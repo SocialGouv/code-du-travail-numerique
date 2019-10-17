@@ -2,29 +2,25 @@
 
 exports[`<Step /> should ask detail about categories 1`] = `
 .c3 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 5em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: right;
+  border: 1px solid #c9d3df;
   border-color: #c9d3df;
+  border-radius: 0.25rem;
 }
 
 .c3::-webkit-outer-spin-button,
 .c3::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c1 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,19 +29,22 @@ exports[`<Step /> should ask detail about categories 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c4 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 .c5 {
@@ -175,29 +174,25 @@ exports[`<Step /> should ask detail about categories 1`] = `
 
 exports[`<Step /> should ask detail about retirement  1`] = `
 .c4 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 5em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: right;
+  border: 1px solid #c9d3df;
   border-color: #c9d3df;
+  border-radius: 0.25rem;
 }
 
 .c4::-webkit-outer-spin-button,
 .c4::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c1 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,6 +201,9 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c6 {
@@ -213,38 +211,38 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c2 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c5 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 .c3 {
@@ -354,29 +352,25 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 
 exports[`<Step /> should render 1`] = `
 .c4 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 5em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: right;
+  border: 1px solid #c9d3df;
   border-color: #c9d3df;
+  border-radius: 0.25rem;
 }
 
 .c4::-webkit-outer-spin-button,
 .c4::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c1 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -385,19 +379,22 @@ exports[`<Step /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c2 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 .c3 {

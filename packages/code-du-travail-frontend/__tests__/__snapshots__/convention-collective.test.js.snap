@@ -57,19 +57,19 @@ exports[`<ConventionCollective /> should render 1`] = `
 .c9 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -78,31 +78,31 @@ exports[`<ConventionCollective /> should render 1`] = `
 .c9:not([disabled]):hover,
 .c9:not([disabled]):active,
 .c9:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c9[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c12 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -111,31 +111,31 @@ exports[`<ConventionCollective /> should render 1`] = `
 .c12:not([disabled]):hover,
 .c12:not([disabled]):active,
 .c12:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c12[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c19 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -148,7 +148,6 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 .c14 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -157,17 +156,18 @@ exports[`<ConventionCollective /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: 100%;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
-  -webkit-animation: iowhYu 0.3s ease-out;
-  animation: iowhYu 0.3s ease-out;
-  border-color: #fee5ad;
   box-shadow: 0 5px 10px 0 #ebeff3;
+  -webkit-animation: iowhYu 300ms ease-out;
+  animation: iowhYu 300ms ease-out;
 }
 
 .c15 {
@@ -226,9 +226,9 @@ exports[`<ConventionCollective /> should render 1`] = `
 .c13 {
   position: fixed;
   bottom: 0;
-  padding: 1rem;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
+  padding: 1rem;
 }
 
 .c17 {
@@ -283,13 +283,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 0;
 }
 
@@ -320,8 +320,8 @@ exports[`<ConventionCollective /> should render 1`] = `
 
 @media print {
   .c6 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 

@@ -2,9 +2,6 @@
 
 exports[`<StepIndemnite /> should render 1`] = `
 .c9 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,18 +10,21 @@ exports[`<StepIndemnite /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 .c1 {
-  font-size: 1.375rem;
-  font-weight: 700;
   color: #005994;
+  font-weight: 700;
+  font-size: 1.375rem;
 }
 
 .c3 {
@@ -41,7 +41,7 @@ exports[`<StepIndemnite /> should render 1`] = `
 }
 
 .c5 {
-  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22%238393a7%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
+  list-style-type: disc;
 }
 
 .c6 {
@@ -67,11 +67,11 @@ exports[`<StepIndemnite /> should render 1`] = `
 }
 
 .c10 {
-  margin-right: 1.25rem;
   -webkit-flex: 1 1 70%;
   -ms-flex: 1 1 70%;
   flex: 1 1 70%;
   min-width: 400px;
+  margin-right: 1.25rem;
 }
 
 <div>

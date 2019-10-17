@@ -2,12 +2,6 @@
 
 exports[`<SectionTitle /> should render title in a link 1`] = `
 .c0 {
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  font-size: 1.375rem;
-  margin-bottom: 0;
-  font-weight: 600;
-  line-height: 1.275;
-  color: #005994;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,20 +10,26 @@ exports[`<SectionTitle /> should render title in a link 1`] = `
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
+  margin-bottom: 0;
+  color: #005994;
+  font-weight: 600;
+  font-size: 1.375rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.275;
 }
 
 .c3 {
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.1;
   color: #005994;
+  font-weight: 300;
+  font-size: 0.875rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.1;
 }
 
 .c1 {
+  color: #005994;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #005994;
 }
 
 .c1:hover {
@@ -37,8 +37,8 @@ exports[`<SectionTitle /> should render title in a link 1`] = `
 }
 
 .c2 {
-  color: #006be6;
   margin-left: 1rem;
+  color: #006be6;
 }
 
 <div>
@@ -82,12 +82,6 @@ exports[`<SectionTitle /> should render title in a link 1`] = `
 
 exports[`<SectionTitle /> should render title only 1`] = `
 .c0 {
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  font-size: 1.375rem;
-  margin-bottom: 0;
-  font-weight: 600;
-  line-height: 1.275;
-  color: #005994;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -96,6 +90,12 @@ exports[`<SectionTitle /> should render title only 1`] = `
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
+  margin-bottom: 0;
+  color: #005994;
+  font-weight: 600;
+  font-size: 1.375rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.275;
 }
 
 <div>
@@ -112,12 +112,6 @@ exports[`<SectionTitle /> should render title only 1`] = `
 
 exports[`<SectionTitle /> should render title with description 1`] = `
 .c0 {
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  font-size: 1.375rem;
-  margin-bottom: 0;
-  font-weight: 600;
-  line-height: 1.275;
-  color: #005994;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,14 +120,20 @@ exports[`<SectionTitle /> should render title with description 1`] = `
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
+  margin-bottom: 0;
+  color: #005994;
+  font-weight: 600;
+  font-size: 1.375rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.275;
 }
 
 .c1 {
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.1;
   color: #005994;
+  font-weight: 300;
+  font-size: 0.875rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.1;
 }
 
 <div>

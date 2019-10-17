@@ -8,22 +8,22 @@ const StyledTile = styled.a`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
+  justify-content: flex-end;
+  height: 100%;
   margin: 0;
   padding: ${spacing.medium} ${spacing.xmedium};
-  height: 100%;
-  font-size: ${fonts.sizeH5};
-  font-weight: bold;
   color: ${({ theme }) => theme.blueDark};
-  text-decoration: none;
+  font-weight: bold;
+  font-size: ${fonts.sizeH5};
   text-align: left;
+  text-decoration: none;
   background-color: ${({ theme }) => theme.white};
   border: ${box.border};
   border-radius: ${box.borderRadius};
   cursor: pointer;
-  appearance: none;
   transition: ${animations.transitionTiming} all;
+  appearance: none;
   &:hover {
     border-color: ${({ theme }) => theme.blueDark};
     box-shadow: ${box.shadow};

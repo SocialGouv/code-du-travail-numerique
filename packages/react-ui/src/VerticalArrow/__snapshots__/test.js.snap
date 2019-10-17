@@ -2,23 +2,26 @@
 
 exports[`<VerticalArrow /> should render 1`] = `
 .c0 {
+  position: relative;
+  display: inline-block;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  display: inline-block;
-  position: relative;
   width: 24px;
   height: 12px;
 }
 
 .c0::after,
 .c0::before {
-  display: block;
   position: absolute;
   top: 50%;
+  display: block;
   width: 10px;
   height: 2px;
   background-color: currentColor;
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   content: "";
 }
 
@@ -48,13 +51,6 @@ exports[`<VerticalArrow /> should render 1`] = `
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-}
-
-.c0::before,
-.c0::after {
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
 <div>

@@ -514,23 +514,23 @@ const Li = styled(ListItem)`
 
 const NumberWrapper = styled.div`
   position: absolute;
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   left: -70px;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   @media (max-width: ${breakpoints.tablet}) {
     position: relative;
     left: 0;
   }
   &:before {
-    content: "";
     position: absolute;
     left: 50%;
     width: 1px;
     height: 100%;
     background-color: ${colors.lightGrey};
+    content: "";
     @media (max-width: ${breakpoints.tablet}) {
       display: none;
     }
@@ -540,13 +540,13 @@ const NumberWrapper = styled.div`
 const Number = styled.div`
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 3rem;
   height: 3rem;
   color: ${colors.white};
-  font-size: ${fonts.sizeH4};
   font-weight: bold;
+  font-size: ${fonts.sizeH4};
   background-color: ${colors.blueDark};
   border-radius: 50%;
 `;

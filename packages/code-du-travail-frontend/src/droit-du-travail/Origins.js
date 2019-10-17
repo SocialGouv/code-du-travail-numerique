@@ -396,8 +396,8 @@ const OriginAccordion = styled(Accordion)`
   @media (max-width: ${breakpoints.tablet}) {
     flex: 0 0 100%;
     & + & {
-      border-top: ${box.border};
       margin-left: 0;
+      border-top: ${box.border};
     }
   }
 `;

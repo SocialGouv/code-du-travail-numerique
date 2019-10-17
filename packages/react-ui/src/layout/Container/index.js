@@ -11,15 +11,15 @@ export const Container = styled.div`
       const maxWidth = "46.25rem"; //740px
       if (props.noPadding) {
         return css`
-          padding: 0;
           max-width: ${maxWidth};
+          padding: 0;
         `;
       }
       return css`
         max-width: ${maxWidth};
       `;
     }
-  }};
+  }}
   & > *:first-child {
     margin-top: 0;
   }

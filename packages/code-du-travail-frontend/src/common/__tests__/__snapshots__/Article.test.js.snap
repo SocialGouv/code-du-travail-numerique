@@ -19,8 +19,8 @@ exports[`<Article /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
 }
 
 .c9 > *:first-child {
@@ -56,8 +56,8 @@ exports[`<Article /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -87,10 +87,10 @@ exports[`<Article /> should render 1`] = `
 }
 
 .c6 {
+  display: inline-block;
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
-  display: inline-block;
 }
 
 .c7 {
@@ -124,8 +124,8 @@ exports[`<Article /> should render 1`] = `
 
 @media print {
   .c2 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 

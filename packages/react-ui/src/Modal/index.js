@@ -46,20 +46,20 @@ const StyledDialogOverlay = styled(DialogOverlay)`
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
   overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
 `;
 const StyledDialogContent = styled(DialogContent)`
   position: relative;
-  margin: 10vh auto;
-  padding: 2rem;
   width: 50vw;
   max-height: calc(100vh - 2 * 10vh);
+  margin: 10vh auto;
+  padding: 2rem;
+  overflow-y: auto;
   color: ${({ theme }) => theme.darkText};
   background: ${({ theme }) => theme.white};
   border-radius: ${box.borderRadius};
   outline: none;
-  overflow-y: auto;
   @media (max-width: ${breakpoints.desktop}) {
     width: 60vw;
   }
@@ -67,9 +67,9 @@ const StyledDialogContent = styled(DialogContent)`
     width: 80vw;
   }
   @media (max-width: ${breakpoints.mobile}) {
-    margin: ${spacing.base};
-    max-height: calc(100vh - 2 * ${spacing.base});
     width: calc(100% - 2 * ${spacing.base});
+    max-height: calc(100vh - 2 * ${spacing.base});
+    margin: ${spacing.base};
   }
 `;
 
@@ -79,10 +79,6 @@ const CloseButton = styled(Button)`
   position: absolute;
   top: 0;
   right: 0;
-  @media (max-width: ${breakpoints.desktop}) {
-  }
-  @media (max-width: ${breakpoints.tablet}) {
-  }
   @media (max-width: ${breakpoints.mobile}) {
     position: fixed;
     top: ${spacing.small};

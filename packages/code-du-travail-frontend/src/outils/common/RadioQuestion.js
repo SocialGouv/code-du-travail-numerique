@@ -53,9 +53,9 @@ function Radios({ name, options }) {
 const { spacing } = theme;
 
 const Fieldset = styled.fieldset`
-  border: none;
-  padding-left: 0;
   margin-left: 0;
+  padding-left: 0;
+  border: none;
 `;
 const RadioContainer = styled.div`
   margin-bottom: ${spacing.small};

@@ -10,32 +10,32 @@ exports[`<Tile /> renders a button tile 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
-  height: 100%;
-  font-size: 1.125rem;
-  font-weight: bold;
   color: #005994;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
   background-color: #fff;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
 }
 
 .c0:hover {
@@ -66,19 +66,19 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
 .c3 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -87,13 +87,13 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c3[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c0 {
@@ -105,32 +105,32 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
-  height: 100%;
-  font-size: 1.125rem;
-  font-weight: bold;
   color: #005994;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
   background-color: #fff;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
 }
 
 .c0:hover {
@@ -179,32 +179,32 @@ exports[`<Tile /> renders with an icon 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
-  height: 100%;
-  font-size: 1.125rem;
-  font-weight: bold;
   color: #005994;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
   background-color: #fff;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
 }
 
 .c0:hover {

@@ -99,9 +99,9 @@ const NumberInsertWrapper = styled.div`
 const NumberInsert = styled.a`
   display: inline-flex;
   margin: ${spacing.base} 0 ${spacing.large};
-  text-decoration: none;
-  text-align: center;
   font-weight: bold;
+  text-align: center;
+  text-decoration: none;
   background-color: ${colors.white};
   border: 1px solid ${colors.blueDark};
   @media (max-width: ${breakpoints.tablet}) {
@@ -116,29 +116,29 @@ const Number = styled.strong`
 `;
 
 const Pricing = styled.em`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   padding: 0 ${spacing.base} 0 ${spacing.medium};
   color: ${colors.white};
-  font-style: normal;
   font-size: ${fonts.sizeBase};
+  font-style: normal;
   background-color: ${colors.blueDark};
   @media (max-width: ${breakpoints.tablet}) {
     padding: ${spacing.small};
   }
   &::before {
-    content: "";
     position: absolute;
-    left: 0;
     top: 50%;
+    left: 0;
     width: 0;
     height: 0;
+    border-color: transparent transparent transparent ${colors.white};
     border-style: solid;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent ${colors.white};
     transform: translateY(-50%);
+    content: "";
     @media (max-width: ${breakpoints.tablet}) {
       display: none;
     }
@@ -146,8 +146,8 @@ const Pricing = styled.em`
 `;
 
 const Input = styled.input`
-  margin-top: ${spacing.small};
   width: 100%;
+  margin-top: ${spacing.small};
 `;
 
 const Small = styled.small`

@@ -4,19 +4,19 @@ exports[`<Result /> should render 1`] = `
 .c21 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -25,17 +25,16 @@ exports[`<Result /> should render 1`] = `
 .c21:not([disabled]):hover,
 .c21:not([disabled]):active,
 .c21:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c21[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c17 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -44,17 +43,18 @@ exports[`<Result /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e5f1fe;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #e5f1fe;
-  box-shadow: none;
 }
 
 .c19 {
@@ -92,15 +92,15 @@ exports[`<Result /> should render 1`] = `
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 .c1 {
-  font-size: 1.375rem;
-  font-weight: 700;
   color: #005994;
+  font-weight: 700;
+  font-size: 1.375rem;
 }
 
 .c9 {
@@ -115,9 +115,7 @@ exports[`<Result /> should render 1`] = `
 }
 
 .c6 {
-  border-radius: 0.25rem;
-  background-color: #4c5467;
-  width: calc(50% * 0.9533911504424778);
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -126,13 +124,14 @@ exports[`<Result /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
+  width: calc(50% * 0.9533911504424778);
   padding: 1em;
+  background-color: #4c5467;
+  border-radius: 0.25rem;
 }
 
 .c15 {
-  border-radius: 0.25rem;
-  width: calc(50% * 1);
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -141,8 +140,9 @@ exports[`<Result /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
+  width: calc(50% * 1);
   padding: 1em;
+  border-radius: 0.25rem;
 }
 
 .c7 {
@@ -166,7 +166,7 @@ exports[`<Result /> should render 1`] = `
 }
 
 .c11 {
-  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22%238393a7%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
+  list-style-type: disc;
 }
 
 .c12 {
@@ -188,17 +188,17 @@ exports[`<Result /> should render 1`] = `
 }
 
 .c3 {
-  padding: 0 0.625rem;
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
+  padding: 0 0.625rem;
 }
 
 .c14 {
-  padding: 0 0.625rem;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
+  padding: 0 0.625rem;
 }
 
 .c4 {
@@ -231,15 +231,15 @@ exports[`<Result /> should render 1`] = `
 
 @media (max-width:980px) {
   .c7 {
-    margin-left: 0;
     width: 100%;
+    margin-left: 0;
   }
 }
 
 @media (max-width:980px) {
   .c16 {
-    margin-left: 0;
     width: 100%;
+    margin-left: 0;
   }
 }
 

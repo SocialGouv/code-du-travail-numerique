@@ -4,19 +4,19 @@ exports[`<SearchBar /> should render 1`] = `
 .c5 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -35,19 +35,19 @@ exports[`<SearchBar /> should render 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c1 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-align: left;
 }
 
@@ -60,11 +60,11 @@ exports[`<SearchBar /> should render 1`] = `
 }
 
 .c0 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   margin: 0 auto;
   padding: 0;
 }
@@ -74,20 +74,20 @@ exports[`<SearchBar /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 0 calc(50px + 0.625rem) 0 1rem;
   width: 100%;
   height: 50px;
+  margin: 0;
+  padding: 0 calc(50px + 0.625rem) 0 1rem;
   font-size: inherit;
   font-family: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 1.5rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .c3:focus {
@@ -97,10 +97,10 @@ exports[`<SearchBar /> should render 1`] = `
 
 .c6 {
   position: absolute;
-  right: 1px;
   top: 1px;
-  height: calc(50px - 2px);
+  right: 1px;
   width: calc(50px - 2px);
+  height: calc(50px - 2px);
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
@@ -181,19 +181,19 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 .c7 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -212,9 +212,9 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c6 {
@@ -226,13 +226,13 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 }
 
 .c1 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-align: left;
 }
 
@@ -245,11 +245,11 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 }
 
 .c0 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   margin: 0 auto;
   padding: 0;
 }
@@ -259,20 +259,20 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 0 calc(50px + 0.625rem) 0 1rem;
   width: 100%;
   height: 50px;
+  margin: 0;
+  padding: 0 calc(50px + 0.625rem) 0 1rem;
   font-size: inherit;
   font-family: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 1.5rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .c3:focus {
@@ -282,10 +282,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 
 .c8 {
   position: absolute;
-  right: 1px;
   top: 1px;
-  height: calc(50px - 2px);
+  right: 1px;
   width: calc(50px - 2px);
+  height: calc(50px - 2px);
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }

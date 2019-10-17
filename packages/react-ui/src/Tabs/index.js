@@ -51,15 +51,15 @@ const StyledTabs = styled(RootTabs)`
 `;
 
 const StyledTabList = styled(TabList)`
-  display: flex;
-  flex-wrap: nowrap;
   position: relative;
   top: 1px;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  max-width: 100%;
-  list-style-type: none;
   overflow-x: auto;
+  list-style-type: none;
   @media (max-width: ${breakpoints.tablet}) {
     flex-wrap: wrap;
   }
@@ -68,8 +68,8 @@ const StyledTabList = styled(TabList)`
 const StyledTab = styled(Tab)`
   margin-right: ${spacing.tiny};
   padding: ${spacing.small} ${spacing.base};
-  font-size: ${fonts.sizeH5};
   color: ${({ theme }) => theme.darkText};
+  font-size: ${fonts.sizeH5};
   background-color: ${({ theme }) => theme.darkBackground};
   border: ${box.border};
   border-bottom: 1px solid ${({ theme }) => theme.blueDark};

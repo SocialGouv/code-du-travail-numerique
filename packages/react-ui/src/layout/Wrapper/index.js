@@ -41,8 +41,8 @@ export const Wrapper = styled.div`
     padding: ${spacing.small} ${spacing.medium};
   }
   @media print {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 `;
 

@@ -4,36 +4,35 @@ import { theme } from "@socialgouv/react-ui";
 const { box, fonts, colors, spacing } = theme;
 
 export const Input = styled.input`
-  padding: 0;
-  font-size: 1rem;
-  text-align: ${props => (props.type === "number" ? "right" : "left")};
-  line-height: inherit;
   width: ${props => (props.size ? `${parseFloat(props.size, 10)}em` : "auto")};
-  border-radius: ${box.borderRadius};
-  border: ${box.border};
   padding: ${spacing.small} ${spacing.tiny};
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: ${props => (props.type === "number" ? "right" : "left")};
+  border: ${box.border};
   border-color: ${props =>
     props.invalid ? colors.dangerBackground : colors.lightGrey};
+  border-radius: ${box.borderRadius};
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
-    appearance: none;
     margin: 0;
+    appearance: none;
   }
 `;
 
 export const Label = styled.label`
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: flex;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 `;
 
 export const RadioContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-direction: ${props => (props.direction === "row" ? "row" : "column")};
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-bottom: ${spacing.interComponent};
 `;
 
@@ -44,29 +43,29 @@ export const Header = styled.div`
 `;
 
 export const QuestionLabel = styled.label`
-  font-size: 1.25rem;
   display: block;
   margin-top: ${spacing.interComponent};
   margin-bottom: ${spacing.small};
+  font-size: 1.25rem;
 `;
 
 export const QuestionParagraphe = styled.p`
-  font-size: 1.25rem;
   display: block;
   margin-top: ${spacing.interComponent};
   margin-bottom: ${spacing.small};
+  font-size: 1.25rem;
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: ${fonts.sizeH3};
   margin-top: ${spacing.large};
   margin-bottom: ${spacing.interComponent};
+  font-size: ${fonts.sizeH3};
 `;
 
 export const Highlight = styled.strong`
-  font-size: ${fonts.sizeH4};
-  font-weight: 700;
   color: ${colors.blueDark};
+  font-weight: 700;
+  font-size: ${fonts.sizeH4};
 `;
 
 export const SmallText = styled.span`

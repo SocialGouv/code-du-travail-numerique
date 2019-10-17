@@ -65,11 +65,11 @@ export { SelectQuestion };
 const { spacing } = theme;
 
 const Select = styled.select`
-  margin-top: ${spacing.small};
-  margin-right: ${spacing.interComponent};
   flex: 1 1 70%;
   min-width: 400px;
   max-width: 100%;
+  margin-top: ${spacing.small};
+  margin-right: ${spacing.interComponent};
 `;
 
 const Wrapper = styled.div`

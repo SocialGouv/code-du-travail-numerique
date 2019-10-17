@@ -3,20 +3,21 @@ import styled from "styled-components";
 export const VerticalArrow = styled.div.attrs(() => ({
   role: "presentation"
 }))`
-  flex: 0 0 auto;
-  display: inline-block;
   position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
   width: 24px;
   height: 12px;
 
   &::after,
   &::before {
-    display: block;
     position: absolute;
     top: 50%;
+    display: block;
     width: 10px;
     height: 2px;
     background-color: currentColor;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
     content: "";
   }
 
@@ -38,10 +39,5 @@ export const VerticalArrow = styled.div.attrs(() => ({
   [aria-expanded="true"] &::after,
   [aria-selected="true"] &::after {
     transform: rotate(45deg);
-  }
-
-  &::before,
-  &::after {
-    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
   }
 `;

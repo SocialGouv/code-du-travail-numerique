@@ -215,14 +215,14 @@ const Flex = styled.div`
 
 const ResultLabel = styled.div`
   flex: 1 0 auto;
-  fontsize: ${theme.fonts.sizeH4};
+  max-width: calc(100% - 200px);
   margin-right: ${theme.spacing.tiny};
   overflow: hidden;
-  text-overflow: ellipsis;
-  whitespace: nowrap;
-  max-width: calc(100% - 200px);
-  font-weight: bold;
   color: ${theme.colors.blueDark};
+  font-weight: bold;
+  font-size: ${theme.fonts.sizeH4};
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 export default Search;

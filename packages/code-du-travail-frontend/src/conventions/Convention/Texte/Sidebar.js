@@ -42,9 +42,9 @@ const { breakpoints, spacing } = theme;
 
 const StyledSection = styled(Section)`
   @media (min-width: ${breakpoints.tablet}) {
-    flex: 0 1 35%;
     position: sticky;
     top: 0px;
+    flex: 0 1 35%;
     max-height: 100vh;
     padding-right: ${spacing.interComponent};
   }

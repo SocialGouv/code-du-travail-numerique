@@ -79,8 +79,8 @@ const ModeleCourrier = ({ modele, ...props }) => {
 const { colors } = theme;
 
 const ModeleCourrierList = styled(List)`
-  list-style-type: none;
   padding-left: 0;
+  list-style-type: none;
 `;
 const Title = styled.h1`
   text-align: center;
@@ -92,14 +92,14 @@ const P = styled.p`
 `;
 
 const Label = styled.span`
-  font-weight: 700;
   color: ${colors.lightText};
+  font-weight: 700;
 `;
 
 const Value = styled.span`
+  color: ${colors.grey};
   font-weight: 700;
   text-transform: uppercase;
-  color: ${colors.grey};
 `;
 
 export default Modeles;

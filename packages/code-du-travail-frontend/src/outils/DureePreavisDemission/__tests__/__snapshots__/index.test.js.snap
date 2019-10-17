@@ -40,19 +40,19 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 .c10 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -61,19 +61,16 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 .c10:not([disabled]):hover,
 .c10:not([disabled]):active,
 .c10:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c10[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c3 {
-  border-bottom: 1px solid #adb9c9;
-  margin-top: 1.25rem;
-  padding-bottom: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,6 +78,9 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #adb9c9;
 }
 
 .c4 {
@@ -88,19 +88,19 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 8.4375rem;
   padding: 0 0.25rem;
-  font-size: 0.875rem;
-  text-align: left;
   color: #006be6;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-weight: 600;
-  line-height: 1;
 }
 
 .c6 {
@@ -108,30 +108,29 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 8.4375rem;
   padding: 0 0.25rem;
-  font-size: 0.875rem;
-  text-align: left;
   color: #adb9c9;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-weight: 600;
-  line-height: 1;
 }
 
 .c5 {
-  border-radius: 49%;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -140,23 +139,23 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 1.6rem;
   width: 1.6rem;
+  height: 1.6rem;
   margin: 0.5rem 0.625rem;
   margin-left: 0;
   color: #fff;
   background-color: #006be6;
+  border-radius: 49%;
 }
 
 .c7 {
-  border-radius: 49%;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -165,25 +164,26 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 1.6rem;
   width: 1.6rem;
+  height: 1.6rem;
   margin: 0.5rem 0.625rem;
   margin-left: 0;
   color: #fff;
   background-color: #adb9c9;
+  border-radius: 49%;
 }
 
 .c9 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
-  margin: 2rem 0;
+  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 2rem 0;
 }
 
 .c9 > *:first-child {
@@ -202,8 +202,8 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   margin: 2rem 0;
 }
 
@@ -230,8 +230,8 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 
 @media print {
   .c2 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 

@@ -2,9 +2,6 @@
 
 exports[`<SelectQuestion /> should render with default value 1`] = `
 .c1 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,16 +10,19 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c2 {
-  margin-top: 0.625rem;
-  margin-right: 1.25rem;
   -webkit-flex: 1 1 70%;
   -ms-flex: 1 1 70%;
   flex: 1 1 70%;
   min-width: 400px;
   max-width: 100%;
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
 }
 
 .c0 {
@@ -67,9 +67,6 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 .c1 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,16 +75,19 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c2 {
-  margin-top: 0.625rem;
-  margin-right: 1.25rem;
   -webkit-flex: 1 1 70%;
   -ms-flex: 1 1 70%;
   flex: 1 1 70%;
   min-width: 400px;
   max-width: 100%;
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
 }
 
 .c0 {

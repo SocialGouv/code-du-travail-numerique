@@ -4,31 +4,31 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 .c8 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c8:focus,
@@ -39,9 +39,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 }
 
 .c2 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,6 +47,9 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c1 {
@@ -57,60 +57,59 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c0 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c6 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
+  font-size: 1rem;
+  line-height: inherit;
   text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c6::-webkit-outer-spin-button,
 .c6::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c5 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1rem;
 }
 
 .c7 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -125,14 +124,14 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 0.25rem;
 }
 
@@ -146,8 +145,8 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 }
 
 .c11 {
-  font-style: italic;
   font-size: 0.875rem;
+  font-style: italic;
 }
 
 <div>
@@ -280,9 +279,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 
 exports[`<StepRemuneration /> should render one input 1`] = `
 .c2 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -291,6 +287,9 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c1 {
@@ -298,68 +297,67 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c0 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c4 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
+  font-size: 1rem;
+  line-height: inherit;
   text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c4::-webkit-outer-spin-button,
 .c4::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c3 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1rem;
 }
 
 .c5 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 .c6 {
-  font-style: italic;
   font-size: 0.875rem;
+  font-style: italic;
 }
 
 <div>

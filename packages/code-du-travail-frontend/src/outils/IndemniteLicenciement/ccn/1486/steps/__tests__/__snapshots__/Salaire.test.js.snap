@@ -2,7 +2,6 @@
 
 exports[`<Salaire /> renders 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -11,17 +10,18 @@ exports[`<Salaire /> renders 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #fee5ad;
-  box-shadow: none;
 }
 
 .c2 {
@@ -59,9 +59,6 @@ exports[`<Salaire /> renders 1`] = `
 }
 
 .c6 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,6 +67,9 @@ exports[`<Salaire /> renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c5 {
@@ -77,25 +77,25 @@ exports[`<Salaire /> renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c4 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c1 {
@@ -213,7 +213,6 @@ exports[`<Salaire /> renders 1`] = `
 
 exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -222,17 +221,18 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #fee5ad;
-  box-shadow: none;
 }
 
 .c2 {
@@ -270,9 +270,6 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 }
 
 .c6 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -281,6 +278,9 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c5 {
@@ -288,25 +288,25 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c4 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c1 {
@@ -464,16 +464,16 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 
 .c7:before,
 .c7:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -493,15 +493,19 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
+  border: 1px solid #c9d3df;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #c9d3df;
 }
 
 .c9 caption {
   padding: 0.625rem 0;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+}
+
+.c9 tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .c9 td,
@@ -522,7 +526,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -531,17 +534,18 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #fee5ad;
-  box-shadow: none;
 }
 
 .c2 {
@@ -579,9 +583,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 }
 
 .c6 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -590,6 +591,9 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c5 {
@@ -597,25 +601,25 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c4 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c1 {
@@ -623,43 +627,42 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 }
 
 .c10 tr > td:nth-child(2) {
-  text-align: left;
   width: 70%;
+  text-align: left;
 }
 
 .c12 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
+  font-size: 1rem;
+  line-height: inherit;
   text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c12::-webkit-outer-spin-button,
 .c12::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c11 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1.25rem;
 }
 
 .c13 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -893,7 +896,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 
 exports[`<Salaire /> renders an input field of type number 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -902,17 +904,18 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #fee5ad;
-  box-shadow: none;
 }
 
 .c2 {
@@ -950,9 +953,6 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
 }
 
 .c6 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -961,6 +961,9 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c5 {
@@ -968,25 +971,25 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c4 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c1 {
@@ -994,38 +997,37 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
 }
 
 .c8 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
+  font-size: 1rem;
+  line-height: inherit;
   text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c8::-webkit-outer-spin-button,
 .c8::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c7 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1.25rem;
 }
 
 .c9 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

@@ -2,9 +2,6 @@
 
 exports[`<RadioQuestion /> should render with default value 1`] = `
 .c3 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,19 +10,22 @@ exports[`<RadioQuestion /> should render with default value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c1 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c0 {
-  border: none;
-  padding-left: 0;
   margin-left: 0;
+  padding-left: 0;
+  border: none;
 }
 
 .c2 {
@@ -79,9 +79,6 @@ exports[`<RadioQuestion /> should render with default value 1`] = `
 
 exports[`<RadioQuestion /> should render with selectedValue value 1`] = `
 .c3 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,19 +87,22 @@ exports[`<RadioQuestion /> should render with selectedValue value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c1 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c0 {
-  border: none;
-  padding-left: 0;
   margin-left: 0;
+  padding-left: 0;
+  border: none;
 }
 
 .c2 {

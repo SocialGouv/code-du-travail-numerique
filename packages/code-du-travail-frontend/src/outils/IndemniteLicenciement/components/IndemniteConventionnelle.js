@@ -112,8 +112,8 @@ const RowWrapper = styled.div`
 `;
 
 const Row = styled.section`
-  padding: 0 ${spacing.small};
   order: ${({ first }) => (first ? 0 : 1)};
+  padding: 0 ${spacing.small};
 `;
 
 const Heading = styled.h2`

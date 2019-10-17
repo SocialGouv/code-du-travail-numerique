@@ -65,8 +65,8 @@ const MontantLabel = styled.label`
 
 const Row = styled.div`
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   margin-bottom: ${spacing.tiny};
 `;
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`

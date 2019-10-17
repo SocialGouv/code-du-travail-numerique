@@ -13,8 +13,8 @@ export const renderSuggestionsContainer = ({ containerProps, children }) => (
 
 export const Suggestion = styled.div`
   width: 90%;
-  overflow: hidden;
   padding: 5px;
+  overflow: hidden;
   font-size: 0.9rem;
   text-decoration: underline;
   :hover {

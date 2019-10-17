@@ -9,17 +9,17 @@ import Html from "../common/Html";
 const { box, colors, fonts } = theme;
 
 const StyledTooltip = styled(Tooltip)`
-  z-index: 10;
-  pointer-events: none;
   position: absolute;
-  padding: 0.25em 0.5em;
-  box-shadow: ${box.shadow};
+  z-index: 10;
   width: 300px;
   max-width: 70vw;
+  padding: 0.25em 0.5em;
+  color: ${colors.lightText};
   font-size: ${fonts.sizeBase};
   background: ${colors.lightBackground};
-  color: ${colors.lightText};
   border: solid 1px ${colors.elementBorder};
+  box-shadow: ${box.shadow};
+  pointer-events: none;
 `;
 
 const Underline = styled.span`

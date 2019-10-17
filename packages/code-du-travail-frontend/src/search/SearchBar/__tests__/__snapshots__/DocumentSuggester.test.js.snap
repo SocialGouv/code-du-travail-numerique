@@ -8,19 +8,19 @@ exports[`<DocumentSuggester /> should render 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c0 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-align: left;
 }
 
@@ -77,9 +77,9 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c4 {
@@ -91,13 +91,13 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
 }
 
 .c0 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-align: left;
 }
 

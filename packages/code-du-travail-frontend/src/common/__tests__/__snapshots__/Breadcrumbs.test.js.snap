@@ -41,11 +41,11 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
 
 .c5 {
   display: inline-block;
-  pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  pointer-events: none;
 }
 
 @media print {

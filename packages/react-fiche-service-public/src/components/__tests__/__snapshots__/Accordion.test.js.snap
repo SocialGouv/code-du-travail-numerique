@@ -2,23 +2,26 @@
 
 exports[`<Accordion /> should have two different levels of headings 1`] = `
 .c4 {
+  position: relative;
+  display: inline-block;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  display: inline-block;
-  position: relative;
   width: 24px;
   height: 12px;
 }
 
 .c4::after,
 .c4::before {
-  display: block;
   position: absolute;
   top: 50%;
+  display: block;
   width: 10px;
   height: 2px;
   background-color: currentColor;
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   content: "";
 }
 
@@ -50,13 +53,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   transform: rotate(45deg);
 }
 
-.c4::before,
-.c4::after {
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-}
-
 .c2 + .c1 {
   border-top: 1px solid #c9d3df;
 }
@@ -66,14 +62,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   cursor: pointer;
 }
 
@@ -261,23 +257,26 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 
 exports[`<Accordion /> should render all, siblings included 1`] = `
 .c4 {
+  position: relative;
+  display: inline-block;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  display: inline-block;
-  position: relative;
   width: 24px;
   height: 12px;
 }
 
 .c4::after,
 .c4::before {
-  display: block;
   position: absolute;
   top: 50%;
+  display: block;
   width: 10px;
   height: 2px;
   background-color: currentColor;
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   content: "";
 }
 
@@ -309,13 +308,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   transform: rotate(45deg);
 }
 
-.c4::before,
-.c4::after {
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-}
-
 .c2 + .c1 {
   border-top: 1px solid #c9d3df;
 }
@@ -325,14 +317,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   cursor: pointer;
 }
 

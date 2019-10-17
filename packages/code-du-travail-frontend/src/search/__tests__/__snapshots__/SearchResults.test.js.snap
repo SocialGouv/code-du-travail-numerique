@@ -48,6 +48,7 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 1.25rem;
   padding: 1.25rem;
   color: #005994;
   -webkit-text-decoration: none;
@@ -55,7 +56,6 @@ exports[`<SearchResults/> should render results 1`] = `
   background-color: #fff;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  margin-bottom: 1.25rem;
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
@@ -81,6 +81,7 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 1.25rem;
   padding: 1.25rem;
   color: #005994;
   -webkit-text-decoration: none;
@@ -88,7 +89,6 @@ exports[`<SearchResults/> should render results 1`] = `
   background-color: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  margin-bottom: 1.25rem;
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
@@ -132,8 +132,8 @@ exports[`<SearchResults/> should render results 1`] = `
 
 @media print {
   .c5 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -252,6 +252,7 @@ exports[`<SearchResults/> should render results with breadcrumbs 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 1.25rem;
   padding: 1.25rem;
   color: #005994;
   -webkit-text-decoration: none;
@@ -259,7 +260,6 @@ exports[`<SearchResults/> should render results with breadcrumbs 1`] = `
   background-color: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  margin-bottom: 1.25rem;
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
@@ -303,8 +303,8 @@ exports[`<SearchResults/> should render results with breadcrumbs 1`] = `
 
 @media print {
   .c2 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 

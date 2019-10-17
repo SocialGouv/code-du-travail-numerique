@@ -39,19 +39,19 @@ exports[`<Feedback/> should render 1`] = `
 .c5 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -60,31 +60,31 @@ exports[`<Feedback/> should render 1`] = `
 .c5:not([disabled]):hover,
 .c5:not([disabled]):active,
 .c5:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c5[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c8 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -93,13 +93,13 @@ exports[`<Feedback/> should render 1`] = `
 .c8:not([disabled]):hover,
 .c8:not([disabled]):active,
 .c8:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c8[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c3 {
@@ -140,8 +140,8 @@ exports[`<Feedback/> should render 1`] = `
 
 @media print {
   .c2 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -219,19 +219,19 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 .c7 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -240,43 +240,43 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 .c7:not([disabled]):hover,
 .c7:not([disabled]):active,
 .c7:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c7[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c9 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c9:focus,
@@ -291,7 +291,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -299,6 +298,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  width: 100%;
 }
 
 .c5 {
@@ -342,8 +342,8 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 
 @media print {
   .c2 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -492,19 +492,19 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 .c7 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -513,13 +513,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 .c7:not([disabled]):hover,
 .c7:not([disabled]):active,
 .c7:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c7[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c4 {
@@ -527,7 +527,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -535,6 +534,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  width: 100%;
 }
 
 .c5 {
@@ -578,8 +578,8 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 
 @media print {
   .c2 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 

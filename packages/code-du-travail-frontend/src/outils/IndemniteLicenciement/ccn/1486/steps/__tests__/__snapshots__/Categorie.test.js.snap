@@ -2,9 +2,6 @@
 
 exports[`<Categorie /> renders 1`] = `
 .c1 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,12 +10,15 @@ exports[`<Categorie /> renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 <div>

@@ -8,8 +8,8 @@ export default createGlobalStyle`
     font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
       Helvetica, Arial, sans-serif;
     /* http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/ */
-    line-height: ${fonts.lineHeight}
-    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom. */
+    line-height: ${fonts.lineHeight};
+    text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom. */
     -webkit-font-smoothing: antialiased;
   }
 

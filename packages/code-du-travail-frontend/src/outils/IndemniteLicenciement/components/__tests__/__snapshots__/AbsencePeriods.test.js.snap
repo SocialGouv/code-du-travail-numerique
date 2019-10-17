@@ -4,31 +4,31 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 .c5 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c5:focus,
@@ -39,23 +39,22 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 }
 
 .c4 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 7em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: right;
+  border: 1px solid #c9d3df;
   border-color: #c9d3df;
+  border-radius: 0.25rem;
 }
 
 .c4::-webkit-outer-spin-button,
 .c4::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c7 {
@@ -67,14 +66,14 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 0.25rem;
 }
 
@@ -191,31 +190,31 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 .c4 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c4:focus,
@@ -234,14 +233,14 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 0.25rem;
 }
 
@@ -291,31 +290,31 @@ exports[`<AbsencePeriods /> should render 1`] = `
 .c5 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c5:focus,
@@ -326,23 +325,22 @@ exports[`<AbsencePeriods /> should render 1`] = `
 }
 
 .c4 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 7em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: right;
+  border: 1px solid #c9d3df;
   border-color: #c9d3df;
+  border-radius: 0.25rem;
 }
 
 .c4::-webkit-outer-spin-button,
 .c4::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c7 {
@@ -354,14 +352,14 @@ exports[`<AbsencePeriods /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 0.25rem;
 }
 

@@ -49,19 +49,19 @@ const Wrapper = styled.div`
 const Type = styled.div`
   align-self: flex-start;
   margin-bottom: ${spacing.xsmall};
+  color: ${colors.blueDark};
   font-weight: bold;
   font-size: 1.1rem;
-  color: ${colors.blueDark};
 `;
 
 const ButtonLink = styled.a`
   &:link,
   &:visited {
     display: inline-block;
-    background-color: ${colors.blueDark};
+    padding: ${spacing.xsmall};
     color: ${colors.primaryText};
     text-decoration: none;
-    padding: ${spacing.xsmall};
+    background-color: ${colors.blueDark};
     border-radius: ${box.borderRadius};
   }
   &:hover,

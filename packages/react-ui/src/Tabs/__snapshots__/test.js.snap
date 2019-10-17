@@ -6,6 +6,8 @@ exports[`<Tabs /> renders 1`] = `
 }
 
 .c1 {
+  position: relative;
+  top: 1px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,20 +15,18 @@ exports[`<Tabs /> renders 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  position: relative;
-  top: 1px;
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  max-width: 100%;
-  list-style-type: none;
   overflow-x: auto;
+  list-style-type: none;
 }
 
 .c2 {
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
-  font-size: 1.125rem;
   color: #434956;
+  font-size: 1.125rem;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;

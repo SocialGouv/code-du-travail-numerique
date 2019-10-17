@@ -37,8 +37,8 @@ export { PrevNextBar };
 const { spacing } = theme;
 
 const StyledContainer = styled(Container)`
-  margin: ${spacing.large} 0;
   display: flex;
+  margin: ${spacing.large} 0;
 `;
 const NextButton = styled(Button)`
   margin-left: auto;

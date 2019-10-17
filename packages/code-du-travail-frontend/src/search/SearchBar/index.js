@@ -93,8 +93,8 @@ const { animations, box, breakpoints, colors, spacing } = theme;
 const inputHeight = "50px";
 
 const SearchForm = styled.form`
-  display: flex;
   position: relative;
+  display: flex;
   margin: 0 auto;
   padding: 0;
   @media (max-width: ${breakpoints.mobile}) {
@@ -105,11 +105,11 @@ const SearchForm = styled.form`
 
 const SearchInputIcon = styled(SearchIcon)`
   position: absolute;
-  left: 0;
   top: 0;
-  margin: ${spacing.base} 0 0 ${spacing.medium};
+  left: 0;
   width: 1.3rem;
   height: 1.3rem;
+  margin: ${spacing.base} 0 0 ${spacing.medium};
   @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }
@@ -117,21 +117,21 @@ const SearchInputIcon = styled(SearchIcon)`
 
 const SearchInput = styled(DocumentSuggester)`
   display: flex;
+  width: 100%;
+  height: ${inputHeight};
   margin: 0;
   padding: 0
     ${({ hasButton }) =>
       hasButton
-        ? `${spacing.base} 0 4rem`
+        ? `${spacing.base} 0 4rem `
         : `calc(${inputHeight} + ${spacing.small}) 0 ${spacing.base}`};
-  width: 100%;
-  height: ${inputHeight};
   font-size: inherit;
   font-family: inherit;
-  appearance: none;
   background: ${colors.lightBackground};
   border: ${box.border};
   border-radius: ${spacing.xmedium};
   transition: border ${animations.transitionTiming} ease;
+  appearance: none;
   &:focus {
     border-color: ${colors.blueLight};
     outline: none;
@@ -144,16 +144,16 @@ const SearchInput = styled(DocumentSuggester)`
 const SubmitButton = styled(Button)`
   margin-left: ${spacing.xsmall};
   @media (max-width: ${breakpoints.mobile}) {
-    margin-left: 0;
     margin-top: ${spacing.small};
+    margin-left: 0;
   }
 `;
 const SubmitIcon = styled(Button)`
   position: absolute;
-  right: 1px;
   top: 1px;
-  height: calc(${inputHeight} - 2px);
+  right: 1px;
   width: calc(${inputHeight} - 2px);
+  height: calc(${inputHeight} - 2px);
   border-top-right-radius: ${box.borderRadius};
   border-bottom-right-radius: ${box.borderRadius};
 `;

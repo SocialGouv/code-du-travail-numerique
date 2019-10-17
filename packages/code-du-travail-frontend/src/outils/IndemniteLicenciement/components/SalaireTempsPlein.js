@@ -99,25 +99,25 @@ const { colors, spacing } = theme;
 
 const Table = styled(UITable)`
   & tr > td:nth-child(2) {
-    text-align: left;
     width: 70%;
+    text-align: left;
   }
 `;
 const NumberInput = styled(Input)`
-  text-align: right;
   padding-right: ${spacing.base};
+  text-align: right;
 `;
 
 const CurrencyWrapper = styled.div`
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: ${spacing.interComponent};
 `;
 
 const Currency = styled.span`
-  color: ${colors.grey};
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: ${colors.grey};
   transform: translateY(-50%);
 `;

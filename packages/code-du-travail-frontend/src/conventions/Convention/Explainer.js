@@ -79,8 +79,8 @@ const StyledWrapper = styled(Wrapper)`
 
 const Title = styled.a`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const SubTitle = styled.p`

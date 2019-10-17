@@ -2,7 +2,6 @@
 
 exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideration 1`] = `
 .c1 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -11,21 +10,21 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #fee5ad;
-  box-shadow: none;
 }
 
 .c9 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -34,17 +33,18 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e5f1fe;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #e5f1fe;
-  box-shadow: none;
 }
 
 .c3 {
@@ -103,29 +103,25 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 }
 
 .c8 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 7em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: right;
+  border: 1px solid #c9d3df;
   border-color: #c9d3df;
+  border-radius: 0.25rem;
 }
 
 .c8::-webkit-outer-spin-button,
 .c8::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c7 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -134,6 +130,9 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c6 {
@@ -141,66 +140,65 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c5 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 .c12 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
+  font-size: 1rem;
+  line-height: inherit;
   text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c12::-webkit-outer-spin-button,
 .c12::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c11 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1rem;
 }
 
 .c13 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -426,7 +424,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 
 exports[`<AncienneteETAMIC /> renders 1`] = `
 .c1 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -435,17 +432,18 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #fee5ad;
-  box-shadow: none;
 }
 
 .c3 {
@@ -483,9 +481,6 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
 }
 
 .c7 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -494,6 +489,9 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c6 {
@@ -501,31 +499,31 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c5 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 .c2 {
