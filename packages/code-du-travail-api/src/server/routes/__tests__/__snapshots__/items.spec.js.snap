@@ -71,6 +71,20 @@ Object {
       "_score": 20.930048,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
+        "breadcrumbs": Array [
+          Object {
+            "id": 7,
+            "label": "Départ de l'entreprise",
+            "parent": null,
+            "slug": "7-depart-de-lentreprise",
+          },
+          Object {
+            "id": 37,
+            "label": "Démission",
+            "parent": "7-depart-de-lentreprise",
+            "slug": "37-demission",
+          },
+        ],
         "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
         "slug": "demission-comment-presenter-une-demission",
         "source": "fiches_ministere_travail",
@@ -85,6 +99,14 @@ Object {
       "_index": "cdtn_document_test",
       "_score": 6.9938016,
       "_source": Object {
+        "breadcrumbs": Array [
+          Object {
+            "id": 7,
+            "label": "Départ de l'entreprise",
+            "parent": null,
+            "slug": "7-depart-de-lentreprise",
+          },
+        ],
         "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. Au terme de celui-ci, l'employeur remet les documents de fin de contrat.",
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -111,6 +133,20 @@ Object {
       "_index": "cdtn_document_test",
       "_score": 5.0822577,
       "_source": Object {
+        "breadcrumbs": Array [
+          Object {
+            "id": 7,
+            "label": "Départ de l'entreprise",
+            "parent": null,
+            "slug": "7-depart-de-lentreprise",
+          },
+          Object {
+            "id": 37,
+            "label": "Démission",
+            "parent": "7-depart-de-lentreprise",
+            "slug": "37-demission",
+          },
+        ],
         "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -138,6 +174,20 @@ Object {
       "_score": 2.7256262,
       "_source": Object {
         "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
+        "breadcrumbs": Array [
+          Object {
+            "id": 7,
+            "label": "Départ de l'entreprise",
+            "parent": null,
+            "slug": "7-depart-de-lentreprise",
+          },
+          Object {
+            "id": 37,
+            "label": "Démission",
+            "parent": "7-depart-de-lentreprise",
+            "slug": "37-demission",
+          },
+        ],
         "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
         "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
         "source": "fiches_ministere_travail",
