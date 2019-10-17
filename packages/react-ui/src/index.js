@@ -1,5 +1,5 @@
-export * as keyframes from "./keyframes";
-export * as theme from "./theme";
+import * as keyframes from "./keyframes";
+import * as theme from "./theme";
 
 // Layout
 export { Container } from "./layout/Container";
@@ -7,7 +7,7 @@ export { Section } from "./layout/Section";
 export { Wrapper } from "./layout/Wrapper";
 
 // Components
-export * as icons from "./icons";
+import * as icons from "./icons";
 export { Accordion } from "./Accordion";
 export { Alert } from "./Alert";
 export { Button } from "./Button";
@@ -24,3 +24,5 @@ export { Tag } from "./Tag";
 export { Tile } from "./Tile";
 export { Toast } from "./Toast";
 export { VerticalArrow } from "./VerticalArrow";
+
+export { keyframes, theme, icons };
