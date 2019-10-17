@@ -1,46 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 1`] = `
-.c2 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
-  padding: 1.25rem 0;
-  color: #434956;
+  position: relative;
+  overflow: hidden;
+}
+
+.c1:before,
+.c1:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, white 15%, rgba(255,255,255,0) 80% );
+}
+
+.c1:before {
+  left: -2rem;
+}
+
+.c1:after {
+  right: -2rem;
+}
+
+.c2 {
+  overflow-x: auto;
+}
+
+.c0 {
+  overflow-x: auto;
+  background: #e5f1fe;
 }
 
 .c3 {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c0 {
-  background: #e5f1fe;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: nowrap;
+  -ms-flex-flow: nowrap;
+  flex-flow: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.625rem 0;
 }
 
 .c4 {
   display: inline-block;
   padding: 0.625rem 1.25rem;
-}
-
-.c4:first-child {
-  padding-left: 0;
+  white-space: nowrap;
 }
 
 .c5 {
-  display: inline-block;
+  display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -48,10 +71,15 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
   pointer-events: none;
 }
 
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
+.c6 {
+  display: block;
+  width: 1rem;
+  color: #005994;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -82,7 +110,25 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
             aria-hidden="true"
             class="c5"
           >
-             » 
+            <svg
+              class="c6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="13 17 18 12 13 7"
+              />
+              <polyline
+                points="6 17 11 12 6 7"
+              />
+            </svg>
           </li>
           <li
             class="c4"
@@ -98,7 +144,25 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
             aria-hidden="true"
             class="c5"
           >
-             » 
+            <svg
+              class="c6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="13 17 18 12 13 7"
+              />
+              <polyline
+                points="6 17 11 12 6 7"
+              />
+            </svg>
           </li>
           <li
             class="c4"
@@ -118,46 +182,69 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 `;
 
 exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = `
-.c2 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
-  padding: 1.25rem 0;
-  color: #434956;
+  position: relative;
+  overflow: hidden;
+}
+
+.c1:before,
+.c1:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, white 15%, rgba(255,255,255,0) 80% );
+}
+
+.c1:before {
+  left: -2rem;
+}
+
+.c1:after {
+  right: -2rem;
+}
+
+.c2 {
+  overflow-x: auto;
+}
+
+.c0 {
+  overflow-x: auto;
+  background: #e5f1fe;
 }
 
 .c3 {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c0 {
-  background: #e5f1fe;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: nowrap;
+  -ms-flex-flow: nowrap;
+  flex-flow: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.625rem 0;
 }
 
 .c4 {
   display: inline-block;
   padding: 0.625rem 1.25rem;
-}
-
-.c4:first-child {
-  padding-left: 0;
+  white-space: nowrap;
 }
 
 .c5 {
-  display: inline-block;
+  display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -165,10 +252,15 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
   pointer-events: none;
 }
 
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
+.c6 {
+  display: block;
+  width: 1rem;
+  color: #005994;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    padding: 0.5rem 0;
   }
 }
 
@@ -199,7 +291,25 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
             aria-hidden="true"
             class="c5"
           >
-             » 
+            <svg
+              class="c6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="13 17 18 12 13 7"
+              />
+              <polyline
+                points="6 17 11 12 6 7"
+              />
+            </svg>
           </li>
           <li
             class="c4"
@@ -215,7 +325,25 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
             aria-hidden="true"
             class="c5"
           >
-             » 
+            <svg
+              class="c6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="13 17 18 12 13 7"
+              />
+              <polyline
+                points="6 17 11 12 6 7"
+              />
+            </svg>
           </li>
           <li
             class="c4"
@@ -231,7 +359,25 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
             aria-hidden="true"
             class="c5"
           >
-             » 
+            <svg
+              class="c6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="13 17 18 12 13 7"
+              />
+              <polyline
+                points="6 17 11 12 6 7"
+              />
+            </svg>
           </li>
           <li
             class="c4"
