@@ -2,7 +2,7 @@ const JSDOM = require("jsdom").JSDOM;
 const pLimit = require("p-limit");
 const ora = require("ora");
 const urls = require("./ministere-travail-liste-fiches.json");
-const { splitArticle } = require("./articleSplitter");
+const slugify = require("@cdt/data/slugify");
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
@@ -22,33 +22,10 @@ const formatAnchor = node => {
 };
 
 function parseDom(dom, url) {
-  const internalId = $(
-    dom.window.document,
-    "meta[name='SPIP.identifier']"
-  ).getAttribute("content");
-
   const description = $(
     dom.window.document,
     "meta[name=description]"
   ).getAttribute("content");
-  const summary = $$(dom.window.document, ".navigation-article li")
-    .map(n => n.textContent.trim())
-    .filter(t => t !== "L’INFO EN PLUS" && t !== "POUR ALLER PLUS LOIN");
-
-  const ariane = $$(dom.window.document, "nav.page__breadcrumb a")
-    .slice(1)
-    .map(el => el.textContent.trim());
-
-  // `articles` = textes de référence.
-  const articles = $$(dom.window.document, "article.encarts__article li")
-    .filter(item => $(item, "a") && $(item, "a").getAttribute("href"))
-    .map(node => {
-      formatAnchor(node);
-      return {
-        url: node.getAttribute("href"),
-        text: node.textContent.trim()
-      };
-    });
 
   const article = $(dom.window.document, "main");
   $$(article, "a").forEach(formatAnchor);
@@ -82,46 +59,22 @@ function parseDom(dom, url) {
 
   const chapo = $(article, ".main-article__chapo");
 
-  const tags = $$(
-    dom.window.document,
-    "span.main-article__tag.tag--encart"
-  ).map(n => n.textContent.trim());
   const title = $(article, "h1").textContent.trim();
+
+  const text = $(article, ".main-article__texte").textContent.trim();
+
+  const html = $(article, ".main-article__texte").outerHTML;
+
   const result = {
-    internalId,
-    description,
-    ariane,
-    tags,
-    articles,
-    summary,
-    intro: `${chapo ? chapo.innerHTML.trim() : ""}${intro}`,
-    title,
-    text_full: $(article, ".main-article__texte").textContent.trim(),
-    text_by_section: [],
     date: `${day}/${month}/${year}`,
+    description,
+    html,
+    intro: `${chapo ? chapo.innerHTML.trim() : ""}${intro}`,
+    slug: slugify(title),
+    title,
+    text,
     url
   };
-  const articleChildren = $$(article, "*");
-  articleChildren
-    .filter(el => el.getAttribute("id"))
-    .forEach(function(el) {
-      if (el.tagName === "H3") {
-        const subSection = {
-          title: el.textContent.trim(),
-          text: "",
-          html: "",
-          url: `${url}#${el.id}`
-        };
-        let nextEl = el.nextElementSibling;
-        while (nextEl && nextEl.tagName !== "H3") {
-          subSection.text += nextEl.textContent.trim();
-          subSection.html += nextEl.outerHTML;
-          nextEl = nextEl.nextElementSibling;
-        }
-        result.text_by_section.push(subSection);
-      }
-    });
-
   return result;
 }
 
@@ -146,10 +99,7 @@ async function parseFiche(url) {
 
 async function parseFiches(urls) {
   const inputs = urls.map(url => limit(() => parseFiche(url)));
-  const results = await Promise.all(inputs);
-  const fiches = results
-    .map(splitArticle)
-    .reduce((state, documents) => state.concat(documents), []);
+  const fiches = await Promise.all(inputs);
   spinner.stop().clear();
   console.log(JSON.stringify(fiches.filter(Boolean), null, 2));
 }

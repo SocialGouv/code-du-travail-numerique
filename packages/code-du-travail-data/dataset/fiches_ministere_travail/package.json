@@ -8,6 +8,7 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
+    "@cdt/data": "^3.3.1",
     "google-spreadsheets": "^2.0.0",
     "jsdom": "^15.2.0",
     "ora": "^4.0.2",
