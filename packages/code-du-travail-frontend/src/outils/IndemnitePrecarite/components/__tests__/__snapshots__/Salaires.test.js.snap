@@ -4,31 +4,31 @@ exports[`<Salaires /> should add a salaire 1`] = `
 .c5 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c5:focus,
@@ -39,38 +39,37 @@ exports[`<Salaires /> should add a salaire 1`] = `
 }
 
 .c3 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
+  font-size: 1rem;
+  line-height: inherit;
   text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c3::-webkit-outer-spin-button,
 .c3::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c2 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1rem;
 }
 
 .c4 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -85,14 +84,14 @@ exports[`<Salaires /> should add a salaire 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 0.25rem;
 }
 
@@ -156,31 +155,31 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c0:focus,
@@ -211,31 +210,31 @@ exports[`<Salaires /> should render 1`] = `
 .c5 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c5:focus,
@@ -246,38 +245,37 @@ exports[`<Salaires /> should render 1`] = `
 }
 
 .c3 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
+  font-size: 1rem;
+  line-height: inherit;
   text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c3::-webkit-outer-spin-button,
 .c3::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c2 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1rem;
 }
 
 .c4 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -292,14 +290,14 @@ exports[`<Salaires /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 0.25rem;
 }
 

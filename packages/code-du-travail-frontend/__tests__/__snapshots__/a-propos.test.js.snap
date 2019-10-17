@@ -58,19 +58,19 @@ exports[`<About /> should render 1`] = `
 .c13 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -85,19 +85,19 @@ exports[`<About /> should render 1`] = `
 .c23 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -106,13 +106,13 @@ exports[`<About /> should render 1`] = `
 .c23:not([disabled]):hover,
 .c23:not([disabled]):active,
 .c23:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c23[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c28 {
@@ -128,19 +128,19 @@ exports[`<About /> should render 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c9 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-align: left;
 }
 
@@ -153,11 +153,11 @@ exports[`<About /> should render 1`] = `
 }
 
 .c8 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   margin: 0 auto;
   padding: 0;
 }
@@ -167,20 +167,20 @@ exports[`<About /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 0 calc(50px + 0.625rem) 0 1rem;
   width: 100%;
   height: 50px;
+  margin: 0;
+  padding: 0 calc(50px + 0.625rem) 0 1rem;
   font-size: inherit;
   font-family: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 1.5rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .c11:focus {
@@ -190,10 +190,10 @@ exports[`<About /> should render 1`] = `
 
 .c14 {
   position: absolute;
-  right: 1px;
   top: 1px;
-  height: calc(50px - 2px);
+  right: 1px;
   width: calc(50px - 2px);
+  height: calc(50px - 2px);
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
@@ -210,15 +210,15 @@ exports[`<About /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 1.25rem;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.25rem;
 }
 
 .c1 > *:first-child {
@@ -234,14 +234,14 @@ exports[`<About /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c3 {
@@ -264,19 +264,19 @@ exports[`<About /> should render 1`] = `
 }
 
 .c5 {
+  font-weight: bold;
   font-size: 1.125rem;
   line-height: 1.2;
-  font-weight: bold;
 }
 
 .c6 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+  font-size: 0.875rem;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #0c0c0e;
   background: #e5f1fe;
@@ -306,8 +306,8 @@ exports[`<About /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -347,8 +347,8 @@ exports[`<About /> should render 1`] = `
 }
 
 .c27 {
-  font-size: 1rem;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 .c29 {
@@ -379,8 +379,8 @@ exports[`<About /> should render 1`] = `
 
 @media print {
   .c17 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -425,15 +425,15 @@ exports[`<About /> should render 1`] = `
 
 @media (max-width:980px) {
   .c7 {
-    margin-top: 1.25rem;
     width: 70%;
+    margin-top: 1.25rem;
   }
 }
 
 @media (max-width:600px) {
   .c7 {
-    margin-top: 1.25rem;
     width: 100%;
+    margin-top: 1.25rem;
   }
 }
 

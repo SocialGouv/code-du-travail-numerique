@@ -14,19 +14,19 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   .c2 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -45,9 +45,9 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c0 {
@@ -56,21 +56,21 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,0.5);
   overflow: auto;
+  background: rgba(0,0,0,0.5);
 }
 
 .c1 {
   position: relative;
-  margin: 10vh auto;
-  padding: 2rem;
   width: 50vw;
   max-height: calc(100vh - 2 * 10vh);
+  margin: 10vh auto;
+  padding: 2rem;
+  overflow-y: auto;
   color: #434956;
   background: #fff;
   border-radius: 0.25rem;
   outline: none;
-  overflow-y: auto;
 }
 
 .c3 {
@@ -93,9 +93,9 @@ exports[`<Modal /> does not render at first and then render 2`] = `
 
 @media (max-width:600px) {
   .c1 {
-    margin: 1rem;
-    max-height: calc(100vh - 2 * 1rem);
     width: calc(100% - 2 * 1rem);
+    max-height: calc(100vh - 2 * 1rem);
+    margin: 1rem;
   }
 }
 
@@ -189,19 +189,19 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   .c2 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -220,9 +220,9 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c0 {
@@ -231,8 +231,8 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,0.5);
   overflow: auto;
+  background: rgba(0,0,0,0.5);
 }
 
 .c3 {

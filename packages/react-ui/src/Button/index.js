@@ -8,16 +8,16 @@ import { animations, fonts, spacing, variants } from "../theme";
 export const StyledButton = styled.button`
   display: inline-block;
   padding: ${spacing.small} ${spacing.xmedium};
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: ${fonts.sizeBase};
   font-weight: 600;
+  font-size: ${fonts.sizeBase};
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: ${spacing.xmedium};
   cursor: pointer;
   transition: background-color ${animations.transitionTiming} ease;
+  appearance: none;
 
   ${props => {
     let color = props.theme.primaryText;
@@ -26,16 +26,16 @@ export const StyledButton = styled.button`
     if (props.variant === "link") {
       return css`
         padding: 0;
-        vertical-align: initial;
-        text-align: left;
-        line-height: initial;
         color: ${props.theme.blueDark};
         font-weight: normal;
         font-size: inherit;
+        line-height: initial;
+        text-align: left;
+        text-decoration: underline;
+        vertical-align: initial;
         background: none;
         border: none;
         border-radius: 0;
-        text-decoration: underline;
         &:focus,
         &:hover,
         &:active {
@@ -69,14 +69,14 @@ export const StyledButton = styled.button`
         &:hover,
         &:active,
         &:focus {
-          background: ${lighten(0.05, backgroundColor)};
           color: ${lighten(0.05, color)};
+          background: ${lighten(0.05, backgroundColor)};
         }
       }
       /* keep it last so it overrides other styles */
       &[disabled] {
-        cursor: not-allowed;
         color: ${transparentize(0.6, color)};
+        cursor: not-allowed;
       }
     `;
   }}

@@ -4,31 +4,31 @@ exports[`<Primes /> should add a prime 1`] = `
 .c4 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c4:focus,
@@ -43,50 +43,49 @@ exports[`<Primes /> should add a prime 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 0.25rem;
 }
 
 .c2 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: left;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: left;
+  border: 1px solid #c9d3df;
   border-color: #c9d3df;
-  text-align: right;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c2::-webkit-outer-spin-button,
 .c2::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c1 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1.25rem;
 }
 
 .c3 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -144,31 +143,31 @@ exports[`<Primes /> should delete a primes 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c0:focus,
@@ -199,31 +198,31 @@ exports[`<Primes /> should render 1`] = `
 .c4 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c4:focus,
@@ -238,50 +237,49 @@ exports[`<Primes /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 0.25rem;
 }
 
 .c2 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: left;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: left;
+  border: 1px solid #c9d3df;
   border-color: #c9d3df;
-  text-align: right;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c2::-webkit-outer-spin-button,
 .c2::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c1 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1.25rem;
 }
 
 .c3 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

@@ -18,7 +18,6 @@ exports[`<Anciennete /> renders AncienneteCE component with initialValues CATEGO
 
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
 .c1 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -27,17 +26,18 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #fee5ad;
-  box-shadow: none;
 }
 
 .c3 {
@@ -75,9 +75,6 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
 }
 
 .c7 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,6 +83,9 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c6 {
@@ -93,31 +93,31 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 1.25rem;
 }
 
 .c5 {
-  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
+  font-size: 1.25rem;
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 .c2 {

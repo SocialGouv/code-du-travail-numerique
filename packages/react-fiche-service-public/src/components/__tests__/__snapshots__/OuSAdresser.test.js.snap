@@ -2,8 +2,8 @@
 
 exports[`<OuSAdresser /> should render a complex case 1`] = `
 .c0 {
-  padding: 2rem;
   margin-bottom: 1rem;
+  padding: 2rem;
   background-color: #ebeff3;
   border-radius: 0.25rem;
 }
@@ -35,8 +35,8 @@ exports[`<OuSAdresser /> should render a complex case 1`] = `
 
 exports[`<OuSAdresser /> should render a simple case 1`] = `
 .c0 {
-  padding: 2rem;
   margin-bottom: 1rem;
+  padding: 2rem;
   background-color: #ebeff3;
   border-radius: 0.25rem;
 }

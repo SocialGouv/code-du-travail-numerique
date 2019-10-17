@@ -34,35 +34,35 @@ SectionTitle.propTypes = {
 };
 
 const Title = styled.h2`
-  font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    Helvetica, Arial, sans-serif;
-  font-size: ${fonts.sizeH4};
-  margin-bottom: 0;
-  font-weight: 600;
-  line-height: 1.275;
-  color: ${({ theme }) => theme.blueDark};
   display: flex;
   align-items: flex-end;
+  margin-bottom: 0;
+  color: ${({ theme }) => theme.blueDark};
+  font-weight: 600;
+  font-size: ${fonts.sizeH4};
+  font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  line-height: 1.275;
 `;
 
 const Subtitle = styled.div`
+  color: ${({ theme }) => theme.blueDark};
+  font-weight: 300;
+  font-size: ${fonts.sizeSmall};
   font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
     Helvetica, Arial, sans-serif;
-  font-size: ${fonts.sizeSmall};
-  font-weight: 300;
   line-height: 1.1;
-  color: ${({ theme }) => theme.blueDark};
 `;
 
 const StyledLink = styled.a`
-  text-decoration: none;
   color: ${({ theme }) => theme.blueDark};
+  text-decoration: none;
   &:hover {
     color: ${({ theme }) => theme.blueLight};
   }
 `;
 
 const Icon = styled(ChevronRight)`
-  color: ${({ theme }) => theme.blueLight};
   margin-left: ${spacing.base};
+  color: ${({ theme }) => theme.blueLight};
 `;

@@ -46,8 +46,8 @@ const StyledAccordionItem = styled(AccordionItem)`
 
 const StyledAccordionItemButton = styled(AccordionItemButton)`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
   &:hover,
   &:focus,

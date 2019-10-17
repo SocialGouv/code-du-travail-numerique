@@ -41,9 +41,9 @@ exports[`<Texte /> renders with a title 1`] = `
 
 .c9 {
   margin-bottom: 0.625rem;
-  font-style: italic;
   font-weight: bold;
   font-size: 1em;
+  font-style: italic;
 }
 
 .c10 {
@@ -70,12 +70,12 @@ exports[`<Texte /> renders with a title 1`] = `
 
 @media (min-width:980px) {
   .c1 {
-    -webkit-flex: 0 1 35%;
-    -ms-flex: 0 1 35%;
-    flex: 0 1 35%;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
+    -webkit-flex: 0 1 35%;
+    -ms-flex: 0 1 35%;
+    flex: 0 1 35%;
     max-height: 100vh;
     padding-right: 1.25rem;
   }
@@ -89,8 +89,8 @@ exports[`<Texte /> renders with a title 1`] = `
 
 @media print {
   .c2 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -1480,9 +1480,9 @@ exports[`<Texte /> renders without a title 1`] = `
 
 .c8 {
   margin-bottom: 0.625rem;
-  font-style: italic;
   font-weight: bold;
   font-size: 1em;
+  font-style: italic;
 }
 
 .c9 {
@@ -1504,12 +1504,12 @@ exports[`<Texte /> renders without a title 1`] = `
 
 @media (min-width:980px) {
   .c1 {
-    -webkit-flex: 0 1 35%;
-    -ms-flex: 0 1 35%;
-    flex: 0 1 35%;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
+    -webkit-flex: 0 1 35%;
+    -ms-flex: 0 1 35%;
+    flex: 0 1 35%;
     max-height: 100vh;
     padding-right: 1.25rem;
   }
@@ -1523,8 +1523,8 @@ exports[`<Texte /> renders without a title 1`] = `
 
 @media print {
   .c2 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 

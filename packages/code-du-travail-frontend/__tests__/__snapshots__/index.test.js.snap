@@ -29,19 +29,19 @@ exports[`<Home /> should render 1`] = `
 .c20 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -50,31 +50,31 @@ exports[`<Home /> should render 1`] = `
 .c20:not([disabled]):hover,
 .c20:not([disabled]):active,
 .c20:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c20[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c34 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -83,13 +83,13 @@ exports[`<Home /> should render 1`] = `
 .c34:not([disabled]):hover,
 .c34:not([disabled]):active,
 .c34:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c34[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c25 {
@@ -100,29 +100,29 @@ exports[`<Home /> should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  list-style-type: none;
-  padding: 0;
   margin: NaN;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c26 {
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
+  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
+  flex-basis: calc(100% / 4 - 2 * 0.625rem);
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
-  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
-  flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
   margin: 0.625rem;
   text-align: center;
 }
@@ -140,18 +140,12 @@ exports[`<Home /> should render 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c23 {
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  font-size: 1.375rem;
-  margin-bottom: 0;
-  font-weight: 600;
-  line-height: 1.275;
-  color: #005994;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -160,14 +154,20 @@ exports[`<Home /> should render 1`] = `
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
+  margin-bottom: 0;
+  color: #005994;
+  font-weight: 600;
+  font-size: 1.375rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.275;
 }
 
 .c24 {
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.1;
   color: #005994;
+  font-weight: 300;
+  font-size: 0.875rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.1;
 }
 
 .c27 {
@@ -179,32 +179,32 @@ exports[`<Home /> should render 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
-  height: 100%;
-  font-size: 1.125rem;
-  font-weight: bold;
   color: #005994;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
   background-color: #fff;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
 }
 
 .c27:hover {
@@ -221,13 +221,13 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c16 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-align: left;
 }
 
@@ -240,22 +240,22 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c14 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   margin: 0 auto;
   padding: 0;
 }
 
 .c15 {
   position: absolute;
-  left: 0;
   top: 0;
-  margin: 1rem 0 0 1.25rem;
+  left: 0;
   width: 1.3rem;
   height: 1.3rem;
+  margin: 1rem 0 0 1.25rem;
 }
 
 .c18 {
@@ -263,20 +263,20 @@ exports[`<Home /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 0 1rem 0 4rem;
   width: 100%;
   height: 50px;
+  margin: 0;
+  padding: 0 1rem 0 4rem;
   font-size: inherit;
   font-family: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 1.5rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .c18:focus {
@@ -298,13 +298,13 @@ exports[`<Home /> should render 1`] = `
 
 .c9 {
   margin-top: 0;
-  line-height: 1.4;
   color: #005994;
+  line-height: 1.4;
 }
 
 .c10 {
-  line-height: 1.1;
   margin-bottom: 0;
+  line-height: 1.1;
 }
 
 .c11 {
@@ -314,13 +314,13 @@ exports[`<Home /> should render 1`] = `
 .c12 {
   display: block;
   margin-bottom: 0.625rem;
-  font-size: 1.375rem;
   color: #005994;
+  font-size: 1.375rem;
 }
 
 .c13 {
-  margin: 0;
   width: 750px;
+  margin: 0;
 }
 
 .c0 {
@@ -335,15 +335,15 @@ exports[`<Home /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 1.25rem;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.25rem;
 }
 
 .c1 > *:first-child {
@@ -359,14 +359,14 @@ exports[`<Home /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c3 {
@@ -389,19 +389,19 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c5 {
+  font-weight: bold;
   font-size: 1.125rem;
   line-height: 1.2;
-  font-weight: bold;
 }
 
 .c6 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+  font-size: 0.875rem;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #0c0c0e;
   background: #e5f1fe;
@@ -427,8 +427,8 @@ exports[`<Home /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -468,8 +468,8 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c38 {
-  font-size: 1rem;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 .c40 {
@@ -527,8 +527,8 @@ exports[`<Home /> should render 1`] = `
 
 @media (max-width:600px) {
   .c21 {
-    margin-left: 0;
     margin-top: 0.625rem;
+    margin-left: 0;
   }
 }
 

@@ -8,16 +8,16 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 
 .c0:before,
 .c0:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -37,15 +37,19 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
+  border: 1px solid #c9d3df;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #c9d3df;
 }
 
 .c2 caption {
   padding: 0.625rem 0;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+}
+
+.c2 tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .c2 td,
@@ -66,43 +70,42 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 }
 
 .c3 tr > td:nth-child(2) {
-  text-align: left;
   width: 70%;
+  text-align: left;
 }
 
 .c5 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
+  font-size: 1rem;
+  line-height: inherit;
   text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c5::-webkit-outer-spin-button,
 .c5::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c4 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1.25rem;
 }
 
 .c6 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -205,16 +208,16 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 
 .c0:before,
 .c0:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -234,15 +237,19 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
+  border: 1px solid #c9d3df;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #c9d3df;
 }
 
 .c2 caption {
   padding: 0.625rem 0;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+}
+
+.c2 tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .c2 td,
@@ -263,43 +270,42 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 }
 
 .c3 tr > td:nth-child(2) {
-  text-align: left;
   width: 70%;
+  text-align: left;
 }
 
 .c5 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 10em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
+  font-size: 1rem;
+  line-height: inherit;
   text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
   padding-right: 1rem;
+  text-align: right;
 }
 
 .c5::-webkit-outer-spin-button,
 .c5::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c4 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-right: 1.25rem;
 }
 
 .c6 {
-  color: #adb9c9;
   position: absolute;
-  right: 0.25rem;
   top: 50%;
+  right: 0.25rem;
+  color: #adb9c9;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

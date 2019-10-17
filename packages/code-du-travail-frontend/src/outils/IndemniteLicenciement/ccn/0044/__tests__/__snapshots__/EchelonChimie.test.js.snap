@@ -2,9 +2,6 @@
 
 exports[`<EchelonChimie /> should render 1`] = `
 .c0 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,6 +10,9 @@ exports[`<EchelonChimie /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c1 {
@@ -161,9 +161,6 @@ exports[`<EchelonChimie /> should render 1`] = `
 
 exports[`<EchelonChimie /> should render the selected echelon 1`] = `
 .c0 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -172,6 +169,9 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
 }
 
 .c1 {

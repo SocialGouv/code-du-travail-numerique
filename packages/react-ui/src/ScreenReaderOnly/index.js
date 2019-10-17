@@ -24,8 +24,8 @@ const InlineSR = styled.span`
     margin: -1px;
     padding: 0;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
     border: 0;
+    clip: rect(0, 0, 0, 0);
   }
 `;
 
@@ -37,7 +37,7 @@ const BlockSR = styled.div`
     margin: -1px;
     padding: 0;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
     border: 0;
+    clip: rect(0, 0, 0, 0);
   }
 `;

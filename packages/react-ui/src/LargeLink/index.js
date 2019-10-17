@@ -30,6 +30,7 @@ LargeLink.defaultProps = {
 const StyledLink = styled.a`
   display: flex;
   align-items: center;
+  margin-bottom: ${spacing.interComponent};
   padding: ${spacing.medium};
   color: ${({ theme }) => theme.blueDark};
   text-decoration: none;
@@ -47,9 +48,8 @@ const StyledLink = styled.a`
         border: ${box.border};
       `;
     }
-  }};
+  }}
   border-radius: ${box.borderRadius};
-  margin-bottom: ${spacing.interComponent};
   transition: ${animations.transitionTiming} all;
   &:visited {
     color: ${({ theme }) => theme.darkText};

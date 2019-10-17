@@ -4,19 +4,19 @@ exports[`<Button /> it renders a Button danger 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #f6bcc2;
   border-color: #f6bcc2;
@@ -25,13 +25,13 @@ exports[`<Button /> it renders a Button danger 1`] = `
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
-  background: #f9d2d6;
   color: #18181c;
+  background: #f9d2d6;
 }
 
 .c0[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 <div>
@@ -49,19 +49,19 @@ exports[`<Button /> it renders a Button icon 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -88,19 +88,19 @@ exports[`<Button /> it renders a Button info 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #e5f1fe;
   border-color: #e5f1fe;
@@ -109,13 +109,13 @@ exports[`<Button /> it renders a Button info 1`] = `
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
-  background: #fefeff;
   color: #18181c;
+  background: #fefeff;
 }
 
 .c0[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 <div>
@@ -133,31 +133,31 @@ exports[`<Button /> it renders a Button link 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
   color: #005994;
   font-weight: normal;
   font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c0:focus,
@@ -182,19 +182,19 @@ exports[`<Button /> it renders a Button primary 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -203,13 +203,13 @@ exports[`<Button /> it renders a Button primary 1`] = `
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c0[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 <div>
@@ -227,19 +227,19 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -248,13 +248,13 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c0[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 <div>
@@ -272,19 +272,19 @@ exports[`<Button /> it renders a Button success 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #e0f2bd;
   border-color: #e0f2bd;
@@ -293,13 +293,13 @@ exports[`<Button /> it renders a Button success 1`] = `
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
-  background: #eaf6d2;
   color: #18181c;
+  background: #eaf6d2;
 }
 
 .c0[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 <div>
@@ -317,19 +317,19 @@ exports[`<Button /> it renders a Button warning 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #fee5ad;
   border-color: #fee5ad;
@@ -338,13 +338,13 @@ exports[`<Button /> it renders a Button warning 1`] = `
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
-  background: #feedc6;
   color: #18181c;
+  background: #feedc6;
 }
 
 .c0[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 <div>
@@ -362,19 +362,19 @@ exports[`<Button /> renders 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -383,13 +383,13 @@ exports[`<Button /> renders 1`] = `
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c0[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 <div>

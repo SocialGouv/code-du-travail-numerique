@@ -68,8 +68,8 @@ exports[`<Container /> renders narrow without padding 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
 }
 
 .c0 > *:first-child {

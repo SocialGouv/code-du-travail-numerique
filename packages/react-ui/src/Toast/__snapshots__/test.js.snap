@@ -2,7 +2,6 @@
 
 exports[`<Toast /> Should render alternative wide toast 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -11,17 +10,18 @@ exports[`<Toast /> Should render alternative wide toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: 100%;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e5f1fe;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: 0 5px 10px 0 #ebeff3;
   -webkit-animation: none;
   animation: none;
-  border-color: #e5f1fe;
-  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
 .c1 {
@@ -107,7 +107,6 @@ exports[`<Toast /> Should render alternative wide toast 1`] = `
 
 exports[`<Toast /> render default info toast 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -116,17 +115,18 @@ exports[`<Toast /> render default info toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e5f1fe;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #e5f1fe;
-  box-shadow: none;
 }
 
 .c1 {
@@ -212,7 +212,6 @@ exports[`<Toast /> render default info toast 1`] = `
 
 exports[`<Toast /> render success toast 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -221,17 +220,18 @@ exports[`<Toast /> render success toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e0f2bd;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #e0f2bd;
-  box-shadow: none;
 }
 
 .c1 {
@@ -304,7 +304,6 @@ exports[`<Toast /> render success toast 1`] = `
 
 exports[`<Toast /> render warning toast 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -313,17 +312,18 @@ exports[`<Toast /> render warning toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #fee5ad;
-  box-shadow: none;
 }
 
 .c1 {
@@ -408,7 +408,6 @@ exports[`<Toast /> render warning toast 1`] = `
 
 exports[`<Toast /> render with from-bottom animated toast 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -417,17 +416,18 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e5f1fe;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
-  -webkit-animation: iowhYu 0.3s ease-out;
-  animation: iowhYu 0.3s ease-out;
-  border-color: #e5f1fe;
   box-shadow: none;
+  -webkit-animation: iowhYu 300ms ease-out;
+  animation: iowhYu 300ms ease-out;
 }
 
 .c1 {
@@ -514,7 +514,6 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
 
 exports[`<Toast /> render with from-left animated toast 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -523,17 +522,18 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e5f1fe;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
-  -webkit-animation: kqOaZP 0.5s ease-out;
-  animation: kqOaZP 0.5s ease-out;
-  border-color: #e5f1fe;
   box-shadow: none;
+  -webkit-animation: kqOaZP 500ms ease-out;
+  animation: kqOaZP 500ms ease-out;
 }
 
 .c1 {
@@ -620,7 +620,6 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
 
 exports[`<Toast /> render with from-right animated toast 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -629,17 +628,18 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e5f1fe;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
-  -webkit-animation: geNrKo 0.5s ease-out;
-  animation: geNrKo 0.5s ease-out;
-  border-color: #e5f1fe;
   box-shadow: none;
+  -webkit-animation: geNrKo 500ms ease-out;
+  animation: geNrKo 500ms ease-out;
 }
 
 .c1 {
@@ -726,7 +726,6 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
 
 exports[`<Toast /> render with from-top animated toast 1`] = `
 .c0 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -735,17 +734,18 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e5f1fe;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: jYyoao 0.3s ease-out;
   animation: jYyoao 0.3s ease-out;
-  border-color: #e5f1fe;
-  box-shadow: none;
 }
 
 .c1 {

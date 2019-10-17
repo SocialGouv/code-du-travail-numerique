@@ -4,19 +4,19 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 .c0 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -25,31 +25,31 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c0[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c9 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -68,9 +68,9 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c1 {
@@ -79,21 +79,21 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,0.5);
   overflow: auto;
+  background: rgba(0,0,0,0.5);
 }
 
 .c2 {
   position: relative;
-  margin: 10vh auto;
-  padding: 2rem;
   width: 50vw;
   max-height: calc(100vh - 2 * 10vh);
+  margin: 10vh auto;
+  padding: 2rem;
+  overflow-y: auto;
   color: #434956;
   background: #fff;
   border-radius: 0.25rem;
   outline: none;
-  overflow-y: auto;
 }
 
 .c10 {
@@ -108,10 +108,10 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 1rem 0 2rem;
+  font-weight: bold;
+  text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: center;
-  font-weight: bold;
   background-color: #fff;
   border: 1px solid #005994;
 }
@@ -123,6 +123,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 .c6 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,32 +136,31 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
   padding: 0 1rem 0 1.25rem;
   color: #fff;
-  font-style: normal;
   font-size: 1rem;
+  font-style: normal;
   background-color: #005994;
 }
 
 .c6::before {
-  content: "";
   position: absolute;
-  left: 0;
   top: 50%;
+  left: 0;
   width: 0;
   height: 0;
+  border-color: transparent transparent transparent #fff;
   border-style: solid;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #fff;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  content: "";
 }
 
 .c7 {
-  margin-top: 0.625rem;
   width: 100%;
+  margin-top: 0.625rem;
 }
 
 .c8 {
@@ -183,9 +183,9 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 
 @media (max-width:600px) {
   .c2 {
-    margin: 1rem;
-    max-height: calc(100vh - 2 * 1rem);
     width: calc(100% - 2 * 1rem);
+    max-height: calc(100vh - 2 * 1rem);
+    margin: 1rem;
   }
 }
 

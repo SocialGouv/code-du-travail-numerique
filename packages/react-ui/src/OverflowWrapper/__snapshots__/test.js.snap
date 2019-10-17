@@ -8,16 +8,16 @@ exports[`<OverflowWrapper /> should render 1`] = `
 
 .c0:before,
 .c0:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -54,16 +54,16 @@ exports[`<OverflowWrapper /> should render with correct color 1`] = `
 
 .c0:before,
 .c0:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, red 15%, rgba(255,0,0,0) 80% );
 }
 

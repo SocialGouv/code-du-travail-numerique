@@ -8,16 +8,16 @@ exports[`<Table /> should render 1`] = `
 
 .c0:before,
 .c0:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -37,15 +37,19 @@ exports[`<Table /> should render 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
+  border: 1px solid #c9d3df;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #c9d3df;
 }
 
 .c2 caption {
   padding: 0.625rem 0;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+}
+
+.c2 tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .c2 td,

@@ -8,9 +8,9 @@ exports[`<ScreenReaderOnly /> should render 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 <div>

@@ -5,6 +5,7 @@ import { box, fonts, spacing, variants } from "../theme";
 export const Tag = styled.div`
   display: inline-block;
   padding: ${spacing.xsmall} ${spacing.small};
+  font-weight: bold;
   font-size: ${fonts.sizeSmall};
   ${({ size }) => {
     if (size === "small") {
@@ -14,10 +15,9 @@ export const Tag = styled.div`
       `;
     }
   }}
-  font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
   line-height: ${fonts.sizeBase};
+  white-space: nowrap;
+  text-align: center;
   border-radius: ${box.borderRadius};
   ${({ theme, variant }) => {
     let color = theme.darkText;

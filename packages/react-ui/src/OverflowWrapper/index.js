@@ -74,15 +74,15 @@ const StyledDiv = styled.div`
 
   &:before,
   &:after {
-    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     display: block;
     width: 4rem;
-    pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s linear;
+    content: "";
+    pointer-events: none;
     ${({ shadowColor, theme }) => css`
       background: radial-gradient(
         ellipse at center,

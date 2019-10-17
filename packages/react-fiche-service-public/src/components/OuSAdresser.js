@@ -46,8 +46,8 @@ class OuSAdresser extends React.PureComponent {
 export default OuSAdresser;
 
 const Wrapper = styled.div`
-  padding: ${spacing.large};
   margin-bottom: ${spacing.base};
+  padding: ${spacing.large};
   background-color: ${colors.darkBackground};
   border-radius: ${box.borderRadius};
 `;

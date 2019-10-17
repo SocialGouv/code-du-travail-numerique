@@ -4,19 +4,19 @@ exports[`<PrevNextBar /> should render 1`] = `
 .c1 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -25,31 +25,31 @@ exports[`<PrevNextBar /> should render 1`] = `
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c1[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c3 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -58,26 +58,26 @@ exports[`<PrevNextBar /> should render 1`] = `
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c3[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
-  margin: 2rem 0;
+  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 2rem 0;
 }
 
 .c0 > *:first-child {
@@ -126,19 +126,19 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 .c1 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -147,31 +147,31 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c1[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c3 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -180,26 +180,26 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c3[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
-  margin: 2rem 0;
+  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 2rem 0;
 }
 
 .c0 > *:first-child {
@@ -249,19 +249,19 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 .c1 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -270,31 +270,31 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c1[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c3 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -303,26 +303,26 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c3[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
-  margin: 2rem 0;
+  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 2rem 0;
 }
 
 .c0 > *:first-child {
@@ -371,19 +371,19 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
 .c1 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -392,26 +392,26 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c1[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
-  margin: 2rem 0;
+  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 2rem 0;
 }
 
 .c0 > *:first-child {

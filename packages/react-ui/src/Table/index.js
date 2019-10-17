@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { OverflowWrapper } from "../OverflowWrapper";
 import { box, spacing } from "../theme";
@@ -19,23 +19,20 @@ const StyledTable = styled.table`
   text-align: left;
   empty-cells: show;
   background-color: ${({ theme }) => theme.white};
+  border: ${box.border};
   border-collapse: collapse;
   border-spacing: 0;
-  border: ${box.border};
 
   caption {
     padding: ${spacing.small} 0;
-    text-align: center;
     font-style: italic;
+    text-align: center;
   }
 
-  ${props =>
-    props.stripes &&
-    css`
-      tr:nth-child(even) {
-        background-color: ${({ theme }) => theme.lightBackground}};
-      }
-    `}
+  tr:nth-child(even) {
+    background-color: ${({ stripes, theme }) =>
+      stripes ? theme.lightBackground : theme.white};
+  }
 
   td,
   th {

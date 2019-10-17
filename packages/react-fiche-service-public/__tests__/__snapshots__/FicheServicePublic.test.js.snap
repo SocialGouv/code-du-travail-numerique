@@ -2,23 +2,26 @@
 
 exports[`<FicheServicePublic /> should render 1`] = `
 .c11 {
+  position: relative;
+  display: inline-block;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  display: inline-block;
-  position: relative;
   width: 24px;
   height: 12px;
 }
 
 .c11::after,
 .c11::before {
-  display: block;
   position: absolute;
   top: 50%;
+  display: block;
   width: 10px;
   height: 2px;
   background-color: currentColor;
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   content: "";
 }
 
@@ -50,13 +53,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
   transform: rotate(45deg);
 }
 
-.c11::before,
-.c11::after {
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-}
-
 .c9 + .c8 {
   border-top: 1px solid #c9d3df;
 }
@@ -66,14 +62,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   cursor: pointer;
 }
 
@@ -109,9 +105,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c2 {
@@ -119,6 +115,8 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 .c3 {
+  position: relative;
+  top: 1px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,20 +124,18 @@ exports[`<FicheServicePublic /> should render 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  position: relative;
-  top: 1px;
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  max-width: 100%;
-  list-style-type: none;
   overflow-x: auto;
+  list-style-type: none;
 }
 
 .c4 {
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
-  font-size: 1.125rem;
   color: #434956;
+  font-size: 1.125rem;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
@@ -199,19 +195,19 @@ exports[`<FicheServicePublic /> should render 1`] = `
   -ms-flex-item-align: start;
   align-self: flex-start;
   margin-bottom: 0.5rem;
+  color: #005994;
   font-weight: bold;
   font-size: 1.1rem;
-  color: #005994;
 }
 
 .c16:link,
 .c16:visited {
   display: inline-block;
-  background-color: #005994;
+  padding: 0.5rem;
   color: #fff;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.5rem;
+  background-color: #005994;
   border-radius: 0.25rem;
 }
 

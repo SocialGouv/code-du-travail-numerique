@@ -7,10 +7,10 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 1rem 0 2rem;
+  font-weight: bold;
+  text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: center;
-  font-weight: bold;
   background-color: #fff;
   border: 1px solid #005994;
 }
@@ -22,6 +22,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 .c3 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,32 +35,31 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
   padding: 0 1rem 0 1.25rem;
   color: #fff;
-  font-style: normal;
   font-size: 1rem;
+  font-style: normal;
   background-color: #005994;
 }
 
 .c3::before {
-  content: "";
   position: absolute;
-  left: 0;
   top: 50%;
+  left: 0;
   width: 0;
   height: 0;
+  border-color: transparent transparent transparent #fff;
   border-style: solid;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #fff;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  content: "";
 }
 
 .c4 {
-  margin-top: 0.625rem;
   width: 100%;
+  margin-top: 0.625rem;
 }
 
 .c5 {

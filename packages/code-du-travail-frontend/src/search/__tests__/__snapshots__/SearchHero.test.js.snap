@@ -18,19 +18,19 @@ exports[`<SearchHero /> should render 1`] = `
 .c13 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -39,13 +39,13 @@ exports[`<SearchHero /> should render 1`] = `
 .c13:not([disabled]):hover,
 .c13:not([disabled]):active,
 .c13:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c13[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c10:not(:focus):not(:active) {
@@ -55,19 +55,19 @@ exports[`<SearchHero /> should render 1`] = `
   margin: -1px;
   padding: 0;
   overflow: hidden;
+  border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c9 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-align: left;
 }
 
@@ -80,22 +80,22 @@ exports[`<SearchHero /> should render 1`] = `
 }
 
 .c7 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   margin: 0 auto;
   padding: 0;
 }
 
 .c8 {
   position: absolute;
-  left: 0;
   top: 0;
-  margin: 1rem 0 0 1.25rem;
+  left: 0;
   width: 1.3rem;
   height: 1.3rem;
+  margin: 1rem 0 0 1.25rem;
 }
 
 .c11 {
@@ -103,20 +103,20 @@ exports[`<SearchHero /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 0 1rem 0 4rem;
   width: 100%;
   height: 50px;
+  margin: 0;
+  padding: 0 1rem 0 4rem;
   font-size: inherit;
   font-family: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 1.5rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .c11:focus {
@@ -138,13 +138,13 @@ exports[`<SearchHero /> should render 1`] = `
 
 .c2 {
   margin-top: 0;
-  line-height: 1.4;
   color: #005994;
+  line-height: 1.4;
 }
 
 .c3 {
-  line-height: 1.1;
   margin-bottom: 0;
+  line-height: 1.1;
 }
 
 .c4 {
@@ -154,13 +154,13 @@ exports[`<SearchHero /> should render 1`] = `
 .c5 {
   display: block;
   margin-bottom: 0.625rem;
-  font-size: 1.375rem;
   color: #005994;
+  font-size: 1.375rem;
 }
 
 .c6 {
-  margin: 0;
   width: 750px;
+  margin: 0;
 }
 
 @media print {
@@ -193,8 +193,8 @@ exports[`<SearchHero /> should render 1`] = `
 
 @media (max-width:600px) {
   .c14 {
-    margin-left: 0;
     margin-top: 0.625rem;
+    margin-left: 0;
   }
 }
 

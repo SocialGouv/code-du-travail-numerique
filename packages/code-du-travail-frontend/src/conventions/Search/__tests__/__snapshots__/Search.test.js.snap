@@ -22,16 +22,16 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 
 .c3:before,
 .c3:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -51,15 +51,19 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
+  border: 1px solid #c9d3df;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #c9d3df;
 }
 
 .c5 caption {
   padding: 0.625rem 0;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+}
+
+.c5 tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .c5 td,
@@ -124,14 +128,14 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  fontsize: 1.375rem;
+  max-width: calc(100% - 200px);
   margin-right: 0.25rem;
   overflow: hidden;
-  text-overflow: ellipsis;
-  whitespace: nowrap;
-  max-width: calc(100% - 200px);
-  font-weight: bold;
   color: #005994;
+  font-weight: bold;
+  font-size: 1.375rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media print {
@@ -446,16 +450,16 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 
 .c3:before,
 .c3:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -475,15 +479,19 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
+  border: 1px solid #c9d3df;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #c9d3df;
 }
 
 .c5 caption {
   padding: 0.625rem 0;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+}
+
+.c5 tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .c5 td,
@@ -548,14 +556,14 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  fontsize: 1.375rem;
+  max-width: calc(100% - 200px);
   margin-right: 0.25rem;
   overflow: hidden;
-  text-overflow: ellipsis;
-  whitespace: nowrap;
-  max-width: calc(100% - 200px);
-  font-weight: bold;
   color: #005994;
+  font-weight: bold;
+  font-size: 1.375rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media print {
@@ -691,16 +699,16 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 
 .c3:before,
 .c3:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -720,15 +728,19 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   text-align: left;
   empty-cells: show;
   background-color: #fff;
+  border: 1px solid #c9d3df;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #c9d3df;
 }
 
 .c5 caption {
   padding: 0.625rem 0;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+}
+
+.c5 tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .c5 td,
@@ -793,14 +805,14 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  fontsize: 1.375rem;
+  max-width: calc(100% - 200px);
   margin-right: 0.25rem;
   overflow: hidden;
-  text-overflow: ellipsis;
-  whitespace: nowrap;
-  max-width: calc(100% - 200px);
-  font-weight: bold;
   color: #005994;
+  font-weight: bold;
+  font-size: 1.375rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media print {
@@ -909,16 +921,16 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 
 .c3:before,
 .c3:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -938,15 +950,19 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   text-align: left;
   empty-cells: show;
   background-color: #fff;
+  border: 1px solid #c9d3df;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #c9d3df;
 }
 
 .c5 caption {
   padding: 0.625rem 0;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+}
+
+.c5 tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .c5 td,
@@ -1011,14 +1027,14 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  fontsize: 1.375rem;
+  max-width: calc(100% - 200px);
   margin-right: 0.25rem;
   overflow: hidden;
-  text-overflow: ellipsis;
-  whitespace: nowrap;
-  max-width: calc(100% - 200px);
-  font-weight: bold;
   color: #005994;
+  font-weight: bold;
+  font-size: 1.375rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media print {
@@ -1135,16 +1151,16 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 
 .c3:before,
 .c3:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
   width: 4rem;
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
@@ -1164,15 +1180,19 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   text-align: left;
   empty-cells: show;
   background-color: #fff;
+  border: 1px solid #c9d3df;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #c9d3df;
 }
 
 .c5 caption {
   padding: 0.625rem 0;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+}
+
+.c5 tr:nth-child(even) {
+  background-color: #fff;
 }
 
 .c5 td,
@@ -1237,14 +1257,14 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  fontsize: 1.375rem;
+  max-width: calc(100% - 200px);
   margin-right: 0.25rem;
   overflow: hidden;
-  text-overflow: ellipsis;
-  whitespace: nowrap;
-  max-width: calc(100% - 200px);
-  font-weight: bold;
   color: #005994;
+  font-weight: bold;
+  font-size: 1.375rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media print {

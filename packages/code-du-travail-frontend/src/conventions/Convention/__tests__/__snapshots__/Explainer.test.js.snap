@@ -2,23 +2,26 @@
 
 exports[`<Explainer /> is togglable 1`] = `
 .c2 {
+  position: relative;
+  display: inline-block;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  display: inline-block;
-  position: relative;
   width: 24px;
   height: 12px;
 }
 
 .c2::after,
 .c2::before {
-  display: block;
   position: absolute;
   top: 50%;
+  display: block;
   width: 10px;
   height: 2px;
   background-color: currentColor;
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   content: "";
 }
 
@@ -50,13 +53,6 @@ exports[`<Explainer /> is togglable 1`] = `
   transform: rotate(45deg);
 }
 
-.c2::before,
-.c2::after {
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-}
-
 .c0 {
   padding: 0.625rem 1.25rem;
   color: #434956;
@@ -79,14 +75,14 @@ exports[`<Explainer /> is togglable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media (max-width:600px) {
@@ -97,8 +93,8 @@ exports[`<Explainer /> is togglable 1`] = `
 
 @media print {
   .c0 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 

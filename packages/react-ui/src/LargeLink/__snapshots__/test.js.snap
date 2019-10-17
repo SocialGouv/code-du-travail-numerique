@@ -10,6 +10,7 @@ exports[`<LargeLink /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 1.25rem;
   padding: 1.25rem;
   color: #005994;
   -webkit-text-decoration: none;
@@ -17,7 +18,6 @@ exports[`<LargeLink /> should render 1`] = `
   background-color: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  margin-bottom: 1.25rem;
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
@@ -55,6 +55,7 @@ exports[`<LargeLink /> should render highlighted 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 1.25rem;
   padding: 1.25rem;
   color: #005994;
   -webkit-text-decoration: none;
@@ -62,7 +63,6 @@ exports[`<LargeLink /> should render highlighted 1`] = `
   background-color: #fff;
   border: 1px solid #005994;
   border-radius: 0.25rem;
-  margin-bottom: 1.25rem;
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
@@ -100,6 +100,7 @@ exports[`<LargeLink /> should render light 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 1.25rem;
   padding: 1.25rem;
   color: #005994;
   -webkit-text-decoration: none;
@@ -107,7 +108,6 @@ exports[`<LargeLink /> should render light 1`] = `
   background-color: #fff;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  margin-bottom: 1.25rem;
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }

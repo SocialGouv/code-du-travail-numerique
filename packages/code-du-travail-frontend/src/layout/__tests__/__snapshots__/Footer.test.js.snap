@@ -9,19 +9,19 @@ exports[`<Footer /> should render 1`] = `
 .c4 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #005994;
   border-color: #005994;
@@ -30,13 +30,13 @@ exports[`<Footer /> should render 1`] = `
 .c4:not([disabled]):hover,
 .c4:not([disabled]):active,
 .c4:not([disabled]):focus {
-  background: #0068ae;
   color: #fff;
+  background: #0068ae;
 }
 
 .c4[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c9 {
@@ -64,8 +64,8 @@ exports[`<Footer /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -105,8 +105,8 @@ exports[`<Footer /> should render 1`] = `
 }
 
 .c8 {
-  font-size: 1rem;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 .c10 {

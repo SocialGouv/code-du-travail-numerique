@@ -2,29 +2,28 @@
 
 exports[`<CategoryPeriod /> should render 1`] = `
 .c2 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
   width: 5em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: right;
+  border: 1px solid #c9d3df;
   border-color: #c9d3df;
+  border-radius: 0.25rem;
 }
 
 .c2::-webkit-outer-spin-button,
 .c2::-webkit-inner-spin-button {
+  margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 .c1 {

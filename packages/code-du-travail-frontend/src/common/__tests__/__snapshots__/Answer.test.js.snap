@@ -19,8 +19,8 @@ exports[`<Answer /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
 }
 
 .c11 > *:first-child {
@@ -71,19 +71,19 @@ exports[`<Answer /> should render 1`] = `
 .c17 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -92,31 +92,31 @@ exports[`<Answer /> should render 1`] = `
 .c17:not([disabled]):hover,
 .c17:not([disabled]):active,
 .c17:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c17[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c20 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -125,31 +125,31 @@ exports[`<Answer /> should render 1`] = `
 .c20:not([disabled]):hover,
 .c20:not([disabled]):active,
 .c20:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c20[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c27 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -162,7 +162,6 @@ exports[`<Answer /> should render 1`] = `
 }
 
 .c22 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -171,17 +170,18 @@ exports[`<Answer /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: 100%;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
-  -webkit-animation: iowhYu 0.3s ease-out;
-  animation: iowhYu 0.3s ease-out;
-  border-color: #fee5ad;
   box-shadow: 0 5px 10px 0 #ebeff3;
+  -webkit-animation: iowhYu 300ms ease-out;
+  animation: iowhYu 300ms ease-out;
 }
 
 .c23 {
@@ -241,8 +241,8 @@ exports[`<Answer /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -272,10 +272,10 @@ exports[`<Answer /> should render 1`] = `
 }
 
 .c8 {
+  display: inline-block;
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
-  display: inline-block;
 }
 
 .c9 {
@@ -290,9 +290,9 @@ exports[`<Answer /> should render 1`] = `
 .c21 {
   position: fixed;
   bottom: 0;
-  padding: 1rem;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
+  padding: 1rem;
 }
 
 .c25 {
@@ -330,13 +330,13 @@ exports[`<Answer /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 0;
 }
 
@@ -398,8 +398,8 @@ exports[`<Answer /> should render 1`] = `
 
 @media print {
   .c4 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -411,8 +411,8 @@ exports[`<Answer /> should render 1`] = `
 
 @media print {
   .c14 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -462,8 +462,8 @@ exports[`<Answer /> should render 1`] = `
 
 @media print {
   .c12 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -690,8 +690,8 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
 }
 
 .c15 > *:first-child {
@@ -742,19 +742,19 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 .c21 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -763,31 +763,31 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 .c21:not([disabled]):hover,
 .c21:not([disabled]):active,
 .c21:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c21[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c24 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -796,31 +796,31 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 .c24:not([disabled]):hover,
 .c24:not([disabled]):active,
 .c24:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c24[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c31 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -839,7 +839,6 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 .c26 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -848,17 +847,18 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: 100%;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
-  -webkit-animation: iowhYu 0.3s ease-out;
-  animation: iowhYu 0.3s ease-out;
-  border-color: #fee5ad;
   box-shadow: 0 5px 10px 0 #ebeff3;
+  -webkit-animation: iowhYu 300ms ease-out;
+  animation: iowhYu 300ms ease-out;
 }
 
 .c27 {
@@ -918,8 +918,8 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -949,10 +949,10 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 .c12 {
+  display: inline-block;
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
-  display: inline-block;
 }
 
 .c13 {
@@ -967,9 +967,9 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 .c25 {
   position: fixed;
   bottom: 0;
-  padding: 1rem;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
+  padding: 1rem;
 }
 
 .c29 {
@@ -1014,11 +1014,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c5 {
   display: inline-block;
-  pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  pointer-events: none;
 }
 
 .c6 {
@@ -1029,13 +1029,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 0;
 }
 
@@ -1097,8 +1097,8 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 @media print {
   .c8 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -1110,8 +1110,8 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 @media print {
   .c18 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -1161,8 +1161,8 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 @media print {
   .c16 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -1447,8 +1447,8 @@ exports[`<Answer /> should render tooltip 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
 }
 
 .c11 > *:first-child {
@@ -1499,19 +1499,19 @@ exports[`<Answer /> should render tooltip 1`] = `
 .c18 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -1520,31 +1520,31 @@ exports[`<Answer /> should render tooltip 1`] = `
 .c18:not([disabled]):hover,
 .c18:not([disabled]):active,
 .c18:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c18[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c21 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -1553,31 +1553,31 @@ exports[`<Answer /> should render tooltip 1`] = `
 .c21:not([disabled]):hover,
 .c21:not([disabled]):active,
 .c21:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c21[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c28 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -1590,7 +1590,6 @@ exports[`<Answer /> should render tooltip 1`] = `
 }
 
 .c23 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1599,17 +1598,18 @@ exports[`<Answer /> should render tooltip 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: 100%;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
-  -webkit-animation: iowhYu 0.3s ease-out;
-  animation: iowhYu 0.3s ease-out;
-  border-color: #fee5ad;
   box-shadow: 0 5px 10px 0 #ebeff3;
+  -webkit-animation: iowhYu 300ms ease-out;
+  animation: iowhYu 300ms ease-out;
 }
 
 .c24 {
@@ -1669,8 +1669,8 @@ exports[`<Answer /> should render tooltip 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -1700,10 +1700,10 @@ exports[`<Answer /> should render tooltip 1`] = `
 }
 
 .c8 {
+  display: inline-block;
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
-  display: inline-block;
 }
 
 .c9 {
@@ -1718,9 +1718,9 @@ exports[`<Answer /> should render tooltip 1`] = `
 .c22 {
   position: fixed;
   bottom: 0;
-  padding: 1rem;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
+  padding: 1rem;
 }
 
 .c26 {
@@ -1762,13 +1762,13 @@ exports[`<Answer /> should render tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 0;
 }
 
@@ -1830,8 +1830,8 @@ exports[`<Answer /> should render tooltip 1`] = `
 
 @media print {
   .c4 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -1843,8 +1843,8 @@ exports[`<Answer /> should render tooltip 1`] = `
 
 @media print {
   .c15 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -1894,8 +1894,8 @@ exports[`<Answer /> should render tooltip 1`] = `
 
 @media print {
   .c12 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -2161,8 +2161,8 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
 }
 
 .c11 > *:first-child {
@@ -2213,19 +2213,19 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 .c18 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -2234,31 +2234,31 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 .c18:not([disabled]):hover,
 .c18:not([disabled]):active,
 .c18:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c18[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c21 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -2267,31 +2267,31 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 .c21:not([disabled]):hover,
 .c21:not([disabled]):active,
 .c21:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c21[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c28 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -2304,7 +2304,6 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 }
 
 .c23 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2313,17 +2312,18 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: 100%;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
-  -webkit-animation: iowhYu 0.3s ease-out;
-  animation: iowhYu 0.3s ease-out;
-  border-color: #fee5ad;
   box-shadow: 0 5px 10px 0 #ebeff3;
+  -webkit-animation: iowhYu 300ms ease-out;
+  animation: iowhYu 300ms ease-out;
 }
 
 .c24 {
@@ -2383,8 +2383,8 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -2414,10 +2414,10 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 }
 
 .c8 {
+  display: inline-block;
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
-  display: inline-block;
 }
 
 .c9 {
@@ -2432,9 +2432,9 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 .c22 {
   position: fixed;
   bottom: 0;
-  padding: 1rem;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
+  padding: 1rem;
 }
 
 .c26 {
@@ -2476,13 +2476,13 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 0;
 }
 
@@ -2544,8 +2544,8 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 
 @media print {
   .c4 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -2557,8 +2557,8 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 
 @media print {
   .c15 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -2608,8 +2608,8 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 
 @media print {
   .c12 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -2860,8 +2860,8 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
 }
 
 .c11 > *:first-child {
@@ -2912,19 +2912,19 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
 .c18 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
@@ -2933,31 +2933,31 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
 .c18:not([disabled]):hover,
 .c18:not([disabled]):active,
 .c18:not([disabled]):focus {
-  background: #fbfcfd;
   color: #18181c;
+  background: #fbfcfd;
 }
 
 .c18[disabled] {
-  cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c21 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -2966,31 +2966,31 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
 .c21:not([disabled]):hover,
 .c21:not([disabled]):active,
 .c21:not([disabled]):focus {
-  background: #07f;
   color: #fff;
+  background: #07f;
 }
 
 .c21[disabled] {
-  cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c28 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
   vertical-align: middle;
   border: 1px solid;
   border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   color: #434956;
   line-height: 0;
@@ -3003,7 +3003,6 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
 }
 
 .c23 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3012,17 +3011,18 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: 100%;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #fee5ad;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
-  -webkit-animation: iowhYu 0.3s ease-out;
-  animation: iowhYu 0.3s ease-out;
-  border-color: #fee5ad;
   box-shadow: 0 5px 10px 0 #ebeff3;
+  -webkit-animation: iowhYu 300ms ease-out;
+  animation: iowhYu 300ms ease-out;
 }
 
 .c24 {
@@ -3082,8 +3082,8 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
+  padding: 0;
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -3113,10 +3113,10 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
 }
 
 .c8 {
+  display: inline-block;
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
-  display: inline-block;
 }
 
 .c9 {
@@ -3131,9 +3131,9 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
 .c22 {
   position: fixed;
   bottom: 0;
-  padding: 1rem;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
+  padding: 1rem;
 }
 
 .c26 {
@@ -3175,13 +3175,13 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 0;
 }
 
@@ -3243,8 +3243,8 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
 
 @media print {
   .c4 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -3256,8 +3256,8 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
 
 @media print {
   .c15 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -3307,8 +3307,8 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
 
 @media print {
   .c12 {
-    border: none;
     padding: 0 5pt;
+    border: none;
   }
 }
 

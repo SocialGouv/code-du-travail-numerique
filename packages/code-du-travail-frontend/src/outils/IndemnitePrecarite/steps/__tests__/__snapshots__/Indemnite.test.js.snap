@@ -2,9 +2,9 @@
 
 exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
 .c0 {
-  font-size: 1.375rem;
-  font-weight: 700;
   color: #005994;
+  font-weight: 700;
+  font-size: 1.375rem;
 }
 
 .c1 {
@@ -112,9 +112,9 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 .c0 {
-  font-size: 1.375rem;
-  font-weight: 700;
   color: #005994;
+  font-weight: 700;
+  font-size: 1.375rem;
 }
 
 .c1 {

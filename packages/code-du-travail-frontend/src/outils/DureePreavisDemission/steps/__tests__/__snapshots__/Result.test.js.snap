@@ -2,7 +2,6 @@
 
 exports[`<StepResult /> should render CC answer 1`] = `
 .c1 {
-  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -11,17 +10,18 @@ exports[`<StepResult /> should render CC answer 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: auto;
+  min-height: 48px;
   color: #434956;
   background-color: #fff;
+  border-color: #e5f1fe;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
+  box-shadow: none;
   -webkit-animation: none;
   animation: none;
-  border-color: #e5f1fe;
-  box-shadow: none;
 }
 
 .c2 {
@@ -59,9 +59,9 @@ exports[`<StepResult /> should render CC answer 1`] = `
 }
 
 .c0 {
-  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  font-size: 1.625rem;
 }
 
 <div>

@@ -4,11 +4,11 @@ exports[`<Tag /> it should render a danger tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+  font-size: 0.875rem;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #0c0c0e;
   background: #f6bcc2;
@@ -29,11 +29,11 @@ exports[`<Tag /> it should render a info tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+  font-size: 0.875rem;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #0c0c0e;
   background: #e5f1fe;
@@ -54,11 +54,11 @@ exports[`<Tag /> it should render a primary tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+  font-size: 0.875rem;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #fff;
   background: #005994;
@@ -79,11 +79,11 @@ exports[`<Tag /> it should render a secondary tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+  font-size: 0.875rem;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #0c0c0e;
   background: #ebeff3;
@@ -104,11 +104,11 @@ exports[`<Tag /> it should render a success tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+  font-size: 0.875rem;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #0c0c0e;
   background: #e0f2bd;
@@ -129,11 +129,11 @@ exports[`<Tag /> it should render a warning tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+  font-size: 0.875rem;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #0c0c0e;
   background: #fee5ad;
@@ -154,11 +154,11 @@ exports[`<Tag /> should render 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+  font-size: 0.875rem;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #434956;
   background: #ebeff3;
@@ -177,13 +177,13 @@ exports[`<Tag /> should render a small tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
+  font-weight: bold;
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
-  font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
   line-height: 1rem;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 0.25rem;
   color: #434956;
   background: #ebeff3;

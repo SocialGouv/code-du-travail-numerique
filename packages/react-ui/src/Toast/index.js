@@ -67,44 +67,40 @@ Toast.defaultProps = {
 };
 
 const StyledToast = styled.div`
-  box-sizing: border-box;
   display: inline-flex;
   justify-content: space-between;
-  min-height: 48px;
+  box-sizing: border-box;
   width: ${props => (props.wide ? "100%" : "auto")};
+  min-height: 48px;
   color: ${({ theme }) => theme.darkText};
   background-color: ${({ theme }) => theme.white};
+  border-color: ${({ theme, variant }) => theme[`${variant}Background`]};
   border-style: solid;
   border-width: 1px;
   border-radius: ${box.borderRadius};
-  ${({ animate, shadow, theme, variant }) => {
-    let animation = "none";
-    const borderColor = theme[`${variant}Background`];
-    if (animate) {
-      if (animate === "from-top") {
-        animation = css`
-          ${fromTop} 0.3s ease-out
-        `;
-      } else if (animate === "from-right") {
-        animation = css`
-          ${fromRight} 0.5s ease-out
-        `;
-      } else if (animate === "from-bottom") {
-        animation = css`
-          ${fromBottom} 0.3s ease-out
-        `;
-      } else if (animate === "from-left") {
-        animation = css`
-          ${fromLeft} 0.5s ease-out
-        `;
-      }
+  box-shadow: ${({ shadow }) => (shadow ? box.shadow : "none")};
+  animation: ${({ animate }) => {
+    if (!animate) return "none";
+    if (animate === "from-top") {
+      return css`
+        ${fromTop} 0.3s ease-out
+      `;
     }
-
-    return css`
-      animation: ${animation};
-      border-color: ${borderColor};
-      box-shadow: ${shadow ? box.shadow : "none"};
-    `;
+    if (animate === "from-right") {
+      return css`
+        ${fromRight} 500ms ease-out
+      `;
+    }
+    if (animate === "from-bottom") {
+      return css`
+        ${fromBottom} 300ms ease-out
+      `;
+    }
+    if (animate === "from-left") {
+      return css`
+        ${fromLeft} 500ms ease-out
+      `;
+    }
   }};
 `;
 
