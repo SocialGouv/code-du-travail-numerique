@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@socialgouv/fiches-vdd": "1.0.0",
-    "@socialgouv/kali-data": "^1.2.19",
+    "@socialgouv/kali-data": "^1.2.20",
     "@socialgouv/legi-data": "^1.1.1",
     "adm-zip": "0.4.13",
     "axios": "^0.19.0",
