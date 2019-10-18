@@ -1,5 +1,12 @@
 const withSourceMaps = require("@zeit/next-source-maps");
-const withTM = require("next-transpile-modules");
+const withTMProd = require("next-transpile-modules");
+
+const withTM = function(config) {
+  if (process.env.NODE_ENV === "production") {
+    return withTMProd(config);
+  }
+  return config;
+};
 
 module.exports = withSourceMaps(
   withTM({
