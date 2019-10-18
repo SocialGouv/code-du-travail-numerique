@@ -72,7 +72,7 @@ export default function useGlossary(children, html) {
           .concat(item.abbrs.map(abbr => new RegExp(`\\b${abbr}\\b`, "g")));
 
         patterns.forEach(pattern => {
-          //we use an internal ref to
+          // we use an internal ref counter to track pattern replacement
           node.innerHTML = node.innerHTML.replace(pattern, function(term) {
             const internalRef = `__tt__${refCounter++}`;
             internalRefMap.set(internalRef, { slug: item.slug, term });
