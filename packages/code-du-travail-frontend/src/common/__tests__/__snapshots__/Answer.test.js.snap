@@ -1969,7 +1969,6 @@ exports[`<Answer /> should render tooltip 1`] = `
                       data-tooltip-ref="__tt__0"
                     >
                       <span
-                        aria-describedby="tooltip:1"
                         class="c13"
                         data-reach-tooltip-trigger=""
                         tabindex="0"
@@ -1982,7 +1981,6 @@ exports[`<Answer /> should render tooltip 1`] = `
                       data-tooltip-ref="__tt__2"
                     >
                       <span
-                        aria-describedby="tooltip:2"
                         class="c13"
                         data-reach-tooltip-trigger=""
                         tabindex="0"
@@ -1995,7 +1993,6 @@ exports[`<Answer /> should render tooltip 1`] = `
                       data-tooltip-ref="__tt__1"
                     >
                       <span
-                        aria-describedby="tooltip:3"
                         class="c13"
                         data-reach-tooltip-trigger=""
                         tabindex="0"
@@ -2680,7 +2677,6 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
                         data-tooltip-ref="__tt__0"
                       >
                         <span
-                          aria-describedby="tooltip:4"
                           class="c13"
                           data-reach-tooltip-trigger=""
                           tabindex="0"
@@ -2694,7 +2690,6 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
                       data-tooltip-ref="__tt__1"
                     >
                       <span
-                        aria-describedby="tooltip:5"
                         class="c13"
                         data-reach-tooltip-trigger=""
                         tabindex="0"
@@ -3378,7 +3373,6 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
                       data-tooltip-ref="__tt__1"
                     >
                       <span
-                        aria-describedby="tooltip:6"
                         class="c13"
                         data-reach-tooltip-trigger=""
                         tabindex="0"
@@ -3391,7 +3385,6 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
                       data-tooltip-ref="__tt__1"
                     >
                       <span
-                        aria-describedby="tooltip:7"
                         class="c13"
                         data-reach-tooltip-trigger=""
                         tabindex="0"

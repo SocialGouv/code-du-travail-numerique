@@ -24,10 +24,13 @@ describe("<ConventionModal />", () => {
   });
 
   it("should close the modal", async () => {
-    const { getByText, queryByPlaceholderText } = render(<ConventionModal />);
+    const { getByTitle, getByText, queryByPlaceholderText } = render(
+      <ConventionModal />
+    );
     const button = getByText(/votre convention collective/i);
     button.click();
-    const el = document.body.querySelector("[data-reach-dialog-overlay]");
+    const el = getByTitle("fermer la modale");
+    expect(el).toBeTruthy();
     el.click();
     expect(
       queryByPlaceholderText(

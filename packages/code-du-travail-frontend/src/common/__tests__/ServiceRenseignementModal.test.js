@@ -28,14 +28,14 @@ describe("<ServiceRenseignementModal />", () => {
   });
 
   it("closes the modal", async () => {
-    const { getByText, queryByLabelText } = render(
+    const { getByText, getByTitle, queryByLabelText } = render(
       <ServiceRenseignementModal>
         <Button>texte dans le bouton</Button>
       </ServiceRenseignementModal>
     );
     const button = getByText(/texte dans le bouton/i);
     button.click();
-    const el = document.body.querySelector("[data-reach-dialog-overlay]");
+    const el = getByTitle("fermer la modale");
     el.click();
     expect(
       queryByLabelText(/saisissez votre numéro de département/i)
