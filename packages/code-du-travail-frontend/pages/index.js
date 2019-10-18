@@ -21,8 +21,8 @@ const Home = ({ pageUrl, ogImage, children = [] }) => (
       image={ogImage}
     />
     <SearchHero />
-    <Themes isRoot={true} themes={children} />
     <Outils />
+    <Themes themes={children} />
   </Layout>
 );
 

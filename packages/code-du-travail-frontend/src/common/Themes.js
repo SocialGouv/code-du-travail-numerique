@@ -3,18 +3,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "next/link";
 import { Layers } from "react-feather";
-import {
-  Grid,
-  GridCell,
-  Container,
-  Section,
-  SectionTitle,
-  Tile
-} from "@socialgouv/react-ui";
+import { Container, Section, CardList, Tile } from "@socialgouv/react-ui";
 
 export default class Themes extends React.Component {
   static propTypes = {
-    isRoot: PropTypes.bool,
     themes: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
@@ -23,38 +15,36 @@ export default class Themes extends React.Component {
     )
   };
 
-  static defaultProps = {
-    isRoot: false
-  };
-
   render() {
-    const { isRoot, themes } = this.props;
+    const { themes } = this.props;
     if (!(themes.length > 0)) {
       return null;
     }
     return (
       <Section>
         <Container>
-          <Link href="/themes" passHref>
-            <SectionTitle desc="Retrouvez tous nos contenus autour de grands thèmes">
-              Thèmes
-            </SectionTitle>
-          </Link>
-          <Grid>
+          <CardList
+            title="Thèmes"
+            desc="Retrouvez tous nos contenus autour de grands thèmes"
+            href="/themes"
+          >
             {themes.map(({ slug, title }) => (
-              <StyledGridCell isRoot={isRoot} key={slug + title}>
-                <Link href="/themes/[slug]" as={`/themes/${slug}`} passHref>
-                  <Tile icon={Layers}>{title}</Tile>
-                </Link>
-              </StyledGridCell>
+              <Link
+                key={slug}
+                href="/themes/[slug]"
+                as={`/themes/${slug}`}
+                passHref
+              >
+                <StyledTile icon={Layers}>{title}</StyledTile>
+              </Link>
             ))}
-          </Grid>
+          </CardList>
         </Container>
       </Section>
     );
   }
 }
 
-const StyledGridCell = styled(GridCell)`
-  height: ${({ isRoot }) => (isRoot ? "120px" : "auto")};
+const StyledTile = styled(Tile)`
+  min-height: 120px;
 `;

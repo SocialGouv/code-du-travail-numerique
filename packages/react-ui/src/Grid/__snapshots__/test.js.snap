@@ -16,7 +16,10 @@ exports[`<Grid /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin: NaN;
+  margin-top: 1.25rem;
+  margin-right: calc(-1 * 0.625rem);
+  margin-bottom: 2rem;
+  margin-left: calc(-1 * 0.625rem);
   padding: 0;
   list-style-type: none;
 }

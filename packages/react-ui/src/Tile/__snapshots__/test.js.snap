@@ -18,6 +18,8 @@ exports[`<Tile /> renders a button tile 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  box-sizing: border-box;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
@@ -113,6 +115,8 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  box-sizing: border-box;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
@@ -187,6 +191,8 @@ exports[`<Tile /> renders with an icon 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  box-sizing: border-box;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;

@@ -51,6 +51,8 @@ exports[`<ConventionModal /> should render 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  box-sizing: border-box;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
@@ -240,6 +242,8 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  box-sizing: border-box;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;

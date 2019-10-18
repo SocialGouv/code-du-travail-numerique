@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { fonts, spacing } from "../theme";
+import { animations, fonts, spacing } from "../theme";
 import { ChevronRight } from "react-feather";
 
 export const SectionTitle = React.forwardRef(
@@ -12,8 +12,8 @@ export const SectionTitle = React.forwardRef(
           <>
             <StyledLink ref={ref} {...props} title={desc}>
               {children}
+              <Icon aria-hidden="true" />
             </StyledLink>
-            <Icon aria-hidden="true" />
           </>
         ) : (
           <>{children}</>
@@ -34,27 +34,27 @@ SectionTitle.propTypes = {
 };
 
 const Title = styled.h2`
-  display: flex;
-  align-items: flex-end;
   margin-bottom: 0;
   color: ${({ theme }) => theme.blueDark};
   font-weight: 600;
   font-size: ${fonts.sizeH4};
   font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
     Helvetica, Arial, sans-serif;
-  line-height: 1.275;
+  line-height: ${fonts.lineHeight};
 `;
 
 const Subtitle = styled.div`
   color: ${({ theme }) => theme.blueDark};
   font-weight: 300;
-  font-size: ${fonts.sizeSmall};
+  font-size: ${fonts.sizeBase};
   font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
     Helvetica, Arial, sans-serif;
-  line-height: 1.1;
+  line-height: ${fonts.lineHeight};
 `;
 
 const StyledLink = styled.a`
+  display: inline-flex;
+  align-items: center;
   color: ${({ theme }) => theme.blueDark};
   text-decoration: none;
   &:hover {
@@ -65,4 +65,9 @@ const StyledLink = styled.a`
 const Icon = styled(ChevronRight)`
   margin-left: ${spacing.base};
   color: ${({ theme }) => theme.blueLight};
+  transition: ${animations.transitionTiming} ease-out transform;
+  /* stylelint-disable-next-line */
+  ${StyledLink}:hover & {
+    transform: translateX(7px);
+  }
 `;
