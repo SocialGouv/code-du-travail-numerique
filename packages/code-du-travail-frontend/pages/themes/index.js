@@ -1,11 +1,20 @@
 import React from "react";
+import Link from "next/link";
+import styled from "styled-components";
 import getConfig from "next/config";
-import { Section } from "@socialgouv/react-ui";
+import {
+  Container,
+  Grid,
+  GridCell,
+  PageTitle,
+  Section,
+  Tile
+} from "@socialgouv/react-ui";
+import { Layers } from "react-feather";
 import fetch from "isomorphic-unfetch";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
-import Themes from "../../src/common/Themes";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -19,8 +28,26 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
       description={`Explorez les contenus autour des thèmes`}
       image={ogImage}
     />
-    <Section variant="white">
-      <Themes isRoot={true} themes={children} />
+    <Section>
+      <Container>
+        <PageTitle>Retrouvez toutes nos thématiques</PageTitle>
+        {children && children.length > 0 && (
+          <Grid>
+            {children.map(({ slug, title }) => (
+              <GridCell key={slug}>
+                <Link
+                  key={slug}
+                  href="/themes/[slug]"
+                  as={`/themes/${slug}`}
+                  passHref
+                >
+                  <StyledTile icon={Layers}>{title}</StyledTile>
+                </Link>
+              </GridCell>
+            ))}
+          </Grid>
+        )}
+      </Container>
     </Section>
   </Layout>
 );
@@ -35,3 +62,7 @@ ThemesPage.getInitialProps = async () => {
 };
 
 export default ThemesPage;
+
+const StyledTile = styled(Tile)`
+  height: 120px;
+`;

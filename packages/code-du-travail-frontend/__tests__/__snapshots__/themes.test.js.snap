@@ -2,6 +2,26 @@
 
 exports[`<Theme /> should render 1`] = `
 .c16 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c16 > *:first-child {
+  margin-top: 0;
+}
+
+.c16 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c15 {
+  padding: 1.25rem 0;
+  color: #434956;
+  background-color: #fff;
+}
+
+.c19 {
   padding: 1.25rem 0;
   color: #434956;
 }
@@ -33,7 +53,7 @@ exports[`<Theme /> should render 1`] = `
   color: #8c94a6;
 }
 
-.c19 {
+.c22 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -54,19 +74,19 @@ exports[`<Theme /> should render 1`] = `
   border-color: #005994;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c22:not([disabled]):hover,
+.c22:not([disabled]):active,
+.c22:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
 }
 
-.c19[disabled] {
+.c22[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
 }
 
-.c24 {
+.c27 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -82,6 +102,15 @@ exports[`<Theme /> should render 1`] = `
   border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
+}
+
+.c17 {
+  margin: 2rem 0 2rem 0;
+  color: #005994;
+  font-weight: normal;
+  font-size: 2.25rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.4;
 }
 
 .c9 {
@@ -238,22 +267,22 @@ exports[`<Theme /> should render 1`] = `
   width: 350px;
 }
 
-.c17 {
+.c20 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   text-align: center;
 }
 
-.c17 > *:first-child {
+.c20 > *:first-child {
   margin-top: 0;
 }
 
-.c17 > *:last-child {
+.c20 > *:last-child {
   margin-bottom: 0;
 }
 
-.c18 {
+.c21 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -263,15 +292,15 @@ exports[`<Theme /> should render 1`] = `
   text-align: left;
 }
 
-.c18 > *:first-child {
+.c21 > *:first-child {
   margin-top: 0;
 }
 
-.c18 > *:last-child {
+.c21 > *:last-child {
   margin-bottom: 0;
 }
 
-.c20 {
+.c23 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -285,30 +314,37 @@ exports[`<Theme /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c20 > *:first-child {
+.c23 > *:first-child {
   margin-top: 0;
 }
 
-.c20 > *:last-child {
+.c23 > *:last-child {
   margin-bottom: 0;
 }
 
-.c22 + .c21 {
+.c25 + .c24 {
   padding-left: 1rem;
 }
 
-.c23 {
+.c26 {
   font-weight: bold;
   font-size: 1rem;
 }
 
-.c25 {
+.c28 {
   margin: 0.5rem 0;
 }
 
-.c25 a,
-.c25 a:visited {
+.c28 a,
+.c28 a:visited {
   color: #434956;
+}
+
+@media print {
+  .c16 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media (max-width:600px) {
@@ -365,34 +401,34 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media print {
-  .c15 {
+  .c18 {
     display: none;
   }
 }
 
 @media print {
-  .c17 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c18 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
   .c20 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c21 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c23 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c23 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -400,7 +436,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 + .c21 {
+  .c25 + .c24 {
     padding-left: 0;
   }
 }
@@ -500,50 +536,62 @@ exports[`<Theme /> should render 1`] = `
   </header>
   <main
     id="main"
-  />
-  <footer
-    class="c15"
   >
     <div
-      class="c16"
+      class="c15"
     >
       <div
-        class="c17"
+        class="c16"
+      >
+        <h1
+          class="c17"
+        />
+      </div>
+    </div>
+  </main>
+  <footer
+    class="c18"
+  >
+    <div
+      class="c19"
+    >
+      <div
+        class="c20"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c18"
+          class="c21"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
-          class="c19"
+          class="c22"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c16"
+      class="c19"
     >
       <div
-        class="c20"
+        class="c23"
       >
         <div
-          class="c21 c22"
+          class="c24 c25"
         >
           <h3
-            class="c23"
+            class="c26"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c24"
+            class="c27"
           >
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="/droit-du-travail"
@@ -552,7 +600,7 @@ exports[`<Theme /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="/glossaire"
@@ -561,7 +609,7 @@ exports[`<Theme /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="/a-propos"
@@ -570,7 +618,7 @@ exports[`<Theme /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="/mentions-legales"
@@ -579,7 +627,7 @@ exports[`<Theme /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="mailto:codedutravailnumerique@travail.gouv.fr"
@@ -590,18 +638,18 @@ exports[`<Theme /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c21 c22"
+          class="c24 c25"
         >
           <h3
-            class="c23"
+            class="c26"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c24"
+            class="c27"
           >
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -612,7 +660,7 @@ exports[`<Theme /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -625,18 +673,18 @@ exports[`<Theme /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c21 c22"
+          class="c24 c25"
         >
           <h3
-            class="c23"
+            class="c26"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c24"
+            class="c27"
           >
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -647,7 +695,7 @@ exports[`<Theme /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -658,7 +706,7 @@ exports[`<Theme /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c28"
             >
               <a
                 href="https://beta.gouv.fr/"

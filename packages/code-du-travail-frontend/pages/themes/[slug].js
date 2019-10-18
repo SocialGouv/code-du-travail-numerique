@@ -1,14 +1,21 @@
 import React from "react";
+import Link from "next/link";
 import getConfig from "next/config";
-import { Section } from "@socialgouv/react-ui";
+import {
+  Container,
+  Grid,
+  GridCell,
+  PageTitle,
+  Section,
+  Tile
+} from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
+import { Layers } from "react-feather";
 
 import { SearchResults } from "../../src/search/SearchResults";
-
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import { ThemeBreadcrumbs } from "../../src/common/ThemeBreadcrumbs";
-import Themes from "../../src/common/Themes";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -42,11 +49,27 @@ class Theme extends React.Component {
           image={ogImage}
         />
         <ThemeBreadcrumbs theme={theme} />
-        {theme.children && theme.children.length > 0 && (
-          <Section variant="white">
-            <Themes title={theme.title} themes={theme.children} />
-          </Section>
-        )}
+        <Section variant="white">
+          <Container>
+            <PageTitle>{theme.title}</PageTitle>
+            {theme.children && theme.children.length > 0 && (
+              <Grid>
+                {theme.children.map(({ slug, title }) => (
+                  <GridCell key={slug}>
+                    <Link
+                      key={slug}
+                      href="/themes/[slug]"
+                      as={`/themes/${slug}`}
+                      passHref
+                    >
+                      <Tile icon={Layers}>{title}</Tile>
+                    </Link>
+                  </GridCell>
+                ))}
+              </Grid>
+            )}
+          </Container>
+        </Section>
         {theme.refs && theme.refs.length > 0 && (
           <Section>
             <SearchResults items={theme.refs} />

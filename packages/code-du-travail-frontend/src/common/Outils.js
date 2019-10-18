@@ -1,14 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import {
-  Grid,
-  GridCell,
-  Container,
-  Section,
-  SectionTitle,
-  Tile
-} from "@socialgouv/react-ui";
+import { Container, Section, CardList, Tile } from "@socialgouv/react-ui";
 
 import ConventionModal from "../conventions/Search/Modal";
 
@@ -32,8 +25,8 @@ export const outils = [
   },
   {
     title: "Modèles de courriers",
-    hrefTitle: "Voir tous les modèles de courriers",
-    button: "Voir",
+    hrefTitle: "Consulter tous les modèles de courriers",
+    button: "Consulter",
     text:
       "Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail",
     href: "/modeles-de-courriers"
@@ -60,28 +53,26 @@ function Outils() {
   return (
     <Section variant="white">
       <Container>
-        <Link passHref>
-          <SectionTitle desc="Trouvez des réponses personnalisées selon votre situation">
-            Boîte à outils
-          </SectionTitle>
-        </Link>
-        <Grid>
-          {outils.map(({ button, title, href, slug, hrefTitle }) => (
-            <GridCell key={slug || href}>
-              <Link href={href} as={slug} passHref>
+        <CardList
+          title="Boîte à outils"
+          desc="Trouvez des réponses personnalisées selon votre situation"
+          href="/outils"
+        >
+          {outils
+            .map(({ button, title, href, slug, hrefTitle }) => (
+              <Link href={href} as={slug} passHref key={slug || "modeles"}>
                 <Tile button={button} title={hrefTitle}>
                   {title}
                 </Tile>
               </Link>
-            </GridCell>
-          ))}
-          <GridCell>
-            <ConventionModal />
-          </GridCell>
-          <GridCell>
-            <Tile>{"Bientôt d'autres outils disponibles..."}</Tile>
-          </GridCell>
-        </Grid>
+            ))
+            .concat([
+              <ConventionModal key="convention-modal" />,
+              <Tile key="next-tools">
+                Bientôt d’autres outils disponibles...
+              </Tile>
+            ])}
+        </CardList>
       </Container>
     </Section>
   );
