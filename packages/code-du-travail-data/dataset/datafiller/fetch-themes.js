@@ -66,7 +66,7 @@ const fetchAll = async () => {
     .then(res => res.json())
     .then(json => json.data);
 
-  const sortedRows = records.map(sortRowRefsByPosition);
+  const sortedRows = records.filter(r => !!r.title).map(sortRowRefsByPosition);
 
   const treeRows = sortedRows.map(row => {
     const breadcrumbs = row.parent && getParents(sortedRows, row);

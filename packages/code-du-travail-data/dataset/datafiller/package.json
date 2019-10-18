@@ -11,9 +11,11 @@
     "remark-html": "^10.0.0"
   },
   "scripts": {
-    "start": "node fetch-requetes.js > prequalified.data.json && node fetch-themes.js > themes.data.json",
-    "test": "jest",
-    "glossary": "node glossary.js > glossary.data.json"
+    "start": "yarn fetch:requetes && yarn fetch:themes && yarn fetch:glossary",
+    "fetch:requetes": "node fetch-requetes.js > prequalified.data.json",
+    "fetch:themes": "node fetch-themes.js > themes.data.json",
+    "fetch:glossary": "node fetch-glossary.js > glossary.data.json",
+    "test": "jest"
   },
   "devDependencies": {
     "jest-cli": "^24.9.0"
