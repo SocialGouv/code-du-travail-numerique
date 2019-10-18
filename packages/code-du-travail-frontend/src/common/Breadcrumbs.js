@@ -1,13 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import {
-  List,
-  ListItem,
-  Container,
-  Section,
-  theme
-} from "@socialgouv/react-ui";
+import { ChevronsRight } from "react-feather";
+import { List, ListItem, OverflowWrapper, theme } from "@socialgouv/react-ui";
 
 const Breadcrumbs = ({ items = [] }) => {
   if (!items || items.length === 0) {
@@ -15,20 +10,20 @@ const Breadcrumbs = ({ items = [] }) => {
   }
   return (
     <Nav>
-      <Section>
-        <Container>
-          <List>
-            {items.map((item, index) => (
-              <React.Fragment key={index}>
-                <NavItem>{item}</NavItem>
-                {index < items.length - 1 && (
-                  <Separator aria-hidden> » </Separator>
-                )}
-              </React.Fragment>
-            ))}
-          </List>
-        </Container>
-      </Section>
+      <OverflowWrapper shadowColor="white">
+        <StyledList>
+          {items.map((item, index) => (
+            <React.Fragment key={index}>
+              <NavItem>{item}</NavItem>
+              {index < items.length - 1 && (
+                <Separator aria-hidden>
+                  <StyledChevronsRight />
+                </Separator>
+              )}
+            </React.Fragment>
+          ))}
+        </StyledList>
+      </OverflowWrapper>
     </Nav>
   );
 };
@@ -39,22 +34,36 @@ Breadcrumbs.propTypes = {
 
 export { Breadcrumbs };
 
-const { spacing, colors } = theme;
+const { breakpoints, colors, spacing } = theme;
 
 const Nav = styled.nav`
+  overflow-x: auto;
   background: ${colors.infoBackground};
 `;
 
+const StyledList = styled(List)`
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  padding: ${spacing.small} 0;
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: ${spacing.xsmall} 0;
+  }
+`;
 const NavItem = styled(ListItem)`
   display: inline-block;
   padding: ${spacing.small} ${spacing.medium};
-  :first-child {
-    padding-left: 0;
-  }
+  white-space: nowrap;
 `;
 
 const Separator = styled.li`
-  display: inline-block;
+  display: block;
   user-select: none;
   pointer-events: none;
+`;
+
+const StyledChevronsRight = styled(ChevronsRight)`
+  display: block;
+  width: ${spacing.base};
+  color: ${({ theme }) => theme.blueDark};
 `;
