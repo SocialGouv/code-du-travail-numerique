@@ -104,7 +104,10 @@ If you get weird errors like an `Invariant Violation`, try to rebuild with `yarn
 
 ### UI
 
-The UI components are showcased here: <https://socialgouv.github.io/code-du-travail-numerique/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a6e5ebcd-e0bc-4eda-b416-fc8ddf217310/deploy-status)](https://app.netlify.com/sites/socialgouv-react-ui/deploys)
+The components are showcased here: <https://socialgouv-react-ui.netlify.com/>
+
+Build is automatically triggered by netlify everytime a changed is pushed to the master branch.
 
 ### Build
 
