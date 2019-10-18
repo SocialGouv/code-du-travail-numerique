@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, GridCell } from ".";
-
+import { Tile } from "../Tile";
 export default {
   component: Grid,
   title: "Components|Grid"
@@ -8,54 +8,16 @@ export default {
 
 export const base = () => (
   <Grid>
-    <GridCell>
-      <h2>Tile 1</h2>
-      <p>
-        L’objectif du code du travail numérique est d’améliorer la lisibilité du
-        droit pour ceux qu’il concerne.
-      </p>
-    </GridCell>
-    <GridCell>
-      <h2>Tile 1</h2>
-      <p>
-        L’objectif du code du travail numérique est d’améliorer la lisibilité du
-        droit pour ceux qu’il concerne.
-      </p>
-    </GridCell>
-    <GridCell>
-      <h2>Tile 1</h2>
-      <p>
-        L’objectif du code du travail numérique est d’améliorer la lisibilité du
-        droit pour ceux qu’il concerne.
-      </p>
-    </GridCell>
-    <GridCell>
-      <h2>Tile 1</h2>
-      <p>
-        L’objectif du code du travail numérique est d’améliorer la lisibilité du
-        droit pour ceux qu’il concerne.
-      </p>
-    </GridCell>
-    <GridCell>
-      <h2>Tile 1</h2>
-      <p>
-        L’objectif du code du travail numérique est d’améliorer la lisibilité du
-        droit pour ceux qu’il concerne.
-      </p>
-    </GridCell>
-    <GridCell>
-      <h2>Tile 1</h2>
-      <p>
-        L’objectif du code du travail numérique est d’améliorer la lisibilité du
-        droit pour ceux qu’il concerne.
-      </p>
-    </GridCell>
-    <GridCell>
-      <h2>Tile 1</h2>
-      <p>
-        L’objectif du code du travail numérique est d’améliorer la lisibilité du
-        droit pour ceux qu’il concerne.
-      </p>
-    </GridCell>
+    {Array.from({ length: 10 }).map((val, index) => (
+      <GridCell key={index}>
+        <Tile>
+          <strong>Tile {index}</strong>
+          <p>
+            du droit pour ceux qu’il concerne. L’objectif du code du travail
+            numérique est d’améliorer la lisibilité
+          </p>
+        </Tile>
+      </GridCell>
+    ))}
   </Grid>
 );

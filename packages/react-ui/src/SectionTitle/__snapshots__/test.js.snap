@@ -2,43 +2,52 @@
 
 exports[`<SectionTitle /> should render title in a link 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
   margin-bottom: 0;
   color: #005994;
   font-weight: 600;
   font-size: 1.375rem;
   font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.275;
+  line-height: 1.4;
 }
 
-.c3 {
+.c4 {
   color: #005994;
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.1;
+  line-height: 1.4;
 }
 
-.c1 {
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #005994;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1:hover {
+.c2:hover {
   color: #006be6;
 }
 
-.c2 {
+.c3 {
   margin-left: 1rem;
   color: #006be6;
+  -webkit-transition: 250ms ease-out -webkit-transform;
+  -webkit-transition: 250ms ease-out transform;
+  transition: 250ms ease-out transform;
+}
+
+.c1:hover .c3 {
+  -webkit-transform: translateX(7px);
+  -ms-transform: translateX(7px);
+  transform: translateX(7px);
 }
 
 <div>
@@ -47,32 +56,32 @@ exports[`<SectionTitle /> should render title in a link 1`] = `
       class="c0"
     >
       <a
-        class="c1"
+        class="c1 c2"
         href="https://code.travail.gouv.fr"
         title="le code du travail numérique"
       >
         Lorem Ipsum
+        <svg
+          aria-hidden="true"
+          class="c3"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="9 18 15 12 9 6"
+          />
+        </svg>
       </a>
-      <svg
-        aria-hidden="true"
-        class="c2"
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <polyline
-          points="9 18 15 12 9 6"
-        />
-      </svg>
     </h2>
     <div
-      class="c3"
+      class="c4"
     >
       le code du travail numérique
     </div>
@@ -82,20 +91,12 @@ exports[`<SectionTitle /> should render title in a link 1`] = `
 
 exports[`<SectionTitle /> should render title only 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
   margin-bottom: 0;
   color: #005994;
   font-weight: 600;
   font-size: 1.375rem;
   font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.275;
+  line-height: 1.4;
 }
 
 <div>
@@ -112,28 +113,20 @@ exports[`<SectionTitle /> should render title only 1`] = `
 
 exports[`<SectionTitle /> should render title with description 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
   margin-bottom: 0;
   color: #005994;
   font-weight: 600;
   font-size: 1.375rem;
   font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.275;
+  line-height: 1.4;
 }
 
 .c1 {
   color: #005994;
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.1;
+  line-height: 1.4;
 }
 
 <div>

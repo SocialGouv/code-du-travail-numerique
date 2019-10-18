@@ -10,6 +10,8 @@ const StyledTile = styled.a`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  box-sizing: border-box;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: ${spacing.medium} ${spacing.xmedium};

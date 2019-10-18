@@ -8,7 +8,10 @@ export const Grid = styled.ul`
   justify-content: flex-start;
   /* Use negative margins on sides to create gutters that do not also
     create a gutter at the edges of the container. */
-  margin: ${-1 * spacing.small};
+  margin-top: ${spacing.interComponent};
+  margin-right: calc(-1 * ${spacing.small});
+  margin-bottom: ${spacing.large};
+  margin-left: calc(-1 * ${spacing.small});
   padding: 0;
   list-style-type: none;
 `;
