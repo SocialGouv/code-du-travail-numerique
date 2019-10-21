@@ -70,7 +70,7 @@ exports[`<StepIndemnite /> should render 1`] = `
   -webkit-flex: 1 1 70%;
   -ms-flex: 1 1 70%;
   flex: 1 1 70%;
-  min-width: 400px;
+  max-width: 100%;
   margin-right: 1.25rem;
 }
 
