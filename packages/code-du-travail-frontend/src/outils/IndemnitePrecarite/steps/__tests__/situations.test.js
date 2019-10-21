@@ -4,7 +4,8 @@ import {
   getNextQuestionKey,
   getOptions,
   getPastQuestions,
-  validateSituation
+  validateSituation,
+  isNotYetProcessed
 } from "../situation";
 
 import data from "@cdt/data...prime-precarite/precarite.data.json";
@@ -19,14 +20,21 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
       foo: "3| bar"
     },
     allowBonus: false,
-    endMessage: "nope"
+    endMessage: "nope",
+    hasConventionalProvision: true
   },
   {
     idcc: "20",
     criteria: {
       foo: "4| baz"
     },
-    allowBonus: true
+    allowBonus: true,
+    hasConventionalProvision: true
+  },
+  {
+    idcc: "30",
+    criteria: {},
+    hasConventionalProvision: null
   }
 ]);
 
@@ -124,6 +132,18 @@ describe("situations", () => {
       ).toEqual({
         criteria: { foo: undefined }
       });
+    });
+  });
+
+  describe("isNotYetProcessed", () => {
+    it("should return true if there no matching cc", () => {
+      expect(isNotYetProcessed("toto")).toBe(true);
+    });
+    it("should return true if cc hasConventionalProvision to null", () => {
+      expect(isNotYetProcessed("30")).toBe(true);
+    });
+    it("should return false if cc hasConventionalProvision to true", () => {
+      expect(isNotYetProcessed("20")).toBe(false);
     });
   });
 });
