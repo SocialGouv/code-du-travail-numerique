@@ -36,7 +36,8 @@ const getPageTitle = async url => {
       return decodeHTML(matches[1]);
     }
   } catch (e) {
-    //console.log(e);
+    console.error(`fail to retrieve title on ${url}`);
+    console.error(e);
   }
   return url;
 };
