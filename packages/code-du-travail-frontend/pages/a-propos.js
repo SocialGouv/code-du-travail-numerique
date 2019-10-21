@@ -36,7 +36,7 @@ const About = ({ ogImage, pageUrl }) => (
             </P>
           </Alert>
           <p>
-            Seul un public expert maitrîse la complexité du droit du travail et
+            Seul un public expert maîtrise la complexité du droit du travail et
             de ses différentes sources de droit (conventions collectives,
             accords de branches et accords d’entreprises…). En plus de la
             diversité des sources de droit, la technicité de la matière la rend
