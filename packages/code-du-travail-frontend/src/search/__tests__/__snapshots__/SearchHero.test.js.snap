@@ -32,15 +32,15 @@ exports[`<SearchHero /> should render 1`] = `
   -moz-appearance: none;
   appearance: none;
   color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  background: #005994;
+  border-color: #005994;
 }
 
 .c13:not([disabled]):hover,
 .c13:not([disabled]):active,
 .c13:not([disabled]):focus {
   color: #fff;
-  background: #07f;
+  background: #0068ae;
 }
 
 .c13[disabled] {

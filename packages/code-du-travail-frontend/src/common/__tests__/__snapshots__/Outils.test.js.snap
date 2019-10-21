@@ -37,20 +37,20 @@ exports[`<Outils /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
 }
 
 .c12:not([disabled]):hover,
 .c12:not([disabled]):active,
 .c12:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
+  color: #18181c;
+  background: #fbfcfd;
 }
 
 .c12[disabled] {
-  color: rgba(255,255,255,0.4);
+  color: rgba(12,12,14,0.4);
   cursor: not-allowed;
 }
 
