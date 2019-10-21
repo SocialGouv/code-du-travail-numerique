@@ -43,10 +43,13 @@ exports[`<ConventionModal /> should render 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -79,7 +82,8 @@ exports[`<ConventionModal /> should render 1`] = `
 }
 
 .c1 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 .c2 {
@@ -234,10 +238,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -270,7 +277,8 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 .c1 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 .c2 {
