@@ -76,7 +76,9 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
         suggestions={suggestions}
       />
       {hasButton ? (
-        <SubmitButton type="submit">Rechercher</SubmitButton>
+        <SubmitButton variant="primary" type="submit">
+          Rechercher
+        </SubmitButton>
       ) : (
         <SubmitIcon type="submit" variant="icon">
           <SearchIcon />

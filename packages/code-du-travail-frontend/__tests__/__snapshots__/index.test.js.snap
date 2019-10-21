@@ -21,7 +21,7 @@ exports[`<Home /> should render 1`] = `
   background-color: #fff;
 }
 
-.c34 {
+.c35 {
   padding: 1.25rem 0;
   color: #434956;
 }
@@ -43,15 +43,15 @@ exports[`<Home /> should render 1`] = `
   -moz-appearance: none;
   appearance: none;
   color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  background: #005994;
+  border-color: #005994;
 }
 
 .c20:not([disabled]):hover,
 .c20:not([disabled]):active,
 .c20:not([disabled]):focus {
   color: #fff;
-  background: #07f;
+  background: #0068ae;
 }
 
 .c20[disabled] {
@@ -59,7 +59,7 @@ exports[`<Home /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c37 {
+.c33 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -75,20 +75,20 @@ exports[`<Home /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
 }
 
-.c37:not([disabled]):hover,
-.c37:not([disabled]):active,
-.c37:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
+.c33:not([disabled]):hover,
+.c33:not([disabled]):active,
+.c33:not([disabled]):focus {
+  color: #18181c;
+  background: #fbfcfd;
 }
 
-.c37[disabled] {
-  color: rgba(255,255,255,0.4);
+.c33[disabled] {
+  color: rgba(12,12,14,0.4);
   cursor: not-allowed;
 }
 
@@ -437,22 +437,22 @@ exports[`<Home /> should render 1`] = `
   margin-left: 1.25rem;
 }
 
-.c35 {
+.c36 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   text-align: center;
 }
 
-.c35 > *:first-child {
+.c36 > *:first-child {
   margin-top: 0;
 }
 
-.c35 > *:last-child {
+.c36 > *:last-child {
   margin-bottom: 0;
 }
 
-.c36 {
+.c37 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -462,11 +462,11 @@ exports[`<Home /> should render 1`] = `
   text-align: left;
 }
 
-.c36 > *:first-child {
+.c37 > *:first-child {
   margin-top: 0;
 }
 
-.c36 > *:last-child {
+.c37 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -605,20 +605,20 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media print {
-  .c33 {
+  .c34 {
     display: none;
   }
 }
 
 @media print {
-  .c35 {
+  .c36 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c36 {
+  .c37 {
     max-width: 100%;
     padding: 0;
   }
@@ -840,7 +840,7 @@ exports[`<Home /> should render 1`] = `
                 class="c32"
               >
                 <div
-                  class="c20"
+                  class="c33"
                 >
                   Démarrer
                 </div>
@@ -864,7 +864,7 @@ exports[`<Home /> should render 1`] = `
                 class="c32"
               >
                 <div
-                  class="c20"
+                  class="c33"
                 >
                   Démarrer
                 </div>
@@ -888,7 +888,7 @@ exports[`<Home /> should render 1`] = `
                 class="c32"
               >
                 <div
-                  class="c20"
+                  class="c33"
                 >
                   Consulter
                 </div>
@@ -912,7 +912,7 @@ exports[`<Home /> should render 1`] = `
                 class="c32"
               >
                 <div
-                  class="c20"
+                  class="c33"
                 >
                   Démarrer
                 </div>
@@ -936,7 +936,7 @@ exports[`<Home /> should render 1`] = `
                 class="c32"
               >
                 <div
-                  class="c20"
+                  class="c33"
                 >
                   Démarrer
                 </div>
@@ -959,7 +959,7 @@ exports[`<Home /> should render 1`] = `
                 class="c32"
               >
                 <div
-                  class="c20"
+                  class="c33"
                 >
                   Rechercher
                 </div>
@@ -986,31 +986,31 @@ exports[`<Home /> should render 1`] = `
     </div>
   </main>
   <footer
-    class="c33"
+    class="c34"
   >
     <div
-      class="c34"
+      class="c35"
     >
       <div
-        class="c35"
+        class="c36"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c36"
+          class="c37"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
-          class="c37"
+          class="c20"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c34"
+      class="c35"
     >
       <div
         class="c38"
