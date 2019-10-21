@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { OnChange } from "react-final-form-listeners";
-import { Container, Section, Wrapper } from "@socialgouv/react-ui";
+import { Container, Section } from "@socialgouv/react-ui";
 
 import {
   stepPrime,
@@ -46,14 +46,12 @@ function CalculateurIndemnite() {
   return (
     <Section>
       <Container>
-        <Wrapper size="large" variant="light">
-          <h1>Calculateur d&apos;indemnités de licenciement</h1>
-          <Wizard
-            stepReducer={stepReducer}
-            initialSteps={initialSteps}
-            Rules={Rules}
-          />
-        </Wrapper>
+        <Wizard
+          title="Simulateur d’indemnités de licenciement"
+          stepReducer={stepReducer}
+          initialSteps={initialSteps}
+          Rules={Rules}
+        />
       </Container>
     </Section>
   );

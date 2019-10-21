@@ -68,24 +68,11 @@ exports[`<PrevNextBar /> should render 1`] = `
 }
 
 .c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 2rem 0;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c4 {
@@ -94,13 +81,6 @@ exports[`<PrevNextBar /> should render 1`] = `
 
 .c2 {
   margin-right: auto;
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
 }
 
 <div>
@@ -190,24 +170,11 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 }
 
 .c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 2rem 0;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c4 {
@@ -216,13 +183,6 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 
 .c2 {
   margin-right: auto;
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
 }
 
 <div>
@@ -313,24 +273,11 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 }
 
 .c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 2rem 0;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c4 {
@@ -339,13 +286,6 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 
 .c2 {
   margin-right: auto;
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
 }
 
 <div>
@@ -402,11 +342,6 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
 }
 
 .c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -414,23 +349,8 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   margin: 2rem 0;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c2 {
   margin-right: auto;
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
 }
 
 <div>

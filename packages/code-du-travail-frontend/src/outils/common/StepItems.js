@@ -8,6 +8,10 @@ import { theme } from "@socialgouv/react-ui";
 export function StepItems({ activeIndex = 0, items = [] }) {
   return (
     <StepItemsContainer>
+      <Title>
+        Étapes{" "}
+        <StepProgress>{`${activeIndex + 1}/${items.length}`}</StepProgress>
+      </Title>
       {items.map((item, index) => (
         <Step
           key={item.name}
@@ -30,14 +34,31 @@ function Step({ label, index, activeIndex, ...props }) {
   );
 }
 
-const { colors, spacing, fonts } = theme;
+const { spacing, fonts, breakpoints } = theme;
 
 const StepItemsContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  margin-top: ${spacing.interComponent};
-  padding-bottom: ${spacing.interComponent};
-  border-bottom: 1px solid ${colors.grey};
+  flex-direction: column;
+  padding: ${spacing.medium} ${spacing.larger};
+  background-color: ${({ theme }) => theme.lightBackground};
+  border-right: 1px solid ${({ theme }) => theme.lightGrey};
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid ${({ theme }) => theme.lightGrey};
+  }
+`;
+
+const Title = styled.span`
+  margin: ${spacing.medium} 0;
+  font-weight: 600;
+`;
+const StepProgress = styled.span`
+  display: none;
+  @media (max-width: ${breakpoints.mobile}) {
+    display: inline-block;
+  }
 `;
 
 const StepWrapper = styled.span`
@@ -45,12 +66,15 @@ const StepWrapper = styled.span`
   align-items: center;
   width: 8.4375rem;
   padding: 0 ${spacing.tiny};
-  color: ${props => (props.isActive ? colors.blueLight : colors.grey)};
+  color: ${({ isActive, theme }) => (isActive ? theme.blueLight : theme.grey)};
   font-weight: 600;
   font-size: ${fonts.sizeSmall};
   line-height: 1;
   text-align: left;
   text-decoration: none;
+  @media (max-width: ${breakpoints.mobile}) {
+    display: ${({ isActive }) => (isActive ? "flex" : "none")};
+  }
 `;
 
 const IndexCircle = styled.span`
@@ -62,8 +86,8 @@ const IndexCircle = styled.span`
   height: 1.6rem;
   margin: ${spacing.xsmall} ${spacing.small};
   margin-left: 0;
-  color: ${colors.white};
-  background-color: ${props =>
-    props.isActive ? colors.blueLight : colors.grey};
+  color: ${({ theme }) => theme.white};
+  background-color: ${({ isActive, theme }) =>
+    isActive ? theme.blueLight : theme.grey};
   border-radius: 49%;
 `;

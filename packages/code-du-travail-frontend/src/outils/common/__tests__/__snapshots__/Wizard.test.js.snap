@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Wizard /> should call navigate the previous step when click on précédent 1`] = `
-.c7 {
+.c12 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -22,32 +22,41 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   border-color: #005994;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
 }
 
-.c7[disabled] {
+.c12[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid #adb9c9;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.25rem 2.5rem;
+  background-color: #f9f9fc;
+  border-right: 1px solid #c9d3df;
 }
 
-.c1 {
+.c2 {
+  margin: 1.25rem 0;
+  font-weight: 600;
+}
+
+.c3 {
+  display: none;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -67,7 +76,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   text-decoration: none;
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -87,7 +96,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   text-decoration: none;
 }
 
-.c2 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -112,7 +121,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   border-radius: 49%;
 }
 
-.c4 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -137,12 +146,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   border-radius: 49%;
 }
 
-.c6 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,69 +154,124 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   margin: 2rem 0;
 }
 
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c13 {
   margin-left: auto;
 }
 
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding: 0;
+  overflow: auto;
+  color: #434956;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c10 {
+  -webkit-flex-basis: 240px;
+  -ms-flex-preferred-size: 240px;
+  flex-basis: 240px;
   margin: 2rem 0;
 }
 
-.c5 > *:first-child {
-  margin-top: 0;
+.c9 {
+  padding: 1rem 0;
+  color: #0c0c0e;
+  font-weight: 400;
+  font-size: 1.375rem;
+  border-bottom: 1px solid #c9d3df;
 }
 
-.c5 > *:last-child {
-  margin-bottom: 0;
+.c8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.25rem 2.5rem;
 }
 
-@media print {
-  .c6 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c1 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #c9d3df;
   }
 }
 
-@media print {
-  .c5 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c3 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
 <div>
-  <form>
+  <form
+    class="c0"
+  >
     <div
-      class="c0"
+      class="c1"
     >
       <span
-        class="c1"
+        class="c2"
+      >
+        Étapes
+         
+        <span
+          class="c3"
+        >
+          1/2
+        </span>
+      </span>
+      <span
+        class="c4"
       >
         <span
-          class="c2"
+          class="c5"
         >
           1
         </span>
         First Step
       </span>
       <span
-        class="c3"
+        class="c6"
       >
         <span
-          class="c4"
+          class="c7"
         >
           2
         </span>
@@ -220,27 +279,36 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       </span>
     </div>
     <div
-      class="c5"
+      class="c8"
     >
-      <p>
-        Premiere Etape
-      </p>
-    </div>
-    <div
-      class="c6"
-    >
-      <button
-        class="c7 c8"
+      <div
+        class="c9"
       >
-        Suivant
-      </button>
+        test
+      </div>
+      <div
+        class="c10"
+      >
+        <p>
+          Premiere Etape
+        </p>
+      </div>
+      <div
+        class="c11"
+      >
+        <button
+          class="c12 c13"
+        >
+          Suivant
+        </button>
+      </div>
     </div>
   </form>
 </div>
 `;
 
 exports[`<Wizard /> should handle initialStepIndex 1`] = `
-.c7 {
+.c12 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -261,32 +329,41 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   border-color: #ebeff3;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
 }
 
-.c7[disabled] {
+.c12[disabled] {
   color: rgba(12,12,14,0.4);
   cursor: not-allowed;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid #adb9c9;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.25rem 2.5rem;
+  background-color: #f9f9fc;
+  border-right: 1px solid #c9d3df;
+}
+
+.c2 {
+  margin: 1.25rem 0;
+  font-weight: 600;
 }
 
 .c3 {
+  display: none;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -306,7 +383,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   text-decoration: none;
 }
 
-.c1 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -326,7 +403,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   text-decoration: none;
 }
 
-.c4 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -351,7 +428,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   border-radius: 49%;
 }
 
-.c2 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -376,12 +453,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   border-radius: 49%;
 }
 
-.c6 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -389,69 +461,124 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   margin: 2rem 0;
 }
 
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c13 {
   margin-right: auto;
 }
 
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding: 0;
+  overflow: auto;
+  color: #434956;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c10 {
+  -webkit-flex-basis: 240px;
+  -ms-flex-preferred-size: 240px;
+  flex-basis: 240px;
   margin: 2rem 0;
 }
 
-.c5 > *:first-child {
-  margin-top: 0;
+.c9 {
+  padding: 1rem 0;
+  color: #0c0c0e;
+  font-weight: 400;
+  font-size: 1.375rem;
+  border-bottom: 1px solid #c9d3df;
 }
 
-.c5 > *:last-child {
-  margin-bottom: 0;
+.c8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.25rem 2.5rem;
 }
 
-@media print {
-  .c6 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c1 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #c9d3df;
   }
 }
 
-@media print {
-  .c5 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c3 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
 <div>
-  <form>
+  <form
+    class="c0"
+  >
     <div
-      class="c0"
+      class="c1"
     >
       <span
-        class="c1"
+        class="c2"
+      >
+        Étapes
+         
+        <span
+          class="c3"
+        >
+          2/2
+        </span>
+      </span>
+      <span
+        class="c4"
       >
         <span
-          class="c2"
+          class="c5"
         >
           1
         </span>
         First Step
       </span>
       <span
-        class="c3"
+        class="c6"
       >
         <span
-          class="c4"
+          class="c7"
         >
           2
         </span>
@@ -459,31 +586,40 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
       </span>
     </div>
     <div
-      class="c5"
+      class="c8"
     >
-      <p>
-        Deuxieme Etape 
-        <button>
-          Submit
-        </button>
-      </p>
-    </div>
-    <div
-      class="c6"
-    >
-      <button
-        class="c7 c8"
-        type="button"
+      <div
+        class="c9"
       >
-        Précédent
-      </button>
+        test
+      </div>
+      <div
+        class="c10"
+      >
+        <p>
+          Deuxieme Etape 
+          <button>
+            Submit
+          </button>
+        </p>
+      </div>
+      <div
+        class="c11"
+      >
+        <button
+          class="c12 c13"
+          type="button"
+        >
+          Précédent
+        </button>
+      </div>
     </div>
   </form>
 </div>
 `;
 
 exports[`<Wizard /> should handle initialValues 1`] = `
-.c7 {
+.c12 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -504,32 +640,41 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   border-color: #005994;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
 }
 
-.c7[disabled] {
+.c12[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid #adb9c9;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.25rem 2.5rem;
+  background-color: #f9f9fc;
+  border-right: 1px solid #c9d3df;
 }
 
-.c1 {
+.c2 {
+  margin: 1.25rem 0;
+  font-weight: 600;
+}
+
+.c3 {
+  display: none;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -549,7 +694,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   text-decoration: none;
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -569,7 +714,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   text-decoration: none;
 }
 
-.c2 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -594,7 +739,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   border-radius: 49%;
 }
 
-.c4 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -619,12 +764,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   border-radius: 49%;
 }
 
-.c6 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -632,79 +772,134 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   margin: 2rem 0;
 }
 
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c13 {
   margin-left: auto;
 }
 
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding: 0;
+  overflow: auto;
+  color: #434956;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c10 {
+  -webkit-flex-basis: 240px;
+  -ms-flex-preferred-size: 240px;
+  flex-basis: 240px;
   margin: 2rem 0;
 }
 
-.c5 > *:first-child {
-  margin-top: 0;
+.c9 {
+  padding: 1rem 0;
+  color: #0c0c0e;
+  font-weight: 400;
+  font-size: 1.375rem;
+  border-bottom: 1px solid #c9d3df;
 }
 
-.c5 > *:last-child {
-  margin-bottom: 0;
+.c8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.25rem 2.5rem;
 }
 
-@media print {
-  .c6 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c1 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #c9d3df;
   }
 }
 
-@media print {
-  .c5 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c3 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
 <div>
-  <form>
+  <form
+    class="c0"
+  >
     <div
-      class="c0"
+      class="c1"
     >
       <span
-        class="c1"
+        class="c2"
+      >
+        Étapes
+         
+        <span
+          class="c3"
+        >
+          1/3
+        </span>
+      </span>
+      <span
+        class="c4"
       >
         <span
-          class="c2"
+          class="c5"
         >
           1
         </span>
         First Step
       </span>
       <span
-        class="c3"
+        class="c6"
       >
         <span
-          class="c4"
+          class="c7"
         >
           2
         </span>
         Second Step
       </span>
       <span
-        class="c3"
+        class="c6"
       >
         <span
-          class="c4"
+          class="c7"
         >
           3
         </span>
@@ -712,27 +907,36 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       </span>
     </div>
     <div
-      class="c5"
+      class="c8"
     >
-      <p>
-        Premiere Etape
-      </p>
-    </div>
-    <div
-      class="c6"
-    >
-      <button
-        class="c7 c8"
+      <div
+        class="c9"
       >
-        Suivant
-      </button>
+        test
+      </div>
+      <div
+        class="c10"
+      >
+        <p>
+          Premiere Etape
+        </p>
+      </div>
+      <div
+        class="c11"
+      >
+        <button
+          class="c12 c13"
+        >
+          Suivant
+        </button>
+      </div>
     </div>
   </form>
 </div>
 `;
 
 exports[`<Wizard /> should inject rules component 1`] = `
-.c7 {
+.c12 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -753,32 +957,41 @@ exports[`<Wizard /> should inject rules component 1`] = `
   border-color: #005994;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
 }
 
-.c7[disabled] {
+.c12[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid #adb9c9;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.25rem 2.5rem;
+  background-color: #f9f9fc;
+  border-right: 1px solid #c9d3df;
 }
 
-.c1 {
+.c2 {
+  margin: 1.25rem 0;
+  font-weight: 600;
+}
+
+.c3 {
+  display: none;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -798,7 +1011,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   text-decoration: none;
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -818,7 +1031,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   text-decoration: none;
 }
 
-.c2 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -843,7 +1056,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   border-radius: 49%;
 }
 
-.c4 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -868,12 +1081,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   border-radius: 49%;
 }
 
-.c6 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -881,72 +1089,127 @@ exports[`<Wizard /> should inject rules component 1`] = `
   margin: 2rem 0;
 }
 
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c13 {
   margin-left: auto;
 }
 
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding: 0;
+  overflow: auto;
+  color: #434956;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c10 {
+  -webkit-flex-basis: 240px;
+  -ms-flex-preferred-size: 240px;
+  flex-basis: 240px;
   margin: 2rem 0;
 }
 
-.c5 > *:first-child {
-  margin-top: 0;
+.c9 {
+  padding: 1rem 0;
+  color: #0c0c0e;
+  font-weight: 400;
+  font-size: 1.375rem;
+  border-bottom: 1px solid #c9d3df;
 }
 
-.c5 > *:last-child {
-  margin-bottom: 0;
+.c8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.25rem 2.5rem;
 }
 
-@media print {
-  .c6 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c1 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #c9d3df;
   }
 }
 
-@media print {
-  .c5 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c3 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
 <div>
-  <form>
+  <form
+    class="c0"
+  >
     <p>
       Rule
     </p>
     <div
-      class="c0"
+      class="c1"
     >
       <span
-        class="c1"
+        class="c2"
+      >
+        Étapes
+         
+        <span
+          class="c3"
+        >
+          1/2
+        </span>
+      </span>
+      <span
+        class="c4"
       >
         <span
-          class="c2"
+          class="c5"
         >
           1
         </span>
         First Step
       </span>
       <span
-        class="c3"
+        class="c6"
       >
         <span
-          class="c4"
+          class="c7"
         >
           2
         </span>
@@ -954,27 +1217,36 @@ exports[`<Wizard /> should inject rules component 1`] = `
       </span>
     </div>
     <div
-      class="c5"
+      class="c8"
     >
-      <p>
-        Premiere Etape
-      </p>
-    </div>
-    <div
-      class="c6"
-    >
-      <button
-        class="c7 c8"
+      <div
+        class="c9"
       >
-        Suivant
-      </button>
+        test
+      </div>
+      <div
+        class="c10"
+      >
+        <p>
+          Premiere Etape
+        </p>
+      </div>
+      <div
+        class="c11"
+      >
+        <button
+          class="c12 c13"
+        >
+          Suivant
+        </button>
+      </div>
     </div>
   </form>
 </div>
 `;
 
 exports[`<Wizard /> should navigate to the second step when click on Suivant 1`] = `
-.c7 {
+.c12 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -995,32 +1267,41 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   border-color: #ebeff3;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
 }
 
-.c7[disabled] {
+.c12[disabled] {
   color: rgba(12,12,14,0.4);
   cursor: not-allowed;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid #adb9c9;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.25rem 2.5rem;
+  background-color: #f9f9fc;
+  border-right: 1px solid #c9d3df;
+}
+
+.c2 {
+  margin: 1.25rem 0;
+  font-weight: 600;
 }
 
 .c3 {
+  display: none;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1040,7 +1321,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   text-decoration: none;
 }
 
-.c1 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1060,7 +1341,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   text-decoration: none;
 }
 
-.c4 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1085,7 +1366,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   border-radius: 49%;
 }
 
-.c2 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1110,12 +1391,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   border-radius: 49%;
 }
 
-.c6 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1123,69 +1399,124 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   margin: 2rem 0;
 }
 
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c13 {
   margin-right: auto;
 }
 
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding: 0;
+  overflow: auto;
+  color: #434956;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c10 {
+  -webkit-flex-basis: 240px;
+  -ms-flex-preferred-size: 240px;
+  flex-basis: 240px;
   margin: 2rem 0;
 }
 
-.c5 > *:first-child {
-  margin-top: 0;
+.c9 {
+  padding: 1rem 0;
+  color: #0c0c0e;
+  font-weight: 400;
+  font-size: 1.375rem;
+  border-bottom: 1px solid #c9d3df;
 }
 
-.c5 > *:last-child {
-  margin-bottom: 0;
+.c8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.25rem 2.5rem;
 }
 
-@media print {
-  .c6 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c1 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #c9d3df;
   }
 }
 
-@media print {
-  .c5 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c3 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
 <div>
-  <form>
+  <form
+    class="c0"
+  >
     <div
-      class="c0"
+      class="c1"
     >
       <span
-        class="c1"
+        class="c2"
+      >
+        Étapes
+         
+        <span
+          class="c3"
+        >
+          2/2
+        </span>
+      </span>
+      <span
+        class="c4"
       >
         <span
-          class="c2"
+          class="c5"
         >
           1
         </span>
         First Step
       </span>
       <span
-        class="c3"
+        class="c6"
       >
         <span
-          class="c4"
+          class="c7"
         >
           2
         </span>
@@ -1193,31 +1524,40 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       </span>
     </div>
     <div
-      class="c5"
+      class="c8"
     >
-      <p>
-        Deuxieme Etape 
-        <button>
-          Submit
-        </button>
-      </p>
-    </div>
-    <div
-      class="c6"
-    >
-      <button
-        class="c7 c8"
-        type="button"
+      <div
+        class="c9"
       >
-        Précédent
-      </button>
+        test
+      </div>
+      <div
+        class="c10"
+      >
+        <p>
+          Deuxieme Etape 
+          <button>
+            Submit
+          </button>
+        </p>
+      </div>
+      <div
+        class="c11"
+      >
+        <button
+          class="c12 c13"
+          type="button"
+        >
+          Précédent
+        </button>
+      </div>
     </div>
   </form>
 </div>
 `;
 
 exports[`<Wizard /> should render a step 1`] = `
-.c7 {
+.c12 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -1238,32 +1578,41 @@ exports[`<Wizard /> should render a step 1`] = `
   border-color: #005994;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
 }
 
-.c7[disabled] {
+.c12[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid #adb9c9;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.25rem 2.5rem;
+  background-color: #f9f9fc;
+  border-right: 1px solid #c9d3df;
 }
 
-.c1 {
+.c2 {
+  margin: 1.25rem 0;
+  font-weight: 600;
+}
+
+.c3 {
+  display: none;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1283,7 +1632,7 @@ exports[`<Wizard /> should render a step 1`] = `
   text-decoration: none;
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1303,7 +1652,7 @@ exports[`<Wizard /> should render a step 1`] = `
   text-decoration: none;
 }
 
-.c2 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1328,7 +1677,7 @@ exports[`<Wizard /> should render a step 1`] = `
   border-radius: 49%;
 }
 
-.c4 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1353,12 +1702,7 @@ exports[`<Wizard /> should render a step 1`] = `
   border-radius: 49%;
 }
 
-.c6 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1366,69 +1710,124 @@ exports[`<Wizard /> should render a step 1`] = `
   margin: 2rem 0;
 }
 
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c13 {
   margin-left: auto;
 }
 
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding: 0;
+  overflow: auto;
+  color: #434956;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c10 {
+  -webkit-flex-basis: 240px;
+  -ms-flex-preferred-size: 240px;
+  flex-basis: 240px;
   margin: 2rem 0;
 }
 
-.c5 > *:first-child {
-  margin-top: 0;
+.c9 {
+  padding: 1rem 0;
+  color: #0c0c0e;
+  font-weight: 400;
+  font-size: 1.375rem;
+  border-bottom: 1px solid #c9d3df;
 }
 
-.c5 > *:last-child {
-  margin-bottom: 0;
+.c8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.25rem 2.5rem;
 }
 
-@media print {
-  .c6 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c1 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #c9d3df;
   }
 }
 
-@media print {
-  .c5 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c3 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
 <div>
-  <form>
+  <form
+    class="c0"
+  >
     <div
-      class="c0"
+      class="c1"
     >
       <span
-        class="c1"
+        class="c2"
+      >
+        Étapes
+         
+        <span
+          class="c3"
+        >
+          1/2
+        </span>
+      </span>
+      <span
+        class="c4"
       >
         <span
-          class="c2"
+          class="c5"
         >
           1
         </span>
         First Step
       </span>
       <span
-        class="c3"
+        class="c6"
       >
         <span
-          class="c4"
+          class="c7"
         >
           2
         </span>
@@ -1436,20 +1835,29 @@ exports[`<Wizard /> should render a step 1`] = `
       </span>
     </div>
     <div
-      class="c5"
+      class="c8"
     >
-      <p>
-        Premiere Etape
-      </p>
-    </div>
-    <div
-      class="c6"
-    >
-      <button
-        class="c7 c8"
+      <div
+        class="c9"
       >
-        Suivant
-      </button>
+        test
+      </div>
+      <div
+        class="c10"
+      >
+        <p>
+          Premiere Etape
+        </p>
+      </div>
+      <div
+        class="c11"
+      >
+        <button
+          class="c12 c13"
+        >
+          Suivant
+        </button>
+      </div>
     </div>
   </form>
 </div>

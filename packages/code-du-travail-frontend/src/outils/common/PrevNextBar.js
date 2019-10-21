@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Button, Container, theme } from "@socialgouv/react-ui";
+import { Button, theme } from "@socialgouv/react-ui";
 
 function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
   return (
-    <StyledContainer narrow noPadding>
+    <Box>
       {previousVisible && (
         <PreviousButton type="button" onClick={onPrev} variant="secondary">
           Précédent
@@ -16,7 +16,7 @@ function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
           Suivant
         </NextButton>
       )}
-    </StyledContainer>
+    </Box>
   );
 }
 PrevNextBar.propTypes = {
@@ -36,7 +36,7 @@ export { PrevNextBar };
 
 const { spacing } = theme;
 
-const StyledContainer = styled(Container)`
+const Box = styled.div`
   display: flex;
   margin: ${spacing.large} 0;
 `;

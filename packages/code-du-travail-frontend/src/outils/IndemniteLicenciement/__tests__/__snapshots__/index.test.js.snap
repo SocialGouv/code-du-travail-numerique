@@ -20,24 +20,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   color: #434956;
 }
 
-.c2 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  padding: 2rem 2.5rem;
-  background-color: #fff;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c10 {
+.c14 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -58,14 +41,14 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   border-color: #005994;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):active,
-.c10:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
 }
 
-.c10[disabled] {
+.c14[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
 }
@@ -75,15 +58,24 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid #adb9c9;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.25rem 2.5rem;
+  background-color: #f9f9fc;
+  border-right: 1px solid #c9d3df;
 }
 
 .c4 {
+  margin: 1.25rem 0;
+  font-weight: 600;
+}
+
+.c5 {
+  display: none;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,7 +95,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   text-decoration: none;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -123,7 +115,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   text-decoration: none;
 }
 
-.c5 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -148,7 +140,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c7 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -173,12 +165,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c9 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -186,33 +173,46 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   margin: 2rem 0;
 }
 
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
+.c15 {
   margin-left: auto;
 }
 
-.c8 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding: 0;
+  overflow: auto;
+  color: #434956;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c12 {
+  -webkit-flex-basis: 240px;
+  -ms-flex-preferred-size: 240px;
+  flex-basis: 240px;
   margin: 2rem 0;
 }
 
-.c8 > *:first-child {
-  margin-top: 0;
+.c11 {
+  padding: 1rem 0;
+  color: #0c0c0e;
+  font-weight: 400;
+  font-size: 1.375rem;
+  border-bottom: 1px solid #c9d3df;
 }
 
-.c8 > *:last-child {
-  margin-bottom: 0;
+.c10 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.25rem 2.5rem;
 }
 
 @media print {
@@ -223,29 +223,45 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
+  .c3 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     border: none;
+    border-bottom: 1px solid #c9d3df;
   }
 }
 
-@media print {
-  .c9 {
-    max-width: 100%;
-    padding: 0;
+@media (max-width:600px) {
+  .c5 {
+    display: inline-block;
   }
 }
 
-@media print {
+@media (max-width:600px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
-    max-width: 100%;
-    padding: 0;
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -256,69 +272,84 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
     <div
       class="c1"
     >
-      <div
+      <form
         class="c2"
       >
-        <h1>
-          Calculateur d'indemnités de licenciement
-        </h1>
-        <form>
-          <div
-            class="c3"
+        <div
+          class="c3"
+        >
+          <span
+            class="c4"
+          >
+            Étapes
+             
+            <span
+              class="c5"
+            >
+              1/5
+            </span>
+          </span>
+          <span
+            class="c6"
           >
             <span
-              class="c4"
+              class="c7"
             >
-              <span
-                class="c5"
-              >
-                1
-              </span>
-              Introduction
+              1
             </span>
+            Introduction
+          </span>
+          <span
+            class="c8"
+          >
             <span
-              class="c6"
+              class="c9"
             >
-              <span
-                class="c7"
-              >
-                2
-              </span>
-              Informations générales
+              2
             </span>
+            Informations générales
+          </span>
+          <span
+            class="c8"
+          >
             <span
-              class="c6"
+              class="c9"
             >
-              <span
-                class="c7"
-              >
-                3
-              </span>
-              Ancienneté
+              3
             </span>
+            Ancienneté
+          </span>
+          <span
+            class="c8"
+          >
             <span
-              class="c6"
+              class="c9"
             >
-              <span
-                class="c7"
-              >
-                4
-              </span>
-              Salaires
+              4
             </span>
+            Salaires
+          </span>
+          <span
+            class="c8"
+          >
             <span
-              class="c6"
+              class="c9"
             >
-              <span
-                class="c7"
-              >
-                5
-              </span>
-              Indemnité légale
+              5
             </span>
+            Indemnité légale
+          </span>
+        </div>
+        <div
+          class="c10"
+        >
+          <div
+            class="c11"
+          >
+            Simulateur d’indemnités de licenciement
           </div>
           <div
-            class="c8"
+            class="c12"
           >
             <p>
               Ce simulateur est un outil qui permet d’estimer le montant de l’indemnité minimale de licenciement d’un salarié.
@@ -344,16 +375,16 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
             </p>
           </div>
           <div
-            class="c9"
+            class="c13"
           >
             <button
-              class="c10 c11"
+              class="c14 c15"
             >
               Suivant
             </button>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>
