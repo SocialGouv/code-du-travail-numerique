@@ -57,7 +57,9 @@ export const Tile = React.forwardRef(
       <OverflowWrapper>{children}</OverflowWrapper>
       {button && (
         <ButtonWrapper>
-          <Button noButton>{button}</Button>
+          <Button noButton variant="secondary">
+            {button}
+          </Button>
         </ButtonWrapper>
       )}
     </StyledTile>
