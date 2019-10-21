@@ -18,14 +18,22 @@ const App = (
 )
 ```
 
-## Color usage
+## Theming
 
-When you wish to set a color, please do not use directly the color variable from the `theme.js` file.
+When you wish to set a color, please do not use the color variable from the theme in the `@socialgouv/react-ui` package.
 Use the `theme` prop provided by styled-components.
 
-e.g.
+e.g.<br />
 Not OK: ~~`color: ${theme.colors.blueDark};`~~
 OK: `color: ${({theme }) => theme.blueDark};`
 
-Otherwise, color won't change it the theme is dynamically modified.
+Otherwise, the color won't change when the theme is dynamically modified. For eveything else, using the `themr.js` file is always the right thing to do: <br />
+``` js
+  import { box, spacing } from "../theme";
+  const P = styled.p`
+    margin: ${spacing.large};
+    color: ${({theme}) => theme.darkBlue};
+    border: ${box.border};
+  `;
+```
 
