@@ -35,4 +35,3 @@ Otherwise, the color won't change when the theme is dynamically modified. For ev
     border: ${box.border};
   `;
 ```
-
