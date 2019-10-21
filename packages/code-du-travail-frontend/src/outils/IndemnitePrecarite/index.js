@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Section, Wrapper } from "@socialgouv/react-ui";
+import { Container, Section } from "@socialgouv/react-ui";
 
 import { Wizard } from "../common/Wizard";
 
@@ -41,10 +41,10 @@ function SimulateurIndemnitePrecarite() {
   return (
     <Section>
       <Container>
-        <Wrapper size="large" variant="light">
-          <h1>Simulateur de la prime de précarité</h1>
-          <Wizard initialSteps={initialSteps} />
-        </Wrapper>
+        <Wizard
+          title="Simulateur de la prime de précarité"
+          initialSteps={initialSteps}
+        />
       </Container>
     </Section>
   );

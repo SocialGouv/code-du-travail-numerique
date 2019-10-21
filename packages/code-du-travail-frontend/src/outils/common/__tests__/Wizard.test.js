@@ -35,13 +35,13 @@ const additionalStep = {
 describe("<Wizard />", () => {
   it("should render a step", () => {
     const { container } = render(
-      <Wizard stepReducer={stepReducer} initialSteps={steps} />
+      <Wizard title="test" stepReducer={stepReducer} initialSteps={steps} />
     );
     expect(container).toMatchSnapshot();
   });
   it("should navigate to the second step when click on Suivant", () => {
     const { container, getByText } = render(
-      <Wizard stepReducer={stepReducer} initialSteps={steps} />
+      <Wizard title="test" stepReducer={stepReducer} initialSteps={steps} />
     );
     const button = getByText(/suivant/i);
     button.click();
@@ -49,7 +49,7 @@ describe("<Wizard />", () => {
   });
   it("should call Step.validate when click on Suivant", () => {
     const { getByText } = render(
-      <Wizard stepReducer={stepReducer} initialSteps={steps} />
+      <Wizard title="test" stepReducer={stepReducer} initialSteps={steps} />
     );
     const button = getByText(/suivant/i);
     button.click();
@@ -58,6 +58,7 @@ describe("<Wizard />", () => {
   it("should handle initialStepIndex", () => {
     const { container } = render(
       <Wizard
+        title="test"
         stepReducer={stepReducer}
         initialSteps={steps}
         initialStepIndex={1}
@@ -68,6 +69,7 @@ describe("<Wizard />", () => {
   it("should call navigate the previous step when click on précédent", () => {
     const { container, getByText } = render(
       <Wizard
+        title="test"
         stepReducer={stepReducer}
         initialSteps={steps}
         initialStepIndex={1}
@@ -80,6 +82,7 @@ describe("<Wizard />", () => {
   it("should handle initialValues", () => {
     const { container } = render(
       <Wizard
+        title="test"
         stepReducer={stepReducer}
         initialSteps={[...steps, additionalStep]}
         initialValues={{ firstName: "lionel" }}
@@ -91,6 +94,7 @@ describe("<Wizard />", () => {
     const Rule = () => <p>Rule</p>;
     const { container } = render(
       <Wizard
+        title="test"
         stepReducer={stepReducer}
         initialSteps={steps}
         Rules={() => <Rule key="key" />}

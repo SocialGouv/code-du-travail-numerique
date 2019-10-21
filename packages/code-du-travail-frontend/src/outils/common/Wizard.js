@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
-import { Container, theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/react-ui";
 
 import { StepItems } from "./StepItems";
 import { PrevNextBar } from "./PrevNextBar";
@@ -12,6 +12,7 @@ function Wizard({
   initialSteps,
   initialStepIndex = 0,
   initialValues = {},
+  title,
   Rules = null,
   stepReducer = step => step
 }) {
@@ -58,25 +59,26 @@ function Wizard({
   const Step = steps[stepIndex].component;
 
   return (
-    <>
-      <Form
-        initialValues={initialValues}
-        validate={validate}
-        decorators={decorators}
-        mutators={{
-          ...arrayMutators
-        }}
-        onSubmit={handlePageSubmit}
-      >
-        {({ handleSubmit, form, invalid }) => {
-          return (
-            <>
-              <form onSubmit={handleSubmit}>
-                {Rules && (
-                  <Rules values={form.getState().values} dispatch={dispatch} />
-                )}
-                <StepItems activeIndex={stepIndex} items={stepItems} />
-                <StepWrapper narrow noPadding>
+    <Form
+      initialValues={initialValues}
+      validate={validate}
+      decorators={decorators}
+      mutators={{
+        ...arrayMutators
+      }}
+      onSubmit={handlePageSubmit}
+    >
+      {({ handleSubmit, form, invalid }) => {
+        return (
+          <>
+            <StyledForm onSubmit={handleSubmit}>
+              {Rules && (
+                <Rules values={form.getState().values} dispatch={dispatch} />
+              )}
+              <StepItems activeIndex={stepIndex} items={stepItems} />
+              <Column>
+                <ToolTitle>{title}</ToolTitle>
+                <StepWrapper noPadding>
                   <Step form={form} dispatch={dispatch} />
                 </StepWrapper>
                 <PrevNextBar
@@ -85,16 +87,17 @@ function Wizard({
                   disabled={invalid}
                   previousVisible={previousVisible}
                 />
-              </form>
-            </>
-          );
-        }}
-      </Form>
-    </>
+              </Column>
+            </StyledForm>
+          </>
+        );
+      }}
+    </Form>
   );
 }
 
 Wizard.propTypes = {
+  title: PropTypes.string.isRequired,
   stepReducer: PropTypes.func,
   initialSteps: PropTypes.arrayOf(
     PropTypes.shape({
@@ -110,8 +113,34 @@ Wizard.propTypes = {
 
 export { Wizard };
 
-const { spacing } = theme;
+const { box, fonts, spacing, breakpoints } = theme;
 
-const StepWrapper = styled(Container)`
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  overflow: auto;
+  color: ${({ theme }) => theme.darkText};
+  background-color: ${({ theme }) => theme.white};
+  border: ${box.border};
+  border-radius: ${box.borderRadius};
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+  }
+`;
+
+const StepWrapper = styled.div`
+  flex-basis: 240px;
   margin: ${spacing.large} 0;
+`;
+const ToolTitle = styled.div`
+  padding: ${spacing.base} 0;
+  color: ${({ theme }) => theme.black};
+  font-weight: 400;
+  font-size: ${fonts.sizeH4};
+  border-bottom: 1px solid ${({ theme }) => theme.lightGrey};
+`;
+const Column = styled.div`
+  flex: 1;
+  padding: ${spacing.medium} ${spacing.larger};
 `;

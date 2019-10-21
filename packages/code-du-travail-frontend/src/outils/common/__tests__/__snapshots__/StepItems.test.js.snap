@@ -6,15 +6,24 @@ exports[`<StepItems /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid #adb9c9;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.25rem 2.5rem;
+  background-color: #f9f9fc;
+  border-right: 1px solid #c9d3df;
 }
 
 .c1 {
+  margin: 1.25rem 0;
+  font-weight: 600;
+}
+
+.c2 {
+  display: none;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,7 +43,7 @@ exports[`<StepItems /> should render 1`] = `
   text-decoration: none;
 }
 
-.c3 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +63,7 @@ exports[`<StepItems /> should render 1`] = `
   text-decoration: none;
 }
 
-.c2 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -79,7 +88,7 @@ exports[`<StepItems /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c4 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -104,6 +113,41 @@ exports[`<StepItems /> should render 1`] = `
   border-radius: 49%;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #c9d3df;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -111,12 +155,13 @@ exports[`<StepItems /> should render 1`] = `
     <span
       class="c1"
     >
+      Étapes
+       
       <span
         class="c2"
       >
-        1
+        2/3
       </span>
-      Step One
     </span>
     <span
       class="c3"
@@ -124,15 +169,25 @@ exports[`<StepItems /> should render 1`] = `
       <span
         class="c4"
       >
+        1
+      </span>
+      Step One
+    </span>
+    <span
+      class="c5"
+    >
+      <span
+        class="c6"
+      >
         2
       </span>
       Step Two
     </span>
     <span
-      class="c1"
+      class="c3"
     >
       <span
-        class="c2"
+        class="c4"
       >
         3
       </span>
