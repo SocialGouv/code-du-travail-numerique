@@ -2354,10 +2354,10 @@
     eslint-plugin-jest "^22.17.0"
     eslint-plugin-prettier "~3.1.0"
 
-"@socialgouv/fiches-vdd@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.0.tgz#42cb76ecf6597033d13fa6d57945fa428e625c20"
-  integrity sha512-ZMmD4GxcNknFeTy/f/UbPcSGudCCGFZHfMgnH4D+j394f98sHYaTJ2n4/weZpdqxRgdCC9DNwsOM1px7XkKsIg==
+"@socialgouv/fiches-vdd@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.1.tgz#ef55901c8419938c2551e899eafbc3545d6bad21"
+  integrity sha512-6ZBMj0KGA/wDhNUfMaOY7paEBh6g+8vN3dL4WtB0MOfxWo5XM/XUVFu6PTHVLIxL5oyU06RmP8KgG219ImRyzA==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.0"
@@ -14900,10 +14900,10 @@ rollup-pluginutils@^2.6.0, rollup-pluginutils@^2.8.1:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.25.0:
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.25.0.tgz#0c293d16be13000fa69c5a3035ab21a852d04bd7"
-  integrity sha512-tcf5ThhnhOUaNrxBSABvaaX9uC8hNxgyJpJmDIXaCkKHq/nPocaDz/4F/KBDiUpOt/ThvUxFrUq3XkyWiyXQiQ==
+rollup@^1.25.1:
+  version "1.25.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.25.1.tgz#905707d686dc8d7218af63dcfb9e37d1f3dc3c34"
+  integrity sha512-K8ytdEzMa6anHSnfTIs2BLB+NXlQ4qmWwdNHBpYQNWCbZAzj+DRVk7+ssbLSgddwpFW1nThr2GElR+jASF2NPA==
   dependencies:
     "@types/estree" "*"
     "@types/node" "*"
