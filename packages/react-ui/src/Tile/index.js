@@ -9,7 +9,7 @@ const StyledTile = styled.a`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: start;
+  align-items: flex-start;
   justify-content: flex-end;
   box-sizing: border-box;
   width: 100%;
