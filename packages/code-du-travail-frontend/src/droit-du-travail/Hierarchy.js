@@ -347,9 +347,7 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: (
-                        <H3>Les usages et les engagements unilatériaux</H3>
-                      ),
+                      title: <H3>Les usages et les engagements unilatéraux</H3>,
                       body: (
                         <>
                           Les usages et les engagements unilatéraux doivent
@@ -369,7 +367,7 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: <H3>Le réglement intérieur de l’entreprise</H3>,
+                      title: <H3>Le règlement intérieur de l’entreprise</H3>,
                       body: (
                         <>
                           Le règlement intérieur doit respecter les textes

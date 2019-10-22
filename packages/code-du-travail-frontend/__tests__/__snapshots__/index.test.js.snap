@@ -206,6 +206,9 @@ exports[`<Home /> should render 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -242,7 +245,8 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c31 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 .c32 {

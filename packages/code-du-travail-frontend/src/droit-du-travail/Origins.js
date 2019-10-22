@@ -153,10 +153,10 @@ const accordionItemsLeft = [
     )
   },
   {
-    title: <h3>Le réglement intérieur de l’entreprise</h3>,
+    title: <h3>Le règlement intérieur de l’entreprise</h3>,
     body: (
       <>
-        Le réglement intérieur de l’entreprise est un acte écrit par l’employeur
+        Le règlement intérieur de l’entreprise est un acte écrit par l’employeur
         qui fixe les règles concernant l’organisation de l’entreprise, la
         discipline, l’hygiène et la sécurité dans l’entreprise.
       </>
@@ -298,7 +298,7 @@ const accordionItemsRight = [
     )
   },
   {
-    title: <h3>Les usages et les engagements unilatériaux</h3>,
+    title: <h3>Les usages et les engagements unilatéraux</h3>,
     body: (
       <>
         <p>

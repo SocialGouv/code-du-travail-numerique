@@ -10,6 +10,9 @@ exports[`<Tile /> renders a button tile 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -46,7 +49,8 @@ exports[`<Tile /> renders a button tile 1`] = `
 }
 
 .c1 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 <div>
@@ -107,6 +111,9 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -143,7 +150,8 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
 }
 
 .c1 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 .c2 {
@@ -183,6 +191,9 @@ exports[`<Tile /> renders with an icon 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -219,7 +230,8 @@ exports[`<Tile /> renders with an icon 1`] = `
 }
 
 .c2 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 .c1 {

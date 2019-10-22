@@ -1373,7 +1373,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 tabindex="0"
               >
                 <h3>
-                  Le réglement intérieur de l’entreprise
+                  Le règlement intérieur de l’entreprise
                 </h3>
                 <div
                   class="c29"
@@ -1389,7 +1389,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               hidden=""
               id="accordion__panel-3"
             >
-              Le réglement intérieur de l’entreprise est un acte écrit par l’employeur qui fixe les règles concernant l’organisation de l’entreprise, la discipline, l’hygiène et la sécurité dans l’entreprise.
+              Le règlement intérieur de l’entreprise est un acte écrit par l’employeur qui fixe les règles concernant l’organisation de l’entreprise, la discipline, l’hygiène et la sécurité dans l’entreprise.
             </div>
           </div>
         </div>
@@ -1611,7 +1611,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 tabindex="0"
               >
                 <h3>
-                  Les usages et les engagements unilatériaux
+                  Les usages et les engagements unilatéraux
                 </h3>
                 <div
                   class="c29"
@@ -2311,7 +2311,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <h3
                         class="c41"
                       >
-                        Les usages et les engagements unilatériaux
+                        Les usages et les engagements unilatéraux
                       </h3>
                       <div
                         class="c29"
@@ -2371,7 +2371,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <h3
                         class="c41"
                       >
-                        Le réglement intérieur de l’entreprise
+                        Le règlement intérieur de l’entreprise
                       </h3>
                       <div
                         class="c29"

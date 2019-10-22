@@ -8,6 +8,7 @@ const StyledTile = styled.a`
   position: relative;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-end;
   box-sizing: border-box;
@@ -33,7 +34,8 @@ const StyledTile = styled.a`
 `;
 
 const OverflowWrapper = styled.div`
-  overflow-y: scroll;
+  max-width: 100%; /* ie11 fix :'( */
+  overflow-y: auto;
 `;
 
 const IconWrapper = styled.div`

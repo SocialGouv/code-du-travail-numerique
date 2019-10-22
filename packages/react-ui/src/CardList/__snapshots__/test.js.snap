@@ -57,6 +57,9 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -93,7 +96,8 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 }
 
 .c4 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 @media (max-width:980px) {
@@ -223,6 +227,9 @@ exports[`<CardList /> should render a collection with a title and description 1`
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -259,7 +266,8 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 .c5 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 @media (max-width:980px) {
@@ -425,6 +433,9 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -461,7 +472,8 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 }
 
 .c8 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 @media (max-width:980px) {
@@ -610,6 +622,9 @@ exports[`<CardList /> should render a signle title 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -646,7 +661,8 @@ exports[`<CardList /> should render a signle title 1`] = `
 }
 
 .c4 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 @media (max-width:980px) {
