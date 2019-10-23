@@ -63,12 +63,25 @@ const analyzer = {
     filter: ["lowercase", "icu_folding"]
   },
 
+  suggest_prefix: {
+    tokenizer: "whitespace",
+    char_filter: ["startwith"],
+    filter: ["lowercase", "icu_folding"]
+  },
+
+  text_prefix: {
+    tokenizer: "keyword",
+    filter: ["lowercase", "icu_folding"]
+  },
+
   autocomplete: {
     tokenizer: "autocomplete",
-    filter: ["lowercase"]
+    filter: ["lowercase", "icu_folding"]
   },
+
   autocomplete_search: {
-    tokenizer: "lowercase"
+    tokenizer: "lowercase",
+    filter: "icu_folding"
   },
 
   french_with_synonyms: {

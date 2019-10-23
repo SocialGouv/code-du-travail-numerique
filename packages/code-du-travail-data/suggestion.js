@@ -24,16 +24,19 @@ export const suggestionMapping = {
     title: {
       type: "keyword"
     },
+
     ranking: {
       type: "rank_feature"
     },
+
     autocomp: {
       type: "text",
       analyzer: "autocomplete",
       search_analyzer: "autocomplete_search",
       fields: {
-        keyword: {
-          type: "keyword"
+        text_prefix: {
+          type: "text",
+          analyzer: "text_prefix"
         }
       }
     }
@@ -66,8 +69,8 @@ async function main() {
   stream.on("line", function(line) {
     const words = line.split(" ");
 
-    if (words.length == 1 && words[0].length > 4) {
-      allSuggestions.push(words[0]);
+    if (words.length <= 4 && words[0].length > 4) {
+      allSuggestions.push(words.join(" "));
       //console.log(words[0]);
     }
   });
