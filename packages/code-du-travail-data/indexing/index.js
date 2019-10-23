@@ -41,6 +41,7 @@ async function main() {
   await version({ client });
 
   // Indexing CCN data
+  //*
   await createIndex({
     client,
     indexName: `${CDTN_CCN_NAME}-${ts}`,
@@ -53,6 +54,7 @@ async function main() {
       documents
     });
   }
+  //*/
 
   // Indexing document data
   await createIndex({

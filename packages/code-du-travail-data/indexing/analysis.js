@@ -58,6 +58,19 @@ const analyzer = {
   idcc_ape: {
     tokenizer: "whitespace"
   },
+  suggest_ana: {
+    tokenizer: "whitespace",
+    filter: ["lowercase", "icu_folding"]
+  },
+
+  autocomplete: {
+    tokenizer: "autocomplete",
+    filter: ["lowercase"]
+  },
+  autocomplete_search: {
+    tokenizer: "lowercase"
+  },
+
   french_with_synonyms: {
     tokenizer: "icu_tokenizer",
     char_filter: ["html_strip"],
@@ -109,6 +122,12 @@ const tokenizer = {
   article_id_tokenizer: {
     type: "simple_pattern",
     pattern: "[0123456789]{4}-[0123456789]{1,3}-?[0123456789]{1,3}?"
+  },
+  autocomplete: {
+    type: "edge_ngram",
+    min_gram: 2,
+    max_gram: 10,
+    token_chars: ["letter"]
   }
 };
 
