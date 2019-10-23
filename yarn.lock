@@ -2143,15 +2143,22 @@
     once "^1.4.0"
     universal-user-agent "^4.0.0"
 
-"@reach/auto-id@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.3.0.tgz#c66b2fc29b5f7e8a7fe1a379dacf33b9b4e27fb1"
-  integrity sha512-FANI91t71NpexgYwMwQ9tm6mJinsVtgXJEVGhs1bf6ZN2Kf8gA9hRSlFXU+W19F1WXFkJQPjRLUE0ASAbUZADw==
+"@reach/auto-id@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.4.0.tgz#7241b4f26092b65dd43c325c278a82efd210ad02"
+  integrity sha512-tWjH+lxmGONcpbxxKHGMUZ2mw+GVvS9YE2eYV2AH+xxcf6b/Q+KC1FlBtS7eYw9y7tONvTAivVVyZSz86a8HKw==
 
 "@reach/component-component@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.3.0.tgz#ccf593e26132cbec0ad92774b80356dcf544d5c5"
   integrity sha512-E93eOotshNv8dnXtOA/f7fMqGUJFTakBG1zEqmBo6BeLJhgP9t9wQrnkiyoU4HL/ou5LYfou8G4P3wQXbDoFFg==
+  dependencies:
+    prop-types "^15.7.2"
+
+"@reach/component-component@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.4.0.tgz#eef22d4eb704839301ebd35986448709bf92e411"
+  integrity sha512-5ofEOKLjcm7/jSw2wosliOqVOV0LvQEJ/QJoVa/mCQ8ASYdqJz6scYPoU687fiJlfS7WORIAfFX7n8ojzDNwqQ==
   dependencies:
     prop-types "^15.7.2"
 
@@ -2179,12 +2186,18 @@
   dependencies:
     "@reach/component-component" "^0.3.0"
 
-"@reach/rect@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@reach/rect/-/rect-0.3.0.tgz#d447113976809b22cb3567192865776343a3bafa"
-  integrity sha512-PVpGh9NSBde9ol7WGoCNLV7FuCUmXh2LxIg/1lOpdTkFJHOlR/pOoRurugJ4F/2PeCk+W7OwRLaKqWlTN9giRw==
+"@reach/portal@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.4.0.tgz#c11e4714cb51fd4eac8dfdf26e25f5c77318c7ac"
+  integrity sha512-pIleAmXipuH4398Drs0Dr8btv+US8I0kgieXdH3I+XcliFbKtANjxFt8k9xgnNgYBSrp+f6l68fOWlmJ5q2FKg==
   dependencies:
-    "@reach/component-component" "^0.3.0"
+    "@reach/component-component" "^0.4.0"
+
+"@reach/rect@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@reach/rect/-/rect-0.4.0.tgz#bd4994866acb2a1512882636041c92d495fb09c1"
+  integrity sha512-tdagmV38JimQZ9lCszV/uFsiYQ8M7s5NHEzVa/Kl1MCH6ESkc1Peyu3ohko51wdgnh6N18KRo85uhDbL1h++2w==
+  dependencies:
     "@reach/observe-rect" "^1.0.3"
     prop-types "^15.7.2"
 
@@ -2199,16 +2212,16 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/tooltip@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.3.0.tgz#4bd524222aff5e76c364aebaef890b47fea43fa0"
-  integrity sha512-msCKVfUIpuzio/KvlgrB6vDc7Tqp+rvj/zX+kpM6hQ+PpSZ6KTwYPXKO3fWs72YfnFRtp5Omkw+OuUxghE8QwA==
+"@reach/tooltip@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.4.0.tgz#a14a6aedefb804090159951c4ed345f83890479c"
+  integrity sha512-WeC0NawnBr9pEDaUJQ61QfeNv3XR8g+HyC6miDbQ/RlBYWbYL8zeA3bm+fE1R58c5QCNw3L/r/CFPwja/2euPw==
   dependencies:
-    "@reach/auto-id" "^0.3.0"
-    "@reach/portal" "^0.3.0"
-    "@reach/rect" "^0.3.0"
-    "@reach/utils" "^0.3.0"
-    "@reach/visually-hidden" "^0.3.0"
+    "@reach/auto-id" "^0.4.0"
+    "@reach/portal" "^0.4.0"
+    "@reach/rect" "^0.4.0"
+    "@reach/utils" "^0.4.0"
+    "@reach/visually-hidden" "^0.4.0"
     prop-types "^15.7.2"
 
 "@reach/utils@^0.3.0":
@@ -2216,10 +2229,15 @@
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.3.0.tgz#2098181aab751f2275cacf219b02a6a8b455be85"
   integrity sha512-dQA1acyNpwqy5ia5yt1lNjaAhm9rrzSurFtlJPoz7ARVPMV1yZ0yfmNotMwwgVbE5q1HnONqszK7oagH86m7Qw==
 
-"@reach/visually-hidden@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.3.0.tgz#cdbabfee34dc76d6a1645d91ee72a9076cf019d1"
-  integrity sha512-H9GzgMPWxmIUrgrm27NciblvlwJfQffAXZYGA6yX2P/Am6wXlux0tIFWyS4cmJd391UjL/ol2ILCx+dVh0UskQ==
+"@reach/utils@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.4.0.tgz#444f3b7384fc0adbe6f3787adb68befd42969b72"
+  integrity sha512-GBvIj0kTQIZpH5YnBmlq80qssJvF7NCf8/GgatNv+dQtBJflbC0qjXmVext9HQN+tajRXxmsGol3LK9SbEAWGw==
+
+"@reach/visually-hidden@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.4.0.tgz#6ae151ad48fcc0f08cf07ab5b7e7120c9371ac0c"
+  integrity sha512-ZELZybjsyx327t0sevPMZluRuPUyRWhTif+SVf2LtjGC6ykfdRngi9jnJcvpW84tV5nB6EZCbfQoEemRAlRmKQ==
 
 "@sentry/browser@^5.7.1":
   version "5.7.1"
@@ -2317,10 +2335,10 @@
     eslint-plugin-jest "^22.20.0"
     eslint-plugin-prettier "~3.1.1"
 
-"@socialgouv/fiches-vdd@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.4.tgz#f954904dfed206b070a38c4b27b0443fa2308396"
-  integrity sha512-jS7LcEbJsg8YdRNbo+d65vVXMW8TYGmtpev3x/oDWv4sB5SdhulmLNrEDBYRgUP8aMp4Ofpj8yQOjHLPhxj4mw==
+"@socialgouv/fiches-vdd@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.6.tgz#26fbc10e87a3e7a73e030a89f90c8293deca7cd1"
+  integrity sha512-Sv/dCZmHlVmMhJxCmQuLkFu9bUjDDxqGDqmR4rsaz/8/Fd9LgI03/GocLb2ZTrF110nfWpa2rYU/20TKrMF8gA==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.0"
