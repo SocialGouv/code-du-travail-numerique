@@ -37,7 +37,7 @@
     "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
-    "@socialgouv/eslint-config-react": "^0.10.0",
+    "@socialgouv/eslint-config-react": "^0.10.2",
     "@storybook/addon-a11y": "^5.2.5",
     "@storybook/addon-actions": "^5.2.5",
     "@storybook/addon-contexts": "^5.2.5",
