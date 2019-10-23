@@ -333,6 +333,10 @@ exports[`<Answer /> should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
@@ -1095,6 +1099,10 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
@@ -1781,6 +1789,10 @@ exports[`<Answer /> should render tooltip 1`] = `
   justify-content: center;
 }
 
+.c13 {
+  border-bottom: 1px dotted #006be6;
+}
+
 .c5 {
   max-width: 1200px;
   margin: 0 auto;
@@ -1866,10 +1878,6 @@ exports[`<Answer /> should render tooltip 1`] = `
   margin-left: 1rem;
 }
 
-.c13 {
-  border-bottom: 1px dotted #006be6;
-}
-
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
@@ -1881,6 +1889,10 @@ exports[`<Answer /> should render tooltip 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
@@ -2492,6 +2504,10 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   justify-content: center;
 }
 
+.c13 {
+  border-bottom: 1px dotted #006be6;
+}
+
 .c5 {
   max-width: 1200px;
   margin: 0 auto;
@@ -2577,10 +2593,6 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   margin-left: 1rem;
 }
 
-.c13 {
-  border-bottom: 1px dotted #006be6;
-}
-
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
@@ -2592,6 +2604,10 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
@@ -3189,6 +3205,10 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
   justify-content: center;
 }
 
+.c13 {
+  border-bottom: 1px dotted #006be6;
+}
+
 .c5 {
   max-width: 1200px;
   margin: 0 auto;
@@ -3274,10 +3294,6 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
   margin-left: 1rem;
 }
 
-.c13 {
-  border-bottom: 1px dotted #006be6;
-}
-
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
@@ -3289,6 +3305,10 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
