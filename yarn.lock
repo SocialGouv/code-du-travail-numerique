@@ -2307,7 +2307,7 @@
     eslint-plugin-react "~7.16.0"
     eslint-plugin-react-hooks "~2.1.2"
 
-"@socialgouv/eslint-config-recommended@^0.10.0", "@socialgouv/eslint-config-recommended@^0.10.2":
+"@socialgouv/eslint-config-recommended@^0.10.2":
   version "0.10.2"
   resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-0.10.2.tgz#7a6532985497d7b09b4e10fc82505913d48c3127"
   integrity sha512-owOVaKrQWTeYa7eG0PzQbXkQkETO6akVzgJ62a4o7cbXeaEBQje9cs720zZyMMtdrOfS6YEP+SRoEum+D5Hq5A==
