@@ -1,6 +1,6 @@
-import { StepInfoCCn as StepInfoCCnComponent } from "../../common/InfosCCn";
+import { StepInfoCCnMandatory } from "../../common/InfosCCn";
 
-StepInfoCCnComponent.validate = values => {
+StepInfoCCnMandatory.validate = values => {
   const errors = {};
   if (Object.keys(values).length === 0) {
     errors.ccn = "Veuillez renseigner votre convention collective ?";
@@ -8,4 +8,4 @@ StepInfoCCnComponent.validate = values => {
   return errors;
 };
 
-export const StepInfoCCn = StepInfoCCnComponent;
+export const StepInfoCCn = StepInfoCCnMandatory;

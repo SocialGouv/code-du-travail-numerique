@@ -12,7 +12,8 @@ export const initialSteps = [
   {
     component: StepInfoCCn,
     name: "info_cc",
-    label: "Convention collective"
+    label: "Convention collective",
+    isOptionnal: true
   },
   {
     component: StepInformations,

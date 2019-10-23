@@ -12,7 +12,7 @@ export const CCN = "ccn";
 // store selected convention in localStorage
 const useConventionState = createPersistedState("convention");
 
-function StepInfoCCn({ form }) {
+function StepInfoCCn({ form, isOptionnal = true }) {
   const [ccInfo, setCcInfo] = useConventionState({});
   useEffect(() => {
     form.batch(() => {
@@ -53,11 +53,13 @@ function StepInfoCCn({ form }) {
               <QuestionLabel>
                 Quelle est votre convention collective ?
               </QuestionLabel>
-              <P>
-                <strong>* optionnel</strong>, si vous ne connaissez pas votre
-                convention collective, vous pouvez passer à l’étape suivante en
-                cliquant sur le bouton Suivant.
-              </P>
+              {isOptionnal && (
+                <P>
+                  <strong>* optionnel</strong>, si vous ne connaissez pas votre
+                  convention collective, vous pouvez passer à l’étape suivante
+                  en cliquant sur le bouton Suivant.
+                </P>
+              )}
               <SearchStyled title="" onSelectConvention={setCcInfo} />
             </>
           );
@@ -68,6 +70,14 @@ function StepInfoCCn({ form }) {
 }
 
 export { StepInfoCCn };
+
+export const StepInfoCCnMandatory = props => (
+  <StepInfoCCn {...props} isOptionnal={false} />
+);
+
+export const StepInfoCCnOptionnal = props => (
+  <StepInfoCCn {...props} isOptionnal={true} />
+);
 
 const SearchStyled = styled(Search)`
   padding-left: 0;

@@ -5,7 +5,6 @@ import data from "@cdt/data...preavis-demission/data.json";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import { SectionTitle } from "../../common/stepStyles";
 import {
-  isNotYetProcessed,
   getOptions,
   getPastQuestions,
   getNextQuestionKey,
@@ -15,16 +14,10 @@ import {
 
 import { questions, labels } from "./situation.js";
 
-function StepInformations({ form, nextStep }) {
+function StepInformations({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.num : "0000";
-
-  // Go to results when cc is not processed
-  if (isNotYetProcessed(data, idcc)) {
-    nextStep();
-    return null;
-  }
 
   const initialSituations = getSituationsFor(data, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
