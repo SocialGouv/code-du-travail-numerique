@@ -2286,7 +2286,7 @@
     escape-string-regexp "^1.0.5"
     lodash.deburr "^4.1.0"
 
-"@socialgouv/dila-api-client@^1.0.1", "@socialgouv/dila-api-client@^1.0.5":
+"@socialgouv/dila-api-client@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@socialgouv/dila-api-client/-/dila-api-client-1.0.5.tgz#b6f9f2adbfc5f783e8769103bf10619afc69d16e"
   integrity sha512-sEvx6WkjByAmrg7b5lSfQy+g/Rye/i5pLk+q0w7XBA9qsmDAyRkQ1w9G+EHSqL+WSDrcy2rlpuaPsK7oLt0O3g==
@@ -2335,15 +2335,15 @@
     "@socialgouv/dila-api-client" "^1.0.5"
     p-map "^3.0.0"
 
-"@socialgouv/legi-data@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.1.1.tgz#f79b07b0d803bca107495d6d5955e40887621fcb"
-  integrity sha512-864LeEgyHDbIaOqhfSqQaj8oZWLpa/ZNQu054Xz1QxKNtS44wUk8jNl9ployb2Wv7MWRA1FjtFq2GqCWvIwyMw==
+"@socialgouv/legi-data@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.1.3.tgz#785bfb03d9478d8255bb739fcdc192278db456d7"
+  integrity sha512-cbSDjDwj9dRI0Dy43+61EF/dKI6gJS6E0zntHJaUlbiqWKOMASTSeLbN8zcrFU/CeXRuv6qEmzFHX/4PKA9rvA==
   dependencies:
-    "@socialgouv/dila-api-client" "^1.0.1"
+    "@socialgouv/dila-api-client" "^1.0.5"
     debug "^4.1.1"
     p-all "^2.1.0"
-    p-timeout "^3.1.0"
+    p-timeout "^3.2.0"
 
 "@storybook/addon-a11y@^5.2.5":
   version "5.2.5"
@@ -12302,7 +12302,7 @@ p-retry@^3.0.1:
   dependencies:
     retry "^0.12.0"
 
-p-timeout@^3.1.0:
+p-timeout@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-3.2.0.tgz#c7e17abc971d2a7962ef83626b35d635acf23dfe"
   integrity sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==
