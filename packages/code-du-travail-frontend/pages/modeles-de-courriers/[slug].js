@@ -32,6 +32,7 @@ class ModeleCourrier extends React.Component {
     const {
       data: {
         _source: { date, description = "", filename, html, title },
+        relatedItems,
         status
       } = { _source: {} },
       pageUrl,
@@ -53,6 +54,7 @@ class ModeleCourrier extends React.Component {
 
         <Answer
           title={`Modèle de courrier :  ${title}`}
+          relatedItems={relatedItems}
           emptyMessage="Modèle de courrier introuvable"
           intro={description}
           footer="Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région"

@@ -38,7 +38,7 @@ router.get("/items/:source/:slug", async ctx => {
   const { title } = item._source;
   const relatedItems = await getSearch({
     q: title,
-    excludeSources: `${SOURCES.CDT}, ${SOURCES.THEMES}`
+    excludeSources: `${SOURCES.CDT}, ${SOURCES.CCN}, ${SOURCES.THEMES}`
   });
 
   ctx.body = {

@@ -36,8 +36,8 @@ const P = styled.p`
 
 const H3 = styled.h3`
   ${({ noMargin }) => (noMargin ? `margin: 0;` : `margin-top: 0;`)}
-  font-size: ${fonts.sizeH5};
   font-weight: bold;
+  font-size: ${fonts.sizeH5};
 `;
 
 const Summary = styled.p`
