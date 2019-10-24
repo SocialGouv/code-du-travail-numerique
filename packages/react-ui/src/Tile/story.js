@@ -12,7 +12,12 @@ export default {
 export const base = () => (
   <div style={{ width: "400px" }}>
     <Section>
-      <Tile href="#">Embauche et contrat</Tile>
+      <Tile href="#">Basic light tile</Tile>
+    </Section>
+    <Section>
+      <Tile variant="dark" href="#">
+        Basic dark tile
+      </Tile>
     </Section>
     <Section>
       <Tile icon={List} href="#">
@@ -22,6 +27,11 @@ export const base = () => (
     <Section>
       <Tile href="#" button="click me">
         Embauche et contrat
+      </Tile>
+    </Section>
+    <Section>
+      <Tile size="small" href="#" button="click me">
+        Petite tuile !
       </Tile>
     </Section>
     <Section>

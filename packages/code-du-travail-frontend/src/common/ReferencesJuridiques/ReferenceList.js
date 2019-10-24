@@ -5,7 +5,7 @@ import TYPE_REFERENCE from "./typeReference";
 
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link href="/code-du-travail/[slug]" as={`/code-du-travail/${slug}`} passHref>
-    <LargeLink>{title}</LargeLink>
+    <LargeLink variant="dark">{title}</LargeLink>
   </Link>
 );
 
@@ -15,12 +15,17 @@ const ConventionLink = ({ title, slug }) => (
     as={`/convention-collective/${slug}`}
     passHref
   >
-    <LargeLink>Convention collective: {title}</LargeLink>
+    <LargeLink variant="dark">Convention collective: {title}</LargeLink>
   </Link>
 );
 
 const OtherLink = ({ title, url }) => (
-  <LargeLink href={url} rel="noopener noreferrer" target="_blank">
+  <LargeLink
+    variant="dark"
+    href={url}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
     Autre: {title}
   </LargeLink>
 );

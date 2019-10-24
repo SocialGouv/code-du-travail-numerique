@@ -123,11 +123,8 @@ function Answer({
                     <Link
                       href={`/${getRouteBySource(link.source)}/[slug]`}
                       as={`/${getRouteBySource(link.source)}/${link.slug}`}
-                      passHref
                     >
-                      <LargeLink variant="light">
-                        <H6>{link.title}</H6>
-                      </LargeLink>
+                      <a>{link.title}</a>
                     </Link>
                   </StyledListItem>
                 ))}
@@ -142,7 +139,11 @@ function Answer({
                     }`}
                     passHref
                   >
-                    <Tile button={"Consulter"} title={relatedLetters[0].title}>
+                    <Tile
+                      size="small"
+                      button={"Consulter"}
+                      title={relatedLetters[0].title}
+                    >
                       {relatedLetters[0].title}
                     </Tile>
                   </Link>
@@ -157,7 +158,11 @@ function Answer({
                     }`}
                     passHref
                   >
-                    <Tile button={"Démarrer"} title={relatedTools[0].title}>
+                    <Tile
+                      size="small"
+                      button={"Démarrer"}
+                      title={relatedTools[0].title}
+                    >
                       {relatedTools[0].title}
                     </Tile>
                   </Link>
@@ -207,13 +212,9 @@ const RelatedItems = styled.div`
   }
 `;
 
-const StyledRelatedItemsTitle = styled.div`
+const StyledRelatedItemsTitle = styled.h6`
+  margin-top: 0;
   font-weight: bold;
-  font-size: ${fonts.sizeH6};
-`;
-
-const H6 = styled.h6`
-  margin: 0;
 `;
 
 const StyledListItem = styled(ListItem)`

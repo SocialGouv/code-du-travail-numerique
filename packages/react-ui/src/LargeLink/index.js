@@ -24,7 +24,7 @@ LargeLink.propTypes = {
 };
 
 LargeLink.defaultProps = {
-  variant: "dark"
+  variant: "light"
 };
 
 const StyledLink = styled.a`

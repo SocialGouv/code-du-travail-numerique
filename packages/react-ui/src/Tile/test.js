@@ -26,4 +26,12 @@ describe("<Tile />", () => {
     const { container } = render(<Tile icon={List}>Hello !</Tile>);
     expect(container).toMatchSnapshot();
   });
+  it("renders dark and small", () => {
+    const { container } = render(
+      <Tile variant="dark" size="small">
+        Hello !
+      </Tile>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

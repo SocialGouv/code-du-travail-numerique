@@ -13,7 +13,17 @@ export const base = () => (
   <Container>
     <Section>
       <LargeLink title="I can get any title" href="#">
-        I am a large link which takes all the width
+        I am a large light link
+      </LargeLink>
+    </Section>
+    <Section>
+      <LargeLink variant="dark" title="I can get any title" href="#">
+        I am a large dark link
+      </LargeLink>
+    </Section>
+    <Section>
+      <LargeLink variant="highlight" title="I can get any title" href="#">
+        I am a large highlighted link
       </LargeLink>
     </Section>
     <Section>

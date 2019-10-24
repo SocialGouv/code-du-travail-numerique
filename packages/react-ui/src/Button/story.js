@@ -18,11 +18,18 @@ export const base = () =>
         {variant} button
       </Button>{" "}
       <Button
+        size="small"
+        variant={variant}
+        onClick={action("text button clicked")}
+      >
+        {variant} small
+      </Button>{" "}
+      <Button
         variant={variant}
         onClick={action("You should not see this")}
         disabled
       >
-        {variant} button disabled
+        {variant} disabled
       </Button>
     </Section>
   ));
