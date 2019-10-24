@@ -11,7 +11,7 @@ StepInfoCCnMandatory.validate = values => {
   }
   if (ccn && isNotYetProcessed(data, ccn.num)) {
     errors.ccn =
-      "Nous n’avons pas encore traité votre convention collective mais nous vous invitons à poursuivre la simulation afin d’obtenir le montant défini par le Code du travail.";
+      "Nous n’avons pas encore traité votre convention collective. Le code du travail ne prévoyant pas de durée précise du préavis de démission, nous vous invitons à consulter le contenu de votre convention collective.";
   }
   return errors;
 };

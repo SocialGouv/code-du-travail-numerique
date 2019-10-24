@@ -77,16 +77,7 @@ export function getSituationsFor(data, obj) {
   );
 }
 
-export const hasConventionalProvision = (data, idcc) => {
-  return data
-    .filter(situation => situation.idcc === idcc)
-    .some(situation => situation.hasConventionalProvision);
-};
-
 export const isNotYetProcessed = (data, idcc) => {
-  const situations = data.filter(situation => situation.idcc === idcc);
-  return (
-    situations.length === 0 ||
-    situations.some(situation => situation.hasConventionalProvision === null)
-  );
+  const situtation = data.filter(situation => situation.idcc === idcc);
+  return !situtation.length;
 };

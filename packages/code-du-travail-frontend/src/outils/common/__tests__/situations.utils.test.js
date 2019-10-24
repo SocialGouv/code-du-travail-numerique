@@ -109,10 +109,7 @@ describe("situations", () => {
     it("should return true if there no matching cc", () => {
       expect(isNotYetProcessed(data, "toto")).toBe(true);
     });
-    it("should return true if cc hasConventionalProvision to null", () => {
-      expect(isNotYetProcessed(data, "30")).toBe(true);
-    });
-    it("should return false if cc hasConventionalProvision to true", () => {
+    it("should return false if there matching cc", () => {
       expect(isNotYetProcessed(data, "20")).toBe(false);
     });
   });

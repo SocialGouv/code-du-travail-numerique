@@ -13,10 +13,13 @@ import {
   getPastQuestions,
   getNextQuestionKey,
   filterSituations,
-  getSituationsFor,
-  hasConventionalProvision
+  getSituationsFor
 } from "../../common/situations.utils";
-import { questions, validateSituation } from "./situation";
+import {
+  hasConventionalProvision,
+  questions,
+  validateSituation
+} from "./situation";
 
 const excludeContracts = [
   "CDD saisonnier",

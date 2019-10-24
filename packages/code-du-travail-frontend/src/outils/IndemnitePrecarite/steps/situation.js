@@ -1,3 +1,4 @@
+import data from "@cdt/data...prime-precarite/precarite.data.json";
 import {
   getPastQuestions,
   filterSituations
@@ -42,3 +43,17 @@ export function validateSituation(initialSituations, criteria, errors) {
   }
   return { ...errors };
 }
+
+export const hasConventionalProvision = (data, idcc) => {
+  return data
+    .filter(situation => situation.idcc === idcc)
+    .some(situation => situation.hasConventionalProvision);
+};
+
+export const isNotYetProcessed = idcc => {
+  const situations = data.filter(situation => situation.idcc === idcc);
+  return (
+    situations.length === 0 ||
+    situations.some(situation => situation.hasConventionalProvision === null)
+  );
+};

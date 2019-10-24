@@ -1,5 +1,5 @@
 import { getSituationsFor } from "../../../common/situations.utils";
-import { validateSituation } from "../situation";
+import { isNotYetProcessed, validateSituation } from "../situation";
 
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 
@@ -58,6 +58,18 @@ describe("situations", () => {
       ).toEqual({
         criteria: { foo: undefined }
       });
+    });
+  });
+
+  describe("isNotYetProcessed", () => {
+    it("should return true if there no matching cc", () => {
+      expect(isNotYetProcessed("toto")).toBe(true);
+    });
+    it("should return true if cc hasConventionalProvision to null", () => {
+      expect(isNotYetProcessed("30")).toBe(true);
+    });
+    it("should return false if cc hasConventionalProvision to true", () => {
+      expect(isNotYetProcessed("20")).toBe(false);
     });
   });
 });
