@@ -4,7 +4,7 @@ exports[`return all modeles results 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "12",
+      "_id": "10",
       "_index": "cdtn_document_test",
       "_score": 0,
       "_source": Object {
@@ -15,7 +15,7 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "13",
+      "_id": "11",
       "_index": "cdtn_document_test",
       "_score": 0,
       "_source": Object {

@@ -18,10 +18,6 @@ Object {
       },
       Object {
         "doc_count": 2,
-        "key": "faq",
-      },
-      Object {
-        "doc_count": 2,
         "key": "fiches_service_public",
       },
       Object {
