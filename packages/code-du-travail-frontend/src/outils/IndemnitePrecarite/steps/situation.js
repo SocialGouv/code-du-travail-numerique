@@ -1,4 +1,3 @@
-import data from "@cdt/data...prime-precarite/precarite.data.json";
 import {
   getPastQuestions,
   filterSituations
@@ -20,20 +19,6 @@ export const labels = {
   hasCdiProposal: "proposition d'un cdi",
   hasCdiRenewal: "renouvellement en cdi",
   hasEquivalentCdiRenewal: "renouvellement en cdi équivalent"
-};
-
-export const hasConventionalProvision = idcc => {
-  return data
-    .filter(situation => situation.idcc === idcc)
-    .some(situation => situation.hasConventionalProvision);
-};
-
-export const isNotYetProcessed = idcc => {
-  const situations = data.filter(situation => situation.idcc === idcc);
-  return (
-    situations.length === 0 ||
-    situations.some(situation => situation.hasConventionalProvision === null)
-  );
 };
 
 export function validateSituation(initialSituations, criteria, errors) {
