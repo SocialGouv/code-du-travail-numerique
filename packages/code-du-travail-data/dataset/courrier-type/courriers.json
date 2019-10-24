@@ -225,14 +225,14 @@
   },
   {
     "titre": "Rupture d’un commun accord d’un contrat d’apprentissage",
-    "description": "Le contrat d’apprentissage peut être rompu par l’une ou l’autre des parties jusqu’à l’échéance des quarante-cinq premiers jours, consécutifs ou non, de formation pratique.",
+    "description": "Le contrat d'apprentissage peut être rompu par l'apprenti ou par l'employeur jusqu'à la fin des 45 premiers jours de la formation pratique en entreprise.Passé ce délai, le contrat d'apprentissage peut être rompu : - en cas de force majeure, - en cas de faute grave de l'apprenti,- en cas d'inaptitude de l'apprenti, - en cas de décès de l'employeur et maître d'apprentissage (entreprise unipersonnelle) - en cas d'obtention du diplôme avant le terme fixé (le contrat peut petre réduit d'un an si l'apprenti décide ne pas poursuivre son bac pro et passer le CAP). Passé ce délai le contrat d'apprentissage peut etre rompu par l'apprenti. Il devra saisir le médiateur  et informer préalablement l'meployeur. Passé ce délai, le contrat d'apprentissage peut être rompu d'un commun accord entre le salarié et l'employeur. Le modèle ci-dessous est un exemple personnalisable de rupture d'un commun accord entre le salarié et l'employeur.",
     "questions": ["comment rompre un contrat d’apprentissage"],
     "tags": {
       "theme": "contrat d’apprentissage",
       "themes": [57600],
       "type_de_contrat": "CDI"
     },
-    "date_redaction": "26/10/2018",
+    "date_redaction": "26/10/2019",
     "redacteur": "cdtn",
     "source": "test",
     "filename": "rupture-amiable-du-contrat-d-apprentissage.docx"
