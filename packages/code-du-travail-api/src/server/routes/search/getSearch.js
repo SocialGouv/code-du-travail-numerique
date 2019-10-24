@@ -49,6 +49,9 @@ const getSearch = async querystring => {
     SOURCES.TOOLS,
     SOURCES.THEMES
   ];
+  console.log(
+    JSON.stringify(getSearchBody({ query, size, excludeSources }), 0, 2)
+  );
   const {
     body: {
       responses: [esResponse, semResponse]

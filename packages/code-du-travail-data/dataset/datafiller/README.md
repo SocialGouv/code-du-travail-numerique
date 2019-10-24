@@ -10,6 +10,6 @@ $ DATAFILLER_URL="https://path/to/datafiller" yarn start
 
 va générer :
 
-  - le fichier `prequalified.data.json` qui sera ensuite utilisé par [l'API](../../../code-du-travail-api/routes/search/search.prequalified.js).
-  - le fichier `themes.data.json` qui sera ensuite utilisé par [l'API](../../../code-du-travail-api/routes/themes/index.js).
-  - le fichier `glossary.data.json` qui sera ensuite utilisé par [le frontend](../../../code-du-travail-frontend).
+- le fichier `prequalified.data.json` qui sera ensuite utilisé par [l'API](../../../code-du-travail-api/routes/search/search.prequalified.js).
+- le fichier `themes.data.json` qui sera ensuite utilisé par [l'API](../../../code-du-travail-api/routes/themes/index.js).
+- le fichier `glossary.data.json` qui sera ensuite utilisé par [le frontend](../../../code-du-travail-frontend).
