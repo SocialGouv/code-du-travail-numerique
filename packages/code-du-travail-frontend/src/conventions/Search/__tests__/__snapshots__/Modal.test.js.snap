@@ -17,20 +17,20 @@ exports[`<ConventionModal /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
 }
 
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
+  color: #18181c;
+  background: #fbfcfd;
 }
 
 .c3[disabled] {
-  color: rgba(255,255,255,0.4);
+  color: rgba(12,12,14,0.4);
   cursor: not-allowed;
 }
 
@@ -43,6 +43,9 @@ exports[`<ConventionModal /> should render 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -79,7 +82,8 @@ exports[`<ConventionModal /> should render 1`] = `
 }
 
 .c1 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 .c2 {
@@ -140,20 +144,20 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
 }
 
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
+  color: #18181c;
+  background: #fbfcfd;
 }
 
 .c3[disabled] {
-  color: rgba(255,255,255,0.4);
+  color: rgba(12,12,14,0.4);
   cursor: not-allowed;
 }
 
@@ -234,6 +238,9 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -270,7 +277,8 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 .c1 {
-  overflow-y: scroll;
+  max-width: 100%;
+  overflow-y: auto;
 }
 
 .c2 {
