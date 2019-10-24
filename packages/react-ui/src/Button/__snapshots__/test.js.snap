@@ -400,3 +400,46 @@ exports[`<Button /> renders 1`] = `
   </button>
 </div>
 `;
+
+exports[`<Button /> renders a small button 1`] = `
+.c0 {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):active,
+.c0:not([disabled]):focus {
+  color: #fff;
+  background: #07f;
+}
+
+.c0[disabled] {
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    A button
+  </button>
+</div>
+`;

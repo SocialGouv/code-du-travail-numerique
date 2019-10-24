@@ -15,7 +15,7 @@ exports[`<LargeLink /> should render 1`] = `
   color: #005994;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f9f9fc;
+  background-color: #fff;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   -webkit-transition: 250ms all;

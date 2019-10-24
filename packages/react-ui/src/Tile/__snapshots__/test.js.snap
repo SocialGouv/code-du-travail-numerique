@@ -3,10 +3,13 @@
 exports[`<Tile /> renders a button tile 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -22,8 +25,6 @@ exports[`<Tile /> renders a button tile 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
   color: #005994;
@@ -49,7 +50,79 @@ exports[`<Tile /> renders a button tile 1`] = `
 }
 
 .c1 {
+  display: block;
   max-width: 100%;
+  padding-right: 0;
+  overflow-y: auto;
+}
+
+<div>
+  <button
+    class="c0"
+    href=""
+  >
+    <div
+      class="c1"
+    >
+      Hello !
+    </div>
+    
+  </button>
+</div>
+`;
+
+exports[`<Tile /> renders dark and small 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  color: #005994;
+  font-weight: bold;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #f9f9fc;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c0:hover {
+  border-color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c1 {
+  display: block;
+  max-width: 100%;
+  padding-right: 0;
   overflow-y: auto;
 }
 
@@ -104,10 +177,13 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
 
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -123,8 +199,6 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
   color: #005994;
@@ -150,7 +224,9 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
 }
 
 .c1 {
+  display: block;
   max-width: 100%;
+  padding-right: 0;
   overflow-y: auto;
 }
 
@@ -184,10 +260,13 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
 exports[`<Tile /> renders with an icon 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -203,8 +282,6 @@ exports[`<Tile /> renders with an icon 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
   color: #005994;
@@ -230,7 +307,9 @@ exports[`<Tile /> renders with an icon 1`] = `
 }
 
 .c2 {
+  display: block;
   max-width: 100%;
+  padding-right: 1rem;
   overflow-y: auto;
 }
 
