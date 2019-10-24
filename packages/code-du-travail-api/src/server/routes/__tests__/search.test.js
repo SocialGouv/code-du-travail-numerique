@@ -15,7 +15,10 @@ const app = new Koa();
 app.use(router.routes());
 
 it("asks same sources wether it is search sem or search elastic and gets a description", () => {
-  expect(getSearchBody._source).toEqual(getSemBody._source);
+  const searchBody = getSearchBody({});
+  const semBody = getSemBody({});
+  expect(searchBody._source).toEqual(semBody._source);
+  expect(searchBody._source).toContain("description");
 });
 
 it("returns search results for demission from datafiller", async () => {
