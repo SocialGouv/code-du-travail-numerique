@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
+import { SOURCES } from "@cdt/sources";
 
 import Answer from "../Answer";
 
