@@ -181,38 +181,6 @@
     "url": "https://www.service-public.fr/particuliers/vosdroits/F33164"
   },
   {
-    "source": "faq",
-    "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
-    "text": "Le préavis de démission diffère suivant la qualification. Il est de :\n8 jours pour les employés ayant moins de 6 mois d’ancienneté, de 15 jours pour ceux ayant entre 6 mois et moins de 2 ans d’ancienneté, et d’1 mois pour ceux ayant 2 ans d’ancienneté et plus,\n15 jours pour les agents de maîtrise ayant moins de 6 mois d’ancienneté, d’1 mois pour ceux ayant entre 6 mois et moins de 2 ans d’ancienneté, et de 2 mois pour ceux ayant 2 ans d’ancienneté et plus.\n1 mois pour les cadres ayant moins de 6 mois d’ancienneté, et 3 mois pour ceux ayant 6 mois d’ancienneté et plus.\n(Article 30.1 de la convention collective nationale des hôtels, cafés, restaurants, que vous pouvez consulter sur le site https://legifrance.gouv.fr avec son numéro d’identification (IDCC) 1979).",
-    "html": "<p>Le préavis de démission diffère suivant la qualification. Il est de :</p><ul>\n<li>8 jours pour les employés ayant moins de 6 mois d’ancienneté, de 15 jours pour ceux ayant entre 6 mois et moins de 2 ans d’ancienneté, et d’1 mois pour ceux ayant 2 ans d’ancienneté et plus,</li>\n<li>15 jours pour les agents de maîtrise ayant moins de 6 mois d’ancienneté, d’1 mois pour ceux ayant entre 6 mois et moins de 2 ans d’ancienneté, et de 2 mois pour ceux ayant 2 ans d’ancienneté et plus.</li>\n<li>1 mois pour les cadres ayant moins de 6 mois d’ancienneté, et 3 mois pour ceux ayant 6 mois d’ancienneté et plus.</li>\n</ul><p>(Article 30.1 de la convention collective nationale des hôtels, cafés, restaurants, que vous pouvez consulter sur le site <a href=\"https://legifrance.gouv.fr\">https://legifrance.gouv.fr</a> avec son numéro d’identification (IDCC) 1979).</p>",
-    "title": "Dans les HCR, quel est le préavis de démission ?",
-    "tags": [
-      "themes:2000",
-      "theme:rupture du contrat",
-      "theme:démission",
-      "theme:préavis",
-      "branche:hôtels, cafés et restaurants"
-    ],
-    "date": "01/12/2017",
-    "author": "DIRECCTE"
-  },
-  {
-    "source": "faq",
-    "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
-    "text": " Vous pouvez être en arrêt maladie pendant le préavis de démission ; cette situation est sans incidence sur son déroulement et sur sa date d’expiration. N’étant pas suspendu pendant votre absence,  le préavis continue à courir et se terminera à la date prévue.Dès l’instant où vous prévenez votre employeur, dans les 48 heures, et que vous justifiez votre absence par l’envoi, sous un délai de 3 jours, d’un certificat médical prescrivant l’arrêt de travail, votre employeur ne peut pas vous sanctionner pour votre absence (article 36 de la convention collective nationale de la boulangerie - pâtisserie (entreprises artisanales)).Vous pouvez consulter cette convention collective sur le site https://www.legifrance.gouv.fr ; son code d’identification (IDCC) est le 843.",
-    "html": "<p> Vous pouvez être en arrêt maladie pendant le préavis de démission ; cette situation est sans incidence sur son déroulement et sur sa date d’expiration. N’étant pas suspendu pendant votre absence,  le préavis continue à courir et se terminera à la date prévue.</p><p>Dès l’instant où vous prévenez votre employeur, dans les 48 heures, et que vous justifiez votre absence par l’envoi, sous un délai de 3 jours, d’un certificat médical prescrivant l’arrêt de travail, votre employeur ne peut pas vous sanctionner pour votre absence (article 36 de la convention collective nationale de la boulangerie - pâtisserie (entreprises artisanales)).</p><p>Vous pouvez consulter cette convention collective sur le site <a href=\"https://www.legifrance.gouv.fr\">https://www.legifrance.gouv.fr</a> ; son code d’identification (IDCC) est le 843.</p>",
-    "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
-    "tags": [
-      "themes:2000",
-      "theme:maladie",
-      "theme:démission",
-      "theme:préavis",
-      "branche:boulangerie artisanale"
-    ],
-    "date": "01/12/2017",
-    "author": "DIRECCTE"
-  },
-  {
     "source": "code_du_travail",
     "text": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66, par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67, par lettre recommandée avec avis de réception ou remise contre récépissé.",
     "slug": "r1225-18",

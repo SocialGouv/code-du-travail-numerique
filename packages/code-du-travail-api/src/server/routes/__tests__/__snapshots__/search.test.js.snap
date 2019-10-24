@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return article results when searching with article id 1`] = `
+exports[`returns article results when searching with article id 1`] = `
 Array [
   Object {
-    "_id": "8",
+    "_id": "6",
     "_index": "cdtn_document_test",
-    "_score": 16.32855,
+    "_score": 14.980795,
     "_source": Object {
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -16,9 +16,9 @@ Array [
     "key": "code_du_travailr1225-18",
   },
   Object {
-    "_id": "14",
+    "_id": "12",
     "_index": "cdtn_document_test",
-    "_score": 4.5136433,
+    "_score": 4.2464232,
     "_source": Object {
       "anchor": "#A-qui-s-applique-le-SMIC",
       "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -32,12 +32,12 @@ Array [
 ]
 `;
 
-exports[`return search results for demission from datafiller 1`] = `
+exports[`returns search results for demission from datafiller 1`] = `
 Array [
   Object {
     "_id": "4",
     "_index": "cdtn_document_test",
-    "_score": 8.05443,
+    "_score": 7.98903,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -100,7 +100,7 @@ Array [
   Object {
     "_id": "2",
     "_index": "cdtn_document_test",
-    "_score": 12.073861,
+    "_score": 11.041574,
     "_source": Object {
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
@@ -130,9 +130,9 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "14",
+    "_id": "12",
     "_index": "cdtn_document_test",
-    "_score": 9.305344,
+    "_score": 9.120251,
     "_source": Object {
       "anchor": "#A-qui-s-applique-le-SMIC",
       "date": "28/12/2018",
@@ -152,7 +152,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "2",
     "_index": "cdtn_document_test",
-    "_score": 2.9044409,
+    "_score": 2.990764,
     "_source": Object {
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
@@ -184,7 +184,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "4",
     "_index": "cdtn_document_test",
-    "_score": 5.5604725,
+    "_score": 5.239993,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -247,7 +247,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "5",
     "_index": "cdtn_document_test",
-    "_score": 11.916153,
+    "_score": 10.563109,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -279,7 +279,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "3",
     "_index": "cdtn_document_test",
-    "_score": 8.89073,
+    "_score": 8.563608,
     "_source": Object {
       "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "breadcrumbs": Array [
@@ -311,7 +311,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "4",
     "_index": "cdtn_document_test",
-    "_score": 3.066515,
+    "_score": 3.1196651,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -374,7 +374,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "2",
     "_index": "cdtn_document_test",
-    "_score": 2.9044409,
+    "_score": 2.990764,
     "_source": Object {
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
@@ -402,6 +402,145 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
       "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
     },
     "_type": "_doc",
+  },
+]
+`;
+
+exports[`returns search results for demission from elastic 1`] = `
+Array [
+  Object {
+    "_id": "2",
+    "_index": "cdtn_document_test",
+    "_score": 8.408615,
+    "_source": Object {
+      "anchor": "#Comment-presenter-une-demission",
+      "breadcrumbs": Array [
+        Object {
+          "id": 7,
+          "label": "Départ de l'entreprise",
+          "parent": null,
+          "slug": "7-depart-de-lentreprise",
+        },
+        Object {
+          "id": 37,
+          "label": "Démission",
+          "parent": "7-depart-de-lentreprise",
+          "slug": "37-demission",
+        },
+      ],
+      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
+      "slug": "demission-comment-presenter-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "Démission : comment présenter une démission ?",
+      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
+    },
+    "_type": "_doc",
+    "key": "fiches_ministere_travaildemission-comment-presenter-une-demission",
+  },
+  Object {
+    "_id": "4",
+    "_index": "cdtn_document_test",
+    "_score": 8.398274,
+    "_source": Object {
+      "breadcrumbs": Array [
+        Object {
+          "id": 7,
+          "label": "Départ de l'entreprise",
+          "parent": null,
+          "slug": "7-depart-de-lentreprise",
+        },
+        Object {
+          "id": 37,
+          "label": "Démission",
+          "parent": "7-depart-de-lentreprise",
+          "slug": "37-demission",
+        },
+      ],
+      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
+      "slug": "demission-dun-salarie",
+      "source": "fiches_service_public",
+      "title": "Démission d'un salarié",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+    },
+    "_type": "_doc",
+    "key": "fiches_service_publicdemission-dun-salarie",
+  },
+  Object {
+    "_id": "5",
+    "_index": "cdtn_document_test",
+    "_score": 7.482512,
+    "_source": Object {
+      "breadcrumbs": Array [
+        Object {
+          "id": 7,
+          "label": "Départ de l'entreprise",
+          "parent": null,
+          "slug": "7-depart-de-lentreprise",
+        },
+      ],
+      "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. Au terme de celui-ci, l'employeur remet les documents de fin de contrat.",
+      "slug": "demission-dune-assistante-maternelle",
+      "source": "fiches_service_public",
+      "title": "Démission d'une assistante maternelle",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
+    },
+    "_type": "_doc",
+    "key": "fiches_service_publicdemission-dune-assistante-maternelle",
+  },
+  Object {
+    "_id": "3",
+    "_index": "cdtn_document_test",
+    "_score": 4.0004086,
+    "_source": Object {
+      "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "breadcrumbs": Array [
+        Object {
+          "id": 7,
+          "label": "Départ de l'entreprise",
+          "parent": null,
+          "slug": "7-depart-de-lentreprise",
+        },
+        Object {
+          "id": 37,
+          "label": "Démission",
+          "parent": "7-depart-de-lentreprise",
+          "slug": "37-demission",
+        },
+      ],
+      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
+      "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "Démission : l’absence prolongée du salarié est-elle une démission ?",
+      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+    },
+    "_type": "_doc",
+    "key": "fiches_ministere_travaildemission-labsence-prolongee-du-salarie-est-elle-une-demission",
+  },
+  Object {
+    "_id": "6",
+    "_index": "cdtn_document_test",
+    "_score": 3.7626958,
+    "_source": Object {
+      "slug": "r1225-18",
+      "source": "code_du_travail",
+      "title": "Article R1225-18",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
+    },
+    "_type": "_doc",
+    "key": "code_du_travailr1225-18",
+  },
+  Object {
+    "_id": "7",
+    "_index": "cdtn_document_test",
+    "_score": 3.750308,
+    "_source": Object {
+      "slug": "r1442-22-4",
+      "source": "code_du_travail",
+      "title": "Article R1442-22-4",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
+    },
+    "_type": "_doc",
+    "key": "code_du_travailr1442-22-4",
   },
 ]
 `;
