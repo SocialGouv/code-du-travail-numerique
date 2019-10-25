@@ -172,7 +172,7 @@ describe("<Search />", () => {
         slug: "slug-convention-2",
         title: "titre convention 2"
       },
-      label: undefined
+      label: "IDCC 4567"
     });
   });
 

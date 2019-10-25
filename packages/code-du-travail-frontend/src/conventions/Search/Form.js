@@ -16,22 +16,20 @@ const getConventionSlug = convention =>
 const Convention = ({ num, title, onClick }) => {
   return (
     <Box>
-      <Flex>
-        {onClick ? (
-          <ConventionLink onClick={onClick}>{title}</ConventionLink>
-        ) : (
-          <Link
-            href="/convention-collective/[slug]"
-            as={`/convention-collective/${getConventionSlug({
-              num,
-              title
-            })}`}
-            passHref
-          >
-            <ConventionLink>{title}</ConventionLink>
-          </Link>
-        )}
-      </Flex>
+      {onClick ? (
+        <ConventionLink onClick={onClick}>{title}</ConventionLink>
+      ) : (
+        <Link
+          href="/convention-collective/[slug]"
+          as={`/convention-collective/${getConventionSlug({
+            num,
+            title
+          })}`}
+          passHref
+        >
+          <ConventionLink>{title}</ConventionLink>
+        </Link>
+      )}
     </Box>
   );
 };
@@ -133,7 +131,7 @@ const Search = ({
                   <div>Aucun résultat pour votre recherche.</div>
                 )}
                 {status === "success" && results && results.length !== 0 && (
-                  <Table>
+                  <FixedTable>
                     <tbody>
                       {resultsConventions.length !== 0 && (
                         <React.Fragment>
@@ -170,7 +168,7 @@ const Search = ({
                         </React.Fragment>
                       )}
                     </tbody>
-                  </Table>
+                  </FixedTable>
                 )}
               </ResultsContainer>
             )
@@ -180,6 +178,10 @@ const Search = ({
     </Container>
   );
 };
+const FixedTable = styled(Table)`
+  width: 100%;
+  table-layout: fixed;
+`;
 
 const TitleResults = styled.tr`
   font-weight: bold;
@@ -214,13 +216,12 @@ const Flex = styled.div`
 `;
 
 const ResultLabel = styled.div`
-  flex: 1 0 auto;
-  max-width: calc(100% - 200px);
-  margin-right: ${theme.spacing.tiny};
+  flex: 1 1 calc(100% - 200px);
+  margin-right: ${theme.spacing.small};
   overflow: hidden;
   color: ${theme.colors.blueDark};
   font-weight: bold;
-  font-size: ${theme.fonts.sizeH4};
+  font-size: ${theme.fonts.sizeH5};
   white-space: nowrap;
   text-overflow: ellipsis;
 `;

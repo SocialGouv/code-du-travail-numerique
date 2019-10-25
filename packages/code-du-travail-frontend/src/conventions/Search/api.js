@@ -18,7 +18,7 @@ export const loadResults = async query => {
       ccns.map(ccn => ({
         type: "convention",
         id: ccn.id,
-        idcc: formatIdcc(ccn.idcc),
+        label: `IDCC ${formatIdcc(ccn.num)}`,
         conventions: [ccn]
       }))
     );
@@ -37,7 +37,9 @@ export const loadResults = async query => {
     // direct search by siret with API sirene
   }
   if (type === "siret") {
-    const etablissement = await searchEntrepriseBySiret(query.trim());
+    const etablissement = await searchEntrepriseBySiret(
+      query.replace(/[\s .-]/g, "")
+    );
     return (etablissement && [etablissement]) || [];
     // search local idcc list
   }
@@ -65,6 +67,7 @@ export const loadResults = async query => {
       return matches.slice(0, 5).map(match => ({
         type: "convention",
         id: match.num,
+        label: `IDCC ${formatIdcc(match.num)}`,
         conventions: [match]
       }));
     }
