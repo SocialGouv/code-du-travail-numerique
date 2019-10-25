@@ -62,10 +62,6 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   text-align: center;
 }
 
-.c5 tr:nth-child(even) {
-  background-color: #fff;
-}
-
 .c5 td,
 .c5 th {
   padding: 0.625rem 1rem;
@@ -84,6 +80,11 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 }
 
 .c6 {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.c7 {
   font-weight: bold;
   background: #e5f1fe;
 }
@@ -92,7 +93,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   margin-top: 1.25rem;
 }
 
-.c11 {
+.c12 {
   color: #4c5467;
   cursor: pointer;
 }
@@ -101,15 +102,15 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c11 {
   margin: 0.625rem 0;
 }
 
-.c9 {
+.c10 {
   margin-top: 0.625rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,16 +125,15 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   justify-content: space-between;
 }
 
-.c8 {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  max-width: calc(100% - 200px);
-  margin-right: 0.25rem;
+.c9 {
+  -webkit-flex: 1 1 calc(100% - 200px);
+  -ms-flex: 1 1 calc(100% - 200px);
+  flex: 1 1 calc(100% - 200px);
+  margin-right: 0.625rem;
   overflow: hidden;
   color: #005994;
   font-weight: bold;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -172,11 +172,11 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
           class="c4"
         >
           <table
-            class="c5"
+            class="c5 c6"
           >
             <tbody>
               <tr
-                class="c6"
+                class="c7"
               >
                 <td>
                   Conventions collectives
@@ -185,27 +185,25 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
               <tr>
                 <td>
                   <div
-                    class="c7"
+                    class="c8"
                   >
                     <div
-                      class="c8"
-                    />
+                      class="c9"
+                    >
+                      IDCC 0275
+                    </div>
                   </div>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
-                      <div
-                        class="c7"
+                      <a
+                        class="c12"
                       >
-                        <a
-                          class="c11"
-                        >
-                          titre convention 1
-                        </a>
-                      </div>
+                        titre convention 1
+                      </a>
                     </div>
                   </div>
                 </td>
@@ -490,10 +488,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   text-align: center;
 }
 
-.c5 tr:nth-child(even) {
-  background-color: #fff;
-}
-
 .c5 td,
 .c5 th {
   padding: 0.625rem 1rem;
@@ -512,6 +506,11 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 .c6 {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.c7 {
   font-weight: bold;
   background: #e5f1fe;
 }
@@ -520,7 +519,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   margin-top: 1.25rem;
 }
 
-.c11 {
+.c12 {
   color: #4c5467;
   cursor: pointer;
 }
@@ -529,15 +528,15 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c11 {
   margin: 0.625rem 0;
 }
 
-.c9 {
+.c10 {
   margin-top: 0.625rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -552,16 +551,15 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   justify-content: space-between;
 }
 
-.c8 {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  max-width: calc(100% - 200px);
-  margin-right: 0.25rem;
+.c9 {
+  -webkit-flex: 1 1 calc(100% - 200px);
+  -ms-flex: 1 1 calc(100% - 200px);
+  flex: 1 1 calc(100% - 200px);
+  margin-right: 0.625rem;
   overflow: hidden;
   color: #005994;
   font-weight: bold;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -600,11 +598,11 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
           class="c4"
         >
           <table
-            class="c5"
+            class="c5 c6"
           >
             <tbody>
               <tr
-                class="c6"
+                class="c7"
               >
                 <td>
                   Conventions collectives
@@ -613,28 +611,26 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
               <tr>
                 <td>
                   <div
-                    class="c7"
+                    class="c8"
                   >
                     <div
-                      class="c8"
-                    />
+                      class="c9"
+                    >
+                      IDCC 0275
+                    </div>
                   </div>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
-                      <div
-                        class="c7"
+                      <a
+                        class="c12"
+                        href="/convention-collective/0275-titre-convention-1"
                       >
-                        <a
-                          class="c11"
-                          href="/convention-collective/0275-titre-convention-1"
-                        >
-                          titre convention 1
-                        </a>
-                      </div>
+                        titre convention 1
+                      </a>
                     </div>
                   </div>
                 </td>
@@ -642,28 +638,26 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
               <tr>
                 <td>
                   <div
-                    class="c7"
+                    class="c8"
                   >
                     <div
-                      class="c8"
-                    />
+                      class="c9"
+                    >
+                      IDCC 0276
+                    </div>
                   </div>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
-                      <div
-                        class="c7"
+                      <a
+                        class="c12"
+                        href="/convention-collective/0276-titre-convention-2"
                       >
-                        <a
-                          class="c11"
-                          href="/convention-collective/0276-titre-convention-2"
-                        >
-                          titre convention 2
-                        </a>
-                      </div>
+                        titre convention 2
+                      </a>
                     </div>
                   </div>
                 </td>
@@ -739,10 +733,6 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   text-align: center;
 }
 
-.c5 tr:nth-child(even) {
-  background-color: #fff;
-}
-
 .c5 td,
 .c5 th {
   padding: 0.625rem 1rem;
@@ -761,6 +751,11 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 }
 
 .c6 {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.c7 {
   font-weight: bold;
   background: #e5f1fe;
 }
@@ -769,7 +764,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   margin-top: 1.25rem;
 }
 
-.c11 {
+.c12 {
   color: #4c5467;
   cursor: pointer;
 }
@@ -778,15 +773,15 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   width: 100%;
 }
 
-.c10 {
+.c11 {
   margin: 0.625rem 0;
 }
 
-.c9 {
+.c10 {
   margin-top: 0.625rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -801,16 +796,15 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   justify-content: space-between;
 }
 
-.c8 {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  max-width: calc(100% - 200px);
-  margin-right: 0.25rem;
+.c9 {
+  -webkit-flex: 1 1 calc(100% - 200px);
+  -ms-flex: 1 1 calc(100% - 200px);
+  flex: 1 1 calc(100% - 200px);
+  margin-right: 0.625rem;
   overflow: hidden;
   color: #005994;
   font-weight: bold;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -849,11 +843,11 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
           class="c4"
         >
           <table
-            class="c5"
+            class="c5 c6"
           >
             <tbody>
               <tr
-                class="c6"
+                class="c7"
               >
                 <td>
                   Conventions collectives
@@ -862,30 +856,26 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
               <tr>
                 <td>
                   <div
-                    class="c7"
+                    class="c8"
                   >
                     <div
-                      class="c8"
+                      class="c9"
                     >
                       IDCC 4567
                     </div>
                   </div>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
-                      <div
-                        class="c7"
+                      <a
+                        class="c12"
+                        href="/convention-collective/4567-titre-convention-2"
                       >
-                        <a
-                          class="c11"
-                          href="/convention-collective/4567-titre-convention-2"
-                        >
-                          titre convention 2
-                        </a>
-                      </div>
+                        titre convention 2
+                      </a>
                     </div>
                   </div>
                 </td>
@@ -961,10 +951,6 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   text-align: center;
 }
 
-.c5 tr:nth-child(even) {
-  background-color: #fff;
-}
-
 .c5 td,
 .c5 th {
   padding: 0.625rem 1rem;
@@ -983,6 +969,11 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 }
 
 .c6 {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.c7 {
   font-weight: bold;
   background: #e5f1fe;
 }
@@ -991,7 +982,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   margin-top: 1.25rem;
 }
 
-.c11 {
+.c12 {
   color: #4c5467;
   cursor: pointer;
 }
@@ -1000,15 +991,15 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   width: 100%;
 }
 
-.c10 {
+.c11 {
   margin: 0.625rem 0;
 }
 
-.c9 {
+.c10 {
   margin-top: 0.625rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1023,16 +1014,15 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   justify-content: space-between;
 }
 
-.c8 {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  max-width: calc(100% - 200px);
-  margin-right: 0.25rem;
+.c9 {
+  -webkit-flex: 1 1 calc(100% - 200px);
+  -ms-flex: 1 1 calc(100% - 200px);
+  flex: 1 1 calc(100% - 200px);
+  margin-right: 0.625rem;
   overflow: hidden;
   color: #005994;
   font-weight: bold;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -1071,11 +1061,11 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
           class="c4"
         >
           <table
-            class="c5"
+            class="c5 c6"
           >
             <tbody>
               <tr
-                class="c6"
+                class="c7"
               >
                 <td>
                   Entreprises
@@ -1084,10 +1074,10 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
               <tr>
                 <td>
                   <div
-                    class="c7"
+                    class="c8"
                   >
                     <div
-                      class="c8"
+                      class="c9"
                     >
                       Entreprise 1 93100 Commune test
                     </div>
@@ -1102,20 +1092,16 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
                     </a>
                   </div>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
-                      <div
-                        class="c7"
+                      <a
+                        class="c12"
                       >
-                        <a
-                          class="c11"
-                        >
-                          Convention 1
-                        </a>
-                      </div>
+                        Convention 1
+                      </a>
                     </div>
                   </div>
                 </td>
@@ -1191,10 +1177,6 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   text-align: center;
 }
 
-.c5 tr:nth-child(even) {
-  background-color: #fff;
-}
-
 .c5 td,
 .c5 th {
   padding: 0.625rem 1rem;
@@ -1213,6 +1195,11 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 }
 
 .c6 {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.c7 {
   font-weight: bold;
   background: #e5f1fe;
 }
@@ -1221,7 +1208,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   margin-top: 1.25rem;
 }
 
-.c11 {
+.c12 {
   color: #4c5467;
   cursor: pointer;
 }
@@ -1230,15 +1217,15 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   width: 100%;
 }
 
-.c10 {
+.c11 {
   margin: 0.625rem 0;
 }
 
-.c9 {
+.c10 {
   margin-top: 0.625rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1253,16 +1240,15 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   justify-content: space-between;
 }
 
-.c8 {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  max-width: calc(100% - 200px);
-  margin-right: 0.25rem;
+.c9 {
+  -webkit-flex: 1 1 calc(100% - 200px);
+  -ms-flex: 1 1 calc(100% - 200px);
+  flex: 1 1 calc(100% - 200px);
+  margin-right: 0.625rem;
   overflow: hidden;
   color: #005994;
   font-weight: bold;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -1301,11 +1287,11 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
           class="c4"
         >
           <table
-            class="c5"
+            class="c5 c6"
           >
             <tbody>
               <tr
-                class="c6"
+                class="c7"
               >
                 <td>
                   Conventions collectives
@@ -1314,33 +1300,31 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
               <tr>
                 <td>
                   <div
-                    class="c7"
+                    class="c8"
                   >
                     <div
-                      class="c8"
-                    />
+                      class="c9"
+                    >
+                      IDCC 0275
+                    </div>
                   </div>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
-                      <div
-                        class="c7"
+                      <a
+                        class="c12"
                       >
-                        <a
-                          class="c11"
-                        >
-                          titre convention 1
-                        </a>
-                      </div>
+                        titre convention 1
+                      </a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr
-                class="c6"
+                class="c7"
               >
                 <td>
                   Entreprises
@@ -1349,10 +1333,10 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
               <tr>
                 <td>
                   <div
-                    class="c7"
+                    class="c8"
                   >
                     <div
-                      class="c8"
+                      class="c9"
                     >
                       Entreprise 1 93100 Commune test
                     </div>
@@ -1367,20 +1351,16 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
                     </a>
                   </div>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
-                      <div
-                        class="c7"
+                      <a
+                        class="c12"
                       >
-                        <a
-                          class="c11"
-                        >
-                          Convention 1
-                        </a>
-                      </div>
+                        Convention 1
+                      </a>
                     </div>
                   </div>
                 </td>

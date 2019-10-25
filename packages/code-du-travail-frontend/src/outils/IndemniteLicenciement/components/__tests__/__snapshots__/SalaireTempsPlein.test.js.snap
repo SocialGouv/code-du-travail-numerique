@@ -48,10 +48,6 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   text-align: center;
 }
 
-.c2 tr:nth-child(even) {
-  background-color: #fff;
-}
-
 .c2 td,
 .c2 th {
   padding: 0.625rem 1rem;
@@ -246,10 +242,6 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   padding: 0.625rem 0;
   font-style: italic;
   text-align: center;
-}
-
-.c2 tr:nth-child(even) {
-  background-color: #fff;
 }
 
 .c2 td,

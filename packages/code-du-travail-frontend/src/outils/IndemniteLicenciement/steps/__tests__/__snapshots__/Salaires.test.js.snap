@@ -48,10 +48,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   text-align: center;
 }
 
-.c5 tr:nth-child(even) {
-  background-color: #fff;
-}
-
 .c5 td,
 .c5 th {
   padding: 0.625rem 1rem;
