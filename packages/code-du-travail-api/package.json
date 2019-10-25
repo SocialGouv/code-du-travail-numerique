@@ -45,7 +45,7 @@
     "@socialgouv/eslint-config-recommended": "^0.10.2",
     "@zeit/ncc": "^0.20.5",
     "@cdt/data": "^3.3.1",
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "nodemon": "^1.19.4",
     "superagent": "^5.1.0",
     "supertest": "^4.0.2"

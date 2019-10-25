@@ -70,7 +70,7 @@
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-plugin-styled-components": "^1.10.6",
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "ignore-loader": "^0.1.2",
     "jest": "^24.9.0",
     "jest-styled-components": "^6.3.3",
