@@ -4,14 +4,14 @@ import { renderForm } from "../../../../../test/renderForm";
 describe("<StepResult />", () => {
   it("should render CC answer", () => {
     const { container } = renderForm(StepResult, {
-      branche: "0044",
-      catégorie: "16| Ingénieurs, Cadres"
+      ccn: { num: "0044" },
+      criteria: { catégorie: "16| Ingénieurs, Cadres" }
     });
     expect(container).toMatchSnapshot();
   });
   it("should render with no cc", () => {
     const { container } = renderForm(StepResult, {
-      branche: "0000"
+      ccn: { num: "0044" }
     });
     expect(container).toMatchSnapshot();
   });

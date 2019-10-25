@@ -3,11 +3,15 @@ import Link from "next/link";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
+import data from "@cdt/data...prime-precarite/precarite.data.json";
 
 import { getIndemnitePrecarite } from "../indemnite";
 import { Summary, Highlight } from "../../common/stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
-import { filterSituations, getSituationsFor } from "./situation";
+import {
+  filterSituations,
+  getSituationsFor
+} from "../../common/situations.utils";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 
 function StepIndemnite({ form }) {
@@ -22,7 +26,7 @@ function StepIndemnite({ form }) {
   } = state.values;
 
   const idcc = ccn ? ccn.num : "0000";
-  const initialSituations = getSituationsFor({ idcc, contractType });
+  const initialSituations = getSituationsFor(data, { idcc, contractType });
   const situations = filterSituations(initialSituations, criteria);
 
   let rate = "10%";
@@ -38,7 +42,7 @@ function StepIndemnite({ form }) {
       break;
     }
     default: {
-      const situations = getSituationsFor({ idcc: "0000", contractType });
+      const situations = getSituationsFor(data, { idcc: "0000", contractType });
       const [situation] = situations;
       references = getRef(situation);
     }

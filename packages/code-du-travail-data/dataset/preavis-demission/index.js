@@ -3,6 +3,8 @@ const GoogleSpreadsheets = require("google-spreadsheets");
 const conventionsColl = require("@socialgouv/kali-data/data/index.json");
 
 const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
+const SPREADSHEET_TAB = 5;
+
 const getCells = promisify(GoogleSpreadsheets.cells);
 
 const conventionsById = conventionsColl.reduce((state, cc) => ({
@@ -12,22 +14,23 @@ const conventionsById = conventionsColl.reduce((state, cc) => ({
 
 const csvColumns = {
   type: 1,
-  answer: 13,
-  ref: 14,
-  refUrl: 15
+  idcc: 2,
+  answer: 18,
+  answer_: 18,
+  ref: 21,
+  refUrl: 22
 };
 
 const criteriaIndex = [
-  2, // idcc
   4, // catégorie
-  5, // durée du tranvail
-  6, // type de rupture
+  6, // durée du tranvail
   7, // durée de préavis
-  8, // groupe
-  9, // ancienneté
-  10, // coefficient
-  11, // échelon
-  12 // période d'essai
+  8, // type de rupture
+  12, // groupe
+  14, // ancienneté
+  15, // coefficient
+  16, // échelon
+  17 // période d'essai
 ];
 
 function getHeaders(row) {
@@ -41,7 +44,7 @@ function getHeaders(row) {
 async function getData() {
   const { cells } = await getCells({
     key: SPREADSHEET_KEY,
-    worksheet: 2
+    worksheet: SPREADSHEET_TAB
   });
 
   const [headersRow] = Object.values(cells).slice(0, 1);
@@ -63,20 +66,13 @@ function transformRow(headers, row) {
   for (const [key, index] of Object.entries(csvColumns)) {
     data[key] = (row[index] && row[index].value) || null;
   }
+  //Format idcc
+  data.idcc = ("0000" + data.idcc).slice(-4);
 
   for (const index of criteriaIndex) {
     if (row[index]) {
       const key = headers[index].trim();
-
-      // handling branche criterion
-      if (key === "idcc") {
-        // format the idcc with
-        const id = ("0000" + row[index].value).slice(-4);
-        const label = conventionsById[row[index].value] || "Je ne sais pas";
-        data.criteria["branche"] = { id, label };
-      } else {
-        data.criteria[key] = row[index].value || undefined;
-      }
+      data.criteria[key] = row[index].value || undefined;
     }
   }
 

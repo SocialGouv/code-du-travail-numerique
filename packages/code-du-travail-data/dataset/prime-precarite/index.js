@@ -2,6 +2,8 @@ const { promisify } = require("util");
 const GoogleSpreadsheets = require("google-spreadsheets");
 
 const SPREADSHEET_KEY = "1SCFHUDjsWWRdVhYP5cVz2Q3AqPa-ubOYsEc3C3kRKOA";
+const SPREADSHEET_TAB = 1;
+
 const getCells = promisify(GoogleSpreadsheets.cells);
 
 const csvColumns = {
@@ -29,7 +31,7 @@ function rowWithIdcc(row) {
 async function getData() {
   const { cells } = await getCells({
     key: SPREADSHEET_KEY,
-    worksheet: 1
+    worksheet: SPREADSHEET_TAB
   });
 
   return Object.values(cells)
