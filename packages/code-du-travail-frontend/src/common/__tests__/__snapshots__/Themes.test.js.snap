@@ -28,9 +28,13 @@ exports[`<Themes /> should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -44,9 +48,10 @@ exports[`<Themes /> should render 1`] = `
 }
 
 .c8 {
-  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
-  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
-  flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -54,8 +59,8 @@ exports[`<Themes /> should render 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: calc(100% / 4 - 2 * 0.625rem);
   margin: 0.625rem;
-  text-align: center;
 }
 
 .c2 {
@@ -109,10 +114,13 @@ exports[`<Themes /> should render 1`] = `
 
 .c9 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -128,8 +136,6 @@ exports[`<Themes /> should render 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
   color: #005994;
@@ -155,7 +161,9 @@ exports[`<Themes /> should render 1`] = `
 }
 
 .c12 {
+  display: block;
   max-width: 100%;
+  padding-right: 1rem;
   overflow-y: auto;
 }
 
@@ -178,17 +186,13 @@ exports[`<Themes /> should render 1`] = `
 
 @media (max-width:980px) {
   .c8 {
-    -webkit-flex-basis: calc(100% / 3 - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% / 3 - 2 * 0.625rem);
-    flex-basis: calc(100% / 3 - 2 * 0.625rem);
+    width: calc(100% / 3 - 2 * 0.625rem);
   }
 }
 
 @media (max-width:600px) {
   .c8 {
-    -webkit-flex-basis: calc(100% - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% - 2 * 0.625rem);
-    flex-basis: calc(100% - 2 * 0.625rem);
+    width: calc(100% - 2 * 0.625rem);
   }
 }
 

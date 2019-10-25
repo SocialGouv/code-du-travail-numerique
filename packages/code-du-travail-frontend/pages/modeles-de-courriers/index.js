@@ -63,7 +63,7 @@ const ModeleCourrier = ({ modele, ...props }) => {
   const { filename, title, editor } = modele;
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   return (
-    <LargeLink variant={"light"} {...props}>
+    <LargeLink {...props}>
       <>
         <strong>{title}</strong>
         <P>

@@ -9,9 +9,13 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -25,9 +29,10 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 }
 
 .c2 {
-  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
-  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
-  flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -35,8 +40,8 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: calc(100% / 4 - 2 * 0.625rem);
   margin: 0.625rem;
-  text-align: center;
 }
 
 .c0 {
@@ -50,10 +55,13 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 
 .c3 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -69,8 +77,6 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
   color: #005994;
@@ -96,23 +102,21 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 }
 
 .c4 {
+  display: block;
   max-width: 100%;
+  padding-right: 0;
   overflow-y: auto;
 }
 
 @media (max-width:980px) {
   .c2 {
-    -webkit-flex-basis: calc(100% / 3 - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% / 3 - 2 * 0.625rem);
-    flex-basis: calc(100% / 3 - 2 * 0.625rem);
+    width: calc(100% / 3 - 2 * 0.625rem);
   }
 }
 
 @media (max-width:600px) {
   .c2 {
-    -webkit-flex-basis: calc(100% - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% - 2 * 0.625rem);
-    flex-basis: calc(100% - 2 * 0.625rem);
+    width: calc(100% - 2 * 0.625rem);
   }
 }
 
@@ -171,9 +175,13 @@ exports[`<CardList /> should render a collection with a title and description 1`
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -187,9 +195,10 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 .c3 {
-  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
-  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
-  flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -197,8 +206,8 @@ exports[`<CardList /> should render a collection with a title and description 1`
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: calc(100% / 4 - 2 * 0.625rem);
   margin: 0.625rem;
-  text-align: center;
 }
 
 .c0 {
@@ -220,10 +229,13 @@ exports[`<CardList /> should render a collection with a title and description 1`
 
 .c4 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -239,8 +251,6 @@ exports[`<CardList /> should render a collection with a title and description 1`
   -ms-flex-pack: end;
   justify-content: flex-end;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
   color: #005994;
@@ -266,23 +276,21 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 .c5 {
+  display: block;
   max-width: 100%;
+  padding-right: 0;
   overflow-y: auto;
 }
 
 @media (max-width:980px) {
   .c3 {
-    -webkit-flex-basis: calc(100% / 3 - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% / 3 - 2 * 0.625rem);
-    flex-basis: calc(100% / 3 - 2 * 0.625rem);
+    width: calc(100% / 3 - 2 * 0.625rem);
   }
 }
 
 @media (max-width:600px) {
   .c3 {
-    -webkit-flex-basis: calc(100% - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% - 2 * 0.625rem);
-    flex-basis: calc(100% - 2 * 0.625rem);
+    width: calc(100% - 2 * 0.625rem);
   }
 }
 
@@ -345,9 +353,13 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -361,9 +373,10 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 }
 
 .c6 {
-  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
-  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
-  flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -371,8 +384,8 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: calc(100% / 4 - 2 * 0.625rem);
   margin: 0.625rem;
-  text-align: center;
 }
 
 .c0 {
@@ -426,10 +439,13 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 
 .c7 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -445,8 +461,6 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -ms-flex-pack: end;
   justify-content: flex-end;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
   color: #005994;
@@ -472,23 +486,21 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 }
 
 .c8 {
+  display: block;
   max-width: 100%;
+  padding-right: 0;
   overflow-y: auto;
 }
 
 @media (max-width:980px) {
   .c6 {
-    -webkit-flex-basis: calc(100% / 3 - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% / 3 - 2 * 0.625rem);
-    flex-basis: calc(100% / 3 - 2 * 0.625rem);
+    width: calc(100% / 3 - 2 * 0.625rem);
   }
 }
 
 @media (max-width:600px) {
   .c6 {
-    -webkit-flex-basis: calc(100% - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% - 2 * 0.625rem);
-    flex-basis: calc(100% - 2 * 0.625rem);
+    width: calc(100% - 2 * 0.625rem);
   }
 }
 
@@ -574,9 +586,13 @@ exports[`<CardList /> should render a signle title 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -590,9 +606,10 @@ exports[`<CardList /> should render a signle title 1`] = `
 }
 
 .c2 {
-  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
-  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
-  flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -600,8 +617,8 @@ exports[`<CardList /> should render a signle title 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: calc(100% / 4 - 2 * 0.625rem);
   margin: 0.625rem;
-  text-align: center;
 }
 
 .c0 {
@@ -615,10 +632,13 @@ exports[`<CardList /> should render a signle title 1`] = `
 
 .c3 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -634,8 +654,6 @@ exports[`<CardList /> should render a signle title 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 1.25rem 1.5rem;
   color: #005994;
@@ -661,23 +679,21 @@ exports[`<CardList /> should render a signle title 1`] = `
 }
 
 .c4 {
+  display: block;
   max-width: 100%;
+  padding-right: 0;
   overflow-y: auto;
 }
 
 @media (max-width:980px) {
   .c2 {
-    -webkit-flex-basis: calc(100% / 3 - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% / 3 - 2 * 0.625rem);
-    flex-basis: calc(100% / 3 - 2 * 0.625rem);
+    width: calc(100% / 3 - 2 * 0.625rem);
   }
 }
 
 @media (max-width:600px) {
   .c2 {
-    -webkit-flex-basis: calc(100% - 2 * 0.625rem);
-    -ms-flex-preferred-size: calc(100% - 2 * 0.625rem);
-    flex-basis: calc(100% - 2 * 0.625rem);
+    width: calc(100% - 2 * 0.625rem);
   }
 }
 

@@ -8,6 +8,10 @@ describe("<Button />", () => {
     const { container } = render(<Button>A button</Button>);
     expect(container).toMatchSnapshot();
   });
+  it("renders a small button", () => {
+    const { container } = render(<Button size="small">A button</Button>);
+    expect(container).toMatchSnapshot();
+  });
   it("does not have a button tag of noButton prop is provided", () => {
     const { container } = render(<Button noButton>A button</Button>);
     expect(container.getElementsByTagName("button").length).toBe(0);

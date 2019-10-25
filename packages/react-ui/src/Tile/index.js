@@ -6,22 +6,25 @@ import styled from "styled-components";
 
 const StyledTile = styled.a`
   position: relative;
-  display: flex;
+  display: inline-flex;
+  flex: 1 1 100%;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-end;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   margin: 0;
-  padding: ${spacing.medium} ${spacing.xmedium};
+  padding: ${({ size }) =>
+    size === "small"
+      ? `${spacing.base} ${spacing.medium}`
+      : `${spacing.medium} ${spacing.xmedium}`};
   color: ${({ theme }) => theme.blueDark};
   font-weight: bold;
-  font-size: ${fonts.sizeH5};
+  font-size: ${({ size }) => (size === "small" ? fonts.sizeh6 : fonts.sizeH5)};
   text-align: left;
   text-decoration: none;
-  background-color: ${({ theme }) => theme.white};
+  background-color: ${({ theme, variant }) =>
+    variant === "dark" ? theme.lightBackground : theme.white};
   border: ${box.border};
   border-radius: ${box.borderRadius};
   cursor: pointer;
@@ -34,7 +37,9 @@ const StyledTile = styled.a`
 `;
 
 const OverflowWrapper = styled.div`
+  display: block;
   max-width: 100%; /* ie11 fix :'( */
+  padding-right: ${({ paddingRight }) => (paddingRight ? spacing.base : 0)};
   overflow-y: auto;
 `;
 
@@ -45,21 +50,27 @@ const IconWrapper = styled.div`
 `;
 
 const ButtonWrapper = styled.div`
-  margin-top: ${spacing.medium};
+  margin-top: ${({ size }) =>
+    size === "small" ? spacing.base : spacing.medium};
 `;
 
 export const Tile = React.forwardRef(
-  ({ button, children, icon: Icon, ...props }, ref) => (
-    <StyledTile as={props.href ? "a" : "button"} ref={ref} {...props}>
+  ({ button, children, icon: Icon, size, ...props }, ref) => (
+    <StyledTile
+      as={props.href ? "a" : "button"}
+      size={size}
+      ref={ref}
+      {...props}
+    >
       {Icon && (
         <IconWrapper>
           <Icon />
         </IconWrapper>
       )}
-      <OverflowWrapper>{children}</OverflowWrapper>
+      <OverflowWrapper paddingRight={Boolean(Icon)}>{children}</OverflowWrapper>
       {button && (
-        <ButtonWrapper>
-          <Button noButton variant="secondary">
+        <ButtonWrapper size={size}>
+          <Button noButton size={size} variant="secondary">
             {button}
           </Button>
         </ButtonWrapper>
@@ -71,14 +82,17 @@ export const Tile = React.forwardRef(
 Tile.displayName = "Tile";
 
 Tile.propTypes = {
+  button: PropTypes.string,
   children: PropTypes.node.isRequired,
-  icon: PropTypes.elementType,
   href: PropTypes.string,
-  title: PropTypes.string,
-  button: PropTypes.string
+  icon: PropTypes.elementType,
+  size: PropTypes.string,
+  variant: PropTypes.string
 };
 
 Tile.defaultProps = {
   href: "",
-  button: ""
+  button: "",
+  size: "",
+  variant: ""
 };

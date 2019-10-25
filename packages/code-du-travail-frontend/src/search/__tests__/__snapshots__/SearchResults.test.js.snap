@@ -113,8 +113,8 @@ exports[`<SearchResults/> should render results 1`] = `
 
 .c3 {
   margin: 0;
-  font-size: 1.125rem;
   font-weight: bold;
+  font-size: 1.125rem;
 }
 
 @media print {
@@ -284,8 +284,8 @@ exports[`<SearchResults/> should render results with breadcrumbs 1`] = `
 
 .c5 {
   margin: 0;
-  font-size: 1.125rem;
   font-weight: bold;
+  font-size: 1.125rem;
 }
 
 @media print {

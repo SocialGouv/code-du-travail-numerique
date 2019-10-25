@@ -32,7 +32,6 @@ const ListLink = ({
         href={url}
         target="_blank"
         className="no-after"
-        variant="light"
         {...otherProps}
       />
     );

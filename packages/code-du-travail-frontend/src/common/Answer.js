@@ -1,19 +1,25 @@
 import React from "react";
-import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
-
 import Head from "next/head";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import styled from "styled-components";
+import { SOURCES, getRouteBySource } from "@cdt/sources";
+import {
+  Alert,
+  Container,
+  List,
+  ListItem,
+  theme,
+  Tile,
+  Wrapper
+} from "@socialgouv/react-ui";
 
-import Article from "../common/Article";
-import Disclaimer from "../common/Disclaimer";
-import { Feedback } from "../common/Feedback";
-import Html from "../common/Html";
 import useGlossary from "../glossary";
-import { ThemeBreadcrumbs } from "../common/ThemeBreadcrumbs";
-import { groupByDisplayCategory } from "../search/utils";
-import { getRouteBySource } from "@cdt/sources";
+import Article from "./Article";
+import Disclaimer from "./Disclaimer";
+import { Feedback } from "./Feedback";
+import Html from "./Html";
+import { ThemeBreadcrumbs } from "./ThemeBreadcrumbs";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
@@ -49,7 +55,25 @@ function Answer({
   emptyMessage = "Aucun résultat"
 }) {
   const glossaryItems = useGlossary(children, html);
-  const linkedResults = groupByDisplayCategory(relatedItems);
+
+  const { relatedTools, relatedLetters, relatedArticles } = relatedItems.reduce(
+    (accumulator, item) => {
+      const itemSource = item._source.source;
+      if (itemSource === SOURCES.TOOLS) {
+        accumulator.relatedTools.push(item._source);
+      } else if (itemSource === SOURCES.LETTERS) {
+        accumulator.relatedLetters.push(item._source);
+      } else {
+        accumulator.relatedArticles.push(item._source);
+      }
+      return accumulator;
+    },
+    {
+      relatedTools: [],
+      relatedLetters: [],
+      relatedArticles: []
+    }
+  );
 
   return (
     <>
@@ -59,7 +83,7 @@ function Answer({
       <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
       <BackToResultsLink query={router.query} />
       <StyledContainer>
-        <StyledContent hasResults={linkedResults.matches.length > 0}>
+        <StyledContent hasResults={relatedItems.length > 0}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
           {(html || children) && (
             <Article
@@ -84,29 +108,67 @@ function Answer({
             title={title}
           />
         </StyledContent>
-        {linkedResults.matches.length > 0 && (
-          <StyledMenu>
-            <StyledMenuList>
-              <StyledMenuTitle>
-                Les articles pouvant vous interesser :
-              </StyledMenuTitle>
-              <ul>
-                {linkedResults.matches
-                  .filter(link => link.title !== title)
-                  .slice(0, 3)
-                  .map(link => (
-                    <StyledLi key={link.slug}>
-                      <Link
-                        href={`/${getRouteBySource(link.source)}/[slug]`}
-                        as={`/${getRouteBySource(link.source)}/${link.slug}`}
-                      >
-                        <a>{link.title}</a>
-                      </Link>
-                    </StyledLi>
-                  ))}
-              </ul>
-            </StyledMenuList>
-          </StyledMenu>
+        {relatedItems.length > 0 && (
+          <RelatedItems>
+            <StyledRelatedItemsTitle>
+              Autres contenus pouvant vous intéresser&nbsp;:
+            </StyledRelatedItemsTitle>
+            <List>
+              {relatedArticles
+                .filter(link => link.title !== title)
+                .slice(0, 3)
+                .map(link => (
+                  <StyledListItem key={link.slug}>
+                    <Link
+                      href={`/${getRouteBySource(link.source)}/[slug]`}
+                      as={`/${getRouteBySource(link.source)}/${link.slug}`}
+                    >
+                      <a>{link.title}</a>
+                    </Link>
+                  </StyledListItem>
+                ))}
+              {relatedLetters.length > 0 && (
+                <StyledListItem>
+                  <Link
+                    href={`/${getRouteBySource(
+                      relatedLetters[0].source
+                    )}/[slug]`}
+                    as={`/${getRouteBySource(relatedLetters[0].source)}/${
+                      relatedLetters[0].slug
+                    }`}
+                    passHref
+                  >
+                    <Tile
+                      size="small"
+                      button={"Consulter"}
+                      title={relatedLetters[0].title}
+                    >
+                      {relatedLetters[0].title}
+                    </Tile>
+                  </Link>
+                </StyledListItem>
+              )}
+              {relatedTools.length > 0 && (
+                <StyledListItem>
+                  <Link
+                    href={`/${getRouteBySource(relatedTools[0].source)}/[slug]`}
+                    as={`/${getRouteBySource(relatedTools[0].source)}/${
+                      relatedTools[0].slug
+                    }`}
+                    passHref
+                  >
+                    <Tile
+                      size="small"
+                      button={"Démarrer"}
+                      title={relatedTools[0].title}
+                    >
+                      {relatedTools[0].title}
+                    </Tile>
+                  </Link>
+                </StyledListItem>
+              )}
+            </List>
+          </RelatedItems>
         )}
       </StyledContainer>
       <Disclaimer />
@@ -127,6 +189,7 @@ const StyledErrorContainer = styled(Container)`
 const StyledContainer = styled(Container)`
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-around;
   padding: 0;
 `;
@@ -138,40 +201,23 @@ const StyledContent = styled.div`
   }
 `;
 
-const StyledMenu = styled.div`
-  width: 30%;
-  padding: ${spacing.large} 0;
-  color: ${colors.blue};
-  @media (max-width: ${breakpoints.tablet}) {
-    width: 100%;
-    margin: 0 ${spacing.medium};
-    padding: ${spacing.large} 0;
-  }
-`;
-
-const StyledMenuList = styled.div`
+const RelatedItems = styled.div`
   position: sticky;
-  top: ${spacing.base};
-  padding: 0 ${spacing.base};
-  border-left: 1px solid ${colors.blue};
+  top: 0;
+  width: 30%;
+  padding: ${spacing.medium} ${spacing.base} ${spacing.medium} 0;
   @media (max-width: ${breakpoints.tablet}) {
-    position: relative;
-    margin-bottom: 4rem;
+    display: none;
   }
 `;
 
-const StyledLi = styled.li`
-  margin: ${spacing.base} 0;
-`;
-
-const StyledMenuTitle = styled.div`
+const StyledRelatedItemsTitle = styled.h6`
+  margin-top: 0;
   font-weight: bold;
-  font-size: ${fonts.sizeBase};
-  @media (max-width: ${breakpoints.tablet}) {
-    padding-bottom: ${spacing.large};
-    font-weight: normal;
-    font-size: ${fonts.sizeH2};
-  }
+`;
+
+const StyledListItem = styled(ListItem)`
+  margin: ${spacing.base} 0;
 `;
 
 const BacklinkContainer = styled(Container)`

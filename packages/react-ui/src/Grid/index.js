@@ -4,7 +4,8 @@ import { breakpoints, spacing } from "../theme";
 export const Grid = styled.ul`
   display: flex; /* Flex layout so items have equal height. */
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
   justify-content: flex-start;
   /* Use negative margins on sides to create gutters that do not also
     create a gutter at the edges of the container. */
@@ -17,15 +18,15 @@ export const Grid = styled.ul`
 `;
 
 export const GridCell = styled.li`
-  flex-basis: calc(100% / 4 - 2 * ${spacing.small});
+  display: flex;
   flex-grow: 0;
   flex-shrink: 1;
+  width: calc(100% / 4 - 2 * ${spacing.small});
   margin: ${spacing.small};
-  text-align: center;
   @media (max-width: ${breakpoints.tablet}) {
-    flex-basis: calc(100% / 3 - 2 * ${spacing.small});
+    width: calc(100% / 3 - 2 * ${spacing.small});
   }
   @media (max-width: ${breakpoints.mobile}) {
-    flex-basis: calc(100% - 2 * ${spacing.small});
+    width: calc(100% - 2 * ${spacing.small});
   }
 `;

@@ -7,9 +7,13 @@ import { animations, fonts, spacing, variants } from "../theme";
 
 export const StyledButton = styled.button`
   display: inline-block;
-  padding: ${spacing.small} ${spacing.xmedium};
+  padding: ${({ size }) =>
+    size === "small"
+      ? `${spacing.xsmall} ${spacing.medium}`
+      : `${spacing.small} ${spacing.xmedium}`};
   font-weight: 600;
-  font-size: ${fonts.sizeBase};
+  font-size: ${({ size }) =>
+    size === "small" ? fonts.sizeSmall : fonts.sizeBase};
   line-height: inherit;
   text-align: center;
   vertical-align: middle;

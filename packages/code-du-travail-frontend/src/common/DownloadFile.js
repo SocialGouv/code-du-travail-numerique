@@ -6,7 +6,7 @@ import { LargeLink, theme } from "@socialgouv/react-ui";
 const DownloadFile = ({ title, type, file }) => {
   const [, extension] = file.split(/\.([a-z]{2,4})$/);
   return (
-    <LargeLink title="Télécharger le courrier type" href={file}>
+    <LargeLink variant="dark" title="Télécharger le courrier type" href={file}>
       <DownloadLabel>
         <span>{title}</span>
         <br />
