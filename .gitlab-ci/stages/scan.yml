@@ -8,7 +8,7 @@
       - $PRODUCTION
 
 Snyk docker scan:
-  <<: *quality_stage
+  <<: *scan_stage
   image: snyk/snyk-cli:docker
   script:
     - ./scripts/snyk-docker-scan.sh
