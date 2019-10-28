@@ -46,9 +46,6 @@ export NLP_HOST="nlp.${DOMAIN}";
 export NLP_API_HOST="${K8S_NAMESPACE}-nlp-${BRANCH_HASH}";
 export NLP_API_URL="http://${NLP_API_HOST}:${NLP_PORT}"
 
-# run snyk scanner only 1 in each 10 pipelines
-export RUN_SNYK="$((CI_PIPELINE_ID % 10))"
-
 #
 
 if [[ -n "${COMMIT_TAG}" ]]; then
