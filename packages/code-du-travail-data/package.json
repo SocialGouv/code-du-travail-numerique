@@ -30,7 +30,7 @@
     "@socialgouv/legi-data": "^1.1.4",
     "esm": "^3.2.25",
     "unist-util-find": "^1.0.1",
-    "unist-util-select": "^2.0.2",
+    "unist-util-select": "^3.0.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
