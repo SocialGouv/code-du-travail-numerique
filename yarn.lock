@@ -16953,15 +16953,15 @@ unist-util-remove@^1.0.0, unist-util-remove@^1.0.1:
   dependencies:
     unist-util-is "^3.0.0"
 
-unist-util-select@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-2.0.2.tgz#cb2774b599695172e7b60a8b5f50793e418f7ea6"
-  integrity sha512-Yv5Z5ShMxv7Z9Dw175tKvOiRVXV4FrMHG778DSD9Z0jALgb3wAx9DoeInr3200QlYp71rYUXzzJdCb76xKdrCw==
+unist-util-select@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-3.0.0.tgz#36cef56c000caa09c51383269946ab17365c702e"
+  integrity sha512-eBOYflIHlKWNI/FTmObsPiPbRQG59POGuddDx4X7b99uxDDMpbOfJLozkazJhcOpKmCYAKqwpZ4IqEaOONqk3A==
   dependencies:
     css-selector-parser "^1.1.0"
     not "^0.1.0"
     nth-check "^1.0.1"
-    unist-util-is "^3.0.0"
+    unist-util-is "^4.0.0"
     zwitch "^1.0.3"
 
 unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1:
