@@ -9,9 +9,9 @@
 
 Snyk docker scan:
   <<: *scan_stage
-  image: snyk/snyk-cli:docker
+  image: docker:$DOCKER_VERSION
   services:
-    - docker:dind
+    - docker:$DOCKER_VERSION-dind
   script:
     - ./scripts/snyk-docker-scan.sh
 
