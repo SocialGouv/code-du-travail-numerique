@@ -504,6 +504,10 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   text-align: center;
 }
 
+.c9 tr:nth-child(even) {
+  background-color: #fff;
+}
+
 .c9 td,
 .c9 th {
   padding: 0.625rem 1rem;

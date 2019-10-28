@@ -146,6 +146,10 @@ exports[`<Term /> should render 1`] = `
   text-align: center;
 }
 
+.c20 tr:nth-child(even) {
+  background-color: #fff;
+}
+
 .c20 td,
 .c20 th {
   padding: 0.625rem 1rem;

@@ -48,6 +48,10 @@ exports[`<Info /> renders 1`] = `
   text-align: center;
 }
 
+.c2 tr:nth-child(even) {
+  background-color: #fff;
+}
+
 .c2 td,
 .c2 th {
   padding: 0.625rem 1rem;

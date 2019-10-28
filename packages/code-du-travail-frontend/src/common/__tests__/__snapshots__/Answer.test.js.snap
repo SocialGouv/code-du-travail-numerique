@@ -1686,7 +1686,7 @@ exports[`<Answer /> renders related content 1`] = `
   cursor: not-allowed;
 }
 
-.c36 {
+.c35 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -1709,41 +1709,8 @@ exports[`<Answer /> renders related content 1`] = `
   border: none;
 }
 
-.c36:hover {
+.c35:hover {
   color: #8c94a6;
-}
-
-.c29 {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-}
-
-.c29:not([disabled]):hover,
-.c29:not([disabled]):active,
-.c29:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-}
-
-.c29[disabled] {
-  color: rgba(12,12,14,0.4);
-  cursor: not-allowed;
 }
 
 .c24 {
@@ -1754,13 +1721,10 @@ exports[`<Answer /> renders related content 1`] = `
 
 .c26 {
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1776,10 +1740,13 @@ exports[`<Answer /> renders related content 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1.5rem;
   color: #005994;
   font-weight: bold;
+  font-size: 1.125rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1800,17 +1767,15 @@ exports[`<Answer /> renders related content 1`] = `
 }
 
 .c27 {
-  display: block;
   max-width: 100%;
-  padding-right: 0;
   overflow-y: auto;
 }
 
 .c28 {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
-.c31 {
+.c30 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1833,7 +1798,7 @@ exports[`<Answer /> renders related content 1`] = `
   animation: iowhYu 300ms ease-out;
 }
 
-.c32 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1854,7 +1819,7 @@ exports[`<Answer /> renders related content 1`] = `
   background-color: #fee5ad;
 }
 
-.c33 {
+.c32 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1867,7 +1832,7 @@ exports[`<Answer /> renders related content 1`] = `
   text-align: left;
 }
 
-.c35 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1940,7 +1905,7 @@ exports[`<Answer /> renders related content 1`] = `
   margin-left: -10px;
 }
 
-.c30 {
+.c29 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
@@ -1948,7 +1913,7 @@ exports[`<Answer /> renders related content 1`] = `
   padding: 1rem;
 }
 
-.c34 {
+.c33 {
   padding: 0 0.25rem;
 }
 
@@ -2335,7 +2300,7 @@ exports[`<Answer /> renders related content 1`] = `
               class="c28"
             >
               <div
-                class="c29"
+                class="c18"
               >
                 Consulter
               </div>
@@ -2359,7 +2324,7 @@ exports[`<Answer /> renders related content 1`] = `
               class="c28"
             >
               <div
-                class="c29"
+                class="c18"
               >
                 Démarrer
               </div>
@@ -2370,13 +2335,13 @@ exports[`<Answer /> renders related content 1`] = `
     </div>
   </div>
   <div
-    class="c30"
+    class="c29"
   >
     <div
-      class="c31"
+      class="c30"
     >
       <div
-        class="c32"
+        class="c31"
       >
         <svg
           fill="none"
@@ -2407,12 +2372,12 @@ exports[`<Answer /> renders related content 1`] = `
         </svg>
       </div>
       <div
-        class="c33"
+        class="c32"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c34"
+          class="c33"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -2423,11 +2388,11 @@ exports[`<Answer /> renders related content 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c35"
+        class="c34"
       >
         <button
           aria-label="Fermer"
-          class="c36"
+          class="c35"
         >
           <svg
             fill="none"
