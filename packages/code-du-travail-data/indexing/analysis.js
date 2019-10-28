@@ -58,27 +58,26 @@ const analyzer = {
   idcc_ape: {
     tokenizer: "whitespace"
   },
-  suggest_ana: {
-    tokenizer: "whitespace",
-    filter: ["lowercase", "icu_folding"]
-  },
 
-  suggest_prefix: {
-    tokenizer: "whitespace",
-    char_filter: ["startwith"],
-    filter: ["lowercase", "icu_folding"]
-  },
-
+  // improve match_phrase_prefix query
+  // using a keyword analyser on type:text field
+  // in order to match results with query as prefix
+  // (as opposite to match "in the middle")
   text_prefix: {
     tokenizer: "keyword",
     filter: ["lowercase", "icu_folding"]
   },
 
+  // used at index time to generate ngrams
+  // for all suggestion
+  // see below, ngram from tokens
   autocomplete: {
     tokenizer: "autocomplete",
     filter: ["lowercase", "icu_folding"]
   },
 
+  // at search time, we only consider
+  // the entire query (no ngrams)
   autocomplete_search: {
     tokenizer: "lowercase",
     filter: "icu_folding"

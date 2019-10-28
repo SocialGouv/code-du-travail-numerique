@@ -11,12 +11,15 @@ import documents from "./cdtn_document_data.json";
 import { conventionCollectiveMapping } from "@cdt/data/indexing/convention_collective.mapping";
 import conventions from "./convention_data.json";
 import { themesMapping } from "@cdt/data/indexing/themes.mapping";
+import { suggestionMapping } from "@cdt/data/indexing/suggestion.mapping";
+import suggestions from "./suggestions_data";
 
 const themes = documents.filter(document => document.source === SOURCES.THEMES);
 
 const documentIndexName = "cdtn_document_test";
 const themeIndexName = "cdtn_theme_test";
 const conventionsIndexName = "cdtn_convention_test";
+const suggestionsIndexName = "cdtn_suggestion_test";
 
 async function main() {
   await version({ client });
@@ -51,6 +54,17 @@ async function main() {
     client,
     indexName: conventionsIndexName,
     documents: conventions
+  });
+
+  await createIndex({
+    client,
+    indexName: suggestionsIndexName,
+    mappings: suggestionMapping
+  });
+  await indexDocumentsBatched({
+    client,
+    indexName: suggestionsIndexName,
+    documents: suggestions
   });
 }
 
