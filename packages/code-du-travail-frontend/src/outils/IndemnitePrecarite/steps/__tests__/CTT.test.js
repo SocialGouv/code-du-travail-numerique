@@ -6,7 +6,12 @@ import { Form } from "react-final-form";
 function renderForm() {
   return render(
     <Form validate={StepCTT.validate} onSubmit={jest.fn()}>
-      {({ form }) => <StepCTT form={form} />}
+      {({ handleSubmit, form }) => (
+        <form onSubmit={handleSubmit}>
+          <StepCTT form={form} />
+          <button data-testid="nextBt">suivant</button>
+        </form>
+      )}
     </Form>
   );
 }
@@ -29,8 +34,9 @@ describe("<StepCTT />", () => {
       const { getByText, getByTestId } = renderForm();
       const radio = getByTestId(key).querySelector(`input[value=${value}]`);
       fireEvent.click(radio);
-      // blur is need to force validation in react-testing-lib
-      fireEvent.blur(radio);
+      // validate form
+      const validateButton = getByTestId("nextBt");
+      validateButton.click();
       expect(getByText(/pas le droit à une prime/i)).toBeTruthy();
     }
   );

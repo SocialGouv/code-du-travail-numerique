@@ -21,7 +21,12 @@ describe("<Button />", () => {
     "it renders a Button %s",
     variant => {
       const { container } = render(
-        <Button variant={variant}>this is a Button {variant} </Button>
+        <>
+          <Button variant={variant}>this is a Button {variant} </Button>
+          <Button inverse variant={variant}>
+            this is a Button {variant}{" "}
+          </Button>
+        </>
       );
       expect(container).toMatchSnapshot();
     }

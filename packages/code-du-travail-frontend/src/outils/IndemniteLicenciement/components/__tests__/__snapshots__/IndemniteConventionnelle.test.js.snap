@@ -45,6 +45,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
 .c6:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c6[disabled] {
@@ -208,6 +209,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 .c21:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c21[disabled] {
@@ -669,6 +671,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 .c21:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c21[disabled] {

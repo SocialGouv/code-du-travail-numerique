@@ -94,6 +94,7 @@ exports[`<Answer /> renders 1`] = `
 .c17:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c17[disabled] {
@@ -127,6 +128,7 @@ exports[`<Answer /> renders 1`] = `
 .c20:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c20[disabled] {
@@ -769,6 +771,7 @@ exports[`<Answer /> renders a breadcrumbs 1`] = `
 .c25:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c25[disabled] {
@@ -802,6 +805,7 @@ exports[`<Answer /> renders a breadcrumbs 1`] = `
 .c28:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c28[disabled] {
@@ -1646,6 +1650,7 @@ exports[`<Answer /> renders related content 1`] = `
 .c18:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c18[disabled] {
@@ -1679,6 +1684,7 @@ exports[`<Answer /> renders related content 1`] = `
 .c21:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c21[disabled] {
@@ -1739,6 +1745,7 @@ exports[`<Answer /> renders related content 1`] = `
 .c29:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c29[disabled] {
@@ -2554,6 +2561,7 @@ exports[`<Answer /> renders tooltip 1`] = `
 .c18:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c18[disabled] {
@@ -2587,6 +2595,7 @@ exports[`<Answer /> renders tooltip 1`] = `
 .c21:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c21[disabled] {
@@ -3269,6 +3278,7 @@ exports[`<Answer /> renders tooltip for words with diacritics without breaking h
 .c18:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c18[disabled] {
@@ -3302,6 +3312,7 @@ exports[`<Answer /> renders tooltip for words with diacritics without breaking h
 .c21:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c21[disabled] {
@@ -3970,6 +3981,7 @@ exports[`<Answer /> renders tooltip without breaking previous word 1`] = `
 .c18:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c18[disabled] {
@@ -4003,6 +4015,7 @@ exports[`<Answer /> renders tooltip without breaking previous word 1`] = `
 .c21:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c21[disabled] {

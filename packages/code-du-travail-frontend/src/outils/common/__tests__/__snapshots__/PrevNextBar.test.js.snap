@@ -27,6 +27,7 @@ exports[`<PrevNextBar /> should render 1`] = `
 .c1:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c1[disabled] {
@@ -60,6 +61,7 @@ exports[`<PrevNextBar /> should render 1`] = `
 .c3:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c3[disabled] {
@@ -102,7 +104,7 @@ exports[`<PrevNextBar /> should render 1`] = `
 </div>
 `;
 
-exports[`<PrevNextBar /> should render disabled buttons 1`] = `
+exports[`<PrevNextBar /> should render error buttons 1`] = `
 .c1 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
@@ -129,6 +131,7 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 .c1:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c1[disabled] {
@@ -152,20 +155,21 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
+  color: #0c0c0e;
+  background: #fff;
+  border-color: #f6bcc2;
 }
 
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
+  color: #18181c;
+  background: #fff;
+  border-color: #f3a6ae;
 }
 
 .c3[disabled] {
-  color: rgba(255,255,255,0.4);
+  color: rgba(12,12,14,0.4);
   cursor: not-allowed;
 }
 
@@ -197,7 +201,110 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
     </button>
     <button
       class="c3 c4"
-      disabled=""
+    >
+      Suivant
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<PrevNextBar /> should render incomplete buttons 1`] = `
+.c1 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  color: #18181c;
+  background: #fbfcfd;
+  border-color: #dbe2e9;
+}
+
+.c1[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
+.c3 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #fff;
+  border-color: #005994;
+}
+
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
+  color: #18181c;
+  background: #fff;
+  border-color: #004a7b;
+}
+
+.c3[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.c4 {
+  margin-left: auto;
+}
+
+.c2 {
+  margin-right: auto;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <button
+      class="c1 c2"
+      type="button"
+    >
+      Précédent
+    </button>
+    <button
+      class="c3 c4"
     >
       Suivant
     </button>
@@ -232,6 +339,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 .c1:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c1[disabled] {
@@ -265,6 +373,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 .c3:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c3[disabled] {
@@ -334,6 +443,7 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
 .c1:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c1[disabled] {

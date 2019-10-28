@@ -1,55 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Anciennete /> should display error if anciennté < 8mois 1`] = `
-.c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #434956;
-  background: #ebeff3;
-  border-color: #cbd6e0;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-<div
-  class="c0"
->
-  L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté
-</div>
-`;
-
-exports[`<Anciennete /> should display error if dateEntre after dateSortie 1`] = `
-.c0 {
-  color: #4c5467;
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-
-<span
-  class="c0"
->
-  La date de sortie doit se situer après le
-  <strong>
-     
-    02 April 2018
-  </strong>
-</span>
-`;
-
-exports[`<Anciennete /> should display error if dateEntree after dateNotif 1`] = `null`;
-
-exports[`<Anciennete /> should display error if dateNotif after dateSortie 1`] = `null`;
-
 exports[`<Anciennete /> should render 1`] = `
-.c3 {
+.c4 {
   width: auto;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -60,15 +12,15 @@ exports[`<Anciennete /> should render 1`] = `
   border-radius: 0.25rem;
 }
 
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
+.c4::-webkit-outer-spin-button,
+.c4::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -82,7 +34,7 @@ exports[`<Anciennete /> should render 1`] = `
   font-size: 1.15rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,27 +53,36 @@ exports[`<Anciennete /> should render 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c1 {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
-}
-
-.c4 {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
-}
-
 .c0 {
   margin-top: 2rem;
   margin-bottom: 1.25rem;
   font-size: 1.625rem;
 }
 
+.c1 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.c5 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: default;
+}
+
 .c2 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -134,104 +95,135 @@ exports[`<Anciennete /> should render 1`] = `
 }
 
 <div>
-  <h2
-    class="c0"
-  >
-    Dates d’entrée et de sortie de l’entreprise
-  </h2>
-  <label
-    class="c1"
-    for="1"
-  >
-    Quelle est votre date d’entrée dans l’entreprise ?
-  </label>
-  <div
-    class="c2"
-  >
-    <input
-      class="c3"
-      id="1"
-      name="dateEntree"
-      placeholder=" jj/mm/yyyy"
-      type="date"
-      value=""
-    />
-  </div>
-  <label
-    class="c1"
-    for="2"
-  >
-    À quelle date votre licenciement vous a-t-il été notifié ?
-  </label>
-  <div
-    class="c2"
-  >
-    <input
-      class="c3"
-      id="2"
-      name="dateNotification"
-      placeholder=" jj/mm/yyyy"
-      type="date"
-      value=""
-    />
-  </div>
-  <label
-    class="c1"
-    for="3"
-  >
-    Quelle est votre date de sortie de l’entreprise (incluant la durée de votre préavis) ?
-  </label>
-  <div
-    class="c2"
-  >
-    <input
-      class="c3"
-      id="3"
-      name="dateSortie"
-      placeholder=" jj/mm/yyyy"
-      type="date"
-      value=""
-    />
-  </div>
-  <h2
-    class="c0"
-  >
-    Période d’absence prolongée (plus d’un mois)
-  </h2>
-  <p
-    class="c4"
-  >
-    Avez-vous eu des périodes d’absence de plus d’un mois au cours de votre contrat ?
-  </p>
-  <div
-    class="c5"
-  >
-    <label
-      class="c6"
+  <form>
+    <h2
+      class="c0"
     >
-      <input
-        name="hasAbsenceProlonge"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
+      Dates d’entrée et de sortie de l’entreprise
+    </h2>
+    <label
+      class="c1"
+      for="1"
+    >
+      Quelle est votre date d’entrée dans l’entreprise ?
+      <span
+        aria-label="champs obligatoire"
+        class="c2"
+      >
+        *
       </span>
     </label>
-    <label
-      class="c6"
+    <div
+      class="c3"
     >
       <input
-        name="hasAbsenceProlonge"
-        type="radio"
-        value="false"
+        class="c4"
+        id="1"
+        name="dateEntree"
+        placeholder=" jj/mm/yyyy"
+        type="date"
+        value=""
       />
-      <span>
-        Non
+    </div>
+    <label
+      class="c1"
+      for="2"
+    >
+      À quelle date votre licenciement vous a-t-il été notifié ?
+      <span
+        aria-label="champs obligatoire"
+        class="c2"
+      >
+        *
       </span>
     </label>
-  </div>
-  
-  
+    <div
+      class="c3"
+    >
+      <input
+        class="c4"
+        id="2"
+        name="dateNotification"
+        placeholder=" jj/mm/yyyy"
+        type="date"
+        value=""
+      />
+    </div>
+    <label
+      class="c1"
+      for="3"
+    >
+      Quelle est votre date de sortie de l’entreprise (incluant la durée de votre préavis) ?
+      <span
+        aria-label="champs obligatoire"
+        class="c2"
+      >
+        *
+      </span>
+    </label>
+    <div
+      class="c3"
+    >
+      <input
+        class="c4"
+        id="3"
+        name="dateSortie"
+        placeholder=" jj/mm/yyyy"
+        type="date"
+        value=""
+      />
+    </div>
+    <h2
+      class="c0"
+    >
+      Période d’absence prolongée (plus d’un mois)
+    </h2>
+    <p
+      class="c5"
+    >
+      Avez-vous eu des périodes d’absence de plus d’un mois au cours de votre contrat ?
+      <span
+        aria-label="champs obligatoire"
+        class="c2"
+      >
+        *
+      </span>
+    </p>
+    <div
+      class="c6"
+    >
+      <label
+        class="c7"
+      >
+        <input
+          name="hasAbsenceProlonge"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c7"
+      >
+        <input
+          name="hasAbsenceProlonge"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    
+    
+    <button
+      data-testid="nextBt"
+    >
+      suivant
+    </button>
+  </form>
 </div>
 `;

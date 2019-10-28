@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 
-import { YesNoQuestion } from "../components/YesNoQuestion";
+import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { Primes } from "../components/Primes";
 
 function StepPrimes({ form }) {

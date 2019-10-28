@@ -11,7 +11,12 @@ function renderForm(data) {
       initialValues={{ ...data }}
       onSubmit={jest.fn()}
     >
-      {({ form }) => <StepInfosGenerales form={form} />}
+      {({ handleSubmit, form }) => (
+        <form onSubmit={handleSubmit}>
+          <StepInfosGenerales form={form} />
+          <button data-testid="nextBt">suivant</button>
+        </form>
+      )}
     </Form>
   );
 }
@@ -50,8 +55,9 @@ describe("<StepInfosGenerales />", () => {
       `input[value=true]`
     );
     fireEvent.click(missionFormation);
-    // blur is need to force validation in react-testing-lib
-    fireEvent.blur(missionFormation);
+    // validate form
+    const validateButton = getByTestId("nextBt");
+    validateButton.click();
     expect(getByText(/ne vous permet pas/i)).toBeTruthy();
   });
   it("should display and info alert if ctt and contrat is not mission-formation", () => {
@@ -62,8 +68,9 @@ describe("<StepInfosGenerales />", () => {
       `input[value=false]`
     );
     fireEvent.click(missionFormation);
-    // blur is need to force validation in react-testing-lib
-    fireEvent.blur(missionFormation);
+    // validate form
+    const validateButton = getByTestId("nextBt");
+    validateButton.click();
     expect(getByText(/attention/i)).toBeTruthy();
   });
 });

@@ -5,7 +5,8 @@ import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
 import { Table as UITable, theme } from "@socialgouv/react-ui";
 
-import { Input, InlineError } from "../../common/stepStyles";
+import { Input } from "../../common/stepStyles";
+import { InlineError } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 
 function SalaireTempsPlein({ name }) {
@@ -98,6 +99,7 @@ export { SalaireTempsPlein };
 const { colors, spacing } = theme;
 
 const Table = styled(UITable)`
+  width: 70%;
   & tr > td:nth-child(2) {
     width: 70%;
     text-align: left;

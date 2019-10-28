@@ -74,6 +74,7 @@ exports[`<Glossaire /> should render 1`] = `
 .c23:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c23[disabled] {

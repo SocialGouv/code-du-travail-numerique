@@ -3,14 +3,10 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { Toast, theme } from "@socialgouv/react-ui";
 
-import {
-  BlockError,
-  Label,
-  Input,
-  SectionTitle
-} from "../../../../common/stepStyles";
+import { Label, Input, SectionTitle } from "../../../../common/stepStyles";
 import { isNumber } from "../../../../common/validators";
-import { YesNoQuestion } from "../../../components/YesNoQuestion";
+import { Error } from "../../../../common/ErrorField";
+import { YesNoQuestion } from "../../../../common/YesNoQuestion";
 import { CurrencyField } from "../../../../common/CurrencyField";
 
 export const CONTRAT_KEY = "brancheContrat";
@@ -79,7 +75,7 @@ export const AncienneteETAMIC = ({ form }) => {
                   type="number"
                   invalid={touched && invalid}
                 />
-                {error && touched && <BlockError>{error}</BlockError>}
+                {error && touched && <Error>{error}</Error>}
               </>
             )}
           />
@@ -92,10 +88,12 @@ export const AncienneteETAMIC = ({ form }) => {
           <CurrencyField
             name={`${CONTRAT_KEY}.indemnite`}
             label="Indemnité de licenciement précédemment perçue"
+            required={false}
           />
           <YesNoQuestion
             name={`${CONTRAT_KEY}.considered`}
             label="Souhaitez vous déduire cette indemnité&nbsp;?"
+            required={false}
           />
         </>
       )}

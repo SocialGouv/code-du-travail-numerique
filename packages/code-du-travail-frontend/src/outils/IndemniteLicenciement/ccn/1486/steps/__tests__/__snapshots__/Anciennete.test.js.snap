@@ -74,7 +74,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,7 +88,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   font-size: 1.15rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,17 +107,25 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   margin-bottom: 1.25rem;
 }
 
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
 .c5 {
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
 }
 
-.c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+.c6 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
 }
 
 .c2 {
@@ -194,12 +202,18 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
     class="c5"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
+    <span
+      aria-label="champs obligatoire"
+      class="c6"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c6"
+    class="c7"
   >
     <label
-      class="c7"
+      class="c8"
     >
       <input
         name="hasBrancheContrat"
@@ -211,7 +225,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
       </span>
     </label>
     <label
-      class="c7"
+      class="c8"
     >
       <input
         name="hasBrancheContrat"

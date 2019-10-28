@@ -62,6 +62,7 @@ exports[`<Feedback/> should render 1`] = `
 .c5:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c5[disabled] {
@@ -95,6 +96,7 @@ exports[`<Feedback/> should render 1`] = `
 .c8:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c8[disabled] {
@@ -242,6 +244,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 .c7:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c7[disabled] {
@@ -515,6 +518,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 .c7:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c7[disabled] {

@@ -5,10 +5,11 @@ import { Field } from "react-final-form";
 import { theme } from "@socialgouv/react-ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Input, InlineError } from "../../common/stepStyles";
+import { Input } from "../../common/stepStyles";
+import { Error } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 import { parse } from "../../common/date";
-import { YesNoQuestion } from "../components/YesNoQuestion";
+import { YesNoQuestion } from "../../common/YesNoQuestion";
 import {
   SalaireTempsPartiel,
   TEMPS_PARTIEL,
@@ -16,6 +17,7 @@ import {
 } from "../components/SalaireTempsPartiel";
 import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
 import { motifs } from "../components/AbsencePeriods";
+import { Question } from "../../common/Question";
 
 function StepSalaires({ form }) {
   return (
@@ -86,10 +88,10 @@ function StepSalaires({ form }) {
                         >
                           {({ input, meta: { touched, error, invalid } }) => (
                             <>
-                              <p>
-                                Salaire mensuel brut (prendre en compte les
-                                primes et avantages en nature)
-                              </p>
+                              <Question required>
+                                Quel a été votre salaire mensuel brut&nbsp;?
+                              </Question>
+
                               <CurrencyWrapper>
                                 <NumberInput
                                   {...input}
@@ -99,8 +101,12 @@ function StepSalaires({ form }) {
                                 />
                                 <Currency aria-hidden="true">€</Currency>
                               </CurrencyWrapper>
+                              <span>
+                                Prendre en compte les primes et avantages en
+                                nature.
+                              </span>
                               {error && touched && invalid ? (
-                                <InlineError>{error}</InlineError>
+                                <Error>{error}</Error>
                               ) : null}
                             </>
                           )}

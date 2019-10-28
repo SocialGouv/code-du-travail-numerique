@@ -113,7 +113,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
   >
     <label
       class="c1"
-      for="3"
+      for="5"
     >
       Montant :
     </label>
@@ -122,7 +122,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
     >
       <input
         class="c3"
-        id="3"
+        id="5"
         name="salaires[0].salaire"
         size="10"
         type="number"

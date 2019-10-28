@@ -64,13 +64,14 @@ exports[`<StepIndemnite /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  max-width: 100%;
 }
 
 .c10 {
-  -webkit-flex: 1 1 70%;
-  -ms-flex: 1 1 70%;
-  flex: 1 1 70%;
-  max-width: 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
   margin-right: 1.25rem;
 }
 

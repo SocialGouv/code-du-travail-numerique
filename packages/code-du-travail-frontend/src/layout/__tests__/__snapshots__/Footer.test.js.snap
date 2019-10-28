@@ -32,6 +32,7 @@ exports[`<Footer /> should render 1`] = `
 .c4:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c4[disabled] {

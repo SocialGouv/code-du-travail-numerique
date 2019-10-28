@@ -1,22 +1,19 @@
 import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
-import { ErrorField } from "../../IndemniteLicenciement/components/ErrorField";
+import { ErrorField } from "../../common/ErrorField";
 
-import {
-  Label,
-  RadioContainer,
-  QuestionParagraphe
-} from "../../common/stepStyles";
+import { Label, RadioContainer } from "../../common/stepStyles";
 import { required } from "../../common/validators";
+import { Question } from "../../common/Question";
 
 function TypeRemuneration({ name, onChange }) {
   return (
     <>
-      <QuestionParagraphe>
+      <Question as="p" required>
         Sélectionnez la manière dont vous souhaitez indiquer votre
         rémunération&nbsp;?
-      </QuestionParagraphe>
+      </Question>
       <RadioContainer>
         <Label>
           <Field
@@ -42,8 +39,8 @@ function TypeRemuneration({ name, onChange }) {
             En indiquant le <strong>salaire mensuel</strong> pour chaque mois.
           </span>
         </Label>
+        <ErrorField name={name} />
       </RadioContainer>
-      <ErrorField name={name} />
       {onChange && (
         <OnChange name={name}>{values => onChange(values)}</OnChange>
       )}

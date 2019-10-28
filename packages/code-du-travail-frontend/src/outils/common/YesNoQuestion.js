@@ -2,18 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
-import {
-  Label,
-  RadioContainer,
-  QuestionParagraphe
-} from "../../common/stepStyles";
-import { requiredBoolean } from "../../common/validators";
+import { Label, RadioContainer } from "./stepStyles";
+import { Question } from "./Question";
+import { requiredBoolean } from "./validators";
 import { ErrorField } from "./ErrorField";
 
-function YesNoQuestion({ name, label, onChange, ...otherProps }) {
+function YesNoQuestion({
+  name,
+  label,
+  required = true,
+  onChange,
+  ...otherProps
+}) {
   return (
     <>
-      <QuestionParagraphe>{label}</QuestionParagraphe>
+      <Question as="p" required={required}>
+        {label}
+      </Question>
+
       <RadioContainer {...otherProps}>
         <Label>
           <Field
@@ -37,8 +43,8 @@ function YesNoQuestion({ name, label, onChange, ...otherProps }) {
           />
           <span>Non</span>
         </Label>
+        <ErrorField name={name} />
       </RadioContainer>
-      <ErrorField name={name} />
       {onChange && (
         <OnChange name={name}>{values => onChange(values)}</OnChange>
       )}

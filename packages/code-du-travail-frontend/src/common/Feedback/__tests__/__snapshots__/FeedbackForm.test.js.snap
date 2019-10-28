@@ -27,6 +27,7 @@ exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
 .c3:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c3[disabled] {
@@ -177,6 +178,7 @@ exports[`<FeedbackForm /> renders if user is satisfied 1`] = `
 .c3:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c3[disabled] {

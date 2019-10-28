@@ -46,6 +46,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
 .c14:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c14[disabled] {

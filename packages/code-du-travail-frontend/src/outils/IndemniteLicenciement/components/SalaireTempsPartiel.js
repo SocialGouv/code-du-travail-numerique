@@ -4,7 +4,9 @@ import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
 import { Button, theme } from "@socialgouv/react-ui";
-import { Input, InlineError, SectionTitle } from "../../common/stepStyles";
+import { Input } from "../../common/stepStyles";
+import { Error } from "../../common/ErrorField";
+import { Question } from "../../common/Question";
 import { isNumber } from "../../common/validators";
 
 function SalaireTempsPartiel({ name, visible = true, onChange }) {
@@ -14,8 +16,9 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
         <>
           {visible && (
             <>
-              <SectionTitle>Périodes de travail</SectionTitle>
-              <p>Renseigner vos différentes périodes de travail</p>
+              <Question>
+                Quelles ont été vos vos différentes périodes de travail&nbsp;?
+              </Question>
               <Row>
                 <CellHeader as={CellType}>Type de contrat</CellHeader>
                 <CellHeader as={CellDuration}>Durée en mois</CellHeader>
@@ -55,7 +58,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                         invalid={touched && invalid}
                       />
                       {error && touched && invalid ? (
-                        <InlineError>{error}</InlineError>
+                        <Error>{error}</Error>
                       ) : null}
                     </>
                   )}
@@ -90,7 +93,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                         Supprimer
                       </DelButton>
                       {error && touched && invalid ? (
-                        <InlineError>{error}</InlineError>
+                        <Error>{error}</Error>
                       ) : null}
                     </>
                   )}

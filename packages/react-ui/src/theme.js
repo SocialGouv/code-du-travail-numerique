@@ -24,12 +24,13 @@ export const colors = {
   darkText: "#434956",
 
   black: "#0c0c0e",
-
   successBackground: "#e0f2bd",
   infoBackground: "#e5f1fe",
   warningBackground: "#fee5ad",
   dangerBackground: "#f6bcc2",
-  focus: "#80bdff"
+  focus: "#80bdff",
+
+  errorText: "#b50113"
 };
 
 // adding colour shortcuts

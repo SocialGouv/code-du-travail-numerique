@@ -7,10 +7,10 @@ import { isAfter, differenceInMonths, format } from "date-fns";
 import { SectionTitle } from "../../common/stepStyles";
 import { isDate } from "../../common/validators";
 import { parse } from "../../common/date";
-import { YesNoQuestion } from "../components/YesNoQuestion";
-import { TextQuestion } from "../components/TextQuestion";
+import { YesNoQuestion } from "../../common/YesNoQuestion";
+import { TextQuestion } from "../../common/TextQuestion";
+import { ErrorComputedField } from "../../common/ErrorField";
 import { AbsencePeriods, motifs } from "../components/AbsencePeriods";
-import { ErrorComputedField } from "../components/ErrorField";
 
 function validate({
   dateEntree,
@@ -75,6 +75,7 @@ function StepAnciennete({ form }) {
         label="À quelle date votre licenciement vous a-t-il été notifié&nbsp;?"
         inputType="date"
         validate={isDate}
+        validateOnChange
         placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
       />
       <TextQuestion
@@ -82,6 +83,7 @@ function StepAnciennete({ form }) {
         label="Quelle est votre date de sortie de l’entreprise (incluant la durée de votre préavis)&nbsp;?"
         inputType="date"
         validate={isDate}
+        validateOnChange
         placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
       />
       <ErrorComputedField name="anciennete" />

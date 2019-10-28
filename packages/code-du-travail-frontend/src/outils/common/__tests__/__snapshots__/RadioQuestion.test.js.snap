@@ -20,6 +20,7 @@ exports[`<RadioQuestion /> should render with default value 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
 }
 
 .c0 {
@@ -56,10 +57,6 @@ exports[`<RadioQuestion /> should render with default value 1`] = `
           label foo
         </span>
       </label>
-    </div>
-    <div
-      class="c2"
-    >
       <label
         class="c3"
       >
@@ -97,6 +94,7 @@ exports[`<RadioQuestion /> should render with selectedValue value 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
 }
 
 .c0 {
@@ -134,10 +132,6 @@ exports[`<RadioQuestion /> should render with selectedValue value 1`] = `
           label foo
         </span>
       </label>
-    </div>
-    <div
-      class="c2"
-    >
       <label
         class="c3"
       >

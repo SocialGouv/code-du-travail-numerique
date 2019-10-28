@@ -37,11 +37,11 @@ function Wizard({
   const handlePageSubmit = (values, form) => {
     // This means the user clicked on a "restart a new simulation" button
     if (stepIndex === steps.length - 1) {
-      form.reset();
       dispatch({
         type: "reset"
       });
       setStepIndex(0);
+      setTimeout(() => form.reset());
     } else {
       nextStep();
     }
@@ -68,7 +68,7 @@ function Wizard({
       }}
       onSubmit={handlePageSubmit}
     >
-      {({ handleSubmit, form, invalid }) => {
+      {({ handleSubmit, form, invalid, submitFailed }) => {
         return (
           <>
             <StyledForm onSubmit={handleSubmit}>
@@ -82,9 +82,10 @@ function Wizard({
                   <Step form={form} dispatch={dispatch} />
                 </StepWrapper>
                 <PrevNextBar
+                  hasError={invalid && submitFailed}
+                  incomplete={invalid}
                   onPrev={prevStep}
                   nextVisible={nextVisible}
-                  disabled={invalid}
                   previousVisible={previousVisible}
                 />
               </Column>

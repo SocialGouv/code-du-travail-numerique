@@ -2,21 +2,10 @@
 
 exports[`<StepInfo /> should display error if contrat cdd 1`] = `
 .c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #434956;
-  background: #ebeff3;
-  border-color: #cbd6e0;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
+  margin: 0.625rem 0 1rem;
+  color: #b50113;
+  font-weight: 600;
+  font-size: 0.875rem;
 }
 
 <div
@@ -35,21 +24,10 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
 
 exports[`<StepInfo /> should display error if fauteGrave 1`] = `
 .c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #434956;
-  background: #ebeff3;
-  border-color: #cbd6e0;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
+  margin: 0.625rem 0 1rem;
+  color: #b50113;
+  font-weight: 600;
+  font-size: 0.875rem;
 }
 
 <div
@@ -62,7 +40,7 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
 `;
 
 exports[`<StepInfo /> should render 1`] = `
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,7 +54,7 @@ exports[`<StepInfo /> should render 1`] = `
   font-size: 1.15rem;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,107 +78,140 @@ exports[`<StepInfo /> should render 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
+}
+
+.c1 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
 }
 
 <div>
-  <p
-    class="c0"
-  >
-    Quel est votre type de contrat ?
-  </p>
-  <div
-    class="c1"
-  >
-    <label
+  <form>
+    <p
+      class="c0"
+    >
+      Quel est votre type de contrat ?
+      <span
+        aria-label="champs obligatoire"
+        class="c1"
+      >
+        *
+      </span>
+    </p>
+    <div
       class="c2"
     >
-      <input
-        name="contrat"
-        type="radio"
-        value="cdd"
-      />
-      <span>
-        Contrat à durée determiné (CDD) ou contrat d’intérim
+      <label
+        class="c3"
+      >
+        <input
+          name="contrat"
+          type="radio"
+          value="cdd"
+        />
+        <span>
+          Contrat à durée determiné (CDD) ou contrat d’intérim
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="contrat"
+          type="radio"
+          value="cdi"
+        />
+        <span>
+          Contrat à durée indeterminé (CDI)
+        </span>
+      </label>
+    </div>
+    <p
+      class="c0"
+    >
+      Êtes-vous licencié(e) pour faute grave ou lourde ?
+      <span
+        aria-label="champs obligatoire"
+        class="c1"
+      >
+        *
       </span>
-    </label>
-    <label
+    </p>
+    <div
       class="c2"
     >
-      <input
-        name="contrat"
-        type="radio"
-        value="cdi"
-      />
-      <span>
-        Contrat à durée indeterminé (CDI)
+      <label
+        class="c3"
+      >
+        <input
+          name="fauteGrave"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="fauteGrave"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <p
+      class="c0"
+    >
+      Êtes-vous licencié(e) pour inaptitude suite à accident du travail ou maladie professionnelle reconnue ?
+      <span
+        aria-label="champs obligatoire"
+        class="c1"
+      >
+        *
       </span>
-    </label>
-  </div>
-  <p
-    class="c0"
-  >
-    Êtes-vous licencié(e) pour faute grave ou lourde ?
-  </p>
-  <div
-    class="c1"
-  >
-    <label
+    </p>
+    <div
       class="c2"
     >
-      <input
-        name="fauteGrave"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
-      </span>
-    </label>
-    <label
-      class="c2"
+      <label
+        class="c3"
+      >
+        <input
+          name="inaptitude"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="inaptitude"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <button
+      data-testid="nextBt"
     >
-      <input
-        name="fauteGrave"
-        type="radio"
-        value="false"
-      />
-      <span>
-        Non
-      </span>
-    </label>
-  </div>
-  <p
-    class="c0"
-  >
-    Êtes-vous licencié(e) pour inaptitude suite à accident du travail ou maladie professionnelle reconnue ?
-  </p>
-  <div
-    class="c1"
-  >
-    <label
-      class="c2"
-    >
-      <input
-        name="inaptitude"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
-      </span>
-    </label>
-    <label
-      class="c2"
-    >
-      <input
-        name="inaptitude"
-        type="radio"
-        value="false"
-      />
-      <span>
-        Non
-      </span>
-    </label>
-  </div>
+      suivant
+    </button>
+  </form>
 </div>
 `;

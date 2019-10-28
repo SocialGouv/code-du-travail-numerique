@@ -27,6 +27,7 @@ exports[`<Result /> should render 1`] = `
 .c21:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c21[disabled] {

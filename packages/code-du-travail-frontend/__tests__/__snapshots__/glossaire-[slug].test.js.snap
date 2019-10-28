@@ -74,6 +74,7 @@ exports[`<Term /> should render 1`] = `
 .c24:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c24[disabled] {

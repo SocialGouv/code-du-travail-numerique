@@ -39,9 +39,11 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .c12 {
@@ -145,14 +147,11 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 }
 
 <div>
-  <h2
+  <label
     class="c0"
   >
-    Périodes de travail
-  </h2>
-  <p>
-    Renseigner vos différentes périodes de travail
-  </p>
+    Quelles ont été vos vos différentes périodes de travail ?
+  </label>
   <div
     class="c1"
   >
@@ -275,9 +274,11 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .c12 {
@@ -381,14 +382,11 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 <div>
-  <h2
+  <label
     class="c0"
   >
-    Périodes de travail
-  </h2>
-  <p>
-    Renseigner vos différentes périodes de travail
-  </p>
+    Quelles ont été vos vos différentes périodes de travail ?
+  </label>
   <div
     class="c1"
   >
@@ -511,9 +509,11 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .c12 {
@@ -617,14 +617,11 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 }
 
 <div>
-  <h2
+  <label
     class="c0"
   >
-    Périodes de travail
-  </h2>
-  <p>
-    Renseigner vos différentes périodes de travail
-  </p>
+    Quelles ont été vos vos différentes périodes de travail ?
+  </label>
   <div
     class="c1"
   >

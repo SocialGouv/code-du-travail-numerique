@@ -15,7 +15,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   font-size: 1.15rem;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,15 +34,23 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   margin-bottom: 1.25rem;
 }
 
+.c1 {
+  width: 100%;
+}
+
 .c2 {
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
 }
 
-.c1 {
-  width: 100%;
+.c3 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
 }
 
 <div>
@@ -189,9 +197,15 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     class="c2"
   >
     Est ce que votre entreprise est affiliée à une des organisations patronales employeur ?
+    <span
+      aria-label="champs obligatoire"
+      class="c3"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c3"
+    class="c4"
   >
     <label
       class="c0"
@@ -222,9 +236,15 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     class="c2"
   >
     Le motif de votre licenciement est-il économique ?
+    <span
+      aria-label="champs obligatoire"
+      class="c3"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c3"
+    class="c4"
   >
     <label
       class="c0"
@@ -255,7 +275,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 `;
 
 exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
-.c6 {
+.c7 {
   width: auto;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -266,8 +286,8 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   border-radius: 0.25rem;
 }
 
-.c6::-webkit-outer-spin-button,
-.c6::-webkit-inner-spin-button {
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -288,7 +308,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   font-size: 1.15rem;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -307,11 +327,8 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c4 {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+.c1 {
+  width: 100%;
 }
 
 .c2 {
@@ -319,13 +336,25 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
-}
-
-.c1 {
-  width: 100%;
+  cursor: default;
 }
 
 .c5 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.c3 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -481,9 +510,15 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     class="c2"
   >
     Est ce que votre entreprise est affiliée à une des organisations patronales employeur ?
+    <span
+      aria-label="champs obligatoire"
+      class="c3"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c3"
+    class="c4"
   >
     <label
       class="c0"
@@ -514,9 +549,15 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     class="c2"
   >
     Le motif de votre licenciement est-il économique ?
+    <span
+      aria-label="champs obligatoire"
+      class="c3"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c3"
+    class="c4"
   >
     <label
       class="c0"
@@ -544,16 +585,22 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </label>
   </div>
   <label
-    class="c4"
+    class="c5"
     for="1"
   >
     Quel etait votre âge à la date du licenciement ?
+    <span
+      aria-label="champs obligatoire"
+      class="c3"
+    >
+      *
+    </span>
   </label>
   <div
-    class="c5"
+    class="c6"
   >
     <input
-      class="c6"
+      class="c7"
       id="1"
       name="age"
       type="number"

@@ -74,11 +74,12 @@ const SelectWrapper = styled.label`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 100%;
 `;
 
 const Select = styled.select`
-  flex: 1 1 70%;
-  max-width: 100%;
+  flex: 1 1 auto;
+  width: 100%;
   margin-right: ${spacing.interComponent};
 `;
 const CancelButton = styled(Button)`

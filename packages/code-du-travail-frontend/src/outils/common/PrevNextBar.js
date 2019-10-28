@@ -3,31 +3,41 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Button, theme } from "@socialgouv/react-ui";
 
-function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
+function PrevNextBar({
+  onPrev,
+  incomplete,
+  hasError,
+  nextVisible,
+  previousVisible
+}) {
+  const nextVariant = hasError ? "danger" : "primary";
+
   return (
-    <Box>
-      {previousVisible && (
-        <PreviousButton type="button" onClick={onPrev} variant="secondary">
-          Précédent
-        </PreviousButton>
-      )}
-      {nextVisible && (
-        <NextButton disabled={disabled} variant="primary">
-          Suivant
-        </NextButton>
-      )}
-    </Box>
+    <>
+      <Box>
+        {previousVisible && (
+          <PreviousButton type="button" onClick={onPrev} variant="secondary">
+            Précédent
+          </PreviousButton>
+        )}
+        {nextVisible && (
+          <NextButton inverse={incomplete} variant={nextVariant}>
+            Suivant
+          </NextButton>
+        )}
+      </Box>
+    </>
   );
 }
 PrevNextBar.propTypes = {
   onPrev: PropTypes.func,
-  disabled: PropTypes.bool,
+  incomplete: PropTypes.bool,
   nextVisible: PropTypes.bool,
   previousVisible: PropTypes.bool
 };
 PrevNextBar.defaultProps = {
   onPrev: () => {},
-  disabled: false,
+  incomplete: false,
   nextVisible: true,
   previousVisible: true
 };

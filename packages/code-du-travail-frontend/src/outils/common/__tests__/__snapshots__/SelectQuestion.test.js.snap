@@ -2,17 +2,11 @@
 
 exports[`<SelectQuestion /> should render with default value 1`] = `
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
-  padding: 0;
-  font-size: 1.15rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .c2 {
@@ -67,17 +61,11 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
-  padding: 0;
-  font-size: 1.15rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .c2 {

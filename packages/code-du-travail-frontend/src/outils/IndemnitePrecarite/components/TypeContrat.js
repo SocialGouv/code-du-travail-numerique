@@ -2,12 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Field } from "react-final-form";
-import {
-  Label,
-  RadioContainer,
-  QuestionParagraphe
-} from "../../common/stepStyles";
+import { Label, RadioContainer } from "../../common/stepStyles";
 import { required } from "../../common/validators";
+import { Question } from "../../common/Question";
+import { ErrorField } from "../../common/ErrorField";
 
 export const CONTRACT_TYPE = {
   CDD: "CDD",
@@ -17,9 +15,9 @@ export const CONTRACT_TYPE = {
 function TypeContrat({ name }) {
   return (
     <>
-      <QuestionParagraphe>
+      <Question as="p" required>
         Quel est votre type de contrat&nbsp;?
-      </QuestionParagraphe>
+      </Question>
       <RadioContainer>
         <Label>
           <Field
@@ -41,6 +39,7 @@ function TypeContrat({ name }) {
           />
           <span>Contrat de travail temporaire (Contrat d’intérim)</span>
         </Label>
+        <ErrorField name={name} />
       </RadioContainer>
     </>
   );

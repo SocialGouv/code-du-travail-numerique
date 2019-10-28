@@ -80,6 +80,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 .c9:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c9[disabled] {
@@ -113,6 +114,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 .c12:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c12[disabled] {
