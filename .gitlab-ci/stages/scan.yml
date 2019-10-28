@@ -3,6 +3,8 @@
 .scan_stage: &scan_stage
   stage: "Vuln scanner"
   dependencies: []
+  before_script:
+    - source .gitlab-ci/env.sh
   except:
     variables:
       - $PRODUCTION
@@ -10,8 +12,12 @@
 Snyk docker scan:
   <<: *scan_stage
   image: snyk/snyk-cli:docker
+  allow_failure: true
   services:
     - docker:$DOCKER_VERSION-dind
   script:
     - ./scripts/snyk-docker-scan.sh
+  only:
+    variables:
+      - $RUN_SNYK
 
