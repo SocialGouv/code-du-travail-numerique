@@ -1,0 +1,14 @@
+#
+
+.scan_stage: &scan_stage
+  stage: "Vuln scanner"
+  dependencies: []
+  except:
+    variables:
+      - $PRODUCTION
+
+Snyk docker scan:
+  <<: *quality_stage
+  image: snyk/snyk-cli:docker
+  script:
+    - ./scripts/snyk-docker-scan.sh

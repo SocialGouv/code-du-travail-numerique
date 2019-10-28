@@ -1,19 +1,21 @@
 ---
 include:
-- /.gitlab-ci/variables.yml
-- /.gitlab-ci/extends.yml
+  - /.gitlab-ci/variables.yml
+  - /.gitlab-ci/extends.yml
 
-- /.gitlab-ci/stages/prepare.yml
-- /.gitlab-ci/stages/quality.yml
-- /.gitlab-ci/stages/register.yml
-- /.gitlab-ci/stages/data.yml
-- /.gitlab-ci/stages/deploy.yml
-- /.gitlab-ci/stages/notify.yml
+  - /.gitlab-ci/stages/prepare.yml
+  - /.gitlab-ci/stages/quality.yml
+  - /.gitlab-ci/stages/register.yml
+  - /.gitlab-ci/stages/scan.yml
+  - /.gitlab-ci/stages/data.yml
+  - /.gitlab-ci/stages/deploy.yml
+  - /.gitlab-ci/stages/notify.yml
 
 stages:
-- "Prepare"
-- "Code Quality"
-- "Registration"
-- "Data"
-- "Deploy"
-- "Notify Finished Deployment"
+  - "Prepare"
+  - "Code Quality"
+  - "Registration"
+  - "Vuln scanner"
+  - "Data"
+  - "Deploy"
+  - "Notify Finished Deployment"
