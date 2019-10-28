@@ -24,14 +24,10 @@ const SUGGEST_FILE = process.env.SUGGEST_FILE || "./data/suggest.txt";
 const SUGGEST_INDEX_NAME = process.env.SUGGEST_INDEX_NAME || "cdtn_suggestions";
 const BUFFER_SIZE = process.env.BUFFER_SIZE || 20000;
 
-function mapSuggestion(title, ranking) {
-  return { title, ranking };
-}
-
 async function pushSuggestions({ client, indexName, data }) {
-  const mappedSuggestions = data.map(([title, weight]) =>
-    mapSuggestion(title, weight)
-  );
+  const mappedSuggestions = data.map(entity => {
+    return { title: entity.entity, ranking: entity.value };
+  });
 
   await indexDocumentsBatched({
     client,
@@ -64,13 +60,9 @@ async function populate_suggestions(client) {
 
     let allSuggestions = [];
     stream.on("line", async function(line) {
-      // todo replace by json parse
-      // File contains this entries
-      // abondon@@@2
-      // abondons@@@2
-      // abonnement@@@2
-      const word_count = line.split("@@@");
-      allSuggestions.push(word_count);
+      // parse JSON representing a suggestion entity {entity: suggestion, value: weight}
+      const entity = JSON.parse(line);
+      allSuggestions.push(entity);
       if (allSuggestions.length >= BUFFER_SIZE) {
         // create a copy of the array
         const suggestions = allSuggestions.slice();

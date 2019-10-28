@@ -12,7 +12,7 @@ import { conventionCollectiveMapping } from "@cdt/data/indexing/convention_colle
 import conventions from "./convention_data.json";
 import { themesMapping } from "@cdt/data/indexing/themes.mapping";
 import { suggestionMapping } from "@cdt/data/indexing/suggestion.mapping";
-import suggestions from "./suggestions_data";
+import suggestions from "./suggestions_data.json";
 
 const themes = documents.filter(document => document.source === SOURCES.THEMES);
 

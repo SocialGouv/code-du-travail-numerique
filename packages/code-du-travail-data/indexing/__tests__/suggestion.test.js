@@ -1,8 +1,4 @@
-import {
-  createIndex,
-  indexDocumentsBatched,
-  deleteOldIndex
-} from "../es_client.utils";
+import { createIndex, indexDocumentsBatched } from "../es_client.utils";
 
 import { populate_suggestions } from "../suggestion";
 
@@ -11,12 +7,13 @@ jest.mock("../es_client.utils");
 const INDEX_NAME = process.env.SUGGEST_INDEX_NAME;
 const BUFFER_SIZE = process.env.BUFFER_SIZE;
 
-const testCasesN = 12;
+const testCasesCount = 25;
 
 describe("populate_suggestion", () => {
   afterEach(() => {
     jest.resetAllMocks();
   });
+
   test("should create suggestionIndex", async () => {
     await populate_suggestions("client");
     expect(createIndex).toHaveBeenCalledTimes(1);
@@ -26,10 +23,11 @@ describe("populate_suggestion", () => {
       createIndex.mock.calls[0][0].indexName.startsWith(`${INDEX_NAME}-`)
     ).toBe(true);
   });
+
   test("should pushSuggestion", async () => {
     await populate_suggestions("client");
     expect(indexDocumentsBatched).toHaveBeenCalledTimes(
-      Math.ceil(testCasesN / BUFFER_SIZE)
+      Math.ceil(testCasesCount / BUFFER_SIZE)
     );
     expect(indexDocumentsBatched.mock.calls[0][0].client).toBe("client");
     expect(
@@ -41,24 +39,44 @@ describe("populate_suggestion", () => {
       .toMatchInlineSnapshot(`
       Array [
         Object {
-          "ranking": "320",
-          "title": "préavis",
+          "ranking": 2,
+          "title": "heures supplémentaire quand sont-ils payé",
         },
         Object {
-          "ranking": "82",
-          "title": "urgent",
+          "ranking": 553,
+          "title": "heures supplémentaires",
         },
         Object {
-          "ranking": "4",
-          "title": "déduction",
+          "ranking": 2,
+          "title": "heures de modulation en cas de démission",
         },
         Object {
-          "ranking": "136",
-          "title": "avertissement",
+          "ranking": 61,
+          "title": "heures de nuit",
         },
         Object {
-          "ranking": "2",
-          "title": "démission-indemnisation",
+          "ranking": 4,
+          "title": "heures rentrée scolaire",
+        },
+        Object {
+          "ranking": 91,
+          "title": "heures complémentaires",
+        },
+        Object {
+          "ranking": 2,
+          "title": "heures supplémentaires maximum",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement cause inaptitude physique et droit au chomage stagiaire de l'education nationale",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement suite changement de syndic",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement économique et délégué du personnel",
         },
       ]
     `);
@@ -66,24 +84,44 @@ describe("populate_suggestion", () => {
       .toMatchInlineSnapshot(`
       Array [
         Object {
-          "ranking": "790",
-          "title": "retraite",
+          "ranking": 2,
+          "title": "licenciement suite à un refus de changement d'horraires",
         },
         Object {
-          "ranking": "296",
-          "title": "renseignements",
+          "ranking": 2,
+          "title": "licenciement contrat à temps partiel indemnité de congés payés",
         },
         Object {
-          "ranking": "6",
-          "title": "ferie",
+          "ranking": 2,
+          "title": "licenciement abusive ou proposition de rupture conventionnelle",
         },
         Object {
-          "ranking": "68",
-          "title": "déplacement",
+          "ranking": 10,
+          "title": "licenciement sans contrat",
         },
         Object {
-          "ranking": "2",
-          "title": "rensegnement",
+          "ranking": 6,
+          "title": "licenciement et clause de non concurrence",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement économique après 8 mois d'ancienneté contrat cdi",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement économique et reprise",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement pendant un procès au prud'homme",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement inapte handicap",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement économique indemnité de congé payé",
         },
       ]
     `);
@@ -91,12 +129,24 @@ describe("populate_suggestion", () => {
       .toMatchInlineSnapshot(`
       Array [
         Object {
-          "ranking": "2",
-          "title": "elena",
+          "ranking": 2,
+          "title": "licenciement économique contrat aidé",
         },
         Object {
-          "ranking": "2",
-          "title": "contractuelle",
+          "ranking": 2,
+          "title": "licenciement ou rupture du contrat de travail",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement représentant du personnel",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement après 2 ans de maladie",
+        },
+        Object {
+          "ranking": 2,
+          "title": "licenciement pendant arrêt maladie 5 mois pour dépression",
         },
       ]
     `);
