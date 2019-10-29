@@ -19,6 +19,7 @@ module.exports = withSourceMaps(
     },
     // https://github.com/zeit/next.js/#disabling-file-system-routing
     useFileSystemPublicRoutes: true,
+    poweredByHeader: false,
     publicRuntimeConfig: {
       API_SIRET2IDCC_URL:
         process.env.API_SIRET2IDCC_URL ||
