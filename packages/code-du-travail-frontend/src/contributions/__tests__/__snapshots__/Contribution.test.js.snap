@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Contribution /> should render with both answers 1`] = `
-.c2 {
+.c1 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
-.c2 > *:first-child {
+.c1 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
-.c4 {
+.c3 {
   width: 100%;
 }
 
@@ -24,20 +24,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
   background: white;
 }
 
-.c1 {
-  padding: 0.625rem 1.25rem;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.2rem;
-}
-
-.c3 {
+.c2 {
   margin: 1.25rem 0;
   padding: 0.625rem;
 }
 
 @media print {
-  .c2 {
+  .c1 {
     max-width: 100%;
     padding: 0;
   }
@@ -60,74 +53,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       </p>
     </div>
   </section>
-  <section
-    class="c1"
-  >
-    <h2>
-      Que dit votre convention collective ?
-    </h2>
-    <div
-      class="c2 c3"
-    >
-      
-      <p>
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-      </p>
-      <input
-        class="c4"
-        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-        role="search"
-        type="search"
-        value=""
-      />
-      
-    </div>
-  </section>
-</div>
-`;
-
-exports[`<Contribution /> should render with conventions answer 1`] = `
-.c1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
-  width: 100%;
-}
-
-.c0 {
-  padding: 0.625rem 1.25rem;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.2rem;
-}
-
-.c2 {
-  margin: 1.25rem 0;
-  padding: 0.625rem;
-}
-
-@media print {
-  .c1 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-<div>
-  <section
-    class="c0"
-  >
+  <section>
     <h2>
       Que dit votre convention collective ?
     </h2>
@@ -140,6 +66,62 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       </p>
       <input
         class="c3"
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        role="search"
+        type="search"
+        value=""
+      />
+      
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Contribution /> should render with conventions answer 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+  padding: 0.625rem;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <section>
+    <h2>
+      Que dit votre convention collective ?
+    </h2>
+    <div
+      class="c0 c1"
+    >
+      
+      <p>
+        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+      </p>
+      <input
+        class="c2"
         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
         role="search"
         type="search"

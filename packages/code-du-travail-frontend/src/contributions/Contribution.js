@@ -13,30 +13,29 @@ import makeArticlesLinks from "./makeArticlesLinks";
 // store selected convention in localStorage
 const useConventionState = createPersistedState("convention");
 
+// hack: todo: remove
+const fixMarkdown = md =>
+  md
+    .replace(/<Tab([^>]+)>/g, '<section type="tab"$1>')
+    .replace(/<\/Tab>/g, "</section>")
+    .replace(/<HDN>/g, '<section type="hdn">')
+    .replace(/<\/HDN>/g, "</section>");
+
 // wrap section in custom components if section has a @data-type
 const AnswerSection = props => {
-  switch (props["data-type"]) {
+  switch (props["type"]) {
     // situations
     case "tab":
       return (
         <StyledAccordion
           items={[
             {
-              title: <h3>{props["data-title"]}</h3>,
+              title: <h3>{props["title"]}</h3>,
               body: props.children
             }
           ]}
         />
       );
-    // sources juridiques
-    case "source":
-      return (
-        <Alert variant="info">
-          <h4>Sources juridiques</h4>
-          <div {...props} />
-        </Alert>
-      );
-    // hierarchie des normes
     case "hdn":
       return (
         <Alert variant="info">
@@ -86,23 +85,23 @@ const AnswerConvention = ({ markdown }) => (
 // search CC + display filtered answer
 const AnswersConventions = ({ answers }) => {
   const [ccInfo, setCcInfo] = useConventionState(null);
-  const answer = ccInfo && answers.find(a => a.idcc === ccInfo.convention.num);
+  const answer = ccInfo && answers.find(a => a.idcc === ccInfo.num);
 
   return (
     <React.Fragment>
       {!ccInfo && (
-        <StyledSearchConvention title="" onSelectConvention={setCcInfo} />
+        <StyledSearchConvention
+          title=""
+          onSelectConvention={({ convention }) => setCcInfo(convention)}
+        />
       )}
       {ccInfo && (
         <React.Fragment>
-          <h6>{ccInfo.convention.title}</h6>
+          <h6>{ccInfo.title}</h6>
           {(answer && (
             <React.Fragment>
-              <AnswerConvention markdown={answer.markdown} />
-              <LinkConvention
-                num={ccInfo.convention.num}
-                title={ccInfo.convention.title}
-              />
+              <AnswerConvention markdown={fixMarkdown(answer.markdown)} />
+              <LinkConvention num={ccInfo.num} title={ccInfo.title} />
             </React.Fragment>
           )) || (
             <React.Fragment>
@@ -110,10 +109,7 @@ const AnswersConventions = ({ answers }) => {
                 Désolé nous n&apos;avons pas de réponse pour cette convention
                 collective
               </NoConventionAlert>
-              <LinkConvention
-                num={ccInfo.convention.num}
-                title={ccInfo.convention.title}
-              />
+              <LinkConvention num={ccInfo.num} title={ccInfo.title} />
             </React.Fragment>
           )}
           <br />
@@ -133,21 +129,22 @@ const Contribution = ({ answers }) => (
       <SectionCdt bgColor="white" style={{ marginBottom: 20 }}>
         <h2>Que dit le code du travail ?</h2>
         <Mdx
-          markdown={makeArticlesLinks(answers.generic.markdown)}
+          markdown={fixMarkdown(answers.generic.markdown)}
           components={components}
         />
       </SectionCdt>
     )}
-    {answers.conventions && (
-      <SectionConvention>
+    {(answers.conventions && answers.conventions.length && (
+      <section>
         <h2>Que dit votre convention collective ?</h2>
         <AnswersConventions answers={answers.conventions} />
-      </SectionConvention>
-    )}
+      </section>
+    )) ||
+      null}
   </React.Fragment>
 );
 
-const { box, colors, spacing } = theme;
+const { box, spacing } = theme;
 
 const NoConventionAlert = styled(Alert)`
   margin: 40px 0;
@@ -156,13 +153,6 @@ const NoConventionAlert = styled(Alert)`
 const SectionCdt = styled.section`
   padding: ${spacing.small} ${spacing.medium};
   background: white;
-`;
-
-const SectionConvention = styled.section`
-  padding: ${spacing.small} ${spacing.medium};
-  background: ${colors.lightBackground};
-  border: ${box.border};
-  border-radius: ${box.lightBorderRadius};
 `;
 
 const StyledSearchConvention = styled(SearchConvention)`
