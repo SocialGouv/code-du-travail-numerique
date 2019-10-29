@@ -253,9 +253,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
           data-reach-dialog-overlay="true"
         >
           <div
+            aria-label="Service de renseignement"
             aria-modal="true"
             class="c2"
             data-reach-dialog-content="true"
+            role="dialog"
             tabindex="-1"
           >
             <h4>

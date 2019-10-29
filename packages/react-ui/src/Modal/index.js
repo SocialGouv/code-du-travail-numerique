@@ -12,12 +12,13 @@ export const Modal = ({
   isOpen,
   onDismiss,
   ContentWrapper,
+  title,
   ...props
 }) => {
   const Wrapper = ContentWrapper || StyledDialogContent;
   return (
     <StyledDialogOverlay isOpen={isOpen} onDismiss={onDismiss} {...props}>
-      <Wrapper>
+      <Wrapper aria-label={title}>
         {children}
         <CloseButton
           variant="icon"
@@ -37,7 +38,8 @@ Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onDismiss: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
-  ContentWrapper: PropTypes.object
+  ContentWrapper: PropTypes.object,
+  title: PropTypes.string.isRequired
 };
 
 const StyledDialogOverlay = styled(DialogOverlay)`

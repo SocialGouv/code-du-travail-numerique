@@ -28,7 +28,11 @@ class ConventionModal extends React.Component {
         <Tile button="Rechercher" onClick={this.openModal}>
           Votre convention collective
         </Tile>
-        <Modal isOpen={modalIsOpen} onDismiss={this.closeModal}>
+        <Modal
+          isOpen={modalIsOpen}
+          onDismiss={this.closeModal}
+          title="Rechercher votre convention collective"
+        >
           <ConventionForm />
         </Modal>
       </React.Fragment>
