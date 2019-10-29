@@ -36,8 +36,8 @@ spec:
           env:
             - name: API_URL
               value: "${API_URL}/api/v1"
-            - name: ENVIRONMENT
-              value: production
+            - name: IS_PRODUCTION_DEPLOYMENT
+              value: true
             - name: FRONTEND_HOST
               value: ${FRONTEND_HOST}
             - name: PIWIK_SITE_ID

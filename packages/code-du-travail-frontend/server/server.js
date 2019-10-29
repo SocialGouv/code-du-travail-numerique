@@ -7,7 +7,8 @@ const getUrls = require("./get-urls");
  * this env variable is use to target developpement / staging deployement
  * in order to block indexing bot using a x-robot-header and an appropriate robots.txt
  */
-const LIVEPROD = process.env.ENVIRONMENT === "production";
+const IS_PRODUCTION_DEPLOYMENT =
+  process.env.IS_PRODUCTION_DEPLOYMENT === "true";
 const PORT = process.env.FRONTEND_PORT || 3000;
 const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
 const dev = process.env.NODE_ENV !== "production";
@@ -39,7 +40,7 @@ const robotTxtHandler = (req, res) => {
   res
     .status(200)
     .set("Content-Type", "text/plain")
-    .send(LIVEPROD ? robotsProd : robotsDev);
+    .send(IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev);
 };
 
 const redirectHostname = (req, res, next) => {
@@ -56,7 +57,7 @@ app.prepare().then(() => {
   server.get("/robots.txt", robotTxtHandler);
   server.use(expressSitemap(getUrls, FRONTEND_HOST));
 
-  if (LIVEPROD) {
+  if (IS_PRODUCTION_DEPLOYMENT) {
     server.use(redirectHostname);
   } else {
     server.use(disallowRobots);
