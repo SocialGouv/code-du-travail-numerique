@@ -27,6 +27,13 @@ export const base = () =>
       <Button
         variant={variant}
         onClick={action("You should not see this")}
+        outlined
+      >
+        {variant} outlined
+      </Button>{" "}
+      <Button
+        variant={variant}
+        onClick={action("You should not see this")}
         disabled
       >
         {variant} disabled

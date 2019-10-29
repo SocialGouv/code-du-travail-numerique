@@ -16,23 +16,26 @@ describe("<TextQuestion />", () => {
         )}
       />
     );
-    const input = getByLabelText("lorem ipsum");
+    const input = getByLabelText(/lorem ipsum/);
 
     fireEvent.change(input, { target: { value: "hello" } });
     expect(container).toMatchSnapshot();
   });
   it("should render error", () => {
     const onSubmit = jest.fn();
-    const { container } = render(
+    const { getByText, getByTestId } = render(
       <Form
         onSubmit={onSubmit}
-        render={() => (
-          <>
+        render={({ handleSubmit }) => (
+          <form onSubmit={handleSubmit}>
             <TextQuestion name="test" label="lorem ipsum" />
-          </>
+            <button data-testid="next">suivant</button>
+          </form>
         )}
       />
     );
-    expect(container).toMatchSnapshot();
+    const bt = getByTestId("next");
+    bt.click();
+    expect(getByText(/ce champ est requis/i)).toBeDefined();
   });
 });

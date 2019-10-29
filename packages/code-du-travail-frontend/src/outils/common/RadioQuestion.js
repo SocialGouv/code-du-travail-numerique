@@ -5,17 +5,17 @@ import { Field } from "react-final-form";
 import { theme } from "@socialgouv/react-ui";
 import { OnChange } from "react-final-form-listeners";
 
-import { Label, QuestionParagraphe } from "../common/stepStyles";
+import { Label } from "../common/stepStyles";
 import { required } from "../common/validators";
-import { ErrorField } from "../IndemniteLicenciement/components/ErrorField";
+import { ErrorField } from "./ErrorField";
+import { Question } from "./Question";
 
 function RadioQuestion({ name, label, options, onChange }) {
   return (
     <>
       <Fieldset>
-        <QuestionParagraphe as="legend">{label}</QuestionParagraphe>
+        <Question as="legend">{label}</Question>
         <Radios name={name} options={options} />
-        <ErrorField name={name} />
         {onChange && (
           <OnChange name={name}>{values => onChange(values)}</OnChange>
         )}
@@ -34,20 +34,23 @@ RadioQuestion.propTypes = {
 export { RadioQuestion };
 
 function Radios({ name, options }) {
-  return Object.entries(options).map(([key, label]) => (
-    <RadioContainer key={`${name}-${key}`}>
-      <Label>
-        <Field
-          component="input"
-          type="radio"
-          name={name}
-          value={key}
-          validate={required}
-        />
-        <span>{label}</span>
-      </Label>
+  return (
+    <RadioContainer>
+      {Object.entries(options).map(([key, label]) => (
+        <Label key={`${name}-${key}`}>
+          <Field
+            component="input"
+            type="radio"
+            name={name}
+            value={key}
+            validate={required}
+          />
+          <span>{label}</span>
+        </Label>
+      ))}
+      <ErrorField name={name} />
     </RadioContainer>
-  ));
+  );
 }
 
 const { spacing } = theme;

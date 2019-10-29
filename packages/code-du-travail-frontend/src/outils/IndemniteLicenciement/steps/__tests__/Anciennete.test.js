@@ -14,7 +14,12 @@ function renderForm(data) {
       initialValues={{ ...data }}
       onSubmit={jest.fn()}
     >
-      {({ form }) => <StepAnciennete form={form} />}
+      {({ form, handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
+          <StepAnciennete form={form} />
+          <button data-testid="nextBt">suivant</button>
+        </form>
+      )}
     </Form>
   );
 }
@@ -25,24 +30,29 @@ describe("<Anciennete />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should display error if dateEntre after dateSortie", () => {
-    const { getByLabelText, getByText } = renderForm({
+  it("should display error if dateEntre after dateSortie", async () => {
+    const { getByLabelText, container } = renderForm({
       dateEntree: "2018-04-02"
     });
     const dateSortie = getByLabelText(/date de sortie/i);
     fireEvent.change(dateSortie, { target: { value: "2018-03-01" } });
+
     expect(
-      getByText(/la date de sortie doit se situer après/i)
-    ).toMatchSnapshot();
+      container.querySelector("input[name=dateSortie] + *").textContent.trim()
+    ).toMatch("La date de sortie doit se situer après le 02 April 2018");
   });
 
   it("should display error if dateEntree after dateNotif", () => {
     const { container, getByLabelText } = renderForm({
-      dateEntrer: "2018-05-01"
+      dateEntree: "2018-05-01"
     });
     const dateNotif = getByLabelText(/licenciement/i);
     fireEvent.change(dateNotif, { target: { value: "2018-04-02" } });
-    expect(container.querySelector(".alert")).toMatchSnapshot();
+    expect(
+      container
+        .querySelector("input[name=dateNotification] + *")
+        .textContent.trim()
+    ).toMatch("La date de notification doit se situer après la date d’entrée");
   });
 
   it("should display error if dateNotif after dateSortie", () => {
@@ -51,17 +61,23 @@ describe("<Anciennete />", () => {
     });
     const dateNotif = getByLabelText(/licenciement/i);
     fireEvent.change(dateNotif, { target: { value: "2018-05-02" } });
-    expect(container.querySelector(".alert")).toMatchSnapshot();
+    expect(
+      container
+        .querySelector("input[name=dateNotification] + *")
+        .textContent.trim()
+    ).toMatch("La date de notification doit se situer avant la date de sortie");
   });
 
   it("should display error if anciennté < 8mois", () => {
-    const { getByLabelText, getByText } = renderForm({
+    const { getByText, getByLabelText } = renderForm({
       dateEntree: "2018-04-02",
       dateNotification: "2018-09-02"
     });
     const dateSortie = getByLabelText(/date de sortie/i);
     fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
-    expect(getByText(/est dûe au-delà de 8 mois/i)).toMatchSnapshot();
+    expect(getByText(/8 mois d’ancienneté/).textContent.trim()).toMatch(
+      "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"
+    );
   });
 });
 

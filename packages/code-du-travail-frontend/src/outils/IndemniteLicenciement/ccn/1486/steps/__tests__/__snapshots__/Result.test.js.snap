@@ -27,6 +27,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 .c24:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c24[disabled] {
@@ -624,6 +625,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
 .c21:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c21[disabled] {

@@ -6,7 +6,12 @@ import { Form } from "react-final-form";
 function renderForm() {
   return render(
     <Form validate={StepCDD.validate} onSubmit={jest.fn()}>
-      {({ form }) => <StepCDD form={form} />}
+      {({ handleSubmit, form }) => (
+        <form onSubmit={handleSubmit}>
+          <StepCDD form={form} />
+          <button data-testid="nextBt">suivant</button>
+        </form>
+      )}
     </Form>
   );
 }
@@ -30,8 +35,9 @@ describe("<StepCDD />", () => {
       const { getByText, getByTestId } = renderForm();
       const radio = getByTestId(key).querySelector(`input[value=${value}]`);
       fireEvent.click(radio);
-      // blur is need to force validation in react-testing-lib
-      fireEvent.blur(radio);
+      // validate form
+      const validateButton = getByTestId("nextBt");
+      validateButton.click();
       expect(getByText(/pas le droit à une prime/i)).toBeTruthy();
     }
   );
@@ -47,8 +53,9 @@ describe("<StepCDD />", () => {
       `input[value=true]`
     );
     fireEvent.click(refusCDI);
-    // blur is need to force validation in react-testing-lib
-    fireEvent.blur(refusCDI);
+    // validate form
+    const validateButton = getByTestId("nextBt");
+    validateButton.click();
     expect(getByText(/pas le droit à une prime/i)).toBeTruthy();
   });
 });

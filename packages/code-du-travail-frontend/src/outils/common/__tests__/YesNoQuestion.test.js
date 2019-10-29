@@ -39,24 +39,24 @@ describe("<YesNoQuestion />", () => {
 
   it("should render error when form validate", () => {
     const onSubmit = jest.fn();
-    const { getByText } = render(
+    const { getByText, getByTestId } = render(
       <Form onSubmit={onSubmit}>
         {({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
             <YesNoQuestion name="test" label="lorem ipsum ?" />
-            <button>validate</button>
+            <button data-testid="next">suivant</button>
           </form>
         )}
       </Form>
     );
-    const non = getByText(/validate/i);
-    fireEvent.click(non);
+    const bt = getByTestId("next");
+    bt.click();
     expect(getByText(/ce champ est requis/i)).toBeDefined();
   });
 
-  it("should render error when radio change", () => {
+  it("should render validate error when form subm", () => {
     const onSubmit = jest.fn();
-    const { getByLabelText, getByText } = render(
+    const { getByTestId, getByLabelText, getByText } = render(
       <Form
         onSubmit={onSubmit}
         validate={values =>
@@ -66,13 +66,15 @@ describe("<YesNoQuestion />", () => {
         {({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
             <YesNoQuestion name="test" label="lorem ipsum ?" />
-            <button>validate</button>
+            <button data-testid="next">suivant</button>
           </form>
         )}
       </Form>
     );
     const non = getByLabelText(/non/i);
     fireEvent.click(non);
+    const bt = getByTestId("next");
+    bt.click();
     expect(getByText(/mauvaise réponse/i)).toBeDefined();
   });
 });

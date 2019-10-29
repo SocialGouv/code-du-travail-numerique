@@ -10,7 +10,12 @@ function renderForm(data) {
       initialValues={{ ...data }}
       onSubmit={jest.fn()}
     >
-      {({ form }) => <StepInfo form={form} />}
+      {({ form, handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
+          <StepInfo form={form} />
+          <button data-testid="nextBt">suivant</button>
+        </form>
+      )}
     </Form>
   );
 }
@@ -22,22 +27,23 @@ describe("<StepInfo />", () => {
   });
 
   it("should display error if contrat cdd", () => {
-    const { getByLabelText, getByText } = renderForm({
+    const { getByLabelText, getByTestId, getByText } = renderForm({
       contrat: "cdi"
     });
     //trigger validation
     const cdd = getByLabelText(/cdd/i);
     fireEvent.click(cdd);
-    fireEvent.blur(cdd);
+    const nextBt = getByTestId("nextBt");
+    nextBt.click();
     expect(getByText(/vous ne pouvez pas/i)).toMatchSnapshot();
   });
 
   it("should display error if fauteGrave", () => {
-    const { getAllByLabelText, getByText } = renderForm({});
+    const { getAllByLabelText, getByTestId, getByText } = renderForm({});
     const [fauteGrave] = getAllByLabelText(/oui/i);
     fireEvent.click(fauteGrave);
-    // blur is need to force validation in react-testing-lib
-    fireEvent.blur(fauteGrave);
+    const nextBt = getByTestId("nextBt");
+    nextBt.click();
     expect(getByText(/n’est pas dûe/i)).toMatchSnapshot();
   });
 });

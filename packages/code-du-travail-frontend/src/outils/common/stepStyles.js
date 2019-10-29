@@ -25,7 +25,7 @@ export const Label = styled.label`
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: ${fonts.sizeH5};
 `;
 
 export const RadioContainer = styled.div`
@@ -40,20 +40,6 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-export const QuestionLabel = styled.label`
-  display: block;
-  margin-top: ${spacing.interComponent};
-  margin-bottom: ${spacing.small};
-  font-size: 1.25rem;
-`;
-
-export const QuestionParagraphe = styled.p`
-  display: block;
-  margin-top: ${spacing.interComponent};
-  margin-bottom: ${spacing.small};
-  font-size: 1.25rem;
 `;
 
 export const SectionTitle = styled.h2`
@@ -71,17 +57,6 @@ export const Highlight = styled.strong`
 export const SmallText = styled.span`
   color: ${colors.darkText};
   font-style: italic;
-`;
-
-export const InlineError = styled.span`
-  color: ${colors.lightText};
-  font-weight: 600;
-  font-size: ${fonts.sizeSmall};
-`;
-export const BlockError = styled.div`
-  color: ${colors.lightText};
-  font-weight: 600;
-  font-size: ${fonts.sizeSmall};
 `;
 
 export const Summary = styled.summary`

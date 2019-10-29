@@ -107,6 +107,7 @@ exports[`<FicheSP /> should render 1`] = `
 .c25:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c25[disabled] {
@@ -140,6 +141,7 @@ exports[`<FicheSP /> should render 1`] = `
 .c28:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c28[disabled] {
@@ -173,6 +175,7 @@ exports[`<FicheSP /> should render 1`] = `
 .c38:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c38[disabled] {

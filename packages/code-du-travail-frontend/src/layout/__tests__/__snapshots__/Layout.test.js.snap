@@ -59,6 +59,7 @@ exports[`<Layout /> should render 1`] = `
 .c19:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c19[disabled] {

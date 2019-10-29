@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { coefficients } from "./coefficients";
 import { required } from "../../../common/validators";
 import { Label } from "../../../common/stepStyles";
+import { Question } from "../../../common/Question";
 
 const groupeLabelByCoeff = coefficients.reduce(
   (state, { coefficient, groupe, label }) => {
@@ -32,10 +33,10 @@ function EchelonChimie({ name }) {
   const [labels, setLabels] = useState();
   return (
     <>
-      <p>
+      <Question as="p">
         Quel est votre échelon dans la convention collective ?<br />
         Vous pouvez le trouver sur votre bulletin de salaire
-      </p>
+      </Question>
       <Field name="echelon" validate={required}>
         {({ input }) => (
           <>

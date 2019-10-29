@@ -223,6 +223,7 @@ exports[`<MentionLegales /> should render 1`] = `
 .c30:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c30[disabled] {

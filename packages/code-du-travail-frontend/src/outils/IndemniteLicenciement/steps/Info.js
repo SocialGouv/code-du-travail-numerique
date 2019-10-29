@@ -1,6 +1,6 @@
 import React from "react";
 import { TypeContrat } from "../components/TypeContrat";
-import { YesNoQuestion } from "../components/YesNoQuestion";
+import { YesNoQuestion } from "../../common/YesNoQuestion";
 
 function validate(values) {
   const errors = {};

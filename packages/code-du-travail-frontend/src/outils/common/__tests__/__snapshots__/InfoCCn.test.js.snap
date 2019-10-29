@@ -15,20 +15,21 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
   margin-bottom: 0;
 }
 
+.c4 {
+  width: 100%;
+}
+
 .c0 {
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
-}
-
-.c4 {
-  width: 100%;
+  cursor: default;
 }
 
 .c3 {
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
 
 .c1 {
@@ -43,11 +44,11 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
 }
 
 <div>
-  <label
+  <p
     class="c0"
   >
     Quelle est votre convention collective ?
-  </label>
+  </p>
   <p
     class="c1"
   >

@@ -41,6 +41,7 @@ exports[`<SearchHero /> should render 1`] = `
 .c13:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c13[disabled] {

@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { Alert, theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/react-ui";
 import { OnChange } from "react-final-form-listeners";
 
-import { Label } from "../common/stepStyles";
+import { Question } from "./Question";
 import { required } from "./validators";
+import { Error } from "./ErrorField";
 
 function SelectQuestion({ name, label, options, onChange }) {
   const uid = `input-${name}`;
@@ -22,7 +23,7 @@ function SelectQuestion({ name, label, options, onChange }) {
       {({ input, meta: { error, dirty } }) => {
         return (
           <Wrapper>
-            <Label htmlFor={uid}>{label}</Label>
+            <Question htmlFor={uid}>{label}</Question>
             <Select {...input} id={uid}>
               <option disabled value="">
                 ...
@@ -42,7 +43,7 @@ function SelectQuestion({ name, label, options, onChange }) {
                 );
               })}
             </Select>
-            {error && dirty && <StyledAlert>{error}</StyledAlert>}
+            {error && dirty && <Error>{error}</Error>}
             {onChange && (
               <OnChange name={name}>{values => onChange(values)}</OnChange>
             )}
@@ -74,8 +75,4 @@ const Select = styled.select`
 
 const Wrapper = styled.div`
   margin: ${spacing.interComponent} 0;
-`;
-
-const StyledAlert = styled(Alert)`
-  margin-top: ${spacing.interComponent};
 `;

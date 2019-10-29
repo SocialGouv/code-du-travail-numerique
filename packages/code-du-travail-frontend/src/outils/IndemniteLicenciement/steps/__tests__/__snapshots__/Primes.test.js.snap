@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepPrimes /> should render 1`] = `
-.c7 {
+.c8 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -31,14 +31,14 @@ exports[`<StepPrimes /> should render 1`] = `
   border-radius: 0;
 }
 
-.c7:focus,
-.c7:hover,
-.c7:active {
+.c8:focus,
+.c8:hover,
+.c8:active {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,10 +49,10 @@ exports[`<StepPrimes /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,9 +76,17 @@ exports[`<StepPrimes /> should render 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
 }
 
-.c3 {
+.c1 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -94,7 +102,7 @@ exports[`<StepPrimes /> should render 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c5 {
+.c6 {
   width: 10em;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -107,21 +115,21 @@ exports[`<StepPrimes /> should render 1`] = `
   text-align: right;
 }
 
-.c5::-webkit-outer-spin-button,
-.c5::-webkit-inner-spin-button {
+.c6::-webkit-outer-spin-button,
+.c6::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   margin-right: 1.25rem;
 }
 
-.c6 {
+.c7 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
@@ -131,12 +139,12 @@ exports[`<StepPrimes /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c8 {
+.c9 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
 }
 
-.c9 {
+.c10 {
   margin: 1.25rem 0;
 }
 
@@ -145,12 +153,18 @@ exports[`<StepPrimes /> should render 1`] = `
     class="c0"
   >
     Avez-vous perçu des primes annuelles ou exceptionnelles au cours des 3 derniers mois ?
+    <span
+      aria-label="champs obligatoire"
+      class="c1"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c1"
+    class="c2"
   >
     <label
-      class="c2"
+      class="c3"
     >
       <input
         checked=""
@@ -163,7 +177,7 @@ exports[`<StepPrimes /> should render 1`] = `
       </span>
     </label>
     <label
-      class="c2"
+      class="c3"
     >
       <input
         name="hasPrimes"
@@ -181,33 +195,33 @@ exports[`<StepPrimes /> should render 1`] = `
     Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
   </p>
   <div
-    class="c3"
+    class="c4"
   >
     <div
-      class="c4"
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         name="primes[0].prime"
         size="10"
         value="3000"
       />
       <span
         aria-hidden="true"
-        class="c6"
+        class="c7"
       >
         €
       </span>
     </div>
     <button
-      class="c7 c8"
+      class="c8 c9"
       type="button"
     >
       Supprimer
     </button>
   </div>
   <button
-    class="c7 c9"
+    class="c8 c10"
     type="button"
   >
     Ajouter une prime

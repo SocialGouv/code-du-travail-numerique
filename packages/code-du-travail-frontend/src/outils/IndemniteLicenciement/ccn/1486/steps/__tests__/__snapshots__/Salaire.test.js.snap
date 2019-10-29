@@ -58,7 +58,7 @@ exports[`<Salaire /> renders 1`] = `
   text-align: left;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,10 +69,10 @@ exports[`<Salaire /> renders 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -96,6 +96,14 @@ exports[`<Salaire /> renders 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
+}
+
+.c5 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
 }
 
 .c1 {
@@ -179,12 +187,18 @@ exports[`<Salaire /> renders 1`] = `
     class="c4"
   >
     De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+    <span
+      aria-label="champs obligatoire"
+      class="c5"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c5"
+    class="c6"
   >
     <label
-      class="c6"
+      class="c7"
     >
       <input
         name="hasBrancheNewSalaire"
@@ -196,7 +210,7 @@ exports[`<Salaire /> renders 1`] = `
       </span>
     </label>
     <label
-      class="c6"
+      class="c7"
     >
       <input
         name="hasBrancheNewSalaire"
@@ -269,7 +283,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   text-align: left;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -280,10 +294,10 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -307,6 +321,14 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
+}
+
+.c5 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
 }
 
 .c1 {
@@ -390,12 +412,18 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
     class="c4"
   >
     De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+    <span
+      aria-label="champs obligatoire"
+      class="c5"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c5"
+    class="c6"
   >
     <label
-      class="c6"
+      class="c7"
     >
       <input
         checked=""
@@ -408,7 +436,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
       </span>
     </label>
     <label
-      class="c6"
+      class="c7"
     >
       <input
         name="hasBrancheNewSalaire"
@@ -424,12 +452,18 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
     class="c4"
   >
     Avez-vous eu le même salaire lors des 12 derniers mois ?
+    <span
+      aria-label="champs obligatoire"
+      class="c5"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c5"
+    class="c6"
   >
     <label
-      class="c6"
+      class="c7"
     >
       <input
         name="hasBrancheNewRegularSalaire"
@@ -441,7 +475,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
       </span>
     </label>
     <label
-      class="c6"
+      class="c7"
     >
       <input
         name="hasBrancheNewRegularSalaire"
@@ -457,13 +491,13 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 `;
 
 exports[`<Salaire /> renders a table of fields of type number 1`] = `
-.c7 {
+.c8 {
   position: relative;
   overflow: hidden;
 }
 
-.c7:before,
-.c7:after {
+.c8:before,
+.c8:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -477,19 +511,19 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c7:before {
+.c8:before {
   left: -2rem;
 }
 
-.c7:after {
+.c8:after {
   right: -2rem;
 }
 
-.c8 {
+.c9 {
   overflow-x: auto;
 }
 
-.c9 {
+.c10 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -498,26 +532,26 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   border-spacing: 0;
 }
 
-.c9 caption {
+.c10 caption {
   padding: 0.625rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c9 td,
-.c9 th {
+.c10 td,
+.c10 th {
   padding: 0.625rem 1rem;
   border: 1px solid #c9d3df;
 }
 
-.c9 thead,
-.c9 tfoot {
+.c10 thead,
+.c10 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
   background: #f9f9fc;
 }
 
-.c9 tfoot {
+.c10 tfoot {
   vertical-align: top;
 }
 
@@ -578,7 +612,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   text-align: left;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -589,10 +623,10 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -616,18 +650,26 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
+}
+
+.c5 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
 }
 
 .c1 {
   margin-top: 1.25rem;
 }
 
-.c10 tr > td:nth-child(2) {
+.c11 tr > td:nth-child(2) {
   width: 70%;
   text-align: left;
 }
 
-.c12 {
+.c13 {
   width: 10em;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -640,21 +682,21 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   text-align: right;
 }
 
-.c12::-webkit-outer-spin-button,
-.c12::-webkit-inner-spin-button {
+.c13::-webkit-outer-spin-button,
+.c13::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11 {
+.c12 {
   position: relative;
   display: inline-block;
   margin-right: 1.25rem;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
@@ -741,12 +783,18 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
     class="c4"
   >
     De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+    <span
+      aria-label="champs obligatoire"
+      class="c5"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c5"
+    class="c6"
   >
     <label
-      class="c6"
+      class="c7"
     >
       <input
         checked=""
@@ -759,7 +807,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
       </span>
     </label>
     <label
-      class="c6"
+      class="c7"
     >
       <input
         name="hasBrancheNewSalaire"
@@ -775,12 +823,18 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
     class="c4"
   >
     Avez-vous eu le même salaire lors des 12 derniers mois ?
+    <span
+      aria-label="champs obligatoire"
+      class="c5"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c5"
+    class="c6"
   >
     <label
-      class="c6"
+      class="c7"
     >
       <input
         name="hasBrancheNewRegularSalaire"
@@ -792,7 +846,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
       </span>
     </label>
     <label
-      class="c6"
+      class="c7"
     >
       <input
         checked=""
@@ -806,13 +860,13 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
     </label>
   </div>
   <div
-    class="c7"
+    class="c8"
   >
     <div
-      class="c8"
+      class="c9"
     >
       <table
-        class="c9 c10"
+        class="c10 c11"
       >
         <thead>
           <tr>
@@ -835,10 +889,10 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
             </td>
             <td>
               <div
-                class="c11"
+                class="c12"
               >
                 <input
-                  class="c12"
+                  class="c13"
                   id="salaire0"
                   name="brancheNewIrregularSalaire[0].salary"
                   size="10"
@@ -847,7 +901,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
                 />
                 <span
                   aria-hidden="true"
-                  class="c13"
+                  class="c14"
                 >
                   €
                 </span>
@@ -864,10 +918,10 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
             </td>
             <td>
               <div
-                class="c11"
+                class="c12"
               >
                 <input
-                  class="c12"
+                  class="c13"
                   id="salaire1"
                   name="brancheNewIrregularSalaire[1].salary"
                   size="10"
@@ -876,7 +930,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
                 />
                 <span
                   aria-hidden="true"
-                  class="c13"
+                  class="c14"
                 >
                   €
                 </span>
@@ -948,7 +1002,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   text-align: left;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -959,10 +1013,10 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -986,13 +1040,21 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
+}
+
+.c5 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
 }
 
 .c1 {
   margin-top: 1.25rem;
 }
 
-.c8 {
+.c9 {
   width: 10em;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -1005,21 +1067,21 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   text-align: right;
 }
 
-.c8::-webkit-outer-spin-button,
-.c8::-webkit-inner-spin-button {
+.c9::-webkit-outer-spin-button,
+.c9::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7 {
+.c8 {
   position: relative;
   display: inline-block;
   margin-right: 1.25rem;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
@@ -1106,12 +1168,18 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     class="c4"
   >
     De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+    <span
+      aria-label="champs obligatoire"
+      class="c5"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c5"
+    class="c6"
   >
     <label
-      class="c6"
+      class="c7"
     >
       <input
         checked=""
@@ -1124,7 +1192,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
       </span>
     </label>
     <label
-      class="c6"
+      class="c7"
     >
       <input
         name="hasBrancheNewSalaire"
@@ -1140,12 +1208,18 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     class="c4"
   >
     Avez-vous eu le même salaire lors des 12 derniers mois ?
+    <span
+      aria-label="champs obligatoire"
+      class="c5"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c5"
+    class="c6"
   >
     <label
-      class="c6"
+      class="c7"
     >
       <input
         checked=""
@@ -1158,7 +1232,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
       </span>
     </label>
     <label
-      class="c6"
+      class="c7"
     >
       <input
         name="hasBrancheNewRegularSalaire"
@@ -1174,10 +1248,10 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     Salaire mensuel ajusté (primes et temps partiel inclus)
   </p>
   <div
-    class="c7"
+    class="c8"
   >
     <input
-      class="c8"
+      class="c9"
       name="brancheNewRegularSalaire"
       size="10"
       type="number"
@@ -1185,7 +1259,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     />
     <span
       aria-hidden="true"
-      class="c9"
+      class="c10"
     >
       €
     </span>

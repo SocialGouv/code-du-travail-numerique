@@ -1,8 +1,8 @@
 import React from "react";
 import { Field } from "react-final-form";
 import { EchelonChimie } from "./EchelonChimie";
-import { YesNoQuestion } from "../../components/YesNoQuestion";
-import { TextQuestion } from "../../components/TextQuestion";
+import { YesNoQuestion } from "../../../common/YesNoQuestion";
+import { TextQuestion } from "../../../common/TextQuestion";
 
 function Step() {
   return (

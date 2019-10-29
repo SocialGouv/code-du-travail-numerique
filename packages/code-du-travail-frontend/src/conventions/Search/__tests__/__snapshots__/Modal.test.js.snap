@@ -27,6 +27,7 @@ exports[`<ConventionModal /> should render 1`] = `
 .c3:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c3[disabled] {
@@ -157,6 +158,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 .c3:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c3[disabled] {

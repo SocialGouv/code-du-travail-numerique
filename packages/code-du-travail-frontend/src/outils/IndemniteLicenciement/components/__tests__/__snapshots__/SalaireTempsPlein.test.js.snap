@@ -65,6 +65,10 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   vertical-align: top;
 }
 
+.c3 {
+  width: 70%;
+}
+
 .c3 tr > td:nth-child(2) {
   width: 70%;
   text-align: left;
@@ -259,6 +263,10 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 
 .c2 tfoot {
   vertical-align: top;
+}
+
+.c3 {
+  width: 70%;
 }
 
 .c3 tr > td:nth-child(2) {

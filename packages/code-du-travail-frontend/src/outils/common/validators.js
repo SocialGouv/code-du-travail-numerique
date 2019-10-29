@@ -1,7 +1,7 @@
 import { parse } from "./date";
 
 export function required(value) {
-  return value ? undefined : "Ce champs est requis";
+  return value ? undefined : "Ce champ est requis";
 }
 
 export function requiredBoolean(value) {

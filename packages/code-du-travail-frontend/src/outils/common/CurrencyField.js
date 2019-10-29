@@ -1,12 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-
 import { Field } from "react-final-form";
-import { isNumber } from "./validators";
-import { Input, InlineError } from "../common/stepStyles";
 import { theme } from "@socialgouv/react-ui";
+import { UID } from "react-uid";
 
-function CurrencyField({ name, label, children = null, ...inputProps }) {
+import { isNumber } from "./validators";
+import { InlineError } from "./ErrorField";
+import { Question } from "./Question";
+import { Input } from "../common/stepStyles";
+
+function CurrencyField({
+  name,
+  label,
+  required = true,
+  children = null,
+  ...inputProps
+}) {
   return (
     <Field
       name={name}
@@ -14,23 +23,32 @@ function CurrencyField({ name, label, children = null, ...inputProps }) {
       subscription={{ value: true, error: true, touched: true, invalid: true }}
     >
       {({ input, meta: { touched, error, invalid } }) => (
-        <>
-          {label && <p>{label}</p>}
-          <CurrencyWrapper>
-            <NumberInput
-              {...inputProps}
-              {...input}
-              type="number"
-              size="10"
-              invalid={touched && invalid}
-            />
-            <Currency aria-hidden="true">€</Currency>
-          </CurrencyWrapper>
-          {children}
-          {error && touched && invalid ? (
-            <InlineError>{error}</InlineError>
-          ) : null}
-        </>
+        <UID>
+          {id => (
+            <>
+              {label && (
+                <Question required={required} htmlFor={`currency-${id}`}>
+                  {label}
+                </Question>
+              )}
+              <CurrencyWrapper>
+                <NumberInput
+                  id={`currency-${id}`}
+                  {...inputProps}
+                  {...input}
+                  type="number"
+                  size="10"
+                  invalid={touched && invalid}
+                />
+                <Currency aria-hidden="true">€</Currency>
+              </CurrencyWrapper>
+              {children}
+              {error && touched && invalid ? (
+                <InlineError>{error}</InlineError>
+              ) : null}
+            </>
+          )}
+        </UID>
       )}
     </Field>
   );

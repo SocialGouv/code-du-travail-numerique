@@ -31,32 +31,13 @@ exports[`<Step /> should ask detail about categories 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
-}
-
-.c4 {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 .c0 {
   margin-top: 2rem;
   margin-bottom: 1.25rem;
   font-size: 1.625rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 1.25rem;
 }
 
 .c2 {
@@ -67,6 +48,33 @@ exports[`<Step /> should ask detail about categories 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.c4 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.c5 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 1.25rem;
 }
 
 <div>
@@ -155,10 +163,16 @@ exports[`<Step /> should ask detail about categories 1`] = `
     class="c4"
     for="2"
   >
-    Quel etait votre âge à la date du licenciement ?
+    Quel etait votre âge à la date du licenciement ?
+    <span
+      aria-label="champs obligatoire"
+      class="c5"
+    >
+      *
+    </span>
   </label>
   <div
-    class="c5"
+    class="c6"
   >
     <input
       class="c3"
@@ -173,7 +187,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
 `;
 
 exports[`<Step /> should ask detail about retirement  1`] = `
-.c4 {
+.c5 {
   width: 5em;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -184,8 +198,8 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   border-radius: 0.25rem;
 }
 
-.c4::-webkit-outer-spin-button,
-.c4::-webkit-inner-spin-button {
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -203,10 +217,10 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,27 +239,36 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c2 {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
-}
-
-.c5 {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
-}
-
 .c0 {
   margin-top: 2rem;
   margin-bottom: 1.25rem;
   font-size: 1.625rem;
 }
 
+.c2 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.c6 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: default;
+}
+
 .c3 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -300,13 +323,19 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     class="c2"
     for="3"
   >
-    Quel etait votre âge à la date du licenciement ?
+    Quel etait votre âge à la date du licenciement ?
+    <span
+      aria-label="champs obligatoire"
+      class="c3"
+    >
+      *
+    </span>
   </label>
   <div
-    class="c3"
+    class="c4"
   >
     <input
-      class="c4"
+      class="c5"
       id="3"
       name="age"
       size="5"
@@ -315,12 +344,18 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     />
   </div>
   <p
-    class="c5"
+    class="c6"
   >
     Le salarié pourrait-il bénéficier de la retraite ?
+    <span
+      aria-label="champs obligatoire"
+      class="c3"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c6"
+    class="c7"
   >
     <label
       class="c1"
@@ -351,7 +386,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 `;
 
 exports[`<Step /> should render 1`] = `
-.c4 {
+.c5 {
   width: 5em;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -362,8 +397,8 @@ exports[`<Step /> should render 1`] = `
   border-radius: 0.25rem;
 }
 
-.c4::-webkit-outer-spin-button,
-.c4::-webkit-inner-spin-button {
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -381,14 +416,7 @@ exports[`<Step /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
-}
-
-.c2 {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 .c0 {
@@ -397,7 +425,22 @@ exports[`<Step /> should render 1`] = `
   font-size: 1.625rem;
 }
 
+.c2 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
 .c3 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -452,13 +495,19 @@ exports[`<Step /> should render 1`] = `
     class="c2"
     for="1"
   >
-    Quel etait votre âge à la date du licenciement ?
+    Quel etait votre âge à la date du licenciement ?
+    <span
+      aria-label="champs obligatoire"
+      class="c3"
+    >
+      *
+    </span>
   </label>
   <div
-    class="c3"
+    class="c4"
   >
     <input
-      class="c4"
+      class="c5"
       id="1"
       name="age"
       size="5"

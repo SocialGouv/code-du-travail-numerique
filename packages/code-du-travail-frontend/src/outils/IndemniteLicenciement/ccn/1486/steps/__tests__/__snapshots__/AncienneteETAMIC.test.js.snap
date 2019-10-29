@@ -24,7 +24,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   animation: none;
 }
 
-.c9 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -68,7 +68,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   background-color: #fee5ad;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,7 +102,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   text-align: left;
 }
 
-.c8 {
+.c9 {
   width: 7em;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -113,15 +113,15 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   border-radius: 0.25rem;
 }
 
-.c8::-webkit-outer-spin-button,
-.c8::-webkit-inner-spin-button {
+.c9::-webkit-outer-spin-button,
+.c9::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,10 +132,10 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,20 +154,36 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   margin-bottom: 1.25rem;
 }
 
-.c5 {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
-}
-
 .c0 {
   margin-top: 2rem;
   margin-bottom: 1.25rem;
   font-size: 1.625rem;
 }
 
+.c5 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: default;
+}
+
 .c12 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.c6 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
+}
+
+.c14 {
   width: 10em;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -180,21 +196,21 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   text-align: right;
 }
 
-.c12::-webkit-outer-spin-button,
-.c12::-webkit-inner-spin-button {
+.c14::-webkit-outer-spin-button,
+.c14::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11 {
+.c13 {
   position: relative;
   display: inline-block;
   margin-right: 1rem;
 }
 
-.c13 {
+.c15 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
@@ -278,12 +294,18 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     class="c5"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
+    <span
+      aria-label="champs obligatoire"
+      class="c6"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c6"
+    class="c7"
   >
     <label
-      class="c7"
+      class="c8"
     >
       <input
         checked=""
@@ -296,7 +318,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       </span>
     </label>
     <label
-      class="c7"
+      class="c8"
     >
       <input
         name="hasBrancheContrat"
@@ -309,13 +331,13 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     </label>
   </div>
   <label
-    class="c7"
+    class="c8"
     for="duration"
   >
     Durée des contrats de travail précédents (en mois)
   </label>
   <input
-    class="c8"
+    class="c9"
     id="duration"
     name="brancheContrat.duration"
     size="7"
@@ -323,10 +345,10 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     value="3"
   />
   <div
-    class="c9 c2"
+    class="c10 c2"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <svg
         fill="none"
@@ -365,14 +387,18 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       Il est important de préciser l’indemnité de licenciement éventuellement perçue lors d’un précédent licenciement dans la même entreprise. L’employeur actuel peut la déduire de l’indemnité de licenciement en train d’être calculée.
     </div>
   </div>
-  <p>
+  <label
+    class="c12"
+    for="currency-1"
+  >
     Indemnité de licenciement précédemment perçue
-  </p>
+  </label>
   <div
-    class="c11"
+    class="c13"
   >
     <input
-      class="c12"
+      class="c14"
+      id="currency-1"
       name="brancheContrat.indemnite"
       size="10"
       type="number"
@@ -380,7 +406,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     />
     <span
       aria-hidden="true"
-      class="c13"
+      class="c15"
     >
       €
     </span>
@@ -391,10 +417,10 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     Souhaitez vous déduire cette indemnité ?
   </p>
   <div
-    class="c6"
+    class="c7"
   >
     <label
-      class="c7"
+      class="c8"
     >
       <input
         name="brancheContrat.considered"
@@ -406,7 +432,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       </span>
     </label>
     <label
-      class="c7"
+      class="c8"
     >
       <input
         checked=""
@@ -480,7 +506,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -491,10 +517,10 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -513,17 +539,25 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   margin-bottom: 1.25rem;
 }
 
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
 .c5 {
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
 }
 
-.c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+.c6 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
 }
 
 .c2 {
@@ -600,12 +634,18 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
     class="c5"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
+    <span
+      aria-label="champs obligatoire"
+      class="c6"
+    >
+      *
+    </span>
   </p>
   <div
-    class="c6"
+    class="c7"
   >
     <label
-      class="c7"
+      class="c8"
     >
       <input
         name="hasBrancheContrat"
@@ -617,7 +657,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
       </span>
     </label>
     <label
-      class="c7"
+      class="c8"
     >
       <input
         name="hasBrancheContrat"

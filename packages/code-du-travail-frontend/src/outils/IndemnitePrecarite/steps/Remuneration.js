@@ -24,7 +24,7 @@ function StepRemuneration({ form }) {
               <>
                 <CurrencyField
                   name="salaire"
-                  label="Indiquez votre rémunération totale brute perçue pendant votre contrat&nbsp;*"
+                  label="Indiquez votre rémunération totale brute perçue pendant votre contrat"
                 />
               </>
             )}

@@ -5,7 +5,8 @@ import styled from "styled-components";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
 import { Button, theme } from "@socialgouv/react-ui";
-import { Input, InlineError } from "../../common/stepStyles";
+import { Input } from "../../common/stepStyles";
+import { InlineError } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 
 function Primes({ name, visible = true, onChange }) {

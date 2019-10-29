@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { lighten, transparentize } from "polished";
+import { darken, lighten, transparentize } from "polished";
 
 import { animations, fonts, spacing, variants } from "../theme";
 
@@ -26,6 +26,7 @@ export const StyledButton = styled.button`
   ${props => {
     let color = props.theme.primaryText;
     let backgroundColor = props.theme.blueLight;
+    let borderColor = props.theme.blueLight;
 
     if (props.variant === "link") {
       return css`
@@ -62,19 +63,24 @@ export const StyledButton = styled.button`
 
     if (props.variant !== "default") {
       backgroundColor = props.theme[`${props.variant}Background`];
+      borderColor = props.theme[`${props.variant}Background`];
       color = props.theme[`${props.variant}Text`];
     }
-
+    if (props.outlined) {
+      backgroundColor = props.theme.white;
+      color = props.theme.black;
+    }
     return css`
       color: ${color};
       background: ${backgroundColor};
-      border-color: ${backgroundColor};
+      border-color: ${borderColor};
       :not([disabled]) {
         &:hover,
         &:active,
         &:focus {
           color: ${lighten(0.05, color)};
           background: ${lighten(0.05, backgroundColor)};
+          border-color: ${darken(0.05, borderColor)};
         }
       }
       /* keep it last so it overrides other styles */
@@ -93,12 +99,14 @@ export const Button = ({ noButton, ...props }) => (
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   noButton: PropTypes.bool,
+  outlined: PropTypes.bool,
   variant: PropTypes.oneOf(["default", "icon", "link"].concat(variants)),
   onClick: PropTypes.func
 };
 
 Button.defaultProps = {
   noButton: false,
+  outlined: false,
   onClick: () => {},
   variant: "default"
 };

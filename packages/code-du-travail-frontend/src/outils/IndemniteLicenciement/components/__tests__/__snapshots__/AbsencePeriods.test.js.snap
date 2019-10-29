@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AbsencePeriods /> should add a period 1`] = `
-.c5 {
+.c6 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -31,14 +31,14 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   border-radius: 0;
 }
 
-.c5:focus,
-.c5:hover,
-.c5:active {
+.c6:focus,
+.c6:hover,
+.c6:active {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c4 {
+.c5 {
   width: 7em;
   padding: 0.625rem 0.25rem;
   font-size: 1rem;
@@ -49,19 +49,27 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   border-radius: 0.25rem;
 }
 
-.c4::-webkit-outer-spin-button,
-.c4::-webkit-inner-spin-button {
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7 {
+.c0 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: default;
+}
+
+.c8 {
   margin: 1.25rem 0;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,22 +85,22 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c1 {
+.c2 {
   -webkit-flex-basis: 25rem;
   -ms-flex-preferred-size: 25rem;
   flex-basis: 25rem;
   margin-right: 1.25rem;
 }
 
-.c3 {
+.c4 {
   margin-right: 1.25rem;
 }
 
-.c2 {
+.c3 {
   font-weight: 700;
 }
 
-.c6 {
+.c7 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
 }
@@ -101,25 +109,30 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   <p>
     Les congés maternité, arrêts de travail liés à un accident du travail ou une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
   </p>
-  <div
+  <p
     class="c0"
   >
+    Quelles ont été vos périodes d’absence prolongée ?
+  </p>
+  <div
+    class="c1"
+  >
     <div
-      class="c1 c2"
+      class="c2 c3"
     >
       Motif
     </div>
     <div
-      class="c3 c2"
+      class="c4 c3"
     >
       Durée (en mois)
     </div>
   </div>
   <div
-    class="c0"
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <select
         name="absences[0].type"
@@ -160,17 +173,17 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
       </select>
     </div>
     <div
-      class="c3"
+      class="c4"
     >
       <input
-        class="c4"
+        class="c5"
         name="absences[0].duration"
         size="7"
         type="number"
         value=""
       />
       <button
-        class="c5 c6"
+        class="c6 c7"
         type="button"
       >
         Supprimer
@@ -178,7 +191,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
     </div>
   </div>
   <button
-    class="c5 c7"
+    class="c6 c8"
     type="button"
   >
     Ajouter une période
@@ -187,106 +200,6 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 `;
 
 exports[`<AbsencePeriods /> should delete a period 1`] = `
-.c4 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  line-height: initial;
-  text-align: left;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  vertical-align: initial;
-  background: none;
-  border: none;
-  border-radius: 0;
-}
-
-.c4:focus,
-.c4:hover,
-.c4:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 {
-  margin: 1.25rem 0;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 0.25rem;
-}
-
-.c1 {
-  -webkit-flex-basis: 25rem;
-  -ms-flex-preferred-size: 25rem;
-  flex-basis: 25rem;
-  margin-right: 1.25rem;
-}
-
-.c3 {
-  margin-right: 1.25rem;
-}
-
-.c2 {
-  font-weight: 700;
-}
-
-<div>
-  <p>
-    Les congés maternité, arrêts de travail liés à un accident du travail ou une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
-  </p>
-  <div
-    class="c0"
-  >
-    <div
-      class="c1 c2"
-    >
-      Motif
-    </div>
-    <div
-      class="c3 c2"
-    >
-      Durée (en mois)
-    </div>
-  </div>
-  <button
-    class="c4 c5"
-    type="button"
-  >
-    Ajouter une période
-  </button>
-</div>
-`;
-
-exports[`<AbsencePeriods /> should render 1`] = `
 .c5 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
@@ -324,30 +237,19 @@ exports[`<AbsencePeriods /> should render 1`] = `
   text-decoration: none;
 }
 
-.c4 {
-  width: 7em;
-  padding: 0.625rem 0.25rem;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
+.c0 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: default;
 }
 
-.c4::-webkit-outer-spin-button,
-.c4::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c7 {
+.c6 {
   margin: 1.25rem 0;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -363,22 +265,154 @@ exports[`<AbsencePeriods /> should render 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c1 {
+.c2 {
   -webkit-flex-basis: 25rem;
   -ms-flex-preferred-size: 25rem;
   flex-basis: 25rem;
   margin-right: 1.25rem;
 }
 
-.c3 {
+.c4 {
   margin-right: 1.25rem;
 }
 
-.c2 {
+.c3 {
   font-weight: 700;
 }
 
+<div>
+  <p>
+    Les congés maternité, arrêts de travail liés à un accident du travail ou une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
+  </p>
+  <p
+    class="c0"
+  >
+    Quelles ont été vos périodes d’absence prolongée ?
+  </p>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2 c3"
+    >
+      Motif
+    </div>
+    <div
+      class="c4 c3"
+    >
+      Durée (en mois)
+    </div>
+  </div>
+  <button
+    class="c5 c6"
+    type="button"
+  >
+    Ajouter une période
+  </button>
+</div>
+`;
+
+exports[`<AbsencePeriods /> should render 1`] = `
 .c6 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #005994;
+  font-weight: normal;
+  font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  vertical-align: initial;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.c6:focus,
+.c6:hover,
+.c6:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 {
+  width: 7em;
+  padding: 0.625rem 0.25rem;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: right;
+  border: 1px solid #c9d3df;
+  border-color: #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c0 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: default;
+}
+
+.c8 {
+  margin: 1.25rem 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.c2 {
+  -webkit-flex-basis: 25rem;
+  -ms-flex-preferred-size: 25rem;
+  flex-basis: 25rem;
+  margin-right: 1.25rem;
+}
+
+.c4 {
+  margin-right: 1.25rem;
+}
+
+.c3 {
+  font-weight: 700;
+}
+
+.c7 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
 }
@@ -387,25 +421,30 @@ exports[`<AbsencePeriods /> should render 1`] = `
   <p>
     Les congés maternité, arrêts de travail liés à un accident du travail ou une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
   </p>
-  <div
+  <p
     class="c0"
   >
+    Quelles ont été vos périodes d’absence prolongée ?
+  </p>
+  <div
+    class="c1"
+  >
     <div
-      class="c1 c2"
+      class="c2 c3"
     >
       Motif
     </div>
     <div
-      class="c3 c2"
+      class="c4 c3"
     >
       Durée (en mois)
     </div>
   </div>
   <div
-    class="c0"
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <select
         name="absences[0].type"
@@ -446,17 +485,17 @@ exports[`<AbsencePeriods /> should render 1`] = `
       </select>
     </div>
     <div
-      class="c3"
+      class="c4"
     >
       <input
-        class="c4"
+        class="c5"
         name="absences[0].duration"
         size="7"
         type="number"
         value="3"
       />
       <button
-        class="c5 c6"
+        class="c6 c7"
         type="button"
       >
         Supprimer
@@ -464,7 +503,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
     </div>
   </div>
   <button
-    class="c5 c7"
+    class="c6 c8"
     type="button"
   >
     Ajouter une période

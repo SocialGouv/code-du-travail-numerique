@@ -27,6 +27,7 @@ exports[`<Button /> it renders a Button danger 1`] = `
 .c0:not([disabled]):focus {
   color: #18181c;
   background: #f9d2d6;
+  border-color: #f3a6ae;
 }
 
 .c0[disabled] {
@@ -34,9 +35,50 @@ exports[`<Button /> it renders a Button danger 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #fff;
+  border-color: #f6bcc2;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  color: #18181c;
+  background: #fff;
+  border-color: #f3a6ae;
+}
+
+.c1[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
 <div>
   <button
     class="c0"
+  >
+    this is a Button 
+    danger
+     
+  </button>
+  <button
+    class="c1"
   >
     this is a Button 
     danger
@@ -81,6 +123,13 @@ exports[`<Button /> it renders a Button icon 1`] = `
     icon
      
   </button>
+  <button
+    class="c0"
+  >
+    this is a Button 
+    icon
+     
+  </button>
 </div>
 `;
 
@@ -111,6 +160,7 @@ exports[`<Button /> it renders a Button info 1`] = `
 .c0:not([disabled]):focus {
   color: #18181c;
   background: #fefeff;
+  border-color: #cce4fd;
 }
 
 .c0[disabled] {
@@ -118,9 +168,50 @@ exports[`<Button /> it renders a Button info 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #fff;
+  border-color: #e5f1fe;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  color: #18181c;
+  background: #fff;
+  border-color: #cce4fd;
+}
+
+.c1[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
 <div>
   <button
     class="c0"
+  >
+    this is a Button 
+    info
+     
+  </button>
+  <button
+    class="c1"
   >
     this is a Button 
     info
@@ -175,6 +266,13 @@ exports[`<Button /> it renders a Button link 1`] = `
     link
      
   </button>
+  <button
+    class="c0"
+  >
+    this is a Button 
+    link
+     
+  </button>
 </div>
 `;
 
@@ -205,6 +303,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
 .c0:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c0[disabled] {
@@ -212,9 +311,50 @@ exports[`<Button /> it renders a Button primary 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #fff;
+  border-color: #005994;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  color: #18181c;
+  background: #fff;
+  border-color: #004a7b;
+}
+
+.c1[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
 <div>
   <button
     class="c0"
+  >
+    this is a Button 
+    primary
+     
+  </button>
+  <button
+    class="c1"
   >
     this is a Button 
     primary
@@ -250,6 +390,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 .c0:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
 .c0[disabled] {
@@ -257,9 +398,50 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #fff;
+  border-color: #ebeff3;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  color: #18181c;
+  background: #fff;
+  border-color: #dbe2e9;
+}
+
+.c1[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
 <div>
   <button
     class="c0"
+  >
+    this is a Button 
+    secondary
+     
+  </button>
+  <button
+    class="c1"
   >
     this is a Button 
     secondary
@@ -295,6 +477,7 @@ exports[`<Button /> it renders a Button success 1`] = `
 .c0:not([disabled]):focus {
   color: #18181c;
   background: #eaf6d2;
+  border-color: #d6eea8;
 }
 
 .c0[disabled] {
@@ -302,9 +485,50 @@ exports[`<Button /> it renders a Button success 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #fff;
+  border-color: #e0f2bd;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  color: #18181c;
+  background: #fff;
+  border-color: #d6eea8;
+}
+
+.c1[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
 <div>
   <button
     class="c0"
+  >
+    this is a Button 
+    success
+     
+  </button>
+  <button
+    class="c1"
   >
     this is a Button 
     success
@@ -340,6 +564,7 @@ exports[`<Button /> it renders a Button warning 1`] = `
 .c0:not([disabled]):focus {
   color: #18181c;
   background: #feedc6;
+  border-color: #fedd94;
 }
 
 .c0[disabled] {
@@ -347,9 +572,50 @@ exports[`<Button /> it renders a Button warning 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #fff;
+  border-color: #fee5ad;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  color: #18181c;
+  background: #fff;
+  border-color: #fedd94;
+}
+
+.c1[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
 <div>
   <button
     class="c0"
+  >
+    this is a Button 
+    warning
+     
+  </button>
+  <button
+    class="c1"
   >
     this is a Button 
     warning
@@ -385,6 +651,7 @@ exports[`<Button /> renders 1`] = `
 .c0:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c0[disabled] {
@@ -428,6 +695,7 @@ exports[`<Button /> renders a small button 1`] = `
 .c0:not([disabled]):focus {
   color: #fff;
   background: #07f;
+  border-color: #005fcd;
 }
 
 .c0[disabled] {

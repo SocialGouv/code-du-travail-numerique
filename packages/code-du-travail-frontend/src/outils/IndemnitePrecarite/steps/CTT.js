@@ -2,7 +2,7 @@ import React from "react";
 import { Field } from "react-final-form";
 import { Toast } from "@socialgouv/react-ui";
 
-import { YesNoQuestion } from "../../IndemniteLicenciement/components/YesNoQuestion";
+import { YesNoQuestion } from "../../common/YesNoQuestion";
 
 function validate(values) {
   const errors = {};

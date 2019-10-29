@@ -1,8 +1,8 @@
 import React from "react";
-import { TextQuestion } from "../../components/TextQuestion";
 import { Categorie, CADRE } from "./Categorie";
-import { YesNoQuestion } from "../../components/YesNoQuestion";
 import { CategoriePeriod } from "./CategoriePeriod";
+import { YesNoQuestion } from "../../../common/YesNoQuestion";
+import { TextQuestion } from "../../../common/TextQuestion";
 
 function Step({ form }) {
   const state = form.getState();
@@ -17,11 +17,11 @@ function Step({ form }) {
         inputType="number"
         name="age"
         size="5"
-        label="Quel etait votre âge à la date du licenciement ?"
+        label="Quel etait votre âge à la date du licenciement&nbsp;?"
       />
       {age > 60 && (
         <YesNoQuestion
-          label="Le salarié pourrait-il bénéficier de la retraite ?"
+          label="Le salarié pourrait-il bénéficier de la retraite&nbsp;?"
           name="hasRetirementAge"
         />
       )}

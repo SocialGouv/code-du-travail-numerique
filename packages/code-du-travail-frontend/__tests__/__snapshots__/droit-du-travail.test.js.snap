@@ -236,6 +236,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 .c48:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c48[disabled] {

@@ -4,8 +4,10 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { Button, theme } from "@socialgouv/react-ui";
-import { Input, BlockError } from "../../common/stepStyles";
+import { Input } from "../../common/stepStyles";
+import { Error } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
+import { Question } from "../../common/Question";
 import { OnChange } from "react-final-form-listeners";
 
 function AbsencePeriods({ name, visible = true, onChange }) {
@@ -22,6 +24,9 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                 sont pas considérés comme des absences. Merci de ne pas les
                 renseigner.
               </p>
+              <Question as="p">
+                Quelles ont été vos périodes d’absence prolongée&nbsp;?
+              </Question>
               <Row key={name}>
                 <CellHeader as={MotifCell}>Motif</CellHeader>
                 <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
@@ -62,9 +67,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                       >
                         Supprimer
                       </DelButton>
-                      {error && touched && invalid && (
-                        <BlockError>{error}</BlockError>
-                      )}
+                      {error && touched && invalid && <Error>{error}</Error>}
                     </>
                   )}
                 />

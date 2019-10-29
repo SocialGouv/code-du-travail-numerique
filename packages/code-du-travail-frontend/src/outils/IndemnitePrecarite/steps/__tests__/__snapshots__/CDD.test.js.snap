@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepCDD /> should render 1`] = `
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,10 +12,10 @@ exports[`<StepCDD /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,144 +39,183 @@ exports[`<StepCDD /> should render 1`] = `
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   font-size: 1.25rem;
+  cursor: default;
+}
+
+.c1 {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #b50113;
+  font-weight: 700;
 }
 
 <div>
-  <p
-    class="c0"
-  >
-    Votre CDD a-t-il été rompu pendant votre période d’essai ?
-  </p>
-  <div
-    class="c1"
-    data-testid="finContratPeriodeDessai"
-  >
-    <label
-      class="c2"
+  <form>
+    <p
+      class="c0"
     >
-      <input
-        name="finContratPeriodeDessai"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
+      Votre CDD a-t-il été rompu pendant votre période d’essai ?
+      <span
+        aria-label="champs obligatoire"
+        class="c1"
+      >
+        *
       </span>
-    </label>
-    <label
+    </p>
+    <div
       class="c2"
+      data-testid="finContratPeriodeDessai"
     >
-      <input
-        name="finContratPeriodeDessai"
-        type="radio"
-        value="false"
-      />
-      <span>
-        Non
+      <label
+        class="c3"
+      >
+        <input
+          name="finContratPeriodeDessai"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="finContratPeriodeDessai"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <p
+      class="c0"
+    >
+      À la fin de votre CDD, avez-vous été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
+      <span
+        aria-label="champs obligatoire"
+        class="c1"
+      >
+        *
       </span>
-    </label>
-  </div>
-  <p
-    class="c0"
-  >
-    À la fin de votre CDD, avez-vous été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
-  </p>
-  <div
-    class="c1"
-    data-testid="propositionCDIFindeContrat"
-  >
-    <label
+    </p>
+    <div
       class="c2"
+      data-testid="propositionCDIFindeContrat"
     >
-      <input
-        name="propositionCDIFindeContrat"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
+      <label
+        class="c3"
+      >
+        <input
+          name="propositionCDIFindeContrat"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="propositionCDIFindeContrat"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <p
+      class="c0"
+    >
+      Votre CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou faute lourde, en cas de force majeure ?
+      <span
+        aria-label="champs obligatoire"
+        class="c1"
+      >
+        *
       </span>
-    </label>
-    <label
+    </p>
+    <div
       class="c2"
+      data-testid="interruptionFauteGrave"
     >
-      <input
-        name="propositionCDIFindeContrat"
-        type="radio"
-        value="false"
-      />
-      <span>
-        Non
+      <label
+        class="c3"
+      >
+        <input
+          name="interruptionFauteGrave"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="interruptionFauteGrave"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <p
+      class="c0"
+    >
+      Avez-vous refusé de renouveler votre CDD alors que votre CDD comportait une clause de renouvellement automatique ?
+      <span
+        aria-label="champs obligatoire"
+        class="c1"
+      >
+        *
       </span>
-    </label>
-  </div>
-  <p
-    class="c0"
-  >
-    Votre CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou faute lourde, en cas de force majeure ?
-  </p>
-  <div
-    class="c1"
-    data-testid="interruptionFauteGrave"
-  >
-    <label
+    </p>
+    <div
       class="c2"
+      data-testid="refusRenouvellementAuto"
     >
-      <input
-        name="interruptionFauteGrave"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
-      </span>
-    </label>
-    <label
-      class="c2"
+      <label
+        class="c3"
+      >
+        <input
+          name="refusRenouvellementAuto"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="refusRenouvellementAuto"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <button
+      data-testid="nextBt"
     >
-      <input
-        name="interruptionFauteGrave"
-        type="radio"
-        value="false"
-      />
-      <span>
-        Non
-      </span>
-    </label>
-  </div>
-  <p
-    class="c0"
-  >
-    Avez-vous refusé de renouveler votre CDD alors que votre CDD comportait une clause de renouvellement automatique ?
-  </p>
-  <div
-    class="c1"
-    data-testid="refusRenouvellementAuto"
-  >
-    <label
-      class="c2"
-    >
-      <input
-        name="refusRenouvellementAuto"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
-      </span>
-    </label>
-    <label
-      class="c2"
-    >
-      <input
-        name="refusRenouvellementAuto"
-        type="radio"
-        value="false"
-      />
-      <span>
-        Non
-      </span>
-    </label>
-  </div>
+      suivant
+    </button>
+  </form>
 </div>
 `;

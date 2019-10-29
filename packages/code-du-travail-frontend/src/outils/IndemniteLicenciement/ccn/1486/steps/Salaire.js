@@ -7,9 +7,10 @@ import frLocale from "date-fns/locale/fr";
 import { Table as UITable, Toast, theme } from "@socialgouv/react-ui";
 
 import { parse } from "../../../../common/date";
-import { Input, InlineError } from "../../../../common/stepStyles";
+import { Input } from "../../../../common/stepStyles";
+import { InlineError } from "../../../../common/ErrorField";
 import { isNumber } from "../../../../common/validators";
-import { YesNoQuestion } from "../../../components/YesNoQuestion";
+import { YesNoQuestion } from "../../../../common/YesNoQuestion";
 
 export const Salaire = ({ form }) => {
   const data = form.getState().values;

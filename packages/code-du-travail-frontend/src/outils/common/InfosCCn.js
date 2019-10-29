@@ -4,9 +4,10 @@ import styled from "styled-components";
 import createPersistedState from "use-persisted-state";
 import { Button, Toast, theme } from "@socialgouv/react-ui";
 
-import { QuestionLabel } from "./stepStyles";
 import Search from "../../conventions/Search/Form";
-
+import { required } from "./validators";
+import { ErrorField } from "./ErrorField";
+import { Question } from "./Question";
 export const CCN = "ccn";
 
 // store selected convention in localStorage
@@ -26,11 +27,12 @@ function StepInfoCCn({ form, isOptionnal = true }) {
     <>
       <Field
         name={CCN}
+        validate={isOptionnal ? null : required}
         render={({ input, meta: { error } }) => {
           if (input.value) {
             return (
               <>
-                <QuestionLabel>Votre convention collective</QuestionLabel>
+                <Question>Votre convention collective</Question>
                 <p>
                   {input.value.title}
                   <br />
@@ -50,9 +52,9 @@ function StepInfoCCn({ form, isOptionnal = true }) {
           }
           return (
             <>
-              <QuestionLabel>
+              <Question as="p" required={!isOptionnal}>
                 Quelle est votre convention collective ?
-              </QuestionLabel>
+              </Question>
               {isOptionnal && (
                 <P>
                   <strong>* optionnel</strong>, si vous ne connaissez pas votre
@@ -61,6 +63,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                 </P>
               )}
               <SearchStyled title="" onSelectConvention={setCcInfo} />
+              <ErrorField name={CCN} />
             </>
           );
         }}
@@ -80,8 +83,8 @@ export const StepInfoCCnOptionnal = props => (
 );
 
 const SearchStyled = styled(Search)`
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
 `;
 
 const { spacing } = theme;
