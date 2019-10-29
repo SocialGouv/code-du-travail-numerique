@@ -1,9 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return suggestions for re 1`] = `
+exports[`ensure results are only returned when enough characters passed 1`] = `Array []`;
+
+exports[`fuzzy matching results are lower than exact matchs 1`] = `
+Array [
+  "déduction",
+  "déplacement régulier",
+]
+`;
+
+exports[`fuzzy matching works 1`] = `
 Array [
   "retraite",
+]
+`;
+
+exports[`return suggestions for re in the right format 1`] = `
+Array [
   "renseignements",
-  "rensegnement",
+  "repos",
+  "retraite",
+  "réintégration",
+  "déplacement régulier",
+]
+`;
+
+exports[`when query match several suggestions with same prefix, 
+  ensure order is based on rank 1`] = `
+Array [
+  "renseignements",
+  "repos",
+  "retraite",
+  "réintégration",
+  "déplacement régulier",
+]
+`;
+
+exports[`when query match several suggestions with same rank, 
+  ensure order is based on query prefix matching position 1`] = `
+Array [
+  "renseignements",
+  "repos",
+  "retraite",
+  "réintégration",
+  "déplacement régulier",
 ]
 `;

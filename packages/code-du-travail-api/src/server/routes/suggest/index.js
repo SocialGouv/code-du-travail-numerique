@@ -8,6 +8,9 @@ const index = process.env.ELASTICSEARCH_SUGGESTION_INDEX || "suggestions-index";
 
 const router = new Router({ prefix: API_BASE_URL });
 
+const minQueryLength = 2;
+const suggestionsSize = 5;
+
 /**
  * Return the search suggestion
  *
@@ -17,15 +20,18 @@ const router = new Router({ prefix: API_BASE_URL });
  * @returns {Object} An object containing the matching theme .
  */
 router.get("/suggest", async ctx => {
-  const { q = "", size = 5 } = ctx.request.query;
+  const { q = "", size = suggestionsSize } = ctx.request.query;
 
-  const body = getSuggestQuery(q, size);
-  const response = await elasticsearchClient.search({
-    index,
-    body
-  });
-  //TODO Handle minimun length case
-  ctx.body = response.body.hits.hits.map(t => t._source.title);
+  if (q.length >= minQueryLength) {
+    const body = getSuggestQuery(q, size);
+    const response = await elasticsearchClient.search({
+      index,
+      body
+    });
+    ctx.body = response.body.hits.hits.map(t => t._source.title);
+  } else {
+    ctx.body = [];
+  }
 });
 
 module.exports = router;

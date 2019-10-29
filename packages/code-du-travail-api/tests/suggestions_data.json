@@ -1,14 +1,13 @@
 [
-  { "ranking": "320", "title": "préavis" },
-  { "ranking": "82", "title": "urgent" },
-  { "ranking": "4", "title": "déduction" },
-  { "ranking": "136", "title": "avertissement" },
-  { "ranking": "2", "title": "démission-indemnisation" },
-  { "ranking": "790", "title": "retraite" },
-  { "ranking": "296", "title": "renseignements" },
-  { "ranking": "6", "title": "ferie" },
-  { "ranking": "68", "title": "déplacement" },
-  { "ranking": "2", "title": "rensegnement" },
-  { "ranking": "2", "title": "elena" },
-  { "ranking": "2", "title": "contractuelle" }
+  { "ranking": "1", "title": "préavis" },
+  { "ranking": "1", "title": "urgent" },
+  { "ranking": "1", "title": "déduction" },
+  { "ranking": "1", "title": "avertissement" },
+  { "ranking": "1", "title": "retraite" },
+  { "ranking": "1", "title": "repos" },
+  { "ranking": "42", "title": "renseignements" },
+  { "ranking": "1", "title": "réintégration" },
+  { "ranking": "1", "title": "férié" },
+  { "ranking": "1", "title": "déplacement régulier" },
+  { "ranking": "1", "title": "contractuelle" }
 ]
