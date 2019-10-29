@@ -45,7 +45,7 @@ spec:
             - name: PIWIK_URL
               value: ${CI_PIWIK_URL}
             - name: SUGGEST_URL
-              value: "${NLP_URL}/api/suggest"
+              value: "${API_URL}/api/v1/suggest"
             - name: VERSION
               value: "${VERSION}"
       initContainers:
