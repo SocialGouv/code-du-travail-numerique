@@ -5,7 +5,7 @@ Array [
   Object {
     "_id": "6",
     "_index": "cdtn_document_test",
-    "_score": 14.980795,
+    "_score": 15.212456,
     "_source": Object {
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -18,7 +18,7 @@ Array [
   Object {
     "_id": "12",
     "_index": "cdtn_document_test",
-    "_score": 4.2464232,
+    "_score": 4.259316,
     "_source": Object {
       "anchor": "#A-qui-s-applique-le-SMIC",
       "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -411,7 +411,7 @@ Array [
   Object {
     "_id": "2",
     "_index": "cdtn_document_test",
-    "_score": 8.408615,
+    "_score": 8.469061,
     "_source": Object {
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
@@ -440,7 +440,7 @@ Array [
   Object {
     "_id": "4",
     "_index": "cdtn_document_test",
-    "_score": 8.398274,
+    "_score": 8.452506,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -468,7 +468,7 @@ Array [
   Object {
     "_id": "5",
     "_index": "cdtn_document_test",
-    "_score": 7.482512,
+    "_score": 7.5505548,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -490,7 +490,7 @@ Array [
   Object {
     "_id": "3",
     "_index": "cdtn_document_test",
-    "_score": 4.0004086,
+    "_score": 4.0652337,
     "_source": Object {
       "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "breadcrumbs": Array [
@@ -519,7 +519,7 @@ Array [
   Object {
     "_id": "6",
     "_index": "cdtn_document_test",
-    "_score": 3.7626958,
+    "_score": 3.7763233,
     "_source": Object {
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -532,7 +532,7 @@ Array [
   Object {
     "_id": "7",
     "_index": "cdtn_document_test",
-    "_score": 3.750308,
+    "_score": 3.7559676,
     "_source": Object {
       "slug": "r1442-22-4",
       "source": "code_du_travail",
