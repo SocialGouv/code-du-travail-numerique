@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import cookie from "js-cookie";
 import { Toast, theme } from "@socialgouv/react-ui";
@@ -8,7 +8,13 @@ const CookieConsent = () => {
   useEffect(() => {
     setCookieConsentHidden(cookie.get("cookieConsent"));
   }, []);
+  const onToastRemove = useCallback(() => {
+    setCookieConsentHidden(true);
+    cookie.set("cookieConsent", true, { expires: 365 });
+  }, []);
+
   if (isCookieConsentHidden) return null;
+
   return (
     <Wrapper>
       <Toast
@@ -16,16 +22,13 @@ const CookieConsent = () => {
         wide
         shadow
         animate="from-bottom"
-        onRemove={() => {
-          setCookieConsentHidden(true);
-          cookie.set("cookieConsent", true, { expires: 365 });
-        }}
+        onRemove={onToastRemove}
       >
         En poursuivant votre navigation sur ce site, vous acceptez l’utilisation
         de cookies pour établir des mesures de fréquentation et d’utilisation du
         site.
         <A
-          title="consulter l'ordonance"
+          title="Mentions legales"
           rel="noopener noreferrer"
           href="http://master.code-du-travail-numerique.dev.factory.social.gouv.fr/mentions-legales"
         >
