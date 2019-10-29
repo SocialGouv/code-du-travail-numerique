@@ -374,9 +374,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
           data-reach-dialog-overlay="true"
         >
           <div
+            aria-label="Rechercher votre convention collective"
             aria-modal="true"
             class="c5"
             data-reach-dialog-content="true"
+            role="dialog"
             tabindex="-1"
           >
             <div

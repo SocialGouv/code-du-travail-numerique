@@ -24,13 +24,13 @@ describe("<Modal />", () => {
   it("does not render at first and then render", () => {
     const onDismiss = () => {};
     const { baseElement, rerender } = render(
-      <Modal isOpen={false} onDismiss={onDismiss}>
+      <Modal isOpen={false} onDismiss={onDismiss} title="title">
         Some content
       </Modal>
     );
     expect(baseElement).toMatchSnapshot();
     rerender(
-      <Modal isOpen={true} onDismiss={onDismiss}>
+      <Modal isOpen={true} onDismiss={onDismiss} title="title">
         Some content
       </Modal>
     );
@@ -39,7 +39,7 @@ describe("<Modal />", () => {
   it("calls the callback when closing", () => {
     const onDismiss = jest.fn();
     const { getByTitle } = render(
-      <Modal isOpen={true} onDismiss={onDismiss}>
+      <Modal isOpen={true} onDismiss={onDismiss} title="title">
         Some content
       </Modal>
     );
@@ -53,7 +53,12 @@ describe("<Modal />", () => {
     `;
     const onDismiss = jest.fn();
     const { baseElement } = render(
-      <Modal isOpen={true} onDismiss={onDismiss} ContentWrapper={Span}>
+      <Modal
+        isOpen={true}
+        onDismiss={onDismiss}
+        ContentWrapper={Span}
+        title="title"
+      >
         {"This won't be displayed"}
       </Modal>
     );

@@ -127,9 +127,11 @@ exports[`<Modal /> does not render at first and then render 2`] = `
           data-reach-dialog-overlay="true"
         >
           <div
+            aria-label="title"
             aria-modal="true"
             class="c1"
             data-reach-dialog-content="true"
+            role="dialog"
             tabindex="-1"
           >
             Some content
@@ -273,6 +275,7 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
           data-reach-dialog-overlay="true"
         >
           <span
+            aria-label="title"
             class="c1"
           >
             This won't be displayed

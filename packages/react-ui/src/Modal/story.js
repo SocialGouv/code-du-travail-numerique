@@ -46,6 +46,7 @@ class ExampleModal extends React.Component {
           Click me !
         </Button>
         <Modal
+          title="my modal title"
           isOpen={defaultModalOpened}
           onDismiss={() => this.closeModal("defaultModal")}
         >
@@ -56,6 +57,7 @@ class ExampleModal extends React.Component {
           {"Click me I'm stylish !"}
         </Button>
         <Modal
+          title="my modal with custom wrapper"
           isOpen={styledModalOpened}
           onDismiss={() => this.closeModal("styledModal")}
           ContentWrapper={StyledModalContentWrapper}

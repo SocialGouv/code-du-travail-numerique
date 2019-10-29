@@ -28,7 +28,11 @@ class ServiceRenseignementModal extends React.Component {
         {React.cloneElement(this.props.children, {
           onClick: this.openModal
         })}
-        <Modal isOpen={this.state.modalIsOpen} onDismiss={this.closeModal}>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onDismiss={this.closeModal}
+          title="Service de renseignement"
+        >
           <ServiceRenseignement />
         </Modal>
       </React.Fragment>
