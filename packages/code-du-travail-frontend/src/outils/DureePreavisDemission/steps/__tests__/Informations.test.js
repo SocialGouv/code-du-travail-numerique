@@ -6,7 +6,7 @@ describe("<StepInformations />", () => {
     const { container } = renderForm(StepInformations);
     expect(container).toMatchSnapshot();
   });
-  it("should render catégorie", () => {
+  it("should render groupe", () => {
     const { container } = renderForm(StepInformations, {
       ccn: { num: "0044" }
     });
@@ -15,7 +15,14 @@ describe("<StepInformations />", () => {
   it("should render coefficient", () => {
     const { container } = renderForm(StepInformations, {
       ccn: { num: "0044" },
-      criteria: { catégorie: "16| Ingénieurs, Cadres" }
+      criteria: { groupe: "4| II" }
+    });
+    expect(container).toMatchSnapshot();
+  });
+  it("should render catégorie", () => {
+    const { container } = renderForm(StepInformations, {
+      ccn: { num: "0044" },
+      criteria: { groupe: "4| II", coefficient: "1| inférieur à 160" }
     });
     expect(container).toMatchSnapshot();
   });
