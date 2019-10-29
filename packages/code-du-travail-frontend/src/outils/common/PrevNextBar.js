@@ -31,7 +31,7 @@ function PrevNextBar({
 }
 PrevNextBar.propTypes = {
   onPrev: PropTypes.func,
-  incomplete: PropTypes.bool,
+  complete: PropTypes.bool,
   nextVisible: PropTypes.bool,
   previousVisible: PropTypes.bool
 };
