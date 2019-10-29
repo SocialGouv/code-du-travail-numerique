@@ -3,8 +3,7 @@ const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const { getSuggestQuery } = require("./suggest.elastic.js");
 
-//const index = process.env.ELASTICSEARCH_SUGGESTION_INDEX || "cdtn_suggestions";
-const index = process.env.ELASTICSEARCH_SUGGESTION_INDEX || "suggestions-index";
+const index = process.env.ELASTICSEARCH_SUGGESTION_INDEX || "cdtn_suggestions";
 
 const router = new Router({ prefix: API_BASE_URL });
 

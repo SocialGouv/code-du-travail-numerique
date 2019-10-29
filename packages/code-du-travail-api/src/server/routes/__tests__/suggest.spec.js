@@ -17,7 +17,7 @@ test("return suggestions for re in the right format", () =>
 
 test("accentuation is ignored", async () =>
   getSuggestions("ré").expect(res =>
-    // this is ugly
+    // this is ugly, coulnt find a better way though
     expect(res.body).toEqual(expect.arrayContaining(["retraite"]))
   ));
 

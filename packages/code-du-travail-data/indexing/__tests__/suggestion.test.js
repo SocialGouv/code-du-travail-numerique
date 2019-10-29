@@ -1,6 +1,6 @@
 import { createIndex, indexDocumentsBatched } from "../es_client.utils";
 
-import { populate_suggestions } from "../suggestion";
+import { populateSuggestions } from "../suggestion";
 
 jest.mock("../es_client.utils");
 
@@ -15,7 +15,7 @@ describe("populate_suggestion", () => {
   });
 
   test("should create suggestionIndex", async () => {
-    await populate_suggestions("client");
+    await populateSuggestions("client");
     expect(createIndex).toHaveBeenCalledTimes(1);
 
     expect(createIndex.mock.calls[0][0].client).toBe("client");
@@ -25,7 +25,7 @@ describe("populate_suggestion", () => {
   });
 
   test("should pushSuggestion", async () => {
-    await populate_suggestions("client");
+    await populateSuggestions("client");
     expect(indexDocumentsBatched).toHaveBeenCalledTimes(
       Math.ceil(testCasesCount / BUFFER_SIZE)
     );

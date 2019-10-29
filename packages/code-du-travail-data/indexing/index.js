@@ -11,12 +11,15 @@ import {
   deleteOldIndex
 } from "./es_client.utils";
 import { cdtnCcnGen } from "./populate";
+import { populateSuggestions } from "./suggestion";
 
 import conventionList from "@socialgouv/kali-data/data/index.json";
 import themes from "../dataset/datafiller/themes.data.json";
 
 const CDTN_INDEX_NAME =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+
+const SUGGEST_INDEX_NAME = process.env.SUGGEST_INDEX_NAME || "cdtn_suggestions";
 
 const CDTN_CCN_NAME =
   process.env.ELASTICSEARCH_CONVENTION_INDEX || "conventions_collectives";
@@ -41,7 +44,6 @@ async function main() {
   await version({ client });
 
   // Indexing CCN data
-  //*
   await createIndex({
     client,
     indexName: `${CDTN_CCN_NAME}-${ts}`,
@@ -54,7 +56,6 @@ async function main() {
       documents
     });
   }
-  //*/
 
   // Indexing document data
   await createIndex({
@@ -82,6 +83,9 @@ async function main() {
     documents: themes
   });
 
+  // Indexing Suggestions
+  await populateSuggestions(client, `${SUGGEST_INDEX_NAME}-${ts}`);
+
   // Creating aliases
   await client.indices.updateAliases({
     body: {
@@ -105,6 +109,12 @@ async function main() {
           }
         },
         {
+          remove: {
+            index: `${SUGGEST_INDEX_NAME}-*`,
+            alias: `${SUGGEST_INDEX_NAME}`
+          }
+        },
+        {
           add: {
             index: `${THEME_INDEX_NAME}-${ts}`,
             alias: `${THEME_INDEX_NAME}`
@@ -121,12 +131,24 @@ async function main() {
             index: `${CDTN_INDEX_NAME}-${ts}`,
             alias: `${CDTN_INDEX_NAME}`
           }
+        },
+        {
+          add: {
+            index: `${SUGGEST_INDEX_NAME}-${ts}`,
+            alias: `${SUGGEST_INDEX_NAME}`
+          }
         }
       ]
     }
   });
 
-  const patterns = [CDTN_INDEX_NAME, THEME_INDEX_NAME, CDTN_CCN_NAME];
+  const patterns = [
+    CDTN_INDEX_NAME,
+    THEME_INDEX_NAME,
+    CDTN_CCN_NAME,
+    SUGGEST_INDEX_NAME
+  ];
+
   await deleteOldIndex({ client, patterns, timestamp: ts });
 }
 
