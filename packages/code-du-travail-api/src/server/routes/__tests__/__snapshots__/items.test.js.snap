@@ -56,7 +56,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 22.58624,
+      "_score": 22.295755,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "breadcrumbs": Array [
@@ -85,7 +85,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 8.087187,
+      "_score": 7.926737,
       "_source": Object {
         "breadcrumbs": Array [
           Object {
@@ -107,7 +107,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 6.4310665,
+      "_score": 6.3226023,
       "_source": Object {
         "breadcrumbs": Array [
           Object {
@@ -135,7 +135,7 @@ Object {
     Object {
       "_id": "3",
       "_index": "cdtn_document_test",
-      "_score": 3.4206882,
+      "_score": 3.2910385,
       "_source": Object {
         "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
         "breadcrumbs": Array [
