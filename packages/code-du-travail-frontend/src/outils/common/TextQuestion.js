@@ -1,14 +1,13 @@
 import React from "react";
 import { Field } from "react-final-form";
-import { required } from "./validators";
-
-import { Input } from "./stepStyles";
-import { InlineError } from "./ErrorField";
-
-import { Question } from "./Question";
 import { UID } from "react-uid";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
+
+import { InlineError } from "./ErrorField";
+import { Question } from "./Question";
+import { Input } from "./stepStyles";
+import { required } from "./validators";
 
 function TextQuestion({
   name,

@@ -156,7 +156,7 @@ exports[`<PrevNextBar /> should render error buttons 1`] = `
   -moz-appearance: none;
   appearance: none;
   color: #0c0c0e;
-  background: #fff;
+  background: #f6bcc2;
   border-color: #f6bcc2;
 }
 
@@ -164,7 +164,7 @@ exports[`<PrevNextBar /> should render error buttons 1`] = `
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
   color: #18181c;
-  background: #fff;
+  background: #f9d2d6;
   border-color: #f3a6ae;
 }
 
@@ -259,21 +259,21 @@ exports[`<PrevNextBar /> should render incomplete buttons 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #fff;
+  color: #fff;
+  background: #005994;
   border-color: #005994;
 }
 
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  color: #18181c;
-  background: #fff;
+  color: #fff;
+  background: #0068ae;
   border-color: #004a7b;
 }
 
 .c3[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
   cursor: not-allowed;
 }
 

@@ -83,7 +83,7 @@ function Wizard({
                 </StepWrapper>
                 <PrevNextBar
                   hasError={invalid && submitFailed}
-                  incomplete={invalid}
+                  complete={!invalid}
                   onPrev={prevStep}
                   nextVisible={nextVisible}
                   previousVisible={previousVisible}

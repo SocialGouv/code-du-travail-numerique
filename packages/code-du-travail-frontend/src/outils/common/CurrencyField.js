@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-
 import { Field } from "react-final-form";
+import { theme } from "@socialgouv/react-ui";
+import { UID } from "react-uid";
+
 import { isNumber } from "./validators";
 import { InlineError } from "./ErrorField";
 import { Question } from "./Question";
 import { Input } from "../common/stepStyles";
-import { theme } from "@socialgouv/react-ui";
-import { UID } from "react-uid";
 
 function CurrencyField({
   name,

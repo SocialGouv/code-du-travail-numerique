@@ -31,7 +31,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c0 {
@@ -217,7 +217,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c7 {
@@ -416,7 +416,7 @@ exports[`<Step /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c0 {

@@ -85,7 +85,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c7 {

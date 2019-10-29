@@ -5,7 +5,7 @@ import { Button, theme } from "@socialgouv/react-ui";
 
 function PrevNextBar({
   onPrev,
-  incomplete,
+  complete,
   hasError,
   nextVisible,
   previousVisible
@@ -21,7 +21,7 @@ function PrevNextBar({
           </PreviousButton>
         )}
         {nextVisible && (
-          <NextButton inverse={incomplete} variant={nextVariant}>
+          <NextButton outlined={!complete} variant={nextVariant}>
             Suivant
           </NextButton>
         )}
@@ -37,7 +37,7 @@ PrevNextBar.propTypes = {
 };
 PrevNextBar.defaultProps = {
   onPrev: () => {},
-  incomplete: false,
+  complete: true,
   nextVisible: true,
   previousVisible: true
 };

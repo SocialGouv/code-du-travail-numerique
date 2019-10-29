@@ -1,10 +1,10 @@
 import React from "react";
-import { SectionTitle, Input } from "../../../common/stepStyles";
-import { InlineError } from "../../../common/ErrorField";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 import { theme } from "@socialgouv/react-ui";
 
+import { SectionTitle, Input } from "../../../common/stepStyles";
+import { InlineError } from "../../../common/ErrorField";
 import { isNumber } from "../../../common/validators";
 
 function CategoriePeriod() {

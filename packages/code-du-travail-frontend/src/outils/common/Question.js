@@ -15,7 +15,7 @@ const Label = styled.label`
   display: block;
   margin-top: ${theme.spacing.interComponent};
   margin-bottom: ${theme.spacing.small};
-  font-size: 1.25rem;
+  font-size: ${theme.fonts.sizeMedium};
   cursor: ${props => (props.as ? "default" : "pointer")};
 `;
 

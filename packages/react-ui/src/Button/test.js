@@ -23,7 +23,7 @@ describe("<Button />", () => {
       const { container } = render(
         <>
           <Button variant={variant}>this is a Button {variant} </Button>
-          <Button inverse variant={variant}>
+          <Button outlined variant={variant}>
             this is a Button {variant}{" "}
           </Button>
         </>

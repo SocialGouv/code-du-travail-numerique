@@ -76,7 +76,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c2 {
@@ -630,7 +630,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c2 {
@@ -876,7 +876,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c2 {

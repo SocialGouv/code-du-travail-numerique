@@ -66,7 +66,7 @@ export const StyledButton = styled.button`
       borderColor = props.theme[`${props.variant}Background`];
       color = props.theme[`${props.variant}Text`];
     }
-    if (props.inverse) {
+    if (props.outlined) {
       backgroundColor = props.theme.white;
       color = props.theme.black;
     }
@@ -99,14 +99,14 @@ export const Button = ({ noButton, ...props }) => (
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   noButton: PropTypes.bool,
-  inverse: PropTypes.bool,
+  outlined: PropTypes.bool,
   variant: PropTypes.oneOf(["default", "icon", "link"].concat(variants)),
   onClick: PropTypes.func
 };
 
 Button.defaultProps = {
   noButton: false,
-  inverse: false,
+  outlined: false,
   onClick: () => {},
   variant: "default"
 };

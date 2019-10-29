@@ -12,7 +12,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c4 {
@@ -305,7 +305,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c4 {
@@ -622,7 +622,7 @@ exports[`<Step /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
 }
 
 .c1 {

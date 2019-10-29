@@ -25,7 +25,7 @@ export const Label = styled.label`
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.15rem;
+  font-size: ${fonts.sizeH5};
 `;
 
 export const RadioContainer = styled.div`

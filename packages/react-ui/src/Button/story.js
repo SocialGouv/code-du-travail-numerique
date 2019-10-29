@@ -27,9 +27,9 @@ export const base = () =>
       <Button
         variant={variant}
         onClick={action("You should not see this")}
-        inverse
+        outlined
       >
-        {variant} inverse
+        {variant} outlined
       </Button>{" "}
       <Button
         variant={variant}

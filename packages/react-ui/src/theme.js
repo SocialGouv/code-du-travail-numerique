@@ -67,6 +67,7 @@ export const fonts = {
   lineHeight: "1.4",
   sizeXsmall: "0.75rem", // 12px
   sizeSmall: "0.875rem", // 14px
+  sizeMedium: "1.25rem",
   sizeH1: "2.25rem",
   sizeH2: "1.875rem",
   sizeH3: "1.625rem",
