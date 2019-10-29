@@ -15,26 +15,20 @@ describe("populate_suggestion", () => {
   });
 
   test("should create suggestionIndex", async () => {
-    await populateSuggestions("client");
+    await populateSuggestions("client", INDEX_NAME);
     expect(createIndex).toHaveBeenCalledTimes(1);
 
     expect(createIndex.mock.calls[0][0].client).toBe("client");
-    expect(
-      createIndex.mock.calls[0][0].indexName.startsWith(`${INDEX_NAME}-`)
-    ).toBe(true);
+    expect(createIndex.mock.calls[0][0].indexName).toBe(INDEX_NAME);
   });
 
   test("should pushSuggestion", async () => {
-    await populateSuggestions("client");
+    await populateSuggestions("client", INDEX_NAME);
     expect(indexDocumentsBatched).toHaveBeenCalledTimes(
       Math.ceil(testCasesCount / BUFFER_SIZE)
     );
     expect(indexDocumentsBatched.mock.calls[0][0].client).toBe("client");
-    expect(
-      indexDocumentsBatched.mock.calls[0][0].indexName.startsWith(
-        `${INDEX_NAME}-`
-      )
-    ).toBe(true);
+    expect(createIndex.mock.calls[0][0].indexName).toBe(INDEX_NAME);
     expect(indexDocumentsBatched.mock.calls[0][0].documents)
       .toMatchInlineSnapshot(`
       Array [

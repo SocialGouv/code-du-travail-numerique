@@ -12,7 +12,7 @@
     "populate": "node ./dist/index.js",
     "check-slugs": "node -r esm indexing/slug_checker",
     "dump": "node -r esm dump.js",
-    "test": "jest"
+    "test": "BUFFER_SIZE=10 SUGGEST_FILE=./indexing/__tests__/suggestion_data_test.txt jest"
   },
   "repository": {
     "type": "git",
