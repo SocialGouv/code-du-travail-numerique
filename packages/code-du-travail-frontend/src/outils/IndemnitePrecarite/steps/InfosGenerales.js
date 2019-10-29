@@ -66,7 +66,10 @@ function StepInfosGenerales({ form }) {
         {({ input }) => {
           switch (input.value) {
             case CONTRACT_TYPE.CDD:
-              if (values.ccn && hasConventionalProvision(values.ccn.num)) {
+              if (
+                values.ccn &&
+                hasConventionalProvision(data, values.ccn.num)
+              ) {
                 return (
                   <>
                     {pastQuestions.map(([key, answers]) => (

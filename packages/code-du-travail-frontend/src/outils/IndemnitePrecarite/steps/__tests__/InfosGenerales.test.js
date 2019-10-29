@@ -29,6 +29,14 @@ describe("<StepInfosGenerales />", () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("should render with CDD and not handled ccn", () => {
+    const { container } = renderForm({
+      ccn: { num: "0016" },
+      contractType: CONTRACT_TYPE.CDD
+    });
+    expect(container).toMatchSnapshot();
+  });
+
   it("should render with CTT", () => {
     const { container } = renderForm({ contractType: CONTRACT_TYPE.CTT });
     expect(container).toMatchSnapshot();
