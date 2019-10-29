@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<CookieConsent /> should not render if cookie exist 1`] = `<div />`;
+
 exports[`<CookieConsent /> should render 1`] = `
 .c6 {
   display: inline-block;
