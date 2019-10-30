@@ -58,7 +58,7 @@
     },
     {
       "name": "date contrat travail",
-      "question": "À quelle date le contrat de travail a-t-il été conclu ?"
+      "question": "Quelle est la date d'entrée du salarié dans l'entreprise?"
     },
     {
       "name": "ancienneté",
@@ -87,10 +87,6 @@
     {
       "name": "agents payés à l'heure",
       "question": "L'agent est-il payé à l'heure ?"
-    },
-    {
-      "name": "date signature convention collective",
-      "question": "À quelle date la convention collective a-t-elle été signée ?"
     },
     {
       "name": "secteur d'activité",
@@ -201,61 +197,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "71| directeurs-adjoints",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de démission",
-      "idcc": "0029",
-      "answer": "3 mois",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "72| gestionnaires",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de démission",
-      "idcc": "0029",
-      "answer": "3 mois",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "73| médecins",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de démission",
-      "idcc": "0029",
-      "answer": "3 mois",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "74| pharmaciens",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de démission",
-      "idcc": "0029",
-      "answer": "3 mois",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "75| biologistes",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de démission",
-      "idcc": "0029",
-      "answer": "3 mois",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "catégorie socio-professionnelle": "70| directeurs généraux",
         "ancienneté": "14| moins de 2 ans"
       },
@@ -268,11 +209,33 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "71| directeurs-adjoints",
+        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de démission",
+      "idcc": "0029",
+      "answer": "3 mois",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "71| directeurs-adjoints",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "0029",
       "answer": "2 mois",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "72| gestionnaires",
+        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de démission",
+      "idcc": "0029",
+      "answer": "3 mois",
       "ref": "Article 15.02.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
     },
@@ -290,6 +253,17 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "73| médecins",
+        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de démission",
+      "idcc": "0029",
+      "answer": "3 mois",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "73| médecins",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
@@ -301,11 +275,33 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "74| pharmaciens",
+        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de démission",
+      "idcc": "0029",
+      "answer": "3 mois",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "74| pharmaciens",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "0029",
       "answer": "2 mois",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "75| biologistes",
+        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de démission",
+      "idcc": "0029",
+      "answer": "3 mois",
       "ref": "Article 15.02.2.1",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
     },
@@ -380,8 +376,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "3| I",
+        "catégorie socio-professionnelle": "63| Autres",
         "coefficient": "1| inférieur à 160"
       },
       "type": "préavis de démission",
@@ -392,68 +387,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "3| I",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "15 jours",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "3| I",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "15 jours",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "4| II",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "15 jours",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "4| II",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "15 jours",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "4| II",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "15 jours",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "4| II",
+        "catégorie socio-professionnelle": "63| Autres",
         "coefficient": "5| entre 160 (inclus) et 190"
       },
       "type": "préavis de démission",
@@ -464,68 +398,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "4| II",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "4| II",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "5| III",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "5| III",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "5| III",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "5| III",
+        "catégorie socio-professionnelle": "63| Autres",
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de démission",
@@ -536,32 +409,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "5| III",
-        "coefficient": "8| supérieur à 190 (inclus)"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "5| III",
-        "coefficient": "8| supérieur à 190 (inclus)"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "groupe": "2| IV",
+        "catégorie socio-professionnelle": "63| Autres",
         "coefficient": "9| inférieur à 275"
       },
       "type": "préavis de démission",
@@ -572,20 +420,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "2| IV",
-        "coefficient": "9| inférieur à 275"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "ref": "Avenant 2, article 20",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "groupe": "2| IV",
+        "catégorie socio-professionnelle": "63| Autres",
         "coefficient": "12| supérieur à 275 (inclus)"
       },
       "type": "préavis de démission",
@@ -596,20 +431,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "2| IV",
-        "coefficient": "12| supérieur à 275 (inclus)"
-      },
-      "type": "préavis de démission",
-      "idcc": "0044",
-      "answer": "3 mois",
-      "ref": "Avenant 2, article 20",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres",
-        "groupe": "7| V"
+        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres"
       },
       "type": "préavis de démission",
       "idcc": "0044",
@@ -618,17 +440,8 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829"
     },
     {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0054",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "coefficient": "23| 120 à 215"
+        "catégorie socio-professionnelle": "4| Employés"
       },
       "type": "préavis de démission",
       "idcc": "0086",
@@ -638,8 +451,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "coefficient": "24| 220 à 390"
+        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens"
       },
       "type": "préavis de démission",
       "idcc": "0086",
@@ -649,8 +461,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "coefficient": "25| à partir de 400"
+        "catégorie socio-professionnelle": "20| Cadres"
       },
       "type": "préavis de démission",
       "idcc": "0086",
@@ -709,7 +520,7 @@
       },
       "type": "préavis de démission",
       "idcc": "0176",
-      "answer": "3 mois ( si les salariés bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947 )",
+      "answer": "3 mois (si les salariés bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947 )",
       "ref": "Article 32, 2°",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
     },
@@ -720,7 +531,7 @@
       },
       "type": "préavis de démission",
       "idcc": "0176",
-      "answer": "4 mois ( si les salariés bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947 )",
+      "answer": "4 mois (si les salariés bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947 )",
       "ref": "Article 32, 2°",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
     },
@@ -852,39 +663,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "80| directeurs de centre de formation en travail social",
-        "ancienneté": "12| plus de 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "0413",
-      "answer": "3 mois",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "78| directeurs d'établissement",
-        "ancienneté": "12| plus de 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "0413",
-      "answer": "3 mois",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "79| directeurs de service",
-        "ancienneté": "12| plus de 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "0413",
-      "answer": "3 mois",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "catégorie socio-professionnelle": "70| directeurs généraux",
         "ancienneté": "14| moins de 2 ans"
       },
@@ -897,6 +675,17 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "80| directeurs de centre de formation en travail social",
+        "ancienneté": "12| plus de 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "0413",
+      "answer": "3 mois",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "80| directeurs de centre de formation en travail social",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
@@ -908,11 +697,33 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "78| directeurs d'établissement",
+        "ancienneté": "12| plus de 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "0413",
+      "answer": "3 mois",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "78| directeurs d'établissement",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "0413",
       "answer": "2 mois",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "79| directeurs de service",
+        "ancienneté": "12| plus de 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "0413",
+      "answer": "3 mois",
       "ref": "Article 9, de l'annexe 6",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
     },
@@ -2794,7 +2605,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "13| Cadres (Classes à 7)"
+        "catégorie socio-professionnelle": "53| Cadres (Classes 5 à 7)"
       },
       "type": "préavis de démission",
       "idcc": "1672",
@@ -2804,7 +2615,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "9| Non-cadres (Classes à 4)"
+        "catégorie socio-professionnelle": "52| Non-cadres (Classes 1 à 4)"
       },
       "type": "préavis de démission",
       "idcc": "1672",
@@ -2814,84 +2625,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "classe": "1| 1"
-      },
-      "type": "préavis de démission",
-      "idcc": "1672",
-      "answer": "1 mois",
-      "ref": "Article 91",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=EAD128BD0E1AE37FF60FAD01F061AE8B.tplgfr38s_1?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "classe": "2| 2"
-      },
-      "type": "préavis de démission",
-      "idcc": "1672",
-      "answer": "1 mois",
-      "ref": "Article 91",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=EAD128BD0E1AE37FF60FAD01F061AE8B.tplgfr38s_1?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "classe": "3| 3"
-      },
-      "type": "préavis de démission",
-      "idcc": "1672",
-      "answer": "1 mois",
-      "ref": "Article 91",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=EAD128BD0E1AE37FF60FAD01F061AE8B.tplgfr38s_1?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "classe": "4| 4"
-      },
-      "type": "préavis de démission",
-      "idcc": "1672",
-      "answer": "1 mois",
-      "ref": "Article 91",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=EAD128BD0E1AE37FF60FAD01F061AE8B.tplgfr38s_1?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "classe": "5| 5"
-      },
-      "type": "préavis de démission",
-      "idcc": "1672",
-      "answer": "3 mois",
-      "ref": "Accord relatif aux dispositions particulières \" Cadres \" article II. 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=EAD128BD0E1AE37FF60FAD01F061AE8B.tplgfr38s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "classe": "6| 6"
-      },
-      "type": "préavis de démission",
-      "idcc": "1672",
-      "answer": "3 mois",
-      "ref": "Accord relatif aux dispositions particulières \" Cadres \" article II. 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=EAD128BD0E1AE37FF60FAD01F061AE8B.tplgfr38s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "classe": "7| 7"
-      },
-      "type": "préavis de démission",
-      "idcc": "1672",
-      "answer": "3 mois",
-      "ref": "Accord relatif aux dispositions particulières \" Cadres \" article II. 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=EAD128BD0E1AE37FF60FAD01F061AE8B.tplgfr38s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de démission",
@@ -2902,7 +2635,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "46| plus de 3 mois"
       },
       "type": "préavis de démission",
@@ -3186,7 +2918,9 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {},
+      "criteria": {
+        "groupe": "34| Hors classification"
+      },
       "type": "préavis de démission",
       "idcc": "2148",
       "answer": "pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois",
@@ -3427,7 +3161,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
@@ -3438,7 +3171,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
         "ancienneté": "13| 2 ans ou plus"
       },
       "type": "préavis de démission",
@@ -3449,7 +3181,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
@@ -3460,7 +3191,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
         "ancienneté": "13| 2 ans ou plus"
       },
       "type": "préavis de démission",
@@ -3472,46 +3202,11 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "54| A",
-        "durée du travail": "1| temps complet",
         "ancienneté": "17| moins de 6 mois"
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "1 semaine ( de date à date)",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "55| B",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "17| moins de 6 mois"
-      },
-      "type": "préavis de démission",
-      "idcc": "2941",
-      "answer": "1 semaine ( de date à date)",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "56| C",
-        "ancienneté": "17| moins de 6 mois"
-      },
-      "type": "préavis de démission",
-      "idcc": "2941",
-      "answer": "1 semaine ( de date à date)",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "57| D",
-        "ancienneté": "17| moins de 6 mois"
-      },
-      "type": "préavis de démission",
-      "idcc": "2941",
-      "answer": "1 semaine ( de date à date)",
+      "answer": "1 semaine (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
@@ -3528,45 +3223,34 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "55| B",
-        "ancienneté": "10| de 6 mois à 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "2941",
-      "answer": "1 mois (de date à date)",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "56| C",
-        "ancienneté": "10| de 6 mois à 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "2941",
-      "answer": "1 mois (de date à date)",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "57| D",
-        "ancienneté": "10| de 6 mois à 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "2941",
-      "answer": "1 mois (de date à date)",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "catégorie socio-professionnelle": "54| A",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "2 mois ( de date à date)",
+      "answer": "2 mois (de date à date)",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "55| B",
+        "ancienneté": "17| moins de 6 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "2941",
+      "answer": "1 semaine (de date à date)",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "55| B",
+        "ancienneté": "10| de 6 mois à 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "2941",
+      "answer": "1 mois (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
@@ -3577,7 +3261,29 @@
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "2 mois ( de date à date)",
+      "answer": "2 mois (de date à date)",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "56| C",
+        "ancienneté": "17| moins de 6 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "2941",
+      "answer": "1 semaine (de date à date)",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "56| C",
+        "ancienneté": "10| de 6 mois à 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "2941",
+      "answer": "1 mois (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
@@ -3588,7 +3294,29 @@
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "2 mois ( de date à date)",
+      "answer": "2 mois (de date à date)",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "57| D",
+        "ancienneté": "17| moins de 6 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "2941",
+      "answer": "1 semaine (de date à date)",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "57| D",
+        "ancienneté": "10| de 6 mois à 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "2941",
+      "answer": "1 mois (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
@@ -3599,7 +3327,7 @@
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "2 mois ( de date à date)",
+      "answer": "2 mois (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
@@ -3616,6 +3344,17 @@
     },
     {
       "criteria": {
+        "catégorie socio-professionnelle": "58| E",
+        "ancienneté": "12| plus de 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "2941",
+      "answer": "2 mois (de date à date)",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
         "catégorie socio-professionnelle": "59| F",
         "ancienneté": "14| moins de 2 ans"
       },
@@ -3627,23 +3366,12 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "58| E",
-        "ancienneté": "12| plus de 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "2941",
-      "answer": "2 mois ( de date à date)",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "catégorie socio-professionnelle": "59| F",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "2 mois ( de date à date)",
+      "answer": "2 mois (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
@@ -3654,29 +3382,7 @@
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "2 mois ( de date à date)",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "61| H",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "2941",
-      "answer": "2 mois ( de date à date)",
-      "ref": "Titre IV, Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "62| I",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "2941",
-      "answer": "2 mois ( de date à date)",
+      "answer": "2 mois (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
@@ -3687,7 +3393,18 @@
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "4 mois ( de date à date)",
+      "answer": "4 mois (de date à date)",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "61| H",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "2941",
+      "answer": "2 mois (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
@@ -3698,7 +3415,18 @@
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "4 mois ( de date à date)",
+      "answer": "4 mois (de date à date)",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "62| I",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "2941",
+      "answer": "2 mois (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
@@ -3709,7 +3437,7 @@
       },
       "type": "préavis de démission",
       "idcc": "2941",
-      "answer": "4 mois ( de date à date)",
+      "answer": "4 mois (de date à date)",
       "ref": "Titre IV, Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
