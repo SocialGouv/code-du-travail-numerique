@@ -73,7 +73,7 @@ const analyzer = {
   // see below, ngram from tokens
   autocomplete: {
     tokenizer: "autocomplete",
-    filter: ["lowercase", "icu_folding"]
+    filter: ["lowercase", "icu_folding", "french_stop"]
   },
 
   // at search time, we only consider

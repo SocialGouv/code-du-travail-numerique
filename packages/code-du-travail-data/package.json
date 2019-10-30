@@ -10,7 +10,7 @@
     "prepush": "yarn lint",
     "populate-dev": "node -r esm indexing/index.js",
     "populate": "node ./dist/index.js",
-    "populate-suggest": "node -r esm indexing/suggestions",
+    "populate-suggest": "node -r esm indexing/suggestion",
     "download-suggestion": "curl -L $SUGGEST_DATA_URL -o ./dataset/suggestions.txt",
     "check-slugs": "node -r esm indexing/slug_checker",
     "dump": "node -r esm dump.js",
