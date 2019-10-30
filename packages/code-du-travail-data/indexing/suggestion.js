@@ -7,7 +7,7 @@ import { suggestionMapping } from "./suggestion.mapping";
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
-const SUGGEST_FILE = process.env.SUGGEST_FILE || "./dataset/fake_sugg.txt";
+const SUGGEST_FILE = process.env.SUGGEST_FILE || "./dataset/suggestions.txt";
 const BUFFER_SIZE = process.env.BUFFER_SIZE || 20000;
 
 async function pushSuggestions({ client, indexName, data }) {
@@ -64,7 +64,13 @@ if (module === require.main) {
   const client = new Client({
     node: `${ELASTICSEARCH_URL}`
   });
-  populateSuggestions(client);
+  /*
+  yarn dev:api
+  const ts = Date.now()
+  populateSuggestions(client, indexname...);
+  // Alias move
+  // deleteOldIndex()
+  */
 }
 
 export { populateSuggestions };
