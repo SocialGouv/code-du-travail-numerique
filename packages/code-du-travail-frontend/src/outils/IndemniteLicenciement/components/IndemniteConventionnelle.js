@@ -1,15 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Alert, Toast, Button, theme } from "@socialgouv/react-ui";
+import { Alert, theme } from "@socialgouv/react-ui";
 
-import { branches } from "../branches";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 import { Montant } from "./Montant";
 import { FormulaDetails } from "./FormulaDetails";
 
 function IndemniteCCn({
-  branche,
   children,
   indemniteConventionnelle,
   indemniteLegale,
@@ -17,14 +15,12 @@ function IndemniteCCn({
   infoCalculConventionnel,
   error
 }) {
-  const selectedBranche = branches.find(br => br.value === branche);
-
   const isIndemniteConventionnelleBigger =
     indemniteConventionnelle > indemniteLegale;
 
   return (
     <>
-      <SectionTitle>{selectedBranche.label}</SectionTitle>
+      <SectionTitle>Indemnité de licenciement</SectionTitle>
       {error ? (
         <Alert>{error}</Alert>
       ) : (
@@ -43,15 +39,15 @@ function IndemniteCCn({
               &nbsp;€ brut
             </Highlight>
           </p>
+          <SectionTitle>Détails</SectionTitle>
           <p>
             Il s’agit du montant le plus favorable entre votre indemnité légale
             et votre indemnité conventionnelle.
           </p>
           <RowWrapper>
-            <Row first={!isIndemniteConventionnelleBigger}>
-              <Heading>Votre indemnite légale</Heading>
+            <div>
+              <RowTitle>Votre indemnite légale</RowTitle>
               <Montant
-                primary={!isIndemniteConventionnelleBigger}
                 value={indemniteLegale}
                 ratio={
                   isIndemniteConventionnelleBigger
@@ -60,11 +56,10 @@ function IndemniteCCn({
                 }
               />
               <FormulaDetails infoCalcul={infoCalculLegal} />
-            </Row>
-            <Row first={isIndemniteConventionnelleBigger}>
-              <Heading>Votre indemnite conventionnelle</Heading>
+            </div>
+            <div>
+              <RowTitle>Votre indemnite conventionnelle</RowTitle>
               <Montant
-                primary={isIndemniteConventionnelleBigger}
                 value={indemniteConventionnelle}
                 ratio={
                   isIndemniteConventionnelleBigger
@@ -73,17 +68,16 @@ function IndemniteCCn({
                 }
               />
               <FormulaDetails infoCalcul={infoCalculConventionnel} />
-            </Row>
+            </div>
           </RowWrapper>
           {children}
         </>
       )}
-      <StyledToast variant="info">
+      <p>
         Un accord collectif d’entreprise, le contrat de travail et un usage
         peuvent prévoir une formule de calcul plus avantageuse pour le salarié.
         Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
-      </StyledToast>
-      <Button>Recommencer une simulation</Button>
+      </p>
     </>
   );
 }
@@ -104,22 +98,15 @@ IndemniteCCn.propTypes = {
 
 export { IndemniteCCn };
 
-const { spacing, fonts } = theme;
+const { fonts, spacing } = theme;
 
 const RowWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-const Row = styled.section`
-  order: ${({ first }) => (first ? 0 : 1)};
-  padding: 0 ${spacing.small};
-`;
-
-const Heading = styled.h2`
-  font-size: ${fonts.sizeH4};
-`;
-
-const StyledToast = styled(Toast)`
-  margin: ${spacing.interComponent} 0;
+const RowTitle = styled.div`
+  margin: ${spacing.tiny};
+  font-weight: 700;
+  font-size: ${fonts.sizebase};
 `;

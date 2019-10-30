@@ -28,6 +28,7 @@ function Wizard({
 
   const previousVisible = stepIndex > 0;
   const nextVisible = stepIndex < steps.length - 1;
+  const restartVisible = stepIndex === steps.length - 1;
 
   const validate = values => {
     const Step = steps[stepIndex].component;
@@ -86,6 +87,7 @@ function Wizard({
                   complete={!invalid}
                   onPrev={prevStep}
                   nextVisible={nextVisible}
+                  restartVisible={restartVisible}
                   previousVisible={previousVisible}
                 />
               </Column>
