@@ -72,13 +72,11 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c5 {
   width: calc(50% * 0.021);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
 .c13 {
   width: calc(50% * 1);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
@@ -158,7 +156,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, votre indémnité de licenciement est estimée à
+    À partir des éléments que vous avez saisis, votre indemnité de licenciement est estimée à
      
     <strong
       class="c1"
@@ -355,13 +353,11 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c5 {
   width: calc(50% * 1);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
 .c13 {
   width: calc(50% * 0.5348);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
@@ -441,7 +437,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, votre indémnité de licenciement est estimée à
+    À partir des éléments que vous avez saisis, votre indemnité de licenciement est estimée à
      
     <strong
       class="c1"

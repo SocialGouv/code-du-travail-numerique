@@ -26,7 +26,7 @@ function IndemniteCCn({
       ) : (
         <>
           <p>
-            À partir des éléments que vous avez saisis, votre indémnité de
+            À partir des éléments que vous avez saisis, votre indemnité de
             licenciement est estimée à{" "}
             <Highlight>
               {Math.max(

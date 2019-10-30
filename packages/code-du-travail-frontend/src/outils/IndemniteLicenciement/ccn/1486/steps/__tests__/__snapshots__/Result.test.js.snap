@@ -87,13 +87,11 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 
 .c13 {
   width: calc(50% * 1);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
 .c5 {
   width: calc(50% * 0.9100320789890648);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
@@ -177,7 +175,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, votre indémnité de licenciement est estimée à
+    À partir des éléments que vous avez saisis, votre indemnité de licenciement est estimée à
      
     <strong
       class="c1"
@@ -462,13 +460,11 @@ exports[`<Result /> renders legal indemnite 1`] = `
 
 .c5 {
   width: calc(50% * 1);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
 .c13 {
   width: calc(50% * 0.5494311811023621);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
@@ -548,7 +544,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, votre indémnité de licenciement est estimée à
+    À partir des éléments que vous avez saisis, votre indemnité de licenciement est estimée à
      
     <strong
       class="c1"

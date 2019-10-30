@@ -30,13 +30,11 @@ exports[`<Result /> should render 1`] = `
 
 .c5 {
   width: calc(50% * 0.9533911504424778);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
 .c13 {
   width: calc(50% * 1);
-  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
@@ -116,7 +114,7 @@ exports[`<Result /> should render 1`] = `
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, votre indémnité de licenciement est estimée à
+    À partir des éléments que vous avez saisis, votre indemnité de licenciement est estimée à
      
     <strong
       class="c1"
