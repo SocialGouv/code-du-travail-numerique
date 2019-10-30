@@ -12,16 +12,14 @@ export const colors = {
   blueDark: "#005994",
 
   white: "#fff",
+  white1: "#f9f9fc",
+  white2: "#ebeff3",
 
-  lightBackground: "#f9f9fc",
-  darkBackground: "#ebeff3",
-
-  lightGrey: "#c9d3df",
-  grey: "#adb9c9",
-  darkGrey: "#8393a7",
-
-  lightText: "#4c5467",
-  darkText: "#434956",
+  grey1: "#c9d3df",
+  grey2: "#adb9c9",
+  grey3: "#8393a7",
+  grey4: "#4c5467",
+  grey5: "#434956",
 
   black: "#0c0c0e",
   successBackground: "#e0f2bd",
@@ -34,7 +32,16 @@ export const colors = {
 };
 
 // adding colour shortcuts
+colors.lightBackground = colors.white1;
+colors.darkBackground = colors.white2;
 colors.primaryBackground = colors.blueDark;
+
+colors.lightGrey = colors.grey1;
+colors.grey = colors.grey2;
+colors.darkGrey = colors.grey3;
+colors.lightText = colors.grey4;
+colors.darkText = colors.grey5;
+
 colors.secondaryBackground = colors.darkBackground;
 colors.focusShadow = colors.infoBackground;
 colors.primaryText = colors.white;

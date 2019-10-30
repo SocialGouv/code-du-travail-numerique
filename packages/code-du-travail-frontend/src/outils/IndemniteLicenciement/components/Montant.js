@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 
 const Bar = styled.div`
   width: ${({ ratio }) => `calc(50% * ${ratio})`};
-  background-color: ${({ theme }) => theme.lightText};
+  background-color: ${({ theme }) => theme.grey4};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     width: ${({ ratio }) => `calc(100% * ${ratio})`};
