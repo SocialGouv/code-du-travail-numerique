@@ -12,9 +12,7 @@ FROM ${NLP_IMAGE} as cdtn-nlp-image
 
 FROM node:10-alpine
 
-RUN apt-get update && apt-get -y --no-install-recommends install curl=7.58.0-2ubuntu3.8 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk update && apk add curl && rm -rf /var/cache/apk/*
 
 COPY ./package.json /app/package.json
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
