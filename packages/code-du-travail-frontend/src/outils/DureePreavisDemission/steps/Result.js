@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Toast } from "@socialgouv/react-ui";
 import data from "@cdt/data...preavis-demission/data.json";
 
-import { SectionTitle } from "../../common/stepStyles";
+import { SectionTitle, Highlight } from "../../common/stepStyles";
 
 import {
   filterSituations,
@@ -62,12 +62,18 @@ function StepResult({ form }) {
         <>
           <SectionTitle>Durée du préavis</SectionTitle>
           <p>
-            En cas de démission, la {ccLabel} ({idcc}) prévoit le respect d’un
-            préavis d’une durée de <strong>{situation.answer}</strong>.
+            À partir des éléments que vous avais saisis, la durée du préavis de
+            démission est estimée à&nbsp;:
+          </p>
+          <p>
+            <Highlight>{situation.answer}</Highlight>.
           </p>
           <SectionTitle>Détails</SectionTitle>
           <p>Élements saisis&nbsp;:</p>
-          {recapSituation(situation.criteria)}
+          {recapSituation({
+            "Convention collective": `${ccLabel} (${idcc})`,
+            ...situation.criteria
+          })}
           <SectionTitle>Source</SectionTitle>
           {situation.ref && situation.refUrl && getRef(situation)}
           <Toast variant="info">

@@ -52,6 +52,7 @@ export const Highlight = styled.strong`
   color: ${colors.blueDark};
   font-weight: 700;
   font-size: ${fonts.sizeH4};
+  white-space: nowrap;
 `;
 
 export const SmallText = styled.span`
