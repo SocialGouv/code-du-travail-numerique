@@ -186,8 +186,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "70| directeurs généraux",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+        "catégorie socio-professionnelle": "70| directeurs généraux"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -208,8 +207,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "71| directeurs-adjoints",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+        "catégorie socio-professionnelle": "71| directeurs-adjoints"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -230,8 +228,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "72| gestionnaires",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+        "catégorie socio-professionnelle": "72| gestionnaires"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -252,8 +249,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "73| médecins",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+        "catégorie socio-professionnelle": "73| médecins"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -274,8 +270,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "74| pharmaciens",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+        "catégorie socio-professionnelle": "74| pharmaciens"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -296,8 +291,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "75| biologistes",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+        "catégorie socio-professionnelle": "75| biologistes"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -319,7 +313,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)",
         "coefficient": "26| supérieur à 715"
       },
       "type": "préavis de démission",
@@ -331,7 +324,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "ancienneté": "49| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)",
         "coefficient": "27| inférieur à 715"
       },
       "type": "préavis de démission",
@@ -537,7 +529,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "6| Ouvriers, Employés"
+        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
+        "aéroport paris": "2| non"
       },
       "type": "préavis de démission",
       "idcc": "0275",
@@ -547,7 +540,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens"
+        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
+        "aéroport paris": "2| non"
       },
       "type": "préavis de démission",
       "idcc": "0275",
@@ -557,7 +551,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "20| Cadres",
+        "aéroport paris": "2| non"
       },
       "type": "préavis de démission",
       "idcc": "0275",
