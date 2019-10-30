@@ -121,11 +121,12 @@ const IrregularNewSalaire = ({ name }) => (
                             fieldIndex > index &&
                             fields.value[fieldIndex].salary === null
                           ) {
-                            fields.value[fieldIndex].salary =
-                              parseFloat(value) || null;
+                            fields.value[fieldIndex].salary = isFinite(value)
+                              ? parseFloat(value)
+                              : null;
                           }
                         });
-                        return parseFloat(value) || null;
+                        return isFinite(value) ? parseFloat(value) : null;
                       }}
                       subscription={{
                         value: true,
