@@ -16,7 +16,16 @@ export const outils = [
     slug: "/outils/indemnite-licenciement"
   },
   {
-    title: "Simulateur de durée de préavis de démission",
+    title: "Simulateur de durée de préavis de licenciement",
+    hrefTitle: "Démarrer une simulation de durée de préavis de licenciement",
+    button: "Démarrer",
+    text:
+      "Estimez simplement la durée du préavis dans le cadre d'un licenciement",
+    href: "/outils/[slug]",
+    slug: "/outils/preavis-licenciement"
+  },
+  {
+    title: "Simulateur de délais de préavis de démission",
     hrefTitle: "Démarrer une simulation de durée de préavis de démission",
     button: "Démarrer",
     text: "Connaître la durée du préavis de démission.",

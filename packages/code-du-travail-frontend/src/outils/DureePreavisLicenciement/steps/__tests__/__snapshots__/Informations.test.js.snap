@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepInformations /> should render 1`] = `
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+</div>
+`;
+
+exports[`<StepInformations /> should render catégorie 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
+}
+
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
+.c3 {
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-criteria.catégorie"
+    >
+      Quelle est la catégorie professionnelle du salarié ?
+    </label>
+    <select
+      class="c3"
+      id="input-criteria.catégorie"
+      name="criteria.catégorie"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="7| Ouvriers, Employés, Techniciens"
+      >
+        Ouvriers, Employés, Techniciens
+      </option>
+      <option
+        value="12| Techniciens et agents de maîtrise (TAM)"
+      >
+        Techniciens et agents de maîtrise (TAM)
+      </option>
+      <option
+        value="16| Ingénieurs, Cadres"
+      >
+        Ingénieurs, Cadres
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<StepInformations /> should render coefficient 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 2em;
+  padding: 0;
+  font-size: 1.15rem;
+}
+
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
+.c3 {
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-criteria.catégorie"
+    >
+      Quelle est la catégorie professionnelle du salarié ?
+    </label>
+    <select
+      class="c3"
+      id="input-criteria.catégorie"
+      name="criteria.catégorie"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="7| Ouvriers, Employés, Techniciens"
+      >
+        Ouvriers, Employés, Techniciens
+      </option>
+      <option
+        value="12| Techniciens et agents de maîtrise (TAM)"
+      >
+        Techniciens et agents de maîtrise (TAM)
+      </option>
+      <option
+        value="16| Ingénieurs, Cadres"
+      >
+        Ingénieurs, Cadres
+      </option>
+    </select>
+  </div>
+</div>
+`;
