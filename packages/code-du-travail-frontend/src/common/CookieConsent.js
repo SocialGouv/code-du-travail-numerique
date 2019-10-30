@@ -46,9 +46,9 @@ const { spacing } = theme;
 const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
-  padding: ${spacing.base};
-  width: 100%;
   z-index: 1000;
+  width: 100%;
+  padding: ${spacing.base};
 `;
 
 const A = styled.a`
