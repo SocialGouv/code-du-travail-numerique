@@ -6,7 +6,12 @@
     "tags": {
       "theme": ["rupture du contrat de travail", "documents de fin de contrat"],
       "themes": [200],
-      "type_de_contrat": ["CDI", "CTT", "CDD", "contrat de professionnalisation"],
+      "type_de_contrat": [
+        "CDI",
+        "CTT",
+        "CDD",
+        "contrat de professionnalisation"
+      ],
       "profil": "employeur"
     },
     "date_redaction": "25/10/2019",
@@ -253,7 +258,7 @@
   },
   {
     "titre": "Modèle : Signalement de faits pouvant relever du harcèlement moral sur mineur au travail",
-    "description": " Ce modèle de courrier permet d'aider le salarié mineur ou son tuteur légal, à informer l'employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d'agir. 	Le harcèlement moral est un cas juridique particulier, et les faits en question sont d'une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d'utiliser ce modèle ce courrier.",
+    "description": " Ce modèle de courrier permet d'aider le salarié mineur ou son tuteur légal, à informer l'employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d'agir. Le harcèlement moral est un cas juridique particulier, et les faits en question sont d'une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d'utiliser ce modèle ce courrier.",
     "questions": [
       "Comment mettre fin à un contrat de travail d’un jeune travailleur en cas de faits pouvant relever du harcèlement moral."
     ],
@@ -269,8 +274,8 @@
   },
   {
     "titre": "Modèle : Signalement de faits pouvant relever du harcèlement moral",
-		
-    "description": "Ce modèle de courrier permet d'aider le salarié mineur ou son tuteur légal, à informer l'employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d'agir. 	Le harcèlement moral est un cas juridique particulier, et les faits en question sont d'une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d'utiliser ce modèle ce courrier",
+
+    "description": "Ce modèle de courrier permet d'aider le salarié mineur ou son tuteur légal, à informer l'employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d'agir. Le harcèlement moral est un cas juridique particulier, et les faits en question sont d'une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d'utiliser ce modèle ce courrier",
     "questions": [
       "Quelles sont les solutions en cas de maltraitance ou de harcèlement au travail"
     ],
@@ -313,4 +318,3 @@
     "filename": "tableau-recap-des-heures-supplementaires.docx"
   }
 ]
-
