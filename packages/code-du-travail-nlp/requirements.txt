@@ -4,7 +4,6 @@ gunicorn==19.9.0
 git+https://github.com/SocialGouv/autosuggest.git
 sentencepiece
 tf-sentencepiece==0.1.82
-numpy==1.16.2
 tensorflow_hub
 tensorflow==1.13.1
 gevent

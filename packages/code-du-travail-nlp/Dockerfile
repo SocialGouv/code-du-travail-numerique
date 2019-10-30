@@ -10,8 +10,8 @@ ARG SUGGEST_DATA_URL=https://gist.githubusercontent.com/ArmandGiraud/aaa65ed694e
 ENV SUGGEST_DATA_URL=$SUGGEST_DATA_URL
 
 RUN apt-get update && apt-get -y --no-install-recommends install curl=7.58.0-2ubuntu3.8 unzip=6.0-21ubuntu1 git=1:2.17.1-1ubuntu0.4 python3-venv=3.6.7-1~18.04 \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
