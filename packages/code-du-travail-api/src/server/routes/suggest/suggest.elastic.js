@@ -27,7 +27,8 @@ function getSuggestQuery(query, size) {
               field: "ranking",
               log: {
                 scaling_factor: 1
-              }
+              },
+              boost: 3
             }
           }
         ]
