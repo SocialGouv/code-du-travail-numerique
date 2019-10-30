@@ -73,10 +73,10 @@ exports[`<StepResult /> should render CC answer 1`] = `
   <p>
     En cas de démission, la 
      (
-    0044
+    0292
     ) prévoit le respect d’un préavis d’une durée de 
     <strong>
-      3 mois
+      2 mois
     </strong>
     .
   </p>
@@ -92,12 +92,12 @@ exports[`<StepResult /> should render CC answer 1`] = `
     <li>
       catégorie socio-professionnelle
       : 
-      Ingénieurs, Cadres
+      Collaborateurs
     </li>
     <li>
-      groupe
+      coefficient
       : 
-      V
+      800 à 830 inclus
     </li>
   </ul>
   <h2
@@ -107,10 +107,10 @@ exports[`<StepResult /> should render CC answer 1`] = `
   </h2>
   <p>
     <a
-      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829"
-      title="Consultez l’avenant n°3 article 4"
+      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
+      title="Consultez l’article 15"
     >
-      Avenant n°3 article 4
+      Article 15
     </a>
   </p>
   <div

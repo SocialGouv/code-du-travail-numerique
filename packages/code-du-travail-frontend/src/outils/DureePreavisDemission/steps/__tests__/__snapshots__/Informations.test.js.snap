@@ -56,85 +56,6 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   >
     <label
       class="c2"
-      for="input-criteria.groupe"
-    >
-      Dans quel groupe professionnel le salarié se situe-t-il ?
-    </label>
-    <select
-      class="c3"
-      id="input-criteria.groupe"
-      name="criteria.groupe"
-    >
-      <option
-        disabled=""
-        value=""
-      >
-        ...
-      </option>
-      <option
-        value="2| IV"
-      >
-        IV
-      </option>
-      <option
-        value="3| I"
-      >
-        I
-      </option>
-      <option
-        value="4| II"
-      >
-        II
-      </option>
-      <option
-        value="5| III"
-      >
-        III
-      </option>
-      <option
-        value="7| V"
-      >
-        V
-      </option>
-    </select>
-  </div>
-  <div
-    class="c1"
-  >
-    <label
-      class="c2"
-      for="input-criteria.coefficient"
-    >
-      Quel est le coefficient hiérarchique du salarié ?
-    </label>
-    <select
-      class="c3"
-      id="input-criteria.coefficient"
-      name="criteria.coefficient"
-    >
-      <option
-        disabled=""
-        value=""
-      >
-        ...
-      </option>
-      <option
-        value="1| inférieur à 160"
-      >
-        inférieur à 160
-      </option>
-      <option
-        value="5| entre 160 (inclus) et 190"
-      >
-        entre 160 (inclus) et 190
-      </option>
-    </select>
-  </div>
-  <div
-    class="c1"
-  >
-    <label
-      class="c2"
       for="input-criteria.catégorie socio-professionnelle"
     >
       Quelle est la catégorie professionnelle du salarié ?
@@ -151,19 +72,14 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         ...
       </option>
       <option
-        value="1| Ouvriers"
+        value="20| Cadres"
       >
-        Ouvriers
+        Cadres
       </option>
       <option
-        value="4| Employés"
+        value="38| Collaborateurs"
       >
-        Employés
-      </option>
-      <option
-        value="5| Techniciens"
-      >
-        Techniciens
+        Collaborateurs
       </option>
     </select>
   </div>
@@ -210,14 +126,14 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   >
     <label
       class="c2"
-      for="input-criteria.groupe"
+      for="input-criteria.catégorie socio-professionnelle"
     >
-      Dans quel groupe professionnel le salarié se situe-t-il ?
+      Quelle est la catégorie professionnelle du salarié ?
     </label>
     <select
       class="c3"
-      id="input-criteria.groupe"
-      name="criteria.groupe"
+      id="input-criteria.catégorie socio-professionnelle"
+      name="criteria.catégorie socio-professionnelle"
     >
       <option
         disabled=""
@@ -226,29 +142,14 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="2| IV"
+        value="20| Cadres"
       >
-        IV
+        Cadres
       </option>
       <option
-        value="3| I"
+        value="38| Collaborateurs"
       >
-        I
-      </option>
-      <option
-        value="4| II"
-      >
-        II
-      </option>
-      <option
-        value="5| III"
-      >
-        III
-      </option>
-      <option
-        value="7| V"
-      >
-        V
+        Collaborateurs
       </option>
     </select>
   </div>
@@ -273,99 +174,14 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="1| inférieur à 160"
+        value="18| 700 à 750"
       >
-        inférieur à 160
+        700 à 750
       </option>
       <option
-        value="5| entre 160 (inclus) et 190"
+        value="19| 800 à 830 inclus"
       >
-        entre 160 (inclus) et 190
-      </option>
-    </select>
-  </div>
-</div>
-`;
-
-exports[`<StepInformations /> should render groupe 1`] = `
-.c2 {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-.c3 {
-  -webkit-flex: 1 1 70%;
-  -ms-flex: 1 1 70%;
-  flex: 1 1 70%;
-  min-width: 400px;
-  max-width: 100%;
-  margin-top: 0.625rem;
-  margin-right: 1.25rem;
-}
-
-.c1 {
-  margin: 1.25rem 0;
-}
-
-.c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
-}
-
-<div>
-  <h2
-    class="c0"
-  >
-    Informations sur le statut du salarié
-  </h2>
-  <div
-    class="c1"
-  >
-    <label
-      class="c2"
-      for="input-criteria.groupe"
-    >
-      Dans quel groupe professionnel le salarié se situe-t-il ?
-    </label>
-    <select
-      class="c3"
-      id="input-criteria.groupe"
-      name="criteria.groupe"
-    >
-      <option
-        disabled=""
-        value=""
-      >
-        ...
-      </option>
-      <option
-        value="2| IV"
-      >
-        IV
-      </option>
-      <option
-        value="3| I"
-      >
-        I
-      </option>
-      <option
-        value="4| II"
-      >
-        II
-      </option>
-      <option
-        value="5| III"
-      >
-        III
-      </option>
-      <option
-        value="7| V"
-      >
-        V
+        800 à 830 inclus
       </option>
     </select>
   </div>
