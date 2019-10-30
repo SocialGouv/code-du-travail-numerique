@@ -47,7 +47,7 @@ function CalculateurIndemnite() {
     <Section>
       <Container>
         <Wizard
-          title="Simulateur d’indemnités de licenciement"
+          title="Simuler l'indemnité de licenciement"
           stepReducer={stepReducer}
           initialSteps={initialSteps}
           Rules={Rules}

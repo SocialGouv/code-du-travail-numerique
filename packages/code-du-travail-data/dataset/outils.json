@@ -51,8 +51,7 @@
     "date": "14/03/2019",
     "references": ["L1221-7", "L1221-9", "L1221-6", "L1221-8"],
     "branche": []
-  }
-  ,
+  },
   {
     "titre": "Simulateur d'indemnité de précarité",
     "code": "indemnite-precarite",
@@ -75,16 +74,10 @@
     "travailleur_particulier": [],
     "date": "14/03/2019",
     "branche": [],
-    "references": [
-      "L1243-8",
-      "L1243-9",
-      "L1243-10",
-      "L1251-32",
-      "L1251-33"
-    ]
+    "references": ["L1243-8", "L1243-9", "L1243-10", "L1251-32", "L1251-33"]
   },
   {
-    "titre": "Simulateur de délais de préavis de démission",
+    "titre": "Simulateur de durée de préavis de démission",
     "code": "preavis-demission",
     "questions": [
       "preavis de demission",
@@ -110,13 +103,11 @@
       {
         "title": "Art 27, Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs (0044)",
         "url": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=70C045E0E54846098687E5973418F47A.tplgfr38s_1?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=29990101&categorieLien=id"
-      }
-      ,
+      },
       {
         "title": "Article 20. Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens (0044)",
         "url": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795"
-      }
-      ,
+      },
       {
         "title": "Article 4 : Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres (0044)",
         "url": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E0976AC203A57E1887CDCB43110ECEF2.tplgfr29s_2?idSectionTA=KALISCTA000005722179&cidTexte=KALITEXT000005677770&idConvention=KALICONT000005635613&dateTexte=29990101"

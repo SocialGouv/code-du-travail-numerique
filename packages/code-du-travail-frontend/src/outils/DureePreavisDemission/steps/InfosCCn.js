@@ -9,7 +9,7 @@ StepInfoCCnMandatory.validate = values => {
   if (Object.keys(values).length === 0) {
     errors.ccn = "Veuillez renseigner votre convention collective ?";
   }
-  if (ccn && isNotYetProcessed(data, ccn.num)) {
+  if (ccn && isNotYetProcessed(data.situations, ccn.num)) {
     errors.ccn =
       "Nous n’avons pas encore traité votre convention collective. Le code du travail ne prévoyant pas de durée précise du préavis de démission, nous vous invitons à consulter le contenu de votre convention collective.";
   }

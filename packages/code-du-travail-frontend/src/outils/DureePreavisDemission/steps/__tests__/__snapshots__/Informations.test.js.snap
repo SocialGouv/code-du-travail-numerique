@@ -56,14 +56,14 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   >
     <label
       class="c2"
-      for="input-criteria.catégorie"
+      for="input-criteria.catégorie socio-professionnelle"
     >
       Quelle est la catégorie professionnelle du salarié ?
     </label>
     <select
       class="c3"
-      id="input-criteria.catégorie"
-      name="criteria.catégorie"
+      id="input-criteria.catégorie socio-professionnelle"
+      name="criteria.catégorie socio-professionnelle"
     >
       <option
         disabled=""
@@ -72,19 +72,14 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         ...
       </option>
       <option
-        value="7| Ouvriers, Employés, Techniciens"
+        value="20| Cadres"
       >
-        Ouvriers, Employés, Techniciens
+        Cadres
       </option>
       <option
-        value="12| Techniciens et agents de maîtrise (TAM)"
+        value="38| Collaborateurs"
       >
-        Techniciens et agents de maîtrise (TAM)
-      </option>
-      <option
-        value="16| Ingénieurs, Cadres"
-      >
-        Ingénieurs, Cadres
+        Collaborateurs
       </option>
     </select>
   </div>
@@ -131,14 +126,14 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   >
     <label
       class="c2"
-      for="input-criteria.catégorie"
+      for="input-criteria.catégorie socio-professionnelle"
     >
       Quelle est la catégorie professionnelle du salarié ?
     </label>
     <select
       class="c3"
-      id="input-criteria.catégorie"
-      name="criteria.catégorie"
+      id="input-criteria.catégorie socio-professionnelle"
+      name="criteria.catégorie socio-professionnelle"
     >
       <option
         disabled=""
@@ -147,19 +142,46 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="7| Ouvriers, Employés, Techniciens"
+        value="20| Cadres"
       >
-        Ouvriers, Employés, Techniciens
+        Cadres
       </option>
       <option
-        value="12| Techniciens et agents de maîtrise (TAM)"
+        value="38| Collaborateurs"
       >
-        Techniciens et agents de maîtrise (TAM)
+        Collaborateurs
+      </option>
+    </select>
+  </div>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-criteria.coefficient"
+    >
+      Quel est le coefficient hiérarchique du salarié ?
+    </label>
+    <select
+      class="c3"
+      id="input-criteria.coefficient"
+      name="criteria.coefficient"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
       </option>
       <option
-        value="16| Ingénieurs, Cadres"
+        value="18| 700 à 750"
       >
-        Ingénieurs, Cadres
+        700 à 750
+      </option>
+      <option
+        value="19| 800 à 830 inclus"
+      >
+        800 à 830 inclus
       </option>
     </select>
   </div>

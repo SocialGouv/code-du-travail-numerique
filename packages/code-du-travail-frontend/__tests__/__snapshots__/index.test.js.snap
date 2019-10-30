@@ -868,7 +868,7 @@ exports[`<Home /> should render 1`] = `
               <div
                 class="c31"
               >
-                Simulateur de délais de préavis de démission
+                Simulateur de durée de préavis de démission
               </div>
               <div
                 class="c32"

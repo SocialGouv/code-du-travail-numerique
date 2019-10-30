@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render CC answer 1`] = `
-.c1 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -24,7 +24,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
   animation: none;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -45,7 +45,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
   background-color: #e5f1fe;
 }
 
-.c3 {
+.c4 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -64,6 +64,13 @@ exports[`<StepResult /> should render CC answer 1`] = `
   font-size: 1.625rem;
 }
 
+.c1 {
+  color: #005994;
+  font-weight: 700;
+  font-size: 1.375rem;
+  white-space: nowrap;
+}
+
 <div>
   <h2
     class="c0"
@@ -71,33 +78,59 @@ exports[`<StepResult /> should render CC answer 1`] = `
     Durée du préavis
   </h2>
   <p>
-    En cas de démission, la 
-     (
-    0044
-    ) prévoit le respect d’un préavis d’une durée de 
-    <strong>
-      3 mois
-    </strong>
-     pour un salarié 
-    appartenant à la catégorie 
-    <strong>
-      Ingénieurs, Cadres
+    À partir des éléments que vous avais saisis, la durée du préavis de démission est estimée à :
+  </p>
+  <p>
+    <strong
+      class="c1"
+    >
+      2 mois
     </strong>
     .
   </p>
+  <h2
+    class="c0"
+  >
+    Détails
+  </h2>
+  <p>
+    Élements saisis :
+  </p>
+  <ul>
+    <li>
+      Convention collective
+      : 
+      Plasturgie (0292)
+    </li>
+    <li>
+      catégorie socio-professionnelle
+      : 
+      Collaborateurs
+    </li>
+    <li>
+      coefficient
+      : 
+      800 à 830 inclus
+    </li>
+  </ul>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
   <p>
     <a
-      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829"
-      title="Consultez l’avenant n°3 article 4"
+      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
+      title="Consultez l’article 15"
     >
-      Avenant n°3 article 4
+      Article 15
     </a>
   </p>
   <div
-    class="c1"
+    class="c2"
   >
     <div
-      class="c2"
+      class="c3"
     >
       <svg
         fill="none"
@@ -130,7 +163,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       </svg>
     </div>
     <div
-      class="c3"
+      class="c4"
       role="alert"
     >
       Si le contrat de travail, un accord collectif d’entreprise ou un usage prévoit une durée de préavis différente, il faut appliquer la durée la plus courte.
@@ -139,4 +172,8 @@ exports[`<StepResult /> should render CC answer 1`] = `
 </div>
 `;
 
-exports[`<StepResult /> should render with no cc 1`] = `<div />`;
+exports[`<StepResult /> should render with no cc 1`] = `
+<div>
+  Votre situation ne permet de répondre précisement.
+</div>
+`;

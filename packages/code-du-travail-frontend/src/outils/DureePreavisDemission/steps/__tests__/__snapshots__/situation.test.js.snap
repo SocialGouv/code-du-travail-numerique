@@ -1,20 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`situations recapSituation should render formated criteria 1`] = `
-<React.Fragment>
-  <React.Fragment>
-    ayant 
-    <strong>
-      moins de un an
-    </strong>
-     d’ancienneté
-  </React.Fragment>
-  , 
-  <React.Fragment>
-    appartenant à la catégorie 
-    <strong>
-      Agents de maîtrise
-    </strong>
-  </React.Fragment>
-</React.Fragment>
+<ul>
+  <li>
+    ancienneté
+    : 
+    moins de un an
+  </li>
+  <li>
+    catégorie
+    : 
+    Agents de maîtrise
+  </li>
+</ul>
 `;

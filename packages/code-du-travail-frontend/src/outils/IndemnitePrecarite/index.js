@@ -42,7 +42,7 @@ function SimulateurIndemnitePrecarite() {
     <Section>
       <Container>
         <Wizard
-          title="Simulateur de la prime de précarité"
+          title="Simuler la prime de précarité"
           initialSteps={initialSteps}
         />
       </Container>

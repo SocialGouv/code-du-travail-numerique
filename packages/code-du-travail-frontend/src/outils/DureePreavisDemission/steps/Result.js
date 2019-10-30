@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Toast } from "@socialgouv/react-ui";
 import data from "@cdt/data...preavis-demission/data.json";
 
-import { SectionTitle } from "../../common/stepStyles";
+import { SectionTitle, Highlight } from "../../common/stepStyles";
 
 import {
   filterSituations,
@@ -18,10 +18,10 @@ function StepResult({ form }) {
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.num : "0000";
 
-  const initialSituations = getSituationsFor(data, { idcc });
+  const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
 
-  if (!possibleSituations.length && isNotYetProcessed(data, idcc)) {
+  if (!possibleSituations.length && isNotYetProcessed(data.situations, idcc)) {
     return (
       <>
         <Toast variant="warning">
@@ -62,10 +62,19 @@ function StepResult({ form }) {
         <>
           <SectionTitle>Durée du préavis</SectionTitle>
           <p>
-            En cas de démission, la {ccLabel} ({idcc}) prévoit le respect d’un
-            préavis d’une durée de <strong>{situation.answer}</strong> pour un
-            salarié {recapSituation(situation.criteria)}.
+            À partir des éléments que vous avais saisis, la durée du préavis de
+            démission est estimée à&nbsp;:
           </p>
+          <p>
+            <Highlight>{situation.answer}</Highlight>.
+          </p>
+          <SectionTitle>Détails</SectionTitle>
+          <p>Élements saisis&nbsp;:</p>
+          {recapSituation({
+            "Convention collective": `${ccLabel} (${idcc})`,
+            ...situation.criteria
+          })}
+          <SectionTitle>Source</SectionTitle>
           {situation.ref && situation.refUrl && getRef(situation)}
           <Toast variant="info">
             Si le contrat de travail, un accord collectif d’entreprise ou un
@@ -76,7 +85,7 @@ function StepResult({ form }) {
       );
     }
     default:
-      return null;
+      return <>Votre situation ne permet de répondre précisement.</>;
   }
 }
 

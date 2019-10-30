@@ -1,5 +1,4 @@
 import React from "react";
-import { Alert } from "@socialgouv/react-ui";
 import data from "@cdt/data...preavis-demission/data.json";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
@@ -12,22 +11,22 @@ import {
   getSituationsFor
 } from "../../common/situations.utils";
 
-import { questions, labels } from "./situation.js";
+const { questions, situations: allSituations } = data;
+const questionsMap = questions.reduce(
+  (state, { name, question }) => ({ ...state, [name]: question }),
+  {}
+);
 
 function StepInformations({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.num : "0000";
 
-  const initialSituations = getSituationsFor(data, { idcc });
+  const initialSituations = getSituationsFor(allSituations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
   const nextQuestionKey = getNextQuestionKey(possibleSituations, criteria);
   const nextQuestionOptions = getOptions(possibleSituations, nextQuestionKey);
   const pastQuestions = getPastQuestions(initialSituations, criteria);
-
-  const showHelp = ["groupe", "coefficient", "echelon"].includes(
-    nextQuestionKey
-  );
 
   return (
     <>
@@ -37,7 +36,7 @@ function StepInformations({ form }) {
           key={key}
           name={`criteria.${key}`}
           options={answers}
-          label={questions[key]}
+          label={questionsMap[key]}
           onChange={() => {
             form.batch(() => {
               // list keys that no longer exist
@@ -58,17 +57,10 @@ function StepInformations({ form }) {
         <>
           <SelectQuestion
             name={`criteria.${nextQuestionKey}`}
-            label={questions[nextQuestionKey]}
+            label={questionsMap[nextQuestionKey]}
             options={nextQuestionOptions}
           />
         </>
-      )}
-      {showHelp && (
-        <Alert>
-          Si vous ne connaissez pas le {labels[nextQuestionKey]}, munissez-vous
-          du dernier bulletin de salaire, où ce dernier doit obligatoirement
-          figurer. Cette information se trouve souvent dans l’en-tête.
-        </Alert>
       )}
     </>
   );

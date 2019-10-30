@@ -53,6 +53,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   color: #005994;
   font-weight: 700;
   font-size: 1.375rem;
+  white-space: nowrap;
 }
 
 .c8 {
@@ -336,6 +337,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   color: #005994;
   font-weight: 700;
   font-size: 1.375rem;
+  white-space: nowrap;
 }
 
 .c8 {

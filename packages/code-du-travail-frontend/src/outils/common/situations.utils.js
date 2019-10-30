@@ -26,11 +26,10 @@ export function getNextQuestionKey(possibleSituations, values = {}) {
     }
     return state;
   }, {});
-
   const [criterion] = Object.entries(dupCriteria).sort(
     ([critA, countA], [critB, countB]) => {
       if (countA === countB) {
-        return critB.localeCompare(critA);
+        return critA.localeCompare(critB);
       }
       return countB - countA;
     }
