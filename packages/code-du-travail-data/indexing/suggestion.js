@@ -61,10 +61,10 @@ async function populateSuggestions(client, indexName) {
 }
 
 if (module === require.main) {
+  /*
   const client = new Client({
     node: `${ELASTICSEARCH_URL}`
   });
-  /*
   yarn dev:api
   const ts = Date.now()
   populateSuggestions(client, indexname...);
