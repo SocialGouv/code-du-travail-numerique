@@ -343,6 +343,40 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   cursor: not-allowed;
 }
 
+.c14 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
+  color: #fff;
+  background: #07f;
+  border-color: #005fcd;
+}
+
+.c14[disabled] {
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -613,6 +647,11 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
           type="button"
         >
           Précédent
+        </button>
+        <button
+          class="c14"
+        >
+          Recommencer une simulation
         </button>
       </div>
     </div>
@@ -1284,6 +1323,40 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   cursor: not-allowed;
 }
 
+.c14 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
+  color: #fff;
+  background: #07f;
+  border-color: #005fcd;
+}
+
+.c14[disabled] {
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1554,6 +1627,11 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
           type="button"
         >
           Précédent
+        </button>
+        <button
+          class="c14"
+        >
+          Recommencer une simulation
         </button>
       </div>
     </div>

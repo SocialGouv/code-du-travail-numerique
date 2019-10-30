@@ -8,6 +8,7 @@ function PrevNextBar({
   complete,
   hasError,
   nextVisible,
+  restartVisible,
   previousVisible
 }) {
   const nextVariant = hasError ? "danger" : "primary";
@@ -25,6 +26,7 @@ function PrevNextBar({
             Suivant
           </NextButton>
         )}
+        {restartVisible && <Button>Recommencer une simulation</Button>}
       </Box>
     </>
   );
@@ -32,12 +34,14 @@ function PrevNextBar({
 PrevNextBar.propTypes = {
   onPrev: PropTypes.func,
   complete: PropTypes.bool,
+  hasError: PropTypes.bool,
   nextVisible: PropTypes.bool,
   previousVisible: PropTypes.bool
 };
 PrevNextBar.defaultProps = {
   onPrev: () => {},
   complete: true,
+  hasError: false,
   nextVisible: true,
   previousVisible: true
 };

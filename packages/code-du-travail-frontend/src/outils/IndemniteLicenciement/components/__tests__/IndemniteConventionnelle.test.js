@@ -37,7 +37,7 @@ describe("<IndemniteCCn />", () => {
     const { container } = render(
       <IndemniteCCn
         branche="0044"
-        indemniteLegale={2000}
+        indemniteLegale={2500}
         indemniteConventionnelle={1337}
         infoCalculLegal={{
           labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },

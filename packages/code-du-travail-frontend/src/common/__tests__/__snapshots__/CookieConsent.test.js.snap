@@ -109,9 +109,9 @@ exports[`<CookieConsent /> should render 1`] = `
 .c0 {
   position: fixed;
   bottom: 0;
-  padding: 1rem;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
+  padding: 1rem;
 }
 
 .c4 {
