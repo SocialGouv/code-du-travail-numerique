@@ -60,6 +60,15 @@ class SemSearch():
         session.run(init_op)
         self.session = session
 
+    def predict_query_vector(self, query: str):
+        query = self.remove_stops(self.strip_accents(query))
+        questions = [query]
+
+        self.question_results = self.session.run(
+            self.question_embeddings, {self.q_placeholder: questions})
+
+        return self.question_results["outputs"].squeeze().tolist()
+
     def compute_vector(self, string, context):
         cleanStr = self.remove_stops(self.strip_accents(string))
         out = self.session.run(self.response_embeddings, {self.r_placeholder: [
