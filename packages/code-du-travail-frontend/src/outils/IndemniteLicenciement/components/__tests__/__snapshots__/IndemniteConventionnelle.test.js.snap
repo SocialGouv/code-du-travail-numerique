@@ -72,11 +72,13 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c5 {
   width: calc(50% * 0.021);
+  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
 .c13 {
   width: calc(50% * 1);
+  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
@@ -353,11 +355,13 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c5 {
   width: calc(50% * 1);
+  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
 .c13 {
   width: calc(50% * 0.5348);
+  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 

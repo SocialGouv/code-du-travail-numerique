@@ -14,6 +14,7 @@ exports[`<Montant /> renders with ratio 1`] = `
 
 .c1 {
   width: calc(50% * 0.7);
+  background-color: #4c5467;
   border-radius: 0.25rem;
 }
 
