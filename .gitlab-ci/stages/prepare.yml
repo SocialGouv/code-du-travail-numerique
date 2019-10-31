@@ -9,6 +9,7 @@
 .monorepo_changes: &monorepo_changes
   changes:
     - yarn.lock
+    - Dockerfile
     - package.json
     - packages/**/package.json
     - packages/**/yarn.lock

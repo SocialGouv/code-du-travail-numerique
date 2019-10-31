@@ -40,7 +40,12 @@ const getSearch = async querystring => {
 
   const query_vector = await fetch(
     `${NLP_URL}/api/search?q=${encodeURIComponent(query)}`
-  ).then(response => (response = response.json()));
+  )
+    .then(response => (response = response.json()))
+    .catch(error => {
+      logger.error(error);
+      return [];
+    });
 
   const semSources = [
     SOURCES.SHEET_MT,
