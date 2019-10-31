@@ -61,6 +61,7 @@ Release:
     GIT_COMMITTER_EMAIL: $CI_GIT_AUTHOR_EMAIL
     GIT_COMMITTER_NAME: $CI_GIT_AUTHOR_NAME
   before_script:
+    - apk add --no-cache git=2.22.0-r0
     - git checkout ${CI_COMMIT_REF_NAME}
     - git config user.name ${CI_GIT_AUTHOR_NAME}
     - git config user.email ${CI_GIT_AUTHOR_EMAIL}
@@ -84,7 +85,7 @@ Production:
   script:
     - echo "Put ${CI_COMMIT_REF_NAME}@${CI_COMMIT_SHORT_SHA} in production"
     - curl --request POST
-        --form ref="${CI_COMMIT_REF_NAME}"
-        --form token="${CI_DEPLOY_TRIGGER}"
-        --form variables[PRODUCTION]="true"
-        https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
+      --form ref="${CI_COMMIT_REF_NAME}"
+      --form token="${CI_DEPLOY_TRIGGER}"
+      --form variables[PRODUCTION]="true"
+      https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
