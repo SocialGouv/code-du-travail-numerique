@@ -30,7 +30,7 @@ class SearchPage extends React.Component {
           image={ogImage}
         />
         <Section>
-          {items.length === 0 ? (
+          {items.documents.length === 0 ? (
             <Container narrow>
               <Alert>
                 Nous n’avons pas trouvé de résultat pour votre recherche.

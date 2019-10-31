@@ -61,11 +61,8 @@ app.use(docsRoutes);
 if (process.env.NODE_ENV !== "production") {
   const Router = require("koa-router");
   const nlpRoutes = new Router({ prefix: "/nlp" });
-  console.log("DEV MODE");
+  console.log("-- DEV MODE ---");
   nlpRoutes.get("/suggest", async ctx => {
-    ctx.body = [];
-  });
-  nlpRoutes.get("/api/search", async ctx => {
     ctx.body = [];
   });
   app.use(nlpRoutes.routes());

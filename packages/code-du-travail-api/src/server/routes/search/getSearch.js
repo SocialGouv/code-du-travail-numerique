@@ -54,6 +54,14 @@ const getSearch = async querystring => {
     SOURCES.TOOLS,
     SOURCES.THEMES
   ];
+  const esExcludeSources = [
+    ...new Set(
+      excludeSources
+        .concat([SOURCES.THEMES, SOURCES.CCN, SOURCES.CDT])
+        .filter(Boolean)
+    )
+  ];
+  console.log(esExcludeSources);
   const {
     body: {
       responses: [esResponse, semResponse]
@@ -61,11 +69,12 @@ const getSearch = async querystring => {
   } = await elasticsearchClient.msearch({
     body: [
       { index },
-      { ...getSearchBody({ query, size, excludeSources }) },
+      { ...getSearchBody({ query, size, esExcludeSources }) },
       { index },
       { ...getSemBody({ query_vector, size, sources: semSources }) }
     ]
   });
+  console.log(semResponse.error);
 
   const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
   const { hits: { hits: bem25Hits } = { hits: [] } } = esResponse;

@@ -32,14 +32,6 @@ function getSearchBody({ query, size, excludeSources = [] }) {
                 },
                 {
                   match: {
-                    "title.article_id": {
-                      query: query,
-                      boost: 3
-                    }
-                  }
-                },
-                {
-                  match: {
                     "text.french_with_synonyms": {
                       query: query
                     }
@@ -64,20 +56,6 @@ function getSearchBody({ query, size, excludeSources = [] }) {
               "text.french": {
                 query: query,
                 boost: 1.5
-              }
-            }
-          },
-          {
-            match: {
-              "tags.keywords": {
-                query: `theme:${query}`
-              }
-            }
-          },
-          {
-            match: {
-              path: {
-                query: query
               }
             }
           },
@@ -110,21 +88,6 @@ function getSearchBody({ query, size, excludeSources = [] }) {
                 query: "modeles_de_courriers",
                 boost: 1.1
               }
-            }
-          },
-          {
-            match: {
-              source: {
-                query: "faq",
-                boost: 1.1
-              }
-            }
-          },
-          {
-            query_string: {
-              query:
-                '(title.french_with_synonyms:"fonction publique") OR (title.french_with_synonyms:"agent public")',
-              boost: 0.0002
             }
           }
         ]

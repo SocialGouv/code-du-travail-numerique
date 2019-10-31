@@ -1,19 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { groupByDisplayCategory } from "../utils";
 import { Results } from "./Results";
 import { Law } from "./Law";
 import { Themes } from "./Themes";
 
-const SearchResults = ({ items = [], isSearch, query }) => {
-  const { matches, law, themes } = groupByDisplayCategory(items);
+const SearchResults = ({
+  items: { documents, themes, articles },
+  isSearch,
+  query
+}) => {
   return (
     <>
-      {matches.length > 0 && (
-        <Results isSearch={isSearch} items={matches} query={query} />
+      {documents.length > 0 && (
+        <Results isSearch={isSearch} items={documents} query={query} />
       )}
-      {law.length > 0 && <Law items={law} query={query} />}
+      {articles.length > 0 && <Law items={articles} query={query} />}
       {themes.length > 0 && <Themes items={themes} query={query} />}
     </>
   );
