@@ -9,9 +9,8 @@ Register data image:
   services:
     - node:10-alpine
   cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-      - node_modules/
+    <<: *cache_template
+    policy: pull
   variables:
     CONTEXT: packages/code-du-travail-data
     DOCKER_BUILD_ARGS: >-

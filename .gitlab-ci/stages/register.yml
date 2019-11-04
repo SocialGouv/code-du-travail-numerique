@@ -37,9 +37,8 @@ Register nlp image:
       --build-arg SUGGEST_DATA_URL=$SUGGEST_DATA_URL
     IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
   cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-      - node_modules/
+    <<: *cache_template
+    policy: pull
   before_script:
     - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u gitlab-ci-token --password-stdin
     - yarn --frozen-lockfile

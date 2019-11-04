@@ -7,13 +7,16 @@
     variables:
       - $PRODUCTION
 
+.cache_template: &cache_template
+  key: "${CI_COMMIT_REF_SLUG}"
+  paths:
+    - node_modules/
+
 Build yarn cache:
   <<: *prepare_stage
   image: node:10-alpine
   cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-      - node_modules/
+    <<: *cache_template
   script:
     - yarn --frozen-lockfile
 

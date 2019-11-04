@@ -12,10 +12,8 @@
 .nodejs_template: &nodejs_template
   image: node:10-alpine
   cache:
+    <<: *cache_template
     policy: pull
-    key: "$CI_COMMIT_REF_SLUG"
-    paths:
-      - node_modules/
   before_script:
     - yarn --frozen-lockfile
 
