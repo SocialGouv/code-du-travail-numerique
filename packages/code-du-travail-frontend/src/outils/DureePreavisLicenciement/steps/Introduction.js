@@ -10,15 +10,15 @@ function StepIntro() {
       </p>
 
       <p>
-        Afin de réaliser cette simulation, vous aurez besoin d'informations
-        concernant la situation de l'employé concerné, comme sa convention
+        Afin de réaliser cette simulation, vous aurez besoin d’informations
+        concernant la situation de l’employé concerné, comme sa convention
         collective, sa catégorie ou son coefficient. La plupart de ces
         informations se trouvent sur le bulletin de salaire ou le contrat de
         travail. Prévoyez deux à cinq minutes pour cette simulation.
       </p>
 
       <p>
-        Vous pouvez trouver plus d'informations sur le préavis de licenciement
+        Vous pouvez trouver plus d’informations sur le préavis de licenciement
         sur{" "}
         <Link
           href="/fiche-service-public/[slug]"

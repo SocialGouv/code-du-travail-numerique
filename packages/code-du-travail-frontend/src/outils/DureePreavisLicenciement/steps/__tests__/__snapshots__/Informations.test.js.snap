@@ -1,40 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInformations /> should render 1`] = `
-.c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
-}
-
-<div>
-  <h2
-    class="c0"
-  >
-    Informations sur le statut du salarié
-  </h2>
-</div>
-`;
-
-exports[`<StepInformations /> should render catégorie 1`] = `
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
-  padding: 0;
-  font-size: 1.15rem;
-}
-
-.c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .c3 {
@@ -51,6 +23,12 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   margin: 1.25rem 0;
 }
 
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
 <div>
   <h2
     class="c0"
@@ -62,14 +40,14 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   >
     <label
       class="c2"
-      for="input-criteria.catégorie"
+      for="input-criteria.ancienneté"
     >
-      Quelle est la catégorie professionnelle du salarié ?
+      Quelle est la’ncienneté du salarié ?
     </label>
     <select
       class="c3"
-      id="input-criteria.catégorie"
-      name="criteria.catégorie"
+      id="input-criteria.ancienneté"
+      name="criteria.ancienneté"
     >
       <option
         disabled=""
@@ -78,44 +56,50 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         ...
       </option>
       <option
-        value="7| Ouvriers, Employés, Techniciens"
+        value="12| plus de 2 ans"
       >
-        Ouvriers, Employés, Techniciens
+        plus de 2 ans
       </option>
       <option
-        value="12| Techniciens et agents de maîtrise (TAM)"
+        value="17| moins de 6 mois"
       >
-        Techniciens et agents de maîtrise (TAM)
+        moins de 6 mois
       </option>
       <option
-        value="16| Ingénieurs, Cadres"
+        value="20| 6 mois à moins de 2 ans"
       >
-        Ingénieurs, Cadres
+        6 mois à moins de 2 ans
       </option>
     </select>
   </div>
 </div>
 `;
 
-exports[`<StepInformations /> should render coefficient 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
-  padding: 0;
-  font-size: 1.15rem;
+exports[`<StepInformations /> should render catégorie 1`] = `
+.c4 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
 }
 
-.c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+.c4 > *:first-child {
+  margin-top: 0;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .c3 {
@@ -132,6 +116,12 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   margin: 1.25rem 0;
 }
 
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
 <div>
   <h2
     class="c0"
@@ -143,14 +133,14 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   >
     <label
       class="c2"
-      for="input-criteria.catégorie"
+      for="input-criteria.groupe"
     >
-      Quelle est la catégorie professionnelle du salarié ?
+      Quel est le groupe du salarié ?
     </label>
     <select
       class="c3"
-      id="input-criteria.catégorie"
-      name="criteria.catégorie"
+      id="input-criteria.groupe"
+      name="criteria.groupe"
     >
       <option
         disabled=""
@@ -159,21 +149,128 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="7| Ouvriers, Employés, Techniciens"
+        value="2| IV"
       >
-        Ouvriers, Employés, Techniciens
+        IV
       </option>
       <option
-        value="12| Techniciens et agents de maîtrise (TAM)"
+        value="3| I"
       >
-        Techniciens et agents de maîtrise (TAM)
+        I
       </option>
       <option
-        value="16| Ingénieurs, Cadres"
+        value="4| II"
       >
-        Ingénieurs, Cadres
+        II
+      </option>
+      <option
+        value="5| III"
+      >
+        III
+      </option>
+      <option
+        value="7| V"
+      >
+        V
       </option>
     </select>
+  </div>
+  <div
+    class="c4"
+  >
+    Si vous ne connaissez pas le 
+    groupe
+    , munissez-vous du dernier bulletin de salaire, où ce dernier doit obligatoirement figurer. Cette information se trouve souvent dans l’en-tête.
+  </div>
+</div>
+`;
+
+exports[`<StepInformations /> should render coefficient 1`] = `
+.c4 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c4 > *:first-child {
+  margin-top: 0;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.c3 {
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-criteria.groupe"
+    >
+      Quel est le groupe du salarié ?
+    </label>
+    <select
+      class="c3"
+      id="input-criteria.groupe"
+      name="criteria.groupe"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="7| V"
+      >
+        V
+      </option>
+    </select>
+  </div>
+  <div
+    class="c4"
+  >
+    Si vous ne connaissez pas le 
+    groupe
+    , munissez-vous du dernier bulletin de salaire, où ce dernier doit obligatoirement figurer. Cette information se trouve souvent dans l’en-tête.
   </div>
 </div>
 `;

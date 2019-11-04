@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { DureePreavisDemission } from "..";
+import { DureePreavisLicenciement } from "..";
 
-describe("<DureePreavisDemission />", () => {
+describe("<DureePreavisLicenciement />", () => {
   it("should render", () => {
-    const { container } = render(<DureePreavisDemission />);
+    const { container } = render(<DureePreavisLicenciement />);
     expect(container).toMatchSnapshot();
   });
 });

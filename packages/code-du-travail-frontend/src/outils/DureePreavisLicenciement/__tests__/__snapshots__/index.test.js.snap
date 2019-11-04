@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DureePreavisDemission /> should render 1`] = `
+exports[`<DureePreavisLicenciement /> should render 1`] = `
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
@@ -46,6 +46,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 .c14:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
+  border-color: #004a7b;
 }
 
 .c14[disabled] {
@@ -286,7 +287,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
             <span
               class="c5"
             >
-              1/4
+              1/5
             </span>
           </span>
           <span
@@ -307,7 +308,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
             >
               2
             </span>
-            Convention collective
+            Renseignements
           </span>
           <span
             class="c8"
@@ -317,7 +318,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
             >
               3
             </span>
-            Informations
+            Convention collective
           </span>
           <span
             class="c8"
@@ -326,6 +327,16 @@ exports[`<DureePreavisDemission /> should render 1`] = `
               class="c9"
             >
               4
+            </span>
+            Informations
+          </span>
+          <span
+            class="c8"
+          >
+            <span
+              class="c9"
+            >
+              5
             </span>
             Durée du préavis
           </span>
@@ -336,19 +347,29 @@ exports[`<DureePreavisDemission /> should render 1`] = `
           <div
             class="c11"
           >
-            Simuler la durée du préavis de démission
+            Simulateur de durée de préavis de licenciement
           </div>
           <div
             class="c12"
           >
             <p>
-              En cas de démission, le salarié ne peut pas quitter l’entreprise immédiatement après avoir informé l’employeur de ses intentions. Il doit rester dans l’entreprise durant une certaine période, qu’on appelle préavis ou parfois délai congé.
+              Le préavis est une période accordée au salarié entre la notification du licenciement et son départ effectif de l’entreprise (fin du contrat).
             </p>
             <p>
-              Les règles encadrant le préavis (droits et obligations, durées, cas de dispense, absences autorisées pour chercher un emploi durant le préavis) sont notamment définies par le code du travail et la branche.
+              Afin de réaliser cette simulation, vous aurez besoin d’informations concernant la situation de l’employé concerné, comme sa convention collective, sa catégorie ou son coefficient. La plupart de ces informations se trouvent sur le bulletin de salaire ou le contrat de travail. Prévoyez deux à cinq minutes pour cette simulation.
             </p>
             <p>
-              Le présent outil vous permet de connaitre la durée du préavis prévue par votre convention collective en matière de démission. Prévoyez une à deux minutes pour cette simulation.
+              Vous pouvez trouver plus d’informations sur le préavis de licenciement sur
+               
+              <a
+                href="/fiche-service-public/preavis-de-licenciement"
+              >
+                cette fiche
+              </a>
+              .
+            </p>
+            <p>
+              Cliquez sur suivant pour commencer la simulation
             </p>
           </div>
           <div

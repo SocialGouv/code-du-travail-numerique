@@ -7,7 +7,7 @@ describe("situations", () => {
         ancienneté: "23| moins de un an",
         catégorie: "15| Agents de maîtrise"
       };
-      expect(recapSituation(criteria)).toMatchSnapshot();
+      expect(recapSituation({ criteria, idcc: "0000" })).toMatchSnapshot();
     });
   });
 });

@@ -2,6 +2,7 @@ import { StepIntro } from "./steps/Introduction";
 import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepResult } from "./steps/Result";
 import { StepInformations } from "./steps/Informations";
+import { StepRenseignements } from "./steps/Renseignements";
 
 export const initialSteps = [
   {
@@ -10,15 +11,20 @@ export const initialSteps = [
     label: "Introduction"
   },
   {
-    component: StepInformations,
-    name: "infos",
-    label: "Informations"
+    component: StepRenseignements,
+    name: "renseignement",
+    label: "Renseignements"
   },
   {
     component: StepInfoCCn,
     name: "info_cc",
     label: "Convention collective",
     isOptionnal: true
+  },
+  {
+    component: StepInformations,
+    name: "infos",
+    label: "Informations"
   },
   {
     component: StepResult,

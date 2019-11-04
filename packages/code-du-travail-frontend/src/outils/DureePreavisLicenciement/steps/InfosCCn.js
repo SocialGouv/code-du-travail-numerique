@@ -1,5 +1,5 @@
 import { StepInfoCCnMandatory } from "../../common/InfosCCn";
-import data from "@cdt/data...preavis-demission/data.json";
+import data from "@cdt/data...preavis-licenciement/data.json";
 
 import { isNotYetProcessed } from "../../common/situations.utils";
 
