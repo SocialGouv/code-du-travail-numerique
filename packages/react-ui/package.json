@@ -25,7 +25,7 @@
     "styled-components": "4.x"
   },
   "dependencies": {
-    "@reach/dialog": "^0.5.0",
+    "@reach/dialog": "^0.5.3",
     "polished": "^3.4.2",
     "react-accessible-accordion": "^3.0.0",
     "react-feather": "^2.0.3",
