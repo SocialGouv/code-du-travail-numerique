@@ -1,42 +1,51 @@
 #
 
 .quality_stage: &quality_stage
-  stage: "Code Quality"
   dependencies: []
+  stage: "Code Quality"
   except:
     variables:
       - $PRODUCTION
 
-.master_based_stage: &master_based_stage
-  variables:
-    GIT_STRATEGY: none
-  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
-  before_script:
-    - cd /app
-
 #
 
-Lint @cdtn/api:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @cdt/api lint
+.nodejs_template: &nodejs_template
+  image: node:10-alpine
+  cache:
+    policy: pull
+    key: "$CI_COMMIT_REF_SLUG"
+    paths:
+      - node_modules/
+  before_script:
+    - yarn --frozen-lockfile
 
-Lint socialgouv/react-ui:
+Lint @socialgouv/react-ui:
   <<: *quality_stage
-  <<: *master_based_stage
+  <<: *nodejs_template
   script:
     - yarn workspace @socialgouv/react-ui lint
 
-Lint @cdtn/frontend:
+Lint @socialgouv/react-fiche-service-public:
   <<: *quality_stage
-  <<: *master_based_stage
+  <<: *nodejs_template
   script:
     - yarn workspace @cdt/frontend lint
 
+Lint @cdtn/frontend:
+  <<: *quality_stage
+  <<: *nodejs_template
+  script:
+    - yarn workspace @cdt/frontend lint
+
+Lint @cdtn/api:
+  <<: *quality_stage
+  <<: *nodejs_template
+  script:
+    - yarn workspace @cdt/api lint
+
 Lint @cdtn/data:
   <<: *quality_stage
-  <<: *master_based_stage
+  <<: *nodejs_template
   script:
     - yarn workspace @cdt/data lint
 
@@ -53,31 +62,30 @@ Lint Dockerfiles:
 
 Test @cdtn/frontend:
   <<: *quality_stage
-  <<: *master_based_stage
+  <<: *nodejs_template
   script:
     - yarn workspace @cdt/frontend test --coverage
 
 Test @socialgouv/react-ui:
   <<: *quality_stage
-  <<: *master_based_stage
+  <<: *nodejs_template
   script:
     - yarn workspace @socialgouv/react-ui test --coverage
 
 Test @socialgouv/react-fiche-service-public:
   <<: *quality_stage
-  <<: *master_based_stage
+  <<: *nodejs_template
   script:
     - yarn workspace @socialgouv/react-fiche-service-public test --coverage
 
 Test @cdtn/api:
   <<: *quality_stage
-  <<: *master_based_stage
+  <<: *nodejs_template
   services:
     - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
+    - curlimages/curl:7.65.3
   variables:
-    GIT_STRATEGY: none
     ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
-    ELASTICSEARCH_LOG_LEVEL: info
   script:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.
@@ -92,7 +100,7 @@ Test @cdtn/api:
 
 Test @cdtn/data:
   <<: *quality_stage
-  <<: *master_based_stage
+  <<: *nodejs_template
   script:
     - yarn workspace @cdt/data test
     - yarn workspace @cdt/data check-slugs

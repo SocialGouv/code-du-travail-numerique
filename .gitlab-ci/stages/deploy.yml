@@ -35,8 +35,10 @@ include:
   only:
     refs:
       - tags
-      - branches
-
+      - external_pull_requests
+  except:
+    variables:
+      - $PRODUCTION
 #
 #
 #

@@ -1,6 +1,7 @@
 node_modules
 coverage
 dist
+data
 /.env
 docker-compose.override.yml
 __pycache__

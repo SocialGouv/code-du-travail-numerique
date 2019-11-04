@@ -57,6 +57,10 @@ Release:
   only:
     - master
   when: manual
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
   before_script:
     - apk add --no-cache git=2.20.1-r0
     - git checkout ${CI_COMMIT_REF_NAME}

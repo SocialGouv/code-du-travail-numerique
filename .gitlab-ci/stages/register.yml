@@ -27,6 +27,8 @@ Register frontend image:
 
 Register nlp image:
   <<: *build_and_push_stage
+  services:
+    - node:10-alpine
   variables:
     CONTEXT: packages/code-du-travail-nlp
     DOCKER_BUILD_ARGS: >-
@@ -34,3 +36,26 @@ Register nlp image:
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
       --build-arg SUGGEST_DATA_URL=$SUGGEST_DATA_URL
     IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  before_script:
+    - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u gitlab-ci-token --password-stdin
+    - yarn --frozen-lockfile
+  script:
+    - yarn workspace @cdt/data -s dump > packages/code-du-travail-nlp/data/dump.json
+    - >
+      if [[ -n "${CI_COMMIT_TAG}" ]]; then
+        export TAG=$(printf "${CI_COMMIT_TAG}" | sed "s/^v//")
+      else
+        export TAG=$CI_COMMIT_REF_SLUG
+      fi
+    #
+    - docker pull $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA || true
+    - docker pull $IMAGE_NAME:$TAG || true
+    - docker pull $IMAGE_NAME:master || true
+    - echo "> docker build $DOCKER_BUILD_ARGS --cache-from $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA --cache-from $IMAGE_NAME:$TAG --cache-from $IMAGE_NAME:master -t $IMAGE_NAME:$CI_COMMIT_SHA -t $IMAGE_NAME:$TAG $CONTEXT"
+    - docker build $DOCKER_BUILD_ARGS --cache-from $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA --cache-from $IMAGE_NAME:$TAG --cache-from $IMAGE_NAME:master -t $IMAGE_NAME:$CI_COMMIT_SHA -t $IMAGE_NAME:$TAG $CONTEXT
+    - docker push $IMAGE_NAME:$CI_COMMIT_SHA
+    - docker push $IMAGE_NAME:$TAG

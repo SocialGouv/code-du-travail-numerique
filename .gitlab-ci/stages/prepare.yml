@@ -1,25 +1,25 @@
 #
 
 .prepare_stage: &prepare_stage
-  extends: .base_register_stage
   stage: "Prepare"
   dependencies: []
-
-#
-
-Register socialgouv/cdtn base image:
-  <<: *prepare_stage
-  variables:
-    CONTEXT: .
-    IMAGE_NAME: $CI_REGISTRY_IMAGE
   except:
     variables:
       - $PRODUCTION
 
-#
+Build yarn cache:
+  <<: *prepare_stage
+  image: node:10-alpine
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  script:
+    - yarn --frozen-lockfile
 
 Register elasticsearch image:
   <<: *prepare_stage
+  extends: .base_register_stage
   variables:
     CONTEXT: ./docker/elasticsearch
     DOCKER_BUILD_ARGS: ""

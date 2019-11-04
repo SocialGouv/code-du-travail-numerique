@@ -6,7 +6,7 @@
 **/build
 **/node_modules
 **/.next
-**/.docz
+**/.storybook
 **/coverage
 **/fiches_service_public/data
 **/code-du-travail-nlp/data
