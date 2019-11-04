@@ -2308,10 +2308,10 @@
     eslint-plugin-jest "^22.20.0"
     eslint-plugin-prettier "~3.1.1"
 
-"@socialgouv/fiches-vdd@1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.15.tgz#0795506b93b50ef31f21a4beb3749d8309f99b6b"
-  integrity sha512-NucD9SIRq45DedjXHLxB3DUr64Sec78ycH0AcbU2mfa2B1TIj5X35kEP8jFyDEc/LksHA+iQHVy1s3fO3ujjmQ==
+"@socialgouv/fiches-vdd@1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.18.tgz#c3f5ddc942a45409d7268b9c2406d8a873ed113d"
+  integrity sha512-9eq1WRCk71l80G7j4DT4cDvbCACJUakllIKsb6llCYhgZh+r+V47iDB6koalxacSBQytvx4GmMBB4eYcg8IXPg==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.0"
@@ -2819,10 +2819,10 @@
     pretty-format "^24.8.0"
     wait-for-expect "^1.3.0"
 
-"@testing-library/react@^9.3.1":
-  version "9.3.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-9.3.1.tgz#96573fb9942e1ca0ed1ec9984ea7b12b66945963"
-  integrity sha512-BXlYrbxTkifNVb7rIC8EHqYXgG/rBeULqG3V0wbEAuSaZ7n5ERX9Bcp0i+9EecrNpLNPwR0cIxdKNp6qVTZS9A==
+"@testing-library/react@^9.3.2":
+  version "9.3.2"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-9.3.2.tgz#418000daa980dafd2d9420cc733d661daece9aa0"
+  integrity sha512-J6ftWtm218tOLS175MF9eWCxGp+X+cUXCpkPIin8KAXWtyZbr9CbqJ8M8QNd6spZxJDAGlw+leLG4MJWLlqVgg==
   dependencies:
     "@babel/runtime" "^7.6.0"
     "@testing-library/dom" "^6.3.0"
