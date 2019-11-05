@@ -18,7 +18,7 @@ function validate() {
   return errors;
 }
 
-function StepRenseignements({ form }) {
+function StepStatus({ form }) {
   const { fauteGrave, travailleurHandicape } = form.getState().values;
   const initialSituations = getSituationsFor(data, { idcc: "0000" });
 
@@ -64,6 +64,6 @@ function StepRenseignements({ form }) {
     </>
   );
 }
-StepRenseignements.validate = validate;
+StepStatus.validate = validate;
 
-export { StepRenseignements };
+export { StepStatus };

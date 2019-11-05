@@ -2,7 +2,7 @@ import { StepIntro } from "./steps/Introduction";
 import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepResult } from "./steps/Result";
 import { StepInformations } from "./steps/Informations";
-import { StepRenseignements } from "./steps/Renseignements";
+import { StepStatus } from "./steps/Status";
 
 export const initialSteps = [
   {
@@ -11,9 +11,9 @@ export const initialSteps = [
     label: "Introduction"
   },
   {
-    component: StepRenseignements,
-    name: "renseignement",
-    label: "Renseignements"
+    component: StepStatus,
+    name: "situation",
+    label: "Situation du salarié"
   },
   {
     component: StepInfoCCn,
@@ -24,7 +24,7 @@ export const initialSteps = [
   {
     component: StepInformations,
     name: "infos",
-    label: "Informations"
+    label: "Informations complémentaires"
   },
   {
     component: StepResult,

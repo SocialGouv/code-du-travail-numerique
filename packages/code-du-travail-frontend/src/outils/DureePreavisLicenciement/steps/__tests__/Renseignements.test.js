@@ -1,9 +1,9 @@
-import { StepRenseignements } from "../Renseignements";
+import { StepStatus } from "../Status";
 import { renderForm } from "../../../../../test/renderForm";
 
-describe("<StepRenseignements />", () => {
+describe("<StepStatus />", () => {
   it("should render", () => {
-    const { container } = renderForm(StepRenseignements);
+    const { container } = renderForm(StepStatus);
     expect(container).toMatchSnapshot();
   });
 });

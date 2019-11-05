@@ -308,7 +308,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
             >
               2
             </span>
-            Renseignements
+            Situation du salarié
           </span>
           <span
             class="c8"
@@ -328,7 +328,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
             >
               4
             </span>
-            Informations
+            Informations complémentaires
           </span>
           <span
             class="c8"

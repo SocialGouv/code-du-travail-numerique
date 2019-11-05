@@ -42,7 +42,7 @@ exports[`<StepInformations /> should render 1`] = `
       class="c2"
       for="input-criteria.ancienneté"
     >
-      Quelle est la’ncienneté du salarié ?
+      Quelle est l’ancienneté du salarié ?
     </label>
     <select
       class="c3"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<StepRenseignements /> should render 1`] = `
+exports[`<StepStatus /> should render 1`] = `
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;

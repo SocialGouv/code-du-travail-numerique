@@ -3,7 +3,7 @@ import React from "react";
 // humanize questions
 export const questions = {
   catégorie: "Quelle est la catégorie professionnelle du salarié ?",
-  ancienneté: "Quelle est la’ncienneté du salarié ?",
+  ancienneté: "Quelle est l’ancienneté du salarié ?",
   groupe: "Quel est le groupe du salarié ?",
   coefficient: "Quel est le coefficient hiérarchique  du salarié ?",
   echelon: "Quel est léchelon du salarié ?"
