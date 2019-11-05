@@ -80,18 +80,48 @@ async function main() {
     documents: themes
   });
 
-  // Creating alias
-  await client.indices.putAlias({
-    index: `${THEME_INDEX_NAME}-${ts}`,
-    name: THEME_INDEX_NAME
-  });
-  await client.indices.putAlias({
-    index: `${CDTN_CCN_NAME}-${ts}`,
-    name: CDTN_CCN_NAME
-  });
-  await client.indices.putAlias({
-    index: `${CDTN_INDEX_NAME}-${ts}`,
-    name: CDTN_INDEX_NAME
+  // Creating aliases
+  await client.indices.updateAliases({
+    body: {
+      actions: [
+        {
+          remove: {
+            index: `${THEME_INDEX_NAME}-*`,
+            alias: `${THEME_INDEX_NAME}`
+          }
+        },
+        {
+          remove: {
+            index: `${CDTN_CCN_NAME}-*`,
+            alias: `${CDTN_CCN_NAME}`
+          }
+        },
+        {
+          remove: {
+            index: `${CDTN_INDEX_NAME}-*`,
+            alias: `${CDTN_INDEX_NAME}`
+          }
+        },
+        {
+          add: {
+            index: `${THEME_INDEX_NAME}-${ts}`,
+            alias: `${THEME_INDEX_NAME}`
+          }
+        },
+        {
+          add: {
+            index: `${CDTN_CCN_NAME}-${ts}`,
+            alias: `${CDTN_CCN_NAME}`
+          }
+        },
+        {
+          add: {
+            index: `${CDTN_INDEX_NAME}-${ts}`,
+            alias: `${CDTN_INDEX_NAME}`
+          }
+        }
+      ]
+    }
   });
 
   const patterns = [CDTN_INDEX_NAME, THEME_INDEX_NAME, CDTN_CCN_NAME];
