@@ -4,7 +4,9 @@
   extends: .base_register_stage
   stage: "Prepare"
   dependencies: []
-
+  except:
+    variables:
+      - $PRODUCTION
 #
 
 Register socialgouv/cdtn base image:
@@ -12,9 +14,6 @@ Register socialgouv/cdtn base image:
   variables:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
-  except:
-    variables:
-      - $PRODUCTION
 
 #
 
