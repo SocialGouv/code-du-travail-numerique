@@ -9,6 +9,7 @@ Array [
 ]
 `;
 
+
 exports[`fuzzy matching works 1`] = `
 Array [
   "retraite",
