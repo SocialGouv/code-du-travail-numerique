@@ -26,6 +26,10 @@ Object {
       },
       Object {
         "doc_count": 2,
+        "key": "outils",
+      },
+      Object {
+        "doc_count": 2,
         "key": "themes",
       },
     ],

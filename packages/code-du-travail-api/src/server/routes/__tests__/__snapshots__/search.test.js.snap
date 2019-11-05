@@ -5,7 +5,7 @@ Array [
   Object {
     "_id": "6",
     "_index": "cdtn_document_test",
-    "_score": 14.980795,
+    "_score": 15.623499,
     "_source": Object {
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -18,7 +18,7 @@ Array [
   Object {
     "_id": "12",
     "_index": "cdtn_document_test",
-    "_score": 4.2464232,
+    "_score": 4.497671,
     "_source": Object {
       "anchor": "#A-qui-s-applique-le-SMIC",
       "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -37,7 +37,7 @@ Array [
   Object {
     "_id": "4",
     "_index": "cdtn_document_test",
-    "_score": 7.98903,
+    "_score": 8.591476,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -100,7 +100,7 @@ Array [
   Object {
     "_id": "2",
     "_index": "cdtn_document_test",
-    "_score": 11.041574,
+    "_score": 11.923078,
     "_source": Object {
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
@@ -132,7 +132,7 @@ Array [
   Object {
     "_id": "12",
     "_index": "cdtn_document_test",
-    "_score": 9.120251,
+    "_score": 8.916825,
     "_source": Object {
       "anchor": "#A-qui-s-applique-le-SMIC",
       "date": "28/12/2018",
@@ -152,7 +152,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "2",
     "_index": "cdtn_document_test",
-    "_score": 2.990764,
+    "_score": 3.3069358,
     "_source": Object {
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
@@ -184,7 +184,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "4",
     "_index": "cdtn_document_test",
-    "_score": 5.239993,
+    "_score": 5.688491,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -247,7 +247,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "5",
     "_index": "cdtn_document_test",
-    "_score": 10.563109,
+    "_score": 11.258083,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -279,7 +279,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "3",
     "_index": "cdtn_document_test",
-    "_score": 8.563608,
+    "_score": 9.279977,
     "_source": Object {
       "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "breadcrumbs": Array [
@@ -311,7 +311,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "4",
     "_index": "cdtn_document_test",
-    "_score": 3.1196651,
+    "_score": 3.4119706,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -374,7 +374,7 @@ Le Smic s’applique sur l’ensemble du territoire métropolitain, en Guadeloup
   Object {
     "_id": "2",
     "_index": "cdtn_document_test",
-    "_score": 2.990764,
+    "_score": 3.3069358,
     "_source": Object {
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
@@ -411,7 +411,7 @@ Array [
   Object {
     "_id": "2",
     "_index": "cdtn_document_test",
-    "_score": 8.408615,
+    "_score": 9.616061,
     "_source": Object {
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
@@ -440,7 +440,7 @@ Array [
   Object {
     "_id": "4",
     "_index": "cdtn_document_test",
-    "_score": 8.398274,
+    "_score": 9.574365,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -468,7 +468,7 @@ Array [
   Object {
     "_id": "5",
     "_index": "cdtn_document_test",
-    "_score": 7.482512,
+    "_score": 8.4761505,
     "_source": Object {
       "breadcrumbs": Array [
         Object {
@@ -488,9 +488,22 @@ Array [
     "key": "fiches_service_publicdemission-dune-assistante-maternelle",
   },
   Object {
+    "_id": "7",
+    "_index": "cdtn_document_test",
+    "_score": 4.468518,
+    "_source": Object {
+      "slug": "r1442-22-4",
+      "source": "code_du_travail",
+      "title": "Article R1442-22-4",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
+    },
+    "_type": "_doc",
+    "key": "code_du_travailr1442-22-4",
+  },
+  Object {
     "_id": "3",
     "_index": "cdtn_document_test",
-    "_score": 4.0004086,
+    "_score": 4.421942,
     "_source": Object {
       "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "breadcrumbs": Array [
@@ -519,7 +532,7 @@ Array [
   Object {
     "_id": "6",
     "_index": "cdtn_document_test",
-    "_score": 3.7626958,
+    "_score": 4.3211427,
     "_source": Object {
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -528,19 +541,6 @@ Array [
     },
     "_type": "_doc",
     "key": "code_du_travailr1225-18",
-  },
-  Object {
-    "_id": "7",
-    "_index": "cdtn_document_test",
-    "_score": 3.750308,
-    "_source": Object {
-      "slug": "r1442-22-4",
-      "source": "code_du_travail",
-      "title": "Article R1442-22-4",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
-    },
-    "_type": "_doc",
-    "key": "code_du_travailr1442-22-4",
   },
 ]
 `;

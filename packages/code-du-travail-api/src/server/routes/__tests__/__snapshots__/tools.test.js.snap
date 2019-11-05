@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns a single tool 1`] = `
+Object {
+  "description": "This is a second description",
+  "slug": "this-is-a-second-tool",
+  "title": "This is a second tool",
+}
+`;
+
+exports[`returns all tools 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "description": "This is a first description",
+      "slug": "this-is-a-first-tool",
+      "title": "This is a first tool",
+    },
+    Object {
+      "description": "This is a second description",
+      "slug": "this-is-a-second-tool",
+      "title": "This is a second tool",
+    },
+  ],
+}
+`;

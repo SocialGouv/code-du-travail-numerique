@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Outils /> should render 1`] = `
+exports[`<Tool /> should render 1`] = `
 .c19 {
   padding: 1.25rem 0;
   color: #434956;

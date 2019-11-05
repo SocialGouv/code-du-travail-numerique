@@ -14,7 +14,7 @@ const initialData = [
   { _source: { source: SOURCES.SHEET_MT } }
 ];
 
-describe("<Outils />", () => {
+describe("search utils", () => {
   it("groups by source", () => {
     const result = groupBySource(initialData);
     expect(result[SOURCES.THEMES].length).toBe(2);

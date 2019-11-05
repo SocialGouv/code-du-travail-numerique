@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "8",
       "_index": "cdtn_document_test",
-      "_score": 1.8253694,
+      "_score": 1.9203103,
       "_source": Object {
         "id": "KALICONT000005635886",
         "idcc": "843",
@@ -19,7 +19,7 @@ Object {
     Object {
       "_id": "9",
       "_index": "cdtn_document_test",
-      "_score": 1.7446828,
+      "_score": 1.8348562,
       "_source": Object {
         "id": "KALICONT000005635691",
         "idcc": "1747",
@@ -30,7 +30,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 1.8253694,
+  "max_score": 1.9203103,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -44,7 +44,7 @@ Object {
     Object {
       "_id": "8",
       "_index": "cdtn_document_test",
-      "_score": 0.6450889,
+      "_score": 0.6839632,
       "_source": Object {
         "id": "KALICONT000005635886",
         "idcc": "843",
@@ -57,7 +57,7 @@ Object {
     Object {
       "_id": "9",
       "_index": "cdtn_document_test",
-      "_score": 0.6450889,
+      "_score": 0.6839632,
       "_source": Object {
         "id": "KALICONT000005635691",
         "idcc": "1747",
@@ -68,7 +68,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 0.6450889,
+  "max_score": 0.6839632,
   "total": Object {
     "relation": "eq",
     "value": 2,

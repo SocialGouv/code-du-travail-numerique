@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Tool from "../pages/outils/[slug]";
+import Tools from "../Tools";
 
-describe("<Tool />", () => {
+describe("<Tools />", () => {
   it("should render", () => {
-    const { container } = render(<Tool />);
+    const { container } = render(<Tools />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -836,32 +836,9 @@ exports[`<Home /> should render 1`] = `
           <li
             class="c29"
           >
-            <a
+            <button
               class="c30"
-              href="/outils/indemnite-licenciement"
-              title="Démarrer une simulation d'indemnités de licenciements"
-            >
-              <div
-                class="c31"
-              >
-                Simulateur d'indemnités de licenciements
-              </div>
-              <div
-                class="c32"
-              >
-                <div
-                  class="c33"
-                >
-                  Démarrer
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c29"
-          >
-            <a
-              class="c30"
+<<<<<<< HEAD
               href="/outils/preavis-licenciement"
               title="Démarrer une simulation de durée de préavis de licenciement"
             >
@@ -888,101 +865,9 @@ exports[`<Home /> should render 1`] = `
               class="c30"
               href="/outils/preavis-demission"
               title="Démarrer une simulation de durée de préavis de démission"
-            >
-              <div
-                class="c31"
-              >
-                Simulateur de durée de préavis de démission
-              </div>
-              <div
-                class="c32"
-              >
-                <div
-                  class="c33"
-                >
-                  Démarrer
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c29"
-          >
-            <a
-              class="c30"
-              href="/modeles-de-courriers"
-              title="Consulter tous les modèles de courriers"
-            >
-              <div
-                class="c31"
-              >
-                Modèles de courriers
-              </div>
-              <div
-                class="c32"
-              >
-                <div
-                  class="c33"
-                >
-                  Consulter
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c29"
-          >
-            <a
-              class="c30"
-              href="/outils/simulateur-embauche"
-              title="Démarrer une simulation de salaire lors d'une embauche"
-            >
-              <div
-                class="c31"
-              >
-                Simulateur d'embauche
-              </div>
-              <div
-                class="c32"
-              >
-                <div
-                  class="c33"
-                >
-                  Démarrer
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c29"
-          >
-            <a
-              class="c30"
-              href="/outils/indemnite-precarite"
-              title="Démarrer une simulation de la prime de précarité"
-            >
-              <div
-                class="c31"
-              >
-                Simulateur de prime de précarité
-              </div>
-              <div
-                class="c32"
-              >
-                <div
-                  class="c33"
-                >
-                  Démarrer
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c29"
-          >
-            <button
-              class="c30"
+=======
               href=""
+>>>>>>> test(chore): update tests and snapshots
             >
               <div
                 class="c31"
@@ -999,6 +884,29 @@ exports[`<Home /> should render 1`] = `
                 </div>
               </div>
             </button>
+          </li>
+          <li
+            class="c29"
+          >
+            <a
+              class="c30"
+              href="/modeles-de-courriers"
+            >
+              <div
+                class="c31"
+              >
+                Modèles de courriers
+              </div>
+              <div
+                class="c32"
+              >
+                <div
+                  class="c33"
+                >
+                  Consulter
+                </div>
+              </div>
+            </a>
           </li>
           <li
             class="c29"

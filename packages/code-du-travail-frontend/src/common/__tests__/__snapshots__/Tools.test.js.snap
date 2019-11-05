@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Outils /> should render 1`] = `
+exports[`<Tools /> should render 1`] = `
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
@@ -273,32 +273,9 @@ exports[`<Outils /> should render 1`] = `
         <li
           class="c8"
         >
-          <a
+          <button
             class="c9"
-            href="/outils/indemnite-licenciement"
-            title="Démarrer une simulation d'indemnités de licenciements"
-          >
-            <div
-              class="c10"
-            >
-              Simulateur d'indemnités de licenciements
-            </div>
-            <div
-              class="c11"
-            >
-              <div
-                class="c12"
-              >
-                Démarrer
-              </div>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c8"
-        >
-          <a
-            class="c9"
+<<<<<<< HEAD:packages/code-du-travail-frontend/src/common/__tests__/__snapshots__/Outils.test.js.snap
             href="/outils/preavis-licenciement"
             title="Démarrer une simulation de durée de préavis de licenciement"
           >
@@ -325,101 +302,9 @@ exports[`<Outils /> should render 1`] = `
             class="c9"
             href="/outils/preavis-demission"
             title="Démarrer une simulation de durée de préavis de démission"
-          >
-            <div
-              class="c10"
-            >
-              Simulateur de durée de préavis de démission
-            </div>
-            <div
-              class="c11"
-            >
-              <div
-                class="c12"
-              >
-                Démarrer
-              </div>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c8"
-        >
-          <a
-            class="c9"
-            href="/modeles-de-courriers"
-            title="Consulter tous les modèles de courriers"
-          >
-            <div
-              class="c10"
-            >
-              Modèles de courriers
-            </div>
-            <div
-              class="c11"
-            >
-              <div
-                class="c12"
-              >
-                Consulter
-              </div>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c8"
-        >
-          <a
-            class="c9"
-            href="/outils/simulateur-embauche"
-            title="Démarrer une simulation de salaire lors d'une embauche"
-          >
-            <div
-              class="c10"
-            >
-              Simulateur d'embauche
-            </div>
-            <div
-              class="c11"
-            >
-              <div
-                class="c12"
-              >
-                Démarrer
-              </div>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c8"
-        >
-          <a
-            class="c9"
-            href="/outils/indemnite-precarite"
-            title="Démarrer une simulation de la prime de précarité"
-          >
-            <div
-              class="c10"
-            >
-              Simulateur de prime de précarité
-            </div>
-            <div
-              class="c11"
-            >
-              <div
-                class="c12"
-              >
-                Démarrer
-              </div>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c8"
-        >
-          <button
-            class="c9"
+=======
             href=""
+>>>>>>> test(chore): update tests and snapshots:packages/code-du-travail-frontend/src/common/__tests__/__snapshots__/Tools.test.js.snap
           >
             <div
               class="c10"
@@ -436,6 +321,29 @@ exports[`<Outils /> should render 1`] = `
               </div>
             </div>
           </button>
+        </li>
+        <li
+          class="c8"
+        >
+          <a
+            class="c9"
+            href="/modeles-de-courriers"
+          >
+            <div
+              class="c10"
+            >
+              Modèles de courriers
+            </div>
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                Consulter
+              </div>
+            </div>
+          </a>
         </li>
         <li
           class="c8"
