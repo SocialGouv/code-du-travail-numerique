@@ -2136,10 +2136,10 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@reach/dialog@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.5.0.tgz#65157bc0e2828536d9f19722800eb7251e054dc9"
-  integrity sha512-El4GzOJfkdP34vuw53ESXXooydutuJbBpB/GAYTMCXqlVAAqDfIoZ+ycrSd4A853V2SpsEw/82RQ0lX8NQKrcA==
+"@reach/dialog@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.5.3.tgz#45596201062db1cbf2274e19cc684a79b5638c78"
+  integrity sha512-oG2I0vemf4OzSBF0QFFAqgBTEenNafj1zc0ry8h/Mn5XWpsN4R9yQzNZzf9wqlnAwtxEOnt2lsiQ1fLL61BPjw==
   dependencies:
     "@reach/portal" "^0.5.0"
     "@reach/utils" "^0.5.0"
@@ -2308,10 +2308,10 @@
     eslint-plugin-jest "^22.20.0"
     eslint-plugin-prettier "~3.1.1"
 
-"@socialgouv/fiches-vdd@1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.15.tgz#0795506b93b50ef31f21a4beb3749d8309f99b6b"
-  integrity sha512-NucD9SIRq45DedjXHLxB3DUr64Sec78ycH0AcbU2mfa2B1TIj5X35kEP8jFyDEc/LksHA+iQHVy1s3fO3ujjmQ==
+"@socialgouv/fiches-vdd@1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.18.tgz#c3f5ddc942a45409d7268b9c2406d8a873ed113d"
+  integrity sha512-9eq1WRCk71l80G7j4DT4cDvbCACJUakllIKsb6llCYhgZh+r+V47iDB6koalxacSBQytvx4GmMBB4eYcg8IXPg==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.0"
