@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2019-11-05)
+
+
+### Bug Fixes
+
+* **api:** case where description was not returned ([#1539](https://github.com/SocialGouv/code-du-travail-numerique/issues/1539)) ([b8b7172](https://github.com/SocialGouv/code-du-travail-numerique/commit/b8b7172))
+* **deps:** update dependency @reach/dialog to ^0.4.0 ([#1553](https://github.com/SocialGouv/code-du-travail-numerique/issues/1553)) ([42ca7d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/42ca7d8))
+* **deps:** update dependency @reach/tooltip to ^0.5.3 ([#1609](https://github.com/SocialGouv/code-du-travail-numerique/issues/1609)) ([080a8ce](https://github.com/SocialGouv/code-du-travail-numerique/commit/080a8ce))
+* **deps:** update dependency next to ^9.1.2 ([#1592](https://github.com/SocialGouv/code-du-travail-numerique/issues/1592)) ([344b3e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/344b3e2))
+* **indemniteLicenciement:** update results ui ([#1594](https://github.com/SocialGouv/code-du-travail-numerique/issues/1594)) ([21a0bd5](https://github.com/SocialGouv/code-du-travail-numerique/commit/21a0bd5))
+* **preavis:** update data ([#1593](https://github.com/SocialGouv/code-du-travail-numerique/issues/1593)) ([ed9abb2](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed9abb2)), closes [#1590](https://github.com/SocialGouv/code-du-travail-numerique/issues/1590)
+* **precarite:** fix cdd for unhandeld ccn ([#1587](https://github.com/SocialGouv/code-du-travail-numerique/issues/1587)) ([b63460f](https://github.com/SocialGouv/code-du-travail-numerique/commit/b63460f))
+* **tools:** display error / question label on validate ([#1581](https://github.com/SocialGouv/code-du-travail-numerique/issues/1581)) ([d3cb221](https://github.com/SocialGouv/code-du-travail-numerique/commit/d3cb221))
+
+
+### Features
+
+* **frontend:** add related content to letters and add tools and letters to related contents ([#1550](https://github.com/SocialGouv/code-du-travail-numerique/issues/1550)) ([8e46db8](https://github.com/SocialGouv/code-du-travail-numerique/commit/8e46db8))
+* **frontend:** Added cookie consent toast to all pages ([#1588](https://github.com/SocialGouv/code-du-travail-numerique/issues/1588)) ([fbc6aaa](https://github.com/SocialGouv/code-du-travail-numerique/commit/fbc6aaa))
+* **server:** force 301 to main hostname in production ([#1591](https://github.com/SocialGouv/code-du-travail-numerique/issues/1591)) ([59a032c](https://github.com/SocialGouv/code-du-travail-numerique/commit/59a032c)), closes [#1577](https://github.com/SocialGouv/code-du-travail-numerique/issues/1577)
+* **server:** remove next.js x-powered-by ([#1586](https://github.com/SocialGouv/code-du-travail-numerique/issues/1586)) ([760c975](https://github.com/SocialGouv/code-du-travail-numerique/commit/760c975))
+
+
+
+
+
 ## [3.3.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.3.0...v3.3.1) (2019-10-08)
 
 **Note:** Version bump only for package @cdt/frontend

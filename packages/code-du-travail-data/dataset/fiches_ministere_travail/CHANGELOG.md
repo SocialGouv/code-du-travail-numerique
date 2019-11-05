@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2019-11-05)
+
+
+### Bug Fixes
+
+* **api:** case where description was not returned ([#1539](https://github.com/SocialGouv/code-du-travail-numerique/issues/1539)) ([b8b7172](https://github.com/SocialGouv/code-du-travail-numerique/commit/b8b7172))
+* **deps:** update dependency jsdom to ^15.2.1 ([#1615](https://github.com/SocialGouv/code-du-travail-numerique/issues/1615)) ([7f4783d](https://github.com/SocialGouv/code-du-travail-numerique/commit/7f4783d))
+
+
+
+
+
 ## [3.3.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.3.0...v3.3.1) (2019-10-08)
 
 **Note:** Version bump only for package @cdt/data...fiches_ministere_travail

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2019-11-05)
+
+
+### Bug Fixes
+
+* **api:** case where description was not returned ([#1539](https://github.com/SocialGouv/code-du-travail-numerique/issues/1539)) ([b8b7172](https://github.com/SocialGouv/code-du-travail-numerique/commit/b8b7172))
+* **deps:** update dependency koa to ^2.11.0 ([#1573](https://github.com/SocialGouv/code-du-travail-numerique/issues/1573)) ([fdc65e4](https://github.com/SocialGouv/code-du-travail-numerique/commit/fdc65e4))
+
+
+### Features
+
+* **frontend:** add related content to letters and add tools and letters to related contents ([#1550](https://github.com/SocialGouv/code-du-travail-numerique/issues/1550)) ([8e46db8](https://github.com/SocialGouv/code-du-travail-numerique/commit/8e46db8))
+
+
+
+
+
 ## [3.3.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.3.0...v3.3.1) (2019-10-08)
 
 **Note:** Version bump only for package @cdt/api
