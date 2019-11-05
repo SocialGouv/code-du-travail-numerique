@@ -17,7 +17,7 @@ const BigError = ({ children }) => (
   </StyledContainer>
 );
 
-const OutilIntrouvable = () => <BigError>Cet outil est introuvable</BigError>;
+const ToolNotFound = () => <BigError>Cet outil est introuvable</BigError>;
 
 const getSimulator = function(name) {
   switch (name) {
@@ -57,12 +57,12 @@ const getSimulator = function(name) {
     default:
       return {
         title: "Outil introuvable",
-        component: OutilIntrouvable
+        component: ToolNotFound
       };
   }
 };
 
-class Outils extends React.Component {
+class Tool extends React.Component {
   static async getInitialProps({ query }) {
     // we don't request data from api since outils are client side only
     return { slug: query.slug, searchTerm: query.q };
@@ -85,7 +85,7 @@ class Outils extends React.Component {
   }
 }
 
-export default Outils;
+export default Tool;
 
 const { colors, fonts, spacing } = theme;
 

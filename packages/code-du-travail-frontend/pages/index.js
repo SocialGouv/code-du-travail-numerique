@@ -5,14 +5,14 @@ import fetch from "isomorphic-unfetch";
 import SearchHero from "../src/search/SearchHero";
 import { Layout } from "../src/layout/Layout";
 import Themes from "../src/common/Themes";
-import Outils from "../src/common/Outils";
+import Tools from "../src/common/Tools";
 import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const Home = ({ pageUrl, ogImage, children = [] }) => (
+const Home = ({ pageUrl, ogImage, themes = [], tools = [] }) => (
   <Layout hideSearch={true}>
     <Metas
       url={pageUrl}
@@ -21,18 +21,28 @@ const Home = ({ pageUrl, ogImage, children = [] }) => (
       image={ogImage}
     />
     <SearchHero />
-    <Outils />
-    <Themes themes={children} />
+    <Tools tools={tools} />
+    <Themes themes={themes} />
   </Layout>
 );
 
 Home.getInitialProps = async () => {
-  const response = await fetch(`${API_URL}/themes`);
-  if (!response.ok) {
-    return { statusCode: response.status };
+  const [themesResponse, toolsResponse] = await Promise.all([
+    fetch(`${API_URL}/themes`),
+    fetch(`${API_URL}/tools`)
+  ]);
+  if (!themesResponse.ok) {
+    return { statusCode: themesResponse.status };
   }
-  const { children } = await response.json();
-  return { children };
+  if (!toolsResponse.ok) {
+    return { statusCode: toolsResponse.status };
+  }
+  const [{ children: themes }, { children: tools }] = await Promise.all([
+    themesResponse.json(),
+    toolsResponse.json()
+  ]);
+
+  return { themes, tools };
 };
 
 export default Home;
