@@ -63,9 +63,10 @@ const analyzer = {
   // using a keyword analyser on type:text field
   // in order to match results with query as prefix
   // (as opposite to match "in the middle")
-  text_prefix: {
-    tokenizer: "keyword",
-    filter: ["lowercase", "icu_folding"]
+  sugg_prefix: {
+    tokenizer: "icu_tokenizer",
+    filter: ["lowercase", "icu_folding"],
+    char_filter: ["startwith"]
   },
 
   // used at index time to generate ngrams
@@ -73,7 +74,7 @@ const analyzer = {
   // see below, ngram from tokens
   autocomplete: {
     tokenizer: "autocomplete",
-    filter: ["lowercase", "icu_folding", "french_stop"]
+    filter: ["lowercase", "icu_folding"] //, "french_stop"]
   },
 
   // at search time, we only consider

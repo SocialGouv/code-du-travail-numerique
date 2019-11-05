@@ -8,9 +8,9 @@ export const suggestionMapping = {
       analyzer: "autocomplete",
       search_analyzer: "autocomplete_search",
       fields: {
-        text_prefix: {
+        prefix: {
           type: "text",
-          analyzer: "text_prefix"
+          analyzer: "sugg_prefix"
         }
       }
     }

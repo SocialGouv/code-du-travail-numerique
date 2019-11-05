@@ -17,7 +17,7 @@ function getSuggestQuery(query, size) {
         should: [
           {
             match_phrase_prefix: {
-              "title.text_prefix": {
+              "title.prefix": {
                 query
               }
             }

@@ -67,6 +67,7 @@ async function populateSuggestions(client, indexName) {
 
 // utility function top reset suggestions in dev mode
 async function resetSuggestions() {
+  console.log("reset suggestions");
   const client = new Client({
     node: `${ELASTICSEARCH_URL}`
   });
