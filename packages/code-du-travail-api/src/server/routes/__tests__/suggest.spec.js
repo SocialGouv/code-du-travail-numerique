@@ -9,31 +9,34 @@ function getSuggestions(query) {
   return request(app.callback()).get(`/api/v1/suggest?q=` + query);
 }
 
+function ensureSuggestionsMatchSnapshot(query) {
+  return getSuggestions(query).expect(res =>
+    expect(res.body).toMatchSnapshot()
+  );
+}
+
 test("return suggestions for re in the right format", () =>
   getSuggestions("re")
     .expect(200)
     .expect("Content-Type", /json/)
     .expect(res => expect(res.body).toMatchSnapshot()));
 
-test("accentuation is ignored", async () =>
+test("accentuation is ignored", () =>
   getSuggestions("ré").expect(res =>
-    // this is ugly, coulnt find a better way though
-    expect(res.body).toEqual(expect.arrayContaining(["retraite"]))
+    expect(res.body.includes("retraite")).toBeTruthy()
   ));
 
 test(`when query match several suggestions with same rank, 
   ensure order is based on query prefix matching position`, () =>
-  getSuggestions("ré").expect(res => expect(res.body).toMatchSnapshot()));
+  ensureSuggestionsMatchSnapshot("ré"));
 
 test(`when query match several suggestions with same prefix, 
-  ensure order is based on rank`, () =>
-  getSuggestions("re").expect(res => expect(res.body).toMatchSnapshot()));
+  ensure order is based on rank`, () => ensureSuggestionsMatchSnapshot("re"));
 
-test("fuzzy matching works", () =>
-  getSuggestions("reta").expect(res => expect(res.body).toMatchSnapshot()));
+test("fuzzy matching works", () => ensureSuggestionsMatchSnapshot("reta"));
 
 test("fuzzy matching results are lower than exact matchs", () =>
-  getSuggestions("ded").expect(res => expect(res.body).toMatchSnapshot()));
+  ensureSuggestionsMatchSnapshot("ded"));
 
 test("ensure results are only returned when enough characters passed", () =>
-  getSuggestions("d").expect(res => expect(res.body).toMatchSnapshot()));
+  ensureSuggestionsMatchSnapshot("d"));

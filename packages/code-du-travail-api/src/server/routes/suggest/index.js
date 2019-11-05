@@ -16,7 +16,7 @@ const suggestionsSize = 5;
  * @example
  * http://localhost:1337/api/v1/suggest?q=aba
  *
- * @returns {Object} An object containing the matching theme .
+ * @returns {Object} List of matching suggestions.
  */
 router.get("/suggest", async ctx => {
   const { q = "", size = suggestionsSize } = ctx.request.query;
