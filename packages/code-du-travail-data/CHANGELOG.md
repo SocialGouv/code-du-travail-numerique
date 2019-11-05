@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.4.1...v3.4.2) (2019-11-05)
+
+
+### Bug Fixes
+
+* **data:** prevent aliases from pointing to different indices ([#1638](https://github.com/SocialGouv/code-du-travail-numerique/issues/1638)) ([f42b9de](https://github.com/SocialGouv/code-du-travail-numerique/commit/f42b9de))
+* **deps:** update dependency mammoth to ^1.4.9 ([#1614](https://github.com/SocialGouv/code-du-travail-numerique/issues/1614)) ([82eb676](https://github.com/SocialGouv/code-du-travail-numerique/commit/82eb676))
+
+
+
+
+
 ## [3.4.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.4.0...v3.4.1) (2019-11-05)
 
 **Note:** Version bump only for package @cdt/data
