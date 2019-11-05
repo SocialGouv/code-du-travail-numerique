@@ -58,6 +58,7 @@ Release:
     - master
   when: manual
   before_script:
+    - apk add --no-cache git=2.20.1-r0
     - git checkout ${CI_COMMIT_REF_NAME}
     - git config user.name "${CI_GIT_AUTHOR_NAME}"
     - git config user.email "${CI_GIT_AUTHOR_EMAIL}"
