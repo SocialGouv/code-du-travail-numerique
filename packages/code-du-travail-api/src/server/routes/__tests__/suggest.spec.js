@@ -36,7 +36,7 @@ test(`when query match several suggestions with same prefix,
 test("fuzzy matching works", () => ensureSuggestionsMatchSnapshot("reta"));
 
 test("fuzzy matching results are lower than exact matchs", () =>
-  ensureSuggestionsMatchSnapshot("ded"));
+  ensureSuggestionsMatchSnapshot("con"));
 
 test("ensure results are only returned when enough characters passed", () =>
   ensureSuggestionsMatchSnapshot("d"));

@@ -4,8 +4,8 @@ exports[`ensure results are only returned when enough characters passed 1`] = `A
 
 exports[`fuzzy matching results are lower than exact matchs 1`] = `
 Array [
-  "déplacement régulier",
-  "déduction",
+  "contractuelle",
+  "composition",
 ]
 `;
 
