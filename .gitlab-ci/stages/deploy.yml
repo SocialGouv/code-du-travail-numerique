@@ -36,6 +36,9 @@ include:
     refs:
       - tags
       - branches
+  except:
+    variables:
+      - $PRODUCTION
 
 #
 #
