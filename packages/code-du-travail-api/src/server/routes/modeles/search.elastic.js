@@ -1,13 +1,14 @@
+const { SOURCES } = require("@cdt/sources");
+
 function getModeleBody() {
   return {
-    size: 1000,
     _source: ["title", "slug", "description", "editor", "filename"],
     query: {
       bool: {
         filter: [
           {
             term: {
-              source: "modeles_de_courriers"
+              source: SOURCES.LETTERS
             }
           }
         ]

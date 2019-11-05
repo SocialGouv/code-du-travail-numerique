@@ -1,3 +1,5 @@
+const { SOURCES } = require("@cdt/sources");
+
 function getIdccBody({ query }) {
   return {
     size: 1000,
@@ -7,7 +9,7 @@ function getIdccBody({ query }) {
         filter: [
           {
             term: {
-              source: "conventions_collectives"
+              source: SOURCES.CCN
             }
           }
         ],

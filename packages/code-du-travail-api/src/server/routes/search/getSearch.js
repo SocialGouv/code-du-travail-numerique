@@ -28,7 +28,7 @@ const getSearch = async querystring => {
   if (knownQueryResult) {
     return knownQueryResult;
   }
-  // remove console.log when stavble
+  // remove logger when stable
   logger.info(
     `querying sem search on: ${NLP_URL}/api/search?q=${encodeURIComponent(
       query

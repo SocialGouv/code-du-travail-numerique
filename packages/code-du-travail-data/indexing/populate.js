@@ -181,15 +181,13 @@ function* cdtnDocumentsGen() {
   );
   logger.info("=== Outils ===");
   yield require("../dataset/outils.json").map(
-    ({ branche, code, date, description, questions, themes, titre }) => ({
+    ({ date, description, questions, titre }) => ({
       source: SOURCES.TOOLS,
       title: titre,
-      slug: slugify(code),
+      slug: slugify(titre),
       description,
       text: questions.join("\n"),
-      themes: themes,
-      date,
-      branche
+      date
     })
   );
   // Temporary removed from ES

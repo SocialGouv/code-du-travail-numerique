@@ -46,8 +46,8 @@ async function bulkIndexDocuments({ client, indexName, documents }) {
     await client.bulk({
       index: indexName,
       body: documents.reduce(
-        (state, doc, i) =>
-          state.concat(
+        (acc, doc, i) =>
+          acc.concat(
             {
               index: {
                 _index: indexName,
