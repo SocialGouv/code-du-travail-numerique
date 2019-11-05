@@ -37,7 +37,7 @@ spec:
             - name: API_URL
               value: "${API_URL}/api/v1"
             - name: IS_PRODUCTION_DEPLOYMENT
-              value: true
+              value: "true"
             - name: FRONTEND_HOST
               value: ${FRONTEND_HOST}
             - name: PIWIK_SITE_ID
