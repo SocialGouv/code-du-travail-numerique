@@ -28,9 +28,11 @@ RUN . venv/bin/activate
 RUN pip install -r requirements.txt
 
 COPY ./api ./api
+COPY ./scripts ./scripts
 
 ENV PYTHONPATH=.
 
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist/dump.data.json ./data/dump.json
+RUN python scripts/dump.py
 
 ENTRYPOINT ["sh", "scripts/entrypoint.sh"]
