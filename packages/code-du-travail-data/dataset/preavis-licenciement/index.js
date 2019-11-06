@@ -10,22 +10,31 @@ const getCells = promisify(GoogleSpreadsheets.cells);
 const csvColumns = {
   type: 1,
   idcc: 2,
-  answer: 19,
-  answer_: 19,
-  ref: 22,
-  refUrl: 23
+  answer: 23,
+  ref: 26,
+  refUrl: 27
 };
 
 const criteriaIndex = [
-  5, // catégorie
-  7, // durée du tranvail
+  4, // catégorie
+  5, // personnel de conduite
+  6, // motif de rupture
+  7, // durée du travail
   8, // durée de préavis
   9, // type de rupture
+  10, // niveau
+  11, // classe
+  12, // position
   13, // groupe
-  15, // ancienneté
-  16, // coefficient
-  17, // échelon
-  18 // période d'essai
+  14, // age
+  15, // date contrat travail
+  16, // ancienneté
+  17, // coefficient
+  18, // échelon
+  19, // période d'essai
+  20, // logement
+  21, // aéroport paris
+  22 // agents payés a l'heure
 ];
 
 function getHeaders(row) {
