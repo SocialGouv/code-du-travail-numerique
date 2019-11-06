@@ -16,6 +16,7 @@ const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
 
 const app = next({ dev });
 const handler = app.getRequestHandler();
+const HEALTH = "health";
 
 /**
  * This middleware is only used for dev / staging deployement
@@ -45,7 +46,8 @@ const robotTxtHandler = (req, res) => {
 
 const redirectHostname = (req, res, next) => {
   const isProdUrl = req.get("Host") === PROD_HOSTNAME;
-  if (!isProdUrl) {
+  const isHealthCheckUrl = req.path === HEALTH;
+  if (!isProdUrl && !isHealthCheckUrl) {
     return res.redirect(301, `https://${PROD_HOSTNAME}${req.originalUrl}`);
   }
   return next();
@@ -53,7 +55,9 @@ const redirectHostname = (req, res, next) => {
 
 app.prepare().then(() => {
   const server = express();
-
+  server.get(`/${HEALTH}`, (_, res) =>
+    res.status(200).json({ status: "up and running" })
+  );
   server.get("/robots.txt", robotTxtHandler);
   server.use(expressSitemap(getUrls, FRONTEND_HOST));
 
