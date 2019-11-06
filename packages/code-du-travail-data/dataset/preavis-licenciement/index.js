@@ -1,16 +1,11 @@
 const { promisify } = require("util");
 const GoogleSpreadsheets = require("google-spreadsheets");
-const conventionsColl = require("@socialgouv/kali-data/data/index.json");
 
 const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
-const SPREADSHEET_TAB = 5;
+const SPREADSHEET_TAB = 4;
+const SPREADSHEET_QUESTIONS_TAB = 6;
 
 const getCells = promisify(GoogleSpreadsheets.cells);
-
-const conventionsById = conventionsColl.reduce((state, cc) => ({
-  ...state,
-  [cc.num]: cc.titre
-}));
 
 const csvColumns = {
   type: 1,
@@ -40,7 +35,25 @@ function getHeaders(row) {
   }
   return headers;
 }
+async function getQuestions() {
+  const { cells } = await getCells({
+    key: SPREADSHEET_KEY,
+    worksheet: SPREADSHEET_QUESTIONS_TAB
+  });
 
+  return Object.values(cells)
+    .slice(1)
+    .map(extractQuestions)
+    .filter(Boolean);
+}
+function extractQuestions(row) {
+  const rowMapping = { name: 1, question: 2 };
+  const data = {};
+  for (const [key, index] of Object.entries(rowMapping)) {
+    data[key] = (row[index] && row[index].value) || null;
+  }
+  return data;
+}
 async function getData() {
   const { cells } = await getCells({
     key: SPREADSHEET_KEY,
@@ -80,8 +93,9 @@ function transformRow(headers, row) {
 }
 
 async function main() {
-  const data = await getData();
-  console.log(JSON.stringify(data.filter(Boolean), 0, 2));
+  const situations = await getData();
+  const questions = await getQuestions();
+  console.log(JSON.stringify({ questions, situations }, 0, 2));
 }
 
 if (module === require.main) {
