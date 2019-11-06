@@ -26,9 +26,7 @@ class SemSearch():
                           "travailler",
                           "travaille"])
 
-        # make a hashtable for performance
-        strp = self.strip_accents
-        self.stops = dict.fromkeys(map(strp, stops), "")
+        self.stops = dict.fromkeys(stops, "")
 
         self.load_graph()
         logger.info("loading graph 🕸")
@@ -36,6 +34,7 @@ class SemSearch():
         logger.info("SemSearch ready in {} secondes ✅".format(end-start))
 
     def load_graph(self):
+        """load tensorhub transformer graph"""
         g = tf.Graph()
         with g.as_default():
             self.q_placeholder = tf.placeholder(tf.string, shape=[None])
@@ -59,6 +58,7 @@ class SemSearch():
         self.session = session
 
     def preprocess(self, q: str):
+        """utility to remove stopwords and lowercase"""
         return self.remove_stops(q.lower())
 
     def predict_query_vector(self, query: str):
@@ -72,6 +72,8 @@ class SemSearch():
         return self.question_results["outputs"].squeeze().tolist()
 
     def compute_vector(self, string: str, context: str):
+        """compute a document veector (used at inexing in dump.py)"""
+
         cleanStr = self.preprocess(string)
         cleanContext = self.preprocess(context)
         out = self.session.run(self.response_embeddings,
@@ -79,7 +81,8 @@ class SemSearch():
                                 self.c_placeholder: [cleanContext]})
         return out["outputs"].squeeze().tolist()
 
-    def compute_batch_vectors(self, strings, contexts):
+    def compute_batch_vectors(self, strings: list, contexts: list):
+        """compute vectors for a batch of documents"""
         cleanStr = [self.preprocess(s) for s in strings]
         cleanContext = [self.preprocess(c) for c in contexts]
         out = self.session.run(self.response_embeddings, {
