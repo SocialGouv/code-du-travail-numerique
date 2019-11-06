@@ -3,7 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<<<<<<< HEAD
 # [3.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.4.2...v3.5.0) (2019-11-06)
 
 **Note:** Version bump only for package @cdt/nlp
@@ -50,6 +49,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - Removing Autosuggest endpoint and dependency as it is now handled by Elastic Search directly through the api and data packages.
 
+=======
+>>>>>>> remove changelog comment
 ## [3.3.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.3.0...v3.3.1) (2019-10-08)
 
 **Note:** Version bump only for package @cdt/nlp
