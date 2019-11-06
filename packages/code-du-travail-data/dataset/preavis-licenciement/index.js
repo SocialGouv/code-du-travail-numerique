@@ -11,6 +11,7 @@ const csvColumns = {
   type: 1,
   idcc: 2,
   answer: 23,
+  duration: 25,
   ref: 26,
   refUrl: 27
 };
