@@ -7,7 +7,6 @@ include:
   - /.gitlab-ci/stages/quality.yml
   - /.gitlab-ci/stages/register.yml
   - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/data.yml
   - /.gitlab-ci/stages/deploy.yml
   - /.gitlab-ci/stages/notify.yml
 
@@ -16,6 +15,5 @@ stages:
   - "Code Quality"
   - "Registration"
   - "Vuln scanner"
-  - "Data"
   - "Deploy"
   - "Notify Finished Deployment"
