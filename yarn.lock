@@ -2129,10 +2129,10 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@reach/dialog@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.5.3.tgz#45596201062db1cbf2274e19cc684a79b5638c78"
-  integrity sha512-oG2I0vemf4OzSBF0QFFAqgBTEenNafj1zc0ry8h/Mn5XWpsN4R9yQzNZzf9wqlnAwtxEOnt2lsiQ1fLL61BPjw==
+"@reach/dialog@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.5.4.tgz#72bc6d8a13c14088bf444f97dd1dec69ebb908c1"
+  integrity sha512-RB2fImD4YOZ3/2qeoy5hXIpOizwSqucw1LcIwKGJ09E2mrVVriRIrSLk07aMc8R5HryeuflREyNmm/TOzbzP/Q==
   dependencies:
     "@reach/portal" "^0.5.0"
     "@reach/utils" "^0.5.0"
