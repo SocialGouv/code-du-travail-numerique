@@ -23,7 +23,7 @@
     "@cdt/data...preavis-demission": "^3.4.2",
     "@cdt/data...prime-precarite": "^3.4.2",
     "@cdt/sources": "^3.4.2",
-    "@reach/tooltip": "^0.5.3",
+    "@reach/tooltip": "^0.5.4",
     "@sentry/browser": "^5.7.1",
     "@socialgouv/react-fiche-service-public": "^3.4.2",
     "@socialgouv/react-ui": "^3.4.2",
