@@ -1,10 +1,10 @@
+"""Encode a query string or a document with a dual encoder"""
 
 import logging
 import json
 import tensorflow as tf
 import tensorflow_hub as hub
 import tf_sentencepiece
-import unicodedata
 import time
 
 stops_path = "../data/stops.txt"
@@ -12,11 +12,6 @@ stops_path = "../data/stops.txt"
 cache_path = "~/Downloads"
 
 logger = logging.getLogger("gunicorn.errror")
-
-
-def add_slash(c):
-    c["slug"] = f"/{c['slug']}"
-    return c
 
 
 class SemSearch():
@@ -27,6 +22,9 @@ class SemSearch():
 
         with open(stops_path, "r") as f:
             stops = f.read().splitlines()
+            stops.extend(["travail",
+                          "travailler",
+                          "travaille"])
 
         # make a hashtable for performance
         strp = self.strip_accents
@@ -60,8 +58,12 @@ class SemSearch():
         session.run(init_op)
         self.session = session
 
+    def preprocess(self, q: str):
+        return self.remove_stops(q.lower())
+
     def predict_query_vector(self, query: str):
-        query = self.remove_stops(self.strip_accents(query))
+        """preprocess and encode a user query as a fixed length vector"""
+        query = self.preprocess(query)
         questions = [query]
 
         self.question_results = self.session.run(
@@ -69,20 +71,21 @@ class SemSearch():
 
         return self.question_results["outputs"].squeeze().tolist()
 
-    def compute_vector(self, string, context):
-        cleanStr = self.remove_stops(self.strip_accents(string))
-        out = self.session.run(self.response_embeddings, {self.r_placeholder: [
-                               cleanStr], self.c_placeholder: [context]})
+    def compute_vector(self, string: str, context: str):
+        cleanStr = self.preprocess(string)
+        cleanContext = self.preprocess(context)
+        out = self.session.run(self.response_embeddings,
+                               {self.r_placeholder: [cleanStr],
+                                self.c_placeholder: [cleanContext]})
         return out["outputs"].squeeze().tolist()
 
     def compute_batch_vectors(self, strings, contexts):
-        cleanStr = [self.remove_stops(self.strip_accents(s)) for s in strings]
+        cleanStr = [self.preprocess(s) for s in strings]
+        cleanContext = [self.preprocess(c) for c in contexts]
         out = self.session.run(self.response_embeddings, {
-                               self.r_placeholder: cleanStr, self.c_placeholder: contexts})
+                               self.r_placeholder: cleanStr,
+                               self.c_placeholder: cleanContext})
         return out["outputs"].tolist()
-
-    def strip_accents(self, s: str):
-        return unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode('utf-8')
 
     def remove_stops(self, string: str):
         tokens = string.split()
