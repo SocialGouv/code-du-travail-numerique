@@ -39,7 +39,7 @@ const AnswerSection = props => {
     case "hdn":
       return (
         <Alert variant="info">
-          <h4>Texte juridique applicable</h4>
+          <h4>Texte applicable</h4>
           <div {...props} />
         </Alert>
       );
@@ -63,9 +63,7 @@ const LinkConvention = ({ num, title }) => {
       href="/convention-collective/[slug]"
       as={`/convention-collective/${slugConvention}`}
     >
-      <Button variant="secondary">
-        Consulter la convention collective complète
-      </Button>
+      <Button variant="secondary">Consulter la convention collective</Button>
     </Link>
   );
 };
@@ -97,7 +95,9 @@ const AnswersConventions = ({ answers }) => {
       )}
       {ccInfo && (
         <React.Fragment>
-          <h6>{ccInfo.title}</h6>
+          <h6>
+            {ccInfo.title} (IDCC {ccInfo.num})
+          </h6>
           {(answer && (
             <React.Fragment>
               <AnswerConvention markdown={fixMarkdown(answer.markdown)} />
