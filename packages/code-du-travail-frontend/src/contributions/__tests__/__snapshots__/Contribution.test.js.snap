@@ -1,5 +1,275 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
+.c2 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c2:not([disabled]):hover,
+.c2:not([disabled]):active,
+.c2:not([disabled]):focus {
+  color: #18181c;
+  background: #fbfcfd;
+  border-color: #dbe2e9;
+}
+
+.c2[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
+.c3 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
+  color: #fff;
+  background: #0068ae;
+  border-color: #004a7b;
+}
+
+.c3[disabled] {
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
+}
+
+.c1 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #fee5ad;
+  border-color: #fdd57b;
+  margin: 40px 0;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 0.625rem 1.25rem;
+  background: white;
+}
+
+<div>
+  <section
+    class="c0"
+    style="margin-bottom: 20px;"
+  >
+    <h2>
+      Que dit le code du travail ?
+    </h2>
+    <div>
+      <p>
+        hello 
+        <strong>
+          generic
+        </strong>
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2>
+      Que dit votre convention collective ?
+    </h2>
+    <h6>
+      unknown convention
+       (IDCC 
+      idcc-unknown
+      )
+    </h6>
+    <div
+      class="c1"
+    >
+      Désolé nous n'avons pas de réponse pour cette convention collective
+    </div>
+    <button
+      class="c2"
+    >
+      Consulter la convention collective
+    </button>
+    <br />
+    <br />
+    <button
+      class="c3"
+    >
+      Changer de convention collective
+    </button>
+  </section>
+</div>
+`;
+
+exports[`<Contribution /> should render preselected convention 1`] = `
+.c1 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  color: #18181c;
+  background: #fbfcfd;
+  border-color: #dbe2e9;
+}
+
+.c1[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
+.c2 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c2:not([disabled]):hover,
+.c2:not([disabled]):active,
+.c2:not([disabled]):focus {
+  color: #fff;
+  background: #0068ae;
+  border-color: #004a7b;
+}
+
+.c2[disabled] {
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
+}
+
+.c0 {
+  padding: 0.625rem 1.25rem;
+  background: white;
+}
+
+<div>
+  <section
+    class="c0"
+    style="margin-bottom: 20px;"
+  >
+    <h2>
+      Que dit le code du travail ?
+    </h2>
+    <div>
+      <p>
+        hello 
+        <strong>
+          generic
+        </strong>
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2>
+      Que dit votre convention collective ?
+    </h2>
+    <h6>
+      preselected convention
+       (IDCC 
+      idcc-preselected
+      )
+    </h6>
+    <div
+      style="background-color: white; padding: 10px; margin-bottom: 20px;"
+    >
+      <div>
+        <p>
+          hello 
+          <strong>
+            123
+          </strong>
+        </p>
+      </div>
+    </div>
+    <button
+      class="c1"
+    >
+      Consulter la convention collective
+    </button>
+    <br />
+    <br />
+    <button
+      class="c2"
+    >
+      Changer de convention collective
+    </button>
+  </section>
+</div>
+`;
+
 exports[`<Contribution /> should render with both answers 1`] = `
 .c1 {
   max-width: 1200px;

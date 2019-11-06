@@ -14,7 +14,9 @@ import makeArticlesLinks from "./makeArticlesLinks";
 const useConventionState = createPersistedState("convention");
 
 // hack: todo: remove
+// will be fixed at source level
 const fixMarkdown = md =>
+  md &&
   md
     .replace(/<Tab([^>]+)>/g, '<section type="tab"$1>')
     .replace(/<\/Tab>/g, "</section>")
@@ -84,7 +86,6 @@ const AnswerConvention = ({ markdown }) => (
 const AnswersConventions = ({ answers }) => {
   const [ccInfo, setCcInfo] = useConventionState(null);
   const answer = ccInfo && answers.find(a => a.idcc === ccInfo.num);
-
   return (
     <React.Fragment>
       {!ccInfo && (
@@ -96,7 +97,10 @@ const AnswersConventions = ({ answers }) => {
       {ccInfo && (
         <React.Fragment>
           <h6>
-            {ccInfo.title} (IDCC {ccInfo.num})
+            {ccInfo.title}
+            {ccInfo.num && (
+              <React.Fragment> (IDCC {ccInfo.num})</React.Fragment>
+            )}
           </h6>
           {(answer && (
             <React.Fragment>
