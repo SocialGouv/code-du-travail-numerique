@@ -23,13 +23,13 @@ spec:
             - containerPort: ${PORT}
           livenessProbe:
             httpGet:
-              path: /
+              path: /health
               port: ${PORT}
             initialDelaySeconds: 10
             periodSeconds: 5
           readinessProbe:
             httpGet:
-              path: /
+              path: /health
               port: ${PORT}
             initialDelaySeconds: 10
             periodSeconds: 5
