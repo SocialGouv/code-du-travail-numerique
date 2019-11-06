@@ -1,3 +1,5 @@
+import React from "react";
+
 const createValuesMatcher = values => item => {
   function swallowEqual(a, b) {
     return Object.entries(a).every(([key, value]) => {
@@ -80,3 +82,18 @@ export const isNotYetProcessed = (data, idcc) => {
   const situtation = data.filter(situation => situation.idcc === idcc);
   return !situtation.length;
 };
+
+export function recapSituation(criteria) {
+  const cleanValue = value => `${value}`.replace(/[0-9]+\|/, "").trim();
+  const capitalize = ([first, ...rest]) => first.toUpperCase() + rest.join("");
+
+  return (
+    <ul>
+      {Object.entries(criteria).map(([criteria, value]) => (
+        <li key={criteria}>
+          {capitalize(criteria)}: <strong>{cleanValue(value)}</strong>
+        </li>
+      ))}
+    </ul>
+  );
+}

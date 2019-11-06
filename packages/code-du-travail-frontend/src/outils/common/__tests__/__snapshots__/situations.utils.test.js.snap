@@ -3,14 +3,18 @@
 exports[`situations recapSituation should render formated criteria 1`] = `
 <ul>
   <li>
-    ancienneté
+    Ancienneté
     : 
-    moins de un an
+    <strong>
+      moins de un an
+    </strong>
   </li>
   <li>
-    catégorie
+    Catégorie
     : 
-    Agents de maîtrise
+    <strong>
+      Agents de maîtrise
+    </strong>
   </li>
 </ul>
 `;

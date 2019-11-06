@@ -100,17 +100,23 @@ exports[`<StepResult /> should render CC answer 1`] = `
     <li>
       Convention collective
       : 
-      Plasturgie (0292)
+      <strong>
+        Plasturgie (0292)
+      </strong>
     </li>
     <li>
-      catégorie socio-professionnelle
+      Catégorie socio-professionnelle
       : 
-      Collaborateurs
+      <strong>
+        Collaborateurs
+      </strong>
     </li>
     <li>
-      coefficient
+      Coefficient
       : 
-      800 à 830 inclus
+      <strong>
+        800 à 830 inclus
+      </strong>
     </li>
   </ul>
   <h2

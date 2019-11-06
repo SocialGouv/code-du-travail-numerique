@@ -68,7 +68,7 @@ exports[`<StepStatus /> should render 1`] = `
       class="c3"
     >
       <input
-        name="fauteGrave"
+        name="seriousMisconduct"
         type="radio"
         value="true"
       />
@@ -80,7 +80,7 @@ exports[`<StepStatus /> should render 1`] = `
       class="c3"
     >
       <input
-        name="fauteGrave"
+        name="seriousMisconduct"
         type="radio"
         value="false"
       />

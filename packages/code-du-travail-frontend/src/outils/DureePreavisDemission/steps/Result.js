@@ -9,9 +9,9 @@ import { SectionTitle, Highlight } from "../../common/stepStyles";
 import {
   filterSituations,
   getSituationsFor,
-  isNotYetProcessed
+  isNotYetProcessed,
+  recapSituation
 } from "../../common/situations.utils";
-import { recapSituation } from "./situation";
 
 function StepResult({ form }) {
   const { values } = form.getState();
