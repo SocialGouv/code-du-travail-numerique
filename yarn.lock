@@ -2171,10 +2171,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/tooltip@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.5.3.tgz#184867ac0c69a6d251652ecac92c1edee222555c"
-  integrity sha512-EkNgWhte7ydGNhUfwx7FBrHFLvx49+S8FGzrA1dpmioKJCzKxgi6et36FzPgWSTmlSnWAXh/LbaegpE2DeMuFA==
+"@reach/tooltip@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.5.4.tgz#fe72525e89de1113dafafc1dd4f71c01b8988a33"
+  integrity sha512-1AUaZ6UUffm/8v9SPjN1d0uR7uo93VFoXlvqWYvQjI2oersqps0ecq2Xm/0bJpGwL0daYfqRY2BuyuAftyu4aQ==
   dependencies:
     "@reach/auto-id" "^0.5.3"
     "@reach/portal" "^0.5.0"
