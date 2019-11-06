@@ -2289,17 +2289,10 @@
     eslint-plugin-jest "^22.20.0"
     eslint-plugin-prettier "~3.1.1"
 
-<<<<<<< HEAD
 "@socialgouv/fiches-vdd@^1.0.19":
   version "1.0.19"
   resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.19.tgz#d46112f167bb80637a0bfe26f48844a5e84cfd7b"
   integrity sha512-7/CzDaetpTlVMejqayv8AupfCykOKfz8OHHGwgYYqmLLBMKYtJXeCuIHEolPzwG7sbzuF4bIZ3LQHtRbyDfB9g==
-=======
-"@socialgouv/fiches-vdd@1.0.12":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.12.tgz#0608996809d044d3161ec70733e5aaf70c816bc4"
-  integrity sha512-E2B5MIlBkYTfhimlRxDkQlLF9HfvsweWYRV+nTJB3b82vDFYR5jHR53URWzfSJjtyqUXRyEGR5j0rJRk7/BT+w==
->>>>>>> elastic suggester : Docker / download suggestions
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.0"
