@@ -1,52 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Contribution /> should render with both answers 1`] = `
+exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
 .c2 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
+.c2:not([disabled]):hover,
+.c2:not([disabled]):active,
+.c2:not([disabled]):focus {
+  color: #18181c;
+  background: #fbfcfd;
+  border-color: #dbe2e9;
 }
 
-.c2 > *:last-child {
-  margin-bottom: 0;
+.c2[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
 }
 
 .c4 {
-  width: 100%;
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
 }
 
-.c0 {
-  padding: 0.625rem 1.25rem;
-  background: white;
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
+  color: #fff;
+  background: #0068ae;
+  border-color: #004a7b;
 }
 
-.c1 {
-  padding: 0.625rem 1.25rem;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.2rem;
+.c4[disabled] {
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
 }
 
 .c3 {
   margin: 1.25rem 0;
-  padding: 0.625rem;
 }
 
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
-  }
+.c1 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #fee5ad;
+  border-color: #fdd57b;
+  margin: 40px 0;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 0.625rem 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 <div>
   <section
     class="c0"
-    style="margin-bottom: 20px;"
   >
     <h2>
       Que dit le code du travail ?
@@ -61,26 +114,436 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </section>
   <section
-    class="c1"
+    class="c0"
   >
     <h2>
       Que dit votre convention collective ?
     </h2>
-    <div
-      class="c2 c3"
-    >
-      
-      <p>
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-      </p>
-      <input
+    <div>
+      <h6>
+        <span
+          aria-label="Icone convention collective"
+          role="img"
+        >
+          📖
+        </span>
+         
+        unknown convention
+         (IDCC 
+        idcc-unknown
+        )
+      </h6>
+      <div
+        class="c1"
+      >
+        Désolé nous n'avons pas de réponse pour cette convention collective
+      </div>
+      <button
+        class="c2 c3"
+      >
+        Consulter la convention collective
+      </button>
+      <br />
+      <br />
+      <button
         class="c4"
-        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-        role="search"
-        type="search"
-        value=""
-      />
-      
+      >
+        Changer de convention collective
+      </button>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Contribution /> should render answer references 1`] = `
+.c2 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c2:not([disabled]):hover,
+.c2:not([disabled]):active,
+.c2:not([disabled]):focus {
+  color: #18181c;
+  background: #fbfcfd;
+  border-color: #dbe2e9;
+}
+
+.c2[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
+  color: #fff;
+  background: #0068ae;
+  border-color: #004a7b;
+}
+
+.c4[disabled] {
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
+}
+
+.c3 {
+  margin: 1.25rem 0;
+}
+
+.c1 {
+  margin: 5px 0;
+  list-style-type: none;
+}
+
+.c0 {
+  padding: 0.625rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <h2>
+      Que dit le code du travail ?
+    </h2>
+    <div>
+      <p>
+        hello 
+        <strong>
+          generic
+        </strong>
+      </p>
+    </div>
+  </section>
+  <section
+    class="c0"
+  >
+    <h2>
+      Que dit votre convention collective ?
+    </h2>
+    <div>
+      <h6>
+        <span
+          aria-label="Icone convention collective"
+          role="img"
+        >
+          📖
+        </span>
+         
+        preselected convention
+         (IDCC 
+        idcc-preselected
+        )
+      </h6>
+      <div>
+        <p>
+          hello 
+          <strong>
+            123
+          </strong>
+        </p>
+      </div>
+      <h3>
+        Références
+      </h3>
+      <h4>
+        Convention collective
+      </h4>
+      <li
+        class="c1"
+      >
+        <a
+          href="http://path/to/agreement"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          reference CC 1
+        </a>
+      </li>
+      <h4>
+        Autres sources
+      </h4>
+      <li
+        class="c1"
+      >
+        <a
+          href="http://path/to/ref"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          reference externe 1
+        </a>
+      </li>
+      <button
+        class="c2 c3"
+      >
+        Consulter la convention collective
+      </button>
+      <br />
+      <br />
+      <button
+        class="c4"
+      >
+        Changer de convention collective
+      </button>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Contribution /> should render preselected convention 1`] = `
+.c1 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  color: #18181c;
+  background: #fbfcfd;
+  border-color: #dbe2e9;
+}
+
+.c1[disabled] {
+  color: rgba(12,12,14,0.4);
+  cursor: not-allowed;
+}
+
+.c3 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
+  color: #fff;
+  background: #0068ae;
+  border-color: #004a7b;
+}
+
+.c3[disabled] {
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
+}
+
+.c2 {
+  margin: 1.25rem 0;
+}
+
+.c0 {
+  padding: 0.625rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <h2>
+      Que dit le code du travail ?
+    </h2>
+    <div>
+      <p>
+        hello 
+        <strong>
+          generic
+        </strong>
+      </p>
+    </div>
+  </section>
+  <section
+    class="c0"
+  >
+    <h2>
+      Que dit votre convention collective ?
+    </h2>
+    <div>
+      <h6>
+        <span
+          aria-label="Icone convention collective"
+          role="img"
+        >
+          📖
+        </span>
+         
+        preselected convention
+         (IDCC 
+        idcc-preselected
+        )
+      </h6>
+      <div>
+        <p>
+          hello 
+          <strong>
+            123
+          </strong>
+        </p>
+      </div>
+      <button
+        class="c1 c2"
+      >
+        Consulter la convention collective
+      </button>
+      <br />
+      <br />
+      <button
+        class="c3"
+      >
+        Changer de convention collective
+      </button>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Contribution /> should render with both answers 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  width: 100%;
+}
+
+.c0 {
+  padding: 0.625rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.c2 {
+  margin: 1.25rem 0;
+  padding: 0.625rem;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <h2>
+      Que dit le code du travail ?
+    </h2>
+    <div>
+      <p>
+        hello 
+        <strong>
+          generic
+        </strong>
+      </p>
+    </div>
+  </section>
+  <section
+    class="c0"
+  >
+    <h2>
+      Que dit votre convention collective ?
+    </h2>
+    <div>
+      <div
+        class="c1 c2"
+      >
+        
+        <p>
+          Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+        </p>
+        <input
+          class="c3"
+          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+          role="search"
+          type="search"
+          value=""
+        />
+        
+      </div>
     </div>
   </section>
 </div>
@@ -107,9 +570,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c0 {
   padding: 0.625rem 1.25rem;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.2rem;
+  margin-bottom: 1.25rem;
 }
 
 .c2 {
@@ -131,21 +592,23 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     <h2>
       Que dit votre convention collective ?
     </h2>
-    <div
-      class="c1 c2"
-    >
-      
-      <p>
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-      </p>
-      <input
-        class="c3"
-        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-        role="search"
-        type="search"
-        value=""
-      />
-      
+    <div>
+      <div
+        class="c1 c2"
+      >
+        
+        <p>
+          Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+        </p>
+        <input
+          class="c3"
+          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+          role="search"
+          type="search"
+          value=""
+        />
+        
+      </div>
     </div>
   </section>
 </div>
@@ -154,13 +617,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 exports[`<Contribution /> should render with generic answer 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
-  background: white;
+  margin-bottom: 1.25rem;
 }
 
 <div>
   <section
     class="c0"
-    style="margin-bottom: 20px;"
   >
     <h2>
       Que dit le code du travail ?

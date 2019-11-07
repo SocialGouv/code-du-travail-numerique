@@ -193,18 +193,18 @@ function* cdtnDocumentsGen() {
     })
   );
   // Temporary removed from ES
-  // logger.info("=== Contributions ===");
-  // yield require("../dataset/contributions/contributions.data.json").map(
-  //   ({ value, answers }) => {
-  //     return {
-  //       source: SOURCES.CONTRIBUTIONS,
-  //       title: value,
-  //       slug: slugify(value),
-  //       text: (answers.general && answers.general.value) || value,
-  //       answers
-  //     };
-  //   }
-  // );
+  logger.info("=== Contributions ===");
+  yield require("../dataset/contributions/contributions.data.json").map(
+    ({ value, answers }) => {
+      return {
+        source: SOURCES.CONTRIBUTIONS,
+        title: value,
+        slug: slugify(value),
+        text: (answers.general && answers.general.value) || value,
+        answers
+      };
+    }
+  );
 }
 
 export const conventionTextType = {
