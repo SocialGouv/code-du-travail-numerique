@@ -6,7 +6,6 @@ import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   getOptions,
-  getNextQuestionKey,
   filterSituations,
   getSituationsFor
 } from "../../common/situations.utils";
@@ -40,11 +39,11 @@ function validate({ seriousMisconduct }) {
 
 function StepStatus({ form }) {
   const { seriousMisconduct, disabledWorker } = form.getState().values;
-  const initialSituations = getSituationsFor(allSituations, { idcc: "0000" });
+  const seniorityKey = "ancienneté";
 
+  const initialSituations = getSituationsFor(allSituations, { idcc: "0000" });
   const possibleSituations = filterSituations(initialSituations, {});
-  const nextQuestionKey = getNextQuestionKey(possibleSituations, {});
-  const nextQuestionOptions = getOptions(possibleSituations, nextQuestionKey);
+  const seniorityOptions = getOptions(possibleSituations, seniorityKey);
 
   return (
     <>
@@ -62,10 +61,10 @@ function StepStatus({ form }) {
       )}
       {typeof disabledWorker !== "undefined" && !seriousMisconduct && (
         <SelectQuestion
-          name={`cdt.${nextQuestionKey}`}
-          label={questionsMap[nextQuestionKey]}
+          name={`cdt.${seniorityKey}`}
+          label={questionsMap[seniorityKey]}
           subLabel="Choissisez parmi les catégories d'ancienneté telles que définies par le Code du travail"
-          options={nextQuestionOptions}
+          options={seniorityOptions}
         />
       )}
     </>

@@ -46,15 +46,15 @@ function StepResult({ form }) {
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
         licenciement est estimée à&nbsp;:
-        <p>
-          <Highlight>
-            {getResult({
-              durationCDT,
-              durationCC,
-              disabledWorker
-            })}
-          </Highlight>
-        </p>
+      </p>
+      <p>
+        <Highlight>
+          {getResult({
+            durationCDT,
+            durationCC,
+            disabledWorker
+          })}
+        </Highlight>
       </p>
       <SectionTitle>Détails</SectionTitle>
       <p>

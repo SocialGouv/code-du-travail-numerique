@@ -22,13 +22,13 @@ exports[`<StepResult /> should render CDT and CC answer 1`] = `
   </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
-    <p>
-      <strong
-        class="c1"
-      >
-        2 mois
-      </strong>
-    </p>
+  </p>
+  <p>
+    <strong
+      class="c1"
+    >
+      2 mois
+    </strong>
   </p>
   <h2
     class="c0"
@@ -139,13 +139,13 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
   </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
-    <p>
-      <strong
-        class="c1"
-      >
-        2 mois
-      </strong>
-    </p>
+  </p>
+  <p>
+    <strong
+      class="c1"
+    >
+      2 mois
+    </strong>
   </p>
   <h2
     class="c0"

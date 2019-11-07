@@ -329,7 +329,7 @@ exports[`<Outils /> should render 1`] = `
             <div
               class="c10"
             >
-              Simulateur de délais de préavis de démission
+              Simulateur de durée de préavis de démission
             </div>
             <div
               class="c11"
