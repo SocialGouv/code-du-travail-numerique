@@ -35,7 +35,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   cursor: not-allowed;
 }
 
-.c3 {
+.c4 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -56,17 +56,21 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   border-color: #005994;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
   border-color: #004a7b;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
+}
+
+.c3 {
+  margin: 1.25rem 0;
 }
 
 .c1 {
@@ -135,14 +139,14 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         Désolé nous n'avons pas de réponse pour cette convention collective
       </div>
       <button
-        class="c2"
+        class="c2 c3"
       >
         Consulter la convention collective
       </button>
       <br />
       <br />
       <button
-        class="c3"
+        class="c4"
       >
         Changer de convention collective
       </button>
@@ -186,7 +190,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   cursor: not-allowed;
 }
 
-.c3 {
+.c4 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -207,17 +211,21 @@ exports[`<Contribution /> should render answer references 1`] = `
   border-color: #005994;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
   border-color: #004a7b;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
+}
+
+.c3 {
+  margin: 1.25rem 0;
 }
 
 .c1 {
@@ -306,15 +314,14 @@ exports[`<Contribution /> should render answer references 1`] = `
         </a>
       </li>
       <button
-        class="c2"
-        style="margin: 20px 0px;"
+        class="c2 c3"
       >
         Consulter la convention collective
       </button>
       <br />
       <br />
       <button
-        class="c3"
+        class="c4"
       >
         Changer de convention collective
       </button>
@@ -358,7 +365,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   cursor: not-allowed;
 }
 
-.c2 {
+.c3 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -379,17 +386,21 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   border-color: #005994;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
   border-color: #004a7b;
 }
 
-.c2[disabled] {
+.c3[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
+}
+
+.c2 {
+  margin: 1.25rem 0;
 }
 
 .c0 {
@@ -442,15 +453,14 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         </p>
       </div>
       <button
-        class="c1"
-        style="margin: 20px 0px;"
+        class="c1 c2"
       >
         Consulter la convention collective
       </button>
       <br />
       <br />
       <button
-        class="c2"
+        class="c3"
       >
         Changer de convention collective
       </button>
