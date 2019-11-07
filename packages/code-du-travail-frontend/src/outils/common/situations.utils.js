@@ -91,7 +91,7 @@ export function recapSituation(criteria) {
     <ul>
       {Object.entries(criteria).map(([criteria, value]) => (
         <li key={criteria}>
-          {capitalize(criteria)}: <strong>{cleanValue(value)}</strong>
+          {capitalize(criteria)} : <strong>{cleanValue(value)}</strong>
         </li>
       ))}
     </ul>

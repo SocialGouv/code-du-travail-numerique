@@ -85,7 +85,9 @@ function StepResult({ form }) {
         <>
           {recapSituation({
             ...situationCCCriteria,
-            "Ancienneté selon la convention collective": seniorityCC,
+            ...(seniorityCC && {
+              "Ancienneté selon la convention collective": seniorityCC
+            }),
             "Convention collective": ccn.title
           })}
           <SectionTitle>Source</SectionTitle>
@@ -104,7 +106,7 @@ StepResult.propTypes = {
 
 export { StepResult };
 
-function getResult({ durationCDT, durationCC, disabledWorker = true }) {
+function getResult({ durationCDT = 0, durationCC = 0, disabledWorker = true }) {
   const durationMax = Math.max(durationCDT, durationCC);
   const durationHandicappedMax = 90;
   let durationHandicapped = 1;

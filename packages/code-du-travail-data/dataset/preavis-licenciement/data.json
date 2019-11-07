@@ -281,8 +281,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "70| directeurs généraux",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "70| directeurs généraux"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -293,8 +292,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "71| directeurs-adjoints",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "71| directeurs-adjoints"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -305,8 +303,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "72| gestionnaires",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "72| gestionnaires"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -317,8 +314,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "73| médecins",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "73| médecins"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -329,8 +325,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "74| pharmaciens",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "74| pharmaciens"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -341,20 +336,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "75| biologistes",
-        "ancienneté": "13| 2 ans ou plus"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0029",
-      "answer": "6 mois",
-      "duration": "180",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "75| biologistes"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -366,7 +348,19 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "ancienneté": "13| 2 ans ou plus"
+        "coefficient": "26| supérieur à 715"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "6 mois",
+      "duration": "180",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
+        "coefficient": "27| inférieur à 715"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -391,63 +385,21 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
+        "catégorie socio-professionnelle": "1| Ouvriers",
         "groupe": "3| I",
-        "ancienneté": "14| moins de 2 ans",
+        "ancienneté": "13| 2 ans ou plus",
         "coefficient": "1| inférieur à 160"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "3| I",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "duration": "30",
+      "answer": "2 mois",
+      "duration": "60",
       "ref": "Avenant n°1 article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
     },
     {
       "criteria": {
         "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "4| II",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "4| II",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
         "groupe": "4| II",
         "ancienneté": "14| moins de 2 ans",
         "coefficient": "1| inférieur à 160"
@@ -475,29 +427,29 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
+        "catégorie socio-professionnelle": "1| Ouvriers",
         "groupe": "4| II",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "5| entre 160 (inclus) et 190"
+        "ancienneté": "13| 2 ans ou plus",
+        "coefficient": "1| inférieur à 160"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
-      "answer": "1 mois",
-      "duration": "30",
+      "answer": "2 mois",
+      "duration": "60",
       "ref": "Avenant n°1 article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
+        "catégorie socio-professionnelle": "1| Ouvriers",
         "groupe": "4| II",
-        "ancienneté": "14| moins de 2 ans",
+        "ancienneté": "13| 2 ans ou plus",
         "coefficient": "5| entre 160 (inclus) et 190"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
-      "answer": "1 mois",
-      "duration": "30",
+      "answer": "2 mois",
+      "duration": "60",
       "ref": "Avenant n°1 article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
     },
@@ -517,189 +469,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "5| III",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "5| III",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
         "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "3| I",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "3| I",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "3| I",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "1| inférieur à 160"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "5| III",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "5| III",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
         "groupe": "5| III",
         "ancienneté": "13| 2 ans ou plus",
         "coefficient": "5| entre 160 (inclus) et 190"
@@ -726,9 +496,76 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
+        "catégorie socio-professionnelle": "5| Techniciens",
+        "groupe": "3| I",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "5| Techniciens",
+        "groupe": "3| I",
+        "ancienneté": "13| 2 ans ou plus"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "5| Techniciens",
+        "groupe": "4| II",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "5| Techniciens",
+        "groupe": "4| II",
+        "ancienneté": "13| 2 ans ou plus"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "5| Techniciens",
         "groupe": "5| III",
-        "coefficient": "8| supérieur à 190 (inclus)"
+        "ancienneté": "14| moins de 2 ans",
+        "coefficient": "5| entre 160 (inclus) et 190"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "5| Techniciens",
+        "groupe": "5| III",
+        "ancienneté": "13| 2 ans ou plus",
+        "coefficient": "5| entre 160 (inclus) et 190"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -748,19 +585,6 @@
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "groupe": "2| IV",
-        "coefficient": "9| inférieur à 275"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Avenant 2, article 20",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
     },
     {
@@ -778,7 +602,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "5| Techniciens",
         "groupe": "2| IV",
         "coefficient": "12| supérieur à 275 (inclus)"
       },
@@ -791,7 +615,113 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
+        "catégorie socio-professionnelle": "4| Employés",
+        "groupe": "3| I",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Employés",
+        "groupe": "3| I",
+        "ancienneté": "13| 2 ans ou plus"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Employés",
+        "groupe": "4| II",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Employés",
+        "groupe": "4| II",
+        "ancienneté": "13| 2 ans ou plus"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Employés",
+        "groupe": "5| III",
+        "ancienneté": "14| moins de 2 ans",
+        "coefficient": "5| entre 160 (inclus) et 190"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Employés",
+        "groupe": "5| III",
+        "ancienneté": "13| 2 ans ou plus",
+        "coefficient": "5| entre 160 (inclus) et 190"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Employés",
+        "groupe": "5| III",
+        "coefficient": "8| supérieur à 190 (inclus)"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "groupe": "2| IV",
+        "coefficient": "9| inférieur à 275"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant 2, article 20",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "15| Agents de maîtrise",
         "groupe": "2| IV",
         "coefficient": "12| supérieur à 275 (inclus)"
       },
@@ -923,8 +853,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "23| 120 à 215"
+        "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0086",
@@ -936,8 +865,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "12| plus de 2 ans",
-        "coefficient": "23| 120 à 215"
+        "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0086",
@@ -948,8 +876,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "coefficient": "24| 220 à 390"
+        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens"
       },
       "type": "préavis de licenciement",
       "idcc": "0086",
@@ -960,8 +887,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "coefficient": "25| à partir de 400"
+        "catégorie socio-professionnelle": "20| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0086",
@@ -998,6 +924,18 @@
     },
     {
       "criteria": {
+        "groupe": "1| de I à III",
+        "date contrat travail": "1| contrat de travail conclu après 2009"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0176",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Article 32, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
         "groupe": "2| IV",
         "date contrat travail": "2| contrat de travail conclu avant 2009"
       },
@@ -1016,18 +954,6 @@
       "idcc": "0176",
       "answer": "3 mois",
       "duration": "90",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "groupe": "1| de I à III",
-        "date contrat travail": "1| contrat de travail conclu après 2009"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0176",
-      "answer": "2 mois",
-      "duration": "60",
       "ref": "Article 32, 2°",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
     },
@@ -1266,8 +1192,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "77| autres cadres",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "77| autres cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1290,6 +1215,18 @@
     },
     {
       "criteria": {
+        "catégorie socio-professionnelle": "70| directeurs généraux",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0413",
+      "answer": "4 mois",
+      "duration": "120",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
         "catégorie socio-professionnelle": "80| directeurs de centre de formation en travail social",
         "ancienneté": "12| plus de 2 ans"
       },
@@ -1302,6 +1239,18 @@
     },
     {
       "criteria": {
+        "catégorie socio-professionnelle": "80| directeurs de centre de formation en travail social",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0413",
+      "answer": "4 mois",
+      "duration": "120",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
         "catégorie socio-professionnelle": "78| directeurs d'établissement",
         "ancienneté": "12| plus de 2 ans"
       },
@@ -1309,6 +1258,18 @@
       "idcc": "0413",
       "answer": "6 mois",
       "duration": "180",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "78| directeurs d'établissement",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0413",
+      "answer": "4 mois",
+      "duration": "120",
       "ref": "Article 9, de l'annexe 6",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
     },
@@ -1321,42 +1282,6 @@
       "idcc": "0413",
       "answer": "6 mois",
       "duration": "180",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "70| directeurs généraux",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0413",
-      "answer": "4 mois",
-      "duration": "120",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "80| directeurs de centre de formation en travail social",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0413",
-      "answer": "4 mois",
-      "duration": "120",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "78| directeurs d'établissement",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0413",
-      "answer": "4 mois",
-      "duration": "120",
       "ref": "Article 9, de l'annexe 6",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
     },
@@ -1388,19 +1313,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "motif de rupture": "1| motif économique",
-        "ancienneté": "11| 2 ans ou moins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0573",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Article 38",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802006&cidTexte=KALITEXT000005673619&dateTexte=20120228"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "motif de rupture": "2| autre motif (hors faute grave ou lourde)",
         "ancienneté": "12| plus de 2 ans"
       },
@@ -1410,6 +1322,18 @@
       "duration": "60",
       "ref": "Article 35",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
+        "motif de rupture": "1| motif économique"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0573",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Article 38",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802006&cidTexte=KALITEXT000005673619&dateTexte=20120228"
     },
     {
       "criteria": {
@@ -1509,7 +1433,7 @@
     },
     {
       "criteria": {
-        "âge": "3| 55 ans et plus"
+        "âge": "4| 55 ans et plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0650",
@@ -1578,23 +1502,23 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0787",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Article 6.2.0",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=CFEA1065D76552B48FA299221688C973.tpdila22v_3?idArticle=KALIARTI000005839444&cidTexte=KALITEXT000005674852&dateTexte=19910731"
-    },
-    {
-      "criteria": {
         "catégorie socio-professionnelle": "20| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0787",
       "answer": "3 mois",
       "duration": "90",
+      "ref": "Article 6.2.0",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=CFEA1065D76552B48FA299221688C973.tpdila22v_3?idArticle=KALIARTI000005839444&cidTexte=KALITEXT000005674852&dateTexte=19910731"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Employés"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0787",
+      "answer": "1 mois",
+      "duration": "30",
       "ref": "Article 6.2.0",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=CFEA1065D76552B48FA299221688C973.tpdila22v_3?idArticle=KALIARTI000005839444&cidTexte=KALITEXT000005674852&dateTexte=19910731"
     },
@@ -3820,102 +3744,6 @@
     },
     {
       "criteria": {
-        "niveau": "3| II",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1517",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1517",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "5| IV",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1517",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "7| V",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1517",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "8| VI",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1517",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "10| VII",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1517",
-      "answer": "3 mois",
-      "duration": "90",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "11| VIII",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1517",
-      "answer": "3 mois",
-      "duration": "90",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "12| IX",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1517",
-      "answer": "3 mois",
-      "duration": "90",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "niveau": "1| I",
         "ancienneté": "12| plus de 2 ans"
       },
@@ -3929,6 +3757,18 @@
     {
       "criteria": {
         "niveau": "3| II",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1517",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "3| II",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -3952,6 +3792,30 @@
     },
     {
       "criteria": {
+        "niveau": "4| III",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1517",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "5| IV",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1517",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
         "niveau": "5| IV",
         "ancienneté": "12| plus de 2 ans"
       },
@@ -3965,7 +3829,31 @@
     {
       "criteria": {
         "niveau": "7| V",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1517",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "7| V",
         "ancienneté": "12| plus de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1517",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "8| VI",
+        "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3989,6 +3877,18 @@
     {
       "criteria": {
         "niveau": "10| VII",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1517",
+      "answer": "3 mois",
+      "duration": "90",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "10| VII",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -4001,7 +3901,31 @@
     {
       "criteria": {
         "niveau": "11| VIII",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1517",
+      "answer": "3 mois",
+      "duration": "90",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "11| VIII",
         "ancienneté": "12| plus de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1517",
+      "answer": "3 mois",
+      "duration": "90",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "12| IX",
+        "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -4038,110 +3962,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "groupe": "24| 3",
-        "ancienneté": "11| 2 ans ou moins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1518",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "groupe": "25| 4",
-        "ancienneté": "11| 2 ans ou moins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1518",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "groupe": "26| 5",
-        "ancienneté": "11| 2 ans ou moins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1518",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "groupe": "27| 6",
-        "ancienneté": "11| 2 ans ou moins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1518",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "48| Animateurs, techniciens et professeurs",
-        "niveau": "20| A",
-        "ancienneté": "11| 2 ans ou moins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1518",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "48| Animateurs, techniciens et professeurs",
-        "niveau": "21| B",
-        "ancienneté": "11| 2 ans ou moins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1518",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "groupe": "28| 7",
-        "ancienneté": "11| 2 ans ou moins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1518",
-      "answer": "3 mois",
-      "duration": "90",
-      "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "groupe": "29| 8",
-        "ancienneté": "11| 2 ans ou moins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1518",
-      "answer": "3 mois",
-      "duration": "90",
-      "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "groupe": "23| 2",
         "ancienneté": "12| plus de 2 ans"
       },
@@ -4156,12 +3976,109 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "groupe": "24| 3",
+        "ancienneté": "11| 2 ans ou moins"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1518",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
+        "groupe": "24| 3",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "2 mois",
       "duration": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
+        "groupe": "25| 4"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1518",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
+        "groupe": "26| 5"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1518",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
+        "groupe": "27| 6"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1518",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "48| Animateurs, techniciens et professeurs",
+        "niveau": "20| A"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1518",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "48| Animateurs, techniciens et professeurs",
+        "niveau": "21| B"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1518",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "20| Cadres",
+        "groupe": "28| 7"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1518",
+      "answer": "3 mois",
+      "duration": "90",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "20| Cadres",
+        "groupe": "29| 8"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1518",
+      "answer": "3 mois",
+      "duration": "90",
       "ref": "Article 4.4",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
     },
@@ -4498,7 +4415,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de licenciement",
@@ -4510,7 +4426,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "28| de 3 à 6 mois"
       },
       "type": "préavis de licenciement",
@@ -4522,7 +4437,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "10| de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
@@ -4534,7 +4448,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -4546,7 +4459,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de licenciement",
@@ -4558,7 +4470,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "28| de 3 à 6 mois"
       },
       "type": "préavis de licenciement",
@@ -4570,7 +4481,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "10| de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
@@ -4582,7 +4492,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -4912,7 +4821,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de licenciement",
@@ -4924,7 +4832,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "28| de 3 à 6 mois"
       },
       "type": "préavis de licenciement",
@@ -4936,7 +4843,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "10| de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
@@ -4948,7 +4854,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -4960,7 +4865,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de licenciement",
@@ -4972,7 +4876,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "28| de 3 à 6 mois"
       },
       "type": "préavis de licenciement",
@@ -4984,7 +4887,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "10| de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
@@ -4996,7 +4898,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -5904,7 +5805,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -5916,7 +5816,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
         "ancienneté": "13| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
@@ -6021,7 +5920,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
+        "âge": "3| moins de 55 ans",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6033,7 +5932,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
+        "âge": "3| moins de 55 ans",
         "ancienneté": "13| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
@@ -6045,7 +5944,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
+        "âge": "4| 55 ans et plus",
         "ancienneté": "29| Au moins 15 ans d'ancienneté"
       },
       "type": "préavis de licenciement",
@@ -6057,7 +5956,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
+        "âge": "3| moins de 55 ans",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6069,7 +5968,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
+        "âge": "3| moins de 55 ans",
         "ancienneté": "13| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
@@ -6081,8 +5980,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
-        "âge": "3| 55 ans et plus",
+        "âge": "4| 55 ans et plus",
         "ancienneté": "29| Au moins 15 ans d'ancienneté"
       },
       "type": "préavis de licenciement",
@@ -6095,46 +5993,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "54| A",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "17| moins de 6 mois"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "2941",
-      "answer": "1 semaine (de date à date)",
-      "duration": "7",
-      "ref": "Titre IV, Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "55| B",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "17| moins de 6 mois"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "2941",
-      "answer": "1 semaine (de date à date)",
-      "duration": "7",
-      "ref": "Titre IV, Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "56| C",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "17| moins de 6 mois"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "2941",
-      "answer": "1 semaine (de date à date)",
-      "duration": "7",
-      "ref": "Titre IV, Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "57| D",
-        "durée du travail": "1| temps complet",
         "ancienneté": "17| moins de 6 mois"
       },
       "type": "préavis de licenciement",
@@ -6147,46 +6005,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "54| A",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "10| de 6 mois à 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "2941",
-      "answer": "1 mois (de date à date)",
-      "duration": "30",
-      "ref": "Titre IV, Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "55| B",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "10| de 6 mois à 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "2941",
-      "answer": "1 mois (de date à date)",
-      "duration": "30",
-      "ref": "Titre IV, Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "56| C",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "10| de 6 mois à 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "2941",
-      "answer": "1 mois (de date à date)",
-      "duration": "30",
-      "ref": "Titre IV, Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "57| D",
-        "durée du travail": "1| temps complet",
         "ancienneté": "10| de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6199,7 +6017,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "54| A",
-        "durée du travail": "1| temps complet",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6212,7 +6029,30 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "55| B",
-        "durée du travail": "1| temps complet",
+        "ancienneté": "17| moins de 6 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2941",
+      "answer": "1 semaine (de date à date)",
+      "duration": "7",
+      "ref": "Titre IV, Article 26.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "55| B",
+        "ancienneté": "10| de 6 mois à 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2941",
+      "answer": "1 mois (de date à date)",
+      "duration": "30",
+      "ref": "Titre IV, Article 26.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "55| B",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6225,7 +6065,30 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "56| C",
-        "durée du travail": "1| temps complet",
+        "ancienneté": "17| moins de 6 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2941",
+      "answer": "1 semaine (de date à date)",
+      "duration": "7",
+      "ref": "Titre IV, Article 26.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "56| C",
+        "ancienneté": "10| de 6 mois à 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2941",
+      "answer": "1 mois (de date à date)",
+      "duration": "30",
+      "ref": "Titre IV, Article 26.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "56| C",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6238,7 +6101,30 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "57| D",
-        "durée du travail": "1| temps complet",
+        "ancienneté": "17| moins de 6 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2941",
+      "answer": "1 semaine (de date à date)",
+      "duration": "7",
+      "ref": "Titre IV, Article 26.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "57| D",
+        "ancienneté": "10| de 6 mois à 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2941",
+      "answer": "1 mois (de date à date)",
+      "duration": "30",
+      "ref": "Titre IV, Article 26.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "57| D",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6251,20 +6137,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "58| E",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "2941",
-      "answer": "1 mois (de date à date)",
-      "duration": "30",
-      "ref": "Titre IV, Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "59| F",
-        "durée du travail": "1| temps complet",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6277,7 +6149,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "58| E",
-        "durée du travail": "1| temps complet",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6290,7 +6161,18 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "59| F",
-        "durée du travail": "1| temps complet",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2941",
+      "answer": "1 mois (de date à date)",
+      "duration": "30",
+      "ref": "Titre IV, Article 26.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "59| F",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6303,33 +6185,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "60| G",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "2941",
-      "answer": "2 mois (de date à date)",
-      "duration": "60",
-      "ref": "Titre IV, Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "61| H",
-        "durée du travail": "1| temps complet",
-        "ancienneté": "14| moins de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "2941",
-      "answer": "2 mois (de date à date)",
-      "duration": "60",
-      "ref": "Titre IV, Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "62| I",
-        "durée du travail": "1| temps complet",
         "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6342,7 +6197,6 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "60| G",
-        "durée du travail": "1| temps complet",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6355,7 +6209,18 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "61| H",
-        "durée du travail": "1| temps complet",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2941",
+      "answer": "2 mois (de date à date)",
+      "duration": "60",
+      "ref": "Titre IV, Article 26.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "61| H",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
@@ -6368,7 +6233,18 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "62| I",
-        "durée du travail": "1| temps complet",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2941",
+      "answer": "2 mois (de date à date)",
+      "duration": "60",
+      "ref": "Titre IV, Article 26.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "62| I",
         "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de licenciement",
