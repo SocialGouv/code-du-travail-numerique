@@ -7,7 +7,8 @@ import { SectionTitle, Highlight } from "../../common/stepStyles";
 import {
   filterSituations,
   getSituationsFor,
-  recapSituation
+  recapSituation,
+  getRef
 } from "../../common/situations.utils";
 
 const { situations: allSituations } = data;
@@ -104,27 +105,19 @@ StepResult.propTypes = {
 export { StepResult };
 
 function getResult({ durationCDT, durationCC, disabledWorker = true }) {
-  const maxNumber = (arr, n = 1) => [...arr].sort((a, b) => b - a).slice(0, n);
-  const maxDuration = maxNumber([durationCDT, durationCC]);
-  const handicapedDurationLimit = 90;
-  const maxHandicaped =
-    maxDuration < handicapedDurationLimit
-      ? handicapedDurationLimit / maxDuration > 2
-        ? 2
-        : handicapedDurationLimit / maxDuration
-      : 1;
+  const durationMax = Math.max(durationCDT, durationCC);
+  const durationHandicappedMax = 90;
+  let durationHandicapped = 1;
+  if (durationMax < durationHandicappedMax) {
+    durationHandicapped = Math.min(durationHandicappedMax / durationMax, 2);
+  }
 
-  const result = disabledWorker ? maxDuration * maxHandicaped : maxDuration;
-  const resultFormat = result >= 30 ? `${result / 30} mois` : `${result} jours`;
+  const result = disabledWorker
+    ? durationMax * durationHandicapped
+    : durationMax;
+  const resultFormat =
+    result >= 30
+      ? `${result / 30} mois`
+      : `${result} jour${result > 1 ? "s" : ""}`;
   return resultFormat;
-}
-
-function getRef({ ref, refUrl }) {
-  return (
-    <p>
-      <a href={refUrl} title={`Consultez l’${ref.toLowerCase()}`}>
-        {ref}
-      </a>
-    </p>
-  );
 }

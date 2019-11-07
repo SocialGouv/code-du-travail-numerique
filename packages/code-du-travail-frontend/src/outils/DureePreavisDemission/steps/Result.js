@@ -10,7 +10,8 @@ import {
   filterSituations,
   getSituationsFor,
   isNotYetProcessed,
-  recapSituation
+  recapSituation,
+  getRef
 } from "../../common/situations.utils";
 
 function StepResult({ form }) {
@@ -96,13 +97,3 @@ StepResult.propTypes = {
 };
 
 export { StepResult };
-
-function getRef({ ref, refUrl }) {
-  return (
-    <p>
-      <a href={refUrl} title={`Consultez l’${ref.toLowerCase()}`}>
-        {ref}
-      </a>
-    </p>
-  );
-}

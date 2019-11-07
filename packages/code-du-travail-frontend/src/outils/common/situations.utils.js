@@ -85,7 +85,7 @@ export const isNotYetProcessed = (data, idcc) => {
 
 export function recapSituation(criteria) {
   const cleanValue = value => `${value}`.replace(/[0-9]+\|/, "").trim();
-  const capitalize = ([first, ...rest]) => first.toUpperCase() + rest.join("");
+  const capitalize = str => str.slice(0, 1).toUpperCase() + str.slice(1);
 
   return (
     <ul>
@@ -95,5 +95,15 @@ export function recapSituation(criteria) {
         </li>
       ))}
     </ul>
+  );
+}
+
+export function getRef({ ref, refUrl }) {
+  return (
+    <p>
+      <a href={refUrl} title={`Consultez l’${ref.toLowerCase()}`}>
+        {ref}
+      </a>
+    </p>
   );
 }
