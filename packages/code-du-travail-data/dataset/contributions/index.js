@@ -81,13 +81,15 @@ const fetchContributions = async () => {
     };
   };
 
-  const allAnswers = questions.map(question => ({
-    ...question,
-    answers: {
-      generic: getGenericAnswer(question.id),
-      conventions: getConventionsAnswers(question.id)
-    }
-  }));
+  const allAnswers = questions
+    .map(question => ({
+      ...question,
+      answers: {
+        generic: getGenericAnswer(question.id),
+        conventions: getConventionsAnswers(question.id)
+      }
+    }))
+    .filter(q => q.answers.generic || q.answers.conventions.length);
 
   return allAnswers;
 };
