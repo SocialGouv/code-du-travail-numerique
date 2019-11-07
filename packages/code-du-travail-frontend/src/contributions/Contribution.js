@@ -1,9 +1,7 @@
 import React from "react";
-import Link from "next/link";
 import styled from "styled-components";
 import createPersistedState from "use-persisted-state";
 
-import slugify from "@cdt/data/slugify";
 import { Accordion, Alert, Button, theme } from "@socialgouv/react-ui";
 
 import SearchConvention from "../../src/conventions/Search/Form";
@@ -11,6 +9,10 @@ import Mdx from "../../src/common/Mdx";
 
 // store selected convention in localStorage
 const useConventionState = createPersistedState("convention");
+
+const getConventionUrl = id =>
+  `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`;
+// `https://beta.legifrance.gouv.fr/conv_coll/id/${id}/`;
 
 // hack: todo: remove
 // will be fixed at source level
@@ -53,24 +55,6 @@ const components = {
   section: AnswerSection
 };
 
-// following data/populate.js slug rules
-const getConventionSlug = ({ num, title }) =>
-  slugify(`${num}-${title}`.substring(0, 80));
-
-const LinkConvention = ({ num, title }) => {
-  const slugConvention = getConventionSlug({ num, title });
-  return (
-    <Link
-      href="/convention-collective/[slug]"
-      as={`/convention-collective/${slugConvention}`}
-    >
-      <ButtonConvention variant="secondary">
-        Consulter la convention collective
-      </ButtonConvention>
-    </Link>
-  );
-};
-
 const RefLink = ({ value, url }) => (
   <LineRef>
     <a href={url} target="_blank" rel="noopener noreferrer">
@@ -98,7 +82,7 @@ const References = ({ references }) => {
                 <RefLink
                   key={ref.id}
                   value={ref.value}
-                  url={ref.agreement.url}
+                  url={getConventionUrl(ref.agreement.id)}
                 />
               ))}
             </React.Fragment>
@@ -135,10 +119,16 @@ const AnswersConventions = ({ answers }) => {
             <span role="img" aria-label="Icone convention collective">
               📖
             </span>{" "}
-            {ccInfo.title}
-            {ccInfo.num && (
-              <React.Fragment> (IDCC {ccInfo.num})</React.Fragment>
-            )}
+            <a
+              href={getConventionUrl(ccInfo.id)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {ccInfo.title}
+              {ccInfo.num && (
+                <React.Fragment> (IDCC {ccInfo.num})</React.Fragment>
+              )}
+            </a>
           </h6>
           {(answer && (
             <React.Fragment>
@@ -148,7 +138,6 @@ const AnswersConventions = ({ answers }) => {
               />
 
               <References references={answer.references} />
-              <LinkConvention num={ccInfo.num} title={ccInfo.title} />
             </React.Fragment>
           )) || (
             <React.Fragment>
@@ -156,7 +145,6 @@ const AnswersConventions = ({ answers }) => {
                 Désolé nous n&apos;avons pas de réponse pour cette convention
                 collective
               </NoConventionAlert>
-              <LinkConvention num={ccInfo.num} title={ccInfo.title} />
             </React.Fragment>
           )}
           <br />
@@ -192,10 +180,6 @@ const Contribution = ({ answers }) => (
 );
 
 const { box, spacing } = theme;
-
-const ButtonConvention = styled(Button)`
-  margin: ${spacing.medium} 0;
-`;
 
 const LineRef = styled.li`
   margin: 5px 0;

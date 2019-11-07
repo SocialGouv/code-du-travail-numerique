@@ -54,7 +54,8 @@ describe("<Contribution />", () => {
   it("should render preselected convention", () => {
     mockPreselectedConvention = {
       title: "preselected convention",
-      num: "idcc-preselected"
+      num: "idcc-preselected",
+      id: 123
     };
     const answers = {
       generic: { markdown: "hello **generic**" },
@@ -74,7 +75,8 @@ describe("<Contribution />", () => {
   it("should NOT render invalid preselected convention", () => {
     mockPreselectedConvention = {
       title: "unknown convention",
-      num: "idcc-unknown"
+      num: "idcc-unknown",
+      id: 456
     };
     const answers = {
       generic: { markdown: "hello **generic**" },
@@ -94,7 +96,8 @@ describe("<Contribution />", () => {
   it("should render answer references", () => {
     mockPreselectedConvention = {
       title: "preselected convention",
-      num: "idcc-preselected"
+      num: "idcc-preselected",
+      id: 123
     };
     const answers = {
       generic: { markdown: "hello **generic**" },
@@ -113,6 +116,7 @@ describe("<Contribution />", () => {
               id: 422,
               value: "reference CC 1",
               agreement: {
+                id: 123,
                 url: "http://path/to/agreement"
               }
             }
