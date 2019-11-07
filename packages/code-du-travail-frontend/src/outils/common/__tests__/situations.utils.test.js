@@ -4,7 +4,8 @@ import {
   getNextQuestionKey,
   getOptions,
   getPastQuestions,
-  isNotYetProcessed
+  isNotYetProcessed,
+  recapSituation
 } from "../situations.utils";
 
 import data from "@cdt/data...prime-precarite/precarite.data.json";
@@ -115,6 +116,16 @@ describe("situations", () => {
     });
     it("should return false if there matching cc", () => {
       expect(isNotYetProcessed(data, "20")).toBe(false);
+    });
+  });
+
+  describe("recapSituation", () => {
+    it("should render formated criteria", () => {
+      const criteria = {
+        ancienneté: "23| moins de un an",
+        catégorie: "15| Agents de maîtrise"
+      };
+      expect(recapSituation(criteria)).toMatchSnapshot();
     });
   });
 });

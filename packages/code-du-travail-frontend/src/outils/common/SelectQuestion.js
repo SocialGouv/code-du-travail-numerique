@@ -9,7 +9,7 @@ import { Question } from "./Question";
 import { required } from "./validators";
 import { Error } from "./ErrorField";
 
-function SelectQuestion({ name, label, options, onChange }) {
+function SelectQuestion({ name, label, subLabel, options, onChange }) {
   const uid = `input-${name}`;
   if (!Array.isArray(options)) {
     options = Object.entries(options);
@@ -24,6 +24,7 @@ function SelectQuestion({ name, label, options, onChange }) {
         return (
           <Wrapper>
             <Question htmlFor={uid}>{label}</Question>
+            {subLabel && <SubLabel>{subLabel}</SubLabel>}
             <Select {...input} id={uid}>
               <option disabled value="">
                 ...
@@ -57,6 +58,7 @@ function SelectQuestion({ name, label, options, onChange }) {
 SelectQuestion.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  subLabel: PropTypes.string,
   options: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
   onChange: PropTypes.func
 };
@@ -64,6 +66,13 @@ SelectQuestion.propTypes = {
 export { SelectQuestion };
 
 const { spacing } = theme;
+
+const SubLabel = styled.label`
+  display: block;
+  margin-bottom: ${theme.spacing.tiny};
+  font-size: ${theme.fonts.sizeBase};
+  cursor: ${props => (props.as ? "default" : "pointer")};
+`;
 
 const Select = styled.select`
   flex: 1 1 70%;

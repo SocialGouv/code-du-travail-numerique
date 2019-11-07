@@ -9,9 +9,10 @@ import { SectionTitle, Highlight } from "../../common/stepStyles";
 import {
   filterSituations,
   getSituationsFor,
-  isNotYetProcessed
+  isNotYetProcessed,
+  recapSituation,
+  getRef
 } from "../../common/situations.utils";
-import { recapSituation } from "./situation";
 
 function StepResult({ form }) {
   const { values } = form.getState();
@@ -96,13 +97,3 @@ StepResult.propTypes = {
 };
 
 export { StepResult };
-
-function getRef({ ref, refUrl }) {
-  return (
-    <p>
-      <a href={refUrl} title={`Consultez l’${ref.toLowerCase()}`}>
-        {ref}
-      </a>
-    </p>
-  );
-}

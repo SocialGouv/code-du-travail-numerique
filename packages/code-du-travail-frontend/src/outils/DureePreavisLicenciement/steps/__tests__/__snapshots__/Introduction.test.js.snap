@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepIntro /> should render 1`] = `
+<div>
+  <p>
+    Le préavis est une période accordée au salarié entre la notification du licenciement et son départ effectif de l’entreprise (fin du contrat).
+  </p>
+  <p>
+    Afin de réaliser cette simulation, vous aurez besoin d’informations concernant la situation de l’employé concerné, comme sa convention collective, sa catégorie ou son coefficient. La plupart de ces informations se trouvent sur le bulletin de salaire ou le contrat de travail. Prévoyez deux à cinq minutes pour cette simulation.
+  </p>
+  <p>
+    Vous pouvez trouver plus d’informations sur le préavis de licenciement sur
+     
+    <a
+      href="/fiche-service-public/preavis-de-licenciement"
+    >
+      cette fiche
+    </a>
+    .
+  </p>
+  <p>
+    Cliquez sur suivant pour commencer la simulation
+  </p>
+</div>
+`;

@@ -141,5 +141,23 @@
         "url": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=8F3BCBFE8812F6151C4D819B05E01E15.tplgfr28s_3?idSectionTA=KALISCTA000005752522&cidTexte=KALITEXT000005679895&idConvention=KALICONT000005635173#KALIARTI000005851454"
       }
     ]
+  },
+  {
+    "titre": "Simulateur de durée de préavis de licenciement",
+    "code": "preavis-licenciement",
+    "questions": [
+      "preavis de licenciement",
+      "preavis de licenciement CDI",
+      "durée du préavis de licenciement",
+      "calculer la durée de son préavis de licenciement",
+      "calcul durée préavis licenciement"
+    ],
+    "description": "Connaître la durée du préavis de licenciement",
+    "theme": "",
+    "themes": [],
+    "catégorie": [],
+    "type_de_contrat": ["cdi"],
+    "travailleur_particulier": [],
+    "date": "08/11/2019"
   }
 ]
