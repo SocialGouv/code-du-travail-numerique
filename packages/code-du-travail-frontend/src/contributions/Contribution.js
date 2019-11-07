@@ -57,16 +57,16 @@ const components = {
 const getConventionSlug = ({ num, title }) =>
   slugify(`${num}-${title}`.substring(0, 80));
 
-const LinkConvention = ({ num, title, style }) => {
+const LinkConvention = ({ num, title }) => {
   const slugConvention = getConventionSlug({ num, title });
   return (
     <Link
       href="/convention-collective/[slug]"
       as={`/convention-collective/${slugConvention}`}
     >
-      <Button style={style} variant="secondary">
+      <ButtonConvention variant="secondary">
         Consulter la convention collective
-      </Button>
+      </ButtonConvention>
     </Link>
   );
 };
@@ -150,11 +150,7 @@ const AnswersConventions = ({ answers }) => {
               />
 
               <References references={answer.references} />
-              <LinkConvention
-                style={{ margin: "20px 0" }}
-                num={ccInfo.num}
-                title={ccInfo.title}
-              />
+              <LinkConvention num={ccInfo.num} title={ccInfo.title} />
             </React.Fragment>
           )) || (
             <React.Fragment>
@@ -198,6 +194,10 @@ const Contribution = ({ answers }) => (
 );
 
 const { box, spacing } = theme;
+
+const ButtonConvention = styled(Button)`
+  margin: ${spacing.medium} 0;
+`;
 
 const LineRef = styled.li`
   margin: 5px 0;
