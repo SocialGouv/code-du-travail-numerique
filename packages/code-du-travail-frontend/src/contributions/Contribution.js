@@ -8,7 +8,6 @@ import { Accordion, Alert, Button, theme } from "@socialgouv/react-ui";
 
 import SearchConvention from "../../src/conventions/Search/Form";
 import Mdx from "../../src/common/Mdx";
-import makeArticlesLinks from "./makeArticlesLinks";
 
 // store selected convention in localStorage
 const useConventionState = createPersistedState("convention");
