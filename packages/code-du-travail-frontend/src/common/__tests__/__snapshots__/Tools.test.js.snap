@@ -275,36 +275,6 @@ exports[`<Tools /> should render 1`] = `
         >
           <button
             class="c9"
-<<<<<<< HEAD:packages/code-du-travail-frontend/src/common/__tests__/__snapshots__/Outils.test.js.snap
-            href="/outils/preavis-licenciement"
-            title="Démarrer une simulation de durée de préavis de licenciement"
-          >
-            <div
-              class="c10"
-            >
-              Simulateur de durée de préavis de licenciement
-            </div>
-            <div
-              class="c11"
-            >
-              <div
-                class="c12"
-              >
-                Démarrer
-              </div>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c8"
-        >
-          <a
-            class="c9"
-            href="/outils/preavis-demission"
-            title="Démarrer une simulation de durée de préavis de démission"
-=======
-            href=""
->>>>>>> test(chore): update tests and snapshots:packages/code-du-travail-frontend/src/common/__tests__/__snapshots__/Tools.test.js.snap
           >
             <div
               class="c10"
@@ -350,7 +320,6 @@ exports[`<Tools /> should render 1`] = `
         >
           <button
             class="c9"
-            href=""
           >
             <div
               class="c10"

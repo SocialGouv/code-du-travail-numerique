@@ -59,7 +59,6 @@ exports[`<Tile /> renders a button tile 1`] = `
 <div>
   <button
     class="c0"
-    href=""
   >
     <div
       class="c1"
@@ -129,7 +128,6 @@ exports[`<Tile /> renders dark and small 1`] = `
 <div>
   <button
     class="c0"
-    href=""
   >
     <div
       class="c1"
@@ -323,7 +321,6 @@ exports[`<Tile /> renders with an icon 1`] = `
 <div>
   <button
     class="c0"
-    href=""
   >
     <div
       class="c1"

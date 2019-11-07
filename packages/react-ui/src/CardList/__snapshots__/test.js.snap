@@ -137,7 +137,6 @@ exports[`<CardList /> should render a collection with a title 1`] = `
     >
       <button
         class="c3"
-        href=""
       >
         <div
           class="c4"
@@ -152,7 +151,6 @@ exports[`<CardList /> should render a collection with a title 1`] = `
     >
       <button
         class="c3"
-        href=""
       >
         <div
           class="c4"
@@ -315,7 +313,6 @@ exports[`<CardList /> should render a collection with a title and description 1`
     >
       <button
         class="c4"
-        href=""
       >
         <div
           class="c5"
@@ -330,7 +327,6 @@ exports[`<CardList /> should render a collection with a title and description 1`
     >
       <button
         class="c4"
-        href=""
       >
         <div
           class="c5"
@@ -548,7 +544,6 @@ exports[`<CardList /> should render a collection with a title with a link and a 
     >
       <button
         class="c7"
-        href=""
       >
         <div
           class="c8"
@@ -563,7 +558,6 @@ exports[`<CardList /> should render a collection with a title with a link and a 
     >
       <button
         class="c7"
-        href=""
       >
         <div
           class="c8"

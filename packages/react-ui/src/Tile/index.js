@@ -91,7 +91,7 @@ Tile.propTypes = {
 };
 
 Tile.defaultProps = {
-  href: "",
+  href: undefined,
   button: "",
   size: "",
   variant: ""

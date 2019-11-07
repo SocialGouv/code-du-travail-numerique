@@ -97,7 +97,6 @@ exports[`<ConventionModal /> should render 1`] = `
 <div>
   <button
     class="c0"
-    href=""
   >
     <div
       class="c1"
@@ -338,7 +337,6 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   >
     <button
       class="c0"
-      href=""
     >
       <div
         class="c1"
