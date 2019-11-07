@@ -12,6 +12,105 @@
       },
       "conventions": [
         {
+          "markdown": "La convention collective encadre les conditions de la clause de non-concurrence uniquement dans deux situations :\n\n- Le portage salarial : le contrat de travail des salariés ne peut pas prévoir de clause de non-concurrence ;\n- En cas d'activité partielle (aussi appelée chômage partiel ou technique) : un(e) salarié(e) positionné(e) en activité partielle qui a trouvé un autre emploi est libre de quitter son entreprise. Si le contrat de travail prévoit une clause de non-concurrence, l'employeur devra y renoncer.",
+          "idcc": "1486",
+          "references": [
+            {
+              "id": "94ffbe28-8a5c-4bc8-acef-e3e49c1e3c51",
+              "category": "agreement",
+              "value": "Accord du 15 novembre 2007 relatif au portage salarial, article 2.11",
+              "url": null,
+              "created_at": "2019-09-09T14:52:42.415837+00:00",
+              "updated_at": "2019-09-09T14:52:42.415837+00:00",
+              "answer_id": "b0dcbe4e-5f9c-48e3-831e-af1c37f5bf0d",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            },
+            {
+              "id": "86e0811c-3b35-4078-9e1a-9f3496e32994",
+              "category": "agreement",
+              "value": "Accord du 16 octobre 2013 relatif à l'activité partielle des salariés, article 8",
+              "url": null,
+              "created_at": "2019-09-09T14:52:52.859152+00:00",
+              "updated_at": "2019-09-09T14:52:52.859152+00:00",
+              "answer_id": "b0dcbe4e-5f9c-48e3-831e-af1c37f5bf0d",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "La convention collective encadre les conditions de la clause de non-concurrence. \n\n#### 1. Conditions de la clause de non-concurrence\n\nLa clause de non-concurrence a une durée maximale de 1 an, renouvelable une fois. Les modalités de la clause de non-concurrence sont précisées dans le contrat de travail ou la lettre d'engagement.\n\nPendant l'application de la clause, la contrepartie financière versée au salarié est une indemnité mensuelle égale aux 6/10ème et dès que le salarié a retrouvé un emploi à 5/10ème de la moyenne mensuelle du salaire mensuel et des avantages et gratifications contractuels dont l'ingénieur ou cadre a bénéficié au cours de ses 12 derniers mois de présence dans l'établissement.\n\n#### 2. Renonciation par l'employeur à l'application de la clause de non-concurrence\n\nL’employeur peut libérer le salarié de la clause de non-concurrence, à condition d'en informer le salarié par écrit dans les 8 jours qui suivent la notification de la rupture du contrat de travail. \n\nEn cas de rupture conventionnelle, l'employeur doit le mentionner dans la convention de rupture conventionnelle.\nDans ce cas, l’indemnité n’est pas versée.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "ef722045-b8e4-4a38-98c2-9930a3919948",
+              "category": "agreement",
+              "value": "Article 28",
+              "url": null,
+              "created_at": "2019-11-07T12:53:32.077815+00:00",
+              "updated_at": "2019-11-07T12:53:32.077815+00:00",
+              "answer_id": "4fe343d3-3453-4b7d-a723-034a3b36b399",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            },
+            {
+              "id": "d619f4b3-7e5a-43fa-9d00-97bca240836f",
+              "category": null,
+              "value": "Jurisprudence (Arrêt Cass. soc du 21 janvier 2015 n°13-24.471)",
+              "url": "https://www.legifrance.gouv.fr/affichJuriJudi.do?oldAction=rechJuriJudi&idTexte=JURITEXT000030142936&fastReqId=1998694406&fastPos=1",
+              "created_at": "2019-10-10T15:06:27.580481+00:00",
+              "updated_at": "2019-10-10T15:06:27.580481+00:00",
+              "answer_id": "4fe343d3-3453-4b7d-a723-034a3b36b399"
+            },
+            {
+              "id": "821785de-3479-4705-9dbb-44b5ceea98fa",
+              "category": null,
+              "value": "Jurisprudence (Arrêt Cass. soc. du 14 avril 2016, n° 14-29.679)",
+              "url": "https://www.legifrance.gouv.fr/affichJuriJudi.do?oldAction=rechJuriJudi&idTexte=JURITEXT000032414297&fastReqId=120344131&fastPos=2",
+              "created_at": "2019-10-10T15:06:47.559872+00:00",
+              "updated_at": "2019-10-10T15:06:47.559872+00:00",
+              "answer_id": "4fe343d3-3453-4b7d-a723-034a3b36b399"
+            }
+          ]
+        },
+        {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1596",
           "references": []
@@ -406,6 +505,35 @@
         "markdown": "<Content href=\"https://www.service-public.fr/particuliers/vosdroits/F2855\"/>\n\n<HDN>\n\nL’employeur applique la mesure la plus favorable, c'est-à-dire la durée la plus longue, pour l’ensemble des salariés, que cette mesure soit prévue par une convention ou un accord collectif de branche ou d’entreprise ou un usage. Le contrat de travail peut toujours prévoir des mesures plus favorables, qui s’appliqueront.\n\n</HDN>"
       },
       "conventions": [
+        {
+          "markdown": "En cas de licenciement, la durée du préavis dépend de l'âge du salarié. \n\n#### 1. Cas général\n\nLa durée du préavis est égale à :\n\n- Ingénieurs et cadres de la position I :\n  - 1 mois pendant les 2 premières années de fonctions en cette qualité dans l'entreprise ;\n  - 2 mois pour une ancienneté d'au moins 2 ans dans l'entreprise ;\n\n- Ingénieurs et cadres de la position II et III :\n  - 3 mois, quelle que soit l'ancienneté du salarié.\n\nL'employeur et le salarié peuvent prévoir un délai plus long dans la lettre d'engagement. \n\nLe salarié n'a pas droit au préavis en cas de licenciement pour faute grave. \n\n#### 2. Salariés âgés de plus de 50 ans et ayant 1 an d'ancienneté dans l'entreprise\n\nLa durée du préavis est égale à :\n\n- Ingénieurs et cadres âgés de 50 à 55 ans :\n  - 4 mois pour une ancienneté de moins de 5 ans ;\n  - 6 mois pour une ancienneté d'au moins 5 ans ;\n\n- Ingénieurs et cadres de 55 ans et plus :\n  - 6 mois, quelle que soit l'ancienneté du salarié.\n\nL'employeur et le salarié peuvent prévoir un délai plus long dans la lettre d'engagement. \n\nLe salarié n'a pas droit au préavis en cas de licenciement pour faute grave.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "1ad3e593-2ffd-4003-a4a2-ec78ee4453aa",
+              "category": "agreement",
+              "value": "Article 27",
+              "url": null,
+              "created_at": "2019-11-07T13:16:59.316945+00:00",
+              "updated_at": "2019-11-07T13:16:59.316945+00:00",
+              "answer_id": "74c93769-718f-42d8-b6f1-b2290f53b7c7",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
         {
           "markdown": "En cas de licenciement, la durée du préavis est égale à :\n\n- De la fin de la période d'essai jusqu'à 3 mois d'ancienneté : 2 jours ;\n- De 3 mois à 6 mois d'ancienneté : 2 semaines ;\n- De 6 mois à 2 ans d'ancienneté : 1 mois ;\n- Plus de 2 ans d'ancienneté : 2 mois.\n\nLe salarié n'a pas droit au préavis en cas de licenciement pour faute grave.",
           "idcc": "1596",
@@ -989,6 +1117,35 @@
         "markdown": "<Tab title=\"Cas général\">\n\nLa durée du préavis de démission est fixée :\n\n- Soit par une convention collective ou un accord collectif\n- Soit par les usages pratiqués dans la localité et dans la profession\n- Soit par le droit local (en Alsace-Moselle).\n\n<HDN>\n\nVotre contrat de travail peut prévoir un préavis de démission, qui s'applique si sa durée est plus courte que celle prévue par la convention collective, l'accord collectif ou les usages.\n\nSi vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.\n\n</HDN>\n\n</Tab>\n\n<Tab title=\"Contrat de mission\">\n\nUn préavis s'applique si le salarié rompt son contrat pour un contrat à durée indéterminée (CDI) après la période d'essai (sauf s'il en est dispensé par l'employeur).\n\nCe préavis est calculé à raison d'un jour par semaine, compte tenu de :\n\n- La durée du contrat, renouvellement inclus, si celui-ci comporte un terme précis\n- La durée effectuée, si le contrat ne comporte pas de terme précis\n\nLa durée totale du préavis ne peut pas être inférieure à 1 jour, ni supérieure à 2 semaines.\n\nLe décompte s'effectue en jours ouvrés.\n\n</Tab>\n\nPour consulter l'intégralité de cette fiche Service Public, voir :\n[Démission d'un salarié](https://www.service-public.fr/particuliers/vosdroits/F2883)"
       },
       "conventions": [
+        {
+          "markdown": "En cas de démission, la durée du préavis est égale à :\n\n- Ingénieurs et cadres de la position I :\n  - 1 mois pendant les 2 premières années de fonctions en cette qualité dans l'entreprise ;\n  - 2 mois pour une ancienneté d'au moins 2 ans dans l'entreprise ;\n\n- Ingénieurs et cadres de la position II et III :\n  - 3 mois, quelle que soit l'ancienneté du salarié.\n\nL'employeur et le salarié peuvent prévoir un délai plus long dans la lettre d'engagement.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "0c594452-c64c-442d-b4dc-56933515c1f2",
+              "category": "agreement",
+              "value": "Article 27",
+              "url": null,
+              "created_at": "2019-11-07T13:14:04.750795+00:00",
+              "updated_at": "2019-11-07T13:14:04.750795+00:00",
+              "answer_id": "dbc482d4-4e74-4c9f-8755-c4b1d02e9b97",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
         {
           "markdown": "En cas de démission, la durée du préavis est égale à :\n\n- De la fin de la période d'essai jusqu'à 3 mois d'ancienneté : 2 jours ;\n- Après 3 mois d'ancienneté : 2 semaines.",
           "idcc": "1596",
@@ -2089,6 +2246,35 @@
       },
       "conventions": [
         {
+          "markdown": "Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.\n\nToutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui :\n\n- Ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé ;\n- N'ont pas accompli, à la fois, le dernier jour du travail précédant le jour férié et le premier jour du travail qui suit, sauf autorisation d'absence préalablement accordée. Toutefois, il n'est pas tenu compte d'une absence pour maladie se terminant la dernière journée de travail précédant le jour férié, ou d'une absence pour maladie commençant la première journée de travail suivant ledit jour férié.\n\nLe chômage des jours fériés ne peut pas donner lieu à récupération.",
+          "idcc": "1596",
+          "references": [
+            {
+              "id": "f62a5ea6-ced8-4b87-bbec-f11f0791b886",
+              "category": "agreement",
+              "value": "Article 5-11",
+              "url": null,
+              "created_at": "2019-10-21T15:14:43.37832+00:00",
+              "updated_at": "2019-10-21T15:14:43.37832+00:00",
+              "answer_id": "d6434225-7064-42e3-866f-2c483feab081",
+              "agreement": {
+                "active": true,
+                "date_publi": "2018-07-01T00:00:00.000Z",
+                "etat": "VIGUEUR_NON_ETEN",
+                "id": "KALICONT000005635221",
+                "mtime": 1562614614,
+                "nature": "IDCC",
+                "num": "1596",
+                "texte_de_base": "KALITEXT000005647125",
+                "title": "Nouvelle convention collective nationale des ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 (c'est-à-dire occupant jusqu'à 10 salariés) du 7 mars 2018 (Avenant du 7 mars 2018) ",
+                "effectif": 282254,
+                "shortTitle": "Bâtiment Ouvriers (entreprises occupant jusqu'à 10 salariés)",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.\n\nToutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui :\n\n- ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé ;\n- n'ont pas accompli à la fois le dernier jour du travail précédant le jour férié et le premier jour du travail qui lui fait suite, sauf autorisation d'absence préalablement accordée. Toutefois, il n'est pas tenu compte d'une absence pour maladie se terminant la dernière journée de travail précédant le jour férié, ou d'une absence pour maladie commençant la première journée de travail suivant ledit jour férié.\n\nLe chômage des jours fériés ne peut pas donner lieu à récupération.",
           "idcc": "1597",
           "references": [
@@ -2351,6 +2537,35 @@
         "markdown": "En cas de départ à la retraite, le salarié effectue un préavis. Sa durée est celle prévue en cas de licenciement. Elle dépend de l’ancienneté du salarié dans l’entreprise : \n\n- Si le salarié a moins de 6 mois d'ancienneté dans l'entreprise, le code du travail ne prévoit pas de durée de préavis. L'employeur applique la durée prévue par la convention collective, un accord collectif, le contrat de travail ou un usage. \n\n- Si le salarié a entre 6 mois et moins de 2 ans d'ancienneté dans l'entreprise, la durée du préavis est égale à 1 mois. \n\n- Si le salarié a 2 ans ou plus d'ancienneté dans l'entreprise, la durée du préavis est égale à 2 mois.\n\nLa durée du préavis d'un travailleur handicapé est égale au double de la durée fixée pour les autres salariés. Toutefois, elle ne peut pas dépasser 3 mois maximum. Cette limite ne s’applique pas si la convention ou l'accord collectif ou un usage prévoit un préavis d'une durée égale ou supérieure à 3 mois.\n\n<HDN>\n\nSi une convention ou un accord collectif de branche ou d’entreprise ou le contrat de travail prévoit des durées de préavis différentes de celles fixées par le code du travail, la durée la plus favorable pour le salarié s'applique. La convention ou l'accord collectif peut prévoir :\n\n- soit la durée du préavis en cas de départ à la retraite ;\n- soit uniquement la durée du préavis en cas de licenciement. Cette durée s’applique alors au salarié si elle est la plus favorable.\n\n</HDN>\n\n_Sources_ :\n[Article L1237-10 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901184&cidTexte=LEGITEXT000006072050)\n[Article L1234-1 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050)\n[Article L5213-9 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006903707&cidTexte=LEGITEXT000006072050)"
       },
       "conventions": [
+        {
+          "markdown": "En cas de départ à la retraite, la durée du préavis est égale à :\n\n- 1 mois pour une ancienneté inférieure à 2 ans à la date de notification du départ à la retraite ;\n- 2 mois, pour une ancienneté d'au moins 2 ans à la date de notification du départ à la retraite.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "a80436d8-8c4c-4d24-91e1-7f7ec45b0046",
+              "category": "agreement",
+              "value": "Article 31.2",
+              "url": null,
+              "created_at": "2019-11-07T13:24:12.327711+00:00",
+              "updated_at": "2019-11-07T13:24:12.327711+00:00",
+              "answer_id": "f2879152-89ae-479c-a325-801dc5777b7f",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
         {
           "markdown": "En cas de départ à la retraite du salarié, la durée du préavis est égale à 2 mois.",
           "idcc": "1596",
@@ -3147,6 +3362,58 @@
       },
       "conventions": [
         {
+          "markdown": "Les durées de la période d'essai ont été fixées par une convention collective conclue avant le 26 juin 2008.\n\n**Pour les salariés en CDI**, la durée maximale de la période d'essai est égale à :\n\n- ETAM :\n  - Coefficient de 200 à 355 inclus : 1 mois, renouvelable une fois ;\n  - Coefficient de 400 à 500 inclus : 2 mois, renouvelable une fois ;\n\n- Ingénieurs et cadres : 3 mois, renouvelable une fois ;\n\n- Chargé d'enquête intermittent : 1 mois, renouvelable une fois.",
+          "idcc": "1486",
+          "references": [
+            {
+              "id": "32d959d6-862c-4d5c-af4b-da3af3a4c40d",
+              "category": "agreement",
+              "value": "Annexe « Enquêteurs », article 3",
+              "url": null,
+              "created_at": "2019-09-09T14:34:38.380889+00:00",
+              "updated_at": "2019-09-09T14:34:38.380889+00:00",
+              "answer_id": "975bdbf7-d8ab-44f1-bb8b-f2324027ce7d",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            },
+            {
+              "id": "d5a21083-9a59-4dbc-b244-1b7517971355",
+              "category": "agreement",
+              "value": "Article 7",
+              "url": null,
+              "created_at": "2019-09-09T14:30:55.457645+00:00",
+              "updated_at": "2019-09-09T14:30:55.457645+00:00",
+              "answer_id": "975bdbf7-d8ab-44f1-bb8b-f2324027ce7d",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "La durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008.\n\n**Pour les salariés en CDI**, la durée maximale de la période d'essai est égale à 3 semaines (pas de renouvellement possible).",
           "idcc": "1596",
           "references": [
@@ -3735,6 +4002,40 @@
         "markdown": "Le nombre de renouvellements du contrat de travail dépend du type de contrat.\n\n<Tab title=\"CDD\">\n\n<Content href=\"https://www.service-public.fr/particuliers/vosdroits/F38\"/> \n\n<HDN>\n\nLe nombre de renouvellements prévu par le code du travail s’applique, sauf si une convention ou un accord collectif de branche étendu fixe ce nombre.\n\n</HDN>\n\n</Tab>\n\n<Tab title=\"Contrat de mission (intérim)\">\n\nQuel que soit son terme (précis ou non), le contrat de mission (intérim) peut être renouvelé 2 fois si la durée totale du contrat, renouvellement inclus, ne dépasse pas la durée maximale autorisée.\nLes conditions de ce renouvellement doivent obligatoirement être fixées par :\n\n- une clause insérée dans le contrat de travail, ou ;\n- un avenant proposé au salarié avant le terme prévu initialement.\n\nPour consulter l'intégralité de cette fiche Service Public, voir :\n[Contrat de travail temporaire (intérim)](https://www.service-public.fr/particuliers/vosdroits/F11215)\n\n</Tab>\n\n<Tab title=\"Contrat d’apprentissage\">\n  \nLe contrat d’apprentissage peut être renouvelé une fois, en cas d’échec lors de l’obtention du diplôme ou du titre professionnel. Dans ce cas, le contrat peut être prolongé pour un an maximum.\n\n_Source_ :\n[Article L6222-11 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000037385975&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Contrat de professionnalisation\">\n\nSi le contrat de professionnalisation est à durée déterminée, il peut être renouvelé 1 fois si le bénéficiaire ayant obtenu la qualification visée prépare une qualification supérieure ou complémentaire.\n\nLe CDD peut également être renouvelé si le bénéficiaire n'a pas obtenu la qualification visée pour l'un des motifs suivants :\n\n- Échec à l'obtention de la qualification ;\n- Maternité ;\n- Maladie ;\n- Accident du travail ;\n- Défaillance de l'organisme de formation.\n\nPour consulter l'intégralité de cette fiche Service Public, voir :\n[Contrat de professionnalisation](https://www.service-public.fr/particuliers/vosdroits/F15478)  \n\n</Tab>\n\n<Tab title=\"Contrat de portage salarial à durée déterminée\">\n  \nLe contrat de portage salarial à durée déterminée peut être renouvelé 2 fois si la durée totale, renouvellement inclus, est de 18 mois maximum. La durée peut être de 21 mois par accord entre le salarié porté et l’entreprise de portage pour permettre au salarié porté de prospecter de nouveaux clients. Les conditions de renouvellement sont prévues par le contrat de travail ou un avenant.\n\n_Sources_ :\n[Article L1254-17 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000031087504&cidTexte=LEGITEXT000006072050)\n[Article L1254-12 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000031087497&cidTexte=LEGITEXT000006072050)\n[Article L1254-13 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000030442369&cidTexte=LEGITEXT000006072050)\n\n</Tab>"
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1486",
+          "references": []
+        },
+        {
+          "markdown": "Le nombre de renouvellements du CDD et du contrat de travail temporaire (intérim) est celui prévu par le code du travail.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "42b89044-b1ea-4deb-aa2e-8580b6f125af",
+              "category": "agreement",
+              "value": "Accord national du 29 juin 2018 relatif au contrat à durée déterminée et au contrat de travail temporaire dans la métallurgie",
+              "url": null,
+              "created_at": "2019-09-16T13:22:29.653409+00:00",
+              "updated_at": "2019-09-16T13:22:29.653409+00:00",
+              "answer_id": "ded3a1e9-5963-4d63-ac75-c97f7a4f7638",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1596",
@@ -4733,6 +5034,11 @@
       "conventions": [
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "0650",
+          "references": []
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1596",
           "references": []
         },
@@ -4894,6 +5200,73 @@
       },
       "conventions": [
         {
+          "markdown": "Un avenant du 8 juillet 1993 relatif aux fins de chantier dans l'ingénierie prévoit la possibilité pour les entreprises de conclure un CDI de chantier. Toutefois, cet avenant n'a pas été étendu. Il s'applique donc uniquement aux entreprises adhérentes aux organisations patronales signataires de l'avenant.",
+          "idcc": "1486",
+          "references": [
+            {
+              "id": "ff2b5568-fe33-4577-847c-113438c4eae2",
+              "category": null,
+              "value": "Avenant n° 11 du 8 juillet 1993 relatif aux fins de chantier dans l'ingénierie",
+              "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idArticle=KALIARTI000005851372&idSectionTA=KALISCTA000005724116&cidTexte=KALITEXT000005679889&idConvention=KALICONT000005635173&dateTexte=29990101&fastReqId=1472535225&fastPos=1",
+              "created_at": "2019-09-09T14:46:24.115421+00:00",
+              "updated_at": "2019-09-09T14:46:24.115421+00:00",
+              "answer_id": "a326a75d-05ba-400c-9963-d9d18f7d2a46"
+            },
+            {
+              "id": "42723135-5f8a-4108-bf42-c907adcefa0e",
+              "category": "agreement",
+              "value": "Avenant n° 11 du 8 juillet 1993 relatif aux fins de chantier dans l'ingénierie",
+              "url": null,
+              "created_at": "2019-11-07T13:58:39.398521+00:00",
+              "updated_at": "2019-11-07T13:58:39.398521+00:00",
+              "answer_id": "a326a75d-05ba-400c-9963-d9d18f7d2a46",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "Les entreprises dans la branche de la Métallurgie peuvent conclure un contrat de chantier ou d'opération jusqu'au 23 décembre 2021.\n\nToutefois, la conclusion du contrat ne doit pas conduire à porter, au moment où il est conclu, le nombre total de ce type de contrat à plus de :\n\n- 10 % de l’effectif de l’entreprise, dans les entreprises comptant entre 50 et moins de 1000 salariés ;\n- 5 % de l’effectif dans celles comptant au moins 1000 salariés.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "6dd44a8f-941e-4dbb-8629-a58a3c672862",
+              "category": "agreement",
+              "value": "Accord national du 29 juin 2018 relatif au contrat de chantier ou d’opération",
+              "url": null,
+              "created_at": "2019-09-16T13:14:18.03531+00:00",
+              "updated_at": "2019-09-16T13:14:18.03531+00:00",
+              "answer_id": "b4a7235f-7cfb-46a4-9b02-4477329bdb14",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "La convention collective ne prévoit rien sur ce point.\n\nLe code du travail précise que lorsque la convention collective ne prévoit rien, l'employeur peut conclure avec un salarié un CDI de chantier et d'opération dans les secteurs où son usage est habituel et conforme à l'exercice régulier de la profession qui y recourt au 1er janvier 2017. Le bâtiment fait partie de ces secteurs. Les entreprises peuvent donc embaucher en CDI de chantier.",
           "idcc": "1596",
           "references": []
@@ -4982,6 +5355,64 @@
         "markdown": "Le code du travail n'impose pas à l'employeur d’informer les salariés des postes créés ou qui se libèrent dans l’entreprise, sauf dans les cas suivants : \n\n- Le salarié à temps partiel qui souhaite occuper un emploi d'une durée au moins égale à 24 heures ou un emploi à temps plein. Ce salarié bénéficie d’une priorité pour l’attribution d’un emploi dans la même catégorie professionnelle ou d’un emploi équivalent. L’employeur doit l’informer des postes libres correspondants.\n\n- Le salarié à temps plein qui souhaite occuper un emploi à temps partiel. Ce salarié bénéficie d’une priorité pour l’attribution d’un emploi dans la même catégorie professionnelle ou d’un emploi équivalent. L’employeur doit l’informer des postes libres correspondants.\n\n- Le salarié en télétravail qui souhaite occuper ou reprendre un poste sans télétravail. L’employeur doit l’informer des postes disponibles et lui donner la priorité s’il se porte candidat.\n\n- L'employeur informe les salariés en CDD ou en contrat de mission (intérim) de la liste des postes à pourvoir dans l'entreprise par des CDI, si un tel dispositif d'information existe déjà pour les salariés en CDI.\n\n<HDN>\n\nUne convention ou un accord collectif de branche et/ou d'entreprise peut prévoir des dispositions complémentaires ou différentes. Dans ce dernier cas, l'employeur applique les mesures les plus favorables pour les salariés. Le contrat de travail peut toujours prévoir des mesures plus favorables, qui s’appliqueront.\n\n</HDN>\n\n_Sources_ :\n[Article L1222-10 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000035643958&cidTexte=LEGITEXT000006072050)\n[Article L3123-3 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000036262948&cidTexte=LEGITEXT000006072050)\n[Article L1242-17 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901211&cidTexte=LEGITEXT000006072050&dateTexte=20191028&oldAction=rechCodeArticle&fastReqId=1716292106&nbResultRech=1)\n[Article L1251-25 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901278&cidTexte=LEGITEXT000006072050&dateTexte=20191028&oldAction=rechCodeArticle&fastReqId=172970319&nbResultRech=1)"
       },
       "conventions": [
+        {
+          "markdown": "En cas de de poste créé ou libre dans l'entreprise, l'employeur doit faire appel par priorité aux salariés susceptibles d'occuper le poste.",
+          "idcc": "1486",
+          "references": [
+            {
+              "id": "b66b42b7-a5b8-474f-a284-f5767be20347",
+              "category": "agreement",
+              "value": "Article 6",
+              "url": null,
+              "created_at": "2019-09-09T14:28:21.267194+00:00",
+              "updated_at": "2019-09-09T14:28:21.267194+00:00",
+              "answer_id": "c187dfdd-caa5-4958-ae66-1b15fb0ff9f2",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "Si un poste se libère ou est créé dans l'entreprise, l'employeur en informe les ingénieures et cadres susceptibles, par leurs compétences et aptitudes, de postuler à ce poste. Il en informe en premier lieu les salariés de l'établissement puis, à défaut, ceux des autres établissements de l'entreprise, avant de faire appel à l'extérieur.\n\nL'employeur fait appel de préférence au personnel employé dans l'entreprise et possédant les compétences et aptitudes requises pour le poste, éventuellement après un stage de formation appropriée.\n\nEn cas de promotion d'un membre du personnel à une situation d'ingénieur ou cadre dans l'entreprise, l'employeur lui adresse une lettre de notification de ses nouvelles conditions d'emploi.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "8b6b2d79-a4c2-49d8-9f79-ebab5883fec7",
+              "category": "agreement",
+              "value": "Article 6",
+              "url": null,
+              "created_at": "2019-11-07T09:20:49.592905+00:00",
+              "updated_at": "2019-11-07T09:20:49.592905+00:00",
+              "answer_id": "954694dc-3370-472d-a90d-41f1d88c12dd",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1596",
@@ -5225,16 +5656,6 @@
           ]
         }
       ]
-    }
-  },
-  {
-    "id": "4ba9c2a6-dd9e-47b1-8718-236c62a30158",
-    "value": "Ma convention collective prévoit-elle des mesures spécifiques sur l’égalité professionnelle femmes-hommes ?",
-    "created_at": "2019-05-08T20:54:59.923739+00:00",
-    "updated_at": "2019-06-22T20:24:30.18358+00:00",
-    "index": 2,
-    "answers": {
-      "conventions": []
     }
   },
   {
@@ -5740,6 +6161,64 @@
       },
       "conventions": [
         {
+          "markdown": "L'employeur remet au salarié, au moment de son embauche, un contrat de travail écrit qui précise :\n\n- La durée du contrat ;\n- La date d'entrée dans l'entreprise ;\n- La fonction occupée par le salarié ;\n- Sa classification et son coefficient hiérarchique ;\n- Le lieu de travail ;\n- La période d'essai ;\n- Les horaires de référence ;\n- Le montant du salaire mensuel ou les conditions de rémunération pour les chargés d'enquêtes ;\n- Les autres éléments éventuels de rémunération directs ou indirects ;\n- La clause de mobilité géographique, le cas échéant.",
+          "idcc": "1486",
+          "references": [
+            {
+              "id": "04f2f6bf-34ee-42a1-a37c-55a2fff6e090",
+              "category": "agreement",
+              "value": "Article 5",
+              "url": null,
+              "created_at": "2019-11-07T13:56:27.678078+00:00",
+              "updated_at": "2019-11-07T13:56:27.678078+00:00",
+              "answer_id": "e0c5b096-563f-4113-962a-b0dae60867b8",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "Avant l'entrée en fonctions d'un ingénieur ou cadre, celui-ci reçoit une lettre d'engagement indiquant :\n\n- La fonction qui sera exercée ;\n- La position repère ;\n- L'indice hiérarchique et les appointements minima afférents à cette position repère ou, dans le cas des positions I et II, à la garantie automatique d'âge ou d'ancienneté ;\n- Le lieu de travail, les lieux ou le cadre régional où la fonction sera exercée ;\n- La durée et les conditions de la période d'essai, si elle est convenue ;\n- Le montant des appointements réels, base 39 heures, ou éventuellement des éléments essentiels de la rémunération forfaitaire convenue ;\n- Éventuellement, l'énumération des avantages en nature.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "f1335e11-a117-4146-b76e-502014487acb",
+              "category": "agreement",
+              "value": "Article 4",
+              "url": null,
+              "created_at": "2019-11-07T12:47:50.896195+00:00",
+              "updated_at": "2019-11-07T12:47:50.896195+00:00",
+              "answer_id": "59c9d36a-5538-4b6b-aa11-781726812e8c",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant :\n\n- Le nom, la raison sociale et l'adresse de l'entreprise, \n- Le numéro de code APE de l'entreprise et le numéro d'inscription à l'URSSAF ou à la mutualité sociale agricole ;\n- Le nom du salarié ;\n- La date d'embauchage du salarié ;\n- L'emploi du salarié, sa qualification et son coefficient hiérarchique ;\n- La durée de la période d'essai ;\n- Le montant de son salaire mensuel correspondant à un horaire hebdomadaire de travail de 39 heures (soit un salaire mensuel calculé sur une base de 169 heures) et son taux de salaire horaire ;\n- L'horaire de travail hebdomadaire de référence choisi dans l'entreprise ou l'établissement et le montant de son salaire mensuel effectif correspondant ;\n- Le montant de la déduction pour 1 heure de travail non effectuée ;\n- L'engagement du salarié, pendant la durée du contrat, de ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail ;\n- Le cas échéant, les avantages en nature et les conditions particulières, telles que le chantier sur lequel l'intéressé est embauché ;\n- La convention collective applicable ;\n- Le nom des caisses de prévoyance et de retraite complémentaire où sont versées les cotisations.",
           "idcc": "1596",
           "references": [
@@ -6115,6 +6594,40 @@
         "markdown": "<Content href=\"https://www.service-public.fr/professionnels-entreprises/vosdroits/F31211\"/>  \n\n<HDN>\n\nLa durée maximale du CDD prévue par le code du travail s’applique, sauf si une convention ou un accord collectif de branche étendu fixe cette durée. Toutefois, pour le CDD à objet défini et les CDD conclus au titre de l’article L1242-3 du code du travail (contrats destinés à favoriser le recrutement de certaines catégories de personnes sans emploi), seul le code du travail s'applique.\n\n</HDN>\n\n_Source_ :\n[Article L1242-8-1 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035643961&cidTexte=LEGITEXT000006072050&dateTexte=20191029&oldAction=rechCodeArticle&fastReqId=1224062090&nbResultRech=1)"
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1486",
+          "references": []
+        },
+        {
+          "markdown": "La durée maximale du CDD et du contrat de travail temporaire (intérim) est celle prévue par le code du travail.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "3eb7d403-ffe5-4311-a45e-0a04b780d908",
+              "category": "agreement",
+              "value": "Accord national du 29 juin 2018 relatif au contrat à durée déterminée et au contrat de travail temporaire dans la métallurgie",
+              "url": null,
+              "created_at": "2019-09-16T13:23:19.92599+00:00",
+              "updated_at": "2019-09-16T13:23:19.92599+00:00",
+              "answer_id": "fb7ecfbf-cce5-4c28-bb91-e44127964e98",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1596",
@@ -6795,16 +7308,6 @@
     }
   },
   {
-    "id": "7d5e474a-dc5b-4aa7-bdb9-afc377a96070",
-    "value": "Quelle est la durée maximale de la période d’essai ?",
-    "created_at": "2019-05-08T20:54:59.923739+00:00",
-    "updated_at": "2019-08-05T15:27:07.84688+00:00",
-    "index": 5,
-    "answers": {
-      "conventions": []
-    }
-  },
-  {
     "id": "7e853ba8-350b-4584-a54c-eb3ac7484288",
     "value": "Quelle est la durée du préavis à respecter en cas de démission pour les ingénieurs et cadres ?",
     "created_at": "2019-05-08T20:54:59.923739+00:00",
@@ -7464,6 +7967,35 @@
       },
       "conventions": [
         {
+          "markdown": "La convention collective prévoit qu'en cas de démission, le préavis doit être exécuté en totalité. Le salarié peut seulement s'absenter pour rechercher un emploi sous certaines conditions.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "fb695ce9-ce6f-47bf-bcbe-1fb1fb6808e1",
+              "category": "agreement",
+              "value": "Article 27",
+              "url": null,
+              "created_at": "2019-11-07T14:04:31.674568+00:00",
+              "updated_at": "2019-11-07T14:04:31.674568+00:00",
+              "answer_id": "3a0a0f59-c95f-48a9-9f85-cd166a7ff400",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "La convention collective ne prévoit rien sur ce point. Elle précise seulement que le salarié peut s'absenter pour rechercher un emploi sous certaines conditions.",
           "idcc": "1596",
           "references": [
@@ -7906,6 +8438,35 @@
       },
       "conventions": [
         {
+          "markdown": "Si l'employeur ou le salarié ne respecte pas le préavis, l'autre partie peut obtenir le paiement d'une indemnité égale à la rémunération et aux avantages que le salarié aurait perçus s'il avait travaillé jusqu'au terme de la période de préavis.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "d7b04df6-3756-453d-8d51-5f9f084623c1",
+              "category": "agreement",
+              "value": "Article 27",
+              "url": null,
+              "created_at": "2019-11-07T14:00:55.154962+00:00",
+              "updated_at": "2019-11-07T14:00:55.154962+00:00",
+              "answer_id": "ebb18624-bcd6-474b-8055-a60ee889834d",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "Si l'employeur ou le salarié ne respecte pas le préavis de licenciement ou de démission, l'autre partie peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant à courir.",
           "idcc": "1596",
           "references": [
@@ -8272,6 +8833,35 @@
         "markdown": "Le code du travail prévoit plusieurs congés pour événements familiaux (naissance, mariage, etc.).\n\n<Content href=\"https://travail-emploi.gouv.fr/droit-du-travail/les-absences-pour-maladie-et-conges-pour-evenements-familiaux/article/les-conges-pour-evenements-familiaux\"/>\n\n<HDN>\n\nL’employeur applique la mesure la plus favorable pour l’ensemble des salariés, que cette mesure soit prévue par la loi, une convention ou un accord collectif de branche et/ou d’entreprise. Le contrat de travail peut toujours prévoir des mesures plus favorables, qui s’appliqueront.\n\n</HDN>"
       },
       "conventions": [
+        {
+          "markdown": "Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :\n\n- Mariage du salarié : 4 jours ;\n- Mariage d'un de ses enfants : 1 jour ;\n- Obsèques de son conjoint : 3 jours ;\n- Obsèques d'un de ses enfants : 3 jours ;\n- Obsèques de son père, de sa mère : 3 jours ;\n- Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour ;\n- Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité.\n\nCes absences s'ajoutent aux congés payés.",
+          "idcc": "1596",
+          "references": [
+            {
+              "id": "40983aab-7fd0-4906-969a-e78315b7f732",
+              "category": "agreement",
+              "value": "Article  5-12",
+              "url": null,
+              "created_at": "2019-07-16T15:21:57.079784+00:00",
+              "updated_at": "2019-07-16T15:21:57.079784+00:00",
+              "answer_id": "85d15aaf-c9f6-494d-81f8-0355d6abebde",
+              "agreement": {
+                "active": true,
+                "date_publi": "2018-07-01T00:00:00.000Z",
+                "etat": "VIGUEUR_NON_ETEN",
+                "id": "KALICONT000005635221",
+                "mtime": 1562614614,
+                "nature": "IDCC",
+                "num": "1596",
+                "texte_de_base": "KALITEXT000005647125",
+                "title": "Nouvelle convention collective nationale des ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 (c'est-à-dire occupant jusqu'à 10 salariés) du 7 mars 2018 (Avenant du 7 mars 2018) ",
+                "effectif": 282254,
+                "shortTitle": "Bâtiment Ouvriers (entreprises occupant jusqu'à 10 salariés)",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+              }
+            }
+          ]
+        },
         {
           "markdown": "Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :\n\n- Mariage du salarié : 4 jours ;\n- Mariage d'un de ses enfants : 1 jour ;\n- Obsèques de son conjoint : 3 jours ;\n- Obsèques d'un de ses enfants : 3 jours ;\n- Obsèques de son père, de sa mère : 3 jours ;\n- Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour ;\n- Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité.",
           "idcc": "1597",
@@ -9478,6 +10068,11 @@
       "conventions": [
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "0650",
+          "references": []
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1596",
           "references": []
         },
@@ -9562,6 +10157,87 @@
         "markdown": "La période d’essai peut être renouvelée uniquement pour les salariés en CDI, et si les 3 conditions suivantes sont remplies :  \n\n- La convention ou l’accord de branche étendu prévoit le renouvellement de la période d’essai ;\n- Le contrat de travail ou la lettre d'engagement prévoit le renouvellement de la période d’essai ;\n- L’employeur et le salarié donnent leur accord pour le renouvellement, pendant la période d'essai initiale, par écrit ou par mail.\n\n<HDN>\n\nUne convention ou un accord collectif de branche ou d’entreprise ou le contrat de travail peut compléter ces conditions. Leurs mesures s’appliquent en plus de celles prévues par le code de travail. \n\n_Exemple : la convention collective peut prévoir que l’accord écrit pour le renouvellement de la période d’essai doit être signé 3 jours avant la fin de la période d’essai d’initiale._\n\n</HDN>\n\n_Source_ :\n[Article L1221-23 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000019071102&cidTexte=LEGITEXT000006072050)"
       },
       "conventions": [
+        {
+          "markdown": "La période d'essai peut être renouvelée, exceptionnellement, une fois pour une période équivalente à la durée initiale. Le renouvellement doit se faire après accord écrit du salarié.",
+          "idcc": "1486",
+          "references": [
+            {
+              "id": "f9af0d16-e61b-489e-8baf-fccc672fcf16",
+              "category": "agreement",
+              "value": "Annexe « Enquêteurs », article 3",
+              "url": null,
+              "created_at": "2019-09-09T14:36:12.058094+00:00",
+              "updated_at": "2019-09-09T14:36:12.058094+00:00",
+              "answer_id": "11c3d9c7-84e3-445c-9709-a0e357239724",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            },
+            {
+              "id": "4af1c5b8-29cc-4e4a-90fa-db60b060ebbc",
+              "category": "agreement",
+              "value": "Article 7",
+              "url": null,
+              "created_at": "2019-11-07T13:53:49.783325+00:00",
+              "updated_at": "2019-11-07T13:53:49.783325+00:00",
+              "answer_id": "11c3d9c7-84e3-445c-9709-a0e357239724",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "La période d'essai du CDD n'est pas renouvelable.\n\nLa période d'essai du CDI peut être renouvelée une fois, du commun accord de l'employeur et du salarié, si cette possibilité a été expressément prévue par la lettre d'engagement ou par le contrat de travail. La durée de la période d'essai renouvelée ne peut pas être supérieure à la durée de la période d'essai initiale. Dans tous les cas, la durée totale de la période d'essai, renouvellement compris, ne peut pas dépasser 6 mois maximum.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "5f6710dd-7ba1-49fb-a1ea-1a1ffa120622",
+              "category": "agreement",
+              "value": "Article 5.4",
+              "url": null,
+              "created_at": "2019-11-07T11:09:08.131136+00:00",
+              "updated_at": "2019-11-07T11:09:08.131136+00:00",
+              "answer_id": "829efd4d-8555-4d69-af76-a751ecf2348e",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point. La période d'essai ne peut donc pas être renouvelée.",
           "idcc": "1596",
@@ -10033,6 +10709,35 @@
       },
       "conventions": [
         {
+          "markdown": "La convention collective prévoit une prime de vacances.\n\nElle est versée, en plus de l'indemnité de congé, à l'ouvrier ayant au moins 1675 heures de travail au cours de l'année de référence dans une ou plusieurs entreprises du bâtiment ou des travaux publics. \n\nLes ouvriers qui n'auront pas atteint, en raison d'arrêt maladie, ce total de 1675 heures au cours de l'année de référence, bénéficient également de la prime de vacances.\n\nLe taux de la prime de vacances est égal à 30 % de l'indemnité de congé payés correspondant aux 24 jours ouvrables.\n\nLa prime de vacances est versée à l'ouvrier en même temps que son indemnité de congé. Elle ne se cumule pas avec les versements qui auraient le même objet.",
+          "idcc": "1596",
+          "references": [
+            {
+              "id": "2e6525d3-f619-4cbb-b0bb-c07d80212c3a",
+              "category": "agreement",
+              "value": "Article 5-25",
+              "url": null,
+              "created_at": "2019-10-18T10:39:55.33547+00:00",
+              "updated_at": "2019-10-18T10:39:55.33547+00:00",
+              "answer_id": "e06af272-41ab-4323-949c-fe8cb8d1f1c7",
+              "agreement": {
+                "active": true,
+                "date_publi": "2018-07-01T00:00:00.000Z",
+                "etat": "VIGUEUR_NON_ETEN",
+                "id": "KALICONT000005635221",
+                "mtime": 1562614614,
+                "nature": "IDCC",
+                "num": "1596",
+                "texte_de_base": "KALITEXT000005647125",
+                "title": "Nouvelle convention collective nationale des ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 (c'est-à-dire occupant jusqu'à 10 salariés) du 7 mars 2018 (Avenant du 7 mars 2018) ",
+                "effectif": 282254,
+                "shortTitle": "Bâtiment Ouvriers (entreprises occupant jusqu'à 10 salariés)",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "La convention collective prévoit une prime de vacances.\n\nElle est versée, en plus de l'indemnité de congé, à l'ouvrier ayant au moins 1675 heures de travail au cours de l'année de référence dans une ou plusieurs entreprises du bâtiment ou des travaux publics.\n\nLes ouvriers qui n'auront pas atteint, en raison d'arrêt maladie, ce total de 1675 heures au cours de l'année de référence, bénéficient également de la prime de vacances.\n\nLe taux de la prime de vacances est égal à 30 % de l'indemnité de congé payés correspondant aux 24 jours ouvrables.\n\nLa prime de vacances est versée à l'ouvrier en même temps que son indemnité de congé. Elle ne se cumule pas avec les versements qui auraient le même objet.",
           "idcc": "1597",
           "references": [
@@ -10247,6 +10952,64 @@
         "markdown": "Le contrat de travail peut être verbal (donc non écrit), sauf lorsque le code du travail prévoit l’obligation d’un contrat de travail écrit et signé. Cette obligation n’existe que pour certains types de contrat de travail. \n\n<HDN>\n\nLa convention collective ou l’accord collectif peut prévoir l’obligation d’un contrat de travail écrit, pour tout type de contrat. Dans ce cas, l'employeur applique la convention ou l'accord si le code du travail n’impose rien. \n\n</HDN>\n\n<Tab title=\"CDI à temps plein\">\n\nLe code du travail n'impose pas la signature d'un contrat de travail, sauf exception :\n\n- Pour certains types de contrats (exemple : le contrat de chantier) ;\n- Si certaines clauses sont prévues : période d’essai, etc. Dans le cas contraire, ces clauses ne s'appliquent pas. \n\n</Tab>\n\n<Tab title=\"Contrat de travail à temps partiel\">\n\nLe contrat de travail du salarié à temps partiel est un contrat écrit et rédigé en français. Cette règle s’applique à tous les contrats (CDI, CDD, intérim, etc.). L’avenant au contrat doit également faire l'objet d'un écrit.\n\nEn l'absence de contrat de travail signé, le salarié est considéré être en CDI à temps plein. L’employeur peut être condamné à une amende de 1.500 € ou 3.000 € en cas de récidive. \n\n_Sources_ :\n[Article L3123-6 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033020080&cidTexte=LEGITEXT000006072050)\n[Article R3124-5 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033471450&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"CDD\">\n\nLe CDD doit être écrit, en français, et signé dans un délai de 2 jours suivant l’embauche. En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive. \n\nSi l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.\n\n_Sources_ :\n[Article L1242-12 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901206&cidTexte=LEGITEXT000006072050)\n[Article L1242-13 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901207&cidTexte=LEGITEXT000006072050)\n[Article L1245-1 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000036262152&cidTexte=LEGITEXT000006072050)\n[Article L1245-2 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901234&cidTexte=LEGITEXT000006072050)\n[Article L1248-6 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901242&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Intérim\">\n\nLe contrat de mission (intérim) doit être écrit, en français, et signé dans un délai de 2 jours suivant la mise à disposition du salarié auprès de l’entreprise. \n\nEn l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.\n\nSi l’employeur transmet le contrat de mission (intérim) au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.\n\n_Sources_ :\n[Article L1251-16 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901267&cidTexte=LEGITEXT000006072050)\n[Article L1251-17 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901268&cidTexte=LEGITEXT000006072050)\n[Article L1251-40 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000036262126&cidTexte=LEGITEXT000006072050)\n[Article L1251-41 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901295&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Apprentissage\">\n\nLe contrat d'apprentissage est un contrat écrit, en français, établi en 3 exemplaires, qui contient des clauses obligatoires. Il est signé avant le début du contrat, par l’employeur et l’apprenti. Si l'apprenti est mineur, ses parents ou son tuteur signent également le contrat. \n\nSi l’apprenti mineur est engagé par son père, sa mère ou un grand-parent, le contrat d’apprentissage peut être remplacé par une simple déclaration à faire par l’employeur. \n\nIl est conclu au moyen du formulaire [cerfa n°10103\\*06](https://www.formulaires.modernisation.gouv.fr/gf/cerfa_10103_06.do;jsessionid=FE8663BFCD9237365C507E3438EEA27D).\n\nEn l’absence d’écrit, le contrat d’apprentissage est nul. Le salarié est considéré être en CDI à temps plein. \n\nSi le contrat d’apprentissage est conclu dans le cadre d’une activité saisonnière, il peut être conclu et signé avec deux employeurs. (Il est également signé par l’apprenti et les parents ou le tuteur de l’apprenti si l’apprenti est mineur.)\n\n_Sources_ :\n[Article L6222-4 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006904000&cidTexte=LEGITEXT000006072050)\n[Article L6222-5 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006904001&cidTexte=LEGITEXT000006072050)\n[Article L6222-6 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006904002&cidTexte=LEGITEXT000006072050)\n[Article R6222-2 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018524175&cidTexte=LEGITEXT000006072050)\n[Cass. Soc. 9 décembre 2010 n°09-42.655](https://www.legifrance.gouv.fr/affichJuriJudi.do?idTexte=JURITEXT000023226986)\n\n</Tab>\n\n<Tab title=\"Contrat de professionnalisation\">\n\nLe contrat de professionnalisation est conclu par écrit, en français. Si le contrat de professionnalisation est un CDD, l’employeur doit le transmettre au salarié dans un délai de 2 jours (calendaires) suivant l’embauche. Si le contrat de professionnalisation est un CDI, le code du travail n’impose pas ce délai de 2 jours. \n\nSi le contrat de professionnalisation est conclu dans le cadre d’une activité saisonnière, il peut être conclu et signé avec deux employeurs.\n\nLe contrat de professionnalisation est conclu au moyen du formulaire [cerfa n°12434\\*02](https://www.formulaires.modernisation.gouv.fr/gf/cerfa_12434_02.do).\n\nSi le contrat de professionnalisation est un CDD, en l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 €, ou 7.500 € en cas de récidive. \n\nDans tous les cas, en l'absence de contrat de professionnalisation écrit, le salarié est considéré être en CDI de droit commun. \n\nSi l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.\n\n_Sources_ :\n[Article L6325-5 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006904257&cidTexte=LEGITEXT000006072050)\n[Article L1242-12 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901206&cidTexte=LEGITEXT000006072050)\n[Article L1242-13 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901207&cidTexte=LEGITEXT000006072050)\n[Article L1245-1 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000036262152&cidTexte=LEGITEXT000006072050)\n[Article L1245-2 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901234&cidTexte=LEGITEXT000006072050)\n[Article L1248-6 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901242&cidTexte=LEGITEXT000006072050)\n[Cass. Soc. 7 janvier 2015 n°13-18598](https://www.legifrance.gouv.fr/affichJuriJudi.do?idTexte=JURITEXT000030081122)\n\n</Tab>\n\n<Tab title=\"Portage salarial\">\n\nLe contrat de travail est établi par écrit : \n\n- Si le contrat de portage salarial est à durée déterminée, il est transmis au salarié dans les 2 jours ouvrables suivant sa conclusion ; \n- Si le contrat de portage salarial est à durée indéterminée, le code du travail ne prévoit pas de délai. \n\nL’entreprise de portage adresse au salarié porté une copie du contrat commercial de portage salarial conclu avec l’entreprise cliente dans les 2 jours ouvrables suivant le début de la prestation.\n\nL'entreprise de portage salariale peut être condamnée à une amende de 3.750 € (la récidive est punie de 6 mois d’emprisonnement et une amende de 7.500€) si :\n\n- Elle ne transmet pas aux salariés, dans les délais, une copie du contrat commercial de portage salarial ;\n- Elle ne transmet pas au salarié en CDD, dans les délais, le contrat de travail.\n\n_Sources_ :\n[Article L1254-14 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000030436206&cidTexte=LEGITEXT000006072050)\n[Article L1254-16 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000030436235&cidTexte=LEGITEXT000006072050)\n[Article L1254-20 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000030436518&cidTexte=LEGITEXT000006072050)\n[Article L1254-22 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000030436629&cidTexte=LEGITEXT000006072050)\n[Article L1255-14 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033012981&cidTexte=LEGITEXT000006072050)\n\n</Tab>"
       },
       "conventions": [
+        {
+          "markdown": "L'employeur remet au salarié, au moment de son embauche, un contrat de travail écrit qui précise les conditions du poste.",
+          "idcc": "1486",
+          "references": [
+            {
+              "id": "2dc468af-2303-441a-b490-58cf4c0ba70e",
+              "category": "agreement",
+              "value": "Article 5",
+              "url": null,
+              "created_at": "2019-11-07T13:54:52.343777+00:00",
+              "updated_at": "2019-11-07T13:54:52.343777+00:00",
+              "answer_id": "f2a8ab4e-3991-4269-acd5-8c9b458f95cc",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-01-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635173",
+                "mtime": 1556652289,
+                "nature": "IDCC",
+                "num": "1486",
+                "texte_de_base": "KALITEXT000005679895",
+                "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+                "effectif": 857061,
+                "shortTitle": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "Avant l'entrée en fonctions d'un ingénieur ou cadre, l’employeur doit lui adresser une lettre d'engagement indiquant les conditions du poste. L'ingénieur ou cadre doit en accuser réception dans un délai maximum de 15 jours. Passé ce délai et s'il est entré en fonction, il est considéré comme ayant donné son accord tacite sur les conditions fixées dans la lettre d'engagement.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "c5ac47c6-6f03-432a-975a-84084aad613a",
+              "category": "agreement",
+              "value": "Article 4",
+              "url": null,
+              "created_at": "2019-11-07T12:41:14.355695+00:00",
+              "updated_at": "2019-11-07T12:41:14.355695+00:00",
+              "answer_id": "511c2b52-2600-4cc3-bd0c-b9058408de99",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
         {
           "markdown": "L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant les conditions du poste. Ce document doit être accepté et signé par l'employeur et le salarié.",
           "idcc": "1597",
@@ -11115,6 +11878,11 @@
       },
       "conventions": [
         {
+          "markdown": "L'activité des sociétés de la branche ne figure pas dans la liste des secteurs d'activité prévue par la loi (article D. 1242-1 du code du travail) permettant le recours à un CDD d'usage. La convention collective ne comporte aucune disposition à ce sujet. L'entreprise ne peut pas embaucher des salariés en CDD d'usage.",
+          "idcc": "0650",
+          "references": []
+        },
+        {
           "markdown": "La convention collective ne prévoit pas le recours au contrat d'usage.\n\nLa liste des secteurs d'activité prévue par la loi (article D1242-1 du code du travail) permettant le recours à un CDD d'usage vise le secteur du bâtiment et des travaux publics pour les chantiers **à l'étranger**. En France, l'entreprise ne peut pas embaucher de salarié en CDD d'usage.",
           "idcc": "1596",
           "references": []
@@ -11383,6 +12151,35 @@
       },
       "conventions": [
         {
+          "markdown": "Le délai de carence entre deux CDD est égal au quart de la durée du premier CDD, incluant son ou ses renouvellements. La durée du contrat et le délai de carence sont appréciés en jours calendaires. \n\nLa durée du délai de carence est de 21 jours maximum.\n\nLe délai de carence n'est pas applicable si l’un des deux contrats est conclu dans l’un des cas suivants :\n\n- Remplacement d'un salarié absent ;\n- Accroissement temporaire de l'activité de l'entreprise ;\n- Exécution de travaux urgents nécessités par des mesures de sécurité ;\n- Emplois à caractère saisonnier ;\n- Remplacement d'un chef d'entreprise artisanale, industrielle ou commerciale ;\n- Au titre de dispositions légales, destinées à favoriser le recrutement de certaines catégories de personnes sans emploi.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "6284d542-5530-40c8-a603-5e4fd2a1a352",
+              "category": "agreement",
+              "value": "Accord national du 29 juin 2018 relatif au contrat à durée déterminée et au contrat de travail temporaire dans la métallurgie, article 1",
+              "url": null,
+              "created_at": "2019-09-16T13:24:28.053764+00:00",
+              "updated_at": "2019-09-16T13:24:28.053764+00:00",
+              "answer_id": "9f9f4bb6-89e0-44f7-85c4-934f25140472",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1596",
           "references": []
@@ -11471,6 +12268,11 @@
         "markdown": "<Content href=\"https://www.service-public.fr/particuliers/vosdroits/F1945\"/>\n\n<HDN>\n\nUne convention collective ou un accord collectif peut prévoir des mesures sur le cumul d’emplois par le salarié (loyauté du salarié, clause d’exclusivité, etc.).\n\n</HDN>"
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.\n\nLe salarié peut cumuler des emplois dans les conditions prévues par le code du travail.",
+          "idcc": "0650",
+          "references": []
+        },
         {
           "markdown": "Le salarié doit s'engager dans le contrat de travail à ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail.",
           "idcc": "1596",
@@ -12017,6 +12819,11 @@
       "conventions": [
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1486",
+          "references": []
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1596",
           "references": []
         },
@@ -12093,16 +12900,6 @@
     }
   },
   {
-    "id": "f723ad07-eaa1-492b-9e9a-ea2abbbb24c4",
-    "value": "Un accord ou un plan sur la prévention de la pénibilité est-il obligatoire ?",
-    "created_at": "2019-05-08T20:54:59.923739+00:00",
-    "updated_at": "2019-10-14T15:31:54.535191+00:00",
-    "index": 49,
-    "answers": {
-      "conventions": []
-    }
-  },
-  {
     "id": "fa25b23c-7b36-46e7-9761-42f7024cc133",
     "value": " Quelle est la durée maximale du contrat de mission (intérim) ? ",
     "created_at": "2019-05-08T20:54:59.923739+00:00",
@@ -12124,6 +12921,35 @@
         "markdown": "BESOIN TABLEAU\n\n(extrait de la fiche) <https://www.service-public.fr/particuliers/vosdroits/F11215> \n\nLa durée du contrat de mission (intérim) prévue par le code du travail s’applique, sauf si une convention ou un accord collectif fixe cette durée.\n\n_Source_ :\n[Article L1251-11 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033024625&cidTexte=LEGITEXT000006072050&dateTexte=20191031&oldAction=rechCodeArticle&fastReqId=30668735&nbResultRech=1)"
       },
       "conventions": [
+        {
+          "markdown": "La durée maximale du contrat de travail temporaire (intérim) est celle prévue par le code du travail.",
+          "idcc": "0650",
+          "references": [
+            {
+              "id": "8bde619c-096e-484e-9635-d9141ec7ba5a",
+              "category": "agreement",
+              "value": "Accord national du 29 juin 2018 relatif au contrat à durée déterminée et au contrat de travail temporaire dans la métallurgie",
+              "url": null,
+              "created_at": "2019-09-16T13:26:06.689615+00:00",
+              "updated_at": "2019-09-16T13:26:06.689615+00:00",
+              "answer_id": "9995c0f9-cd47-4559-9105-1bec33f60d8f",
+              "agreement": {
+                "active": true,
+                "date_publi": "1972-03-13T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635842",
+                "mtime": 1561406517,
+                "nature": "IDCC",
+                "num": "650",
+                "texte_de_base": "KALITEXT000005673470",
+                "title": "Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972. Etendue par arrêté du 27 avril 1973 (JO du 29 mai 1973)",
+                "effectif": 453740,
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
+                "shortTitle": "Métallurgie : ingénieurs et cadres"
+              }
+            }
+          ]
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1596",
