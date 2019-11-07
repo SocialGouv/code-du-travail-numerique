@@ -91,7 +91,7 @@ const References = ({ references }) => {
         <React.Fragment>
           <h3>Références</h3>
           {/* group CCs references */}
-          {(agreementRefs.length && (
+          {agreementRefs.length !== 0 && (
             <React.Fragment>
               <h4>Convention collective</h4>
               {agreementRefs.map(ref => (
@@ -102,17 +102,15 @@ const References = ({ references }) => {
                 />
               ))}
             </React.Fragment>
-          )) ||
-            null}
-          {(othersRefs.length && (
+          )}
+          {othersRefs.length !== 0 && (
             <React.Fragment>
               <h4>Autres sources</h4>
               {othersRefs.map(ref => (
                 <RefLink key={ref.id} value={ref.value} url={ref.url} />
               ))}
             </React.Fragment>
-          )) ||
-            null}
+          )}
         </React.Fragment>
       )}
     </React.Fragment>
