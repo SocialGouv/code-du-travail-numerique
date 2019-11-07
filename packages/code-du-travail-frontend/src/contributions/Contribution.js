@@ -103,7 +103,7 @@ const References = ({ references }) => {
               ))}
             </React.Fragment>
           )}
-          {agreementRefs.length && (
+          {othersRefs.length && (
             <React.Fragment>
               <h4>Autres sources</h4>
               {othersRefs.map(ref => (
