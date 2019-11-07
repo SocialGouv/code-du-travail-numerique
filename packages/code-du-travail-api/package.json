@@ -11,6 +11,7 @@
     "start": "NODE_ENV=production node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js",
     "dev-with-nlp": "nodemon ./src/server/index.js",
+    "update-mock-data": "node -r esm tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test node -r esm tests/create_indexes.js",
     "test": "ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_CONVENTION_INDEX=cdtn_convention_test ELASTICSEARCH_THEME_INDEX=cdtn_theme_test jest",
     "elastic": "node scripts/elastic.js"

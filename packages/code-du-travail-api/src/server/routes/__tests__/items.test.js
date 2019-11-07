@@ -1,12 +1,11 @@
 const request = require("supertest");
 const Koa = require("koa");
 const router = require("../items");
-const nlpFakeData = require("./sem_search.json");
 const fetch = require("node-fetch");
 
 // mock fetch function
 jest.mock("node-fetch");
-fetch.mockResolvedValue({ json: () => nlpFakeData });
+fetch.mockResolvedValue({ json: () => [] });
 
 const app = new Koa();
 app.use(router.routes());

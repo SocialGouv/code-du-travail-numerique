@@ -4,15 +4,13 @@ import {
   createIndex,
   indexDocumentsBatched
 } from "@cdt/data/indexing/es_client.utils";
-import { SOURCES } from "@cdt/sources";
 
 import { documentMapping } from "@cdt/data/indexing/document.mapping";
-import documents from "./cdtn_document_data.json";
+import documents from "./cdtn_document.data.json";
+import themes from "./cdtn_theme.data.json";
 import { conventionCollectiveMapping } from "@cdt/data/indexing/convention_collective.mapping";
-import conventions from "./convention_data.json";
+import conventions from "./convention.data.json";
 import { themesMapping } from "@cdt/data/indexing/themes.mapping";
-
-const themes = documents.filter(document => document.source === SOURCES.THEMES);
 
 const documentIndexName = "cdtn_document_test";
 const themeIndexName = "cdtn_theme_test";

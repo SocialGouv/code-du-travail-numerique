@@ -1,4 +1,7 @@
-function getSearchBody({ query, size, excludeSources = [] }) {
+function getSearchBody({ query, size, sources = [] }) {
+  if (sources.lenght === 0) {
+    throw new Error("[getSearchBody] sources should not be empty");
+  }
   return {
     size: size,
     _source: [
@@ -12,11 +15,6 @@ function getSearchBody({ query, size, excludeSources = [] }) {
     ],
     query: {
       bool: {
-        must_not: {
-          terms: {
-            source: excludeSources
-          }
-        },
         must: [
           {
             bool: {
@@ -40,7 +38,11 @@ function getSearchBody({ query, size, excludeSources = [] }) {
               ]
             }
           }
-        ],
+        ].concat({
+          terms: {
+            source: sources
+          }
+        }),
         should: [
           {
             match_phrase: {

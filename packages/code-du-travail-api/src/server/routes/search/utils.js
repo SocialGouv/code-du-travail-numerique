@@ -15,26 +15,24 @@ const merge = (res1, res2, max_result) => {
   return res;
 };
 
-// add a key to make results comparable
-
-const addKey = res =>
-  res.map(a => ({ ...a, key: a._source.source + a._source.slug }));
-
 // Remove Duplicates
 
 const removeDuplicate = arr =>
   Object.values(
-    arr.reduce((values, current) => ({ ...values, [current.key]: current }), {})
+    arr.reduce(
+      (values, current) => ({
+        ...values,
+        [current._source.source + "/" + current._source.slug]: current
+      }),
+      {}
+    )
   );
 
 const mergePipe = (a, b, max_result) => {
-  const ak = addKey(a);
-  const bk = addKey(b);
-  const res = merge(ak, bk, max_result);
-  return removeDuplicate(res);
+  const res = merge(a, b, a.length + b.length);
+  return removeDuplicate(res).slice(0, max_result);
 };
 
 exports.merge = merge;
-exports.addKey = addKey;
 exports.removeDuplicate = removeDuplicate;
 exports.mergePipe = mergePipe;

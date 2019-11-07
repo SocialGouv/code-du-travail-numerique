@@ -1,9 +1,9 @@
 const { SOURCES } = require("@cdt/sources");
 
-function getRelatedArticlesBody(query) {
+function getRelatedArticlesBody({ query, size = 5 }) {
   return {
-    size: 5,
-    _source: ["title", "slug", "url"],
+    size,
+    _source: ["title", "slug", "url", "source"],
     query: {
       bool: {
         filter: {

@@ -1,15 +1,21 @@
 const request = require("supertest");
 const Koa = require("koa");
+const fetch = require("node-fetch");
+const winston = require("winston");
+
 const router = require("../search");
 
 const getSearchBody = require("../search/search.elastic");
 const getSemBody = require("../search/search.sem");
+const getDocumentByUrlQuery = require("../search/getDocumentByUrlQuery");
+const demission_vector = require("./demission.vector");
 
-const nlpFakeData = require("./sem_search.json");
-const nlpFakeDataArticles = require("./sem_search_art.json");
-// mock fetch function
-jest.mock("node-fetch", () => jest.fn());
-const fetch = require("node-fetch");
+const { logger } = require("../../utils/logger");
+logger.level = winston.error;
+
+// mock fetch function to return vector for démission
+jest.mock("node-fetch");
+fetch.mockResolvedValue({ json: () => demission_vector });
 
 const app = new Koa();
 app.use(router.routes());
@@ -17,14 +23,13 @@ app.use(router.routes());
 it("asks same sources wether it is search sem or search elastic and gets a description", () => {
   const searchBody = getSearchBody({});
   const semBody = getSemBody({});
+  const getEsRefBody = getDocumentByUrlQuery("/code-du-travail/slug");
   expect(searchBody._source).toEqual(semBody._source);
+  expect(getEsRefBody._source).toEqual(semBody._source);
   expect(searchBody._source).toContain("description");
 });
 
 it("returns search results for demission from datafiller", async () => {
-  // nlp api will return fake data
-  fetch.mockResolvedValue({ json: () => nlpFakeData });
-
   const response = await request(app.callback()).get(
     "/api/v1/search?q=démission"
   );
@@ -37,13 +42,10 @@ it("returns 3 search results for demission from elastic if size = 3", async () =
     "/api/v1/search?q=démission&skipSavedResults&size=3"
   );
   expect(response.status).toBe(200);
-  expect(response.body.length).toBe(3);
+  expect(response.body.documents.length).toBe(3);
 });
 
 it("returns search results for demission from elastic", async () => {
-  // nlp api will return fake data
-  fetch.mockResolvedValue({ json: () => nlpFakeData });
-
   const response = await request(app.callback()).get(
     "/api/v1/search?q=démission&skipSavedResults"
   );
@@ -51,8 +53,7 @@ it("returns search results for demission from elastic", async () => {
   expect(response.body).toMatchSnapshot();
 });
 
-it("returns article results when searching with article id", async () => {
-  fetch.mockResolvedValue({ json: () => nlpFakeDataArticles });
+it("returns article results when searching article R1225-18", async () => {
   const response = await request(app.callback()).get(
     `/api/v1/search?q=R1225-18`
   );
