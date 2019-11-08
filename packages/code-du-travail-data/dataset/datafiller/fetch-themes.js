@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 const slugify = require("../../slugify");
-
+const { SOURCES } = require("@cdt/sources");
 const {
   sortByKey,
   getVariants,
@@ -73,6 +73,7 @@ const fetchAll = async () => {
     const children = getChildren(sortedRows, row);
     return {
       ...row,
+      source: SOURCES.THEMES,
       slug: getSlug(row),
       breadcrumbs,
       children,

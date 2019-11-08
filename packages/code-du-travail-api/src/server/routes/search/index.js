@@ -21,7 +21,7 @@ const themeIndex = process.env.ELASTICSEARCH_THEME_INDEX || "cdtn_themes";
 const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
 
 const MAX_RESULTS = 100;
-const DEFAULT_RESULTS_NUMBER = 10;
+const DEFAULT_RESULTS_NUMBER = 7;
 const THEMES_RESULTS_NUMBER = 5;
 const CDT_RESULTS_NUMBER = 5;
 
@@ -116,7 +116,7 @@ router.get("/search", async ctx => {
       searches[THEMES_SEM] = [
         { index },
         getSemBody({
-          query,
+          query_vector,
           size: themeNumber,
           sources: [SOURCES.THEMES]
         })

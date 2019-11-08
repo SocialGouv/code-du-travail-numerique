@@ -2,7 +2,11 @@
   {
     "refs": [
       {
-        "url": "/fiche-service-public/est-on-dispense-de-preavis-en-cas-de-demission-liee-a-la-mutation-du-conjoint"
+        "url": "/outils/preavis-demission",
+        "title": "Simulateur de délais de préavis de démission"
+      },
+      {
+        "url": "/fiche-service-public/peut-on-demissionner-pendant-un-arret-maladie"
       },
       {
         "url": "/fiche-service-public/le-salarie-peut-il-revenir-sur-sa-demission"
@@ -14,13 +18,10 @@
         "url": "/fiche-service-public/demission-du-salarie-a-domicile-employe-par-un-particulier"
       },
       {
-        "url": "/fiche-service-public/peut-on-demissionner-pendant-un-arret-maladie"
+        "url": "/fiche-service-public/est-on-dispense-de-preavis-en-cas-de-demission-liee-a-la-mutation-du-conjoint"
       },
       {
         "url": "/fiche-service-public/demission-du-salarie-a-domicile-employe-par-un-particulier"
-      },
-      {
-        "url": "/fiche-service-public/demission-dune-assistante-maternelle"
       },
       {
         "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-parental"
@@ -29,17 +30,39 @@
         "url": "/fiche-service-public/peut-on-percevoir-lallocation-chomage-en-cas-de-demission"
       },
       {
+        "url": "/fiche-service-public/demission-dune-assistante-maternelle"
+      },
+      {
+        "url": "/fiche-service-public/demission-dun-salarie",
+        "title": "Démission d'un salarié"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-demission-comment-presenter-une-demission",
+        "title": "La démission: comment présenter une démission ?"
+      },
+      {
         "url": "/fiche-ministere-travail/comment-le-cdi-peut-il-prendre-fin"
       },
       {
         "url": "/fiche-ministere-travail/le-droit-aux-allocations-chomage-du-salarie-demissionnaire-que-se-passe-t-il-dans-les-autres-cas"
+      },
+      {
+        "url": "/fiche-ministere-travail/le-droit-aux-allocations-chomage-du-salarie-demissionnaire-quelles-sont-les-demissions-considerees-comme-legitimes",
+        "title": "Le droit aux allocations chômage du salarié démissionnaire: quelles sont les démissions considérées comme légitimes ?"
+      },
+      {
+        "url": "http://master.code-du-travail-numerique.dev.factory.social.gouv.fr/fiche-service-public/demission-dun-salarie?q=D%C3%A9mission%20d%27un%20salari%C3%A9"
+      },
+      {
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2883"
       }
     ],
     "title": "Démission",
     "parent": "a91437fb-e493-4e18-8f7d-7ffe8d16ff1f",
     "position": 81,
     "id": "688661b6-f614-47a7-99cf-e70b15e691ef",
-    "last_modified": 1567555503592,
+    "last_modified": 1571394811837,
+    "source": "themes",
     "slug": "81-demission",
     "breadcrumbs": [
       {
@@ -78,6 +101,7 @@
     "position": 8,
     "id": "a91437fb-e493-4e18-8f7d-7ffe8d16ff1f",
     "last_modified": 1567555502091,
+    "source": "themes",
     "slug": "8-depart-de-lentreprise",
     "breadcrumbs": null,
     "children": [

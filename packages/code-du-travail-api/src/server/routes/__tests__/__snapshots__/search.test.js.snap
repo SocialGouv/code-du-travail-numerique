@@ -80,14 +80,19 @@ Object {
       "source": "modeles_de_courriers",
       "title": "Modèle : Rupture d’un commun accord d’un contrat à durée déterminée",
     },
+  ],
+  "themes": Array [
     Object {
-      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. Cette demande doit se faire avec une lettre recommandée à accusé de réception. Le demandeur doit aussi garder une copie de la lettre",
-      "slug": "modele-rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-      "source": "modeles_de_courriers",
-      "title": "Modèle : rupture de période d’essai, à l'initiative de l'employeur",
+      "slug": "81-demission",
+      "source": "themes",
+      "title": "Démission",
+    },
+    Object {
+      "slug": "1-embauche-et-contrat-de-travail",
+      "source": "themes",
+      "title": "Embauche et contrat de travail",
     },
   ],
-  "themes": Array [],
 }
 `;
 
@@ -158,6 +163,11 @@ Object {
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
+    },
+    Object {
+      "slug": "1-embauche-et-contrat-de-travail",
+      "source": "themes",
+      "title": "Embauche et contrat de travail",
     },
   ],
 }
@@ -250,18 +260,17 @@ Object {
       "source": "modeles_de_courriers",
       "title": "Modèle : Rupture d’un commun accord d’un contrat à durée déterminée",
     },
-    Object {
-      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. Cette demande doit se faire avec une lettre recommandée à accusé de réception. Le demandeur doit aussi garder une copie de la lettre",
-      "slug": "modele-rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-      "source": "modeles_de_courriers",
-      "title": "Modèle : rupture de période d’essai, à l'initiative de l'employeur",
-    },
   ],
   "themes": Array [
     Object {
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
+    },
+    Object {
+      "slug": "1-embauche-et-contrat-de-travail",
+      "source": "themes",
+      "title": "Embauche et contrat de travail",
     },
   ],
 }
