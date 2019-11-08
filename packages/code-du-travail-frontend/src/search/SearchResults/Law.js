@@ -16,7 +16,7 @@ export const Law = ({ items, query }) => (
   <Section>
     <Container>
       <Wrapper>
-        <CardList title="Que dit le code du travail&nbsp;?" columns={3}>
+        <CardList title="Que dit le code du travail&nbsp;?" columns={2}>
           {items.map(({ slug, title, source, description }) => (
             <Link
               key={slug}
@@ -46,12 +46,13 @@ const StyledTile = styled(Tile)`
 const P = styled.p`
   max-height: calc(2 * ${theme.fonts.lineHeight} * 1rem);
   margin: 0;
+  overflow-y: hidden;
   color: ${({ theme }) => theme.black};
   font-weight: 400;
   font-size: ${theme.fonts.sizeSmall};
   line-height: calc(${theme.fonts.lineHeight} * 1rem);
   /*
-   * non standart solution  thus supported by many browser
+   * non standard solution  thus supported by many browser
    * https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp
    */
   /* stylelint-disable-next-line order/properties-order, value-no-vendor-prefix */

@@ -6,15 +6,29 @@ import ConventionModal from "../Modal";
 
 describe("<ConventionModal />", () => {
   it("should render", () => {
-    const { container } = render(<ConventionModal />);
+    const { container } = render(
+      <ConventionModal>
+        {openModal => (
+          <button data-testid="bt" onClick={openModal}>
+            voir les conventions
+          </button>
+        )}
+      </ConventionModal>
+    );
     expect(container).toMatchSnapshot();
   });
 
   it("should render a popup when click on button", () => {
-    const { baseElement, getByText, getByPlaceholderText } = render(
-      <ConventionModal />
+    const { baseElement, getByTestId, getByPlaceholderText } = render(
+      <ConventionModal>
+        {openModal => (
+          <button data-testid="bt" onClick={openModal}>
+            voir les conventions
+          </button>
+        )}
+      </ConventionModal>
     );
-    const button = getByText(/votre convention collective/i);
+    const button = getByTestId("bt");
     button.click();
     const input = getByPlaceholderText(
       /Nom d'entreprise, SIRET, nom de convention collective/i
@@ -24,10 +38,16 @@ describe("<ConventionModal />", () => {
   });
 
   it("should close the modal", async () => {
-    const { getByTitle, getByText, queryByPlaceholderText } = render(
-      <ConventionModal />
+    const { getByTitle, getByTestId, queryByPlaceholderText } = render(
+      <ConventionModal>
+        {openModal => (
+          <button data-testid="bt" onClick={openModal}>
+            chercher votre convention
+          </button>
+        )}
+      </ConventionModal>
     );
-    const button = getByText(/votre convention collective/i);
+    const button = getByTestId("bt");
     button.click();
     const el = getByTitle("fermer la modale");
     expect(el).toBeTruthy();

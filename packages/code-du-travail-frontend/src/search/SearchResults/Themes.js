@@ -16,10 +16,7 @@ export const Themes = ({ items, query }) => (
   <Section>
     <Container>
       <Wrapper>
-        <CardList
-          columns={5}
-          title="Les thèmes suivants peuvent vous intéresser"
-        >
+        <CardList title="Les thèmes suivants peuvent vous intéresser">
           {items.map(({ slug, title, source }) => (
             <Link
               key={slug}

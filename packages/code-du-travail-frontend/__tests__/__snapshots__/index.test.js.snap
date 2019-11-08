@@ -47,6 +47,13 @@ exports[`<Home /> should render 1`] = `
   border-color: #005994;
 }
 
+.c20:link,
+.c20:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c20:not([disabled]):hover,
 .c20:not([disabled]):active,
 .c20:not([disabled]):focus {
@@ -79,6 +86,13 @@ exports[`<Home /> should render 1`] = `
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
+}
+
+.c33:link,
+.c33:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
 }
 
 .c33:not([disabled]):hover,

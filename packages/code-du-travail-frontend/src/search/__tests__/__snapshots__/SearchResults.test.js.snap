@@ -92,7 +92,7 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 3 - 2 * 0.625rem);
+  width: calc(100% / 2 - 2 * 0.625rem);
   margin: 0.625rem;
 }
 
@@ -108,7 +108,7 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 5 - 2 * 0.625rem);
+  width: calc(100% / 4 - 2 * 0.625rem);
   margin: 0.625rem;
 }
 
@@ -279,6 +279,7 @@ exports[`<SearchResults/> should render results 1`] = `
 .c15 {
   max-height: calc(2 * 1.4 * 1rem);
   margin: 0;
+  overflow-y: hidden;
   color: #0c0c0e;
   font-weight: 400;
   font-size: 0.875rem;
@@ -321,25 +322,25 @@ exports[`<SearchResults/> should render results 1`] = `
 
 @media (max-width:980px) {
   .c11 {
-    width: calc( 100% / 2 - 2 * 0.625rem );
+    width: calc( 100% / 1 - 2 * 0.625rem );
   }
 }
 
 @media (max-width:600px) {
   .c11 {
-    width: calc( 100% - 1 * 0.625rem );
+    width: calc( 100% - 0 * 0.625rem );
   }
 }
 
 @media (max-width:980px) {
   .c16 {
-    width: calc( 100% / 4 - 2 * 0.625rem );
+    width: calc( 100% / 3 - 2 * 0.625rem );
   }
 }
 
 @media (max-width:600px) {
   .c16 {
-    width: calc( 100% - 3 * 0.625rem );
+    width: calc( 100% - 2 * 0.625rem );
   }
 }
 

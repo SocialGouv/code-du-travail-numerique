@@ -1,172 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConventionModal /> should render 1`] = `
-.c3 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-}
-
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
-}
-
-.c3[disabled] {
-  color: rgba(12,12,14,0.4);
-  cursor: not-allowed;
-}
-
-.c0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c0:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
-}
-
-.c1 {
-  display: block;
-  max-width: 100%;
-  padding-right: 0;
-  overflow-y: auto;
-}
-
-.c2 {
-  margin-top: 1.25rem;
-}
-
 <div>
   <button
-    class="c0"
-    href=""
+    data-testid="bt"
   >
-    <div
-      class="c1"
-    >
-      Votre convention collective
-    </div>
-    <div
-      class="c2"
-    >
-      <div
-        class="c3"
-      >
-        Rechercher
-      </div>
-    </div>
+    voir les conventions
   </button>
 </div>
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
-.c6 {
+.c2 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
-.c6 > *:first-child {
+.c2 > *:first-child {
   margin-top: 0;
 }
 
-.c6 > *:last-child {
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
-.c3 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-}
-
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
-}
-
-.c3[disabled] {
-  color: rgba(12,12,14,0.4);
-  cursor: not-allowed;
-}
-
-.c8 {
+.c4 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -189,11 +48,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   border: none;
 }
 
-.c8:hover {
+.c4:hover {
   color: #8c94a6;
 }
 
-.c10:not(:focus):not(:active) {
+.c6:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -205,7 +64,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c4 {
+.c0 {
   position: fixed;
   top: 0;
   right: 0;
@@ -215,7 +74,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   background: rgba(0,0,0,0.5);
 }
 
-.c5 {
+.c1 {
   position: relative;
   width: 50vw;
   max-height: calc(100vh - 2 * 10vh);
@@ -228,96 +87,37 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   outline: none;
 }
 
-.c9 {
+.c5 {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.c0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c0:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
-}
-
-.c1 {
-  display: block;
-  max-width: 100%;
-  padding-right: 0;
-  overflow-y: auto;
-}
-
-.c2 {
-  margin-top: 1.25rem;
-}
-
-.c7 {
+.c3 {
   width: 100%;
 }
 
 @media print {
-  .c6 {
+  .c2 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:1200px) {
-  .c5 {
+  .c1 {
     width: 60vw;
   }
 }
 
 @media (max-width:980px) {
-  .c5 {
+  .c1 {
     width: 80vw;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c1 {
     width: calc(100% - 2 * 1rem);
     max-height: calc(100vh - 2 * 1rem);
     margin: 1rem;
@@ -325,7 +125,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c5 {
     position: fixed;
     top: 0.625rem;
     right: 0.625rem;
@@ -337,23 +137,9 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
     aria-hidden="true"
   >
     <button
-      class="c0"
-      href=""
+      data-testid="bt"
     >
-      <div
-        class="c1"
-      >
-        Votre convention collective
-      </div>
-      <div
-        class="c2"
-      >
-        <div
-          class="c3"
-        >
-          Rechercher
-        </div>
-      </div>
+      voir les conventions
     </button>
   </div>
   <reach-portal>
@@ -372,19 +158,19 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="c4"
+          class="c0"
           data-reach-dialog-overlay="true"
         >
           <div
             aria-label="Rechercher votre convention collective"
             aria-modal="true"
-            class="c5"
+            class="c1"
             data-reach-dialog-content="true"
             role="dialog"
             tabindex="-1"
           >
             <div
-              class="c6"
+              class="c2"
             >
               <h3>
                 Recherche de convention collective
@@ -393,7 +179,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
               </p>
               <input
-                class="c7"
+                class="c3"
                 placeholder="Nom d'entreprise, SIRET, nom de convention collective"
                 role="search"
                 type="search"
@@ -402,11 +188,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               
             </div>
             <button
-              class="c8 c9"
+              class="c4 c5"
               title="fermer la modale"
             >
               <div
-                class="c10"
+                class="c6"
               >
                 fermer la modale
               </div>

@@ -42,6 +42,13 @@ exports[`<Outils /> should render 1`] = `
   border-color: #ebeff3;
 }
 
+.c12:link,
+.c12:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c12:not([disabled]):hover,
 .c12:not([disabled]):active,
 .c12:not([disabled]):focus {

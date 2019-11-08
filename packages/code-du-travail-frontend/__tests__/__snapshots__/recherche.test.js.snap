@@ -87,6 +87,13 @@ exports[`<Recherche /> should render 1`] = `
   border-color: #005994;
 }
 
+.c21:link,
+.c21:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c21:not([disabled]):hover,
 .c21:not([disabled]):active,
 .c21:not([disabled]):focus {
