@@ -33,9 +33,6 @@ export function initPiwik({
     // We use only the part of the url without the querystring to ensure piwik is happy
     // It seems that piwiki doesn't track well page with querystring
     const [pathname] = path.split("?");
-    if (previousPath === pathname) {
-      return;
-    }
 
     // In order to ensure that the page title had been updated,
     // we delayed pushing the tracking to the next tick.
