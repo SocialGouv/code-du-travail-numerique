@@ -41,6 +41,13 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   border-color: #005994;
 }
 
+.c14:link,
+.c14:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c14:not([disabled]):hover,
 .c14:not([disabled]):active,
 .c14:not([disabled]):focus {

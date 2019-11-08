@@ -22,6 +22,13 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   border-color: #005994;
 }
 
+.c12:link,
+.c12:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c12:not([disabled]):hover,
 .c12:not([disabled]):active,
 .c12:not([disabled]):focus {
@@ -330,6 +337,13 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   border-color: #ebeff3;
 }
 
+.c12:link,
+.c12:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c12:not([disabled]):hover,
 .c12:not([disabled]):active,
 .c12:not([disabled]):focus {
@@ -362,6 +376,13 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   color: #fff;
   background: #006be6;
   border-color: #006be6;
+}
+
+.c14:link,
+.c14:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c14:not([disabled]):hover,
@@ -679,6 +700,13 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c12:link,
+.c12:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c12:not([disabled]):hover,
@@ -999,6 +1027,13 @@ exports[`<Wizard /> should inject rules component 1`] = `
   border-color: #005994;
 }
 
+.c12:link,
+.c12:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c12:not([disabled]):hover,
 .c12:not([disabled]):active,
 .c12:not([disabled]):focus {
@@ -1310,6 +1345,13 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   border-color: #ebeff3;
 }
 
+.c12:link,
+.c12:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c12:not([disabled]):hover,
 .c12:not([disabled]):active,
 .c12:not([disabled]):focus {
@@ -1342,6 +1384,13 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   color: #fff;
   background: #006be6;
   border-color: #006be6;
+}
+
+.c14:link,
+.c14:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c14:not([disabled]):hover,
@@ -1659,6 +1708,13 @@ exports[`<Wizard /> should render a step 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c12:link,
+.c12:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c12:not([disabled]):hover,

@@ -102,6 +102,13 @@ exports[`<FicheSP /> should render 1`] = `
   border-color: #ebeff3;
 }
 
+.c25:link,
+.c25:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c25:not([disabled]):hover,
 .c25:not([disabled]):active,
 .c25:not([disabled]):focus {
@@ -136,6 +143,13 @@ exports[`<FicheSP /> should render 1`] = `
   border-color: #006be6;
 }
 
+.c28:link,
+.c28:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c28:not([disabled]):hover,
 .c28:not([disabled]):active,
 .c28:not([disabled]):focus {
@@ -168,6 +182,13 @@ exports[`<FicheSP /> should render 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c38:link,
+.c38:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c38:not([disabled]):hover,

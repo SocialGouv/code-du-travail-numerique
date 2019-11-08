@@ -1,7 +1,7 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
 import { X, Maximize } from "react-feather";
-
+import { createGlobalStyle } from "styled-components";
 import { variants } from "../theme";
 import { Section } from "../layout/Section";
 import { Button } from ".";
@@ -58,8 +58,23 @@ export const icons = () => (
 
 export const link = () => (
   <Section>
-    <Button variant="link" onClick={action("link button clicked")}>
-      Button link
-    </Button>
+    {linkCss}
+    <p>
+      <Button variant="link" onClick={action("link button clicked")}>
+        Button link
+      </Button>
+    </p>
+    <p>
+      <Button variant="secondary" as="a" href="https://code.travail.gouv.fr">
+        Button link
+      </Button>
+    </p>
   </Section>
 );
+
+const linkCss = createGlobalStyle`
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+`;

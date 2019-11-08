@@ -102,6 +102,13 @@ exports[`<FicheMT /> should render 1`] = `
   border-color: #ebeff3;
 }
 
+.c24:link,
+.c24:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c24:not([disabled]):hover,
 .c24:not([disabled]):active,
 .c24:not([disabled]):focus {
@@ -136,6 +143,13 @@ exports[`<FicheMT /> should render 1`] = `
   border-color: #006be6;
 }
 
+.c27:link,
+.c27:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c27:not([disabled]):hover,
 .c27:not([disabled]):active,
 .c27:not([disabled]):focus {
@@ -168,6 +182,13 @@ exports[`<FicheMT /> should render 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c37:link,
+.c37:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c37:not([disabled]):hover,

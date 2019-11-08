@@ -69,6 +69,13 @@ exports[`<Glossaire /> should render 1`] = `
   border-color: #005994;
 }
 
+.c23:link,
+.c23:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c23:not([disabled]):hover,
 .c23:not([disabled]):active,
 .c23:not([disabled]):focus {

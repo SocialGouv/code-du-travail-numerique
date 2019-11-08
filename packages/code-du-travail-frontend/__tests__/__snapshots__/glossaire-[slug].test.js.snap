@@ -69,6 +69,13 @@ exports[`<Term /> should render 1`] = `
   border-color: #005994;
 }
 
+.c24:link,
+.c24:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c24:not([disabled]):hover,
 .c24:not([disabled]):active,
 .c24:not([disabled]):focus {

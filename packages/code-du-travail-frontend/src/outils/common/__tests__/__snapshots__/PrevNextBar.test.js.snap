@@ -22,6 +22,13 @@ exports[`<PrevNextBar /> should render 1`] = `
   border-color: #ebeff3;
 }
 
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
@@ -54,6 +61,13 @@ exports[`<PrevNextBar /> should render 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c3:link,
+.c3:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c3:not([disabled]):hover,
@@ -126,6 +140,13 @@ exports[`<PrevNextBar /> should render error buttons 1`] = `
   border-color: #ebeff3;
 }
 
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
@@ -158,6 +179,13 @@ exports[`<PrevNextBar /> should render error buttons 1`] = `
   color: #0c0c0e;
   background: #f6bcc2;
   border-color: #f6bcc2;
+}
+
+.c3:link,
+.c3:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
 }
 
 .c3:not([disabled]):hover,
@@ -230,6 +258,13 @@ exports[`<PrevNextBar /> should render incomplete buttons 1`] = `
   border-color: #ebeff3;
 }
 
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
@@ -262,6 +297,13 @@ exports[`<PrevNextBar /> should render incomplete buttons 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c3:link,
+.c3:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c3:not([disabled]):hover,
@@ -334,6 +376,13 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   border-color: #ebeff3;
 }
 
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
@@ -366,6 +415,13 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c3:link,
+.c3:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c3:not([disabled]):hover,
@@ -436,6 +492,13 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
+}
+
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
 }
 
 .c1:not([disabled]):hover,

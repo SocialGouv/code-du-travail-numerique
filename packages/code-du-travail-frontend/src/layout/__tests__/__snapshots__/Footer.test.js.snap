@@ -27,6 +27,13 @@ exports[`<Footer /> should render 1`] = `
   border-color: #005994;
 }
 
+.c4:link,
+.c4:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c4:not([disabled]):hover,
 .c4:not([disabled]):active,
 .c4:not([disabled]):focus {

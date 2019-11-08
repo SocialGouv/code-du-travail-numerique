@@ -75,6 +75,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   border-color: #ebeff3;
 }
 
+.c9:link,
+.c9:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c9:not([disabled]):hover,
 .c9:not([disabled]):active,
 .c9:not([disabled]):focus {
@@ -107,6 +114,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   color: #fff;
   background: #006be6;
   border-color: #006be6;
+}
+
+.c12:link,
+.c12:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c12:not([disabled]):hover,

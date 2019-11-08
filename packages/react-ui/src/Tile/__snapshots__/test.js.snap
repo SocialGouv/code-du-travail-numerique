@@ -163,6 +163,13 @@ exports[`<Tile /> renders with a div fake button inside 1`] = `
   border-color: #ebeff3;
 }
 
+.c3:link,
+.c3:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
