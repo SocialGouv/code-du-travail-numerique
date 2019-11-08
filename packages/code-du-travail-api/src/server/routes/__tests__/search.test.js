@@ -2,7 +2,7 @@ const request = require("supertest");
 const Koa = require("koa");
 const fetch = require("node-fetch");
 const winston = require("winston");
-
+const { SOURCES } = require("@cdt/sources");
 const router = require("../search");
 
 const getSearchBody = require("../search/search.elastic");
@@ -21,8 +21,8 @@ const app = new Koa();
 app.use(router.routes());
 
 it("asks same sources wether it is search sem or search elastic and gets a description", () => {
-  const searchBody = getSearchBody({});
-  const semBody = getSemBody({});
+  const searchBody = getSearchBody({ sources: [SOURCES.CDT] });
+  const semBody = getSemBody({ sources: [SOURCES.CDT] });
   const getEsRefBody = getDocumentByUrlQuery("/code-du-travail/slug");
   expect(searchBody._source).toEqual(semBody._source);
   expect(getEsRefBody._source).toEqual(semBody._source);
