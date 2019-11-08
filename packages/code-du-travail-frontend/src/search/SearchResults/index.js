@@ -23,16 +23,29 @@ const SearchResults = ({
 
 SearchResults.propTypes = {
   isSearch: PropTypes.bool,
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      _source: PropTypes.shape({
+  items: PropTypes.shape({
+    documents: PropTypes.arrayOf(
+      PropTypes.shape({
         title: PropTypes.string,
         source: PropTypes.string,
         slug: PropTypes.string
       })
-    })
-  )
+    ),
+    articles: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        source: PropTypes.string,
+        slug: PropTypes.string
+      })
+    ),
+    themes: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        source: PropTypes.string,
+        slug: PropTypes.string
+      })
+    )
+  })
 };
 
 export { SearchResults };

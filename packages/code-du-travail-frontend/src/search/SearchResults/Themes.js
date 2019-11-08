@@ -1,46 +1,46 @@
 import React from "react";
 import Link from "next/link";
+import styled from "styled-components";
+import { Layers } from "react-feather";
+
 import { getRouteBySource } from "@cdt/sources";
 import {
-  LargeLink,
-  List,
-  ListItem,
+  CardList,
   Container,
   Section,
+  Tile,
   Wrapper
 } from "@socialgouv/react-ui";
 
-import { LinkContent } from "./LinkContent";
-
 export const Themes = ({ items, query }) => (
   <Section>
-    <Container narrow>
-      <Wrapper variant="light">
-        <h2>{"Themes suceptibles de vous intéresser"}</h2>
-        <List>
-          {items.map(item => (
-            <ListItem key={item.slug}>
-              <Link
-                href={{
-                  pathname: `/${getRouteBySource(item.source)}/[slug]`,
-                  query: {
-                    ...(query && { q: query }),
-                    slug: item.slug
-                  }
-                }}
-                as={`/${getRouteBySource(item.source)}/${item.slug}${
-                  query ? `?q=${query}` : ""
-                }`}
-                passHref
-              >
-                <LargeLink variant="dark">
-                  <LinkContent {...item} />
-                </LargeLink>
-              </Link>
-            </ListItem>
+    <Container>
+      <Wrapper>
+        <CardList
+          columns={5}
+          title="Les thèmes suivants peuvent vous intéresser"
+        >
+          {items.map(({ slug, title, source }) => (
+            <Link
+              key={slug}
+              href={{
+                pathname: `${getRouteBySource(source)}/[slug]`,
+                query: query ? { q: query } : null
+              }}
+              as={`/${getRouteBySource(source)}/${slug}${
+                query ? `?q=${query}` : ""
+              }`}
+              passHref
+            >
+              <StyledTile icon={Layers}>{title}</StyledTile>
+            </Link>
           ))}
-        </List>
+        </CardList>
       </Wrapper>
     </Container>
   </Section>
 );
+
+const StyledTile = styled(Tile)`
+  min-height: 120px;
+`;

@@ -16,7 +16,12 @@ class SearchPage extends React.Component {
   }
 
   render() {
-    const { router, items = [], pageUrl, ogImage } = this.props;
+    const {
+      router,
+      items = { documents: [], articles: [], themes: [] },
+      pageUrl,
+      ogImage
+    } = this.props;
     const { q: query = "" } = router.query;
     return (
       <Layout>
@@ -30,7 +35,9 @@ class SearchPage extends React.Component {
           image={ogImage}
         />
         <Section>
-          {items.documents.length === 0 ? (
+          {items.documents.length === 0 &&
+          items.articles.length === 0 &&
+          items.themes.length === 0 ? (
             <Container narrow>
               <Alert>
                 Nous n’avons pas trouvé de résultat pour votre recherche.

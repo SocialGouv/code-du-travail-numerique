@@ -18,25 +18,107 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
+.c7 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c7 > *:first-child {
+  margin-top: 0;
+}
+
+.c7 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 {
   padding: 1.25rem 0;
   color: #434956;
 }
 
-.c5 {
+.c8 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  background-color: #fff;
+  border-color: transparent;
 }
 
-.c5 > *:first-child {
+.c8 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c8 > *:last-child {
   margin-bottom: 0;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 1.25rem;
+  margin-right: calc(-1 * 0.625rem);
+  margin-bottom: 2rem;
+  margin-left: calc(-1 * 0.625rem);
+  padding: 0;
+  list-style-type: none;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 3 - 2 * 0.625rem);
+  margin: 0.625rem;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 5 - 2 * 0.625rem);
+  margin: 0.625rem;
+}
+
+.c9 {
+  margin-bottom: 0;
+  color: #005994;
+  font-weight: 600;
+  font-size: 1.375rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.4;
 }
 
 .c2 {
@@ -72,7 +154,7 @@ exports[`<SearchResults/> should render results 1`] = `
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,21 +168,21 @@ exports[`<SearchResults/> should render results 1`] = `
   color: #005994;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f9f9fc;
-  border: 1px solid #c9d3df;
+  background-color: #fff;
+  border: 1px solid #005994;
   border-radius: 0.25rem;
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
 
-.c6:visited {
+.c5:visited {
   color: #434956;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:active,
-.c6:hover {
+.c5:active,
+.c5:hover {
   border-color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
@@ -111,10 +193,103 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c3 {
+.c12 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  box-sizing: border-box;
   margin: 0;
+  padding: 1.25rem 1.5rem;
+  color: #005994;
   font-weight: bold;
   font-size: 1.125rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c12:hover {
+  border-color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c14 {
+  display: block;
+  max-width: 100%;
+  padding-right: 0;
+  overflow-y: auto;
+}
+
+.c19 {
+  display: block;
+  max-width: 100%;
+  padding-right: 1rem;
+  overflow-y: auto;
+}
+
+.c18 {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.c3 {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.c4 {
+  margin: 0;
+  color: #434956;
+}
+
+.c13 {
+  min-height: 120px;
+}
+
+.c15 {
+  max-height: calc(2 * 1.4 * 1rem);
+  margin: 0;
+  color: #0c0c0e;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: calc(1.4 * 1rem);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.c17 {
+  min-height: 120px;
 }
 
 @media print {
@@ -124,16 +299,47 @@ exports[`<SearchResults/> should render results 1`] = `
   }
 }
 
+@media print {
+  .c7 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 @media (max-width:600px) {
-  .c5 {
+  .c8 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c5 {
+  .c8 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c11 {
+    width: calc( 100% / 2 - 2 * 0.625rem );
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    width: calc( 100% - 1 * 0.625rem );
+  }
+}
+
+@media (max-width:980px) {
+  .c16 {
+    width: calc( 100% / 4 - 2 * 0.625rem );
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    width: calc( 100% - 3 * 0.625rem );
   }
 }
 
@@ -151,9 +357,8 @@ exports[`<SearchResults/> should render results 1`] = `
         class=""
       >
         <a
-          class="c2 no-after"
-          href="http://voila.fr"
-          target="_blank"
+          class="c2"
+          href="/fiche-service-public/mer-il-est-fou?q=search test"
         >
           <div>
             <h3
@@ -161,218 +366,139 @@ exports[`<SearchResults/> should render results 1`] = `
             >
               Mer il est fou!
             </h3>
-            
+            <p
+              class="c4"
+            >
+              description
+            </p>
+          </div>
+        </a>
+      </li>
+      <li
+        class=""
+      >
+        <a
+          class="c5"
+          href="/outils/simulateur-precarite?q=search test"
+        >
+          <div>
+            <h3
+              class="c3"
+            >
+              simulateur de prime de précarite
+            </h3>
+            <p
+              class="c4"
+            >
+              description
+            </p>
+          </div>
+        </a>
+      </li>
+      <li
+        class=""
+      >
+        <a
+          class="c2 no-after"
+          href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
+          target="_blank"
+        >
+          <div>
+            <h3
+              class="c3"
+            >
+              fich
+            </h3>
+            <p
+              class="c4"
+            >
+              description
+            </p>
+          </div>
+        </a>
+      </li>
+      <li
+        class=""
+      >
+        <a
+          class="c5"
+          href="/outils/mer-il-est-fou2?q=search test"
+        >
+          <div>
+            <h3
+              class="c3"
+            >
+              Mer il est fou 2!
+            </h3>
+            <p
+              class="c4"
+            >
+              description
+            </p>
+          </div>
+        </a>
+      </li>
+      <li
+        class=""
+      >
+        <a
+          class="c2"
+          href="/undefined/mer-il-est-fou4?q=search test"
+        >
+          <div>
+            <h3
+              class="c3"
+            >
+              Mer il est fou 4!
+            </h3>
+            <p
+              class="c4"
+            >
+              description
+            </p>
           </div>
         </a>
       </li>
     </ul>
   </div>
   <div
-    class="c4"
+    class="c6"
   >
     <div
-      class="c0"
+      class="c7"
     >
       <div
-        class="c5"
+        class="c8"
       >
-        <h2>
-          Que dit la loi ?
-        </h2>
+        <div>
+          <h2
+            class="c9"
+          >
+            Que dit le code du travail ?
+          </h2>
+          
+        </div>
         <ul
-          class="c1"
+          class="c10"
         >
           <li
-            class=""
+            class="c11"
           >
             <a
-              class="c6"
-              href="/code-du-travail/mer-il-est-fou?q=search test"
+              class="c12 c13"
+              href="/code-du-travail/L1243-1?q=search test"
             >
-              <div>
-                <h3
-                  class="c3"
+              <div
+                class="c14"
+              >
+                L1243-1
+                <p
+                  class="c15"
                 >
-                  Mer il est fou!
-                </h3>
-                
+                  la description
+                </p>
               </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<SearchResults/> should render results with breadcrumbs 1`] = `
-.c1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-}
-
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c0 {
-  padding: 1.25rem 0;
-  color: #434956;
-}
-
-.c2 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #fff;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
-  color: #005994;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
-}
-
-.c4:visited {
-  color: #434956;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:active,
-.c4:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
-}
-
-.c3 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c5 {
-  margin: 0;
-  font-weight: bold;
-  font-size: 1.125rem;
-}
-
-@media print {
-  .c1 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-<div>
-  <div
-    class="c0"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2"
-      >
-        <h2>
-          Que dit la loi ?
-        </h2>
-        <ul
-          class="c3"
-        >
-          <li
-            class=""
-          >
-            <a
-              class="c4"
-              href="/code-du-travail/mer-il-est-fou1?q=search test"
-            >
-              <div>
-                <h3
-                  class="c5"
-                >
-                  Mer il est fou 1  !
-                </h3>
-                
-              </div>
-            </a>
-          </li>
-          <li
-            class=""
-          >
-            <a
-              class="c4"
-              href="/code-du-travail/mer-il-est-fou2?q=search test"
-            >
-              <div>
-                <h3
-                  class="c5"
-                >
-                  Mer il est fou 2!
-                </h3>
-                
-              </div>
-            </a>
-          </li>
-          <li
-            class=""
-          >
-            <a
-              class="c4"
-              href="/code-du-travail/mer-il-est-fou3?q=search test"
-            >
-              <div>
-                <h3
-                  class="c5"
-                >
-                  Mer il est fou 3!
-                </h3>
-                
-              </div>
+              
             </a>
           </li>
         </ul>
@@ -380,35 +506,63 @@ exports[`<SearchResults/> should render results with breadcrumbs 1`] = `
     </div>
   </div>
   <div
-    class="c0"
+    class="c6"
   >
     <div
-      class="c1"
+      class="c7"
     >
       <div
-        class="c2"
+        class="c8"
       >
-        <h2>
-          Themes suceptibles de vous intéresser
-        </h2>
+        <div>
+          <h2
+            class="c9"
+          >
+            Les thèmes suivants peuvent vous intéresser
+          </h2>
+          
+        </div>
         <ul
-          class="c3"
+          class="c10"
         >
           <li
-            class=""
+            class="c16"
           >
             <a
-              class="c4"
-              href="/themes/mer-il-est-fou4?q=search test"
+              class="c12 c17"
+              href="/themes/1-contrat?q=search test"
             >
-              <div>
-                <h3
-                  class="c5"
+              <div
+                class="c18"
+              >
+                <svg
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  Mer il est fou 4!
-                </h3>
-                
+                  <polygon
+                    points="12 2 2 7 12 12 22 7 12 2"
+                  />
+                  <polyline
+                    points="2 17 12 22 22 17"
+                  />
+                  <polyline
+                    points="2 12 12 17 22 12"
+                  />
+                </svg>
               </div>
+              <div
+                class="c19"
+              >
+                Contrat
+              </div>
+              
             </a>
           </li>
         </ul>
