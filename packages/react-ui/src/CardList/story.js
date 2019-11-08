@@ -7,22 +7,17 @@ export default {
   title: "Components|CardList"
 };
 
-const items = [
-  {
-    title: "Title 1",
-    id: "1"
-  },
-  {
-    title: "Title 2",
-    id: "2"
-  }
-];
+const items = Array.from({ length: 7 }, (_, index) => ({
+  title: `Title ${index + 1}`,
+  id: `${index + 1}`
+}));
 
 export const base = () => (
   <>
     <CardList
       title="Boîte à outils"
       desc="Trouvez des réponses personnalisées selon votre situation"
+      columns={3}
     >
       {items.map(item => (
         <Tile key={item.id}>{item.title}</Tile>

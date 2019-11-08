@@ -1,5 +1,246 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<CardList /> should render a collection on 3column 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 1.25rem;
+  margin-right: calc(-1 * 0.625rem);
+  margin-bottom: 2rem;
+  margin-left: calc(-1 * 0.625rem);
+  padding: 0;
+  list-style-type: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 3 - 2 * 0.625rem);
+  margin: 0.625rem;
+}
+
+.c0 {
+  margin-bottom: 0;
+  color: #005994;
+  font-weight: 600;
+  font-size: 1.375rem;
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  line-height: 1.4;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  color: #005994;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:hover {
+  border-color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c4 {
+  display: block;
+  max-width: 100%;
+  padding-right: 0;
+  overflow-y: auto;
+}
+
+@media (max-width:980px) {
+  .c2 {
+    width: calc( 100% / 2 - 2 * 0.625rem );
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: calc( 100% - 1 * 0.625rem );
+  }
+}
+
+<div>
+  <div>
+    <h2
+      class="c0"
+    >
+      Hello
+    </h2>
+    
+  </div>
+  <ul
+    class="c1"
+  >
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 1
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 2
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 3
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 4
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 5
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 6
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 7
+        </div>
+        
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`<CardList /> should render a collection with a title 1`] = `
 .c1 {
   display: -webkit-box;
@@ -110,13 +351,13 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 
 @media (max-width:980px) {
   .c2 {
-    width: calc(100% / 3 - 2 * 0.625rem);
+    width: calc( 100% / 3 - 2 * 0.625rem );
   }
 }
 
 @media (max-width:600px) {
   .c2 {
-    width: calc(100% - 2 * 0.625rem);
+    width: calc( 100% - 2 * 0.625rem );
   }
 }
 
@@ -158,6 +399,81 @@ exports[`<CardList /> should render a collection with a title 1`] = `
           class="c4"
         >
           Title 2
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 3
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 4
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 5
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 6
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c2"
+    >
+      <button
+        class="c3"
+        href=""
+      >
+        <div
+          class="c4"
+        >
+          Title 7
         </div>
         
       </button>
@@ -284,13 +600,13 @@ exports[`<CardList /> should render a collection with a title and description 1`
 
 @media (max-width:980px) {
   .c3 {
-    width: calc(100% / 3 - 2 * 0.625rem);
+    width: calc( 100% / 3 - 2 * 0.625rem );
   }
 }
 
 @media (max-width:600px) {
   .c3 {
-    width: calc(100% - 2 * 0.625rem);
+    width: calc( 100% - 2 * 0.625rem );
   }
 }
 
@@ -336,6 +652,81 @@ exports[`<CardList /> should render a collection with a title and description 1`
           class="c5"
         >
           Title 2
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c3"
+    >
+      <button
+        class="c4"
+        href=""
+      >
+        <div
+          class="c5"
+        >
+          Title 3
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c3"
+    >
+      <button
+        class="c4"
+        href=""
+      >
+        <div
+          class="c5"
+        >
+          Title 4
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c3"
+    >
+      <button
+        class="c4"
+        href=""
+      >
+        <div
+          class="c5"
+        >
+          Title 5
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c3"
+    >
+      <button
+        class="c4"
+        href=""
+      >
+        <div
+          class="c5"
+        >
+          Title 6
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c3"
+    >
+      <button
+        class="c4"
+        href=""
+      >
+        <div
+          class="c5"
+        >
+          Title 7
         </div>
         
       </button>
@@ -494,13 +885,13 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 
 @media (max-width:980px) {
   .c6 {
-    width: calc(100% / 3 - 2 * 0.625rem);
+    width: calc( 100% / 3 - 2 * 0.625rem );
   }
 }
 
 @media (max-width:600px) {
   .c6 {
-    width: calc(100% - 2 * 0.625rem);
+    width: calc( 100% - 2 * 0.625rem );
   }
 }
 
@@ -569,6 +960,81 @@ exports[`<CardList /> should render a collection with a title with a link and a 
           class="c8"
         >
           Title 2
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c6"
+    >
+      <button
+        class="c7"
+        href=""
+      >
+        <div
+          class="c8"
+        >
+          Title 3
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c6"
+    >
+      <button
+        class="c7"
+        href=""
+      >
+        <div
+          class="c8"
+        >
+          Title 4
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c6"
+    >
+      <button
+        class="c7"
+        href=""
+      >
+        <div
+          class="c8"
+        >
+          Title 5
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c6"
+    >
+      <button
+        class="c7"
+        href=""
+      >
+        <div
+          class="c8"
+        >
+          Title 6
+        </div>
+        
+      </button>
+    </li>
+    <li
+      class="c6"
+    >
+      <button
+        class="c7"
+        href=""
+      >
+        <div
+          class="c8"
+        >
+          Title 7
         </div>
         
       </button>
@@ -687,13 +1153,13 @@ exports[`<CardList /> should render a signle title 1`] = `
 
 @media (max-width:980px) {
   .c2 {
-    width: calc(100% / 3 - 2 * 0.625rem);
+    width: calc( 100% / 3 - 2 * 0.625rem );
   }
 }
 
 @media (max-width:600px) {
   .c2 {
-    width: calc(100% - 2 * 0.625rem);
+    width: calc( 100% - 2 * 0.625rem );
   }
 }
 

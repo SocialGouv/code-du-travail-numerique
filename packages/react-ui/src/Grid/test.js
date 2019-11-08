@@ -18,4 +18,19 @@ describe("<Grid />", () => {
     );
     expect(container).toMatchSnapshot();
   });
+  test("should render 5columns", () => {
+    const { container } = render(
+      <Grid columns={5}>
+        <GridCell>
+          <strong>titre 1</strong>
+          <p>contenu 1</p>
+        </GridCell>
+        <GridCell>
+          <strong>titre 2</strong>
+          <p>contenu 2</p>
+        </GridCell>
+      </Grid>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
