@@ -68,8 +68,8 @@ router.get("/items/:source/:slug", async ctx => {
 
   const relatedItems = utils
     .mergePipe(
-      semanticHits,
-      bem25Hits.filter(doc => doc._id !== _id),
+      semanticHits.filter(doc => doc._id !== _id),
+      bem25Hits,
       MAX_RESULTS
     )
     .map(({ _source }) => _source);

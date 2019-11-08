@@ -1,5 +1,5 @@
 function getRelatedItemsBody({ index, id, size = 5, sources = [] }) {
-  if (sources.lenght === 0) {
+  if (sources.length === 0) {
     throw new Error("[getRelatedItemsBody] sources should not be empty");
   }
   return {

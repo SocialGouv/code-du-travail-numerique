@@ -1,5 +1,5 @@
 function getSearchBody({ query, size, sources = [] }) {
-  if (sources.lenght === 0) {
+  if (sources.length === 0) {
     throw new Error("[getSearchBody] sources should not be empty");
   }
   return {
