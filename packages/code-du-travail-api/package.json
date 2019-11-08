@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@cdt/data": "^3.5.0",
+    "@cdt/data...datafiller": "^3.5.0",
     "@socialgouv/eslint-config-recommended": "^0.10.2",
     "@zeit/ncc": "^0.20.5",
     "eslint": "^6.6.0",

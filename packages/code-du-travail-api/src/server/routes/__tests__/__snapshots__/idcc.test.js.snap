@@ -4,9 +4,9 @@ exports[`return idcc results for boulangerie 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "8",
+      "_id": "13",
       "_index": "cdtn_document_test",
-      "_score": 1.8253694,
+      "_score": 1.946898,
       "_source": Object {
         "id": "KALICONT000005635886",
         "idcc": "843",
@@ -17,9 +17,9 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "9",
+      "_id": "12",
       "_index": "cdtn_document_test",
-      "_score": 1.7446828,
+      "_score": 1.8617321,
       "_source": Object {
         "id": "KALICONT000005635691",
         "idcc": "1747",
@@ -30,7 +30,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 1.8253694,
+  "max_score": 1.946898,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -42,22 +42,9 @@ exports[`return idcc results for pati 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "8",
+      "_id": "12",
       "_index": "cdtn_document_test",
-      "_score": 0.6450889,
-      "_source": Object {
-        "id": "KALICONT000005635886",
-        "idcc": "843",
-        "slug": "843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-1976",
-        "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
-        "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
-      },
-      "_type": "_doc",
-    },
-    Object {
-      "_id": "9",
-      "_index": "cdtn_document_test",
-      "_score": 0.6450889,
+      "_score": 0.68624586,
       "_source": Object {
         "id": "KALICONT000005635691",
         "idcc": "1747",
@@ -67,8 +54,21 @@ Object {
       },
       "_type": "_doc",
     },
+    Object {
+      "_id": "13",
+      "_index": "cdtn_document_test",
+      "_score": 0.68624586,
+      "_source": Object {
+        "id": "KALICONT000005635886",
+        "idcc": "843",
+        "slug": "843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-1976",
+        "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
+        "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
+      },
+      "_type": "_doc",
+    },
   ],
-  "max_score": 0.6450889,
+  "max_score": 0.68624586,
   "total": Object {
     "relation": "eq",
     "value": 2,
