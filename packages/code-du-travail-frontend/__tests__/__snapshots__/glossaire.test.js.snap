@@ -1015,13 +1015,6 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/arret"
-              >
-                Arrêt
-              </a>
-            </li>
-            <li>
-              <a
                 href="/glossaire/arret-de-travail"
               >
                 arrêt de travail
