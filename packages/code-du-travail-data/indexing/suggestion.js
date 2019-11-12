@@ -76,9 +76,23 @@ async function resetSuggestions() {
 
   await populateSuggestions(client, tmpIndexName);
 
-  await client.indices.putAlias({
-    index: tmpIndexName,
-    name: SUGGEST_INDEX_NAME
+  await client.indices.updateAliases({
+    body: {
+      actions: [
+        {
+          remove: {
+            index: `${SUGGEST_INDEX_NAME}-*`,
+            alias: `${SUGGEST_INDEX_NAME}`
+          }
+        },
+        {
+          add: {
+            index: `${SUGGEST_INDEX_NAME}-${ts}`,
+            alias: `${SUGGEST_INDEX_NAME}`
+          }
+        }
+      ]
+    }
   });
 
   await deleteOldIndex({
@@ -88,6 +102,7 @@ async function resetSuggestions() {
   });
 }
 
+// case we run the script directly to reset the suggestions
 if (module === require.main) {
   resetSuggestions();
 }

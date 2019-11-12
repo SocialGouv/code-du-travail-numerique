@@ -12,7 +12,7 @@ FROM ${NLP_IMAGE} as cdtn-nlp-image
 
 FROM node:10-alpine
 
-RUN apk add --no-cache curl=7.64.0-r3 && rm -rf /var/cache/apk/*
+RUN apk add --no-cache curl=7.64.0-r3
 
 COPY ./package.json /app/package.json
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
