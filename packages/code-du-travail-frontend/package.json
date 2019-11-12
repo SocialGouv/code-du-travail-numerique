@@ -55,7 +55,7 @@
     "react-uid": "^2.2.0",
     "rehype-raw": "^4.0.1",
     "rehype-react": "^4.0.1",
-    "remark-parse": "^7.0.1",
+    "remark-parse": "^7.0.2",
     "remark-rehype": "^5.0.0",
     "speakingurl": "14.0.1",
     "styled-components": "^4.4.1",
