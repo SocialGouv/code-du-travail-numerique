@@ -3,8 +3,14 @@ import { getDuplicateSlugs, flattenTags, makeSlug } from "../populate";
 describe("getDuplicateSlug", () => {
   test("should return an empty array if there is no duplicate slug", () => {
     const documents = [
-      [{ slug: "slug-1", source: "cdt" }, { slug: "slug-2", source: "cdt" }],
-      [{ slug: "slug-1", source: "faq" }, { slug: "slug-2", source: "faq" }]
+      [
+        { slug: "slug-1", source: "cdt" },
+        { slug: "slug-2", source: "cdt" }
+      ],
+      [
+        { slug: "slug-1", source: "faq" },
+        { slug: "slug-2", source: "faq" }
+      ]
     ];
     const duplicateSlugs = getDuplicateSlugs(documents);
     expect(Object.entries(duplicateSlugs).length).toBe(0);
@@ -12,9 +18,18 @@ describe("getDuplicateSlug", () => {
 
   test("should return an array of duplicated slug", () => {
     const documents = [
-      [{ slug: "slug-1", source: "cdt" }, { slug: "slug-2", source: "cdt" }],
-      [{ slug: "slug-1", source: "faq" }, { slug: "slug-1", source: "faq" }],
-      [{ slug: "slug-4", source: "fiche" }, { slug: "slug-3", source: "fiche" }]
+      [
+        { slug: "slug-1", source: "cdt" },
+        { slug: "slug-2", source: "cdt" }
+      ],
+      [
+        { slug: "slug-1", source: "faq" },
+        { slug: "slug-1", source: "faq" }
+      ],
+      [
+        { slug: "slug-4", source: "fiche" },
+        { slug: "slug-3", source: "fiche" }
+      ]
     ];
     const duplicateSlugs = getDuplicateSlugs(documents);
     expect(Object.entries(duplicateSlugs).length).toBe(1);
