@@ -130,7 +130,9 @@ async function main() {
 
 main().catch(response => {
   if (response.body) {
-    logger.error(response.body.error.reason || response.body);
+    logger.error(
+      (response.body.error && response.body.error.reason) || response.body
+    );
   } else {
     logger.error(`${response}`);
   }
