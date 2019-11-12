@@ -64,12 +64,12 @@ router.get("/items/:source/:slug", async ctx => {
   });
 
   const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
-  const { hits: { hits: bem25Hits } = { hits: [] } } = esResponse;
+  const { hits: { hits: fulltextHits } = { hits: [] } } = esResponse;
 
   const relatedItems = utils
     .mergePipe(
       semanticHits.filter(doc => doc._id !== _id),
-      bem25Hits,
+      fulltextHits,
       MAX_RESULTS
     )
     .map(({ _source }) => _source);

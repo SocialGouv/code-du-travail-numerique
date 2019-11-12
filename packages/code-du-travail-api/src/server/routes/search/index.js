@@ -141,18 +141,20 @@ router.get("/search", async ctx => {
   });
 
   if (!knownQueryResult) {
-    const { hits: { hits: bem25Hits } = { hits: [] } } = results[DOCUMENTS_ES];
+    const { hits: { hits: fulltextHits } = { hits: [] } } = results[
+      DOCUMENTS_ES
+    ];
     const { hits: { hits: semanticHits } = { hits: [] } } = results[
       DOCUMENTS_SEM
     ];
-    documents = mergePipe(semanticHits, bem25Hits, size);
+    documents = mergePipe(semanticHits, fulltextHits, size);
   }
   if (shouldRequestThemes) {
-    const { hits: { hits: bem25Hits } = { hits: [] } } = results[THEMES_ES];
+    const { hits: { hits: fulltextHits } = { hits: [] } } = results[THEMES_ES];
     const { hits: { hits: semanticHits } = { hits: [] } } = results[THEMES_SEM];
     themes = removeDuplicate(
       themes
-        .concat(merge(bem25Hits, semanticHits, THEMES_RESULTS_NUMBER * 2))
+        .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
         .slice(0, THEMES_RESULTS_NUMBER)
     );
   }
@@ -179,6 +181,11 @@ module.exports = router;
 async function msearch({ client, searches }) {
   const requests = [];
   const keys = [];
+
+  // return an empty object if we receive an empty object
+  if (Object.keys(searches).length === 0) {
+    return {};
+  }
 
   for (const [key, [index, query]] of Object.entries(searches)) {
     requests.push(index, query);
