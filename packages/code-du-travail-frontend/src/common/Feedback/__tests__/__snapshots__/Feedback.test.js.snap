@@ -57,6 +57,13 @@ exports[`<Feedback/> should render 1`] = `
   border-color: #ebeff3;
 }
 
+.c5:link,
+.c5:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c5:not([disabled]):hover,
 .c5:not([disabled]):active,
 .c5:not([disabled]):focus {
@@ -89,6 +96,13 @@ exports[`<Feedback/> should render 1`] = `
   color: #fff;
   background: #006be6;
   border-color: #006be6;
+}
+
+.c8:link,
+.c8:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c8:not([disabled]):hover,
@@ -237,6 +251,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c7:link,
+.c7:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c7:not([disabled]):hover,
@@ -511,6 +532,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c7:link,
+.c7:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c7:not([disabled]):hover,

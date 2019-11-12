@@ -1,5 +1,5 @@
 function getSemQuery({ query_vector, size, sources = [] }) {
-  if (sources.lenght === 0) {
+  if (sources.length === 0) {
     throw new Error("[getSemQuery] sources should not be empty");
   }
   return {

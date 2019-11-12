@@ -9,8 +9,8 @@
     "lint": "eslint src/**/*.js",
     "prepush": "yarn lint",
     "start": "NODE_ENV=production node ./dist/index.js",
-    "dev": "NLP_URL=http://localhost:1337/nlp nodemon ./src/server/index.js",
-    "dev-with-nlp": "nodemon ./src/server/index.js",
+    "dev": "nodemon ./src/server/index.js",
+    "update-mock-data": "node -r esm tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test node -r esm tests/create_indexes.js",
     "test": "ELASTICSEARCH_SUGGESTION_INDEX=cdtn_suggestion_test ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_CONVENTION_INDEX=cdtn_convention_test ELASTICSEARCH_THEME_INDEX=cdtn_theme_test jest",
     "elastic": "node scripts/elastic.js"
@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@cdt/data": "^3.5.0",
+    "@cdt/data...datafiller": "^3.5.0",
     "@socialgouv/eslint-config-recommended": "^0.10.2",
     "@zeit/ncc": "^0.20.5",
     "eslint": "^6.6.0",

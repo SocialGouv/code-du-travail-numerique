@@ -74,6 +74,13 @@ exports[`<Theme /> should render 1`] = `
   border-color: #005994;
 }
 
+.c22:link,
+.c22:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c22:not([disabled]):hover,
 .c22:not([disabled]):active,
 .c22:not([disabled]):focus {

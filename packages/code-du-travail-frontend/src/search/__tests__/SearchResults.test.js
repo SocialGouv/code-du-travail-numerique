@@ -2,86 +2,81 @@ import React from "react";
 import { SearchResults } from "../SearchResults";
 import { render } from "@testing-library/react";
 
-const items = [
-  {
-    _id: "id",
-    _source: {
-      source: "code_du_travail",
+const items = {
+  documents: [
+    {
+      source: "fiches_service_public",
       title: "Mer il est fou!",
-      slug: "mer-il-est-fou"
-    }
-  },
-  {
-    _id: "id2",
-    _source: {
-      source: "external",
-      title: "Mer il est fou!",
-      url: "http://voila.fr"
-    }
-  }
-];
-
-const itemsBreadcrumbs = [
-  {
-    _id: "id",
-    _source: {
-      source: "code_du_travail",
-      title: "Mer il est fou 1  !",
-      slug: "mer-il-est-fou1",
-      breadcrumbs: []
-    }
-  },
-  {
-    _id: "id",
-    _source: {
-      source: "code_du_travail",
-      title: "Mer il est fou 2!",
-      slug: "mer-il-est-fou2",
-      breadcrumbs: [{ slug: "theme-root", title: "test root content" }]
-    }
-  },
-  {
-    _id: "id",
-    _source: {
-      source: "code_du_travail",
-      title: "Mer il est fou 3!",
-      slug: "mer-il-est-fou3",
+      slug: "mer-il-est-fou",
+      description: "description",
       breadcrumbs: [
         { slug: "theme-root", title: "test content" },
-        { slug: "theme-leaf", title: "test leaf content" }
+        { slug: "theme-test", title: "test theme content" }
       ]
-    }
-  },
-  {
-    _id: "id",
-    _source: {
-      source: "themes",
+    },
+    {
+      source: "outils",
+      title: "simulateur de prime de précarite",
+      slug: "simulateur-precarite",
+      description: "description"
+    },
+    {
+      source: "external",
+      title: "fich",
+      url:
+        "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
+      slug: "simulateur-licenciement-telerc",
+      description: "description"
+    },
+    {
+      source: "outils",
+      title: "Mer il est fou 2!",
+      slug: "mer-il-est-fou2",
+      description: "description",
+      breadcrumbs: [{ slug: "theme-root", title: "test root content" }]
+    },
+    {
+      source: "contribution",
       title: "Mer il est fou 4!",
       slug: "mer-il-est-fou4",
+      description: "description",
       breadcrumbs: [
         { slug: "theme-root", title: "test content" },
         { slug: "theme-test", title: "test theme content" }
       ]
     }
-  }
-];
-
+  ],
+  articles: [
+    {
+      source: "code_du_travail",
+      title: "L1243-1",
+      slug: "L1243-1",
+      description: "la description"
+    }
+  ],
+  themes: [
+    {
+      source: "themes",
+      title: "Contrat",
+      slug: "1-contrat"
+    }
+  ]
+};
+const emptyItems = {
+  documents: [],
+  articles: [],
+  themes: []
+};
 describe("<SearchResults/>", () => {
   it("should render no results", () => {
     const { container } = render(
-      <SearchResults items={[]} query="search test" />
+      <SearchResults items={emptyItems} query="search test" />
     );
     expect(container).toMatchSnapshot();
   });
   it("should render results", () => {
     const { container } = render(
       <SearchResults items={items} query="search test" />
-    );
-    expect(container).toMatchSnapshot();
-  });
-  it("should render results with breadcrumbs", () => {
-    const { container } = render(
-      <SearchResults items={itemsBreadcrumbs} query="search test" />
     );
     expect(container).toMatchSnapshot();
   });

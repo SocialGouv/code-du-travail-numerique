@@ -46,13 +46,97 @@ exports[`<Grid /> should render 1`] = `
 
 @media (max-width:980px) {
   .c1 {
-    width: calc(100% / 3 - 2 * 0.625rem);
+    width: calc( 100% / 3 - 2 * 0.625rem );
   }
 }
 
 @media (max-width:600px) {
   .c1 {
-    width: calc(100% - 2 * 0.625rem);
+    width: calc( 100% - 2 * 0.625rem );
+  }
+}
+
+<div>
+  <ul
+    class="c0"
+  >
+    <li
+      class="c1"
+    >
+      <strong>
+        titre 1
+      </strong>
+      <p>
+        contenu 1
+      </p>
+    </li>
+    <li
+      class="c1"
+    >
+      <strong>
+        titre 2
+      </strong>
+      <p>
+        contenu 2
+      </p>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Grid /> should render 5columns 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 1.25rem;
+  margin-right: calc(-1 * 0.625rem);
+  margin-bottom: 2rem;
+  margin-left: calc(-1 * 0.625rem);
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 5 - 2 * 0.625rem);
+  margin: 0.625rem;
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: calc( 100% / 4 - 2 * 0.625rem );
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    width: calc( 100% - 3 * 0.625rem );
   }
 }
 

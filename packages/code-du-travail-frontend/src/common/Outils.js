@@ -75,12 +75,18 @@ function Outils() {
                 </Tile>
               </Link>
             ))
-            .concat([
-              <ConventionModal key="convention-modal" />,
+            .concat(
+              <ConventionModal key="convention-modal">
+                {openModal => (
+                  <Tile button="Rechercher" onClick={openModal}>
+                    Votre convention collective
+                  </Tile>
+                )}
+              </ConventionModal>,
               <Tile key="next-tools">
                 Bientôt d’autres outils disponibles...
               </Tile>
-            ])}
+            )}
         </CardList>
       </Container>
     </Section>

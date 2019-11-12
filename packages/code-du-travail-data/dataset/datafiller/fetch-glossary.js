@@ -1,5 +1,5 @@
 const fetch = require("node-fetch");
-const slugify = require("@cdt/data/slugify");
+const slugify = require("../../slugify");
 const remark = require("remark");
 const html = require("remark-html");
 

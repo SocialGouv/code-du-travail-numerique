@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 const slugify = require("../../slugify");
-
+const { SOURCES } = require("@cdt/sources");
 const {
   sortByKey,
   getVariants,
@@ -66,13 +66,16 @@ const fetchAll = async () => {
     .then(res => res.json())
     .then(json => json.data);
 
-  const sortedRows = records.map(sortRowRefsByPosition);
+  const sortedRows = records
+    .map(sortRowRefsByPosition)
+    .filter(({ title }) => title.length > 0);
 
   const treeRows = sortedRows.map(row => {
     const breadcrumbs = row.parent && getParents(sortedRows, row);
     const children = getChildren(sortedRows, row);
     return {
       ...row,
+      source: SOURCES.THEMES,
       slug: getSlug(row),
       breadcrumbs,
       children,

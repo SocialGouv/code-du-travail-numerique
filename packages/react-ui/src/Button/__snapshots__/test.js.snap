@@ -22,6 +22,13 @@ exports[`<Button /> it renders a Button danger 1`] = `
   border-color: #f6bcc2;
 }
 
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
@@ -54,6 +61,13 @@ exports[`<Button /> it renders a Button danger 1`] = `
   color: #0c0c0e;
   background: #fff;
   border-color: #f6bcc2;
+}
+
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
 }
 
 .c1:not([disabled]):hover,
@@ -155,6 +169,13 @@ exports[`<Button /> it renders a Button info 1`] = `
   border-color: #e5f1fe;
 }
 
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
@@ -187,6 +208,13 @@ exports[`<Button /> it renders a Button info 1`] = `
   color: #0c0c0e;
   background: #fff;
   border-color: #e5f1fe;
+}
+
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
 }
 
 .c1:not([disabled]):hover,
@@ -298,6 +326,13 @@ exports[`<Button /> it renders a Button primary 1`] = `
   border-color: #005994;
 }
 
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
@@ -330,6 +365,13 @@ exports[`<Button /> it renders a Button primary 1`] = `
   color: #0c0c0e;
   background: #fff;
   border-color: #005994;
+}
+
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
 }
 
 .c1:not([disabled]):hover,
@@ -385,6 +427,13 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   border-color: #ebeff3;
 }
 
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
@@ -417,6 +466,13 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   color: #0c0c0e;
   background: #fff;
   border-color: #ebeff3;
+}
+
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
 }
 
 .c1:not([disabled]):hover,
@@ -472,6 +528,13 @@ exports[`<Button /> it renders a Button success 1`] = `
   border-color: #e0f2bd;
 }
 
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
@@ -504,6 +567,13 @@ exports[`<Button /> it renders a Button success 1`] = `
   color: #0c0c0e;
   background: #fff;
   border-color: #e0f2bd;
+}
+
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
 }
 
 .c1:not([disabled]):hover,
@@ -559,6 +629,13 @@ exports[`<Button /> it renders a Button warning 1`] = `
   border-color: #fee5ad;
 }
 
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
@@ -591,6 +668,13 @@ exports[`<Button /> it renders a Button warning 1`] = `
   color: #0c0c0e;
   background: #fff;
   border-color: #fee5ad;
+}
+
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
 }
 
 .c1:not([disabled]):hover,
@@ -646,6 +730,13 @@ exports[`<Button /> renders 1`] = `
   border-color: #006be6;
 }
 
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
@@ -688,6 +779,13 @@ exports[`<Button /> renders a small button 1`] = `
   color: #fff;
   background: #006be6;
   border-color: #006be6;
+}
+
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c0:not([disabled]):hover,

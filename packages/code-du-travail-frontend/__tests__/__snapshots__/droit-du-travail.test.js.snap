@@ -231,6 +231,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-color: #005994;
 }
 
+.c48:link,
+.c48:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c48:not([disabled]):hover,
 .c48:not([disabled]):active,
 .c48:not([disabled]):focus {

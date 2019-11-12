@@ -72,7 +72,9 @@ class Theme extends React.Component {
         </Section>
         {theme.refs && theme.refs.length > 0 && (
           <Section>
-            <SearchResults items={theme.refs} />
+            <SearchResults
+              items={{ documents: theme.refs, articles: [], themes: [] }}
+            />
           </Section>
         )}
       </Layout>

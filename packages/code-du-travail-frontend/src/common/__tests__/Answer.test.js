@@ -98,60 +98,44 @@ describe("<Answer />", () => {
         sourceType="social groove"
         relatedItems={[
           {
-            _source: {
-              source: SOURCES.SHEET_SP,
-              slug: `${SLUG_LINK_BASE}1`,
-              title: "related sheet sp title 1"
-            }
+            source: SOURCES.SHEET_SP,
+            slug: `${SLUG_LINK_BASE}1`,
+            title: "related sheet sp title 1"
           },
           {
-            _source: {
-              source: SOURCES.SHEET_MT,
-              slug: `${SLUG_LINK_BASE}2`,
-              title: "related sheet mt title 1"
-            }
+            source: SOURCES.SHEET_MT,
+            slug: `${SLUG_LINK_BASE}2`,
+            title: "related sheet mt title 1"
           },
           {
-            _source: {
-              source: SOURCES.EXTERNALS,
-              slug: `${SLUG_LINK_BASE}3`,
-              title: "related external title 1"
-            }
+            source: SOURCES.EXTERNALS,
+            slug: `${SLUG_LINK_BASE}3`,
+            title: "related external title 1"
           },
           {
-            _source: {
-              source: SOURCES.SHEET_SP,
-              slug: `${SLUG_LINK_BASE}4`,
-              title: "related sheet sp title 2"
-            }
+            source: SOURCES.SHEET_SP,
+            slug: `${SLUG_LINK_BASE}4`,
+            title: "related sheet sp title 2"
           },
           {
-            _source: {
-              source: SOURCES.TOOLS,
-              slug: `${SLUG_TOOL_BASE}1`,
-              title: "related tool title 1"
-            }
+            source: SOURCES.TOOLS,
+            slug: `${SLUG_TOOL_BASE}1`,
+            title: "related tool title 1"
           },
           {
-            _source: {
-              source: SOURCES.TOOLS,
-              slug: `${SLUG_TOOL_BASE}2`,
-              title: "related tool title 2"
-            }
+            source: SOURCES.TOOLS,
+            slug: `${SLUG_TOOL_BASE}2`,
+            title: "related tool title 2"
           },
           {
-            _source: {
-              source: SOURCES.LETTERS,
-              slug: `${SLUG_LETTER_BASE}1`,
-              title: "related letter title 1"
-            }
+            source: SOURCES.LETTERS,
+            slug: `${SLUG_LETTER_BASE}1`,
+            title: "related letter title 1"
           },
           {
-            _source: {
-              source: SOURCES.LETTERS,
-              slug: `${SLUG_LETTER_BASE}2`,
-              title: "related letter title 2"
-            }
+            source: SOURCES.LETTERS,
+            slug: `${SLUG_LETTER_BASE}2`,
+            title: "related letter title 2"
           }
         ]}
       >

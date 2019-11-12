@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 import { Grid, GridCell } from "../Grid";
 import { SectionTitle } from "../SectionTitle";
 
-export function CardList({ title, href, desc, children }) {
+export function CardList({ title, href, desc, columns, children }) {
   return (
     <>
       <SectionTitle desc={desc} href={href}>
         {title}
       </SectionTitle>
-      <Grid>
+      <Grid columns={columns}>
         {Array.isArray(children) ? (
           React.Children.map(children, element => (
             <GridCell key={element.key}>{element}</GridCell>
@@ -27,5 +27,10 @@ CardList.propTypes = {
   children: PropTypes.node.isRequired,
   desc: PropTypes.string,
   title: PropTypes.string.isRequired,
-  href: PropTypes.string
+  href: PropTypes.string,
+  columns: PropTypes.number
+};
+
+CardList.defaultProps = {
+  columns: 4
 };

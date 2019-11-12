@@ -36,6 +36,13 @@ exports[`<SearchHero /> should render 1`] = `
   border-color: #005994;
 }
 
+.c13:link,
+.c13:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c13:not([disabled]):hover,
 .c13:not([disabled]):active,
 .c13:not([disabled]):focus {

@@ -58,13 +58,13 @@ function Answer({
 
   const { relatedTools, relatedLetters, relatedArticles } = relatedItems.reduce(
     (accumulator, item) => {
-      const itemSource = item._source.source;
+      const itemSource = item.source;
       if (itemSource === SOURCES.TOOLS) {
-        accumulator.relatedTools.push(item._source);
+        accumulator.relatedTools.push(item);
       } else if (itemSource === SOURCES.LETTERS) {
-        accumulator.relatedLetters.push(item._source);
+        accumulator.relatedLetters.push(item);
       } else {
-        accumulator.relatedArticles.push(item._source);
+        accumulator.relatedArticles.push(item);
       }
       return accumulator;
     },

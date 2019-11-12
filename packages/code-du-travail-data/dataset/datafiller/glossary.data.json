@@ -363,14 +363,6 @@
     ]
   },
   {
-    "title": "Arrêt",
-    "slug": "arret",
-    "abbrs": [],
-    "variants": [],
-    "definition": "<p>Décision de justice prise par une cour d'appel, une cour administrative d'appel, une cour d'assises, la Cour de Cassation ou le Conseil d'Etat.  Le Conseil d'Etat emploie également le terme \"décision\".</p>",
-    "refs": []
-  },
-  {
     "title": "arrêt de travail",
     "slug": "arret-de-travail",
     "abbrs": [],
@@ -1558,9 +1550,10 @@
     "slug": "jour-calendaire",
     "abbrs": [],
     "variants": [
-      "jours calendaires"
+      "jours calendaires",
+      "manière calendaire"
     ],
-    "definition": "<p>Jour du calendrier de l'année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou chômés.</p>",
+    "definition": "<p>Correspond à la totalité des jours du calendrier de l'année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou chômés.</p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R1092"

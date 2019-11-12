@@ -74,6 +74,11 @@ export const StyledButton = styled.button`
       color: ${color};
       background: ${backgroundColor};
       border-color: ${borderColor};
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: ${color};
+      }
       :not([disabled]) {
         &:hover,
         &:active,

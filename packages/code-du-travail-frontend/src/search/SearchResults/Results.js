@@ -67,7 +67,7 @@ export const Results = ({ id, isSearch, items, query }) => {
   return (
     <Container narrow>
       {isSearch ? (
-        <H1 id={id}>{`Résultats pour "${query}"`}</H1>
+        <H1 id={id}>{`Résultats de recherche pour “${query}”`}</H1>
       ) : (
         <h2 id={id}>{"Contenu correspondant"}</h2>
       )}

@@ -1,43 +1,32 @@
-import React from "react";
-import { Modal, Tile } from "@socialgouv/react-ui";
+import React, { useCallback, useState } from "react";
+import { Modal } from "@socialgouv/react-ui";
 
 import ConventionForm from "./Form";
 
-class ConventionModal extends React.Component {
-  state = {
-    modalIsOpen: false
-  };
+function ConventionModal({ children: renderProp }) {
+  const [isModalVisible, setModalVisibility] = useState(false);
 
-  openModal = e => {
+  const openModal = useCallback(e => {
     e.preventDefault();
-    this.setState({
-      modalIsOpen: true
-    });
-  };
+    setModalVisibility(true);
+  }, []);
 
-  closeModal = () => {
-    this.setState({
-      modalIsOpen: false
-    });
-  };
+  const closeModal = useCallback(() => {
+    setModalVisibility(false);
+  }, []);
 
-  render() {
-    const { modalIsOpen } = this.state;
-    return (
-      <React.Fragment>
-        <Tile button="Rechercher" onClick={this.openModal}>
-          Votre convention collective
-        </Tile>
-        <Modal
-          isOpen={modalIsOpen}
-          onDismiss={this.closeModal}
-          title="Rechercher votre convention collective"
-        >
-          <ConventionForm />
-        </Modal>
-      </React.Fragment>
-    );
-  }
+  return (
+    <>
+      {renderProp(openModal)}
+      <Modal
+        isOpen={isModalVisible}
+        onDismiss={closeModal}
+        title="Rechercher votre convention collective"
+      >
+        <ConventionForm />
+      </Modal>
+    </>
+  );
 }
 
 export default ConventionModal;

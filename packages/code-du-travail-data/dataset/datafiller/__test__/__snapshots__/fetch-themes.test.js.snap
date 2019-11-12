@@ -46,6 +46,7 @@ Array [
       },
     ],
     "slug": "1-title1",
+    "source": "themes",
     "title": "title1",
     "variants": Array [
       "title1",
@@ -85,6 +86,7 @@ Array [
       },
     ],
     "slug": "1-title2",
+    "source": "themes",
     "theme": "theme2",
     "title": "title2",
     "variants": Array [
@@ -120,6 +122,7 @@ Array [
       },
     ],
     "slug": "1-title3",
+    "source": "themes",
     "theme": "theme3",
     "title": "title3",
     "variants": Array [
@@ -157,6 +160,7 @@ Array [
       },
     ],
     "slug": "1-title4",
+    "source": "themes",
     "theme": "theme4",
     "title": "title4",
     "variants": Array [

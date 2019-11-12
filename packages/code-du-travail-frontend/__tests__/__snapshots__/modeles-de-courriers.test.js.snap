@@ -116,6 +116,13 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   border-color: #ebeff3;
 }
 
+.c32:link,
+.c32:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0c0c0e;
+}
+
 .c32:not([disabled]):hover,
 .c32:not([disabled]):active,
 .c32:not([disabled]):focus {
@@ -150,6 +157,13 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   border-color: #006be6;
 }
 
+.c35:link,
+.c35:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 .c35:not([disabled]):hover,
 .c35:not([disabled]):active,
 .c35:not([disabled]):focus {
@@ -182,6 +196,13 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   color: #fff;
   background: #005994;
   border-color: #005994;
+}
+
+.c45:link,
+.c45:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .c45:not([disabled]):hover,

@@ -52,7 +52,7 @@ router.get("/themes/:slug", async ctx => {
 
   ctx.body = {
     ...theme._source,
-    refs
+    refs: refs.map(({ _source }) => _source)
   };
 });
 
