@@ -105,7 +105,13 @@ describe("situations", () => {
     it("should return a tuple array of questions key and questions option for branch and bar", () => {
       const situations = getSituationsFor(data, { idcc: "10" });
       expect(getPastQuestions(situations, { bar: "baz" })).toEqual([
-        ["bar", [["bar", "bar"], ["baz", "baz"]]]
+        [
+          "bar",
+          [
+            ["bar", "bar"],
+            ["baz", "baz"]
+          ]
+        ]
       ]);
     });
   });

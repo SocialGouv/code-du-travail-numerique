@@ -24,9 +24,10 @@ export const loadResults = async query => {
     );
 
     // fulltext search API Sirene
-    const promiseEtablissements = searchEntrepriseByName(query.trim()).then(
-      etablissements =>
-        etablissements.filter(r => r.conventions && r.conventions.length)
+    const promiseEtablissements = searchEntrepriseByName(
+      query.trim()
+    ).then(etablissements =>
+      etablissements.filter(r => r.conventions && r.conventions.length)
     );
 
     const [ccn, etablissements] = await Promise.all([
