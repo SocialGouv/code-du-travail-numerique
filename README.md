@@ -64,7 +64,7 @@ $ CDTN_REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travai
 $ docker run \
         --rm \
         --entrypoint cat $CDTN_REGISTRY/data:$(git rev-parse origin/master) /app/dump.tf.json \
-        > ./packages/code-du-travail-nlp/data/dump.data.json
+        > ./packages/code-du-travail-nlp/data/dump.tf.json
 ```
 
 Then you can launch services using docker-compose
@@ -329,11 +329,33 @@ env:
 
 ## HOW TO
 
-To print SHA1 hashe to a given revision you can use :
+### To print SHA1 hashe to a given revision you can use :
 
 ```ssh
 $ git rev-parse origin/master
 ```
+
+<br>
+
+### Import data from Google SpreadSheet with google-spreadsheets package :
+
+You have to connect to the Google Spreadsheet document and select :
+
+```
+Fichier > Publier pour le web
+```
+
+On displayed modal you have to select
+```
+> Tabs that you want to publish
+> Page web
+```
+Then click on **"Publier"** button
+
+Once the data are published you can execute your import script
+
+> **Don't forget to unpublish when you have done**
+
 
 <br>
 <br>
