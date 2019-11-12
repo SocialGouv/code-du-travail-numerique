@@ -7,7 +7,7 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "@socialgouv/fiches-vdd": "^1.0.22",
+    "@socialgouv/fiches-vdd": "^1.0.26",
     "@socialgouv/kali-data": "^1.2.27",
     "@socialgouv/legi-data": "^1.1.5",
     "adm-zip": "0.4.13",
