@@ -14,6 +14,7 @@ const searchRoutes = require("./routes/search");
 const versionRoutes = require("./routes/version");
 const docsRoutes = require("./routes/docs");
 const themesRoute = require("./routes/themes");
+const suggestRoute = require("./routes/suggest");
 
 const { logger } = require("./utils/logger");
 
@@ -55,6 +56,7 @@ app.use(searchRoutes.routes());
 app.use(itemsRoutes.routes());
 app.use(versionRoutes.routes());
 app.use(themesRoute.routes());
+app.use(suggestRoute.routes());
 
 app.use(docsRoutes);
 

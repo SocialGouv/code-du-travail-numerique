@@ -5,7 +5,6 @@ from flask import jsonify
 import os
 
 from api.ready import add_ready
-from api.suggest import add_suggest
 from api.search import add_search
 from api.index import add_index
 
@@ -91,7 +90,6 @@ def load_nlp(app):
         return response
 
     add_ready(app, nlp)
-    add_suggest(app, nlp, queries_path, stops_path)
     add_search(app, nlp, stops_path)
     add_index(app, nlp)
 

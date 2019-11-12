@@ -58,6 +58,32 @@ const analyzer = {
   idcc_ape: {
     tokenizer: "whitespace"
   },
+
+  // improve match_phrase_prefix query
+  // using a keyword analyser on type:text field
+  // in order to match results with query as prefix
+  // (as opposite to match "in the middle")
+  sugg_prefix: {
+    tokenizer: "icu_tokenizer",
+    filter: ["lowercase", "icu_folding"],
+    char_filter: ["startwith"]
+  },
+
+  // used at index time to generate ngrams
+  // for all suggestion
+  // see below, ngram from tokens
+  autocomplete: {
+    tokenizer: "autocomplete",
+    filter: ["lowercase", "icu_folding"] //, "french_stop"]
+  },
+
+  // at search time, we only consider
+  // the entire query (no ngrams)
+  autocomplete_search: {
+    tokenizer: "lowercase",
+    filter: "icu_folding"
+  },
+
   french_with_synonyms: {
     tokenizer: "icu_tokenizer",
     char_filter: ["html_strip"],
@@ -109,6 +135,12 @@ const tokenizer = {
   article_id_tokenizer: {
     type: "simple_pattern",
     pattern: "[0123456789]{4}-[0123456789]{1,3}-?[0123456789]{1,3}?"
+  },
+  autocomplete: {
+    type: "edge_ngram",
+    min_gram: 2,
+    max_gram: 10,
+    token_chars: ["letter"]
   }
 };
 
