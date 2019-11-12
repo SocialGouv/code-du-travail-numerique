@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepInformations /> should render 1`] = `
+.c2 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.c3 {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.c4 {
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-criteria.ancienneté"
+    >
+      Quelle est l'ancienneté du salarié ?
+    </label>
+    <label
+      class="c3"
+    >
+      Choissisez parmi les catégories d'ancienneté telles que définies par la convention collective
+    </label>
+    <select
+      class="c4"
+      id="input-criteria.ancienneté"
+      name="criteria.ancienneté"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="12| plus de 2 ans"
+      >
+        plus de 2 ans
+      </option>
+      <option
+        value="17| moins de 6 mois"
+      >
+        moins de 6 mois
+      </option>
+      <option
+        value="20| 6 mois à moins de 2 ans"
+      >
+        6 mois à moins de 2 ans
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<StepInformations /> should render catégorie 1`] = `
+.c2 {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.c3 {
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-criteria.catégorie socio-professionnelle"
+    >
+      Quelle est la catégorie professionnelle du salarié ?
+    </label>
+    <select
+      class="c3"
+      id="input-criteria.catégorie socio-professionnelle"
+      name="criteria.catégorie socio-professionnelle"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="1| Ouvriers"
+      >
+        Ouvriers
+      </option>
+      <option
+        value="4| Employés"
+      >
+        Employés
+      </option>
+      <option
+        value="5| Techniciens"
+      >
+        Techniciens
+      </option>
+      <option
+        value="15| Agents de maîtrise"
+      >
+        Agents de maîtrise
+      </option>
+      <option
+        value="16| Ingénieurs, Cadres"
+      >
+        Ingénieurs, Cadres
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<StepInformations /> should render coefficient 1`] = `
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+</div>
+`;

@@ -1,46 +1,48 @@
 import React from "react";
-import Link from "next/link";
 import styled from "styled-components";
 import createPersistedState from "use-persisted-state";
 
-import slugify from "@cdt/data/slugify";
 import { Accordion, Alert, Button, theme } from "@socialgouv/react-ui";
 
 import SearchConvention from "../../src/conventions/Search/Form";
 import Mdx from "../../src/common/Mdx";
-import makeArticlesLinks from "./makeArticlesLinks";
 
 // store selected convention in localStorage
 const useConventionState = createPersistedState("convention");
 
+const getConventionUrl = id =>
+  `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`;
+// `https://beta.legifrance.gouv.fr/conv_coll/id/${id}/`;
+
+// hack: todo: remove
+// will be fixed at source level
+const fixMarkdown = md =>
+  md &&
+  md
+    .replace(/<Tab([^>]+)>/g, '<section type="tab"$1>')
+    .replace(/<\/Tab>/g, "</section>")
+    .replace(/<HDN>/g, '<section type="hdn">')
+    .replace(/<\/HDN>/g, "</section>");
+
 // wrap section in custom components if section has a @data-type
 const AnswerSection = props => {
-  switch (props["data-type"]) {
+  switch (props["type"]) {
     // situations
     case "tab":
       return (
         <StyledAccordion
           items={[
             {
-              title: <h3>{props["data-title"]}</h3>,
+              title: <h3>{props["title"]}</h3>,
               body: props.children
             }
           ]}
         />
       );
-    // sources juridiques
-    case "source":
-      return (
-        <Alert variant="info">
-          <h4>Sources juridiques</h4>
-          <div {...props} />
-        </Alert>
-      );
-    // hierarchie des normes
     case "hdn":
       return (
         <Alert variant="info">
-          <h4>Texte juridique applicable</h4>
+          <h4>Texte applicable</h4>
           <div {...props} />
         </Alert>
       );
@@ -53,56 +55,89 @@ const components = {
   section: AnswerSection
 };
 
-// following data/populate.js slug rules
-const getConventionSlug = ({ num, title }) =>
-  slugify(`${num}-${title}`.substring(0, 80));
+const RefLink = ({ value, url }) => (
+  <LineRef>
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      {value}
+    </a>
+  </LineRef>
+);
 
-const LinkConvention = ({ num, title }) => {
-  const slugConvention = getConventionSlug({ num, title });
+const References = ({ references }) => {
+  const agreementRefs =
+    (references && references.filter(ref => !!ref.agreement)) || [];
+  const othersRefs =
+    (references && references.filter(ref => !ref.agreement)) || [];
+
   return (
-    <Link
-      href="/convention-collective/[slug]"
-      as={`/convention-collective/${slugConvention}`}
-    >
-      <Button variant="secondary">
-        Consulter la convention collective complète
-      </Button>
-    </Link>
+    <React.Fragment>
+      {references && references.length && (
+        <React.Fragment>
+          <h3>Références</h3>
+          {/* group CCs references */}
+          {agreementRefs.length !== 0 && (
+            <React.Fragment>
+              <h4>Convention collective</h4>
+              {agreementRefs.map(ref => (
+                <RefLink
+                  key={ref.id}
+                  value={ref.value}
+                  url={getConventionUrl(ref.agreement.id)}
+                />
+              ))}
+            </React.Fragment>
+          )}
+          {othersRefs.length !== 0 && (
+            <React.Fragment>
+              <h4>Autres sources</h4>
+              {othersRefs.map(ref => (
+                <RefLink key={ref.id} value={ref.value} url={ref.url} />
+              ))}
+            </React.Fragment>
+          )}
+        </React.Fragment>
+      )}
+    </React.Fragment>
   );
 };
-
-const AnswerConvention = ({ markdown }) => (
-  <div
-    style={{
-      backgroundColor: "white",
-      padding: 10,
-      marginBottom: 20
-    }}
-  >
-    <Mdx markdown={makeArticlesLinks(markdown)} components={components} />
-  </div>
-);
 
 // search CC + display filtered answer
 const AnswersConventions = ({ answers }) => {
   const [ccInfo, setCcInfo] = useConventionState(null);
-  const answer = ccInfo && answers.find(a => a.idcc === ccInfo.convention.num);
-
+  const answer = ccInfo && answers.find(a => a.idcc === ccInfo.num);
   return (
-    <React.Fragment>
+    <div>
       {!ccInfo && (
-        <StyledSearchConvention title="" onSelectConvention={setCcInfo} />
+        <StyledSearchConvention
+          title=""
+          onSelectConvention={({ convention }) => setCcInfo(convention)}
+        />
       )}
       {ccInfo && (
         <React.Fragment>
-          <h6>{ccInfo.convention.title}</h6>
+          <h6>
+            <span role="img" aria-label="Icone convention collective">
+              📖
+            </span>{" "}
+            <a
+              href={getConventionUrl(ccInfo.id)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {ccInfo.title}
+              {ccInfo.num && (
+                <React.Fragment> (IDCC {ccInfo.num})</React.Fragment>
+              )}
+            </a>
+          </h6>
           {(answer && (
             <React.Fragment>
-              <AnswerConvention markdown={answer.markdown} />
-              <LinkConvention
-                num={ccInfo.convention.num}
-                title={ccInfo.convention.title}
+              <Mdx
+                markdown={fixMarkdown(answer.markdown)}
+                components={components}
               />
+
+              <References references={answer.references} />
             </React.Fragment>
           )) || (
             <React.Fragment>
@@ -110,10 +145,6 @@ const AnswersConventions = ({ answers }) => {
                 Désolé nous n&apos;avons pas de réponse pour cette convention
                 collective
               </NoConventionAlert>
-              <LinkConvention
-                num={ccInfo.convention.num}
-                title={ccInfo.convention.title}
-              />
             </React.Fragment>
           )}
           <br />
@@ -123,46 +154,45 @@ const AnswersConventions = ({ answers }) => {
           </Button>
         </React.Fragment>
       )}
-    </React.Fragment>
+    </div>
   );
 };
 
 const Contribution = ({ answers }) => (
   <React.Fragment>
     {answers.generic && (
-      <SectionCdt bgColor="white" style={{ marginBottom: 20 }}>
+      <SectionAnswer>
         <h2>Que dit le code du travail ?</h2>
         <Mdx
-          markdown={makeArticlesLinks(answers.generic.markdown)}
+          markdown={fixMarkdown(answers.generic.markdown)}
           components={components}
         />
-      </SectionCdt>
+      </SectionAnswer>
     )}
-    {answers.conventions && (
-      <SectionConvention>
+    {(answers.conventions && answers.conventions.length && (
+      <SectionAnswer>
         <h2>Que dit votre convention collective ?</h2>
         <AnswersConventions answers={answers.conventions} />
-      </SectionConvention>
-    )}
+      </SectionAnswer>
+    )) ||
+      null}
   </React.Fragment>
 );
 
-const { box, colors, spacing } = theme;
+const { box, spacing } = theme;
+
+const LineRef = styled.li`
+  margin: 5px 0;
+  list-style-type: none;
+`;
 
 const NoConventionAlert = styled(Alert)`
   margin: 40px 0;
 `;
 
-const SectionCdt = styled.section`
+const SectionAnswer = styled.section`
   padding: ${spacing.small} ${spacing.medium};
-  background: white;
-`;
-
-const SectionConvention = styled.section`
-  padding: ${spacing.small} ${spacing.medium};
-  background: ${colors.lightBackground};
-  border: ${box.border};
-  border-radius: ${box.lightBorderRadius};
+  margin-bottom: ${spacing.medium};
 `;
 
 const StyledSearchConvention = styled(SearchConvention)`

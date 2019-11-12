@@ -876,6 +876,30 @@ exports[`<Home /> should render 1`] = `
           >
             <a
               class="c30"
+              href="/outils/preavis-licenciement"
+              title="Démarrer une simulation de durée de préavis de licenciement"
+            >
+              <div
+                class="c31"
+              >
+                Simulateur de durée de préavis de licenciement
+              </div>
+              <div
+                class="c32"
+              >
+                <div
+                  class="c33"
+                >
+                  Démarrer
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c29"
+          >
+            <a
+              class="c30"
               href="/outils/preavis-demission"
               title="Démarrer une simulation de durée de préavis de démission"
             >

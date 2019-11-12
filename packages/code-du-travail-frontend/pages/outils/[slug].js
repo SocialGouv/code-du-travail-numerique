@@ -6,6 +6,7 @@ import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
+import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
@@ -26,6 +27,13 @@ const getSimulator = function(name) {
         description:
           "Calculez votre indemnité de licenciement en tenant compte des dispositions conventionnelles",
         component: CalculateurIndemnite
+      };
+    case "preavis-licenciement":
+      return {
+        title: "Simulateur de durée de préavis de licenciement",
+        description:
+          "Estimez simplement la durée du préavis dans le cadre d'un licenciement",
+        component: DureePreavisLicenciement
       };
     case "simulateur-embauche":
       return {

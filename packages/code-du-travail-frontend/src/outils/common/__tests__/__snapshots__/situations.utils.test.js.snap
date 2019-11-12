@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`situations recapSituation should render formated criteria 1`] = `
+<ul>
+  <li>
+    Ancienneté
+     : 
+    <strong>
+      moins de un an
+    </strong>
+  </li>
+  <li>
+    Catégorie
+     : 
+    <strong>
+      Agents de maîtrise
+    </strong>
+  </li>
+</ul>
+`;

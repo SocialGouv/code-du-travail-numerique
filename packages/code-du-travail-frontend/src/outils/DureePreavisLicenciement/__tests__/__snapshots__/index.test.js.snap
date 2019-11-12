@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DureePreavisLicenciement /> should render 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 1.25rem 0;
+  color: #434956;
+}
+
+.c14 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
+  color: #fff;
+  background: #0068ae;
+  border-color: #004a7b;
+}
+
+.c14[disabled] {
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.25rem 2.5rem;
+  background-color: #f9f9fc;
+  border-right: 1px solid #c9d3df;
+}
+
+.c4 {
+  margin: 1.25rem 0;
+  font-weight: 600;
+}
+
+.c5 {
+  display: none;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 8.4375rem;
+  padding: 0 0.25rem;
+  color: #006be6;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 8.4375rem;
+  padding: 0 0.25rem;
+  color: #adb9c9;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #006be6;
+  border-radius: 49%;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #adb9c9;
+  border-radius: 49%;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.c15 {
+  margin-left: auto;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 0;
+  overflow: auto;
+  color: #434956;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c12 {
+  -webkit-flex-basis: 240px;
+  -ms-flex-preferred-size: 240px;
+  flex-basis: 240px;
+  margin: 2rem 0;
+}
+
+.c11 {
+  padding: 1rem 0;
+  color: #0c0c0e;
+  font-weight: 400;
+  font-size: 1.375rem;
+  border-bottom: 1px solid #c9d3df;
+}
+
+.c10 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.25rem 2.5rem;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #c9d3df;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <form
+        class="c2"
+      >
+        <div
+          class="c3"
+        >
+          <span
+            class="c4"
+          >
+            Étapes
+             
+            <span
+              class="c5"
+            >
+              1/5
+            </span>
+          </span>
+          <span
+            class="c6"
+          >
+            <span
+              class="c7"
+            >
+              1
+            </span>
+            Introduction
+          </span>
+          <span
+            class="c8"
+          >
+            <span
+              class="c9"
+            >
+              2
+            </span>
+            Situation du salarié
+          </span>
+          <span
+            class="c8"
+          >
+            <span
+              class="c9"
+            >
+              3
+            </span>
+            Convention collective
+          </span>
+          <span
+            class="c8"
+          >
+            <span
+              class="c9"
+            >
+              4
+            </span>
+            Informations complémentaires
+          </span>
+          <span
+            class="c8"
+          >
+            <span
+              class="c9"
+            >
+              5
+            </span>
+            Durée du préavis
+          </span>
+        </div>
+        <div
+          class="c10"
+        >
+          <div
+            class="c11"
+          >
+            Simulateur de durée de préavis de licenciement
+          </div>
+          <div
+            class="c12"
+          >
+            <p>
+              Le préavis est une période accordée au salarié entre la notification du licenciement et son départ effectif de l’entreprise (fin du contrat).
+            </p>
+            <p>
+              Afin de réaliser cette simulation, vous aurez besoin d’informations concernant la situation de l’employé concerné, comme sa convention collective, sa catégorie ou son coefficient. La plupart de ces informations se trouvent sur le bulletin de salaire ou le contrat de travail. Prévoyez deux à cinq minutes pour cette simulation.
+            </p>
+            <p>
+              Vous pouvez trouver plus d’informations sur le préavis de licenciement sur
+               
+              <a
+                href="/fiche-service-public/preavis-de-licenciement"
+              >
+                cette fiche
+              </a>
+              .
+            </p>
+            <p>
+              Cliquez sur suivant pour commencer la simulation
+            </p>
+          </div>
+          <div
+            class="c13"
+          >
+            <button
+              class="c14 c15"
+            >
+              Suivant
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

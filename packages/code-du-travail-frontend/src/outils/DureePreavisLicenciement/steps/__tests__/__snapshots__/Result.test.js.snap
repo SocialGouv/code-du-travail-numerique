@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepResult /> should render CDT and CC answer 1`] = `
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
+.c1 {
+  color: #005994;
+  font-weight: 700;
+  font-size: 1.375rem;
+  white-space: nowrap;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Durée du préavis
+  </h2>
+  <p>
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
+  </p>
+  <p>
+    <strong
+      class="c1"
+    >
+      2 mois
+    </strong>
+  </p>
+  <h2
+    class="c0"
+  >
+    Détails
+  </h2>
+  <p>
+    Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
+  </p>
+  <ul>
+    <li>
+      Durée légale: 
+      <strong>
+        2 mois
+      </strong>
+    </li>
+    <li>
+      Durée conventionnelle: 
+      <strong>
+        2 mois
+      </strong>
+    </li>
+  </ul>
+  <p>
+    Éléments saisis :
+  </p>
+  <ul>
+    <li>
+      Licenciement pour faute grave
+       : 
+      <strong>
+        Non
+      </strong>
+    </li>
+    <li>
+      Reconnu en tant que travailleur handicapé
+       : 
+      <strong>
+        Non
+      </strong>
+    </li>
+    <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        plus de 2 ans
+      </strong>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      Catégorie socio-professionnelle
+       : 
+      <strong>
+        Ouvriers, Employés
+      </strong>
+    </li>
+    <li>
+      Ancienneté selon la convention collective
+       : 
+      <strong>
+        2 ans ou plus
+      </strong>
+    </li>
+    <li>
+      Convention collective
+       : 
+      <strong>
+        Convention collective nationale de l'immobilier, administrateurs de biens, sociétés immobilières, agents immobiliers, etc. (anciennement cabinets d'administrateurs de biens et des sociétés immobilières), du 9 septembre 1988. Etendue par arrêté du 24 février 1989 JORF 3 mars 1989. Mise à jour par avenant  n° 47 du 23 novembre 2010, JORF 18 juillet 2012
+      </strong>
+    </li>
+  </ul>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <p>
+    <a
+      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
+      title="Consultez l’article 32"
+    >
+      Article 32
+    </a>
+  </p>
+</div>
+`;
+
+exports[`<StepResult /> should render with CDT no CC 1`] = `
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.625rem;
+}
+
+.c1 {
+  color: #005994;
+  font-weight: 700;
+  font-size: 1.375rem;
+  white-space: nowrap;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Durée du préavis
+  </h2>
+  <p>
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
+  </p>
+  <p>
+    <strong
+      class="c1"
+    >
+      2 mois
+    </strong>
+  </p>
+  <h2
+    class="c0"
+  >
+    Détails
+  </h2>
+  <p>
+    Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
+  </p>
+  <ul>
+    <li>
+      Durée légale: 
+      <strong>
+        2 mois
+      </strong>
+    </li>
+    <li>
+      Durée conventionnelle: 
+      <strong>
+        1 mois
+      </strong>
+    </li>
+  </ul>
+  <p>
+    Éléments saisis :
+  </p>
+  <ul>
+    <li>
+      Licenciement pour faute grave
+       : 
+      <strong>
+        Non
+      </strong>
+    </li>
+    <li>
+      Reconnu en tant que travailleur handicapé
+       : 
+      <strong>
+        Non
+      </strong>
+    </li>
+    <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        plus de 2 ans
+      </strong>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      Catégorie socio-professionnelle
+       : 
+      <strong>
+        Ouvriers, Employés
+      </strong>
+    </li>
+    <li>
+      Ancienneté selon la convention collective
+       : 
+      <strong>
+        moins de 2 ans
+      </strong>
+    </li>
+    <li>
+      Convention collective
+       : 
+      <strong>
+        Convention collective nationale de l'immobilier, administrateurs de biens, sociétés immobilières, agents immobiliers, etc. (anciennement cabinets d'administrateurs de biens et des sociétés immobilières), du 9 septembre 1988. Etendue par arrêté du 24 février 1989 JORF 3 mars 1989. Mise à jour par avenant  n° 47 du 23 novembre 2010, JORF 18 juillet 2012
+      </strong>
+    </li>
+  </ul>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <p>
+    <a
+      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
+      title="Consultez l’article 32"
+    >
+      Article 32
+    </a>
+  </p>
+</div>
+`;

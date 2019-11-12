@@ -23,12 +23,12 @@
   },
   "dependencies": {
     "husky": "^3.0.9",
-    "lerna": "^3.18.3"
+    "lerna": "^3.18.4"
   },
   "resolutions": {
-    "@babel/core": "7.6.4",
-    "@babel/plugin-proposal-class-properties": "7.5.5",
-    "@babel/preset-env": "7.6.3"
+    "@babel/core": "7.7.0",
+    "@babel/plugin-proposal-class-properties": "7.7.0",
+    "@babel/preset-env": "7.7.1"
   },
   "workspaces": {
     "packages": ["packages/*", "packages/code-du-travail-data/dataset/*"]

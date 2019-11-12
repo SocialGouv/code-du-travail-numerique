@@ -25,18 +25,18 @@
     "styled-components": "4.x"
   },
   "dependencies": {
-    "@reach/dialog": "^0.5.3",
+    "@reach/dialog": "^0.5.4",
     "polished": "^3.4.2",
     "react-accessible-accordion": "^3.0.0",
     "react-feather": "^2.0.3",
     "react-tabs": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
     "@socialgouv/eslint-config-react": "^0.10.2",
     "@storybook/addon-a11y": "^5.2.5",
     "@storybook/addon-actions": "^5.2.5",
@@ -54,7 +54,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "rollup": "^1.26.3",
+    "rollup": "^1.26.5",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
