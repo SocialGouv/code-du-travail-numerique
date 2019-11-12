@@ -16,7 +16,7 @@ export const Themes = ({ items, query }) => (
   <Section>
     <Container narrow>
       <Wrapper variant="light">
-        <h2>{"Themes suceptibles de vous intéresser"}</h2>
+        <h2>{"Thèmes susceptibles de vous intéresser"}</h2>
         <List>
           {items.map(item => (
             <ListItem key={item.slug}>
