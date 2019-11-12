@@ -389,7 +389,7 @@ exports[`<SearchResults/> should render results with breadcrumbs 1`] = `
         class="c2"
       >
         <h2>
-          Themes suceptibles de vous intéresser
+          Thèmes susceptibles de vous intéresser
         </h2>
         <ul
           class="c3"
