@@ -29,10 +29,15 @@ const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/req
 
 // fetch title from remote url
 const getPageTitle = async url => {
-  const text = await fetch(url).then(r => r.text());
-  const matches = text.match(/<title>([^<]+)<\/title>/i);
-  if (matches) {
-    return decodeHTML(matches[1]);
+  try {
+    const text = await fetch(url).then(r => r.text());
+    const matches = text.match(/<title>([^<]+)<\/title>/i);
+    if (matches) {
+      return decodeHTML(matches[1]);
+    }
+  } catch (e) {
+    console.error(`fail to retrieve title on ${url}`);
+    console.error(e);
   }
   return url;
 };
