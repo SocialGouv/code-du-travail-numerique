@@ -11,9 +11,13 @@ Release:
     LERNA_ARGS: --force-publish --yes --conventional-prerelease
   except:
     refs:
+      # Don't tag tags
       - tags
     variables:
+      # Don't run when deploying in production an existing image
       - $PRODUCTION
+      # Don't run when running e2e tests
+      - $E2E_TEST
   before_script:
     - apk add --no-cache git=~2
     - git checkout ${CI_COMMIT_REF_NAME}
@@ -38,7 +42,10 @@ Production:
       - tags
   except:
     variables:
+      # Don't run when deploying in production an existing image
       - $PRODUCTION
+      # Don't run when running e2e tests
+      - $E2E_TEST
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/

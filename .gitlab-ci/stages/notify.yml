@@ -13,13 +13,17 @@ Notify Starting Deployment:
   extends: .base_notify_pending_stage
   stage: Deploy
   except:
-    - /^renovate/*
+    variables:
+      # Don't run when running e2e tests
+      - $E2E_TEST
 
 Notify Fail:
   extends: .base_notify_fail_stage
   stage: Notify Finished Deployment
   except:
-    - /^renovate/*
+    variables:
+      # Don't run when running e2e tests
+      - $E2E_TEST
   dependencies:
     - Notify Starting Deployment
   before_script:
@@ -30,7 +34,9 @@ Notify Success:
   extends: .base_notify_success_stage
   stage: Notify Finished Deployment
   except:
-    - /^renovate/*
+    variables:
+      # Don't run when running e2e tests
+      - $E2E_TEST
   dependencies:
     - Notify Starting Deployment
   before_script:

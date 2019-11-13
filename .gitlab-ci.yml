@@ -18,6 +18,8 @@ include:
   - /.gitlab-ci/stages/deploy.yml
   - /.gitlab-ci/stages/notify.yml
 
+  - /optional/e2e/.runners/puppetteer/.gitlab-ci.yml
+
 stages:
   - "Prepare"
   - "Code Quality"
@@ -26,3 +28,4 @@ stages:
   - "Post Registration"
   - "Deploy"
   - "Notify Finished Deployment"
+  - E2E test
