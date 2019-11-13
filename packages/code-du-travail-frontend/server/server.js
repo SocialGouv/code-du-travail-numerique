@@ -1,8 +1,7 @@
 // Custom server using Express.
 const express = require("express");
 const next = require("next");
-const expressSitemap = require("express-sitemap-xml");
-const getUrls = require("./get-urls");
+
 /**
  * this env variable is use to target developpement / staging deployement
  * in order to block indexing bot using a x-robot-header and an appropriate robots.txt
@@ -32,7 +31,7 @@ const robotsProd = [
   "Disallow: /assets/",
   "Disallow: /images/",
   "",
-  `Sitemap: ${FRONTEND_HOST}/sitemap.xml`
+  `Sitemap: https://${PROD_HOSTNAME}/sitemap.xml`
 ].join("\n");
 
 const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
@@ -59,7 +58,6 @@ app.prepare().then(() => {
     res.status(200).json({ status: "up and running" })
   );
   server.get("/robots.txt", robotTxtHandler);
-  server.use(expressSitemap(getUrls, FRONTEND_HOST));
 
   if (IS_PRODUCTION_DEPLOYMENT) {
     server.use(redirectHostname);
