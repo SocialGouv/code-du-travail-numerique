@@ -8,7 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "node index > ../export-courriers.json"
+    "start": "node index > ./export-courriers.json"
   },
   "author": "Lionel Breduillieard <lionel@lumographe.fr>",
   "license": "ISC",

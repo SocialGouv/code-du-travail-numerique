@@ -154,7 +154,7 @@ function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Courriers ===");
-  yield require("../dataset/export-courriers.json").map(
+  yield require("../dataset/courrier-type/export-courriers.json").map(
     ({
       titre,
       filename,
