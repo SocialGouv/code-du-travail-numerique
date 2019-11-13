@@ -2312,7 +2312,7 @@
     eslint-plugin-react "~7.16.0"
     eslint-plugin-react-hooks "~2.2.0"
 
-"@socialgouv/eslint-config-recommended@^0.10.2", "@socialgouv/eslint-config-recommended@^0.10.3":
+"@socialgouv/eslint-config-recommended@^0.10.3":
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-0.10.3.tgz#cf350593afc949402403bad686882c03fdbd3ce6"
   integrity sha512-aKTROPdK8j5spug6sE1NBo+ty7i6DnPf7L0PDj6KvTXLIe5KdkbNkTQ8YQASWP2qTbE01ev+VYNNZhgn+msXFQ==
@@ -2322,20 +2322,20 @@
     eslint-plugin-jest "^23.0.3"
     eslint-plugin-prettier "~3.1.1"
 
-"@socialgouv/fiches-vdd@^1.0.26":
-  version "1.0.26"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.26.tgz#f0561e4a7cc8c5a36634ebf18d22d9e5574565ed"
-  integrity sha512-ZFog9L5FrlynIPTEXWX5wOiCGDzb4sj0BGlW2Yl8Tjly6h3vqFAZAw6BiLB8SzNFc/F5OiyMh0Dj+n9WMor4Vg==
+"@socialgouv/fiches-vdd@^1.0.27":
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.27.tgz#9076dd0c804aadcbdaf886cff42d31d499a2ee8b"
+  integrity sha512-igN6i8AWK1c8TZFeoLOtUgNzXHKeIsutJ5/dVlXn1WTEXOwGDeYa8fqr+v75lfwLNCY+4QA4bCNXYp4rWEslMQ==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.0"
     unzipper "^0.10.5"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.2.27":
-  version "1.2.27"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.27.tgz#f01e0110ae7f0d00a04bb6b9fabaccd5b086a03c"
-  integrity sha512-qJhwzDUE1YRcNwpbL66D8m8D/yeBi4mQEYacP7lHHmz/W5mGD0K6la5QT0ynLFQBlcVRYhz2obWrU1joVB8nRg==
+"@socialgouv/kali-data@^1.2.28":
+  version "1.2.28"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.28.tgz#46d30c3b9b4b03dba5fd6783f85749391f491f30"
+  integrity sha512-bG2L40QxX0SccrlPS8BgNQAatgyRMWCHVEF+6IH2Sr5Q+eKXuWfEYyty9N8pmgk79AOaBH2w9Db+x9reA4MsOQ==
   dependencies:
     "@socialgouv/dila-api-client" "^1.0.5"
     p-map "^3.0.0"
@@ -13527,10 +13527,10 @@ query-string@^4.1.0:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-query-string@^6.8.3:
-  version "6.8.3"
-  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.3.tgz#fd9fb7ffb068b79062b43383685611ee47777d4b"
-  integrity sha512-llcxWccnyaWlODe7A9hRjkvdCKamEKTh+wH8ITdTc3OhchaqUZteiSCX/2ablWHVrkVIe04dntnaZJ7BdyW0lQ==
+query-string@^6.9.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.9.0.tgz#1c3b727c370cf00f177c99f328fda2108f8fa3dd"
+  integrity sha512-KG4bhCFYapExLsUHrFt+kQVEegF2agm4cpF/VNc6pZVthIfCc/GK8t8VyNIE3nyXG9DK3Tf2EGkxjR6/uRdYsA==
   dependencies:
     decode-uri-component "^0.2.0"
     split-on-first "^1.0.0"
