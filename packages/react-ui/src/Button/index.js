@@ -97,9 +97,10 @@ export const StyledButton = styled.button`
   }}
 `;
 
-export const Button = ({ noButton, ...props }) => (
-  <StyledButton as={noButton ? "div" : "button"} {...props} />
-);
+export const Button = React.forwardRef(({ noButton, ...props }, ref) => (
+  <StyledButton as={noButton ? "div" : "button"} {...props} ref={ref} />
+));
+Button.displayName = "Button";
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
