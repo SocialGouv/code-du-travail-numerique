@@ -40,6 +40,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
     // prevent onSubmit to be call
     event.preventDefault();
     matopush(["trackEvent", "selectedSuggestion", query, suggestion]);
+    matopush(["trackEvent", "candidateSuggestions", suggestions.join("###")]);
     Router.push({
       pathname: "/recherche",
       query: { q: suggestion }

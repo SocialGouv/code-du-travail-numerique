@@ -2,6 +2,10 @@ import React from "react";
 import { SearchResults } from "../SearchResults";
 import { render } from "@testing-library/react";
 
+jest.mock("../../piwik", () => ({
+  matopush: jest.fn()
+}));
+
 const items = {
   documents: [
     {

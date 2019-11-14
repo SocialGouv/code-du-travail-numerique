@@ -12,6 +12,13 @@ export function initPiwik({
   matopush(["setTrackerUrl", `${piwikUrl}/${phpTrackerFile}`]);
   matopush(["enableLinkTracking"]);
 
+  const campaign = location.search.match(
+    /(?:pk_campaign|utm_campaign)=([^&]+)&?/
+  );
+  if (campaign && campaign.length) {
+    const [, campaignKey] = campaign;
+    matopush(["setCampaignNameKey", campaignKey]);
+  }
   /**
    * for intial loading we use the location.pathname
    * as the first url visited.
@@ -37,7 +44,7 @@ export function initPiwik({
     // In order to ensure that the page title had been updated,
     // we delayed pushing the tracking to the next tick.
     setTimeout(() => {
-      const { q, source } = Router.query;
+      const { q } = Router.query;
       if (previousPath) {
         matopush(["setReferrerUrl", `${previousPath}`]);
       }
@@ -46,7 +53,7 @@ export function initPiwik({
       matopush(["deleteCustomVariables", "page"]);
       matopush(["setGenerationTimeMs", 0]);
       if (/^\/recherche/.test(pathname)) {
-        matopush(["trackSiteSearch", q, source]);
+        matopush(["trackSiteSearch", q]);
       } else {
         matopush(["trackPageView"]);
       }
@@ -58,8 +65,4 @@ export function initPiwik({
 
 export function matopush(args) {
   window._paq.push(args);
-}
-
-export function pof() {
-  return 42;
 }

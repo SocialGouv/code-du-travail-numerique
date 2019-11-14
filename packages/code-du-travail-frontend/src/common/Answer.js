@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { withRouter } from "next/router";
@@ -20,6 +20,7 @@ import Disclaimer from "./Disclaimer";
 import { Feedback } from "./Feedback";
 import Html from "./Html";
 import { ThemeBreadcrumbs } from "./ThemeBreadcrumbs";
+import { matopush } from "../piwik";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
@@ -28,12 +29,27 @@ const BigError = ({ children }) => (
 );
 
 const BackToResultsLink = ({ query }) => {
-  if (!query.q) return null;
+  const { q } = query;
+  const onClick = useCallback(() => {
+    matopush(["trackEvent", "backResults", q]);
+  }, [q]);
+  const onKeyPress = useCallback(
+    event => {
+      if (event.keyCode === 13)
+        // Enter
+        matopush(["trackEvent", "backResults", q]);
+    },
+    [q]
+  );
+
+  if (!q) return null;
 
   return (
     <BacklinkContainer>
       <Link href={{ pathname: "/recherche", query }}>
-        <a>{"< Retour aux résultats"}</a>
+        <a role="link" tabIndex={0} onClick={onClick} onKeyPress={onKeyPress}>
+          {"< Retour aux résultats"}
+        </a>
       </Link>
     </BacklinkContainer>
   );
