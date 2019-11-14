@@ -2332,10 +2332,10 @@
     unzipper "^0.10.5"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.2.28":
-  version "1.2.28"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.28.tgz#46d30c3b9b4b03dba5fd6783f85749391f491f30"
-  integrity sha512-bG2L40QxX0SccrlPS8BgNQAatgyRMWCHVEF+6IH2Sr5Q+eKXuWfEYyty9N8pmgk79AOaBH2w9Db+x9reA4MsOQ==
+"@socialgouv/kali-data@^1.2.29":
+  version "1.2.29"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.29.tgz#c4d5649bf1c4125f282bb48ebaaf00d1bf8c4fae"
+  integrity sha512-fYxzdujq4XTanMzrDT1k7pKsiR0R+hI+szO7+7Lh4RXtv6nA1/bqv+fzFpUusNemlViQFPhZVFHwXPSjNW0C8g==
   dependencies:
     "@socialgouv/dila-api-client" "^1.0.5"
     p-map "^3.0.0"
