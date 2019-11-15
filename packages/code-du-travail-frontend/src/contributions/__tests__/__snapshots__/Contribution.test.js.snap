@@ -549,4 +549,48 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 </div>
 `;
 
+exports[`<Contribution /> should render with generic answer and content 1`] = `
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  margin-bottom: 2rem;
+}
+
+.c0 {
+  padding: 0.625rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <h2>
+      Que dit le code du travail ?
+    </h2>
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      />
+    </div>
+    <div>
+      <p>
+        hello 
+        <strong>
+          world
+        </strong>
+      </p>
+    </div>
+  </section>
+</div>
+`;
+
 exports[`<Contribution /> should render with no answer 1`] = `<div />`;

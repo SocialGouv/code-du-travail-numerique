@@ -24,6 +24,18 @@ describe("<Contribution />", () => {
     const { container } = render(<Contribution answers={answers} />);
     expect(container).toMatchSnapshot();
   });
+  it("should render with generic answer and content", () => {
+    const answers = { generic: { markdown: "hello **world**" } };
+    const content = {
+      raw:
+        '{"type":"element","name":"Publication","attributes":{"xmlns:dc":"http://purl.org/dc/elements/1.1/","xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance","ID":"F317","type":"Fiche Question-réponse","xsi:noNamespaceSchemaLocation":"../Schemas/3.0/Publication.xsd"},"children":[{"type":"element","name":"dc:title","children":[{"type":"text","text":"Arrêt maladie pendant la période d\'essai : quelles sont les règles ?"}]}]}',
+      url: "https://www.service-public.fr/particuliers/vosdroits/F317"
+    };
+    const { container } = render(
+      <Contribution answers={answers} content={content} />
+    );
+    expect(container).toMatchSnapshot();
+  });
   it("should render with conventions answer", () => {
     const answers = {
       conventions: [
