@@ -18,7 +18,7 @@ test("return item from its id", async () => {
 
 test("return item from source and slug ", async () => {
   const response = await request(app.callback()).get(
-    `/api/v1/items/fiches_ministere_travail/demission-comment-presenter-une-demission`
+    `/api/v1/items/fiches_service_public/demission-dun-salarie`
   );
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();

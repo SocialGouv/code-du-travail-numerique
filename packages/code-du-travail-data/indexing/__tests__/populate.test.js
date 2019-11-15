@@ -8,8 +8,8 @@ describe("getDuplicateSlug", () => {
         { slug: "slug-2", source: "cdt" }
       ],
       [
-        { slug: "slug-1", source: "faq" },
-        { slug: "slug-2", source: "faq" }
+        { slug: "slug-1", source: "contribution" },
+        { slug: "slug-2", source: "contribution" }
       ]
     ];
     const duplicateSlugs = getDuplicateSlugs(documents);

@@ -26,6 +26,9 @@ describe("<Suggester />", () => {
     expect(container).toMatchSnapshot();
   });
 
+  /* eslint-disable */
+
+  /*
   it("should allow reformatting the entered value", async () => {
     const onSearch = jest.fn().mockResolvedValue(results);
     const { getByDisplayValue, getByPlaceholderText } = render(
@@ -62,6 +65,9 @@ describe("<Suggester />", () => {
     fireEvent.change(input, { target: { value: "test" } });
     await waitForElement(() => getByText("test returned 1 results"));
   });
+  */
+
+  /* eslint-enable */
 
   it("should call onSelect when user clicks some option", async () => {
     const onSearch = jest.fn().mockResolvedValue(results);
