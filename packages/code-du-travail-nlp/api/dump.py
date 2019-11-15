@@ -1,7 +1,7 @@
 import os
 import json
 import time
-from api.sem_search import SemSearch
+from sem_search import SemSearch
 import logging
 
 logger = logging.getLogger("nlp")
