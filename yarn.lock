@@ -2162,13 +2162,20 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@reach/dialog@^0.5.4":
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.5.4.tgz#72bc6d8a13c14088bf444f97dd1dec69ebb908c1"
-  integrity sha512-RB2fImD4YOZ3/2qeoy5hXIpOizwSqucw1LcIwKGJ09E2mrVVriRIrSLk07aMc8R5HryeuflREyNmm/TOzbzP/Q==
+"@reach/component-component@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.6.0.tgz#8fbcaa83d0e2df62620815905e31d6524e4932d4"
+  integrity sha512-O32VzeGT/xOH5YH0qCzRN5Y8I0zwj2epqNAVPdl+CEJYXoMYQ/KEWmt4ahQCwxa8yvGQ5oEHyNpGnuCsY221MA==
   dependencies:
-    "@reach/portal" "^0.5.0"
-    "@reach/utils" "^0.5.0"
+    prop-types "^15.7.2"
+
+"@reach/dialog@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.6.0.tgz#de8b1ef574ee8a08a1721385635d1db769910780"
+  integrity sha512-ROIt0zHmRgLMgwMxGwLDadC8IZSvUeuMOicq/lmmyKrF9DMRSF4epQXfbZHV98pGZlvdJ8ztxNMi0+YYCGO7YQ==
+  dependencies:
+    "@reach/portal" "^0.6.0"
+    "@reach/utils" "^0.6.0"
     prop-types "^15.7.2"
     react-focus-lock "^2.2.1"
     react-remove-scroll "^2.2.0"
@@ -2184,6 +2191,13 @@
   integrity sha512-3WB6KLAVegGgWSvCVpXAUuo3tKOQi90l+V2ktzfUOCG5jxFTeEjDAA8MHZ7Zve5h1ZhBscGJKoO9UWxl1UNRhQ==
   dependencies:
     "@reach/component-component" "^0.5.0"
+
+"@reach/portal@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.6.0.tgz#961d61a6514fc1439acba9dc470b1bd8d7480357"
+  integrity sha512-KOlse0SKa+Un4upSxt5CY8aawrTquqYl2LC9UHdSkRPN6JqITu3DtLNxWY43hyglAZ/KPYg5oTM4A/Fj73es1A==
+  dependencies:
+    "@reach/component-component" "^0.6.0"
 
 "@reach/rect@^0.5.0":
   version "0.5.0"
@@ -2220,6 +2234,11 @@
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.5.0.tgz#2a64238a5a3ee57ee9742cf2579cacf41ae3a036"
   integrity sha512-MXYKmCz7BGiCLuZnPI1sBlxQFdpdv3O1Oc13k6oumJGd0eMN3+utGSs20gBH17Ml3IKVqY+9UOLEuqGfyWytHQ==
+
+"@reach/utils@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.6.0.tgz#0fc9cc11eddc7ca22302c522747fcb2fc3d4dd9d"
+  integrity sha512-zFgdyvvo+z2U7jKwrMS7kwfa/2drG5QfnR6vBpUkSadc0c7lrxdzATgzpvHjZxvKlCM8FwXhBALtiCKTr51leQ==
 
 "@reach/visually-hidden@^0.5.0":
   version "0.5.0"
