@@ -24,7 +24,7 @@ COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/datafiller/themes.data.json ./dataset/datafiller/themes.data.json
 
-ENV SUGGEST_DATA_URL=https://gist.github.com/rmelisson/31a6a17284d4022baa1faeda13afcc3a/raw/05d8138deed49cbab058b474fa8a0594b233bca2/cdtn_entities.txt
+ENV SUGGEST_DATA_URL=https://gist.github.com/rmelisson/31a6a17284d4022baa1faeda13afcc3a/raw/72cad4bd229d326c293f61d3f4c8517e72d1c847/cdtn_entities.txt
 RUN curl -L $SUGGEST_DATA_URL -o ./dataset/suggestions.txt
 
 WORKDIR /app
