@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import createPersistedState from "use-persisted-state";
-
+import FicheServicePublic from "@socialgouv/react-fiche-service-public";
 import { Accordion, Alert, Button, theme } from "@socialgouv/react-ui";
 
 import SearchConvention from "../../src/conventions/Search/Form";
@@ -12,47 +12,29 @@ const useConventionState = createPersistedState("convention");
 
 const getConventionUrl = id =>
   `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`;
-// `https://beta.legifrance.gouv.fr/conv_coll/id/${id}/`;
 
-// hack: todo: remove
-// will be fixed at source level
-const fixMarkdown = md =>
-  md &&
-  md
-    .replace(/<Tab([^>]+)>/g, '<section type="tab"$1>')
-    .replace(/<\/Tab>/g, "</section>")
-    .replace(/<HDN>/g, '<section type="hdn">')
-    .replace(/<\/HDN>/g, "</section>");
+//Custom MDX component
+const Tab = props => (
+  <StyledAccordion
+    items={[
+      {
+        title: <h3>{props["title"]}</h3>,
+        body: props.children
+      }
+    ]}
+  />
+);
 
-// wrap section in custom components if section has a @data-type
-const AnswerSection = props => {
-  switch (props["type"]) {
-    // situations
-    case "tab":
-      return (
-        <StyledAccordion
-          items={[
-            {
-              title: <h3>{props["title"]}</h3>,
-              body: props.children
-            }
-          ]}
-        />
-      );
-    case "hdn":
-      return (
-        <Alert variant="info">
-          <h4>Texte applicable</h4>
-          <div {...props} />
-        </Alert>
-      );
-    default:
-      return <section {...props} />;
-  }
-};
+const Hdn = props => (
+  <Alert variant="info">
+    <h4>Texte applicable</h4>
+    <div {...props} />
+  </Alert>
+);
 
-const components = {
-  section: AnswerSection
+const customCommponentsMdx = {
+  tab: Tab,
+  hdn: Hdn
 };
 
 const RefLink = ({ value, url }) => (
@@ -133,8 +115,8 @@ const AnswersConventions = ({ answers }) => {
           {(answer && (
             <React.Fragment>
               <Mdx
-                markdown={fixMarkdown(answer.markdown)}
-                components={components}
+                markdown={answer.markdown}
+                components={customCommponentsMdx}
               />
 
               <References references={answer.references} />
@@ -158,14 +140,19 @@ const AnswersConventions = ({ answers }) => {
   );
 };
 
-const Contribution = ({ answers }) => (
+const Contribution = ({ answers, content }) => (
   <React.Fragment>
     {answers.generic && (
       <SectionAnswer>
         <h2>Que dit le code du travail ?</h2>
+        {content && content.raw && (
+          <StyledContent>
+            <FicheServicePublic data={JSON.parse(content.raw).children} />
+          </StyledContent>
+        )}
         <Mdx
-          markdown={fixMarkdown(answers.generic.markdown)}
-          components={components}
+          markdown={answers.generic.markdown}
+          components={customCommponentsMdx}
         />
       </SectionAnswer>
     )}
@@ -188,6 +175,10 @@ const LineRef = styled.li`
 
 const NoConventionAlert = styled(Alert)`
   margin: 40px 0;
+`;
+
+const StyledContent = styled.div`
+  margin-bottom: ${spacing.large};
 `;
 
 const SectionAnswer = styled.section`
