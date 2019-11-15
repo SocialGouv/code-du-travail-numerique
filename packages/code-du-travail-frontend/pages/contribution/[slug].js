@@ -24,16 +24,12 @@ class PageContribution extends React.Component {
 
     // Check Content tag exist on markdown
     const contentRegExp = new RegExp("<s*Content[^](.*?)s*/>", "g");
-    const {
-      _source: {
-        answers: {
-          generic: { markdown }
-        }
-      } = {
-        _source: {}
-      }
-    } = data;
-    const contentTag = (markdown || {}).match(contentRegExp)[0];
+    const markdown =
+      ((((data || {})._source || {}).answers || {}).generic || {}).markdown ||
+      "";
+
+    const contentTag = markdown.match(contentRegExp)[0];
+
     if (contentTag) {
       // Extract URL from Content tag, only one for now
       const contentUrl = contentTag.match(

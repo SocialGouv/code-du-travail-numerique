@@ -18,7 +18,7 @@ const Tab = props => (
   <StyledAccordion
     items={[
       {
-        title: <h3>{props["title"]}</h3>,
+        title: <h3>{props.title}</h3>,
         body: props.children
       }
     ]}
@@ -32,7 +32,7 @@ const Hdn = props => (
   </Alert>
 );
 
-const customCommponentsMdx = {
+const customComponentsMdx = {
   tab: Tab,
   hdn: Hdn
 };
@@ -116,7 +116,7 @@ const AnswersConventions = ({ answers }) => {
             <React.Fragment>
               <Mdx
                 markdown={answer.markdown}
-                components={customCommponentsMdx}
+                components={customComponentsMdx}
               />
 
               <References references={answer.references} />
@@ -152,7 +152,7 @@ const Contribution = ({ answers, content }) => (
         )}
         <Mdx
           markdown={answers.generic.markdown}
-          components={customCommponentsMdx}
+          components={customComponentsMdx}
         />
       </SectionAnswer>
     )}

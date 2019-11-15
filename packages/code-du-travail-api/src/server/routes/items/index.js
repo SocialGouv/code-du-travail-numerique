@@ -112,7 +112,7 @@ router.get("/items", async ctx => {
   const { url } = ctx.query;
   const response = await elasticsearchClient.search({
     index: index,
-    _source: ["url", "raw", "html"],
+    _source: ["raw"],
     body: {
       query: {
         bool: {
