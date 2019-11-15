@@ -4,6 +4,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
+      "_score": 20.589056,
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -13,6 +14,8 @@ Object {
   ],
   "documents": Array [
     Object {
+      "_score": 1.2627476,
+      "algo": "semantic",
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
         Object {
@@ -31,6 +34,8 @@ Object {
       "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
     },
     Object {
+      "_score": 1.1894765,
+      "algo": "semantic",
       "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
       "slug": "demission-dun-salarie",
       "source": "fiches_service_public",
@@ -38,6 +43,8 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
+      "_score": 1.1808184,
+      "algo": "semantic",
       "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
       "slug": "la-demission-labsence-prolongee-du-salarie-est-elle-une-demission",
@@ -46,6 +53,8 @@ Object {
       "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
     },
     Object {
+      "_score": 1.1642654,
+      "algo": "semantic",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",
@@ -63,18 +72,24 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
+      "_score": 1.1540345,
+      "algo": "semantic",
       "description": "Connaître la durée du préavis de démission",
       "slug": "preavis-demission",
       "source": "outils",
       "title": "Simulateur de durée de préavis de démission",
     },
     Object {
+      "_score": 1.1081983,
+      "algo": "semantic",
       "description": "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
       "slug": "indemnite-licenciement",
       "source": "outils",
       "title": "Simulateur d'indemnité de licenciement",
     },
     Object {
+      "_score": 1.0708303,
+      "algo": "semantic",
       "description": "La rupture anticipée du contrat à déterminée n’est possible que dans certains cas. La rupture d’un commun accord est l’un de ces cas : ce modèle permet à l’une des parties de demander à l’autre, la rupture du CDD.",
       "slug": "modele-rupture-dun-commun-accord-dun-contrat-a-duree-determinee",
       "source": "modeles_de_courriers",
@@ -83,11 +98,15 @@ Object {
   ],
   "themes": Array [
     Object {
+      "_score": 1.1876618,
+      "algo": "semantic",
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
     },
     Object {
+      "_score": 1.1013293,
+      "algo": "semantic",
       "slug": "1-embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",
@@ -100,6 +119,7 @@ exports[`returns search results for demission from datafiller 1`] = `
 Object {
   "articles": Array [
     Object {
+      "_score": 2.6640253,
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
       "source": "code_du_travail",
@@ -107,6 +127,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
     },
     Object {
+      "_score": 2.7267747,
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -116,6 +137,8 @@ Object {
   ],
   "documents": Array [
     Object {
+      "_score": 7.2590585,
+      "algo": "pre-qualified",
       "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
       "slug": "demission-dun-salarie",
       "source": "fiches_service_public",
@@ -123,6 +146,8 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
+      "_score": 11.705261,
+      "algo": "pre-qualified",
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
         Object {
@@ -141,6 +166,8 @@ Object {
       "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
     },
     Object {
+      "_score": 10.582796,
+      "algo": "pre-qualified",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",
@@ -160,11 +187,15 @@ Object {
   ],
   "themes": Array [
     Object {
+      "_score": 1.1876618,
+      "algo": "semantic",
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
     },
     Object {
+      "_score": 1.1013293,
+      "algo": "semantic",
       "slug": "1-embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",
@@ -177,6 +208,7 @@ exports[`returns search results for demission from elastic 1`] = `
 Object {
   "articles": Array [
     Object {
+      "_score": 2.7267747,
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -184,6 +216,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
     Object {
+      "_score": 2.6640253,
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
       "source": "code_du_travail",
@@ -193,6 +226,8 @@ Object {
   ],
   "documents": Array [
     Object {
+      "_score": 7.1739163,
+      "algo": "fulltext",
       "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
         Object {
@@ -211,6 +246,8 @@ Object {
       "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
     },
     Object {
+      "_score": 1.1894765,
+      "algo": "semantic",
       "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
       "slug": "demission-dun-salarie",
       "source": "fiches_service_public",
@@ -218,12 +255,16 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
+      "_score": 1.1540345,
+      "algo": "semantic",
       "description": "Connaître la durée du préavis de démission",
       "slug": "preavis-demission",
       "source": "outils",
       "title": "Simulateur de durée de préavis de démission",
     },
     Object {
+      "_score": 3.4247293,
+      "algo": "fulltext",
       "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
       "slug": "la-demission-labsence-prolongee-du-salarie-est-elle-une-demission",
@@ -232,6 +273,8 @@ Object {
       "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
     },
     Object {
+      "_score": 7.033888,
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",
@@ -249,12 +292,16 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
+      "_score": 1.1081983,
+      "algo": "semantic",
       "description": "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
       "slug": "indemnite-licenciement",
       "source": "outils",
       "title": "Simulateur d'indemnité de licenciement",
     },
     Object {
+      "_score": 1.0708303,
+      "algo": "semantic",
       "description": "La rupture anticipée du contrat à déterminée n’est possible que dans certains cas. La rupture d’un commun accord est l’un de ces cas : ce modèle permet à l’une des parties de demander à l’autre, la rupture du CDD.",
       "slug": "modele-rupture-dun-commun-accord-dun-contrat-a-duree-determinee",
       "source": "modeles_de_courriers",
@@ -263,11 +310,15 @@ Object {
   ],
   "themes": Array [
     Object {
+      "_score": 1.1876618,
+      "algo": "semantic",
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
     },
     Object {
+      "_score": 1.1013293,
+      "algo": "semantic",
       "slug": "1-embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",

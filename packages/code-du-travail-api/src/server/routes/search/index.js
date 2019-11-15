@@ -61,8 +61,8 @@ router.get("/search", async ctx => {
   let documents = [];
   let articles = [];
   let themes = [];
-
   if (knownQueryResult) {
+    knownQueryResult.forEach(item => (item._source.algo = "pre-qualified"));
     documents = knownQueryResult.filter(({ _source: { source } }) =>
       sources.includes(source)
     );
@@ -147,11 +147,15 @@ router.get("/search", async ctx => {
     const { hits: { hits: semanticHits } = { hits: [] } } = results[
       DOCUMENTS_SEM
     ];
+    fulltextHits.forEach(item => (item._source.algo = "fulltext"));
+    semanticHits.forEach(item => (item._source.algo = "semantic"));
     documents = mergePipe(semanticHits, fulltextHits, size);
   }
   if (shouldRequestThemes) {
     const { hits: { hits: fulltextHits } = { hits: [] } } = results[THEMES_ES];
     const { hits: { hits: semanticHits } = { hits: [] } } = results[THEMES_SEM];
+    fulltextHits.forEach(item => (item._source.algo = "fulltext"));
+    semanticHits.forEach(item => (item._source.algo = "semantic"));
     themes = removeDuplicate(
       themes
         .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
@@ -165,11 +169,12 @@ router.get("/search", async ctx => {
   logger.info(`search: ${query} took ${results.took}ms`);
 
   ctx.body = {
-    documents: documents.map(({ _source }) => _source),
-    articles: articles.map(({ _source }) => _source),
+    documents: documents.map(({ _score, _source }) => ({ _score, ..._source })),
+    articles: articles.map(({ _score, _source }) => ({ _score, ..._source })),
     // we add source prop since some result might come from dedicataed themes index
     // wich has no source prop
-    themes: themes.map(({ _source }) => ({
+    themes: themes.map(({ _score, _source }) => ({
+      _score,
       ..._source,
       source: SOURCES.THEMES
     }))
