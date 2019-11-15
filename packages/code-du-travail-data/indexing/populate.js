@@ -114,33 +114,16 @@ function* cdtnDocumentsGen() {
     })
   );
 
-  logger.info("=== Fiches MT ===");
-  yield require("../dataset/fiches_ministere_travail/fiches-mt.json").map(
-    ({
-      title,
-      slug,
-      text,
-      description,
-      anchor,
-      intro,
-      html,
-      breadcrumbs,
-      theme,
-      date,
-      url
-    }) => ({
+  logger.info("=== Fiches MT Split ===");
+  yield require("../dataset/fiches_ministere_travail/fiches-mt-split.json").map(
+    ({ anchor, description, html, slug, text, title }) => ({
       source: SOURCES.SHEET_MT,
-      title,
-      slug,
-      intro,
+      anchor,
       description,
-      text,
       html,
-      breadcrumbs,
-      theme,
-      date,
-      url,
-      anchor
+      slug,
+      text,
+      title
     })
   );
 
@@ -215,7 +198,7 @@ export const conventionTextType = {
 
 /**
  *
- * @param {array} list - a array of document absctract
+ * @param {array} list - a array of document abstract
  * @param {number} batchSize - the max size of the batch
  */
 function* cdtnCcnGen(list, batchSize = 10000000) {
@@ -289,10 +272,16 @@ function* cdtnCcnGen(list, batchSize = 10000000) {
   }
 }
 
+// Elle est compliquée cette fonction dites donc !
+function* cdtnMTGen() {
+  yield require("../dataset/fiches_ministere_travail/fiches-mt.json");
+}
+
 export {
   flattenTags,
   makeSlug,
   getDuplicateSlugs,
   cdtnDocumentsGen,
-  cdtnCcnGen
+  cdtnCcnGen,
+  cdtnMTGen
 };

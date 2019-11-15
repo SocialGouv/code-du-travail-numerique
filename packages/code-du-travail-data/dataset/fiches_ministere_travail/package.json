@@ -8,6 +8,8 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
+    "@cdt/data": "^3.5.0",
+    "@cdt/sources": "^3.5.0",
     "google-spreadsheets": "^2.0.0",
     "jsdom": "^15.2.1",
     "ora": "^4.0.3",
@@ -15,8 +17,8 @@
     "superagent": "^5.1.0"
   },
   "scripts": {
-    "prestart": "node verifyUrl.js",
-    "start": "node index.js > fiches-mt.json",
-    "updateTheme": "node updateTheme.js > out.json && mv out.json fiches-mt.json && node report.js"
+    "prestart": "node verifyUrl",
+    "start": "node index",
+    "updateTheme": "node updateTheme && node report"
   }
 }

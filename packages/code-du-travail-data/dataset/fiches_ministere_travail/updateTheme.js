@@ -1,8 +1,10 @@
+const fs = require("fs");
+const { SOURCES, getRouteBySource } = require("@cdt/sources");
 const themes = require("../datafiller/themes.data.json");
 
-async function updateTheme(fiches) {
+function updateTheme(fiches) {
   fiches.forEach(fiche => {
-    const ficheUrl = `/fiche-ministere-travail/${fiche.slug}`;
+    const ficheUrl = `/${getRouteBySource(SOURCES.SHEET_MT)}/${fiche.slug}`;
     const theme = themes.find(theme =>
       theme.refs.map(r => r.url.split("#")[0]).includes(ficheUrl)
     );
@@ -25,14 +27,9 @@ async function updateTheme(fiches) {
   });
 }
 
-async function main() {
-  const fiches = require("./fiches-mt.json");
-  updateTheme(fiches);
-  console.log(JSON.stringify(fiches, null, 2));
-}
-
-if (module === require.main) {
-  main();
-}
-
-module.exports = updateTheme;
+let fiches = require("./fiches-mt.json");
+updateTheme(fiches);
+fs.writeFileSync("./fiches-mt.json", JSON.stringify(fiches, null, 2));
+fiches = require("./fiches-mt-split.json");
+updateTheme(fiches);
+fs.writeFileSync("./fiches-mt-split.json", JSON.stringify(fiches, null, 2));
