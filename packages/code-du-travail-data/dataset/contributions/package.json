@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@socialgouv/kali-data": "^1.2.29",
+    "@socialgouv/kali-data": "^1.2.30",
     "node-fetch": "^2.6.0"
   },
   "scripts": {
