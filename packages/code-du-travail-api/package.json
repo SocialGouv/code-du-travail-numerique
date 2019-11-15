@@ -10,9 +10,9 @@
     "prepush": "yarn lint",
     "start": "NODE_ENV=production node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js",
-    "update-mock-data": "node -r esm tests/fetch_mock_data.js",
+    "update-mock-data": "ELASTICSEARCH_DOCUMENT_INDEX=code_du_travail_numerique ELASTICSEARCH_SHEETS_MT_INDEX=fiches_ministere_du_travail node -r esm tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test node -r esm tests/create_indexes.js",
-    "test": "ELASTICSEARCH_SUGGESTION_INDEX=cdtn_suggestion_test ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_CONVENTION_INDEX=cdtn_convention_test ELASTICSEARCH_THEME_INDEX=cdtn_theme_test jest",
+    "test": "ELASTICSEARCH_SUGGESTION_INDEX=cdtn_suggestion_test ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_CONVENTION_INDEX=cdtn_convention_test ELASTICSEARCH_THEME_INDEX=cdtn_theme_test ELASTICSEARCH_SHEETS_MT_INDEX=cdtn_fiches_ministere_du_travail_test jest",
     "elastic": "node scripts/elastic.js"
   },
   "repository": {
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "dependencies": {
     "@cdt/data...courrier-type": "^3.5.0",
+    "@cdt/data...datafiller": "^3.5.0",
     "@cdt/sources": "^3.5.0",
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^3.0.0",

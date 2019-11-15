@@ -14,7 +14,6 @@ function getSearchBody({ source, slug }) {
       }
     },
     _source: [
-      "author", // faq
       "date",
       "date_debut", // code-du-travail
       "date_fin", // code-du-travail
@@ -29,6 +28,7 @@ function getSearchBody({ source, slug }) {
       "slug", // outils
       "tags", // code-du-travail
       "title",
+      "title_vector", // otherwise we can search for related items ?
       "url",
       "breadcrumbs",
       "idcc",
