@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { withRouter } from "next/router";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import {
@@ -28,7 +28,7 @@ const BigError = ({ children }) => (
   </StyledErrorContainer>
 );
 
-const BackToResultsLink = ({ query }) => {
+export const BackToResultsLink = ({ query }) => {
   const { q } = query;
   const onClick = useCallback(() => {
     matopush(["trackEvent", "backResults", q]);
@@ -48,7 +48,7 @@ const BackToResultsLink = ({ query }) => {
     <BacklinkContainer>
       <Link href={{ pathname: "/recherche", query }}>
         <a role="link" tabIndex={0} onClick={onClick} onKeyPress={onKeyPress}>
-          {"< Retour aux résultats"}
+          <span aria-hidden>‹</span> Retour aux résultats
         </a>
       </Link>
     </BacklinkContainer>
@@ -56,7 +56,6 @@ const BackToResultsLink = ({ query }) => {
 };
 
 function Answer({
-  router,
   title,
   intro = null,
   html = null,
@@ -71,7 +70,7 @@ function Answer({
   emptyMessage = "Aucun résultat"
 }) {
   const glossaryItems = useGlossary(children, html);
-
+  const router = useRouter();
   const { relatedTools, relatedLetters, relatedArticles } = relatedItems.reduce(
     (accumulator, item) => {
       const itemSource = item.source;
@@ -192,7 +191,7 @@ function Answer({
   );
 }
 
-export default withRouter(Answer);
+export default Answer;
 
 const { box, breakpoints, colors, fonts, spacing } = theme;
 
