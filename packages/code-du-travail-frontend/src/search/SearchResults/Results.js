@@ -37,13 +37,21 @@ const ListLink = ({
     );
   }
 
+  let rootSlug = slug;
+  let anchor = "";
+  if (slug.includes("#")) {
+    [rootSlug, anchor] = slug.split("#");
+  }
+
   return (
     <Link
       href={{
         pathname: `/${getRouteBySource(source)}/[slug]`,
-        query: { ...(query && { q: query }), slug: slug }
+        query: { ...(query && { q: query }), slug: rootSlug }
       }}
-      as={`/${getRouteBySource(source)}/${slug}${query ? `?q=${query}` : ""}`}
+      as={`/${getRouteBySource(source)}/${rootSlug}${
+        query ? `?q=${query}` : ""
+      }${anchor ? `#${anchor}` : ""}`}
       passHref
     >
       <LargeLink

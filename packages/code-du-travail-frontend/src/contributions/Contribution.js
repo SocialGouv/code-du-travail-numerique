@@ -191,8 +191,8 @@ const NoConventionAlert = styled(Alert)`
 `;
 
 const SectionAnswer = styled.section`
-  padding: ${spacing.small} ${spacing.medium};
   margin-bottom: ${spacing.medium};
+  padding: ${spacing.small} ${spacing.medium};
 `;
 
 const StyledSearchConvention = styled(SearchConvention)`
