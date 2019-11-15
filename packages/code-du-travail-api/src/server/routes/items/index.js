@@ -125,7 +125,9 @@ router.get("/items", async ctx => {
       }
     }
   });
-  ctx.body = response.body;
+
+  const item = response.body.hits.hits[0];
+  ctx.body = { ...item };
 });
 
 module.exports = router;
