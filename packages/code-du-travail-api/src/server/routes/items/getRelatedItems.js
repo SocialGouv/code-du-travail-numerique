@@ -28,7 +28,6 @@ async function getRelatedItems({ queryVector, settings, slug }) {
       {
         ...getRelatedItemsBody({
           settings,
-          size: 10,
           sources
         })
       },
@@ -41,7 +40,6 @@ async function getRelatedItems({ queryVector, settings, slug }) {
   const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
   const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
 
-  console.log(JSON.stringify(fullTextHits, null, 2));
   const filteredFullTextHits = fullTextHits.filter(
     ({ _source }) => !_source.slug.includes(slug)
   );
