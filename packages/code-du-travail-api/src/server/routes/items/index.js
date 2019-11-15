@@ -99,4 +99,35 @@ router.get("/items/:id", async ctx => {
   ctx.body = response.body;
 });
 
+/**
+ * Return document matching the given url.
+ *
+ * @example
+ * http://localhost:1337/api/v1/items?url=:url
+ *
+ * @param {string} :url The item url.
+ * @returns {Object} Result.
+ */
+router.get("/items", async ctx => {
+  const { url } = ctx.query;
+  const response = await elasticsearchClient.search({
+    index: index,
+    _source: ["raw"],
+    body: {
+      query: {
+        bool: {
+          filter: {
+            term: {
+              url
+            }
+          }
+        }
+      }
+    }
+  });
+
+  const item = response.body.hits.hits[0];
+  ctx.body = { ...item };
+});
+
 module.exports = router;

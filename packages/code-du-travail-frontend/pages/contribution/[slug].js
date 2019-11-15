@@ -21,6 +21,26 @@ class PageContribution extends React.Component {
       return { statusCode: response.status };
     }
     const data = await response.json();
+
+    // Check Content tag exist on markdown
+    const contentRegExp = new RegExp("<s*Content[^](.*?)s*/>", "g");
+    const markdown =
+      ((((data || {})._source || {}).answers || {}).generic || {}).markdown ||
+      "";
+
+    const contentTag = markdown.match(contentRegExp)[0];
+
+    if (contentTag) {
+      // Extract URL from Content tag, only one for now
+      const contentUrl = contentTag.match(
+        /\bhttps?:\/\/(www\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)/gi
+      )[0];
+
+      const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
+      const content = await fetchContent.json();
+
+      return { data, content };
+    }
     return { data };
   }
 
@@ -29,6 +49,7 @@ class PageContribution extends React.Component {
       data: { _source: { title, answers, description }, relatedItems } = {
         _source: {}
       },
+      content: { _source: contentSource },
       pageUrl,
       ogImage
     } = this.props;
@@ -48,7 +69,7 @@ class PageContribution extends React.Component {
             sourceType="Réponse personnalisée selon votre convention collective"
             emptyMessage="Cette question n'a pas été trouvée"
           >
-            <Contribution answers={answers} />
+            <Contribution answers={answers} content={contentSource || {}} />
           </Answer>
         </Layout>
       </div>
