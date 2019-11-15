@@ -26,7 +26,7 @@ test("return item from source and slug", async () => {
 
 test("return item from its url", async () => {
   const response = await request(app.callback()).get(
-    `/api/v1/items?url=https://www.service-public.fr/professionnels-entreprises/vosdroits/F33693`
+    `/api/v1/items?url=https://www.service-public.fr/particuliers/vosdroits/F2883`
   );
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();
