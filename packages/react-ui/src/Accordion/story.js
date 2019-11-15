@@ -34,5 +34,21 @@ export const base = () => (
         ]}
       />
     </Wrapper>
+    <Wrapper>
+      <Accordion
+        preExpanded={["id"]}
+        items={[
+          {
+            id: "id",
+            title: <Section>This is a pre expanded accordion</Section>,
+            body: "this is the body"
+          },
+          {
+            title: <Section>This bloc could be extended too if needed</Section>,
+            body: "this is the body"
+          }
+        ]}
+      />
+    </Wrapper>
   </>
 );
