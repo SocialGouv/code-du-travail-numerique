@@ -28,7 +28,7 @@ const items = {
     },
     {
       source: "external",
-      title: "fich",
+      title: "telerc",
       url:
         "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
       slug: "simulateur-licenciement-telerc",

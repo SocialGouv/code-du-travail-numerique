@@ -3,30 +3,24 @@ import Router from "next/router";
 export function initPiwik({
   siteId,
   piwikUrl,
-  jsTrackerFile = "piwik.js",
-  phpTrackerFile = "piwik.php"
+  jsTrackerFile = "matomo.js",
+  phpTrackerFile = "matomo.php"
 }) {
   window._paq = window._paq || [];
   let previousPath = "";
-  matopush(["setSiteId", siteId]);
-  matopush(["setTrackerUrl", `${piwikUrl}/${phpTrackerFile}`]);
+  // order is important -_- so campaign are detected
+  matopush(["trackPageView"]);
   matopush(["enableLinkTracking"]);
+  matopush(["setTrackerUrl", `${piwikUrl}/${phpTrackerFile}`]);
+  matopush(["setSiteId", siteId]);
 
-  const campaign = location.search.match(
-    /(?:pk_campaign|utm_campaign)=([^&]+)&?/
-  );
-  if (campaign && campaign.length) {
-    const [, campaignKey] = campaign;
-    matopush(["setCampaignNameKey", campaignKey]);
-  }
   /**
    * for intial loading we use the location.pathname
    * as the first url visited.
    * Once user navigate accross the site,
    * we rely on Router.pathname
    */
-  matopush(["setCustomUrl", location.pathname]);
-  matopush(["trackPageView"]);
+
   const scriptElement = document.createElement("script");
   const refElement = document.getElementsByTagName("script")[0];
   scriptElement.type = "text/javascript";
@@ -38,7 +32,7 @@ export function initPiwik({
 
   Router.events.on("routeChangeComplete", path => {
     // We use only the part of the url without the querystring to ensure piwik is happy
-    // It seems that piwiki doesn't track well page with querystring
+    // It seems that piwik doesn't track well page with querystring
     const [pathname] = path.split("?");
 
     // In order to ensure that the page title had been updated,

@@ -12,52 +12,18 @@ describe("initPiwik", () => {
     expect(global._paq).toMatchInlineSnapshot(`
       Array [
         Array [
-          "setSiteId",
-          "42",
-        ],
-        Array [
-          "setTrackerUrl",
-          "YO/piwik.php",
+          "trackPageView",
         ],
         Array [
           "enableLinkTracking",
         ],
         Array [
-          "setCustomUrl",
-          "/",
+          "setTrackerUrl",
+          "YO/matomo.php",
         ],
-        Array [
-          "trackPageView",
-        ],
-      ]
-    `);
-  });
-  it("should set campaign if there is a campaign urlparam", () => {
-    fakeLocation("https://code.travail.gouv.fr/?utm_campaign=fire");
-    initPiwik({ siteId: "42", piwikUrl: "YO" });
-    expect(global._paq).toMatchInlineSnapshot(`
-      Array [
         Array [
           "setSiteId",
           "42",
-        ],
-        Array [
-          "setTrackerUrl",
-          "YO/piwik.php",
-        ],
-        Array [
-          "enableLinkTracking",
-        ],
-        Array [
-          "setCampaignNameKey",
-          "fire",
-        ],
-        Array [
-          "setCustomUrl",
-          "/",
-        ],
-        Array [
-          "trackPageView",
         ],
       ]
     `);
@@ -77,20 +43,3 @@ describe("matopush", () => {
     `);
   });
 });
-
-function fakeLocation(url) {
-  const a = document.createElement("a");
-  a.setAttribute("href", url);
-  const { host, hostname, href, origin, pathname, port, search, protocol } = a;
-  delete window.location;
-  global.location = {
-    host,
-    hostname,
-    href,
-    origin,
-    pathname,
-    protocol,
-    port,
-    search
-  };
-}
