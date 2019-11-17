@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "next/link";
@@ -13,7 +13,9 @@ import {
 
 import { LinkContent } from "./LinkContent";
 
-const ListLink = ({
+import { matopush } from "../../piwik";
+
+export const ListLink = ({
   focused,
   item: { source, slug, url },
   query,
@@ -25,6 +27,20 @@ const ListLink = ({
       ref.current.focus();
     }
   }, [focused]);
+  const trackedUrl =
+    source === SOURCES.EXTERNALS ? url : `/${getRouteBySource(source)}/${slug}`;
+
+  const onClick = useCallback(() => {
+    matopush(["trackEvent", "selectResult", trackedUrl]);
+  }, [trackedUrl]);
+  const onKeyPress = useCallback(
+    event => {
+      if (event.keyCode === 13)
+        // Enter
+        matopush(["trackEvent", "selectResult", trackedUrl]);
+    },
+    [trackedUrl]
+  );
   if (source === SOURCES.EXTERNALS) {
     return (
       <LargeLink
@@ -32,6 +48,8 @@ const ListLink = ({
         href={url}
         target="_blank"
         className="no-after"
+        onClick={onClick}
+        onKeyPress={onKeyPress}
         {...otherProps}
       />
     );
@@ -48,6 +66,8 @@ const ListLink = ({
     >
       <LargeLink
         ref={ref}
+        onClick={onClick}
+        onKeyPress={onKeyPress}
         variant={source === SOURCES.TOOLS ? "highlight" : "light"}
         {...otherProps}
       />

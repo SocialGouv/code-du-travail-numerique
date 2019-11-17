@@ -3,14 +3,16 @@ import Router from "next/router";
 export function initPiwik({
   siteId,
   piwikUrl,
-  jsTrackerFile = "piwik.js",
-  phpTrackerFile = "piwik.php"
+  jsTrackerFile = "matomo.js",
+  phpTrackerFile = "matomo.php"
 }) {
   window._paq = window._paq || [];
   let previousPath = "";
-  matopush(["setSiteId", siteId]);
-  matopush(["setTrackerUrl", `${piwikUrl}/${phpTrackerFile}`]);
+  // order is important -_- so campaign are detected
+  matopush(["trackPageView"]);
   matopush(["enableLinkTracking"]);
+  matopush(["setTrackerUrl", `${piwikUrl}/${phpTrackerFile}`]);
+  matopush(["setSiteId", siteId]);
 
   /**
    * for intial loading we use the location.pathname
@@ -18,8 +20,7 @@ export function initPiwik({
    * Once user navigate accross the site,
    * we rely on Router.pathname
    */
-  matopush(["setCustomUrl", location.pathname]);
-  matopush(["trackPageView"]);
+
   const scriptElement = document.createElement("script");
   const refElement = document.getElementsByTagName("script")[0];
   scriptElement.type = "text/javascript";
@@ -31,13 +32,13 @@ export function initPiwik({
 
   Router.events.on("routeChangeComplete", path => {
     // We use only the part of the url without the querystring to ensure piwik is happy
-    // It seems that piwiki doesn't track well page with querystring
+    // It seems that piwik doesn't track well page with querystring
     const [pathname] = path.split("?");
 
     // In order to ensure that the page title had been updated,
     // we delayed pushing the tracking to the next tick.
     setTimeout(() => {
-      const { q, source } = Router.query;
+      const { q } = Router.query;
       if (previousPath) {
         matopush(["setReferrerUrl", `${previousPath}`]);
       }
@@ -46,7 +47,7 @@ export function initPiwik({
       matopush(["deleteCustomVariables", "page"]);
       matopush(["setGenerationTimeMs", 0]);
       if (/^\/recherche/.test(pathname)) {
-        matopush(["trackSiteSearch", q, source]);
+        matopush(["trackSiteSearch", q]);
       } else {
         matopush(["trackPageView"]);
       }
@@ -58,8 +59,4 @@ export function initPiwik({
 
 export function matopush(args) {
   window._paq.push(args);
-}
-
-export function pof() {
-  return 42;
 }

@@ -1,6 +1,12 @@
 import React from "react";
+import Router from "next/router";
 import { SearchResults } from "../SearchResults";
 import { render } from "@testing-library/react";
+import { matopush } from "../../piwik";
+
+jest.mock("../../piwik", () => ({
+  matopush: jest.fn()
+}));
 
 const items = {
   documents: [
@@ -22,7 +28,7 @@ const items = {
     },
     {
       source: "external",
-      title: "fich",
+      title: "telerc",
       url:
         "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
       slug: "simulateur-licenciement-telerc",
@@ -68,6 +74,9 @@ const emptyItems = {
   themes: []
 };
 describe("<SearchResults/>", () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
+  });
   it("should render no results", () => {
     const { container } = render(
       <SearchResults items={emptyItems} query="search test" />
@@ -79,5 +88,15 @@ describe("<SearchResults/>", () => {
       <SearchResults items={items} query="search test" />
     );
     expect(container).toMatchSnapshot();
+  });
+
+  it("should track event candidateResults", () => {
+    Router.router.query.q = "démission";
+    render(<SearchResults items={items} query="search test" />);
+
+    const trackParams = matopush.mock.calls[0];
+    expect(trackParams[0]).toEqual(
+      expect.arrayContaining(["trackEvent", "candidateResults", "démission"])
+    );
   });
 });

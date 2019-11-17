@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { Button, theme } from "@socialgouv/react-ui";
 
 import SearchIcon from "../../icons/SearchIcon";
@@ -23,7 +23,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
   const onFormSubmit = e => {
     e.preventDefault();
     if (query) {
-      Router.push({
+      router.push({
         pathname: "/recherche",
         query: {
           q: query
@@ -40,7 +40,8 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
     // prevent onSubmit to be call
     event.preventDefault();
     matopush(["trackEvent", "selectedSuggestion", query, suggestion]);
-    Router.push({
+    matopush(["trackEvent", "candidateSuggestions", suggestions.join("###")]);
+    router.push({
       pathname: "/recherche",
       query: { q: suggestion }
     });

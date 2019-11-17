@@ -1,33 +1,32 @@
 import { initPiwik, matopush } from "../piwik";
 
 describe("initPiwik", () => {
+  beforeEach(() => {
+    global._paq = [];
+  });
   it("should create a js tag", () => {
     // we need to add a fake script node so
     // initPiwik can insert piwik tracker code before it
     document.head.appendChild(document.createElement("script"));
     initPiwik({ siteId: "42", piwikUrl: "YO" });
-    expect(window._paq).toMatchInlineSnapshot(`
-Array [
-  Array [
-    "setSiteId",
-    "42",
-  ],
-  Array [
-    "setTrackerUrl",
-    "YO/piwik.php",
-  ],
-  Array [
-    "enableLinkTracking",
-  ],
-  Array [
-    "setCustomUrl",
-    "/",
-  ],
-  Array [
-    "trackPageView",
-  ],
-]
-`);
+    expect(global._paq).toMatchInlineSnapshot(`
+      Array [
+        Array [
+          "trackPageView",
+        ],
+        Array [
+          "enableLinkTracking",
+        ],
+        Array [
+          "setTrackerUrl",
+          "YO/matomo.php",
+        ],
+        Array [
+          "setSiteId",
+          "42",
+        ],
+      ]
+    `);
   });
 });
 
@@ -36,11 +35,11 @@ describe("matopush", () => {
     window._paq = [];
     matopush(["test"]);
     expect(window._paq).toMatchInlineSnapshot(`
-Array [
-  Array [
-    "test",
-  ],
-]
-`);
+      Array [
+        Array [
+          "test",
+        ],
+      ]
+    `);
   });
 });

@@ -1,7 +1,11 @@
 import React from "react";
-import SearchBar from "../SearchBar";
 import { fireEvent, render, waitForElement } from "@testing-library/react";
+import SearchBar from "../SearchBar";
 import { fetchSuggestResults } from "../search.service";
+import { matopush } from "../../piwik";
+import { act } from "react-dom/test-utils";
+
+jest.useFakeTimers();
 
 jest.mock("../search.service.js", () => ({
   fetchSuggestResults: jest.fn()
@@ -42,5 +46,30 @@ describe("<SearchBar />", () => {
     fireEvent.keyDown(input, { keyCode: 40 }); // foo
     fireEvent.keyDown(input, { keyCode: 40 }); // foobar
     expect(input.value).toBe("foobar");
+  });
+
+  it("should track suggestions and selectedSuggestion", async () => {
+    const { getByText, getByLabelText, getAllByRole } = render(<SearchBar />);
+
+    const input = getByLabelText(/rechercher/i);
+    await act(async () => {
+      fireEvent.change(input, { target: { value: "yolo" } });
+      input.focus();
+    });
+    const suggestion = getByText("foobar");
+    suggestion.click();
+    await waitForElement(() => getAllByRole("option"));
+    expect(matopush).toHaveBeenCalledTimes(2);
+    expect(matopush.mock.calls[0][0]).toEqual([
+      "trackEvent",
+      "selectedSuggestion",
+      "yolo",
+      "foobar"
+    ]);
+    expect(matopush.mock.calls[1][0]).toEqual([
+      "trackEvent",
+      "candidateSuggestions",
+      suggestions.join("###")
+    ]);
   });
 });
