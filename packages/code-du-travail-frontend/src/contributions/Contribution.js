@@ -142,7 +142,7 @@ const AnswersConventions = ({ answers }) => {
 
 const Contribution = ({ answers, content }) => (
   <React.Fragment>
-    {answers.generic && (
+    {answers && answers.generic && (
       <SectionAnswer>
         <h2>Que dit le code du travail ?</h2>
         {content && content.raw && (
@@ -156,7 +156,7 @@ const Contribution = ({ answers, content }) => (
         />
       </SectionAnswer>
     )}
-    {(answers.conventions && answers.conventions.length && (
+    {(answers && answers.conventions && answers.conventions.length && (
       <SectionAnswer>
         <h2>Que dit votre convention collective ?</h2>
         <AnswersConventions answers={answers.conventions} />

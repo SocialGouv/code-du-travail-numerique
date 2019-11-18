@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FicheContribution /> should render with external content 1`] = `
+exports[`<FicheContribution /> should render 1`] = `
 .c18 {
   max-width: 1200px;
   margin: 0 auto;
@@ -52,7 +52,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 0;
 }
 
-.c26 {
+.c25 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -60,11 +60,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #ebeff3;
 }
 
-.c26 > *:first-child {
+.c25 > *:first-child {
   margin-top: 0;
 }
 
-.c26 > *:last-child {
+.c25 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -95,7 +95,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #8c94a6;
 }
 
-.c29 {
+.c28 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -116,27 +116,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #ebeff3;
 }
 
-.c29:link,
-.c29:visited {
+.c28:link,
+.c28:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #0c0c0e;
 }
 
-.c29:not([disabled]):hover,
-.c29:not([disabled]):active,
-.c29:not([disabled]):focus {
+.c28:not([disabled]):hover,
+.c28:not([disabled]):active,
+.c28:not([disabled]):focus {
   color: #18181c;
   background: #fbfcfd;
   border-color: #dbe2e9;
 }
 
-.c29[disabled] {
+.c28[disabled] {
   color: rgba(12,12,14,0.4);
   cursor: not-allowed;
 }
 
-.c32 {
+.c31 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -157,27 +157,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #006be6;
 }
 
-.c32:link,
-.c32:visited {
+.c31:link,
+.c31:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c32:not([disabled]):hover,
-.c32:not([disabled]):active,
-.c32:not([disabled]):focus {
+.c31:not([disabled]):hover,
+.c31:not([disabled]):active,
+.c31:not([disabled]):focus {
   color: #fff;
   background: #07f;
   border-color: #005fcd;
 }
 
-.c32[disabled] {
+.c31[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
 }
 
-.c42 {
+.c41 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
@@ -198,27 +198,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #005994;
 }
 
-.c42:link,
-.c42:visited {
+.c41:link,
+.c41:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c42:not([disabled]):hover,
-.c42:not([disabled]):active,
-.c42:not([disabled]):focus {
+.c41:not([disabled]):hover,
+.c41:not([disabled]):active,
+.c41:not([disabled]):focus {
   color: #fff;
   background: #0068ae;
   border-color: #004a7b;
 }
 
-.c42[disabled] {
+.c41[disabled] {
   color: rgba(255,255,255,0.4);
   cursor: not-allowed;
 }
 
-.c47 {
+.c46 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -236,7 +236,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c34 {
+.c33 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -259,7 +259,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   animation: iowhYu 300ms ease-out;
 }
 
-.c35 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -280,7 +280,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #fee5ad;
 }
 
-.c36 {
+.c35 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -293,7 +293,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c38 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -350,7 +350,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-left: -10px;
 }
 
-.c33 {
+.c32 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
@@ -358,15 +358,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 1rem;
 }
 
-.c37 {
+.c36 {
   padding: 0 0.25rem;
 }
 
-.c27 {
+.c26 {
   margin-bottom: 1rem;
 }
 
-.c28 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -377,11 +377,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: space-around;
 }
 
-.c31 {
+.c30 {
   min-width: 7rem;
 }
 
-.c31 + .c30 {
+.c30 + .c29 {
   margin-left: 1rem;
 }
 
@@ -417,13 +417,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c16 {
   width: 80%;
-}
-
-.c25 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
 }
 
 .c9 {
@@ -580,22 +573,22 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   width: 350px;
 }
 
-.c40 {
+.c39 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   text-align: center;
 }
 
-.c40 > *:first-child {
+.c39 > *:first-child {
   margin-top: 0;
 }
 
-.c40 > *:last-child {
+.c39 > *:last-child {
   margin-bottom: 0;
 }
 
-.c41 {
+.c40 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -605,1287 +598,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c41 > *:first-child {
+.c40 > *:first-child {
   margin-top: 0;
 }
 
-.c41 > *:last-child {
+.c40 > *:last-child {
   margin-bottom: 0;
-}
-
-.c43 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c43 > *:first-child {
-  margin-top: 0;
-}
-
-.c43 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c45 + .c44 {
-  padding-left: 1rem;
-}
-
-.c46 {
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.c48 {
-  margin: 0.5rem 0;
-}
-
-.c48 a,
-.c48 a:visited {
-  color: #434956;
-}
-
-@media print {
-  .c18 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c24 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c19 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c26 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media print {
-  .c20 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media print {
-  .c15 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c16 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c1 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c1 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:980px) {
-  .c7 {
-    width: 70%;
-    margin-top: 1.25rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    width: 100%;
-    margin-top: 1.25rem;
-  }
-}
-
-@media print {
-  .c39 {
-    display: none;
-  }
-}
-
-@media print {
-  .c40 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c41 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c43 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c43 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c45 + .c44 {
-    padding-left: 0;
-  }
-}
-
-<div>
-  <header
-    class="c0"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2"
-      >
-        <a
-          class="c3"
-          href="/"
-          title="Code du travail numérique - retour à l'accueil"
-        >
-          <img
-            alt="symbole de la Marianne, site officiel du gouvernement"
-            class="c4"
-            src="/static/assets/img/marianne.svg"
-          />
-          <span
-            class="c5"
-          >
-            Code du travail
-            <br />
-            numérique
-          </span>
-        </a>
-        <div
-          class="c6"
-        >
-          Version Bêta
-        </div>
-      </div>
-      <div
-        class="c7"
-      >
-        <form
-          class="c8"
-        >
-          <label
-            class="c9"
-            for="main-search-input"
-          >
-            <span
-              class="c10"
-            >
-              Rechercher
-            </span>
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-cdtn-documents-suggester"
-              role="combobox"
-              style="flex: 1;"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-cdtn-documents-suggester"
-                autocomplete="off"
-                class="c11"
-                id="main-search-input"
-                name="query"
-                placeholder="Recherche"
-                type="search"
-                value=""
-              />
-              <div
-                class="c12"
-                id="react-autowhatever-cdtn-documents-suggester"
-                role="listbox"
-              />
-            </div>
-          </label>
-          <button
-            class="c13 c14"
-            type="submit"
-          >
-            <svg
-              viewBox="0 0 20 20"
-            >
-              <title />
-              <path
-                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </form>
-      </div>
-    </div>
-  </header>
-  <main
-    id="main"
-  >
-    <div
-      class="c15"
-    >
-      <div
-        class="c16"
-      >
-        <div
-          class="c17"
-          data-main-content="true"
-        >
-          <div
-            class="c18"
-          >
-            <div
-              class="c19"
-            >
-              <div
-                class="c17"
-              >
-                <div
-                  class="c20"
-                >
-                  <h1 />
-                  <div
-                    class="c21"
-                  >
-                    <span
-                      class="c22"
-                    >
-                      Fiche ministère du Travail
-                    </span>
-                  </div>
-                  <div
-                    class="c23"
-                  />
-                </div>
-                <div
-                  class="c24"
-                >
-                  <div
-                    class="accordion"
-                    data-accordion-component="Accordion"
-                  />
-                  <div
-                    class="c25"
-                  >
-                    <a
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Voir le contenu original sur : 
-                      Ministère du travail
-                       
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="c17"
-        >
-          <div
-            class="c18"
-          >
-            <div
-              class="c26"
-            >
-              <h3
-                class="c27"
-              >
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-              <p
-                class="c28"
-              >
-                <button
-                  class="c29 c30 c31"
-                >
-                  Non
-                </button>
-                <button
-                  class="c32 c30 c31"
-                >
-                  Oui
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="c33"
-    >
-      <div
-        class="c34"
-      >
-        <div
-          class="c35"
-        >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-            />
-            <line
-              x1="12"
-              x2="12"
-              y1="9"
-              y2="13"
-            />
-            <line
-              x1="12"
-              x2="12"
-              y1="17"
-              y2="17"
-            />
-          </svg>
-        </div>
-        <div
-          class="c36"
-          role="alert"
-        >
-          Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
-          <a
-            class="c37"
-            href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="consulter l'ordonance"
-          >
-            L’ouverture officielle du site
-          </a>
-          est prévue pour 2020.
-        </div>
-        <div
-          class="c38"
-        >
-          <button
-            aria-label="Fermer"
-            class="c13"
-          >
-            <svg
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="18"
-                x2="6"
-                y1="6"
-                y2="18"
-              />
-              <line
-                x1="6"
-                x2="18"
-                y1="6"
-                y2="18"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer
-    class="c39"
-  >
-    <div
-      class="c17"
-    >
-      <div
-        class="c40"
-      >
-        <h2>
-          Besoin d’un accompagnement personnalisé ?
-        </h2>
-        <div
-          class="c41"
-        >
-          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
-        </div>
-        <button
-          class="c42"
-        >
-          Contacter les services de renseignement
-        </button>
-      </div>
-    </div>
-    <div
-      class="c17"
-    >
-      <div
-        class="c43"
-      >
-        <div
-          class="c44 c45"
-        >
-          <h3
-            class="c46"
-          >
-            Code du travail numérique
-          </h3>
-          <ul
-            class="c47"
-          >
-            <li
-              class="c48"
-            >
-              <a
-                href="/droit-du-travail"
-              >
-                Le droit du travail
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="/glossaire"
-              >
-                Glossaire
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="/a-propos"
-              >
-                À propos
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="/mentions-legales"
-              >
-                Mentions légales
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="mailto:codedutravailnumerique@travail.gouv.fr"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c44 c45"
-        >
-          <h3
-            class="c46"
-          >
-            Aidez-nous à améliorer cet outil
-          </h3>
-          <ul
-            class="c47"
-          >
-            <li
-              class="c48"
-            >
-              <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Contribuer sur Github
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Journal des modifications
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c44 c45"
-        >
-          <h3
-            class="c46"
-          >
-            En collaboration avec
-          </h3>
-          <ul
-            class="c47"
-          >
-            <li
-              class="c48"
-            >
-              <a
-                href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                La Direction Générale du Travail
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="https://incubateur.social.gouv.fr/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                L’incubateur des ministères sociaux
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="https://beta.gouv.fr/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                beta.gouv.fr
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-</div>
-`;
-
-exports[`<FicheContribution /> should render without external content 1`] = `
-.c18 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c18 > *:first-child {
-  margin-top: 0;
-}
-
-.c18 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
-}
-
-.c24 > *:first-child {
-  margin-top: 0;
-}
-
-.c24 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c17 {
-  padding: 1.25rem 0;
-  color: #434956;
-}
-
-.c19 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #fff;
-}
-
-.c19 > *:first-child {
-  margin-top: 0;
-}
-
-.c19 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c26 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-}
-
-.c26 > *:first-child {
-  margin-top: 0;
-}
-
-.c26 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c13 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-}
-
-.c13:hover {
-  color: #8c94a6;
-}
-
-.c29 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-}
-
-.c29:link,
-.c29:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #0c0c0e;
-}
-
-.c29:not([disabled]):hover,
-.c29:not([disabled]):active,
-.c29:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
-}
-
-.c29[disabled] {
-  color: rgba(12,12,14,0.4);
-  cursor: not-allowed;
-}
-
-.c32 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-}
-
-.c32:link,
-.c32:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c32:not([disabled]):hover,
-.c32:not([disabled]):active,
-.c32:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
-  border-color: #005fcd;
-}
-
-.c32[disabled] {
-  color: rgba(255,255,255,0.4);
-  cursor: not-allowed;
 }
 
 .c42 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-}
-
-.c42:link,
-.c42:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c42:not([disabled]):hover,
-.c42:not([disabled]):active,
-.c42:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
-}
-
-.c42[disabled] {
-  color: rgba(255,255,255,0.4);
-  cursor: not-allowed;
-}
-
-.c47 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c10:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
-.c34 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 48px;
-  color: #434956;
-  background-color: #fff;
-  border-color: #fee5ad;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 10px 0 #ebeff3;
-  -webkit-animation: iowhYu 300ms ease-out;
-  animation: iowhYu 300ms ease-out;
-}
-
-.c35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c36 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem;
-  color: #434956;
-  text-align: left;
-}
-
-.c38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c20 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
-  position: relative;
-  margin-bottom: 1.25rem;
-}
-
-.c20 > *:first-child {
-  margin-top: 0;
-}
-
-.c20 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-
-.c22 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
-.c23 {
-  margin-left: -10px;
-}
-
-.c33 {
-  position: fixed;
-  bottom: 0;
-  z-index: 1000;
-  width: 100%;
-  padding: 1rem;
-}
-
-.c37 {
-  padding: 0 0.25rem;
-}
-
-.c27 {
-  margin-bottom: 1rem;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-}
-
-.c31 {
-  min-width: 7rem;
-}
-
-.c31 + .c30 {
-  margin-left: 1rem;
-}
-
-.c15 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c15 > *:first-child {
-  margin-top: 0;
-}
-
-.c15 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c16 {
-  width: 80%;
-}
-
-.c25 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  text-align: left;
-}
-
-.c12 ul {
-  z-index: 100;
-}
-
-.c12 li[role="option"]:nth-child(2n + 1) {
-  background: #f9f9fc;
-}
-
-.c8 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 50px;
-  margin: 0;
-  padding: 0 calc(50px + 0.625rem) 0 1rem;
-  font-size: inherit;
-  font-family: inherit;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 1.5rem;
-  -webkit-transition: border 250ms ease;
-  transition: border 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c11:focus {
-  border-color: #006be6;
-  outline: none;
-}
-
-.c14 {
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  width: calc(50px - 2px);
-  height: calc(50px - 2px);
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-
-.c0 {
-  background: #fff;
-}
-
-.c1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 1.25rem;
-}
-
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4 {
-  width: 5rem;
-  height: 100%;
-  margin-right: 1rem;
-}
-
-.c5 {
-  font-weight: bold;
-  font-size: 1.125rem;
-  line-height: 1.2;
-}
-
-.c6 {
-  display: inline-block;
-  padding: 0.5rem 0.625rem;
-  font-weight: bold;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  white-space: nowrap;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #e5f1fe;
-  margin-left: 1.25rem;
-}
-
-.c7 {
-  width: 350px;
-}
-
-.c40 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  text-align: center;
-}
-
-.c40 > *:first-child {
-  margin-top: 0;
-}
-
-.c40 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c41 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-  padding: 0;
-  margin-bottom: 1.25rem;
-  text-align: left;
-}
-
-.c41 > *:first-child {
-  margin-top: 0;
-}
-
-.c41 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c43 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -1899,29 +620,29 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: space-between;
 }
 
-.c43 > *:first-child {
+.c42 > *:first-child {
   margin-top: 0;
 }
 
-.c43 > *:last-child {
+.c42 > *:last-child {
   margin-bottom: 0;
 }
 
-.c45 + .c44 {
+.c44 + .c43 {
   padding-left: 1rem;
 }
 
-.c46 {
+.c45 {
   font-weight: bold;
   font-size: 1rem;
 }
 
-.c48 {
+.c47 {
   margin: 0.5rem 0;
 }
 
-.c48 a,
-.c48 a:visited {
+.c47 a,
+.c47 a:visited {
   color: #434956;
 }
 
@@ -1953,13 +674,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c25 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c26 {
+  .c25 {
     padding: 0 5pt;
     border: none;
   }
@@ -2051,8 +772,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media print {
-  .c39 {
+  .c38 {
     display: none;
+  }
+}
+
+@media print {
+  .c39 {
+    max-width: 100%;
+    padding: 0;
   }
 }
 
@@ -2064,21 +792,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media print {
-  .c41 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c43 {
+  .c42 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c42 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2086,259 +807,192 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c45 + .c44 {
+  .c44 + .c43 {
     padding-left: 0;
   }
 }
 
 <div>
-  <header
-    class="c0"
-  >
-    <div
-      class="c1"
+  <div>
+    <header
+      class="c0"
     >
       <div
-        class="c2"
+        class="c1"
       >
-        <a
-          class="c3"
-          href="/"
-          title="Code du travail numérique - retour à l'accueil"
-        >
-          <img
-            alt="symbole de la Marianne, site officiel du gouvernement"
-            class="c4"
-            src="/static/assets/img/marianne.svg"
-          />
-          <span
-            class="c5"
-          >
-            Code du travail
-            <br />
-            numérique
-          </span>
-        </a>
         <div
-          class="c6"
+          class="c2"
         >
-          Version Bêta
+          <a
+            class="c3"
+            href="/"
+            title="Code du travail numérique - retour à l'accueil"
+          >
+            <img
+              alt="symbole de la Marianne, site officiel du gouvernement"
+              class="c4"
+              src="/static/assets/img/marianne.svg"
+            />
+            <span
+              class="c5"
+            >
+              Code du travail
+              <br />
+              numérique
+            </span>
+          </a>
+          <div
+            class="c6"
+          >
+            Version Bêta
+          </div>
+        </div>
+        <div
+          class="c7"
+        >
+          <form
+            class="c8"
+          >
+            <label
+              class="c9"
+              for="main-search-input"
+            >
+              <span
+                class="c10"
+              >
+                Rechercher
+              </span>
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="react-autowhatever-cdtn-documents-suggester"
+                role="combobox"
+                style="flex: 1;"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="react-autowhatever-cdtn-documents-suggester"
+                  autocomplete="off"
+                  class="c11"
+                  id="main-search-input"
+                  name="query"
+                  placeholder="Recherche"
+                  type="search"
+                  value=""
+                />
+                <div
+                  class="c12"
+                  id="react-autowhatever-cdtn-documents-suggester"
+                  role="listbox"
+                />
+              </div>
+            </label>
+            <button
+              class="c13 c14"
+              type="submit"
+            >
+              <svg
+                viewBox="0 0 20 20"
+              >
+                <title />
+                <path
+                  d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
-      <div
-        class="c7"
-      >
-        <form
-          class="c8"
-        >
-          <label
-            class="c9"
-            for="main-search-input"
-          >
-            <span
-              class="c10"
-            >
-              Rechercher
-            </span>
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-cdtn-documents-suggester"
-              role="combobox"
-              style="flex: 1;"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-cdtn-documents-suggester"
-                autocomplete="off"
-                class="c11"
-                id="main-search-input"
-                name="query"
-                placeholder="Recherche"
-                type="search"
-                value=""
-              />
-              <div
-                class="c12"
-                id="react-autowhatever-cdtn-documents-suggester"
-                role="listbox"
-              />
-            </div>
-          </label>
-          <button
-            class="c13 c14"
-            type="submit"
-          >
-            <svg
-              viewBox="0 0 20 20"
-            >
-              <title />
-              <path
-                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </form>
-      </div>
-    </div>
-  </header>
-  <main
-    id="main"
-  >
-    <div
-      class="c15"
+    </header>
+    <main
+      id="main"
     >
       <div
-        class="c16"
+        class="c15"
       >
         <div
-          class="c17"
-          data-main-content="true"
+          class="c16"
         >
           <div
-            class="c18"
+            class="c17"
+            data-main-content="true"
           >
             <div
-              class="c19"
+              class="c18"
             >
               <div
-                class="c17"
+                class="c19"
               >
                 <div
-                  class="c20"
-                >
-                  <h1 />
-                  <div
-                    class="c21"
-                  >
-                    <span
-                      class="c22"
-                    >
-                      Fiche ministère du Travail
-                    </span>
-                  </div>
-                  <div
-                    class="c23"
-                  />
-                </div>
-                <div
-                  class="c24"
+                  class="c17"
                 >
                   <div
-                    class="accordion"
-                    data-accordion-component="Accordion"
-                  />
-                  <div
-                    class="c25"
+                    class="c20"
                   >
-                    <a
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <h1 />
+                    <div
+                      class="c21"
                     >
-                      Voir le contenu original sur : 
-                      Ministère du travail
-                       
-                    </a>
+                      <span
+                        class="c22"
+                      >
+                        Réponse personnalisée selon votre convention collective
+                      </span>
+                    </div>
+                    <div
+                      class="c23"
+                    />
                   </div>
+                  <div
+                    class="c24"
+                  />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="c17"
-        >
           <div
-            class="c18"
+            class="c17"
           >
             <div
-              class="c26"
+              class="c18"
             >
-              <h3
-                class="c27"
+              <div
+                class="c25"
               >
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-              <p
-                class="c28"
-              >
-                <button
-                  class="c29 c30 c31"
+                <h3
+                  class="c26"
                 >
-                  Non
-                </button>
-                <button
-                  class="c32 c30 c31"
+                  Avez-vous trouvé la réponse à votre question ?
+                </h3>
+                <p
+                  class="c27"
                 >
-                  Oui
-                </button>
-              </p>
+                  <button
+                    class="c28 c29 c30"
+                  >
+                    Non
+                  </button>
+                  <button
+                    class="c31 c29 c30"
+                  >
+                    Oui
+                  </button>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="c33"
-    >
       <div
-        class="c34"
+        class="c32"
       >
         <div
-          class="c35"
+          class="c33"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-            />
-            <line
-              x1="12"
-              x2="12"
-              y1="9"
-              y2="13"
-            />
-            <line
-              x1="12"
-              x2="12"
-              y1="17"
-              y2="17"
-            />
-          </svg>
-        </div>
-        <div
-          class="c36"
-          role="alert"
-        >
-          Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
-          <a
-            class="c37"
-            href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="consulter l'ordonance"
-          >
-            L’ouverture officielle du site
-          </a>
-          est prévue pour 2020.
-        </div>
-        <div
-          class="c38"
-        >
-          <button
-            aria-label="Fermer"
-            class="c13"
+          <div
+            class="c34"
           >
             <svg
               fill="none"
@@ -2351,195 +1005,247 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <line
-                x1="18"
-                x2="6"
-                y1="6"
-                y2="18"
+              <path
+                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
               />
               <line
-                x1="6"
-                x2="18"
-                y1="6"
-                y2="18"
+                x1="12"
+                x2="12"
+                y1="9"
+                y2="13"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="17"
+                y2="17"
               />
             </svg>
+          </div>
+          <div
+            class="c35"
+            role="alert"
+          >
+            Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
+            <a
+              class="c36"
+              href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="consulter l'ordonance"
+            >
+              L’ouverture officielle du site
+            </a>
+            est prévue pour 2020.
+          </div>
+          <div
+            class="c37"
+          >
+            <button
+              aria-label="Fermer"
+              class="c13"
+            >
+              <svg
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="c38"
+    >
+      <div
+        class="c17"
+      >
+        <div
+          class="c39"
+        >
+          <h2>
+            Besoin d’un accompagnement personnalisé ?
+          </h2>
+          <div
+            class="c40"
+          >
+            Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
+          </div>
+          <button
+            class="c41"
+          >
+            Contacter les services de renseignement
           </button>
         </div>
       </div>
-    </div>
-  </main>
-  <footer
-    class="c39"
-  >
-    <div
-      class="c17"
-    >
       <div
-        class="c40"
+        class="c17"
       >
-        <h2>
-          Besoin d’un accompagnement personnalisé ?
-        </h2>
         <div
-          class="c41"
-        >
-          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
-        </div>
-        <button
           class="c42"
         >
-          Contacter les services de renseignement
-        </button>
-      </div>
-    </div>
-    <div
-      class="c17"
-    >
-      <div
-        class="c43"
-      >
-        <div
-          class="c44 c45"
-        >
-          <h3
-            class="c46"
+          <div
+            class="c43 c44"
           >
-            Code du travail numérique
-          </h3>
-          <ul
-            class="c47"
+            <h3
+              class="c45"
+            >
+              Code du travail numérique
+            </h3>
+            <ul
+              class="c46"
+            >
+              <li
+                class="c47"
+              >
+                <a
+                  href="/droit-du-travail"
+                >
+                  Le droit du travail
+                </a>
+              </li>
+              <li
+                class="c47"
+              >
+                <a
+                  href="/glossaire"
+                >
+                  Glossaire
+                </a>
+              </li>
+              <li
+                class="c47"
+              >
+                <a
+                  href="/a-propos"
+                >
+                  À propos
+                </a>
+              </li>
+              <li
+                class="c47"
+              >
+                <a
+                  href="/mentions-legales"
+                >
+                  Mentions légales
+                </a>
+              </li>
+              <li
+                class="c47"
+              >
+                <a
+                  href="mailto:codedutravailnumerique@travail.gouv.fr"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="c43 c44"
           >
-            <li
-              class="c48"
+            <h3
+              class="c45"
             >
-              <a
-                href="/droit-du-travail"
-              >
-                Le droit du travail
-              </a>
-            </li>
-            <li
-              class="c48"
+              Aidez-nous à améliorer cet outil
+            </h3>
+            <ul
+              class="c46"
             >
-              <a
-                href="/glossaire"
+              <li
+                class="c47"
               >
-                Glossaire
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="/a-propos"
+                <a
+                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Contribuer sur Github
+                </a>
+              </li>
+              <li
+                class="c47"
               >
-                À propos
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="/mentions-legales"
-              >
-                Mentions légales
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="mailto:codedutravailnumerique@travail.gouv.fr"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c44 c45"
-        >
-          <h3
-            class="c46"
+                <a
+                  href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Journal des modifications
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="c43 c44"
           >
-            Aidez-nous à améliorer cet outil
-          </h3>
-          <ul
-            class="c47"
-          >
-            <li
-              class="c48"
+            <h3
+              class="c45"
             >
-              <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Contribuer sur Github
-              </a>
-            </li>
-            <li
-              class="c48"
+              En collaboration avec
+            </h3>
+            <ul
+              class="c46"
             >
-              <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                rel="noopener noreferrer"
-                target="_blank"
+              <li
+                class="c47"
               >
-                Journal des modifications
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c44 c45"
-        >
-          <h3
-            class="c46"
-          >
-            En collaboration avec
-          </h3>
-          <ul
-            class="c47"
-          >
-            <li
-              class="c48"
-            >
-              <a
-                href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                rel="noopener noreferrer"
-                target="_blank"
+                <a
+                  href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  La Direction Générale du Travail
+                </a>
+              </li>
+              <li
+                class="c47"
               >
-                La Direction Générale du Travail
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="https://incubateur.social.gouv.fr/"
-                rel="noopener noreferrer"
-                target="_blank"
+                <a
+                  href="https://incubateur.social.gouv.fr/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  L’incubateur des ministères sociaux
+                </a>
+              </li>
+              <li
+                class="c47"
               >
-                L’incubateur des ministères sociaux
-              </a>
-            </li>
-            <li
-              class="c48"
-            >
-              <a
-                href="https://beta.gouv.fr/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                beta.gouv.fr
-              </a>
-            </li>
-          </ul>
+                <a
+                  href="https://beta.gouv.fr/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  beta.gouv.fr
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </div>
 `;

@@ -4,6 +4,7 @@ import fetch from "isomorphic-unfetch";
 
 import Answer from "../../src/common/Answer";
 import Contribution from "../../src/contributions/Contribution";
+import extractMdxContentUrl from "../../src/contributions/extractMdxContentUrl";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
@@ -22,20 +23,11 @@ class PageContribution extends React.Component {
     }
     const data = await response.json();
 
-    // Check Content tag exist on markdown
-    const contentRegExp = new RegExp("<s*Content[^](.*?)s*/>", "g");
-    const markdown =
-      ((((data || {})._source || {}).answers || {}).generic || {}).markdown ||
-      "";
+    const contentUrl = extractMdxContentUrl(
+      data._source.answers.generic && data._source.answers.generic.markdown
+    );
 
-    const contentTag = markdown.match(contentRegExp);
-
-    if (contentTag && contentTag.length > 0) {
-      // Extract URL from Content tag, only one for now
-      const contentUrl = contentTag[0].match(
-        /\bhttps?:\/\/(www\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)/gi
-      )[0];
-
+    if (contentUrl) {
       const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
       const content = await fetchContent.json();
 
@@ -45,14 +37,11 @@ class PageContribution extends React.Component {
   }
 
   render() {
+    const { data = { _source: {} }, content, pageUrl, ogImage } = this.props;
     const {
-      data: { _source: { title, answers, description }, relatedItems } = {
-        _source: {}
-      },
-      content,
-      pageUrl,
-      ogImage
-    } = this.props;
+      _source: { title, answers, description },
+      relatedItems
+    } = data;
 
     return (
       <div>
@@ -64,7 +53,7 @@ class PageContribution extends React.Component {
             image={ogImage}
           />
           <Answer
-            title={title}
+            title={title || ""}
             relatedItems={relatedItems}
             sourceType="Réponse personnalisée selon votre convention collective"
             emptyMessage="Cette question n'a pas été trouvée"
