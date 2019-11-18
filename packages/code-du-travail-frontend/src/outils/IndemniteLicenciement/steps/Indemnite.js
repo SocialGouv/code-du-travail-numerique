@@ -18,11 +18,11 @@ function StepIndemnite({ form }) {
         infoCalcul={infoCalculLegal}
       />
       <SectionTitle>
-        Votre convention collective peut prévoir un montant plus important
+        La convention collective peut prévoir un montant plus important
       </SectionTitle>
       <p>
-        Selon la convention collective dont vous dépendez, le montant minimum de
-        votre indemnité de licenciement peut être supérieur au montant de
+        Selon la convention collective applicable, le montant minimum de
+        l’indemnité de licenciement peut être supérieur au montant de
         l’indemnité légale.
       </p>
       <Field
@@ -34,7 +34,7 @@ function StepIndemnite({ form }) {
             <>
               <SelectWrapper>
                 <Label htmlFor="ccn">
-                  Sélectionnez votre convention collective pour en savoir plus :
+                  Sélectionnez la convention collective pour en savoir plus :
                 </Label>
                 <Select {...input} id="ccn">
                   <option disabled value="">

@@ -19,8 +19,9 @@ export const Categorie = ({ dispatch }) => (
   <>
     <SectionTitle>Catégorie professionnelle</SectionTitle>
     <p>
-      Quelle est votre catégorie d’après la convention collective ?<br />
-      Vous pouvez la trouver sur votre bulletin de paie.
+      Quelle est la catégorie du salarié dans la convention collective&nbsp;?
+      <br />
+      Cette information se trouve sur le bulletin de salaire.
     </p>
     <Field name={CATEGORIE_KEY} validate={required}>
       {({ input }) => (

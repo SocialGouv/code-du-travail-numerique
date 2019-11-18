@@ -26,7 +26,7 @@ function IndemniteCCn({
       ) : (
         <>
           <p>
-            À partir des éléments que vous avez saisis, votre indemnité de
+            À partir des éléments que vous avez saisis, l’indemnité de
             licenciement est estimée à{" "}
             <Highlight>
               {Math.max(
@@ -41,8 +41,8 @@ function IndemniteCCn({
           </p>
           <SectionTitle>Détails</SectionTitle>
           <p>
-            Il s’agit du montant le plus favorable entre votre indemnité légale
-            et votre indemnité conventionnelle.
+            Il s’agit du montant le plus important entre l’indemnité légale et
+            l’indemnité conventionnelle.
           </p>
           <RowWrapper>
             <div>
@@ -74,9 +74,9 @@ function IndemniteCCn({
         </>
       )}
       <p>
-        Un accord collectif d’entreprise, le contrat de travail et un usage
-        peuvent prévoir une formule de calcul plus avantageuse pour le salarié.
-        Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
+        Un accord d’entreprise, le contrat de travail ou un usage peuvent
+        prévoir un montant plus favorable pour le salarié. Dans ce cas, le
+        montant dû est le montant le montant le plus favorable pour le salarié.
       </p>
     </>
   );

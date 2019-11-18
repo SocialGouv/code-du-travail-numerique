@@ -41,7 +41,7 @@ export function getIndemnite({ salaireRef, anciennete }) {
     formula.push(`1/10 * Sref * ${trancheAnciennete.a2}`);
   } else {
     error =
-      "Aucune indemnité de licenciement n'est prévue en deçà de 2 ans d'ancienneté.";
+      "Aucune indemnité de licenciement n’est prévue en deçà de 2 ans d'ancienneté.";
   }
 
   return {

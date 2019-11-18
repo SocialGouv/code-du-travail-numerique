@@ -29,7 +29,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
           if (input.value) {
             return (
               <>
-                <Question>Votre convention collective</Question>
+                <Question>La convention collective</Question>
                 <p>
                   {input.value.title}
                   <br />
@@ -50,11 +50,11 @@ function StepInfoCCn({ form, isOptionnal = true }) {
           return (
             <>
               <Question as="p" required={!isOptionnal}>
-                Quelle est votre convention collective ?
+                Quelle est la convention collective du salarié ?
               </Question>
               {isOptionnal && (
                 <P>
-                  <strong>* optionnel</strong>, si vous ne connaissez pas votre
+                  <strong>* optionnel</strong>, si vous ne connaissez pas la
                   convention collective, vous pouvez passer à l’étape suivante
                   en cliquant sur le bouton Suivant.
                 </P>

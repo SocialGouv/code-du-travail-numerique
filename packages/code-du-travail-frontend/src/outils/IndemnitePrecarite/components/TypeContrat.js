@@ -16,7 +16,7 @@ function TypeContrat({ name }) {
   return (
     <>
       <Question as="p" required>
-        Quel est votre type de contrat&nbsp;?
+        Quel est le type du contrat de travail&nbsp;?
       </Question>
       <RadioContainer>
         <Label>

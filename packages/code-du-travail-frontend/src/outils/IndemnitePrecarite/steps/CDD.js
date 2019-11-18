@@ -33,12 +33,12 @@ function StepCDD() {
       <YesNoQuestion
         data-testid="finContratPeriodeDessai"
         name="finContratPeriodeDessai"
-        label="Votre CDD a-t-il été rompu pendant votre période d’essai&nbsp;?"
+        label="Le CDD a-t-il été rompu pendant votre période d’essai&nbsp;?"
       />
       <YesNoQuestion
         data-testid="propositionCDIFindeContrat"
         name="propositionCDIFindeContrat"
-        label="À la fin de votre CDD, avez-vous été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent&nbsp;?"
+        label="À la fin du CDD, la salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent&nbsp;?"
       />
       <Field name="propositionCDIFindeContrat">
         {({ input }) => {
@@ -46,7 +46,7 @@ function StepCDD() {
             <YesNoQuestion
               data-testid="refusCDIFindeContrat"
               name="refusCDIFindeContrat"
-              label="À la fin de votre CDD, avez-vous refusé un CDI pour occuper le même emploi ou un emploi similaire dans l’entreprise avec une rémunération au moins équivalente&nbsp;?"
+              label="À la fin du CDD, le salarié a-t-il refusé un CDI pour occuper le même emploi ou un emploi similaire dans l’entreprise avec une rémunération au moins équivalente&nbsp;?"
             />
           ) : null;
         }}
@@ -54,12 +54,12 @@ function StepCDD() {
       <YesNoQuestion
         data-testid="interruptionFauteGrave"
         name="interruptionFauteGrave"
-        label="Votre CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou faute lourde, en cas de force majeure&nbsp;?"
+        label="Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes&nbsp;: la propre initiative du salairé, la faute grave ou faute lourde du salairé, cas de force majeure&nbsp;?"
       />
       <YesNoQuestion
         data-testid="refusRenouvellementAuto"
         name="refusRenouvellementAuto"
-        label="Avez-vous refusé de renouveler votre CDD alors que votre CDD comportait une clause de renouvellement automatique&nbsp;?"
+        label="Le salarié a-t-il refusé de renouveler le CDD alors que le CDD comportait une clause de renouvellement automatique&nbsp;?"
       />
     </>
   );

@@ -11,7 +11,7 @@ function TypeRemuneration({ name, onChange }) {
   return (
     <>
       <Question as="p" required>
-        Sélectionnez la manière dont vous souhaitez indiquer votre
+        Sélectionnez la manière dont vous souhaitez indiquer la
         rémunération&nbsp;?
       </Question>
       <RadioContainer>

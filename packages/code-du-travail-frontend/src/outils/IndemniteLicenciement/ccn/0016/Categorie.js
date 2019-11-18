@@ -19,9 +19,9 @@ function Categorie({ name }) {
   return (
     <>
       <SectionTitle>
-        Quel est votre catégorie dans la convention collective ?
+        Quelle est la catégorie dans du salarié la convention collective&nbsp;?
       </SectionTitle>
-      <p>Vous pouvez le trouver sur votre bulletin de salaire</p>
+      <p>Cette information se trouve sur le bulletin de salaire.</p>
       <Field name={name} validate={required}>
         {({ input }) => (
           <>

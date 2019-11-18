@@ -20,8 +20,9 @@ export const AncienneteETAMIC = ({ form }) => {
     <>
       <SectionTitle>Contrats antérieurs</SectionTitle>
       <p>
-        Si vous avez été auparavant employé par la même société et que la fin
-        du/des contrat(s) n’est pas imputable à l’une des raisons suivantes:
+        Si le salarié a été auparavant employé par la même société et que la fin
+        du / des contrat(s) n’est pas imputable à l’une des raisons
+        suivantes&nbsp;:
       </p>
       <ul>
         <li>démission</li>

@@ -65,14 +65,14 @@ function StepAnciennete({ form }) {
       <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
       <TextQuestion
         name="dateEntree"
-        label="Quelle est votre date d’entrée dans l’entreprise&nbsp;?"
+        label="Quelle est la date d’entrée dans l’entreprise&nbsp;?"
         inputType="date"
         validate={isDate}
         placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
       />
       <TextQuestion
         name="dateNotification"
-        label="À quelle date votre licenciement vous a-t-il été notifié&nbsp;?"
+        label="Quelle est la date de notification du licenciement&nbsp;?"
         inputType="date"
         validate={isDate}
         validateOnChange
@@ -80,7 +80,7 @@ function StepAnciennete({ form }) {
       />
       <TextQuestion
         name="dateSortie"
-        label="Quelle est votre date de sortie de l’entreprise (incluant la durée de votre préavis)&nbsp;?"
+        label="Quelle est la date de sortie de l’entreprise (incluant la durée du préavis)&nbsp;?"
         inputType="date"
         validate={isDate}
         validateOnChange
@@ -90,8 +90,7 @@ function StepAnciennete({ form }) {
       <SectionTitle>Période d’absence prolongée (plus d’un mois)</SectionTitle>
       <YesNoQuestion
         name="hasAbsenceProlonge"
-        label="Avez-vous eu des périodes d’absence de plus d’un mois au cours
-        de votre contrat&nbsp;?"
+        label="Y a-t-il eu des absences de plus d’un mois durant le contrat de travail&nbsp;?"
         onChange={hasAbsenceProlonge => {
           hasAbsenceProlonge
             ? form.change("absencePeriods", [

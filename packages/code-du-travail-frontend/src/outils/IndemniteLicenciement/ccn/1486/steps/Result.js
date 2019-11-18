@@ -23,17 +23,17 @@ function Result({ form }) {
     <StyledToast variant="warning">
       Si un emploi équivalent a été trouvé
       <ul>
-        <li>par votre employeur</li>
+        <li>par l’employeur</li>
         <li>dans une autre entreprise</li>
         <li>avant la fin du préavis</li>
-        <li>et que vous l’acceptez</li>
+        <li>et que le salarié l’accepte</li>
       </ul>
       Alors l’indemnité de licenciement conventionnelle est réduite d’un tiers
       et passe donc à{" "}
       <Highlight>{round((indemniteConventionnelle * 2) / 3)}&nbsp;€</Highlight>
       <br />
-      Attention, ce tiers ({round(indemniteConventionnelle / 3)}&nbsp;€) vous
-      est dû si la période d’essai dans ce nouvel emploi reste sans suite.
+      Attention, ce tiers ({round(indemniteConventionnelle / 3)}&nbsp;€) est dû
+      si la période d’essai dans ce nouvel emploi reste sans suite.
     </StyledToast>
   );
 

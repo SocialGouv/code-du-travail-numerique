@@ -25,7 +25,8 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                 renseigner.
               </p>
               <Question as="p">
-                Quelles ont été vos périodes d’absence prolongée&nbsp;?
+                Quels sont le motif et la durée de ces absences
+                prolongées&nbsp;?
               </Question>
               <Row key={name}>
                 <CellHeader as={MotifCell}>Motif</CellHeader>

@@ -6,12 +6,13 @@ import {
 
 // humanize questions
 export const questions = {
-  cddType: "Quelle est le type de votre cdd ?",
-  hasCdiProposal: "À la fin de votre CDD, vous a-t-on proposé un CDI ?",
+  cddType: "Quelle est le type du cdd ?",
+  hasCdiProposal:
+    "À la fin du CDD, le salarié a-t-il reçu une proposition de CDI ?",
   hasCdiRenewal:
-    "À la fin de votre CDD, avez-vous été immédiatement embauché en CDI ?",
+    "À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI ?",
   hasEquivalentCdiRenewal:
-    "À la fin de votre CDD, avez-vous été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?"
+    "À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?"
 };
 
 export const labels = {

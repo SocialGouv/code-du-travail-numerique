@@ -53,11 +53,10 @@ class ModeleCourrier extends React.Component {
         />
 
         <Answer
-          title={`Modèle de courrier :  ${title}`}
+          title={title}
           relatedItems={relatedItems}
           emptyMessage="Modèle de courrier introuvable"
           intro={description}
-          footer="Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région"
           date={date}
           sourceType="Modèle de document"
         >
