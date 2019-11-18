@@ -1,4 +1,5 @@
 import React from "react";
+import { PageTitle } from "../../Titles";
 import { Section } from ".";
 
 export default {
@@ -8,7 +9,7 @@ export default {
 
 export const base = () => (
   <>
-    <h1>Section</h1>
+    <PageTitle>Section</PageTitle>
     <p>
       The Section component is a bloc which adds vertical margins and an
       eventual background color

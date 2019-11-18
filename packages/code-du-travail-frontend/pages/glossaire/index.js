@@ -4,11 +4,13 @@ import Link from "next/link";
 
 import styled from "styled-components";
 import {
+  Container,
   List,
   ListItem,
-  Container,
+  PageTitle,
   Section,
-  theme
+  theme,
+  Title
 } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
@@ -26,7 +28,7 @@ function Glossaire({ pageUrl, ogImage }) {
       />
       <Section>
         <Container narrow>
-          <Title>Glossaire</Title>
+          <PageTitle>Glossaire</PageTitle>
           <GlossaryNavigation letters={termsByLetters} />
           <Glossary letters={termsByLetters} />
         </Container>
@@ -51,7 +53,7 @@ function getGlossaryLetters(glossary) {
 }
 
 function LetterTitle({ letter }) {
-  return <h2 id={`ancre-${letter}`}>{letter}</h2>;
+  return <Title id={`ancre-${letter}`}>{letter}</Title>;
 }
 
 function Glossary({ letters }) {
@@ -97,13 +99,10 @@ function GlossaryNavigation({ letters }) {
     </List>
   );
 }
-const { spacing, fonts } = theme;
+const { spacings, fonts } = theme;
 
-const Title = styled.h1`
-  text-align: center;
-`;
 const Item = styled(ListItem)`
   display: inline-block;
-  padding: ${spacing.tiny};
-  font-size: ${fonts.sizeH5};
+  padding: ${spacings.tiny};
+  font-size: ${fonts.sizes.headings.small};
 `;

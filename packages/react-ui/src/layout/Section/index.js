@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { spacing } from "../../theme";
+import { spacings } from "../../theme";
 
 export const Section = styled.div`
-  padding: ${spacing.interComponent} 0;
-  color: ${({ theme }) => theme.darkText};
+  padding: ${spacings.medium} 0;
+  color: ${({ theme }) => theme.paragraph};
   ${props => {
     if (props.variant === "white") {
       return css`
@@ -13,12 +13,12 @@ export const Section = styled.div`
     }
     if (props.variant === "light") {
       return css`
-        background-color: ${props.theme.lightBackground};
+        background-color: ${props.theme.bgSecondary};
       `;
     }
     if (props.variant === "dark") {
       return css`
-        background-color: ${props.theme.darkBackground};
+        background-color: ${props.theme.bgTertiary};
       `;
     }
   }}
@@ -26,11 +26,9 @@ export const Section = styled.div`
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
   variant: PropTypes.oneOf(["default", "white", "light", "dark"])
 };
 
 Section.defaultProps = {
-  className: "",
   variant: "default"
 };

@@ -7,7 +7,7 @@ import { theme } from "@socialgouv/react-ui";
 import { ElementBuilder } from "./ElementBuilder";
 import { getText } from "../utils";
 
-const { colors, spacing, box } = theme;
+const { colors, spacings, box } = theme;
 
 class OuSAdresser extends React.PureComponent {
   static propTypes = {
@@ -46,12 +46,12 @@ class OuSAdresser extends React.PureComponent {
 export default OuSAdresser;
 
 const Wrapper = styled.div`
-  margin-bottom: ${spacing.base};
-  padding: ${spacing.large};
-  background-color: ${colors.darkBackground};
+  margin-bottom: ${spacings.base};
+  padding: ${spacings.large};
+  background-color: ${colors.bgTertiary};
   border-radius: ${box.borderRadius};
 `;
 const Title = styled.strong`
   display: block;
-  margin-bottom: ${spacing.xsmall};
+  margin-bottom: ${spacings.tiny};
 `;

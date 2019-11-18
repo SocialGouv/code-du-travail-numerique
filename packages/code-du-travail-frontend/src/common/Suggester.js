@@ -69,7 +69,7 @@ export class Suggester extends React.Component {
       value: query,
       type: "search",
       onChange: this.onChange,
-      className: className
+      className
     };
 
     return (

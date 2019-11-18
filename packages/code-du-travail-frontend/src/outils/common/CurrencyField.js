@@ -56,22 +56,22 @@ function CurrencyField({
 
 export { CurrencyField };
 
-const { colors, spacing } = theme;
+const { colors, spacings } = theme;
 const NumberInput = styled(Input)`
-  padding-right: ${spacing.base};
+  padding-right: ${spacings.base};
   text-align: right;
 `;
 
 const CurrencyWrapper = styled.div`
   position: relative;
   display: inline-block;
-  margin-right: ${spacing.base};
+  margin-right: ${spacings.base};
 `;
 
 const Currency = styled.span`
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: ${colors.grey};
+  color: ${colors.altText};
   transform: translateY(-50%);
 `;

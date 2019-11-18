@@ -106,31 +106,32 @@ AbsencePeriods.propTypes = {
   name: PropTypes.string.isRequired
 };
 export { AbsencePeriods };
-const { fonts, spacing } = theme;
+
+const { fonts, spacings } = theme;
 
 const AddButton = styled(Button)`
-  margin: ${spacing.interComponent} 0;
+  margin: ${spacings.medium} 0;
 `;
 const Row = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: ${spacing.tiny};
+  margin-bottom: ${spacings.tiny};
 `;
 const MotifCell = styled.div`
   flex-basis: 25rem;
-  margin-right: ${spacing.interComponent};
+  margin-right: ${spacings.medium};
 `;
 const DurationCell = styled.div`
-  margin-right: ${spacing.interComponent};
+  margin-right: ${spacings.medium};
 `;
 const CellHeader = styled.div`
   font-weight: 700;
 `;
 
 const DelButton = styled(Button)`
-  margin-left: ${spacing.interComponent};
-  font-size: ${fonts.sizeSmall};
+  margin-left: ${spacings.medium};
+  font-size: ${fonts.sizes.small};
 `;
 
 export const motifs = [

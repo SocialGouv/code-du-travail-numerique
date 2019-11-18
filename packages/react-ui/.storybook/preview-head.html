@@ -1,5 +1,50 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,600i&display=swap"
+  rel="stylesheet"
+/>
 <style type="text/css">
+  html {
+    font-size: 62.5%;
+    /* http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/ */
+    line-height: 1.625;
+    text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom. */
+    -webkit-font-smoothing: antialiased;
+  }
   body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #3e486e;
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    color: #2f3b6c;
+    font-weight: normal;
+    font-family: 'Merriweather', serif;
+    line-height: 1.25;
+  }
+  a {
+    color: #3e486e;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: ${colors.primary};
+    transition: all ${animations.transitionTiming} linear;
+  }
+  a:focus,
+  a:hover,
+  a:active {
+    color: #ff7067;
+  }
+
+  a:visited {
+    text-decoration-color: #7598d6;
   }
 </style>

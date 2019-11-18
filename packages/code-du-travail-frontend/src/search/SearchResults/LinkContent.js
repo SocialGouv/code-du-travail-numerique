@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "@socialgouv/react-ui";
+import { Heading, theme } from "@socialgouv/react-ui";
 import { SOURCES } from "@cdt/sources";
 
 const Theme = ({ breadcrumbs = [], source, isSearch }) => {
@@ -20,7 +20,7 @@ export const LinkContent = props => {
   return (
     <>
       <Theme {...props} />
-      <H3 noMargin={!summary}>{title}</H3>
+      <StyledHeading noMargin={!summary}>{title}</StyledHeading>
       {summary && <Summary>{summary}</Summary>}
     </>
   );
@@ -30,17 +30,15 @@ const { colors, fonts } = theme;
 
 const P = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.darkText};
-  font-size: ${fonts.sizeSmall};
+  color: ${({ theme }) => theme.altText};
+  font-size: ${fonts.sizes.small};
 `;
 
-const H3 = styled.h3`
-  ${({ noMargin }) => (noMargin ? `margin: 0;` : `margin-top: 0;`)}
-  font-weight: bold;
-  font-size: ${fonts.sizeH5};
+const StyledHeading = styled(Heading)`
+  ${({ noMargin }) => noMargin && `margin: 0;`}
 `;
 
 const Summary = styled.p`
   margin: 0;
-  color: ${colors.darkText};
+  color: ${colors.paragraph};
 `;

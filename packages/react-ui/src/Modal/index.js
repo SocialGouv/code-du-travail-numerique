@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import styled from "styled-components";
 import { X } from "react-feather";
-import { box, breakpoints, spacing } from "../theme";
+import { box, breakpoints, spacings } from "../theme";
 import { Button } from "../Button";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
 
@@ -21,7 +21,9 @@ export const Modal = ({
       <Wrapper aria-label={title}>
         {children}
         <CloseButton
-          variant="icon"
+          variant="naked"
+          small
+          narrow
           title="fermer la modale"
           onClick={onDismiss}
         >
@@ -34,7 +36,6 @@ export const Modal = ({
 };
 
 Modal.propTypes = {
-  className: PropTypes.string,
   isOpen: PropTypes.bool.isRequired,
   onDismiss: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
@@ -58,7 +59,7 @@ const StyledDialogContent = styled(DialogContent)`
   margin: 10vh auto;
   padding: 2rem;
   overflow-y: auto;
-  color: ${({ theme }) => theme.darkText};
+  color: ${({ theme }) => theme.paragraph};
   background: ${({ theme }) => theme.white};
   border-radius: ${box.borderRadius};
   outline: none;
@@ -69,9 +70,9 @@ const StyledDialogContent = styled(DialogContent)`
     width: 80vw;
   }
   @media (max-width: ${breakpoints.mobile}) {
-    width: calc(100% - 2 * ${spacing.base});
-    max-height: calc(100vh - 2 * ${spacing.base});
-    margin: ${spacing.base};
+    width: calc(100% - 2 * ${spacings.base});
+    max-height: calc(100vh - 2 * ${spacings.base});
+    margin: ${spacings.base};
   }
 `;
 
@@ -83,7 +84,7 @@ const CloseButton = styled(Button)`
   right: 0;
   @media (max-width: ${breakpoints.mobile}) {
     position: fixed;
-    top: ${spacing.small};
-    right: ${spacing.small};
+    top: ${spacings.small};
+    right: ${spacings.small};
   }
 `;

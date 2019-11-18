@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { breakpoints, spacing } from "../theme";
+import { breakpoints, spacings } from "../theme";
 
 const GridContext = React.createContext({ columns: 4 });
 
@@ -13,10 +13,10 @@ export const List = styled.ul`
   justify-content: flex-start;
   /* Use negative margins on sides to create gutters that do not also
     create a gutter at the edges of the container. */
-  margin-top: ${spacing.interComponent};
-  margin-right: calc(-1 * ${spacing.small});
-  margin-bottom: ${spacing.large};
-  margin-left: calc(-1 * ${spacing.small});
+  margin-top: ${spacings.medium};
+  margin-right: calc(-1 * ${spacings.small});
+  margin-bottom: ${spacings.large};
+  margin-left: calc(-1 * ${spacings.small});
   padding: 0;
   list-style-type: none;
 `;
@@ -44,16 +44,16 @@ export const ListItem = styled.li`
   display: flex;
   flex-grow: 0;
   flex-shrink: 1;
-  width: calc(100% / ${props => props.columns} - 2 * ${spacing.small});
-  margin: ${spacing.small};
+  width: calc(100% / ${props => props.columns} - 2 * ${spacings.small});
+  margin: ${spacings.small};
   @media (max-width: ${breakpoints.tablet}) {
     width: calc(
-      100% / ${props => Math.max(props.columns - 1, 0)} - 2 * ${spacing.small}
+      100% / ${props => Math.max(props.columns - 1, 0)} - 2 * ${spacings.small}
     );
   }
   @media (max-width: ${breakpoints.mobile}) {
     width: calc(
-      100% - ${props => Math.max(props.columns - 2, 0)} * ${spacing.small}
+      100% - ${props => Math.max(props.columns - 2, 0)} * ${spacings.small}
     );
   }
 `;

@@ -53,7 +53,7 @@ function Radios({ name, options }) {
   );
 }
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const Fieldset = styled.fieldset`
   margin-left: 0;
@@ -61,5 +61,5 @@ const Fieldset = styled.fieldset`
   border: none;
 `;
 const RadioContainer = styled.div`
-  margin-bottom: ${spacing.small};
+  margin-bottom: ${spacings.small};
 `;

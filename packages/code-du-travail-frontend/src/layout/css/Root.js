@@ -5,8 +5,7 @@ const { colors, fonts } = theme;
 
 export default createGlobalStyle`
   html {
-    font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-      Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
     /* http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/ */
     line-height: ${fonts.lineHeight};
     text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom. */
@@ -15,13 +14,12 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    color: ${colors.lightText};
-    font-size: ${fonts.sizeBase};
+    color: ${colors.paragraph};
+    font-size: ${fonts.sizes.default};
+    font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    background: ${colors.darkBackground};
-    border-top: 5px solid ${colors.blueDark};
     @media print {
       font-size: 10pt;
     }
@@ -30,6 +28,5 @@ export default createGlobalStyle`
   main {
     /* https://stackoverflow.com/questions/35820429/main-element-not-working-in-internet-explorer-11 */
     display: block;
-    background: ${colors.lightBackground};
   }
 `;

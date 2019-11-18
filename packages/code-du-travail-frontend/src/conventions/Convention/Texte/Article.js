@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { theme } from "@socialgouv/react-ui";
+import { Heading, theme } from "@socialgouv/react-ui";
 
 import Html from "../../../common/Html";
 
@@ -20,7 +20,11 @@ const Article = ({ item: { id, etat, surtitre, content } }) => {
   return (
     <>
       <Status>{ETAT_LABEL[etat]}</Status>
-      {surtitre && <h5 id={id}>{surtitre}</h5>}
+      {surtitre && (
+        <Heading as="h5" id={id}>
+          {surtitre}
+        </Heading>
+      )}
       <ArticleContent>{content}</ArticleContent>
     </>
   );
@@ -37,15 +41,15 @@ Article.propTypes = {
 
 export default Article;
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const Status = styled.div`
-  margin-bottom: ${spacing.small};
+  margin-bottom: ${spacings.small};
   font-weight: bold;
   font-size: 1em;
   font-style: italic;
 `;
 
 const ArticleContent = styled(Html)`
-  margin-bottom: ${spacing.small};
+  margin-bottom: ${spacings.small};
 `;

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Spinner from "react-svg-spinner";
 
 import slugify from "@cdt/data/slugify";
-import { Table, Container, theme } from "@socialgouv/react-ui";
+import { Table, Container, Heading, theme } from "@socialgouv/react-ui";
 
 import SearchCC from "./SearchCC";
 
@@ -66,9 +66,7 @@ const SearchResult = ({ label, siret, conventions, selectConvention }) => (
             />
           ))
         ) : (
-          <div className="text-danger">
-            Aucune convention collective connue pour cette entreprise
-          </div>
+          <div>Aucune convention collective connue pour cette entreprise</div>
         )}
       </ConventionsContainer>
     </td>
@@ -100,7 +98,7 @@ const Search = ({
 
   return (
     <Container style={style} className={className}>
-      {title && <h3>{title}</h3>}
+      {title && <Heading>{title}</Heading>}
       <p>
         Renseignez le nom de votre entreprise, son SIRET ou le nom de votre
         convention collective.
@@ -178,6 +176,9 @@ const Search = ({
     </Container>
   );
 };
+
+const { colors, fonts, spacings } = theme;
+
 const FixedTable = styled(Table)`
   width: 100%;
   table-layout: fixed;
@@ -185,15 +186,15 @@ const FixedTable = styled(Table)`
 
 const TitleResults = styled.tr`
   font-weight: bold;
-  background: ${theme.colors.infoBackground};
+  background: ${colors.bgTertiary};
 `;
 
 const ResultsContainer = styled.div`
-  margin-top: ${theme.spacing.medium};
+  margin-top: ${spacings.medium};
 `;
 
 const ConventionLink = styled.a`
-  color: ${theme.colors.lightText};
+  color: ${colors.altText};
   cursor: pointer;
 `;
 
@@ -202,11 +203,11 @@ const Input = styled.input`
 `;
 
 const Box = styled.div`
-  margin: ${theme.spacing.small} 0;
+  margin: ${spacings.small} 0;
 `;
 
 const ConventionsContainer = styled.div`
-  margin-top: ${theme.spacing.small};
+  margin-top: ${spacings.small};
 `;
 
 const Flex = styled.div`
@@ -217,11 +218,11 @@ const Flex = styled.div`
 
 const ResultLabel = styled.div`
   flex: 1 1 calc(100% - 200px);
-  margin-right: ${theme.spacing.small};
+  margin-right: ${spacings.small};
   overflow: hidden;
-  color: ${theme.colors.blueDark};
+  color: ${colors.paragraph};
   font-weight: bold;
-  font-size: ${theme.fonts.sizeH5};
+  font-size: ${fonts.sizes.headings.small};
   white-space: nowrap;
   text-overflow: ellipsis;
 `;

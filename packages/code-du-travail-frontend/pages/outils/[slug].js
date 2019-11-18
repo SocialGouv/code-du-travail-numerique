@@ -13,7 +13,7 @@ import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 
 const BigError = ({ children }) => (
   <StyledContainer>
-    <Alert variant="warning">{children}</Alert>
+    <Alert>{children}</Alert>
   </StyledContainer>
 );
 
@@ -87,17 +87,17 @@ class Outils extends React.Component {
 
 export default Outils;
 
-const { colors, fonts, spacing } = theme;
+const { colors, fonts, spacings } = theme;
 
 const StyledContainer = styled(Container)`
   margin: 20%;
-  font-size: ${fonts.sizeH2};
+  font-size: ${fonts.sizes.headings.large};
   text-align: center;
 `;
 
 const Source = styled.div`
   margin-top: 50px;
-  padding: ${spacing.small};
+  padding: ${spacings.small};
   text-align: center;
-  background: ${colors.lightBackground};
+  background: ${colors.bgSecondary};
 `;

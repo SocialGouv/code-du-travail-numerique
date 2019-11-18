@@ -71,10 +71,10 @@ const Explainer = () => {
 
 export default Explainer;
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const StyledWrapper = styled(Wrapper)`
-  margin-bottom: ${spacing.interComponent};
+  margin-bottom: ${spacings.medium};
 `;
 
 const Title = styled.a`

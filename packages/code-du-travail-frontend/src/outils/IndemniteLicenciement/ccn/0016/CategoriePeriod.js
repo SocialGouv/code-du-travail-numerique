@@ -80,12 +80,12 @@ function CategoriePeriod() {
 }
 
 export { CategoriePeriod };
-const { spacing } = theme;
+const { spacings } = theme;
 const VerticalLabel = styled.label`
   display: flex;
   flex-direction: column;
 `;
 const ErrorWrapper = styled.div`
   display: inline-block;
-  margin-left: ${spacing.interComponent};
+  margin-left: ${spacings.medium};
 `;

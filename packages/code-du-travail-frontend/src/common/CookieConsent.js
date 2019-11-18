@@ -17,13 +17,7 @@ const CookieConsent = () => {
 
   return (
     <Wrapper>
-      <Toast
-        variant="info"
-        wide
-        shadow
-        animate="from-bottom"
-        onRemove={onToastRemove}
-      >
+      <Toast wide shadow animate="from-bottom" onRemove={onToastRemove}>
         Nous utilisons des cookies pour établir des mesures anonymisées de
         fréquentation et d’utilisation du site.
         <A
@@ -40,16 +34,16 @@ const CookieConsent = () => {
 
 export default CookieConsent;
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  padding: ${spacing.base};
+  padding: ${spacings.base};
 `;
 
 const A = styled.a`
-  padding: 0 ${spacing.tiny};
+  padding: 0 ${spacings.tiny};
 `;

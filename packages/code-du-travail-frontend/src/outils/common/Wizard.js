@@ -84,7 +84,6 @@ function Wizard({
                 </StepWrapper>
                 <PrevNextBar
                   hasError={invalid && submitFailed}
-                  complete={!invalid}
                   onPrev={prevStep}
                   nextVisible={nextVisible}
                   restartVisible={restartVisible}
@@ -116,14 +115,14 @@ Wizard.propTypes = {
 
 export { Wizard };
 
-const { box, fonts, spacing, breakpoints } = theme;
+const { box, fonts, spacings, breakpoints } = theme;
 
 const StyledForm = styled.form`
   display: flex;
   flex-direction: row;
   padding: 0;
   overflow: auto;
-  color: ${({ theme }) => theme.darkText};
+  color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};
   border: ${box.border};
   border-radius: ${box.borderRadius};
@@ -134,16 +133,16 @@ const StyledForm = styled.form`
 
 const StepWrapper = styled.div`
   flex-basis: 240px;
-  margin: ${spacing.large} 0;
+  margin: ${spacings.large} 0;
 `;
 const ToolTitle = styled.div`
-  padding: ${spacing.base} 0;
-  color: ${({ theme }) => theme.black};
+  padding: ${spacings.base} 0;
+  color: ${({ theme }) => theme.title};
   font-weight: 400;
-  font-size: ${fonts.sizeH4};
-  border-bottom: 1px solid ${({ theme }) => theme.lightGrey};
+  font-size: ${fonts.sizes.headings.medium};
+  border-bottom: 1px solid ${({ theme }) => theme.border};
 `;
 const Column = styled.div`
   flex: 1;
-  padding: ${spacing.medium} ${spacing.larger};
+  padding: ${spacings.medium} ${spacings.larger};
 `;

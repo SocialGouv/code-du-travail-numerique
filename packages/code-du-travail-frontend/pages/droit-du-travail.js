@@ -1,6 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Section, theme, Wrapper } from "@socialgouv/react-ui";
+import {
+  Container,
+  PageTitle,
+  Section,
+  theme,
+  Title,
+  Wrapper
+} from "@socialgouv/react-ui";
 
 import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
@@ -19,7 +26,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
       <StyledContainer>
         <BigBlock>
           <Wrapper>
-            <H1>Le droit du travail, c’est quoi ?</H1>
+            <PageTitle>Le droit du travail, c’est quoi ?</PageTitle>
             <strong>
               Le droit du travail est l’ensemble des règles juridiques
               applicables aux relations entre employeurs privés et salariés, à
@@ -42,7 +49,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
         </BigBlock>
         <SmallBlock>
           <Wrapper>
-            <h2>Ce n’est pas... </h2>
+            <Title>Ce n’est pas... </Title>
             <p>
               Le droit du travail ne concerne pas les travailleurs qui sont
               soumis au droit public (par exemple, les fonctionnaires), les
@@ -60,10 +67,10 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
 
 export default DroitDuTravail;
 
-const { box, breakpoints, colors, fonts, spacing } = theme;
+const { box, breakpoints, colors, fonts, spacings } = theme;
 
 const StyledSection = styled(Section)`
-  padding: ${spacing.larger} 0;
+  padding: ${spacings.larger} 0;
 `;
 
 const StyledContainer = styled(Container)`
@@ -71,7 +78,7 @@ const StyledContainer = styled(Container)`
   display: flex;
   align-items: flex-end;
   max-width: 1200px;
-  margin-bottom: ${spacing.large};
+  margin-bottom: ${spacings.large};
   @media (max-width: ${breakpoints.tablet}) {
     flex-wrap: wrap;
     margin-bottom: 0;
@@ -83,27 +90,27 @@ const BigBlock = styled.div`
   left: 4%;
   flex-basis: 80%;
   padding-right: 8%;
-  background-color: ${colors.lightBackground};
+  background-color: ${colors.bgSecondary};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     left: 0;
     flex-basis: 100%;
-    margin-bottom: ${spacing.interComponent};
+    margin-bottom: ${spacings.medium};
     padding: 0;
   }
 `;
 
 const H1 = styled.h1`
-  font-size: ${fonts.sizeH2};
+  font-size: ${fonts.sizes.headings.large};
 `;
 
 const SmallBlock = styled.div`
   position: relative;
   right: 4%;
-  bottom: ${spacing.medium};
+  bottom: ${spacings.medium};
   flex-basis: 410px;
   flex-shrink: 0;
-  background-color: ${colors.infoBackground};
+  background-color: ${colors.bgTertiary};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     right: 0;

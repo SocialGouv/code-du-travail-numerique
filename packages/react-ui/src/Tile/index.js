@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button } from "../Button";
-import { animations, box, fonts, spacing } from "../theme";
+import { animations, box, fonts, spacings } from "../theme";
 import styled from "styled-components";
 
 const StyledTile = styled.a`
@@ -16,42 +16,44 @@ const StyledTile = styled.a`
   margin: 0;
   padding: ${({ size }) =>
     size === "small"
-      ? `${spacing.base} ${spacing.medium}`
-      : `${spacing.medium} ${spacing.xmedium}`};
-  color: ${({ theme }) => theme.blueDark};
-  font-weight: bold;
-  font-size: ${({ size }) => (size === "small" ? fonts.sizeh6 : fonts.sizeH5)};
+      ? `${spacings.base} ${spacings.medium}`
+      : `${spacings.medium} ${spacings.xmedium}`};
+  color: ${({ theme }) => theme.paragraph};
+  font-weight: 600;
+  font-size: ${({ size }) =>
+    size === "small" ? fonts.default : fonts.sizes.headings.small};
   text-align: left;
   text-decoration: none;
   background-color: ${({ theme, variant }) =>
-    variant === "dark" ? theme.lightBackground : theme.white};
+    variant === "dark" ? theme.bgSecondary : theme.white};
   border: ${box.border};
   border-radius: ${box.borderRadius};
   cursor: pointer;
   transition: ${animations.transitionTiming} all;
   appearance: none;
   &:hover {
-    border-color: ${({ theme }) => theme.blueDark};
-    box-shadow: ${box.shadow};
+    color: ${({ theme }) => theme.paragraph};
+    border-color: ${({ theme }) => theme.paragraph};
+    box-shadow: ${box.shadow.default};
   }
 `;
 
 const OverflowWrapper = styled.div`
   display: block;
   max-width: 100%; /* ie11 fix :'( */
-  padding-right: ${({ paddingRight }) => (paddingRight ? spacing.base : 0)};
+  padding-right: ${({ paddingRight }) => (paddingRight ? spacings.base : 0)};
   overflow-y: auto;
 `;
 
 const IconWrapper = styled.div`
   position: absolute;
-  top: ${spacing.xsmall};
-  right: ${spacing.xsmall};
+  top: ${spacings.tiny};
+  right: ${spacings.tiny};
 `;
 
 const ButtonWrapper = styled.div`
   margin-top: ${({ size }) =>
-    size === "small" ? spacing.base : spacing.medium};
+    size === "small" ? spacings.base : spacings.medium};
 `;
 
 export const Tile = React.forwardRef(
@@ -70,7 +72,7 @@ export const Tile = React.forwardRef(
       <OverflowWrapper paddingRight={Boolean(Icon)}>{children}</OverflowWrapper>
       {button && (
         <ButtonWrapper size={size}>
-          <Button noButton size={size} variant="secondary">
+          <Button as="div" small={size === "small"} variant="secondary">
             {button}
           </Button>
         </ButtonWrapper>

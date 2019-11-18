@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Section, Wrapper } from "@socialgouv/react-ui";
-import styled from "styled-components";
+import { Container, Section, Title, Wrapper } from "@socialgouv/react-ui";
 
 import { ErrorBoundary } from "../common/ErrorBoundary";
 
@@ -34,7 +33,4 @@ class SimulateurEmbauche extends React.PureComponent {
     );
   }
 }
-const Title = styled.h2`
-  text-align: center;
-`;
 export { SimulateurEmbauche };

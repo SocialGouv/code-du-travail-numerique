@@ -57,23 +57,23 @@ function Salaires({ name, visible = true, onChange }) {
 
 export { Salaires };
 
-const { fonts, spacing } = theme;
+const { fonts, spacings } = theme;
 
 const MontantLabel = styled.label`
-  margin-right: ${spacing.small};
+  margin-right: ${spacings.small};
 `;
 
 const Row = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: ${spacing.tiny};
+  margin-bottom: ${spacings.tiny};
 `;
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin-right: ${spacing.interComponent};
-  font-size: ${fonts.sizeSmall};
+  margin-right: ${spacings.medium};
+  font-size: ${fonts.sizes.small};
 `;
 
 const AddButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin: ${spacing.interComponent} 0;
+  margin: ${spacings.medium} 0;
 `;

@@ -25,7 +25,7 @@ function StepResult({ form }) {
   if (!possibleSituations.length && isNotYetProcessed(data.situations, idcc)) {
     return (
       <>
-        <Toast variant="warning">
+        <Toast>
           Nous n’avons pas encore traité cette convention collective. Le code du
           travail ne prévoyant pas de durée précise du préavis de démission,
           nous vous invitons à consulter le contenu de la convention collective.
@@ -76,7 +76,7 @@ function StepResult({ form }) {
           })}
           <SectionTitle>Source</SectionTitle>
           {situation.ref && situation.refUrl && getRef(situation)}
-          <Toast variant="info">
+          <Toast>
             Si le contrat de travail, un accord collectif d’entreprise ou un
             usage prévoit une durée de préavis différente, il faut appliquer la
             durée la plus courte.

@@ -109,10 +109,10 @@ function Feedback({
 
 export { Feedback };
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const Title = styled.h3`
-  margin-bottom: ${spacing.base};
+  margin-bottom: ${spacings.base};
 `;
 
 const P = styled.p`
@@ -121,8 +121,7 @@ const P = styled.p`
 `;
 
 const StyledButton = styled(Button)`
-  min-width: 7rem;
   & + & {
-    margin-left: ${spacing.base};
+    margin-left: ${spacings.base};
   }
 `;

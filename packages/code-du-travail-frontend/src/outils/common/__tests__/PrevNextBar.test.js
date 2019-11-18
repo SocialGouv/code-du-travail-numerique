@@ -15,12 +15,8 @@ describe("<PrevNextBar />", () => {
     const { container } = render(<PrevNextBar prevVisible={false} />);
     expect(container).toMatchSnapshot();
   });
-  it("should render incomplete buttons", () => {
-    const { container } = render(<PrevNextBar incomplete />);
-    expect(container).toMatchSnapshot();
-  });
-  it("should render error buttons", () => {
-    const { container } = render(<PrevNextBar hasError incomplete />);
+  it("should render a disabled button", () => {
+    const { container } = render(<PrevNextBar hasError />);
     expect(container).toMatchSnapshot();
   });
   it("should trigger onPrev", () => {

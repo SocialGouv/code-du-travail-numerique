@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "@socialgouv/react-ui";
 
-const { colors, fonts, spacing } = theme;
+const { colors, fonts } = theme;
 
 export default createGlobalStyle`
   h1,
@@ -10,34 +10,10 @@ export default createGlobalStyle`
   h4,
   h5,
   h6 {
-    margin: ${spacing.xsmall} 0 ${spacing.small} 0;
-    color: ${colors.blueDark};
+    margin: 0;
+    color: ${colors.title};
     font-weight: normal;
-    line-height: ${fonts.lineHeight};
+    font-family: 'Merriweather', serif;
+    line-height: ${fonts.lineHeightTitle};
   }
-
-  h1 {
-    font-size: ${fonts.sizeH1};
-  }
-
-  h2 {
-    font-size: ${fonts.sizeH2};
-  }
-
-  h3 {
-    font-size: ${fonts.sizeH3};
-  }
-
-  h4 {
-    font-size: ${fonts.sizeH4};
-  }
-
-  h5 {
-    font-size: ${fonts.sizeH5};
-  }
-
-  h6 {
-    font-size: ${fonts.sizeH6};
-  }
-
 `;

@@ -38,7 +38,7 @@ SidebarItem.propTypes = {
 
 export default Sidebar;
 
-const { breakpoints, spacing } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledSection = styled(Section)`
   @media (min-width: ${breakpoints.tablet}) {
@@ -46,7 +46,7 @@ const StyledSection = styled(Section)`
     top: 0px;
     flex: 0 1 35%;
     max-height: 100vh;
-    padding-right: ${spacing.interComponent};
+    padding-right: ${spacings.medium};
   }
 `;
 

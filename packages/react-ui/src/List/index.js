@@ -8,12 +8,7 @@ export const List = styled.ul`
 `;
 
 List.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string
-};
-
-List.defaultProps = {
-  className: ""
+  children: PropTypes.node
 };
 
 export const ListItem = styled.li``;

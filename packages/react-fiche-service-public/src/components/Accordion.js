@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Accordion, theme } from "@socialgouv/react-ui";
 
+import { getText } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const isItemOfAccordion = element =>
   (element.name === "Chapitre" || element.name === "Cas") &&
@@ -24,12 +25,10 @@ class AccordionWrapper extends React.PureComponent {
     const accordionItems = data.children
       .filter(isItemOfAccordion)
       .map(accordionItem => {
-        const title = (
-          <ElementBuilder
-            data={accordionItem.children.find(child => child.name === "Titre")}
-            headingLevel={headingLevel}
-          />
+        const title = getText(
+          accordionItem.children.find(child => child.name === "Titre")
         );
+        const as = `h${headingLevel > 3 ? 6 : headingLevel + 1}`;
         const body = (
           <ElementBuilder
             data={accordionItem.children.filter(
@@ -40,6 +39,7 @@ class AccordionWrapper extends React.PureComponent {
         );
         return {
           title,
+          as,
           body
         };
       });
@@ -78,5 +78,5 @@ class AccordionWrapper extends React.PureComponent {
 export default AccordionWrapper;
 
 const StyledAccordion = styled(Accordion)`
-  margin-bottom: ${spacing.large};
+  margin-bottom: ${spacings.large};
 `;

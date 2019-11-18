@@ -36,7 +36,7 @@ function StepCTT() {
       <Field name="cttFormation">
         {({ input }) =>
           input.value === false ? (
-            <Toast variant="info">
+            <Toast>
               Attention&nbsp;: s’il s’agit d’un contrat de travail temporaire
               saisonnier ou d’usage, un accord d’entreprise ou d’établissement
               peut dispenser l’entreprise de travail temporaire (l’entreprise

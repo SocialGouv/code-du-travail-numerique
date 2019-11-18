@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { Section, Wrapper } from "@socialgouv/react-ui";
+import { Heading, Section, Wrapper } from "@socialgouv/react-ui";
 
 import Html from "../../src/common/Html";
 import { DownloadFile } from "../../src/common/DownloadFile";
@@ -65,7 +65,7 @@ class ModeleCourrier extends React.Component {
               <Html>{html}</Html>
             </Wrapper>
           </Section>
-          <h4>Télécharger le modèle</h4>
+          <Heading as="h4">Télécharger le modèle</Heading>
           <DownloadFile
             title={title || "modele"}
             file={`${API_URL}/docs/${filename}`}

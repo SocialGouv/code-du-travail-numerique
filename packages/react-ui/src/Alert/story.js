@@ -1,5 +1,4 @@
 import React from "react";
-import { variants } from "../theme";
 import { Alert } from ".";
 
 export default {
@@ -7,9 +6,9 @@ export default {
   title: "Components|Alert"
 };
 
-export const base = () =>
-  ["default"].concat(variants).map(variant => (
-    <Alert key={variant} variant={variant}>
-      {variant} alert
-    </Alert>
-  ));
+export const base = () => (
+  <>
+    <Alert variant="primary">Primary alert</Alert>
+    <Alert variant="secondary">Secondary (default) alert</Alert>
+  </>
+);

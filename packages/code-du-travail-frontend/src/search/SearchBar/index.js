@@ -81,7 +81,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
           Rechercher
         </SubmitButton>
       ) : (
-        <SubmitIcon type="submit" variant="icon">
+        <SubmitIcon type="submit" small narrow variant="naked">
           <SearchIcon />
         </SubmitIcon>
       )}
@@ -91,7 +91,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
 
 export default SearchBar;
 
-const { animations, box, breakpoints, colors, spacing } = theme;
+const { animations, box, breakpoints, colors, spacings } = theme;
 
 const inputHeight = "50px";
 
@@ -110,9 +110,9 @@ const SearchInputIcon = styled(SearchIcon)`
   position: absolute;
   top: 0;
   left: 0;
-  width: 1.3rem;
-  height: 1.3rem;
-  margin: ${spacing.base} 0 0 ${spacing.medium};
+  width: 2rem;
+  height: 2rem;
+  margin: ${spacings.base} 0 0 ${spacings.medium};
   @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }
@@ -126,28 +126,24 @@ const SearchInput = styled(DocumentSuggester)`
   padding: 0
     ${({ hasButton }) =>
       hasButton
-        ? `${spacing.base} 0 4rem `
-        : `calc(${inputHeight} + ${spacing.small}) 0 ${spacing.base}`};
+        ? `${spacings.base} 0 4rem `
+        : `calc(${inputHeight} + ${spacings.small}) 0 ${spacings.base}`};
   font-size: inherit;
   font-family: inherit;
-  background: ${colors.lightBackground};
+  background: ${colors.bgSecondary};
   border: ${box.border};
-  border-radius: ${spacing.xmedium};
+  border-radius: ${spacings.xmedium};
   transition: border ${animations.transitionTiming} ease;
   appearance: none;
-  &:focus {
-    border-color: ${colors.blueLight};
-    outline: none;
-  }
   @media (max-width: ${breakpoints.mobile}) {
-    padding: 0 ${spacing.base};
+    padding: 0 ${spacings.base};
   }
 `;
 
 const SubmitButton = styled(Button)`
-  margin-left: ${spacing.xsmall};
+  margin-left: ${spacings.tiny};
   @media (max-width: ${breakpoints.mobile}) {
-    margin-top: ${spacing.small};
+    margin-top: ${spacings.small};
     margin-left: 0;
   }
 `;

@@ -24,7 +24,7 @@ import { matopush } from "../piwik";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
-    <Alert variant="warning">{children}</Alert>
+    <Alert>{children}</Alert>
   </StyledErrorContainer>
 );
 
@@ -193,11 +193,11 @@ function Answer({
 
 export default Answer;
 
-const { box, breakpoints, colors, fonts, spacing } = theme;
+const { box, breakpoints, colors, fonts, spacings } = theme;
 
 const StyledErrorContainer = styled(Container)`
   margin: 20%;
-  font-size: ${fonts.sizeH2};
+  font-size: ${fonts.sizes.headings.large};
   text-align: center;
 `;
 
@@ -220,7 +220,7 @@ const RelatedItems = styled.div`
   position: sticky;
   top: 0;
   width: 30%;
-  padding: ${spacing.medium} ${spacing.base} ${spacing.medium} 0;
+  padding: ${spacings.medium} ${spacings.base} ${spacings.medium} 0;
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
@@ -232,20 +232,20 @@ const StyledRelatedItemsTitle = styled.h6`
 `;
 
 const StyledListItem = styled(ListItem)`
-  margin: ${spacing.base} 0;
+  margin: ${spacings.base} 0;
 `;
 
 const BacklinkContainer = styled(Container)`
-  padding-top: ${spacing.base};
+  padding-top: ${spacings.base};
 `;
 
 const IntroWrapper = styled(Wrapper)`
-  margin: ${spacing.base} auto;
+  margin: ${spacings.base} auto;
 `;
 
 const Footer = styled.div`
-  margin-top: ${spacing.larger};
-  padding: ${spacing.base};
-  background-color: ${colors.lightBackground};
+  margin-top: ${spacings.larger};
+  padding: ${spacings.base};
+  background-color: ${colors.bgSecondary};
   border-radius: ${box.borderRadius};
 `;

@@ -49,5 +49,5 @@ export default Content;
 const { fonts } = theme;
 
 const Title = styled.h3`
-  font-size: ${props => (props.depth ? fonts.sizeH4 : fonts.sizeH3)};
+  font-size: ${fonts.sizes.headings.medium};
 `;

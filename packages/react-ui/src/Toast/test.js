@@ -2,14 +2,13 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import { Toast } from "../Toast";
 
-// unusable test for now because of the button import
 describe("<Toast />", () => {
-  it("render default info toast", () => {
-    const { container } = render(<Toast>Default info content</Toast>);
+  it("render default toast", () => {
+    const { container } = render(<Toast>Default content</Toast>);
     expect(container).toMatchSnapshot();
   });
 
-  it.each([["warning"], ["success"]])("render %s toast", variant => {
+  it.each([["primary"], ["secondary"]])("render %s toast", variant => {
     const { container } = render(
       <Toast variant={variant}>{variant} content</Toast>
     );
@@ -40,10 +39,10 @@ describe("<Toast />", () => {
     expect(onRemove.mock.calls.length).toBe(1);
   });
 
-  it("Should render alternative wide toast", () => {
+  it("Should render a wide toast", () => {
     const { container } = render(
       <Toast shadow wide>
-        I big and beautiful
+        I’m big and beautiful
       </Toast>
     );
     expect(container).toMatchSnapshot();

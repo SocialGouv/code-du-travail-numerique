@@ -92,12 +92,12 @@ const P = styled.p`
 `;
 
 const Label = styled.span`
-  color: ${colors.lightText};
+  color: ${colors.altText};
   font-weight: 700;
 `;
 
 const Value = styled.span`
-  color: ${colors.grey};
+  color: ${colors.altText};
   font-weight: 700;
   text-transform: uppercase;
 `;

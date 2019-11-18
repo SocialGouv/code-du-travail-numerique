@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Section } from "../layout/Section";
+import { Title } from "../Titles";
 import { Button } from "../Button";
 import { Modal, ModalContentWrapper } from ".";
 
@@ -41,29 +43,33 @@ class ExampleModal extends React.Component {
     const { defaultModalOpened, styledModalOpened } = this.state;
     return (
       <>
-        <h1> Standard modal </h1>
-        <Button onClick={() => this.openModal("defaultModal")}>
-          Click me !
-        </Button>
-        <Modal
-          title="my modal title"
-          isOpen={defaultModalOpened}
-          onDismiss={() => this.closeModal("defaultModal")}
-        >
-          <p>It was worth the click right ?</p>
-        </Modal>
-        <h1> Styled modal </h1>
-        <Button onClick={() => this.openModal("styledModal")}>
-          {"Click me I'm stylish !"}
-        </Button>
-        <Modal
-          title="my modal with custom wrapper"
-          isOpen={styledModalOpened}
-          onDismiss={() => this.closeModal("styledModal")}
-          ContentWrapper={StyledModalContentWrapper}
-        >
-          <p>Are you blind yet ?</p>
-        </Modal>
+        <Section>
+          <Title> Standard modal </Title>
+          <Button onClick={() => this.openModal("defaultModal")}>
+            Click me !
+          </Button>
+          <Modal
+            title="my modal title"
+            isOpen={defaultModalOpened}
+            onDismiss={() => this.closeModal("defaultModal")}
+          >
+            <p>It was worth the click right ?</p>
+          </Modal>
+        </Section>
+        <Section>
+          <Title> Styled modal </Title>
+          <Button onClick={() => this.openModal("styledModal")}>
+            {"Click me I'm stylish !"}
+          </Button>
+          <Modal
+            title="my modal with custom wrapper"
+            isOpen={styledModalOpened}
+            onDismiss={() => this.closeModal("styledModal")}
+            ContentWrapper={StyledModalContentWrapper}
+          >
+            <p>Are you blind yet ?</p>
+          </Modal>
+        </Section>
       </>
     );
   }

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-import { Tag, Container, theme } from "@socialgouv/react-ui";
+import { Container, theme } from "@socialgouv/react-ui";
 
 import SearchBar from "../search/SearchBar";
 
@@ -23,7 +23,6 @@ const Header = ({ hideSearch = false }) => (
             </Title>
           </LogoWrapper>
         </Link>
-        <StyledTag variant="info">Version Bêta</StyledTag>
       </LeftWrapper>
       {!hideSearch && (
         <SearchBarWrapper>
@@ -34,7 +33,7 @@ const Header = ({ hideSearch = false }) => (
   </StyledHeader>
 );
 
-const { breakpoints, colors, fonts, spacing } = theme;
+const { breakpoints, colors, fonts, spacings } = theme;
 
 const StyledHeader = styled.header`
   background: ${colors.white};
@@ -44,7 +43,7 @@ const StyledContainer = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: ${spacing.medium};
+  padding: ${spacings.medium};
   @media (max-width: ${breakpoints.tablet}) {
     flex-direction: column;
   }
@@ -64,30 +63,26 @@ const LogoWrapper = styled.a`
 `;
 
 const Logo = styled.img`
-  width: 5rem;
+  width: 8rem;
   height: 100%;
-  margin-right: ${spacing.base};
+  margin-right: ${spacings.base};
 `;
 
 const Title = styled.span`
   font-weight: bold;
-  font-size: ${fonts.sizeH5};
+  font-size: ${fonts.sizes.headings.small};
   line-height: 1.2;
-`;
-
-const StyledTag = styled(Tag)`
-  margin-left: ${spacing.interComponent};
 `;
 
 const SearchBarWrapper = styled.div`
   width: 350px;
   @media (max-width: ${breakpoints.tablet}) {
     width: 70%;
-    margin-top: ${spacing.interComponent};
+    margin-top: ${spacings.medium};
   }
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
-    margin-top: ${spacing.interComponent};
+    margin-top: ${spacings.medium};
   }
 `;
 export default Header;

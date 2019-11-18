@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { theme } from "@socialgouv/react-ui";
+import { theme, Title } from "@socialgouv/react-ui";
 import { getConventionTextes } from "../convention.service";
 import Texte from "./Texte";
 
@@ -30,7 +30,7 @@ const ListTextes = ({ conventionId, typeTextes }) => {
         <Button onClick={() => setSelectedTexte(null)}>
           &lt; Retour à la liste des textes
         </Button>
-        <h2>{selectedTexte.titrefull}</h2>
+        <Title>{selectedTexte.titrefull}</Title>
         <Texte node={selectedTexte} title={selectedTexte.data.title} />
       </>
     );
@@ -60,12 +60,12 @@ ListTextes.propTypes = {
 
 export default ListTextes;
 
-const { colors, spacing } = theme;
+const { colors, spacings } = theme;
 
 const Button = styled.button`
-  margin: 0 0 ${spacing.xsmall} 0;
+  margin: 0 0 ${spacings.tiny} 0;
   padding: 0;
-  color: ${colors.blueDark};
+  color: ${colors.paragraph};
   font-size: inherit;
   text-align: left;
   text-decoration: underline;

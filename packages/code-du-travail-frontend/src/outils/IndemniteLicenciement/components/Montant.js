@@ -18,7 +18,7 @@ function Montant({ value, ratio = 1 }) {
 }
 export { Montant };
 
-const { box, breakpoints, fonts, spacing } = theme;
+const { box, breakpoints, fonts, spacings } = theme;
 
 const Wrapper = styled.div`
   display: flex;
@@ -30,16 +30,16 @@ const Wrapper = styled.div`
 
 const Bar = styled.div`
   width: ${({ ratio }) => `calc(50% * ${ratio})`};
-  background-color: ${({ theme }) => theme.grey4};
+  background-color: ${({ theme }) => theme.secondary};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     width: ${({ ratio }) => `calc(100% * ${ratio})`};
   }
 `;
 const Value = styled.span`
-  margin-left: ${spacing.base};
-  color: ${({ theme }) => theme.lightText};
-  font-size: ${fonts.sizeH5};
+  margin-left: ${spacings.base};
+  color: ${({ theme }) => theme.altText};
+  font-size: ${fonts.sizes.headings.small};
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
     margin-left: 0;

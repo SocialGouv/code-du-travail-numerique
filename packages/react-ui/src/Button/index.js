@@ -1,79 +1,90 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { darken, lighten, transparentize } from "polished";
+import { ArrowRight } from "react-feather";
+import { lighten, transparentize } from "polished";
 
-import { animations, fonts, spacing, variants } from "../theme";
+import { animations, box, fonts, spacings } from "../theme";
 
 export const StyledButton = styled.button`
-  display: inline-block;
-  padding: ${({ size }) =>
-    size === "small"
-      ? `${spacing.xsmall} ${spacing.medium}`
-      : `${spacing.small} ${spacing.xmedium}`};
-  font-weight: 600;
-  font-size: ${({ size }) =>
-    size === "small" ? fonts.sizeSmall : fonts.sizeBase};
-  line-height: inherit;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: ${fonts.sizes.default};
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: ${spacing.xmedium};
+  border-radius: ${box.borderRadius};
   cursor: pointer;
-  transition: background-color ${animations.transitionTiming} ease;
+  transition: background-color ${animations.transitionTiming} linear,
+    border-color ${animations.transitionTiming} linear, transform 100ms linear;
   appearance: none;
 
-  ${props => {
-    let color = props.theme.primaryText;
-    let backgroundColor = props.theme.blueLight;
-    let borderColor = props.theme.blueLight;
-
-    if (props.variant === "link") {
+  ${({ narrow, theme, small, variant }) => {
+    if (variant === "link") {
       return css`
         padding: 0;
-        color: ${props.theme.blueDark};
-        font-weight: normal;
-        font-size: inherit;
-        line-height: initial;
+        color: ${theme.primary};
+        font-weight: 400;
+        font-size: ${fonts.sizes.default};
+        line-height: ${fonts.lineHeight};
         text-align: left;
-        text-decoration: underline;
-        vertical-align: initial;
         background: none;
         border: none;
         border-radius: 0;
         &:focus,
         &:hover,
         &:active {
-          text-decoration: none;
-        }
-      `;
-    }
-    if (props.variant === "icon") {
-      return css`
-        padding: ${spacing.base};
-        color: ${props.theme.darkText};
-        line-height: 0;
-        background-color: transparent;
-        border: none;
-        &:hover {
-          color: ${lighten(0.3, props.theme.darkText)};
+          text-decoration: underline;
         }
       `;
     }
 
-    if (props.variant !== "default") {
-      backgroundColor = props.theme[`${props.variant}Background`];
-      borderColor = props.theme[`${props.variant}Background`];
-      color = props.theme[`${props.variant}Text`];
+    let height = "5.2rem";
+    let backgroundColor = theme[`${variant}`];
+    let borderColor = theme[`${variant}`];
+    let color = theme[`${variant}Text`];
+    let boxShadow =
+      "0px 10px 30px rgba(52, 77, 122, 0.26), 0px 4px 5px rgba(117, 152, 214, 0.35)";
+    let opacity = "1";
+
+    let padding = "0 4.4rem";
+
+    if (small) {
+      height = "4rem";
+      padding = "0 3rem";
     }
-    if (props.outlined) {
-      backgroundColor = props.theme.white;
-      color = props.theme.black;
+
+    if (narrow) {
+      padding = small ? "0 1rem" : "0 1.9rem";
     }
+
+    if (variant === "flat") {
+      color = theme.paragraph;
+      backgroundColor = theme.white;
+      borderColor = theme.border;
+      boxShadow = "none";
+    }
+
+    if (variant === "naked") {
+      color = theme.paragraph;
+      backgroundColor = "transparent";
+      borderColor = "transparent";
+      boxShadow = "none";
+      opacity = "0.6";
+    }
+
     return css`
+      height: ${height};
+      padding: ${padding};
       color: ${color};
       background: ${backgroundColor};
       border-color: ${borderColor};
+      box-shadow: ${boxShadow};
+      opacity: 1;
+
       &:link,
       &:visited {
         text-decoration: none;
@@ -83,36 +94,51 @@ export const StyledButton = styled.button`
         &:hover,
         &:active,
         &:focus {
-          color: ${lighten(0.05, color)};
-          background: ${lighten(0.05, backgroundColor)};
-          border-color: ${darken(0.05, borderColor)};
+          opacity: ${opacity};
+          transform: translateY(-2px);
+          background: ${lighten(0.1, backgroundColor)};
+          border-color: ${lighten(0.1, borderColor)};
         }
       }
       /* keep it last so it overrides other styles */
       &[disabled] {
         color: ${transparentize(0.6, color)};
+        box-shadow: none;
         cursor: not-allowed;
       }
     `;
   }}
 `;
 
-export const Button = React.forwardRef(({ noButton, ...props }, ref) => (
-  <StyledButton as={noButton ? "div" : "button"} {...props} ref={ref} />
+const StyledArrowRight = styled(ArrowRight)`
+  height: 1.4rem;
+  margin-left: ${spacings.tiny};
+  transition: transform ${animations.transitionTiming} linear;
+  /* stylelint-disable-next-line */
+  ${StyledButton}:hover & {
+    transform: translateX(5px);
+  }
+`;
+
+export const Button = React.forwardRef(({ children, ...props }, ref) => (
+  <StyledButton {...props} ref={ref}>
+    {children}
+    {props.variant === "link" && <StyledArrowRight />}
+  </StyledButton>
 ));
 Button.displayName = "Button";
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  noButton: PropTypes.bool,
-  outlined: PropTypes.bool,
-  variant: PropTypes.oneOf(["default", "icon", "link"].concat(variants)),
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  small: PropTypes.bool,
+  narrow: PropTypes.bool,
+  variant: PropTypes.oneOf(["link", "flat", "naked", "primary", "secondary"])
 };
 
 Button.defaultProps = {
-  noButton: false,
-  outlined: false,
   onClick: () => {},
-  variant: "default"
+  narrow: false,
+  small: false,
+  variant: "secondary"
 };

@@ -1,43 +1,15 @@
 import styled from "styled-components";
+import { ChevronRight } from "react-feather";
+import { animations } from "../theme";
 
-export const VerticalArrow = styled.div.attrs(() => ({
-  role: "presentation"
-}))`
+const StyledChevronRight = styled(ChevronRight)`
   position: relative;
-  display: inline-block;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 12px;
-
-  &::after,
-  &::before {
-    position: absolute;
-    top: 50%;
-    display: block;
-    width: 10px;
-    height: 2px;
-    background-color: currentColor;
-    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
-    content: "";
-  }
-
-  &::before {
-    left: 4px;
-    transform: rotate(45deg);
-  }
-
-  [aria-expanded="true"] &::before,
-  [aria-selected="true"] &::before {
-    transform: rotate(-45deg);
-  }
-
-  &::after {
-    right: 4px;
-    transform: rotate(-45deg);
-  }
-
-  [aria-expanded="true"] &::after,
-  [aria-selected="true"] &::after {
-    transform: rotate(45deg);
+  transform: rotate(0);
+  transition: transform ${animations.transitionTiming} linear;
+  [aria-expanded="true"] &,
+  [aria-selected="true"] & {
+    transform: rotate(90deg);
   }
 `;
+
+export const VerticalArrow = StyledChevronRight;

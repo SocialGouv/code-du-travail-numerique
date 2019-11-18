@@ -1,13 +1,15 @@
 import React from "react";
 import { Field } from "react-final-form";
 import { EchelonChimie } from "./EchelonChimie";
+import { Title } from "@socialgouv/react-ui";
+
 import { YesNoQuestion } from "../../../common/YesNoQuestion";
 import { TextQuestion } from "../../../common/TextQuestion";
 
 function Step() {
   return (
     <>
-      <h3>Chimie</h3>
+      <Title as="h3">Chimie</Title>
       <EchelonChimie name="groupe" />
 
       <Field name="anciennete">

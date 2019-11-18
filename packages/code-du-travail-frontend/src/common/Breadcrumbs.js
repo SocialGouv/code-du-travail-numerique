@@ -42,11 +42,11 @@ Breadcrumbs.propTypes = {
 
 export { Breadcrumbs };
 
-const { breakpoints, colors, spacing } = theme;
+const { breakpoints, colors, spacings } = theme;
 
 const Nav = styled.nav`
   overflow-x: auto;
-  background: ${colors.infoBackground};
+  background: ${colors.bgTertiary};
 `;
 const StyledContainer = styled(Container)`
   padding: 0;
@@ -56,14 +56,14 @@ const StyledList = styled(List)`
   display: flex;
   flex-flow: nowrap;
   align-items: center;
-  padding: ${spacing.small} 0;
+  padding: ${spacings.small} 0;
   @media (max-width: ${breakpoints.mobile}) {
-    padding: ${spacing.xsmall} 0;
+    padding: ${spacings.tiny} 0;
   }
 `;
 const NavItem = styled(ListItem)`
   display: inline-block;
-  padding: ${spacing.small} ${spacing.medium};
+  padding: ${spacings.small} ${spacings.medium};
   white-space: nowrap;
 `;
 
@@ -75,6 +75,6 @@ const Separator = styled.li`
 
 const StyledChevronsRight = styled(ChevronsRight)`
   display: block;
-  width: ${spacing.base};
-  color: ${({ theme }) => theme.blueDark};
+  width: ${spacings.base};
+  color: ${({ theme }) => theme.paragraph};
 `;

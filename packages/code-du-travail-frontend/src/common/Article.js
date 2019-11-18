@@ -2,24 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Tag, Container, Section, theme, Wrapper } from "@socialgouv/react-ui/";
+import {
+  Container,
+  PageTitle,
+  Section,
+  theme,
+  Wrapper
+} from "@socialgouv/react-ui/";
 
-const Article = ({
-  title,
-  tags,
-  sourceType,
-  date,
-  wide,
-  onTagClick,
-  children
-}) => {
+const Article = ({ title, sourceType, date, wide, children }) => {
   return (
     <Section data-main-content>
       <Container>
         <Wrapper variant="light">
           <Section>
             <Header narrow={!wide} noPadding>
-              <h1>{title}</h1>
+              <PageTitle>{title}</PageTitle>
               <Meta>
                 {sourceType && <Type>{sourceType}</Type>}
                 {date && (
@@ -28,13 +26,6 @@ const Article = ({
                   </Date>
                 )}
               </Meta>
-              <Tags>
-                {tags.map(tag => (
-                  <StyledTag key={tag} onClick={() => onTagClick(tag)}>
-                    {tag}
-                  </StyledTag>
-                ))}
-              </Tags>
             </Header>
             {children && (
               <Container narrow={!wide} noPadding>
@@ -56,25 +47,18 @@ Article.propTypes = {
   date: PropTypes.string,
   sourceType: PropTypes.string,
   wide: PropTypes.bool,
-  /** list of tags */
-  tags: PropTypes.array,
-  className: PropTypes.string,
   style: PropTypes.object,
   /** when user clicks some tag */
   onTagClick: PropTypes.func
 };
 
-Article.defaultProps = {
-  tags: []
-};
-
 export default Article;
 
-const { breakpoints, colors, fonts, spacing } = theme;
+const { breakpoints, colors, fonts, spacings } = theme;
 
 const Header = styled(Container)`
   position: relative;
-  margin-bottom: ${spacing.interComponent};
+  margin-bottom: ${spacings.medium};
 `;
 
 const Meta = styled.div`
@@ -87,28 +71,20 @@ const Meta = styled.div`
 `;
 
 const Type = styled.span`
-  color: ${colors.lightText};
+  color: ${colors.altText};
   font-weight: 600;
 `;
 
 const Date = styled.span`
   display: inline-block;
-  margin-left: ${spacing.base};
-  color: ${colors.lightText};
-  font-size: ${fonts.sizeSmall};
+  margin-left: ${spacings.base};
+  color: ${colors.altText};
+  font-size: ${fonts.sizes.small};
   @media (max-width: ${breakpoints.mobile}) {
     margin-left: 0;
   }
 `;
 const DateValue = styled.span`
-  color: ${colors.lightText};
+  color: ${colors.altText};
   font-weight: 600;
-`;
-
-const Tags = styled.div`
-  margin-left: -10px;
-`;
-
-const StyledTag = styled(Tag)`
-  cursor: pointer;
 `;

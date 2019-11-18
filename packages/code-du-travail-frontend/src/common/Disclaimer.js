@@ -11,7 +11,7 @@ const Disclaimer = () => {
   return (
     <Wrapper>
       <Toast
-        variant="warning"
+        variant="primary"
         wide
         shadow
         animate="from-bottom"
@@ -38,16 +38,16 @@ const Disclaimer = () => {
 
 export default Disclaimer;
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  padding: ${spacing.base};
+  padding: ${spacings.base};
 `;
 
 const A = styled.a`
-  padding: 0 ${spacing.tiny};
+  padding: 0 ${spacings.tiny};
 `;

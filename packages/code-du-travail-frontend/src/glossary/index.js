@@ -14,16 +14,16 @@ const StyledTooltip = styled(Tooltip)`
   width: 300px;
   max-width: 70vw;
   padding: 0.25em 0.5em;
-  color: ${colors.lightText};
-  font-size: ${fonts.sizeBase};
-  background: ${colors.lightBackground};
-  border: solid 1px ${colors.elementBorder};
-  box-shadow: ${box.shadow};
+  color: ${colors.paragraph};
+  font-size: ${fonts.sizes.default};
+  background: ${colors.bgTertiary};
+  border: solid 1px ${colors.border};
+  box-shadow: ${box.shadow.default};
   pointer-events: none;
 `;
 
 const Underline = styled.span`
-  border-bottom: 1px dotted ${colors.blueLight};
+  border-bottom: 1px dotted ${colors.secondary};
 `;
 
 const glossaryBySlug = glossary.reduce(

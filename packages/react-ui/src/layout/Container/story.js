@@ -1,4 +1,5 @@
 import React from "react";
+import { PageTitle } from "../../Titles";
 import { Section } from "../Section";
 import { Container } from ".";
 
@@ -9,7 +10,7 @@ export default {
 
 export const base = () => (
   <>
-    <h1>Container</h1>
+    <PageTitle>Container</PageTitle>
     <p>
       The Container component is a bloc which adds horizontal paddings and a
       max-width. It is usually the children of a Section component.

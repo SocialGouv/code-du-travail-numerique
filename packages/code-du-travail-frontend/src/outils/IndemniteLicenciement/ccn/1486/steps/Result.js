@@ -20,7 +20,7 @@ function Result({ form }) {
   } = getIndemniteConventionnelle(data);
 
   const IndemniteWarning = () => (
-    <StyledToast variant="warning">
+    <StyledToast>
       Si un emploi équivalent a été trouvé
       <ul>
         <li>par l’employeur</li>
@@ -53,8 +53,8 @@ function Result({ form }) {
 
 export { Result };
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const StyledToast = styled(Toast)`
-  margin: ${spacing.interComponent} 0;
+  margin: ${spacings.medium} 0;
 `;

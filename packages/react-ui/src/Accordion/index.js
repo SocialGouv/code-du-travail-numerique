@@ -8,18 +8,19 @@ import {
   AccordionItemButton,
   AccordionItemPanel
 } from "react-accessible-accordion";
-import { box, spacing } from "../theme";
+import { box, spacings } from "../theme";
+import { Heading } from "../Titles";
 import { VerticalArrow } from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
 
 export const Accordion = ({ items, ...props }) => (
   <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
-    {items.map(({ body, id, title }, index) => (
+    {items.map(({ body, id, title, as }, index) => (
       <StyledAccordionItem uuid={id} key={index}>
         <AccordionItemHeading>
           <StyledAccordionItemButton>
-            {title}
-            <VerticalArrow />
+            <StyledVerticalArrow />
+            <StyledHeading as={as}>{title}</StyledHeading>
           </StyledAccordionItemButton>
         </AccordionItemHeading>
         <StyledAccordionItemPanel>{body}</StyledAccordionItemPanel>
@@ -29,7 +30,6 @@ export const Accordion = ({ items, ...props }) => (
 );
 
 Accordion.propTypes = {
-  className: PropTypes.string,
   preExpanded: PropTypes.arrayOf(PropTypes.string),
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -50,21 +50,30 @@ const StyledAccordionItem = styled(AccordionItem)`
   }
 `;
 
+const StyledHeading = styled(Heading)`
+  margin: ${spacings.medium} 0;
+  padding: 0;
+`;
+const StyledVerticalArrow = styled(VerticalArrow)`
+  margin-right: ${spacings.small};
+  color: ${({ theme }) => theme.secondary};
+`;
+
 const StyledAccordionItemButton = styled(AccordionItemButton)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   cursor: pointer;
   &:hover,
   &:focus,
   &:focus-within,
   &[aria-expanded="true"] {
-    color: ${({ theme }) => theme.blueDark};
+    color: ${({ theme }) => theme.paragraph};
   }
 `;
 
 const StyledAccordionItemPanel = styled(AccordionItemPanel)`
-  padding: ${spacing.base};
+  padding: ${spacings.base};
   animation: ${fadeIn} 0.35s ease-in;
   & > *:first-child {
     margin-top: 0;

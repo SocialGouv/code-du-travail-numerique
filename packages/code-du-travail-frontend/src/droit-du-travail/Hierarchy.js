@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import {
   Accordion,
+  Button,
+  Container,
+  Heading,
   List,
   ListItem,
   Modal,
-  Toast,
-  Button,
-  Container,
   Section,
-  theme
+  theme,
+  Title,
+  Toast
 } from "@socialgouv/react-ui";
 
 const Hierarchy = () => {
@@ -20,7 +22,7 @@ const Hierarchy = () => {
     <>
       <Section variant="white">
         <Container narrow>
-          <h2>Existe-t-il une hiérarchie entre les textes ?</h2>
+          <Title>Existe-t-il une hiérarchie entre les textes ?</Title>
           <p>
             Le principe général en droit du travail est le suivant&nbsp;:
             lorsqu’il existe plusieurs textes sur un même sujet, c’est le texte
@@ -42,7 +44,8 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: <H3>Les textes internationaux et européens</H3>,
+                      title: "Les textes internationaux et européens",
+                      as: "h3",
                       body: (
                         <>
                           Les textes situés plus bas doivent être conformes aux
@@ -60,7 +63,8 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: <H3>La Constitution</H3>,
+                      title: "La Constitution",
+                      as: "h3",
                       body: (
                         <>
                           Les textes situés plus bas doivent être conformes à la
@@ -79,15 +83,14 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: (
-                        <H3>Lois, ordonnances et décrets (Code du travail) </H3>
-                      ),
+                      title: "Lois, ordonnances et décrets (Code du travail)",
+                      as: "h3",
                       body: (
                         <>
-                          <h4>
+                          <Heading>
                             Hiérarchie entre le Code du travail et les
                             conventions et accords collectifs
-                          </h4>
+                          </Heading>
                           <p>
                             Il n’y a pas de règle de hiérarchie unique pour tous
                             les articles du Code du travail. Il existe 3
@@ -96,12 +99,9 @@ const Hierarchy = () => {
                           <Accordion
                             items={[
                               {
-                                title: (
-                                  <h5>
-                                    Les conventions et accords collectifs
-                                    doivent respecter le Code du travail
-                                  </h5>
-                                ),
+                                title:
+                                  "Les conventions et accords collectifs doivent respecter le Code du travail",
+                                as: "h5",
                                 body: (
                                   <>
                                     Il existe des règles dans le Code du travail
@@ -115,13 +115,9 @@ const Hierarchy = () => {
                                 )
                               },
                               {
-                                title: (
-                                  <h5>
-                                    Les conventions et accords collectifs
-                                    peuvent prévoir des mesures différentes que
-                                    celles posées par le Code du travail.
-                                  </h5>
-                                ),
+                                title:
+                                  "Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail.",
+                                as: "h5",
                                 body: (
                                   <>
                                     <p>
@@ -168,13 +164,9 @@ const Hierarchy = () => {
                                 )
                               },
                               {
-                                title: (
-                                  <h5>
-                                    En l’absence de convention ou d’accord
-                                    collectif sur le sujet, le Code du travail
-                                    s’applique
-                                  </h5>
-                                ),
+                                title:
+                                  "En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique",
+                                as: "h5",
                                 body: (
                                   <>
                                     <p>
@@ -225,9 +217,9 @@ const Hierarchy = () => {
                               }
                             ]}
                           />
-                          <h4>
+                          <Heading>
                             Attention à certaines règles du Code du travail !
-                          </h4>
+                          </Heading>
                           <p>
                             Il existe des règles du Code du travail auxquelles
                             tous les textes situés en bas ne peuvent pas déroger
@@ -256,22 +248,23 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: <H3>Les conventions et accords collectifs</H3>,
+                      title: "Les conventions et accords collectifs",
+                      as: "h3",
                       body: (
                         <>
-                          <h4>
+                          <Heading>
                             Hiérarchie entre conventions et accords collectifs
                             de niveaux différents
-                          </h4>
+                          </Heading>
                           <p>
                             La règle qui détermine quel est le texte applicable
                             est différente en fonction du niveau des textes
                             comparés.
                           </p>
-                          <h5>
+                          <Heading>
                             Hiérarchie entre accord de branche et accord
                             d’entreprise
-                          </h5>
+                          </Heading>
                           <p>
                             Le principe est que l’accord d’entreprise s’applique
                             en priorité par rapport à l’accord ou la convention
@@ -279,7 +272,7 @@ const Hierarchy = () => {
                             désavantageux pour le salarié que l’accord de
                             branche.
                           </p>
-                          <Toast variant="warning">
+                          <Toast>
                             Le principe ne s’applique pas dans{" "}
                             <Button
                               variant="link"
@@ -310,10 +303,10 @@ const Hierarchy = () => {
                             accord de branche et accord de groupe et entre
                             accord de branche et accord d’établissement.
                           </p>
-                          <h5>
+                          <Heading>
                             Hiérarchie entre accord de groupe et accord
                             d’entreprise
-                          </h5>
+                          </Heading>
                           <p>
                             L’accord de groupe s’applique en priorité par
                             rapport à l’accord d’entreprise ou l’accord
@@ -322,10 +315,10 @@ const Hierarchy = () => {
                             groupe alors l’accord le plus avantageux pour le
                             salarié s’applique.
                           </p>
-                          <h5>
+                          <Heading>
                             Hiérarchie entre accord d’entreprise et accord
                             d’établissement
-                          </h5>
+                          </Heading>
                           <p>
                             L’accord d’entreprise s’applique en priorité par
                             rapport à l’accord d’établissement si l’accord
@@ -347,7 +340,8 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: <H3>Les usages et les engagements unilatéraux</H3>,
+                      title: "Les usages et les engagements unilatéraux",
+                      as: "h3",
                       body: (
                         <>
                           Les usages et les engagements unilatéraux doivent
@@ -367,7 +361,8 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: <H3>Le règlement intérieur de l’entreprise</H3>,
+                      title: "Le règlement intérieur de l’entreprise",
+                      as: "h3",
                       body: (
                         <>
                           Le règlement intérieur doit respecter les textes
@@ -387,7 +382,8 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: <H3>Le contrat de travail</H3>,
+                      title: "Le contrat de travail",
+                      as: "h3",
                       body: (
                         <>
                           Le contrat de travail doit respecter les textes situés
@@ -498,7 +494,7 @@ const Hierarchy = () => {
 
 export default Hierarchy;
 
-const { breakpoints, colors, fonts, spacing } = theme;
+const { breakpoints, colors, fonts, spacings } = theme;
 
 const Li = styled(ListItem)`
   position: relative;
@@ -506,7 +502,7 @@ const Li = styled(ListItem)`
   align-items: stretch;
   @media (max-width: ${breakpoints.tablet}) {
     flex-flow: column;
-    margin-top: ${spacing.interComponent};
+    margin-top: ${spacings.medium};
   }
 `;
 
@@ -527,7 +523,7 @@ const NumberWrapper = styled.div`
     left: 50%;
     width: 1px;
     height: 100%;
-    background-color: ${colors.lightGrey};
+    background-color: ${colors.border};
     content: "";
     @media (max-width: ${breakpoints.tablet}) {
       display: none;
@@ -540,22 +536,18 @@ const Number = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 4.8rem;
+  height: 4.8rem;
   color: ${colors.white};
   font-weight: bold;
-  font-size: ${fonts.sizeH4};
-  background-color: ${colors.blueDark};
+  font-size: ${fonts.sizes.headings.small};
+  background-color: ${colors.secondary};
   border-radius: 50%;
 `;
 
 const HierarchyAccordion = styled(Accordion)`
   flex: 1 1 auto;
-  padding: ${spacing.small} 0;
-`;
-
-const H3 = styled.h3`
-  margin: ${spacing.small} ${spacing.base};
+  padding: ${spacings.small} 0;
 `;
 
 const ListContainer = styled.div`
@@ -569,7 +561,7 @@ const Ul = styled.ul`
   flex: 1 1 50%;
   margin: 0;
   & + & {
-    margin-left: ${spacing.interComponent};
+    margin-left: ${spacings.medium};
     @media (max-width: ${breakpoints.mobile}) {
       margin-left: 0;
     }

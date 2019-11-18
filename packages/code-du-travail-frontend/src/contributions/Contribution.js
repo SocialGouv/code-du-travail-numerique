@@ -2,7 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import createPersistedState from "use-persisted-state";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
-import { Accordion, Alert, Button, theme } from "@socialgouv/react-ui";
+import {
+  Accordion,
+  Alert,
+  Button,
+  Heading,
+  theme,
+  Title
+} from "@socialgouv/react-ui";
 
 import SearchConvention from "../../src/conventions/Search/Form";
 import Mdx from "../../src/common/Mdx";
@@ -18,7 +25,8 @@ const Tab = props => (
   <StyledAccordion
     items={[
       {
-        title: <h3>{props.title}</h3>,
+        title: props.title,
+        as: "h3",
         body: props.children
       }
     ]}
@@ -26,8 +34,8 @@ const Tab = props => (
 );
 
 const Hdn = props => (
-  <Alert variant="info">
-    <h4>Texte applicable</h4>
+  <Alert>
+    <Heading as="h4">Texte applicable</Heading>
     <div {...props} />
   </Alert>
 );
@@ -55,11 +63,11 @@ const References = ({ references }) => {
     <React.Fragment>
       {references && references.length !== 0 && (
         <React.Fragment>
-          <h3>Références</h3>
+          <Title as="h3">Références</Title>
           {/* group CCs references */}
           {agreementRefs.length !== 0 && (
             <React.Fragment>
-              <h4>Convention collective</h4>
+              <Heading as="h4">Convention collective</Heading>
               {agreementRefs.map(ref => (
                 <RefLink
                   key={ref.id}
@@ -71,7 +79,7 @@ const References = ({ references }) => {
           )}
           {othersRefs.length !== 0 && (
             <React.Fragment>
-              <h4>Autres sources</h4>
+              <Heading as="h4">Autres sources</Heading>
               {othersRefs.map(ref => (
                 <RefLink key={ref.id} value={ref.value} url={ref.url} />
               ))}
@@ -97,7 +105,7 @@ const AnswersConventions = ({ answers }) => {
       )}
       {ccInfo && (
         <React.Fragment>
-          <h6>
+          <Heading as="h6">
             <span role="img" aria-label="Icone convention collective">
               📖
             </span>{" "}
@@ -111,7 +119,7 @@ const AnswersConventions = ({ answers }) => {
                 <React.Fragment> (IDCC {ccInfo.num})</React.Fragment>
               )}
             </a>
-          </h6>
+          </Heading>
           {(answer && (
             <React.Fragment>
               <Mdx
@@ -123,7 +131,7 @@ const AnswersConventions = ({ answers }) => {
             </React.Fragment>
           )) || (
             <React.Fragment>
-              <NoConventionAlert variant="warning">
+              <NoConventionAlert variant="secondary">
                 Désolé nous n&apos;avons pas de réponse pour cette convention
                 collective
               </NoConventionAlert>
@@ -144,7 +152,7 @@ const Contribution = ({ answers, content }) => (
   <React.Fragment>
     {answers.generic && (
       <SectionAnswer>
-        <h2>Que dit le code du travail ?</h2>
+        <Title>Que dit le code du travail ?</Title>
         {content && content.raw && (
           <StyledContent>
             <FicheServicePublic data={JSON.parse(content.raw).children} />
@@ -158,7 +166,7 @@ const Contribution = ({ answers, content }) => (
     )}
     {(answers.conventions && answers.conventions.length && (
       <SectionAnswer>
-        <h2>Que dit votre convention collective ?</h2>
+        <Title>Que dit votre convention collective ?</Title>
         <AnswersConventions answers={answers.conventions} />
       </SectionAnswer>
     )) ||
@@ -166,7 +174,7 @@ const Contribution = ({ answers, content }) => (
   </React.Fragment>
 );
 
-const { box, spacing } = theme;
+const { box, spacings } = theme;
 
 const LineRef = styled.li`
   margin: 5px 0;
@@ -178,17 +186,17 @@ const NoConventionAlert = styled(Alert)`
 `;
 
 const StyledContent = styled.div`
-  margin-bottom: ${spacing.large};
+  margin-bottom: ${spacings.large};
 `;
 
 const SectionAnswer = styled.section`
-  margin-bottom: ${spacing.medium};
-  padding: ${spacing.small} ${spacing.medium};
+  margin-bottom: ${spacings.medium};
+  padding: ${spacings.small} ${spacings.medium};
 `;
 
 const StyledSearchConvention = styled(SearchConvention)`
-  margin: ${spacing.medium} 0;
-  padding: ${spacing.small};
+  margin: ${spacings.medium} 0;
+  padding: ${spacings.small};
 `;
 
 const StyledAccordion = styled(Accordion)`
@@ -198,7 +206,7 @@ const StyledAccordion = styled(Accordion)`
     }
   }
   *[data-accordion-component="AccordionItemButton"] {
-    padding-left: ${spacing.small};
+    padding-left: ${spacings.small};
   }
 `;
 

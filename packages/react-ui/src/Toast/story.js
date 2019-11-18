@@ -12,28 +12,24 @@ export default {
 export const base = () => (
   <>
     <Section>
-      <Toast variant="info">Here is an info.</Toast>
+      <Toast variant="primary">Here is an primary info.</Toast>
     </Section>
     <Section>
-      <Toast variant="success">Here is a success.</Toast>
+      <Toast variant="secondary">Here is a secondary info.</Toast>
     </Section>
     <Section>
-      <Toast variant="warning" shadow>
-        Here is a warning with a shadow.
-      </Toast>
+      <Toast shadow>Here is a toast with a shadow.</Toast>
     </Section>
     <Section>
-      <Toast variant="info" onRemove={action("remove button clicked")}>
+      <Toast onRemove={action("remove button clicked")}>
         {"Here is a removable info"}
       </Toast>
     </Section>
     <Section>
-      <Toast variant="info" wide>
-        {"Here is a wide info."}
-      </Toast>
+      <Toast wide>{"Here is a wide info."}</Toast>
     </Section>
     <Section>
-      <Toast variant="info" onRemove={action("remove button clicked")}>
+      <Toast onRemove={action("remove button clicked")}>
         <div>
           {"This is a crazy long removable toast,"}
           <br />
@@ -63,17 +59,17 @@ export const animated = () => (
       <Toast animate="from-top">{"Here is an info coming from the sky"}</Toast>
     </Section>
     <Section>
-      <Toast variant="info" animate="from-right">
+      <Toast animate="from-right">
         {"Here is an info coming from the sea"}
       </Toast>
     </Section>
     <Section>
-      <Toast variant="success" animate="from-left" shadow>
+      <Toast animate="from-left" shadow>
         {"Here is an success coming from the woods with a shadow"}
       </Toast>
     </Section>
     <Section>
-      <Toast variant="warning" animate="from-bottom">
+      <Toast animate="from-bottom">
         {"Here is an warning coming from the ground"}
       </Toast>
     </Section>

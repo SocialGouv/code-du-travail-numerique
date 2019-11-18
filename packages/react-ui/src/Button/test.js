@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { variants } from "../theme";
 import { Button } from ".";
 
 describe("<Button />", () => {
@@ -8,23 +7,30 @@ describe("<Button />", () => {
     const { container } = render(<Button>A button</Button>);
     expect(container).toMatchSnapshot();
   });
-  it("renders a small button", () => {
-    const { container } = render(<Button size="small">A button</Button>);
+  it("renders as a link", () => {
+    const { container } = render(
+      <Button as="a" href="http://www.turfu.com">
+        A button
+      </Button>
+    );
     expect(container).toMatchSnapshot();
   });
-  it("does not have a button tag of noButton prop is provided", () => {
-    const { container } = render(<Button noButton>A button</Button>);
-    expect(container.getElementsByTagName("button").length).toBe(0);
+  it("renders as div", () => {
+    const { container } = render(<Button as="div">A button</Button>);
+    expect(container).toMatchSnapshot();
   });
 
-  test.each(["icon", "link"].concat(variants))(
+  test.each(["naked", "flat", "link", "primary", "secondary"])(
     "it renders a Button %s",
     variant => {
       const { container } = render(
         <>
           <Button variant={variant}>this is a Button {variant} </Button>
-          <Button outlined variant={variant}>
-            this is a Button {variant}{" "}
+          <Button small variant={variant}>
+            this is a small Button {variant}{" "}
+          </Button>
+          <Button narrow variant={variant}>
+            this is a narrow Button {variant}{" "}
           </Button>
         </>
       );

@@ -94,12 +94,10 @@ class FeedbackForm extends React.Component {
   getAlert() {
     switch (this.state.status) {
       case "sent":
-        return <Alert variant="success">Message bien envoyé !</Alert>;
+        return <Alert>Message bien envoyé !</Alert>;
 
       case "error":
-        return (
-          <Alert variant="warning">Impossible d’envoyer votre message</Alert>
-        );
+        return <Alert>Impossible d’envoyer votre message</Alert>;
 
       default:
         return null;
@@ -158,7 +156,7 @@ class FeedbackForm extends React.Component {
 
 export { FeedbackForm };
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const StyledForm = styled.form`
   display: flex;
@@ -168,7 +166,7 @@ const StyledForm = styled.form`
 `;
 
 const StyledInput = styled.input`
-  margin-bottom: ${spacing.medium};
+  margin-bottom: ${spacings.medium};
 `;
 
 const FormAction = styled.div`
@@ -179,5 +177,5 @@ const FormAction = styled.div`
 const Status = styled.div`
   flex-basis: 100%;
   margin: 0;
-  margin-top: ${spacing.medium};
+  margin-top: ${spacings.medium};
 `;
