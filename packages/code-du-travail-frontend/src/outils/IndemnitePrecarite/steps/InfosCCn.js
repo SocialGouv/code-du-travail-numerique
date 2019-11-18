@@ -14,7 +14,7 @@ export function StepInfoCCn(props) {
       <StepInfoCCnOptionnal {...props} />
       {ccn && isNotYetProcessed(ccn.num) && (
         <StyledToast>
-          Nous n’avons pas encore traité votre convention collective mais nous
+          Nous n’avons pas encore traité cette convention collective mais nous
           vous invitons à poursuivre la simulation afin d’obtenir le montant
           défini par le Code du travail.
         </StyledToast>

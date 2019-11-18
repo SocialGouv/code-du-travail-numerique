@@ -17,7 +17,7 @@ function Step({ form }) {
     <Container>
       <h3>{selectedBranche.label}</h3>
       <p>
-        Pour votre branche, le calcul de l’indemnité de licenciement se base sur
+        Pour cette branche, le calcul de l’indemnité de licenciement se base sur
         l’indemnité légale de licenciement.
       </p>
       <IndemniteLegale

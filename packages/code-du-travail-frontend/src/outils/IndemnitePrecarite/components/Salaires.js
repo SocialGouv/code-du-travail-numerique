@@ -14,7 +14,7 @@ function Salaires({ name, visible = true, onChange }) {
           <>
             {visible && (
               <p>
-                Indiquez vos salaires mensuels bruts perçus pendant votre
+                Indiquez les salaires mensuels bruts perçus pendant le
                 contrat&nbsp;*
               </p>
             )}

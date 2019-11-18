@@ -17,7 +17,8 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
           {visible && (
             <>
               <Question>
-                Quelles ont été vos vos différentes périodes de travail&nbsp;?
+                Quels ont été les durées et les salaires des périodes à temps
+                plein et à temps partiel&nbsp;?
               </Question>
               <Row>
                 <CellHeader as={CellType}>Type de contrat</CellHeader>

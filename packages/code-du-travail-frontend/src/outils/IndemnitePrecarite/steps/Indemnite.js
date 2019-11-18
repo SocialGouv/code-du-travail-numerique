@@ -30,7 +30,7 @@ function StepIndemnite({ form }) {
   const situations = filterSituations(initialSituations, criteria);
 
   let rate = "10%";
-  let bonusAltName = "prime de précarité";
+  let bonusAltName = "La prime de précarité";
   let references;
 
   switch (situations.length) {
@@ -65,7 +65,7 @@ function StepIndemnite({ form }) {
   return (
     <>
       <p>
-        Votre {bonusAltName} est estimée à <Highlight>{indemnite}</Highlight> €.
+        {bonusAltName} est estimée à <Highlight>{indemnite}</Highlight> €.
       </p>
       <details>
         <Summary>Detail du calcul</Summary>

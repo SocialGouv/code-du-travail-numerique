@@ -161,7 +161,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   <p
     class="c0"
   >
-    Sélectionnez la manière dont vous souhaitez indiquer votre rémunération ?
+    Sélectionnez la manière dont vous souhaitez indiquer la rémunération ?
     <span
       aria-label="champs obligatoire"
       class="c1"
@@ -207,7 +207,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <p>
-    Indiquez vos salaires mensuels bruts perçus pendant votre contrat *
+    Indiquez les salaires mensuels bruts perçus pendant le contrat *
   </p>
   <div
     class="c4"
@@ -394,7 +394,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   <p
     class="c0"
   >
-    Sélectionnez la manière dont vous souhaitez indiquer votre rémunération ?
+    Sélectionnez la manière dont vous souhaitez indiquer la rémunération ?
     <span
       aria-label="champs obligatoire"
       class="c1"
@@ -443,7 +443,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     class="c4"
     for="currency-1"
   >
-    Indiquez votre rémunération totale brute perçue pendant votre contrat
+    Indiquez la rémunération totale brute perçue pendant le contrat
     <span
       aria-label="champs obligatoire"
       class="c1"

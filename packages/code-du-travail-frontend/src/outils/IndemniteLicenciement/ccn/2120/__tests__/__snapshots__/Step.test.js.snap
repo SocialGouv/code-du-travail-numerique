@@ -90,7 +90,7 @@ exports[`<Step /> should render 1`] = `
       class="c2"
       for="input-categorie"
     >
-      Précisez votre categorie professionnelle :
+      Précisez la categorie professionnelle du salarié :
     </label>
     <select
       class="c3"

@@ -52,10 +52,10 @@ exports[`<IndemniteLegale /> should render 1`] = `
       class="c1"
     >
       42.00
-       € brut
+       € brut
     </strong>
      
-    pour votre indemnité de licenciement.
+    pour l’indemnité de licenciement.
   </p>
   <details
     class="c2"

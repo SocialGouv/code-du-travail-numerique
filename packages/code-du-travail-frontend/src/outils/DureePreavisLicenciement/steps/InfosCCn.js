@@ -8,7 +8,7 @@ StepInfoCCnMandatory.validate = values => {
   const { ccn } = values;
   if (ccn && isNotYetProcessed(data, ccn.num)) {
     errors.ccn =
-      "Nous n’avons pas encore traité votre convention collective. Le code du travail ne prévoyant pas de durée précise du préavis de démission, nous vous invitons à consulter le contenu de votre convention collective.";
+      "Nous n’avons pas encore traité cette convention collective. Le code du travail ne prévoyant pas de durée précise du préavis de démission, nous vous invitons à consulter le contenu de la convention collective.";
   }
   return errors;
 };

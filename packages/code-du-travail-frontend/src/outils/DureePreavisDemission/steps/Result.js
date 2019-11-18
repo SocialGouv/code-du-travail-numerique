@@ -26,10 +26,9 @@ function StepResult({ form }) {
     return (
       <>
         <Toast variant="warning">
-          Nous n’avons pas encore traité votre convention collective. Le code du
+          Nous n’avons pas encore traité cette convention collective. Le code du
           travail ne prévoyant pas de durée précise du préavis de démission,
-          nous vous invitons à consulter le contenu de votre convention
-          collective.
+          nous vous invitons à consulter le contenu de la convention collective.
           <br />
           <Link
             href="/fiche-service-public/[slug]"
@@ -86,7 +85,7 @@ function StepResult({ form }) {
       );
     }
     default:
-      return <>Votre situation ne permet de répondre précisement.</>;
+      return <>La situation du salarié ne permet de répondre précisement.</>;
   }
 }
 

@@ -154,7 +154,7 @@ function validate(values) {
   if (values.criteria && excludeContracts.includes(values.criteria.cddType)) {
     errors.criteria = {
       cddType:
-        "Votre type de contrat ne vous permet pas d’avoir droit à une prime de précarité."
+        "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité."
     };
   }
   return {

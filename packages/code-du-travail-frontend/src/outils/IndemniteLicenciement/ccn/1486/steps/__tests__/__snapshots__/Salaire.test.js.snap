@@ -173,7 +173,7 @@ exports[`<Salaire /> renders 1`] = `
       <strong>
         primes
       </strong>
-       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de votre convention collective. Si vous en avez perçues, merci de les intégrer à votre rémunération ci-après.
+       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de la convention collective. Si des primes ont été perçues, merci de les intégrer à la rémunération ci-après.
       <br />
       Aussi, si il y en a, les mois effectués en 
       <strong>
@@ -186,7 +186,7 @@ exports[`<Salaire /> renders 1`] = `
   <p
     class="c4"
   >
-    De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+    De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
       aria-label="champs obligatoire"
       class="c5"
@@ -398,7 +398,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
       <strong>
         primes
       </strong>
-       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de votre convention collective. Si vous en avez perçues, merci de les intégrer à votre rémunération ci-après.
+       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de la convention collective. Si des primes ont été perçues, merci de les intégrer à la rémunération ci-après.
       <br />
       Aussi, si il y en a, les mois effectués en 
       <strong>
@@ -411,7 +411,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   <p
     class="c4"
   >
-    De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+    De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
       aria-label="champs obligatoire"
       class="c5"
@@ -451,7 +451,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   <p
     class="c4"
   >
-    Avez-vous eu le même salaire lors des 12 derniers mois ?
+    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
       aria-label="champs obligatoire"
       class="c5"
@@ -769,7 +769,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
       <strong>
         primes
       </strong>
-       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de votre convention collective. Si vous en avez perçues, merci de les intégrer à votre rémunération ci-après.
+       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de la convention collective. Si des primes ont été perçues, merci de les intégrer à la rémunération ci-après.
       <br />
       Aussi, si il y en a, les mois effectués en 
       <strong>
@@ -782,7 +782,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   <p
     class="c4"
   >
-    De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+    De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
       aria-label="champs obligatoire"
       class="c5"
@@ -822,7 +822,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   <p
     class="c4"
   >
-    Avez-vous eu le même salaire lors des 12 derniers mois ?
+    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
       aria-label="champs obligatoire"
       class="c5"
@@ -1154,7 +1154,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
       <strong>
         primes
       </strong>
-       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de votre convention collective. Si vous en avez perçues, merci de les intégrer à votre rémunération ci-après.
+       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de la convention collective. Si des primes ont été perçues, merci de les intégrer à la rémunération ci-après.
       <br />
       Aussi, si il y en a, les mois effectués en 
       <strong>
@@ -1167,7 +1167,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   <p
     class="c4"
   >
-    De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+    De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
       aria-label="champs obligatoire"
       class="c5"
@@ -1207,7 +1207,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   <p
     class="c4"
   >
-    Avez-vous eu le même salaire lors des 12 derniers mois ?
+    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
       aria-label="champs obligatoire"
       class="c5"

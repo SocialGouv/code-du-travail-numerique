@@ -18,7 +18,7 @@ function StepIntro() {
 
       <p>
         Le présent outil vous permet de connaitre la durée du préavis prévue par
-        votre convention collective en matière de démission. Prévoyez une à deux
+        la convention collective en matière de démission. Prévoyez une à deux
         minutes pour cette simulation.
       </p>
     </>

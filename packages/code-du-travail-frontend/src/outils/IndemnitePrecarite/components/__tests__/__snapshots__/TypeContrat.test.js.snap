@@ -53,7 +53,7 @@ exports[`<TypeContrat /> should render 1`] = `
   <p
     class="c0"
   >
-    Quel est votre type de contrat ?
+    Quel est le type du contrat de travail ?
     <span
       aria-label="champs obligatoire"
       class="c1"

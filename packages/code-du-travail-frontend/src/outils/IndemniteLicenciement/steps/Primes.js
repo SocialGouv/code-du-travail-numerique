@@ -10,7 +10,7 @@ function StepPrimes({ form }) {
     <>
       <YesNoQuestion
         name="hasPrimes"
-        label="Avez-vous perçu des primes annuelles ou exceptionnelles au cours des 3 derniers mois&nbsp;?"
+        label="Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois&nbsp;?"
         onChange={hasPrimes => {
           hasPrimes
             ? form.change("primes", [{ prime: null }])

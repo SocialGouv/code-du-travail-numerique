@@ -72,7 +72,7 @@ function StepResult({ form }) {
           </li>
         )}
       </ul>
-      <p>Éléments saisis :</p>
+      <p>Éléments saisis&nbsp;:</p>
       {recapSituation({
         "Licenciement pour faute grave": seriousMisconduct ? "Oui" : "Non",
         "Reconnu en tant que travailleur handicapé": disabledWorker

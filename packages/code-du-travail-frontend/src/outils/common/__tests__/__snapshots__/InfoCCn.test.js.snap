@@ -47,7 +47,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
   <p
     class="c0"
   >
-    Quelle est votre convention collective ?
+    Quelle est la convention collective du salarié ?
   </p>
   <p
     class="c1"
@@ -55,7 +55,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
     <strong>
       * optionnel
     </strong>
-    , si vous ne connaissez pas votre convention collective, vous pouvez passer à l’étape suivante en cliquant sur le bouton Suivant.
+    , si vous ne connaissez pas la convention collective, vous pouvez passer à l’étape suivante en cliquant sur le bouton Suivant.
   </p>
   <div
     class="c2 c3"

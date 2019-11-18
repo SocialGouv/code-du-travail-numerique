@@ -19,13 +19,13 @@ export const Salaire = ({ form }) => {
       <Notice />
       <YesNoQuestion
         name="hasBrancheNewSalaire"
-        label="De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire&nbsp;?"
+        label="De ce fait, avez-vous une modification à faire dans la déclaration du salaire&nbsp;?"
       />
       {data.hasBrancheNewSalaire && (
         <>
           <YesNoQuestion
             name="hasBrancheNewRegularSalaire"
-            label="Avez-vous eu le même salaire lors des 12 derniers mois&nbsp;?"
+            label="Le salaire mensuel a-t-il été le même durant les 12 derniers mois&nbsp;?"
             onChange={hasSameSalaire => {
               if (hasSameSalaire) {
                 form.change("brancheNewIrregularSalaire", undefined);
@@ -184,8 +184,8 @@ const Notice = () => (
     <StyledToast variant="warning">
       Attention, les éventuelles <strong>primes</strong> renseignées
       précédemment ne seront pas prises en compte dans le calcul de l’indemnité
-      de votre convention collective. Si vous en avez perçues, merci de les
-      intégrer à votre rémunération ci-après.
+      de la convention collective. Si des primes ont été perçues, merci de les
+      intégrer à la rémunération ci-après.
       <br />
       Aussi, si il y en a, les mois effectués en <strong>
         temps partiel

@@ -60,9 +60,9 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   <p
     class="c0"
   >
-    Quel est votre échelon dans la convention collective ?
+    Quel est l’échelon du salarié dans la convention collective ?
     <br />
-    Vous pouvez le trouver sur votre bulletin de salaire
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"
@@ -198,7 +198,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   <p
     class="c0"
   >
-    Est ce que votre entreprise est affiliée à une des organisations patronales employeur ?
+    Est-ce que l'entreprise est affiliée à une des organisations patronales employeur ?
     <span
       aria-label="champs obligatoire"
       class="c3"
@@ -237,7 +237,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   <p
     class="c0"
   >
-    Le motif de votre licenciement est-il économique ?
+    Le motif du licenciement est-il économique ?
     <span
       aria-label="champs obligatoire"
       class="c3"
@@ -375,9 +375,9 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   <p
     class="c0"
   >
-    Quel est votre échelon dans la convention collective ?
+    Quel est l’échelon du salarié dans la convention collective ?
     <br />
-    Vous pouvez le trouver sur votre bulletin de salaire
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"
@@ -513,7 +513,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   <p
     class="c0"
   >
-    Est ce que votre entreprise est affiliée à une des organisations patronales employeur ?
+    Est-ce que l'entreprise est affiliée à une des organisations patronales employeur ?
     <span
       aria-label="champs obligatoire"
       class="c3"
@@ -552,7 +552,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   <p
     class="c0"
   >
-    Le motif de votre licenciement est-il économique ?
+    Le motif du licenciement est-il économique ?
     <span
       aria-label="champs obligatoire"
       class="c3"
@@ -592,7 +592,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     class="c5"
     for="1"
   >
-    Quel etait votre âge à la date du licenciement ?
+    Quel était l’âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
       class="c3"
@@ -648,9 +648,9 @@ exports[`<Step /> should render 1`] = `
   <p
     class="c0"
   >
-    Quel est votre échelon dans la convention collective ?
+    Quel est l’échelon du salarié dans la convention collective ?
     <br />
-    Vous pouvez le trouver sur votre bulletin de salaire
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"

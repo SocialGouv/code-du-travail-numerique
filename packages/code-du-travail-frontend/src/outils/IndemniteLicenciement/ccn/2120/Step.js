@@ -56,7 +56,7 @@ function Step() {
           return (
             <FormGroup>
               <Label htmlFor="input-categorie">
-                Précisez votre categorie professionnelle :
+                Précisez la categorie professionnelle du salarié&nbsp;:
               </Label>
 
               <Select id="input-categorie" {...input}>

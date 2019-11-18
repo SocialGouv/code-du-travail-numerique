@@ -7,7 +7,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article L1243-8 du code du travail\nArticle L1243-9 du code du travail",
     "refUrl": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501\nhttps://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
   },
@@ -21,7 +21,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article L1243-8 du code du travail\nArticle L1243-9 du code du travail",
     "refUrl": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501\nhttps://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
   },
@@ -69,7 +69,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": null,
     "refUrl": null
   },
@@ -767,7 +767,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "4%",
-    "bonusLabel": "indemnité de fin de contrat",
+    "bonusLabel": "L'indemnité de fin de contrat",
     "refLabel": "article 53 de l'annexe relative aux enquêteurs - Accord du 16 décembre 1991",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7625C278F6496D100BB4EC20B6D7BAA7.tplgfr25s_3?idArticle=KALIARTI000005851356&cidTexte=KALITEXT000005679885&dateTexte=29990101&categorieLien=id"
   },
@@ -782,7 +782,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "6%",
-    "bonusLabel": "prime d'intervention",
+    "bonusLabel": "La prime d'intervention",
     "refLabel": "Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918"
   },
@@ -797,7 +797,7 @@
     "allowBonus": false,
     "endMessage": "Selon votre convention collective, le salarié en contrat d'intervention qui, à l'issue de son contrat, a reçu une proposition d'un CDI, n’a pas le droit à une prime d'intervention.",
     "rate": null,
-    "bonusLabel": "prime d'intervention",
+    "bonusLabel": "La prime d'intervention",
     "refLabel": "Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918"
   },
@@ -811,7 +811,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article L1243-8 du code du travail\nArticle L1243-9 du code du travail",
     "refUrl": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501\nhttps://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
   },
@@ -850,7 +850,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "6%",
-    "bonusLabel": "indemnité dite \"d'usage\"",
+    "bonusLabel": "L'indemnité dite \"d'usage\"",
     "refLabel": "article 5 de la convention collective (point 5.4.3.)",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D21CB91C1CA2006FC1F3B641A83D2560.tplgfr43s_2?idArticle=KALIARTI000026451298&cidTexte=KALITEXT000005644543&dateTexte=29981231&categorieLien=id"
   },
@@ -865,7 +865,7 @@
     "allowBonus": false,
     "endMessage": "Selon votre convention collective, le salarié en contrat d'usage qui, à l'issu de son contrat, poursuit par un CDI, n’a pas le droit à une indemnité dite \" d'usage \".",
     "rate": null,
-    "bonusLabel": "indemnité dite \"d'usage\"",
+    "bonusLabel": "L'indemnité dite \"d'usage\"",
     "refLabel": "article 5 de la convention collective (point 5.4.3.)",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D21CB91C1CA2006FC1F3B641A83D2560.tplgfr43s_2?idArticle=KALIARTI000026451298&cidTexte=KALITEXT000005644543&dateTexte=29981231&categorieLien=id"
   },
@@ -879,7 +879,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article L1243-8 du code du travail\nArticle L1243-9 du code du travail",
     "refUrl": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501\nhttps://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
   },
@@ -1301,13 +1301,13 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article 9 de l'accord du 10 mai 2010 relatif à l'activité d'optimisation de linéaires",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023105275&cidTexte=KALITEXT000023105252&dateTexte=20190918"
   },
   {
     "criteria": {
-      "cddType": "CDD d'Animation Commerciale"
+      "cddType": "CDD d'animation commerciale"
     },
     "contractType": "CDD",
     "idcc": "2098",
@@ -1315,7 +1315,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article 9 de l'accord du 13 février 2006 Activités de l'animation commerciale",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=793A05966FD38DF94E5C833A2BA3BAA6.tplgfr35s_3?idArticle=KALIARTI000005853800&cidTexte=KALITEXT000005680889&dateTexte=29990101&categorieLien=id"
   },
@@ -1329,7 +1329,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article 4.1 de l'accord du 20 septembre 2002 (1) relatif aux dispositions spécifiques à l'accueil événementiel",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=498352440FE8B0C9DFAD6C46CE391F1F.tplgfr27s_3?idArticle=KALIARTI000028460654&cidTexte=KALITEXT000005680353&dateTexte=29990101&categorieLien=id"
   },
@@ -1343,7 +1343,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article L1243-8 du code du travail\nArticle L1243-9 du code du travail",
     "refUrl": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501\nhttps://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
   },
@@ -1502,7 +1502,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime d'intervention",
+    "bonusLabel": "La prime d'intervention",
     "refLabel": "article 4.7 de la convention collective (point 4.7.2.)",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AC096B3D0CD017996E22DEE5D3C1ABFF.tplgfr41s_1?idArticle=KALIARTI000021063900&cidTexte=KALITEXT000017577657&dateTexte=20160726&categorieLien=id"
   },
@@ -1517,7 +1517,7 @@
     "allowBonus": false,
     "endMessage": "Selon votre convention collective, lorsque le contrat d'intervention est transformé en CDI, le salarié n’a pas le droit à une prime d'intervention.",
     "rate": null,
-    "bonusLabel": "prime d'intervention",
+    "bonusLabel": "La prime d'intervention",
     "refLabel": "article 4.7 de la convention collective (point 4.7.2.)",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AC096B3D0CD017996E22DEE5D3C1ABFF.tplgfr41s_1?idArticle=KALIARTI000021063900&cidTexte=KALITEXT000017577657&dateTexte=20160726&categorieLien=id"
   },
@@ -1531,7 +1531,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article L1243-8 du code du travail\nArticle L1243-9 du code du travail",
     "refUrl": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501\nhttps://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
   },
@@ -1714,7 +1714,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": "10%",
-    "bonusLabel": "prime de mission",
+    "bonusLabel": "La prime de mission",
     "refLabel": "article 2.5 de la section 1 de la Partie 1 du Chapitre II de la convention collective",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C006837D6C1061AF47817DC0CD5FF05C.tplgfr43s_2?idArticle=KALIARTI000026943297&cidTexte=KALITEXT000026943196&dateTexte=29990101&categorieLien=id"
   },
@@ -1729,7 +1729,7 @@
     "allowBonus": false,
     "endMessage": "Selon votre convention collective, lorsque le contrat de mission ponctuelle est transformé en CDI pour un poste et une durée équivalents, le salarié n’a pas le droit à une prime d'intervention.",
     "rate": null,
-    "bonusLabel": "prime de mission",
+    "bonusLabel": "La prime de mission",
     "refLabel": "article 2.5 de la section 1 de la Partie 1 du Chapitre II de la convention collective",
     "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C006837D6C1061AF47817DC0CD5FF05C.tplgfr43s_2?idArticle=KALIARTI000026943297&cidTexte=KALITEXT000026943196&dateTexte=29990101&categorieLien=id"
   },
@@ -1743,7 +1743,7 @@
     "allowBonus": true,
     "endMessage": null,
     "rate": null,
-    "bonusLabel": "prime de précarité",
+    "bonusLabel": "La prime de précarité",
     "refLabel": "Article L1243-8 du code du travail\nArticle L1243-9 du code du travail",
     "refUrl": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501\nhttps://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
   }

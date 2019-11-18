@@ -24,8 +24,7 @@ function StepSalaires({ form }) {
     <>
       <YesNoQuestion
         name="hasTempsPartiel"
-        label="Avez-vous alterné, au cours de votre contrat de travail des périodes
-              de travail à temps plein et à temps partiel&nbsp;?"
+        label="Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail&nbsp;?"
         onChange={hasTempsPartiel => {
           if (hasTempsPartiel) {
             form.batch(() => {
@@ -59,7 +58,7 @@ function StepSalaires({ form }) {
               <>
                 <YesNoQuestion
                   name="hasSameSalaire"
-                  label="Avez-vous eu le même salaire lors des 12 derniers mois&nbsp;?"
+                  label="Le salaire mensuel a-t-il été le même durant les 12 derniers mois&nbsp;?"
                   onChange={hasSameSalaire => {
                     if (hasSameSalaire) {
                       form.change("salaires", []);
@@ -89,7 +88,8 @@ function StepSalaires({ form }) {
                           {({ input, meta: { touched, error, invalid } }) => (
                             <>
                               <Question required>
-                                Quel a été votre salaire mensuel brut&nbsp;?
+                                Quel a été le montant du salaire mensuel
+                                brut&nbsp;?
                               </Question>
 
                               <CurrencyWrapper>
