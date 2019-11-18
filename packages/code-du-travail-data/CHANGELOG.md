@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.1...v3.6.2) (2019-11-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/kali-data to ^1.2.31 ([#1720](https://github.com/SocialGouv/code-du-travail-numerique/issues/1720)) ([0fb8402](https://github.com/SocialGouv/code-du-travail-numerique/commit/0fb8402))
+
+
+
+
+
 ## [3.6.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.0...v3.6.1) (2019-11-18)
 
 **Note:** Version bump only for package @cdt/data
