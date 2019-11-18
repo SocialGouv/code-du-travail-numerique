@@ -54,7 +54,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
     <p
       class="c0"
     >
-      Quel est votre type de contrat ?
+      Quel est le type du contrat de travail ?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -175,7 +175,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
     <p
       class="c0"
     >
-      Quel est votre type de contrat ?
+      Quel est le type du contrat de travail ?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -219,7 +219,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         class="c5"
         for="input-criteria.cddType"
       >
-        Quelle est le type de votre cdd ?
+        Quelle est le type du cdd ?
       </label>
       <select
         class="c6"
@@ -359,7 +359,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
     <p
       class="c0"
     >
-      Quel est votre type de contrat ?
+      Quel est le type du contrat de travail ?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -403,7 +403,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         class="c5"
         for="input-criteria.cddType"
       >
-        Quelle est le type de votre cdd ?
+        Quelle est le type du cdd ?
       </label>
       <select
         class="c6"
@@ -521,7 +521,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <p
       class="c0"
     >
-      Quel est votre type de contrat ?
+      Quel est le type du contrat de travail ?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -561,7 +561,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <p
       class="c0"
     >
-      Avez vous un contrat de mission-formation ?
+      S’agit-il d’un contrat de mission-formation ?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -601,7 +601,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <p
       class="c0"
     >
-      Votre contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou en cas de force majeure ?
+      Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure&nsbp;?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -641,7 +641,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <p
       class="c0"
     >
-      À la fin de votre contrat d'intérim, avez-vous été immédiatement embauché en CDI au sein de l'entreprise dans laquelle vous effectuiez votre mission ?
+      À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -681,7 +681,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <p
       class="c0"
     >
-      Avez-vous refusé la mise en œuvre de la souplesse prévue dans votre contrat d’intérim ?
+      Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
       <span
         aria-label="champs obligatoire"
         class="c1"

@@ -89,10 +89,10 @@ exports[`<StepIndemnite /> should render 1`] = `
       class="c1"
     >
       1,250.00
-       € brut
+       € brut
     </strong>
      
-    pour votre indemnité de licenciement.
+    pour l’indemnité de licenciement.
   </p>
   <details
     class="c2"
@@ -154,10 +154,10 @@ exports[`<StepIndemnite /> should render 1`] = `
   <h2
     class="c0"
   >
-    Votre convention collective peut prévoir un montant plus important
+    La convention collective peut prévoir un montant plus important
   </h2>
   <p>
-    Selon la convention collective dont vous dépendez, le montant minimum de votre indemnité de licenciement peut être supérieur au montant de l’indemnité légale.
+    Selon la convention collective applicable, le montant minimum de l’indemnité de licenciement peut être supérieur au montant de l’indemnité légale.
   </p>
   <label
     class="c8"
@@ -166,7 +166,7 @@ exports[`<StepIndemnite /> should render 1`] = `
       class="c9"
       for="ccn"
     >
-      Sélectionnez votre convention collective pour en savoir plus :
+      Sélectionnez la convention collective pour en savoir plus :
     </label>
     <select
       class="c10"
@@ -192,7 +192,7 @@ exports[`<StepIndemnite /> should render 1`] = `
       <option
         value="1518"
       >
-        Convention collective nationale de l'Animation
+        Convention collective nationale de l’Animation
       </option>
       <option
         value="0843"
@@ -207,7 +207,7 @@ exports[`<StepIndemnite /> should render 1`] = `
       <option
         value="1486"
       >
-        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987
+        Convention collective nationale des bureaux d’études techniques, des cabinets d’ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987
       </option>
       <option
         value="1534"
@@ -232,12 +232,12 @@ exports[`<StepIndemnite /> should render 1`] = `
       <option
         value="0029"
       >
-        Etablissements privés d'hospitalisation (FEHAP)
+        Etablissements privés d’hospitalisation (FEHAP)
       </option>
       <option
         value="1596"
       >
-        Ouvriers du bâtiment (entreprises jusqu'à 10 salariés)
+        Ouvriers du bâtiment (entreprises jusqu’à 10 salariés)
       </option>
       <option
         value="1597"

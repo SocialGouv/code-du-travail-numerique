@@ -152,7 +152,7 @@ exports[`<StepPrimes /> should render 1`] = `
   <p
     class="c0"
   >
-    Avez-vous perçu des primes annuelles ou exceptionnelles au cours des 3 derniers mois ?
+    Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois ?
     <span
       aria-label="champs obligatoire"
       class="c1"

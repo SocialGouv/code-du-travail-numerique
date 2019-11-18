@@ -58,7 +58,7 @@ describe("<StepInfosGenerales />", () => {
     // validate form
     const validateButton = getByTestId("nextBt");
     validateButton.click();
-    expect(getByText(/ne vous permet pas/i)).toBeTruthy();
+    expect(getByText(/ne permet pas/i)).toBeTruthy();
   });
   it("should display and info alert if ctt and contrat is not mission-formation", () => {
     const { getByTestId, getByText } = renderForm({

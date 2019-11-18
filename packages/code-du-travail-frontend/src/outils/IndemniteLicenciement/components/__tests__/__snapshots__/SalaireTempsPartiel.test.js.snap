@@ -150,7 +150,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   <label
     class="c0"
   >
-    Quelles ont été vos vos différentes périodes de travail ?
+    Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
   </label>
   <div
     class="c1"
@@ -385,7 +385,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   <label
     class="c0"
   >
-    Quelles ont été vos vos différentes périodes de travail ?
+    Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
   </label>
   <div
     class="c1"
@@ -620,7 +620,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   <label
     class="c0"
   >
-    Quelles ont été vos vos différentes périodes de travail ?
+    Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
   </label>
   <div
     class="c1"

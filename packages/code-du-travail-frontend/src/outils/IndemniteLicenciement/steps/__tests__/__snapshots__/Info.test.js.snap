@@ -11,14 +11,15 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
 <div
   class="c0"
 >
-  Vous ne pouvez pas obtenir d’indemnité de licenciement si vous êtes en CDD ou en contrat de travail temporaire. Sous certaines conditions, vous avez le droit à une 
+  L’indemnité de licenciement n’est pas dûe pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une 
   <a
     el="noopener noreferrer"
     href="/fiche-service-public/qui-peut-toucher-la-prime-de-precarite-a-la-fin-dun-contrat-de-travail"
     target="_blank"
   >
-    prime de précarité
+    indemnité de précarité
   </a>
+  .
 </div>
 `;
 
@@ -93,7 +94,7 @@ exports[`<StepInfo /> should render 1`] = `
     <p
       class="c0"
     >
-      Quel est votre type de contrat ?
+      Quel est le type de contrat ?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -132,7 +133,7 @@ exports[`<StepInfo /> should render 1`] = `
     <p
       class="c0"
     >
-      Êtes-vous licencié(e) pour faute grave ou lourde ?
+      Le licenciement est-il dû à une faute grave ou lourde ?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -171,7 +172,7 @@ exports[`<StepInfo /> should render 1`] = `
     <p
       class="c0"
     >
-      Êtes-vous licencié(e) pour inaptitude suite à accident du travail ou maladie professionnelle reconnue ?
+      Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
       <span
         aria-label="champs obligatoire"
         class="c1"

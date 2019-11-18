@@ -81,10 +81,10 @@ exports[`<Step /> should ask detail about categories 1`] = `
   <h2
     class="c0"
   >
-    Quel est votre catégorie dans la convention collective ?
+    Quelle est la catégorie dans du salarié la convention collective ?
   </h2>
   <p>
-    Vous pouvez le trouver sur votre bulletin de salaire
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"
@@ -163,7 +163,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
     class="c4"
     for="2"
   >
-    Quel etait votre âge à la date du licenciement ?
+    Quel était l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
       class="c5"
@@ -284,10 +284,10 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   <h2
     class="c0"
   >
-    Quel est votre catégorie dans la convention collective ?
+    Quelle est la catégorie dans du salarié la convention collective ?
   </h2>
   <p>
-    Vous pouvez le trouver sur votre bulletin de salaire
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"
@@ -323,7 +323,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     class="c2"
     for="3"
   >
-    Quel etait votre âge à la date du licenciement ?
+    Quel était l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
       class="c3"
@@ -456,10 +456,10 @@ exports[`<Step /> should render 1`] = `
   <h2
     class="c0"
   >
-    Quel est votre catégorie dans la convention collective ?
+    Quelle est la catégorie dans du salarié la convention collective ?
   </h2>
   <p>
-    Vous pouvez le trouver sur votre bulletin de salaire
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"
@@ -495,7 +495,7 @@ exports[`<Step /> should render 1`] = `
     class="c2"
     for="1"
   >
-    Quel etait votre âge à la date du licenciement ?
+    Quel était l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
       class="c3"

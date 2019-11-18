@@ -35,7 +35,7 @@ describe("<StepInfo />", () => {
     fireEvent.click(cdd);
     const nextBt = getByTestId("nextBt");
     nextBt.click();
-    expect(getByText(/vous ne pouvez pas/i)).toMatchSnapshot();
+    expect(getByText(/pour les CDD/i)).toMatchSnapshot();
   });
 
   it("should display error if fauteGrave", () => {
@@ -44,6 +44,6 @@ describe("<StepInfo />", () => {
     fireEvent.click(fauteGrave);
     const nextBt = getByTestId("nextBt");
     nextBt.click();
-    expect(getByText(/n’est pas dûe/i)).toMatchSnapshot();
+    expect(getByText(/pas dûe en cas de faute grave/i)).toMatchSnapshot();
   });
 });

@@ -25,10 +25,10 @@ exports[`<Categorie /> should render 1`] = `
   <h2
     class="c0"
   >
-    Quel est votre catégorie dans la convention collective ?
+    Quelle est la catégorie dans du salarié la convention collective ?
   </h2>
   <p>
-    Vous pouvez le trouver sur votre bulletin de salaire
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"

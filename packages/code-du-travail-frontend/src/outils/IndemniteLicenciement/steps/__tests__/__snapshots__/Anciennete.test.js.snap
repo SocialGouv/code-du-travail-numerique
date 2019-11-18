@@ -105,7 +105,7 @@ exports[`<Anciennete /> should render 1`] = `
       class="c1"
       for="1"
     >
-      Quelle est votre date d’entrée dans l’entreprise ?
+      Quelle est la date d’entrée dans l’entreprise ?
       <span
         aria-label="champs obligatoire"
         class="c2"
@@ -129,7 +129,7 @@ exports[`<Anciennete /> should render 1`] = `
       class="c1"
       for="2"
     >
-      À quelle date votre licenciement vous a-t-il été notifié ?
+      Quelle est la date de notification du licenciement ?
       <span
         aria-label="champs obligatoire"
         class="c2"
@@ -153,7 +153,7 @@ exports[`<Anciennete /> should render 1`] = `
       class="c1"
       for="3"
     >
-      Quelle est votre date de sortie de l’entreprise (incluant la durée de votre préavis) ?
+      Quelle est la date de sortie de l’entreprise (incluant la durée du préavis) ?
       <span
         aria-label="champs obligatoire"
         class="c2"
@@ -181,7 +181,7 @@ exports[`<Anciennete /> should render 1`] = `
     <p
       class="c5"
     >
-      Avez-vous eu des périodes d’absence de plus d’un mois au cours de votre contrat ?
+      Y a-t-il eu des absences de plus d’un mois durant le contrat de travail ?
       <span
         aria-label="champs obligatoire"
         class="c2"

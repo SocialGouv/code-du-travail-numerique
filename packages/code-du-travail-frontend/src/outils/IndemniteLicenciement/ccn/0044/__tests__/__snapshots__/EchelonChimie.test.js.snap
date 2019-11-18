@@ -31,9 +31,9 @@ exports[`<EchelonChimie /> should render 1`] = `
   <p
     class="c0"
   >
-    Quel est votre échelon dans la convention collective ?
+    Quel est l’échelon du salarié dans la convention collective ?
     <br />
-    Vous pouvez le trouver sur votre bulletin de salaire
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"
@@ -200,9 +200,9 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   <p
     class="c0"
   >
-    Quel est votre échelon dans la convention collective ?
+    Quel est l’échelon du salarié dans la convention collective ?
     <br />
-    Vous pouvez le trouver sur votre bulletin de salaire
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"
@@ -337,7 +337,7 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   </select>
   <ul>
     <li>
-      Emploi impliquant l'exécution de travaux ne demandant qu'une mise au courant sommaire.
+      Emploi impliquant l’exécution de travaux ne demandant qu’une mise au courant sommaire.
     </li>
   </ul>
 </div>

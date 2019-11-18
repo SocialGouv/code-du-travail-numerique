@@ -163,7 +163,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   <p
     class="c0"
   >
-    Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel ?
+    Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
     <span
       aria-label="champs obligatoire"
       class="c1"
@@ -203,7 +203,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   <p
     class="c0"
   >
-    Avez-vous eu le même salaire lors des 12 derniers mois ?
+    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
       aria-label="champs obligatoire"
       class="c1"
@@ -716,7 +716,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   <p
     class="c0"
   >
-    Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel ?
+    Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
     <span
       aria-label="champs obligatoire"
       class="c1"
@@ -756,7 +756,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   <p
     class="c0"
   >
-    Avez-vous eu le même salaire lors des 12 derniers mois ?
+    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
       aria-label="champs obligatoire"
       class="c1"
@@ -796,7 +796,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   <label
     class="c4"
   >
-    Quel a été votre salaire mensuel brut ?
+    Quel a été le montant du salaire mensuel brut ?
     <span
       aria-label="champs obligatoire"
       class="c1"
@@ -1025,7 +1025,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   <p
     class="c0"
   >
-    Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel ?
+    Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
     <span
       aria-label="champs obligatoire"
       class="c1"
@@ -1065,7 +1065,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   <label
     class="c4"
   >
-    Quelles ont été vos vos différentes périodes de travail ?
+    Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
   </label>
   <div
     class="c5"

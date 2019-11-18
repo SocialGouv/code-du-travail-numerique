@@ -180,6 +180,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
 
 exports[`<StepResult /> should render with no cc 1`] = `
 <div>
-  Votre situation ne permet de répondre précisement.
+  La situation du salarié ne permet de répondre précisement.
 </div>
 `;

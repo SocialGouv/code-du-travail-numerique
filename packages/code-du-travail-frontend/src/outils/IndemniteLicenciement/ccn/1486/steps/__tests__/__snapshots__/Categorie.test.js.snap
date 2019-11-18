@@ -28,9 +28,9 @@ exports[`<Categorie /> renders 1`] = `
     Catégorie professionnelle
   </h2>
   <p>
-    Quelle est votre catégorie d’après la convention collective ?
+    Quelle est la catégorie du salarié dans la convention collective ?
     <br />
-    Vous pouvez la trouver sur votre bulletin de paie.
+    Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
     class="c1"

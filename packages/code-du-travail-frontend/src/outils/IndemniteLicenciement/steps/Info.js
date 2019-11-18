@@ -8,7 +8,7 @@ function validate(values) {
   if (values.contrat && values.contrat !== "cdi") {
     errors.contrat = (
       <>
-        L’indemnité de licenciement n’est pas due pour les CDD et contrats de
+        L’indemnité de licenciement n’est pas dûe pour les CDD et contrats de
         travail temporaires. Sous certaines conditions, le salarié peut avoir le
         droit à une&nbsp;
         <a

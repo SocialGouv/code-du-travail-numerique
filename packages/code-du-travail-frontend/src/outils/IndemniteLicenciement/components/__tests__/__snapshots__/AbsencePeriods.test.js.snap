@@ -112,7 +112,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   <p
     class="c0"
   >
-    Quelles ont été vos périodes d’absence prolongée ?
+    Quels sont le motif et la durée de ces absences prolongées ?
   </p>
   <div
     class="c1"
@@ -287,7 +287,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   <p
     class="c0"
   >
-    Quelles ont été vos périodes d’absence prolongée ?
+    Quels sont le motif et la durée de ces absences prolongées ?
   </p>
   <div
     class="c1"
@@ -424,7 +424,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   <p
     class="c0"
   >
-    Quelles ont été vos périodes d’absence prolongée ?
+    Quels sont le motif et la durée de ces absences prolongées ?
   </p>
   <div
     class="c1"

@@ -37,7 +37,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
     lorem ipsum
   </div>
   <p>
-    Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
+    Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le montant le plus favorable pour le salarié.
   </p>
 </div>
 `;
@@ -159,7 +159,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, votre indemnité de licenciement est estimée à
+    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
      
     <strong
       class="c1"
@@ -174,7 +174,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     Détails
   </h2>
   <p>
-    Il s’agit du montant le plus favorable entre votre indemnité légale et votre indemnité conventionnelle.
+    Il s’agit du montant le plus important entre l’indemnité légale et l’indemnité conventionnelle.
   </p>
   <div
     class="c2"
@@ -321,7 +321,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     </div>
   </div>
   <p>
-    Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
+    Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le montant le plus favorable pour le salarié.
   </p>
 </div>
 `;
@@ -443,7 +443,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, votre indemnité de licenciement est estimée à
+    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
      
     <strong
       class="c1"
@@ -458,7 +458,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     Détails
   </h2>
   <p>
-    Il s’agit du montant le plus favorable entre votre indemnité légale et votre indemnité conventionnelle.
+    Il s’agit du montant le plus important entre l’indemnité légale et l’indemnité conventionnelle.
   </p>
   <div
     class="c2"
@@ -605,7 +605,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     </div>
   </div>
   <p>
-    Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
+    Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le montant le plus favorable pour le salarié.
   </p>
 </div>
 `;
