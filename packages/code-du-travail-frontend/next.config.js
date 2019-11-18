@@ -32,7 +32,7 @@ module.exports = withSourceMaps(
       PIWIK_URL: process.env.PIWIK_URL,
       SENTRY_PUBLIC_DSN: process.env.SENTRY_PUBLIC_DSN,
       SUGGEST_URL:
-        process.env.SUGGEST_URL || "http://127.0.0.1:5000/api/suggest"
+        process.env.SUGGEST_URL || "http://127.0.0.1:1337/api/v1/suggest"
     },
     transpileModules: ["@cdt/sources", "@cdt/data"]
   })
