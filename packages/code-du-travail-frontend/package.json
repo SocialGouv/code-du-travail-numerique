@@ -25,7 +25,7 @@
     "@cdt/data...preavis-licenciement": "^3.6.1",
     "@cdt/data...prime-precarite": "^3.6.1",
     "@cdt/sources": "^3.6.1",
-    "@reach/tooltip": "^0.5.4",
+    "@reach/tooltip": "^0.6.1",
     "@sentry/browser": "^5.9.0",
     "@socialgouv/react-fiche-service-public": "^3.6.1",
     "@socialgouv/react-ui": "^3.6.1",
