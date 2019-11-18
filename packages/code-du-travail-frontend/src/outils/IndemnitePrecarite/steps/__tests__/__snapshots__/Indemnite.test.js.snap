@@ -31,7 +31,7 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
 
 <div>
   <p>
-    prime de précarité
+    La prime de précarité
      est estimée à 
     <strong
       class="c0"
@@ -141,7 +141,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 
 <div>
   <p>
-    prime de précarité
+    La prime de précarité
      est estimée à 
     <strong
       class="c0"
