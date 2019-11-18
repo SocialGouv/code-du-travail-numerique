@@ -28,11 +28,11 @@ class PageContribution extends React.Component {
       ((((data || {})._source || {}).answers || {}).generic || {}).markdown ||
       "";
 
-    const contentTag = markdown.match(contentRegExp)[0];
+    const contentTag = markdown.match(contentRegExp);
 
-    if (contentTag) {
+    if (contentTag && contentTag.length > 0) {
       // Extract URL from Content tag, only one for now
-      const contentUrl = contentTag.match(
+      const contentUrl = contentTag[0].match(
         /\bhttps?:\/\/(www\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)/gi
       )[0];
 
@@ -49,7 +49,7 @@ class PageContribution extends React.Component {
       data: { _source: { title, answers, description }, relatedItems } = {
         _source: {}
       },
-      content: { _source: contentSource },
+      content,
       pageUrl,
       ogImage
     } = this.props;
@@ -69,7 +69,10 @@ class PageContribution extends React.Component {
             sourceType="Réponse personnalisée selon votre convention collective"
             emptyMessage="Cette question n'a pas été trouvée"
           >
-            <Contribution answers={answers} content={contentSource || {}} />
+            <Contribution
+              answers={answers}
+              content={(content && content._source) || {}}
+            />
           </Answer>
         </Layout>
       </div>
