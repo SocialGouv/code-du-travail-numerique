@@ -18,7 +18,7 @@ function Step() {
               <>
                 <YesNoQuestion
                   name="hasOpe"
-                  label="Est ce que l'entreprise est affiliée à une des organisations patronales employeur&nbsp;?"
+                  label="Est-ce que l'entreprise est affiliée à une des organisations patronales employeur&nbsp;?"
                 />
                 <YesNoQuestion
                   name="isEco"
@@ -28,7 +28,7 @@ function Step() {
                   <TextQuestion
                     inputType="number"
                     name="age"
-                    label="Quel etait l’âge du salarié à la date du licenciement ?"
+                    label="Quel était l’âge du salarié à la date du licenciement ?"
                   />
                 )}
               </>

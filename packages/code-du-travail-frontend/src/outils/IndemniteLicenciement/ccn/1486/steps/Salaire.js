@@ -184,7 +184,7 @@ const Notice = () => (
     <StyledToast variant="warning">
       Attention, les éventuelles <strong>primes</strong> renseignées
       précédemment ne seront pas prises en compte dans le calcul de l’indemnité
-      de la convention collective. Si des primes on étés perçue, merci de les
+      de la convention collective. Si des primes ont été perçues, merci de les
       intégrer à la rémunération ci-après.
       <br />
       Aussi, si il y en a, les mois effectués en <strong>

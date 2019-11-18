@@ -37,7 +37,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
     lorem ipsum
   </div>
   <p>
-    Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le montant le plus favorable pour le salarié.
+    Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le plus favorable pour le salarié.
   </p>
 </div>
 `;
@@ -321,7 +321,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     </div>
   </div>
   <p>
-    Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le montant le plus favorable pour le salarié.
+    Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le plus favorable pour le salarié.
   </p>
 </div>
 `;
@@ -605,7 +605,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     </div>
   </div>
   <p>
-    Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le montant le plus favorable pour le salarié.
+    Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le plus favorable pour le salarié.
   </p>
 </div>
 `;

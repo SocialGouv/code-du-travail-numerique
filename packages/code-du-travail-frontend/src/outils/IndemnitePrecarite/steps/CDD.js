@@ -54,7 +54,7 @@ function StepCDD() {
       <YesNoQuestion
         data-testid="interruptionFauteGrave"
         name="interruptionFauteGrave"
-        label="Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes&nbsp;: la propre initiative du salairé, la faute grave ou faute lourde du salairé, cas de force majeure&nbsp;?"
+        label="Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes&nbsp;: la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure&nbsp;?"
       />
       <YesNoQuestion
         data-testid="refusRenouvellementAuto"

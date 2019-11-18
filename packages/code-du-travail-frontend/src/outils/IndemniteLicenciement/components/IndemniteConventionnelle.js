@@ -76,7 +76,7 @@ function IndemniteCCn({
       <p>
         Un accord d’entreprise, le contrat de travail ou un usage peuvent
         prévoir un montant plus favorable pour le salarié. Dans ce cas, le
-        montant dû est le montant le montant le plus favorable pour le salarié.
+        montant dû est le montant le plus favorable pour le salarié.
       </p>
     </>
   );

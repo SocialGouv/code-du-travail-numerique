@@ -134,7 +134,7 @@ exports[`<StepCDD /> should render 1`] = `
     <p
       class="c0"
     >
-      Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salairé, la faute grave ou faute lourde du salairé, cas de force majeure ?
+      Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure ?
       <span
         aria-label="champs obligatoire"
         class="c1"
