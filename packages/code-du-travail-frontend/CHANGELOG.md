@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.6.0 (2019-11-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sentry/browser to ^5.8.0 ([#1685](https://github.com/SocialGouv/code-du-travail-numerique/issues/1685)) ([36fc670](https://github.com/SocialGouv/code-du-travail-numerique/commit/36fc670))
+* **deps:** update dependency @sentry/browser to ^5.9.0 ([#1701](https://github.com/SocialGouv/code-du-travail-numerique/issues/1701)) ([9de4a7e](https://github.com/SocialGouv/code-du-travail-numerique/commit/9de4a7e))
+* **deps:** update dependency date-fns to ^2.7.0 ([#1662](https://github.com/SocialGouv/code-du-travail-numerique/issues/1662)) ([c77414c](https://github.com/SocialGouv/code-du-travail-numerique/commit/c77414c))
+* **deps:** update dependency final-form to ^4.18.6 ([#1661](https://github.com/SocialGouv/code-du-travail-numerique/issues/1661)) ([1834140](https://github.com/SocialGouv/code-du-travail-numerique/commit/1834140))
+* **deps:** update dependency unified to ^8.4.2 ([#1683](https://github.com/SocialGouv/code-du-travail-numerique/issues/1683)) ([5e1b412](https://github.com/SocialGouv/code-du-travail-numerique/commit/5e1b412))
+* **deps:** update remark monorepo ([#1682](https://github.com/SocialGouv/code-du-travail-numerique/issues/1682)) ([eac11ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/eac11ba))
+
+
+### Features
+
+* **data:** unsplit fiches-mt ([#1657](https://github.com/SocialGouv/code-du-travail-numerique/issues/1657)) ([65f31f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/65f31f2)), closes [#1394](https://github.com/SocialGouv/code-du-travail-numerique/issues/1394)
+* **matomo:** add suggestionCandidate and resultsCandidate in matomo ([#1708](https://github.com/SocialGouv/code-du-travail-numerique/issues/1708)) ([d3dd21a](https://github.com/SocialGouv/code-du-travail-numerique/commit/d3dd21a))
+* **sitemap:** add glossary, documents and static pages ([#1700](https://github.com/SocialGouv/code-du-travail-numerique/issues/1700)) ([3efb11a](https://github.com/SocialGouv/code-du-travail-numerique/commit/3efb11a)), closes [#1569](https://github.com/SocialGouv/code-du-travail-numerique/issues/1569)
+
+
+
+
+
 # [3.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.4.2...v3.5.0) (2019-11-06)
 
 

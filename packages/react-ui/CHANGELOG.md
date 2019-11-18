@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.6.0 (2019-11-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @reach/dialog to ^0.6.1 ([#1717](https://github.com/SocialGouv/code-du-travail-numerique/issues/1717)) ([2421efe](https://github.com/SocialGouv/code-du-travail-numerique/commit/2421efe))
+* **deps:** update dependency date-fns to ^2.7.0 ([#1662](https://github.com/SocialGouv/code-du-travail-numerique/issues/1662)) ([c77414c](https://github.com/SocialGouv/code-du-travail-numerique/commit/c77414c))
+* **deps:** update dependency react-accessible-accordion to ^3.0.1 ([#1702](https://github.com/SocialGouv/code-du-travail-numerique/issues/1702)) ([41f12ce](https://github.com/SocialGouv/code-du-travail-numerique/commit/41f12ce))
+* **ui:** allow Button to forwardRef ([#1707](https://github.com/SocialGouv/code-du-travail-numerique/issues/1707)) ([a24080e](https://github.com/SocialGouv/code-du-travail-numerique/commit/a24080e))
+
+
+### Features
+
+* **data:** unsplit fiches-mt ([#1657](https://github.com/SocialGouv/code-du-travail-numerique/issues/1657)) ([65f31f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/65f31f2)), closes [#1394](https://github.com/SocialGouv/code-du-travail-numerique/issues/1394)
+
+
+
+
+
 # [3.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.4.2...v3.5.0) (2019-11-06)
 
 **Note:** Version bump only for package @socialgouv/react-ui
