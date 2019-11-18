@@ -6,7 +6,12 @@ export const documentMapping = {
     },
     // The local document slug
     slug: {
-      type: "text"
+      type: "text",
+      fields: {
+        asKeyword: {
+          type: "keyword"
+        }
+      }
     },
     // The source URL
     url: {

@@ -1,6 +1,9 @@
+const fs = require("fs");
 const JSDOM = require("jsdom").JSDOM;
 const pLimit = require("p-limit");
 const ora = require("ora");
+const slugify = require("@cdt/data/slugify");
+
 const urls = require("./ministere-travail-liste-fiches.json");
 const { splitArticle } = require("./articleSplitter");
 
@@ -22,35 +25,12 @@ const formatAnchor = node => {
 };
 
 function parseDom(dom, url) {
-  const internalId = $(
-    dom.window.document,
-    "meta[name='SPIP.identifier']"
-  ).getAttribute("content");
-
   const description = $(
     dom.window.document,
     "meta[name=description]"
   ).getAttribute("content");
-  const summary = $$(dom.window.document, ".navigation-article li")
-    .map(n => n.textContent.trim())
-    .filter(t => t !== "L’INFO EN PLUS" && t !== "POUR ALLER PLUS LOIN");
-
-  const ariane = $$(dom.window.document, "nav.page__breadcrumb a")
-    .slice(1)
-    .map(el => el.textContent.trim());
-
-  // `articles` = textes de référence.
-  const articles = $$(dom.window.document, "article.encarts__article li")
-    .filter(item => $(item, "a") && $(item, "a").getAttribute("href"))
-    .map(node => {
-      formatAnchor(node);
-      return {
-        url: node.getAttribute("href"),
-        text: node.textContent.trim()
-      };
-    });
-
   const article = $(dom.window.document, "main");
+
   $$(article, "a").forEach(formatAnchor);
 
   $$(article, "img")
@@ -66,11 +46,6 @@ function parseDom(dom, url) {
       }
     });
 
-  const dateRaw =
-    $(dom.window.document, "meta[property*=modified_time]") ||
-    $(dom.window.document, "meta[property$=published_time]");
-  const [year, month, day] = dateRaw.getAttribute("content").split("-");
-
   // get Intro image + text before first Question
   let elIntro = $(article, ".main-article__texte > *");
   let intro = "";
@@ -80,25 +55,22 @@ function parseDom(dom, url) {
     elIntro = elIntro.nextElementSibling;
   }
 
-  const chapo = $(article, ".main-article__chapo");
+  let chapo = $(article, ".main-article__chapo");
+  chapo = chapo && chapo.innerHTML.trim();
 
-  const tags = $$(
-    dom.window.document,
-    "span.main-article__tag.tag--encart"
-  ).map(n => n.textContent.trim());
+  const dateRaw =
+    $(dom.window.document, "meta[property*=modified_time]") ||
+    $(dom.window.document, "meta[property$=published_time]");
+  const [year, month, day] = dateRaw.getAttribute("content").split("-");
   const title = $(article, "h1").textContent.trim();
+
   const result = {
-    internalId,
-    description,
-    ariane,
-    tags,
-    articles,
-    summary,
-    intro: `${chapo ? chapo.innerHTML.trim() : ""}${intro}`,
-    title,
-    text_full: $(article, ".main-article__texte").textContent.trim(),
-    text_by_section: [],
     date: `${day}/${month}/${year}`,
+    description,
+    intro: `${chapo || ""}${intro}`,
+    sections: [],
+    slug: slugify(title),
+    title,
     url
   };
   const articleChildren = $$(article, "*");
@@ -106,19 +78,20 @@ function parseDom(dom, url) {
     .filter(el => el.getAttribute("id"))
     .forEach(function(el) {
       if (el.tagName === "H3") {
-        const subSection = {
-          title: el.textContent.trim(),
-          text: "",
-          html: "",
-          url: `${url}#${el.id}`
-        };
         let nextEl = el.nextElementSibling;
+        const section = {
+          anchor: el.id,
+          description: nextEl.textContent.trim(),
+          html: "",
+          text: "",
+          title: el.textContent.trim()
+        };
         while (nextEl && nextEl.tagName !== "H3") {
-          subSection.text += nextEl.textContent.trim();
-          subSection.html += nextEl.outerHTML;
+          section.text += nextEl.textContent.trim();
+          section.html += nextEl.outerHTML;
           nextEl = nextEl.nextElementSibling;
         }
-        result.text_by_section.push(subSection);
+        result.sections.push(section);
       }
     });
 
@@ -147,11 +120,29 @@ async function parseFiche(url) {
 async function parseFiches(urls) {
   const inputs = urls.map(url => limit(() => parseFiche(url)));
   const results = await Promise.all(inputs);
+  fs.writeFileSync(
+    "./fiches-mt.json",
+    JSON.stringify(
+      results.map(fiche => ({
+        ...fiche,
+        sections: fiche.sections.map(
+          // description and text are not needed in the file
+          // eslint-disable-next-line no-unused-vars
+          ({ description, text, ...section }) => section
+        )
+      })),
+      null,
+      2
+    )
+  );
   const fiches = results
     .map(splitArticle)
-    .reduce((state, documents) => state.concat(documents), []);
+    .reduce((accumulator, documents) => accumulator.concat(documents), []);
+  fs.writeFileSync(
+    "./fiches-mt-split.json",
+    JSON.stringify(fiches.filter(Boolean), null, 2)
+  );
   spinner.stop().clear();
-  console.log(JSON.stringify(fiches.filter(Boolean), null, 2));
 }
 
 if (module === require.main) {

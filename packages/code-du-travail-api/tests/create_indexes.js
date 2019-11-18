@@ -8,6 +8,7 @@ import {
 import { documentMapping } from "@cdt/data/indexing/document.mapping";
 import documents from "./cdtn_document.data.json";
 import themes from "./cdtn_theme.data.json";
+import sheetsMT from "./fiches_ministere_travail.data.json";
 import { conventionCollectiveMapping } from "@cdt/data/indexing/convention_collective.mapping";
 import conventions from "./convention.data.json";
 import { themesMapping } from "@cdt/data/indexing/themes.mapping";
@@ -18,6 +19,7 @@ const documentIndexName = "cdtn_document_test";
 const themeIndexName = "cdtn_theme_test";
 const conventionsIndexName = "cdtn_convention_test";
 const suggestionsIndexName = "cdtn_suggestion_test";
+const sheetMTIndexName = "cdtn_fiches_ministere_du_travail_test";
 
 async function main() {
   await version({ client });
@@ -63,6 +65,17 @@ async function main() {
     client,
     indexName: suggestionsIndexName,
     documents: suggestions
+  });
+
+  await createIndex({
+    client,
+    indexName: sheetMTIndexName,
+    mappings: documentMapping
+  });
+  await indexDocumentsBatched({
+    client,
+    indexName: sheetMTIndexName,
+    documents: sheetsMT
   });
 }
 

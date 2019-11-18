@@ -62,8 +62,8 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 .c0 {
-  padding: 0.625rem 1.25rem;
   margin-bottom: 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 
 <div>
@@ -173,8 +173,8 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 .c0 {
-  padding: 0.625rem 1.25rem;
   margin-bottom: 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 
 <div>
@@ -313,8 +313,8 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 .c0 {
-  padding: 0.625rem 1.25rem;
   margin-bottom: 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 
 <div>
@@ -399,8 +399,8 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 .c0 {
-  padding: 0.625rem 1.25rem;
   margin-bottom: 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 
 .c2 {
@@ -479,8 +479,8 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 .c0 {
-  padding: 0.625rem 1.25rem;
   margin-bottom: 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 
 .c2 {
@@ -526,8 +526,8 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 exports[`<Contribution /> should render with generic answer 1`] = `
 .c0 {
-  padding: 0.625rem 1.25rem;
   margin-bottom: 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 
 <div>

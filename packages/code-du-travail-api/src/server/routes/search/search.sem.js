@@ -4,15 +4,7 @@ function getSemQuery({ query_vector, size, sources = [] }) {
   }
   return {
     size: size,
-    _source: [
-      "title",
-      "source",
-      "slug",
-      "description",
-      "anchor",
-      "url",
-      "breadcrumbs"
-    ],
+    _source: ["title", "source", "slug", "description", "url", "breadcrumbs"],
     query: {
       script_score: {
         query: {

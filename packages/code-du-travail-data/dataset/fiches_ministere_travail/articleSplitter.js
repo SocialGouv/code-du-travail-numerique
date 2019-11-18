@@ -1,7 +1,5 @@
-const slugify = require("@cdt/data/slugify");
-
 function splitArticle(article) {
-  const { title, description, intro, date, breadcrumbs, themeCdtn } = article;
+  const { slug, title } = article;
   let prefixTitle = title;
   // extract accronyms inside parenthesis
   // Contrat de sécurisation professionnelle (CSP)
@@ -26,23 +24,17 @@ function splitArticle(article) {
     prefixTitle = prefixTitle.replace(pattern, "");
   }
   prefixTitle = prefixTitle.replace(/\s+/g, " ").trim();
-  return article.text_by_section
+  return article.sections
     .filter(isUnusedSection)
-    .map(({ title: sectionTitle, url, text, html }) => {
+    .map(({ anchor, description, html, text, title: sectionTitle }) => {
       const title = transformSectionTitle({ sectionTitle, prefixTitle });
-      const [anchor] = url.match(/#.+$/);
       return {
-        title,
         anchor,
-        intro,
         description,
-        date,
-        breadcrumbs,
-        text,
         html,
-        url,
-        themeCdtn,
-        slug: slugify(title)
+        slug: `${slug}#${anchor}`,
+        text,
+        title
       };
     });
 }
@@ -60,7 +52,7 @@ function transformSectionTitle({ sectionTitle: title, prefixTitle }) {
   // add the prefix, only if it is not present in the sectionTitle
   // and if sectionTitle doesn't contains ":" ( there is already a prefix)
   if (sectionTitle.indexOf(prefixTitle) === -1) {
-    sectionTitle = `${prefixTitle}: ${sectionTitle.toLowerCase()}`;
+    sectionTitle = `${prefixTitle} : ${sectionTitle.toLowerCase()}`;
   }
 
   // replace multiple spaces by a single space.

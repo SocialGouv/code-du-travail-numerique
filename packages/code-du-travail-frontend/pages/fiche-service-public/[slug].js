@@ -49,7 +49,6 @@ class Fiche extends React.Component {
         breadcrumbs,
         date,
         description,
-        html,
         raw,
         references_juridiques,
         title,
@@ -71,7 +70,6 @@ class Fiche extends React.Component {
             title={title}
             relatedItems={relatedItems}
             emptyMessage="Cette fiche n'a pas été trouvée"
-            html={html}
             footer={footer}
             date={date}
             sourceType="Fiche service-public.fr"

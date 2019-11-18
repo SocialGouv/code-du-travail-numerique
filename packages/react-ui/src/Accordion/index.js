@@ -14,15 +14,15 @@ import { fadeIn } from "../keyframes";
 
 export const Accordion = ({ items, ...props }) => (
   <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
-    {items.map((item, index) => (
-      <StyledAccordionItem key={index}>
+    {items.map(({ body, id, title }, index) => (
+      <StyledAccordionItem uuid={id} key={index}>
         <AccordionItemHeading>
           <StyledAccordionItemButton>
-            {item.title}
+            {title}
             <VerticalArrow />
           </StyledAccordionItemButton>
         </AccordionItemHeading>
-        <StyledAccordionItemPanel>{item.body}</StyledAccordionItemPanel>
+        <StyledAccordionItemPanel>{body}</StyledAccordionItemPanel>
       </StyledAccordionItem>
     ))}
   </RootAccordion>
@@ -30,12 +30,18 @@ export const Accordion = ({ items, ...props }) => (
 
 Accordion.propTypes = {
   className: PropTypes.string,
+  preExpanded: PropTypes.arrayOf(PropTypes.string),
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.node.isRequired,
-      body: PropTypes.node.isRequired
+      body: PropTypes.node.isRequired,
+      id: PropTypes.string,
+      title: PropTypes.node.isRequired
     })
   ).isRequired
+};
+
+Accordion.defaultProps = {
+  preExpanded: []
 };
 
 const StyledAccordionItem = styled(AccordionItem)`

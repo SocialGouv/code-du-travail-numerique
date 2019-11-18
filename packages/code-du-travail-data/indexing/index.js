@@ -10,7 +10,7 @@ import {
   indexDocumentsBatched,
   deleteOldIndex
 } from "./es_client.utils";
-import { cdtnCcnGen } from "./populate";
+import { cdtnCcnGen, cdtnMTGen } from "./populate";
 import { populateSuggestions } from "./suggestion";
 
 import conventionList from "@socialgouv/kali-data/data/index.json";
@@ -20,6 +20,8 @@ const CDTN_INDEX_NAME =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
 const SUGGEST_INDEX_NAME = process.env.SUGGEST_INDEX_NAME || "cdtn_suggestions";
+const FICHES_MT_INDEX_NAME =
+  process.env.ELASTICSEARCH_SHEETS_MT_INDEX || "fiches_ministere_du_travail";
 
 const CDTN_CCN_NAME =
   process.env.ELASTICSEARCH_CONVENTION_INDEX || "conventions_collectives";
@@ -57,7 +59,7 @@ async function main() {
     });
   }
 
-  // Indexing document data
+  // Indexing documents/search data
   await createIndex({
     client,
     indexName: `${CDTN_INDEX_NAME}-${ts}`,
@@ -70,6 +72,20 @@ async function main() {
     client,
     documents
   });
+
+  // Indexing entire fiches MT data
+  await createIndex({
+    client,
+    indexName: `${FICHES_MT_INDEX_NAME}-${ts}`,
+    mappings: documentMapping
+  });
+  for (const documents of cdtnMTGen()) {
+    await indexDocumentsBatched({
+      indexName: `${FICHES_MT_INDEX_NAME}-${ts}`,
+      client,
+      documents: documents
+    });
+  }
 
   // Indexing Themes data
   await createIndex({
@@ -104,6 +120,12 @@ async function main() {
         },
         {
           remove: {
+            index: `${FICHES_MT_INDEX_NAME}-*`,
+            alias: `${FICHES_MT_INDEX_NAME}`
+          }
+        },
+        {
+          remove: {
             index: `${CDTN_INDEX_NAME}-*`,
             alias: `${CDTN_INDEX_NAME}`
           }
@@ -128,6 +150,12 @@ async function main() {
         },
         {
           add: {
+            index: `${FICHES_MT_INDEX_NAME}-${ts}`,
+            alias: `${FICHES_MT_INDEX_NAME}`
+          }
+        },
+        {
+          add: {
             index: `${CDTN_INDEX_NAME}-${ts}`,
             alias: `${CDTN_INDEX_NAME}`
           }
@@ -146,7 +174,8 @@ async function main() {
     CDTN_INDEX_NAME,
     THEME_INDEX_NAME,
     CDTN_CCN_NAME,
-    SUGGEST_INDEX_NAME
+    SUGGEST_INDEX_NAME,
+    FICHES_MT_INDEX_NAME
   ];
 
   await deleteOldIndex({ client, patterns, timestamp: ts });

@@ -14,9 +14,16 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 1.2627476,
+      "_score": 1.2627374,
       "algo": "semantic",
-      "anchor": "#Comment-presenter-une-demission",
+      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
+      "slug": "la-demission#Comment-presenter-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : comment présenter une démission ?",
+    },
+    Object {
+      "_score": 1.1894766,
+      "algo": "semantic",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",
@@ -27,15 +34,6 @@ Object {
           "title": "Démission",
         },
       ],
-      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
-      "slug": "la-demission-comment-presenter-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "La démission: comment présenter une démission ?",
-      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
-    },
-    Object {
-      "_score": 1.1894765,
-      "algo": "semantic",
       "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
       "slug": "demission-dun-salarie",
       "source": "fiches_service_public",
@@ -43,14 +41,12 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 1.1808184,
+      "_score": 1.1810381,
       "algo": "semantic",
-      "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
-      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
-      "slug": "la-demission-labsence-prolongee-du-salarie-est-elle-une-demission",
+      "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",
-      "title": "La démission: l’absence prolongée du salarié est-elle une démission ?",
-      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
     Object {
       "_score": 1.1642654,
@@ -137,18 +133,8 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 7.2590585,
+      "_score": 7.277507,
       "algo": "pre-qualified",
-      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
-      "slug": "demission-dun-salarie",
-      "source": "fiches_service_public",
-      "title": "Démission d'un salarié",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
-    },
-    Object {
-      "_score": 11.705261,
-      "algo": "pre-qualified",
-      "anchor": "#Comment-presenter-une-demission",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",
@@ -159,14 +145,22 @@ Object {
           "title": "Démission",
         },
       ],
-      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
-      "slug": "la-demission-comment-presenter-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "La démission: comment présenter une démission ?",
-      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
+      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
+      "slug": "demission-dun-salarie",
+      "source": "fiches_service_public",
+      "title": "Démission d'un salarié",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 10.582796,
+      "_score": 11.7543745,
+      "algo": "pre-qualified",
+      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
+      "slug": "la-demission#Comment-presenter-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : comment présenter une démission ?",
+    },
+    Object {
+      "_score": 10.619121,
       "algo": "pre-qualified",
       "breadcrumbs": Array [
         Object {
@@ -228,7 +222,14 @@ Object {
     Object {
       "_score": 7.1739163,
       "algo": "fulltext",
-      "anchor": "#Comment-presenter-une-demission",
+      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
+      "slug": "la-demission#Comment-presenter-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : comment présenter une démission ?",
+    },
+    Object {
+      "_score": 1.1894766,
+      "algo": "semantic",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",
@@ -239,15 +240,6 @@ Object {
           "title": "Démission",
         },
       ],
-      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
-      "slug": "la-demission-comment-presenter-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "La démission: comment présenter une démission ?",
-      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
-    },
-    Object {
-      "_score": 1.1894765,
-      "algo": "semantic",
       "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
       "slug": "demission-dun-salarie",
       "source": "fiches_service_public",
@@ -265,12 +257,10 @@ Object {
     Object {
       "_score": 3.4247293,
       "algo": "fulltext",
-      "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
-      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
-      "slug": "la-demission-labsence-prolongee-du-salarie-est-elle-une-demission",
+      "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",
-      "title": "La démission: l’absence prolongée du salarié est-elle une démission ?",
-      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
     Object {
       "_score": 7.033888,
