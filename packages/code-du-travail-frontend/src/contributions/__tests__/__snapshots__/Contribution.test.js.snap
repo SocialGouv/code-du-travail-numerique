@@ -736,8 +736,8 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
 }
 
 .c0 {
-  padding: 0.625rem 1.25rem;
   margin-bottom: 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 
 <div>
