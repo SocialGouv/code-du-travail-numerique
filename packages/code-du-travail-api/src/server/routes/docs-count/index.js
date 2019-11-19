@@ -1,9 +1,11 @@
 const Router = require("koa-router");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 
-const index =
-  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 

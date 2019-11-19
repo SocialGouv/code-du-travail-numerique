@@ -1,10 +1,12 @@
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getDocumentByUrlQuery = require("./getDocumentByUrlQuery");
 
 const isInternalUrl = url => url.match(/^\//);
 
-const index =
-  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const makeHit = data => ({
   _index: index,
