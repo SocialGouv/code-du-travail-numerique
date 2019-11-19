@@ -1,10 +1,13 @@
 const Router = require("koa-router");
+const { THEMES } = require("@cdt/data/indexing/esIndexName");
+
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const { getRootThemesQuery, getThemeQuery } = require("./search.elastic.js");
 const getEsReferences = require("../search/getEsReferences");
 
-const index = process.env.ELASTICSEARCH_THEME_INDEX || "cdtn_themes";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const index = `${ES_INDEX_PREFIX}_${THEMES}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 

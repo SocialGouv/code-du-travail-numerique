@@ -77,7 +77,6 @@ Test @cdtn/api:
   variables:
     GIT_STRATEGY: none
     ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
-    ELASTICSEARCH_LOG_LEVEL: info
   script:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.

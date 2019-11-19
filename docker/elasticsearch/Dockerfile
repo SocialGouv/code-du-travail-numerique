@@ -1,6 +1,10 @@
 FROM docker.elastic.co/elasticsearch/elasticsearch:7.4.2
 
-RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install --silent analysis-icu
+WORKDIR /usr/share/elasticsearch
 
-COPY ./elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
+RUN bin/elasticsearch-plugin install --silent analysis-icu
+
+RUN  bin/elasticsearch-keystore create
+
+COPY ./elasticsearch.yml  config/elasticsearch.yml
 

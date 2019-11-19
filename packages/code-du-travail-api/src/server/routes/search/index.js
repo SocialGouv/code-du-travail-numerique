@@ -1,22 +1,21 @@
 const Router = require("koa-router");
 const fetch = require("node-fetch");
 const { SOURCES } = require("@cdt/sources");
+const { DOCUMENTS, THEMES } = require("@cdt/data/indexing/esIndexName");
 
 const API_BASE_URL = require("../v1.prefix");
-
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSavedResult = require("./search.getSavedResult");
 const getSearchBody = require("./search.elastic");
 const getSemBody = require("./search.sem");
 const getRelatedThemesBody = require("./searchRelatedThemes.elastic");
 const getRelatedArticlesBody = require("./searchRelatedArticles.elastic");
-
 const { removeDuplicate, merge, mergePipe } = require("./utils");
 const { logger } = require("../../utils/logger");
 
-const index =
-  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
-const themeIndex = process.env.ELASTICSEARCH_THEME_INDEX || "cdtn_themes";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
+const themeIndex = `${ES_INDEX_PREFIX}_${THEMES}`;
 
 const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
 

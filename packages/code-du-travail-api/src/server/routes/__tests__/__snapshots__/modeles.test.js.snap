@@ -5,7 +5,7 @@ Object {
   "hits": Array [
     Object {
       "_id": "10",
-      "_index": "cdtn_document_test",
+      "_index": "cdtn_test_documents",
       "_score": 0,
       "_source": Object {
         "description": "La rupture anticipée du contrat à déterminée n’est possible que dans certains cas. La rupture d’un commun accord est l’un de ces cas : ce modèle permet à l’une des parties de demander à l’autre, la rupture du CDD.",
@@ -18,7 +18,7 @@ Object {
     },
     Object {
       "_id": "11",
-      "_index": "cdtn_document_test",
+      "_index": "cdtn_test_documents",
       "_score": 0,
       "_source": Object {
         "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. Cette demande doit se faire avec une lettre recommandée à accusé de réception. Le demandeur doit aussi garder une copie de la lettre",

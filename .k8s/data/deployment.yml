@@ -15,7 +15,11 @@ spec:
       name: ${K8S_NAMESPACE}-${CONTEXT}
       env:
         - name: ELASTICSEARCH_URL
-          value: "${ELASTICSEARCH_URL}"
+          value: "${K8S_SECRET_ELASTICSEARCH_URL}"
+        - name: ELASTICSEARCH_PWD
+          value: "${K8S_SECRET_ELASTICSEARCH_PWD}"
+        - name: ES_INDEX_PREFIX
+          value: "cdtn-${BRANCH_HASH}"
   restartPolicy: Never
   initContainers:
     - name: wait-for-elasticsearch
@@ -29,7 +33,7 @@ spec:
           sleep 10s # delay wait for elastic to be sure elastic had been removed first
           retry=120; # 5s * (12 * 10) = 10min
           while
-            ! curl -sS "${ELASTICSEARCH_URL}/_cat/health?h=status" &&
+            ! curl -sS "elastic:${K8S_SECRET_ELASTICSEARCH_PWD}@${K8S_SECRET_ELASTICSEARCH_URL}/_cat/health?h=status" &&
             [[ $(( retry-- )) -gt 0 ]];
           do echo "Waiting for Elasticsearch to go Green ($(( retry )))" ; sleep 5s ; done ;
 

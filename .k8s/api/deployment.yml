@@ -37,11 +37,15 @@ spec:
             - name: PORT
               value: "${PORT}"
             - name: ELASTICSEARCH_URL
-              value: "${ELASTICSEARCH_URL}"
+              value: "${K8S_SECRET_ELASTICSEARCH_URL}"
+            - name: ELASTICSEARCH_PWD
+              value: "${K8S_SECRET_ELASTICSEARCH_PWD}"
             - name: VERSION
               value: "${VERSION}"
             - name: NLP_URL
               value: "${NLP_API_URL}"
+            - name: ES_INDEX_PREFIX
+              value: "cdtn-${BRANCH_HASH}"
       initContainers:
         - name: wait-for-elasticsearch
           image: alpine
@@ -54,7 +58,7 @@ spec:
 
               retry=120; # 5s * (12 * 10) = 10min
               while
-                ! curl -sS --fail "${ELASTICSEARCH_URL}/_cat/indices/code_du_travail_numerique" &&
+                ! curl -sS --fail "elastic:${K8S_SECRET_ELASTICSEARCH_PWD}@${K8S_SECRET_ELASTICSEARCH_URL}/_cat/indices/${BRANCH_HASH}_documents" &&
                 [[ $(( retry-- )) -gt 0 ]];
               do echo "Waiting for Elasticsearch indices to go Green ($(( retry )))" ; sleep 5s ; done ;
 

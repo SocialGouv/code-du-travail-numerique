@@ -3,7 +3,7 @@
 exports[`returns a convention container with base text 1`] = `
 Object {
   "_id": "0",
-  "_index": "cdtn_convention_test",
+  "_index": "cdtn_test_agreements",
   "_score": 0.13353139,
   "_source": Object {
     "categorisation": Array [
@@ -453,7 +453,7 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
 exports[`returns a convention container with textes attaches 1`] = `
 Object {
   "_id": "2",
-  "_index": "cdtn_convention_test",
+  "_index": "cdtn_test_agreements",
   "_score": 0.13353139,
   "_source": Object {
     "categorisation": Array [
@@ -538,7 +538,7 @@ Object {
 exports[`returns a convention container with textes salaires 1`] = `
 Object {
   "_id": "1",
-  "_index": "cdtn_convention_test",
+  "_index": "cdtn_test_agreements",
   "_score": 0.13353139,
   "_source": Object {
     "categorisation": Array [
