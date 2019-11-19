@@ -4,6 +4,7 @@ import { promisify } from "util";
 import { join } from "path";
 import getDocumentByUrlQuery from "../src/server/routes/search/getDocumentByUrlQuery";
 import { getSheetMTQuery } from "../src/server/routes/sheets-mt/search.elastic.js";
+import { DOCUMENTS, MT_SHEETS } from "@cdt/data/indexing/esIndexName";
 
 import themes from "@cdt/data...datafiller/themes.data.json";
 
@@ -43,9 +44,10 @@ const ficheMTSlugs = [
   "5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae"
 ];
 
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+
 async function updateDocumentsData(slugs) {
-  const index =
-    process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+  const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
   const requests = slugs.reduce((state, slug) => {
     state.push({ index });
     state.push(getDocumentByUrlQuery(slug, []));
@@ -77,9 +79,7 @@ async function updateThemes(slugs) {
 }
 
 async function updateFichesMT(slugs) {
-  const index =
-    process.env.ELASTICSEARCH_SHEETS_MT_INDEX ||
-    "cdtn_fiches_ministere_du_travail";
+  const index = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
   const requests = [];
   slugs.forEach(slug => {
     requests.push({ index });

@@ -3,7 +3,7 @@
 exports[`return theme data for slug 5-questions-reponses-sur-la-sante-au-travail 1`] = `
 Object {
   "_id": "0",
-  "_index": "cdtn_fiches_ministere_du_travail_test",
+  "_index": "cdtn_test_mt-sheets",
   "_score": 0,
   "_source": Object {
     "date": "23/05/2017",

@@ -1,4 +1,11 @@
 import { Client } from "@elastic/elasticsearch";
+import {
+  DOCUMENTS,
+  THEMES,
+  AGREEMENTS,
+  SUGGESTIONS,
+  SHEET_MT
+} from "./esIndexName";
 
 import { logger } from "./logger";
 import { documentMapping } from "./document.mapping";
@@ -16,17 +23,13 @@ import { populateSuggestions } from "./suggestion";
 import conventionList from "@socialgouv/kali-data/data/index.json";
 import themes from "../dataset/datafiller/themes.data.json";
 
-const CDTN_INDEX_NAME =
-  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 
-const SUGGEST_INDEX_NAME = process.env.SUGGEST_INDEX_NAME || "cdtn_suggestions";
-const FICHES_MT_INDEX_NAME =
-  process.env.ELASTICSEARCH_SHEETS_MT_INDEX || "fiches_ministere_du_travail";
-
-const CDTN_CCN_NAME =
-  process.env.ELASTICSEARCH_CONVENTION_INDEX || "conventions_collectives";
-
-const THEME_INDEX_NAME = process.env.ELASTICSEARCH_THEME_INDEX || "cdtn_themes";
+const DOCUMENT_INDEX_NAME = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
+const THEME_INDEX_NAME = `${ES_INDEX_PREFIX}_${THEMES}`;
+const AGREEMENT_INDEX_NAME = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
+const SHEET_MT_INDEX_NAME = `${ES_INDEX_PREFIX}_${SHEET_MT}`;
+const SUGGEST_INDEX_NAME = `${ES_INDEX_PREFIX}_${SUGGESTIONS}`;
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
@@ -48,12 +51,12 @@ async function main() {
   // Indexing CCN data
   await createIndex({
     client,
-    indexName: `${CDTN_CCN_NAME}-${ts}`,
+    indexName: `${AGREEMENT_INDEX_NAME}-${ts}`,
     mappings: conventionCollectiveMapping
   });
   for (const documents of cdtnCcnGen(conventionList, 10000000)) {
     await indexDocumentsBatched({
-      indexName: `${CDTN_CCN_NAME}-${ts}`,
+      indexName: `${AGREEMENT_INDEX_NAME}-${ts}`,
       client,
       documents
     });
@@ -62,13 +65,13 @@ async function main() {
   // Indexing documents/search data
   await createIndex({
     client,
-    indexName: `${CDTN_INDEX_NAME}-${ts}`,
+    indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
     mappings: documentMapping
   });
 
   const documents = require(DUMP_PATH);
   await indexDocumentsBatched({
-    indexName: `${CDTN_INDEX_NAME}-${ts}`,
+    indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
     client,
     documents
   });
@@ -76,12 +79,12 @@ async function main() {
   // Indexing entire fiches MT data
   await createIndex({
     client,
-    indexName: `${FICHES_MT_INDEX_NAME}-${ts}`,
+    indexName: `${SHEET_MT_INDEX_NAME}-${ts}`,
     mappings: documentMapping
   });
   for (const documents of cdtnMTGen()) {
     await indexDocumentsBatched({
-      indexName: `${FICHES_MT_INDEX_NAME}-${ts}`,
+      indexName: `${SHEET_MT_INDEX_NAME}-${ts}`,
       client,
       documents: documents
     });
@@ -114,20 +117,20 @@ async function main() {
         },
         {
           remove: {
-            index: `${CDTN_CCN_NAME}-*`,
-            alias: `${CDTN_CCN_NAME}`
+            index: `${AGREEMENT_INDEX_NAME}-*`,
+            alias: `${AGREEMENT_INDEX_NAME}`
           }
         },
         {
           remove: {
-            index: `${FICHES_MT_INDEX_NAME}-*`,
-            alias: `${FICHES_MT_INDEX_NAME}`
+            index: `${SHEET_MT_INDEX_NAME}-*`,
+            alias: `${SHEET_MT_INDEX_NAME}`
           }
         },
         {
           remove: {
-            index: `${CDTN_INDEX_NAME}-*`,
-            alias: `${CDTN_INDEX_NAME}`
+            index: `${DOCUMENT_INDEX_NAME}-*`,
+            alias: `${DOCUMENT_INDEX_NAME}`
           }
         },
         {
@@ -144,20 +147,20 @@ async function main() {
         },
         {
           add: {
-            index: `${CDTN_CCN_NAME}-${ts}`,
-            alias: `${CDTN_CCN_NAME}`
+            index: `${AGREEMENT_INDEX_NAME}-${ts}`,
+            alias: `${AGREEMENT_INDEX_NAME}`
           }
         },
         {
           add: {
-            index: `${FICHES_MT_INDEX_NAME}-${ts}`,
-            alias: `${FICHES_MT_INDEX_NAME}`
+            index: `${SHEET_MT_INDEX_NAME}-${ts}`,
+            alias: `${SHEET_MT_INDEX_NAME}`
           }
         },
         {
           add: {
-            index: `${CDTN_INDEX_NAME}-${ts}`,
-            alias: `${CDTN_INDEX_NAME}`
+            index: `${DOCUMENT_INDEX_NAME}-${ts}`,
+            alias: `${DOCUMENT_INDEX_NAME}`
           }
         },
         {
@@ -171,11 +174,11 @@ async function main() {
   });
 
   const patterns = [
-    CDTN_INDEX_NAME,
+    DOCUMENT_INDEX_NAME,
     THEME_INDEX_NAME,
-    CDTN_CCN_NAME,
+    AGREEMENT_INDEX_NAME,
     SUGGEST_INDEX_NAME,
-    FICHES_MT_INDEX_NAME
+    SHEET_MT_INDEX_NAME
   ];
 
   await deleteOldIndex({ client, patterns, timestamp: ts });

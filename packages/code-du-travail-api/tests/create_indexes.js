@@ -5,6 +5,14 @@ import {
   indexDocumentsBatched
 } from "@cdt/data/indexing/es_client.utils";
 
+import {
+  DOCUMENTS,
+  THEMES,
+  AGREEMENTS,
+  SUGGESTIONS,
+  MT_SHEETS
+} from "@cdt/data/indexing/esIndexName";
+
 import { documentMapping } from "@cdt/data/indexing/document.mapping";
 import documents from "./cdtn_document.data.json";
 import themes from "./cdtn_theme.data.json";
@@ -15,44 +23,46 @@ import { themesMapping } from "@cdt/data/indexing/themes.mapping";
 import { suggestionMapping } from "@cdt/data/indexing/suggestion.mapping";
 import suggestions from "./suggestions_data.json";
 
-const documentIndexName = "cdtn_document_test";
-const themeIndexName = "cdtn_theme_test";
-const conventionsIndexName = "cdtn_convention_test";
-const suggestionsIndexName = "cdtn_suggestion_test";
-const sheetMTIndexName = "cdtn_fiches_ministere_du_travail_test";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn_test";
+
+const documentsIndexName = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
+const themesIndexName = `${ES_INDEX_PREFIX}_${THEMES}`;
+const agreementsIndexName = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
+const mtSheetsIndexName = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
+const suggestionsIndexName = `${ES_INDEX_PREFIX}_${SUGGESTIONS}`;
 
 async function main() {
   await version({ client });
   await createIndex({
     client,
-    indexName: documentIndexName,
+    indexName: documentsIndexName,
     mappings: documentMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: documentIndexName,
+    indexName: documentsIndexName,
     documents: documents
   });
 
   await createIndex({
     client,
-    indexName: themeIndexName,
+    indexName: themesIndexName,
     mappings: themesMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: themeIndexName,
+    indexName: themesIndexName,
     documents: themes
   });
 
   await createIndex({
     client,
-    indexName: conventionsIndexName,
+    indexName: agreementsIndexName,
     mappings: conventionCollectiveMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: conventionsIndexName,
+    indexName: agreementsIndexName,
     documents: conventions
   });
 
@@ -69,12 +79,12 @@ async function main() {
 
   await createIndex({
     client,
-    indexName: sheetMTIndexName,
+    indexName: mtSheetsIndexName,
     mappings: documentMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: sheetMTIndexName,
+    indexName: mtSheetsIndexName,
     documents: sheetsMT
   });
 }
