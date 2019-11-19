@@ -62,7 +62,7 @@ function StepResult({ form }) {
         <>
           <SectionTitle>Durée du préavis</SectionTitle>
           <p>
-            À partir des éléments que vous avais saisis, la durée du préavis de
+            À partir des éléments que vous avez saisis, la durée du préavis de
             démission est estimée à&nbsp;:
           </p>
           <p>
