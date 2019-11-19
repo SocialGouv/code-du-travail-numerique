@@ -7,7 +7,7 @@
   "keywords": [],
   "main": "src/index.js",
   "scripts": {
-    "dev": "SUGGEST_URL=http://localhost:1337/nlp/suggest node server/server.js",
+    "dev": "node server/server.js",
     "dev-with-nlp": "node server/server.js",
     "lint-js": "eslint src/* pages/*",
     "lint-css": "stylelint 'src/**/*.js' 'src/**/*.css' 'pages/**/*.js'",

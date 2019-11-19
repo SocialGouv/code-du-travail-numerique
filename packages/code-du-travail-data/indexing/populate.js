@@ -183,7 +183,8 @@ function* cdtnDocumentsGen() {
         source: SOURCES.CONTRIBUTIONS,
         title: value,
         slug: slugify(value),
-        text: (answers.general && answers.general.value) || value,
+        description: (answers.generic && answers.generic.text) || value,
+        text: (answers.generic && answers.generic.text) || value,
         answers
       };
     }

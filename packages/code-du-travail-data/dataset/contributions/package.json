@@ -6,7 +6,9 @@
   "license": "MIT",
   "dependencies": {
     "@socialgouv/kali-data": "^1.2.31",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "remark": "^11.0.2",
+    "strip-markdown": "^3.1.1"
   },
   "scripts": {
     "start": "node index.js > contributions.data.json"
