@@ -7,14 +7,25 @@ const { logger } = require("../utils/logger");
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
 
-if (process.env.NODE_ENV === "test") {
-  logger.level = winston.warn;
+const esClientConfig = {
+  node: `${ELASTICSEARCH_URL}`
+};
+
+switch (process.env.NODE_ENV) {
+  case "test":
+    logger.level = winston.warn;
+    break;
+  case "production":
+    esClientConfig.auth = {
+      username: process.env.ELASTICSEARCH_USER || "elastic",
+      password: process.env.ELASTICSEARCH_PWD
+    };
+    break;
 }
 
-logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
+const client = new Client(esClientConfig);
 
-const client = new Client({
-  node: `${ELASTICSEARCH_URL}`
-});
+logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
+client.info().then(({ body }) => logger.info(body.version.number));
 
 module.exports = client;

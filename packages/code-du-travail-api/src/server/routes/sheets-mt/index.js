@@ -1,11 +1,13 @@
 const Router = require("koa-router");
+const { MT_SHEETS } = require("@cdt/data/indexing/esIndexName");
+
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const { getRelatedItems } = require("../items/getRelatedItems");
 const { getSheetMTQuery } = require("./search.elastic.js");
 
-const index =
-  process.env.ELASTICSEARCH_SHEETS_MT_INDEX || "fiches_ministere_du_travail";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const index = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 

@@ -1,4 +1,5 @@
 const { SOURCES } = require("@cdt/sources");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSemBody = require("../search/search.sem");
@@ -6,8 +7,9 @@ const utils = require("../search/utils");
 const getRelatedItemsBody = require("./relatedItems.elastic");
 
 const MAX_RESULTS = 5;
-const index =
-  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 async function getRelatedItems({ queryVector, settings, slug }) {
   const size = MAX_RESULTS;
