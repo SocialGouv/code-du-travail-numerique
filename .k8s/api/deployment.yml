@@ -34,14 +34,14 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 5
           env:
-          - name: PORT
-            value: "${PORT}"
-          - name: ELASTICSEARCH_URL
-            value: "${ELASTICSEARCH_URL}"
-          - name: VERSION
-            value: "${VERSION}"
-          - name: NLP_URL
-            value: "${NLP_API_URL}"
+            - name: PORT
+              value: "${PORT}"
+            - name: ELASTICSEARCH_URL
+              value: "${ELASTICSEARCH_URL}"
+            - name: VERSION
+              value: "${VERSION}"
+            - name: NLP_URL
+              value: "${NLP_API_URL}"
       initContainers:
         - name: wait-for-elasticsearch
           image: alpine
@@ -50,7 +50,7 @@ spec:
             - sh
             - -c
             - |
-              apk --no-cache --update add curl;
+              apk add --no-cache curl=7.66.0-r0;
 
               retry=120; # 5s * (12 * 10) = 10min
               while
