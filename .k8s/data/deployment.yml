@@ -15,7 +15,7 @@ spec:
       name: ${K8S_NAMESPACE}-${CONTEXT}
       env:
         - name: ELASTICSEARCH_URL
-          value: "${ELASTICSEARCH_URL}"
+          value: "${CI_ELASTICSEARCH_CLUSTER}"
         - name: ELASTICSEARCH_USER
           valueFrom:
             secretKeyRef:
@@ -35,7 +35,7 @@ spec:
       imagePullPolicy: Always
       env:
         - name: ELASTICSEARCH_URL
-          value: "${ELASTICSEARCH_URL}"
+          value: "${CI_ELASTICSEARCH_CLUSTER}"
         - name: ELASTICSEARCH_USER
           valueFrom:
             secretKeyRef:
@@ -54,7 +54,7 @@ spec:
           sleep 10s # delay wait for elastic to be sure elastic had been removed first
           retry=120; # 5s * (12 * 10) = 10min
           while
-            ! curl -sS --fail -u "${ELASTICSEARCH_USER}:${ELASTICSEARCH_PWD}:" "${ELASTICSEARCH_URL}/_cat/health?h=status" &&
+            ! curl -sS --fail -u "${ELASTICSEARCH_USER}:${ELASTICSEARCH_PWD}:" "${CI_ELASTICSEARCH_CLUSTER}/_cat/health?h=status" &&
             [[ $(( retry-- )) -gt 0 ]];
           do echo "Waiting for Elasticsearch to go Green ($(( retry )))" ; sleep 5s ; done ;
 
