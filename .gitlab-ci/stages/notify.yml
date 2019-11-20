@@ -5,7 +5,7 @@
   variables:
     DEPLOY_ID_FILE: github_deploy_id
   before_script:
-    - apk add --update curl
+    - apk add --no-cache curl=7.64.0-r3
     - source .gitlab-ci/env.sh
   dependencies: []
 
@@ -58,7 +58,7 @@ Release:
     - master
   when: manual
   before_script:
-    - apk add --no-cache git=2.20.1-r0
+    - apk add --no-cache git=2.22.0-r0
     - git checkout ${CI_COMMIT_REF_NAME}
     - git config user.name "${CI_GIT_AUTHOR_NAME}"
     - git config user.email "${CI_GIT_AUTHOR_EMAIL}"
