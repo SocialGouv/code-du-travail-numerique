@@ -3,46 +3,42 @@
 exports[`convert datafiller data from API 1`] = `
 Array [
   Object {
-    "breadcrumbs": undefined,
+    "breadcrumbs": null,
     "children": Array [
       Object {
-        "slug": "1-title2",
+        "slug": "2-title2",
         "title": "title2",
       },
       Object {
-        "slug": "1-title4",
+        "slug": "4-title4",
         "title": "title4",
       },
     ],
-    "id": "theme1",
+    "position": 1,
     "refs": Array [
       Object {
-        "position": 2,
         "title": "Conclusion du contrat de travail à durée déterminée (CDD)",
         "url": "/fiche-service-public/conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
       },
       Object {
-        "position": 4,
         "title": "Fiche 3",
         "url": "/fiche-service-public/fiche-3",
       },
       Object {
-        "position": 5,
         "title": "Fiche 2",
         "url": "/fiche-service-public/fiche-2",
       },
       Object {
-        "position": 5,
+        "title": "Article L1221-3",
+        "url": "/code-du-travail/l1221-3",
+      },
+      Object {
+        "title": undefined,
         "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
       },
       Object {
-        "position": 5,
+        "title": undefined,
         "url": "/some-unknown-source/test",
-      },
-      Object {
-        "position": 5,
-        "title": "Article L1221-3",
-        "url": "/code-du-travail/l1221-3",
       },
     ],
     "slug": "1-title1",
@@ -63,31 +59,27 @@ Array [
     ],
     "children": Array [
       Object {
-        "slug": "1-title1",
-        "title": "title1",
+        "slug": "3-title3",
+        "title": "title3",
       },
     ],
-    "parent": "theme1",
+    "position": 2,
     "refs": Array [
       Object {
-        "position": 1,
         "title": "Thématique",
         "url": "/themes/theme1",
       },
       Object {
-        "position": 3,
         "title": "Le salaire : quelles sont les modalités de paiement ?",
         "url": "/fiche-ministere-travail/le-salaire-quelles-sont-les-modalites-de-paiement",
       },
       Object {
-        "position": 5,
         "title": "Article L3221-3",
         "url": "/code-du-travail/l3221-3",
       },
     ],
-    "slug": "1-title2",
+    "slug": "2-title2",
     "source": "themes",
-    "theme": "theme2",
     "title": "title2",
     "variants": Array [
       "title2",
@@ -96,34 +88,34 @@ Array [
     ],
   },
   Object {
-    "breadcrumbs": Array [],
-    "children": Array [
+    "breadcrumbs": Array [
       Object {
         "slug": "1-title1",
         "title": "title1",
       },
+      Object {
+        "slug": "2-title2",
+        "title": "title2",
+      },
     ],
-    "parent": "theme2",
+    "children": Array [],
+    "position": 3,
     "refs": Array [
       Object {
-        "position": 1,
         "title": "Thématique",
         "url": "/themes/theme1",
       },
       Object {
-        "position": 3,
         "title": "Le salaire : quelles sont les modalités de paiement ?",
         "url": "/fiche-ministere-travail/le-salaire-quelles-sont-les-modalites-de-paiement",
       },
       Object {
-        "position": 5,
         "title": "Article L3221-3",
         "url": "/code-du-travail/l3221-3",
       },
     ],
-    "slug": "1-title3",
+    "slug": "3-title3",
     "source": "themes",
-    "theme": "theme3",
     "title": "title3",
     "variants": Array [
       "title3",
@@ -138,13 +130,8 @@ Array [
         "title": "title1",
       },
     ],
-    "children": Array [
-      Object {
-        "slug": "1-title1",
-        "title": "title1",
-      },
-    ],
-    "parent": "theme1",
+    "children": Array [],
+    "position": 4,
     "refs": Array [
       Object {
         "title": "Thématique",
@@ -159,9 +146,8 @@ Array [
         "url": "/code-du-travail/l3221-3",
       },
     ],
-    "slug": "1-title4",
+    "slug": "4-title4",
     "source": "themes",
-    "theme": "theme4",
     "title": "title4",
     "variants": Array [
       "title4",
