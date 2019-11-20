@@ -1,8 +1,8 @@
-FROM node:10-alpine
+FROM node:10.17.0-alpine3.10
 
 # NOTE(douglasduteil): add `curl` in the master image
 # `curl` is very useful for later health check tests ;)
-RUN apk add --no-cache --update git=2.20.1-r0 curl=7.64.0-r3
+RUN apk add --no-cache --update git=2.22.0-r0 curl=7.66.0-r0
 
 #
 
