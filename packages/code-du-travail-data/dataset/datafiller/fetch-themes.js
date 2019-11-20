@@ -74,7 +74,9 @@ const fetchAll = async () => {
     const breadcrumbs = row.parent && getParents(sortedRows, row);
     const children = getChildren(sortedRows, row);
     return {
-      ...row,
+      title: row.title,
+      position: row.position,
+      refs: row.refs.map(({ url, title }) => ({ url, title })),
       source: SOURCES.THEMES,
       slug: getSlug(row),
       breadcrumbs,

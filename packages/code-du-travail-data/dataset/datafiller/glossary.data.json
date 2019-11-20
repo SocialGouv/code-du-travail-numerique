@@ -368,77 +368,7 @@
     "abbrs": [],
     "variants": [],
     "definition": "<p>Période de suspension du contrat de travail en raison d'une maladie ou d'un accident du travail d'origine professionnelle ou non professionnelle. L'arrêt de travail est justifiée par une prescription médicale. </p>",
-    "refs": [
-      {},
-      {
-        "url": "/fiche-service-public/arret-maladie-reprise-du-travail-du-salarie",
-        "title": "Arrêt maladie : reprise du travail du salarié"
-      },
-      {
-        "url": "/fiche-service-public/le-salarie-doit-il-passer-une-visite-medicale-apres-un-arret-de-travail",
-        "title": "Le salarié doit-il passer une visite médicale après un arrêt de travail ?"
-      },
-      {
-        "url": "/fiche-service-public/invalidite-ou-arret-de-travail-pour-maladie-demarches-de-lemployeur",
-        "title": "Invalidité ou arrêt de travail pour maladie : démarches de l'employeur"
-      },
-      {
-        "url": "/fiche-ministere-travail/arret-de-travail-pour-accident-ou-maladie-pro-que-se-passe-t-il-pendant-larret-de-travail",
-        "title": "Arrêt de travail pour accident ou maladie pro : que se passe-t-il pendant l’arrêt de travail ?"
-      },
-      {
-        "url": "/code-du-travail/l1226-7",
-        "title": "Article L1226-7"
-      },
-      {
-        "url": "/code-du-travail/l1226-1",
-        "title": "Article L1226-1"
-      },
-      {
-        "url": "/code-du-travail/l1226-1-1",
-        "title": "Article L1226-1-1"
-      },
-      {
-        "url": "/code-du-travail/l1226-9",
-        "title": "Article L1226-9"
-      },
-      {
-        "url": "/fiche-service-public/accident-du-travail-indemnites-journalieres-pendant-larret-de-travail",
-        "title": "Accident du travail : indemnités journalières pendant l'arrêt de travail"
-      },
-      {
-        "url": "/fiche-service-public/un-arret-de-travail-prolonge-t-il-un-contrat-a-duree-determinee-cdd",
-        "title": "Un arrêt de travail prolonge-t-il un contrat à durée déterminée (CDD) ?"
-      },
-      {
-        "url": "/fiche-service-public/maladie-professionnelle-indemnites-journalieres-pendant-larret-de-travail",
-        "title": "Maladie professionnelle : indemnités journalières pendant l'arrêt de travail"
-      },
-      {
-        "url": "/fiche-service-public/arret-maladie-pendant-le-preavis-quelles-consequences",
-        "title": "Arrêt maladie pendant le préavis : quelles conséquences ?"
-      },
-      {
-        "url": "/fiche-service-public/controle-dun-salarie-en-arret-de-travail-quelles-sont-les-regles",
-        "title": "Contrôle d'un salarié en arrêt de travail : quelles sont les règles ?"
-      },
-      {
-        "url": "/fiche-service-public/un-salarie-peut-il-travailler-pendant-un-arret-maladie",
-        "title": "Un salarié peut-il travailler pendant un arrêt maladie ?"
-      },
-      {
-        "url": "/fiche-service-public/quelles-sont-les-heures-dautorisation-de-sortie-du-salarie-en-arret-maladie",
-        "title": "Quelles sont les heures d'autorisation de sortie du salarié en arrêt maladie ?"
-      },
-      {
-        "url": "/code-du-travail/l1226-8",
-        "title": "Article L1226-8"
-      },
-      {
-        "url": "/code-du-travail/l6313-14",
-        "title": "Article L6313-14"
-      }
-    ]
+    "refs": []
   },
   {
     "title": "Arrêté",

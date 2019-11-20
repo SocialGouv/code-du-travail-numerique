@@ -53,7 +53,13 @@ const getTitle = item => {
 };
 
 const fixRefsTitles = refs =>
-  Promise.all(refs.map(async ref => ({ ...ref, title: await getTitle(ref) })));
+  Promise.all(
+    refs.map(async ref => ({
+      url: ref.url,
+      title: await getTitle(ref),
+      relevance: ref.relevance
+    }))
+  );
 
 // import only valid data from datafiller
 // == has more than one ref
@@ -67,7 +73,8 @@ const fetchAll = async () => {
       .filter(item => item.refs && item.refs.length > 1)
       // add title for external links
       .map(async item => ({
-        ...item,
+        title: item.title,
+        theme: item.theme,
         refs: await fixRefsTitles(item.refs),
         variants: getVariants(item)
       }))
