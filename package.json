@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "husky": "^3.1.0",
-    "lerna": "^3.18.4"
+    "lerna": "^3.19.0"
   },
   "resolutions": {
     "@babel/core": "7.7.0",
