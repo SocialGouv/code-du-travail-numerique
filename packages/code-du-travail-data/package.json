@@ -30,7 +30,7 @@
     "@cdt/sources": "^3.6.2",
     "@elastic/elasticsearch": "^7.4.0",
     "@socialgouv/kali-data": "^1.2.31",
-    "@socialgouv/legi-data": "^1.1.9",
+    "@socialgouv/legi-data": "^1.1.10",
     "esm": "^3.2.25",
     "unist-util-find": "^1.0.1",
     "unist-util-select": "^3.0.0",
