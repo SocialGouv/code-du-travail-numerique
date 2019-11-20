@@ -6,6 +6,10 @@ include:
   - /.k8s/elasticsearch/.k8s-deploy-elasticsearch.yml
   - /.k8s/frontend/.k8s-deploy-frontend.yml
   - /.k8s/nlp/.k8s-deploy-nlp.yml
+  #
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v1.2.2/base_semantic_release_stage.yml"
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v1.2.2/base_create_namespace_stage.yml"
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v1.2.2/base_docker_kubectl_image_stage.yml"
 
 #
 
