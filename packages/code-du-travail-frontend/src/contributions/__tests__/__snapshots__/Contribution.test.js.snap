@@ -722,6 +722,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 `;
 
 exports[`<Contribution /> should render with generic answer and content 1`] = `
+<<<<<<< HEAD
 .c1 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
@@ -900,6 +901,8 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   margin-bottom: 3.2rem;
 }
 
+=======
+>>>>>>> test(frontend):Updated tests
 .c0 {
   margin-bottom: 2rem;
   padding: 1rem 2rem;
@@ -914,6 +917,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
     >
       Que dit le code du travail ?
     </h2>
+<<<<<<< HEAD
     <div
       class="c2"
     >
@@ -1888,6 +1892,8 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
         </div>
       </div>
     </div>
+=======
+>>>>>>> test(frontend):Updated tests
     <div>
       <p>
         hello 

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should extract url from External content MT with Mdx correctly: https://travail-emploi.gouv.fr/droit-du-travail/les-absences-pour-maladie-et-conges-pour-evenements-familiaux/article/les-conges-pour-evenements-familiaux 1`] = `"https://travail-emploi.gouv.fr/droit-du-travail/les-absences-pour-maladie-et-conges-pour-evenements-familiaux/article/les-conges-pour-evenements-familiaux"`;
+
+exports[`should extract url from External content SP correctly: https://www.service-public.fr/professionnels-entreprises/vosdroits/F33693 1`] = `"https://www.service-public.fr/professionnels-entreprises/vosdroits/F33693"`;
+
+exports[`should extract url from External content SP with Mdx correctly: https://www.service-public.fr/particuliers/vosdroits/F31897 1`] = `"https://www.service-public.fr/particuliers/vosdroits/F31897"`;
