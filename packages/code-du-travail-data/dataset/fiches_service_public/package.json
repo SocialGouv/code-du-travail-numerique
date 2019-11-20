@@ -9,7 +9,7 @@
   "dependencies": {
     "@socialgouv/fiches-vdd": "^1.0.32",
     "@socialgouv/kali-data": "^1.2.31",
-    "@socialgouv/legi-data": "^1.1.9",
+    "@socialgouv/legi-data": "^1.1.10",
     "adm-zip": "0.4.13",
     "axios": "^0.19.0",
     "lodash.uniqby": "^4.7.0",
