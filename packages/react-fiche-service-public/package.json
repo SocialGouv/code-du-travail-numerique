@@ -41,7 +41,7 @@
     "jest": "^24.9.0",
     "jest-styled-components": "^6.3.4",
     "prettier": "^1.19.1",
-    "rollup": "^1.27.2",
+    "rollup": "^1.27.3",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
