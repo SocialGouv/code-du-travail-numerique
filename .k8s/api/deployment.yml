@@ -37,7 +37,7 @@ spec:
             - name: PORT
               value: "${PORT}"
             - name: ELASTICSEARCH_URL
-              value: "${ELASTICSEARCH_URL}"
+              value: "${CI_ELASTICSEARCH_CLUSTER}"
             - name: ELASTICSEARCH_USER
               valueFrom:
                 secretKeyRef:
@@ -62,7 +62,7 @@ spec:
             - name: PORT
               value: "${PORT}"
             - name: ELASTICSEARCH_URL
-              value: "${ELASTICSEARCH_URL}"
+              value: "${CI_ELASTICSEARCH_CLUSTER}"
             - name: ELASTICSEARCH_USER
               valueFrom:
                 secretKeyRef:
@@ -81,7 +81,7 @@ spec:
 
               retry=120; # 5s * (12 * 10) = 10min
               while
-                ! curl -sS --fail -u "${ELASTICSEARCH_USER}:${ELASTICSEARCH_PWD}:" "${ELASTICSEARCH_URL}/_cat/indices/${BRANCH_HASH}_documents" &&
+                ! curl -sS --fail -u "${ELASTICSEARCH_USER}:${ELASTICSEARCH_PWD}:" "${CI_ELASTICSEARCH_CLUSTER}/_cat/indices/${BRANCH_HASH}_documents" &&
                 [[ $(( retry-- )) -gt 0 ]];
               do echo "Waiting for Elasticsearch indices to go Green ($(( retry )))" ; sleep 5s ; done ;
 
