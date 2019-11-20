@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:10.17.0-alpine3.10
 
 # NOTE(douglasduteil): add `curl` in the master image
 # `curl` is very useful for later health check tests ;)
