@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import createPersistedState from "use-persisted-state";
-import FicheServicePublic from "@socialgouv/react-fiche-service-public";
-import { Accordion, Alert, Button, theme } from "@socialgouv/react-ui";
+import { Alert, Button, theme } from "@socialgouv/react-ui";
 
 import SearchConvention from "../../src/conventions/Search/Form";
+import customComponentsMdx from "./externalContent";
 import Mdx from "../../src/common/Mdx";
 
 // store selected convention in localStorage
@@ -12,30 +12,6 @@ const useConventionState = createPersistedState("convention");
 
 const getConventionUrl = id =>
   `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`;
-
-//Custom MDX component
-const Tab = props => (
-  <StyledAccordion
-    items={[
-      {
-        title: <h3>{props.title}</h3>,
-        body: props.children
-      }
-    ]}
-  />
-);
-
-const Hdn = props => (
-  <Alert variant="info">
-    <h4>Texte applicable</h4>
-    <div {...props} />
-  </Alert>
-);
-
-const customComponentsMdx = {
-  tab: Tab,
-  hdn: Hdn
-};
 
 const RefLink = ({ value, url }) => (
   <LineRef>
@@ -145,14 +121,9 @@ const Contribution = ({ answers, content }) => (
     {answers && answers.generic && (
       <SectionAnswer>
         <h2>Que dit le code du travail ?</h2>
-        {content && content.raw && (
-          <StyledContent>
-            <FicheServicePublic data={JSON.parse(content.raw).children} />
-          </StyledContent>
-        )}
         <Mdx
           markdown={answers.generic.markdown}
-          components={customComponentsMdx}
+          components={customComponentsMdx(content)}
         />
       </SectionAnswer>
     )}
@@ -166,7 +137,7 @@ const Contribution = ({ answers, content }) => (
   </React.Fragment>
 );
 
-const { box, spacing } = theme;
+const { spacing } = theme;
 
 const LineRef = styled.li`
   margin: 5px 0;
@@ -177,10 +148,6 @@ const NoConventionAlert = styled(Alert)`
   margin: 40px 0;
 `;
 
-const StyledContent = styled.div`
-  margin-bottom: ${spacing.large};
-`;
-
 const SectionAnswer = styled.section`
   margin-bottom: ${spacing.medium};
   padding: ${spacing.small} ${spacing.medium};
@@ -189,17 +156,6 @@ const SectionAnswer = styled.section`
 const StyledSearchConvention = styled(SearchConvention)`
   margin: ${spacing.medium} 0;
   padding: ${spacing.small};
-`;
-
-const StyledAccordion = styled(Accordion)`
-  *[data-accordion-component="AccordionItem"] {
-    &:nth-of-type(1) {
-      border-bottom: ${box.border};
-    }
-  }
-  *[data-accordion-component="AccordionItemButton"] {
-    padding-left: ${spacing.small};
-  }
 `;
 
 export default Contribution;

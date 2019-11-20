@@ -30,7 +30,6 @@ class PageContribution extends React.Component {
     if (contentUrl) {
       const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
       const content = await fetchContent.json();
-
       return { data, content };
     }
     return { data };
@@ -53,7 +52,7 @@ class PageContribution extends React.Component {
             image={ogImage}
           />
           <Answer
-            title={title || ""}
+            title={title}
             relatedItems={relatedItems}
             sourceType="Réponse personnalisée selon votre convention collective"
             emptyMessage="Cette question n'a pas été trouvée"
