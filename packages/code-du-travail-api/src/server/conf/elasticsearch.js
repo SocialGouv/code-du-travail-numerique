@@ -26,6 +26,5 @@ switch (process.env.NODE_ENV) {
 const client = new Client(esClientConfig);
 
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
-client.info().then(({ body }) => logger.info(body.version.number));
 
 module.exports = client;

@@ -39,9 +39,20 @@ const DUMP_PATH =
 
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
 
-const client = new Client({
+const esClientConfig = {
   node: `${ELASTICSEARCH_URL}`
-});
+};
+
+switch (process.env.NODE_ENV) {
+  case "production":
+    esClientConfig.auth = {
+      username: process.env.ELASTICSEARCH_USER || "elastic",
+      password: process.env.ELASTICSEARCH_PWD
+    };
+    break;
+}
+
+const client = new Client(esClientConfig);
 
 async function main() {
   const ts = Date.now();
