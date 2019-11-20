@@ -80,8 +80,7 @@ router.get("/items/:id", async ctx => {
 router.get("/items", async ctx => {
   const { url } = ctx.query;
   const response = await elasticsearchClient.search({
-    index: index,
-    _source: ["raw"],
+    _source: ["raw", "intro", "sections"],
     body: {
       query: {
         bool: {
