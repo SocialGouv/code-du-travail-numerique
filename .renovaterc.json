@@ -3,5 +3,13 @@
   "extends": [
     "github>SocialGouv/renovate-config",
     ":automergeAll"
+  ],
+  "packageRules": [
+    {
+      "groupName": "SocialGouv",
+      "packagePatterns": [
+        "^@socialgouv/"
+      ]
+    }
   ]
 }
