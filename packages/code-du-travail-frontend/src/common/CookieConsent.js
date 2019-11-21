@@ -24,9 +24,7 @@ const CookieConsent = () => {
         animate="from-bottom"
         onRemove={onToastRemove}
       >
-        En poursuivant votre navigation sur ce site, vous acceptez l’utilisation
-        de cookies pour établir des mesures de fréquentation et d’utilisation du
-        site.
+        Nous utilisons des cookies pour établir des mesures anonymisées de fréquentation et d’utilisation du site.
         <A
           title="Mentions legales"
           rel="noopener noreferrer"
