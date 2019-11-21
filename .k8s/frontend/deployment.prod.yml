@@ -55,13 +55,12 @@ spec:
               value: "${VERSION}"
       initContainers:
         - name: wait-for-api
-          image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.14.0
+          image: curlimages/curl:7.67.0
           imagePullPolicy: Always
           command:
             - sh
             - -c
             - |
-
               retry=120; # 5s * (12 * 10) = 10min
               while
                 ! curl -sS "${API_URL}/api/v1/version" &&
@@ -72,13 +71,12 @@ spec:
 
               echo Ready;
         - name: wait-for-nlp
-          image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.14.0
+          image: curlimages/curl:7.67.0
           imagePullPolicy: Always
           command:
             - sh
             - -c
             - |
-
               retry=120; # 5s * (12 * 10) = 10min
               while
                 ! curl -sS --fail "${NLP_URL}" &&
