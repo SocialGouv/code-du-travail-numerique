@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/react-ui",
-  "version": "3.6.2",
+  "version": "3.7.0",
   "private": true,
   "description": "Composants ReactJS",
   "main": "lib/index.js",

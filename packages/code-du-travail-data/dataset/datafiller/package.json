@@ -1,10 +1,10 @@
 {
   "name": "@cdt/data...datafiller",
-  "version": "3.6.2",
+  "version": "3.7.0",
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@cdt/sources": "^3.6.2",
+    "@cdt/sources": "^3.7.0",
     "debug": "^4.1.1",
     "node-fetch": "^2.6.0",
     "p-limit": "^2.2.1",

@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.2...v3.7.0) (2019-11-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sentry/browser to ^5.9.1 ([#1727](https://github.com/SocialGouv/code-du-travail-numerique/issues/1727)) ([5c8014a](https://github.com/SocialGouv/code-du-travail-numerique/commit/5c8014a))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.34 ([#1739](https://github.com/SocialGouv/code-du-travail-numerique/issues/1739)) ([e4abb58](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4abb58))
+* **deps:** update dependency @socialgouv/kali-data to ^1.2.32 ([#1740](https://github.com/SocialGouv/code-du-travail-numerique/issues/1740)) ([87922b9](https://github.com/SocialGouv/code-du-travail-numerique/commit/87922b9))
+* **deps:** update dependency @socialgouv/legi-data to ^1.1.10 ([#1757](https://github.com/SocialGouv/code-du-travail-numerique/issues/1757)) ([29a4095](https://github.com/SocialGouv/code-du-travail-numerique/commit/29a4095))
+* **deps:** update dependency date-fns to ^2.8.0 ([#1743](https://github.com/SocialGouv/code-du-travail-numerique/issues/1743)) ([9940a0d](https://github.com/SocialGouv/code-du-travail-numerique/commit/9940a0d))
+* **deps:** update dependency final-form-arrays to ^3.0.2 ([#1758](https://github.com/SocialGouv/code-du-travail-numerique/issues/1758)) ([e6ed933](https://github.com/SocialGouv/code-du-travail-numerique/commit/e6ed933))
+* **deps:** update dependency husky to ^3.1.0 ([#1736](https://github.com/SocialGouv/code-du-travail-numerique/issues/1736)) ([c252245](https://github.com/SocialGouv/code-du-travail-numerique/commit/c252245))
+* **deps:** update dependency lerna to ^3.19.0 ([#1756](https://github.com/SocialGouv/code-du-travail-numerique/issues/1756)) ([1429f9d](https://github.com/SocialGouv/code-du-travail-numerique/commit/1429f9d))
+* **deps:** update dependency next to ^9.1.4 ([#1737](https://github.com/SocialGouv/code-du-travail-numerique/issues/1737)) ([a0c9e07](https://github.com/SocialGouv/code-du-travail-numerique/commit/a0c9e07))
+* **deps:** update dependency react-final-form to ^6.3.3 ([#1738](https://github.com/SocialGouv/code-du-travail-numerique/issues/1738)) ([f248856](https://github.com/SocialGouv/code-du-travail-numerique/commit/f248856))
+
+
+### Features
+
+* **contrib:** add description in search results ([#1734](https://github.com/SocialGouv/code-du-travail-numerique/issues/1734)) ([6e31c3d](https://github.com/SocialGouv/code-du-travail-numerique/commit/6e31c3d)), closes [#1665](https://github.com/SocialGouv/code-du-travail-numerique/issues/1665)
+* **data:** update datafiller, contribution, sitemap ([#1769](https://github.com/SocialGouv/code-du-travail-numerique/issues/1769)) ([6086d5b](https://github.com/SocialGouv/code-du-travail-numerique/commit/6086d5b))
+
+
+
+
+
 ## [3.6.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.1...v3.6.2) (2019-11-18)
 
 

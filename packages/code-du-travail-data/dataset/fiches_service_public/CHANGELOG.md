@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.2...v3.7.0) (2019-11-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.34 ([#1739](https://github.com/SocialGouv/code-du-travail-numerique/issues/1739)) ([e4abb58](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4abb58))
+* **deps:** update dependency @socialgouv/kali-data to ^1.2.32 ([#1740](https://github.com/SocialGouv/code-du-travail-numerique/issues/1740)) ([87922b9](https://github.com/SocialGouv/code-du-travail-numerique/commit/87922b9))
+* **deps:** update dependency @socialgouv/legi-data to ^1.1.10 ([#1757](https://github.com/SocialGouv/code-du-travail-numerique/issues/1757)) ([29a4095](https://github.com/SocialGouv/code-du-travail-numerique/commit/29a4095))
+
+
+### Features
+
+* **data:** update datafiller, contribution, sitemap ([#1769](https://github.com/SocialGouv/code-du-travail-numerique/issues/1769)) ([6086d5b](https://github.com/SocialGouv/code-du-travail-numerique/commit/6086d5b))
+
+
+
+
+
 ## [3.6.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.1...v3.6.2) (2019-11-18)
 
 
