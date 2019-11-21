@@ -50,14 +50,12 @@ spec:
               value: "${VERSION}"
       initContainers:
         - name: wait-for-api
-          image: alpine
+          image: curlimages/curl:7.67.0
           imagePullPolicy: Always
           command:
             - sh
             - -c
             - |
-              apk add --no-cache curl=7.66.0-r0;
-
               retry=120; # 5s * (12 * 10) = 10min
               while
                 ! curl -sS --fail "${API_URL}/api/v1/version" &&
@@ -68,14 +66,12 @@ spec:
 
               echo Ready;
         - name: wait-for-nlp
-          image: alpine
+          image: curlimages/curl:7.67.0
           imagePullPolicy: Always
           command:
             - sh
             - -c
             - |
-              apk add --no-cache curl=7.66.0-r0;
-
               retry=120; # 5s * (12 * 10) = 10min
               while
                 ! curl -sS --fail "${NLP_URL}" &&
