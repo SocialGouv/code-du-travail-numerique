@@ -42,12 +42,12 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: elasticsearch-creds
-                  key: USERNAME
+                  key: user
             - name: ELASTICSEARCH_PWD
               valueFrom:
                 secretKeyRef:
                   name: elasticsearch-creds
-                  key: PASSWORD
+                  key: password
             - name: VERSION
               value: "${VERSION}"
             - name: NLP_URL
@@ -56,32 +56,30 @@ spec:
               value: "cdtn-${BRANCH_HASH}"
       initContainers:
         - name: wait-for-elasticsearch
-          image: alpine
+          image: curlimages/curl:7.67.0
           imagePullPolicy: Always
           env:
-            - name: PORT
-              value: "${PORT}"
             - name: ELASTICSEARCH_URL
               value: "${CI_ELASTICSEARCH_CLUSTER}"
             - name: ELASTICSEARCH_USER
               valueFrom:
                 secretKeyRef:
                   name: elasticsearch-creds
-                  key: USERNAME
+                  key: user
             - name: ELASTICSEARCH_PWD
               valueFrom:
                 secretKeyRef:
                   name: elasticsearch-creds
-                  key: PASSWORD
+                  key: password
+            - name: ES_INDEX_PREFIX
+              value: "cdtn-${BRANCH_HASH}"
           command:
             - sh
             - -c
             - |
-              export ES_CREDENTIALS=$ELASTICSEARCH_USER:$ELASTICSEARCH_PWD
-              apk add --no-cache curl=7.66.0-r0;
               retry=120; # 5s * (12 * 10) = 10min
               while
-                ! curl -sS --fail -u $ES_CREDENTIALS "${CI_ELASTICSEARCH_CLUSTER}/_cat/indices/${BRANCH_HASH}_documents" &&
+                ! curl -sS --fail -u $ELASTICSEARCH_USER:$ELASTICSEARCH_PWD "${CI_ELASTICSEARCH_CLUSTER}/_cat/indices/${ES_INDEX_PREFIX}_documents" &&
                 [[ $(( retry-- )) -gt 0 ]];
               do echo "Waiting for Elasticsearch indices to go Green ($(( retry )))" ; sleep 5s ; done ;
 
