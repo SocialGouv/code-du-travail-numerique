@@ -53,7 +53,7 @@ const References = ({ references }) => {
 
   return (
     <React.Fragment>
-      {references && references.length && (
+      {references && references.length !== 0 && (
         <React.Fragment>
           <h3>Références</h3>
           {/* group CCs references */}
