@@ -65,7 +65,7 @@ spec:
 >>>>>>> fix initcontainer credentials
           imagePullPolicy: Always
           env:
-            - name: ELASTICSEARCH_URL
+            - name: CI_ELASTICSEARCH_CLUSTER
               value: "${CI_ELASTICSEARCH_CLUSTER}"
             - name: ELASTICSEARCH_USER
               valueFrom:
