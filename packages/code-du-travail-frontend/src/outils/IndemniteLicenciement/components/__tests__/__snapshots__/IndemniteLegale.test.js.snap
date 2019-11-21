@@ -63,7 +63,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
     <summary
       class="c3"
     >
-      Voir le detail du calcul
+      Voir le détail du calcul
     </summary>
     <strong
       class="c4"

@@ -93,7 +93,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
       <summary
         class="c4"
       >
-        Voir le detail du calcul
+        Voir le détail du calcul
       </summary>
       <strong
         class="c5"

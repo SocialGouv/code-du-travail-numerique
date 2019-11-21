@@ -10,7 +10,7 @@ import { Summary } from "../../common/stepStyles";
 function FormulaDetails({ infoCalcul: { labels, formula } }) {
   return (
     <Details>
-      <Summary>Voir le detail du calcul</Summary>
+      <Summary>Voir le détail du calcul</Summary>
       <HeadingDetails>Élements saisis :</HeadingDetails>
       <ListDetails>
         {Object.entries(labels).map(([label, value], index) => (
