@@ -1,21 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SectionTitle /> should render title in a link 1`] = `
+exports[`<ListTitle /> should render title in a link 1`] = `
 .c0 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
-}
-
-.c4 {
-  color: #005994;
-  font-weight: 300;
-  font-size: 1rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 .c2 {
@@ -27,27 +20,29 @@ exports[`<SectionTitle /> should render title in a link 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #005994;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-family: "Merriweather",serif;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2:hover {
-  color: #006be6;
+  color: #2f3b6c;
 }
 
 .c3 {
-  margin-left: 1rem;
-  color: #006be6;
-  -webkit-transition: 250ms ease-out -webkit-transform;
-  -webkit-transition: 250ms ease-out transform;
-  transition: 250ms ease-out transform;
+  margin-left: 1.6rem;
+  color: #7598d6;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
 }
 
 .c1:hover .c3 {
-  -webkit-transform: translateX(7px);
-  -ms-transform: translateX(7px);
-  transform: translateX(7px);
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 <div>
@@ -80,23 +75,22 @@ exports[`<SectionTitle /> should render title in a link 1`] = `
         </svg>
       </a>
     </h2>
-    <div
-      class="c4"
-    >
+    <div>
       le code du travail numérique
     </div>
   </div>
 </div>
 `;
 
-exports[`<SectionTitle /> should render title only 1`] = `
+exports[`<ListTitle /> should render title only 1`] = `
 .c0 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 <div>
@@ -111,22 +105,15 @@ exports[`<SectionTitle /> should render title only 1`] = `
 </div>
 `;
 
-exports[`<SectionTitle /> should render title with description 1`] = `
+exports[`<ListTitle /> should render title with description 1`] = `
 .c0 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
-}
-
-.c1 {
-  color: #005994;
-  font-weight: 300;
-  font-size: 1rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 <div>
@@ -136,9 +123,7 @@ exports[`<SectionTitle /> should render title with description 1`] = `
     >
       Lorem Ipsum
     </h2>
-    <div
-      class="c1"
-    >
+    <div>
       Hello
     </div>
   </div>

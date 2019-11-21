@@ -3,13 +3,13 @@
 exports[`<CategoryPeriod /> should render 1`] = `
 .c2 {
   width: 5em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
 }
 
 .c2::-webkit-outer-spin-button,
@@ -21,9 +21,14 @@ exports[`<CategoryPeriod /> should render 1`] = `
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 .c1 {

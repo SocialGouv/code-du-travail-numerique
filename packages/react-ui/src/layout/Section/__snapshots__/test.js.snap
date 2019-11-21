@@ -2,9 +2,9 @@
 
 exports[`<Section /> it renders a dark Section 1`] = `
 .c0 {
-  padding: 1.25rem 0;
-  color: #434956;
-  background-color: #ebeff3;
+  padding: 2rem 0;
+  color: #3e486e;
+  background-color: #e4e8ef;
 }
 
 <div>
@@ -20,8 +20,8 @@ exports[`<Section /> it renders a dark Section 1`] = `
 
 exports[`<Section /> it renders a default Section 1`] = `
 .c0 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 <div>
@@ -37,9 +37,9 @@ exports[`<Section /> it renders a default Section 1`] = `
 
 exports[`<Section /> it renders a light Section 1`] = `
 .c0 {
-  padding: 1.25rem 0;
-  color: #434956;
-  background-color: #f9f9fc;
+  padding: 2rem 0;
+  color: #3e486e;
+  background-color: #f2f5fa;
 }
 
 <div>
@@ -55,8 +55,8 @@ exports[`<Section /> it renders a light Section 1`] = `
 
 exports[`<Section /> it renders a white Section 1`] = `
 .c0 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
   background-color: #fff;
 }
 

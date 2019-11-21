@@ -1,74 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Alert /> it should render a danger alert 1`] = `
-.c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #f6bcc2;
-  border-color: #f08f99;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-<div>
-  <div
-    class="c0"
-  >
-    this is a 
-    danger
-     alert 
-  </div>
-</div>
-`;
-
-exports[`<Alert /> it should render a info alert 1`] = `
-.c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #e5f1fe;
-  border-color: #b4d7fc;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-<div>
-  <div
-    class="c0"
-  >
-    this is a 
-    info
-     alert 
-  </div>
-</div>
-`;
-
 exports[`<Alert /> it should render a primary alert 1`] = `
 .c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #fff;
-  background: #005994;
-  border-color: #003a61;
+  border-color: #ff7067;
+  border-radius: 0.6rem;
 }
 
 .c0 > *:first-child {
@@ -92,13 +32,12 @@ exports[`<Alert /> it should render a primary alert 1`] = `
 
 exports[`<Alert /> it should render a secondary alert 1`] = `
 .c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #cbd6e0;
+  border-radius: 0.6rem;
 }
 
 .c0 > *:first-child {
@@ -120,75 +59,14 @@ exports[`<Alert /> it should render a secondary alert 1`] = `
 </div>
 `;
 
-exports[`<Alert /> it should render a success alert 1`] = `
-.c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #e0f2bd;
-  border-color: #ccea92;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-<div>
-  <div
-    class="c0"
-  >
-    this is a 
-    success
-     alert 
-  </div>
-</div>
-`;
-
-exports[`<Alert /> it should render a warning alert 1`] = `
-.c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #fee5ad;
-  border-color: #fdd57b;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-<div>
-  <div
-    class="c0"
-  >
-    this is a 
-    warning
-     alert 
-  </div>
-</div>
-`;
-
 exports[`<Alert /> should render 1`] = `
 .c0 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #434956;
-  background: #ebeff3;
-  border-color: #cbd6e0;
+  border-radius: 0.6rem;
 }
 
 .c0 > *:first-child {

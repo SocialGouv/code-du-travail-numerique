@@ -4,7 +4,7 @@ exports[`<Themes /> should render 1`] = `
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c1 > *:first-child {
@@ -16,11 +16,11 @@ exports[`<Themes /> should render 1`] = `
 }
 
 .c0 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,15 +39,15 @@ exports[`<Themes /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -59,25 +59,18 @@ exports[`<Themes /> should render 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 4 - 2 * 1rem);
+  margin: 1rem;
 }
 
 .c2 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
-}
-
-.c6 {
-  color: #005994;
-  font-weight: 300;
-  font-size: 1rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 .c4 {
@@ -89,30 +82,32 @@ exports[`<Themes /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #005994;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-family: "Merriweather",serif;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4:hover {
-  color: #006be6;
+  color: #2f3b6c;
 }
 
 .c5 {
-  margin-left: 1rem;
-  color: #006be6;
-  -webkit-transition: 250ms ease-out -webkit-transform;
-  -webkit-transition: 250ms ease-out transform;
-  transition: 250ms ease-out transform;
+  margin-left: 1.6rem;
+  color: #7598d6;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
 }
 
 .c3:hover .c5 {
-  -webkit-transform: translateX(7px);
-  -ms-transform: translateX(7px);
-  transform: translateX(7px);
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
-.c9 {
+.c8 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -137,16 +132,16 @@ exports[`<Themes /> should render 1`] = `
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -155,25 +150,26 @@ exports[`<Themes /> should render 1`] = `
   appearance: none;
 }
 
-.c9:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
-}
-
-.c12 {
-  display: block;
-  max-width: 100%;
-  padding-right: 1rem;
-  overflow-y: auto;
+.c8:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
 .c11 {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  display: block;
+  max-width: 100%;
+  padding-right: 1.6rem;
+  overflow-y: auto;
 }
 
 .c10 {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+}
+
+.c9 {
   min-height: 120px;
 }
 
@@ -185,14 +181,14 @@ exports[`<Themes /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c8 {
-    width: calc( 100% / 3 - 2 * 0.625rem );
+  .c7 {
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
-    width: calc( 100% - 2 * 0.625rem );
+  .c7 {
+    width: calc( 100% - 2 * 1rem );
   }
 }
 
@@ -232,24 +228,22 @@ exports[`<Themes /> should render 1`] = `
             </svg>
           </a>
         </h2>
-        <div
-          class="c6"
-        >
+        <div>
           Retrouvez tous nos contenus autour de grands thèmes
         </div>
       </div>
       <ul
-        class="c7"
+        class="c6"
       >
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9 c10"
+            class="c8 c9"
             href="/themes/1-recrutement-et-contrat-de-travail"
           >
             <div
-              class="c11"
+              class="c10"
             >
               <svg
                 fill="none"
@@ -274,7 +268,7 @@ exports[`<Themes /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c12"
+              class="c11"
             >
               Recrutement et contrat de travail
             </div>
@@ -282,14 +276,14 @@ exports[`<Themes /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9 c10"
+            class="c8 c9"
             href="/themes/2-salaire-et-remuneration"
           >
             <div
-              class="c11"
+              class="c10"
             >
               <svg
                 fill="none"
@@ -314,7 +308,7 @@ exports[`<Themes /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c12"
+              class="c11"
             >
               Salaire et Rémunération
             </div>
@@ -322,14 +316,14 @@ exports[`<Themes /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9 c10"
+            class="c8 c9"
             href="/themes/3-temps-de-travail-et-conges"
           >
             <div
-              class="c11"
+              class="c10"
             >
               <svg
                 fill="none"
@@ -354,7 +348,7 @@ exports[`<Themes /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c12"
+              class="c11"
             >
               Temps de travail et congés
             </div>
@@ -362,14 +356,14 @@ exports[`<Themes /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9 c10"
+            class="c8 c9"
             href="/themes/4-emploi-et-formation"
           >
             <div
-              class="c11"
+              class="c10"
             >
               <svg
                 fill="none"
@@ -394,7 +388,7 @@ exports[`<Themes /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c12"
+              class="c11"
             >
               Emploi et formation
             </div>
@@ -402,14 +396,14 @@ exports[`<Themes /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9 c10"
+            class="c8 c9"
             href="/themes/5-sante,-securite-et-conditions-de-travail"
           >
             <div
-              class="c11"
+              class="c10"
             >
               <svg
                 fill="none"
@@ -434,7 +428,7 @@ exports[`<Themes /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c12"
+              class="c11"
             >
               Santé, sécurité et conditions de travail
             </div>
@@ -442,14 +436,14 @@ exports[`<Themes /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9 c10"
+            class="c8 c9"
             href="/themes/6-representation-du-personnel-et-negociation-collective"
           >
             <div
-              class="c11"
+              class="c10"
             >
               <svg
                 fill="none"
@@ -474,7 +468,7 @@ exports[`<Themes /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c12"
+              class="c11"
             >
               Représentation du personnel et négociation collective
             </div>
@@ -482,14 +476,14 @@ exports[`<Themes /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9 c10"
+            class="c8 c9"
             href="/themes/7-depart-de-lentreprise"
           >
             <div
-              class="c11"
+              class="c10"
             >
               <svg
                 fill="none"
@@ -514,7 +508,7 @@ exports[`<Themes /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c12"
+              class="c11"
             >
               Départ de l'entreprise
             </div>
@@ -522,14 +516,14 @@ exports[`<Themes /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9 c10"
+            class="c8 c9"
             href="/themes/8-conflits-au-travail-et-controle-de-la-reglementation"
           >
             <div
-              class="c11"
+              class="c10"
             >
               <svg
                 fill="none"
@@ -554,7 +548,7 @@ exports[`<Themes /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c12"
+              class="c11"
             >
               Conflits au travail et contrôle de la réglementation
             </div>

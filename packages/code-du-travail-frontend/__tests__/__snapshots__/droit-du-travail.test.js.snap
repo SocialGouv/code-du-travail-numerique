@@ -1,43 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DroitDuTravail /> should render 1`] = `
-.c22 {
+.c23 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
 }
 
-.c22 > *:first-child {
+.c23 > *:first-child {
   margin-top: 0;
 }
 
-.c22 > *:last-child {
+.c23 > *:last-child {
   margin-bottom: 0;
 }
 
-.c21 {
-  padding: 1.25rem 0;
-  color: #434956;
-  background-color: #f9f9fc;
-}
-
-.c34 {
-  padding: 1.25rem 0;
-  color: #434956;
-  background-color: #fff;
+.c22 {
+  padding: 2rem 0;
+  color: #3e486e;
+  background-color: #f2f5fa;
 }
 
 .c35 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
+  background-color: #fff;
+}
+
+.c36 {
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c18 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   border-color: transparent;
 }
 
@@ -49,63 +49,68 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c29 {
+.c19 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c21 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c42 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c28 + .c27 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c31 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.c30 {
   position: relative;
-  display: inline-block;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 12px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+  margin-right: 1rem;
+  color: #7598d6;
 }
 
-.c29::after,
-.c29::before {
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 10px;
-  height: 2px;
-  background-color: currentColor;
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  content: "";
+[aria-expanded="true"] .c30,
+[aria-selected="true"] .c30 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.c29::before {
-  left: 4px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-[aria-expanded="true"] .c29::before,
-[aria-selected="true"] .c29::before {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c29::after {
-  right: 4px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-[aria-expanded="true"] .c29::after,
-[aria-selected="true"] .c29::after {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.c27 + .c26 {
-  border-top: 1px solid #c9d3df;
-}
-
-.c28 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,121 +119,168 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   cursor: pointer;
 }
 
-.c28:hover,
-.c28:focus,
-.c28:focus-within,
-.c28[aria-expanded="true"] {
-  color: #005994;
+.c29:hover,
+.c29:focus,
+.c29:focus-within,
+.c29[aria-expanded="true"] {
+  color: #3e486e;
 }
 
-.c30 {
-  padding: 1rem;
+.c32 {
+  padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c30 > *:first-child {
+.c32 > *:first-child {
   margin-top: 0;
 }
 
-.c30 > *:last-child {
+.c32 > *:last-child {
   margin-bottom: 0;
 }
 
-.c30.accordion__body--hidden {
+.c32.accordion__body--hidden {
   display: none;
 }
 
 .c13 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c13:hover {
-  color: #8c94a6;
+.c13:link,
+.c13:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
 }
 
-.c44 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c13:not([disabled]):hover,
+.c13:not([disabled]):active,
+.c13:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c13[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c43 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  line-height: initial;
+  color: #ff7067;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.625;
   text-align: left;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
 }
 
-.c44:focus,
-.c44:hover,
-.c44:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c43:focus,
+.c43:hover,
+.c43:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c48 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c48:link,
@@ -241,23 +293,41 @@ exports[`<DroitDuTravail /> should render 1`] = `
 .c48:not([disabled]):hover,
 .c48:not([disabled]):active,
 .c48:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
 .c48[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c36 {
+.c44 {
+  height: 1.4rem;
+  margin-left: 0.4rem;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c12:hover .c44 {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
+.c37 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c10:not(:focus):not(:active) {
+.c9:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -269,95 +339,30 @@ exports[`<DroitDuTravail /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c31 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: auto;
-  min-height: 48px;
-  color: #434956;
-  background-color: #fff;
-  border-color: #e5f1fe;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: none;
-  -webkit-animation: none;
-  animation: none;
-}
-
-.c42 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: auto;
-  min-height: 48px;
-  color: #434956;
-  background-color: #fff;
-  border-color: #fee5ad;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: none;
-  -webkit-animation: none;
-  animation: none;
-}
-
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e5f1fe;
-}
-
-.c43 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
 .c33 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7598d6;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c34 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -365,12 +370,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -381,15 +386,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
   text-align: left;
 }
 
-.c12 ul {
+.c11 ul {
   z-index: 100;
 }
 
-.c12 li[role="option"]:nth-child(2n + 1) {
-  background: #f9f9fc;
+.c11 li[role="option"]:nth-child(2n + 1) {
+  background: #f2f5fa;
 }
 
-.c8 {
+.c7 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -399,7 +404,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 0;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -407,22 +412,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
   width: 100%;
   height: 50px;
   margin: 0;
-  padding: 0 calc(50px + 0.625rem) 0 1rem;
+  padding: 0 calc(50px + 1rem) 0 1.6rem;
   font-size: inherit;
   font-family: inherit;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 1.5rem;
+  background: #f2f5fa;
+  border: 1px solid #bbcadf;
+  border-radius: 2.4rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.c11:focus {
-  border-color: #006be6;
-  outline: none;
 }
 
 .c14 {
@@ -431,8 +431,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
   right: 1px;
   width: calc(50px - 2px);
   height: calc(50px - 2px);
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
 }
 
 .c0 {
@@ -442,7 +442,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -455,7 +455,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1.25rem;
+  padding: 2rem;
 }
 
 .c1 > *:first-child {
@@ -495,39 +495,29 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c4 {
-  width: 5rem;
+  width: 8rem;
   height: 100%;
-  margin-right: 1rem;
+  margin-right: 1.6rem;
 }
 
 .c5 {
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
 .c6 {
-  display: inline-block;
-  padding: 0.5rem 0.625rem;
-  font-weight: bold;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  white-space: nowrap;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #e5f1fe;
-  margin-left: 1.25rem;
+  width: 350px;
 }
 
-.c7 {
-  width: 350px;
+.c45 {
+  background-color: #f2f5fa;
 }
 
 .c46 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
@@ -542,10 +532,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
 .c47 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
@@ -560,7 +550,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 .c49 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -580,27 +570,22 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c51 + .c50 {
-  padding-left: 1rem;
+  padding-left: 1.6rem;
 }
 
 .c52 {
-  font-weight: bold;
-  font-size: 1rem;
+  margin: 0.4rem 0;
 }
 
-.c53 {
-  margin: 0.5rem 0;
+.c52 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.c53 a,
-.c53 a:visited {
-  color: #434956;
-}
-
-.c23 {
+.c24 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -609,29 +594,29 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-.c23 > *:first-child {
+.c24 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c24 > *:last-child {
   margin-bottom: 0;
 }
 
-.c25 {
+.c26 {
   -webkit-flex: 0 1 50%;
   -ms-flex: 0 1 50%;
   flex: 0 1 50%;
 }
 
-.c25 + .c24 {
-  margin-left: 2.5rem;
+.c26 + .c25 {
+  margin-left: 4rem;
 }
 
-.c37 {
+.c38 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -643,7 +628,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   align-items: stretch;
 }
 
-.c38 {
+.c39 {
   position: absolute;
   left: -70px;
   display: -webkit-box;
@@ -664,16 +649,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
   height: 100%;
 }
 
-.c38:before {
+.c39:before {
   position: absolute;
   left: 50%;
   width: 1px;
   height: 100%;
-  background-color: #c9d3df;
+  background-color: #bbcadf;
   content: "";
 }
 
-.c39 {
+.c40 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -687,37 +672,33 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 4.8rem;
+  height: 4.8rem;
   color: #fff;
   font-weight: bold;
-  font-size: 1.375rem;
-  background-color: #005994;
+  font-size: 1.8rem;
+  background-color: #7598d6;
   border-radius: 50%;
 }
 
-.c40 {
+.c41 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 0.625rem 0;
-}
-
-.c41 {
-  margin: 0.625rem 1rem;
+  padding: 1rem 0;
 }
 
 .c15 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
   background-color: #fff;
-  padding: 2.5rem 0;
+  padding: 4rem 0;
 }
 
 .c16 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -728,7 +709,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -ms-flex-align: flex-end;
   align-items: flex-end;
   max-width: 1200px;
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
 }
 
 .c16 > *:first-child {
@@ -746,30 +727,26 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -ms-flex-preferred-size: 80%;
   flex-basis: 80%;
   padding-right: 8%;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
-}
-
-.c19 {
-  font-size: 1.875rem;
+  background-color: #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c20 {
   position: relative;
   right: 4%;
-  bottom: 1.25rem;
+  bottom: 2rem;
   -webkit-flex-basis: 410px;
   -ms-flex-preferred-size: 410px;
   flex-basis: 410px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e5f1fe;
-  border-radius: 0.25rem;
+  background-color: #e4e8ef;
+  border-radius: 0.6rem;
 }
 
 @media print {
-  .c22 {
+  .c23 {
     max-width: 100%;
     padding: 0;
   }
@@ -777,7 +754,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 @media (max-width:600px) {
   .c18 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -789,7 +766,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c7 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -798,8 +775,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
-    padding: 0 1rem;
+  .c10 {
+    padding: 0 1.6rem;
   }
 }
 
@@ -828,16 +805,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c7 {
+  .c6 {
     width: 70%;
-    margin-top: 1.25rem;
+    margin-top: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     width: 100%;
-    margin-top: 1.25rem;
+    margin-top: 2rem;
   }
 }
 
@@ -883,14 +860,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media print {
-  .c23 {
+  .c24 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c23 {
+  .c24 {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -898,36 +875,36 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c25 {
+  .c26 {
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
   }
 
-  .c25 + .c24 {
+  .c26 + .c25 {
     margin-left: 0;
-    border-top: 1px solid #c9d3df;
-  }
-}
-
-@media (max-width:980px) {
-  .c37 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    margin-top: 1.25rem;
+    border-top: 1px solid #bbcadf;
   }
 }
 
 @media (max-width:980px) {
   .c38 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c39 {
     position: relative;
     left: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c38:before {
+  .c39:before {
     display: none;
   }
 }
@@ -954,7 +931,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
     padding: 0;
   }
 }
@@ -998,24 +975,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
             numérique
           </span>
         </a>
-        <div
-          class="c6"
-        >
-          Version Bêta
-        </div>
       </div>
       <div
-        class="c7"
+        class="c6"
       >
         <form
-          class="c8"
+          class="c7"
         >
           <label
-            class="c9"
+            class="c8"
             for="main-search-input"
           >
             <span
-              class="c10"
+              class="c9"
             >
               Rechercher
             </span>
@@ -1030,7 +1002,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-autocomplete="list"
                 aria-controls="react-autowhatever-cdtn-documents-suggester"
                 autocomplete="off"
-                class="c11"
+                class="c10"
                 id="main-search-input"
                 name="query"
                 placeholder="Recherche"
@@ -1038,14 +1010,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 value=""
               />
               <div
-                class="c12"
+                class="c11"
                 id="react-autowhatever-cdtn-documents-suggester"
                 role="listbox"
               />
             </div>
           </label>
           <button
-            class="c13 c14"
+            class="c12 c13 c14"
             type="submit"
           >
             <svg
@@ -1100,7 +1072,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <div
             class="c18"
           >
-            <h2>
+            <h2
+              class="c21"
+            >
               Ce n’est pas... 
             </h2>
             <p>
@@ -1111,27 +1085,29 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c21"
+      class="c22"
     >
       <div
-        class="c22"
+        class="c23"
       >
-        <h2>
-          Quels sont les textes à l’origine du droit du travail ?
+        <h2
+          class="c21"
+        >
+          Quels sont les textes à l’origine du droit du travail ?
         </h2>
         <p>
           Le droit du travail est construit par de nombreux textes juridiques dont les sources sont diverses : sources internationales, sources européennes et sources nationales. Vous trouverez les textes participant à la construction du droit du travail en France ci-dessous.
         </p>
       </div>
       <div
-        class="c23"
+        class="c24"
       >
         <div
-          class="c24 c25"
+          class="c25 c26"
           data-accordion-component="Accordion"
         >
           <div
-            class="c26 c27"
+            class="c27 c28"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1144,25 +1120,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="accordion__panel-0"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c28"
+                class="c29"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-0"
                 role="button"
                 tabindex="0"
               >
-                <h3>
+                <svg
+                  class="c30"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h3
+                  class="c31"
+                >
                   Les textes internationaux
                 </h3>
-                <div
-                  class="c29"
-                  role="presentation"
-                />
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-0"
-              class="c30"
+              class="c32"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-0"
@@ -1227,7 +1217,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c26 c27"
+            class="c27 c28"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1240,25 +1230,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="accordion__panel-1"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c28"
+                class="c29"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-1"
                 role="button"
                 tabindex="0"
               >
-                <h3>
+                <svg
+                  class="c30"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h3
+                  class="c31"
+                >
                   La Constitution française
                 </h3>
-                <div
-                  class="c29"
-                  role="presentation"
-                />
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-1"
-              class="c30"
+              class="c32"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-1"
@@ -1313,7 +1317,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c26 c27"
+            class="c27 c28"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1326,25 +1330,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="accordion__panel-2"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c28"
+                class="c29"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-2"
                 role="button"
                 tabindex="0"
               >
-                <h3>
+                <svg
+                  class="c30"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h3
+                  class="c31"
+                >
                   Les conventions et accords collectifs
                 </h3>
-                <div
-                  class="c29"
-                  role="presentation"
-                />
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-2"
-              class="c30"
+              class="c32"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-2"
@@ -1361,7 +1379,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c26 c27"
+            class="c27 c28"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1374,25 +1392,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="accordion__panel-3"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c28"
+                class="c29"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-3"
                 role="button"
                 tabindex="0"
               >
-                <h3>
+                <svg
+                  class="c30"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h3
+                  class="c31"
+                >
                   Le règlement intérieur de l’entreprise
                 </h3>
-                <div
-                  class="c29"
-                  role="presentation"
-                />
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-3"
-              class="c30"
+              class="c32"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-3"
@@ -1402,11 +1434,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c24 c25"
+          class="c25 c26"
           data-accordion-component="Accordion"
         >
           <div
-            class="c26 c27"
+            class="c27 c28"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1419,25 +1451,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="accordion__panel-4"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c28"
+                class="c29"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-4"
                 role="button"
                 tabindex="0"
               >
-                <h3>
+                <svg
+                  class="c30"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h3
+                  class="c31"
+                >
                   Les textes européens
                 </h3>
-                <div
-                  class="c29"
-                  role="presentation"
-                />
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-4"
-              class="c30"
+              class="c32"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-4"
@@ -1540,7 +1586,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c26 c27"
+            class="c27 c28"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1553,25 +1599,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="accordion__panel-5"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c28"
+                class="c29"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-5"
                 role="button"
                 tabindex="0"
               >
-                <h3>
+                <svg
+                  class="c30"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h3
+                  class="c31"
+                >
                   Lois, ordonnances, décrets et arrêtés
                 </h3>
-                <div
-                  class="c29"
-                  role="presentation"
-                />
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-5"
-              class="c30"
+              class="c32"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-5"
@@ -1599,7 +1659,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c26 c27"
+            class="c27 c28"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1612,25 +1672,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="accordion__panel-6"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c28"
+                class="c29"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-6"
                 role="button"
                 tabindex="0"
               >
-                <h3>
+                <svg
+                  class="c30"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h3
+                  class="c31"
+                >
                   Les usages et les engagements unilatéraux
                 </h3>
-                <div
-                  class="c29"
-                  role="presentation"
-                />
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-6"
-              class="c30"
+              class="c32"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-6"
@@ -1652,7 +1726,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c26 c27"
+            class="c27 c28"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1665,25 +1739,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 aria-controls="accordion__panel-7"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c28"
+                class="c29"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-7"
                 role="button"
                 tabindex="0"
               >
-                <h3>
+                <svg
+                  class="c30"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h3
+                  class="c31"
+                >
                   Le contrat de travail
                 </h3>
-                <div
-                  class="c29"
-                  role="presentation"
-                />
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-7"
-              class="c30"
+              class="c32"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-7"
@@ -1705,46 +1793,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c22"
+        class="c23"
       >
         <div
-          class="c31"
+          class="c33"
         >
           <div
-            class="c32"
-          >
-            <svg
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="8"
-                y2="8"
-              />
-            </svg>
-          </div>
-          <div
-            class="c33"
+            class="c34"
             role="alert"
           >
             La jurisprudence de la Cour Européenne des droits de l’Homme, de la Cour de justice de l’Union européenne, du Conseil Constitutionnel, du Conseil d’Etat et de la Cour de cassation influence également le droit du travail en France.
@@ -1753,12 +1808,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c34"
+      class="c35"
     >
       <div
-        class="c22"
+        class="c23"
       >
-        <h2>
+        <h2
+          class="c21"
+        >
           Existe-t-il une hiérarchie entre les textes ?
         </h2>
         <p>
@@ -1769,32 +1826,32 @@ exports[`<DroitDuTravail /> should render 1`] = `
         </p>
       </div>
       <div
-        class="c35"
+        class="c36"
       >
         <div
-          class="c22"
+          class="c23"
         >
           <ul
-            class="c36"
+            class="c37"
           >
             <li
-              class="c37"
+              class="c38"
             >
               <div
-                class="c38"
+                class="c39"
               >
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   1
                 </div>
               </div>
               <div
-                class="c40"
+                class="c41"
                 data-accordion-component="Accordion"
               >
                 <div
-                  class="c26 c27"
+                  class="c27 c28"
                   data-accordion-component="AccordionItem"
                 >
                   <div
@@ -1807,27 +1864,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       aria-controls="accordion__panel-8"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c28"
+                      class="c29"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-8"
                       role="button"
                       tabindex="0"
                     >
+                      <svg
+                        class="c30"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
                       <h3
-                        class="c41"
+                        class="c31"
                       >
                         Les textes internationaux et européens
                       </h3>
-                      <div
-                        class="c29"
-                        role="presentation"
-                      />
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-8"
-                    class="c30"
+                    class="c32"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-8"
@@ -1838,23 +1907,23 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </div>
             </li>
             <li
-              class="c37"
+              class="c38"
             >
               <div
-                class="c38"
+                class="c39"
               >
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   2
                 </div>
               </div>
               <div
-                class="c40"
+                class="c41"
                 data-accordion-component="Accordion"
               >
                 <div
-                  class="c26 c27"
+                  class="c27 c28"
                   data-accordion-component="AccordionItem"
                 >
                   <div
@@ -1867,27 +1936,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       aria-controls="accordion__panel-9"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c28"
+                      class="c29"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-9"
                       role="button"
                       tabindex="0"
                     >
+                      <svg
+                        class="c30"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
                       <h3
-                        class="c41"
+                        class="c31"
                       >
                         La Constitution
                       </h3>
-                      <div
-                        class="c29"
-                        role="presentation"
-                      />
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-9"
-                    class="c30"
+                    class="c32"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-9"
@@ -1898,23 +1979,23 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </div>
             </li>
             <li
-              class="c37"
+              class="c38"
             >
               <div
-                class="c38"
+                class="c39"
               >
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   3
                 </div>
               </div>
               <div
-                class="c40"
+                class="c41"
                 data-accordion-component="Accordion"
               >
                 <div
-                  class="c26 c27"
+                  class="c27 c28"
                   data-accordion-component="AccordionItem"
                 >
                   <div
@@ -1927,34 +2008,48 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       aria-controls="accordion__panel-10"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c28"
+                      class="c29"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-10"
                       role="button"
                       tabindex="0"
                     >
-                      <h3
-                        class="c41"
+                      <svg
+                        class="c30"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        Lois, ordonnances et décrets (Code du travail) 
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                      <h3
+                        class="c31"
+                      >
+                        Lois, ordonnances et décrets (Code du travail)
                       </h3>
-                      <div
-                        class="c29"
-                        role="presentation"
-                      />
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-10"
-                    class="c30"
+                    class="c32"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-10"
                   >
-                    <h4>
+                    <h3
+                      class="c42"
+                    >
                       Hiérarchie entre le Code du travail et les conventions et accords collectifs
-                    </h4>
+                    </h3>
                     <p>
                       Il n’y a pas de règle de hiérarchie unique pour tous les articles du Code du travail. Il existe 3 hiérarchies possibles :
                     </p>
@@ -1963,7 +2058,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       data-accordion-component="Accordion"
                     >
                       <div
-                        class="c26 c27"
+                        class="c27 c28"
                         data-accordion-component="AccordionItem"
                       >
                         <div
@@ -1976,25 +2071,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             aria-controls="accordion__panel-11"
                             aria-disabled="false"
                             aria-expanded="false"
-                            class="c28"
+                            class="c29"
                             data-accordion-component="AccordionItemButton"
                             id="accordion__heading-11"
                             role="button"
                             tabindex="0"
                           >
-                            <h5>
+                            <svg
+                              class="c30"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <polyline
+                                points="9 18 15 12 9 6"
+                              />
+                            </svg>
+                            <h5
+                              class="c31"
+                            >
                               Les conventions et accords collectifs doivent respecter le Code du travail
                             </h5>
-                            <div
-                              class="c29"
-                              role="presentation"
-                            />
                           </div>
                         </div>
                         <div
                           aria-hidden="true"
                           aria-labelledby="accordion__heading-11"
-                          class="c30"
+                          class="c32"
                           data-accordion-component="AccordionItemPanel"
                           hidden=""
                           id="accordion__panel-11"
@@ -2003,7 +2112,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c26 c27"
+                        class="c27 c28"
                         data-accordion-component="AccordionItem"
                       >
                         <div
@@ -2016,25 +2125,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             aria-controls="accordion__panel-12"
                             aria-disabled="false"
                             aria-expanded="false"
-                            class="c28"
+                            class="c29"
                             data-accordion-component="AccordionItemButton"
                             id="accordion__heading-12"
                             role="button"
                             tabindex="0"
                           >
-                            <h5>
+                            <svg
+                              class="c30"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <polyline
+                                points="9 18 15 12 9 6"
+                              />
+                            </svg>
+                            <h5
+                              class="c31"
+                            >
                               Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail.
                             </h5>
-                            <div
-                              class="c29"
-                              role="presentation"
-                            />
                           </div>
                         </div>
                         <div
                           aria-hidden="true"
                           aria-labelledby="accordion__heading-12"
-                          class="c30"
+                          class="c32"
                           data-accordion-component="AccordionItemPanel"
                           hidden=""
                           id="accordion__panel-12"
@@ -2059,7 +2182,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c26 c27"
+                        class="c27 c28"
                         data-accordion-component="AccordionItem"
                       >
                         <div
@@ -2072,25 +2195,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             aria-controls="accordion__panel-13"
                             aria-disabled="false"
                             aria-expanded="false"
-                            class="c28"
+                            class="c29"
                             data-accordion-component="AccordionItemButton"
                             id="accordion__heading-13"
                             role="button"
                             tabindex="0"
                           >
-                            <h5>
+                            <svg
+                              class="c30"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <polyline
+                                points="9 18 15 12 9 6"
+                              />
+                            </svg>
+                            <h5
+                              class="c31"
+                            >
                               En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
                             </h5>
-                            <div
-                              class="c29"
-                              role="presentation"
-                            />
                           </div>
                         </div>
                         <div
                           aria-hidden="true"
                           aria-labelledby="accordion__heading-13"
-                          class="c30"
+                          class="c32"
                           data-accordion-component="AccordionItemPanel"
                           hidden=""
                           id="accordion__panel-13"
@@ -2115,9 +2252,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </div>
                       </div>
                     </div>
-                    <h4>
+                    <h3
+                      class="c42"
+                    >
                       Attention à certaines règles du Code du travail !
-                    </h4>
+                    </h3>
                     <p>
                       Il existe des règles du Code du travail auxquelles tous les textes situés en bas ne peuvent pas déroger même si les textes sont plus avantageux pour le salarié. La loi interdit toute dérogation possible. Les textes situés en bas doivent purement et simplement respecter ces règles.
                     </p>
@@ -2131,23 +2270,23 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </div>
             </li>
             <li
-              class="c37"
+              class="c38"
             >
               <div
-                class="c38"
+                class="c39"
               >
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   4
                 </div>
               </div>
               <div
-                class="c40"
+                class="c41"
                 data-accordion-component="Accordion"
               >
                 <div
-                  class="c26 c27"
+                  class="c27 c28"
                   data-accordion-component="AccordionItem"
                 >
                   <div
@@ -2160,103 +2299,154 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       aria-controls="accordion__panel-14"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c28"
+                      class="c29"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-14"
                       role="button"
                       tabindex="0"
                     >
+                      <svg
+                        class="c30"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
                       <h3
-                        class="c41"
+                        class="c31"
                       >
                         Les conventions et accords collectifs
                       </h3>
-                      <div
-                        class="c29"
-                        role="presentation"
-                      />
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-14"
-                    class="c30"
+                    class="c32"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-14"
                   >
-                    <h4>
+                    <h3
+                      class="c42"
+                    >
                       Hiérarchie entre conventions et accords collectifs de niveaux différents
-                    </h4>
+                    </h3>
                     <p>
                       La règle qui détermine quel est le texte applicable est différente en fonction du niveau des textes comparés.
                     </p>
-                    <h5>
+                    <h3
+                      class="c42"
+                    >
                       Hiérarchie entre accord de branche et accord d’entreprise
-                    </h5>
+                    </h3>
                     <p>
                       Le principe est que l’accord d’entreprise s’applique en priorité par rapport à l’accord ou la convention de branche même si, l’accord d’entreprise est plus désavantageux pour le salarié que l’accord de branche.
                     </p>
                     <div
-                      class="c42"
+                      class="c33"
                     >
                       <div
-                        class="c43"
-                      >
-                        <svg
-                          fill="none"
-                          height="24"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-                          />
-                          <line
-                            x1="12"
-                            x2="12"
-                            y1="9"
-                            y2="13"
-                          />
-                          <line
-                            x1="12"
-                            x2="12"
-                            y1="17"
-                            y2="17"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="c33"
+                        class="c34"
                         role="alert"
                       >
                         Le principe ne s’applique pas dans
                          
                         <button
-                          class="c44"
+                          class="c12 c43"
                         >
                           13 matières
+                          <svg
+                            class="c44"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <line
+                              x1="5"
+                              x2="19"
+                              y1="12"
+                              y2="12"
+                            />
+                            <polyline
+                              points="12 5 19 12 12 19"
+                            />
+                          </svg>
                         </button>
                          
                         où la loi reconnait la primauté à l’accord de branche et
                          
                         <button
-                          class="c44"
+                          class="c12 c43"
                         >
                           4 matières
+                          <svg
+                            class="c44"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <line
+                              x1="5"
+                              x2="19"
+                              y1="12"
+                              y2="12"
+                            />
+                            <polyline
+                              points="12 5 19 12 12 19"
+                            />
+                          </svg>
                         </button>
                          
                         où la branche elle même peut reconnaitre sa primauté, sauf si l’accord d’entreprise a
                          
                         <button
-                          class="c44"
+                          class="c12 c43"
                         >
                           des garanties au moins équivalentes
+                          <svg
+                            class="c44"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <line
+                              x1="5"
+                              x2="19"
+                              y1="12"
+                              y2="12"
+                            />
+                            <polyline
+                              points="12 5 19 12 12 19"
+                            />
+                          </svg>
                         </button>
                         .
                       </div>
@@ -2264,15 +2454,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     <p>
                       Ces règles sont les mêmes pour la hiérarchie entre accord de branche et accord de groupe et entre accord de branche et accord d’établissement.
                     </p>
-                    <h5>
+                    <h3
+                      class="c42"
+                    >
                       Hiérarchie entre accord de groupe et accord d’entreprise
-                    </h5>
+                    </h3>
                     <p>
                       L’accord de groupe s’applique en priorité par rapport à l’accord d’entreprise ou l’accord d’établissement si l’accord de groupe l’indique dans son accord. Si rien n’est indiqué dans l’accord de groupe alors l’accord le plus avantageux pour le salarié s’applique.
                     </p>
-                    <h5>
+                    <h3
+                      class="c42"
+                    >
                       Hiérarchie entre accord d’entreprise et accord d’établissement
-                    </h5>
+                    </h3>
                     <p>
                       L’accord d’entreprise s’applique en priorité par rapport à l’accord d’établissement si l’accord d’entreprise l’indique dans son accord. Si rien n’est indiqué dans l’accord d’entreprise alors l’accord le plus avantageux pour le salarié s’applique.
                     </p>
@@ -2281,23 +2475,23 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </div>
             </li>
             <li
-              class="c37"
+              class="c38"
             >
               <div
-                class="c38"
+                class="c39"
               >
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   5
                 </div>
               </div>
               <div
-                class="c40"
+                class="c41"
                 data-accordion-component="Accordion"
               >
                 <div
-                  class="c26 c27"
+                  class="c27 c28"
                   data-accordion-component="AccordionItem"
                 >
                   <div
@@ -2310,27 +2504,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       aria-controls="accordion__panel-15"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c28"
+                      class="c29"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-15"
                       role="button"
                       tabindex="0"
                     >
+                      <svg
+                        class="c30"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
                       <h3
-                        class="c41"
+                        class="c31"
                       >
                         Les usages et les engagements unilatéraux
                       </h3>
-                      <div
-                        class="c29"
-                        role="presentation"
-                      />
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-15"
-                    class="c30"
+                    class="c32"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-15"
@@ -2341,23 +2547,23 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </div>
             </li>
             <li
-              class="c37"
+              class="c38"
             >
               <div
-                class="c38"
+                class="c39"
               >
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   6
                 </div>
               </div>
               <div
-                class="c40"
+                class="c41"
                 data-accordion-component="Accordion"
               >
                 <div
-                  class="c26 c27"
+                  class="c27 c28"
                   data-accordion-component="AccordionItem"
                 >
                   <div
@@ -2370,27 +2576,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       aria-controls="accordion__panel-16"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c28"
+                      class="c29"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-16"
                       role="button"
                       tabindex="0"
                     >
+                      <svg
+                        class="c30"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
                       <h3
-                        class="c41"
+                        class="c31"
                       >
                         Le règlement intérieur de l’entreprise
                       </h3>
-                      <div
-                        class="c29"
-                        role="presentation"
-                      />
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-16"
-                    class="c30"
+                    class="c32"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-16"
@@ -2401,23 +2619,23 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </div>
             </li>
             <li
-              class="c37"
+              class="c38"
             >
               <div
-                class="c38"
+                class="c39"
               >
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   7
                 </div>
               </div>
               <div
-                class="c40"
+                class="c41"
                 data-accordion-component="Accordion"
               >
                 <div
-                  class="c26 c27"
+                  class="c27 c28"
                   data-accordion-component="AccordionItem"
                 >
                   <div
@@ -2430,27 +2648,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       aria-controls="accordion__panel-17"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c28"
+                      class="c29"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-17"
                       role="button"
                       tabindex="0"
                     >
+                      <svg
+                        class="c30"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
                       <h3
-                        class="c41"
+                        class="c31"
                       >
                         Le contrat de travail
                       </h3>
-                      <div
-                        class="c29"
-                        role="presentation"
-                      />
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-17"
-                    class="c30"
+                    class="c32"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-17"
@@ -2469,12 +2699,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
     class="c45"
   >
     <div
-      class="c35"
+      class="c36"
     >
       <div
         class="c46"
       >
-        <h2>
+        <h2
+          class="c21"
+        >
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
@@ -2483,14 +2715,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
-          class="c48"
+          class="c12 c48"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c35"
+      class="c36"
     >
       <div
         class="c49"
@@ -2499,15 +2731,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
           class="c50 c51"
         >
           <h3
-            class="c52"
+            class="c42"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c36"
+            class="c37"
           >
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="/droit-du-travail"
@@ -2516,7 +2748,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="/glossaire"
@@ -2525,7 +2757,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="/a-propos"
@@ -2534,7 +2766,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="/mentions-legales"
@@ -2543,7 +2775,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="mailto:codedutravailnumerique@travail.gouv.fr"
@@ -2557,15 +2789,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
           class="c50 c51"
         >
           <h3
-            class="c52"
+            class="c42"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c36"
+            class="c37"
           >
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -2576,7 +2808,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -2592,15 +2824,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
           class="c50 c51"
         >
           <h3
-            class="c52"
+            class="c42"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c36"
+            class="c37"
           >
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -2611,7 +2843,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -2622,7 +2854,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c53"
+              class="c52"
             >
               <a
                 href="https://beta.gouv.fr/"

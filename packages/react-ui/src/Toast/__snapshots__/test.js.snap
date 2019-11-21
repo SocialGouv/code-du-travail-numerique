@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Toast /> Should render alternative wide toast 1`] = `
+exports[`<Toast /> Should render a wide toast 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -13,39 +13,18 @@ exports[`<Toast /> Should render alternative wide toast 1`] = `
   box-sizing: border-box;
   width: 100%;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #e5f1fe;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
   -webkit-animation: none;
   animation: none;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e5f1fe;
-}
-
-.c2 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -53,8 +32,8 @@ exports[`<Toast /> Should render alternative wide toast 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
@@ -64,48 +43,15 @@ exports[`<Toast /> Should render alternative wide toast 1`] = `
   >
     <div
       class="c1"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="16"
-          y2="12"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="8"
-          y2="8"
-        />
-      </svg>
-    </div>
-    <div
-      class="c2"
       role="alert"
     >
-      I big and beautiful
+      I’m big and beautiful
     </div>
   </div>
 </div>
 `;
 
-exports[`<Toast /> render default info toast 1`] = `
+exports[`<Toast /> render default toast 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -118,39 +64,18 @@ exports[`<Toast /> render default info toast 1`] = `
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #e5f1fe;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: none;
   animation: none;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e5f1fe;
-}
-
-.c2 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -158,8 +83,8 @@ exports[`<Toast /> render default info toast 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
@@ -169,48 +94,15 @@ exports[`<Toast /> render default info toast 1`] = `
   >
     <div
       class="c1"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="16"
-          y2="12"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="8"
-          y2="8"
-        />
-      </svg>
-    </div>
-    <div
-      class="c2"
       role="alert"
     >
-      Default info content
+      Default content
     </div>
   </div>
 </div>
 `;
 
-exports[`<Toast /> render success toast 1`] = `
+exports[`<Toast /> render primary toast 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -223,39 +115,18 @@ exports[`<Toast /> render success toast 1`] = `
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #e0f2bd;
+  border-color: #ff7067;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: none;
   animation: none;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e0f2bd;
-}
-
-.c2 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -263,8 +134,8 @@ exports[`<Toast /> render success toast 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
@@ -274,35 +145,16 @@ exports[`<Toast /> render success toast 1`] = `
   >
     <div
       class="c1"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <polyline
-          points="20 6 9 17 4 12"
-        />
-      </svg>
-    </div>
-    <div
-      class="c2"
       role="alert"
     >
-      success
+      primary
        content
     </div>
   </div>
 </div>
 `;
 
-exports[`<Toast /> render warning toast 1`] = `
+exports[`<Toast /> render secondary toast 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -315,39 +167,18 @@ exports[`<Toast /> render warning toast 1`] = `
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: none;
   animation: none;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c2 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -355,8 +186,8 @@ exports[`<Toast /> render warning toast 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
@@ -366,40 +197,9 @@ exports[`<Toast /> render warning toast 1`] = `
   >
     <div
       class="c1"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="9"
-          y2="13"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="17"
-          y2="17"
-        />
-      </svg>
-    </div>
-    <div
-      class="c2"
       role="alert"
     >
-      warning
+      secondary
        content
     </div>
   </div>
@@ -419,39 +219,18 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #e5f1fe;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e5f1fe;
-}
-
-.c2 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -459,8 +238,8 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
@@ -470,39 +249,6 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   >
     <div
       class="c1"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="16"
-          y2="12"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="8"
-          y2="8"
-        />
-      </svg>
-    </div>
-    <div
-      class="c2"
       role="alert"
     >
       from-bottom
@@ -525,39 +271,18 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #e5f1fe;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: kqOaZP 500ms ease-out;
   animation: kqOaZP 500ms ease-out;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e5f1fe;
-}
-
-.c2 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -565,8 +290,8 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
@@ -576,39 +301,6 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   >
     <div
       class="c1"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="16"
-          y2="12"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="8"
-          y2="8"
-        />
-      </svg>
-    </div>
-    <div
-      class="c2"
       role="alert"
     >
       from-left
@@ -631,39 +323,18 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #e5f1fe;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: geNrKo 500ms ease-out;
   animation: geNrKo 500ms ease-out;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e5f1fe;
-}
-
-.c2 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -671,8 +342,8 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
@@ -682,39 +353,6 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   >
     <div
       class="c1"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="16"
-          y2="12"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="8"
-          y2="8"
-        />
-      </svg>
-    </div>
-    <div
-      class="c2"
       role="alert"
     >
       from-right
@@ -737,39 +375,18 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #e5f1fe;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: jYyoao 0.3s ease-out;
   animation: jYyoao 0.3s ease-out;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e5f1fe;
-}
-
-.c2 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -777,8 +394,8 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
@@ -788,39 +405,6 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   >
     <div
       class="c1"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="16"
-          y2="12"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="8"
-          y2="8"
-        />
-      </svg>
-    </div>
-    <div
-      class="c2"
       role="alert"
     >
       from-top

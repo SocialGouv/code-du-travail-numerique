@@ -2,8 +2,7 @@ import React from "react";
 import glossary from "@cdt/data...datafiller/glossary.data.json";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styled from "styled-components";
-import { Table, Container, Section } from "@socialgouv/react-ui";
+import { Container, PageTitle, Section, Table } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
@@ -24,7 +23,7 @@ function Term({ pageUrl, ogImage }) {
       />
       <Section>
         <Container narrow>
-          <Title>{term.title}</Title>
+          <PageTitle>{term.title}</PageTitle>
 
           <Table>
             <tbody>
@@ -69,7 +68,3 @@ function Term({ pageUrl, ogImage }) {
 }
 
 export default Term;
-
-const Title = styled.h1`
-  text-align: center;
-`;

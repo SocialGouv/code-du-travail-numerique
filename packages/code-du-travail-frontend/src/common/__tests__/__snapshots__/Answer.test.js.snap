@@ -4,7 +4,7 @@ exports[`<Answer /> should renders 1`] = `
 .c3 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c3 > *:first-child {
@@ -18,8 +18,8 @@ exports[`<Answer /> should renders 1`] = `
 .c11 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
 }
 
@@ -32,15 +32,15 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c2 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c4 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   background-color: #fff;
 }
 
@@ -53,11 +53,11 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c14 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
 }
 
 .c14 > *:first-child {
@@ -68,116 +68,139 @@ exports[`<Answer /> should renders 1`] = `
   margin-bottom: 0;
 }
 
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c15 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c17 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c17:link,
 .c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c17:not([disabled]):hover,
 .c17:not([disabled]):active,
 .c17:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c17[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c20 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c24 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c20:link,
-.c20:visited {
+.c24:link,
+.c24:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
-.c20:not([disabled]):hover,
-.c20:not([disabled]):active,
-.c20:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
-  border-color: #005fcd;
+.c24:not([disabled]):hover,
+.c24:not([disabled]):active,
+.c24:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
 }
 
-.c20[disabled] {
-  color: rgba(255,255,255,0.4);
+.c24[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c27 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-}
-
-.c27:hover {
-  color: #8c94a6;
-}
-
-.c22 {
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -189,39 +212,18 @@ exports[`<Answer /> should renders 1`] = `
   box-sizing: border-box;
   width: 100%;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #ff7067;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
-.c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c24 {
+.c22 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -229,38 +231,24 @@ exports[`<Answer /> should renders 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.c25 {
+  margin-top: 0.4rem;
+  color: #ff7067;
 }
 
 .c5 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c5 > *:first-child {
@@ -271,7 +259,7 @@ exports[`<Answer /> should renders 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -282,41 +270,33 @@ exports[`<Answer /> should renders 1`] = `
   align-items: flex-end;
 }
 
-.c7 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
 .c8 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 0.875rem;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
 .c9 {
-  color: #4c5467;
-  font-weight: 600;
+  display: inline-block;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.4rem;
 }
 
 .c10 {
-  margin-left: -10px;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
-.c21 {
+.c20 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 
-.c25 {
-  padding: 0 0.25rem;
-}
-
-.c15 {
-  margin-bottom: 1rem;
+.c23 {
+  padding: 0 0.4rem;
 }
 
 .c16 {
@@ -330,18 +310,14 @@ exports[`<Answer /> should renders 1`] = `
   justify-content: space-around;
 }
 
-.c19 {
-  min-width: 7rem;
-}
-
 .c19 + .c18 {
-  margin-left: 1rem;
+  margin-left: 1.6rem;
 }
 
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -373,12 +349,12 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c12 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-  margin: 1rem auto;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
+  margin: 1.6rem auto;
 }
 
 .c12 > *:first-child {
@@ -390,10 +366,10 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c13 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
+  margin-top: 4rem;
+  padding: 1.6rem;
+  background-color: #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 @media print {
@@ -412,7 +388,7 @@ exports[`<Answer /> should renders 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -425,7 +401,7 @@ exports[`<Answer /> should renders 1`] = `
 
 @media (max-width:600px) {
   .c14 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -444,7 +420,7 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -456,7 +432,7 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-left: 0;
   }
 }
@@ -476,7 +452,7 @@ exports[`<Answer /> should renders 1`] = `
 
 @media (max-width:600px) {
   .c12 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -510,31 +486,30 @@ exports[`<Answer /> should renders 1`] = `
               <div
                 class="c5"
               >
-                <h1>
+                <h1
+                  class="c6"
+                >
                   Article du code
                 </h1>
                 <div
-                  class="c6"
+                  class="c7"
                 >
                   <span
-                    class="c7"
+                    class="c8"
                   >
                     social groove
                   </span>
                   <span
-                    class="c8"
+                    class="c9"
                   >
                     Mis à jour le : 
                     <span
-                      class="c9"
+                      class="c10"
                     >
                       03/11/1979
                     </span>
                   </span>
                 </div>
-                <div
-                  class="c10"
-                />
               </div>
               <div
                 class="c11"
@@ -590,7 +565,7 @@ exports[`<Answer /> should renders 1`] = `
                 Non
               </button>
               <button
-                class="c20 c18 c19"
+                class="c17 c18 c19"
               >
                 Oui
               </button>
@@ -601,49 +576,18 @@ exports[`<Answer /> should renders 1`] = `
     </div>
   </div>
   <div
-    class="c21"
+    class="c20"
   >
     <div
-      class="c22"
+      class="c21"
     >
       <div
-        class="c23"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="9"
-            y2="13"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="17"
-            y2="17"
-          />
-        </svg>
-      </div>
-      <div
-        class="c24"
+        class="c22"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c25"
+          class="c23"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -653,39 +597,37 @@ exports[`<Answer /> should renders 1`] = `
         </a>
         est prévue pour 2020.
       </div>
-      <div
-        class="c26"
+      <button
+        aria-label="Fermer"
+        class="c24"
       >
-        <button
-          aria-label="Fermer"
-          class="c27"
+        <svg
+          class="c25"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          variant="primary"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
-      </div>
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -695,7 +637,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 .c11 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c11 > *:first-child {
@@ -709,8 +651,8 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 .c19 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
 }
 
@@ -723,15 +665,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c10 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c12 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   background-color: #fff;
 }
 
@@ -744,11 +686,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c22 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
 }
 
 .c22 > *:first-child {
@@ -759,113 +701,136 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
+.c14 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c23 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c25 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c25:link,
 .c25:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c25:not([disabled]):hover,
 .c25:not([disabled]):active,
 .c25:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c25[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c28 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c32 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c28:link,
-.c28:visited {
+.c32:link,
+.c32:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
-.c28:not([disabled]):hover,
-.c28:not([disabled]):active,
-.c28:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
-  border-color: #005fcd;
+.c32:not([disabled]):hover,
+.c32:not([disabled]):active,
+.c32:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
 }
 
-.c28[disabled] {
-  color: rgba(255,255,255,0.4);
+.c32[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
   cursor: not-allowed;
-}
-
-.c35 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-}
-
-.c35:hover {
-  color: #8c94a6;
 }
 
 .c2 {
@@ -900,7 +865,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   overflow-x: auto;
 }
 
-.c30 {
+.c29 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -912,39 +877,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   box-sizing: border-box;
   width: 100%;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #ff7067;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
-.c31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c32 {
+.c30 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -952,38 +896,24 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c34 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.c33 {
+  margin-top: 0.4rem;
+  color: #ff7067;
 }
 
 .c13 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c13 > *:first-child {
@@ -994,7 +924,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1005,41 +935,33 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   align-items: flex-end;
 }
 
-.c15 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
 .c16 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 0.875rem;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
 .c17 {
-  color: #4c5467;
-  font-weight: 600;
+  display: inline-block;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.4rem;
 }
 
 .c18 {
-  margin-left: -10px;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
-.c29 {
+.c28 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 
-.c33 {
-  padding: 0 0.25rem;
-}
-
-.c23 {
-  margin-bottom: 1rem;
+.c31 {
+  padding: 0 0.4rem;
 }
 
 .c24 {
@@ -1053,23 +975,19 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   justify-content: space-around;
 }
 
-.c27 {
-  min-width: 7rem;
-}
-
 .c27 + .c26 {
-  margin-left: 1rem;
+  margin-left: 1.6rem;
 }
 
 .c0 {
   overflow-x: auto;
-  background: #e5f1fe;
+  background: #e4e8ef;
 }
 
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   padding: 0;
 }
 
@@ -1096,12 +1014,12 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.625rem 0;
+  padding: 1rem 0;
 }
 
 .c5 {
   display: inline-block;
-  padding: 0.625rem 1.25rem;
+  padding: 1rem 2rem;
   white-space: nowrap;
 }
 
@@ -1116,14 +1034,14 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c7 {
   display: block;
-  width: 1rem;
-  color: #005994;
+  width: 1.6rem;
+  color: #3e486e;
 }
 
 .c8 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1155,12 +1073,12 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c20 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-  margin: 1rem auto;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
+  margin: 1.6rem auto;
 }
 
 .c20 > *:first-child {
@@ -1172,10 +1090,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c21 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
+  margin-top: 4rem;
+  padding: 1.6rem;
+  background-color: #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 @media print {
@@ -1194,7 +1112,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 @media (max-width:600px) {
   .c12 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -1207,7 +1125,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 @media (max-width:600px) {
   .c22 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -1226,7 +1144,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c15 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -1238,7 +1156,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     margin-left: 0;
   }
 }
@@ -1252,7 +1170,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
   }
 }
 
@@ -1271,7 +1189,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 @media (max-width:600px) {
   .c20 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -1403,31 +1321,30 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               <div
                 class="c13"
               >
-                <h1>
+                <h1
+                  class="c14"
+                >
                   Article du code
                 </h1>
                 <div
-                  class="c14"
+                  class="c15"
                 >
                   <span
-                    class="c15"
+                    class="c16"
                   >
                     social groove
                   </span>
                   <span
-                    class="c16"
+                    class="c17"
                   >
                     Mis à jour le : 
                     <span
-                      class="c17"
+                      class="c18"
                     >
                       03/11/1979
                     </span>
                   </span>
                 </div>
-                <div
-                  class="c18"
-                />
               </div>
               <div
                 class="c19"
@@ -1483,7 +1400,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 Non
               </button>
               <button
-                class="c28 c26 c27"
+                class="c25 c26 c27"
               >
                 Oui
               </button>
@@ -1494,49 +1411,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
     </div>
   </div>
   <div
-    class="c29"
+    class="c28"
   >
     <div
-      class="c30"
+      class="c29"
     >
       <div
-        class="c31"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="9"
-            y2="13"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="17"
-            y2="17"
-          />
-        </svg>
-      </div>
-      <div
-        class="c32"
+        class="c30"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c33"
+          class="c31"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -1546,39 +1432,37 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </a>
         est prévue pour 2020.
       </div>
-      <div
-        class="c34"
+      <button
+        aria-label="Fermer"
+        class="c32"
       >
-        <button
-          aria-label="Fermer"
-          class="c35"
+        <svg
+          class="c33"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          variant="primary"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
-      </div>
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -1588,7 +1472,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 .c4 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c4 > *:first-child {
@@ -1602,8 +1486,8 @@ exports[`<Answer /> should renders back to results link 1`] = `
 .c12 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
 }
 
@@ -1616,15 +1500,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c3 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c5 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   background-color: #fff;
 }
 
@@ -1637,11 +1521,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c15 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
 }
 
 .c15 > *:first-child {
@@ -1652,116 +1536,139 @@ exports[`<Answer /> should renders back to results link 1`] = `
   margin-bottom: 0;
 }
 
+.c7 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c16 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c18 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c18:link,
 .c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c18:not([disabled]):hover,
 .c18:not([disabled]):active,
 .c18:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c18[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c21 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c21:link,
-.c21:visited {
+.c25:link,
+.c25:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):active,
-.c21:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
-  border-color: #005fcd;
+.c25:not([disabled]):hover,
+.c25:not([disabled]):active,
+.c25:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
 }
 
-.c21[disabled] {
-  color: rgba(255,255,255,0.4);
+.c25[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c28 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-}
-
-.c28:hover {
-  color: #8c94a6;
-}
-
-.c23 {
+.c22 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1773,39 +1680,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
   box-sizing: border-box;
   width: 100%;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #ff7067;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c25 {
+.c23 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1813,38 +1699,24 @@ exports[`<Answer /> should renders back to results link 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.c26 {
+  margin-top: 0.4rem;
+  color: #ff7067;
 }
 
 .c6 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c6 > *:first-child {
@@ -1855,7 +1727,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1866,41 +1738,33 @@ exports[`<Answer /> should renders back to results link 1`] = `
   align-items: flex-end;
 }
 
-.c8 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
 .c9 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 0.875rem;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
 .c10 {
-  color: #4c5467;
-  font-weight: 600;
+  display: inline-block;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.4rem;
 }
 
 .c11 {
-  margin-left: -10px;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
-.c22 {
+.c21 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 
-.c26 {
-  padding: 0 0.25rem;
-}
-
-.c16 {
-  margin-bottom: 1rem;
+.c24 {
+  padding: 0 0.4rem;
 }
 
 .c17 {
@@ -1914,18 +1778,14 @@ exports[`<Answer /> should renders back to results link 1`] = `
   justify-content: space-around;
 }
 
-.c20 {
-  min-width: 7rem;
-}
-
 .c20 + .c19 {
-  margin-left: 1rem;
+  margin-left: 1.6rem;
 }
 
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1959,8 +1819,8 @@ exports[`<Answer /> should renders back to results link 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  padding-top: 1rem;
+  padding: 0 2rem;
+  padding-top: 1.6rem;
 }
 
 .c0 > *:first-child {
@@ -1972,12 +1832,12 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c13 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-  margin: 1rem auto;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
+  margin: 1.6rem auto;
 }
 
 .c13 > *:first-child {
@@ -1989,10 +1849,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c14 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
+  margin-top: 4rem;
+  padding: 1.6rem;
+  background-color: #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 @media print {
@@ -2011,7 +1871,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 @media (max-width:600px) {
   .c5 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -2024,7 +1884,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 @media (max-width:600px) {
   .c15 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -2043,7 +1903,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -2055,7 +1915,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     margin-left: 0;
   }
 }
@@ -2082,7 +1942,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 @media (max-width:600px) {
   .c13 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -2132,31 +1992,30 @@ exports[`<Answer /> should renders back to results link 1`] = `
               <div
                 class="c6"
               >
-                <h1>
+                <h1
+                  class="c7"
+                >
                   Article du code
                 </h1>
                 <div
-                  class="c7"
+                  class="c8"
                 >
                   <span
-                    class="c8"
+                    class="c9"
                   >
                     social groove
                   </span>
                   <span
-                    class="c9"
+                    class="c10"
                   >
                     Mis à jour le : 
                     <span
-                      class="c10"
+                      class="c11"
                     >
                       03/11/1979
                     </span>
                   </span>
                 </div>
-                <div
-                  class="c11"
-                />
               </div>
               <div
                 class="c12"
@@ -2212,7 +2071,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 Non
               </button>
               <button
-                class="c21 c19 c20"
+                class="c18 c19 c20"
               >
                 Oui
               </button>
@@ -2223,49 +2082,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
     </div>
   </div>
   <div
-    class="c22"
+    class="c21"
   >
     <div
-      class="c23"
+      class="c22"
     >
       <div
-        class="c24"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="9"
-            y2="13"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="17"
-            y2="17"
-          />
-        </svg>
-      </div>
-      <div
-        class="c25"
+        class="c23"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c26"
+          class="c24"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -2275,39 +2103,37 @@ exports[`<Answer /> should renders back to results link 1`] = `
         </a>
         est prévue pour 2020.
       </div>
-      <div
-        class="c27"
+      <button
+        aria-label="Fermer"
+        class="c25"
       >
-        <button
-          aria-label="Fermer"
-          class="c28"
+        <svg
+          class="c26"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          variant="primary"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
-      </div>
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -2317,7 +2143,7 @@ exports[`<Answer /> should renders related content 1`] = `
 .c3 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c3 > *:first-child {
@@ -2331,8 +2157,8 @@ exports[`<Answer /> should renders related content 1`] = `
 .c11 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
 }
 
@@ -2345,15 +2171,15 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c2 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c4 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   background-color: #fff;
 }
 
@@ -2366,11 +2192,11 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c15 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
 }
 
 .c15 > *:first-child {
@@ -2381,163 +2207,211 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-bottom: 0;
 }
 
-.c18 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c16 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c22 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c18:link,
 .c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c18:not([disabled]):hover,
 .c18:not([disabled]):active,
 .c18:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c18[disabled] {
-  color: rgba(12,12,14,0.4);
-  cursor: not-allowed;
-}
-
-.c21 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-}
-
-.c21:link,
-.c21:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c21:not([disabled]):hover,
-.c21:not([disabled]):active,
-.c21:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
-  border-color: #005fcd;
-}
-
-.c21[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c36 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c33 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c36:hover {
-  color: #8c94a6;
-}
-
-.c29 {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-}
-
-.c29:link,
-.c29:visited {
+.c33:link,
+.c33:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #3e486e;
 }
 
-.c29:not([disabled]):hover,
-.c29:not([disabled]):active,
-.c29:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+.c33:not([disabled]):hover,
+.c33:not([disabled]):active,
+.c33:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
 }
 
-.c29[disabled] {
-  color: rgba(12,12,14,0.4);
+.c33[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c24 {
+.c28 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 3rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
+}
+
+.c28:link,
+.c28:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.c28:not([disabled]):hover,
+.c28:not([disabled]):active,
+.c28:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
+}
+
+.c28[disabled] {
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c23 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c26 {
+.c25 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2562,15 +2436,15 @@ exports[`<Answer /> should renders related content 1`] = `
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1rem 1.25rem;
-  color: #005994;
-  font-weight: bold;
+  padding: 1.6rem 2rem;
+  color: #3e486e;
+  font-weight: 600;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -2579,23 +2453,24 @@ exports[`<Answer /> should renders related content 1`] = `
   appearance: none;
 }
 
-.c26:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+.c25:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
-.c27 {
+.c26 {
   display: block;
   max-width: 100%;
   padding-right: 0;
   overflow-y: auto;
 }
 
-.c28 {
-  margin-top: 1rem;
+.c27 {
+  margin-top: 1.6rem;
 }
 
-.c31 {
+.c30 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2607,39 +2482,18 @@ exports[`<Answer /> should renders related content 1`] = `
   box-sizing: border-box;
   width: 100%;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #ff7067;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c33 {
+.c31 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -2647,42 +2501,28 @@ exports[`<Answer /> should renders related content 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.c34 {
+  margin-top: 0.4rem;
+  color: #ff7067;
 }
 
 .c13 {
-  border-bottom: 1px dotted #006be6;
+  border-bottom: 1px dotted #7598d6;
 }
 
 .c5 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c5 > *:first-child {
@@ -2693,7 +2533,7 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2704,41 +2544,33 @@ exports[`<Answer /> should renders related content 1`] = `
   align-items: flex-end;
 }
 
-.c7 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
 .c8 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 0.875rem;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
 .c9 {
-  color: #4c5467;
-  font-weight: 600;
+  display: inline-block;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.4rem;
 }
 
 .c10 {
-  margin-left: -10px;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
-.c30 {
+.c29 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 
-.c34 {
-  padding: 0 0.25rem;
-}
-
-.c16 {
-  margin-bottom: 1rem;
+.c32 {
+  padding: 0 0.4rem;
 }
 
 .c17 {
@@ -2752,18 +2584,14 @@ exports[`<Answer /> should renders related content 1`] = `
   justify-content: space-around;
 }
 
-.c20 {
-  min-width: 7rem;
-}
-
 .c20 + .c19 {
-  margin-left: 1rem;
+  margin-left: 1.6rem;
 }
 
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2794,30 +2622,25 @@ exports[`<Answer /> should renders related content 1`] = `
   width: 70%;
 }
 
-.c22 {
+.c21 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 30%;
-  padding: 1.25rem 1rem 1.25rem 0;
+  padding: 2rem 1.6rem 2rem 0;
 }
 
-.c23 {
-  margin-top: 0;
-  font-weight: bold;
-}
-
-.c25 {
-  margin: 1rem 0;
+.c24 {
+  margin: 1.6rem 0;
 }
 
 .c12 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-  margin: 1rem auto;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
+  margin: 1.6rem auto;
 }
 
 .c12 > *:first-child {
@@ -2829,10 +2652,10 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c14 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
+  margin-top: 4rem;
+  padding: 1.6rem;
+  background-color: #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 @media print {
@@ -2851,7 +2674,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -2864,7 +2687,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 @media (max-width:600px) {
   .c15 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -2883,7 +2706,7 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -2895,7 +2718,7 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-left: 0;
   }
 }
@@ -2914,14 +2737,14 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:980px) {
-  .c22 {
+  .c21 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
   .c12 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -2955,31 +2778,30 @@ exports[`<Answer /> should renders related content 1`] = `
               <div
                 class="c5"
               >
-                <h1>
+                <h1
+                  class="c6"
+                >
                   Article du code
                 </h1>
                 <div
-                  class="c6"
+                  class="c7"
                 >
                   <span
-                    class="c7"
+                    class="c8"
                   >
                     social groove
                   </span>
                   <span
-                    class="c8"
+                    class="c9"
                   >
                     Mis à jour le : 
                     <span
-                      class="c9"
+                      class="c10"
                     >
                       03/11/1979
                     </span>
                   </span>
                 </div>
-                <div
-                  class="c10"
-                />
               </div>
               <div
                 class="c11"
@@ -3056,7 +2878,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 Non
               </button>
               <button
-                class="c21 c19 c20"
+                class="c18 c19 c20"
               >
                 Oui
               </button>
@@ -3066,18 +2888,18 @@ exports[`<Answer /> should renders related content 1`] = `
       </div>
     </div>
     <div
-      class="c22"
+      class="c21"
     >
-      <h6
-        class="c23"
+      <h3
+        class="c22"
       >
         Autres contenus pouvant vous intéresser :
-      </h6>
+      </h3>
       <ul
-        class="c24"
+        class="c23"
       >
         <li
-          class="c25"
+          class="c24"
         >
           <a
             href="/fiche-service-public/LINK_1"
@@ -3086,7 +2908,7 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c25"
+          class="c24"
         >
           <a
             href="/fiche-ministere-travail/LINK_2"
@@ -3095,7 +2917,7 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c25"
+          class="c24"
         >
           <a
             href="/external/LINK_3"
@@ -3104,23 +2926,23 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c25"
+          class="c24"
         >
           <a
-            class="c26"
+            class="c25"
             href="/modeles-de-courriers/LETTER_1"
             title="related letter title 1"
           >
             <div
-              class="c27"
+              class="c26"
             >
               related letter title 1
             </div>
             <div
-              class="c28"
+              class="c27"
             >
               <div
-                class="c29"
+                class="c28"
               >
                 Consulter
               </div>
@@ -3128,23 +2950,23 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c25"
+          class="c24"
         >
           <a
-            class="c26"
+            class="c25"
             href="/outils/TOOL_1"
             title="related tool title 1"
           >
             <div
-              class="c27"
+              class="c26"
             >
               related tool title 1
             </div>
             <div
-              class="c28"
+              class="c27"
             >
               <div
-                class="c29"
+                class="c28"
               >
                 Démarrer
               </div>
@@ -3155,49 +2977,18 @@ exports[`<Answer /> should renders related content 1`] = `
     </div>
   </div>
   <div
-    class="c30"
+    class="c29"
   >
     <div
-      class="c31"
+      class="c30"
     >
       <div
-        class="c32"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="9"
-            y2="13"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="17"
-            y2="17"
-          />
-        </svg>
-      </div>
-      <div
-        class="c33"
+        class="c31"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c34"
+          class="c32"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -3207,39 +2998,37 @@ exports[`<Answer /> should renders related content 1`] = `
         </a>
         est prévue pour 2020.
       </div>
-      <div
-        class="c35"
+      <button
+        aria-label="Fermer"
+        class="c33"
       >
-        <button
-          aria-label="Fermer"
-          class="c36"
+        <svg
+          class="c34"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          variant="primary"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
-      </div>
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -3249,7 +3038,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 .c3 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c3 > *:first-child {
@@ -3263,8 +3052,8 @@ exports[`<Answer /> should renders tooltip 1`] = `
 .c11 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
 }
 
@@ -3277,15 +3066,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c2 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c4 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   background-color: #fff;
 }
 
@@ -3298,11 +3087,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c15 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
 }
 
 .c15 > *:first-child {
@@ -3313,116 +3102,139 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin-bottom: 0;
 }
 
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c16 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c18 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c18:link,
 .c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c18:not([disabled]):hover,
 .c18:not([disabled]):active,
 .c18:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c18[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c21 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c21:link,
-.c21:visited {
+.c25:link,
+.c25:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):active,
-.c21:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
-  border-color: #005fcd;
+.c25:not([disabled]):hover,
+.c25:not([disabled]):active,
+.c25:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
 }
 
-.c21[disabled] {
-  color: rgba(255,255,255,0.4);
+.c25[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c28 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-}
-
-.c28:hover {
-  color: #8c94a6;
-}
-
-.c23 {
+.c22 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3434,39 +3246,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
   box-sizing: border-box;
   width: 100%;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #ff7067;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c25 {
+.c23 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -3474,42 +3265,28 @@ exports[`<Answer /> should renders tooltip 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.c26 {
+  margin-top: 0.4rem;
+  color: #ff7067;
 }
 
 .c13 {
-  border-bottom: 1px dotted #006be6;
+  border-bottom: 1px dotted #7598d6;
 }
 
 .c5 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c5 > *:first-child {
@@ -3520,7 +3297,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3531,41 +3308,33 @@ exports[`<Answer /> should renders tooltip 1`] = `
   align-items: flex-end;
 }
 
-.c7 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
 .c8 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 0.875rem;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
 .c9 {
-  color: #4c5467;
-  font-weight: 600;
+  display: inline-block;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.4rem;
 }
 
 .c10 {
-  margin-left: -10px;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
-.c22 {
+.c21 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 
-.c26 {
-  padding: 0 0.25rem;
-}
-
-.c16 {
-  margin-bottom: 1rem;
+.c24 {
+  padding: 0 0.4rem;
 }
 
 .c17 {
@@ -3579,18 +3348,14 @@ exports[`<Answer /> should renders tooltip 1`] = `
   justify-content: space-around;
 }
 
-.c20 {
-  min-width: 7rem;
-}
-
 .c20 + .c19 {
-  margin-left: 1rem;
+  margin-left: 1.6rem;
 }
 
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3622,12 +3387,12 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c12 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-  margin: 1rem auto;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
+  margin: 1.6rem auto;
 }
 
 .c12 > *:first-child {
@@ -3639,10 +3404,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c14 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
+  margin-top: 4rem;
+  padding: 1.6rem;
+  background-color: #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 @media print {
@@ -3661,7 +3426,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -3674,7 +3439,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 @media (max-width:600px) {
   .c15 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -3693,7 +3458,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -3705,7 +3470,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-left: 0;
   }
 }
@@ -3725,7 +3490,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 @media (max-width:600px) {
   .c12 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -3759,31 +3524,30 @@ exports[`<Answer /> should renders tooltip 1`] = `
               <div
                 class="c5"
               >
-                <h1>
+                <h1
+                  class="c6"
+                >
                   Article du code
                 </h1>
                 <div
-                  class="c6"
+                  class="c7"
                 >
                   <span
-                    class="c7"
+                    class="c8"
                   >
                     social groove
                   </span>
                   <span
-                    class="c8"
+                    class="c9"
                   >
                     Mis à jour le : 
                     <span
-                      class="c9"
+                      class="c10"
                     >
                       03/11/1979
                     </span>
                   </span>
                 </div>
-                <div
-                  class="c10"
-                />
               </div>
               <div
                 class="c11"
@@ -3875,7 +3639,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 Non
               </button>
               <button
-                class="c21 c19 c20"
+                class="c18 c19 c20"
               >
                 Oui
               </button>
@@ -3886,49 +3650,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
     </div>
   </div>
   <div
-    class="c22"
+    class="c21"
   >
     <div
-      class="c23"
+      class="c22"
     >
       <div
-        class="c24"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="9"
-            y2="13"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="17"
-            y2="17"
-          />
-        </svg>
-      </div>
-      <div
-        class="c25"
+        class="c23"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c26"
+          class="c24"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -3938,39 +3671,37 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </a>
         est prévue pour 2020.
       </div>
-      <div
-        class="c27"
+      <button
+        aria-label="Fermer"
+        class="c25"
       >
-        <button
-          aria-label="Fermer"
-          class="c28"
+        <svg
+          class="c26"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          variant="primary"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
-      </div>
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -3980,7 +3711,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 .c3 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c3 > *:first-child {
@@ -3994,8 +3725,8 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 .c11 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
 }
 
@@ -4008,15 +3739,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c2 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c4 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   background-color: #fff;
 }
 
@@ -4029,11 +3760,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c15 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
 }
 
 .c15 > *:first-child {
@@ -4044,116 +3775,139 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin-bottom: 0;
 }
 
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c16 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c18 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c18:link,
 .c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c18:not([disabled]):hover,
 .c18:not([disabled]):active,
 .c18:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c18[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c21 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c21:link,
-.c21:visited {
+.c25:link,
+.c25:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):active,
-.c21:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
-  border-color: #005fcd;
+.c25:not([disabled]):hover,
+.c25:not([disabled]):active,
+.c25:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
 }
 
-.c21[disabled] {
-  color: rgba(255,255,255,0.4);
+.c25[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c28 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-}
-
-.c28:hover {
-  color: #8c94a6;
-}
-
-.c23 {
+.c22 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4165,39 +3919,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   box-sizing: border-box;
   width: 100%;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #ff7067;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c25 {
+.c23 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -4205,42 +3938,28 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.c26 {
+  margin-top: 0.4rem;
+  color: #ff7067;
 }
 
 .c13 {
-  border-bottom: 1px dotted #006be6;
+  border-bottom: 1px dotted #7598d6;
 }
 
 .c5 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c5 > *:first-child {
@@ -4251,7 +3970,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4262,41 +3981,33 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   align-items: flex-end;
 }
 
-.c7 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
 .c8 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 0.875rem;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
 .c9 {
-  color: #4c5467;
-  font-weight: 600;
+  display: inline-block;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.4rem;
 }
 
 .c10 {
-  margin-left: -10px;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
-.c22 {
+.c21 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 
-.c26 {
-  padding: 0 0.25rem;
-}
-
-.c16 {
-  margin-bottom: 1rem;
+.c24 {
+  padding: 0 0.4rem;
 }
 
 .c17 {
@@ -4310,18 +4021,14 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   justify-content: space-around;
 }
 
-.c20 {
-  min-width: 7rem;
-}
-
 .c20 + .c19 {
-  margin-left: 1rem;
+  margin-left: 1.6rem;
 }
 
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4353,12 +4060,12 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c12 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-  margin: 1rem auto;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
+  margin: 1.6rem auto;
 }
 
 .c12 > *:first-child {
@@ -4370,10 +4077,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c14 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
+  margin-top: 4rem;
+  padding: 1.6rem;
+  background-color: #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 @media print {
@@ -4392,7 +4099,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -4405,7 +4112,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 @media (max-width:600px) {
   .c15 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -4424,7 +4131,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -4436,7 +4143,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-left: 0;
   }
 }
@@ -4456,7 +4163,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 @media (max-width:600px) {
   .c12 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -4490,31 +4197,30 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               <div
                 class="c5"
               >
-                <h1>
+                <h1
+                  class="c6"
+                >
                   Article du code
                 </h1>
                 <div
-                  class="c6"
+                  class="c7"
                 >
                   <span
-                    class="c7"
+                    class="c8"
                   >
                     social groove
                   </span>
                   <span
-                    class="c8"
+                    class="c9"
                   >
                     Mis à jour le : 
                     <span
-                      class="c9"
+                      class="c10"
                     >
                       03/11/1979
                     </span>
                   </span>
                 </div>
-                <div
-                  class="c10"
-                />
               </div>
               <div
                 class="c11"
@@ -4592,7 +4298,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 Non
               </button>
               <button
-                class="c21 c19 c20"
+                class="c18 c19 c20"
               >
                 Oui
               </button>
@@ -4603,49 +4309,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
     </div>
   </div>
   <div
-    class="c22"
+    class="c21"
   >
     <div
-      class="c23"
+      class="c22"
     >
       <div
-        class="c24"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="9"
-            y2="13"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="17"
-            y2="17"
-          />
-        </svg>
-      </div>
-      <div
-        class="c25"
+        class="c23"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c26"
+          class="c24"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -4655,39 +4330,37 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </a>
         est prévue pour 2020.
       </div>
-      <div
-        class="c27"
+      <button
+        aria-label="Fermer"
+        class="c25"
       >
-        <button
-          aria-label="Fermer"
-          class="c28"
+        <svg
+          class="c26"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          variant="primary"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
-      </div>
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -4697,7 +4370,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 .c3 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c3 > *:first-child {
@@ -4711,8 +4384,8 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 .c11 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
 }
 
@@ -4725,15 +4398,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c2 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c4 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   background-color: #fff;
 }
 
@@ -4746,11 +4419,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c15 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
 }
 
 .c15 > *:first-child {
@@ -4761,116 +4434,139 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin-bottom: 0;
 }
 
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c16 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c18 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c18:link,
 .c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c18:not([disabled]):hover,
 .c18:not([disabled]):active,
 .c18:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c18[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c21 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c21:link,
-.c21:visited {
+.c25:link,
+.c25:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):active,
-.c21:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
-  border-color: #005fcd;
+.c25:not([disabled]):hover,
+.c25:not([disabled]):active,
+.c25:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
 }
 
-.c21[disabled] {
-  color: rgba(255,255,255,0.4);
+.c25[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c28 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-}
-
-.c28:hover {
-  color: #8c94a6;
-}
-
-.c23 {
+.c22 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4882,39 +4578,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   box-sizing: border-box;
   width: 100%;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #ff7067;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c25 {
+.c23 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -4922,42 +4597,28 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.c26 {
+  margin-top: 0.4rem;
+  color: #ff7067;
 }
 
 .c13 {
-  border-bottom: 1px dotted #006be6;
+  border-bottom: 1px dotted #7598d6;
 }
 
 .c5 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c5 > *:first-child {
@@ -4968,7 +4629,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4979,41 +4640,33 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   align-items: flex-end;
 }
 
-.c7 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
 .c8 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 0.875rem;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
 .c9 {
-  color: #4c5467;
-  font-weight: 600;
+  display: inline-block;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.4rem;
 }
 
 .c10 {
-  margin-left: -10px;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
-.c22 {
+.c21 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 
-.c26 {
-  padding: 0 0.25rem;
-}
-
-.c16 {
-  margin-bottom: 1rem;
+.c24 {
+  padding: 0 0.4rem;
 }
 
 .c17 {
@@ -5027,18 +4680,14 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   justify-content: space-around;
 }
 
-.c20 {
-  min-width: 7rem;
-}
-
 .c20 + .c19 {
-  margin-left: 1rem;
+  margin-left: 1.6rem;
 }
 
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5070,12 +4719,12 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c12 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-  margin: 1rem auto;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
+  margin: 1.6rem auto;
 }
 
 .c12 > *:first-child {
@@ -5087,10 +4736,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c14 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
+  margin-top: 4rem;
+  padding: 1.6rem;
+  background-color: #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 @media print {
@@ -5109,7 +4758,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -5122,7 +4771,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 @media (max-width:600px) {
   .c15 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -5141,7 +4790,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -5153,7 +4802,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-left: 0;
   }
 }
@@ -5173,7 +4822,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 @media (max-width:600px) {
   .c12 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -5207,31 +4856,30 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               <div
                 class="c5"
               >
-                <h1>
+                <h1
+                  class="c6"
+                >
                   Article du code
                 </h1>
                 <div
-                  class="c6"
+                  class="c7"
                 >
                   <span
-                    class="c7"
+                    class="c8"
                   >
                     social groove
                   </span>
                   <span
-                    class="c8"
+                    class="c9"
                   >
                     Mis à jour le : 
                     <span
-                      class="c9"
+                      class="c10"
                     >
                       03/11/1979
                     </span>
                   </span>
                 </div>
-                <div
-                  class="c10"
-                />
               </div>
               <div
                 class="c11"
@@ -5308,7 +4956,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 Non
               </button>
               <button
-                class="c21 c19 c20"
+                class="c18 c19 c20"
               >
                 Oui
               </button>
@@ -5319,49 +4967,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
     </div>
   </div>
   <div
-    class="c22"
+    class="c21"
   >
     <div
-      class="c23"
+      class="c22"
     >
       <div
-        class="c24"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="9"
-            y2="13"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="17"
-            y2="17"
-          />
-        </svg>
-      </div>
-      <div
-        class="c25"
+        class="c23"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c26"
+          class="c24"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -5371,39 +4988,37 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </a>
         est prévue pour 2020.
       </div>
-      <div
-        class="c27"
+      <button
+        aria-label="Fermer"
+        class="c25"
       >
-        <button
-          aria-label="Fermer"
-          class="c28"
+        <svg
+          class="c26"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          variant="primary"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
-      </div>
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>

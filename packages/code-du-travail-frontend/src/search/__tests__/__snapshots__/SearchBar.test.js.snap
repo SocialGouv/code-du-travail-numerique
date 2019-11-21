@@ -2,30 +2,60 @@
 
 exports[`<SearchBar /> should render 1`] = `
 .c5 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c5:hover {
-  color: #8c94a6;
+.c5:link,
+.c5:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c5:not([disabled]):hover,
+.c5:not([disabled]):active,
+.c5:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c5[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c2:not(:focus):not(:active) {
@@ -56,7 +86,7 @@ exports[`<SearchBar /> should render 1`] = `
 }
 
 .c4 li[role="option"]:nth-child(2n + 1) {
-  background: #f9f9fc;
+  background: #f2f5fa;
 }
 
 .c0 {
@@ -77,22 +107,17 @@ exports[`<SearchBar /> should render 1`] = `
   width: 100%;
   height: 50px;
   margin: 0;
-  padding: 0 calc(50px + 0.625rem) 0 1rem;
+  padding: 0 calc(50px + 1rem) 0 1.6rem;
   font-size: inherit;
   font-family: inherit;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 1.5rem;
+  background: #f2f5fa;
+  border: 1px solid #bbcadf;
+  border-radius: 2.4rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.c3:focus {
-  border-color: #006be6;
-  outline: none;
 }
 
 .c6 {
@@ -101,8 +126,8 @@ exports[`<SearchBar /> should render 1`] = `
   right: 1px;
   width: calc(50px - 2px);
   height: calc(50px - 2px);
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
 }
 
 @media (max-width:600px) {
@@ -116,7 +141,7 @@ exports[`<SearchBar /> should render 1`] = `
 
 @media (max-width:600px) {
   .c3 {
-    padding: 0 1rem;
+    padding: 0 1.6rem;
   }
 }
 
@@ -179,30 +204,60 @@ exports[`<SearchBar /> should render 1`] = `
 
 exports[`<SearchBar /> should render suggestions 1`] = `
 .c7 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c7:hover {
-  color: #8c94a6;
+.c7:link,
+.c7:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c7[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c2:not(:focus):not(:active) {
@@ -241,7 +296,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 }
 
 .c4 li[role="option"]:nth-child(2n + 1) {
-  background: #f9f9fc;
+  background: #f2f5fa;
 }
 
 .c0 {
@@ -262,22 +317,17 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   width: 100%;
   height: 50px;
   margin: 0;
-  padding: 0 calc(50px + 0.625rem) 0 1rem;
+  padding: 0 calc(50px + 1rem) 0 1.6rem;
   font-size: inherit;
   font-family: inherit;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 1.5rem;
+  background: #f2f5fa;
+  border: 1px solid #bbcadf;
+  border-radius: 2.4rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.c3:focus {
-  border-color: #006be6;
-  outline: none;
 }
 
 .c8 {
@@ -286,8 +336,8 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   right: 1px;
   width: calc(50px - 2px);
   height: calc(50px - 2px);
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
 }
 
 @media (max-width:600px) {
@@ -301,7 +351,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 
 @media (max-width:600px) {
   .c3 {
-    padding: 0 1rem;
+    padding: 0 1.6rem;
   }
 }
 

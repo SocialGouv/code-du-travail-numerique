@@ -6,8 +6,8 @@ exports[`<SearchResults/> should render results 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
 }
 
 .c0 > *:first-child {
@@ -18,31 +18,10 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
+.c8 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c7 > *:first-child {
-  margin-top: 0;
-}
-
-.c7 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  padding: 1.25rem 0;
-  color: #434956;
-}
-
-.c8 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  border-color: transparent;
+  padding: 0 2rem;
 }
 
 .c8 > *:first-child {
@@ -53,7 +32,37 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c7 {
+  padding: 2rem 0;
+  color: #3e486e;
+}
+
+.c9 {
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  border-color: transparent;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -72,128 +81,131 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
-  padding: 0;
-  list-style-type: none;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  width: calc(100% / 2 - 2 * 0.625rem);
-  margin: 0.625rem;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
-}
-
-.c9 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
-  color: #005994;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
-}
-
-.c2:visited {
-  color: #434956;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2:active,
-.c2:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
-  color: #005994;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #005994;
-  border-radius: 0.25rem;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
-}
-
-.c5:visited {
-  color: #434956;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:active,
-.c5:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
-}
-
-.c1 {
-  margin: 0;
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
 .c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 2 - 2 * 1rem);
+  margin: 1rem;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 4 - 2 * 1rem);
+  margin: 1rem;
+}
+
+.c10 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  color: #3e486e;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.c3:visited {
+  color: #3e486e;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:active,
+.c3:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  color: #3e486e;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #7598d6;
+  border-radius: 0.6rem;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.c6:visited {
+  color: #3e486e;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:active,
+.c6:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
+}
+
+.c2 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c13 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -218,16 +230,16 @@ exports[`<SearchResults/> should render results 1`] = `
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -236,60 +248,64 @@ exports[`<SearchResults/> should render results 1`] = `
   appearance: none;
 }
 
-.c12:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+.c13:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
-.c14 {
+.c15 {
   display: block;
   max-width: 100%;
   padding-right: 0;
   overflow-y: auto;
 }
 
-.c19 {
+.c20 {
   display: block;
   max-width: 100%;
-  padding-right: 1rem;
+  padding-right: 1.6rem;
   overflow-y: auto;
 }
 
-.c18 {
+.c19 {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-}
-
-.c3 {
-  margin-top: 0;
-  font-weight: bold;
-  font-size: 1.125rem;
+  top: 0.4rem;
+  right: 0.4rem;
 }
 
 .c4 {
-  margin: 0;
-  color: #434956;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
-.c13 {
+.c5 {
+  margin: 0;
+  color: #3e486e;
+}
+
+.c14 {
   min-height: 120px;
 }
 
-.c15 {
-  max-height: calc(2 * 1.4 * 1rem);
+.c16 {
+  max-height: calc(2 * 1.625 * 1rem);
   margin: 0;
   overflow-y: hidden;
-  color: #0c0c0e;
+  color: #3e486e;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: calc(1.4 * 1rem);
+  font-size: 1.4rem;
+  line-height: calc(1.625 * 1rem);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
-.c17 {
+.c18 {
   min-height: 120px;
 }
 
@@ -301,46 +317,46 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media print {
-  .c7 {
+  .c8 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
-    padding: 0.625rem 1.25rem;
+  .c9 {
+    padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c9 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:980px) {
-  .c11 {
-    width: calc( 100% / 1 - 2 * 0.625rem );
+  .c12 {
+    width: calc( 100% / 1 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c11 {
-    width: calc( 100% - 0 * 0.625rem );
+  .c12 {
+    width: calc( 100% - 0 * 1rem );
   }
 }
 
 @media (max-width:980px) {
-  .c16 {
-    width: calc( 100% / 3 - 2 * 0.625rem );
+  .c17 {
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
-    width: calc( 100% - 2 * 0.625rem );
+  .c17 {
+    width: calc( 100% - 2 * 1rem );
   }
 }
 
@@ -348,27 +364,29 @@ exports[`<SearchResults/> should render results 1`] = `
   <div
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Contenu correspondant
     </h2>
     <ul
-      class="c1"
+      class="c2"
     >
       <li
         class=""
       >
         <a
-          class="c2"
+          class="c3"
           href="/fiche-service-public/mer-il-est-fou?q=search test"
         >
           <div>
             <h3
-              class="c3"
+              class="c4"
             >
               Mer il est fou!
             </h3>
             <p
-              class="c4"
+              class="c5"
             >
               description
             </p>
@@ -379,17 +397,17 @@ exports[`<SearchResults/> should render results 1`] = `
         class=""
       >
         <a
-          class="c5"
+          class="c6"
           href="/outils/simulateur-precarite?q=search test"
         >
           <div>
             <h3
-              class="c3"
+              class="c4"
             >
               simulateur de prime de précarite
             </h3>
             <p
-              class="c4"
+              class="c5"
             >
               description
             </p>
@@ -400,18 +418,18 @@ exports[`<SearchResults/> should render results 1`] = `
         class=""
       >
         <a
-          class="c2 no-after"
+          class="c3 no-after"
           href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
           target="_blank"
         >
           <div>
             <h3
-              class="c3"
+              class="c4"
             >
               telerc
             </h3>
             <p
-              class="c4"
+              class="c5"
             >
               description
             </p>
@@ -422,17 +440,17 @@ exports[`<SearchResults/> should render results 1`] = `
         class=""
       >
         <a
-          class="c5"
+          class="c6"
           href="/outils/mer-il-est-fou2?q=search test"
         >
           <div>
             <h3
-              class="c3"
+              class="c4"
             >
               Mer il est fou 2!
             </h3>
             <p
-              class="c4"
+              class="c5"
             >
               description
             </p>
@@ -443,17 +461,17 @@ exports[`<SearchResults/> should render results 1`] = `
         class=""
       >
         <a
-          class="c2"
+          class="c3"
           href="/undefined/mer-il-est-fou4?q=search test"
         >
           <div>
             <h3
-              class="c3"
+              class="c4"
             >
               Mer il est fou 4!
             </h3>
             <p
-              class="c4"
+              class="c5"
             >
               description
             </p>
@@ -463,38 +481,38 @@ exports[`<SearchResults/> should render results 1`] = `
     </ul>
   </div>
   <div
-    class="c6"
+    class="c7"
   >
     <div
-      class="c7"
+      class="c8"
     >
       <div
-        class="c8"
+        class="c9"
       >
         <div>
           <h2
-            class="c9"
+            class="c10"
           >
             Que dit le code du travail ?
           </h2>
           
         </div>
         <ul
-          class="c10"
+          class="c11"
         >
           <li
-            class="c11"
+            class="c12"
           >
             <a
-              class="c12 c13"
+              class="c13 c14"
               href="/code-du-travail/L1243-1?q=search test"
             >
               <div
-                class="c14"
+                class="c15"
               >
                 L1243-1
                 <p
-                  class="c15"
+                  class="c16"
                 >
                   la description
                 </p>
@@ -507,34 +525,34 @@ exports[`<SearchResults/> should render results 1`] = `
     </div>
   </div>
   <div
-    class="c6"
+    class="c7"
   >
     <div
-      class="c7"
+      class="c8"
     >
       <div
-        class="c8"
+        class="c9"
       >
         <div>
           <h2
-            class="c9"
+            class="c10"
           >
             Les thèmes suivants peuvent vous intéresser
           </h2>
           
         </div>
         <ul
-          class="c10"
+          class="c11"
         >
           <li
-            class="c16"
+            class="c17"
           >
             <a
-              class="c12 c17"
+              class="c13 c18"
               href="/themes/1-contrat?q=search test"
             >
               <div
-                class="c18"
+                class="c19"
               >
                 <svg
                   fill="none"
@@ -559,7 +577,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </svg>
               </div>
               <div
-                class="c19"
+                class="c20"
               >
                 Contrat
               </div>

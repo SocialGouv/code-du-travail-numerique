@@ -1,76 +1,111 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
+.c1 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c2 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
-.c2:link,
-.c2:visited {
+.c4:link,
+.c4:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
-.c2[disabled] {
+.c4[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c1 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
+.c3 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #fee5ad;
-  border-color: #fdd57b;
+  border-radius: 0.6rem;
   margin: 40px 0;
 }
 
-.c1 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
 .c0 {
-  margin-bottom: 1.25rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 
 <div>
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit le code du travail ?
     </h2>
     <div>
@@ -85,11 +120,15 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit votre convention collective ?
     </h2>
     <div>
-      <h6>
+      <h6
+        class="c2"
+      >
         <span
           aria-label="Icone convention collective"
           role="img"
@@ -109,14 +148,14 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         </a>
       </h6>
       <div
-        class="c1"
+        class="c3"
       >
         Désolé nous n'avons pas de réponse pour cette convention collective
       </div>
       <br />
       <br />
       <button
-        class="c2"
+        class="c4"
       >
         Changer de convention collective
       </button>
@@ -126,62 +165,98 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 `;
 
 exports[`<Contribution /> should render answer references 1`] = `
+.c1 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c2 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
-.c2:link,
-.c2:visited {
+.c4:link,
+.c4:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
-.c2[disabled] {
+.c4[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c1 {
+.c3 {
   margin: 5px 0;
   list-style-type: none;
 }
 
 .c0 {
-  margin-bottom: 1.25rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 
 <div>
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit le code du travail ?
     </h2>
     <div>
@@ -196,11 +271,15 @@ exports[`<Contribution /> should render answer references 1`] = `
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit votre convention collective ?
     </h2>
     <div>
-      <h6>
+      <h6
+        class="c2"
+      >
         <span
           aria-label="Icone convention collective"
           role="img"
@@ -227,14 +306,18 @@ exports[`<Contribution /> should render answer references 1`] = `
           </strong>
         </p>
       </div>
-      <h3>
+      <h3
+        class="c1"
+      >
         Références
       </h3>
-      <h4>
+      <h4
+        class="c2"
+      >
         Convention collective
       </h4>
       <li
-        class="c1"
+        class="c3"
       >
         <a
           href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
@@ -244,11 +327,13 @@ exports[`<Contribution /> should render answer references 1`] = `
           reference CC 1
         </a>
       </li>
-      <h4>
+      <h4
+        class="c2"
+      >
         Autres sources
       </h4>
       <li
-        class="c1"
+        class="c3"
       >
         <a
           href="http://path/to/ref"
@@ -261,7 +346,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       <br />
       <br />
       <button
-        class="c2"
+        class="c4"
       >
         Changer de convention collective
       </button>
@@ -272,56 +357,92 @@ exports[`<Contribution /> should render answer references 1`] = `
 
 exports[`<Contribution /> should render preselected convention 1`] = `
 .c1 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c2 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
-.c1:link,
-.c1:visited {
+.c3:link,
+.c3:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c1:not([disabled]):hover,
-.c1:not([disabled]):active,
-.c1:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
-.c1[disabled] {
+.c3[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
 .c0 {
-  margin-bottom: 1.25rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 
 <div>
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit le code du travail ?
     </h2>
     <div>
@@ -336,11 +457,15 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit votre convention collective ?
     </h2>
     <div>
-      <h6>
+      <h6
+        class="c2"
+      >
         <span
           aria-label="Icone convention collective"
           role="img"
@@ -370,7 +495,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       <br />
       <br />
       <button
-        class="c1"
+        class="c3"
       >
         Changer de convention collective
       </button>
@@ -380,36 +505,45 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 `;
 
 exports[`<Contribution /> should render with both answers 1`] = `
-.c1 {
+.c2 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
-.c1 > *:first-child {
+.c2 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
-.c3 {
+.c1 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c4 {
   width: 100%;
 }
 
 .c0 {
-  margin-bottom: 1.25rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 
-.c2 {
-  margin: 1.25rem 0;
-  padding: 0.625rem;
+.c3 {
+  margin: 2rem 0;
+  padding: 1rem;
 }
 
 @media print {
-  .c1 {
+  .c2 {
     max-width: 100%;
     padding: 0;
   }
@@ -419,7 +553,9 @@ exports[`<Contribution /> should render with both answers 1`] = `
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit le code du travail ?
     </h2>
     <div>
@@ -434,19 +570,21 @@ exports[`<Contribution /> should render with both answers 1`] = `
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit votre convention collective ?
     </h2>
     <div>
       <div
-        class="c1 c2"
+        class="c2 c3"
       >
         
         <p>
           Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
         </p>
         <input
-          class="c3"
+          class="c4"
           placeholder="Nom d'entreprise, SIRET, nom de convention collective"
           role="search"
           type="search"
@@ -460,36 +598,45 @@ exports[`<Contribution /> should render with both answers 1`] = `
 `;
 
 exports[`<Contribution /> should render with conventions answer 1`] = `
-.c1 {
+.c2 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
-.c1 > *:first-child {
+.c2 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
-.c3 {
+.c1 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c4 {
   width: 100%;
 }
 
 .c0 {
-  margin-bottom: 1.25rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 
-.c2 {
-  margin: 1.25rem 0;
-  padding: 0.625rem;
+.c3 {
+  margin: 2rem 0;
+  padding: 1rem;
 }
 
 @media print {
-  .c1 {
+  .c2 {
     max-width: 100%;
     padding: 0;
   }
@@ -499,19 +646,21 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit votre convention collective ?
     </h2>
     <div>
       <div
-        class="c1 c2"
+        class="c2 c3"
       >
         
         <p>
           Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
         </p>
         <input
-          class="c3"
+          class="c4"
           placeholder="Nom d'entreprise, SIRET, nom de convention collective"
           role="search"
           type="search"
@@ -525,16 +674,27 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 `;
 
 exports[`<Contribution /> should render with generic answer 1`] = `
+.c1 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c0 {
-  margin-bottom: 1.25rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 
 <div>
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit le code du travail ?
     </h2>
     <div>
@@ -550,63 +710,50 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 `;
 
 exports[`<Contribution /> should render with generic answer and content 1`] = `
-.c8 {
+.c1 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c7 + .c6 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c10 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.c9 {
   position: relative;
-  display: inline-block;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 12px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+  margin-right: 1rem;
+  color: #7598d6;
 }
 
-.c8::after,
-.c8::before {
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 10px;
-  height: 2px;
-  background-color: currentColor;
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  content: "";
+[aria-expanded="true"] .c9,
+[aria-selected="true"] .c9 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.c8::before {
-  left: 4px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-[aria-expanded="true"] .c8::before,
-[aria-selected="true"] .c8::before {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c8::after {
-  right: 4px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-[aria-expanded="true"] .c8::after,
-[aria-selected="true"] .c8::after {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.c6 + .c5 {
-  border-top: 1px solid #c9d3df;
-}
-
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -615,45 +762,45 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   cursor: pointer;
 }
 
-.c7:hover,
-.c7:focus,
-.c7:focus-within,
-.c7[aria-expanded="true"] {
-  color: #005994;
+.c8:hover,
+.c8:focus,
+.c8:focus-within,
+.c8[aria-expanded="true"] {
+  color: #3e486e;
 }
 
-.c9 {
-  padding: 1rem;
+.c11 {
+  padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c9 > *:first-child {
+.c11 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c11 > *:last-child {
   margin-bottom: 0;
 }
 
-.c9.accordion__body--hidden {
+.c11.accordion__body--hidden {
   display: none;
 }
 
-.c11 {
+.c13 {
   position: relative;
   overflow: hidden;
 }
 
-.c11:before,
-.c11:after {
+.c13:before,
+.c13:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -667,103 +814,111 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c11:before {
+.c13:before {
   left: -2rem;
 }
 
-.c11:after {
+.c13:after {
   right: -2rem;
 }
 
-.c12 {
+.c14 {
   overflow-x: auto;
 }
 
-.c13 {
+.c15 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
-  border: 1px solid #c9d3df;
+  border: 1px solid #bbcadf;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-.c13 caption {
-  padding: 0.625rem 0;
+.c15 caption {
+  padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c13 td,
-.c13 th {
-  padding: 0.625rem 1rem;
-  border: 1px solid #c9d3df;
+.c15 td,
+.c15 th {
+  padding: 1rem 1.6rem;
+  border: 1px solid #bbcadf;
 }
 
-.c13 thead,
-.c13 tfoot {
-  padding: 0.625rem 1rem;
+.c15 th {
+  color: #2f3b6c;
+  font-weight: 600;
+  background: #e4e8ef;
+}
+
+.c15 thead,
+.c15 tfoot {
+  padding: 1rem 1.6rem;
   vertical-align: bottom;
-  background: #f9f9fc;
+  background: #f2f5fa;
 }
 
-.c13 tfoot {
+.c15 tfoot {
   vertical-align: top;
 }
 
+.c5 {
+  margin-bottom: 3.2rem;
+}
+
+.c12 {
+  margin-bottom: 0.4rem;
+}
+
 .c4 {
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
 }
 
-.c10 {
-  margin-bottom: 0.25rem;
-}
-
-.c3 {
-  margin-bottom: 2rem;
-}
-
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
-.c1 {
-  margin-bottom: 2rem;
+.c2 {
+  margin-bottom: 3.2rem;
 }
 
 .c0 {
-  margin-bottom: 1.25rem;
-  padding: 0.625rem 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 
 <div>
   <section
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Que dit le code du travail ?
     </h2>
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c2"
+        class="c3"
       >
         <p
-          class="c3"
+          class="c4"
         >
           Le contrat d'extra, ou contrat d'usage, est un contrat à durée déterminée particulier, qui permet à un employeur d'un secteur d'activité strictement défini d'augmenter son effectif en employant rapidement un extra. Ce contrat ne peut être  utilisé que pour répondre à des besoins ponctuels et immédiats pour un poste spécifique et limités dans le temps.
         </p>
         <div
-          class="c4"
+          class="c5"
           data-accordion-component="Accordion"
         >
           <div
-            class="c5 c6"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -776,25 +931,39 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 aria-controls="accordion__panel-0"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c7"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-0"
                 role="button"
                 tabindex="0"
               >
-                <h2>
+                <svg
+                  class="c9"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h1
+                  class="c10"
+                >
                   Conditions de recours
-                </h2>
-                <div
-                  class="c8"
-                  role="presentation"
-                />
+                </h1>
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-0"
-              class="c9"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-0"
@@ -806,21 +975,21 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
               </p>
               <ul>
                 <li
-                  class="c10"
+                  class="c12"
                 >
                   <p>
                     un secteur d'activité qui autorise ce type de contrat ;
                   </p>
                 </li>
                 <li
-                  class="c10"
+                  class="c12"
                 >
                   <p>
                     usage constant de ne pas recourir au contrat à durée indéterminée ;
                   </p>
                 </li>
                 <li
-                  class="c10"
+                  class="c12"
                 >
                   <p>
                     la nature temporaire de l'emploi.
@@ -839,7 +1008,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
             </div>
           </div>
           <div
-            class="c5 c6"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -852,25 +1021,39 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 aria-controls="accordion__panel-1"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c7"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-1"
                 role="button"
                 tabindex="0"
               >
-                <h2>
+                <svg
+                  class="c9"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h1
+                  class="c10"
+                >
                   Secteurs autorisés
-                </h2>
-                <div
-                  class="c8"
-                  role="presentation"
-                />
+                </h1>
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-1"
-              class="c9"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-1"
@@ -892,13 +1075,13 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 En dehors des secteurs d'activité couverts par décret ou par une convention ou un accord collectif étendu, le recours au CDD d'usage n'est pas permis.
               </p>
               <div
-                class="c11"
+                class="c13"
               >
                 <div
-                  class="c12"
+                  class="c14"
                 >
                   <table
-                    class="c13"
+                    class="c15"
                   >
                     <caption>
                       Domaines d'activité où le CDD ou l'intérim est l'usage
@@ -1333,7 +1516,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
             </div>
           </div>
           <div
-            class="c5 c6"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1346,25 +1529,39 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 aria-controls="accordion__panel-2"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c7"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-2"
                 role="button"
                 tabindex="0"
               >
-                <h2>
+                <svg
+                  class="c9"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h1
+                  class="c10"
+                >
                   Conclusion et fin du contrat
-                </h2>
-                <div
-                  class="c8"
-                  role="presentation"
-                />
+                </h1>
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-2"
-              class="c9"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-2"
@@ -1391,7 +1588,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
             </div>
           </div>
           <div
-            class="c5 c6"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1404,25 +1601,39 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 aria-controls="accordion__panel-3"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c7"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-3"
                 role="button"
                 tabindex="0"
               >
-                <h2>
+                <svg
+                  class="c9"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h1
+                  class="c10"
+                >
                   Rémunération et cotisations sociales
-                </h2>
-                <div
-                  class="c8"
-                  role="presentation"
-                />
+                </h1>
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-3"
-              class="c9"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-3"
@@ -1442,7 +1653,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
             </div>
           </div>
           <div
-            class="c5 c6"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1455,25 +1666,39 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 aria-controls="accordion__panel-4"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c7"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-4"
                 role="button"
                 tabindex="0"
               >
-                <h2>
+                <svg
+                  class="c9"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h1
+                  class="c10"
+                >
                   Congés et durée du travail
-                </h2>
-                <div
-                  class="c8"
-                  role="presentation"
-                />
+                </h1>
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-4"
-              class="c9"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-4"
@@ -1502,21 +1727,21 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
               </p>
               <ul>
                 <li
-                  class="c10"
+                  class="c12"
                 >
                   <p>
                     le nombre d'heures supplémentaires effectuées ;
                   </p>
                 </li>
                 <li
-                  class="c10"
+                  class="c12"
                 >
                   <p>
                     le nombre d'heures de repos compensateur auxquelles elles ouvrent droit ;
                   </p>
                 </li>
                 <li
-                  class="c10"
+                  class="c12"
                 >
                   <p>
                     le nombre d'heures de repos attribuées.
@@ -1528,28 +1753,28 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
               </p>
               <ul>
                 <li
-                  class="c10"
+                  class="c12"
                 >
                   <p>
                     une durée maximale par jour :
                   </p>
                   <ul>
                     <li
-                      class="c10"
+                      class="c12"
                     >
                       <p>
                         11 heures pour un cuisinier ;
                       </p>
                     </li>
                     <li
-                      class="c10"
+                      class="c12"
                     >
                       <p>
                         12 heures pour un veilleur de nuit ;
                       </p>
                     </li>
                     <li
-                      class="c10"
+                      class="c12"
                     >
                       <p>
                         11h30 pour un autre salarié.
@@ -1558,7 +1783,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                   </ul>
                 </li>
                 <li
-                  class="c10"
+                  class="c12"
                 >
                   <p>
                     une durée maximale  hebdomadaire de 50 heures (en moyenne sur 12 semaines) ou de 52 heures (en durée absolue).
@@ -1568,7 +1793,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
             </div>
           </div>
           <div
-            class="c5 c6"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1581,25 +1806,39 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 aria-controls="accordion__panel-5"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c7"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-5"
                 role="button"
                 tabindex="0"
               >
-                <h2>
+                <svg
+                  class="c9"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                  />
+                </svg>
+                <h1
+                  class="c10"
+                >
                   Requalification en CDI
-                </h2>
-                <div
-                  class="c8"
-                  role="presentation"
-                />
+                </h1>
               </div>
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-5"
-              class="c9"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-5"

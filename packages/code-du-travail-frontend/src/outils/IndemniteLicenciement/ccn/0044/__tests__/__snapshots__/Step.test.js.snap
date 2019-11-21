@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Step /> should ask for ope and licenciement eco 1`] = `
-.c1 {
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,10 +21,10 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31,47 +40,49 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
-.c0 {
+.c1 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: default;
 }
 
-.c3 {
+.c4 {
   display: inline-block;
-  margin-left: 0.625rem;
-  color: #b50113;
+  margin-left: 1rem;
+  color: #eb5757;
   font-weight: 700;
 }
 
-.c2 {
+.c3 {
   width: 100%;
 }
 
 <div>
-  <h3>
+  <h3
+    class="c0"
+  >
     Chimie
   </h3>
   <p
-    class="c0"
+    class="c1"
   >
     Quel est l’échelon du salarié dans la convention collective ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c1"
+    class="c2"
     for="echelon"
   >
     Sélectionnez un échelon
   </label>
   <select
-    class="c2"
+    class="c3"
     id="echelon"
     name="echelon"
   >
@@ -196,21 +207,21 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </option>
   </select>
   <p
-    class="c0"
+    class="c1"
   >
     Est-ce que l'entreprise est affiliée à une des organisations patronales employeur ?
     <span
       aria-label="champs obligatoire"
-      class="c3"
+      class="c4"
     >
       *
     </span>
   </p>
   <div
-    class="c4"
+    class="c5"
   >
     <label
-      class="c1"
+      class="c2"
     >
       <input
         name="hasOpe"
@@ -222,7 +233,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
       </span>
     </label>
     <label
-      class="c1"
+      class="c2"
     >
       <input
         name="hasOpe"
@@ -235,21 +246,21 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </label>
   </div>
   <p
-    class="c0"
+    class="c1"
   >
     Le motif du licenciement est-il économique ?
     <span
       aria-label="champs obligatoire"
-      class="c3"
+      class="c4"
     >
       *
     </span>
   </p>
   <div
-    class="c4"
+    class="c5"
   >
     <label
-      class="c1"
+      class="c2"
     >
       <input
         name="isEco"
@@ -261,7 +272,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
       </span>
     </label>
     <label
-      class="c1"
+      class="c2"
     >
       <input
         name="isEco"
@@ -277,26 +288,35 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 `;
 
 exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
-.c7 {
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c8 {
   width: auto;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
 }
 
-.c7::-webkit-outer-spin-button,
-.c7::-webkit-inner-spin-button {
+.c8::-webkit-outer-spin-button,
+.c8::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -307,10 +327,10 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -326,37 +346,37 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
-.c0 {
+.c1 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: default;
 }
 
-.c5 {
+.c6 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
-.c3 {
+.c4 {
   display: inline-block;
-  margin-left: 0.625rem;
-  color: #b50113;
+  margin-left: 1rem;
+  color: #eb5757;
   font-weight: 700;
 }
 
-.c2 {
+.c3 {
   width: 100%;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -365,28 +385,30 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 <div>
-  <h3>
+  <h3
+    class="c0"
+  >
     Chimie
   </h3>
   <p
-    class="c0"
+    class="c1"
   >
     Quel est l’échelon du salarié dans la convention collective ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c1"
+    class="c2"
     for="echelon"
   >
     Sélectionnez un échelon
   </label>
   <select
-    class="c2"
+    class="c3"
     id="echelon"
     name="echelon"
   >
@@ -511,21 +533,21 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </option>
   </select>
   <p
-    class="c0"
+    class="c1"
   >
     Est-ce que l'entreprise est affiliée à une des organisations patronales employeur ?
     <span
       aria-label="champs obligatoire"
-      class="c3"
+      class="c4"
     >
       *
     </span>
   </p>
   <div
-    class="c4"
+    class="c5"
   >
     <label
-      class="c1"
+      class="c2"
     >
       <input
         name="hasOpe"
@@ -537,7 +559,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
       </span>
     </label>
     <label
-      class="c1"
+      class="c2"
     >
       <input
         name="hasOpe"
@@ -550,21 +572,21 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </label>
   </div>
   <p
-    class="c0"
+    class="c1"
   >
     Le motif du licenciement est-il économique ?
     <span
       aria-label="champs obligatoire"
-      class="c3"
+      class="c4"
     >
       *
     </span>
   </p>
   <div
-    class="c4"
+    class="c5"
   >
     <label
-      class="c1"
+      class="c2"
     >
       <input
         name="isEco"
@@ -576,7 +598,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
       </span>
     </label>
     <label
-      class="c1"
+      class="c2"
     >
       <input
         name="isEco"
@@ -589,22 +611,22 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </label>
   </div>
   <label
-    class="c5"
+    class="c6"
     for="1"
   >
     Quel était l’âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
-      class="c3"
+      class="c4"
     >
       *
     </span>
   </label>
   <div
-    class="c6"
+    class="c7"
   >
     <input
-      class="c7"
+      class="c8"
       id="1"
       name="age"
       type="number"
@@ -615,7 +637,16 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 `;
 
 exports[`<Step /> should render 1`] = `
-.c1 {
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -626,40 +657,42 @@ exports[`<Step /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
-.c0 {
+.c1 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: default;
 }
 
-.c2 {
+.c3 {
   width: 100%;
 }
 
 <div>
-  <h3>
+  <h3
+    class="c0"
+  >
     Chimie
   </h3>
   <p
-    class="c0"
+    class="c1"
   >
     Quel est l’échelon du salarié dans la convention collective ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c1"
+    class="c2"
     for="echelon"
   >
     Sélectionnez un échelon
   </label>
   <select
-    class="c2"
+    class="c3"
     id="echelon"
     name="echelon"
   >

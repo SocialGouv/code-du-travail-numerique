@@ -74,10 +74,10 @@ const tests = [
     test: container =>
       expect(container).toMatchInlineSnapshot(`
         .c0 {
-          margin-bottom: 1rem;
-          padding: 1rem;
-          background-color: #f9f9fc;
-          border-radius: 0.25rem;
+          margin-bottom: 1.6rem;
+          padding: 1.6rem;
+          background-color: #f2f5fa;
+          border-radius: 0.6rem;
         }
 
         .c0 > *:first-child {

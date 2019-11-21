@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import Link from "next/link";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import {
@@ -9,8 +8,7 @@ import {
   List,
   ListItem,
   PageTitle,
-  Title,
-  theme
+  Title
 } from "@socialgouv/react-ui";
 
 import { LinkContent } from "./LinkContent";
@@ -118,9 +116,3 @@ export const Results = ({ id, isSearch, items, query }) => {
     </Container>
   );
 };
-
-const { spacings } = theme;
-
-const H1 = styled.h1`
-  margin: ${spacings.medium} 0;
-`;

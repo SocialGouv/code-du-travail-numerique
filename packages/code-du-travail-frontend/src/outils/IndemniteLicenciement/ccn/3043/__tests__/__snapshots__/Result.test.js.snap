@@ -2,20 +2,25 @@
 
 exports[`<Result /> should render 1`] = `
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 .c1 {
-  color: #005994;
+  color: #3e486e;
   font-weight: 700;
-  font-size: 1.375rem;
+  font-size: 1.8rem;
   white-space: nowrap;
 }
 
 .c8 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .c4 {
@@ -31,29 +36,29 @@ exports[`<Result /> should render 1`] = `
 
 .c5 {
   width: calc(50% * 1);
-  background-color: #4c5467;
-  border-radius: 0.25rem;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
 }
 
 .c13 {
   width: calc(50% * 0.4);
-  background-color: #4c5467;
-  border-radius: 0.25rem;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
 }
 
 .c6 {
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 1.125rem;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 .c7 {
-  margin-top: 1.25rem;
+  margin-top: 2rem;
 }
 
 .c9 {
   font-weight: bold;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 }
 
 .c10 {
@@ -61,11 +66,11 @@ exports[`<Result /> should render 1`] = `
 }
 
 .c11 {
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 }
 
 .c12 {
-  margin: 1rem 0;
+  margin: 1.6rem 0;
 }
 
 .c2 {
@@ -79,8 +84,9 @@ exports[`<Result /> should render 1`] = `
 }
 
 .c3 {
-  margin: 0.25rem;
+  margin: 0.4rem;
   font-weight: 700;
+  font-size: 1.6rem;
 }
 
 @media (max-width:980px) {

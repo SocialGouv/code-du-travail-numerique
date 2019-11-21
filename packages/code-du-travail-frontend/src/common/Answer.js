@@ -7,6 +7,7 @@ import { SOURCES, getRouteBySource } from "@cdt/sources";
 import {
   Alert,
   Container,
+  Heading,
   List,
   ListItem,
   theme,
@@ -125,9 +126,7 @@ function Answer({
         </StyledContent>
         {relatedItems.length > 0 && (
           <RelatedItems>
-            <StyledRelatedItemsTitle>
-              Autres contenus pouvant vous intéresser&nbsp;:
-            </StyledRelatedItemsTitle>
+            <Heading>Autres contenus pouvant vous intéresser&nbsp;:</Heading>
             <List>
               {relatedArticles
                 .filter(link => link.title !== title)
@@ -224,11 +223,6 @@ const RelatedItems = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
-`;
-
-const StyledRelatedItemsTitle = styled.h6`
-  margin-top: 0;
-  font-weight: bold;
 `;
 
 const StyledListItem = styled(ListItem)`

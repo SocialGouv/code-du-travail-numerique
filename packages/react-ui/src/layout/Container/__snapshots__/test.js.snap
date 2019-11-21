@@ -4,7 +4,7 @@ exports[`<Container /> renders 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c0 > *:first-child {
@@ -35,8 +35,8 @@ exports[`<Container /> renders narrow 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
 }
 
 .c0 > *:first-child {
@@ -67,8 +67,8 @@ exports[`<Container /> renders narrow without padding 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
 }
 
@@ -100,7 +100,7 @@ exports[`<Container /> renders without padding even if the prop is specified, be
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c0 > *:first-child {

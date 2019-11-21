@@ -4,7 +4,7 @@ exports[`<Outils /> should render 1`] = `
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c1 > *:first-child {
@@ -16,53 +16,69 @@ exports[`<Outils /> should render 1`] = `
 }
 
 .c0 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
   background-color: #fff;
 }
 
-.c12 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
-.c12:link,
-.c12:visited {
+.c11:link,
+.c11:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+.c11:not([disabled]):hover,
+.c11:not([disabled]):active,
+.c11:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
-.c12[disabled] {
-  color: rgba(12,12,14,0.4);
+.c11[disabled] {
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,15 +97,15 @@ exports[`<Outils /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,25 +117,18 @@ exports[`<Outils /> should render 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 4 - 2 * 1rem);
+  margin: 1rem;
 }
 
 .c2 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
-}
-
-.c6 {
-  color: #005994;
-  font-weight: 300;
-  font-size: 1rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 .c4 {
@@ -131,30 +140,32 @@ exports[`<Outils /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #005994;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-family: "Merriweather",serif;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4:hover {
-  color: #006be6;
+  color: #2f3b6c;
 }
 
 .c5 {
-  margin-left: 1rem;
-  color: #006be6;
-  -webkit-transition: 250ms ease-out -webkit-transform;
-  -webkit-transition: 250ms ease-out transform;
-  transition: 250ms ease-out transform;
+  margin-left: 1.6rem;
+  color: #7598d6;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
 }
 
 .c3:hover .c5 {
-  -webkit-transform: translateX(7px);
-  -ms-transform: translateX(7px);
-  transform: translateX(7px);
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
-.c9 {
+.c8 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -179,16 +190,16 @@ exports[`<Outils /> should render 1`] = `
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -197,20 +208,21 @@ exports[`<Outils /> should render 1`] = `
   appearance: none;
 }
 
-.c9:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+.c8:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
-.c10 {
+.c9 {
   display: block;
   max-width: 100%;
   padding-right: 0;
   overflow-y: auto;
 }
 
-.c11 {
-  margin-top: 1.25rem;
+.c10 {
+  margin-top: 2rem;
 }
 
 @media print {
@@ -221,14 +233,14 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c8 {
-    width: calc( 100% / 3 - 2 * 0.625rem );
+  .c7 {
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
-    width: calc( 100% - 2 * 0.625rem );
+  .c7 {
+    width: calc( 100% - 2 * 1rem );
   }
 }
 
@@ -268,33 +280,31 @@ exports[`<Outils /> should render 1`] = `
             </svg>
           </a>
         </h2>
-        <div
-          class="c6"
-        >
+        <div>
           Trouvez des réponses personnalisées selon votre situation
         </div>
       </div>
       <ul
-        class="c7"
+        class="c6"
       >
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9"
+            class="c8"
             href="/outils/indemnite-licenciement"
             title="Démarrer une simulation d'indemnités de licenciements"
           >
             <div
-              class="c10"
+              class="c9"
             >
               Simulateur d'indemnités de licenciements
             </div>
             <div
-              class="c11"
+              class="c10"
             >
               <div
-                class="c12"
+                class="c11"
               >
                 Démarrer
               </div>
@@ -302,23 +312,23 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9"
+            class="c8"
             href="/outils/preavis-licenciement"
             title="Démarrer une simulation de durée de préavis de licenciement"
           >
             <div
-              class="c10"
+              class="c9"
             >
               Simulateur de durée de préavis de licenciement
             </div>
             <div
-              class="c11"
+              class="c10"
             >
               <div
-                class="c12"
+                class="c11"
               >
                 Démarrer
               </div>
@@ -326,23 +336,23 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9"
+            class="c8"
             href="/outils/preavis-demission"
             title="Démarrer une simulation de durée de préavis de démission"
           >
             <div
-              class="c10"
+              class="c9"
             >
               Simulateur de durée de préavis de démission
             </div>
             <div
-              class="c11"
+              class="c10"
             >
               <div
-                class="c12"
+                class="c11"
               >
                 Démarrer
               </div>
@@ -350,23 +360,23 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9"
+            class="c8"
             href="/modeles-de-courriers"
             title="Consulter tous les modèles de courriers"
           >
             <div
-              class="c10"
+              class="c9"
             >
               Modèles de courriers
             </div>
             <div
-              class="c11"
+              class="c10"
             >
               <div
-                class="c12"
+                class="c11"
               >
                 Consulter
               </div>
@@ -374,23 +384,23 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9"
+            class="c8"
             href="/outils/simulateur-embauche"
             title="Démarrer une simulation de salaire lors d'une embauche"
           >
             <div
-              class="c10"
+              class="c9"
             >
               Simulateur d'embauche
             </div>
             <div
-              class="c11"
+              class="c10"
             >
               <div
-                class="c12"
+                class="c11"
               >
                 Démarrer
               </div>
@@ -398,23 +408,23 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <a
-            class="c9"
+            class="c8"
             href="/outils/indemnite-precarite"
             title="Démarrer une simulation de la prime de précarité"
           >
             <div
-              class="c10"
+              class="c9"
             >
               Simulateur de prime de précarité
             </div>
             <div
-              class="c11"
+              class="c10"
             >
               <div
-                class="c12"
+                class="c11"
               >
                 Démarrer
               </div>
@@ -422,22 +432,22 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <button
-            class="c9"
+            class="c8"
             href=""
           >
             <div
-              class="c10"
+              class="c9"
             >
               Votre convention collective
             </div>
             <div
-              class="c11"
+              class="c10"
             >
               <div
-                class="c12"
+                class="c11"
               >
                 Rechercher
               </div>
@@ -445,14 +455,14 @@ exports[`<Outils /> should render 1`] = `
           </button>
         </li>
         <li
-          class="c8"
+          class="c7"
         >
           <button
-            class="c9"
+            class="c8"
             href=""
           >
             <div
-              class="c10"
+              class="c9"
             >
               Bientôt d’autres outils disponibles...
             </div>

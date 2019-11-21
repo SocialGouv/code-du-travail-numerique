@@ -1,63 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should have two different levels of headings 1`] = `
-.c4 {
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c3 + .c2 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.c5 {
   position: relative;
-  display: inline-block;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 12px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+  margin-right: 1rem;
+  color: #7598d6;
 }
 
-.c4::after,
-.c4::before {
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 10px;
-  height: 2px;
-  background-color: currentColor;
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  content: "";
+[aria-expanded="true"] .c5,
+[aria-selected="true"] .c5 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.c4::before {
-  left: 4px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-[aria-expanded="true"] .c4::before,
-[aria-selected="true"] .c4::before {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c4::after {
-  right: 4px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-[aria-expanded="true"] .c4::after,
-[aria-selected="true"] .c4::after {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.c2 + .c1 {
-  border-top: 1px solid #c9d3df;
-}
-
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -66,55 +53,57 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   cursor: pointer;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #005994;
+.c4:hover,
+.c4:focus,
+.c4:focus-within,
+.c4[aria-expanded="true"] {
+  color: #3e486e;
 }
 
-.c5 {
-  padding: 1rem;
+.c7 {
+  padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c5 > *:first-child {
+.c7 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c7 > *:last-child {
   margin-bottom: 0;
 }
 
-.c5.accordion__body--hidden {
+.c7.accordion__body--hidden {
   display: none;
 }
 
-.c0 {
-  margin-bottom: 2rem;
+.c1 {
+  margin-bottom: 3.2rem;
 }
 
 <div>
-  <h2>
+  <h2
+    class="c0"
+  >
     titre 0
   </h2>
   <p>
     paragraphe 0
   </p>
   <div
-    class="c0"
+    class="c1"
     data-accordion-component="Accordion"
   >
     <div
-      class="c1 c2"
+      class="c2 c3"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -127,25 +116,39 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           aria-controls="accordion__panel-0"
           aria-disabled="false"
           aria-expanded="false"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-0"
           role="button"
           tabindex="0"
         >
-          <h2>
+          <svg
+            class="c5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <h1
+            class="c6"
+          >
             titre 1
-          </h2>
-          <div
-            class="c4"
-            role="presentation"
-          />
+          </h1>
         </div>
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-0"
-        class="c5"
+        class="c7"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-0"
@@ -159,7 +162,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       </div>
     </div>
     <div
-      class="c1 c2"
+      class="c2 c3"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -172,25 +175,39 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           aria-controls="accordion__panel-1"
           aria-disabled="false"
           aria-expanded="false"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-1"
           role="button"
           tabindex="0"
         >
-          <h2>
+          <svg
+            class="c5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <h1
+            class="c6"
+          >
             titre 2
-          </h2>
-          <div
-            class="c4"
-            role="presentation"
-          />
+          </h1>
         </div>
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-1"
-        class="c5"
+        class="c7"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-1"
@@ -201,13 +218,15 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         <p>
           paragraphe 2-2
         </p>
-        <h3>
+        <h3
+          class="c0"
+        >
           titre 2-1
         </h3>
       </div>
     </div>
     <div
-      class="c1 c2"
+      class="c2 c3"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -220,25 +239,39 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           aria-controls="accordion__panel-2"
           aria-disabled="false"
           aria-expanded="false"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-2"
           role="button"
           tabindex="0"
         >
-          <h2>
+          <svg
+            class="c5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <h1
+            class="c6"
+          >
             titre 3
-          </h2>
-          <div
-            class="c4"
-            role="presentation"
-          />
+          </h1>
         </div>
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-2"
-        class="c5"
+        class="c7"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-2"
@@ -256,63 +289,50 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Accordion /> should render all, siblings included 1`] = `
-.c4 {
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c3 + .c2 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.c5 {
   position: relative;
-  display: inline-block;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 12px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+  margin-right: 1rem;
+  color: #7598d6;
 }
 
-.c4::after,
-.c4::before {
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 10px;
-  height: 2px;
-  background-color: currentColor;
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  content: "";
+[aria-expanded="true"] .c5,
+[aria-selected="true"] .c5 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.c4::before {
-  left: 4px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-[aria-expanded="true"] .c4::before,
-[aria-selected="true"] .c4::before {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c4::after {
-  right: 4px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-[aria-expanded="true"] .c4::after,
-[aria-selected="true"] .c4::after {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.c2 + .c1 {
-  border-top: 1px solid #c9d3df;
-}
-
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -321,55 +341,57 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   cursor: pointer;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #005994;
+.c4:hover,
+.c4:focus,
+.c4:focus-within,
+.c4[aria-expanded="true"] {
+  color: #3e486e;
 }
 
-.c5 {
-  padding: 1rem;
+.c7 {
+  padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c5 > *:first-child {
+.c7 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c7 > *:last-child {
   margin-bottom: 0;
 }
 
-.c5.accordion__body--hidden {
+.c7.accordion__body--hidden {
   display: none;
 }
 
-.c0 {
-  margin-bottom: 2rem;
+.c1 {
+  margin-bottom: 3.2rem;
 }
 
 <div>
-  <h5>
+  <h5
+    class="c0"
+  >
     titre 0
   </h5>
   <p>
     paragraphe 0
   </p>
   <div
-    class="c0"
+    class="c1"
     data-accordion-component="Accordion"
   >
     <div
-      class="c1 c2"
+      class="c2 c3"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -382,25 +404,39 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           aria-controls="accordion__panel-3"
           aria-disabled="false"
           aria-expanded="false"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-3"
           role="button"
           tabindex="0"
         >
-          <h5>
+          <svg
+            class="c5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <h4
+            class="c6"
+          >
             titre 1
-          </h5>
-          <div
-            class="c4"
-            role="presentation"
-          />
+          </h4>
         </div>
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-3"
-        class="c5"
+        class="c7"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-3"
@@ -414,7 +450,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       </div>
     </div>
     <div
-      class="c1 c2"
+      class="c2 c3"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -427,25 +463,39 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           aria-controls="accordion__panel-4"
           aria-disabled="false"
           aria-expanded="false"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-4"
           role="button"
           tabindex="0"
         >
-          <h5>
+          <svg
+            class="c5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <h4
+            class="c6"
+          >
             titre 2
-          </h5>
-          <div
-            class="c4"
-            role="presentation"
-          />
+          </h4>
         </div>
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-4"
-        class="c5"
+        class="c7"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-4"
@@ -456,13 +506,15 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         <p>
           paragraphe 2-2
         </p>
-        <h6>
+        <h6
+          class="c0"
+        >
           titre 2-1
         </h6>
       </div>
     </div>
     <div
-      class="c1 c2"
+      class="c2 c3"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -475,25 +527,39 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           aria-controls="accordion__panel-5"
           aria-disabled="false"
           aria-expanded="false"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-5"
           role="button"
           tabindex="0"
         >
-          <h5>
+          <svg
+            class="c5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <h4
+            class="c6"
+          >
             titre 3
-          </h5>
-          <div
-            class="c4"
-            role="presentation"
-          />
+          </h4>
         </div>
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-5"
-        class="c5"
+        class="c7"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-5"

@@ -67,7 +67,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
 
 export default DroitDuTravail;
 
-const { box, breakpoints, colors, fonts, spacings } = theme;
+const { box, breakpoints, colors, spacings } = theme;
 
 const StyledSection = styled(Section)`
   padding: ${spacings.larger} 0;
@@ -98,10 +98,6 @@ const BigBlock = styled.div`
     margin-bottom: ${spacings.medium};
     padding: 0;
   }
-`;
-
-const H1 = styled.h1`
-  font-size: ${fonts.sizes.headings.large};
 `;
 
 const SmallBlock = styled.div`

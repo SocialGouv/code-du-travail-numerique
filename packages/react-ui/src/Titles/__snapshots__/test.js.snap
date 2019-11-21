@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> should render a H3 heading  1`] = `
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+<div>
+  <h3
+    class="c0"
+  >
+    Lorem Ipsum
+  </h3>
+</div>
+`;
+
+exports[`<PageTitle /> should render a H1 page title  1`] = `
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+<div>
+  <h1
+    class="c0"
+  >
+    Lorem Ipsum
+  </h1>
+</div>
+`;
+
+exports[`<Title /> should render a H2 title  1`] = `
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Lorem Ipsum
+  </h2>
+</div>
+`;

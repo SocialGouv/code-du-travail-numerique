@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 
-import { theme } from "@socialgouv/react-ui";
+import { Title } from "@socialgouv/react-ui";
 
 import Article from "./Article";
 import { sortByIntOrdre } from "../../utils";
@@ -45,9 +44,3 @@ Content.propTypes = {
 };
 
 export default Content;
-
-const { fonts } = theme;
-
-const Title = styled.h3`
-  font-size: ${fonts.sizes.headings.medium};
-`;

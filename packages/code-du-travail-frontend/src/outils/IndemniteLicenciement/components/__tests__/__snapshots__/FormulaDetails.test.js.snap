@@ -2,16 +2,16 @@
 
 exports[`<FormulaDetails /> should render 1`] = `
 .c1 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .c0 {
-  margin-top: 1.25rem;
+  margin-top: 2rem;
 }
 
 .c2 {
   font-weight: bold;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 }
 
 .c3 {
@@ -19,11 +19,11 @@ exports[`<FormulaDetails /> should render 1`] = `
 }
 
 .c4 {
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
-  margin: 1rem 0;
+  margin: 1.6rem 0;
 }
 
 <div>

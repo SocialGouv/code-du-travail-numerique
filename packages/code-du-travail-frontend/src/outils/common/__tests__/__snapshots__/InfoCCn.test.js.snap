@@ -4,7 +4,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
 .c2 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c2 > *:first-child {
@@ -21,9 +21,9 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: default;
 }
 

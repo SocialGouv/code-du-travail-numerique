@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
-import { theme } from "@socialgouv/react-ui";
+import { PageTitle, theme } from "@socialgouv/react-ui";
 
 import { StepItems } from "./StepItems";
 import { PrevNextBar } from "./PrevNextBar";
@@ -115,7 +115,7 @@ Wizard.propTypes = {
 
 export { Wizard };
 
-const { box, fonts, spacings, breakpoints } = theme;
+const { box, spacings, breakpoints } = theme;
 
 const StyledForm = styled.form`
   display: flex;
@@ -135,11 +135,8 @@ const StepWrapper = styled.div`
   flex-basis: 240px;
   margin: ${spacings.large} 0;
 `;
-const ToolTitle = styled.div`
+const ToolTitle = styled(PageTitle)`
   padding: ${spacings.base} 0;
-  color: ${({ theme }) => theme.title};
-  font-weight: 400;
-  font-size: ${fonts.sizes.headings.medium};
   border-bottom: 1px solid ${({ theme }) => theme.border};
 `;
 const Column = styled.div`

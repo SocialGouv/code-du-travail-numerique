@@ -2,11 +2,11 @@
 
 exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 .c0 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
 }
 
 .c0 > *:first-child {
@@ -19,7 +19,7 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -43,10 +43,10 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 
 exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 .c0 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   border-color: transparent;
 }
 
@@ -60,7 +60,7 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -84,10 +84,10 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 
 exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 .c0 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   background-color: #fff;
 }
 
@@ -101,7 +101,7 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -125,11 +125,11 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 
 exports[`<Wrapper /> should render a large wrapper 1`] = `
 .c0 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  padding: 2rem 2.5rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  padding: 3.2rem 4rem;
   border-color: transparent;
 }
 
@@ -143,7 +143,7 @@ exports[`<Wrapper /> should render a large wrapper 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 

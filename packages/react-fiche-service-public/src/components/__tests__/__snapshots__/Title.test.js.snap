@@ -1,13 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Title /> heading should default to H6 1`] = `
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 <div>
-  <h6 />
+  <h6
+    class="c0"
+  />
 </div>
 `;
 
 exports[`<Title /> should render a H{x} whose {x} is headingLevel + 2 1`] = `
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 <div>
-  <h4 />
+  <h4
+    class="c0"
+  />
 </div>
 `;

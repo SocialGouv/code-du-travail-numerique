@@ -1,25 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
-.c0 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
+.c3 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #006be6;
-  border-color: #006be6;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c0:link,
@@ -32,44 +53,78 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 .c0:not([disabled]):hover,
 .c0:not([disabled]):active,
 .c0:not([disabled]):focus {
-  color: #fff;
-  background: #07f;
-  border-color: #005fcd;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c0[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c9 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c9:hover {
-  color: #8c94a6;
+.c10:link,
+.c10:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
 }
 
-.c11:not(:focus):not(:active) {
+.c10:not([disabled]):hover,
+.c10:not([disabled]):active,
+.c10:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c10[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c12:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -98,39 +153,39 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   margin: 10vh auto;
   padding: 2rem;
   overflow-y: auto;
-  color: #434956;
+  color: #3e486e;
   background: #fff;
-  border-radius: 0.25rem;
+  border-radius: 0.6rem;
   outline: none;
 }
 
-.c10 {
+.c11 {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.c4 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin: 1rem 0 2rem;
+  margin: 1.6rem 0 3.2rem;
   font-weight: bold;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #005994;
-}
-
-.c5 {
-  padding: 0 1rem;
-  color: #005994;
-  font-size: 2rem;
+  border: 1px solid #7598d6;
 }
 
 .c6 {
+  padding: 0 1.6rem;
+  color: #3e486e;
+  font-size: 2rem;
+}
+
+.c7 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -144,14 +199,14 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 1rem 0 1.25rem;
+  padding: 0 1.6rem 0 2rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-style: normal;
-  background-color: #005994;
+  background-color: #7598d6;
 }
 
-.c6::before {
+.c7::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -166,15 +221,14 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   content: "";
 }
 
-.c7 {
+.c8 {
   width: 100%;
-  margin-top: 0.625rem;
+  margin-top: 1rem;
 }
 
-.c8 {
+.c9 {
   display: block;
-  margin-top: 1.25rem;
-  color: #8393a7;
+  margin-top: 2rem;
 }
 
 @media (max-width:1200px) {
@@ -191,28 +245,28 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 
 @media (max-width:600px) {
   .c2 {
-    width: calc(100% - 2 * 1rem);
-    max-height: calc(100vh - 2 * 1rem);
-    margin: 1rem;
+    width: calc(100% - 2 * 1.6rem);
+    max-height: calc(100vh - 2 * 1.6rem);
+    margin: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     position: fixed;
-    top: 0.625rem;
-    right: 0.625rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c3 {
-    text-align: center;
+    top: 1rem;
+    right: 1rem;
   }
 }
 
 @media (max-width:980px) {
   .c4 {
+    text-align: center;
+  }
+}
+
+@media (max-width:980px) {
+  .c5 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -220,13 +274,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:980px) {
-  .c6 {
-    padding: 0.625rem;
+  .c7 {
+    padding: 1rem;
   }
 }
 
 @media (max-width:980px) {
-  .c6::before {
+  .c7::before {
     display: none;
   }
 }
@@ -268,29 +322,33 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             role="dialog"
             tabindex="-1"
           >
-            <h4>
+            <h4
+              class="c3"
+            >
               Contacter les services de renseignement par téléphone
             </h4>
             <div
-              class="c3"
+              class="c4"
             >
               <a
-                class="c4"
+                class="c5"
                 href="tel:+0033806000126"
               >
                 <strong
-                  class="c5"
+                  class="c6"
                 >
                   0 806 000 126
                 </strong>
                 <em
-                  class="c6"
+                  class="c7"
                 >
                   Service gratuit + prix appel
                 </em>
               </a>
             </div>
-            <h4>
+            <h4
+              class="c3"
+            >
               Trouver les coordonnées du service de renseignement de mon département
             </h4>
             <p>
@@ -300,14 +358,14 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 Saisissez votre numéro de département :
               </label>
               <input
-                class="c7"
+                class="c8"
                 id="id_1"
                 maxlength="3"
                 type="text"
               />
             </p>
             <small
-              class="c8"
+              class="c9"
             >
               Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
               <ul>
@@ -326,11 +384,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </ul>
             </small>
             <button
-              class="c9 c10"
+              class="c10 c11"
               title="fermer la modale"
             >
               <div
-                class="c11"
+                class="c12"
               >
                 fermer la modale
               </div>

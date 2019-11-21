@@ -13,39 +13,18 @@ exports[`<StepResult /> should render CC answer 1`] = `
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #e5f1fe;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: none;
   animation: none;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e5f1fe;
-}
-
-.c4 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -53,21 +32,26 @@ exports[`<StepResult /> should render CC answer 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 .c1 {
-  color: #005994;
+  color: #3e486e;
   font-weight: 700;
-  font-size: 1.375rem;
+  font-size: 1.8rem;
   white-space: nowrap;
 }
 
@@ -137,39 +121,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
   >
     <div
       class="c3"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="16"
-          y2="12"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="8"
-          y2="8"
-        />
-      </svg>
-    </div>
-    <div
-      class="c4"
       role="alert"
     >
       Si le contrat de travail, un accord collectif d’entreprise ou un usage prévoit une durée de préavis différente, il faut appliquer la durée la plus courte.

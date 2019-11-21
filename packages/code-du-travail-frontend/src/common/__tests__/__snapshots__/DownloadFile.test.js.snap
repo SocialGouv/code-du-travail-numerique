@@ -10,42 +10,43 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
-  color: #005994;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  color: #3e486e;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  background-color: #f2f5fa;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
 
 .c0:visited {
-  color: #434956;
+  color: #3e486e;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0:active,
 .c0:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
 .c1 {
-  color: #434956;
+  color: #3e486e;
   font-weight: bold;
 }
 
 .c2 {
-  font-size: var(--font-size-xsmall);
+  font-size: 1.2rem;
 }
 
 .c3 {
-  color: var(--color-grey);
-  font-size: var(--font-size-xsmall);
+  color: #4d73b8;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 

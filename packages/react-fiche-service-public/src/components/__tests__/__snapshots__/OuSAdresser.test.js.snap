@@ -2,15 +2,15 @@
 
 exports[`<OuSAdresser /> should render a complex case 1`] = `
 .c0 {
-  margin-bottom: 1rem;
-  padding: 2rem;
-  background-color: #ebeff3;
-  border-radius: 0.25rem;
+  margin-bottom: 1.6rem;
+  padding: 3.2rem;
+  background-color: #e4e8ef;
+  border-radius: 0.6rem;
 }
 
 .c1 {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 <div>
@@ -35,15 +35,15 @@ exports[`<OuSAdresser /> should render a complex case 1`] = `
 
 exports[`<OuSAdresser /> should render a simple case 1`] = `
 .c0 {
-  margin-bottom: 1rem;
-  padding: 2rem;
-  background-color: #ebeff3;
-  border-radius: 0.25rem;
+  margin-bottom: 1.6rem;
+  padding: 3.2rem;
+  background-color: #e4e8ef;
+  border-radius: 0.6rem;
 }
 
 .c1 {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 <div>
