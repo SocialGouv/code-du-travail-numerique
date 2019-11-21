@@ -162,7 +162,7 @@ exports[`<CookieConsent /> should render 1`] = `
         class="c3"
         role="alert"
       >
-        En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour établir des mesures de fréquentation et d’utilisation du site.
+        Nous utilisons des cookies pour établir des mesures anonymisées de fréquentation et d’utilisation du site.
         <a
           class="c4"
           href="http://master.code-du-travail-numerique.dev.factory.social.gouv.fr/mentions-legales"
