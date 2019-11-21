@@ -162,7 +162,7 @@ exports[`<Result /> should render 1`] = `
         <summary
           class="c8"
         >
-          Voir le detail du calcul
+          Voir le détail du calcul
         </summary>
         <strong
           class="c9"
@@ -246,7 +246,7 @@ exports[`<Result /> should render 1`] = `
         <summary
           class="c8"
         >
-          Voir le detail du calcul
+          Voir le détail du calcul
         </summary>
         <strong
           class="c9"
