@@ -53,7 +53,7 @@ const ContentMT = props => {
   );
 };
 
-const customComponentsMdx = content => {
+const rehypeToReact = content => {
   const contentComponent =
     content && content.raw ? (
       <ContentSP raw={content.raw} />
@@ -106,4 +106,4 @@ const IntroWrapper = styled(Wrapper)`
   margin: ${spacing.base} auto;
 `;
 
-export default customComponentsMdx;
+export default rehypeToReact;

@@ -4,7 +4,7 @@ import createPersistedState from "use-persisted-state";
 import { Alert, Button, Heading, theme, Title } from "@socialgouv/react-ui";
 
 import SearchConvention from "../../src/conventions/Search/Form";
-import customComponentsMdx from "./externalContent";
+import rehypeToReact from "./rehypeToReact";
 import Mdx from "../../src/common/Mdx";
 
 // store selected convention in localStorage
@@ -90,10 +90,7 @@ const AnswersConventions = ({ answers }) => {
           </Heading>
           {(answer && (
             <React.Fragment>
-              <Mdx
-                markdown={answer.markdown}
-                components={customComponentsMdx}
-              />
+              <Mdx markdown={answer.markdown} components={rehypeToReact} />
 
               <References references={answer.references} />
             </React.Fragment>
@@ -123,7 +120,7 @@ const Contribution = ({ answers, content }) => (
         <Title>Que dit le code du travail ?</Title>
         <Mdx
           markdown={answers.generic.markdown}
-          components={customComponentsMdx(content)}
+          components={rehypeToReact(content)}
         />
       </SectionAnswer>
     )}
