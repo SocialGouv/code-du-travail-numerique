@@ -48,7 +48,7 @@
     "@zeit/ncc": "^0.20.5",
     "eslint": "^6.6.0",
     "nodemon": "^2.0.0",
-    "superagent": "^5.1.0",
+    "superagent": "^5.1.1",
     "supertest": "^4.0.2"
   },
   "jest": {
