@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
-import { Accordion, Alert, theme, Wrapper } from "@socialgouv/react-ui";
+import {
+  Accordion,
+  Alert,
+  Heading,
+  theme,
+  Wrapper
+} from "@socialgouv/react-ui";
 import Html from "../../src/common/Html";
 
 //Custom MDX component
@@ -9,7 +15,8 @@ const Tab = props => (
   <StyledAccordion
     items={[
       {
-        title: <h3>{props.title}</h3>,
+        title: props.title,
+        as: "h3",
         body: props.children
       }
     ]}
@@ -18,7 +25,7 @@ const Tab = props => (
 
 const Hdn = props => (
   <Alert variant="info">
-    <h4>Texte applicable</h4>
+    <Heading>Texte applicable</Heading>
     <div {...props} />
   </Alert>
 );
@@ -45,7 +52,8 @@ const ContentMT = props => {
       <Accordion
         items={sections.map(section => ({
           id: section.anchor,
-          title: <h3>{section.title}</h3>,
+          title: section.title,
+          as: "h3",
           body: <TabContent>{section.html}</TabContent>
         }))}
       />
@@ -67,7 +75,7 @@ const rehypeToReact = content => {
   };
 };
 
-const { box, spacing } = theme;
+const { box, spacings } = theme;
 
 const StyledAccordion = styled(Accordion)`
   *[data-accordion-component="AccordionItem"] {
@@ -76,7 +84,7 @@ const StyledAccordion = styled(Accordion)`
     }
   }
   *[data-accordion-component="AccordionItemButton"] {
-    padding-left: ${spacing.small};
+    padding-left: ${spacings.small};
   }
 `;
 
@@ -90,7 +98,7 @@ const TabContent = styled(Html)`
 `;
 
 const StyledContent = styled.div`
-  margin-bottom: ${spacing.large};
+  margin-bottom: ${spacings.large};
 `;
 
 const Intro = styled(Html)`
@@ -103,7 +111,7 @@ const Intro = styled(Html)`
 `;
 
 const IntroWrapper = styled(Wrapper)`
-  margin: ${spacing.base} auto;
+  margin: ${spacings.base} auto;
 `;
 
 export default rehypeToReact;
