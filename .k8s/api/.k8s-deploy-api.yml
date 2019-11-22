@@ -2,7 +2,7 @@
   extends: .base_docker_kube_image_stage
   script:
     #
-    - envsubst '${K8S_NAMESPACE} ${CONTEXT} ${BRANCH_HASH} ${BRANCH_NAME} ${COMMIT} ${IMAGE_NAME} ${IMAGE_TAG} ${CI_ELASTICSEARCH_CLUSTER}' < ./.k8s/data/deployment.yml > ./deployment.yml
+    - envsubst '${K8S_NAMESPACE} ${CONTEXT} ${BRANCH_HASH} ${BRANCH_NAME} ${COMMIT} ${IMAGE_NAME} ${IMAGE_TAG} ${CI_ELASTICSEARCH_CLUSTER}' < ./.k8s/api/deployment.yml > ./deployment.yml
     - envsubst < ./.k8s/api/service.yml > ./service.yml
     - envsubst < ./.k8s/api/ingress${SUFFIX}.yml > ./ingress.yml
     #
