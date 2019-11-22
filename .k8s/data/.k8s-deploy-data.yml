@@ -1,6 +1,6 @@
 .k8s-deploy-data:
   extends: .base_docker_kube_image_stage
   script:
-    - envsubst '${K8S_NAMESPACE} ${CONTEXT} ${BRANCH_HASH} ${BRANCH_NAME} ${COMMIT} ${IMAGE_NAME} ${IMAGE_TAG} ${CI_ELASTICSEARCH_CLUSTER}' < ./.k8s/data/deployment.yml > ./deployment.yml
+    - envsubst '${K8S_NAMESPACE} ${JOB_ID} ${CONTEXT} ${BRANCH_HASH} ${BRANCH_NAME} ${COMMIT} ${IMAGE_NAME} ${IMAGE_TAG} ${CI_ELASTICSEARCH_CLUSTER}' < ./.k8s/data/deployment.yml > ./deployment.yml
     #
     - ./.k8s/data/create-index.sh ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
