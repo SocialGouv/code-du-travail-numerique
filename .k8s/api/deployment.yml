@@ -79,7 +79,7 @@ spec:
             - |
               retry=120; # 5s * (12 * 10) = 10min
               while
-                ! curl -sS --fail -u $ELASTICSEARCH_USER:$ELASTICSEARCH_PWD "${CI_ELASTICSEARCH_CLUSTER}/_cat/indices/${ES_INDEX_PREFIX}_documents" &&
+                ! curl -sS --fail -u ${ELASTICSEARCH_USER}:${ELASTICSEARCH_PWD} "${CI_ELASTICSEARCH_CLUSTER}/_cat/indices/${ES_INDEX_PREFIX}_documents" &&
                 [[ $(( retry-- )) -gt 0 ]];
               do echo "Waiting for Elasticsearch indices to go Green ($(( retry )))" ; sleep 5s ; done ;
 
