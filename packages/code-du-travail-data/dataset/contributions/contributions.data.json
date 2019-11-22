@@ -14,6 +14,16 @@
       },
       "conventions": [
         {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1043",
+          "references": []
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "2511",
+          "references": []
+        },
+        {
           "markdown": "La convention collective encadre les modalités de la clause de non-concurrence.\n\n#### 1. Conditions de la clause de non-concurrence\n\nLa clause de non-concurrence peut interdire au salarié de collaborer avec une entreprise intervenant dans le même secteur d'activité professionnelle que l'employeur, si cela est indispensable à la protection des intérêts légitimes de l'entreprise.\n\nElle doit être limitée :\n\n- Dans le temps : sa durée ne peut pas dépasser 1 an ;\n- Dans l'espace ;\n- Aux seules activités et compétences du salarié, dont la nature nécessite la protection des intérêts légitimes de l'employeur\n\nLa clause de non-concurrence doit avoir une contrepartie financière d'un montant égal à :\n\n- Si la clause a une durée d'un an : 50 % du salaire annuel brut du salarié ;\n- Si la clause est inférieure à un an : l'indemnité est calculée proportionnellement à ce montant.\n\n#### 2. Renonciation par l'employeur à l'application de la clause de non-concurrence\n\nL’employeur peut libérer le salarié de la clause de non-concurrence, à condition de l'en informer par écrit :\n\n- Dans les 15 jours calendaires suivant la notification du licenciement ou de la démission, ou ;\n- En l'absence d'exécution du préavis, au jour de la rupture du contrat de travail.\n\nDans ce cas, la contrepartie financière n’est pas versée.",
           "idcc": "2148",
           "references": [
@@ -569,45 +579,6 @@
                 "effectif": 75306,
                 "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635630",
                 "shortTitle": "Entreprises de la publicité et assimilées"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "2596",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0044",
-          "references": []
-        },
-        {
-          "markdown": "La salariée bénéficie du congé de maternité légal. \n\nElle a droit à un congé supplémentaire rémunéré, si elle a bénéficié d'un maintien de salaire de la part de l'entreprise en application de la convention collective, pendant son congé de maternité légal. Ce congé supplémentaire aura l'une des durées suivantes :\n\n- Congé de 45 jours calendaires, rémunéré à 100%, ou\n- Congé de 90 jours calendaires, rémunéré à 50%.\n\nLa salariée doit informer son employeur, par lettre recommandée avec avis de réception, de son intention de bénéficier de ce congé supplémentaire, au moins un mois avant la fin de son congé de maternité. Dans son courrier, elle précise la durée du congé souhaitée.\n\nCette période d'absence supplémentaire ne donne pas lieu à acquisition de droits à congés payés.",
-          "idcc": "2120",
-          "references": [
-            {
-              "id": "492a18ff-960b-40c9-a3f8-5a35efe1436e",
-              "category": "agreement",
-              "value": "Article 51",
-              "url": null,
-              "created_at": "2019-11-18T17:28:15.007358+00:00",
-              "updated_at": "2019-11-18T17:28:15.007358+00:00",
-              "answer_id": "f08d2836-9e6f-466d-b161-3be53516af2d",
-              "agreement": {
-                "active": true,
-                "date_publi": "2000-01-10T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635780",
-                "mtime": 1561580346,
-                "nature": "IDCC",
-                "num": "2120",
-                "texte_de_base": "KALITEXT000005678018",
-                "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
-                "effectif": 216431,
-                "shortTitle": "Banque",
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780"
               }
             }
           ]
@@ -3705,6 +3676,58 @@
       },
       "conventions": [
         {
+          "markdown": "Le chômage des jours fériés légaux n'entraîne aucune diminution de rémunération. \n\nLe 1er Mai est un jour chômé et payé.\n\nSi le salarié travaille un jour férié autre que le 1er mai, il a le choix entre :\n\n- une majoration de 50 % ;\n- une compensation en temps d'une journée.\n\nEn cas de travail la nuit d'un jour férié, la majoration est de 110 %. (Les heures de travail occasionnelles entre 22 heures et 6 heures du matin sont considérées comme travail de nuit.) \n\nEn cas de travail un dimanche également jour férié, seule la majoration la plus favorable s'applique.",
+          "idcc": "2148",
+          "references": [
+            {
+              "id": "f204e57d-5c52-4c9b-b95b-2f3d7ecbccea",
+              "category": "agreement",
+              "value": "Article 10 de l'accord du du 4 juin 1999",
+              "url": null,
+              "created_at": "2019-11-21T09:54:33.066298+00:00",
+              "updated_at": "2019-11-21T09:54:33.066298+00:00",
+              "answer_id": "bc3896b4-0b22-44ae-9bee-b947f5d34994",
+              "agreement": {
+                "active": true,
+                "date_publi": "2000-11-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635557",
+                "mtime": 1557430160,
+                "nature": "IDCC",
+                "num": "2148",
+                "texte_de_base": "KALITEXT000005677399",
+                "title": "Convention collective nationale des télécommunications du 26 avril 2000",
+                "effectif": 88278,
+                "shortTitle": "Télécommunications",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635557"
+              }
+            },
+            {
+              "id": "20017218-548a-4dae-990d-f4bb1104b6e1",
+              "category": "agreement",
+              "value": "Article 9 de l'accord du du 4 juin 1999",
+              "url": null,
+              "created_at": "2019-10-15T08:51:05.155956+00:00",
+              "updated_at": "2019-10-15T08:51:05.155956+00:00",
+              "answer_id": "bc3896b4-0b22-44ae-9bee-b947f5d34994",
+              "agreement": {
+                "active": true,
+                "date_publi": "2000-11-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635557",
+                "mtime": 1557430160,
+                "nature": "IDCC",
+                "num": "2148",
+                "texte_de_base": "KALITEXT000005677399",
+                "title": "Convention collective nationale des télécommunications du 26 avril 2000",
+                "effectif": 88278,
+                "shortTitle": "Télécommunications",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635557"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "Les jours fériés sont les suivants : le 1er mai, le 1er janvier, le lundi de Pâques, le jeudi de l'Ascension, le lundi de Pentecôte, le 14 juillet, le 15 août, la Toussaint, le 11 novembre, le jour de Noël.\n\nLes jours fériés sont chômés et payés. \n\nSi un salarié effectue une permanence un jour férié, il a, en plus de son salaire habituel, le choix entre :\n\n- Une journée de salaire égale à 1/24ème de son salaire mensuel ; \n- Une journée de repos dans la semaine qui suit.",
           "idcc": "0086",
           "references": [
@@ -5406,6 +5429,40 @@
       },
       "conventions": [
         {
+          "markdown": "Si le salarié travaille occasionnellement un dimanche, il a le choix entre :\n\n- une majoration de 100% ;\n- une compensation en temps équivalent.\n\nEn cas de travail la nuit d'un dimanche, la majoration est de 110 %. (Les heures de travail occasionnelles entre 22 heures et 6 heures du matin sont considérées comme travail de nuit.) \n\nEn cas de travail un dimanche et jour férié, seule la majoration la plus favorable s'applique.",
+          "idcc": "2148",
+          "references": [
+            {
+              "id": "f41e2be0-f686-4e22-9fc6-7233819ddd7d",
+              "category": "agreement",
+              "value": "Article 10 de l'accord du 4 juin 1999",
+              "url": null,
+              "created_at": "2019-10-15T09:22:45.619259+00:00",
+              "updated_at": "2019-10-15T09:22:45.619259+00:00",
+              "answer_id": "2b7941e1-706f-4cbe-80c2-07bfda1be10f",
+              "agreement": {
+                "active": true,
+                "date_publi": "2000-11-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635557",
+                "mtime": 1557430160,
+                "nature": "IDCC",
+                "num": "2148",
+                "texte_de_base": "KALITEXT000005677399",
+                "title": "Convention collective nationale des télécommunications du 26 avril 2000",
+                "effectif": 88278,
+                "shortTitle": "Télécommunications",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635557"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1501",
+          "references": []
+        },
+        {
           "markdown": "Le repos dominical reste la règle de principe. Le salarié peut travailler le dimanche dans le cadre des dispositions du code du travail. Dans ce cas, le travail dominical se fera par appel au volontariat. L'employeur informe les salariés au moins 15 jours à l'avance.\n\nLe travail d'un dimanche donne droit à :\n\n- 1 journée de repos compensateur dans les 2 semaines civiles suivantes, et ;\n- Une prime exceptionnelle de travail le dimanche égale à 1/24ème du salaire mensuel du salarié.",
           "idcc": "2596",
           "references": [
@@ -5777,6 +5834,87 @@
         "markdown": "Le code du travail prévoit la durée maximale de la période d’essai. Il précise que, dans certains cas, la période d’essai est automatiquement réduite ou supprimée.\n\nEn effet, après la fin du contrat d’apprentissage, il ne peut pas y avoir de période d’essai en cas d’embauche en CDI, CDD ou contrat de mission (intérim), sauf si une convention collective ou un accord d’entreprise en prévoit une.\n\nLa durée de la période d’essai normalement prévue est automatiquement réduite dans les cas suivants :\n\n- En cas de poursuite du contrat de travail en CDI après la fin d’un CDD, la durée du CDD est déduite de la période d’essai du CDI ;\n- En cas d’embauche après la fin du contrat de mission (intérim), la durée des missions effectuées par le salarié dans l'entreprise au cours des 3 mois précédant l'embauche est déduite de la période d'essai ;\n- En cas d’embauche après un stage intégré à un cursus pédagogique réalisé lors de la dernière année d'études, la durée de ce stage est déduite de la période d’essai, dans la limite de la moitié de la durée normalement applicable. Une convention collective ou un accord d’entreprise peut prévoir une mesure plus avantageuse pour le salarié.\n\nLa durée de la période d'essai varie selon le type de contrat de travail. \n\n_Sources_ :\n[Article L1243-11 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901222&cidTexte=LEGITEXT000006072050)\n[Article L6222-16 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000024422125&cidTexte=LEGITEXT000006072050)\n[Article L1251-38 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901292&cidTexte=LEGITEXT000006072050)\n[Article L1221-24 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000029236224&cidTexte=LEGITEXT000006072050)\n\n<Tab title=\"CDI\">\n\nLa période d’essai, appelée période d’essai initiale, peut être renouvelée une fois. Sa durée maximale varie en fonction de la catégorie professionnelle du salarié.\n\n- Ouvriers et Employés : \n  - Durée de la période d’essai initiale : 2 mois ;\n  - Durée totale de la période d’essai avec renouvellement : 4 mois.\n\n- Agents de maîtrise :\n  - Durée de la période d’essai initiale : 3 mois ;\n  - Durée totale de la période d’essai avec renouvellement : 6 mois.\n\n- Cadres :\n  - Durée de la période d’essai initiale : 4 mois ;\n  - Durée totale de la période d’essai avec renouvellement : 8 mois.\n\n<HDN>\n\nSi une convention ou un accord collectif ou le contrat de travail prévoit des durées différentes, l’employeur et le salarié appliquent :\n\n- La durée de la période d’essai prévue par une convention ou un accord de branche conclu avant le 26 juin 2008, si cette durée est plus longue que celle prévue par le code du travail ;\n\n  ou\n\n- La durée de la période d’essai initiale de l’accord d’entreprise, si elle est plus longue que celle prévue par une convention ou un accord de branche et plus courte que celle prévue par le code du travail, pour les contrats de travail conclus depuis le 1er janvier 2018.\n\nL'employeur et le salarié peuvent fixer, dans le contrat de travail, une durée plus courte.\n\n</HDN>\n\n_Sources_ :\n[Article L1221-19 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000019071113&cidTexte=LEGITEXT000006072050)\n[Article L1221-21 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000019071109&cidTexte=LEGITEXT000006072050)\n[Article L1221-22 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000019071104&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"CDD\">  \n\nLa durée de la période d’essai dépend de la durée du CDD. Si le CDD n’a pas de terme précis, la durée de la période d’essai est fixée par rapport à la durée minimale du CDD.\n\n- CDD de 6 mois maximum : 1 jour par semaine de travail, sans dépasser 2 semaines de période d’essai ;\n- CDD de plus de 6 mois : 1 mois maximum.\n\n<HDN>\n\nSi une convention ou un accord collectif de branche ou d’entreprise prévoit une durée différente de celle prévue par le code du travail, l'employeur et le salarié appliquent la durée la plus courte. \n\nLe contrat de travail peut toujours prévoir une durée de période d'essai plus courte, qui s’appliquera. \n\n</HDN>\n\n_Source_ :\n[Article L1242-10 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901204&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Contrat de mission (intérim)\"> \n\nLa durée de la période d’essai est fixée par une convention ou accord de branche, ou à défaut par un accord d’entreprise, ou à défaut par le code du travail. \n\nLa durée de la période d’essai dépend de la durée du contrat de mission (intérim) :\n\n- Contrat de mission de 1 mois maximum : 2 jours ;\n- Contrat de mission de 1 à 2 mois : 3 jours ;\n- Contrat de mission de plus de 2 mois : 5 jours.\n\n<HDN>\n\nSi une convention ou un accord collectif de branche ou d’entreprise prévoit une durée différente de celle prévue par le code du travail, l'employeur et le salarié appliquent la durée la plus courte. \n\nLe contrat de travail peut toujours prévoir une durée de période d'essai plus courte, qui s’appliquera. \n\n</HDN>\n\n_Source_ :\n[Article L1251-14 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901265&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Contrat d’apprentissage\">\n \nLe code du travail n’évoque pas la période d’essai du contrat d'apprentissage. Toutefois, il prévoit que le contrat peut être librement rompu par l’employeur ou l’apprenti (et son représentant s’il est mineur) pendant les 45 premiers jours, consécutifs ou non, de formation pratique en entreprise effectuée par l'apprenti. \n\n_Source_ :\n[Article L6222-18 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000037386025&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Contrat de travail à temps partiel\">\n\nLa durée de la période d’essai du contrat de travail à temps partiel est celle du CDD ou du CDI, selon le type de contrat qui a été conclu. La période d'essai d'un salarié à temps partiel ne peut pas avoir une durée calendaire supérieure à celle du salarié à temps complet.\n\n_Source_ : \n[Article L3123-5 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033020084&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Contrat de professionnalisation\">\n\nLa durée de la période d’essai du contrat de professionnalisation est celle du CDD ou du CDI, selon le type de contrat conclu.\n\n</Tab>\n\n<Tab title=\"Contrat de portage salarial\">\n\nLa durée de la période d’essai du contrat de portage salarial est celle du CDD ou du CDI, selon le type de contrat conclu.\n\n</Tab>"
       },
       "conventions": [
+        {
+          "markdown": "Les durées de la période d'essai ont été fixées par un avenant\\* conclu après le 26 juin 2008.\n\nPour **les salariés en CDI**, la durée maximum de la période d'essai est égale à :\n\n- Pour les salariés non-logés : 1 mois, renouvelable une fois ;\n- Pour les salariés logés (catégorie A ou B) : 2 mois (non renouvelable) ;\n- Pour les salariés agents de maîtrise, logés ou non : 2 mois, renouvelable une fois.\n\n_\\*L'avenant a été conclu le 11 janvier 2016._",
+          "idcc": "1043",
+          "references": [
+            {
+              "id": "8c9f32a2-a6ba-4efe-bae6-1898b1b23c98",
+              "category": "agreement",
+              "value": "Article 11",
+              "url": null,
+              "created_at": "2019-10-15T12:33:17.061358+00:00",
+              "updated_at": "2019-10-15T12:33:17.061358+00:00",
+              "answer_id": "04e256b9-279a-401a-9dec-5ab47392f08a",
+              "agreement": {
+                "active": true,
+                "date_publi": "2009-04-27T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635953",
+                "mtime": 1561059873,
+                "nature": "IDCC",
+                "num": "1043",
+                "texte_de_base": "KALITEXT000021180979",
+                "title": "Convention collective nationale des gardiens, concierges et employés d'immeubles (réécrite par l'avenant n° 74 du 27 avril 2009 portant modification de la convention)",
+                "effectif": 62393,
+                "shortTitle": "Gardiens, concierges et employés d'immeubles",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635953"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "Les durées de la période d'essai prévues par la convention collective ont été fixées par un avenant\\* conclu après le 26 juin 2008. \n\nPour **les salariés en CDI**, la durée maximale de la période d'essai est égale à :\n\n- Pour les ouvriers et employés : 1 mois, renouvelable ;\n- Pour les techniciens et agents de maîtrise : 2 mois, renouvelable ;\n- Pour les cadres : 3 mois, renouvelable.\n\nPour **les salariés en CDD spécifique**, il ne peut pas y avoir de période d'essai. \n\n\\*_L'avenant a été conclu le 24 novembre 2008._",
+          "idcc": "2511",
+          "references": [
+            {
+              "id": "03133a5f-8a93-480c-aa2d-0f55bf6d25b5",
+              "category": "agreement",
+              "value": "Article 4.2.2",
+              "url": null,
+              "created_at": "2019-11-21T09:51:09.809846+00:00",
+              "updated_at": "2019-11-21T09:51:09.809846+00:00",
+              "answer_id": "9470f081-1359-4605-96eb-d9edb3695afa",
+              "agreement": {
+                "active": true,
+                "date_publi": "2005-07-07T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
+              }
+            },
+            {
+              "id": "fea25a63-0b3b-48c3-a0be-afdfbe3d6980",
+              "category": "agreement",
+              "value": "Article 4.7.3.2",
+              "url": null,
+              "created_at": "2019-11-21T09:51:19.569148+00:00",
+              "updated_at": "2019-11-21T09:51:19.569148+00:00",
+              "answer_id": "9470f081-1359-4605-96eb-d9edb3695afa",
+              "agreement": {
+                "active": true,
+                "date_publi": "2005-07-07T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
+              }
+            }
+          ]
+        },
         {
           "markdown": "Les durées de la période d'essai ont été fixées par un avenant\\* conclu après le 26 juin 2008.\n\nPour **les salariés en CDI**, la durée maximale de la période d'essai est égale à :\n\n- Salariés des groupes A et B : 1 mois, renouvelable une fois ;\n- Salariés des groupes C et D : 2 mois, renouvelable une fois ;\n- Salariés des groupes E, F et G : 3 mois, renouvelable une fois ;\n- Salariés hors classification : la durée de la période d'essai est fixée dans le contrat de travail.\n\n\\*_L'avenant a été conclu le 20 novembre 2009_.",
           "idcc": "2148",
@@ -6702,26 +6840,6 @@
               }
             }
           ]
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0086",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "2596",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0044",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "2120",
-          "references": []
         },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
@@ -8665,6 +8783,16 @@
       },
       "conventions": [
         {
+          "markdown": "La convention collective ne prévoit rien sur ce point. L’employeur ne peut donc pas embaucher de salariés en CDI de chantier ou d’opération.",
+          "idcc": "1043",
+          "references": []
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "2511",
+          "references": []
+        },
+        {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "2148",
           "references": []
@@ -8677,71 +8805,6 @@
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "2596",
-          "references": [
-            {
-              "id": "59732c52-b4fb-4938-87c4-2e5678f8c1a7",
-              "category": "labor_code",
-              "value": "L1223-8",
-              "url": null,
-              "created_at": "2019-07-03T14:19:08.206109+00:00",
-              "updated_at": "2019-07-03T14:19:08.206109+00:00",
-              "answer_id": "b7fcb116-48d2-4c17-8921-28ffbdd63645"
-            }
-          ]
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0086",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "2264",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "2120",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "1979",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0413",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0275",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0044",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0029",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0016",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.\n\nLe code du travail précise que lorsque la convention collective ne prévoit rien, l'employeur peut conclure avec un salarié un CDI de chantier et d'opération dans les secteurs où son usage est habituel et conforme à l'exercice régulier de la profession qui y recourt au 1er janvier 2017. Le bâtiment fait partie de ces secteurs. Les entreprises peuvent donc embaucher en CDI de chantier.",
-          "idcc": "2420",
-          "references": []
-        },
-        {
-          "markdown": "Les entreprises de la branche de l'industrie pharmaceutique peuvent conclure des CDI de chantier ou d’opération, quel que soit leur effectif.\n\nLe seuil maximum de salariés embauchés en CDI de chantier est limité à :\n\n- 5 % des effectifs de l’entreprise, dans les entreprises d’au moins 300 salariés ;\n- 10 % des effectifs de l’entreprise, dans les entreprises de moins de 300 salariés.\n\nToutes les activités inhérentes à l’entreprise peuvent faire l’objet d’un CDI de chantier ou d’opération. Ce dernier doit néanmoins contribuer au développement, à l’attractivité ou à la préservation de la compétitivité de l’entreprise ou de l’emploi. L’entreprise ne peut recourir au CDI de chantier ou d’opération que si :\n\n- La pérennité du projet n’est pas assurée, compte tenu des éléments connus au moment de l’embauche ;\n- La durée prévisionnelle du chantier ou de l’opération est inférieure ou égale à 5 ans.\n\nL’entreprise devra avoir préalablement identifié le périmètre de l’activité pouvant faire l’objet d’un CDI de chantier ou d’opération, ainsi que les compétences nécessaires à la bonne réalisation du chantier ou de l’opération. \n\nDans les entreprises de 300 salariés et plus, le CSE sera informé trimestriellement, le cas échéant, sur les CDI de chantier ou d’opération au sein de l’entreprise.",
-          "idcc": "0176",
           "references": [
             {
               "id": "59732c52-b4fb-4938-87c4-2e5678f8c1a7",
@@ -8932,6 +8995,11 @@
         "markdown": "Le code du travail n'impose pas à l'employeur d’informer les salariés des postes créés ou qui se libèrent dans l’entreprise, sauf dans les cas suivants : \n\n- **Le salarié à temps partiel** qui souhaite occuper un emploi d'une durée au moins égale à 24 heures ou un emploi à temps plein. Ce salarié bénéficie d’une priorité pour l’attribution d’un emploi dans la même catégorie professionnelle ou d’un emploi équivalent. L’employeur doit l’informer des postes libres correspondants.\n\n- **Le salarié à temps plein qui souhaite occuper un emploi à temps partiel.** Ce salarié bénéficie d’une priorité pour l’attribution d’un emploi dans la même catégorie professionnelle ou d’un emploi équivalent. L’employeur doit l’informer des postes libres correspondants.\n\n- **Le salarié en télétravail** qui souhaite occuper ou reprendre un poste sans télétravail. L’employeur doit l’informer des postes disponibles et lui donner la priorité s’il se porte candidat.\n\n- L'employeur informe **les salariés en CDD ou en contrat de mission (intérim)** de la liste des postes à pourvoir dans l'entreprise par des CDI, si un tel dispositif d'information existe déjà pour les salariés en CDI.\n\n<HDN>\n\nUne convention ou un accord collectif de branche et/ou d'entreprise peut prévoir des dispositions complémentaires ou différentes. Dans ce dernier cas, l'employeur applique les mesures les plus favorables pour les salariés. \n\nLe contrat de travail peut toujours prévoir, pour le salarié, des mesures plus favorables, qui s’appliqueront.\n\n</HDN>\n\n_Sources_ :\n[Article L1222-10 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000035643958&cidTexte=LEGITEXT000006072050)\n[Article L3123-3 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000036262948&cidTexte=LEGITEXT000006072050)\n[Article L1242-17 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901211&cidTexte=LEGITEXT000006072050&dateTexte=20191028&oldAction=rechCodeArticle&fastReqId=1716292106&nbResultRech=1)\n[Article L1251-25 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901278&cidTexte=LEGITEXT000006072050&dateTexte=20191028&oldAction=rechCodeArticle&fastReqId=172970319&nbResultRech=1)"
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1043",
+          "references": []
+        },
         {
           "markdown": "Si un poste est disponible, l'employeur le propose en priorité aux salariés de l'entreprise qui répondent aux exigences de ce poste.\n\nTout candidat en interne répondant aux exigences requises par le poste pourra, à cette occasion, demander à bénéficier d'un entretien avec les services compétents de l'entreprise.",
           "idcc": "2148",
@@ -10079,6 +10147,133 @@
         "markdown": "Le code du travail prévoit le contenu obligatoire du contrat de travail uniquement pour certains contrats (CDD, contrat d’apprentissage, etc.). \n\n<HDN>\n\nUne convention ou un accord collectif peut fixer le contenu du contrat de travail, pour tout type de contrat. Dans ce cas, l'employeur applique :\n\n- La convention ou l'accord collectif si le code du travail n’impose rien, ou ;\n- La convention ou un accord collectif et le code du travail. \n\n</HDN>\n\n<Tab title=\"CDI à temps plein\">\n  \nLe code du travail ne prévoit pas le contenu du contrat de travail, quand l’écrit n’est pas obligatoire. \nAttention, certaines clauses doivent figurer dans le contrat de travail ou son avenant signé pour pouvoir s’appliquer (la période d’essai, etc.).\n\n</Tab>\n\n<Tab title=\"Contrat de travail à temps partiel\">\n\nLe contrat de travail du salarié à temps partiel doit préciser : \n\n- La qualification du salarié ;\n- Les éléments de la rémunération ;\n- La durée de travail hebdomadaire ou mensuelle prévue, ainsi que sa répartition entre les jours de la semaine ou les semaines du mois ;\n- Les limites dans lesquelles peuvent être accomplies des heures complémentaires ;\n- Le mode de communication par écrit au salarié des horaires de travail pour chaque journée travaillée ;\n- Les cas dans lesquels la répartition de la durée du travail peut être modifiée et la nature de cette modification.\n\nSi le contrat de travail à temps partiel est un CDD, il doit également comporter les mentions obligatoires du CDD. \n\n</Tab>\n\n_Source_ :\n[Article L3123-6 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033020080&cidTexte=LEGITEXT000006072050)\n\n<Tab title=\"CDD\">\n\nLe CDD doit préciser :\n\n- Le motif de recours au CDD (remplacement, accroissement temporaire d’activité, etc.) ;\n- Le nom et la qualification professionnelle de la personne remplacée en cas de CDD de remplacement ;\n- Les dates de début et de fin du CDD, ou si le CDD n’a pas une date de fin précise, une durée minimale ;\n- Éventuellement, une clause de renouvellement quand le CDD a une date de fin précise ;\n- La désignation du poste de travail en précisant :\n  - Si le poste figure sur la liste des postes de travail présentant des risques particuliers pour la santé ou la sécurité des salariés prévue à l'article L4154-2 ;\n  - Lorsque le contrat est conclu pour assurer un complément de formation professionnelle au salarié au titre du 2° de l'article L1242-3, la désignation de la nature des activités auxquelles participe le salarié dans l'entreprise ;\n- Le nom de la convention collective applicable ;\n- La durée de la période d'essai, si une période d’essai est prévue ;\n- Le salaire et les primes et accessoires de salaire s'il en existe ;\n- Le nom et l'adresse de la caisse de retraite complémentaire ainsi que, le cas échéant, ceux de l'organisme de prévoyance.\n\n_Source_ :\n[Article L1242-12 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901206&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"CDD à objet défini\">\n\nLe CDD à objet défini doit préciser les mentions générales exigées pour un CDD (_voir l'onglet CDD_) et les mentions propres au CDD à objet défini :\n\n- La mention \" contrat à durée déterminée à objet défini \" ;\n- L'intitulé et les références de l'accord collectif qui institue ce contrat ;\n- Une clause descriptive du projet et la mention de sa durée prévisible ;\n- La définition des tâches pour lesquelles le contrat est conclu ;\n- L’événement ou le résultat objectif déterminant la fin de la relation contractuelle ;\n- Le délai de prévenance de l'arrivée au terme du contrat et, le cas échéant, de la proposition de poursuite de la relation de travail en CDI ;\n- Une clause mentionnant la possibilité de rupture à la date anniversaire de la conclusion du contrat, par l'une ou l'autre partie, pour un motif réel et sérieux et le droit pour le salarié, lorsque cette rupture est à l'initiative de l'employeur, à une indemnité égale à 10 % de la rémunération totale brute du salarié.\n\n_Sources_ :\n[Article L1242-12 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901206&cidTexte=LEGITEXT000006072050)\n[Article L1242-13 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901207&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Contrat d'intérim\">\n\nLe contrat de mission (intérim) doit préciser :\n\n- Le motif pour lequel il est fait appel au salarié temporaire. Cette mention est assortie de justifications précises dont, notamment, dans les cas de remplacement le nom et la qualification de la personne remplacée ou à remplacer ;\n- La date de fin de la mission ;\n- Le cas échéant, la clause prévoyant la possibilité de modifier la date de fin de la mission. Cette disposition s'applique également à l'avenant prévoyant le renouvellement du contrat de mise à disposition ;\n- Les caractéristiques particulières du poste de travail à pourvoir et, notamment :\n  - Si celui-ci figure sur la liste des postes présentant des risques particuliers pour la santé ou la sécurité des salariés prévue à l'article L. 4154-2 ;\n  - La qualification professionnelle exigée ; \n  - Le lieu de la mission ;\n  - L'horaire ;\n- La nature des équipements de protection individuelle que le salarié utilise. Le contrat précise, le cas échéant, si ceux-ci sont fournis par l'entreprise de travail temporaire ;\n- Le salaire avec les primes et accessoires de salaire que percevrait dans l'entreprise utilisatrice, après période d'essai, un salarié de qualification professionnelle équivalente occupant le même poste de travail ;\n- La qualification professionnelle du salarié ;\n- Les modalités de la rémunération due au salarié, y compris celles de l'indemnité de fin de mission prévue à l'article L. 1251-32 ;\n- La durée de la période d'essai éventuellement prévue ;\n- Une clause de rapatriement du salarié à la charge de l'entrepreneur de travail temporaire lorsque la mission s'effectue hors du territoire métropolitain. Cette clause devient caduque en cas de rupture du contrat à l'initiative du salarié ;\n- Le nom et l'adresse de la caisse de retraite complémentaire et de l'organisme de prévoyance dont relève l'entreprise de travail temporaire,\n- La mention selon laquelle l'embauche du salarié par l'entreprise utilisatrice à l'issue de la mission n'est pas interdite.\n\n_Sources_ :\n[Article L1251-16 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901267&cidTexte=LEGITEXT000006072050)\n[Article L1251-43 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901299&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Contrat d’apprentissage\">\n\nLe contrat d’apprentissage prévoit les informations sur :\n\n- La forme du contrat (CDD ou CDI) et sa durée en cas de CDD ;\n- Le nom du maître d’apprentissage, ses titres ou diplômes, la durée de son expérience professionnelle dans l’activité concernée par la formation ;\n- La formation ;\n- La date de début d’exécution du contrat d’apprentissage, de la formation pratique chez l’employeur et de la période de formation en centre de formation apprentis ;\n- La rémunération ;\n- Les conditions du contrat de travail qui pourrait être conclu après le contrat d’apprentissage ;\n- Les règles concernant l’opposition de l’autorité administrative faite à l’employeur d’engager un apprenti ;\n- Les règles concernant la suspension du contrat d’apprentissage et l’interdiction faite à l’employeur de recruter de nouveaux apprentis.\n\nLe contrat d’apprentissage est conclu au moyen du formulaire [cerfa n°10103\\*06](https://www.formulaires.modernisation.gouv.fr/gf/cerfa_10103_06.do).\n\nSi le contrat d’apprentissage est conclu dans le cadre d’une activité saisonnière avec deux employeurs, il faut également signer une convention tripartite qui prévoit : \n\n- L’affectation de l’apprenti entre les deux entreprises au cours du contrat selon un calendrier prédéfini, ainsi que le nombre d'heures effectuées dans chaque entreprise ;\n- Les conditions de mise en place du tutorat entre les deux entreprises ;\n- La désignation de l'employeur tenu de verser la rémunération due au titre de chaque période consacrée par l'apprenti à la formation dispensée dans les centres de formation d'apprentis et les sections d'apprentissage.\n\n_Sources_ :\n[Article L6222-4 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006904000&cidTexte=LEGITEXT000006072050)\n[Article L6222-5 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006904001&cidTexte=LEGITEXT000006072050)\n[Article L6222-6 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006904002&cidTexte=LEGITEXT000006072050)\n[Article L6222-12 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000037385971&cidTexte=LEGITEXT000006072050)\n[Article R6222-3 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018524173&cidTexte=LEGITEXT000006072050)\n[Article R6222-4 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000029446022&cidTexte=LEGITEXT000006072050)\n\n</Tab>\n\n<Tab title=\"Contrat de professionnalisation\">\n\nSi le contrat de professionnalisation est un CDD, il doit comporter les mentions obligatoires du CDD (_voir l'onglet CDD_).\n\nSi le contrat de professionnalisation est un CDI, le code du travail ne prévoit pas de mention obligatoire. Mais le contrat peut préciser :\n\n- La désignation du tuteur ;\n- La nature du contrat (CDI) ;\n- L'emploi occupé ;\n- Éventuellement une période d’essai ;\n- Le temps de travail ;\n- Le salaire ;\n- Les actions de professionnalisation concrètement envisagées.\n\nUn document précisant les objectifs, le programme et les modalités d’organisation, d’évaluation et de sanction de la formation doit être annexé au contrat de professionnalisation.\n\nLe contrat de professionnalisation est conclu au moyen du formulaire [cerfa n°12434\\*02](https://www.formulaires.modernisation.gouv.fr/gf/cerfa_12434_02.do).\n\nSi le contrat de professionnalisation est conclu dans le cadre d’une activité saisonnière avec deux employeurs, il faut également signer une convention tripartite qui prévoit : \n\n- L’affectation du salarié entre les deux entreprises au cours du contrat selon un calendrier prédéfini, ainsi que le nombre d'heures effectuées dans chaque entreprise ;\n- Les conditions de mise en place du tutorat entre les deux entreprises ;\n- La désignation de l'employeur tenu de verser la rémunération due au titre de chaque période consacrée par le salarié aux enseignements et aux actions de positionnement, d’évaluation et d’accompagnement.\n\n_Sources_ :\n[Article L6325-4-1 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000024410644&cidTexte=LEGITEXT000006072050)\n[Article D6325-11 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018523007&cidTexte=LEGITEXT000006072050)\n\n</Tab>"
       },
       "conventions": [
+        {
+          "markdown": "Le contrat de travail doit préciser : \n\n- Les fonctions du salarié ;\n- Le libellé de l'emploi ;\n- Les conditions de travail (dont le détail et le décompte des tâches, pour les salariés catégorie B) ;\n- La classification professionnelle ;\n- Le coefficient hiérarchique ;\n- Le montant de la rémunération du salarié ;\n- Le lieu de travail, et, pour le salarié logé, l'évaluation du salaire en nature ;\n- Le début du contrat et son terme s'il s'agit d'un CDD.",
+          "idcc": "1043",
+          "references": [
+            {
+              "id": "08483320-becf-46fb-a617-1e4cefce6d9a",
+              "category": "agreement",
+              "value": "Article 11 ",
+              "url": null,
+              "created_at": "2019-05-24T09:21:45.971652+00:00",
+              "updated_at": "2019-05-24T09:21:45.971652+00:00",
+              "answer_id": "93d59685-c233-4bc2-a723-2bdb6a9a25ef",
+              "agreement": {
+                "active": true,
+                "date_publi": "2009-04-27T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635953",
+                "mtime": 1561059873,
+                "nature": "IDCC",
+                "num": "1043",
+                "texte_de_base": "KALITEXT000021180979",
+                "title": "Convention collective nationale des gardiens, concierges et employés d'immeubles (réécrite par l'avenant n° 74 du 27 avril 2009 portant modification de la convention)",
+                "effectif": 62393,
+                "shortTitle": "Gardiens, concierges et employés d'immeubles",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635953"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "Le contrat de travail doit comporter les mentions suivantes : \n\n- La nature du contrat ;\n- La raison sociale de l'employeur ;\n- L'adresse de l'employeur ;\n- Les nom et prénom du salarié ;\n- La nationalité du salarié, et s'il est étranger, le type et le numéro d'ordre du titre valant autorisation de travail ;\n- Le numéro national d'identification du salarié et, à défaut, sa date et son lieu de naissance ;\n- La date d'embauche ;\n- Le lieu de travail ;\n- La dénomination de l'emploi ;\n- Le groupe de classification ;\n- Le salaire de base et les différents éléments de la rémunération ;\n- La durée de travail de référence ;\n- Les conditions particulières de travail, et notamment les périodes et le nombre de semaines où le salarié sera amené à accomplir des sujétions particulières ;\n- Les modalités de prise du repos hebdomadaire ;\n- Les différents avantages en nature et les modalités de leur cessation en fin de contrat ;\n- Les modalités de la période d'essai ;\n- La référence de l'organisme auquel l'employeur verse les cotisations de sécurité sociale et le numéro sous lequel ces cotisations sont versées ;\n- Le nom des caisses de retraite complémentaire et de prévoyance ;\n- La référence à la convention collective et les modalités de sa consultation sur le lieu de travail.\n\nEn plus de ces mentions, le CDD spécifique doit comporter :\n\n- La référence aux articles L. 222-2 à L. 222-2-8 du Code du sport ;\n- L'identité et l'adresse des parties ;\n- La date d'embauche et la durée pour laquelle il est conclu ;\n- La désignation de l'emploi occupé et les activités auxquelles participe le salarié ;\n- Le montant de la rémunération et de ses différentes composantes, y compris les primes et accessoires de salaire s'il en existe;\n- Les noms et adresses des caisses de retraite complémentaire et de prévoyance et de l'organisme assurant la couverture maladie complémentaire ;\n- L'intitulé des conventions ou accords collectifs applicables.",
+          "idcc": "2511",
+          "references": [
+            {
+              "id": "8de4a350-1b79-45d6-b76c-9a6407afed91",
+              "category": "agreement",
+              "value": "Article 12.4",
+              "url": null,
+              "created_at": "2019-11-21T10:47:08.828734+00:00",
+              "updated_at": "2019-11-21T10:47:08.828734+00:00",
+              "answer_id": "c4ea9590-b865-437d-900e-d3c10245004f",
+              "agreement": {
+                "active": true,
+                "date_publi": "2005-07-07T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
+              }
+            },
+            {
+              "id": "baf31edd-93d2-4b5e-9fba-16faf3462ad4",
+              "category": "agreement",
+              "value": "Article 4.2.1",
+              "url": null,
+              "created_at": "2019-11-21T10:44:34.145161+00:00",
+              "updated_at": "2019-11-21T10:44:34.145161+00:00",
+              "answer_id": "c4ea9590-b865-437d-900e-d3c10245004f",
+              "agreement": {
+                "active": true,
+                "date_publi": "2005-07-07T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
+              }
+            },
+            {
+              "id": "58e1c625-ee4b-410e-ae56-2ea2a8aabeef",
+              "category": "agreement",
+              "value": "Article 4.7.3.1",
+              "url": null,
+              "created_at": "2019-11-21T10:46:25.664538+00:00",
+              "updated_at": "2019-11-21T10:46:25.664538+00:00",
+              "answer_id": "c4ea9590-b865-437d-900e-d3c10245004f",
+              "agreement": {
+                "active": true,
+                "date_publi": "2005-07-07T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
+              }
+            },
+            {
+              "id": "aacc8fd7-324c-408d-b6f1-a31a25d1b64e",
+              "category": "agreement",
+              "value": "Article 4.7.3.2",
+              "url": null,
+              "created_at": "2019-11-21T10:46:42.508865+00:00",
+              "updated_at": "2019-11-21T10:46:42.508865+00:00",
+              "answer_id": "c4ea9590-b865-437d-900e-d3c10245004f",
+              "agreement": {
+                "active": true,
+                "date_publi": "2005-07-07T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
+              }
+            }
+          ]
+        },
         {
           "markdown": "Le contrat de travail doit préciser :\n\n- L'identité de l'employeur et du salarié ;\n- La durée minimale ou la date de fin de contrat pour un CDD ; \n- La date d'embauche du salarié ;\n- La durée de la période d'essai, s'il y a lieu, et les conditions de son éventuel renouvellement ;\n- L'appellation de l'emploi occupé et son groupe de classification ;\n- Le lieu de travail ou le lieu de travail de rattachement en cas de sites multiples ;\n- La durée du travail de référence applicable au salarié ;\n- Le montant, la composition et la périodicité de versement des éléments contractuels de la rémunération ;\n- L'existence de la convention collective et les conditions de sa consultation ;\n- L'existence d'un règlement intérieur ;\n- Le régime de protection sociale.\n\nLe contrat de travail peut aussi prévoir les clauses concernant :\n\n- La mobilité géographique et/ou fonctionnelle au sein de l'entreprise ou du groupe ;\n- L'obligation de non-concurrence ;\n- Le dédit formation ;\n- Le régime des déplacements professionnels ;\n- S'il y a lieu, pour le personnel d'encadrement, les conditions d'une éventuelle délégation de pouvoirs ou d'autorité.",
           "idcc": "2148",
@@ -11936,155 +12131,34 @@
       },
       "conventions": [
         {
-          "markdown": "La convention collective ne prévoit pas la durée du préavis en cas de mise à la retraite. \n\nElle prévoit seulement la durée du préavis en cas de licenciement, qui est égale à :\n\n- Salariés occupant un emploi technique de la coiffure, un emploi non technique ou un emploi de l'esthétique cosmétique : \n  - 1 semaine pour une ancienneté inférieure ou égale à 6 mois ;\n  - 1 mois pour une ancienneté comprise entre 6 mois et 2 ans  ;\n  - 2 mois pour une ancienneté supérieure à 2 ans ;\n\n- Agents de maitrise : 3 mois ;\n\n- Cadres : 3 mois.",
-          "idcc": "2596",
+          "markdown": "La convention collective renvoie au code du travail.",
+          "idcc": "1501",
           "references": [
             {
-              "id": "89755294-f881-4ffe-9af4-bd334fef46c6",
+              "id": "9b11beae-ae6e-4f17-b46c-34d1d13d2d48",
               "category": "agreement",
-              "value": "Article 7.4.1",
+              "value": "Article 28",
               "url": null,
-              "created_at": "2019-11-20T09:57:02.810906+00:00",
-              "updated_at": "2019-11-20T09:57:02.810906+00:00",
-              "answer_id": "8ec8ed24-5053-4180-9533-6a0a7b6fb734",
+              "created_at": "2019-11-20T13:28:44.453534+00:00",
+              "updated_at": "2019-11-20T13:28:44.453534+00:00",
+              "answer_id": "838db368-32a6-4bda-96ce-10500cc1e572",
               "agreement": {
                 "active": true,
-                "date_publi": "2007-04-18T00:00:00.000Z",
+                "date_publi": "1988-05-18T00:00:00.000Z",
                 "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000018563755",
-                "mtime": 1554405887,
+                "id": "KALICONT000005635596",
+                "mtime": 1560541782,
                 "nature": "IDCC",
-                "num": "2596",
-                "texte_de_base": "KALITEXT000018563760",
-                "title": "Convention collective nationale de la coiffure et des professions connexes du 10 juillet 2006. Etendue par arrêté du 3 avril 2007 JORF 17 avril 2007.",
-                "effectif": 98152,
-                "shortTitle": "Coiffure et professions connexes",
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018563755"
+                "num": "1501",
+                "texte_de_base": "KALITEXT000005672325",
+                "title": "Convention collective nationale de la restauration rapide du 18 mars 1988",
+                "effectif": 171010,
+                "shortTitle": "Restauration rapide",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635596"
               }
             }
           ]
         },
-        {
-          "markdown": "La convention collective ne fixe pas la durée du préavis en cas de mise à la retraite. Elle prévoit uniquement la durée du préavis en cas de licenciement, qui est égale à :\n\n- Ouvriers, employés et techniciens (groupes I à III):\n  - Coefficient inférieur à 190 : 1 mois pour une ancienneté inférieure à 2 ans, 2 mois à partir de 2 ans d'ancienneté ;\n  - Coefficient de 190 et plus : 2 mois.\n\n- Agents de maîtrise et techniciens (groupe IV) :\n  - Coefficient inférieur à 275 : 2 mois ;\n  - Coefficient de 275 et plus : 3 mois;\n\n- Ingénieurs et cadres (groupe V) : 3 mois.",
-          "idcc": "0044",
-          "references": [
-            {
-              "id": "90959ae1-104e-49bd-ba86-7a4da33741ea",
-              "category": "agreement",
-              "value": "Avenant n° 1 Ouvriers et collaborateurs du 11 février 1971 Article 27",
-              "url": null,
-              "created_at": "2019-11-19T14:08:35.835196+00:00",
-              "updated_at": "2019-11-19T14:08:35.835196+00:00",
-              "answer_id": "f1aa8160-17d0-4989-9cc5-46655f8f158d",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            },
-            {
-              "id": "0d4dab68-ac7c-4f34-8243-ceac9773e79e",
-              "category": "agreement",
-              "value": "Avenant n° 2 Agents de maîtrise et techniciens du 14 mars 1955 Article 20",
-              "url": null,
-              "created_at": "2019-11-19T14:08:48.626056+00:00",
-              "updated_at": "2019-11-19T14:08:48.626056+00:00",
-              "answer_id": "f1aa8160-17d0-4989-9cc5-46655f8f158d",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            },
-            {
-              "id": "bf0d06cd-9edd-4423-81c9-a7e3deb6a76a",
-              "category": "agreement",
-              "value": "Avenant n°3 Ingénieurs et cadres du 16 juin 1955 Article 4",
-              "url": null,
-              "created_at": "2019-11-19T14:09:00.727428+00:00",
-              "updated_at": "2019-11-19T14:09:00.727428+00:00",
-              "answer_id": "f1aa8160-17d0-4989-9cc5-46655f8f158d",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "En cas de mise à la retraite, la durée du préavis est égale à 3 mois, pour les techniciens et les cadres, quelle que soit leur ancienneté.",
-          "idcc": "2120",
-          "references": [
-            {
-              "id": "3ad6b256-8eaf-4611-bb8c-2edf134286b6",
-              "category": "agreement",
-              "value": "Articles 32",
-              "url": null,
-              "created_at": "2019-07-11T12:32:10.004652+00:00",
-              "updated_at": "2019-07-11T12:32:10.004652+00:00",
-              "answer_id": "50fc08c5-4560-4dd1-97fa-3aabe63b39c2",
-              "agreement": {
-                "active": true,
-                "date_publi": "2000-01-10T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635780",
-                "mtime": 1561580346,
-                "nature": "IDCC",
-                "num": "2120",
-                "texte_de_base": "KALITEXT000005678018",
-                "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
-                "effectif": 216431,
-                "shortTitle": "Banque",
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780"
-              }
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "id": "800a9d49-2de5-4006-87df-12ccb9068595",
-    "value": " Quelle est la durée de préavis en cas de mise à la retraite ?",
-    "created_at": "2019-05-08T20:54:59.923739+00:00",
-    "updated_at": "2019-10-14T15:18:28.035183+00:00",
-    "index": 29,
-    "answers": {
-      "generic": {
-        "text": "En cas de mise à la retraite, le salarié effectue un préavis. Sa durée est celle prévue en cas de licenciement. Elle dépend de l’ancienneté du salarié dans l’entreprise : Si le salarié a moins de 6 mois d'ancienneté dans l'entreprise, le code du travail ne prévoit pas de durée de préavis. L'employeur applique la durée prévue par la convention collective, un accord collectif, le contrat de travail ou un usage.\n\nSi le salarié a entre 6 mois et moins de 2 ans d'ancienneté dans l'entreprise, la durée du préavis est égale à 1 mois. \n\nSi le salarié a 2 ans ou plus d'ancienneté dans l'entreprise, la durée du préavis est égale à 2 mois.\n\nLa durée du préavis d'un travailleur handicapé est égale au double de la durée fixée pour les autres salariés. Toutefois, elle ne peut pas dépasser 3 mois maximum. Cette limite ne s’applique pas si la convention ou l'accord collectif ou un usage prévoit un préavis d'une durée égale ou supérieure à 3 mois.\n\n\n\nSi une convention ou un accord collectif de branche ou d’entreprise ou le contrat de travail prévoit des durées de préavis différentes de celles fixées par le code du travail, la durée la plus favorable pour le salarié s'applique. \n\nLa convention ou l'accord collectif peut prévoir :\n\nSoit la durée du préavis en cas de mise à la retraite ;\n\nSoit uniquement la durée du préavis en cas de licenciement. Cette durée s’applique alors au salarié si elle est la plus favorable.\n\n\n\nSources :\nArticle L1237-6 du code du travail\nArticle L1234-1 du code du travail\nArticle L5213-9 du code du travail\nCass. Soc. 15 mai 2007 n° 05-45.234",
-        "description": "En cas de mise à la retraite, le salarié effectue un préavis. Sa durée est celle prévue en cas de licenciement. Elle dépend de l’ancienneté du salarié…",
-        "references": [],
-        "markdown": "En cas de mise à la retraite, le salarié effectue un préavis. Sa durée est celle prévue en cas de licenciement. Elle dépend de l’ancienneté du salarié dans l’entreprise : \n\n- Si le salarié a moins de 6 mois d'ancienneté dans l'entreprise, le code du travail ne prévoit pas de durée de préavis. L'employeur applique la durée prévue par la convention collective, un accord collectif, le contrat de travail ou un usage.\n\n- Si le salarié a entre 6 mois et moins de 2 ans d'ancienneté dans l'entreprise, la durée du préavis est égale à 1 mois. \n\n- Si le salarié a 2 ans ou plus d'ancienneté dans l'entreprise, la durée du préavis est égale à 2 mois.\n\nLa durée du préavis d'un travailleur handicapé est égale au double de la durée fixée pour les autres salariés. Toutefois, elle ne peut pas dépasser 3 mois maximum. Cette limite ne s’applique pas si la convention ou l'accord collectif ou un usage prévoit un préavis d'une durée égale ou supérieure à 3 mois.\n\n<HDN>\n\nSi une convention ou un accord collectif de branche ou d’entreprise ou le contrat de travail prévoit des durées de préavis différentes de celles fixées par le code du travail, la durée la plus favorable pour le salarié s'applique. \n\nLa convention ou l'accord collectif peut prévoir :\n\n- Soit la durée du préavis en cas de mise à la retraite ;\n- Soit uniquement la durée du préavis en cas de licenciement. Cette durée s’applique alors au salarié si elle est la plus favorable.\n\n</HDN>\n\n_Sources_ :\n[Article L1237-6 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901180&cidTexte=LEGITEXT000006072050)\n[Article L1234-1 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050)\n[Article L5213-9 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006903707&cidTexte=LEGITEXT000006072050)\n[Cass. Soc. 15 mai 2007 n° 05-45.234](https://www.legifrance.gouv.fr/affichJuriJudi.do?oldAction=rechJuriJudi&idTexte=JURITEXT000017829912&fastReqId=706400929&fastPos=1)"
-      },
-      "conventions": [
         {
           "markdown": "En cas de mise à la retraite, la durée du préavis est égale à :\n\n- Pour les groupes A et B :\n\n  - 1 mois si le salarié a moins de 2 ans d'ancienneté ;\n  - 2 mois si le salarié a plus de 2 ans d'ancienneté ;\n\n- Pour les groupes C et D : 2 mois ;\n\n- Pour les groupes E, F et G : 3 mois ;\n\n- Pour les salariés hors classification : la durée du préavis est fixée par le contrat de travail et ne peut pas être inférieure 3 mois.",
           "idcc": "2148",
@@ -13925,126 +13999,6 @@
       },
       "conventions": [
         {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "2596",
-          "references": [
-            {
-              "id": "4aeaf40a-6085-444b-8c23-ebbb7d09d82c",
-              "category": "labor_code",
-              "value": "L1234-5",
-              "url": null,
-              "created_at": "2019-08-27T10:03:15.930074+00:00",
-              "updated_at": "2019-08-27T10:03:15.930074+00:00",
-              "answer_id": "a9712c5a-34fa-4134-8b5e-a93df39488b5"
-            }
-          ]
-        },
-        {
-          "markdown": "L’employeur ou le salarié qui ne respecte pas le préavis doit verser à l’autre une indemnité. Celle-ci est égale à la rémunération correspondant à :\n\n- La période de préavis non travaillée, ou ;\n- La période de préavis non travaillée après déduction des heures d'absence autorisée pour recherche d'emploi, en cas de non-respect du préavis par un salarié appartenant à la catégorie des ouvriers, employés et techniciens (groupes I à III) ou des agents de maîtrise et techniciens (groupe IV).",
-          "idcc": "0044",
-          "references": [
-            {
-              "id": "30673849-4b26-45d4-9ae3-375eb1f8ab31",
-              "category": "agreement",
-              "value": "Avenant n° 1 Ouvriers et collaborateurs du 11 février 1971 Article 27",
-              "url": null,
-              "created_at": "2019-11-19T14:13:12.403473+00:00",
-              "updated_at": "2019-11-19T14:13:12.403473+00:00",
-              "answer_id": "63df3599-228f-48d8-a457-39008008e2b9",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            },
-            {
-              "id": "b7c7bdd7-6d73-49f0-b101-6d2dcb547426",
-              "category": "agreement",
-              "value": "Avenant n° 2 Agents de maîtrise et techniciens du 14 mars 1955 Article 20",
-              "url": null,
-              "created_at": "2019-11-19T14:13:25.875073+00:00",
-              "updated_at": "2019-11-19T14:13:25.875073+00:00",
-              "answer_id": "63df3599-228f-48d8-a457-39008008e2b9",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            },
-            {
-              "id": "6b217546-6eaf-4d77-b72b-3d5fd67c9677",
-              "category": "agreement",
-              "value": "Avenant n°3 Ingénieurs et cadres du 16 juin 1955 Article 4",
-              "url": null,
-              "created_at": "2019-11-19T14:15:09.0343+00:00",
-              "updated_at": "2019-11-19T14:15:09.0343+00:00",
-              "answer_id": "63df3599-228f-48d8-a457-39008008e2b9",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "2120",
-          "references": []
-        },
-        {
-          "markdown": "En cas de démission, si le salarié ne respecte pas le préavis, l'employeur peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant.",
-          "idcc": "0029",
-          "references": [
-            {
-              "id": "3bc3eb33-073e-48eb-83b9-0a27e208cbf4",
-              "category": "agreement",
-              "value": "Article 15.02.2.3",
-              "url": null,
-              "created_at": "2019-10-24T14:48:22.024276+00:00",
-              "updated_at": "2019-10-24T14:48:22.024276+00:00",
-              "answer_id": "64d7dfc1-edcf-4c4a-9570-26eae27b9c51",
-              "agreement": {
-                "texte_de_base": "KALITEXT000029787837",
-                "etat": "VIGUEUR_NON_ETEN",
-                "title": "Convention collective nationale des etablissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.",
-                "num": "29",
-                "nature": "IDCC",
-                "id": "KALICONT000005635234",
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635234",
-                "shortTitle": "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)"
-              }
-            }
-          ]
-        },
-        {
           "markdown": "Si le préavis de licenciement ou de démission n'est pas respecté par l'employeur, il est redevable des salaires et avantages que le salarié aurait reçus s'il avait accompli son travail jusqu'à la fin du préavis, sauf en cas de faute grave ou faute lourde du salarié.",
           "idcc": "2148",
           "references": [
@@ -14634,6 +14588,35 @@
         "markdown": "Le code du travail prévoit plusieurs congés pour événements familiaux (naissance, mariage, etc.).\n\n<Content href=\"https://travail-emploi.gouv.fr/droit-du-travail/les-absences-pour-maladie-et-conges-pour-evenements-familiaux/article/les-conges-pour-evenements-familiaux\"/>\n\n<HDN>\n\nL’employeur applique la mesure la plus favorable pour l’ensemble des salariés, que cette mesure soit prévue par la loi, une convention ou un accord collectif de branche et/ou d’entreprise. Le contrat de travail peut toujours prévoir des mesures plus favorables, qui s’appliqueront.\n\n</HDN>"
       },
       "conventions": [
+        {
+          "markdown": "Les salariés ont droit, sur justificatif, aux congés exceptionnels  suivants :\n\n- Mariage du salarié : 6 jours ouvrables ;\n\n- Mariage d'un enfant : 2 jours ouvrables ;\n\n- Décès du conjoint : 3 jours ouvrables ;\n\n- Décès d'un enfant : 3 jours ouvrables ;\n\n- Décès du père ou de la mère : 2 jours ouvrables ;\n\n- Décès du frère ou de la soeur : 2 jours ouvrables ;\n\n- Décès du beau-père ou de la belle-mère : 2 jours ouvrables ;\n\n- Naissance survenue au foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours ouvrables ;\n\n- Maladie ou accident constaté par certificat médical d'un enfant à charge de moins de 16 ans : dans la limite de 3 jours ouvrables par an.\n\nCes congés n’entraînent pas de perte de salaire.",
+          "idcc": "2148",
+          "references": [
+            {
+              "id": "ca1fb603-0616-4c38-848c-dcf39672e7f4",
+              "category": "agreement",
+              "value": "Article 8 de l'accord du 4 juin 1999",
+              "url": null,
+              "created_at": "2019-10-15T08:24:27.365852+00:00",
+              "updated_at": "2019-10-15T08:24:27.365852+00:00",
+              "answer_id": "65aa5ab1-1d4f-49bf-a8fe-35366282fd82",
+              "agreement": {
+                "active": true,
+                "date_publi": "2000-11-01T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635557",
+                "mtime": 1557430160,
+                "nature": "IDCC",
+                "num": "2148",
+                "texte_de_base": "KALITEXT000005677399",
+                "title": "Convention collective nationale des télécommunications du 26 avril 2000",
+                "effectif": 88278,
+                "shortTitle": "Télécommunications",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635557"
+              }
+            }
+          ]
+        },
         {
           "markdown": "Le salarié a droit aux congés pour événements familiaux suivants : \n\n- Mariage du salarié : 1 semaine ;\n\n- Mariage d'un enfant : 2 jours ;\n\n- Mariage d'un frère ou d'une sœur : 1 jour ;\n\n- Naissance du premier enfant : 3 jours ;\n\n- Naissance, à partir du second enfant et à condition que l'aîné ait moins de 16 ans et vive au foyer : 4 jours ;\n\n- Rentrée scolaire d'un enfant vivant dans le foyer : 1/2 journée ; \n\n- Baptême, communion solennelle ou cérémonies similaires d'un descendant, d'un frère, d'une sœur, d'un neveu, d'une nièce, d'un (e) filleul (e) : 1 jour ;\n\n- Décès du conjoint ou d'un enfant : 1 semaine ;\n\n- Décès du père, de la mère, du beau-père, de la belle-mère : 3 jours ;\n\n- Décès du frère,  de la sœur, des grands-parents, des petits-enfants : 2 jours ;\n\n- Déménagement : 1 jour, à condition qu'il ne s'agisse pas de changement d'hôtel ou de locaux meublés.\n\nCes congés exceptionnels sont à prendre au moment de l'événement.\n\nLe salarié peut avoir droit à des délais de route pour se rendre au lieu de l'événement, dans la limite du territoire métropolitain, et pour en revenir. Ces derniers sont déterminés en fonction des moyens de transport couramment utilisés.\n\nLes salariés peuvent bénéficier, sur leur demande justifiée, d'un congé sans solde si la santé de leur conjoint ou descendant à charge le nécessiterait. Ce congé a durée maximum de 1 mois.",
           "idcc": "0086",
@@ -16655,26 +16638,6 @@
         },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0086",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "2596",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0044",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "idcc": "2120",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0176",
           "references": []
         },
@@ -16782,163 +16745,59 @@
       },
       "conventions": [
         {
-          "markdown": "Pour **les salariés en CDI**, la période d'essai peut être renouvelée une fois, dans le respect de la durée maximum. La possibilité de renouveler la période d'essai doit être prévue par le contrat de travail.  \n\nAvant d'envisager un renouvellement de la période d'essai, le salarié peut avoir un entretien à mi-période, à son initiative ou celle de l'employeur. Cet entretien permet de faire un bilan de l'activité et de l'adaptation au poste. A l'issue de cet entretien le salarié et l'employeur décideront d'un commun accord soit la rupture de la période d'essai soit sa reconduction.",
-          "idcc": "2596",
+          "markdown": "La période d’essai peut être renouvelée une fois pour :\n\n- Les salariés non logés ;\n- Les salariés agents de maîtrise, logés ou non.\n\nLa période d'essai ne peut pas être renouvelée pour les salariés logés (catégorie A ou B).",
+          "idcc": "1043",
           "references": [
             {
-              "id": "5b2bcf54-e27b-48f6-9d6e-5b14cc742783",
+              "id": "eb3a7ea1-b0a9-4952-b28b-336fb9a77f4f",
               "category": "agreement",
-              "value": "Article 7.3",
+              "value": "Article 11",
               "url": null,
-              "created_at": "2019-11-20T08:24:49.734119+00:00",
-              "updated_at": "2019-11-20T08:24:49.734119+00:00",
-              "answer_id": "87e9f3ec-a70e-4f61-bd4f-323c5807da47",
+              "created_at": "2019-10-15T12:40:31.529497+00:00",
+              "updated_at": "2019-10-15T12:40:31.529497+00:00",
+              "answer_id": "556a6c10-37cd-4ef2-9569-d3471404548b",
               "agreement": {
                 "active": true,
-                "date_publi": "2007-04-18T00:00:00.000Z",
+                "date_publi": "2009-04-27T00:00:00.000Z",
                 "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000018563755",
-                "mtime": 1554405887,
+                "id": "KALICONT000005635953",
+                "mtime": 1561059873,
                 "nature": "IDCC",
-                "num": "2596",
-                "texte_de_base": "KALITEXT000018563760",
-                "title": "Convention collective nationale de la coiffure et des professions connexes du 10 juillet 2006. Etendue par arrêté du 3 avril 2007 JORF 17 avril 2007.",
-                "effectif": 98152,
-                "shortTitle": "Coiffure et professions connexes",
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018563755"
+                "num": "1043",
+                "texte_de_base": "KALITEXT000021180979",
+                "title": "Convention collective nationale des gardiens, concierges et employés d'immeubles (réécrite par l'avenant n° 74 du 27 avril 2009 portant modification de la convention)",
+                "effectif": 62393,
+                "shortTitle": "Gardiens, concierges et employés d'immeubles",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635953"
               }
             }
           ]
         },
         {
-          "markdown": "La période d'essai ne peut pas être renouvelée.",
-          "idcc": "0044",
+          "markdown": "La convention collective prévoit que la période d'essai peut être renouvelée. Ce renouvellement est exceptionnel. Il doit être motivé et établi par écrit.",
+          "idcc": "2511",
           "references": [
             {
-              "id": "c334de8a-11fd-4f10-90ab-d8c741e0bb92",
+              "id": "0d1feec9-43f5-45cc-8adc-7e3422170f94",
               "category": "agreement",
-              "value": "Article 9",
+              "value": "Article 4.2.2",
               "url": null,
-              "created_at": "2019-08-29T10:17:51.894468+00:00",
-              "updated_at": "2019-08-29T10:17:51.894468+00:00",
-              "answer_id": "d3149949-24e3-4de9-8e8a-2e5bd3aa771a",
+              "created_at": "2019-11-21T09:55:02.270985+00:00",
+              "updated_at": "2019-11-21T09:55:02.270985+00:00",
+              "answer_id": "dff15a66-b186-4d36-bca3-3750635924c5",
               "agreement": {
                 "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
+                "date_publi": "2005-07-07T00:00:00.000Z",
                 "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
                 "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "Pour les employés en CDI, la période d'essai ne peut pas être renouvelée.\n\nPour les autres salariés en CDI, la période d'essai peut être renouvelée une fois, si le renouvellement est prévu par le contrat de travail ou la lettre d'engagement pour les durées suivantes :\n\n- Techniciens et agents de maîtrise (coefficients 220 à 390) : la période d'essai ne peut pas dépasser 4 mois, renouvellement compris ;\n- Cadres (à partir du coefficient 400) : la période d'essai ne peut pas dépasser 6 mois, renouvellement compris.",
-          "idcc": "0086",
-          "references": [
-            {
-              "id": "3d5df0e4-96ea-40ce-95aa-9e668f82bca3",
-              "category": "agreement",
-              "value": "Article 15",
-              "url": null,
-              "created_at": "2019-10-11T15:36:56.020056+00:00",
-              "updated_at": "2019-10-11T15:36:56.020056+00:00",
-              "answer_id": "948fdd4a-9939-48bb-a158-1a77bde20fcc",
-              "agreement": {
-                "active": true,
-                "date_publi": "1955-04-01T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635630",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "86",
-                "texte_de_base": "KALITEXT000005682357",
-                "title": "Convention collective nationale de travail des cadres, techniciens et employés de la publicité française du 22 avril 1955. Étendue par arrêté du 29 juillet 1955 JORF 19 août 1955",
-                "effectif": 75306,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635630",
-                "shortTitle": "Entreprises de la publicité et assimilées"
-              }
-            },
-            {
-              "id": "0269e895-2428-4619-ad58-c8ad79d74499",
-              "category": "agreement",
-              "value": "Article 33",
-              "url": null,
-              "created_at": "2019-10-11T15:37:48.748348+00:00",
-              "updated_at": "2019-10-11T15:37:48.748348+00:00",
-              "answer_id": "948fdd4a-9939-48bb-a158-1a77bde20fcc",
-              "agreement": {
-                "active": true,
-                "date_publi": "1955-04-01T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635630",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "86",
-                "texte_de_base": "KALITEXT000005682357",
-                "title": "Convention collective nationale de travail des cadres, techniciens et employés de la publicité française du 22 avril 1955. Étendue par arrêté du 29 juillet 1955 JORF 19 août 1955",
-                "effectif": 75306,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635630",
-                "shortTitle": "Entreprises de la publicité et assimilées"
-              }
-            },
-            {
-              "id": "f69df0a3-89f1-4893-9aa5-bb8b9c9601df",
-              "category": "agreement",
-              "value": "Article 53",
-              "url": null,
-              "created_at": "2019-10-11T15:37:31.846149+00:00",
-              "updated_at": "2019-10-11T15:37:31.846149+00:00",
-              "answer_id": "948fdd4a-9939-48bb-a158-1a77bde20fcc",
-              "agreement": {
-                "active": true,
-                "date_publi": "1955-04-01T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635630",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "86",
-                "texte_de_base": "KALITEXT000005682357",
-                "title": "Convention collective nationale de travail des cadres, techniciens et employés de la publicité française du 22 avril 1955. Étendue par arrêté du 29 juillet 1955 JORF 19 août 1955",
-                "effectif": 75306,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635630",
-                "shortTitle": "Entreprises de la publicité et assimilées"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "Pour les salariés en CDI de la catégorie professionnelle \"techniciens\", la période d'essai peut être renouvelée une fois pour une durée maximum de 3 mois, par accord écrit de l'employeur et du salarié. Un entretien est organisé au moins 5 jours ouvrés avant la fin de la période d'essai. \n\nPour les salariés de la catégorie professionnelle \"cadres\", la période d'essai ne peut pas être renouvelée.",
-          "idcc": "2120",
-          "references": [
-            {
-              "id": "938db500-008e-4c0d-bf38-6ab3539a8d9b",
-              "category": "agreement",
-              "value": "Article 19",
-              "url": null,
-              "created_at": "2019-11-18T15:20:34.471404+00:00",
-              "updated_at": "2019-11-18T15:20:34.471404+00:00",
-              "answer_id": "1e58bf74-4f19-4adf-a563-3a4cd28d24cf",
-              "agreement": {
-                "active": true,
-                "date_publi": "2000-01-10T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635780",
-                "mtime": 1561580346,
-                "nature": "IDCC",
-                "num": "2120",
-                "texte_de_base": "KALITEXT000005678018",
-                "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
-                "effectif": 216431,
-                "shortTitle": "Banque",
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780"
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
               }
             }
           ]
@@ -17746,6 +17605,63 @@
       },
       "conventions": [
         {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "2148",
+          "references": []
+        },
+        {
+          "markdown": "La convention collective prévoit les primes suivantes :\n\n- Prime annuelle conventionnelle : les salariés, qui ont au moins 1 an d'ancienneté et sont inscrit à l'effectif de l'entreprise le jour de versement de la prime, ont droit à une prime annuelle conventionnelle. La prime est versée en une seule fois. Le montant brut de la prime annuelle conventionnelle, est égale à :\n\n  - Ancienneté de 1 an à moins de 3 ans : 170 € ;\n  - Ancienneté de 3 ans à moins de 5 ans : 200 € ;\n  - Ancienneté de 5 ans à moins de 10 ans : 270 € ;\n  - A partir de 10 ans d'ancienneté : 370 €.\n\nLe montant de la prime est calculé proportionnellement au temps de travail du salarié dans les cas suivants :\n\n- Les salariés à temps partiel ;\n- Les absences injustifiées de plus de 3 jours ;\n- Les absences pour maladie d'une durée de plus de 10 jours ;\n- Le congé sans solde d'une durée supérieure à 10 jours ;\n- Le congé non rémunéré.\n\nLa prime annuelle conventionnelle se rajoute aux autres éléments de rémunération versés dans l'entreprise à l'exception des primes ou gratifications ayant la nature de 13ème mois ou de prime d'ancienneté. Si cette prime ou gratification est d'un montant globalement inférieur au montant de la prime annuelle conventionnelle, l'entreprise devra compléter le versement à due concurrence.\n\n- Prime de blanchissage : si un modèle particulier de vêtements de travail est imposé et que le nettoyage est à la charge du salarié, ce dernier reçoit en remboursement de ses frais, une indemnité de blanchissage égale à 3,32 % du minimum garanti en vigueur dans la restauration, dans la limite de 151,67 heures.",
+          "idcc": "1501",
+          "references": [
+            {
+              "id": "d750e112-efed-4a3e-bc55-0454c7963337",
+              "category": "agreement",
+              "value": "Article 41",
+              "url": null,
+              "created_at": "2019-11-21T08:48:15.169754+00:00",
+              "updated_at": "2019-11-21T08:48:15.169754+00:00",
+              "answer_id": "90727b2f-109d-4ec4-b23f-b8404693e9a0",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-05-18T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635596",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "1501",
+                "texte_de_base": "KALITEXT000005672325",
+                "title": "Convention collective nationale de la restauration rapide du 18 mars 1988",
+                "effectif": 171010,
+                "shortTitle": "Restauration rapide",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635596"
+              }
+            },
+            {
+              "id": "b94713ba-01e7-4159-9126-ee85813f4451",
+              "category": "agreement",
+              "value": "Article 44.1",
+              "url": null,
+              "created_at": "2019-11-21T08:48:09.111564+00:00",
+              "updated_at": "2019-11-21T08:48:09.111564+00:00",
+              "answer_id": "90727b2f-109d-4ec4-b23f-b8404693e9a0",
+              "agreement": {
+                "active": true,
+                "date_publi": "1988-05-18T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635596",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "1501",
+                "texte_de_base": "KALITEXT000005672325",
+                "title": "Convention collective nationale de la restauration rapide du 18 mars 1988",
+                "effectif": 171010,
+                "shortTitle": "Restauration rapide",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635596"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "La convention collective prévoit les primes suivantes : \n\n- Prime d'ancienneté, pour les salarié appartenant à la catégorie professionnelle des employés, techniciens et agents de maîtrise ; \n\n- Prime en cas de remplacement temporaire : si le salarié assure le remplacement d'un autre poste pour une durée supérieure à 1 mois et que son salaire minimum est inférieur au salaire minimum conventionnel du remplacé, il a droit à une indemnité égale à la différence entre ces deux salaires.",
           "idcc": "0086",
           "references": [
@@ -18447,6 +18363,110 @@
       },
       "conventions": [
         {
+          "markdown": "L'embauche doit faire l'objet d'un contrat de travail écrit, dont un exemplaire sera remis au salarié. \n\nPour un salarié en CDD, le contrat doit être au plus tard conclu dans les 48 heures après l'embauche.\n\nLe contrat de travail doit être établi, y compris si l'employeur et le salarié utilisent le titre emploi service entreprise (TESE).",
+          "idcc": "1043",
+          "references": [
+            {
+              "id": "07a79e2e-0d81-4aeb-a0ec-076d54f37713",
+              "category": "agreement",
+              "value": "Article 11 ",
+              "url": null,
+              "created_at": "2019-05-24T09:20:52.127643+00:00",
+              "updated_at": "2019-05-24T09:20:52.127643+00:00",
+              "answer_id": "5809a457-9513-4752-ae5e-7872ba30b104",
+              "agreement": {
+                "active": true,
+                "date_publi": "2009-04-27T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000005635953",
+                "mtime": 1561059873,
+                "nature": "IDCC",
+                "num": "1043",
+                "texte_de_base": "KALITEXT000021180979",
+                "title": "Convention collective nationale des gardiens, concierges et employés d'immeubles (réécrite par l'avenant n° 74 du 27 avril 2009 portant modification de la convention)",
+                "effectif": 62393,
+                "shortTitle": "Gardiens, concierges et employés d'immeubles",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635953"
+              }
+            }
+          ]
+        },
+        {
+          "markdown": "Le contrat de travail doit être établi par écrit, en deux exemplaires dont l'un est remis au salarié. Le salarié et l'employeur signent les deux exemplaires du contrat avec la mention \"lu et approuvé\". Toute modification du contrat de travail doit être proposée au salarié par écrit, dans un avenant au contrat de travail.\n\nPour le CDD spécifique, (concernant le sportif ou l'entraîneur professionnel), le contrat de travail doit être établi par écrit en au moins trois exemplaires. Le sportif ou l' entraîneur professionnel et l'employeur signent les trois exemplaires du contrat de travail avec la mention \"lu et approuvé\". Le contrat de travail est transmis par l'employeur au sportif ou à l' entraîneur professionnel au plus tard dans les deux jours ouvrables suivant l'embauche. Toute modification du contrat de travail fait obligatoirement l'objet d'un avenant proposé par écrit au sportif ou à l' entraîneur professionnel",
+          "idcc": "2511",
+          "references": [
+            {
+              "id": "799c0495-ff23-4f40-b115-8aabe5917edc",
+              "category": "agreement",
+              "value": "Article 12.4.1",
+              "url": null,
+              "created_at": "2019-11-21T10:35:07.592659+00:00",
+              "updated_at": "2019-11-21T10:35:07.592659+00:00",
+              "answer_id": "e98d8b02-c63e-4c17-b766-0028bb685219",
+              "agreement": {
+                "active": true,
+                "date_publi": "2005-07-07T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
+              }
+            },
+            {
+              "id": "43402da8-2b6f-4255-88cc-bb1b49fe6a67",
+              "category": "agreement",
+              "value": "Article 4.2.1 ",
+              "url": null,
+              "created_at": "2019-07-19T16:07:13.316688+00:00",
+              "updated_at": "2019-07-19T16:07:13.316688+00:00",
+              "answer_id": "e98d8b02-c63e-4c17-b766-0028bb685219",
+              "agreement": {
+                "active": true,
+                "date_publi": "2005-07-07T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
+              }
+            },
+            {
+              "id": "90915e34-f1fe-4cd8-bb6d-24f49944b8f5",
+              "category": "agreement",
+              "value": "Article 4.7.3.2",
+              "url": null,
+              "created_at": "2019-11-21T10:31:36.671971+00:00",
+              "updated_at": "2019-11-21T10:31:36.671971+00:00",
+              "answer_id": "e98d8b02-c63e-4c17-b766-0028bb685219",
+              "agreement": {
+                "active": true,
+                "date_publi": "2005-07-07T00:00:00.000Z",
+                "etat": "VIGUEUR_ETEN",
+                "id": "KALICONT000017577652",
+                "mtime": 1560541782,
+                "nature": "IDCC",
+                "num": "2511",
+                "texte_de_base": "KALITEXT000017577657",
+                "title": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006",
+                "effectif": 80901,
+                "shortTitle": "Sport",
+                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652"
+              }
+            }
+          ]
+        },
+        {
           "markdown": "Pour l'embauche d'un salarié, l'employeur rédige un contrat de travail, en français, en double exemplaire. Ce contrat ne peut pas contenir de terme étranger ni d'expression étrangère à moins qu'il y ait une explication en français. Si le salarié est étranger, une traduction du contrat sera effectuée à la demande du salarié, dans sa langue.",
           "idcc": "2148",
           "references": [
@@ -18500,191 +18520,6 @@
                 "effectif": 171010,
                 "shortTitle": "Restauration rapide",
                 "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635596"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "L'embauche d'un salarié donne lieu à la conclusion d'un contrat de travail écrit, établi en 2 exemplaires, l'un remis au salarié, l'autre conservé par l'employeur. Ces deux exemplaires doivent être signés par l'employeur et le salarié.",
-          "idcc": "2596",
-          "references": [
-            {
-              "id": "e0484372-f245-4d0a-afd2-2647365bb748",
-              "category": "agreement",
-              "value": "Article 7.2",
-              "url": null,
-              "created_at": "2019-11-20T08:28:37.832524+00:00",
-              "updated_at": "2019-11-20T08:28:37.832524+00:00",
-              "answer_id": "f33dfb20-7351-4a24-8278-c00e9cd00f89",
-              "agreement": {
-                "active": true,
-                "date_publi": "2007-04-18T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000018563755",
-                "mtime": 1554405887,
-                "nature": "IDCC",
-                "num": "2596",
-                "texte_de_base": "KALITEXT000018563760",
-                "title": "Convention collective nationale de la coiffure et des professions connexes du 10 juillet 2006. Etendue par arrêté du 3 avril 2007 JORF 17 avril 2007.",
-                "effectif": 98152,
-                "shortTitle": "Coiffure et professions connexes",
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018563755"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "Chaque embauche doit faire l’objet d’un écrit entre l’employeur et le salarié.",
-          "idcc": "0086",
-          "references": [
-            {
-              "id": "d99eeb30-76a3-49c0-ac5d-aa9ed7d19e5f",
-              "category": "agreement",
-              "value": "Article 10",
-              "url": null,
-              "created_at": "2019-05-23T08:31:23.103203+00:00",
-              "updated_at": "2019-05-23T08:31:23.103203+00:00",
-              "answer_id": "e2f9adb9-e56e-4e23-8cef-e2848aa759e8",
-              "agreement": {
-                "active": true,
-                "date_publi": "1955-04-01T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635630",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "86",
-                "texte_de_base": "KALITEXT000005682357",
-                "title": "Convention collective nationale de travail des cadres, techniciens et employés de la publicité française du 22 avril 1955. Étendue par arrêté du 29 juillet 1955 JORF 19 août 1955",
-                "effectif": 75306,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635630",
-                "shortTitle": "Entreprises de la publicité et assimilées"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "L'embauche d'un salarié doit être confirmée par un écrit de l'employeur, qui précise les conditions d'emploi.",
-          "idcc": "0044",
-          "references": [
-            {
-              "id": "a75b036a-6f11-448a-a72e-fc5bfd196ab1",
-              "category": "agreement",
-              "value": "Article 9.5",
-              "url": null,
-              "created_at": "2019-08-29T10:23:21.081523+00:00",
-              "updated_at": "2019-08-29T10:23:21.081523+00:00",
-              "answer_id": "314a085c-02d0-4e5c-9210-8fcb0a7fb44d",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            },
-            {
-              "id": "58bc26cc-b907-4b28-860d-70fa20b22d6b",
-              "category": "agreement",
-              "value": "Avenant n° 1 Ouvriers et collaborateurs du 11 février 1971 Article 2",
-              "url": null,
-              "created_at": "2019-11-19T13:53:54.828655+00:00",
-              "updated_at": "2019-11-19T13:53:54.828655+00:00",
-              "answer_id": "314a085c-02d0-4e5c-9210-8fcb0a7fb44d",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            },
-            {
-              "id": "c43ac405-d5ff-4aaf-aa43-b2ee514538b8",
-              "category": "agreement",
-              "value": "Avenant n° 2 Agents de maîtrise et techniciens du 14 mars 1955 Article 2",
-              "url": null,
-              "created_at": "2019-11-19T13:54:15.469229+00:00",
-              "updated_at": "2019-11-19T13:54:15.469229+00:00",
-              "answer_id": "314a085c-02d0-4e5c-9210-8fcb0a7fb44d",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            },
-            {
-              "id": "0cdda646-2d4b-4a53-b64d-0279e8b77358",
-              "category": "agreement",
-              "value": "Avenant n°3 Ingénieurs et cadres du 16 juin 1955 Article 2",
-              "url": null,
-              "created_at": "2019-11-19T13:55:55.864238+00:00",
-              "updated_at": "2019-11-19T13:55:55.864238+00:00",
-              "answer_id": "314a085c-02d0-4e5c-9210-8fcb0a7fb44d",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "L'employeur doit remettre au salarié un contrat de travail écrit au moment de son embauche.",
-          "idcc": "2120",
-          "references": [
-            {
-              "id": "98ddbfae-6778-43a6-a386-60a16934ea76",
-              "category": "agreement",
-              "value": "Article 18",
-              "url": null,
-              "created_at": "2019-06-13T14:07:00.812263+00:00",
-              "updated_at": "2019-06-13T14:07:00.812263+00:00",
-              "answer_id": "f13f9e7f-7d36-4b26-89d2-ce2ef3bbe050",
-              "agreement": {
-                "active": true,
-                "date_publi": "2000-01-10T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635780",
-                "mtime": 1561580346,
-                "nature": "IDCC",
-                "num": "2120",
-                "texte_de_base": "KALITEXT000005678018",
-                "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
-                "effectif": 216431,
-                "shortTitle": "Banque",
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780"
               }
             }
           ]
@@ -21214,112 +21049,6 @@
     "answers": {
       "conventions": [
         {
-          "markdown": "Le salarié a droit à une prime d’ancienneté, à partir de 5 ans d’ancienneté dans l’entreprise. Son montant est égal à :\n\n- A partir de 5 ans d'ancienneté : 25 euros ;\n- A partir de 7 ans d'ancienneté : 36 euros ;\n- A partir de 9 ans d'ancienneté : 47 euros ;\n- A partir de 12 ans d'ancienneté : 61 euros ;\n- A partir de 15 ans d'ancienneté : 75 euros.\n\nLa prime d'ancienneté doit faire l'objet d'une ligne distincte sur le bulletin de paye. À défaut, elle sera considérée ne pas avoir été payée.\n\nPour les salariés à temps partiel, la prime d'ancienneté est versée au prorata du temps de travail effectif (par rapport à la durée légale du travail).\n\nL'ancienneté s'entend d'un nombre d'années entières et consécutives dans le même établissement, sans déduction des périodes de suspension du contrat de travail pour maladie.",
-          "idcc": "2596",
-          "references": [
-            {
-              "id": "43681e42-aaa1-4acd-98f7-8af7b0859d64",
-              "category": "agreement",
-              "value": "Article 2 du chapitre III",
-              "url": null,
-              "created_at": "2019-11-20T10:05:54.592041+00:00",
-              "updated_at": "2019-11-20T10:05:54.592041+00:00",
-              "answer_id": "dfc2d994-8789-4147-8b3b-493436ac0c5d",
-              "agreement": {
-                "active": true,
-                "date_publi": "2007-04-18T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000018563755",
-                "mtime": 1554405887,
-                "nature": "IDCC",
-                "num": "2596",
-                "texte_de_base": "KALITEXT000018563760",
-                "title": "Convention collective nationale de la coiffure et des professions connexes du 10 juillet 2006. Etendue par arrêté du 3 avril 2007 JORF 17 avril 2007.",
-                "effectif": 98152,
-                "shortTitle": "Coiffure et professions connexes",
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018563755"
-              }
-            },
-            {
-              "id": "e48f3cf3-cb08-4a90-86ed-c52931bd4570",
-              "category": null,
-              "value": "Cass. Soc., 28 juin 2018, n° 16-28.511",
-              "url": "https://www.legifrance.gouv.fr/affichJuriJudi.do?oldAction=rechJuriJudi&idTexte=JURITEXT000037196457&fastReqId=1957833888&fastPos=1",
-              "created_at": "2019-09-17T13:55:57.969833+00:00",
-              "updated_at": "2019-09-17T13:55:57.969833+00:00",
-              "answer_id": "dfc2d994-8789-4147-8b3b-493436ac0c5d"
-            }
-          ]
-        },
-        {
-          "markdown": "La convention collective prévoit une prime d'ancienneté pour les salariés appartenant à la catégorie des ouvriers, employés et techniciens (groupes I à III) ou des agents de maîtrise et techniciens (groupe IV). Le salarié doit avoir au moins 3 ans d'ancienneté. \n\nLa prime d'ancienneté est calculée en appliquant un pourcentage sur le minimum conventionnel correspondant au coefficient hiérarchique du salarié, augmenté, le cas échéant, des majorations pour heures supplémentaires et proportionnellement à l'horaire de travail. Les taux de la prime sont les suivants :\n\n- 3% après 3 ans d'ancienneté dans l'entreprise ;\n- 6% après 6 ans d'ancienneté dans l'entreprise ;\n- 9% après 9 ans d'ancienneté dans l'entreprise ;\n- 12% après 12 ans d'ancienneté dans l'entreprise ;\n- 15% après 15 ans d'ancienneté dans l'entreprise.",
-          "idcc": "0044",
-          "references": [
-            {
-              "id": "cd4a9730-ead3-4d11-9729-fc47ff84c6e9",
-              "category": "agreement",
-              "value": "Avenant n° 1 Ouvriers et collaborateurs du 11 février 1971 Article 10",
-              "url": null,
-              "created_at": "2019-11-19T14:15:57.351449+00:00",
-              "updated_at": "2019-11-19T14:15:57.351449+00:00",
-              "answer_id": "814a1ea2-024f-4f6f-ba58-68e23f327d66",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            },
-            {
-              "id": "fd56539d-ece2-4f65-ba85-62896df4cb22",
-              "category": "agreement",
-              "value": "Avenant n° 2 Agents de maîtrise et techniciens du 14 mars 1955 Article 16",
-              "url": null,
-              "created_at": "2019-11-19T14:16:10.246533+00:00",
-              "updated_at": "2019-11-19T14:16:10.246533+00:00",
-              "answer_id": "814a1ea2-024f-4f6f-ba58-68e23f327d66",
-              "agreement": {
-                "active": true,
-                "date_publi": "1952-12-30T00:00:00.000Z",
-                "etat": "VIGUEUR_ETEN",
-                "id": "KALICONT000005635613",
-                "mtime": 1562873918,
-                "nature": "IDCC",
-                "num": "44",
-                "texte_de_base": "KALITEXT000005677744",
-                "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
-                "effectif": 218310,
-                "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
-                "shortTitle": "Industries chimiques et connexes"
-              }
-            }
-          ]
-        },
-        {
-          "markdown": "La convention collective ne prévoit pas de prime d'ancienneté.",
-          "idcc": "2120",
-          "references": []
-        }
-      ]
-    }
-  },
-  {
-    "id": "eaa38257-1bef-4356-9225-4a95347445f1",
-    "value": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
-    "created_at": "2019-05-08T20:54:59.923739+00:00",
-    "updated_at": "2019-10-14T15:22:06.813669+00:00",
-    "index": 39,
-    "answers": {
-      "conventions": [
-        {
           "markdown": "La convention collective ne prévoit pas de prime d'ancienneté.",
           "idcc": "2148",
           "references": []
@@ -21827,6 +21556,16 @@
       },
       "conventions": [
         {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1043",
+          "references": []
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point. ",
+          "idcc": "2511",
+          "references": []
+        },
+        {
           "markdown": "La suspension du contrat de travail décale la fin de la période d'essai pour une durée égale à la suspension. Cette règle s'applique en cas d'arrêt maladie pendant la période d'essai.",
           "idcc": "2148",
           "references": [
@@ -22167,26 +21906,6 @@
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1501",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0086",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "2596",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point.",
-          "idcc": "0044",
-          "references": []
-        },
-        {
-          "markdown": "La convention collective ne prévoit rien sur ce point. ",
-          "idcc": "2120",
           "references": []
         },
         {
