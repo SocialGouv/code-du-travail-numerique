@@ -1,6 +1,5 @@
 import React from "react";
 import { Section } from "../layout/Section";
-import { Wrapper } from "../layout/Wrapper";
 import { Accordion } from ".";
 
 export default {
@@ -10,45 +9,49 @@ export default {
 
 export const base = () => (
   <>
-    <Wrapper>
+    <Section>
       <Accordion
         items={[
           {
-            title: "This is the title of a single item accordion",
-            body: "this is the body"
+            title: "This is the heading of a single item accordion",
+            as: "h5",
+            body: "this is the single body"
           }
         ]}
       />
-    </Wrapper>
-    <Wrapper>
+    </Section>
+    <Section>
       <Accordion
         items={[
           {
-            title: <Section>This is a first section wrapped title</Section>,
-            body: "this is the body"
+            title: "This the first heading of a multiple accordion",
+            as: "h3",
+            body: "this is the first body"
           },
           {
-            title: <Section>This is a second section wrapped title</Section>,
-            body: "this is the body"
+            title: "This is the second heading of a multiple accordion",
+            body: "this is the second body"
           }
         ]}
       />
-    </Wrapper>
-    <Wrapper>
+    </Section>
+    <Section>
       <Accordion
         preExpanded={["id"]}
         items={[
           {
             id: "id",
-            title: <Section>This is a pre expanded accordion</Section>,
+            title: "This is a pre expanded accordion",
+            as: "h2",
             body: "this is the body"
           },
           {
-            title: <Section>This bloc could be extended too if needed</Section>,
+            title: "This bloc could be extended too if needed",
+            as: "h2",
             body: "this is the body"
           }
         ]}
       />
-    </Wrapper>
+    </Section>
   </>
 );

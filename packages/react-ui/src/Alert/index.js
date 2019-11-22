@@ -1,28 +1,21 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { darken } from "polished";
-import { box, spacing, variants } from "../theme";
+import { box, colors, spacings } from "../theme";
 
 export const Alert = styled.div`
-  margin-bottom: ${spacing.base};
-  padding: ${spacing.small} ${spacing.medium};
+  margin-bottom: ${spacings.base};
+  padding: ${spacings.small} ${spacings.medium};
+  color: ${colors.paragraph};
+  background-color: ${colors.bgSecondary};
   border: 1px solid transparent;
-  border-radius: ${box.borderRadius};
-  ${({ theme, variant }) => {
-    let color = theme.darkText;
-    let backgroundColor = theme.darkBackground;
-    let borderColor = darken(0.1, backgroundColor);
-    if (variant !== "default") {
-      color = theme[`${variant}Text`];
-      backgroundColor = theme[`${variant}Background`];
-      borderColor = darken(0.1, backgroundColor);
+  ${props => {
+    if (props.variant === "primary") {
+      return css`
+        border-color: ${colors.primary};
+      `;
     }
-    return css`
-      color: ${color};
-      background: ${backgroundColor};
-      border-color: ${borderColor};
-    `;
   }}
+  border-radius: ${box.borderRadius};
   & > *:first-child {
     margin-top: 0;
   }
@@ -32,10 +25,10 @@ export const Alert = styled.div`
 `;
 
 Alert.propTypes = {
-  variant: PropTypes.oneOf(["default"].concat(variants)),
+  variant: PropTypes.oneOf(["primary", "secondary"]),
   children: PropTypes.node.isRequired
 };
 
 Alert.defaultProps = {
-  variant: "default"
+  variant: "secondary"
 };

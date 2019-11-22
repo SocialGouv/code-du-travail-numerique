@@ -40,17 +40,20 @@ export const Law = ({ items, query }) => (
     </Container>
   </Section>
 );
+
+const { fonts } = theme;
+
 const StyledTile = styled(Tile)`
   min-height: 120px;
 `;
 const P = styled.p`
-  max-height: calc(2 * ${theme.fonts.lineHeight} * 1rem);
+  max-height: calc(2 * ${fonts.lineHeight} * 1rem);
   margin: 0;
   overflow-y: hidden;
-  color: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.paragraph};
   font-weight: 400;
-  font-size: ${theme.fonts.sizeSmall};
-  line-height: calc(${theme.fonts.lineHeight} * 1rem);
+  font-size: ${fonts.sizes.small};
+  line-height: calc(${fonts.lineHeight} * 1rem);
   /*
    * non standard solution  thus supported by many browser
    * https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp

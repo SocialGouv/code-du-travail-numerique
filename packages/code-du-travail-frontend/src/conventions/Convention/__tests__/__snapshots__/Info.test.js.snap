@@ -37,28 +37,34 @@ exports[`<Info /> renders 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
-  border: 1px solid #c9d3df;
+  border: 1px solid #bbcadf;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 .c2 caption {
-  padding: 0.625rem 0;
+  padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
 .c2 td,
 .c2 th {
-  padding: 0.625rem 1rem;
-  border: 1px solid #c9d3df;
+  padding: 1rem 1.6rem;
+  border: 1px solid #bbcadf;
+}
+
+.c2 th {
+  color: #2f3b6c;
+  font-weight: 600;
+  background: #e4e8ef;
 }
 
 .c2 thead,
 .c2 tfoot {
-  padding: 0.625rem 1rem;
+  padding: 1rem 1.6rem;
   vertical-align: bottom;
-  background: #f9f9fc;
+  background: #f2f5fa;
 }
 
 .c2 tfoot {

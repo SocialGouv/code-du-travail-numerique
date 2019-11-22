@@ -31,11 +31,11 @@ const SearchHero = () => (
 
 export default SearchHero;
 
-const { breakpoints, colors, spacing, fonts } = theme;
+const { breakpoints, colors, spacings, fonts } = theme;
 
 const SearchSection = styled(Section)`
-  padding-bottom: ${spacing.larger};
-  background-color: ${colors.infoBackground};
+  padding-bottom: ${spacings.larger};
+  background-color: ${colors.bgTertiary};
   @media print {
     display: none;
   }
@@ -43,28 +43,28 @@ const SearchSection = styled(Section)`
 
 const Header = styled.header`
   margin-top: 0;
-  color: ${colors.blueDark};
+  color: ${colors.paragraph};
   line-height: ${fonts.lineHeight};
 `;
 
 const H1 = styled.h1`
-  margin-bottom: 0;
-  line-height: 1.1;
+  font-size: ${fonts.sizes.headings.medium};
 `;
 
 const P = styled.p`
-  margin-top: ${spacing.smaller};
+  margin-top: ${spacings.small};
 `;
 
 const Span = styled.span`
   font-weight: bold;
+  font-size: 4.6rem;
 `;
 
 const Label = styled.label`
   display: block;
-  margin-bottom: ${spacing.small};
-  color: ${colors.blueDark};
-  font-size: ${fonts.sizeH4};
+  margin-bottom: ${spacings.small};
+  color: ${colors.paragraph};
+  font-size: ${fonts.sizes.default};
 `;
 
 const SearchBarWrapper = styled.div`

@@ -13,9 +13,7 @@ describe("<CardList />", () => {
     const { container } = render(
       <CardList title="Hello" desc="Hello Tiles">
         {items.map(item => (
-          <Tile noButton key={item.id}>
-            {item.title}
-          </Tile>
+          <Tile key={item.id}>{item.title}</Tile>
         ))}
       </CardList>
     );

@@ -1,50 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> should render 1`] = `
-.c8 {
+.c7 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
-.c8 > *:first-child {
+.c7 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c7 > *:last-child {
   margin-bottom: 0;
 }
 
 .c22 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
   background-color: #fff;
 }
 
-.c35 {
-  padding: 1.25rem 0;
-  color: #434956;
+.c34 {
+  padding: 2rem 0;
+  color: #3e486e;
+}
+
+.c36 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c41 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c20 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c20:link,
@@ -57,58 +87,78 @@ exports[`<Home /> should render 1`] = `
 .c20:not([disabled]):hover,
 .c20:not([disabled]):active,
 .c20:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
 .c20[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c33 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c32 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
-.c33:link,
-.c33:visited {
+.c32:link,
+.c32:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
-.c33:not([disabled]):hover,
-.c33:not([disabled]):active,
-.c33:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+.c32:not([disabled]):hover,
+.c32:not([disabled]):active,
+.c32:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
-.c33[disabled] {
-  color: rgba(12,12,14,0.4);
+.c32[disabled] {
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c28 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -127,15 +177,15 @@ exports[`<Home /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c29 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -147,25 +197,18 @@ exports[`<Home /> should render 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 4 - 2 * 1rem);
+  margin: 1rem;
 }
 
 .c23 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
-}
-
-.c27 {
-  color: #005994;
-  font-weight: 300;
-  font-size: 1rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 .c25 {
@@ -177,27 +220,29 @@ exports[`<Home /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #005994;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-family: "Merriweather",serif;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c25:hover {
-  color: #006be6;
+  color: #2f3b6c;
 }
 
 .c26 {
-  margin-left: 1rem;
-  color: #006be6;
-  -webkit-transition: 250ms ease-out -webkit-transform;
-  -webkit-transition: 250ms ease-out transform;
-  transition: 250ms ease-out transform;
+  margin-left: 1.6rem;
+  color: #7598d6;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
 }
 
 .c24:hover .c26 {
-  -webkit-transform: translateX(7px);
-  -ms-transform: translateX(7px);
-  transform: translateX(7px);
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .c42 {
@@ -218,7 +263,7 @@ exports[`<Home /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c30 {
+.c29 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -243,16 +288,16 @@ exports[`<Home /> should render 1`] = `
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -261,20 +306,21 @@ exports[`<Home /> should render 1`] = `
   appearance: none;
 }
 
-.c30:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+.c29:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
-.c31 {
+.c30 {
   display: block;
   max-width: 100%;
   padding-right: 0;
   overflow-y: auto;
 }
 
-.c32 {
-  margin-top: 1.25rem;
+.c31 {
+  margin-top: 2rem;
 }
 
 .c16 {
@@ -293,7 +339,7 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c19 li[role="option"]:nth-child(2n + 1) {
-  background: #f9f9fc;
+  background: #f2f5fa;
 }
 
 .c14 {
@@ -310,9 +356,9 @@ exports[`<Home /> should render 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  width: 1.3rem;
-  height: 1.3rem;
-  margin: 1rem 0 0 1.25rem;
+  width: 2rem;
+  height: 2rem;
+  margin: 1.6rem 0 0 2rem;
 }
 
 .c18 {
@@ -323,12 +369,12 @@ exports[`<Home /> should render 1`] = `
   width: 100%;
   height: 50px;
   margin: 0;
-  padding: 0 1rem 0 4rem;
+  padding: 0 1.6rem 0 4rem;
   font-size: inherit;
   font-family: inherit;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 1.5rem;
+  background: #f2f5fa;
+  border: 1px solid #bbcadf;
+  border-radius: 2.4rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
   -webkit-appearance: none;
@@ -336,43 +382,42 @@ exports[`<Home /> should render 1`] = `
   appearance: none;
 }
 
-.c18:focus {
-  border-color: #006be6;
-  outline: none;
-}
-
 .c21 {
-  margin-left: 0.5rem;
+  margin-left: 0.4rem;
 }
 
-.c7 {
-  padding: 1.25rem 0;
-  color: #434956;
+.c6 {
+  padding: 2rem 0;
+  color: #3e486e;
   background-color: #fff;
-  padding-bottom: 2.5rem;
-  background-color: #e5f1fe;
+  padding-bottom: 4rem;
+  background-color: #e4e8ef;
+}
+
+.c8 {
+  margin-top: 0;
+  color: #3e486e;
+  line-height: 1.625;
 }
 
 .c9 {
-  margin-top: 0;
-  color: #005994;
-  line-height: 1.4;
-}
-
-.c10 {
-  margin-bottom: 0;
-  line-height: 1.1;
+  font-size: 2.8rem;
 }
 
 .c11 {
+  margin-top: 1rem;
+}
+
+.c10 {
   font-weight: bold;
+  font-size: 4.6rem;
 }
 
 .c12 {
   display: block;
-  margin-bottom: 0.625rem;
-  color: #005994;
-  font-size: 1.375rem;
+  margin-bottom: 1rem;
+  color: #3e486e;
+  font-size: 1.6rem;
 }
 
 .c13 {
@@ -387,7 +432,7 @@ exports[`<Home /> should render 1`] = `
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -400,7 +445,7 @@ exports[`<Home /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1.25rem;
+  padding: 2rem;
 }
 
 .c1 > *:first-child {
@@ -440,53 +485,43 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c4 {
-  width: 5rem;
+  width: 8rem;
   height: 100%;
-  margin-right: 1rem;
+  margin-right: 1.6rem;
 }
 
 .c5 {
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
-.c6 {
-  display: inline-block;
-  padding: 0.5rem 0.625rem;
-  font-weight: bold;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  white-space: nowrap;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #e5f1fe;
-  margin-left: 1.25rem;
+.c33 {
+  background-color: #f2f5fa;
 }
 
-.c36 {
+.c35 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
-.c36 > *:first-child {
+.c35 > *:first-child {
   margin-top: 0;
 }
 
-.c36 > *:last-child {
+.c35 > *:last-child {
   margin-bottom: 0;
 }
 
 .c37 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
@@ -501,7 +536,7 @@ exports[`<Home /> should render 1`] = `
 .c38 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -521,39 +556,34 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c40 + .c39 {
-  padding-left: 1rem;
-}
-
-.c41 {
-  font-weight: bold;
-  font-size: 1rem;
+  padding-left: 1.6rem;
 }
 
 .c43 {
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
 }
 
-.c43 a,
-.c43 a:visited {
-  color: #434956;
+.c43 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 @media print {
-  .c8 {
+  .c7 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c29 {
-    width: calc( 100% / 3 - 2 * 0.625rem );
+  .c28 {
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
-    width: calc( 100% - 2 * 0.625rem );
+  .c28 {
+    width: calc( 100% - 2 * 1rem );
   }
 }
 
@@ -574,19 +604,19 @@ exports[`<Home /> should render 1`] = `
 
 @media (max-width:600px) {
   .c18 {
-    padding: 0 1rem;
+    padding: 0 1.6rem;
   }
 }
 
 @media (max-width:600px) {
   .c21 {
-    margin-top: 0.625rem;
+    margin-top: 1rem;
     margin-left: 0;
   }
 }
 
 @media print {
-  .c7 {
+  .c6 {
     display: none;
   }
 }
@@ -629,13 +659,13 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media print {
-  .c34 {
+  .c33 {
     display: none;
   }
 }
 
 @media print {
-  .c36 {
+  .c35 {
     max-width: 100%;
     padding: 0;
   }
@@ -697,11 +727,6 @@ exports[`<Home /> should render 1`] = `
             numérique
           </span>
         </a>
-        <div
-          class="c6"
-        >
-          Version Bêta
-        </div>
       </div>
     </div>
   </header>
@@ -709,27 +734,27 @@ exports[`<Home /> should render 1`] = `
     id="main"
   >
     <div
-      class="c7"
+      class="c6"
     >
       <div
-        class="c8"
+        class="c7"
       >
         <header
-          class="c9"
+          class="c8"
         >
           <h1
-            class="c10"
+            class="c9"
           >
             Bienvenue sur 
             <br />
             <span
-              class="c11"
+              class="c10"
             >
               le Code du travail numérique
             </span>
           </h1>
           <p
-            class=""
+            class="c11"
           >
             Vous cherchez une information sur le droit du travail ? Vous avez besoin d’accompagnement ?
             <br />
@@ -807,7 +832,7 @@ exports[`<Home /> should render 1`] = `
       class="c22"
     >
       <div
-        class="c8"
+        class="c7"
       >
         <div>
           <h2
@@ -838,33 +863,31 @@ exports[`<Home /> should render 1`] = `
               </svg>
             </a>
           </h2>
-          <div
-            class="c27"
-          >
+          <div>
             Trouvez des réponses personnalisées selon votre situation
           </div>
         </div>
         <ul
-          class="c28"
+          class="c27"
         >
           <li
-            class="c29"
+            class="c28"
           >
             <a
-              class="c30"
+              class="c29"
               href="/outils/indemnite-licenciement"
               title="Démarrer une simulation d'indemnités de licenciements"
             >
               <div
-                class="c31"
+                class="c30"
               >
                 Simulateur d'indemnités de licenciements
               </div>
               <div
-                class="c32"
+                class="c31"
               >
                 <div
-                  class="c33"
+                  class="c32"
                 >
                   Démarrer
                 </div>
@@ -872,23 +895,23 @@ exports[`<Home /> should render 1`] = `
             </a>
           </li>
           <li
-            class="c29"
+            class="c28"
           >
             <a
-              class="c30"
+              class="c29"
               href="/outils/preavis-licenciement"
               title="Démarrer une simulation de durée de préavis de licenciement"
             >
               <div
-                class="c31"
+                class="c30"
               >
                 Simulateur de durée de préavis de licenciement
               </div>
               <div
-                class="c32"
+                class="c31"
               >
                 <div
-                  class="c33"
+                  class="c32"
                 >
                   Démarrer
                 </div>
@@ -896,23 +919,23 @@ exports[`<Home /> should render 1`] = `
             </a>
           </li>
           <li
-            class="c29"
+            class="c28"
           >
             <a
-              class="c30"
+              class="c29"
               href="/outils/preavis-demission"
               title="Démarrer une simulation de durée de préavis de démission"
             >
               <div
-                class="c31"
+                class="c30"
               >
                 Simulateur de durée de préavis de démission
               </div>
               <div
-                class="c32"
+                class="c31"
               >
                 <div
-                  class="c33"
+                  class="c32"
                 >
                   Démarrer
                 </div>
@@ -920,23 +943,23 @@ exports[`<Home /> should render 1`] = `
             </a>
           </li>
           <li
-            class="c29"
+            class="c28"
           >
             <a
-              class="c30"
+              class="c29"
               href="/modeles-de-courriers"
               title="Consulter tous les modèles de courriers"
             >
               <div
-                class="c31"
+                class="c30"
               >
                 Modèles de courriers
               </div>
               <div
-                class="c32"
+                class="c31"
               >
                 <div
-                  class="c33"
+                  class="c32"
                 >
                   Consulter
                 </div>
@@ -944,23 +967,23 @@ exports[`<Home /> should render 1`] = `
             </a>
           </li>
           <li
-            class="c29"
+            class="c28"
           >
             <a
-              class="c30"
+              class="c29"
               href="/outils/simulateur-embauche"
               title="Démarrer une simulation de salaire lors d'une embauche"
             >
               <div
-                class="c31"
+                class="c30"
               >
                 Simulateur d'embauche
               </div>
               <div
-                class="c32"
+                class="c31"
               >
                 <div
-                  class="c33"
+                  class="c32"
                 >
                   Démarrer
                 </div>
@@ -968,23 +991,23 @@ exports[`<Home /> should render 1`] = `
             </a>
           </li>
           <li
-            class="c29"
+            class="c28"
           >
             <a
-              class="c30"
+              class="c29"
               href="/outils/indemnite-precarite"
               title="Démarrer une simulation de la prime de précarité"
             >
               <div
-                class="c31"
+                class="c30"
               >
                 Simulateur de prime de précarité
               </div>
               <div
-                class="c32"
+                class="c31"
               >
                 <div
-                  class="c33"
+                  class="c32"
                 >
                   Démarrer
                 </div>
@@ -992,22 +1015,22 @@ exports[`<Home /> should render 1`] = `
             </a>
           </li>
           <li
-            class="c29"
+            class="c28"
           >
             <button
-              class="c30"
+              class="c29"
               href=""
             >
               <div
-                class="c31"
+                class="c30"
               >
                 Votre convention collective
               </div>
               <div
-                class="c32"
+                class="c31"
               >
                 <div
-                  class="c33"
+                  class="c32"
                 >
                   Rechercher
                 </div>
@@ -1015,14 +1038,14 @@ exports[`<Home /> should render 1`] = `
             </button>
           </li>
           <li
-            class="c29"
+            class="c28"
           >
             <button
-              class="c30"
+              class="c29"
               href=""
             >
               <div
-                class="c31"
+                class="c30"
               >
                 Bientôt d’autres outils disponibles...
               </div>
@@ -1034,15 +1057,17 @@ exports[`<Home /> should render 1`] = `
     </div>
   </main>
   <footer
-    class="c34"
+    class="c33"
   >
     <div
-      class="c35"
+      class="c34"
     >
       <div
-        class="c36"
+        class="c35"
       >
-        <h2>
+        <h2
+          class="c36"
+        >
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
@@ -1058,7 +1083,7 @@ exports[`<Home /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c35"
+      class="c34"
     >
       <div
         class="c38"

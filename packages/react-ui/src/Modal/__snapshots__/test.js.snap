@@ -12,30 +12,60 @@ exports[`<Modal /> does not render at first and then render 2`] = `
     aria-hidden="true"
   />
   .c2 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c2:hover {
-  color: #8c94a6;
+.c2:link,
+.c2:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c2:not([disabled]):hover,
+.c2:not([disabled]):active,
+.c2:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c2[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c4:not(:focus):not(:active) {
@@ -67,9 +97,9 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   margin: 10vh auto;
   padding: 2rem;
   overflow-y: auto;
-  color: #434956;
+  color: #3e486e;
   background: #fff;
-  border-radius: 0.25rem;
+  border-radius: 0.6rem;
   outline: none;
 }
 
@@ -93,17 +123,17 @@ exports[`<Modal /> does not render at first and then render 2`] = `
 
 @media (max-width:600px) {
   .c1 {
-    width: calc(100% - 2 * 1rem);
-    max-height: calc(100vh - 2 * 1rem);
-    margin: 1rem;
+    width: calc(100% - 2 * 1.6rem);
+    max-height: calc(100vh - 2 * 1.6rem);
+    margin: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
   .c3 {
     position: fixed;
-    top: 0.625rem;
-    right: 0.625rem;
+    top: 1rem;
+    right: 1rem;
   }
 }
 
@@ -189,30 +219,60 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
     aria-hidden="true"
   />
   .c2 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c2:hover {
-  color: #8c94a6;
+.c2:link,
+.c2:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c2:not([disabled]):hover,
+.c2:not([disabled]):active,
+.c2:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c2[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c4:not(:focus):not(:active) {
@@ -250,8 +310,8 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
 @media (max-width:600px) {
   .c3 {
     position: fixed;
-    top: 0.625rem;
-    right: 0.625rem;
+    top: 1rem;
+    right: 1rem;
   }
 }
 

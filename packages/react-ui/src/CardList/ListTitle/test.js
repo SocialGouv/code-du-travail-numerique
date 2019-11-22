@@ -1,26 +1,26 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { SectionTitle } from ".";
+import { ListTitle } from ".";
 
-describe("<SectionTitle />", () => {
+describe("<ListTitle />", () => {
   test("should render title with description", () => {
     const { container } = render(
-      <SectionTitle desc="Hello">Lorem Ipsum</SectionTitle>
+      <ListTitle desc="Hello">Lorem Ipsum</ListTitle>
     );
     expect(container).toMatchSnapshot();
   });
   test("should render title only", () => {
-    const { container } = render(<SectionTitle>Lorem Ipsum</SectionTitle>);
+    const { container } = render(<ListTitle>Lorem Ipsum</ListTitle>);
     expect(container).toMatchSnapshot();
   });
   test("should render title in a link", () => {
     const { container } = render(
-      <SectionTitle
+      <ListTitle
         href="https://code.travail.gouv.fr"
         desc="le code du travail numérique"
       >
         Lorem Ipsum
-      </SectionTitle>
+      </ListTitle>
     );
     expect(container).toMatchSnapshot();
   });

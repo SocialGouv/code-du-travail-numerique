@@ -84,11 +84,11 @@ const SearchStyled = styled(Search)`
   padding-left: 0;
 `;
 
-const { spacing } = theme;
+const { spacings } = theme;
 const P = styled.p`
   font-style: italic;
 `;
 const StyledToast = styled(Toast)`
   width: 100%;
-  margin-top: ${spacing.interComponent};
+  margin-top: ${spacings.medium};
 `;

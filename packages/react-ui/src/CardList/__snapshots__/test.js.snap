@@ -20,10 +20,10 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
@@ -40,17 +40,18 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 3 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 3 - 2 * 1rem);
+  margin: 1rem;
 }
 
 .c0 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 .c3 {
@@ -78,16 +79,16 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -97,8 +98,9 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
 }
 
 .c3:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
 .c4 {
@@ -110,13 +112,13 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
 
 @media (max-width:980px) {
   .c2 {
-    width: calc( 100% / 2 - 2 * 0.625rem );
+    width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
   .c2 {
-    width: calc( 100% - 1 * 0.625rem );
+    width: calc( 100% - 1 * 1rem );
   }
 }
 
@@ -261,10 +263,10 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
@@ -281,17 +283,18 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 4 - 2 * 1rem);
+  margin: 1rem;
 }
 
 .c0 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 .c3 {
@@ -319,16 +322,16 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -338,8 +341,9 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 }
 
 .c3:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
 .c4 {
@@ -351,13 +355,13 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 
 @media (max-width:980px) {
   .c2 {
-    width: calc( 100% / 3 - 2 * 0.625rem );
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
   .c2 {
-    width: calc( 100% - 2 * 0.625rem );
+    width: calc( 100% - 2 * 1rem );
   }
 }
 
@@ -483,7 +487,7 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 `;
 
 exports[`<CardList /> should render a collection with a title and description 1`] = `
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -502,15 +506,15 @@ exports[`<CardList /> should render a collection with a title and description 1`
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -522,28 +526,21 @@ exports[`<CardList /> should render a collection with a title and description 1`
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 4 - 2 * 1rem);
+  margin: 1rem;
 }
 
 .c0 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
-.c1 {
-  color: #005994;
-  font-weight: 300;
-  font-size: 1rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
-}
-
-.c4 {
+.c3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -568,16 +565,16 @@ exports[`<CardList /> should render a collection with a title and description 1`
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -586,12 +583,13 @@ exports[`<CardList /> should render a collection with a title and description 1`
   appearance: none;
 }
 
-.c4:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+.c3:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
-.c5 {
+.c4 {
   display: block;
   max-width: 100%;
   padding-right: 0;
@@ -599,14 +597,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 @media (max-width:980px) {
-  .c3 {
-    width: calc( 100% / 3 - 2 * 0.625rem );
+  .c2 {
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
-    width: calc( 100% - 2 * 0.625rem );
+  .c2 {
+    width: calc( 100% - 2 * 1rem );
   }
 }
 
@@ -617,24 +615,22 @@ exports[`<CardList /> should render a collection with a title and description 1`
     >
       Hello
     </h2>
-    <div
-      class="c1"
-    >
+    <div>
       Hello Tiles
     </div>
   </div>
   <ul
-    class="c2"
+    class="c1"
   >
     <li
-      class="c3"
+      class="c2"
     >
       <button
-        class="c4"
+        class="c3"
         href=""
       >
         <div
-          class="c5"
+          class="c4"
         >
           Title 1
         </div>
@@ -642,14 +638,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
       </button>
     </li>
     <li
-      class="c3"
+      class="c2"
     >
       <button
-        class="c4"
+        class="c3"
         href=""
       >
         <div
-          class="c5"
+          class="c4"
         >
           Title 2
         </div>
@@ -657,14 +653,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
       </button>
     </li>
     <li
-      class="c3"
+      class="c2"
     >
       <button
-        class="c4"
+        class="c3"
         href=""
       >
         <div
-          class="c5"
+          class="c4"
         >
           Title 3
         </div>
@@ -672,14 +668,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
       </button>
     </li>
     <li
-      class="c3"
+      class="c2"
     >
       <button
-        class="c4"
+        class="c3"
         href=""
       >
         <div
-          class="c5"
+          class="c4"
         >
           Title 4
         </div>
@@ -687,14 +683,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
       </button>
     </li>
     <li
-      class="c3"
+      class="c2"
     >
       <button
-        class="c4"
+        class="c3"
         href=""
       >
         <div
-          class="c5"
+          class="c4"
         >
           Title 5
         </div>
@@ -702,14 +698,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
       </button>
     </li>
     <li
-      class="c3"
+      class="c2"
     >
       <button
-        class="c4"
+        class="c3"
         href=""
       >
         <div
-          class="c5"
+          class="c4"
         >
           Title 6
         </div>
@@ -717,14 +713,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
       </button>
     </li>
     <li
-      class="c3"
+      class="c2"
     >
       <button
-        class="c4"
+        class="c3"
         href=""
       >
         <div
-          class="c5"
+          class="c4"
         >
           Title 7
         </div>
@@ -736,7 +732,7 @@ exports[`<CardList /> should render a collection with a title and description 1`
 `;
 
 exports[`<CardList /> should render a collection with a title with a link and a desc 1`] = `
-.c5 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -755,15 +751,15 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -775,25 +771,18 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 4 - 2 * 1rem);
+  margin: 1rem;
 }
 
 .c0 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
-}
-
-.c4 {
-  color: #005994;
-  font-weight: 300;
-  font-size: 1rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 .c2 {
@@ -805,30 +794,32 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #005994;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-family: "Merriweather",serif;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2:hover {
-  color: #006be6;
+  color: #2f3b6c;
 }
 
 .c3 {
-  margin-left: 1rem;
-  color: #006be6;
-  -webkit-transition: 250ms ease-out -webkit-transform;
-  -webkit-transition: 250ms ease-out transform;
-  transition: 250ms ease-out transform;
+  margin-left: 1.6rem;
+  color: #7598d6;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
 }
 
 .c1:hover .c3 {
-  -webkit-transform: translateX(7px);
-  -ms-transform: translateX(7px);
-  transform: translateX(7px);
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
-.c7 {
+.c6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -853,16 +844,16 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -871,12 +862,13 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   appearance: none;
 }
 
-.c7:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+.c6:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
-.c8 {
+.c7 {
   display: block;
   max-width: 100%;
   padding-right: 0;
@@ -884,14 +876,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 }
 
 @media (max-width:980px) {
-  .c6 {
-    width: calc( 100% / 3 - 2 * 0.625rem );
+  .c5 {
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
-    width: calc( 100% - 2 * 0.625rem );
+  .c5 {
+    width: calc( 100% - 2 * 1rem );
   }
 }
 
@@ -925,24 +917,22 @@ exports[`<CardList /> should render a collection with a title with a link and a 
         </svg>
       </a>
     </h2>
-    <div
-      class="c4"
-    >
+    <div>
       le code du travail numérique
     </div>
   </div>
   <ul
-    class="c5"
+    class="c4"
   >
     <li
-      class="c6"
+      class="c5"
     >
       <button
-        class="c7"
+        class="c6"
         href=""
       >
         <div
-          class="c8"
+          class="c7"
         >
           Title 1
         </div>
@@ -950,14 +940,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       </button>
     </li>
     <li
-      class="c6"
+      class="c5"
     >
       <button
-        class="c7"
+        class="c6"
         href=""
       >
         <div
-          class="c8"
+          class="c7"
         >
           Title 2
         </div>
@@ -965,14 +955,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       </button>
     </li>
     <li
-      class="c6"
+      class="c5"
     >
       <button
-        class="c7"
+        class="c6"
         href=""
       >
         <div
-          class="c8"
+          class="c7"
         >
           Title 3
         </div>
@@ -980,14 +970,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       </button>
     </li>
     <li
-      class="c6"
+      class="c5"
     >
       <button
-        class="c7"
+        class="c6"
         href=""
       >
         <div
-          class="c8"
+          class="c7"
         >
           Title 4
         </div>
@@ -995,14 +985,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       </button>
     </li>
     <li
-      class="c6"
+      class="c5"
     >
       <button
-        class="c7"
+        class="c6"
         href=""
       >
         <div
-          class="c8"
+          class="c7"
         >
           Title 5
         </div>
@@ -1010,14 +1000,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       </button>
     </li>
     <li
-      class="c6"
+      class="c5"
     >
       <button
-        class="c7"
+        class="c6"
         href=""
       >
         <div
-          class="c8"
+          class="c7"
         >
           Title 6
         </div>
@@ -1025,14 +1015,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       </button>
     </li>
     <li
-      class="c6"
+      class="c5"
     >
       <button
-        class="c7"
+        class="c6"
         href=""
       >
         <div
-          class="c8"
+          class="c7"
         >
           Title 7
         </div>
@@ -1063,10 +1053,10 @@ exports[`<CardList /> should render a signle title 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
@@ -1083,17 +1073,18 @@ exports[`<CardList /> should render a signle title 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 4 - 2 * 1rem);
+  margin: 1rem;
 }
 
 .c0 {
-  margin-bottom: 0;
-  color: #005994;
-  font-weight: 600;
-  font-size: 1.375rem;
-  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
-  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  font-size: 3rem;
 }
 
 .c3 {
@@ -1121,16 +1112,16 @@ exports[`<CardList /> should render a signle title 1`] = `
   justify-content: flex-end;
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  color: #005994;
-  font-weight: bold;
-  font-size: 1.125rem;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -1140,8 +1131,9 @@ exports[`<CardList /> should render a signle title 1`] = `
 }
 
 .c3:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
 .c4 {
@@ -1153,13 +1145,13 @@ exports[`<CardList /> should render a signle title 1`] = `
 
 @media (max-width:980px) {
   .c2 {
-    width: calc( 100% / 3 - 2 * 0.625rem );
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
   .c2 {
-    width: calc( 100% - 2 * 0.625rem );
+    width: calc( 100% - 2 * 1rem );
   }
 }
 

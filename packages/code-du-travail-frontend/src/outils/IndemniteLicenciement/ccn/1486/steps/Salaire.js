@@ -181,7 +181,7 @@ const Notice = () => (
         les majorations/indemnités liées à un déplacement ou un détachement
       </li>
     </ul>
-    <StyledToast variant="warning">
+    <StyledToast>
       Attention, les éventuelles <strong>primes</strong> renseignées
       précédemment ne seront pas prises en compte dans le calcul de l’indemnité
       de la convention collective. Si des primes ont été perçues, merci de les
@@ -195,10 +195,10 @@ const Notice = () => (
   </>
 );
 
-const { colors, spacing } = theme;
+const { colors, spacings } = theme;
 
 const StyledToast = styled(Toast)`
-  margin-top: ${spacing.interComponent};
+  margin-top: ${spacings.medium};
 `;
 
 const Table = styled(UITable)`
@@ -208,20 +208,20 @@ const Table = styled(UITable)`
   }
 `;
 const NumberInput = styled(Input)`
-  padding-right: ${spacing.base};
+  padding-right: ${spacings.base};
   text-align: right;
 `;
 
 const CurrencyWrapper = styled.div`
   position: relative;
   display: inline-block;
-  margin-right: ${spacing.interComponent};
+  margin-right: ${spacings.medium};
 `;
 
 const Currency = styled.span`
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: ${colors.grey};
+  color: ${colors.altText};
   transform: translateY(-50%);
 `;

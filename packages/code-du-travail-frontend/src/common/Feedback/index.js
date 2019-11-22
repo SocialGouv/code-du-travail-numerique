@@ -4,6 +4,7 @@ import {
   Container,
   Section,
   theme,
+  Title,
   Wrapper
 } from "@socialgouv/react-ui";
 import styled from "styled-components";
@@ -65,7 +66,7 @@ function Feedback({
     <Section>
       <Container>
         <Wrapper variant="dark">
-          <Title>Avez-vous trouvé la réponse à votre question ?</Title>
+          <Title as="h3">Avez-vous trouvé la réponse à votre question ?</Title>
           {isSatisfied === null && (
             <P>
               <StyledButton
@@ -109,11 +110,7 @@ function Feedback({
 
 export { Feedback };
 
-const { spacing } = theme;
-
-const Title = styled.h3`
-  margin-bottom: ${spacing.base};
-`;
+const { spacings } = theme;
 
 const P = styled.p`
   display: flex;
@@ -121,8 +118,7 @@ const P = styled.p`
 `;
 
 const StyledButton = styled(Button)`
-  min-width: 7rem;
   & + & {
-    margin-left: ${spacing.base};
+    margin-left: ${spacings.base};
   }
 `;

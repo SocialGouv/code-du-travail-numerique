@@ -2,61 +2,99 @@
 
 exports[`<Footer /> should render 1`] = `
 .c1 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
-.c4 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
+.c3 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c9 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
-.c4:link,
-.c4:visited {
+.c5:link,
+.c5:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):active,
-.c4:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+.c5:not([disabled]):hover,
+.c5:not([disabled]):active,
+.c5:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
-.c4[disabled] {
+.c5[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.c9 {
+.c10 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.c0 {
+  background-color: #f2f5fa;
+}
+
 .c2 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
@@ -68,28 +106,28 @@ exports[`<Footer /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c4 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
-.c3 > *:first-child {
+.c4 > *:first-child {
   margin-top: 0;
 }
 
-.c3 > *:last-child {
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
-.c5 {
+.c6 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,30 +138,25 @@ exports[`<Footer /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c5 > *:first-child {
+.c6 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c6 > *:last-child {
   margin-bottom: 0;
 }
 
-.c7 + .c6 {
-  padding-left: 1rem;
+.c8 + .c7 {
+  padding-left: 1.6rem;
 }
 
-.c8 {
-  font-weight: bold;
-  font-size: 1rem;
+.c11 {
+  margin: 0.4rem 0;
 }
 
-.c10 {
-  margin: 0.5rem 0;
-}
-
-.c10 a,
-.c10 a:visited {
-  color: #434956;
+.c11 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 @media print {
@@ -140,21 +173,21 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media print {
-  .c3 {
+  .c4 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c5 {
+  .c6 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -162,7 +195,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 + .c6 {
+  .c8 + .c7 {
     padding-left: 0;
   }
 }
@@ -177,16 +210,18 @@ exports[`<Footer /> should render 1`] = `
       <div
         class="c2"
       >
-        <h2>
+        <h2
+          class="c3"
+        >
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c3"
+          class="c4"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
-          class="c4"
+          class="c5"
         >
           Contacter les services de renseignement
         </button>
@@ -196,21 +231,21 @@ exports[`<Footer /> should render 1`] = `
       class="c1"
     >
       <div
-        class="c5"
+        class="c6"
       >
         <div
-          class="c6 c7"
+          class="c7 c8"
         >
           <h3
-            class="c8"
+            class="c9"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c9"
+            class="c10"
           >
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="/droit-du-travail"
@@ -219,7 +254,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="/glossaire"
@@ -228,7 +263,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="/a-propos"
@@ -237,7 +272,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="/mentions-legales"
@@ -246,7 +281,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="mailto:codedutravailnumerique@travail.gouv.fr"
@@ -257,18 +292,18 @@ exports[`<Footer /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c6 c7"
+          class="c7 c8"
         >
           <h3
-            class="c8"
+            class="c9"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c9"
+            class="c10"
           >
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -279,7 +314,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -292,18 +327,18 @@ exports[`<Footer /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c6 c7"
+          class="c7 c8"
         >
           <h3
-            class="c8"
+            class="c9"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c9"
+            class="c10"
           >
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -314,7 +349,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -325,7 +360,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c10"
+              class="c11"
             >
               <a
                 href="https://beta.gouv.fr/"

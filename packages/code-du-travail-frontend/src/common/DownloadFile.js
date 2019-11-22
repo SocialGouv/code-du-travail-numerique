@@ -25,19 +25,19 @@ DownloadFile.propTypes = {
 
 export { DownloadFile };
 
-const { colors } = theme;
+const { colors, fonts } = theme;
 
 const DownloadLabel = styled.div`
-  color: ${colors.darkText};
+  color: ${colors.paragraph};
   font-weight: bold;
 `;
 
 const DownloadType = styled.span`
-  font-size: var(--font-size-xsmall);
+  font-size: ${fonts.sizes.tiny};
 `;
 
 const DownloadExtension = styled.span`
-  color: var(--color-grey);
-  font-size: var(--font-size-xsmall);
+  color: ${colors.altText};
+  font-size: ${fonts.sizes.tiny};
   text-transform: uppercase;
 `;

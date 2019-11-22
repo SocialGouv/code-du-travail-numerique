@@ -70,14 +70,14 @@ function TextQuestion({
 }
 
 export { TextQuestion };
-const { spacing } = theme;
+const { spacings } = theme;
 
 const QuestionWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: ${spacing.interComponent};
+  margin-bottom: ${spacings.medium};
 `;
 const ErrorWrapper = styled.div`
   display: inline-block;
-  margin-left: ${spacing.interComponent};
+  margin-left: ${spacings.medium};
 `;

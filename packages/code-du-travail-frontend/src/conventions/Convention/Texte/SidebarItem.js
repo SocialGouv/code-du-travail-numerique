@@ -68,15 +68,15 @@ SidebarItem.propTypes = {
 
 export default SidebarItem;
 
-const { fonts, spacing } = theme;
+const { fonts, spacings } = theme;
 
 const Li = styled.li`
-  font-size: ${fonts.sizeSmall};
+  font-size: ${fonts.sizes.small};
 `;
 
 const Link = styled.a`
   display: block;
-  padding: ${spacing.tiny} 0;
+  padding: ${spacings.tiny} 0;
   text-decoration: none;
   &:hover {
     font-weight: bold;

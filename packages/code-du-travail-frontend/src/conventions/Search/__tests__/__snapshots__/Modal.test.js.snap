@@ -14,7 +14,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 .c2 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c2 > *:first-child {
@@ -25,34 +25,73 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
+.c3 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c4:hover {
-  color: #8c94a6;
+.c5:link,
+.c5:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
 }
 
-.c6:not(:focus):not(:active) {
+.c5:not([disabled]):hover,
+.c5:not([disabled]):active,
+.c5:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c5[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c7:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -81,19 +120,19 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   margin: 10vh auto;
   padding: 2rem;
   overflow-y: auto;
-  color: #434956;
+  color: #3e486e;
   background: #fff;
-  border-radius: 0.25rem;
+  border-radius: 0.6rem;
   outline: none;
 }
 
-.c5 {
+.c6 {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.c3 {
+.c4 {
   width: 100%;
 }
 
@@ -118,17 +157,17 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 
 @media (max-width:600px) {
   .c1 {
-    width: calc(100% - 2 * 1rem);
-    max-height: calc(100vh - 2 * 1rem);
-    margin: 1rem;
+    width: calc(100% - 2 * 1.6rem);
+    max-height: calc(100vh - 2 * 1.6rem);
+    margin: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     position: fixed;
-    top: 0.625rem;
-    right: 0.625rem;
+    top: 1rem;
+    right: 1rem;
   }
 }
 
@@ -172,14 +211,16 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             <div
               class="c2"
             >
-              <h3>
+              <h3
+                class="c3"
+              >
                 Recherche de convention collective
               </h3>
               <p>
                 Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
               </p>
               <input
-                class="c3"
+                class="c4"
                 placeholder="Nom d'entreprise, SIRET, nom de convention collective"
                 role="search"
                 type="search"
@@ -188,11 +229,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               
             </div>
             <button
-              class="c4 c5"
+              class="c5 c6"
               title="fermer la modale"
             >
               <div
-                class="c6"
+                class="c7"
               >
                 fermer la modale
               </div>

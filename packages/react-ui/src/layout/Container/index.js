@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { breakpoints, spacing } from "../../theme";
+import { breakpoints, spacings } from "../../theme";
 
 export const Container = styled.div`
   max-width: ${breakpoints.desktop};
   margin: 0 auto;
-  padding: 0 ${spacing.medium};
+  padding: 0 ${spacings.medium};
   ${props => {
     if (props.narrow) {
-      const maxWidth = "46.25rem"; //740px
+      const maxWidth = "74rem"; //740px
       if (props.noPadding) {
         return css`
           max-width: ${maxWidth};
@@ -34,13 +34,11 @@ export const Container = styled.div`
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
   narrow: PropTypes.bool,
   noPadding: PropTypes.bool
 };
 
 Container.defaultProps = {
-  className: "",
   narrow: false,
   noPadding: false
 };

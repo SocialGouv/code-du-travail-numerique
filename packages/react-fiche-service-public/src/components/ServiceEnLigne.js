@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { theme } from "@socialgouv/react-ui";
+import { Button, theme } from "@socialgouv/react-ui";
 
 import { getText } from "../utils";
 
-const { colors, spacing, box } = theme;
+const { colors, spacings, box } = theme;
 
 class ServiceEnLigne extends React.PureComponent {
   static propTypes = {
@@ -20,14 +20,15 @@ class ServiceEnLigne extends React.PureComponent {
     return (
       <Wrapper>
         <Type>{type}</Type>
-        <ButtonLink
+        <Button
+          as="a"
           href={url}
           rel="noopener noreferrer"
           target="_blank"
           className="no-after"
         >
           {title}
-        </ButtonLink>
+        </Button>
         <Source>{source}</Source>
       </Wrapper>
     );
@@ -40,39 +41,21 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-bottom: ${spacing.base};
-  padding: ${spacing.large};
-  background-color: ${colors.darkBackground};
+  margin-bottom: ${spacings.base};
+  padding: ${spacings.large};
+  background-color: ${colors.bgTertiary};
   border-radius: ${box.borderRadius};
 `;
 
 const Type = styled.div`
   align-self: flex-start;
-  margin-bottom: ${spacing.xsmall};
-  color: ${colors.blueDark};
+  margin-bottom: ${spacings.tiny};
+  color: ${colors.paragraph};
   font-weight: bold;
   font-size: 1.1rem;
 `;
 
-const ButtonLink = styled.a`
-  &:link,
-  &:visited {
-    display: inline-block;
-    padding: ${spacing.xsmall};
-    color: ${colors.primaryText};
-    text-decoration: none;
-    background-color: ${colors.blueDark};
-    border-radius: ${box.borderRadius};
-  }
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: ${colors.blueDark};
-  }
-`;
-
 const Source = styled.small`
   display: inline-block;
-  margin-top: ${spacing.xsmall};
-  color: ${colors.darkGrey};
+  margin-top: ${spacings.tiny};
 `;

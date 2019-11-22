@@ -1,18 +1,25 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "@socialgouv/react-ui";
 
-const { colors } = theme;
+const { animations, colors } = theme;
 export default createGlobalStyle`
-  a,
-  a:visited {
-    color: ${colors.blueDark};
+  a {
+    color: ${colors.paragraph};
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
     text-decoration: underline;
+    text-decoration-color: ${colors.primary};
+    transition: all ${animations.transitionTiming} linear;
   }
 
   a:focus,
   a:hover,
   a:active {
-    text-decoration: none;
+    color: ${colors.primary};
+  }
+
+  a:visited {
+    text-decoration-color: ${colors.secondary};
   }
   a[target="_blank"]:not(.no-after):after,
   a[href^="http://"]:not(.no-after):not([href*="social.gouv.fr"]):after,

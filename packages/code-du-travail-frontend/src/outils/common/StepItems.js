@@ -34,24 +34,24 @@ function Step({ label, index, activeIndex, ...props }) {
   );
 }
 
-const { spacing, fonts, breakpoints } = theme;
+const { spacings, fonts, breakpoints } = theme;
 
 const StepItemsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: ${spacing.medium} ${spacing.larger};
-  background-color: ${({ theme }) => theme.lightBackground};
-  border-right: 1px solid ${({ theme }) => theme.lightGrey};
+  padding: ${spacings.medium} ${spacings.larger};
+  background-color: ${({ theme }) => theme.bgSecondary};
+  border-right: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: row-reverse;
     justify-content: space-between;
     border: none;
-    border-bottom: 1px solid ${({ theme }) => theme.lightGrey};
+    border-bottom: 1px solid ${({ theme }) => theme.border};
   }
 `;
 
 const Title = styled.span`
-  margin: ${spacing.medium} 0;
+  margin: ${spacings.medium} 0;
   font-weight: 600;
 `;
 const StepProgress = styled.span`
@@ -64,11 +64,12 @@ const StepProgress = styled.span`
 const StepWrapper = styled.span`
   display: flex;
   align-items: center;
-  width: 8.4375rem;
-  padding: 0 ${spacing.tiny};
-  color: ${({ isActive, theme }) => (isActive ? theme.blueLight : theme.grey)};
+  width: 13.5rem;
+  padding: 0 ${spacings.tiny};
+  color: ${({ isActive, theme }) =>
+    isActive ? theme.altText : theme.placeholder};
   font-weight: 600;
-  font-size: ${fonts.sizeSmall};
+  font-size: ${fonts.sizes.small};
   line-height: 1;
   text-align: left;
   text-decoration: none;
@@ -82,12 +83,12 @@ const IndexCircle = styled.span`
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 1.6rem;
-  height: 1.6rem;
-  margin: ${spacing.xsmall} ${spacing.small};
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: ${spacings.tiny} ${spacings.small};
   margin-left: 0;
   color: ${({ theme }) => theme.white};
   background-color: ${({ isActive, theme }) =>
-    isActive ? theme.blueLight : theme.grey};
+    isActive ? theme.altText : theme.placeholder};
   border-radius: 49%;
 `;

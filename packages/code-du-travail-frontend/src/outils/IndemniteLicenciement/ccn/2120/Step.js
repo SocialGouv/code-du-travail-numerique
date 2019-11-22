@@ -79,14 +79,14 @@ function Step() {
 
 export { Step };
 
-const { spacing } = theme;
+const { spacings } = theme;
 const Select = styled.select`
-  max-width: 20rem;
+  max-width: 32rem;
 `;
 
 const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: ${spacing.interComponent};
+  margin-bottom: ${spacings.medium};
 `;

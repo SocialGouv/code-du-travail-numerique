@@ -32,10 +32,10 @@ ErrorComputedField.propTypes = {
 };
 
 const Error = styled.div`
-  margin: ${theme.spacing.small} 0 ${theme.spacing.base};
-  color: ${({ theme }) => theme.errorText};
+  margin: ${theme.spacings.small} 0 ${theme.spacings.base};
+  color: ${({ theme }) => theme.error};
   font-weight: 600;
-  font-size: ${theme.fonts.sizeSmall};
+  font-size: ${theme.fonts.sizes.small};
 `;
 
 const InlineError = props => <Error {...props} as="span" />;

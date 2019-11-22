@@ -4,7 +4,7 @@ exports[`<Article /> should render 1`] = `
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .c1 > *:first-child {
@@ -18,8 +18,8 @@ exports[`<Article /> should render 1`] = `
 .c9 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
 }
 
@@ -32,15 +32,15 @@ exports[`<Article /> should render 1`] = `
 }
 
 .c0 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c2 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   background-color: #fff;
 }
 
@@ -52,14 +52,23 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c4 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c3 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c3 > *:first-child {
@@ -70,7 +79,7 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,25 +90,21 @@ exports[`<Article /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c5 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
 .c6 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 0.875rem;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
 .c7 {
-  color: #4c5467;
-  font-weight: 600;
+  display: inline-block;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.4rem;
 }
 
 .c8 {
-  margin-left: -10px;
+  color: #4d73b8;
+  font-weight: 600;
 }
 
 @media print {
@@ -118,7 +123,7 @@ exports[`<Article /> should render 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -137,7 +142,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -149,7 +154,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     margin-left: 0;
   }
 }
@@ -171,31 +176,30 @@ exports[`<Article /> should render 1`] = `
           <div
             class="c3"
           >
-            <h1>
+            <h1
+              class="c4"
+            >
               Contrat de travail et formalités d'embauche de l'assistante maternelle
             </h1>
             <div
-              class="c4"
+              class="c5"
             >
               <span
-                class="c5"
+                class="c6"
               >
                 Fiche service public
               </span>
               <span
-                class="c6"
+                class="c7"
               >
                 Mis à jour le : 
                 <span
-                  class="c7"
+                  class="c8"
                 >
                   26/07/2018
                 </span>
               </span>
             </div>
-            <div
-              class="c8"
-            />
           </div>
           <div
             class="c9"

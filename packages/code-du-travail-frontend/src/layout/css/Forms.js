@@ -1,17 +1,18 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "@socialgouv/react-ui";
 
-const { animations, box, colors, spacing } = theme;
+const { animations, box, colors, spacings } = theme;
 
 const RADIO_SIZE = "1.1em";
 
+// We have to move this into UI as soon as possible
 export default createGlobalStyle`
   label {
     cursor: pointer;
   }
 
   fieldset {
-    padding: ${spacing.base};
+    padding: ${spacings.base};
     border: ${box.border};
   }
 
@@ -23,7 +24,7 @@ export default createGlobalStyle`
   textarea,
   input {
     max-width: 100%;
-    padding: ${spacing.small} ${spacing.base};
+    padding: ${spacings.small} ${spacings.base};
     color: inherit;
 
     font-size: inherit;
@@ -37,11 +38,6 @@ export default createGlobalStyle`
     label + &, label > & {
      vertical-align: top;
     }
-
-    &:focus {
-      border: 1px solid ${colors.focus};
-      box-shadow: 0 0 2px 2px ${colors.focusShadow};
-    }
   }
 
   input[type="radio"] {
@@ -50,7 +46,7 @@ export default createGlobalStyle`
     flex-shrink: 0;
     width: ${RADIO_SIZE};
     height: ${RADIO_SIZE};
-    margin: 0 ${spacing.xsmall} calc(1em / 10) 0;
+    margin: 0 ${spacings.tiny} calc(1em / 10) 0;
     padding: 0;
     color: inherit;
     font: inherit;
@@ -63,7 +59,7 @@ export default createGlobalStyle`
   }
   input[type="radio"]:checked {
     background-color: ${colors.white};
-    border-color: ${colors.blueDark};
+    border-color: ${colors.primary};
   }
   input[type="radio"]::before {
     position: absolute;
@@ -71,40 +67,22 @@ export default createGlobalStyle`
     left: calc(50% - ${RADIO_SIZE} / 4);
     width: calc(${RADIO_SIZE} / 2);
     height: calc(${RADIO_SIZE} / 2);
-    background-color: ${colors.blueDark};
+    background-color: ${colors.secondary};
     border-radius: 50%;
     transform: scale(0);
-    transition: transform ${animations.transitionTiming} ease-out;
+    transition: all ${animations.transitionTiming} ease-out;
     content: "";
   }
   input[type="radio"]:checked::before {
+    background-color: ${colors.primary};
     transform: scale(1);
-  }
-
-  input[type="radio"]:focus {
-    box-shadow: none;
-  }
-  input[type="radio"]:-moz-focusring {
-    box-shadow: 0 0 0.15em 0.15em ${colors.focusShadow};
-  }
-  input[type="radio"]:focus-visible {
-    box-shadow: 0 0 0.15em 0.15em ${colors.focusShadow};
-  }
-
-  input[type="radio"]:focus:not(:focus-visible) {
-    border-color: ${colors.focus};
-    outline: none;
-  }
-  input[type="radio"]:focus:not(:-moz-focusring) {
-    border-color: ${colors.focus};
-    outline: none;
   }
 
   select {
     position: relative;
-    padding: ${spacing.small} ${spacing.base};
-    padding-right: ${spacing.large};
-    color: ${colors.black};
+    padding: ${spacings.small} ${spacings.base};
+    padding-right: ${spacings.large};
+    color: ${colors.paragraph};
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
@@ -119,13 +97,7 @@ export default createGlobalStyle`
   }
 
   select:disabled {
-    background-color: ${colors.darkBackground};
-  }
-
-  select:focus {
-    border-color: ${colors.blueLight};
-    outline: none;
-    box-shadow: 0 0 0.15rem 0.15rem ${colors.focusShadow};
+    background-color: ${colors.bgTertiary};
   }
 
 `;

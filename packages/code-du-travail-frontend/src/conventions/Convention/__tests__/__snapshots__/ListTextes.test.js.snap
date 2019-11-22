@@ -2,9 +2,9 @@
 
 exports[`<ListTextes /> renders a list of textes 1`] = `
 .c0 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.4rem 0;
   padding: 0;
-  color: #005994;
+  color: #3e486e;
   font-size: inherit;
   text-align: left;
   -webkit-text-decoration: underline;
@@ -28,73 +28,82 @@ exports[`<ListTextes /> renders a list of textes 1`] = `
 `;
 
 exports[`<ListTextes /> renders a text 1`] = `
-.c4 {
-  font-size: 0.875rem;
+.c1 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c9 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c5 {
+  font-size: 1.4rem;
+}
+
+.c6 {
   display: block;
-  padding: 0.25rem 0;
+  padding: 0.4rem 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:hover {
+.c6:hover {
   font-weight: bold;
 }
 
-.c2 {
-  padding: 1.25rem 0;
-  color: #434956;
+.c3 {
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
-.c3 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+.c4 {
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
   max-height: 100%;
   overflow: auto;
 }
 
-.c3 > *:first-child {
+.c4 > *:first-child {
   margin-top: 0;
 }
 
-.c3 > *:last-child {
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
-.c9 {
-  margin-bottom: 0.625rem;
+.c8 {
+  margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1em;
   font-style: italic;
 }
 
 .c10 {
-  margin-bottom: 0.625rem;
-}
-
-.c8 {
-  font-size: 1.625rem;
-}
-
-.c6 {
-  padding: 1.25rem 0;
-  color: #434956;
+  margin-bottom: 1rem;
 }
 
 .c7 {
-  margin-top: 0;
-  margin-bottom: 2rem;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c0 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.4rem 0;
   padding: 0;
-  color: #005994;
+  color: #3e486e;
   font-size: inherit;
   text-align: left;
   -webkit-text-decoration: underline;
@@ -105,7 +114,7 @@ exports[`<ListTextes /> renders a text 1`] = `
 }
 
 @media (min-width:980px) {
-  .c2 {
+  .c3 {
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
@@ -113,25 +122,25 @@ exports[`<ListTextes /> renders a text 1`] = `
     -ms-flex: 0 1 35%;
     flex: 0 1 35%;
     max-height: 100vh;
-    padding-right: 1.25rem;
+    padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
-    padding: 0.625rem 1.25rem;
+  .c4 {
+    padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c3 {
+  .c4 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (min-width:980px) {
-  .c6 {
+  .c7 {
     -webkit-flex: 0 1 65%;
     -ms-flex: 0 1 65%;
     flex: 0 1 65%;
@@ -140,7 +149,7 @@ exports[`<ListTextes /> renders a text 1`] = `
 }
 
 @media (min-width:980px) {
-  .c1 {
+  .c2 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -158,52 +167,54 @@ exports[`<ListTextes /> renders a text 1`] = `
   >
     &lt; Retour à la liste des textes
   </button>
-  <h2 />
-  <div
+  <h2
     class="c1"
+  />
+  <div
+    class="c2"
   >
     <div
-      class="c2"
+      class="c3"
     >
       <div
-        class="c3"
+        class="c4"
       >
         <ol>
           <li
-            class="c4"
+            class="c5"
           >
             <a
-              class="c5"
+              class="c6"
               href="#KALIARTI000033084096"
             >
               Objet de l'avenant
             </a>
           </li>
           <li
-            class="c4"
+            class="c5"
           >
             <a
-              class="c5"
+              class="c6"
               href="#KALIARTI000033084097"
             >
               Revalorisation des salaires minima
             </a>
           </li>
           <li
-            class="c4"
+            class="c5"
           >
             <a
-              class="c5"
+              class="c6"
               href="#KALIARTI000033084098"
             >
               Date d'application
             </a>
           </li>
           <li
-            class="c4"
+            class="c5"
           >
             <a
-              class="c5"
+              class="c6"
               href="#KALIARTI000033084099"
             >
               Formalité, publicité
@@ -213,23 +224,24 @@ exports[`<ListTextes /> renders a text 1`] = `
       </div>
     </div>
     <div
-      class="c6"
+      class="c7"
     >
       <h2
-        class="c7"
+        class="c1"
       >
         Avenant n° 0914 du 8 avril 2016 relatif aux rémunérations minimales au 1er mai 2016
       </h2>
       <h3
-        class="c8"
+        class="c1"
         id="KALIARTI000033084096"
       />
       <div
-        class="c9"
+        class="c8"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000033084096"
       >
         Objet de l'avenant
@@ -245,15 +257,16 @@ exports[`<ListTextes /> renders a text 1`] = `
         </p>
       </div>
       <h3
-        class="c8"
+        class="c1"
         id="KALIARTI000033084097"
       />
       <div
-        class="c9"
+        class="c8"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000033084097"
       >
         Revalorisation des salaires minima
@@ -431,15 +444,16 @@ exports[`<ListTextes /> renders a text 1`] = `
         <p />
       </div>
       <h3
-        class="c8"
+        class="c1"
         id="KALIARTI000033084098"
       />
       <div
-        class="c9"
+        class="c8"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000033084098"
       >
         Date d'application
@@ -455,15 +469,16 @@ exports[`<ListTextes /> renders a text 1`] = `
         </p>
       </div>
       <h3
-        class="c8"
+        class="c1"
         id="KALIARTI000033084099"
       />
       <div
-        class="c9"
+        class="c8"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000033084099"
       >
         Formalité, publicité

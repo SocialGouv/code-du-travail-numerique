@@ -54,5 +54,5 @@ const FlexCenterer = styled.div`
 `;
 
 const P = styled.p`
-  font-size: ${fonts.sizeH2};
+  font-size: ${fonts.sizes.headings.large};
 `;

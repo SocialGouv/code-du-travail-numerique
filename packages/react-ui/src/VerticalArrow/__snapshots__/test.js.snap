@@ -3,60 +3,37 @@
 exports[`<VerticalArrow /> should render 1`] = `
 .c0 {
   position: relative;
-  display: inline-block;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 12px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
 }
 
-.c0::after,
-.c0::before {
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 10px;
-  height: 2px;
-  background-color: currentColor;
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  content: "";
-}
-
-.c0::before {
-  left: 4px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-[aria-expanded="true"] .c0::before,
-[aria-selected="true"] .c0::before {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c0::after {
-  right: 4px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-[aria-expanded="true"] .c0::after,
-[aria-selected="true"] .c0::after {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+[aria-expanded="true"] .c0,
+[aria-selected="true"] .c0 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 <div>
-  <div
+  <svg
     class="c0"
-    role="presentation"
-  />
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <polyline
+      points="9 18 15 12 9 6"
+    />
+  </svg>
 </div>
 `;

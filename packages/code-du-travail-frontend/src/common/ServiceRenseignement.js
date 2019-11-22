@@ -1,7 +1,7 @@
 import React from "react";
 import { UID } from "react-uid";
 import styled from "styled-components";
-import { theme } from "@socialgouv/react-ui";
+import { Heading, theme } from "@socialgouv/react-ui";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
 
@@ -37,7 +37,9 @@ class ServiceRenseignement extends React.Component {
 
     return (
       <>
-        <h4>Contacter les services de renseignement par téléphone</h4>
+        <Heading as="h4">
+          Contacter les services de renseignement par téléphone
+        </Heading>
         <NumberInsertWrapper>
           <NumberInsert href="tel:+0033806000126">
             <Number>0 806 000 126</Number>
@@ -45,9 +47,9 @@ class ServiceRenseignement extends React.Component {
           </NumberInsert>
         </NumberInsertWrapper>
 
-        <h4>
+        <Heading as="h4">
           Trouver les coordonnées du service de renseignement de mon département
-        </h4>
+        </Heading>
         <p>
           <UID name={id => `id_${id}`}>
             {id => (
@@ -88,7 +90,7 @@ class ServiceRenseignement extends React.Component {
 
 export { ServiceRenseignement };
 
-const { breakpoints, colors, fonts, spacing } = theme;
+const { breakpoints, colors, fonts, spacings } = theme;
 
 const NumberInsertWrapper = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
@@ -98,20 +100,20 @@ const NumberInsertWrapper = styled.div`
 
 const NumberInsert = styled.a`
   display: inline-flex;
-  margin: ${spacing.base} 0 ${spacing.large};
+  margin: ${spacings.base} 0 ${spacings.large};
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   background-color: ${colors.white};
-  border: 1px solid ${colors.blueDark};
+  border: 1px solid ${colors.secondary};
   @media (max-width: ${breakpoints.tablet}) {
     flex-direction: column;
   }
 `;
 
 const Number = styled.strong`
-  padding: 0 ${spacing.base};
-  color: ${colors.blueDark};
+  padding: 0 ${spacings.base};
+  color: ${colors.paragraph};
   font-size: 2rem;
 `;
 
@@ -120,13 +122,13 @@ const Pricing = styled.em`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 ${spacing.base} 0 ${spacing.medium};
+  padding: 0 ${spacings.base} 0 ${spacings.medium};
   color: ${colors.white};
-  font-size: ${fonts.sizeBase};
+  font-size: ${fonts.sizes.default};
   font-style: normal;
-  background-color: ${colors.blueDark};
+  background-color: ${colors.secondary};
   @media (max-width: ${breakpoints.tablet}) {
-    padding: ${spacing.small};
+    padding: ${spacings.small};
   }
   &::before {
     position: absolute;
@@ -147,11 +149,10 @@ const Pricing = styled.em`
 
 const Input = styled.input`
   width: 100%;
-  margin-top: ${spacing.small};
+  margin-top: ${spacings.small};
 `;
 
 const Small = styled.small`
   display: block;
-  margin-top: ${spacing.interComponent};
-  color: ${colors.darkGrey};
+  margin-top: ${spacings.medium};
 `;

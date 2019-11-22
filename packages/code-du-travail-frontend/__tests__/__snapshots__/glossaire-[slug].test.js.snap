@@ -1,72 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Term /> should render 1`] = `
-.c16 {
+.c15 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
 }
 
-.c16 > *:first-child {
+.c15 > *:first-child {
   margin-top: 0;
 }
 
-.c16 > *:last-child {
+.c15 > *:last-child {
   margin-bottom: 0;
 }
 
-.c15 {
-  padding: 1.25rem 0;
-  color: #434956;
+.c14 {
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
-.c13 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
+.c16 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c22 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c28 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  background-color: transparent;
-  border: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c13:hover {
-  color: #8c94a6;
+.c12:link,
+.c12:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c12[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c24 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c24:link,
@@ -79,13 +148,17 @@ exports[`<Term /> should render 1`] = `
 .c24:not([disabled]):hover,
 .c24:not([disabled]):active,
 .c24:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
 .c24[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
@@ -95,7 +168,7 @@ exports[`<Term /> should render 1`] = `
   list-style-type: none;
 }
 
-.c10:not(:focus):not(:active) {
+.c9:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -107,13 +180,13 @@ exports[`<Term /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c18 {
+.c17 {
   position: relative;
   overflow: hidden;
 }
 
-.c18:before,
-.c18:after {
+.c17:before,
+.c17:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -127,51 +200,57 @@ exports[`<Term /> should render 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c18:before {
+.c17:before {
   left: -2rem;
 }
 
-.c18:after {
+.c17:after {
   right: -2rem;
 }
 
-.c19 {
+.c18 {
   overflow-x: auto;
 }
 
-.c20 {
+.c19 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
-  border: 1px solid #c9d3df;
+  border: 1px solid #bbcadf;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-.c20 caption {
-  padding: 0.625rem 0;
+.c19 caption {
+  padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c20 td,
-.c20 th {
-  padding: 0.625rem 1rem;
-  border: 1px solid #c9d3df;
+.c19 td,
+.c19 th {
+  padding: 1rem 1.6rem;
+  border: 1px solid #bbcadf;
 }
 
-.c20 thead,
-.c20 tfoot {
-  padding: 0.625rem 1rem;
+.c19 th {
+  color: #2f3b6c;
+  font-weight: 600;
+  background: #e4e8ef;
+}
+
+.c19 thead,
+.c19 tfoot {
+  padding: 1rem 1.6rem;
   vertical-align: bottom;
-  background: #f9f9fc;
+  background: #f2f5fa;
 }
 
-.c20 tfoot {
+.c19 tfoot {
   vertical-align: top;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,15 +261,15 @@ exports[`<Term /> should render 1`] = `
   text-align: left;
 }
 
-.c12 ul {
+.c11 ul {
   z-index: 100;
 }
 
-.c12 li[role="option"]:nth-child(2n + 1) {
-  background: #f9f9fc;
+.c11 li[role="option"]:nth-child(2n + 1) {
+  background: #f2f5fa;
 }
 
-.c8 {
+.c7 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -200,7 +279,7 @@ exports[`<Term /> should render 1`] = `
   padding: 0;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -208,12 +287,12 @@ exports[`<Term /> should render 1`] = `
   width: 100%;
   height: 50px;
   margin: 0;
-  padding: 0 calc(50px + 0.625rem) 0 1rem;
+  padding: 0 calc(50px + 1rem) 0 1.6rem;
   font-size: inherit;
   font-family: inherit;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 1.5rem;
+  background: #f2f5fa;
+  border: 1px solid #bbcadf;
+  border-radius: 2.4rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
   -webkit-appearance: none;
@@ -221,19 +300,14 @@ exports[`<Term /> should render 1`] = `
   appearance: none;
 }
 
-.c11:focus {
-  border-color: #006be6;
-  outline: none;
-}
-
-.c14 {
+.c13 {
   position: absolute;
   top: 1px;
   right: 1px;
   width: calc(50px - 2px);
   height: calc(50px - 2px);
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
 }
 
 .c0 {
@@ -243,7 +317,7 @@ exports[`<Term /> should render 1`] = `
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -256,7 +330,7 @@ exports[`<Term /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1.25rem;
+  padding: 2rem;
 }
 
 .c1 > *:first-child {
@@ -296,57 +370,47 @@ exports[`<Term /> should render 1`] = `
 }
 
 .c4 {
-  width: 5rem;
+  width: 8rem;
   height: 100%;
-  margin-right: 1rem;
+  margin-right: 1.6rem;
 }
 
 .c5 {
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
 .c6 {
-  display: inline-block;
-  padding: 0.5rem 0.625rem;
-  font-weight: bold;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  white-space: nowrap;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #e5f1fe;
-  margin-left: 1.25rem;
-}
-
-.c7 {
   width: 350px;
 }
 
-.c22 {
+.c20 {
+  background-color: #f2f5fa;
+}
+
+.c21 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
-.c22 > *:first-child {
+.c21 > *:first-child {
   margin-top: 0;
 }
 
-.c22 > *:last-child {
+.c21 > *:last-child {
   margin-bottom: 0;
 }
 
 .c23 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  padding: 0 2rem;
+  max-width: 74rem;
   padding: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
@@ -361,7 +425,7 @@ exports[`<Term /> should render 1`] = `
 .c25 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -381,36 +445,27 @@ exports[`<Term /> should render 1`] = `
 }
 
 .c27 + .c26 {
-  padding-left: 1rem;
-}
-
-.c28 {
-  font-weight: bold;
-  font-size: 1rem;
+  padding-left: 1.6rem;
 }
 
 .c30 {
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
 }
 
-.c30 a,
-.c30 a:visited {
-  color: #434956;
-}
-
-.c17 {
-  text-align: center;
+.c30 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 @media print {
-  .c16 {
+  .c15 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c7 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -419,8 +474,8 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
-    padding: 0 1rem;
+  .c10 {
+    padding: 0 1.6rem;
   }
 }
 
@@ -449,27 +504,27 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c7 {
+  .c6 {
     width: 70%;
-    margin-top: 1.25rem;
+    margin-top: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     width: 100%;
-    margin-top: 1.25rem;
+    margin-top: 2rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c20 {
     display: none;
   }
 }
 
 @media print {
-  .c22 {
+  .c21 {
     max-width: 100%;
     padding: 0;
   }
@@ -531,24 +586,19 @@ exports[`<Term /> should render 1`] = `
             numérique
           </span>
         </a>
-        <div
-          class="c6"
-        >
-          Version Bêta
-        </div>
       </div>
       <div
-        class="c7"
+        class="c6"
       >
         <form
-          class="c8"
+          class="c7"
         >
           <label
-            class="c9"
+            class="c8"
             for="main-search-input"
           >
             <span
-              class="c10"
+              class="c9"
             >
               Rechercher
             </span>
@@ -563,7 +613,7 @@ exports[`<Term /> should render 1`] = `
                 aria-autocomplete="list"
                 aria-controls="react-autowhatever-cdtn-documents-suggester"
                 autocomplete="off"
-                class="c11"
+                class="c10"
                 id="main-search-input"
                 name="query"
                 placeholder="Recherche"
@@ -571,14 +621,14 @@ exports[`<Term /> should render 1`] = `
                 value=""
               />
               <div
-                class="c12"
+                class="c11"
                 id="react-autowhatever-cdtn-documents-suggester"
                 role="listbox"
               />
             </div>
           </label>
           <button
-            class="c13 c14"
+            class="c12 c13"
             type="submit"
           >
             <svg
@@ -600,24 +650,24 @@ exports[`<Term /> should render 1`] = `
     id="main"
   >
     <div
-      class="c15"
+      class="c14"
     >
       <div
-        class="c16"
+        class="c15"
       >
         <h1
-          class="c17"
+          class="c16"
         >
           Accord d'entreprise
         </h1>
         <div
-          class="c18"
+          class="c17"
         >
           <div
-            class="c19"
+            class="c18"
           >
             <table
-              class="c20"
+              class="c19"
             >
               <tbody>
                 <tr>
@@ -647,15 +697,17 @@ exports[`<Term /> should render 1`] = `
     </div>
   </main>
   <footer
-    class="c21"
+    class="c20"
   >
     <div
-      class="c15"
+      class="c14"
     >
       <div
-        class="c22"
+        class="c21"
       >
-        <h2>
+        <h2
+          class="c22"
+        >
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
@@ -671,7 +723,7 @@ exports[`<Term /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c15"
+      class="c14"
     >
       <div
         class="c25"

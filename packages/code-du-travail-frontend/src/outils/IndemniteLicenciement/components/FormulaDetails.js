@@ -38,15 +38,15 @@ FormulaDetails.propTypes = {
   })
 };
 
-const { spacing, fonts } = theme;
+const { spacings, fonts } = theme;
 
 const Details = styled.details`
-  margin-top: ${spacing.interComponent};
+  margin-top: ${spacings.medium};
 `;
 
 const HeadingDetails = styled.strong`
   font-weight: bold;
-  font-size: ${fonts.sizeSmall};
+  font-size: ${fonts.sizes.small};
 `;
 
 const ListDetails = styled.ul`
@@ -54,9 +54,9 @@ const ListDetails = styled.ul`
 `;
 
 const ItemDetails = styled.li`
-  font-size: ${fonts.sizeSmall};
+  font-size: ${fonts.sizes.small};
 `;
 
 const FormuleWrapper = styled.div`
-  margin: ${spacing.base} 0;
+  margin: ${spacings.base} 0;
 `;

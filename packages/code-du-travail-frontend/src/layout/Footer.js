@@ -3,12 +3,14 @@ import getConfig from "next/config";
 import Link from "next/link";
 import styled from "styled-components";
 import {
-  List,
-  ListItem,
   Button,
   Container,
+  Heading,
+  List,
+  ListItem,
   Section,
-  theme
+  theme,
+  Title
 } from "@socialgouv/react-ui";
 
 import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
@@ -21,7 +23,7 @@ const Footer = () => (
   <StyledFooter>
     <Section>
       <FirstContainerWrapper>
-        <h2>Besoin d’un accompagnement personnalisé ?</h2>
+        <Title>Besoin d’un accompagnement personnalisé ?</Title>
         <SecondContainerWrapper narrow noPadding>
           Les services de renseignement en droit du travail peuvent vous donner
           des informations juridiques générales relatives au Code du travail,
@@ -38,7 +40,7 @@ const Footer = () => (
     <Section>
       <Links>
         <Category>
-          <CategoryTitle>Code du travail numérique</CategoryTitle>
+          <Heading>Code du travail numérique</Heading>
           <List>
             <StyledListItem>
               <Link href="/droit-du-travail">
@@ -68,7 +70,7 @@ const Footer = () => (
           </List>
         </Category>
         <Category>
-          <CategoryTitle>Aidez-nous à améliorer cet outil</CategoryTitle>
+          <Heading>Aidez-nous à améliorer cet outil</Heading>
           <List>
             <StyledListItem>
               <a
@@ -103,7 +105,7 @@ const Footer = () => (
           </List>
         </Category>
         <Category>
-          <CategoryTitle>En collaboration avec</CategoryTitle>
+          <Heading>En collaboration avec</Heading>
           <List>
             <StyledListItem>
               <a
@@ -143,9 +145,10 @@ const Footer = () => (
 
 export default Footer;
 
-const { breakpoints, colors, fonts, spacing } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledFooter = styled.footer`
+  background-color: ${({ theme }) => theme.bgSecondary};
   @media print {
     display: none;
   }
@@ -156,7 +159,7 @@ const FirstContainerWrapper = styled(Container)`
 `;
 
 const SecondContainerWrapper = styled(Container)`
-  margin-bottom: ${spacing.interComponent};
+  margin-bottom: ${spacings.medium};
   text-align: left;
 `;
 
@@ -170,22 +173,16 @@ const Links = styled(Container)`
 
 const Category = styled.div`
   & + & {
-    padding-left: ${spacing.base};
+    padding-left: ${spacings.base};
     @media (max-width: ${breakpoints.mobile}) {
       padding-left: 0;
     }
   }
 `;
 
-const CategoryTitle = styled.h3`
-  font-weight: bold;
-  font-size: ${fonts.sizeBase};
-`;
-
 const StyledListItem = styled(ListItem)`
-  margin: ${spacing.xsmall} 0;
-  a,
-  a:visited {
-    color: ${colors.darkText};
+  margin: ${spacings.tiny} 0;
+  a {
+    text-decoration: none;
   }
 `;

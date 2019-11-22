@@ -98,7 +98,7 @@ IndemniteCCn.propTypes = {
 
 export { IndemniteCCn };
 
-const { fonts, spacing } = theme;
+const { fonts, spacings } = theme;
 
 const RowWrapper = styled.div`
   display: flex;
@@ -106,7 +106,7 @@ const RowWrapper = styled.div`
 `;
 
 const RowTitle = styled.div`
-  margin: ${spacing.tiny};
+  margin: ${spacings.tiny};
   font-weight: 700;
-  font-size: ${fonts.sizebase};
+  font-size: ${fonts.sizes.default};
 `;

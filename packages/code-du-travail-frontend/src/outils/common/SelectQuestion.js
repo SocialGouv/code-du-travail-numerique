@@ -65,12 +65,12 @@ SelectQuestion.propTypes = {
 
 export { SelectQuestion };
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const SubLabel = styled.label`
   display: block;
-  margin-bottom: ${theme.spacing.tiny};
-  font-size: ${theme.fonts.sizeBase};
+  margin-bottom: ${theme.spacings.tiny};
+  font-size: ${theme.fonts.sizes.default};
   cursor: ${props => (props.as ? "default" : "pointer")};
 `;
 
@@ -78,10 +78,10 @@ const Select = styled.select`
   flex: 1 1 70%;
   min-width: 400px;
   max-width: 100%;
-  margin-top: ${spacing.small};
-  margin-right: ${spacing.interComponent};
+  margin-top: ${spacings.small};
+  margin-right: ${spacings.medium};
 `;
 
 const Wrapper = styled.div`
-  margin: ${spacing.interComponent} 0;
+  margin: ${spacings.medium} 0;
 `;

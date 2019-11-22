@@ -14,7 +14,7 @@ import Table from "./Table";
 import Tabulator from "./Tabulator";
 import Title from "./Title";
 
-const { box, colors, spacing } = theme;
+const { box, colors, spacings } = theme;
 
 const parseChildren = (children, headingLevel) => (
   <ElementBuilder data={children} headingLevel={headingLevel} />
@@ -111,9 +111,9 @@ ElementBuilder.defaultProps = {
 };
 
 const ANoter = styled.div`
-  margin-bottom: ${spacing.base};
-  padding: ${spacing.base};
-  background-color: ${colors.lightBackground};
+  margin-bottom: ${spacings.base};
+  padding: ${spacings.base};
+  background-color: ${colors.bgSecondary};
   border-radius: ${box.borderRadius};
   & > *:first-child {
     margin-top: 0;
@@ -124,5 +124,5 @@ const ANoter = styled.div`
 `;
 
 const Introduction = styled.p`
-  margin-bottom: ${spacing.large};
+  margin-bottom: ${spacings.large};
 `;

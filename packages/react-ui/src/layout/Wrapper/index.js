@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { box, breakpoints, spacing } from "../../theme";
+import { box, breakpoints, spacings } from "../../theme";
 
 export const Wrapper = styled.div`
-  padding: ${spacing.small} ${spacing.medium};
-  color: ${({ theme }) => theme.darkText};
+  padding: ${spacings.small} ${spacings.medium};
+  color: ${({ theme }) => theme.paragraph};
   border: ${box.border};
   border-radius: ${box.borderRadius};
   ${props => {
     if (props.size === "large") {
       return css`
-        padding: ${spacing.large} ${spacing.larger};
+        padding: ${spacings.large} ${spacings.larger};
       `;
     }
   }}
@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
     }
     if (props.variant === "dark") {
       return css`
-        background-color: ${props.theme.darkBackground};
+        background-color: ${props.theme.bgTertiary};
       `;
     }
   }}
@@ -38,7 +38,7 @@ export const Wrapper = styled.div`
     margin-bottom: 0;
   }
   @media (max-width: ${breakpoints.mobile}) {
-    padding: ${spacing.small} ${spacing.medium};
+    padding: ${spacings.small} ${spacings.medium};
   }
   @media print {
     padding: 0 5pt;
@@ -48,13 +48,11 @@ export const Wrapper = styled.div`
 
 Wrapper.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
   size: PropTypes.oneOf(["default", "large"]),
   variant: PropTypes.oneOf(["default", "light", "dark"])
 };
 
 Wrapper.defaultProps = {
-  className: "",
   size: "default",
   variant: "default"
 };

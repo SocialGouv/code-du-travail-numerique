@@ -1,53 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaires /> should add a salaire 1`] = `
-.c5 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  line-height: initial;
+  color: #ff7067;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.625;
   text-align: left;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
 }
 
-.c5:focus,
-.c5:hover,
-.c5:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c6:focus,
+.c6:hover,
+.c6:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8 {
+  height: 1.4rem;
+  margin-left: 0.4rem;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c5:hover .c8 {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .c3 {
   width: 10em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
-  padding-right: 1rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
+  padding-right: 1.6rem;
   text-align: right;
 }
 
@@ -62,21 +81,21 @@ exports[`<Salaires /> should add a salaire 1`] = `
 .c2 {
   position: relative;
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 1.6rem;
 }
 
 .c4 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: #adb9c9;
+  color: #4d73b8;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 .c1 {
-  margin-right: 0.625rem;
+  margin-right: 1rem;
 }
 
 .c0 {
@@ -92,16 +111,16 @@ exports[`<Salaires /> should add a salaire 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.25rem;
-}
-
-.c6 {
-  margin-right: 1.25rem;
-  font-size: 0.875rem;
+  margin-bottom: 0.4rem;
 }
 
 .c7 {
-  margin: 1.25rem 0;
+  margin-right: 2rem;
+  font-size: 1.4rem;
+}
+
+.c9 {
+  margin: 2rem 0;
 }
 
 <div>
@@ -136,61 +155,124 @@ exports[`<Salaires /> should add a salaire 1`] = `
       </span>
     </div>
     <button
-      class="c5 c6"
+      class="c5 c6 c7"
       type="button"
     >
       Supprimer
+      <svg
+        class="c8"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="5"
+          x2="19"
+          y1="12"
+          y2="12"
+        />
+        <polyline
+          points="12 5 19 12 12 19"
+        />
+      </svg>
     </button>
   </div>
   <button
-    class="c5 c7"
+    class="c5 c6 c9"
     type="button"
   >
     Ajouter un salaire
+    <svg
+      class="c8"
+      fill="none"
+      height="24"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        x1="5"
+        x2="19"
+        y1="12"
+        y2="12"
+      />
+      <polyline
+        points="12 5 19 12 12 19"
+      />
+    </svg>
   </button>
 </div>
 `;
 
 exports[`<Salaires /> should delete a salaires 1`] = `
-.c0 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  line-height: initial;
+  color: #ff7067;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.625;
   text-align: left;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
 }
 
-.c0:focus,
-.c0:hover,
-.c0:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c1:focus,
+.c1:hover,
+.c1:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
-.c1 {
-  margin: 1.25rem 0;
+.c3 {
+  height: 1.4rem;
+  margin-left: 0.4rem;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c0:hover .c3 {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
+.c2 {
+  margin: 2rem 0;
 }
 
 <div>
@@ -198,62 +280,103 @@ exports[`<Salaires /> should delete a salaires 1`] = `
     Indiquez les salaires mensuels bruts perçus pendant le contrat *
   </p>
   <button
-    class="c0 c1"
+    class="c0 c1 c2"
     type="button"
   >
     Ajouter un salaire
+    <svg
+      class="c3"
+      fill="none"
+      height="24"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        x1="5"
+        x2="19"
+        y1="12"
+        y2="12"
+      />
+      <polyline
+        points="12 5 19 12 12 19"
+      />
+    </svg>
   </button>
 </div>
 `;
 
 exports[`<Salaires /> should render 1`] = `
-.c5 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  line-height: initial;
+  color: #ff7067;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.625;
   text-align: left;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
 }
 
-.c5:focus,
-.c5:hover,
-.c5:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c6:focus,
+.c6:hover,
+.c6:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8 {
+  height: 1.4rem;
+  margin-left: 0.4rem;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c5:hover .c8 {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .c3 {
   width: 10em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
-  padding-right: 1rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
+  padding-right: 1.6rem;
   text-align: right;
 }
 
@@ -268,21 +391,21 @@ exports[`<Salaires /> should render 1`] = `
 .c2 {
   position: relative;
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 1.6rem;
 }
 
 .c4 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: #adb9c9;
+  color: #4d73b8;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 .c1 {
-  margin-right: 0.625rem;
+  margin-right: 1rem;
 }
 
 .c0 {
@@ -298,16 +421,16 @@ exports[`<Salaires /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.25rem;
-}
-
-.c6 {
-  margin-right: 1.25rem;
-  font-size: 0.875rem;
+  margin-bottom: 0.4rem;
 }
 
 .c7 {
-  margin: 1.25rem 0;
+  margin-right: 2rem;
+  font-size: 1.4rem;
+}
+
+.c9 {
+  margin: 2rem 0;
 }
 
 <div>
@@ -342,17 +465,61 @@ exports[`<Salaires /> should render 1`] = `
       </span>
     </div>
     <button
-      class="c5 c6"
+      class="c5 c6 c7"
       type="button"
     >
       Supprimer
+      <svg
+        class="c8"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="5"
+          x2="19"
+          y1="12"
+          y2="12"
+        />
+        <polyline
+          points="12 5 19 12 12 19"
+        />
+      </svg>
     </button>
   </div>
   <button
-    class="c5 c7"
+    class="c5 c6 c9"
     type="button"
   >
     Ajouter un salaire
+    <svg
+      class="c8"
+      fill="none"
+      height="24"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        x1="5"
+        x2="19"
+        y1="12"
+        y2="12"
+      />
+      <polyline
+        points="12 5 19 12 12 19"
+      />
+    </svg>
   </button>
 </div>
 `;

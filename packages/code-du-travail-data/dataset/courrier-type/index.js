@@ -6,7 +6,7 @@ const basic_styles = `<style>
 .courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}
 .courrier-destinataire {display: flex; align-items: flex-end; flex-direction:column;}
 .courrier-signature {display: flex; flex-direction:column; align-items: flex-end;}
-.editable {color: blue}
+.editable {color: #4d73b8}
 </style>`;
 const options = {
   styleMap: [

@@ -10,28 +10,29 @@ exports[`<ReferenceList /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
-  color: #005994;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  color: #3e486e;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  background-color: #f2f5fa;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
 
 .c1:visited {
-  color: #434956;
+  color: #3e486e;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c1:active,
 .c1:hover {
-  border-color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
 .c0 {

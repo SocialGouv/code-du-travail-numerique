@@ -5,12 +5,14 @@ import {
   Toast,
   Container,
   Section,
-  theme
+  theme,
+  Title
 } from "@socialgouv/react-ui";
 
 const accordionItemsLeft = [
   {
-    title: <h3>Les textes internationaux</h3>,
+    title: "Les textes internationaux",
+    as: "h3",
     body: (
       <>
         <p>
@@ -75,7 +77,8 @@ const accordionItemsLeft = [
     )
   },
   {
-    title: <h3>La Constitution française</h3>,
+    title: "La Constitution française",
+    as: "h3",
     body: (
       <>
         <p>
@@ -128,7 +131,8 @@ const accordionItemsLeft = [
     )
   },
   {
-    title: <h3>Les conventions et accords collectifs</h3>,
+    title: "Les conventions et accords collectifs",
+    as: "h3",
     body: (
       <>
         <p>
@@ -153,7 +157,8 @@ const accordionItemsLeft = [
     )
   },
   {
-    title: <h3>Le règlement intérieur de l’entreprise</h3>,
+    title: "Le règlement intérieur de l’entreprise",
+    as: "h3",
     body: (
       <>
         Le règlement intérieur de l’entreprise est un acte écrit par l’employeur
@@ -166,7 +171,8 @@ const accordionItemsLeft = [
 
 const accordionItemsRight = [
   {
-    title: <h3>Les textes européens</h3>,
+    title: "Les textes européens",
+    as: "h3",
     body: (
       <>
         <p>
@@ -256,7 +262,8 @@ const accordionItemsRight = [
     )
   },
   {
-    title: <h3>Lois, ordonnances, décrets et arrêtés</h3>,
+    title: "Lois, ordonnances, décrets et arrêtés",
+    as: "h3",
     body: (
       <>
         <p>
@@ -298,7 +305,8 @@ const accordionItemsRight = [
     )
   },
   {
-    title: <h3>Les usages et les engagements unilatéraux</h3>,
+    title: "Les usages et les engagements unilatéraux",
+    as: "h3",
     body: (
       <>
         <p>
@@ -322,7 +330,8 @@ const accordionItemsRight = [
     )
   },
   {
-    title: <h3>Le contrat de travail</h3>,
+    title: "Le contrat de travail",
+    as: "h3",
     body: (
       <>
         <p>
@@ -351,7 +360,9 @@ const accordionItemsRight = [
 const Origins = () => (
   <Section variant="light">
     <Container narrow>
-      <h2>Quels sont les textes à l’origine du droit du travail ?</h2>
+      <Title>
+        Quels sont les textes à l’origine du droit du travail&nbsp;?
+      </Title>
       <p>
         Le droit du travail est construit par de nombreux textes juridiques dont
         les sources sont diverses&nbsp;: sources internationales, sources
@@ -376,13 +387,13 @@ const Origins = () => (
 
 export default Origins;
 
-const { breakpoints, box, spacing } = theme;
+const { breakpoints, box, spacings } = theme;
 
 const AccordionContainer = styled(Container)`
   display: flex;
   align-items: flex-start;
-  padding-top: ${spacing.larger};
-  padding-bottom: ${spacing.larger};
+  padding-top: ${spacings.larger};
+  padding-bottom: ${spacings.larger};
   @media (max-width: ${breakpoints.tablet}) {
     flex-wrap: wrap;
   }
@@ -391,7 +402,7 @@ const AccordionContainer = styled(Container)`
 const OriginAccordion = styled(Accordion)`
   flex: 0 1 50%;
   & + & {
-    margin-left: ${spacing.larger};
+    margin-left: ${spacings.larger};
   }
   @media (max-width: ${breakpoints.tablet}) {
     flex: 0 0 100%;

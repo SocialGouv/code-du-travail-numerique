@@ -13,83 +13,18 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  box-shadow: none;
-  -webkit-animation: none;
-  animation: none;
-}
-
-.c10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: auto;
-  min-height: 48px;
-  color: #434956;
-  background-color: #fff;
-  border-color: #e5f1fe;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: none;
   animation: none;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #e5f1fe;
-}
-
-.c4 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -97,31 +32,31 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c9 {
+.c8 {
   width: 7em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
 }
 
-.c9::-webkit-outer-spin-button,
-.c9::-webkit-inner-spin-button {
+.c8::-webkit-outer-spin-button,
+.c8::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,10 +67,10 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,77 +86,82 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
-.c5 {
+.c4 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: default;
 }
 
-.c12 {
+.c9 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
-  margin-left: 0.625rem;
-  color: #b50113;
+  margin-left: 1rem;
+  color: #eb5757;
   font-weight: 700;
 }
 
-.c14 {
+.c11 {
   width: 10em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
-  padding-right: 1rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
+  padding-right: 1.6rem;
   text-align: right;
 }
 
-.c14::-webkit-outer-spin-button,
-.c14::-webkit-inner-spin-button {
+.c11::-webkit-outer-spin-button,
+.c11::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c13 {
+.c10 {
   position: relative;
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 1.6rem;
 }
 
-.c15 {
+.c12 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: #adb9c9;
+  color: #4d73b8;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 .c2 {
-  margin-top: 1.25rem;
+  margin-top: 2rem;
 }
 
 <div>
@@ -254,58 +194,27 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   >
     <div
       class="c3"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="9"
-          y2="13"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="17"
-          y2="17"
-        />
-      </svg>
-    </div>
-    <div
-      class="c4"
       role="alert"
     >
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
   </div>
   <p
-    class="c5"
+    class="c4"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
     <span
       aria-label="champs obligatoire"
-      class="c6"
+      class="c5"
     >
       *
     </span>
   </p>
   <div
-    class="c7"
+    class="c6"
   >
     <label
-      class="c8"
+      class="c7"
     >
       <input
         checked=""
@@ -318,7 +227,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       </span>
     </label>
     <label
-      class="c8"
+      class="c7"
     >
       <input
         name="hasBrancheContrat"
@@ -331,13 +240,13 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     </label>
   </div>
   <label
-    class="c8"
+    class="c7"
     for="duration"
   >
     Durée des contrats de travail précédents (en mois)
   </label>
   <input
-    class="c9"
+    class="c8"
     id="duration"
     name="brancheContrat.duration"
     size="7"
@@ -345,59 +254,26 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     value="3"
   />
   <div
-    class="c10 c2"
+    class="c1 c2"
   >
     <div
-      class="c11"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="16"
-          y2="12"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="8"
-          y2="8"
-        />
-      </svg>
-    </div>
-    <div
-      class="c4"
+      class="c3"
       role="alert"
     >
       Il est important de préciser l’indemnité de licenciement éventuellement perçue lors d’un précédent licenciement dans la même entreprise. L’employeur actuel peut la déduire de l’indemnité de licenciement en train d’être calculée.
     </div>
   </div>
   <label
-    class="c12"
+    class="c9"
     for="currency-1"
   >
     Indemnité de licenciement précédemment perçue
   </label>
   <div
-    class="c13"
+    class="c10"
   >
     <input
-      class="c14"
+      class="c11"
       id="currency-1"
       name="brancheContrat.indemnite"
       size="10"
@@ -406,21 +282,21 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     />
     <span
       aria-hidden="true"
-      class="c15"
+      class="c12"
     >
       €
     </span>
   </div>
   <p
-    class="c5"
+    class="c4"
   >
     Souhaitez vous déduire cette indemnité ?
   </p>
   <div
-    class="c7"
+    class="c6"
   >
     <label
-      class="c8"
+      class="c7"
     >
       <input
         name="brancheContrat.considered"
@@ -432,7 +308,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       </span>
     </label>
     <label
-      class="c8"
+      class="c7"
     >
       <input
         checked=""
@@ -461,39 +337,18 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   box-sizing: border-box;
   width: auto;
   min-height: 48px;
-  color: #434956;
+  color: #3e486e;
   background-color: #fff;
-  border-color: #fee5ad;
+  border-color: #7598d6;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 0.6rem;
   box-shadow: none;
   -webkit-animation: none;
   animation: none;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c4 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -501,12 +356,12 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  padding: 1rem;
-  color: #434956;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
   text-align: left;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -517,10 +372,10 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -536,32 +391,37 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
-.c5 {
+.c4 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: default;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
-  margin-left: 0.625rem;
-  color: #b50113;
+  margin-left: 1rem;
+  color: #eb5757;
   font-weight: 700;
 }
 
 .c2 {
-  margin-top: 1.25rem;
+  margin-top: 2rem;
 }
 
 <div>
@@ -594,58 +454,27 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   >
     <div
       class="c3"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="9"
-          y2="13"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="17"
-          y2="17"
-        />
-      </svg>
-    </div>
-    <div
-      class="c4"
       role="alert"
     >
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
   </div>
   <p
-    class="c5"
+    class="c4"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
     <span
       aria-label="champs obligatoire"
-      class="c6"
+      class="c5"
     >
       *
     </span>
   </p>
   <div
-    class="c7"
+    class="c6"
   >
     <label
-      class="c8"
+      class="c7"
     >
       <input
         name="hasBrancheContrat"
@@ -657,7 +486,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
       </span>
     </label>
     <label
-      class="c8"
+      class="c7"
     >
       <input
         name="hasBrancheContrat"

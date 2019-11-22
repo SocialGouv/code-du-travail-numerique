@@ -1,60 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should render 1`] = `
+.c1 + .c0 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c4 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 2rem 0;
+  padding: 0;
+}
+
 .c3 {
   position: relative;
-  display: inline-block;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 12px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+  margin-right: 1rem;
+  color: #7598d6;
 }
 
-.c3::after,
-.c3::before {
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 10px;
-  height: 2px;
-  background-color: currentColor;
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  content: "";
-}
-
-.c3::before {
-  left: 4px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-[aria-expanded="true"] .c3::before,
-[aria-selected="true"] .c3::before {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c3::after {
-  right: 4px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-[aria-expanded="true"] .c3::after,
-[aria-selected="true"] .c3::after {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.c1 + .c0 {
-  border-top: 1px solid #c9d3df;
+[aria-expanded="true"] .c3,
+[aria-selected="true"] .c3 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .c2 {
@@ -66,10 +44,10 @@ exports[`<Accordion /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   cursor: pointer;
 }
 
@@ -77,24 +55,24 @@ exports[`<Accordion /> should render 1`] = `
 .c2:focus,
 .c2:focus-within,
 .c2[aria-expanded="true"] {
-  color: #005994;
+  color: #3e486e;
 }
 
-.c4 {
-  padding: 1rem;
+.c5 {
+  padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c4 > *:first-child {
+.c5 > *:first-child {
   margin-top: 0;
 }
 
-.c4 > *:last-child {
+.c5 > *:last-child {
   margin-bottom: 0;
 }
 
-.c4.accordion__body--hidden {
+.c5.accordion__body--hidden {
   display: none;
 }
 
@@ -123,17 +101,33 @@ exports[`<Accordion /> should render 1`] = `
           role="button"
           tabindex="0"
         >
-          This is the title
-          <div
+          <svg
             class="c3"
-            role="presentation"
-          />
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <h3
+            class="c4"
+          >
+            This is the title
+          </h3>
         </div>
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-0"
-        class="c4"
+        class="c5"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-0"

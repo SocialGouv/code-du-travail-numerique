@@ -1,27 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignement /> should render suggestions 1`] = `
-.c1 {
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin: 1rem 0 2rem;
+  margin: 1.6rem 0 3.2rem;
   font-weight: bold;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #005994;
-}
-
-.c2 {
-  padding: 0 1rem;
-  color: #005994;
-  font-size: 2rem;
+  border: 1px solid #7598d6;
 }
 
 .c3 {
+  padding: 0 1.6rem;
+  color: #3e486e;
+  font-size: 2rem;
+}
+
+.c4 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -35,14 +44,14 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 1rem 0 1.25rem;
+  padding: 0 1.6rem 0 2rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-style: normal;
-  background-color: #005994;
+  background-color: #7598d6;
 }
 
-.c3::before {
+.c4::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -57,25 +66,24 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   content: "";
 }
 
-.c4 {
+.c5 {
   width: 100%;
-  margin-top: 0.625rem;
+  margin-top: 1rem;
 }
 
-.c5 {
+.c6 {
   display: block;
-  margin-top: 1.25rem;
-  color: #8393a7;
+  margin-top: 2rem;
 }
 
 @media (max-width:980px) {
-  .c0 {
+  .c1 {
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c1 {
+  .c2 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -83,41 +91,45 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 @media (max-width:980px) {
-  .c3 {
-    padding: 0.625rem;
+  .c4 {
+    padding: 1rem;
   }
 }
 
 @media (max-width:980px) {
-  .c3::before {
+  .c4::before {
     display: none;
   }
 }
 
 <div>
-  <h4>
+  <h4
+    class="c0"
+  >
     Contacter les services de renseignement par téléphone
   </h4>
   <div
-    class="c0"
+    class="c1"
   >
     <a
-      class="c1"
+      class="c2"
       href="tel:+0033806000126"
     >
       <strong
-        class="c2"
+        class="c3"
       >
         0 806 000 126
       </strong>
       <em
-        class="c3"
+        class="c4"
       >
         Service gratuit + prix appel
       </em>
     </a>
   </div>
-  <h4>
+  <h4
+    class="c0"
+  >
     Trouver les coordonnées du service de renseignement de mon département
   </h4>
   <p>
@@ -127,7 +139,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       Saisissez votre numéro de département :
     </label>
     <input
-      class="c4"
+      class="c5"
       id="id_1"
       maxlength="3"
       type="text"
@@ -145,7 +157,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </a>
   </p>
   <small
-    class="c5"
+    class="c6"
   >
     Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
     <ul>

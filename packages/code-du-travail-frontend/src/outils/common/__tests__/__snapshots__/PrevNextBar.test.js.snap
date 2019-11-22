@@ -2,65 +2,93 @@
 
 exports[`<PrevNextBar /> should render 1`] = `
 .c1 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c1:link,
 .c1:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c1[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
 .c3 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c3:link,
@@ -73,13 +101,17 @@ exports[`<PrevNextBar /> should render 1`] = `
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
 .c3[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
@@ -88,7 +120,7 @@ exports[`<PrevNextBar /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem 0;
+  margin: 3.2rem 0;
 }
 
 .c4 {
@@ -118,185 +150,95 @@ exports[`<PrevNextBar /> should render 1`] = `
 </div>
 `;
 
-exports[`<PrevNextBar /> should render error buttons 1`] = `
+exports[`<PrevNextBar /> should render a disabled button 1`] = `
 .c1 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-}
-
-.c1:link,
-.c1:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #0c0c0e;
-}
-
-.c1:not([disabled]):hover,
-.c1:not([disabled]):active,
-.c1:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
-}
-
-.c1[disabled] {
-  color: rgba(12,12,14,0.4);
-  cursor: not-allowed;
-}
-
-.c3 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #0c0c0e;
-  background: #f6bcc2;
-  border-color: #f6bcc2;
-}
-
-.c3:link,
-.c3:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #0c0c0e;
-}
-
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
-  color: #18181c;
-  background: #f9d2d6;
-  border-color: #f3a6ae;
-}
-
-.c3[disabled] {
-  color: rgba(12,12,14,0.4);
-  cursor: not-allowed;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 2rem 0;
-}
-
-.c4 {
-  margin-left: auto;
-}
-
-.c2 {
-  margin-right: auto;
-}
-
-<div>
-  <div
-    class="c0"
-  >
-    <button
-      class="c1 c2"
-      type="button"
-    >
-      Précédent
-    </button>
-    <button
-      class="c3 c4"
-    >
-      Suivant
-    </button>
-  </div>
-</div>
-`;
-
-exports[`<PrevNextBar /> should render incomplete buttons 1`] = `
-.c1 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-}
-
-.c1:link,
-.c1:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #0c0c0e;
-}
-
-.c1:not([disabled]):hover,
-.c1:not([disabled]):active,
-.c1:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
-}
-
-.c1[disabled] {
-  color: rgba(12,12,14,0.4);
-  cursor: not-allowed;
-}
-
-.c3 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
+}
+
+.c1:link,
+.c1:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
+}
+
+.c1[disabled] {
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c3:link,
@@ -309,13 +251,17 @@ exports[`<PrevNextBar /> should render incomplete buttons 1`] = `
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
 .c3[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
@@ -324,7 +270,7 @@ exports[`<PrevNextBar /> should render incomplete buttons 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem 0;
+  margin: 3.2rem 0;
 }
 
 .c4 {
@@ -347,6 +293,7 @@ exports[`<PrevNextBar /> should render incomplete buttons 1`] = `
     </button>
     <button
       class="c3 c4"
+      disabled=""
     >
       Suivant
     </button>
@@ -356,65 +303,93 @@ exports[`<PrevNextBar /> should render incomplete buttons 1`] = `
 
 exports[`<PrevNextBar /> should render only next button 1`] = `
 .c1 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c1:link,
 .c1:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c1[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
 .c3 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
+  background: #ff7067;
+  border-color: #ff7067;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c3:link,
@@ -427,13 +402,17 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 .c3:not([disabled]):hover,
 .c3:not([disabled]):active,
 .c3:not([disabled]):focus {
-  color: #fff;
-  background: #0068ae;
-  border-color: #004a7b;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #ffa09a;
+  border-color: #ffa09a;
 }
 
 .c3[disabled] {
   color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
@@ -442,7 +421,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem 0;
+  margin: 3.2rem 0;
 }
 
 .c4 {
@@ -474,43 +453,59 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 
 exports[`<PrevNextBar /> should render only prev button 1`] = `
 .c1 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
 }
 
 .c1:link,
 .c1:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0c0c0e;
+  color: #fff;
 }
 
 .c1:not([disabled]):hover,
 .c1:not([disabled]):active,
 .c1:not([disabled]):focus {
-  color: #18181c;
-  background: #fbfcfd;
-  border-color: #dbe2e9;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c1[disabled] {
-  color: rgba(12,12,14,0.4);
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
@@ -519,7 +514,7 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem 0;
+  margin: 3.2rem 0;
 }
 
 .c2 {

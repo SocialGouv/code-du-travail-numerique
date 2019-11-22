@@ -1,13 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Texte /> renders with a title 1`] = `
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c9 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c3 {
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 }
 
 .c4 {
   display: block;
-  padding: 0.25rem 0;
+  padding: 0.4rem 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -17,16 +35,16 @@ exports[`<Texte /> renders with a title 1`] = `
 }
 
 .c1 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c2 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
   max-height: 100%;
   overflow: auto;
 }
@@ -39,33 +57,20 @@ exports[`<Texte /> renders with a title 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  margin-bottom: 0.625rem;
+.c7 {
+  margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1em;
   font-style: italic;
 }
 
-.c10 {
-  margin-bottom: 0.625rem;
-}
-
-.c7 {
-  font-size: 1.625rem;
-}
-
 .c8 {
-  font-size: 1.375rem;
+  margin-bottom: 1rem;
 }
 
 .c5 {
-  padding: 1.25rem 0;
-  color: #434956;
-}
-
-.c6 {
-  margin-top: 0;
-  margin-bottom: 2rem;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 @media (min-width:980px) {
@@ -77,13 +82,13 @@ exports[`<Texte /> renders with a title 1`] = `
     -ms-flex: 0 1 35%;
     flex: 0 1 35%;
     max-height: 100vh;
-    padding-right: 1.25rem;
+    padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
   .c2 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -317,22 +322,22 @@ exports[`<Texte /> renders with a title 1`] = `
         This title must be in snapshot
       </h2>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524044"
       >
         Préambule
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524059"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -397,27 +402,28 @@ exports[`<Texte /> renders with a title 1`] = `
         <p />
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524045"
       >
         Titre Ier Clauses générales
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524073"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524073"
       >
         Commission paritaire nationale de l'emploi
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -501,33 +507,34 @@ exports[`<Texte /> renders with a title 1`] = `
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524046"
       >
         Titre II Droit syndical et représentants du personnel
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALISCTA000038524075"
       >
         Chapitre Ier Droit syndical
       </h4>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524152"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524152"
       >
         Congés de formation économique, sociale et syndicale
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -591,27 +598,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h4
-        class="c8"
+        class="c6"
         id="KALISCTA000038524076"
       >
         Chapitre II Comité social et économique
       </h4>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524157"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524157"
       >
         Comité social et économique
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="center"
@@ -683,27 +691,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524047"
       >
         Titre III Embauche
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524081"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524081"
       >
         Période d'essai pour les contrats à durée déterminée
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -750,27 +759,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524048"
       >
         Titre IV Salaires et primes
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524085"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524085"
       >
         Prime de transport
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -780,50 +790,52 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524049"
       >
         Titre V Modification du contrat de travail
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524088"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524088"
       >
         (supprimé)
       </h5>
       <div
-        class="c10"
+        class="c8"
       />
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524050"
       >
         Titre VI Durée du travail
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524094"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524094"
       >
         Temps de pause. – Pause casse-croûte
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="center"
@@ -852,33 +864,34 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524051"
       >
         Titre VII Congés payés. – Congés pour événements familiaux. – Congés d'ancienneté
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALISCTA000038524095"
       >
         Chapitre Ier Congés payés
       </h4>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524162"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524162"
       >
         Indemnité de congés payés
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -914,27 +927,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h4
-        class="c8"
+        class="c6"
         id="KALISCTA000038524096"
       >
         Chapitre II Congés pour événements familiaux et congé d'ancienneté
       </h4>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524167"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524167"
       >
         Congé d'ancienneté
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -952,27 +966,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524052"
       >
         Titre VIII Maladie et accident. – Maternité. – Accident du travail
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524104"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524104"
       >
         Dispositions générales
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -1006,27 +1021,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524053"
       >
         Titre IX Suspension du contrat de travail
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524107"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524107"
       >
         Démission pour élever un enfant et congé parental d'éducation
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="center"
@@ -1070,27 +1086,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524054"
       >
         Titre X Rupture du contrat de travail
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524110"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524110"
       >
         Gratification de fin de carrière
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -1113,27 +1130,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524055"
       >
         Titre XI Dispositions particulières aux jeunes et à l'égalité entre hommes et femmes
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524112"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524112"
       >
         Égalité professionnelle. – Égalité de traitement
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -1164,27 +1182,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524056"
       >
         Titre XII Hygiène, sécurité et santé au travail. – Services de santé au travail
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524117"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524117"
       >
         Visite des chauffeurs
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -1201,27 +1220,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524057"
       >
         Titre XIII Dispositions générales relatives à l'emploi
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524127"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524127"
       >
         Préavis
       </h5>
       <div
-        class="c10"
+        class="c8"
       >
         <p
           align="left"
@@ -1237,16 +1257,16 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALIARTI000038531122"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <div
-        class="c10"
+        class="c8"
       >
         <p>
           Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'
@@ -1260,22 +1280,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h3
-        class="c7"
+        class="c6"
         id="KALISCTA000038524058"
       >
         Annexes
       </h3>
       <h4
-        class="c8"
+        class="c6"
         id="KALIARTI000038524128"
       />
       <div
-        class="c9"
+        class="c7"
       >
         Article non étendu
       </div>
       <div
-        class="c10"
+        class="c8"
       >
         <p>
           Annexes 
@@ -1440,13 +1460,31 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
 `;
 
 exports[`<Texte /> renders without a title 1`] = `
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+.c9 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c3 {
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 }
 
 .c4 {
   display: block;
-  padding: 0.25rem 0;
+  padding: 0.4rem 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -1456,16 +1494,16 @@ exports[`<Texte /> renders without a title 1`] = `
 }
 
 .c1 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c2 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  background-color: #e4e8ef;
   max-height: 100%;
   overflow: auto;
 }
@@ -1478,28 +1516,20 @@ exports[`<Texte /> renders without a title 1`] = `
   margin-bottom: 0;
 }
 
-.c8 {
-  margin-bottom: 0.625rem;
+.c7 {
+  margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1em;
   font-style: italic;
 }
 
-.c9 {
-  margin-bottom: 0.625rem;
-}
-
-.c6 {
-  font-size: 1.625rem;
-}
-
-.c7 {
-  font-size: 1.375rem;
+.c8 {
+  margin-bottom: 1rem;
 }
 
 .c5 {
-  padding: 1.25rem 0;
-  color: #434956;
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 @media (min-width:980px) {
@@ -1511,13 +1541,13 @@ exports[`<Texte /> renders without a title 1`] = `
     -ms-flex: 0 1 35%;
     flex: 0 1 35%;
     max-height: 100vh;
-    padding-right: 1.25rem;
+    padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
   .c2 {
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -1752,16 +1782,16 @@ exports[`<Texte /> renders without a title 1`] = `
         Préambule
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524059"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -1832,21 +1862,22 @@ exports[`<Texte /> renders without a title 1`] = `
         Titre Ier Clauses générales
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524073"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524073"
       >
         Commission paritaire nationale de l'emploi
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -1936,27 +1967,28 @@ exports[`<Texte /> renders without a title 1`] = `
         Titre II Droit syndical et représentants du personnel
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALISCTA000038524075"
       >
         Chapitre Ier Droit syndical
       </h4>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524152"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524152"
       >
         Congés de formation économique, sociale et syndicale
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2020,27 +2052,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h4
-        class="c7"
+        class="c6"
         id="KALISCTA000038524076"
       >
         Chapitre II Comité social et économique
       </h4>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524157"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524157"
       >
         Comité social et économique
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="center"
@@ -2118,21 +2151,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre III Embauche
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524081"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524081"
       >
         Période d'essai pour les contrats à durée déterminée
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2185,21 +2219,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre IV Salaires et primes
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524085"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524085"
       >
         Prime de transport
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2215,21 +2250,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre V Modification du contrat de travail
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524088"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524088"
       >
         (supprimé)
       </h5>
       <div
-        class="c9"
+        class="c8"
       />
       <h3
         class="c6"
@@ -2238,21 +2274,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre VI Durée du travail
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524094"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524094"
       >
         Temps de pause. – Pause casse-croûte
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="center"
@@ -2287,27 +2324,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre VII Congés payés. – Congés pour événements familiaux. – Congés d'ancienneté
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALISCTA000038524095"
       >
         Chapitre Ier Congés payés
       </h4>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524162"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524162"
       >
         Indemnité de congés payés
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2343,27 +2381,28 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         </p>
       </div>
       <h4
-        class="c7"
+        class="c6"
         id="KALISCTA000038524096"
       >
         Chapitre II Congés pour événements familiaux et congé d'ancienneté
       </h4>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524167"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524167"
       >
         Congé d'ancienneté
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2387,21 +2426,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre VIII Maladie et accident. – Maternité. – Accident du travail
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524104"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524104"
       >
         Dispositions générales
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2441,21 +2481,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre IX Suspension du contrat de travail
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524107"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524107"
       >
         Démission pour élever un enfant et congé parental d'éducation
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="center"
@@ -2505,21 +2546,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre X Rupture du contrat de travail
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524110"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524110"
       >
         Gratification de fin de carrière
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2548,21 +2590,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre XI Dispositions particulières aux jeunes et à l'égalité entre hommes et femmes
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524112"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524112"
       >
         Égalité professionnelle. – Égalité de traitement
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2599,21 +2642,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre XII Hygiène, sécurité et santé au travail. – Services de santé au travail
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524117"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524117"
       >
         Visite des chauffeurs
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2636,21 +2680,22 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Titre XIII Dispositions générales relatives à l'emploi
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524127"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <h5
+        class="c9"
         id="KALIARTI000038524127"
       >
         Préavis
       </h5>
       <div
-        class="c9"
+        class="c8"
       >
         <p
           align="left"
@@ -2670,12 +2715,12 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         id="KALIARTI000038531122"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         <p>
           Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'
@@ -2695,16 +2740,16 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
         Annexes
       </h3>
       <h4
-        class="c7"
+        class="c6"
         id="KALIARTI000038524128"
       />
       <div
-        class="c8"
+        class="c7"
       >
         Article non étendu
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         <p>
           Annexes 

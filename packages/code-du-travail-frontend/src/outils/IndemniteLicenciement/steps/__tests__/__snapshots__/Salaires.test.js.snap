@@ -37,28 +37,34 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
-  border: 1px solid #c9d3df;
+  border: 1px solid #bbcadf;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 .c6 caption {
-  padding: 0.625rem 0;
+  padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
 .c6 td,
 .c6 th {
-  padding: 0.625rem 1rem;
-  border: 1px solid #c9d3df;
+  padding: 1rem 1.6rem;
+  border: 1px solid #bbcadf;
+}
+
+.c6 th {
+  color: #2f3b6c;
+  font-weight: 600;
+  background: #e4e8ef;
 }
 
 .c6 thead,
 .c6 tfoot {
-  padding: 0.625rem 1rem;
+  padding: 1rem 1.6rem;
   vertical-align: bottom;
-  background: #f9f9fc;
+  background: #f2f5fa;
 }
 
 .c6 tfoot {
@@ -76,7 +82,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -95,21 +101,21 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c0 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: default;
 }
 
 .c1 {
   display: inline-block;
-  margin-left: 0.625rem;
-  color: #b50113;
+  margin-left: 1rem;
+  color: #eb5757;
   font-weight: 700;
 }
 
@@ -124,14 +130,14 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 
 .c9 {
   width: 10em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
-  padding-right: 1rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
+  padding-right: 1.6rem;
   text-align: right;
 }
 
@@ -146,14 +152,14 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 .c8 {
   position: relative;
   display: inline-block;
-  margin-right: 1.25rem;
+  margin-right: 2rem;
 }
 
 .c10 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: #adb9c9;
+  color: #4d73b8;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -630,7 +636,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -649,42 +655,42 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c0 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: default;
 }
 
 .c4 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
 .c1 {
   display: inline-block;
-  margin-left: 0.625rem;
-  color: #b50113;
+  margin-left: 1rem;
+  color: #eb5757;
   font-weight: 700;
 }
 
 .c6 {
   width: 10em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
-  padding-right: 1rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
+  padding-right: 1.6rem;
   text-align: right;
 }
 
@@ -699,14 +705,14 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 .c5 {
   position: relative;
   display: inline-block;
-  margin-right: 1.25rem;
+  margin-right: 2rem;
 }
 
 .c7 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: #adb9c9;
+  color: #4d73b8;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -828,41 +834,60 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 `;
 
 exports[`<StepSalaires /> should render tempsPartiel 1`] = `
-.c14 {
-  display: inline-block;
-  padding: 0.625rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: inherit;
+.c15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
   text-align: center;
   vertical-align: middle;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  line-height: initial;
+  color: #ff7067;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.625;
   text-align: left;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  vertical-align: initial;
   background: none;
   border: none;
   border-radius: 0;
 }
 
-.c14:focus,
-.c14:hover,
-.c14:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c15:focus,
+.c15:hover,
+.c15:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17 {
+  height: 1.4rem;
+  margin-left: 0.4rem;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c14:hover .c17 {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .c3 {
@@ -876,7 +901,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -895,34 +920,34 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .c0 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: default;
 }
 
 .c4 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
 .c1 {
   display: inline-block;
-  margin-left: 0.625rem;
-  color: #b50113;
+  margin-left: 1rem;
+  color: #eb5757;
   font-weight: 700;
 }
 
-.c16 {
-  margin: 1.25rem 0;
+.c18 {
+  margin: 2rem 0;
 }
 
 .c5 {
@@ -934,21 +959,21 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
 }
 
 .c6 {
   -webkit-flex-basis: 15rem;
   -ms-flex-preferred-size: 15rem;
   flex-basis: 15rem;
-  margin-right: 1.25rem;
+  margin-right: 2rem;
 }
 
 .c8 {
   -webkit-flex-basis: 8rem;
   -ms-flex-preferred-size: 8rem;
   flex-basis: 8rem;
-  margin-right: 1.25rem;
+  margin-right: 2rem;
 }
 
 .c7 {
@@ -961,14 +986,14 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 
 .c10 {
   width: 8em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
-  padding-right: 1rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
+  padding-right: 1.6rem;
   text-align: right;
 }
 
@@ -982,14 +1007,14 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 
 .c12 {
   width: 10em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
-  padding-right: 1rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
+  padding-right: 1.6rem;
   text-align: right;
 }
 
@@ -1010,15 +1035,15 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: #adb9c9;
+  color: #4d73b8;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.c15 {
-  margin-left: 1.25rem;
-  font-size: 0.875rem;
+.c16 {
+  margin-left: 2rem;
+  font-size: 1.4rem;
 }
 
 <div>
@@ -1134,10 +1159,32 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         </span>
       </div>
       <button
-        class="c14 c15"
+        class="c14 c15 c16"
         type="button"
       >
         Supprimer
+        <svg
+          class="c17"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="5"
+            x2="19"
+            y1="12"
+            y2="12"
+          />
+          <polyline
+            points="12 5 19 12 12 19"
+          />
+        </svg>
       </button>
     </div>
   </div>
@@ -1189,18 +1236,62 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         </span>
       </div>
       <button
-        class="c14 c15"
+        class="c14 c15 c16"
         type="button"
       >
         Supprimer
+        <svg
+          class="c17"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="5"
+            x2="19"
+            y1="12"
+            y2="12"
+          />
+          <polyline
+            points="12 5 19 12 12 19"
+          />
+        </svg>
       </button>
     </div>
   </div>
   <button
-    class="c14 c16"
+    class="c14 c15 c18"
     type="button"
   >
     Ajouter une période
+    <svg
+      class="c17"
+      fill="none"
+      height="24"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        x1="5"
+        x2="19"
+        y1="12"
+        y2="12"
+      />
+      <polyline
+        points="12 5 19 12 12 19"
+      />
+    </svg>
   </button>
 </div>
 `;

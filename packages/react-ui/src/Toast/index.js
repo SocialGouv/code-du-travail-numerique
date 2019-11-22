@@ -1,21 +1,13 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { AlertTriangle, Info, Check, X } from "react-feather";
+import { X } from "react-feather";
 import { Button } from "../Button";
 
-import { box, spacing } from "../theme";
+import { box, spacings } from "../theme";
 import { fromTop, fromRight, fromBottom, fromLeft } from "../keyframes";
 
-const VARIANT_TO_ICON = {
-  info: Info,
-  success: Check,
-  warning: AlertTriangle
-};
-
 export const Toast = ({ children, onRemove, timeout, variant, ...props }) => {
-  const Icon = VARIANT_TO_ICON[variant];
-
   useEffect(() => {
     let timer;
     if (timeout && onRemove) {
@@ -28,24 +20,24 @@ export const Toast = ({ children, onRemove, timeout, variant, ...props }) => {
 
   return (
     <StyledToast variant={variant} {...props}>
-      <IconWrapper variant={variant}>
-        <Icon />
-      </IconWrapper>
       <Content role="alert">{children}</Content>
       {onRemove && (
-        <ButtonWrapper>
-          <Button variant="icon" aria-label="Fermer" onClick={onRemove}>
-            <X />
-          </Button>
-        </ButtonWrapper>
+        <Button
+          variant="naked"
+          narrow
+          small
+          aria-label="Fermer"
+          onClick={onRemove}
+        >
+          <StyledX variant={variant} />
+        </Button>
       )}
     </StyledToast>
   );
 };
 
 Toast.propTypes = {
-  className: PropTypes.string,
-  variant: PropTypes.oneOf(["warning", "success", "info"]),
+  variant: PropTypes.oneOf(["primary", "secondary"]),
   wide: PropTypes.bool,
   shadow: PropTypes.bool,
   animate: PropTypes.oneOf([
@@ -61,7 +53,7 @@ Toast.propTypes = {
 
 Toast.defaultProps = {
   wide: false,
-  variant: "info",
+  variant: "secondary",
   animate: null,
   onRemove: null
 };
@@ -72,13 +64,13 @@ const StyledToast = styled.div`
   box-sizing: border-box;
   width: ${props => (props.wide ? "100%" : "auto")};
   min-height: 48px;
-  color: ${({ theme }) => theme.darkText};
+  color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};
-  border-color: ${({ theme, variant }) => theme[`${variant}Background`]};
+  border-color: ${({ theme, variant }) => theme[`${variant}`]};
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-radius: ${box.borderRadius};
-  box-shadow: ${({ shadow }) => (shadow ? box.shadow : "none")};
+  box-shadow: ${({ shadow }) => (shadow ? box.shadow.default : "none")};
   animation: ${({ animate }) => {
     if (!animate) return "none";
     if (animate === "from-top") {
@@ -104,30 +96,15 @@ const StyledToast = styled.div`
   }};
 `;
 
-const IconWrapper = styled.div`
-  display: flex;
-  flex-grow: 0;
-  align-items: flex-start;
-  justify-content: center;
-  padding: ${spacing.base};
-  ${({ theme, variant }) => {
-    return css`
-      background-color: ${theme[`${variant}Background`]};
-    `;
-  }}
-`;
-
 const Content = styled.div`
   flex-grow: 1;
   align-self: center;
-  padding: ${spacing.base};
-  color: ${({ theme }) => theme.darkText};
+  padding: ${spacings.small} ${spacings.base};
+  color: ${({ theme }) => theme.paragraph};
   text-align: left;
 `;
 
-const ButtonWrapper = styled.div`
-  display: flex;
-  flex-grow: 0;
-  align-items: flex-start;
-  justify-content: center;
+const StyledX = styled(X)`
+  margin-top: ${spacings.tiny};
+  color: ${({ theme, variant }) => theme[`${variant}`]};
 `;

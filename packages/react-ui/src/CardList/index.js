@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Grid, GridCell } from "../Grid";
-import { SectionTitle } from "../SectionTitle";
+import { ListTitle } from "./ListTitle";
 
 export function CardList({ title, href, desc, columns, children }) {
   return (
     <>
-      <SectionTitle desc={desc} href={href}>
+      <ListTitle desc={desc} href={href}>
         {title}
-      </SectionTitle>
+      </ListTitle>
       <Grid columns={columns}>
         {Array.isArray(children) ? (
           React.Children.map(children, element => (

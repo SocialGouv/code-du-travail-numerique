@@ -23,9 +23,9 @@ export function StepInfoCCn(props) {
   );
 }
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const StyledToast = styled(Toast)`
   width: 100%;
-  margin-top: ${spacing.interComponent};
+  margin-top: ${spacings.medium};
 `;

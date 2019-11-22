@@ -1,9 +1,9 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import { X, Maximize } from "react-feather";
-import { createGlobalStyle } from "styled-components";
-import { variants } from "../theme";
+import styled from "styled-components";
+import { Maximize, Search, X } from "react-feather";
 import { Section } from "../layout/Section";
+import { spacings } from "../theme";
 import { Button } from ".";
 
 export default {
@@ -11,25 +11,21 @@ export default {
   title: "Components|Button"
 };
 
+const StyledSearchRight = styled(Search)`
+  padding-left: ${spacings.small};
+`;
+const StyledSearchLeft = styled(Search)`
+  padding-right: ${spacings.small};
+`;
+
 export const base = () =>
-  ["default"].concat(variants).map(variant => (
+  ["primary", "secondary", "flat"].map(variant => (
     <Section key={variant}>
-      <Button variant={variant} onClick={action("text button clicked")}>
+      <Button variant={variant} onClick={action("basic button clicked")}>
         {variant} button
       </Button>{" "}
-      <Button
-        size="small"
-        variant={variant}
-        onClick={action("text button clicked")}
-      >
-        {variant} small
-      </Button>{" "}
-      <Button
-        variant={variant}
-        onClick={action("You should not see this")}
-        outlined
-      >
-        {variant} outlined
+      <Button variant={variant} small onClick={action("small button clicked")}>
+        {variant} button
       </Button>{" "}
       <Button
         variant={variant}
@@ -44,12 +40,46 @@ export const base = () =>
 export const icons = () => (
   <>
     <Section>
-      <Button variant="icon" onClick={action("button X clicked")}>
+      <Button variant="primary" onClick={action("button text + icon clicked")}>
+        Some text <StyledSearchRight />
+      </Button>
+    </Section>
+    <Section>
+      <Button onClick={action("button icon + text on clicked")}>
+        <StyledSearchLeft /> Some text
+      </Button>
+    </Section>
+    <Section>
+      <Button small onClick={action("button small text + icon clicked")}>
+        Some text <StyledSearchRight />
+      </Button>
+    </Section>
+    <Section>
+      <Button variant="primary" narrow onClick={action("button X clicked")}>
         <X />
       </Button>
     </Section>
     <Section>
-      <Button variant="icon" onClick={action("Button Maximize clicked")}>
+      <Button variant="naked" narrow onClick={action("button X clicked")}>
+        <X />
+      </Button>
+    </Section>
+    <Section>
+      <Button
+        variant="secondary"
+        small
+        onClick={action("Button Maximize clicked")}
+      >
+        <X />
+      </Button>
+    </Section>
+    <Section>
+      <Button
+        variant="secondary"
+        narrow
+        small
+        onClick={action("Button Maximize clicked")}
+      >
         <Maximize />
       </Button>
     </Section>
@@ -58,23 +88,24 @@ export const icons = () => (
 
 export const link = () => (
   <Section>
-    {linkCss}
     <p>
       <Button variant="link" onClick={action("link button clicked")}>
-        Button link
+        Button with link variant
       </Button>
     </p>
     <p>
       <Button variant="secondary" as="a" href="https://code.travail.gouv.fr">
-        Button link
+        Button with &lt;a&gt; tag
       </Button>
     </p>
   </Section>
 );
-
-const linkCss = createGlobalStyle`
-  a {
-    color: blue;
-    text-decoration: underline;
-  }
-`;
+export const div = () => (
+  <Section>
+    <p>
+      <Button variant="secondary" as="div">
+        Button with &lt;div&gt; tag
+      </Button>
+    </p>
+  </Section>
+);

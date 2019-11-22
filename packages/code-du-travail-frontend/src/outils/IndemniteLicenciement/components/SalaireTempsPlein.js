@@ -97,7 +97,7 @@ SalaireTempsPlein.propTypes = {
 
 export { SalaireTempsPlein };
 
-const { colors, spacing } = theme;
+const { colors, spacings } = theme;
 
 const Table = styled(UITable)`
   width: 70%;
@@ -107,20 +107,20 @@ const Table = styled(UITable)`
   }
 `;
 const NumberInput = styled(Input)`
-  padding-right: ${spacing.base};
+  padding-right: ${spacings.base};
   text-align: right;
 `;
 
 const CurrencyWrapper = styled.div`
   position: relative;
   display: inline-block;
-  margin-right: ${spacing.interComponent};
+  margin-right: ${spacings.medium};
 `;
 
 const Currency = styled.span`
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: ${colors.grey};
+  color: ${colors.altText};
   transform: translateY(-50%);
 `;

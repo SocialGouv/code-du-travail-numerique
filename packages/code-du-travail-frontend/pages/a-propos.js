@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
   Alert,
   Container,
+  PageTitle,
   Section,
   theme,
   Wrapper
@@ -21,8 +22,8 @@ const About = ({ ogImage, pageUrl }) => (
     <Section>
       <Container narrow>
         <Wrapper variant="light">
-          <h1>À propos du code du travail numérique</h1>
-          <Alert variant="info">
+          <PageTitle>À propos du code du travail numérique</PageTitle>
+          <Alert>
             Ce service public vous permet d’obtenir des réponses détaillées à
             des questions de droit de travail, ainsi que des fiches explicatives
             et les articles de loi correspondants.
@@ -89,8 +90,8 @@ const About = ({ ogImage, pageUrl }) => (
 );
 export default About;
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const P = styled.p`
-  margin-top: ${spacing.interComponent};
+  margin-top: ${spacings.medium};
 `;

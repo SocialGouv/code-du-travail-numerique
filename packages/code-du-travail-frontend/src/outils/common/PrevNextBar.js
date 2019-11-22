@@ -5,14 +5,11 @@ import { Button, theme } from "@socialgouv/react-ui";
 
 function PrevNextBar({
   onPrev,
-  complete,
   hasError,
   nextVisible,
   restartVisible,
   previousVisible
 }) {
-  const nextVariant = hasError ? "danger" : "primary";
-
   return (
     <>
       <Box>
@@ -22,7 +19,7 @@ function PrevNextBar({
           </PreviousButton>
         )}
         {nextVisible && (
-          <NextButton outlined={!complete} variant={nextVariant}>
+          <NextButton disabled={hasError} variant="primary">
             Suivant
           </NextButton>
         )}
@@ -33,14 +30,12 @@ function PrevNextBar({
 }
 PrevNextBar.propTypes = {
   onPrev: PropTypes.func,
-  complete: PropTypes.bool,
   hasError: PropTypes.bool,
   nextVisible: PropTypes.bool,
   previousVisible: PropTypes.bool
 };
 PrevNextBar.defaultProps = {
   onPrev: () => {},
-  complete: true,
   hasError: false,
   nextVisible: true,
   previousVisible: true
@@ -48,11 +43,11 @@ PrevNextBar.defaultProps = {
 
 export { PrevNextBar };
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const Box = styled.div`
   display: flex;
-  margin: ${spacing.large} 0;
+  margin: ${spacings.large} 0;
 `;
 const NextButton = styled(Button)`
   margin-left: auto;

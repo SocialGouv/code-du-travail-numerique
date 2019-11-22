@@ -137,11 +137,11 @@ function getRef({ refLabel, refUrl }) {
   );
 }
 
-const { spacing, fonts } = theme;
+const { spacings, fonts } = theme;
 
 const Heading = styled.strong`
   font-weight: bold;
-  font-size: ${fonts.sizeSmall};
+  font-size: ${fonts.sizes.small};
 `;
 
 const dashSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 6 10"><path fill="currentColor" d="M0 4h5v1H0z"/></svg>`;
@@ -149,8 +149,8 @@ const List = styled.ul`
   list-style-image: url("data:image/svg+xml;,${encodeURIComponent(dashSvg)}");
 `;
 const Item = styled.li`
-  font-size: ${fonts.sizeSmall};
+  font-size: ${fonts.sizes.small};
 `;
 const FormuleWrapper = styled.div`
-  margin: ${spacing.base} 0;
+  margin: ${spacings.base} 0;
 `;

@@ -3,7 +3,13 @@ import getConfig from "next/config";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
-import { Container, LargeLink, Section, theme } from "@socialgouv/react-ui";
+import {
+  Container,
+  LargeLink,
+  PageTitle,
+  Section,
+  theme
+} from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
@@ -34,7 +40,7 @@ class Modeles extends React.Component {
         />
         <Section>
           <Container narrow>
-            <Title>Les modèles de documents à télécharger</Title>
+            <PageTitle>Les modèles de documents à télécharger</PageTitle>
             <ModeleCourrierList items={data.hits.hits} />
           </Container>
         </Section>
@@ -82,9 +88,6 @@ const ModeleCourrierList = styled(List)`
   padding-left: 0;
   list-style-type: none;
 `;
-const Title = styled.h1`
-  text-align: center;
-`;
 
 const P = styled.p`
   margin-bottom: 0;
@@ -92,12 +95,12 @@ const P = styled.p`
 `;
 
 const Label = styled.span`
-  color: ${colors.lightText};
+  color: ${colors.altText};
   font-weight: 700;
 `;
 
 const Value = styled.span`
-  color: ${colors.grey};
+  color: ${colors.altText};
   font-weight: 700;
   text-transform: uppercase;
 `;

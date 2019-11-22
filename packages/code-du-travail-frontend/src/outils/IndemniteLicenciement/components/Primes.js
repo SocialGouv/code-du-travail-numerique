@@ -73,38 +73,38 @@ Primes.propTypes = {
 };
 export { Primes };
 
-const { colors, fonts, spacing } = theme;
+const { colors, fonts, spacings } = theme;
 
 const Row = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: ${spacing.tiny};
+  margin-bottom: ${spacings.tiny};
 `;
 
 const NumberInput = styled(Input)`
-  padding-right: ${spacing.base};
+  padding-right: ${spacings.base};
   text-align: right;
 `;
 
 const CurrencyWrapper = styled.div`
   position: relative;
   display: inline-block;
-  margin-right: ${spacing.interComponent};
+  margin-right: ${spacings.medium};
 `;
 
 const Currency = styled.span`
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: ${colors.grey};
+  color: ${colors.altText};
   transform: translateY(-50%);
 `;
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin-left: ${spacing.interComponent};
-  font-size: ${fonts.sizeSmall};
+  margin-left: ${spacings.medium};
+  font-size: ${fonts.sizes.small};
 `;
 
 const AddButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin: ${spacing.interComponent} 0;
+  margin: ${spacings.medium} 0;
 `;

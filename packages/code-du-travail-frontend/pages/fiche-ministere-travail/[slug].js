@@ -50,7 +50,7 @@ class Fiche extends React.Component {
     } = data;
     const formattedSections = sections.map(section => ({
       id: section.anchor,
-      title: <h3>{section.title}</h3>,
+      title: section.title,
       body: <TabContent>{section.html}</TabContent>
     }));
     const footer = <Source name="Ministère du travail" url={url} />;

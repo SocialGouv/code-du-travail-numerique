@@ -127,25 +127,25 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
 }
 export { SalaireTempsPartiel };
 
-const { colors, fonts, spacing } = theme;
+const { colors, fonts, spacings } = theme;
 
 const AddButton = styled(Button)`
-  margin: ${spacing.interComponent} 0;
+  margin: ${spacings.medium} 0;
 `;
 
 const Row = styled.div`
   display: flex;
   justify-content: flex-start;
-  margin-bottom: ${spacing.tiny};
+  margin-bottom: ${spacings.tiny};
 `;
 
 const CellType = styled.div`
   flex-basis: 15rem;
-  margin-right: ${spacing.interComponent};
+  margin-right: ${spacings.medium};
 `;
 const CellDuration = styled.div`
   flex-basis: 8rem;
-  margin-right: ${spacing.interComponent};
+  margin-right: ${spacings.medium};
 `;
 const CellHeader = styled.div`
   font-weight: 700;
@@ -155,7 +155,7 @@ const Select = styled.select`
   width: 100%;
 `;
 const NumberInput = styled(Input)`
-  padding-right: ${spacing.base};
+  padding-right: ${spacings.base};
   text-align: right;
 `;
 
@@ -168,12 +168,12 @@ const Currency = styled.span`
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: ${colors.grey};
+  color: ${colors.altText};
   transform: translateY(-50%);
 `;
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin-left: ${spacing.interComponent};
-  font-size: ${fonts.sizeSmall};
+  margin-left: ${spacings.medium};
+  font-size: ${fonts.sizes.small};
 `;
 
 export const TEMPS_PLEIN = "Temps plein";

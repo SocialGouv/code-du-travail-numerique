@@ -2,9 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Head from "next/head";
 import {
+  Container,
   Grid,
   GridCell,
-  Container,
+  Heading,
+  PageTitle,
   Section,
   Wrapper
 } from "@socialgouv/react-ui";
@@ -23,23 +25,23 @@ const About = () => (
     <Section>
       <Container>
         <Wrapper variant="light">
-          <h1>Statistiques du code du travail numérique</h1>
+          <PageTitle>Statistiques du code du travail numérique</PageTitle>
           <br />
           <Grid>
             <GridCell>
-              <h3>Contenus référencés</h3>
+              <Heading>Contenus référencés</Heading>
               <Num>14369</Num>
             </GridCell>
             <GridCell>
-              <h3>Visites</h3>
+              <Heading>Visites</Heading>
               <Num>2992</Num>
             </GridCell>
             <GridCell>
-              <h3>Recherches</h3>
+              <Heading>Recherches</Heading>
               <Num>15368</Num>
             </GridCell>
             <GridCell>
-              <h3>Consultations</h3>
+              <Heading>Consultations</Heading>
               <Num>30736</Num>
             </GridCell>
           </Grid>

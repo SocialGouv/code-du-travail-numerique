@@ -130,7 +130,7 @@ const SuggestionsContainer = styled.div`
     z-index: 100;
   }
   li[role="option"]:nth-child(2n + 1) {
-    background: ${colors.lightBackground};
+    background: ${colors.bgSecondary};
   }
 `;
 
@@ -164,6 +164,6 @@ const suggesterTheme = {
     cursor: "pointer"
   },
   suggestionHighlighted: {
-    background: colors.darkBackground
+    background: colors.bgTertiary
   }
 };

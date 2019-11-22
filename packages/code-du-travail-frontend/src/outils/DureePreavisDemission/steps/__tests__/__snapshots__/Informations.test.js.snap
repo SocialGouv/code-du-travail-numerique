@@ -2,9 +2,14 @@
 
 exports[`<StepInformations /> should render 1`] = `
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 <div>
@@ -19,9 +24,9 @@ exports[`<StepInformations /> should render 1`] = `
 exports[`<StepInformations /> should render catégorie 1`] = `
 .c2 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
@@ -31,18 +36,23 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   flex: 1 1 70%;
   min-width: 400px;
   max-width: 100%;
-  margin-top: 0.625rem;
-  margin-right: 1.25rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
 }
 
 .c1 {
-  margin: 1.25rem 0;
+  margin: 2rem 0;
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 <div>
@@ -89,9 +99,9 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 exports[`<StepInformations /> should render coefficient 1`] = `
 .c2 {
   display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
@@ -101,18 +111,23 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   flex: 1 1 70%;
   min-width: 400px;
   max-width: 100%;
-  margin-top: 0.625rem;
-  margin-right: 1.25rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
 }
 
 .c1 {
-  margin: 1.25rem 0;
+  margin: 2rem 0;
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 <div>

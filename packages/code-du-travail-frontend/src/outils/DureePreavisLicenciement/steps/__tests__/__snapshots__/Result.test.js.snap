@@ -2,15 +2,20 @@
 
 exports[`<StepResult /> should render CDT and CC answer 1`] = `
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 .c1 {
-  color: #005994;
+  color: #3e486e;
   font-weight: 700;
-  font-size: 1.375rem;
+  font-size: 1.8rem;
   white-space: nowrap;
 }
 
@@ -119,15 +124,20 @@ exports[`<StepResult /> should render CDT and CC answer 1`] = `
 
 exports[`<StepResult /> should render with CDT no CC 1`] = `
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.625rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 .c1 {
-  color: #005994;
+  color: #3e486e;
   font-weight: 700;
-  font-size: 1.375rem;
+  font-size: 1.8rem;
   white-space: nowrap;
 }
 

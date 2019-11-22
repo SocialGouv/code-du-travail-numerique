@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { animations, box, breakpoints, spacing } from "../theme";
+import { animations, box, breakpoints, spacings } from "../theme";
 
 export const LargeLink = React.forwardRef(
   ({ icon: Icon, children, variant, ...props }, ref) => (
@@ -30,21 +30,21 @@ LargeLink.defaultProps = {
 const StyledLink = styled.a`
   display: flex;
   align-items: center;
-  margin-bottom: ${spacing.interComponent};
-  padding: ${spacing.medium};
-  color: ${({ theme }) => theme.blueDark};
+  margin-bottom: ${spacings.medium};
+  padding: ${spacings.medium};
+  color: ${({ theme }) => theme.paragraph};
   text-decoration: none;
   ${({ theme, variant }) => {
     if (variant === "highlight") {
       return css`
         background-color: ${theme.white};
-        border: 1px solid ${theme.blueDark};
+        border: 1px solid ${theme.secondary};
       `;
     } else {
       return css`
         background-color: ${variant === "light"
           ? theme.white
-          : theme.lightBackground};
+          : theme.bgSecondary};
         border: ${box.border};
       `;
     }
@@ -52,13 +52,14 @@ const StyledLink = styled.a`
   border-radius: ${box.borderRadius};
   transition: ${animations.transitionTiming} all;
   &:visited {
-    color: ${({ theme }) => theme.darkText};
+    color: ${({ theme }) => theme.paragraph};
     text-decoration: none;
   }
   &:active,
   &:hover {
-    border-color: ${({ theme }) => theme.blueDark};
-    box-shadow: ${box.shadow};
+    color: ${({ theme }) => theme.paragraph};
+    border-color: ${({ theme }) => theme.paragraph};
+    box-shadow: ${box.shadow.default};
   }
 `;
 
@@ -68,5 +69,5 @@ const StyledSpan = styled.span`
   @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }
-  color: ${({ theme }) => theme.lightText};
+  color: ${({ theme }) => theme.altText};
 `;

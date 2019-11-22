@@ -35,7 +35,7 @@ export const AncienneteETAMIC = ({ form }) => {
         </strong>
         .
       </p>
-      <StyledToast variant="warning">
+      <StyledToast>
         Dans le cas de la démission, l’employeur peut accepter de prendre en
         compte la durée du contrat de travail correspondant pour l’appréciation
         de l’ancienneté.
@@ -80,7 +80,7 @@ export const AncienneteETAMIC = ({ form }) => {
               </>
             )}
           />
-          <StyledToast variant="info">
+          <StyledToast>
             Il est important de préciser l’indemnité de licenciement
             éventuellement perçue lors d’un précédent licenciement dans la même
             entreprise. L’employeur actuel peut la déduire de l’indemnité de
@@ -102,8 +102,8 @@ export const AncienneteETAMIC = ({ form }) => {
   );
 };
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const StyledToast = styled(Toast)`
-  margin-top: ${spacing.interComponent};
+  margin-top: ${spacings.medium};
 `;

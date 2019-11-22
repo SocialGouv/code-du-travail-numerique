@@ -35,13 +35,13 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 
 .c0 {
   overflow-x: auto;
-  background: #e5f1fe;
+  background: #e4e8ef;
 }
 
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   padding: 0;
 }
 
@@ -68,12 +68,12 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.625rem 0;
+  padding: 1rem 0;
 }
 
 .c5 {
   display: inline-block;
-  padding: 0.625rem 1.25rem;
+  padding: 1rem 2rem;
   white-space: nowrap;
 }
 
@@ -88,8 +88,8 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 
 .c7 {
   display: block;
-  width: 1rem;
-  color: #005994;
+  width: 1.6rem;
+  color: #3e486e;
 }
 
 @media print {
@@ -101,7 +101,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
   }
 }
 
@@ -242,13 +242,13 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
 
 .c0 {
   overflow-x: auto;
-  background: #e5f1fe;
+  background: #e4e8ef;
 }
 
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   padding: 0;
 }
 
@@ -275,12 +275,12 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.625rem 0;
+  padding: 1rem 0;
 }
 
 .c5 {
   display: inline-block;
-  padding: 0.625rem 1.25rem;
+  padding: 1rem 2rem;
   white-space: nowrap;
 }
 
@@ -295,8 +295,8 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
 
 .c7 {
   display: block;
-  width: 1rem;
-  color: #005994;
+  width: 1.6rem;
+  color: #3e486e;
 }
 
 @media print {
@@ -308,7 +308,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
   }
 }
 

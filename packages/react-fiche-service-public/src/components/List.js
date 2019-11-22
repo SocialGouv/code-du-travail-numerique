@@ -6,7 +6,7 @@ import { theme } from "@socialgouv/react-ui";
 
 import { ElementBuilder } from "./ElementBuilder";
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 class List extends React.PureComponent {
   static propTypes = {
@@ -31,5 +31,5 @@ class List extends React.PureComponent {
 export default List;
 
 const StyledLi = styled.li`
-  margin-bottom: ${spacing.tiny};
+  margin-bottom: ${spacings.tiny};
 `;

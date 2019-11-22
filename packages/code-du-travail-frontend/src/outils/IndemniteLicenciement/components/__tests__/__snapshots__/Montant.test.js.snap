@@ -14,14 +14,14 @@ exports[`<Montant /> renders with ratio 1`] = `
 
 .c1 {
   width: calc(50% * 0.7);
-  background-color: #4c5467;
-  border-radius: 0.25rem;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
 }
 
 .c2 {
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 1.125rem;
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 @media (max-width:980px) {

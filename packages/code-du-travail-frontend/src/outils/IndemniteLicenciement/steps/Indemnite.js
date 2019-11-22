@@ -68,7 +68,7 @@ StepIndemnite.propTypes = {
 };
 export { StepIndemnite };
 
-const { spacing } = theme;
+const { spacings } = theme;
 
 const SelectWrapper = styled.label`
   display: flex;
@@ -80,8 +80,8 @@ const SelectWrapper = styled.label`
 const Select = styled.select`
   flex: 1 1 auto;
   width: 100%;
-  margin-right: ${spacing.interComponent};
+  margin-right: ${spacings.medium};
 `;
 const CancelButton = styled(Button)`
-  margin: ${spacing.interComponent} 0;
+  margin: ${spacings.medium} 0;
 `;

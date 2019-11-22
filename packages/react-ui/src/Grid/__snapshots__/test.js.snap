@@ -20,10 +20,10 @@ exports[`<Grid /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
@@ -40,19 +40,19 @@ exports[`<Grid /> should render 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 4 - 2 * 1rem);
+  margin: 1rem;
 }
 
 @media (max-width:980px) {
   .c1 {
-    width: calc( 100% / 3 - 2 * 0.625rem );
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
   .c1 {
-    width: calc( 100% - 2 * 0.625rem );
+    width: calc( 100% - 2 * 1rem );
   }
 }
 
@@ -104,10 +104,10 @@ exports[`<Grid /> should render 5columns 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
-  margin-right: calc(-1 * 0.625rem);
-  margin-bottom: 2rem;
-  margin-left: calc(-1 * 0.625rem);
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
@@ -124,19 +124,19 @@ exports[`<Grid /> should render 5columns 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 5 - 2 * 0.625rem);
-  margin: 0.625rem;
+  width: calc(100% / 5 - 2 * 1rem);
+  margin: 1rem;
 }
 
 @media (max-width:980px) {
   .c1 {
-    width: calc( 100% / 4 - 2 * 0.625rem );
+    width: calc( 100% / 4 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
   .c1 {
-    width: calc( 100% - 3 * 0.625rem );
+    width: calc( 100% - 3 * 1rem );
   }
 }
 

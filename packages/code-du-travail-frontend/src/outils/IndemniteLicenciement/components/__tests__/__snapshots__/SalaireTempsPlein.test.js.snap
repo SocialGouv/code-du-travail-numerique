@@ -37,28 +37,34 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
-  border: 1px solid #c9d3df;
+  border: 1px solid #bbcadf;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 .c2 caption {
-  padding: 0.625rem 0;
+  padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
 .c2 td,
 .c2 th {
-  padding: 0.625rem 1rem;
-  border: 1px solid #c9d3df;
+  padding: 1rem 1.6rem;
+  border: 1px solid #bbcadf;
+}
+
+.c2 th {
+  color: #2f3b6c;
+  font-weight: 600;
+  background: #e4e8ef;
 }
 
 .c2 thead,
 .c2 tfoot {
-  padding: 0.625rem 1rem;
+  padding: 1rem 1.6rem;
   vertical-align: bottom;
-  background: #f9f9fc;
+  background: #f2f5fa;
 }
 
 .c2 tfoot {
@@ -76,14 +82,14 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 
 .c5 {
   width: 10em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
-  padding-right: 1rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
+  padding-right: 1.6rem;
   text-align: right;
 }
 
@@ -98,14 +104,14 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 .c4 {
   position: relative;
   display: inline-block;
-  margin-right: 1.25rem;
+  margin-right: 2rem;
 }
 
 .c6 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: #adb9c9;
+  color: #4d73b8;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -237,28 +243,34 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   text-align: left;
   empty-cells: show;
   background-color: #fff;
-  border: 1px solid #c9d3df;
+  border: 1px solid #bbcadf;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 .c2 caption {
-  padding: 0.625rem 0;
+  padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
 .c2 td,
 .c2 th {
-  padding: 0.625rem 1rem;
-  border: 1px solid #c9d3df;
+  padding: 1rem 1.6rem;
+  border: 1px solid #bbcadf;
+}
+
+.c2 th {
+  color: #2f3b6c;
+  font-weight: 600;
+  background: #e4e8ef;
 }
 
 .c2 thead,
 .c2 tfoot {
-  padding: 0.625rem 1rem;
+  padding: 1rem 1.6rem;
   vertical-align: bottom;
-  background: #f9f9fc;
+  background: #f2f5fa;
 }
 
 .c2 tfoot {
@@ -276,14 +288,14 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 
 .c5 {
   width: 10em;
-  padding: 0.625rem 0.25rem;
+  padding: 1rem 0.4rem;
   font-size: 1rem;
   line-height: inherit;
   text-align: right;
-  border: 1px solid #c9d3df;
-  border-color: #c9d3df;
-  border-radius: 0.25rem;
-  padding-right: 1rem;
+  border: 1px solid #bbcadf;
+  border-color: #bbcadf;
+  border-radius: 0.6rem;
+  padding-right: 1.6rem;
   text-align: right;
 }
 
@@ -298,14 +310,14 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 .c4 {
   position: relative;
   display: inline-block;
-  margin-right: 1.25rem;
+  margin-right: 2rem;
 }
 
 .c6 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
-  color: #adb9c9;
+  color: #4d73b8;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

@@ -1,8 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<List /> should render and increment heading level of children by one 1`] = `
+.c1 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
 .c0 {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
 }
 
 <div>
@@ -10,7 +19,9 @@ exports[`<List /> should render and increment heading level of children by one 1
     <li
       class="c0"
     >
-      <h3>
+      <h3
+        class="c1"
+      >
         title
       </h3>
     </li>

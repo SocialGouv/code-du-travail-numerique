@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@socialgouv/react-ui";
+import { Container, Title } from "@socialgouv/react-ui";
 
 import { IndemniteLegale } from "../components/IndemniteLegale";
 import { branches } from "../branches";
@@ -15,7 +15,7 @@ function Step({ form }) {
 
   return (
     <Container>
-      <h3>{selectedBranche.label}</h3>
+      <Title as="h3">{selectedBranche.label}</Title>
       <p>
         Pour cette branche, le calcul de l’indemnité de licenciement se base sur
         l’indemnité légale de licenciement.

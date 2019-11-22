@@ -1,14 +1,14 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import Link from "next/link";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import {
+  Container,
   LargeLink,
   List,
   ListItem,
-  Container,
-  theme
+  PageTitle,
+  Title
 } from "@socialgouv/react-ui";
 
 import { LinkContent } from "./LinkContent";
@@ -95,9 +95,11 @@ export const Results = ({ id, isSearch, items, query }) => {
   return (
     <Container narrow>
       {isSearch ? (
-        <H1 id={id}>{`Résultats de recherche pour “${query}”`}</H1>
+        <PageTitle
+          id={id}
+        >{`Résultats de recherche pour “${query}”`}</PageTitle>
       ) : (
-        <h2 id={id}>{"Contenu correspondant"}</h2>
+        <Title id={id}>{"Contenu correspondant"}</Title>
       )}
       <List>
         {items.map((item, i) => {
@@ -114,9 +116,3 @@ export const Results = ({ id, isSearch, items, query }) => {
     </Container>
   );
 };
-
-const { spacing } = theme;
-
-const H1 = styled.h1`
-  margin: ${spacing.interComponent} 0;
-`;

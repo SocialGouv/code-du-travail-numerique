@@ -23,14 +23,14 @@ const App = (
 When you wish to set a color, please do not use the color variable from the theme in the `@socialgouv/react-ui` package.
 Use the `theme` prop provided by styled-components.
 
-Not OK: ~~`color: ${theme.colors.blueDark};`~~<br />
-OK: `color: ${({theme }) => theme.blueDark};`
+Not OK: ~~`color: ${theme.colors.paragraph};`~~<br />
+OK: `color: ${({theme }) => theme.paragraph};`
 
 Otherwise, the color won't change when the theme is dynamically modified. For eveything else, using the `themr.js` file is always the right thing to do: <br />
 ``` js
-  import { box, spacing } from "../theme";
+  import { box, spacings } from "../theme";
   const P = styled.p`
-    margin: ${spacing.large};
+    margin: ${spacings.large};
     color: ${({theme}) => theme.darkBlue};
     border: ${box.border};
   `;

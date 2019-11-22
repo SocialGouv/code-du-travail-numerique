@@ -1,4 +1,5 @@
 import React from "react";
+import { PageTitle } from "../Titles";
 import { Container } from "./Container";
 import { Section } from "./Section";
 import { Wrapper } from "./Wrapper";
@@ -9,7 +10,7 @@ export default {
 
 export const readme = () => (
   <>
-    <h1>How it works</h1>
+    <PageTitle>How it works</PageTitle>
     <p>
       {
         "The following order is usually respected : Section > Container > Wrapper"
@@ -17,9 +18,9 @@ export const readme = () => (
     </p>
     <p>More details are provided in each specific component documentation</p>
     <p>
-      N.B. Although Wrapper is supposed to provide normalized spacing, you can
+      N.B. Although Wrapper is supposed to provide normalized spacings, you can
       always add paddings and marging anywhere needed. But you must use the
-      spacing variables in the `theme.js` file.
+      spacings variables in the `theme.js` file.
     </p>
     <Section>
       <Container>

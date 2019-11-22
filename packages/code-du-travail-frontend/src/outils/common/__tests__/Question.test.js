@@ -8,9 +8,9 @@ describe("<Question />", () => {
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         display: block;
-        margin-top: 1.25rem;
-        margin-bottom: 0.625rem;
-        font-size: 1.25rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
         cursor: pointer;
       }
 
@@ -30,16 +30,16 @@ describe("<Question />", () => {
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         display: block;
-        margin-top: 1.25rem;
-        margin-bottom: 0.625rem;
-        font-size: 1.25rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
         cursor: pointer;
       }
 
       .c1 {
         display: inline-block;
-        margin-left: 0.625rem;
-        color: #b50113;
+        margin-left: 1rem;
+        color: #eb5757;
         font-weight: 700;
       }
 

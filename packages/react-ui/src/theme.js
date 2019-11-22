@@ -1,86 +1,56 @@
-export const variants = [
-  "primary",
-  "secondary",
-  "info",
-  "success",
-  "warning",
-  "danger"
-];
-
 export const colors = {
-  blueLight: "#006be6",
-  blueDark: "#005994",
+  // main colors
+  primary: "#ff7067",
+  secondary: "#7598d6",
 
+  // global colors
   white: "#fff",
-  white1: "#f9f9fc",
-  white2: "#ebeff3",
+  bgPrimary: "#fff",
+  bgSecondary: "#f2f5fa",
+  bgTertiary: "#e4e8ef",
+  border: "#bbcadf",
 
-  grey1: "#c9d3df",
-  grey2: "#adb9c9",
-  grey3: "#8393a7",
-  grey4: "#4c5467",
-  grey5: "#434956",
+  // text colors
+  title: "#2f3b6c",
+  paragraph: "#3e486e",
+  altText: "#4d73b8",
+  placeholder: "#9298af",
 
-  black: "#0c0c0e",
-  successBackground: "#e0f2bd",
-  infoBackground: "#e5f1fe",
-  warningBackground: "#fee5ad",
-  dangerBackground: "#f6bcc2",
-  focus: "#80bdff",
-
-  errorText: "#b50113"
+  // form colors
+  error: "#eb5757",
+  validate: "#7bd0ac"
 };
 
-// adding colour shortcuts
-colors.lightBackground = colors.white1;
-colors.darkBackground = colors.white2;
-colors.primaryBackground = colors.blueDark;
-
-colors.lightGrey = colors.grey1;
-colors.grey = colors.grey2;
-colors.darkGrey = colors.grey3;
-colors.lightText = colors.grey4;
-colors.darkText = colors.grey5;
-
-colors.secondaryBackground = colors.darkBackground;
-colors.focusShadow = colors.infoBackground;
 colors.primaryText = colors.white;
-colors.secondaryText = colors.black;
-colors.successText = colors.black;
-colors.infoText = colors.black;
-colors.warningText = colors.black;
-colors.dangerText = colors.black;
+colors.secondaryText = colors.white;
 
-/* Rem with a 16px base:
-  20px = 1.25rem => (20 * 1) / 16
-  12px => 0.75rem
-  10px => 0.625rem
-  etc.
-*/
-export const spacing = {
-  tiny: "0.25rem", // 4px
-  xsmall: "0.5rem", // 8px
-  small: "0.625rem", // 10px
-  base: "1rem", // 16px
-  medium: "1.25rem", // 20px
-  xmedium: "1.5rem", // 24px
-  large: "2rem", // 32px
-  larger: "2.5rem", // 40px
-  interComponent: "1.25rem"
+/* Rem with a 10px base */
+
+export const spacings = {
+  tiny: "0.4rem",
+  xsmall: "0.8rem",
+  small: "1rem",
+  base: "1.6rem",
+  medium: "2rem",
+  xmedium: "2.4rem",
+  large: "3.2rem",
+  larger: "4rem"
 };
 
 export const fonts = {
-  sizeBase: "1rem", // should be 16px
-  lineHeight: "1.4",
-  sizeXsmall: "0.75rem", // 12px
-  sizeSmall: "0.875rem", // 14px
-  sizeMedium: "1.25rem",
-  sizeH1: "2.25rem",
-  sizeH2: "1.875rem",
-  sizeH3: "1.625rem",
-  sizeH4: "1.375rem",
-  sizeH5: "1.125rem",
-  sizeH6: "1rem"
+  lineHeight: "1.625",
+  lineHeightTitle: "1.25",
+  sizes: {
+    tiny: "1.2rem",
+    small: "1.4rem",
+    default: "1.6rem",
+    headings: {
+      small: "1.8rem",
+      medium: "2.8rem",
+      large: "3.2rem"
+    },
+    medium: "2rem"
+  }
 };
 
 export const breakpoints = {
@@ -89,11 +59,17 @@ export const breakpoints = {
   mobile: "600px"
 };
 
+const shadowColor = "85, 112, 160";
+const largeShadow = "0px 10px 50px";
+const smallShadow = "0px 10px 15px";
+
 export const box = {
-  lightBorderRadius: "0.2rem",
-  border: `1px solid ${colors.lightGrey}`,
-  borderRadius: "0.25rem",
-  shadow: `0 5px 10px 0 ${colors.darkBackground}`
+  border: `1px solid ${colors.border}`,
+  borderRadius: "0.6rem",
+  shadow: {
+    default: `${largeShadow} rgba(${shadowColor}, 0.12), ${smallShadow} rgba(${shadowColor}, 0.1)`,
+    large: `${largeShadow} rgba(${shadowColor}, 0.2), ${smallShadow} rgba(${shadowColor}, 0.25)`
+  }
 };
 
 export const animations = {
