@@ -4,7 +4,7 @@ import {
   THEMES,
   AGREEMENTS,
   SUGGESTIONS,
-  SHEET_MT
+  MT_SHEETS
 } from "./esIndexName";
 
 import { logger } from "./logger";
@@ -28,7 +28,7 @@ const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const DOCUMENT_INDEX_NAME = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 const THEME_INDEX_NAME = `${ES_INDEX_PREFIX}_${THEMES}`;
 const AGREEMENT_INDEX_NAME = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
-const SHEET_MT_INDEX_NAME = `${ES_INDEX_PREFIX}_${SHEET_MT}`;
+const SHEET_MT_INDEX_NAME = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
 const SUGGEST_INDEX_NAME = `${ES_INDEX_PREFIX}_${SUGGESTIONS}`;
 
 const ELASTICSEARCH_URL =
