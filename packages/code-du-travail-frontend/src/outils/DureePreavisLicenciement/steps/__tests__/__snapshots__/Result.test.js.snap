@@ -114,6 +114,8 @@ exports[`<StepResult /> should render CDT and CC answer 1`] = `
   <p>
     <a
       href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
+      rel="noopener noreferrer"
+      target="_blank"
       title="Consultez l’article 32"
     >
       Article 32
@@ -236,6 +238,8 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
   <p>
     <a
       href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
+      rel="noopener noreferrer"
+      target="_blank"
       title="Consultez l’article 32"
     >
       Article 32
