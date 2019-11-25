@@ -53,7 +53,7 @@ Notify Success:
 
 Release:
   stage: "Notify Finished Deployment"
-  image: node:10-alpine
+  image: node:10.17.0-alpine3.10
   only:
     - master
   when: manual
