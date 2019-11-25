@@ -6,7 +6,6 @@ metadata:
   labels:
     app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
     git/branch: ${BRANCH_NAME}
-  annotations:
     git/commit: ${COMMIT}
     gitlab/job: "${JOB_ID}"
 spec:
@@ -22,66 +21,66 @@ spec:
       securityContext:
         fsGroup: 1000
       initContainers:
-      - name: init-sysctl
-        image: busybox
-        imagePullPolicy: IfNotPresent
-        securityContext:
-          privileged: true
-        command: ["sysctl", "-w", "vm.max_map_count=262144"]
+        - name: init-sysctl
+          image: busybox
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true
+          command: ["sysctl", "-w", "vm.max_map_count=262144"]
       containers:
-      - name: ${ELASTICSEARCH_HOST}
-        resources:
-          limits:
-            memory: "1024Mi"
-            cpu: "1.5"
-          requests:
-            memory: "512Mi"
-            cpu: "0.5"
-        securityContext:
-          privileged: true
-          runAsUser: 1000
-          capabilities:
-            add:
-            - IPC_LOCK
-            - SYS_RESOURCE
-        image: ${IMAGE_NAME}:${IMAGE_TAG}
-        env:
-        - name: ES_JAVA_OPTS
-          valueFrom:
-            configMapKeyRef:
-              name: ${K8S_NAMESPACE}-es-config-${BRANCH_HASH}
-              key: ES_JAVA_OPTS
-        livenessProbe:
-          httpGet:
-            scheme: HTTP
-            path: /_cluster/health
-            port: ${PORT}
-          initialDelaySeconds: 60
-          periodSeconds: 5
-        readinessProbe:
-          httpGet:
-            scheme: HTTP
-            path: /_cluster/health
-            port: ${PORT}
-          initialDelaySeconds: 60
-          periodSeconds: 5
-        ports:
-        - containerPort: ${PORT}
-          name: es-http
-        - containerPort: ${ES_INTER_NODE}
-          name: es-transport
-        volumeMounts:
-        - name: ${K8S_NAMESPACE}-es-data-${BRANCH_HASH}
-          mountPath: /usr/share/elasticsearch/data
-        - name: ${K8S_NAMESPACE}-elasticsearch-config-${BRANCH_HASH}
-          mountPath: /usr/share/elasticsearch/config/elasticsearch.yml
-          subPath: elasticsearch.yml
+        - name: ${ELASTICSEARCH_HOST}
+          resources:
+            limits:
+              memory: "1024Mi"
+              cpu: "1.5"
+            requests:
+              memory: "512Mi"
+              cpu: "0.5"
+          securityContext:
+            privileged: true
+            runAsUser: 1000
+            capabilities:
+              add:
+                - IPC_LOCK
+                - SYS_RESOURCE
+          image: ${IMAGE_NAME}:${IMAGE_TAG}
+          env:
+            - name: ES_JAVA_OPTS
+              valueFrom:
+                configMapKeyRef:
+                  name: ${K8S_NAMESPACE}-es-config-${BRANCH_HASH}
+                  key: ES_JAVA_OPTS
+          livenessProbe:
+            httpGet:
+              scheme: HTTP
+              path: /_cluster/health
+              port: ${PORT}
+            initialDelaySeconds: 60
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              scheme: HTTP
+              path: /_cluster/health
+              port: ${PORT}
+            initialDelaySeconds: 60
+            periodSeconds: 5
+          ports:
+            - containerPort: ${PORT}
+              name: es-http
+            - containerPort: ${ES_INTER_NODE}
+              name: es-transport
+          volumeMounts:
+            - name: ${K8S_NAMESPACE}-es-data-${BRANCH_HASH}
+              mountPath: /usr/share/elasticsearch/data
+            - name: ${K8S_NAMESPACE}-elasticsearch-config-${BRANCH_HASH}
+              mountPath: /usr/share/elasticsearch/config/elasticsearch.yml
+              subPath: elasticsearch.yml
       volumes:
-      - name: ${K8S_NAMESPACE}-elasticsearch-config-${BRANCH_HASH}
-        configMap:
-          name: ${K8S_NAMESPACE}-es-config-${BRANCH_HASH}
-          items:
-          - key: elasticsearch.yml
-            path: elasticsearch.yml
-      - name: ${K8S_NAMESPACE}-es-data-${BRANCH_HASH}
-        emptyDir: {}
+        - name: ${K8S_NAMESPACE}-elasticsearch-config-${BRANCH_HASH}
+          configMap:
+            name: ${K8S_NAMESPACE}-es-config-${BRANCH_HASH}
+            items:
+              - key: elasticsearch.yml
+                path: elasticsearch.yml
+        - name: ${K8S_NAMESPACE}-es-data-${BRANCH_HASH}
+          emptyDir: {}
