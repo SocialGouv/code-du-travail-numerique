@@ -25,6 +25,6 @@ const tests = [
 
 tests.forEach(t => {
   test(`should extract url from ${t.label} correctly`, () => {
-    expect(extractMdxContentUrl(t.data)).toMatchSnapshot(t.url);
+    expect(extractMdxContentUrl(t.data)).toMatch(t.url);
   });
 });
