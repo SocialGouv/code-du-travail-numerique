@@ -2,13 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { ChevronsRight } from "react-feather";
-import {
-  Container,
-  List,
-  ListItem,
-  OverflowWrapper,
-  theme
-} from "@socialgouv/react-ui";
+import { Container, OverflowWrapper, theme } from "@socialgouv/react-ui";
 
 const Breadcrumbs = ({ items = [] }) => {
   if (!items || items.length === 0) {
@@ -52,7 +46,7 @@ const StyledContainer = styled(Container)`
   padding: 0;
 `;
 
-const StyledList = styled(List)`
+const StyledList = styled.ul`
   display: flex;
   flex-flow: nowrap;
   align-items: center;
@@ -61,7 +55,7 @@ const StyledList = styled(List)`
     padding: ${spacings.tiny} 0;
   }
 `;
-const NavItem = styled(ListItem)`
+const NavItem = styled.li`
   display: inline-block;
   padding: ${spacings.small} ${spacings.medium};
   white-space: nowrap;

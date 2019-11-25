@@ -72,7 +72,6 @@ export const AncienneteETAMIC = ({ form }) => {
                 <Input
                   {...input}
                   id="duration"
-                  size="7"
                   type="number"
                   invalid={touched && invalid}
                 />

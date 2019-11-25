@@ -2,14 +2,7 @@ import React, { useCallback, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
-import {
-  Container,
-  LargeLink,
-  List,
-  ListItem,
-  PageTitle,
-  Title
-} from "@socialgouv/react-ui";
+import { Container, LargeLink, PageTitle, Title } from "@socialgouv/react-ui";
 
 import { LinkContent } from "./LinkContent";
 
@@ -101,18 +94,18 @@ export const Results = ({ id, isSearch, items, query }) => {
       ) : (
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
-      <List>
+      <ul>
         {items.map((item, i) => {
           const { slug } = item;
           return (
-            <ListItem key={slug}>
+            <li key={slug}>
               <ListLink focused={i === 0} item={item} query={query}>
                 <LinkContent isSearch={isSearch} {...item} />
               </ListLink>
-            </ListItem>
+            </li>
           );
         })}
-      </List>
+      </ul>
     </Container>
   );
 };

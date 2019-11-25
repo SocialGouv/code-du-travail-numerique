@@ -8,8 +8,6 @@ import {
   Alert,
   Container,
   Heading,
-  List,
-  ListItem,
   theme,
   Tile,
   Wrapper
@@ -127,7 +125,7 @@ function Answer({
         {relatedItems.length > 0 && (
           <RelatedItems>
             <Heading>Autres contenus pouvant vous intéresser&nbsp;:</Heading>
-            <List>
+            <ul>
               {relatedArticles
                 .filter(link => link.title !== title)
                 .slice(0, 3)
@@ -181,7 +179,7 @@ function Answer({
                   </Link>
                 </StyledListItem>
               )}
-            </List>
+            </ul>
           </RelatedItems>
         )}
       </StyledContainer>
@@ -225,7 +223,7 @@ const RelatedItems = styled.div`
   }
 `;
 
-const StyledListItem = styled(ListItem)`
+const StyledListItem = styled.li`
   margin: ${spacings.base} 0;
 `;
 

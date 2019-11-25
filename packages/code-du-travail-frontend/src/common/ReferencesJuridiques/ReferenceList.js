@@ -1,5 +1,5 @@
 import React from "react";
-import { LargeLink, List, ListItem } from "@socialgouv/react-ui";
+import { LargeLink } from "@socialgouv/react-ui";
 import Link from "next/link";
 import TYPE_REFERENCE from "./typeReference";
 
@@ -43,11 +43,11 @@ const getLink = reference => {
 
 const ReferenceList = ({ references }) => {
   return (
-    <List>
+    <ul>
       {references.map(reference => (
-        <ListItem key={reference.id}>{getLink(reference)}</ListItem>
+        <li key={reference.id}>{getLink(reference)}</li>
       ))}
-    </List>
+    </ul>
   );
 };
 

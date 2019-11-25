@@ -13,7 +13,6 @@ function TextQuestion({
   name,
   label,
   inputType = "text",
-  size,
   validate,
   validateOnChange = false,
   ...props
@@ -50,7 +49,6 @@ function TextQuestion({
                     id={id}
                     type={inputType}
                     invalid={touched && invalid}
-                    size={size}
                   />
                   {invalid &&
                     ((!validateOnChange && submitFailed) ||

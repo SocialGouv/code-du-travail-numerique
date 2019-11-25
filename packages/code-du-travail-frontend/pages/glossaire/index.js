@@ -5,8 +5,6 @@ import Link from "next/link";
 import styled from "styled-components";
 import {
   Container,
-  List,
-  ListItem,
   PageTitle,
   Section,
   theme,
@@ -81,7 +79,7 @@ function Glossary({ letters }) {
 
 function GlossaryNavigation({ letters }) {
   return (
-    <List>
+    <ul>
       {letters.map(({ letter, terms }) => {
         if (terms.length > 0) {
           return (
@@ -96,12 +94,12 @@ function GlossaryNavigation({ letters }) {
           </Item>
         );
       })}
-    </List>
+    </ul>
   );
 }
 const { spacings, fonts } = theme;
 
-const Item = styled(ListItem)`
+const Item = styled.li`
   display: inline-block;
   padding: ${spacings.tiny};
   font-size: ${fonts.sizes.headings.small};

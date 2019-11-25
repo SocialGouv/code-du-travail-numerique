@@ -4,8 +4,6 @@ import {
   Accordion,
   Alert,
   Container,
-  List,
-  ListItem,
   PageTitle,
   Section,
   theme,
@@ -70,18 +68,18 @@ const SearchPage = ({ pageUrl, ogImage }) => {
           utilisées à des fins de suivi et d’amélioration du service :
         </p>
         <StyledList>
-          <ListItem>
+          <li>
             Les données collectées ne sont pas recoupées avec d’autres
             traitements.
-          </ListItem>
-          <ListItem>
+          </li>
+          <li>
             Le cookie déposé sert uniquement à la production de statistiques
             anonymes.
-          </ListItem>
-          <ListItem>
+          </li>
+          <li>
             Le cookie ne permet pas de suivre la navigation de l’internaute sur
             d’autres sites.
-          </ListItem>
+          </li>
         </StyledList>
         <p>
           La mesure d’audience (nombre de visites, pages consultées) est
@@ -262,7 +260,7 @@ const Address = styled.address`
   margin: ${spacings.medium} 0;
 `;
 
-const StyledList = styled(List)`
+const StyledList = styled.ul`
   margin: ${spacings.medium} 0;
   padding-left: ${spacings.medium};
   list-style-type: disc;

@@ -57,7 +57,6 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                     <>
                       <Input
                         {...input}
-                        size="7"
                         type="number"
                         invalid={touched && invalid}
                       />
