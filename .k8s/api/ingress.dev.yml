@@ -6,7 +6,6 @@ metadata:
   labels:
     app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
     git/branch: ${BRANCH_NAME}
-  annotations:
     git/commit: ${COMMIT}
     gitlab/job: "${JOB_ID}"
 spec:

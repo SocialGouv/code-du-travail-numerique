@@ -6,7 +6,6 @@ metadata:
   labels:
     app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
     git/branch: ${BRANCH_NAME}
-  annotations:
     git/commit: ${COMMIT}
     gitlab/job: "${JOB_ID}"
 spec:
@@ -21,80 +20,80 @@ spec:
         app: ${ELASTICSEARCH_HOST}
     spec:
       volumes:
-      - name: data
-        emptyDir: {}
+        - name: data
+          emptyDir: {}
       containers:
-      - name: elasticsearch
-        resources:
-          limits:
-            cpu: 1000m
-          requests:
-            cpu: 100m
-        image: ${IMAGE_NAME}:${IMAGE_TAG}
-        livenessProbe:
-          httpGet:
-            scheme: HTTP
-            path: /_cluster/health
-            port: ${PORT}
-          initialDelaySeconds: 60
-          periodSeconds: 5
-        readinessProbe:
-          httpGet:
-            scheme: HTTP
-            path: /_cluster/health
-            port: ${PORT}
-          initialDelaySeconds: 60
-          periodSeconds: 5
-        ports:
-        - containerPort: ${PORT}
-          name: rest
-          protocol: TCP
-        - containerPort: ${ES_INTER_NODE}
-          name: inter-node
-          protocol: TCP
-        volumeMounts:
-        - name: data
-          mountPath: /usr/share/elasticsearch/data
-        env:
-        - name: cluster.name
-          value: ${K8S_NAMESPACE}-${CONTEXT}
-        - name: node.name
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.name
-        - name: http.cors.enabled
-          value: "true"
-        - name: http.cors.allow-origin
-          value: "*"
-        - name: xpack.security.enabled
-          value: "false"
-        - name: xpack.monitoring.enabled
-          value: "false"
-        - name: xpack.ml.enabled
-          value: "false"
-        - name: xpack.graph.enabled
-          value: "false"
-        - name: xpack.watcher.enabled
-          value: "false"
-        - name: ES_JAVA_OPTS
-          value: "-Xms512m -Xmx512m"
+        - name: elasticsearch
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m
+          image: ${IMAGE_NAME}:${IMAGE_TAG}
+          livenessProbe:
+            httpGet:
+              scheme: HTTP
+              path: /_cluster/health
+              port: ${PORT}
+            initialDelaySeconds: 60
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              scheme: HTTP
+              path: /_cluster/health
+              port: ${PORT}
+            initialDelaySeconds: 60
+            periodSeconds: 5
+          ports:
+            - containerPort: ${PORT}
+              name: rest
+              protocol: TCP
+            - containerPort: ${ES_INTER_NODE}
+              name: inter-node
+              protocol: TCP
+          volumeMounts:
+            - name: data
+              mountPath: /usr/share/elasticsearch/data
+          env:
+            - name: cluster.name
+              value: ${K8S_NAMESPACE}-${CONTEXT}
+            - name: node.name
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: http.cors.enabled
+              value: "true"
+            - name: http.cors.allow-origin
+              value: "*"
+            - name: xpack.security.enabled
+              value: "false"
+            - name: xpack.monitoring.enabled
+              value: "false"
+            - name: xpack.ml.enabled
+              value: "false"
+            - name: xpack.graph.enabled
+              value: "false"
+            - name: xpack.watcher.enabled
+              value: "false"
+            - name: ES_JAVA_OPTS
+              value: "-Xms512m -Xmx512m"
       initContainers:
-      - name: fix-permissions
-        image: busybox
-        command: ["sh", "-c", "chown -R 1000:1000 /usr/share/elasticsearch/data"]
-        securityContext:
-          privileged: true
-        volumeMounts:
-        - name: data
-          mountPath: /usr/share/elasticsearch/data
-      - name: increase-vm-max-map
-        image: busybox
-        command: ["sysctl", "-w", "vm.max_map_count=262144"]
-        securityContext:
-          privileged: true
-      - name: increase-fd-ulimit
-        image: busybox
-        command: ["sh", "-c", "ulimit -n 65536"]
-        securityContext:
-          privileged: true
-
+        - name: fix-permissions
+          image: busybox
+          command:
+            ["sh", "-c", "chown -R 1000:1000 /usr/share/elasticsearch/data"]
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - name: data
+              mountPath: /usr/share/elasticsearch/data
+        - name: increase-vm-max-map
+          image: busybox
+          command: ["sysctl", "-w", "vm.max_map_count=262144"]
+          securityContext:
+            privileged: true
+        - name: increase-fd-ulimit
+          image: busybox
+          command: ["sh", "-c", "ulimit -n 65536"]
+          securityContext:
+            privileged: true
