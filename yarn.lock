@@ -2118,12 +2118,12 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@reach/dialog@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.6.1.tgz#eaeef3bb0e349843c55f9a750dc6d5eb3bc31f1e"
-  integrity sha512-xX6iP+o731l0Y8gMI6cCG8SEu2i7sxfBXgVLX/0p847jUQKoqJ+AGAJvfjlYnf2lt0RO5/EmSzBSx0H7EB6ddg==
+"@reach/dialog@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.6.2.tgz#3f7cf1ee4c3b688697c4031f5dae7e9d60412151"
+  integrity sha512-o8M/k3xOyp+TE2SkzJdG12HNMjUlfwyj+qPWZ6ZEy66CKv88rwKGQFpWqI7rPb7OQPR41VNlgiHTRajWBFt/Ww==
   dependencies:
-    "@reach/portal" "^0.6.1"
+    "@reach/portal" "^0.6.2"
     "@reach/utils" "^0.6.1"
     prop-types "^15.7.2"
     react-focus-lock "^2.2.1"
