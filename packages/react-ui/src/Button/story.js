@@ -87,25 +87,23 @@ export const icons = () => (
 );
 
 export const link = () => (
-  <Section>
-    <p>
+  <>
+    <Section>
       <Button variant="link" onClick={action("link button clicked")}>
         Button with link variant
       </Button>
-    </p>
-    <p>
+    </Section>
+    <Section>
       <Button variant="secondary" as="a" href="https://code.travail.gouv.fr">
         Button with &lt;a&gt; tag
       </Button>
-    </p>
-  </Section>
+    </Section>
+  </>
 );
 export const div = () => (
   <Section>
-    <p>
-      <Button variant="secondary" as="div">
-        Button with &lt;div&gt; tag
-      </Button>
-    </p>
+    <Button variant="secondary" as="div">
+      Button with &lt;div&gt; tag
+    </Button>
   </Section>
 );

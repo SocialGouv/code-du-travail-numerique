@@ -2,20 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { animations, box, breakpoints, spacings } from "../theme";
+import { animations, box, spacings } from "../theme";
 
-export const LargeLink = React.forwardRef(
-  ({ icon: Icon, children, variant, ...props }, ref) => (
-    <StyledLink {...props} variant={variant} ref={ref}>
-      {Icon && (
-        <StyledSpan>
-          <Icon />
-        </StyledSpan>
-      )}
-      <div>{children}</div>
-    </StyledLink>
-  )
-);
+export const LargeLink = React.forwardRef(({ variant, ...props }, ref) => (
+  <StyledLink {...props} variant={variant} ref={ref}></StyledLink>
+));
 LargeLink.displayName = "LargeLink";
 LargeLink.propTypes = {
   children: PropTypes.node.isRequired,
@@ -28,8 +19,7 @@ LargeLink.defaultProps = {
 };
 
 const StyledLink = styled.a`
-  display: flex;
-  align-items: center;
+  display: block;
   margin-bottom: ${spacings.medium};
   padding: ${spacings.medium};
   color: ${({ theme }) => theme.paragraph};
@@ -61,13 +51,4 @@ const StyledLink = styled.a`
     border-color: ${({ theme }) => theme.paragraph};
     box-shadow: ${box.shadow.default};
   }
-`;
-
-const StyledSpan = styled.span`
-  flex: 0 0 3rem;
-  margin-right: 1rem;
-  @media (max-width: ${breakpoints.mobile}) {
-    display: none;
-  }
-  color: ${({ theme }) => theme.altText};
 `;

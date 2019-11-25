@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
-import { Question } from "../icons";
+import { Calculator } from "../icons";
 import { LargeLink } from ".";
 
 export default {
@@ -15,20 +15,17 @@ export const base = () => (
       <LargeLink title="I can get any title" href="#">
         I am a large light link
       </LargeLink>
-    </Section>
-    <Section>
       <LargeLink variant="dark" title="I can get any title" href="#">
         I am a large dark link
       </LargeLink>
-    </Section>
-    <Section>
       <LargeLink variant="highlight" title="I can get any title" href="#">
         I am a large highlighted link
       </LargeLink>
-    </Section>
-    <Section>
-      <LargeLink title="I can get any title" href="#" icon={Question}>
-        I can also have an icon
+      <LargeLink title="I can get any title" href="#" icon={Calculator}>
+        <div style={{ width: "3rem" }}>
+          <Calculator />
+        </div>
+        &nbsp;I can have whatever inside
       </LargeLink>
     </Section>
   </Container>
