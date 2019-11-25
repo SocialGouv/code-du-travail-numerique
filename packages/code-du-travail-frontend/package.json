@@ -66,8 +66,8 @@
     "use-persisted-state": "^0.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "@socialgouv/eslint-config-react": "^0.10.3",
     "@testing-library/react": "^9.3.2",
     "babel-eslint": "^10.0.3",
