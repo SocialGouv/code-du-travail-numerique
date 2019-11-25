@@ -10,7 +10,7 @@ FROM ${BASE_IMAGE} as cdtn-base-image
 # hadolint ignore=DL3006
 FROM ${NLP_IMAGE} as cdtn-nlp-image
 
-FROM node:10-alpine
+FROM node:10.17.0-alpine3.10
 
 RUN apk add --no-cache curl=7.66.0-r0
 
