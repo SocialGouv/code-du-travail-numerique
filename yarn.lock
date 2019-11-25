@@ -2256,7 +2256,7 @@
     eslint-plugin-jest "^23.0.3"
     eslint-plugin-prettier "~3.1.1"
 
-"@socialgouv/fiches-vdd@^1.0.36":
+"@socialgouv/fiches-vdd@^1.0.38":
   version "1.0.38"
   resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.38.tgz#0195506f565debd42c65958673adde2dd15e24e8"
   integrity sha512-/Cummpfdcq8+SQiqtMp6G/DgVmW85zCvJZXMOIvJjqewzEVw/iZd9YCff6x77Op8Ffts+P06WeUqJQgBbmCLEQ==

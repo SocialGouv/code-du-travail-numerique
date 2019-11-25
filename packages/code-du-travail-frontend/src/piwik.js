@@ -6,6 +6,9 @@ export function initPiwik({
   jsTrackerFile = "matomo.js",
   phpTrackerFile = "matomo.php"
 }) {
+  if (!piwikUrl) {
+    return;
+  }
   window._paq = window._paq || [];
   let previousPath = "";
   // order is important -_- so campaign are detected
