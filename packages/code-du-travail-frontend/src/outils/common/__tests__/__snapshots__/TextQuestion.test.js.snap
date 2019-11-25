@@ -17,14 +17,8 @@ exports[`<TextQuestion /> should render 1`] = `
 }
 
 .c3 {
-  width: auto;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: left;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
 }
 
 .c3::-webkit-outer-spin-button,

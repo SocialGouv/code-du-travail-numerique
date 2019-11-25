@@ -10,6 +10,10 @@ exports[`<Primes /> should add a prime 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -74,14 +78,8 @@ exports[`<Primes /> should add a prime 1`] = `
 }
 
 .c2 {
-  width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: left;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -132,7 +130,6 @@ exports[`<Primes /> should add a prime 1`] = `
       <input
         class="c2"
         name="primes[0].prime"
-        size="10"
         value=""
       />
       <span
@@ -212,6 +209,10 @@ exports[`<Primes /> should delete a primes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -308,6 +309,10 @@ exports[`<Primes /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -372,14 +377,8 @@ exports[`<Primes /> should render 1`] = `
 }
 
 .c2 {
-  width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: left;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -430,7 +429,6 @@ exports[`<Primes /> should render 1`] = `
       <input
         class="c2"
         name="primes[0].prime"
-        size="10"
         value="300"
       />
       <span

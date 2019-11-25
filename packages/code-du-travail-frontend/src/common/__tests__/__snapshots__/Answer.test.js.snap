@@ -95,6 +95,10 @@ exports[`<Answer /> should renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -152,6 +156,10 @@ exports[`<Answer /> should renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -728,6 +736,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -785,6 +797,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -1000,9 +1016,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c4 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1563,6 +1576,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -1620,6 +1637,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -2243,6 +2264,10 @@ exports[`<Answer /> should renders related content 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -2291,7 +2316,7 @@ exports[`<Answer /> should renders related content 1`] = `
   cursor: not-allowed;
 }
 
-.c33 {
+.c32 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2300,6 +2325,10 @@ exports[`<Answer /> should renders related content 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -2324,16 +2353,16 @@ exports[`<Answer /> should renders related content 1`] = `
   opacity: 1;
 }
 
-.c33:link,
-.c33:visited {
+.c32:link,
+.c32:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c33:not([disabled]):hover,
-.c33:not([disabled]):active,
-.c33:not([disabled]):focus {
+.c32:not([disabled]):hover,
+.c32:not([disabled]):active,
+.c32:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -2342,13 +2371,13 @@ exports[`<Answer /> should renders related content 1`] = `
   border-color: transparent;
 }
 
-.c33[disabled] {
+.c32[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c28 {
+.c27 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2357,6 +2386,10 @@ exports[`<Answer /> should renders related content 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -2381,16 +2414,16 @@ exports[`<Answer /> should renders related content 1`] = `
   opacity: 1;
 }
 
-.c28:link,
-.c28:visited {
+.c27:link,
+.c27:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c28:not([disabled]):hover,
-.c28:not([disabled]):active,
-.c28:not([disabled]):focus {
+.c27:not([disabled]):hover,
+.c27:not([disabled]):active,
+.c27:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -2399,19 +2432,13 @@ exports[`<Answer /> should renders related content 1`] = `
   border-color: #9cb5e2;
 }
 
-.c28[disabled] {
+.c27[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c23 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c25 {
+.c24 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2453,24 +2480,24 @@ exports[`<Answer /> should renders related content 1`] = `
   appearance: none;
 }
 
-.c25:hover {
+.c24:hover {
   color: #3e486e;
   border-color: #3e486e;
   box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
-.c26 {
+.c25 {
   display: block;
   max-width: 100%;
   padding-right: 0;
   overflow-y: auto;
 }
 
-.c27 {
+.c26 {
   margin-top: 1.6rem;
 }
 
-.c30 {
+.c29 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2493,7 +2520,7 @@ exports[`<Answer /> should renders related content 1`] = `
   animation: iowhYu 300ms ease-out;
 }
 
-.c31 {
+.c30 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -2506,7 +2533,7 @@ exports[`<Answer /> should renders related content 1`] = `
   text-align: left;
 }
 
-.c34 {
+.c33 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
@@ -2561,7 +2588,7 @@ exports[`<Answer /> should renders related content 1`] = `
   font-weight: 600;
 }
 
-.c29 {
+.c28 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
@@ -2569,7 +2596,7 @@ exports[`<Answer /> should renders related content 1`] = `
   padding: 1.6rem;
 }
 
-.c32 {
+.c31 {
   padding: 0 0.4rem;
 }
 
@@ -2630,7 +2657,7 @@ exports[`<Answer /> should renders related content 1`] = `
   padding: 2rem 1.6rem 2rem 0;
 }
 
-.c24 {
+.c23 {
   margin: 1.6rem 0;
 }
 
@@ -2895,11 +2922,9 @@ exports[`<Answer /> should renders related content 1`] = `
       >
         Autres contenus pouvant vous intéresser :
       </h3>
-      <ul
-        class="c23"
-      >
+      <ul>
         <li
-          class="c24"
+          class="c23"
         >
           <a
             href="/fiche-service-public/LINK_1"
@@ -2908,7 +2933,7 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c24"
+          class="c23"
         >
           <a
             href="/fiche-ministere-travail/LINK_2"
@@ -2917,7 +2942,7 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c24"
+          class="c23"
         >
           <a
             href="/external/LINK_3"
@@ -2926,23 +2951,23 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c24"
+          class="c23"
         >
           <a
-            class="c25"
+            class="c24"
             href="/modeles-de-courriers/LETTER_1"
             title="related letter title 1"
           >
             <div
-              class="c26"
+              class="c25"
             >
               related letter title 1
             </div>
             <div
-              class="c27"
+              class="c26"
             >
               <div
-                class="c28"
+                class="c27"
               >
                 Consulter
               </div>
@@ -2950,23 +2975,23 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c24"
+          class="c23"
         >
           <a
-            class="c25"
+            class="c24"
             href="/outils/TOOL_1"
             title="related tool title 1"
           >
             <div
-              class="c26"
+              class="c25"
             >
               related tool title 1
             </div>
             <div
-              class="c27"
+              class="c26"
             >
               <div
-                class="c28"
+                class="c27"
               >
                 Démarrer
               </div>
@@ -2977,18 +3002,18 @@ exports[`<Answer /> should renders related content 1`] = `
     </div>
   </div>
   <div
-    class="c29"
+    class="c28"
   >
     <div
-      class="c30"
+      class="c29"
     >
       <div
-        class="c31"
+        class="c30"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c32"
+          class="c31"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -3000,10 +3025,10 @@ exports[`<Answer /> should renders related content 1`] = `
       </div>
       <button
         aria-label="Fermer"
-        class="c33"
+        class="c32"
       >
         <svg
-          class="c34"
+          class="c33"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -3129,6 +3154,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -3186,6 +3215,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -3802,6 +3835,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -3859,6 +3896,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -4461,6 +4502,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -4518,6 +4563,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;

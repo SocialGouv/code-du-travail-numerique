@@ -33,6 +33,10 @@ exports[`<Footer /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -79,12 +83,6 @@ exports[`<Footer /> should render 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c10 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c0 {
@@ -150,11 +148,11 @@ exports[`<Footer /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c11 {
+.c10 {
   margin: 0.4rem 0;
 }
 
-.c11 a {
+.c10 a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -241,11 +239,9 @@ exports[`<Footer /> should render 1`] = `
           >
             Code du travail numérique
           </h3>
-          <ul
-            class="c10"
-          >
+          <ul>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="/droit-du-travail"
@@ -254,7 +250,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="/glossaire"
@@ -263,7 +259,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="/a-propos"
@@ -272,7 +268,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="/mentions-legales"
@@ -281,7 +277,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="mailto:codedutravailnumerique@travail.gouv.fr"
@@ -299,11 +295,9 @@ exports[`<Footer /> should render 1`] = `
           >
             Aidez-nous à améliorer cet outil
           </h3>
-          <ul
-            class="c10"
-          >
+          <ul>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -314,7 +308,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -334,11 +328,9 @@ exports[`<Footer /> should render 1`] = `
           >
             En collaboration avec
           </h3>
-          <ul
-            class="c10"
-          >
+          <ul>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -349,7 +341,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -360,7 +352,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c10"
             >
               <a
                 href="https://beta.gouv.fr/"

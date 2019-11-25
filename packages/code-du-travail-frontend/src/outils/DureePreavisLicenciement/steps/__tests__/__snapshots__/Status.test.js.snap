@@ -12,7 +12,6 @@ exports[`<StepStatus /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {
@@ -104,7 +103,6 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {
@@ -308,7 +306,6 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {

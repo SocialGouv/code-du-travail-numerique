@@ -10,6 +10,10 @@ exports[`<Salaires /> should add a salaire 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -58,14 +62,8 @@ exports[`<Salaires /> should add a salaire 1`] = `
 }
 
 .c3 {
-  width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -143,7 +141,6 @@ exports[`<Salaires /> should add a salaire 1`] = `
         class="c3"
         id="5"
         name="salaires[0].salaire"
-        size="10"
         type="number"
         value=""
       />
@@ -224,6 +221,10 @@ exports[`<Salaires /> should delete a salaires 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -320,6 +321,10 @@ exports[`<Salaires /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -368,14 +373,8 @@ exports[`<Salaires /> should render 1`] = `
 }
 
 .c3 {
-  width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -453,7 +452,6 @@ exports[`<Salaires /> should render 1`] = `
         class="c3"
         id="1"
         name="salaires[0].salaire"
-        size="10"
         type="number"
         value="3000"
       />

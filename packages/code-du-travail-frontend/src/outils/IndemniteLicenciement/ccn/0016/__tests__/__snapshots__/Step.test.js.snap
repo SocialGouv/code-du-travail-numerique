@@ -2,14 +2,8 @@
 
 exports[`<Step /> should ask detail about categories 1`] = `
 .c3 {
-  width: 5em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
 }
 
 .c3::-webkit-outer-spin-button,
@@ -31,7 +25,6 @@ exports[`<Step /> should ask detail about categories 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c0 {
@@ -137,7 +130,6 @@ exports[`<Step /> should ask detail about categories 1`] = `
         class="c3"
         min="0"
         name="tamDuration"
-        size="5"
         type="number"
         value=""
       />
@@ -156,7 +148,6 @@ exports[`<Step /> should ask detail about categories 1`] = `
         class="c3"
         min="0"
         name="cadreDuration"
-        size="5"
         type="number"
         value=""
       />
@@ -183,7 +174,6 @@ exports[`<Step /> should ask detail about categories 1`] = `
       class="c3"
       id="2"
       name="age"
-      size="5"
       type="number"
       value=""
     />
@@ -193,14 +183,8 @@ exports[`<Step /> should ask detail about categories 1`] = `
 
 exports[`<Step /> should ask detail about retirement  1`] = `
 .c5 {
-  width: 5em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
 }
 
 .c5::-webkit-outer-spin-button,
@@ -222,7 +206,6 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c7 {
@@ -348,7 +331,6 @@ exports[`<Step /> should ask detail about retirement  1`] = `
       class="c5"
       id="3"
       name="age"
-      size="5"
       type="number"
       value="62"
     />
@@ -397,14 +379,8 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 
 exports[`<Step /> should render 1`] = `
 .c5 {
-  width: 5em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
 }
 
 .c5::-webkit-outer-spin-button,
@@ -426,7 +402,6 @@ exports[`<Step /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c0 {
@@ -525,7 +500,6 @@ exports[`<Step /> should render 1`] = `
       class="c5"
       id="1"
       name="age"
-      size="5"
       type="number"
       value=""
     />

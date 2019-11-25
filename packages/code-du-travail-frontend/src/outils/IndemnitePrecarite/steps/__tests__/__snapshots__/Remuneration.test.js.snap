@@ -10,6 +10,10 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -68,7 +72,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {
@@ -106,14 +109,8 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 }
 
 .c7 {
-  width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -244,7 +241,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
         class="c7"
         id="2"
         name="salaires[0].salaire"
-        size="10"
         type="number"
         value="2000"
       />
@@ -300,7 +296,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
         class="c7"
         id="4"
         name="salaires[1].salaire"
-        size="10"
         type="number"
         value="1500"
       />
@@ -388,7 +383,6 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {
@@ -434,14 +428,8 @@ exports[`<StepRemuneration /> should render one input 1`] = `
 }
 
 .c6 {
-  width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -543,7 +531,6 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       class="c6"
       id="currency-1"
       name="salaire"
-      size="10"
       type="number"
       value="3000"
     />

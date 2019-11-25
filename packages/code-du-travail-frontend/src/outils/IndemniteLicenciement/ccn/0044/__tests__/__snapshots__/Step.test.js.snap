@@ -21,7 +21,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c5 {
@@ -298,14 +297,8 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 }
 
 .c8 {
-  width: auto;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
 }
 
 .c8::-webkit-outer-spin-button,
@@ -327,7 +320,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c5 {
@@ -657,7 +649,6 @@ exports[`<Step /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c1 {
