@@ -96,14 +96,18 @@ function StepIndemnite({ form }) {
             href="/fiche-service-public/[slug]"
             as={"/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"}
           >
-            <a>salarié en CDD</a>
+            <a target="_blank" rel="noopener noreferrer">
+              salarié en CDD
+            </a>
           </Link>
         ) : (
           <Link
             href="/fiche-service-public/[slug]"
             as={"/fiche-service-public/contrat-de-travail-temporaire-interim"}
           >
-            <a>salarié en contrat de travail temporaire (contrat d’intérim)</a>
+            <a target="_blank" rel="noopener noreferrer">
+              salarié en contrat de travail temporaire (contrat d’intérim)
+            </a>
           </Link>
         )}
       </p>
@@ -124,7 +128,13 @@ function getRef({ refLabel, refUrl }) {
     <p>
       {refs
         .map(([url, label]) => (
-          <a key={url} href={url} title={`Consultez l’${label.toLowerCase()}`}>
+          <a
+            key={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={url}
+            title={`Consultez l’${label.toLowerCase()}`}
+          >
             {label}
           </a>
         ))

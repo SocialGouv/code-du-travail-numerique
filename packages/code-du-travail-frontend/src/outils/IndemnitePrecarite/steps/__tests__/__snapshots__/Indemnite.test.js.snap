@@ -86,6 +86,8 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
   <p>
     <a
       href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+      rel="noopener noreferrer"
+      target="_blank"
       title="Consultez l’article l1243-8 du code du travail"
     >
       Article L1243-8 du code du travail
@@ -93,6 +95,8 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
     , 
     <a
       href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+      rel="noopener noreferrer"
+      target="_blank"
       title="Consultez l’article l1243-9 du code du travail"
     >
       Article L1243-9 du code du travail
@@ -103,6 +107,8 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
      
     <a
       href="/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       salarié en CDD
     </a>
@@ -196,6 +202,8 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   <p>
     <a
       href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+      rel="noopener noreferrer"
+      target="_blank"
       title="Consultez l’article l1243-8 du code du travail"
     >
       Article L1243-8 du code du travail
@@ -203,6 +211,8 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     , 
     <a
       href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+      rel="noopener noreferrer"
+      target="_blank"
       title="Consultez l’article l1243-9 du code du travail"
     >
       Article L1243-9 du code du travail
@@ -213,6 +223,8 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
      
     <a
       href="/fiche-service-public/contrat-de-travail-temporaire-interim"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       salarié en contrat de travail temporaire (contrat d’intérim)
     </a>

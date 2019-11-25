@@ -111,6 +111,8 @@ exports[`<StepResult /> should render CC answer 1`] = `
   <p>
     <a
       href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
+      rel="noopener noreferrer"
+      target="_blank"
       title="Consultez l’article 15"
     >
       Article 15

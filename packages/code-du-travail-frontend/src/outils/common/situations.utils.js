@@ -101,7 +101,12 @@ export function recapSituation(criteria) {
 export function getRef({ ref, refUrl }) {
   return (
     <p>
-      <a href={refUrl} title={`Consultez l’${ref.toLowerCase()}`}>
+      <a
+        href={refUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={`Consultez l’${ref.toLowerCase()}`}
+      >
         {ref}
       </a>
     </p>
