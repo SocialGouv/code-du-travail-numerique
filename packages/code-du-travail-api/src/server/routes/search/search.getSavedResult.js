@@ -5,6 +5,7 @@ const getEsReferences = require("./getEsReferences");
 const fuzz = require("fuzzball");
 const deburr = require("lodash.deburr");
 
+const threshold = 90;
 const knownQueriesSet = {};
 
 // Preprocess query : remove accentuation and
@@ -24,7 +25,7 @@ const populateSavedQueries = () => {
   });
 };
 
-// Function to test if a given query fuzzy matches with
+// Test if a given query fuzzy matches with
 //  a known one (and variants).
 const testMatch = query => {
   const fuzzOptions = {
@@ -43,10 +44,11 @@ const testMatch = query => {
     fuzzOptions
   );
 
-  const closerMatch = results[0];
+  const closerMatch = results[0][0];
+  const bestScore = results[0][1];
 
-  if (closerMatch[1] > 90) {
-    return knownQueriesSet[closerMatch[0]];
+  if (bestScore > threshold) {
+    return knownQueriesSet[closerMatch];
   } else {
     return undefined;
   }
