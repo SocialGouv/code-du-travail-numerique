@@ -125,6 +125,7 @@ exports[`<StepPrimes /> should render 1`] = `
 }
 
 .c6 {
+  width: auto;
   text-align: left;
   border-color: #bbcadf;
   padding-right: 1.6rem;

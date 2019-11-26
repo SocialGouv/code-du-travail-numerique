@@ -2,6 +2,7 @@
 
 exports[`<CategoryPeriod /> should render 1`] = `
 .c2 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
 }

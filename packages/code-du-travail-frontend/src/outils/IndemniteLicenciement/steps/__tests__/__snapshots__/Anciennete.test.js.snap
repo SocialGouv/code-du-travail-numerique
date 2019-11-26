@@ -2,6 +2,7 @@
 
 exports[`<Anciennete /> should render 1`] = `
 .c4 {
+  width: auto;
   text-align: left;
   border-color: #bbcadf;
 }

@@ -78,6 +78,7 @@ exports[`<Primes /> should add a prime 1`] = `
 }
 
 .c2 {
+  width: auto;
   text-align: left;
   border-color: #bbcadf;
   padding-right: 1.6rem;
@@ -377,6 +378,7 @@ exports[`<Primes /> should render 1`] = `
 }
 
 .c2 {
+  width: auto;
   text-align: left;
   border-color: #bbcadf;
   padding-right: 1.6rem;

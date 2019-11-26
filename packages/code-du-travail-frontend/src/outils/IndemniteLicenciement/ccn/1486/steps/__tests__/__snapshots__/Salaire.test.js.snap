@@ -548,6 +548,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 }
 
 .c12 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
   padding-right: 1.6rem;
@@ -872,6 +873,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
 }
 
 .c8 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
   padding-right: 1.6rem;

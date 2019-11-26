@@ -109,6 +109,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 }
 
 .c7 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
   padding-right: 1.6rem;
@@ -428,6 +429,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
 }
 
 .c6 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
   padding-right: 1.6rem;

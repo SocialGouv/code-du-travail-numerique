@@ -297,6 +297,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 }
 
 .c8 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
 }

@@ -62,6 +62,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
 }
 
 .c3 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
   padding-right: 1.6rem;
@@ -373,6 +374,7 @@ exports[`<Salaires /> should render 1`] = `
 }
 
 .c3 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
   padding-right: 1.6rem;

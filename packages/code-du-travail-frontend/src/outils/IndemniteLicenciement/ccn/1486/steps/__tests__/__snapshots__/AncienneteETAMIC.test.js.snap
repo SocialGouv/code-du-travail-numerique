@@ -38,6 +38,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 }
 
 .c8 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
 }
@@ -117,6 +118,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 }
 
 .c11 {
+  width: 10em;
   text-align: right;
   border-color: #bbcadf;
   padding-right: 1.6rem;

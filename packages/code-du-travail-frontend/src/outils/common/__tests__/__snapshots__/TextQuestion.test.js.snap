@@ -17,6 +17,7 @@ exports[`<TextQuestion /> should render 1`] = `
 }
 
 .c3 {
+  width: auto;
   text-align: left;
   border-color: #bbcadf;
 }

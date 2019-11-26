@@ -4,6 +4,7 @@ import { theme, Title } from "@socialgouv/react-ui";
 const { fonts, colors, spacings } = theme;
 
 export const Input = styled.input`
+  width: ${props => (props.type === "number" ? "10em" : "auto")};
   text-align: ${props => (props.type === "number" ? "right" : "left")};
   border-color: ${props => (props.invalid ? colors.error : colors.border)};
   &::-webkit-outer-spin-button,
