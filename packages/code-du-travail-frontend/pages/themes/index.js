@@ -21,7 +21,7 @@ const {
 } = getConfig();
 
 const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
-  <Layout>
+  <Layout currentPage="themes">
     <Metas
       url={pageUrl}
       title={`Thèmes - Code du travail numérique`}

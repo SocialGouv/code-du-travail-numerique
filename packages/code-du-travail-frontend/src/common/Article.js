@@ -12,7 +12,7 @@ import {
 
 const Article = ({ title, sourceType, date, wide, children }) => {
   return (
-    <Section data-main-content>
+    <ArticleSection data-main-content>
       <Container>
         <Wrapper variant="light">
           <Section>
@@ -35,7 +35,7 @@ const Article = ({ title, sourceType, date, wide, children }) => {
           </Section>
         </Wrapper>
       </Container>
-    </Section>
+    </ArticleSection>
   );
 };
 
@@ -55,6 +55,10 @@ Article.propTypes = {
 export default Article;
 
 const { breakpoints, colors, fonts, spacings } = theme;
+
+const ArticleSection = styled(Section)`
+  padding-top: 0;
+`;
 
 const Header = styled(Container)`
   position: relative;

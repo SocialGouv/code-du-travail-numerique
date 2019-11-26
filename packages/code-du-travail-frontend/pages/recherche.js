@@ -1,18 +1,22 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import styled from "styled-components";
 import { withRouter } from "next/router";
 import {
   Alert,
   Button,
   Container,
+  PageTitle,
   Section,
+  theme,
   Wrapper
 } from "@socialgouv/react-ui";
 
 import ConventionModal from "../src/conventions/Search/Modal";
 import { fetchSearchResults } from "../src/search/search.service";
 import { SearchResults } from "../src/search/SearchResults";
+import SearchBar from "../src/search/SearchBar";
 import { Layout } from "../src/layout/Layout";
 
 import Metas from "../src/common/Metas";
@@ -32,7 +36,7 @@ class SearchPage extends React.Component {
     } = this.props;
     const { q: query = "" } = router.query;
     return (
-      <Layout>
+      <Layout currentPage="search">
         <Head>
           <meta name="robots" content="noindex, follow" />
         </Head>
@@ -42,6 +46,12 @@ class SearchPage extends React.Component {
           description="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
           image={ogImage}
         />
+        <Container narrow>
+          <PageTitle>Recherche</PageTitle>
+          <SearchBarWrapper>
+            <SearchBar />
+          </SearchBarWrapper>
+        </Container>
         {items.documents.length === 0 &&
         items.articles.length === 0 &&
         items.themes.length === 0 ? (
@@ -84,3 +94,9 @@ class SearchPage extends React.Component {
   }
 }
 export default withRouter(SearchPage);
+
+const { spacings } = theme;
+
+const SearchBarWrapper = styled.div`
+  margin-bottom: ${spacings.large} !important;
+`;

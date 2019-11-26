@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -19,40 +19,12 @@ import Disclaimer from "./Disclaimer";
 import { Feedback } from "./Feedback";
 import Html from "./Html";
 import { ThemeBreadcrumbs } from "./ThemeBreadcrumbs";
-import { matopush } from "../piwik";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
     <Alert>{children}</Alert>
   </StyledErrorContainer>
 );
-
-export const BackToResultsLink = ({ query }) => {
-  const { q } = query;
-  const onClick = useCallback(() => {
-    matopush(["trackEvent", "backResults", q]);
-  }, [q]);
-  const onKeyPress = useCallback(
-    event => {
-      if (event.keyCode === 13)
-        // Enter
-        matopush(["trackEvent", "backResults", q]);
-    },
-    [q]
-  );
-
-  if (!q) return null;
-
-  return (
-    <BacklinkContainer>
-      <Link href={{ pathname: "/recherche", query }}>
-        <a role="link" tabIndex={0} onClick={onClick} onKeyPress={onKeyPress}>
-          <span aria-hidden>‹</span> Retour aux résultats
-        </a>
-      </Link>
-    </BacklinkContainer>
-  );
-};
 
 function Answer({
   title,
@@ -95,7 +67,6 @@ function Answer({
         <title>{title}</title>
       </Head>
       <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
-      <BackToResultsLink query={router.query} />
       <StyledContainer>
         <StyledContent hasResults={relatedItems.length > 0}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
@@ -225,10 +196,6 @@ const RelatedItems = styled.div`
 
 const StyledListItem = styled.li`
   margin: ${spacings.base} 0;
-`;
-
-const BacklinkContainer = styled(Container)`
-  padding-top: ${spacings.base};
 `;
 
 const IntroWrapper = styled(Wrapper)`

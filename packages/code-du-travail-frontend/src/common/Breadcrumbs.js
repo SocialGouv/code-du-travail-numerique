@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { ChevronsRight } from "react-feather";
-import { Container, OverflowWrapper, theme } from "@socialgouv/react-ui";
+import { Container, icons, OverflowWrapper, theme } from "@socialgouv/react-ui";
+
+const { ArrowRight } = icons;
 
 const Breadcrumbs = ({ items = [] }) => {
   if (!items || items.length === 0) {
@@ -10,22 +11,17 @@ const Breadcrumbs = ({ items = [] }) => {
   }
   return (
     <Nav>
-      <StyledContainer>
-        <OverflowWrapper shadowColor="white">
-          <StyledList>
-            {items.map((item, index) => (
-              <React.Fragment key={index}>
-                <NavItem>{item}</NavItem>
-                {index < items.length - 1 && (
-                  <Separator aria-hidden>
-                    <StyledChevronsRight />
-                  </Separator>
-                )}
-              </React.Fragment>
-            ))}
-          </StyledList>
-        </OverflowWrapper>
-      </StyledContainer>
+      <OverflowWrapper>
+        <StyledContainer>
+          {items.map((item, index) => (
+            <React.Fragment key={index}>
+              <NavItem>
+                {index !== 0 && <StyledArrowRight />} {item}
+              </NavItem>
+            </React.Fragment>
+          ))}
+        </StyledContainer>
+      </OverflowWrapper>
     </Nav>
   );
 };
@@ -36,39 +32,38 @@ Breadcrumbs.propTypes = {
 
 export { Breadcrumbs };
 
-const { breakpoints, colors, spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
 const Nav = styled.nav`
+  margin-bottom: ${spacings.small};
   overflow-x: auto;
-  background: ${colors.bgTertiary};
 `;
 const StyledContainer = styled(Container)`
-  padding: 0;
+  display: flex;
+  align-items: center;
 `;
 
-const StyledList = styled.ul`
+const NavItem = styled.li`
   display: flex;
-  flex-flow: nowrap;
   align-items: center;
-  padding: ${spacings.small} 0;
+  padding: 0 ${spacings.small} 0 0;
+  white-space: nowrap;
+  &:first-of-type {
+    padding-left: 0;
+  }
   @media (max-width: ${breakpoints.mobile}) {
-    padding: ${spacings.tiny} 0;
+    font-size: ${fonts.sizes.tiny};
+    &:not(:last-of-type) {
+      display: none;
+    }
   }
 `;
-const NavItem = styled.li`
-  display: inline-block;
-  padding: ${spacings.small} ${spacings.medium};
-  white-space: nowrap;
-`;
 
-const Separator = styled.li`
-  display: block;
-  user-select: none;
-  pointer-events: none;
-`;
-
-const StyledChevronsRight = styled(ChevronsRight)`
-  display: block;
-  width: ${spacings.base};
-  color: ${({ theme }) => theme.paragraph};
+const StyledArrowRight = styled(ArrowRight)`
+  width: 1.2rem;
+  margin-right: ${spacings.small};
+  color: ${({ theme }) => theme.secondary};
+  @media (max-width: ${breakpoints.mobile}) {
+    transform: rotate(180deg);
+  }
 `;

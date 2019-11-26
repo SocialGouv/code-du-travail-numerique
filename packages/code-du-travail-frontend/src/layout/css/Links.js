@@ -9,7 +9,9 @@ export default createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     text-decoration: underline;
     text-decoration-color: ${({ theme }) => theme.primary};
-    transition: all ${animations.transitionTiming} linear;
+    transition: color ${animations.transitionTiming} linear, text-decoration ${
+  animations.transitionTiming
+} linear;
   }
 
   a:focus,

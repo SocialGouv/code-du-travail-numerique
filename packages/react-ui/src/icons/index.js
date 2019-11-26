@@ -28,6 +28,6 @@ export { default as Download } from "./components/monochrome/Download";
 export { default as Euro } from "./components/monochrome/Euro";
 export { default as External } from "./components/monochrome/Calendar";
 export { default as Help } from "./components/monochrome/Help";
-export { default as Home } from "./components/monochrome/Help";
+export { default as Home } from "./components/monochrome/Home";
 export { default as More } from "./components/monochrome/More";
 export { default as Search } from "./components/monochrome/Search";

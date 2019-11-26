@@ -18,7 +18,7 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 const Outils = ({ pageUrl, ogImage, emailTemplates }) => (
-  <Layout>
+  <Layout currentPage="tools">
     <Metas
       url={pageUrl}
       title={`Boîte a outils - Code du travail numérique`}

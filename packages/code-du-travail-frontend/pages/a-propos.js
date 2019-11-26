@@ -12,7 +12,7 @@ import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
 
 const About = ({ ogImage, pageUrl }) => (
-  <Layout>
+  <Layout currentPage="about">
     <Metas
       url={pageUrl}
       title="À propos - Code du travail numérique"
