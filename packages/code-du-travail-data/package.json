@@ -29,7 +29,7 @@
   "dependencies": {
     "@cdt/sources": "^3.7.0",
     "@elastic/elasticsearch": "^7.4.0",
-    "@socialgouv/kali-data": "^1.2.33",
+    "@socialgouv/kali-data": "^1.2.34",
     "@socialgouv/legi-data": "^1.1.10",
     "esm": "^3.2.25",
     "unist-util-find": "^1.0.1",
