@@ -42,10 +42,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="fr" prefix="og: http://ogp.me/ns#">
         <Head>
-          <link
-            href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,600i&display=swap"
-            rel="stylesheet"
-          />
+          <link rel="stylesheet" type="text/css" href="/static/fonts.css" />
           <meta charSet="utf-8" />
           <meta
             name="viewport"
