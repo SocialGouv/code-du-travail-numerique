@@ -52,7 +52,6 @@ exports[`<StepInfo /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {

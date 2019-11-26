@@ -82,7 +82,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {
@@ -130,13 +129,8 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 
 .c9 {
   width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -285,7 +279,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary0"
                   name="salaires[0].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -314,7 +307,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary1"
                   name="salaires[1].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -343,7 +335,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary2"
                   name="salaires[2].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -372,7 +363,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary3"
                   name="salaires[3].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -401,7 +391,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary4"
                   name="salaires[4].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -430,7 +419,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary5"
                   name="salaires[5].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -459,7 +447,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary6"
                   name="salaires[6].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -488,7 +475,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary7"
                   name="salaires[7].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -517,7 +503,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary8"
                   name="salaires[8].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -546,7 +531,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary9"
                   name="salaires[9].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -575,7 +559,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary10"
                   name="salaires[10].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -604,7 +587,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                   class="c9"
                   id="salary11"
                   name="salaires[11].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -636,7 +618,6 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {
@@ -683,13 +664,8 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 
 .c6 {
   width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -816,7 +792,6 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     <input
       class="c6"
       name="salaire"
-      size="10"
       type="number"
       value="3000"
     />
@@ -834,7 +809,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 `;
 
 exports[`<StepSalaires /> should render tempsPartiel 1`] = `
-.c15 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -843,6 +818,10 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -869,14 +848,14 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   border-radius: 0;
 }
 
-.c15:focus,
-.c15:hover,
-.c15:active {
+.c14:focus,
+.c14:hover,
+.c14:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c17 {
+.c16 {
   height: 1.4rem;
   margin-left: 0.4rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -884,7 +863,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   transition: transform 250ms linear;
 }
 
-.c14:hover .c17 {
+.c13:hover .c16 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -901,7 +880,6 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {
@@ -946,7 +924,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   font-weight: 700;
 }
 
-.c18 {
+.c17 {
   margin: 2rem 0;
 }
 
@@ -985,14 +963,9 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 }
 
 .c10 {
-  width: 8em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
+  width: 10em;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -1005,33 +978,12 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   appearance: none;
 }
 
-.c12 {
-  width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
-  text-align: right;
-  border: 1px solid #bbcadf;
-  border-color: #bbcadf;
-  border-radius: 0.6rem;
-  padding-right: 1.6rem;
-  text-align: right;
-}
-
-.c12::-webkit-outer-spin-button,
-.c12::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .c11 {
   position: relative;
   display: inline-block;
 }
 
-.c13 {
+.c12 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
@@ -1041,7 +993,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   transform: translateY(-50%);
 }
 
-.c16 {
+.c15 {
   margin-left: 2rem;
   font-size: 1.4rem;
 }
@@ -1135,7 +1087,6 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
       <input
         class="c10"
         name="salairePeriods[0].duration"
-        size="8"
         type="number"
         value="24"
       />
@@ -1145,26 +1096,25 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         class="c11"
       >
         <input
-          class="c12"
+          class="c10"
           name="salairePeriods[0].salary"
-          size="10"
           type="number"
           value="2000"
         />
         <span
           aria-hidden="true"
-          class="c13"
+          class="c12"
         >
           €
         </span>
       </div>
       <button
-        class="c14 c15 c16"
+        class="c13 c14 c15"
         type="button"
       >
         Supprimer
         <svg
-          class="c17"
+          class="c16"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -1212,7 +1162,6 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
       <input
         class="c10"
         name="salairePeriods[1].duration"
-        size="8"
         type="number"
         value="12"
       />
@@ -1222,26 +1171,25 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         class="c11"
       >
         <input
-          class="c12"
+          class="c10"
           name="salairePeriods[1].salary"
-          size="10"
           type="number"
           value="1000"
         />
         <span
           aria-hidden="true"
-          class="c13"
+          class="c12"
         >
           €
         </span>
       </div>
       <button
-        class="c14 c15 c16"
+        class="c13 c14 c15"
         type="button"
       >
         Supprimer
         <svg
-          class="c17"
+          class="c16"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -1266,12 +1214,12 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     </div>
   </div>
   <button
-    class="c14 c15 c18"
+    class="c13 c14 c17"
     type="button"
   >
     Ajouter une période
     <svg
-      class="c17"
+      class="c16"
       fill="none"
       height="24"
       stroke="currentColor"

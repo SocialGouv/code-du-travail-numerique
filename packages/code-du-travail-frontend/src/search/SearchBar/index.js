@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
-import { Button, theme } from "@socialgouv/react-ui";
+import { Button, icons, theme } from "@socialgouv/react-ui";
 
-import SearchIcon from "../../icons/SearchIcon";
 import { matopush } from "../../piwik";
 import { fetchSuggestResults } from "../search.service";
 import { DocumentSuggester } from "./DocumentSuggester";
+
+const { Search: SearchIcon } = icons;
 
 const suggestMaxResults = 5;
 
@@ -63,7 +64,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
   };
   return (
     <SearchForm onSubmit={onFormSubmit}>
-      {hasButton && <SearchInputIcon />}
+      {hasButton && <SearchIconLeft />}
       <SearchInput
         inputId={inputId}
         hasFocus={hasFocus}
@@ -82,7 +83,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
         </SubmitButton>
       ) : (
         <SubmitIcon type="submit" small narrow variant="naked">
-          <SearchIcon />
+          <StyledSearchIcon />
         </SubmitIcon>
       )}
     </SearchForm>
@@ -93,7 +94,7 @@ export default SearchBar;
 
 const { animations, box, breakpoints, colors, spacings } = theme;
 
-const inputHeight = "50px";
+const INPUT_HEIGHT = "5.4rem";
 
 const SearchForm = styled.form`
   position: relative;
@@ -106,12 +107,14 @@ const SearchForm = styled.form`
   }
 `;
 
-const SearchInputIcon = styled(SearchIcon)`
+const StyledSearchIcon = styled(SearchIcon)`
+  width: 2.5rem;
+`;
+
+const SearchIconLeft = styled(StyledSearchIcon)`
   position: absolute;
   top: 0;
   left: 0;
-  width: 2rem;
-  height: 2rem;
   margin: ${spacings.base} 0 0 ${spacings.medium};
   @media (max-width: ${breakpoints.mobile}) {
     display: none;
@@ -121,18 +124,15 @@ const SearchInputIcon = styled(SearchIcon)`
 const SearchInput = styled(DocumentSuggester)`
   display: flex;
   width: 100%;
-  height: ${inputHeight};
   margin: 0;
   padding: 0
     ${({ hasButton }) =>
       hasButton
-        ? `${spacings.base} 0 4rem `
-        : `calc(${inputHeight} + ${spacings.small}) 0 ${spacings.base}`};
+        ? `${spacings.base} 0 6.4rem `
+        : `calc(${INPUT_HEIGHT} + ${spacings.small}) 0 ${spacings.base}`};
   font-size: inherit;
   font-family: inherit;
   background: ${colors.bgSecondary};
-  border: ${box.border};
-  border-radius: ${spacings.xmedium};
   transition: border ${animations.transitionTiming} ease;
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
@@ -149,10 +149,10 @@ const SubmitButton = styled(Button)`
 `;
 const SubmitIcon = styled(Button)`
   position: absolute;
-  top: 1px;
-  right: 1px;
-  width: calc(${inputHeight} - 2px);
-  height: calc(${inputHeight} - 2px);
+  top: 0;
+  right: 0;
+  width: calc(${INPUT_HEIGHT} - ${spacings.small});
+  height: calc(${INPUT_HEIGHT} - 2px);
   border-top-right-radius: ${box.borderRadius};
   border-bottom-right-radius: ${box.borderRadius};
 `;

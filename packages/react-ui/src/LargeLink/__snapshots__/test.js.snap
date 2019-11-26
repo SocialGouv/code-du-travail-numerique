@@ -2,14 +2,7 @@
 
 exports[`<LargeLink /> should render 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-bottom: 2rem;
   padding: 2rem;
   color: #3e486e;
@@ -39,23 +32,14 @@ exports[`<LargeLink /> should render 1`] = `
   <a
     class="c0"
   >
-    <div>
-      Ok
-    </div>
+    Ok
   </a>
 </div>
 `;
 
 exports[`<LargeLink /> should render highlighted 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-bottom: 2rem;
   padding: 2rem;
   color: #3e486e;
@@ -85,23 +69,14 @@ exports[`<LargeLink /> should render highlighted 1`] = `
   <a
     class="c0"
   >
-    <div>
-      Ok
-    </div>
+    Ok
   </a>
 </div>
 `;
 
 exports[`<LargeLink /> should render light 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-bottom: 2rem;
   padding: 2rem;
   color: #3e486e;
@@ -131,9 +106,7 @@ exports[`<LargeLink /> should render light 1`] = `
   <a
     class="c0"
   >
-    <div>
-      Ok
-    </div>
+    Ok
   </a>
 </div>
 `;

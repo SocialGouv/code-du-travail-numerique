@@ -34,11 +34,7 @@ function Primes({ name, visible = true, onChange }) {
                 render={({ input, meta: { touched, error, invalid } }) => (
                   <>
                     <CurrencyWrapper>
-                      <NumberInput
-                        {...input}
-                        size="10"
-                        invalid={touched && invalid}
-                      />
+                      <NumberInput {...input} invalid={touched && invalid} />
                       <Currency aria-hidden="true">€</Currency>
                     </CurrencyWrapper>
                     {error && touched && invalid ? (

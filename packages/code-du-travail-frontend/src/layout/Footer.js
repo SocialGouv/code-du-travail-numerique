@@ -6,8 +6,6 @@ import {
   Button,
   Container,
   Heading,
-  List,
-  ListItem,
   Section,
   theme,
   Title
@@ -41,7 +39,7 @@ const Footer = () => (
       <Links>
         <Category>
           <Heading>Code du travail numérique</Heading>
-          <List>
+          <ul>
             <StyledListItem>
               <Link href="/droit-du-travail">
                 <a>Le droit du travail</a>
@@ -67,11 +65,11 @@ const Footer = () => (
                 Contact
               </a>
             </StyledListItem>
-          </List>
+          </ul>
         </Category>
         <Category>
           <Heading>Aidez-nous à améliorer cet outil</Heading>
-          <List>
+          <ul>
             <StyledListItem>
               <a
                 href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
@@ -102,11 +100,11 @@ const Footer = () => (
                 );
               })()}
             </StyledListItem>
-          </List>
+          </ul>
         </Category>
         <Category>
           <Heading>En collaboration avec</Heading>
-          <List>
+          <ul>
             <StyledListItem>
               <a
                 href={
@@ -136,7 +134,7 @@ const Footer = () => (
                 beta.gouv.fr
               </a>
             </StyledListItem>
-          </List>
+          </ul>
         </Category>
       </Links>
     </Section>
@@ -180,7 +178,7 @@ const Category = styled.div`
   }
 `;
 
-const StyledListItem = styled(ListItem)`
+const StyledListItem = styled.li`
   margin: ${spacings.tiny} 0;
   a {
     text-decoration: none;

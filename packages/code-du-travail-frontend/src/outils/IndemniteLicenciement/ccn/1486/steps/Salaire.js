@@ -76,7 +76,6 @@ const RegularNewSalaire = ({ name }) => (
           <CurrencyWrapper>
             <NumberInput
               {...input}
-              size="10"
               type="number"
               invalid={touched && invalid}
             />
@@ -142,7 +141,6 @@ const IrregularNewSalaire = ({ name }) => (
                           <CurrencyWrapper>
                             <NumberInput
                               {...input}
-                              size="10"
                               type="number"
                               id={`salaire${index}`}
                               invalid={touched && invalid}

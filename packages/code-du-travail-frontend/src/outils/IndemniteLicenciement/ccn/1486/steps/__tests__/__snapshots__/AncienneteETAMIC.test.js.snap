@@ -38,14 +38,9 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 }
 
 .c8 {
-  width: 7em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
+  width: 10em;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
 }
 
 .c8::-webkit-outer-spin-button,
@@ -67,7 +62,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c6 {
@@ -125,13 +119,8 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 
 .c11 {
   width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -249,7 +238,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     class="c8"
     id="duration"
     name="brancheContrat.duration"
-    size="7"
     type="number"
     value="3"
   />
@@ -276,7 +264,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       class="c11"
       id="currency-1"
       name="brancheContrat.indemnite"
-      size="10"
       type="number"
       value="0"
     />
@@ -372,7 +359,6 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c6 {

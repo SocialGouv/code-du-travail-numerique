@@ -10,6 +10,10 @@ exports[`<PrevNextBar /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -67,6 +71,10 @@ exports[`<PrevNextBar /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -160,6 +168,10 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -217,6 +229,10 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -311,6 +327,10 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -368,6 +388,10 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -461,6 +485,10 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;

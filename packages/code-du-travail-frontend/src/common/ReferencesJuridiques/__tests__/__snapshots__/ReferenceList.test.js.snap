@@ -1,15 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReferenceList /> should render 1`] = `
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c0 {
+  display: block;
   margin-bottom: 2rem;
   padding: 2rem;
   color: #3e486e;
@@ -22,66 +15,46 @@ exports[`<ReferenceList /> should render 1`] = `
   transition: 250ms all;
 }
 
-.c1:visited {
+.c0:visited {
   color: #3e486e;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1:active,
-.c1:hover {
+.c0:active,
+.c0:hover {
   color: #3e486e;
   border-color: #3e486e;
   box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
 }
 
-.c0 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 <div>
-  <ul
-    class="c0"
-  >
-    <li
-      class=""
-    >
+  <ul>
+    <li>
       <a
-        class="c1"
+        class="c0"
         href="/code-du-travail/xxx"
       >
-        <div>
-          Article xxx du code du travail
-        </div>
+        Article xxx du code du travail
       </a>
     </li>
-    <li
-      class=""
-    >
+    <li>
       <a
-        class="c1"
+        class="c0"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <div>
-          Autre: 
-          Article yyy du code du travail
-        </div>
+        Autre: 
+        Article yyy du code du travail
       </a>
     </li>
-    <li
-      class=""
-    >
+    <li>
       <a
-        class="c1"
+        class="c0"
         href="/convention-collective/zzz"
       >
-        <div>
-          Convention collective: 
-          Article zzz du code du travail
-        </div>
+        Convention collective: 
+        Article zzz du code du travail
       </a>
     </li>
   </ul>

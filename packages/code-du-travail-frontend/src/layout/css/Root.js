@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "@socialgouv/react-ui";
 
-const { colors, fonts } = theme;
+const { fonts } = theme;
 
 export default createGlobalStyle`
   html {
@@ -14,7 +14,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    color: ${colors.paragraph};
+    color: ${({ theme }) => theme.paragraph};
     font-size: ${fonts.sizes.default};
     font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;

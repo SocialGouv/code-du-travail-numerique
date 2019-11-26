@@ -14,7 +14,6 @@ export { Button } from "./Button";
 export { CardList } from "./CardList";
 export { Grid, GridCell } from "./Grid";
 export { LargeLink } from "./LargeLink";
-export { List, ListItem } from "./List";
 export { Modal, ModalContentWrapper } from "./Modal";
 export { OverflowWrapper } from "./OverflowWrapper";
 export { Heading, PageTitle, Title } from "./Titles";

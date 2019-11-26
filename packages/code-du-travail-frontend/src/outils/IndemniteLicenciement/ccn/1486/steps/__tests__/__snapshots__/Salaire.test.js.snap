@@ -48,7 +48,6 @@ exports[`<Salaire /> renders 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c5 {
@@ -221,7 +220,6 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c5 {
@@ -504,7 +502,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c5 {
@@ -552,13 +549,8 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 
 .c12 {
   width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -745,7 +737,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
                   class="c12"
                   id="salaire0"
                   name="brancheNewIrregularSalaire[0].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -774,7 +765,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
                   class="c12"
                   id="salaire1"
                   name="brancheNewIrregularSalaire[1].salary"
-                  size="10"
                   type="number"
                   value=""
                 />
@@ -842,7 +832,6 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c5 {
@@ -885,13 +874,8 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
 
 .c8 {
   width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
   text-align: right;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -1051,7 +1035,6 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     <input
       class="c8"
       name="brancheNewRegularSalaire"
-      size="10"
       type="number"
       value=""
     />

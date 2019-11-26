@@ -5,8 +5,6 @@ import {
   Button,
   Container,
   Heading,
-  List,
-  ListItem,
   Modal,
   Section,
   theme,
@@ -36,7 +34,7 @@ const Hierarchy = () => {
         </Container>
         <Section>
           <Container narrow>
-            <List>
+            <ul>
               <Li>
                 <NumberWrapper>
                   <Number>1</Number>
@@ -396,7 +394,7 @@ const Hierarchy = () => {
                   ]}
                 />
               </Li>
-            </List>
+            </ul>
           </Container>
         </Section>
       </Section>
@@ -496,7 +494,7 @@ export default Hierarchy;
 
 const { breakpoints, colors, fonts, spacings } = theme;
 
-const Li = styled(ListItem)`
+const Li = styled.li`
   position: relative;
   display: flex;
   align-items: stretch;
@@ -520,6 +518,7 @@ const NumberWrapper = styled.div`
   }
   &:before {
     position: absolute;
+    top: 0;
     left: 50%;
     width: 1px;
     height: 100%;

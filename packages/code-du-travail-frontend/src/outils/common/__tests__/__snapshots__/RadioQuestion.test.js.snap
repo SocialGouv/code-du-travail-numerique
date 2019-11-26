@@ -12,7 +12,6 @@ exports[`<RadioQuestion /> should render with default value 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c1 {
@@ -86,7 +85,6 @@ exports[`<RadioQuestion /> should render with selectedValue value 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c1 {

@@ -10,6 +10,10 @@ exports[`<StepPrimes /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -68,7 +72,6 @@ exports[`<StepPrimes /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-  font-size: 1.8rem;
 }
 
 .c2 {
@@ -122,14 +125,9 @@ exports[`<StepPrimes /> should render 1`] = `
 }
 
 .c6 {
-  width: 10em;
-  padding: 1rem 0.4rem;
-  font-size: 1rem;
-  line-height: inherit;
+  width: auto;
   text-align: left;
-  border: 1px solid #bbcadf;
   border-color: #bbcadf;
-  border-radius: 0.6rem;
   padding-right: 1.6rem;
   text-align: right;
 }
@@ -222,7 +220,6 @@ exports[`<StepPrimes /> should render 1`] = `
       <input
         class="c6"
         name="primes[0].prime"
-        size="10"
         value="3000"
       />
       <span

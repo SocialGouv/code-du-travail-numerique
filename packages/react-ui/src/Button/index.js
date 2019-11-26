@@ -9,6 +9,7 @@ import { animations, box, fonts, spacings } from "../theme";
 export const StyledButton = styled.button`
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: ${fonts.sizes.default};

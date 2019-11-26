@@ -115,15 +115,8 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   display: none;
 }
 
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c10 {
+  display: block;
   margin-bottom: 2rem;
   padding: 2rem;
   color: #3e486e;
@@ -136,23 +129,17 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   transition: 250ms all;
 }
 
-.c11:visited {
+.c10:visited {
   color: #3e486e;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c11:active,
-.c11:hover {
+.c10:active,
+.c10:hover {
   color: #3e486e;
   border-color: #3e486e;
   box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
-}
-
-.c10 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c0 {
@@ -252,72 +239,50 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               hidden=""
               id="accordion__panel-0"
             >
-              <ul
-                class="c10"
-              >
-                <li
-                  class=""
-                >
+              <ul>
+                <li>
                   <a
-                    class="c11"
+                    class="c10"
                     href="/code-du-travail/l1244-3"
                   >
-                    <div>
-                      Article L1244-3 du code du travail
-                    </div>
+                    Article L1244-3 du code du travail
                   </a>
                 </li>
-                <li
-                  class=""
-                >
+                <li>
                   <a
-                    class="c11"
+                    class="c10"
                     href="/code-du-travail/l1244-4"
                   >
-                    <div>
-                      Article L1244-4 du code du travail
-                    </div>
+                    Article L1244-4 du code du travail
                   </a>
                 </li>
-                <li
-                  class=""
-                >
+                <li>
                   <a
-                    class="c11"
+                    class="c10"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <div>
-                      Autre: 
-                      Article L3121-44 du code du travail
-                    </div>
+                    Autre: 
+                    Article L3121-44 du code du travail
                   </a>
                 </li>
-                <li
-                  class=""
-                >
+                <li>
                   <a
-                    class="c11"
+                    class="c10"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <div>
-                      Autre: 
-                      Article xxx du code du travail
-                    </div>
+                    Autre: 
+                    Article xxx du code du travail
                   </a>
                 </li>
-                <li
-                  class=""
-                >
+                <li>
                   <a
-                    class="c11"
+                    class="c10"
                     href="/convention-collective/yyy"
                   >
-                    <div>
-                      Convention collective: 
-                      Article yyy du code du travail
-                    </div>
+                    Convention collective: 
+                    Article yyy du code du travail
                   </a>
                 </li>
               </ul>

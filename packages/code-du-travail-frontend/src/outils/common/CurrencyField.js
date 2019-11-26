@@ -37,7 +37,6 @@ function CurrencyField({
                   {...inputProps}
                   {...input}
                   type="number"
-                  size="10"
                   invalid={touched && invalid}
                 />
                 <Currency aria-hidden="true">€</Currency>

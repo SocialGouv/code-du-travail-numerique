@@ -16,7 +16,6 @@ function Step({ form }) {
       <TextQuestion
         inputType="number"
         name="age"
-        size="5"
         label="Quel était l'âge du salarié à la date du licenciement&nbsp;?"
       />
       {age > 60 && (

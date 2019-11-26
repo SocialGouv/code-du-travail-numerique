@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Outils /> should render 1`] = `
-.c18 {
+.c19 {
   padding: 2rem 0;
   color: #3e486e;
 }
 
-.c20 {
+.c21 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: normal;
@@ -15,7 +15,7 @@ exports[`<Outils /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c26 {
+.c27 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -24,7 +24,7 @@ exports[`<Outils /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c15 {
+.c16 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -33,11 +33,11 @@ exports[`<Outils /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c15 > *:first-child {
+.c16 > *:first-child {
   margin-top: 0;
 }
 
-.c15 > *:last-child {
+.c16 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -50,6 +50,10 @@ exports[`<Outils /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -98,7 +102,7 @@ exports[`<Outils /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c22 {
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -107,6 +111,10 @@ exports[`<Outils /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: content-box;
   font-weight: 500;
   font-size: 1.6rem;
@@ -131,16 +139,16 @@ exports[`<Outils /> should render 1`] = `
   opacity: 1;
 }
 
-.c22:link,
-.c22:visited {
+.c23:link,
+.c23:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c22:not([disabled]):hover,
-.c22:not([disabled]):active,
-.c22:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):active,
+.c23:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -149,16 +157,10 @@ exports[`<Outils /> should render 1`] = `
   border-color: #ffa09a;
 }
 
-.c22[disabled] {
+.c23[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c27 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c9:not(:focus):not(:active) {
@@ -202,20 +204,21 @@ exports[`<Outils /> should render 1`] = `
   padding: 0;
 }
 
+.c14 {
+  width: 2.5rem;
+}
+
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 50px;
   margin: 0;
-  padding: 0 calc(50px + 1rem) 0 1.6rem;
+  padding: 0 calc(5.4rem + 1rem) 0 1.6rem;
   font-size: inherit;
   font-family: inherit;
   background: #f2f5fa;
-  border: 1px solid #bbcadf;
-  border-radius: 2.4rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
   -webkit-appearance: none;
@@ -225,10 +228,10 @@ exports[`<Outils /> should render 1`] = `
 
 .c13 {
   position: absolute;
-  top: 1px;
-  right: 1px;
-  width: calc(50px - 2px);
-  height: calc(50px - 2px);
+  top: 0;
+  right: 0;
+  width: calc(5.4rem - 1rem);
+  height: calc(5.4rem - 2px);
   border-top-right-radius: 0.6rem;
   border-bottom-right-radius: 0.6rem;
 }
@@ -308,26 +311,26 @@ exports[`<Outils /> should render 1`] = `
   width: 350px;
 }
 
-.c17 {
+.c18 {
   background-color: #f2f5fa;
 }
 
-.c19 {
+.c20 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   text-align: center;
 }
 
-.c19 > *:first-child {
+.c20 > *:first-child {
   margin-top: 0;
 }
 
-.c19 > *:last-child {
+.c20 > *:last-child {
   margin-bottom: 0;
 }
 
-.c21 {
+.c22 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -337,15 +340,15 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c21 > *:first-child {
+.c22 > *:first-child {
   margin-top: 0;
 }
 
-.c21 > *:last-child {
+.c22 > *:last-child {
   margin-bottom: 0;
 }
 
-.c23 {
+.c24 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -359,15 +362,15 @@ exports[`<Outils /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c23 > *:first-child {
+.c24 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c24 > *:last-child {
   margin-bottom: 0;
 }
 
-.c25 + .c24 {
+.c26 + .c25 {
   padding-left: 1.6rem;
 }
 
@@ -380,7 +383,7 @@ exports[`<Outils /> should render 1`] = `
   text-decoration: none;
 }
 
-.c14 {
+.c15 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -389,15 +392,15 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c14 > *:first-child {
+.c15 > *:first-child {
   margin-top: 0;
 }
 
-.c14 > *:last-child {
+.c15 > *:last-child {
   margin-bottom: 0;
 }
 
-.c16 {
+.c17 {
   margin-top: 50px;
   padding: 1rem;
   text-align: center;
@@ -458,34 +461,34 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c17 {
+  .c18 {
     display: none;
   }
 }
 
 @media print {
-  .c19 {
+  .c20 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c21 {
+  .c22 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c23 {
+  .c24 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -493,13 +496,13 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 + .c24 {
+  .c26 + .c25 {
     padding-left: 0;
   }
 }
 
 @media print {
-  .c14 {
+  .c15 {
     max-width: 100%;
     padding: 0;
   }
@@ -579,13 +582,13 @@ exports[`<Outils /> should render 1`] = `
             type="submit"
           >
             <svg
-              viewBox="0 0 20 20"
+              class="c14"
+              fill="none"
+              viewBox="0 0 32 32"
             >
-              <title />
               <path
-                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
                 fill="currentColor"
-                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -597,63 +600,61 @@ exports[`<Outils /> should render 1`] = `
     id="main"
   >
     <div
-      class="c14"
+      class="c15"
     >
       <div
-        class="c15"
+        class="c16"
       >
         Cet outil est introuvable
       </div>
     </div>
     <div
-      class="c16"
+      class="c17"
     >
       -
     </div>
   </main>
   <footer
-    class="c17"
+    class="c18"
   >
     <div
-      class="c18"
+      class="c19"
     >
       <div
-        class="c19"
+        class="c20"
       >
         <h2
-          class="c20"
+          class="c21"
         >
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c21"
+          class="c22"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
-          class="c22"
+          class="c23"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c18"
+      class="c19"
     >
       <div
-        class="c23"
+        class="c24"
       >
         <div
-          class="c24 c25"
+          class="c25 c26"
         >
           <h3
-            class="c26"
+            class="c27"
           >
             Code du travail numérique
           </h3>
-          <ul
-            class="c27"
-          >
+          <ul>
             <li
               class="c28"
             >
@@ -702,16 +703,14 @@ exports[`<Outils /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c24 c25"
+          class="c25 c26"
         >
           <h3
-            class="c26"
+            class="c27"
           >
             Aidez-nous à améliorer cet outil
           </h3>
-          <ul
-            class="c27"
-          >
+          <ul>
             <li
               class="c28"
             >
@@ -737,16 +736,14 @@ exports[`<Outils /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c24 c25"
+          class="c25 c26"
         >
           <h3
-            class="c26"
+            class="c27"
           >
             En collaboration avec
           </h3>
-          <ul
-            class="c27"
-          >
+          <ul>
             <li
               class="c28"
             >

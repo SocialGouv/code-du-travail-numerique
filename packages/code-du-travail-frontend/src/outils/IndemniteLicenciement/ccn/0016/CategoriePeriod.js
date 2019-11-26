@@ -30,7 +30,6 @@ function CategoriePeriod() {
               <div>
                 <Input
                   {...input}
-                  size="5"
                   min="0"
                   type="number"
                   invalid={touched && invalid}
@@ -63,7 +62,6 @@ function CategoriePeriod() {
               <div>
                 <Input
                   {...input}
-                  size="5"
                   min="0"
                   type="number"
                   invalid={touched && invalid}

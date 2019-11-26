@@ -54,7 +54,6 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                     <>
                       <NumberInput
                         {...input}
-                        size="8"
                         type="number"
                         invalid={touched && invalid}
                       />
@@ -80,7 +79,6 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                       <CurrencyWrapper>
                         <NumberInput
                           {...input}
-                          size="10"
                           type="number"
                           invalid={touched && invalid}
                         />

@@ -15,6 +15,7 @@
     "lint": "yarn lint-js && yarn lint-css",
     "prepush": "yarn lint && yarn test",
     "start": "start-storybook",
+    "svg": "svgo --config=src/icons/mono.config.yaml -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.yaml -f src/icons/src/bicolor && npx @svgr/cli --icon --no-dimensions -d src/icons/components src/icons/src",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "test": "jest"
   },
@@ -44,12 +45,15 @@
     "@storybook/addon-viewport": "^5.2.6",
     "@storybook/components": "^5.2.6",
     "@storybook/react": "^5.2.6",
+    "@svgr/cli": "^4.3.3",
+    "@svgr/core": "^4.3.3",
     "@testing-library/react": "^9.3.2",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "eslint": "^6.7.1",
     "jest": "^24.9.0",
     "jest-styled-components": "^6.3.4",
+    "npx": "^10.2.0",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -65,7 +69,8 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-order": "^3.1.1",
-    "stylelint-processor-styled-components": "^1.9.0"
+    "stylelint-processor-styled-components": "^1.9.0",
+    "svgo": "^1.3.2"
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/packages/react-ui",
   "license": "MIT",

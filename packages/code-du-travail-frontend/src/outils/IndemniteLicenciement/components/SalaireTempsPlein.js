@@ -67,7 +67,6 @@ function SalaireTempsPlein({ name }) {
                           <CurrencyWrapper>
                             <NumberInput
                               {...input}
-                              size="10"
                               type="number"
                               id={`salary${index}`}
                               invalid={touched && invalid}
