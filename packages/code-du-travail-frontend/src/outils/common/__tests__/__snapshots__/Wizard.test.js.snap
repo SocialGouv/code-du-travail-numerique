@@ -677,7 +677,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
         <button
           class="c12"
         >
-          Recommencer une simulation
+          Imprimer le résultat
         </button>
       </div>
     </div>
@@ -1713,7 +1713,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
         <button
           class="c12"
         >
-          Recommencer une simulation
+          Imprimer le résultat
         </button>
       </div>
     </div>
