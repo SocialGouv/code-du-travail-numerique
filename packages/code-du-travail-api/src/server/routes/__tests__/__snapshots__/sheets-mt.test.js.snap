@@ -6,6 +6,20 @@ Object {
   "_index": "cdtn_fiches_ministere_du_travail_test",
   "_score": 0,
   "_source": Object {
+    "breadcrumbs": Array [
+      Object {
+        "slug": "6-sante-securite-et-conditions-de-travail",
+        "title": "Santé, sécurité et conditions de travail",
+      },
+      Object {
+        "slug": "63-sante-au-travail",
+        "title": "Santé au travail",
+      },
+      Object {
+        "slug": "634-suivi-medical-des-salaries",
+        "title": "Suivi médical des salariés",
+      },
+    ],
     "date": "23/05/2017",
     "description": "1) Visite d'information et de prévention : pour qui ? Depuis le 1er janvier 2017, la visite d'information et de prévention vient remplacer la (...)",
     "intro": "<dl class=\\"spip_document_432939 spip_documents spip_documents_center\\">

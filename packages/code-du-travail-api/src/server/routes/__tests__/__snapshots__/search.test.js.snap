@@ -12,102 +12,8 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
   ],
-  "documents": Array [
-    Object {
-      "_score": 1.2627374,
-      "algo": "semantic",
-      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
-      "slug": "la-demission#Comment-presenter-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : comment présenter une démission ?",
-    },
-    Object {
-      "_score": 1.1894766,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "8-depart-de-lentreprise",
-          "title": "Départ de l'entreprise",
-        },
-        Object {
-          "slug": "81-demission",
-          "title": "Démission",
-        },
-      ],
-      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
-      "slug": "demission-dun-salarie",
-      "source": "fiches_service_public",
-      "title": "Démission d'un salarié",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
-    },
-    Object {
-      "_score": 1.1810381,
-      "algo": "semantic",
-      "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
-      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
-    },
-    Object {
-      "_score": 1.1642654,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "8-depart-de-lentreprise",
-          "title": "Départ de l'entreprise",
-        },
-        Object {
-          "slug": "81-demission",
-          "title": "Démission",
-        },
-      ],
-      "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
-      "slug": "demission-dune-assistante-maternelle",
-      "source": "fiches_service_public",
-      "title": "Démission d'une assistante maternelle",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
-    },
-    Object {
-      "_score": 1.1540345,
-      "algo": "semantic",
-      "description": "Connaître la durée du préavis de démission",
-      "slug": "preavis-demission",
-      "source": "outils",
-      "title": "Simulateur de durée de préavis de démission",
-    },
-    Object {
-      "_score": 1.1081983,
-      "algo": "semantic",
-      "description": "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Simulateur d'indemnité de licenciement",
-    },
-    Object {
-      "_score": 1.0708303,
-      "algo": "semantic",
-      "description": "La rupture anticipée du contrat à déterminée n’est possible que dans certains cas. La rupture d’un commun accord est l’un de ces cas : ce modèle permet à l’une des parties de demander à l’autre, la rupture du CDD.",
-      "slug": "modele-rupture-dun-commun-accord-dun-contrat-a-duree-determinee",
-      "source": "modeles_de_courriers",
-      "title": "Modèle : Rupture d’un commun accord d’un contrat à durée déterminée",
-    },
-  ],
-  "themes": Array [
-    Object {
-      "_score": 1.1876618,
-      "algo": "semantic",
-      "slug": "81-demission",
-      "source": "themes",
-      "title": "Démission",
-    },
-    Object {
-      "_score": 1.1013293,
-      "algo": "semantic",
-      "slug": "1-embauche-et-contrat-de-travail",
-      "source": "themes",
-      "title": "Embauche et contrat de travail",
-    },
-  ],
+  "documents": Array [],
+  "themes": Array [],
 }
 `;
 
@@ -181,18 +87,11 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.1876618,
-      "algo": "semantic",
+      "_score": 0.8025915,
+      "algo": "fulltext",
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
-    },
-    Object {
-      "_score": 1.1013293,
-      "algo": "semantic",
-      "slug": "1-embauche-et-contrat-de-travail",
-      "source": "themes",
-      "title": "Embauche et contrat de travail",
     },
   ],
 }
@@ -220,16 +119,8 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 7.1739163,
+      "_score": 7.800238,
       "algo": "fulltext",
-      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
-      "slug": "la-demission#Comment-presenter-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : comment présenter une démission ?",
-    },
-    Object {
-      "_score": 1.1894766,
-      "algo": "semantic",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",
@@ -247,20 +138,20 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 1.1540345,
-      "algo": "semantic",
+      "_score": 7.500506,
+      "algo": "fulltext",
       "description": "Connaître la durée du préavis de démission",
       "slug": "preavis-demission",
       "source": "outils",
       "title": "Simulateur de durée de préavis de démission",
     },
     Object {
-      "_score": 3.4247293,
+      "_score": 7.1739163,
       "algo": "fulltext",
-      "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
-      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
+      "slug": "la-demission#Comment-presenter-une-demission",
       "source": "fiches_ministere_travail",
-      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
+      "title": "La démission : comment présenter une démission ?",
     },
     Object {
       "_score": 7.033888,
@@ -282,36 +173,21 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 1.1081983,
-      "algo": "semantic",
-      "description": "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Simulateur d'indemnité de licenciement",
-    },
-    Object {
-      "_score": 1.0708303,
-      "algo": "semantic",
-      "description": "La rupture anticipée du contrat à déterminée n’est possible que dans certains cas. La rupture d’un commun accord est l’un de ces cas : ce modèle permet à l’une des parties de demander à l’autre, la rupture du CDD.",
-      "slug": "modele-rupture-dun-commun-accord-dun-contrat-a-duree-determinee",
-      "source": "modeles_de_courriers",
-      "title": "Modèle : Rupture d’un commun accord d’un contrat à durée déterminée",
+      "_score": 3.4247293,
+      "algo": "fulltext",
+      "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
   ],
   "themes": Array [
     Object {
-      "_score": 1.1876618,
-      "algo": "semantic",
+      "_score": 0.8025915,
+      "algo": "fulltext",
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
-    },
-    Object {
-      "_score": 1.1013293,
-      "algo": "semantic",
-      "slug": "1-embauche-et-contrat-de-travail",
-      "source": "themes",
-      "title": "Embauche et contrat de travail",
     },
   ],
 }

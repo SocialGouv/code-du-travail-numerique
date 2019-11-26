@@ -19,7 +19,7 @@ export const documentMapping = {
     },
     title_vector: {
       type: "dense_vector",
-      dims: 512
+      dims: 768
     },
     title: {
       type: "text",
