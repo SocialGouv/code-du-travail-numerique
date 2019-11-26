@@ -22,6 +22,19 @@ export default createGlobalStyle`
     text-rendering: optimizeLegibility;
     @media print {
       font-size: 10pt;
+      /* Override specifics class to print. */
+      footer,
+      button {
+        display: none;
+      }
+      [class*="SearchBar__SearchForm"],
+      [class*="StepItems__StepItemsContainer"],
+      [class*="PrevNextBar__Box"] {
+        display: none;
+      }
+      [class*="Wizard__StyledForm"] {
+        border: 0;
+      }
     }
   }
 
