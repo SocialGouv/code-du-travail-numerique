@@ -767,6 +767,12 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media print {
   .c37 {
     display: none;
   }

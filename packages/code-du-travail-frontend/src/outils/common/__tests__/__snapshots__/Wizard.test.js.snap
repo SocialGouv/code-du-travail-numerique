@@ -241,6 +241,12 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c3 {
     display: inline-block;
@@ -262,11 +268,23 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   }
 }
 
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media print {
+  .c0 {
+    border: 0;
   }
 }
 
@@ -579,6 +597,12 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c3 {
     display: inline-block;
@@ -600,11 +624,23 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   }
 }
 
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media print {
+  .c0 {
+    border: 0;
   }
 }
 
@@ -926,6 +962,12 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c3 {
     display: inline-block;
@@ -947,11 +989,23 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   }
 }
 
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media print {
+  .c0 {
+    border: 0;
   }
 }
 
@@ -1274,6 +1328,12 @@ exports[`<Wizard /> should inject rules component 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c3 {
     display: inline-block;
@@ -1295,11 +1355,23 @@ exports[`<Wizard /> should inject rules component 1`] = `
   }
 }
 
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media print {
+  .c0 {
+    border: 0;
   }
 }
 
@@ -1615,6 +1687,12 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c3 {
     display: inline-block;
@@ -1636,11 +1714,23 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   }
 }
 
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media print {
+  .c0 {
+    border: 0;
   }
 }
 
@@ -1962,6 +2052,12 @@ exports[`<Wizard /> should render a step 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c3 {
     display: inline-block;
@@ -1983,11 +2079,23 @@ exports[`<Wizard /> should render a step 1`] = `
   }
 }
 
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media print {
+  .c0 {
+    border: 0;
   }
 }
 

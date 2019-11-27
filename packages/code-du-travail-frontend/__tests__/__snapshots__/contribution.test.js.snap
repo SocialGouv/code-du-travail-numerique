@@ -767,6 +767,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media print {
   .c37 {
     display: none;
   }
@@ -1980,6 +1986,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   .c6 {
     width: 100%;
     margin-top: 2rem;
+  }
+}
+
+@media print {
+  .c6 {
+    display: none;
   }
 }
 

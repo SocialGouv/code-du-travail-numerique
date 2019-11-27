@@ -601,6 +601,12 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media print {
   .c30 {
     display: none;
   }

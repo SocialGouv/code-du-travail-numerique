@@ -267,6 +267,12 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   }
 }
 
+@media print {
+  .c3 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c5 {
     display: inline-block;
@@ -288,11 +294,23 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   }
 }
 
+@media print {
+  .c13 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c2 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media print {
+  .c2 {
+    border: 0;
   }
 }
 

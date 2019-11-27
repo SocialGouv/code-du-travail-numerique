@@ -687,6 +687,12 @@ exports[`<CodeDuTravail /> should render 1`] = `
 }
 
 @media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media print {
   .c32 {
     display: none;
   }
