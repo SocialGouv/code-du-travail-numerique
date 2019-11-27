@@ -38,7 +38,6 @@ class PageContribution extends React.Component {
 
       const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
       const content = await fetchContent.json();
-
       return { data, content };
     }
     return { data };
