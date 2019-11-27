@@ -38,9 +38,15 @@ deployment:
     - name: NODE_ENV
       value: "production"
     - name: PIWIK_SITE_ID
-      value: ${CI_PIWIK_SITE_ID}
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: PIWIK_SITE_ID
     - name: PIWIK_URL
-      value: ${CI_PIWIK_URL}
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: PIWIK_SITE_ID
     - name: PORT
       value: "3000"
     - name: PROD_HOSTNAME
