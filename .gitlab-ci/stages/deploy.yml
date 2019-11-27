@@ -56,7 +56,7 @@ Create namespace:
   services:
     - docker:dind
   variables: &deploy_stage_variables
-    IMAGE_TAG: 6a044b9d92c85c0df5ac73a6478e2bcfd7f28736
+    IMAGE_TAG: ${CI_COMMIT_SHA}
     REGISTRY: ${CI_REGISTRY_IMAGE}
   before_script:
     - source ./.gitlab-ci/env.sh
