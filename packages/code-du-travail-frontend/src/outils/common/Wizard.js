@@ -129,6 +129,9 @@ const StyledForm = styled.form`
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
   }
+  @media print {
+    border: 0;
+  }
 `;
 
 const StepWrapper = styled.div`

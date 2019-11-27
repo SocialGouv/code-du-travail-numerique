@@ -84,5 +84,8 @@ const SearchBarWrapper = styled.div`
     width: 100%;
     margin-top: ${spacings.medium};
   }
+  @media print {
+    display: none;
+  }
 `;
 export default Header;

@@ -48,6 +48,9 @@ const StepItemsContainer = styled.div`
     border: none;
     border-bottom: 1px solid ${({ theme }) => theme.border};
   }
+  @media print {
+    display: none;
+  }
 `;
 
 const Title = styled.span`

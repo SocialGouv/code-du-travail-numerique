@@ -51,6 +51,9 @@ const { spacings } = theme;
 const Box = styled.div`
   display: flex;
   margin: ${spacings.large} 0;
+  @media print {
+    display: none;
+  }
 `;
 const NextButton = styled(Button)`
   margin-left: auto;
