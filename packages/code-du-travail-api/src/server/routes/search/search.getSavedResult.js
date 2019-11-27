@@ -6,7 +6,6 @@ const fuzz = require("fuzzball");
 const deburr = require("lodash.deburr");
 
 const threshold = 90;
-const knownQueriesSet = {};
 
 // Preprocess query : remove accentuation and
 //  non alpha numerical to speed up the lookup.
@@ -17,13 +16,19 @@ const preprocess = q => {
 // We populate the saved queries in an object in order to ease
 //  searches and map variant matches with the actual known query.
 const populateSavedQueries = () => {
+  const savedQueries = {};
+
   knownQueries.map(q => {
     q.variants.map(v => {
       const prepro = preprocess(v);
-      knownQueriesSet[prepro] = q;
+      savedQueries[prepro] = q;
     });
   });
+
+  return savedQueries;
 };
+
+const knownQueriesSet = populateSavedQueries();
 
 // Test if a given query fuzzy matches with
 //  a known one (and variants).
@@ -44,13 +49,13 @@ const testMatch = query => {
     fuzzOptions
   );
 
-  const closerMatch = results[0][0];
-  const bestScore = results[0][1];
+  if (results && results.length > 1) {
+    const closerMatch = results[0][0];
+    const bestScore = results[0][1];
 
-  if (bestScore > threshold) {
-    return knownQueriesSet[closerMatch];
-  } else {
-    return undefined;
+    if (bestScore > threshold) {
+      return knownQueriesSet[closerMatch];
+    }
   }
 };
 
@@ -65,7 +70,5 @@ const getSavedResult = async query => {
     return refs;
   }
 };
-
-populateSavedQueries();
 
 module.exports = getSavedResult;
