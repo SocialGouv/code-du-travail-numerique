@@ -17,7 +17,18 @@ const merge = (res1, res2, max_result) => {
 
 // Remove Duplicates
 
-const removeDuplicate = arr => {
+const removeDuplicate = arr =>
+  Object.values(
+    arr.reduce(
+      (values, current) => ({
+        ...values,
+        [current._source.source + "/" + current._source.slug]: current
+      }),
+      {}
+    )
+  );
+
+const mergeDuplicate = arr => {
   return Object.values(
     arr.reduce((acc, current) => {
       const unique = current._source.source + "/" + current._source.slug;
@@ -33,7 +44,7 @@ const removeDuplicate = arr => {
 
 const mergePipe = (a, b, max_result) => {
   const res = merge(a, b, a.length + b.length);
-  return removeDuplicate(res).slice(0, max_result);
+  return mergeDuplicate(res).slice(0, max_result);
 };
 
 exports.merge = merge;

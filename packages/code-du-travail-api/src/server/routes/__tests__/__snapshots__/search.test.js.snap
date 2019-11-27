@@ -221,7 +221,7 @@ Object {
   "documents": Array [
     Object {
       "_score": 7.1739163,
-      "algo": "fulltext",
+      "algo": "both",
       "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
       "slug": "la-demission#Comment-presenter-une-demission",
       "source": "fiches_ministere_travail",
@@ -229,7 +229,7 @@ Object {
     },
     Object {
       "_score": 1.1894766,
-      "algo": "semantic",
+      "algo": "both",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",
@@ -248,7 +248,7 @@ Object {
     },
     Object {
       "_score": 1.1540345,
-      "algo": "semantic",
+      "algo": "both",
       "description": "Connaître la durée du préavis de démission",
       "slug": "preavis-demission",
       "source": "outils",
@@ -256,7 +256,7 @@ Object {
     },
     Object {
       "_score": 3.4247293,
-      "algo": "fulltext",
+      "algo": "both",
       "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
       "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",
@@ -264,7 +264,7 @@ Object {
     },
     Object {
       "_score": 7.033888,
-      "algo": "fulltext",
+      "algo": "both",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",

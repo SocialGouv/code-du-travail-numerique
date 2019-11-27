@@ -79,8 +79,7 @@ const test_dupl = [
         _source: {
           whatever: "whatever",
           slug: "hey",
-          source: "a",
-          algo: "both"
+          source: "a"
         }
       },
       {
