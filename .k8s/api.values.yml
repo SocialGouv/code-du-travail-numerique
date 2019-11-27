@@ -37,7 +37,7 @@ deployment:
     - name: ES_INDEX_PREFIX
       value: "cdtn-${BRANCH_HASH}"
     - name: NLP_URL
-      value: "${NLP_API_URL}"
+      value: "${NLP_URL}"
     - name: NODE_ENV
       value: "production"
     - name: PORT
