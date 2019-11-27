@@ -691,6 +691,12 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 @media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media print {
   .c33 {
     display: none;
   }

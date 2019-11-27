@@ -263,6 +263,12 @@ exports[`<Header /> should render 1`] = `
   }
 }
 
+@media print {
+  .c6 {
+    display: none;
+  }
+}
+
 <div>
   <header
     class="c0"

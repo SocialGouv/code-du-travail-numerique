@@ -456,6 +456,12 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media print {
   .c18 {
     display: none;
   }

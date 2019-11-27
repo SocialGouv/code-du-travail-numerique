@@ -139,6 +139,12 @@ exports[`<PrevNextBar /> should render 1`] = `
   margin-right: auto;
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -295,6 +301,12 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
 
 .c2 {
   margin-right: auto;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
 }
 
 <div>
@@ -456,6 +468,12 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   margin-right: auto;
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -547,6 +565,12 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
 
 .c2 {
   margin-right: auto;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
 }
 
 <div>

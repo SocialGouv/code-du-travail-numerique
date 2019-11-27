@@ -457,6 +457,12 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media print {
   .c20 {
     display: none;
   }

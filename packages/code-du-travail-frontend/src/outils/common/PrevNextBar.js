@@ -2,12 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Button, theme } from "@socialgouv/react-ui";
+import printResult from "./printResult";
 
 function PrevNextBar({
   onPrev,
   hasError,
   nextVisible,
-  restartVisible,
+  printVisible,
   previousVisible
 }) {
   return (
@@ -23,7 +24,9 @@ function PrevNextBar({
             Suivant
           </NextButton>
         )}
-        {restartVisible && <Button>Recommencer une simulation</Button>}
+        {printVisible && (
+          <Button onClick={printResult}>Imprimer le résultat</Button>
+        )}
       </Box>
     </>
   );
@@ -48,6 +51,9 @@ const { spacings } = theme;
 const Box = styled.div`
   display: flex;
   margin: ${spacings.large} 0;
+  @media print {
+    display: none;
+  }
 `;
 const NextButton = styled(Button)`
   margin-left: auto;
