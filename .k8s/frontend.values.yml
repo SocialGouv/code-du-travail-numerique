@@ -1,0 +1,117 @@
+image:
+  repository: ${CI_REGISTRY_IMAGE}/frontend
+  tag: master
+
+deployment:
+
+  port: 3000
+
+  resources:
+    limits:
+      # cpu: 50m
+      memory: 256Mi
+    requests:
+      # cpu: 5m
+      memory: 128Mi
+
+  livenessProbe:
+    path: /health
+    periodSeconds: 25
+  readinessProbe:
+    path: /health
+    periodSeconds: 25
+
+  env:
+    - name: API_URL
+      value: "${API_URL}/api/v1"
+    - name: ENVIRONMENT
+      value: ${ENVIRONMENT}
+    - name: FRONTEND_HOST
+      value: ${FRONTEND_HOST}
+    - name: FRONTEND_PORT
+      value: "3000"
+    - name: IS_PRODUCTION_DEPLOYMENT
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: IS_PRODUCTION_DEPLOYMENT
+    - name: NODE_ENV
+      value: "production"
+    - name: PIWIK_SITE_ID
+      value: ${CI_PIWIK_SITE_ID}
+    - name: PIWIK_URL
+      value: ${CI_PIWIK_URL}
+    - name: PORT
+      value: "3000"
+    - name: PROD_HOSTNAME
+      value: "code.travail.gouv.fr"
+    - name: SENTRY_PUBLIC_DSN
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: SENTRY_PUBLIC_DSN
+    - name: SUGGEST_URL
+      value: "${API_URL}/api/v1/suggest"
+    - name: VERSION
+      value: "${VERSION}"
+
+  initContainers:
+    - name: wait-for-api
+      image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.14.0
+      resources:
+        requests:
+          cpu: 5m
+          memory: 16Mi
+        limits:
+          cpu: 50m
+          memory: 32Mi
+      command:
+        - sh
+        - -c
+        - |
+          retry=120; # 5s * (12 * 10) = 10min
+          while
+            ! curl -sS "${API_URL}/api/v1/version" &&
+            [[ $(( retry-- )) -gt 0 ]];
+          do echo "Waiting for api to be available ($(( retry )))" ; sleep 5s ; done ;
+
+          [[ $(( retry )) -lt 1 ]] && exit 128;
+
+          echo Ready;
+    - name: wait-for-nlp
+      image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.14.0
+      resources:
+        requests:
+          cpu: 5m
+          memory: 16Mi
+        limits:
+          cpu: 50m
+          memory: 32Mi
+      command:
+        - sh
+        - -c
+        - |
+          retry=120; # 5s * (12 * 10) = 10min
+          while
+            ! curl -sS --fail "${NLP_URL}" &&
+            [[ $(( retry-- )) -gt 0 ]];
+          do echo "Waiting for api to respond ($(( retry )))" ; sleep 5s ; done ;
+
+          [[ $(( retry )) -lt 1 ]] && exit 128;
+
+          echo Ready;
+
+
+ingress:
+  enabled: true
+  annotations:
+    appgw.ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/ingress.class: "azure/application-gateway"
+  hosts:
+    - host: code.travail.dev.fabrique.social.gouv.fr
+      paths:
+        - /
+  tls:
+    - hosts:
+        - "code.travail.dev.fabrique.social.gouv.fr"
+      secretName: wildcard-crt

@@ -1,20 +1,22 @@
 #
 
-.scan_stage: &scan_stage
-  stage: "Vuln scanner"
-  dependencies: []
-  before_script:
-    - source .gitlab-ci/env.sh
+Snyk docker scan:
+  stage: "Deploy"
+  image: snyk/snyk-cli:docker
+  services:
+    - docker:$DOCKER_VERSION-dind
   except:
     variables:
       - $PRODUCTION
-
-Snyk docker scan:
-  <<: *scan_stage
-  image: snyk/snyk-cli:docker
+  dependencies: []
+  needs:
+    - Register api image
+    - Register frontend image
+    - Register nlp image
+    - Register data image
   allow_failure: true
-  services:
-    - docker:$DOCKER_VERSION-dind
+  before_script:
+    - source .gitlab-ci/env.sh
   script:
     - ./scripts/snyk-docker-scan.sh
 

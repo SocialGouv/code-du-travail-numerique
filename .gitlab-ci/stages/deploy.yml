@@ -1,11 +1,52 @@
 #
 
 include:
-  - /.k8s/api/.k8s-deploy-api.yml
-  - /.k8s/data/.k8s-deploy-data.yml
-  - /.k8s/elasticsearch/.k8s-deploy-elasticsearch.yml
-  - /.k8s/frontend/.k8s-deploy-frontend.yml
-  - /.k8s/nlp/.k8s-deploy-nlp.yml
+  #
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.1.0/base_create_namespace_stage.yml"
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.1.0/base_deploy_nodejs_chart_stage.yml"
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.1.0/base_docker_helm_image_stage.yml"
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.1.0/base_docker_kubectl_image_stage.yml"
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.1.0/base_semantic_release_stage.yml"
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.1.0/register-stage.yml"
+
+#
+
+Create namespace:
+  extends: .base_create_namespace_stage
+  stage: "Post Registration"
+  variables:
+    RANCHER_PROJECT_ID: c-gsm8d:p-v7cpb # the "default" project
+  before_script:
+    - source ./.gitlab-ci/env.sh
+  after_script:
+    - source ./.gitlab-ci/env.sh
+    #
+    # Use wild cart certificate
+    - kubectl label namespace ${K8S_NAMESPACE} cert=wildcard || true
+    #
+    # Create cdtn secrets
+    - envsubst < ./.k8s/secrets.yml | kubectl apply -n ${K8S_NAMESPACE} -f - || true
+    #
+    # Copy elasticsearch-creds
+    - kubectl get secret elasticsearch-creds --namespace=cdtn-secret --export -o yaml |
+        kubectl apply --namespace=${K8S_NAMESPACE} -f -
+
+#
+
+.resolve_helm_render_args: &resolve_helm_render_args |
+  HELM_RENDER_ARGS="\
+    --set image.tag=${IMAGE_TAG} \
+    --set ingress.hosts[0].host=${HOST} \
+    --set ingress.tls[0].hosts[0]=${HOST}"
+
+  if [[ "${BRANCH_NAME}" = "master" ]]; then
+    HELM_RENDER_ARGS=" \
+      ${HELM_RENDER_ARGS} \
+      --set ingress.annotations.certmanager\.k8s\.io/cluster-issuer=letsencrypt-prod \
+      --set-string ingress.annotations.kubernetes\.io/tls-acme=true \
+      --set ingress.tls[0].secretName=${PROJECT}-certificate"
+  fi
+
 
 #
 
@@ -15,12 +56,15 @@ include:
   services:
     - docker:dind
   variables: &deploy_stage_variables
-    IMAGE_TAG: ${CI_COMMIT_SHA}
+    IMAGE_TAG: 5d682f3c931e73658849ea7c2abfe878cf4f28f3
     REGISTRY: ${CI_REGISTRY_IMAGE}
+  before_script:
+    - source ./.gitlab-ci/env.sh
+    - kubectl config set-context --current --namespace=${K8S_NAMESPACE}
 
 .incubateur_stage: &incubateur_stage
   environment:
-    name: incubateur
+    name: prod
   only:
     refs:
       - triggers
@@ -31,7 +75,7 @@ include:
 
 .dev_stage: &dev_stage
   environment:
-    name: dev
+    name: fabrique-dev
   only:
     refs:
       - tags
@@ -44,88 +88,55 @@ include:
 #
 #
 
-.deploy-api: &deploy_api
+.deploy_api_stage: &deploy_api_stage
   <<: *deploy_stage
-  extends: .k8s-deploy-api
+  extends: .base_deploy_nodejs_chart_stage
   variables:
     <<: *deploy_stage_variables
     CONTEXT: api
-    ELASTICSEARCH_LOG_LEVEL: trace
-    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/api
     PORT: 8000
-  after_script:
-    # NOTE(douglasduteil): re-run env.sh
-    # Because the `after_script` runs in a separated shell context.
-    # see https://docs.gitlab.com/ee/ci/variables/where_variables_can_be_used.html#execution-shell-environment
+    VALUES_FILE: ./.k8s/api.values.yml
+  before_script:
     - source ./.gitlab-ci/env.sh
-    - echo "Api available at - ${API_URL}"
+    - HOST=${API_HOST}
+    - *resolve_helm_render_args
 
 #
 
 Deploy @cdtn/api (dev):
-  <<: *deploy_api
+  <<: *deploy_api_stage
   <<: *dev_stage
 
 Deploy @cdtn/api (incubateur):
-  <<: *deploy_api
+  <<: *deploy_api_stage
   <<: *incubateur_stage
 
 #
 #
 #
 
-.deploy-frontend: &deploy_frontend
+.deploy_frontend_stage: &deploy_frontend_stage
   <<: *deploy_stage
-  extends: .k8s-deploy-frontend
-  variables: &deploy_stage_variable_frontend
+  extends: .base_deploy_nodejs_chart_stage
+  variables:
     <<: *deploy_stage_variables
-    CONTEXT: frontend
-    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/frontend
     PORT: ${FRONTEND_PORT}
-  after_script:
-    # NOTE(douglasduteil): re-run env.sh
-    # Because the `after_script` runs in a separated shell context.
-    # see https://docs.gitlab.com/ee/ci/variables/where_variables_can_be_used.html#execution-shell-environment
+    CONTEXT: frontend
+    VALUES_FILE: ./.k8s/frontend.values.yml
+  before_script:
     - source ./.gitlab-ci/env.sh
-    - echo "Frontend available at - ${FRONTEND_URL}"
+    - HOST=${FRONTEND_HOST}
+    - *resolve_helm_render_args
 
 #
 
 Deploy @cdtn/frontend (dev):
-  <<: *deploy_frontend
+  <<: *deploy_frontend_stage
   <<: *dev_stage
 
 Deploy @cdtn/frontend (incubateur):
-  <<: *deploy_frontend
+  <<: *deploy_frontend_stage
   <<: *incubateur_stage
-  variables:
-    <<: *deploy_stage_variable_frontend
-    ENVIRONMENT: production
-
-#
-#
-#
-
-# .deploy-elasticsearch: &deploy_elasticsearch
-#   <<: *deploy_stage
-#   variables:
-#     <<: *deploy_stage_variables
-#     CONTEXT: elasticsearch
-#     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
-#     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/elasticsearch
-#     PORT: ${ELASTICSEARCH_PORT}
-
-#
-
-# Deploy elasticsearch (dev):
-#   extends: .k8s-deploy-elasticsearch-dev
-#   <<: *deploy_elasticsearch
-#   <<: *dev_stage
-
-# Deploy elasticsearch (incubateur):
-#   extends: .k8s-deploy-elasticsearch-prod
-#   <<: *deploy_elasticsearch
-#   <<: *incubateur_stage
 
 #
 #
@@ -133,12 +144,18 @@ Deploy @cdtn/frontend (incubateur):
 
 .deploy-data: &deploy_data
   <<: *deploy_stage
-  extends: .k8s-deploy-data
+  extends: .base_docker_kube_image_stage
   variables:
     <<: *deploy_stage_variables
     CONTEXT: data
     ES_PORT: ${ELASTICSEARCH_PORT}
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
+  script:
+    - kubectl delete job ${CONTEXT} || true
+    #
+    - envsubst < ./.k8s/data.job.yml > ./job.yml
+    - kubectl apply -f ./job.yml || true
+
 
 #
 
@@ -154,28 +171,25 @@ Create Elasticsearch Index (incubateur):
 #
 #
 
-.deploy-nlp: &deploy_nlp
+.deploy_nlp_stage: &deploy_nlp_stage
   <<: *deploy_stage
+  extends: .base_deploy_nodejs_chart_stage
   variables:
     <<: *deploy_stage_variables
-    CONTEXT: nlp
     PORT: ${NLP_PORT}
-    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/nlp
-  after_script:
-    # NOTE(douglasduteil): re-run env.sh
-    # Because the `after_script` runs in a separated shell context.
-    # see https://docs.gitlab.com/ee/ci/variables/where_variables_can_be_used.html#execution-shell-environment
+    CONTEXT: nlp
+    VALUES_FILE: ./.k8s/nlp.values.yml
+  before_script:
     - source ./.gitlab-ci/env.sh
-    - echo "NLP api available at - ${NLP_URL}"
+    - HOST=${NLP_HOST}
+    - *resolve_helm_render_args
 
 #
 
 Deploy @cdtn/nlp (dev):
-  extends: .k8s-deploy-nlp-dev
-  <<: *deploy_nlp
+  <<: *deploy_nlp_stage
   <<: *dev_stage
 
 Deploy @cdtn/nlp (incubateur):
-  extends: .k8s-deploy-nlp-prod
-  <<: *deploy_nlp
+  <<: *deploy_nlp_stage
   <<: *incubateur_stage

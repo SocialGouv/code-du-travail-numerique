@@ -1,7 +1,9 @@
 .build_and_push_stage: &build_and_push_stage
   extends: .base_docker_image_stage
-  stage: "Data"
+  stage: "Post Registration"
   dependencies: []
+  needs:
+    - Register nlp image
   before_script:
     - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u gitlab-ci-token --password-stdin
   script:
@@ -11,7 +13,7 @@
 
 #
 
-Register data image:
+.Register data image:
   <<: *build_and_push_stage
   except:
     variables:
