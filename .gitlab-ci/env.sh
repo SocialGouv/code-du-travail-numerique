@@ -45,7 +45,7 @@ export ELASTICSEARCH_HOST="cdtn-es-http";
 export ELASTICSEARCH_URL="http://${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}";
 export FRONTEND_HOST="${DOMAIN}";
 export NLP_HOST="nlp-nodejs";
-export NLP_URL="http://${NLP_HOST}:5000";
+export NLP_URL="http://${NLP_HOST}";
 
 #
 
