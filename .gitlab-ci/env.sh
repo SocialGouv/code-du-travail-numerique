@@ -51,12 +51,10 @@ export NLP_URL="http://${NLP_HOST}:5000";
 
 if [[ -n "${PRODUCTION+x}" ]]; then
   export API_HOST="api.${DOMAIN}";
-  export NLP_HOST="nlp.${DOMAIN}";
 fi
 
 export API_URL="https://${API_HOST}"
 export FRONTEND_URL="https://${FRONTEND_HOST}"
-export NLP_URL="https://${NLP_HOST}"
 
 printenv | grep -E \
   "BRANCH_HASH|BRANCH_NAME|BRANCH_HASH_DOT|COMMIT|COMMIT_TAG|DOMAIN|CLUSTER_NAME|HASH_SIZE|JOB_ID|K8S_NAMESPACE" \
