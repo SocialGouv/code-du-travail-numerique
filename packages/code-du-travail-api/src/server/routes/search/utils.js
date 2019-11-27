@@ -17,16 +17,19 @@ const merge = (res1, res2, max_result) => {
 
 // Remove Duplicates
 
-const removeDuplicate = arr =>
-  Object.values(
-    arr.reduce(
-      (values, current) => ({
-        ...values,
-        [current._source.source + "/" + current._source.slug]: current
-      }),
-      {}
-    )
+const removeDuplicate = arr => {
+  return Object.values(
+    arr.reduce((acc, current) => {
+      const unique = current._source.source + "/" + current._source.slug;
+      if (acc[unique] != undefined) {
+        acc[unique]._source.algo = "both";
+      } else {
+        acc[unique] = current;
+      }
+      return acc;
+    }, {})
   );
+};
 
 const mergePipe = (a, b, max_result) => {
   const res = merge(a, b, a.length + b.length);

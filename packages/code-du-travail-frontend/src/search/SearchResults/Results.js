@@ -12,6 +12,7 @@ function reportSelectionToMatomo(trackedUrl) {
 }
 
 export const ListLink = ({
+<<<<<<< HEAD
   item: { breadcrumbs = [], description, source, slug, title, url },
   isSearch,
   query
@@ -32,6 +33,40 @@ export const ListLink = ({
     subtitle,
     children: summarize(description)
   };
+=======
+  focused,
+  item: { source, slug, url, algo },
+  query,
+  ...otherProps
+}) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (focused && ref.current) {
+      ref.current.focus();
+    }
+  }, [focused]);
+
+  const trackedUrl =
+    source === SOURCES.EXTERNALS ? url : `/${getRouteBySource(source)}/${slug}`;
+
+  const qualifiedCall = JSON.stringify({
+    url: trackedUrl,
+    algo
+  });
+
+  const onClick = useCallback(() => {
+    matopush(["trackEvent", "selectResult", qualifiedCall]);
+  }, [qualifiedCall]);
+  const onKeyPress = useCallback(
+    event => {
+      if (event.keyCode === 13)
+        // Enter
+        matopush(["trackEvent", "selectResult", qualifiedCall]);
+    },
+    [qualifiedCall]
+  );
+>>>>>>> add algo to select_result and add both algo when fulltext+sem are matching
 
   if (source === SOURCES.EXTERNALS) {
     return (

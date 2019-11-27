@@ -16,7 +16,10 @@ const tests = [
         }
       ]
     ],
-    expected: [{ title: 1, score: 2 }, { title: 2, score: 4 }]
+    expected: [
+      { title: 1, score: 2 },
+      { title: 2, score: 4 }
+    ]
   },
   {
     input: [
@@ -76,7 +79,8 @@ const test_dupl = [
         _source: {
           whatever: "whatever",
           slug: "hey",
-          source: "a"
+          source: "a",
+          algo: "both"
         }
       },
       {

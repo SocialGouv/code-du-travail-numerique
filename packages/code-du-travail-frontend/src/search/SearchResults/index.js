@@ -13,11 +13,16 @@ const SearchResults = ({
 }) => {
   const router = useRouter();
   useEffect(() => {
-    const toSlug = ({ source, slug }) => `${source}/${slug}`;
+    const toLogCandidate = ({ source, slug, algo }) => {
+      return {
+        slug: `${source}/${slug}`,
+        algo
+      };
+    };
     const results = JSON.stringify({
-      documents: documents.map(toSlug),
-      themes: themes.map(toSlug),
-      articles: articles.map(toSlug)
+      documents: documents.map(toLogCandidate),
+      themes: themes.map(toLogCandidate),
+      articles: articles.map(toLogCandidate)
     });
     matopush(["trackEvent", "candidateResults", router.query.q, results]);
   });
