@@ -15,39 +15,30 @@ const preprocess = q => {
 
 // We populate the saved queries in an object in order to ease
 //  searches and map variant matches with the actual known query.
-const populateSavedQueries = () => {
-  const savedQueries = {};
+const knownQueriesSet = knownQueries.reduce((queries, query) => {
+  for (const variant of query.variants) {
+    const prepro = preprocess(variant);
+    queries[prepro] = query;
+  }
+  return queries;
+});
 
-  knownQueries.map(q => {
-    q.variants.map(v => {
-      const prepro = preprocess(v);
-      savedQueries[prepro] = q;
-    });
-  });
+const allVariants = Object.keys(knownQueriesSet);
 
-  return savedQueries;
+const fuzzOptions = {
+  scorer: fuzz.ratio,
+  full_process: false,
+  unsorted: false,
+  limit: 2
 };
-
-const knownQueriesSet = populateSavedQueries();
 
 // Test if a given query fuzzy matches with
 //  a known one (and variants).
 const testMatch = query => {
-  const fuzzOptions = {
-    scorer: fuzz.ratio,
-    full_process: false,
-    unsorted: false,
-    limit: 2
-  };
-
   // preprocess query
   const ppQuery = preprocess(query);
 
-  const results = fuzz.extract(
-    ppQuery,
-    Object.keys(knownQueriesSet),
-    fuzzOptions
-  );
+  const results = fuzz.extract(ppQuery, allVariants, fuzzOptions);
 
   if (results && results.length > 1) {
     const closerMatch = results[0][0];
