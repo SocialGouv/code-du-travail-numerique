@@ -30,17 +30,3 @@ deployment:
       value: "${PORT}"
     - name: VERSION
       value: "${VERSION}"
-
-ingress:
-  enabled: true
-  annotations:
-    appgw.ingress.kubernetes.io/ssl-redirect: "true"
-    kubernetes.io/ingress.class: "azure/application-gateway"
-  hosts:
-    - host: nlp.code.travail.dev.fabrique.social.gouv.fr
-      paths:
-        - /
-  tls:
-    - hosts:
-        - nlp.code.travail.dev.fabrique.social.gouv.fr
-      secretName: wildcard-crt
