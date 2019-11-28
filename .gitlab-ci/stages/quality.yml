@@ -17,7 +17,8 @@
     - yarn --frozen-lockfile
 
 Lint @socialgouv/react-ui:
-  <<: *quality_stage
+  # <<: *quality_stage
+  stage: "Code Quality"
   <<: *nodejs_template
   script:
     - yarn workspace @socialgouv/react-ui lint
