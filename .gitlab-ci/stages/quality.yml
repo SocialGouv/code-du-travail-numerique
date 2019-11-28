@@ -11,8 +11,8 @@
 
 .nodejs_template: &nodejs_template
   image: node:10-alpine
-  # cache:
-  #   <<: *cache_template
+  cache:
+    <<: *cache_template
   before_script:
     - yarn --frozen-lockfile
 
