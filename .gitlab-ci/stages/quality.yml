@@ -11,18 +11,16 @@
 
 .nodejs_template: &nodejs_template
   image: node:10-alpine
-  cache:
-    <<: *cache_template
+  # cache:
+  #   <<: *cache_template
   before_script:
     - yarn --frozen-lockfile
 
 Lint @socialgouv/react-ui:
-  # <<: *quality_stage
-  stage: "Code Quality"
+  <<: *quality_stage
   <<: *nodejs_template
   script:
     - yarn workspace @socialgouv/react-ui lint
-
 # Lint @socialgouv/react-fiche-service-public:
 #   <<: *quality_stage
 #   <<: *nodejs_template
