@@ -14,7 +14,7 @@
   cache:
     key: "${CI_COMMIT_REF_SLUG}"
     paths:
-      - node_modules/
+      - .pnp.js
   before_script:
     - yarn --frozen-lockfile
 
