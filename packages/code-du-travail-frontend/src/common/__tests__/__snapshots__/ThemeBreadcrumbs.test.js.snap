@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 1`] = `
-.c2 {
+.c1 {
   position: relative;
   overflow: hidden;
 }
 
-.c2:before,
-.c2:after {
+.c1:before,
+.c1:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -18,38 +18,45 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
   transition: opacity 0.3s linear;
   content: "";
   pointer-events: none;
-  background: radial-gradient( ellipse at center, white 15%, rgba(255,255,255,0) 80% );
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c2:before {
+.c1:before {
   left: -2rem;
 }
 
-.c2:after {
+.c1:after {
   right: -2rem;
 }
 
-.c3 {
+.c2 {
   overflow-x: auto;
 }
 
 .c0 {
+  margin-bottom: 1rem;
   overflow-x: auto;
-  background: #e4e8ef;
 }
 
-.c1 {
-  max-width: 1200px;
+.c3 {
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c1 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -58,39 +65,52 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: nowrap;
-  -ms-flex-flow: nowrap;
-  flex-flow: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1rem 0;
-}
-
-.c5 {
-  display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0 1rem 0 0;
   white-space: nowrap;
 }
 
-.c6 {
-  display: block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none;
+.c4:first-of-type {
+  padding-left: 0;
 }
 
 .c7 {
-  display: block;
-  width: 1.6rem;
-  color: #3e486e;
+  width: 1.2rem;
+  margin-right: 1rem;
+  color: #7598d6;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:focus,
+.c5:hover,
+.c5:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c6 {
+  width: 2rem;
+  margin-right: 1rem;
+  color: #7598d6;
 }
 
 @media print {
-  .c1 {
+  .c3 {
     max-width: 100%;
     padding: 0;
   }
@@ -98,7 +118,19 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.4rem 0;
+    font-size: 1.2rem;
+  }
+
+  .c4:not(:last-of-type) {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -115,88 +147,72 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
         <div
           class="c3"
         >
-          <ul
+          <li
             class="c4"
           >
-            <li
+             
+            <a
               class="c5"
-            >
-              <a
-                href="/"
-                title="Retour à l'accueil"
-              >
-                Accueil
-              </a>
-            </li>
-            <li
-              aria-hidden="true"
-              class="c6"
+              href="/"
+              title="Retour à l'accueil"
             >
               <svg
-                class="c7"
+                class="c6"
                 fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
               >
-                <polyline
-                  points="13 17 18 12 13 7"
-                />
-                <polyline
-                  points="6 17 11 12 6 7"
+                <path
+                  d="M12.216 6.056L8.114 2.197a.166.166 0 00-.228 0L3.784 6.056v7.089c0 .088.07.154.154.154h8.124c.08 0 .154-.069.154-.154V6.056zm.936.88v6.828c0 .253-.21.458-.47.458H3.318a.464.464 0 01-.47-.458V6.937l-1.055.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016l-1.056-.993z"
+                  fill="currentColor"
                 />
               </svg>
-            </li>
-            <li
+              Accueil
+            </a>
+          </li>
+          <li
+            class="c4"
+          >
+            <svg
+              class="c7"
+              fill="none"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                fill="currentColor"
+              />
+            </svg>
+             
+            <a
               class="c5"
+              href="/themes/theme-1"
+              title="Voir le theme theme 1"
             >
-              <a
-                href="/themes/theme-1"
-                title="Voir le theme theme 1"
-              >
-                theme 1
-              </a>
-            </li>
-            <li
-              aria-hidden="true"
-              class="c6"
+              theme 1
+            </a>
+          </li>
+          <li
+            class="c4"
+          >
+            <svg
+              class="c7"
+              fill="none"
+              viewBox="0 0 16 16"
             >
-              <svg
-                class="c7"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polyline
-                  points="13 17 18 12 13 7"
-                />
-                <polyline
-                  points="6 17 11 12 6 7"
-                />
-              </svg>
-            </li>
-            <li
+              <path
+                d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                fill="currentColor"
+              />
+            </svg>
+             
+            <a
               class="c5"
+              href="/themes/theme-2"
+              title="Voir le theme theme 2"
             >
-              <a
-                href="/themes/theme-2"
-                title="Voir le theme theme 2"
-              >
-                theme 2
-              </a>
-            </li>
-          </ul>
+              theme 2
+            </a>
+          </li>
         </div>
       </div>
     </div>
@@ -205,13 +221,13 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 `;
 
 exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = `
-.c2 {
+.c1 {
   position: relative;
   overflow: hidden;
 }
 
-.c2:before,
-.c2:after {
+.c1:before,
+.c1:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -222,38 +238,45 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
   transition: opacity 0.3s linear;
   content: "";
   pointer-events: none;
-  background: radial-gradient( ellipse at center, white 15%, rgba(255,255,255,0) 80% );
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c2:before {
+.c1:before {
   left: -2rem;
 }
 
-.c2:after {
+.c1:after {
   right: -2rem;
 }
 
-.c3 {
+.c2 {
   overflow-x: auto;
 }
 
 .c0 {
+  margin-bottom: 1rem;
   overflow-x: auto;
-  background: #e4e8ef;
 }
 
-.c1 {
-  max-width: 1200px;
+.c3 {
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c1 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -262,39 +285,52 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: nowrap;
-  -ms-flex-flow: nowrap;
-  flex-flow: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1rem 0;
-}
-
-.c5 {
-  display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0 1rem 0 0;
   white-space: nowrap;
 }
 
-.c6 {
-  display: block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none;
+.c4:first-of-type {
+  padding-left: 0;
 }
 
 .c7 {
-  display: block;
-  width: 1.6rem;
-  color: #3e486e;
+  width: 1.2rem;
+  margin-right: 1rem;
+  color: #7598d6;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:focus,
+.c5:hover,
+.c5:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c6 {
+  width: 2rem;
+  margin-right: 1rem;
+  color: #7598d6;
 }
 
 @media print {
-  .c1 {
+  .c3 {
     max-width: 100%;
     padding: 0;
   }
@@ -302,7 +338,19 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
 
 @media (max-width:600px) {
   .c4 {
-    padding: 0.4rem 0;
+    font-size: 1.2rem;
+  }
+
+  .c4:not(:last-of-type) {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -319,121 +367,92 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
         <div
           class="c3"
         >
-          <ul
+          <li
             class="c4"
           >
-            <li
+             
+            <a
               class="c5"
-            >
-              <a
-                href="/"
-                title="Retour à l'accueil"
-              >
-                Accueil
-              </a>
-            </li>
-            <li
-              aria-hidden="true"
-              class="c6"
+              href="/"
+              title="Retour à l'accueil"
             >
               <svg
-                class="c7"
+                class="c6"
                 fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
               >
-                <polyline
-                  points="13 17 18 12 13 7"
-                />
-                <polyline
-                  points="6 17 11 12 6 7"
+                <path
+                  d="M12.216 6.056L8.114 2.197a.166.166 0 00-.228 0L3.784 6.056v7.089c0 .088.07.154.154.154h8.124c.08 0 .154-.069.154-.154V6.056zm.936.88v6.828c0 .253-.21.458-.47.458H3.318a.464.464 0 01-.47-.458V6.937l-1.055.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016l-1.056-.993z"
+                  fill="currentColor"
                 />
               </svg>
-            </li>
-            <li
+              Accueil
+            </a>
+          </li>
+          <li
+            class="c4"
+          >
+            <svg
+              class="c7"
+              fill="none"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                fill="currentColor"
+              />
+            </svg>
+             
+            <a
               class="c5"
+              href="/themes/theme-1"
+              title="Voir le theme theme 1"
             >
-              <a
-                href="/themes/theme-1"
-                title="Voir le theme theme 1"
-              >
-                theme 1
-              </a>
-            </li>
-            <li
-              aria-hidden="true"
-              class="c6"
+              theme 1
+            </a>
+          </li>
+          <li
+            class="c4"
+          >
+            <svg
+              class="c7"
+              fill="none"
+              viewBox="0 0 16 16"
             >
-              <svg
-                class="c7"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polyline
-                  points="13 17 18 12 13 7"
-                />
-                <polyline
-                  points="6 17 11 12 6 7"
-                />
-              </svg>
-            </li>
-            <li
+              <path
+                d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                fill="currentColor"
+              />
+            </svg>
+             
+            <a
               class="c5"
+              href="/themes/theme-2"
+              title="Voir le theme theme 2"
             >
-              <a
-                href="/themes/theme-2"
-                title="Voir le theme theme 2"
-              >
-                theme 2
-              </a>
-            </li>
-            <li
-              aria-hidden="true"
-              class="c6"
+              theme 2
+            </a>
+          </li>
+          <li
+            class="c4"
+          >
+            <svg
+              class="c7"
+              fill="none"
+              viewBox="0 0 16 16"
             >
-              <svg
-                class="c7"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polyline
-                  points="13 17 18 12 13 7"
-                />
-                <polyline
-                  points="6 17 11 12 6 7"
-                />
-              </svg>
-            </li>
-            <li
-              class="c5"
+              <path
+                d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                fill="currentColor"
+              />
+            </svg>
+             
+            <span
+              title="voir le contenu du thème title theme"
             >
-              <span
-                title="voir le contenu du thème title theme"
-              >
-                title theme
-              </span>
-            </li>
-          </ul>
+              title theme
+            </span>
+          </li>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ exports[`<ConventionModal /> should render 1`] = `
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 .c2 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -147,7 +147,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   }
 }
 
-@media (max-width:1200px) {
+@media (max-width:1180px) {
   .c1 {
     width: 60vw;
   }

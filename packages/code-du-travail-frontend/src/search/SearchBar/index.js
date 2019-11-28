@@ -96,7 +96,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
 
 export default SearchBar;
 
-const { animations, box, breakpoints, spacings } = theme;
+const { animations, breakpoints, spacings } = theme;
 
 const SearchForm = styled.form`
   position: relative;

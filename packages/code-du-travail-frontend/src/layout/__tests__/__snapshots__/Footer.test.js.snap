@@ -1,9 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> should render 1`] = `
-.c1 {
-  padding: 2rem 0;
-  color: #3e486e;
+.c2 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c3 {
@@ -12,15 +21,6 @@ exports[`<Footer /> should render 1`] = `
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
-  line-height: 1.25;
-}
-
-.c9 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
   line-height: 1.25;
 }
 
@@ -55,8 +55,8 @@ exports[`<Footer /> should render 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
+  background: #7598d6;
+  border-color: #7598d6;
   box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
   opacity: 1;
 }
@@ -75,8 +75,8 @@ exports[`<Footer /> should render 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #9cb5e2;
+  border-color: #9cb5e2;
 }
 
 .c5[disabled] {
@@ -86,26 +86,48 @@ exports[`<Footer /> should render 1`] = `
 }
 
 .c0 {
+  position: relative;
+  z-index: 1;
+  margin-top: 4rem;
+  padding-top: 4rem;
   background-color: #f2f5fa;
 }
 
-.c2 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c0:before {
+  position: absolute;
+  top: -27px;
+  left: -50%;
+  z-index: -1;
+  width: 200%;
+  height: 400px;
+  background-color: #f2f5fa;
+  border-radius: 100%;
+  content: "";
+}
+
+.c1 {
+  padding: 2rem 0;
+  color: #3e486e;
+  position: relative;
+  padding-bottom: 4rem;
   text-align: center;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
+.c1:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 70px;
+  height: 3px;
+  background-color: #7598d6;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  content: "";
 }
 
 .c4 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
@@ -123,7 +145,19 @@ exports[`<Footer /> should render 1`] = `
 }
 
 .c6 {
-  max-width: 1200px;
+  width: 1.5em;
+  margin-left: 1.6rem;
+}
+
+.c7 {
+  padding: 2rem 0;
+  color: #3e486e;
+  padding: 4rem 0;
+  background-color: #e4e8ef;
+}
+
+.c8 {
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   display: -webkit-box;
@@ -136,37 +170,55 @@ exports[`<Footer /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c6 > *:first-child {
+.c8 > *:first-child {
   margin-top: 0;
 }
 
-.c6 > *:last-child {
+.c8 > *:last-child {
   margin-bottom: 0;
 }
 
-.c8 + .c7 {
+.c10 + .c9 {
   padding-left: 1.6rem;
 }
 
-.c10 {
-  margin: 0.4rem 0;
+.c12 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.c10 a {
+.c11 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  font-size: 1.6rem;
+}
+
+.c13 {
+  margin: 0.4rem 0;
+  padding: 0;
+}
+
+.c14 {
+  font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
 }
 
 @media print {
   .c2 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media print {
+  .c0 {
+    display: none;
   }
 }
 
@@ -178,14 +230,14 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media print {
-  .c6 {
+  .c8 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -193,8 +245,21 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 + .c7 {
+  .c10 + .c9 {
     padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    margin-top: 1rem;
+    text-align: center;
   }
 }
 
@@ -221,150 +286,178 @@ exports[`<Footer /> should render 1`] = `
         <button
           class="c5"
         >
-          Contacter les services de renseignement
+          Contacter nos services
+          <svg
+            class="c6"
+            fill="none"
+            viewBox="0 0 28 15"
+          >
+            <path
+              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+              fill="currentColor"
+            />
+          </svg>
         </button>
       </div>
     </div>
     <div
-      class="c1"
+      class="c7"
     >
-      <div
-        class="c6"
-      >
+      <nav>
         <div
-          class="c7 c8"
+          class="c8"
         >
-          <h3
-            class="c9"
+          <div
+            class="c9 c10"
           >
-            Code du travail numérique
-          </h3>
-          <ul>
-            <li
-              class="c10"
+            <h3
+              class="c11"
             >
-              <a
-                href="/droit-du-travail"
-              >
-                Le droit du travail
-              </a>
-            </li>
-            <li
-              class="c10"
+              Code du travail numérique
+            </h3>
+            <ul
+              class="c12"
             >
-              <a
-                href="/glossaire"
+              <li
+                class="c13"
               >
-                Glossaire
-              </a>
-            </li>
-            <li
-              class="c10"
-            >
-              <a
-                href="/a-propos"
+                <a
+                  class="c14"
+                  href="/droit-du-travail"
+                >
+                  Le droit du travail
+                </a>
+              </li>
+              <li
+                class="c13"
               >
-                À propos
-              </a>
-            </li>
-            <li
-              class="c10"
-            >
-              <a
-                href="/mentions-legales"
+                <a
+                  class="c14"
+                  href="/glossaire"
+                >
+                  Glossaire
+                </a>
+              </li>
+              <li
+                class="c13"
               >
-                Mentions légales
-              </a>
-            </li>
-            <li
-              class="c10"
-            >
-              <a
-                href="mailto:codedutravailnumerique@travail.gouv.fr"
+                <a
+                  class="c14"
+                  href="/a-propos"
+                >
+                  À propos
+                </a>
+              </li>
+              <li
+                class="c13"
               >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c7 c8"
-        >
-          <h3
-            class="c9"
+                <a
+                  class="c14"
+                  href="/mentions-legales"
+                >
+                  Mentions légales
+                </a>
+              </li>
+              <li
+                class="c13"
+              >
+                <a
+                  class="c14"
+                  href="mailto:codedutravailnumerique@travail.gouv.fr"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="c9 c10"
           >
-            Aidez-nous à améliorer cet outil
-          </h3>
-          <ul>
-            <li
-              class="c10"
+            <h3
+              class="c11"
             >
-              <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Contribuer sur Github
-              </a>
-            </li>
-            <li
-              class="c10"
+              Aidez-nous à améliorer cet outil
+            </h3>
+            <ul
+              class="c12"
             >
-              <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                rel="noopener noreferrer"
-                target="_blank"
+              <li
+                class="c13"
               >
-                Journal des modifications
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c7 c8"
-        >
-          <h3
-            class="c9"
+                <a
+                  class="c14"
+                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Contribuer sur Github
+                </a>
+              </li>
+              <li
+                class="c13"
+              >
+                <a
+                  class="c14"
+                  href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Journal des modifications
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="c9 c10"
           >
-            En collaboration avec
-          </h3>
-          <ul>
-            <li
-              class="c10"
+            <h3
+              class="c11"
             >
-              <a
-                href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                La Direction Générale du Travail
-              </a>
-            </li>
-            <li
-              class="c10"
+              En collaboration avec
+            </h3>
+            <ul
+              class="c12"
             >
-              <a
-                href="https://incubateur.social.gouv.fr/"
-                rel="noopener noreferrer"
-                target="_blank"
+              <li
+                class="c13"
               >
-                L’incubateur des ministères sociaux
-              </a>
-            </li>
-            <li
-              class="c10"
-            >
-              <a
-                href="https://beta.gouv.fr/"
-                rel="noopener noreferrer"
-                target="_blank"
+                <a
+                  class="c14"
+                  href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  La Direction Générale du Travail
+                </a>
+              </li>
+              <li
+                class="c13"
               >
-                beta.gouv.fr
-              </a>
-            </li>
-          </ul>
+                <a
+                  class="c14"
+                  href="https://incubateur.social.gouv.fr/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  L’incubateur des ministères sociaux
+                </a>
+              </li>
+              <li
+                class="c13"
+              >
+                <a
+                  class="c14"
+                  href="https://beta.gouv.fr/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  beta.gouv.fr
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </nav>
     </div>
   </footer>
 </div>

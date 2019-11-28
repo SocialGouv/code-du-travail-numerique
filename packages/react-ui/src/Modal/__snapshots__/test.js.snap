@@ -113,7 +113,7 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   right: 0;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1180px) {
   .c1 {
     width: 60vw;
   }
