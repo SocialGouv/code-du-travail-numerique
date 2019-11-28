@@ -12,7 +12,10 @@
 .nodejs_template: &nodejs_template
   image: node:10-alpine
   cache:
-    <<: *cache_template
+    key: "${CI_COMMIT_REF_SLUG}"
+    paths:
+      - .pnp.js
+      - .pnp
   before_script:
     - yarn --frozen-lockfile
 

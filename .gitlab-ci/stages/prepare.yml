@@ -11,6 +11,7 @@
   key: "${CI_COMMIT_REF_SLUG}"
   paths:
     - .pnp.js
+    - .pnp
 
 Build yarn cache:
   <<: *prepare_stage
