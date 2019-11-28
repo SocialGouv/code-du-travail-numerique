@@ -846,6 +846,7 @@ exports[`<FicheMT /> should render 1`] = `
         class="c6"
       >
         <form
+          action="/recherche"
           class="c7"
         >
           <label
@@ -870,7 +871,7 @@ exports[`<FicheMT /> should render 1`] = `
                 autocomplete="off"
                 class="c10"
                 id="main-search-input"
-                name="query"
+                name="q"
                 placeholder="Recherche"
                 type="search"
                 value=""

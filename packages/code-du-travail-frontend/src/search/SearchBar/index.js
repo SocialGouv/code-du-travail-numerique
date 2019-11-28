@@ -63,7 +63,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
     }
   };
   return (
-    <SearchForm onSubmit={onFormSubmit}>
+    <SearchForm action="/recherche" onSubmit={onFormSubmit}>
       {hasButton && <SearchIconLeft />}
       <SearchInput
         inputId={inputId}

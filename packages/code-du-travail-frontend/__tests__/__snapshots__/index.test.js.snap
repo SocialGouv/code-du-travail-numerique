@@ -769,6 +769,7 @@ exports[`<Home /> should render 1`] = `
           class="c13"
         >
           <form
+            action="/recherche"
             class="c14"
           >
             <svg
@@ -803,7 +804,7 @@ exports[`<Home /> should render 1`] = `
                   autocomplete="off"
                   class="c18"
                   id="searchbar"
-                  name="query"
+                  name="q"
                   placeholder="Recherche"
                   type="search"
                   value=""
