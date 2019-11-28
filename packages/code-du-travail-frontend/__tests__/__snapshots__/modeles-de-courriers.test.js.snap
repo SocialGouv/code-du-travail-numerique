@@ -875,6 +875,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
         class="c6"
       >
         <form
+          action="/recherche"
           class="c7"
         >
           <label
@@ -899,7 +900,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 autocomplete="off"
                 class="c10"
                 id="main-search-input"
-                name="query"
+                name="q"
                 placeholder="Recherche"
                 type="search"
                 value=""

@@ -279,6 +279,7 @@ exports[`<SearchHero /> should render 1`] = `
         class="c7"
       >
         <form
+          action="/recherche"
           class="c8"
         >
           <svg
@@ -313,7 +314,7 @@ exports[`<SearchHero /> should render 1`] = `
                 autocomplete="off"
                 class="c12"
                 id="searchbar"
-                name="query"
+                name="q"
                 placeholder="Recherche"
                 type="search"
                 value=""

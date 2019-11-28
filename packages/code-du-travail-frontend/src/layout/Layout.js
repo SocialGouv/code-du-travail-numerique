@@ -5,11 +5,13 @@ import { ErrorBoundary } from "../common/ErrorBoundary";
 
 const Layout = ({ children, hideSearch }) => {
   return (
-    <ErrorBoundary>
+    <>
       <Header hideSearch={hideSearch} />
-      <main id="main">{children}</main>
+      <ErrorBoundary message="Une erreur est survenue">
+        <main id="main">{children}</main>
+      </ErrorBoundary>
       <Footer />
-    </ErrorBoundary>
+    </>
   );
 };
 

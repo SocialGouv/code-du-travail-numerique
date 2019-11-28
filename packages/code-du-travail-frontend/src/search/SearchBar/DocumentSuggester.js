@@ -71,7 +71,7 @@ export class DocumentSuggester extends React.Component {
     } = this.props;
     const inputProps = {
       id: inputId,
-      name: "query",
+      name: "q",
       placeholder,
       "aria-label": ariaLabel,
       type: "search",
