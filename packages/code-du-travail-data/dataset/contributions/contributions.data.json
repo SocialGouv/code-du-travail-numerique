@@ -12932,6 +12932,11 @@
       },
       "conventions": [
         {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "0843",
+          "references": []
+        },
+        {
           "markdown": "Si un poste est libre ou est créé, l'employeur fait appel de préférence à un salarié de l'entreprise apte à occuper le poste.\n\nEn cas de promotion, le salarié peut être soumis à une période probatoire. Pendant cette période, le salarié perçoit une prime. À la fin de la période probatoire, deux cas peuvent se présenter :\n\n- L'employé est confirmé dans le nouveau poste et perçoit le salaire correspondant ;\n\n- L'employé est réintégré à son ancien poste, ou à un poste équivalent. La prime est alors supprimée. Cette réintégration ne peut pas être considérée comme une rétrogradation.",
           "idcc": "1266",
           "references": [
