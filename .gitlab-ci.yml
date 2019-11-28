@@ -3,7 +3,7 @@ include:
   - /.gitlab-ci/variables.yml
   # - /.gitlab-ci/extends.yml
   # - /.gitlab-ci/stages/prepare.yml
-  # - /.gitlab-ci/stages/quality.yml
+  - /.gitlab-ci/stages/quality.yml
   # - /.gitlab-ci/stages/register.yml
   # - /.gitlab-ci/stages/scan.yml
   # - /.gitlab-ci/stages/deploy.yml
@@ -94,120 +94,6 @@ Register elasticsearch image:
     DOCKER_BUILD_ARGS: ""
     IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
 #
-
-.quality_stage: &quality_stage
-  dependencies: []
-  stage: "Code Quality"
-  except:
-    variables:
-      - $PRODUCTION
-
-#
-
-.nodejs_template: &nodejs_template
-  image: node:10-alpine
-  cache:
-    <<: *cache_template
-    policy: pull
-  before_script:
-    - yarn --frozen-lockfile
-
-Lint @socialgouv/react-ui:
-  <<: *quality_stage
-  <<: *nodejs_template
-  script:
-    - yarn workspace @socialgouv/react-ui lint
-
-Lint @socialgouv/react-fiche-service-public:
-  <<: *quality_stage
-  <<: *nodejs_template
-  script:
-    - yarn workspace @cdt/frontend lint
-
-Lint @cdtn/frontend:
-  <<: *quality_stage
-  <<: *nodejs_template
-  script:
-    - yarn workspace @cdt/frontend lint
-
-Lint @cdtn/api:
-  <<: *quality_stage
-  <<: *nodejs_template
-  script:
-    - yarn workspace @cdt/api lint
-
-Lint @cdtn/data:
-  <<: *quality_stage
-  <<: *nodejs_template
-  script:
-    - yarn workspace @cdt/data lint
-
-Lint Dockerfiles:
-  <<: *quality_stage
-  image: hadolint/hadolint:latest-debian
-  script:
-    - |-
-      for i in $(find . -name Dockerfile); do
-        echo ""
-        echo "[+] hadolint ${i}"
-        hadolint ${i}
-      done
-
-Test @cdtn/frontend:
-  <<: *quality_stage
-  <<: *nodejs_template
-  script:
-    - yarn workspace @cdt/frontend test --coverage
-
-Test @socialgouv/react-ui:
-  <<: *quality_stage
-  <<: *nodejs_template
-  script:
-    - yarn workspace @socialgouv/react-ui test --coverage
-
-Test @socialgouv/react-fiche-service-public:
-  <<: *quality_stage
-  <<: *nodejs_template
-  script:
-    - yarn workspace @socialgouv/react-fiche-service-public test --coverage
-
-Test @cdtn/api:
-  <<: *quality_stage
-  <<: *nodejs_template
-  services:
-    - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
-    - curlimages/curl:7.65.3
-  variables:
-    ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
-  script:
-    # NOTE(douglasduteil): the elasticsearch health check must be last
-    # As we block the job waiting for elasticsearch to be up.
-    - |-
-      retry=60;
-      while
-        ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
-        [[ $(( retry-- )) -gt 0 ]];
-      do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
-    #
-    - yarn workspace @cdt/api test --coverage
-
-Test @cdtn/data:
-  <<: *quality_stage
-  <<: *nodejs_template
-  script:
-    - yarn workspace @cdt/data test
-    - yarn workspace @cdt/data check-slugs
-    - yarn workspace @cdt/data...datafiller test
-
-Test @cdtn/frontend SDR data:
-  <<: *quality_stage
-  image: alpine:3.10
-  allow_failure: true
-  before_script:
-    - apk add --no-cache jq=1.6-r0 curl=7.66.0-r0
-  script:
-    - |-
-      jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 curl -L --head --fail > /dev/null
 
 stages:
   - "Prepare"
