@@ -32,7 +32,7 @@
       "Abrogés",
       "Abrogées"
     ],
-    "definition": "<p>Texte(s) qui ne s'applique(nt) plus suite à une abrogation explicite.</p>",
+    "definition": "<p>Texte qui ne s'applique plus.</p>",
     "refs": []
   },
   {
@@ -44,7 +44,7 @@
       "complément de salaire",
       "accessoire de salaire"
     ],
-    "definition": "<p>Autres éléments de rémunération versés par l'employeur qui s'ajoutent au salaire de base du salarié. Ils font partie de la rémunération du salarié. </p><p>Exemples : primes, avantages en nature, avantages en espèces, etc.</p>",
+    "definition": "<p>Autres éléments de rémunération versés par l'employeur qui s'ajoutent au salaire de base du salarié. Ils font partie de la rémunération du salarié.Exemples : primes, avantages en nature, avantages en espèces…</p>",
     "refs": []
   },
   {
@@ -78,7 +78,7 @@
     "variants": [
       "accords atypiques"
     ],
-    "definition": "<p>Accord conclu entre l'employeur et des représentants du personnel ou des salariés sans respecter les règles de validité des accords collectifs de travail posées par le code du travail. Selon le juge ces accords ne sont pas nuls pour autant. Ils sont considérés comme des engagements unilatéraux de l'employeur et sont donc obligatoires pour l'employeur.</p>",
+    "definition": "<p>Accord conclu entre l'employeur et des représentants du personnel ou des salariés sans respecter les règles de validité des accords collectifs de travail posées par le code du travail.Selon le juge ces accords ne sont pas nuls pour autant. Ils sont considérés comme des engagements unilatéraux de l'employeur et sont donc obligatoires pour l'employeur. </p>",
     "refs": []
   },
   {
@@ -90,7 +90,7 @@
       "accords collectifs",
       "accords collectifs de travail"
     ],
-    "definition": "<p>Accord conclu entre un employeur ou des représentants d'employeurs et une ou plusieurs organisations syndicales de salariés en respectant des règles de validité issues du code du travail. Il peut être conclu à plusieurs niveaux : branche professionnelle, groupe, entreprise, établissement... </p><p>L'accord collectif concerne un ou plusieurs thèmes contrairement à la convention collective qui traite de l'ensemble des conditions d’emploi, de travail et de formation professionnelle et des garanties sociales des salariés.Exemple : un accord collectif sur le temps de travail, un accord collectif sur les salaires...</p>",
+    "definition": "<p>Accord conclu entre un employeur ou des représentants d'employeurs et une ou plusieurs organisations syndicales ou des représentants de salariés, ou dans certains cas, à la suite de la consultation des salariés, en respectant des règles de validité issues du code du travail.Il peut être conclu à plusieurs niveaux : branche professionnelle, groupe, entreprise, établissement...L'accord collectif concerne un ou plusieurs thèmes contrairement à la convention collective qui traite de l'ensemble des conditions d’emploi, de travail et de formation professionnelle et des garanties sociales des salariés. </p>",
     "refs": []
   },
   {
@@ -114,7 +114,7 @@
       "accords collectifs de branche",
       "accord collectif de branche"
     ],
-    "definition": "<p>Accord collectif de travail conclu au niveau d’une branche d’activité ou d’un secteur professionnel.</p>",
+    "definition": "<p>Accord collectif de travail conclu au sein d'une commission paritaire permanente de négociation et d'interprétation au niveau d’une branche d’activité ou d’un secteur professionnel.</p>",
     "refs": []
   },
   {
@@ -130,7 +130,7 @@
     "slug": "accord-de-branche-non-etendu",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Accord collectif conclu au niveau d'une branche professionnelle qui ne s'appliquent qu'aux entreprises ayant signé ou ayant adhéré à l'une des organisations patronales signataires de l'accord.</p>",
+    "definition": "<p>Accord collectif conclu au niveau d'une branche professionnelle qui ne s'appliquent qu'aux entreprises ayant signé ou ayant adhéré à l'une des organisations patronales signataires de l'accord. </p>",
     "refs": []
   },
   {
@@ -146,7 +146,7 @@
     "slug": "accord-de-methode",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Accord conclu et négocié entre un employeur ou des représentants d'employeurs et une ou plusieurs organisations syndicales de salariés afin de définir en amont la méthode de négociation. </p><p>Exemples : les principales étapes du déroulement de la négociation, les informations partagées entre les négociateurs, la procédure d'information et consultation du comité social et économique dans le cadre des licenciements économiques collectifs, etc.</p>",
+    "definition": "<p>Accord conclu et négocié entre un employeur ou des représentants d'employeurs et une ou plusieurs organisations syndicales de salariés afin de définir en amont la méthode de négociation.Exemples : les principales étapes du déroulement de la négociation, la procédure d'information et consultation du comité social et économique dans le cadre des licenciements économiques collectifs. </p>",
     "refs": []
   },
   {
@@ -157,7 +157,7 @@
       "accord collectif dérogatoire",
       "accords dérogatoires"
     ],
-    "definition": "<p>Accord collectif dérogeant à ce que prévoit le code du travail. L'accord dérogatoire peut être conclu uniquement dans des domaines précis et en respectant certaines conditions fixés par la loi. </p><p>Exemple : accord de performance collective.</p>",
+    "definition": "<p>Accord collectif dérogeant à ce que prévoit le code du travail. L'accord dérogatoire peut être conclu uniquement dans des domaines précis et en respectant certaines conditions fixées par la loi.Exemple : accord de performance collective.</p>",
     "refs": []
   },
   {
@@ -176,8 +176,12 @@
     "abbrs": [
       "ANI"
     ],
-    "variants": [],
-    "definition": "<p>Accord collectif conclu au niveau national qui s'applique à plusieurs branches professionnelles.</p>",
+    "variants": [
+      "accords de grenelle ",
+      "accords matignon ",
+      "accords parodi"
+    ],
+    "definition": "<p>Accord collectif conclu au niveau national qui s'applique aux secteurs de l'industrie, de la construction, du commerce et des services. </p>",
     "refs": []
   },
   {
@@ -187,19 +191,15 @@
     "variants": [
       "actes réglementaires"
     ],
-    "definition": "<p>Décision administrative à portée générale et impersonnelle.Par exemple, arrêté pris par un maire ou un président de conseil départemental ou régional. </p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R51598"
-      }
-    ]
+    "definition": "<p>Décision administrative à portée générale et impersonnelle.Exemple : arrêté pris par un maire ou un président de conseil départemental ou régional.</p><p>A la différence des actes administratifs \"\"individuels\"\", qui s'adressent à des destinataires identifiables, les actes réglementaires ont une portée générale et impersonnelle et visent ou concernent des catégories envisagées abstraitement et dans leur ensemble. </p>",
+    "refs": []
   },
   {
     "title": "Actes positifs de recherche d'emploi",
     "slug": "actes-positifs-de-recherche-demploi",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Démarches régulières de recherche d'emploi pour lesquelles le demandeur d'emploi doit être en mesure de produire un justificatif (candidatures envoyées, participation à des sessions d'aide à la recherche d'un emploi, etc.).</p>",
+    "definition": "<p>Démarches régulières de recherche d'emploi pour lesquelles le demandeur d'emploi doit être en mesure de produire un justificatif.Exemples : candidatures envoyées, participation à des sessions d'aide à la recherche d'un emploi...</p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R52115"
@@ -211,15 +211,18 @@
     "slug": "actionnariat-des-salaries",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Le fait pour les salariés de participer au capital d'une société notamment par le biais d'actions. </p><p>Exemples de dispositifs d'actionnariat salarié : stock-options, attribution d'actions gratuites, augmentations de capital réservées aux adhérents des plans d'épargne entreprise...</p>",
+    "definition": "<p>Le fait pour les salariés de participer au capital d'une société notamment par le biais d'actions. </p><p>Exemples : stock-options, attribution d'actions gratuites, augmentations de capital réservées aux adhérents des plans d'épargne entreprise...</p>",
     "refs": []
   },
   {
     "title": "Activité partielle",
     "slug": "activite-partielle",
     "abbrs": [],
-    "variants": [],
-    "definition": "<p>Egalement appelé chômage partiel. Dispositif permettant à un employeur, suite à des difficultés, de réduire ou de suspendre temporairement l'activité de ses salariés. À ce titre, l'employeur verse une indemnité au salarié et reçoit une allocation de l'Etat appelée allocation d'activité partielle.</p>",
+    "variants": [
+      "chômage partiel",
+      "chômage technique"
+    ],
+    "definition": "<p>Anciennement appelé \"chômage partiel\".Dispositif permettant à un employeur confronté à des difficultés conjoncturelles de réduire ou de suspendre temporairement l'activité de ses salariés pour maintenir leur emploi. L'employeur verse une indemnité au salarié et reçoit une allocation de l'Etat.</p>",
     "refs": []
   },
   {
@@ -248,7 +251,7 @@
       "œuvres sociales",
       "activité sociale et culturelle"
     ],
-    "definition": "<p>Selon le juge, il s'agit de toute activité non obligatoire exercée principalement au bénéfice du personnel de l'entreprise, sans discrimination, en vue d'améliorer les conditions collectives d'emploi, de travail et de vie du personnel au sein de l'entreprise.  Le comité social et économique assure, contrôle ou participe à la gestion de toutes les activités sociales et culturelles présentes dans l'entreprise.</p><p>Exemples : titres-restaurants, crèches, bons d'achat, chèques-vacances, colonies de vacances, etc.</p>",
+    "definition": "<p>Selon le juge, il s'agit de toute activité non obligatoire légalement exercée principalement au bénéfice du personnel de l'entreprise, sans discrimination, en vue d'améliorer les conditions collectives d'emploi, de travail et de vie du personnel au sein de l'entreprise.Exemples : titres-restaurants, crèches, bons d'achat, chèques-vacances, colonies de vacances, offres sportives et culturelles...Le comité social et économique assure, contrôle ou participe à la gestion de toutes les activités sociales et culturelles présentes dans l'entreprise.</p>",
     "refs": [
       {
         "url": "https://www.legifrance.gouv.fr/affichJuriJudi.do?idTexte=JURITEXT000006994396"
@@ -260,7 +263,7 @@
     "slug": "adhesion-accord-collectif-ou-convention-collective",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>L'adhésion est une procédure qui permet à une organisation syndicale de salariés ou à un employeur de contresigner un accord collectif ou une convention collective qui a déjà été négocié. Cette adhésion entraîne pour celui qui l'a faite l'obligation de respecter la convention collective ou l'accord collectif.</p>",
+    "definition": "<p>L'adhésion est une procédure qui permet à une organisation syndicale de salariés ou à un employeur de contresigner un accord collectif ou une convention collective qui a déjà été négocié. Cette adhésion entraîne pour celui qui l'a faite l'obligation de respecter la convention collective ou l'accord collectif. </p>",
     "refs": []
   },
   {
@@ -284,7 +287,7 @@
     "slug": "affiliation",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Être rattaché à un organisme, un régime, etc.<br>Exemples :Affilié à la Sécurité Sociale, cela signifie être rattaché au régime obligatoire de la Sécurité sociale.<br>Affilié à la mutuelle, cela signifie être rattaché à la mutuelle.</p>",
+    "definition": "<p>C'est le fait d'être rattaché.Affilié à la Sécurité Sociale : être rattaché au régime obligatoire de la Sécurité socialeAffilié à la mutuelle : être rattaché à la mutuelle. </p>",
     "refs": []
   },
   {
@@ -325,7 +328,7 @@
       "amplitude journalière",
       "amplitude de la journée de travail"
     ],
-    "definition": "<p>Durée entre la première prise de poste du salarié et la fin de la dernière prise de poste dans une journée de travail, temps de pause compris. </p><p>Exemple : un salarié commence à 8h puis termine à 12h et reprend son travail à 15h et termine à 21h, son amplitude horaire est de 13 heures (temps écoulé entre 8h et 21h).</p>",
+    "definition": "<p>Durée entre la première prise de poste du salarié et la fin de la dernière prise de poste dans une journée de travail, temps de pause compris.Exemple : un salarié commence à 8h puis termine à 12h et reprend son travail à 15h et termine à 21h, son amplitude horaire est de 13 heures (temps écoulé entre 8h et 21h). </p>",
     "refs": []
   },
   {
@@ -336,7 +339,8 @@
     "definition": "<p>Du 1er janvier au 31 décembre.</p>",
     "refs": [
       {
-        "url": "https://www.service-public.fr/particuliers/glossaire"
+        "url": "https://www.service-public.fr/particuliers/glossaire/R52114",
+        "valid": true
       }
     ]
   },
@@ -347,7 +351,7 @@
     "variants": [
       "annualisation"
     ],
-    "definition": "<p>Aménagement du temps de travail des salariés qui permet de faire varier leur durée du travail sur une année civile avec des périodes de haute et de basse activité.</p>",
+    "definition": "<p>Mode d'aménagement du temps de travail des salariés qui permet d'aménager les horaires de travail avec des périodes hautes et des périodes basses sur l'année. </p>",
     "refs": []
   },
   {
@@ -363,6 +367,16 @@
     ]
   },
   {
+    "title": "arrêt de la cour de cassation",
+    "slug": "arret-de-la-cour-de-cassation",
+    "abbrs": [],
+    "variants": [],
+    "definition": "<p>Décision de justice prise par  la Cour de cassation. </p>",
+    "refs": [
+      {}
+    ]
+  },
+  {
     "title": "arrêt de travail",
     "slug": "arret-de-travail",
     "abbrs": [],
@@ -375,7 +389,7 @@
     "slug": "arrete",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Décision émanant d’une autorité administrative autre que le Président de la République ou le Premier ministre. </p><p>Exemples : arrêté du maire, arrêté ministériel, arrêté préfectoral...</p>",
+    "definition": "<p>Décision administrative émanant d’une autorité administrative autre que le Président de la République ou le Premier ministre.Exemples : arrêté du maire, arrêté préfectoral... </p>",
     "refs": []
   },
   {
@@ -433,19 +447,15 @@
     "variants": [
       "autorité de chose jugée"
     ],
-    "definition": "<p>Se dit d'un jugement qui a une valeur légale et qui peut être contesté uniquement par les voies de recours prévues.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R31039"
-      }
-    ]
+    "definition": "<p>Se dit d'une décision de justice rendue lorsqu'elle peut être contestée uniquement par les voies de recours existantes.  </p>",
+    "refs": []
   },
   {
     "title": "Avantages en nature",
     "slug": "avantages-en-nature",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Biens, produits ou services fournis par l'employeur à ses salariés gratuitement ou moyennant un prix inférieur à leur valeur réelle. </p><p>Exemple : logement, nourriture gratuits ou à des prix préférentiels, etc.</p>",
+    "definition": "<p>Biens, produits ou services fournis par l'employeur à ses salariés gratuitement ou à un prix inférieur à leur valeur réelle et qui correspondent à des dépenses personnelles incombant normalement au salarié.Exemples : logement, nourriture gratuits ou à des prix préférentiels.</p>",
     "refs": []
   },
   {
@@ -453,7 +463,7 @@
     "slug": "avenant",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Document complémentaire du contrat constatant une modification, une adaptation ou un complément qui y sont apportés d'un commun accord entre les deux parties. </p><p>Exemple : avenant à l'accord collectif, avenant au contrat de travail, etc.</p>",
+    "definition": "<p>Document complémentaire du contrat constatant une modification, une adaptation ou un complément qui y sont apportés d'un commun accord entre les deux parties.Exemples : avenant à l'accord collectif, avenant au contrat de travail...</p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R10829"
@@ -467,12 +477,8 @@
     "variants": [
       "blâme"
     ],
-    "definition": "<p>Reproches adressés par l'employeur au salarié, et notifiés par écrit, en raison du comportement fautif du salarié.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R46983"
-      }
-    ]
+    "definition": "<p>Reproches adressés par l'employeur au salarié, et notifiés par écrit, en raison du comportement fautif du salarié. Il s'agit d'une sanction disciplinaire mineure. </p>",
+    "refs": []
   },
   {
     "title": "Ayant droit",
@@ -495,7 +501,7 @@
       "BDES"
     ],
     "variants": [],
-    "definition": "<p>Base de données regroupant des informations économiques et sociales de l'entreprise mise à disposition par l'employeur aux représentants du personnel.</p>",
+    "definition": "<p>Base de données regroupant l'ensemble des informations économiques et sociales de l'entreprise mise à disposition du comité économique et social par l'employeur.</p>",
     "refs": []
   },
   {
@@ -503,7 +509,7 @@
     "slug": "bilan-social",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Document établi par l'employeur récapitulant des données chiffrées sur la situation sociale de l’entreprise de l'année en cours, d'années précédentes et d'années futures.</p><p>Exemples des données présentes : emploi, rémunérations, conditions de travail, formation des salariés. </p>",
+    "definition": "<p>Document établi par l'employeur récapitulant les principales données chiffrées sur la situation sociale de l’entreprise de l'année écoulée et des deux années précédentes.Exemples des données présentes : emploi, rémunérations, conditions de travail, formation des salariés. </p>",
     "refs": []
   },
   {
@@ -513,7 +519,7 @@
     "variants": [
       "bons de délégation"
     ],
-    "definition": "<p>Document ou formulaire établi par un représentant du personnel indiquant les heures qu'il a consacrées à l'exercice de son mandat.</p>",
+    "definition": "<p>Document ou formulaire interne à l'entreprise établi par un représentant du personnel indiquant les heures qu'il a consacrées à l'exercice de son mandat, dites \"heures de délégation\". </p>",
     "refs": []
   },
   {
@@ -523,12 +529,8 @@
     "variants": [
       "branches professionnelles"
     ],
-    "definition": "<p>Regroupement de plusieurs entreprises appartenant à un même secteur d'activité et relevant d'un accord ou d'une convention collective.  </p><p>Exemple : métallurgie, hôtels cafés et restaurants, coiffure, boulangerie-pâtisserie, banque, bâtiment, hospitalisation privée, etc.</p>",
-    "refs": [
-      {
-        "url": "https://travail-emploi.gouv.fr/archives/archives-courantes/loi-travail-2016/les-principales-mesures-de-la-loi-travail/article/branches-professionnelles"
-      }
-    ]
+    "definition": "<p>Regroupement de plusieurs entreprises appartenant à un même secteur d'activité et relevant d'une convention collective.<br>Exemples : métallurgie, hôtels cafés et restaurants, coiffure, boulangerie-pâtisserie, banque, bâtiment, hospitalisation privée... </p>",
+    "refs": []
   },
   {
     "title": "Bulletin de paye",
@@ -543,7 +545,7 @@
       "bulletins de paye",
       "bulletins de paie"
     ],
-    "definition": "<p>Document obligatoire établi par l'employeur et remis au salarié au moment du paiement du salaire, indiquant des informations comme la rémunératoin du salarié, le nombre d'heures travaillées, l'emploi du salarié ainsi que sa position dans la classification conventionnelle.</p>",
+    "definition": "<p>Document obligatoire établi par l'employeur et remis au salarié au moment du paiement du salaire, indiquant des informations comme la rémunération du salarié, le nombre d'heures travaillées, l'emploi du salarié ainsi que sa position dans la classification conventionnelle. </p>",
     "refs": []
   },
   {
@@ -552,18 +554,14 @@
     "abbrs": [],
     "variants": [],
     "definition": "<p>Cadre auquel sont confiées des responsabilités dont l'importance implique une grande indépendance dans l'organisation de son emploi du temps, qui est habilité à prendre des décisions de façon largement autonome et qui perçoit une rémunération se situant dans les niveaux les plus élevés des systèmes de rémunération pratiqués dans l'entreprise ou l'établissement.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R50822"
-      }
-    ]
+    "refs": []
   },
   {
     "title": "Certificat de travail",
     "slug": "certificat-de-travail",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Document remis par l'employeur au salarié à la fin de son contrat de travail qui atteste que le salarié a bien travaillé dans l’entreprise en indiquant la nature du ou des emplois exercés par le salarié dans l'entreprise et la ou les durées des emplois occupés.</p>",
+    "definition": "<p>Document remis par l'employeur au salarié à la fin de son contrat de travail qui atteste que le salarié a bien travaillé dans l’entreprise en indiquant la nature du ou des emplois exercés par le salarié dans l'entreprise et la ou les durées des emplois occupés. </p>",
     "refs": []
   },
   {
@@ -571,7 +569,7 @@
     "slug": "chambre-sociale-de-la-cour-de-cassation",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Formation de la Cour de cassation qui a compétence notamment en matière de droit du travail.</p>",
+    "definition": "<p>Formation de la Cour de cassation qui a compétence notamment en matière de droit du travail. </p>",
     "refs": []
   },
   {
@@ -579,7 +577,7 @@
     "slug": "champ-dapplication-dun-accord-collectif",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Domaine professionnel et territorial dans lequel s'applique l'accord collectif.</p>",
+    "definition": "<p>Domaine professionnel et territorial dans lequel s'applique l'accord collectif. </p>",
     "refs": []
   },
   {
@@ -589,7 +587,7 @@
     "variants": [
       "circulaires"
     ],
-    "definition": "<p>Texte émanant des autorités administratives (ministres, préfets, recteurs...), adressé à leurs services afin de les informer notamment concernant un nouveau texte de loi ou règlement.</p>",
+    "definition": "<p>Texte émanant des autorités administratives (ministres, préfets, recteurs...), adressé à leurs services afin de les accompagner dans l'adoption ou l'interprétation d'un texte de loi ou de règlement.  </p>",
     "refs": []
   },
   {
@@ -597,20 +595,8 @@
     "slug": "classification-professionnelle",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Position du salarié dans la grille de classificiation hiérarchique des emplois définie dans la convention collective de branche et applicable à toutes les entreprises du secteur d'activité de la branche. La position est en principe déterminée par la qualification de l'emploi du slaarié (ouvrier, employé, agent de maîtrise, cadre), un niveau et/ou un coefficient.</p><p>Exemple : Ouvriers, niveau 1. 01 coefficient 140.</p>",
+    "definition": "<p>Position du salarié dans la grille de classification hiérarchique des emplois définie dans la convention collective de branche et applicable à toutes les entreprises du secteur d'activité de la branche. La position est en principe déterminée par la qualification de l'emploi du salarié (ouvrier, employé, agent de maîtrise, cadre) ,un niveau et/ou un coefficient.Exemple : Ouvriers, niveau 1. 01 coefficient 140. </p>",
     "refs": []
-  },
-  {
-    "title": "Clause d'indexation",
-    "slug": "clause-dindexation",
-    "abbrs": [],
-    "variants": [],
-    "definition": "<p>Disposition d’un contrat ou d’un jugement destinée à compenser la dépréciation monétaire (ou à tenir compte de l’inflation) entre le jour où la créance est évaluée et le jour du paiement.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R2289"
-      }
-    ]
   },
   {
     "title": "Clause pénale",
@@ -629,7 +615,7 @@
     "slug": "clause-resolutoire",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Clause prévoyant la résiliation automatique du contrat en cas de manquement à une obligation contractuelle par l'une des parties (exemple : non-paiement du loyer).</p>",
+    "definition": "<p>Clause prévoyant la résiliation automatique du contrat en cas de manquement à une obligation contractuelle par l'une des parties.Exemple : non-paiement du loyer.</p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R1061"
@@ -641,7 +627,7 @@
     "slug": "coefficient-hierarchique",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Normalement présent sur le bulletin de paie du salarié, le coefficient représente la position du salarié dans la classification hiérarchique établie par la convention collective applicable au salarié. Il est déterminer en fonction de divers critères comme l'emploi, les tâches exercées, l'autonomie du salarié, etc. Il permet notamment de calculer le salaire minimum que le salarié à un tel coefficient doit percevoir.</p>",
+    "definition": "<p>Souvent présent sur le bulletin de paie du salarié, le coefficient représente la position du salarié dans la classification hiérarchique établie par la convention collective applicable au salarié. Il est déterminé en fonction de divers critères comme l'emploi, les tâches exercées, l'autonomie du salarié, etc... Il permet notamment de calculer le salaire minimum que le salarié à un tel coefficient doit percevoir.</p>",
     "refs": []
   },
   {
@@ -653,30 +639,20 @@
     "variants": [
       "Comités sociaux et économique"
     ],
-    "definition": "<p>Instance en charge de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l'entreprise qui étaient les délégués du personnel, le comité d'entreprise et le CHSCT. Elle a de nombreuses missions variant en fonction du nombre de salariés dans l'entreprise et est obligatoire à partir de 11 salariés dans l'entreprise.</p>",
+    "definition": "<p>Instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l'entreprise qui étaient les délégués du personnel, le comité d'entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l'effectif atteint 11 salariés pendant 12 mois consécutifs. Ses attributions évoluent en fonction des effectifs de l'entreprise. </p>",
     "refs": []
   },
   {
-    "title": "Commissaire aux comptes",
-    "slug": "commissaire-aux-comptes",
-    "abbrs": [],
-    "variants": [],
-    "definition": "<p>Membre d'une profession libérale réglementée, chargé du contrôle comptable, financier et juridique d'une société, dont il est indépendant. Il dispose d'un droit d'alerte en cas d'irrégularités dans la gestion du personnel dirigeant.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R32143"
-      }
-    ]
-  },
-  {
-    "title": "Commission nationale de l’informatique et des libertés ",
+    "title": "Commission nationale de l’informatique et des libertés",
     "slug": "commission-nationale-de-linformatique-et-des-libertes",
     "abbrs": [
       "CNIL"
     ],
     "variants": [],
-    "definition": "<p>Autorité administrative indépendante en charge de veiller à la protection des données personnelles, de la vie privée et des libertés individuelles ou publiques.</p>",
-    "refs": []
+    "definition": "<p>Autorité administrative indépendante en charge de veiller à la protection des données personnelles, de la vie privée et des libertés individuelles ou publiques. </p>",
+    "refs": [
+      {}
+    ]
   },
   {
     "title": "Commission santé, sécurité et conditions de travail",
@@ -685,7 +661,7 @@
       "CSSCT"
     ],
     "variants": [],
-    "definition": "<p>Commission présente au sein du comité social et économique d'une entrepris en charge de la santé, la sécurité et des conditions de travail.</p>",
+    "definition": "<p>Commission présente au sein du comité social et économique d'une entreprise en charge de la santé, la sécurité et des conditions de travail. </p>",
     "refs": []
   },
   {
@@ -703,7 +679,7 @@
     "variants": [
       "congé familial"
     ],
-    "definition": "<p>Congés liés à des évènements familiaux : naissance, adoption, mariage, décès, pacs, proche aidant, etc.</p>",
+    "definition": "<p>Congés liés à des événements familiaux : naissance, adoption, mariage, décès, pacs...</p>",
     "refs": []
   },
   {
@@ -713,7 +689,7 @@
     "variants": [
       "congé spécial"
     ],
-    "definition": "<p>Congés autres que les congés payés liés à certains événements, activités, formations, projets...</p>",
+    "definition": "<p>Congés autres que les congés payés pour articuler vie professionnelle et vie personnelle ou pour permettre un engagement associatif, politique ou militant ou entrepreneuriat.Exemples : congé pour enfant malade, congé sabbatique...</p>",
     "refs": []
   },
   {
@@ -721,7 +697,7 @@
     "slug": "conseil-detat",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Plus haute juridiction de l'ordre des juridictions administratives.</p>",
+    "definition": "<p>Dans sa fonction juridictionnelle, plus haute juridiction de l'ordre des juridictions administratives. </p>",
     "refs": []
   },
   {
@@ -731,7 +707,7 @@
       "CPH"
     ],
     "variants": [],
-    "definition": "<p>Juridiction qui règle les litiges entre l'employeur et le salarié (et apprenti) liés au contrat de travail.</p>",
+    "definition": "<p>Juridiction qui règle les litiges entre l'employeur et le salarié (et apprenti) liés au contrat de travail.  </p>",
     "refs": []
   },
   {
@@ -741,7 +717,7 @@
     "variants": [
       "conseillers du salarié"
     ],
-    "definition": "<p>Il peut assister le salarié à l'entretien préalable de licenciement, lorsqu'il n'y a pas de représentants du personnels élus dans l'entreprise. Le salarié peut choisir le conseiller du salarié qui va l'assister sur une liste, diffusée en mairie ou dans les DIRECCTE.</p>",
+    "definition": "<p>Personne qui assiste le salarié lors de l'entretien préalable à un licenciement ou à une rupture conventionnelle lorsqu'il n'y a pas de représentants du personnels élus dans l'entreprise.</p>",
     "refs": []
   },
   {
@@ -749,7 +725,8 @@
     "slug": "conseiller-prudhomal",
     "abbrs": [],
     "variants": [
-      "conseillers prud'homaux"
+      "conseillers prud'homaux",
+      "conseillers prud'hommes"
     ],
     "definition": "<p>Nom donné au juge d'un conseil des prud'hommes.</p>",
     "refs": []
@@ -759,7 +736,7 @@
     "slug": "constitution",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Ensemble des règles juridiques les plus importantes de l’État. Elle détermine les pouvoirs publics, leur fonctionnement et organise la protection des droits fondamentaux.</p>",
+    "definition": "<p>Ensemble des règles juridiques supérieures de l’État. Elle détermine les pouvoirs publics, leur fonctionnement et organise la protection des droits fondamentaux.</p>",
     "refs": []
   },
   {
@@ -805,7 +782,7 @@
     "variants": [
       "conventions collectives de branche"
     ],
-    "definition": "<p>La convention collective de branche est conclue entre organisations syndicales représentatives d’une branche d’activité (exemple : caoutchouc, commerces de gros, etc.). Elle s’applique aux entreprises entrant dans le champ d’application professionnel (activité) et géographique (national, régional, départemental, local) et ayant adhéré à une organisation patronale signataire de cette convention.</p>",
+    "definition": "<p>La convention collective de branche est conclue entre organisations syndicales de salariés et d'employeurs représentatives d’une branche d’activité (ex. : caoutchouc, commerces de gros, etc.). Elle s’applique aux entreprises entrant dans le champ d’application professionnel (activité principale) et géographique (national, régional, départemental, local).</p>",
     "refs": []
   },
   {
@@ -835,7 +812,7 @@
       "CCASS"
     ],
     "variants": [],
-    "definition": "<p>Plus haute juridiction de l'ordre judiciaire.</p>",
+    "definition": "<p>Plus haute juridiction de l'ordre judiciaire qui a pour mission de contrôler l'exacte application du droit par les tribunaux et cours d'appel garantissant une interprétation uniforme de la loi.</p>",
     "refs": []
   },
   {
@@ -845,7 +822,7 @@
       "CJUE"
     ],
     "variants": [],
-    "definition": "<p>Cour de justice qui veille au respect du droit de l'Union Européenne par les Etats membres de l'UE.</p>",
+    "definition": "<p>Cour de justice qui veille au respect du droit de l'Union Européenne par ses Etats membres. </p>",
     "refs": []
   },
   {
@@ -855,7 +832,7 @@
       "CEDH"
     ],
     "variants": [],
-    "definition": "<p>Juridiction internationale qui veille au respect de la Convention européenne des droits de l'homme par les Etats membres du Conseil de l'Europe.</p>",
+    "definition": "<p>Juridiction internationale qui veille au respect de la Convention européenne des droits de l'homme par les Etats membres du Conseil de l'Europe. </p>",
     "refs": []
   },
   {
@@ -865,7 +842,7 @@
     "variants": [
       "créances"
     ],
-    "definition": "<p>Droit permettant à une personne d'exiger quelque chose d'une autre personne, en général le paiement d'une somme d'argent. Terme souvent utilisé pour désigner la somme due.</p>",
+    "definition": "<p>Droit permettant à une personne d'exiger quelque chose d'une autre personne, en général le paiement d'une somme d'argent. Terme souvent utilisé pour désigner la somme due. </p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R12474"
@@ -879,7 +856,7 @@
     "variants": [
       "heures de délégation"
     ],
-    "definition": "<p>Il s'agit du nombre d'heures dont dispose les représentants du personnel (membres du CSE, délégués syndicaux...) pour exercer leurs fonctions issues de leur mandat. </p><p>Exemple : selon le code du travail, chaque membre du CSE (Comité social et économique) dans les entreprises de 11 à 49 salariés a le droit à 10 heures de délégation par mois afin de pouvoir exercer les fonctions qui leurs sont confiées en tant que membre du CSE.</p>",
+    "definition": "<p>Il s'agit du nombre d'heures dont dispose les représentants du personnel (membres du CSE, délégués syndicaux...) pour exercer leur mandat.Exemple : selon le code du travail, chaque membre du CSE (Comité social et économique) dans les entreprises de 11 à 49 salariés a le droit à 10 heures de délégation par mois pour exercer son mandat. </p>",
     "refs": []
   },
   {
@@ -897,7 +874,7 @@
     "variants": [
       "décrets"
     ],
-    "definition": "<p>Texte adopté par le Président de la République ou le Premier ministre.</p>",
+    "definition": "<p>Décision administrative adoptée par le Président de la République ou le Premier ministre.</p>",
     "refs": []
   },
   {
@@ -905,7 +882,7 @@
     "slug": "decret-en-conseil-detat",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Texte pris après consultation obligatoire du Conseil d'État par le gouvernement sur son projet de décret.</p>",
+    "definition": "<p>Texte pris après consultation obligatoire du Conseil d'État par le gouvernement.</p>",
     "refs": []
   },
   {
@@ -927,7 +904,7 @@
     "variants": [
       "défenseurs syndicaux"
     ],
-    "definition": "<p>Personne qui assiste ou représente le salarié ou l'employeur devant le conseil des prud'hommes ou la cour d'appel lors d'un litige. Il conseille et défend le salarié ou l'employeur au cours de la procédure.</p>",
+    "definition": "<p>Personne qui assiste ou représente et défend le salarié ou l'employeur devant le conseil de prud'hommes ou la cour d'appel.</p>",
     "refs": []
   },
   {
@@ -937,7 +914,7 @@
     "variants": [
       "délais de carence"
     ],
-    "definition": "<p>Délai qui doit s'écouler entre 2 événements. </p><p>Exemples : </p><ul><li><p>Délai de carence entre 2 CDD, c'est-à-dire délai qui doit s'écouler entre la fin du premier CDD et le début du second CDD. </p><p>Délai de carence de 3 jours en cas d'arrêt maladie entre le moment où l'arrêt maladie est fait et le moment du versement des indemnités journalières par le Caisse primaire d'assurance maladie.</p></li></ul>",
+    "definition": "<p>Délai qui doit s'écouler entre 2 événements.Exemples : </p><ul><li>Délai de carence entre 2 CDD, c'est-à-dire délai qui doit s'écouler entre la fin du premier CDD et le début du second CDD. </li><li>Délai de carence de 3 jours en cas d'arrêt maladie entre le moment où l'arrêt maladie est fait et le moment du versement des indemnités journalières par le Caisse primaire d'assurance maladie. </li></ul>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R52042"
@@ -951,7 +928,7 @@
     "variants": [
       "délais de prévenance"
     ],
-    "definition": "<p>Délai qu'il est obligatoire de respecter entre la notification (ou entre le document qui informe d'un évènement ou d'une décision) d'un évènement et la réalisation de cet évènement ou de cette décision.</p>",
+    "definition": "<p>Délai qu'il est obligatoire de respecter entre la notification d'un événement ou la notification d'un document qui informe d'un événement ou d'une décision et la réalisation de cet événement ou de cette décision. </p>",
     "refs": []
   },
   {
@@ -959,7 +936,7 @@
     "slug": "delibere",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Moment au cours duquel les juges débattent et prennent une décision.</p>",
+    "definition": "<p>Moment, après l'audience, au cours duquel les juges débattent et prennent une décision. </p>",
     "refs": []
   },
   {
@@ -999,7 +976,7 @@
     "slug": "denonciation-dun-accord-collectif",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Procédure par laquelle une ou des organisations d'employeur ou une ou des organisations syndicales demande la disparition d'un accord ou convention collective. Sous certaines conditions, l'accord ou la convention collective dénoncé cesse d'être appliqué.</p>",
+    "definition": "<p>Procédure par laquelle une ou des organisations d'employeurs ou une ou des organisations syndicales demande la disparition d'un accord ou convention collective. Sous certaines conditions et après un certain délai, l'accord ou la convention collective dénoncé cesse d'être appliqué. </p>",
     "refs": []
   },
   {
@@ -1007,7 +984,7 @@
     "slug": "depens",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Frais de procédure engendrés par le procès (droits, taxes, redevances ou honoraires perçus par les greffes des juridictions, indemnités des témoins, les rémunérations des techniciens, etc.).</p>",
+    "definition": "<p>Définit un ensemble de frais de procédure engendrés par le procès (droits, taxes, indemnités des témoins, les rémunérations des techniciens...).</p>",
     "refs": []
   },
   {
@@ -1017,7 +994,7 @@
     "variants": [
       "dérogations"
     ],
-    "definition": "<p>Fait de ne pas respecter, de s'écarter ou de prévoir des mesures différentes de la loi, d'une convention, d'un accord, d'un traité, etc.</p>",
+    "definition": "<p>Mesures différentes de la loi, d'une convention, d'un accord, d'un traité.</p>",
     "refs": []
   },
   {
@@ -1027,7 +1004,7 @@
     "variants": [
       "dispositions"
     ],
-    "definition": "<p>Phrase ou ensemble de phrases d'un accord, d'une loi, du code du travail, du contrat de travail, etc. Également appelée clause.</p>",
+    "definition": "<p>Phrase ou ensemble de phrases d'un accord, d'une convention collective, d'une loi.</p>",
     "refs": []
   },
   {
@@ -1098,7 +1075,7 @@
       "législation du travail",
       "réglementation du travail"
     ],
-    "definition": "<p>Voir la <a href=\"/droit-du-travail\">page d'introduction au droit du travail</a>.</p>",
+    "definition": "<p>Voir la <a href=\"https://code.travail.gouv.fr/droit-du-travail\">page d'introduction au droit du travail</a>.</p>",
     "refs": []
   },
   {
@@ -1108,7 +1085,7 @@
     "variants": [
       "duplicatas"
     ],
-    "definition": "<p>Copie d'un document.</p>",
+    "definition": "<p>Double, copie d'un document ou d'un acte.</p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R13034"
@@ -1120,7 +1097,7 @@
     "slug": "echelon",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Position du salarié dans la classification professionnelle établie par la convention collective applicable. Il se retrouve normalement sur le bulletin de paie du salarié.</p>",
+    "definition": "<p>Position du salarié dans la classification professionnelle établie par la convention collective applicable.Il se retrouve normalement sur le bulletin de paie du salarié. </p>",
     "refs": []
   },
   {
@@ -1130,7 +1107,7 @@
     "variants": [
       "effectifs de l'entreprise"
     ],
-    "definition": "<p>Nombre de salariés liés par un contrat de travail travaillant au sein de l'entreprise.</p>",
+    "definition": "<p>Nombre de salariés liés par un contrat de travail travaillant au sein de l'entreprise. </p>",
     "refs": []
   },
   {
@@ -1142,6 +1119,16 @@
     ],
     "definition": "<p>Qui peut être candidat aux élections.</p>",
     "refs": []
+  },
+  {
+    "title": "Employeurs multiples",
+    "slug": "employeurs-multiples",
+    "abbrs": [],
+    "variants": [],
+    "definition": "<p>Lorsqu'un salarié a plusieurs employeurs. </p>",
+    "refs": [
+      {}
+    ]
   },
   {
     "title": "Emprisonnement",
@@ -1228,7 +1215,7 @@
     "slug": "faute-grave",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Faute ou faits fautifs du salarié d'une certaine gravité qui rend impossible son maintien dans l'entreprise.</p>",
+    "definition": "<p>Faute (ou ensemble de faits fautifs) du salarié d'une gravité telle qu'elle rend  impossible son maintien dans l'entreprise pendant la durée du préavis. </p>",
     "refs": []
   },
   {
@@ -1236,7 +1223,7 @@
     "slug": "faute-inexcusable-de-lemployeur",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Lorsque l’employeur avait ou aurait dû avoir conscience du danger auquel était exposé le salarié, et qu’il n’a pas pris les mesures nécessaires pour l’en préserver.</p>",
+    "definition": "<p>A la suite d'un accident du travail ou d'une maladie professionnelle, faute de l’employeur qui n'a pas pris les mesures de prévention des risques professionnels rendues obligatoires.</p>",
     "refs": []
   },
   {
@@ -1244,8 +1231,23 @@
     "slug": "faute-lourde",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Faute ou faits fautifs du salarié commise dans l'intention de nuire à l'employeur. Elle est plus importante que la faute grave.</p>",
+    "definition": "<p>Faute (ou ensemble de faits fautifs) du salarié d'une gravité telle qu'elle rend impossible son maintien dans l'entreprise pendant la durée du préavis et commise dans l'intention de nuire à l'employeur. Il s'agit de la faute la plus grave.</p>",
     "refs": []
+  },
+  {
+    "title": "Fêtes légales",
+    "slug": "fetes-legales",
+    "abbrs": [],
+    "variants": [
+      "Fête légale"
+    ],
+    "definition": "<p>Fêtes inscrites dans le code du travail comme étant des jours fériés : 1er janvier ; lundi de Pâques ; 1er mai ; 8 mai ; l'Ascension ; 14 juillet ; jour de Noël... </p>",
+    "refs": [
+      {
+        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006902611&cidTexte=LEGITEXT000006072050",
+        "valid": true
+      }
+    ]
   },
   {
     "title": "Filiale",
@@ -1274,7 +1276,7 @@
     "slug": "force-majeure",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Événement exceptionnel, imprévisible et irrésistible justifiant de s'exonérer d'une obligation, d'un engagement ou d'une responsabilité (exemple : catastrophe naturelle pour un contrat d'assurance, décès pour un contrat de travail, etc.).</p>",
+    "definition": "<p>Événement exceptionnel, imprévisible et irrésistible justifiant de s'exonérer d'une obligation, d'un engagement ou d'une responsabilité.Exemple : catastrophe naturelle pour un contrat d'assurance...</p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R38200"
@@ -1308,7 +1310,7 @@
     "variants": [
       "gratifications"
     ],
-    "definition": "<p>Somme d'argent versée.</p>",
+    "definition": "<p>Somme d'argent versée par l'employeur à ses salariés en complément du salaire de base.</p>",
     "refs": []
   },
   {
@@ -1316,7 +1318,7 @@
     "slug": "gratification-stagiaire",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Indemnité versée par un employeur à son stagiaire.</p>",
+    "definition": "<p>Somme versée par l’employeur au stagiaire en milieu professionnel, dans le cadre d'un cursus pédagogique scolaire ou universitaire.</p>",
     "refs": []
   },
   {
@@ -1348,7 +1350,7 @@
     "slug": "heures-complementaires",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Pour un salarié à temps partiel, il s'agit des heures effectuées au-delà de la durée normale inscrite dans son contrat de travail sans pouvoir dépasser la durée légale de travail (35h). </p><p>Exemple : un salarié a une durée de travail de 30h/semaine. S'il travaille 32h une semaine, il aura effectué 2 heures complémentaires.</p>",
+    "definition": "<p>Pour un salarié à temps partiel, il s'agit des heures effectuées au-delà de la durée normale inscrite dans son contrat de travail sans pouvoir dépasser la durée légale de travail (35h).Exemple : un salarié a une durée de travail de 30h/semaine. S'il travaille 32h une semaine, il aura effectué 2 heures complémentaires. </p>",
     "refs": []
   },
   {
@@ -1356,7 +1358,7 @@
     "slug": "heures-dequivalence",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Dans certains secteurs d'activité ou certaines professions, heures où le salarié est présent dans l'entreprise mais qui sont considérées comme des heures d'inaction et par conséquent, ne sont pas rémunérées. On dit que la durée de travail du salarié est équivalente à la durée légale.</p><p>Exemple : Dans le secteur du commerce de détail des fruits et légumes et de l’épicerie, 38 heures de présence équivalent à la durée légale de 35 heures payées.</p>",
+    "definition": "<p>Dans certains secteurs d'activité ou certaines professions, certaines heures de présence dans l'entreprise sont considérées comme des heures d'inaction et par conséquent, ne sont pas rémunérées. Sous ce régime particulier, une durée du travail équivalente à la durée légale est instituée.</p>",
     "refs": []
   },
   {
@@ -1366,7 +1368,7 @@
     "variants": [
       "heures recherche d'emploi"
     ],
-    "definition": "<p>Heures accordées au salarié pendant son préavis afin qu'il puisse rechercher un nouvel emploi.</p>",
+    "definition": "<p>Heures accordées au salarié pendant son préavis afin qu'il puisse rechercher un nouvel emploi. </p>",
     "refs": []
   },
   {
@@ -1382,7 +1384,7 @@
     "slug": "hyperbare",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Lieu où la pression est supérieure à la pression atmosphérique (par exemple : sous l'eau, caisson hyperbare, enceinte de confinement de réacteur nucléaire, etc.).</p>",
+    "definition": "<p>Lieu où la pression est supérieure à la pression atmosphérique.Exemples : sous l'eau, caisson hyperbare, enceinte de confinement de réacteur nucléaire, etc.</p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R46445"
@@ -1422,7 +1424,7 @@
     "variants": [
       "echelle mobile des salaires"
     ],
-    "definition": "<p>Variation automatique du montant des salaires en fonction d'un indice déterminé. Attention certaines indexations sont interdites comme par exemple une indexation sur le SMIC ou une indexation sur le niveau général des salaires.</p>",
+    "definition": "<p>Révision automatique des salaires en fonction d'un indice déterminé. Attention les clauses d'indexation sont interdites, comme par exemple une indexation sur le SMIC ou une indexation sur le niveau général  des prix ou des salaires. </p>",
     "refs": []
   },
   {
@@ -1458,22 +1460,8 @@
       "institution représentative du personnel",
       "instance représentative du personnel"
     ],
-    "definition": "<p>Ensemble des fonctions représentant le personnel dans une entreprise : comité social et économique, comité de groupe, comité d'entreprise européen, délégué syndical, etc.</p>",
+    "definition": "<p>Ensemble des institutions représentant le personnel dans une entreprise : comité social et économique, comité de groupe, comité d'entreprise européen, délégué syndical... </p>",
     "refs": []
-  },
-  {
-    "title": "Intermittent du spectacle",
-    "slug": "intermittent-du-spectacle",
-    "abbrs": [],
-    "variants": [
-      "intermittents du spectacle"
-    ],
-    "definition": "<p>Salarié engagé en contrat à durée déterminée (CDD) par un ou des employeurs publics ou privés, exerçant une activité soit d'artiste du spectacle vivant ou du cinéma et de l'audiovisuel (comédien, musicien, chansonnier par exemple), soit d'ouvrier ou technicien du spectacle dont l'employeur doit avoir une activité dans l'un des secteurs suivants : cinéma, audiovisuel, édition phonographique, radio, télédiffusion, spectacle vivant, prestation technique au service de la création et de l'événement, espaces de loisir, attractions culturelles, production de films d'animation.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R43518"
-      }
-    ]
   },
   {
     "title": "Jour calendaire",
@@ -1513,7 +1501,7 @@
       "jours fériés",
       "fêtes légales"
     ],
-    "definition": "<p>Jours de fêtes religieuses, laïques, de commémoration ou fête nationale prévus par la loi : 1er janvier, lundi de Pâques, 1er mai, 8 mai, Ascension, lundi de Pentecôte, 14 juillet, Assomption (15 août), Toussaint, 11 novembre, 25 décembre. Il existe également des jours fériés locaux ou professionnels. Les jours fériés peuvent être travaillés ou non. Seul le 1er mai est obligatoirement non travaillé sauf exception.</p>",
+    "definition": "<p>Jours de fêtes religieuses, laïques, de commémoration ou fête nationale prévus par la loi : 1er janvier, lundi de Pâques, 1er mai, 8 mai, Ascension, lundi de Pentecôte, 14 juillet, Assomption (15 août), Toussaint, 11 novembre, 25 décembre. Il existe également des jours fériés locaux.. Les jours fériés peuvent être travaillés ou non. Seul le 1er mai est obligatoirement non travaillé sauf exception. </p>",
     "refs": []
   },
   {
@@ -1557,20 +1545,6 @@
         "url": "https://www.service-public.fr/particuliers/glossaire/R17509"
       }
     ]
-  },
-  {
-    "title": "Jours de fractionnement",
-    "slug": "jours-de-fractionnement",
-    "abbrs": [],
-    "variants": [
-      "jours supplémentaires pour fractionnement",
-      "congé de fractionnement",
-      "congé pour fractionnement",
-      "congé supplément pour fractionnement",
-      "jour de fractionnement"
-    ],
-    "definition": "<p>Jours de congé supplémentaires accordés au salarié lorsqu'il pose une partie de ses 4 premières semaines de congés payés en dehors de la période légale de prise des congés (du 1er mai au 31 octobre). La 5ème semaine ne donne pas droit à des jours de congé supplémentaires pour fractionnement.</p>",
-    "refs": []
   },
   {
     "title": "Jugement définitif",
@@ -1629,7 +1603,7 @@
     "variants": [
       "jurisprudences"
     ],
-    "definition": "<p>Ensemble des décisions de justice rendues par les juridictions.</p>",
+    "definition": "<p>Ensemble des décisions de justice rendues par les juridictions. </p>",
     "refs": []
   },
   {
@@ -1647,7 +1621,7 @@
     "slug": "licenciement-irregulier",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Licenciement dont la procédure n'a pas été respectée sans que cela ne remette en cause la justification du licenciement.</p>",
+    "definition": "<p>Licenciement dont la procédure n'a pas été respectée sans que cela ne remette en cause la justification du licenciement. </p>",
     "refs": []
   },
   {
@@ -1655,7 +1629,7 @@
     "slug": "licenciement-nul",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Licenciement annulé par le juge lorsque le licenciement est prononcé en violation d'une liberté fondamentale ou en méconnaissance de règles spécifiques posées par la loi. Les conséquences sont plus lourdes pour l'employeur qu'un licenciement abusif ou irrégulier.</p>",
+    "definition": "<p>Licenciement annulé par le juge lorsque le licenciement est prononcé en violation d'une liberté fondamentale ou en méconnaissance de règles spécifiques posées par la loi. Les conséquences sont plus lourdes pour l'employeur qu'un licenciement abusif ou irrégulier.      </p>",
     "refs": []
   },
   {
@@ -1665,7 +1639,7 @@
     "variants": [
       "licenciement motif économique"
     ],
-    "definition": "<p>Licenciement basé sur un motif non lié à la personne du salarié mais lié à l'activité de l'entreprise ou à sa situation économique. Cela se distingue du licenciement pour motif personnel qui est lié à la personne du salarié.</p>",
+    "definition": "<p>Licenciement fondé sur un motif non lié à la personne du salarié mais lié à l'activité de l'entreprise ou à sa situation économique. Le licenciement pour motif économique peut être justifié soit par des difficultés économiques de l'entreprise, soit par des mutations technologiques, soit par une réorganisation de l'entreprise nécessaire à son adaptation au contexte économique, soit par une cessation d'activité de l'entreprise. </p>",
     "refs": []
   },
   {
@@ -1695,20 +1669,18 @@
     "title": "Lien de subordination",
     "slug": "lien-de-subordination",
     "abbrs": [],
-    "variants": [],
+    "variants": [
+      "Lien de subordination juridique"
+    ],
     "definition": "<p>Quel que soit le type de contrat de travail, lien par lequel l'employeur exerce son pouvoir de direction sur l'employé : pouvoir de donner des ordres, d'en contrôler l'exécution et de sanctionner la mauvaise exécution des ordres.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/professionnels-entreprises/glossaire/R54147"
-      }
-    ]
+    "refs": []
   },
   {
     "title": "Liquidation judiciaire",
     "slug": "liquidation-judiciaire",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Procédure lorsqu'une entreprise est en état de cessation des paiements et que son rétablissement est manfiestement impossible. La procédure est destinée à mettre fin à l'activité de l'entreprise.</p>",
+    "definition": "<p>Procédure visant une entreprise en état de cessation des paiements. La procédure est destinée à mettre fin à l'activité de l'entreprise dont les biens sont vendus pour permettre le paiement des différents créanciers.  </p>",
     "refs": []
   },
   {
@@ -1716,7 +1688,7 @@
     "slug": "litige",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Désaccord entre deux ou plusieurs parties sur un fait ou sur un droit qui donne lieu à une conciliation, une médiation, un arbitrage ou une action en justice.</p>",
+    "definition": "<p>Désaccord entre deux ou plusieurs parties sur un fait ou sur un droit qui donne lieu à une conciliation, une médiation, un arbitrage ou une action en justice.  </p>",
     "refs": []
   },
   {
@@ -1724,7 +1696,7 @@
     "slug": "lock-out",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Fermeture ou interdiction d'accès des locaux de l'entreprise par l'employeur en réponse à une grève ou une menace de grève.</p>",
+    "definition": "<p>Fermeture ou interdiction d'accès des locaux de l'entreprise par l'employeur en réponse à une grève ou une menace de grève. </p>",
     "refs": []
   },
   {
@@ -1732,7 +1704,7 @@
     "slug": "maladie-professionnelle",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Maladie qui a un lien direct avec le travail habituel du salarié.</p>",
+    "definition": "<p>Maladie qui présente un lien avec l'activité professionnelle d'un salarié. </p>",
     "refs": []
   },
   {
@@ -1740,7 +1712,7 @@
     "slug": "mandat-dun-representant-du-personnel",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Fonction attribuée aux représentants du personnel avec des missions et des moyens attachées à cette fonction.</p><p>Exemple : mandat de délégué syndical.</p>",
+    "definition": "<p>Mission attribuée par voie électorale aux représentants du personnel avec des attributions et des moyens attachées à cette fonction.Exemple : mandat de délégué syndical. </p>",
     "refs": []
   },
   {
@@ -1748,7 +1720,7 @@
     "slug": "mandataire-social",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Personne physique mandatée par une personne morale (une entreprise, une société, une association, etc.) pour la représenter, la diriger et la gérer vis à vis des tiers. </p><p>Exemple : PDG, Directeur général, gérant d'une SARL, etc.</p>",
+    "definition": "<p>Personne physique mandatée par une personne morale (une entreprise, une société, une association...) pour la représenter, la diriger et la gérer vis à vis des tiers.Exemples : PDG, Directeur général, gérant d'une SARL etc...</p>",
     "refs": []
   },
   {
@@ -1778,7 +1750,7 @@
       "MG"
     ],
     "variants": [],
-    "definition": "<p>Valeur minimale en euros servant de référence pour le calcul de nombreux avantages et indemnités : avantages en nature (nourriture, logement...), frais professionnels (repas, déplacements..) et allocations sociales.  À ne pas confondre avec le SMIC.</p>",
+    "definition": "<p>Valeur minimale en euros servant de référence pour le calcul de nombreux avantages et indemnités : avantages en nature (nourriture, logement...), frais professionnels (repas, déplacements..) et allocations sociales...A ne pas confondre avec le SMIC.</p>",
     "refs": []
   },
   {
@@ -1786,12 +1758,8 @@
     "slug": "mise-a-pied-conservatoire",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Suspension préventive et provisoire d'un salarié de ses fonctions, dans l'attente d'une procédure de sanction, suite à une faute grave. Le salarié est dispensé d'exécuter son travail et son contrat est suspendu pendant une durée indéterminée.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R32331"
-      }
-    ]
+    "definition": "<p>Suspension provisoire du contrat de travail faisant suite à une faute du salarié dont la gravité rend impossible son maintien dans l'entreprise pendant le déroulement de la procédure disciplinaire et qui prend fin avec le prononcé de la sanction définitive. La mise à pied conservatoire n'est pas une sanction disciplinaire.</p>",
+    "refs": []
   },
   {
     "title": "Mise à pied disciplinaire",
@@ -1814,12 +1782,8 @@
       "med"
     ],
     "variants": [],
-    "definition": "<p>Acte par lequel un créancier exige du débiteur le remboursement d'une dette sous peine de versement de dommages et intérêts. Adressé par lettre recommandée avec accusé de réception ou par acte d'huissier.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R2705"
-      }
-    ]
+    "definition": "<p>Injonction adressée à une personne de prendre une mesure, de payer une somme d'argent ou de mettre fin à un comportement illégal, le cas échéant sous peine de sanction.</p>",
+    "refs": []
   },
   {
     "title": "Modification juridique de la situation de l'employeur",
@@ -1827,9 +1791,10 @@
     "abbrs": [],
     "variants": [
       "changement de la situation juridique de l'employeur",
-      "transfert d'entreprise"
+      "transfert d'entreprise",
+      "Modification de la situation juridique de l'employeur"
     ],
-    "definition": "<p>Changement de l'employeur suite à une fusion, vente, scission, succesion suite au décès de l'employeur, etc.</p>",
+    "definition": "<p>Changement de l'employeur suite à une fusion, vente, scission, succession suite au décès de l'employeur, etc.</p>",
     "refs": []
   },
   {
@@ -1871,16 +1836,6 @@
     ]
   },
   {
-    "title": "Négociation triennale ",
-    "slug": "negociation-triennale",
-    "abbrs": [],
-    "variants": [
-      "négociations triennales"
-    ],
-    "definition": "<p>Négociation tous les 3 ans.</p>",
-    "refs": []
-  },
-  {
     "title": "Norme nf x35-102",
     "slug": "norme-nf-x35-102",
     "abbrs": [],
@@ -1897,7 +1852,7 @@
     "slug": "notification",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Formalité par laquelle un acte de procédure ou une décision est porté à la connaissance d’une personne.</p>",
+    "definition": "<p>Formalité par laquelle un acte de procédure ou une décision est porté à la connaissance d’une personne</p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R14732"
@@ -1927,7 +1882,7 @@
       "ODJ"
     ],
     "variants": [],
-    "definition": "<p>Document qui liste les sujets qui vont être abordés lors d'une réunion.</p>",
+    "definition": "<p>Document qui liste les sujets qui vont être abordés lors d'une réunion. </p>",
     "refs": []
   },
   {
@@ -1937,7 +1892,7 @@
       "OP"
     ],
     "variants": [],
-    "definition": "<p>Ensemble des règles et principes fondamentaux du droit.</p>",
+    "definition": "<p>Ensemble des règles et principes fondamentaux du droit. </p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R50177"
@@ -1949,7 +1904,7 @@
     "slug": "outplacement",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Egalement appelé reclassement externe, il s'agit d'un processus qui accompagnement le salarié à retrouver un emploi en dehors de l'entreprise. Cet accompagnement est souvent effectué par des cabinets spécialisés. </p><p>Exemple : dans le cadre d'un licenciement économique.</p>",
+    "definition": "<p>Egalement appelé reclassement externe, il s'agit d'un processus d’accompagnement du salarié vers un emploi en dehors de son entreprise d’origine. Cet accompagnement est souvent effectué par des cabinets spécialisés.Exemple : dans le cadre d'un licenciement économique.</p>",
     "refs": []
   },
   {
@@ -2033,7 +1988,7 @@
     "slug": "periode-probatoire",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Lors d'un changement de poste du salarié dans l'entreprise, période qui permet à l'employeur d'apprécier les compétences du salarié sur ce nouveau poste.</p>",
+    "definition": "<p>Lors d'un changement de poste du salarié dans l'entreprise, période qui permet à l'employeur d'apprécier les compétences du salarié sur ce nouveau poste. </p>",
     "refs": []
   },
   {
@@ -2070,7 +2025,7 @@
       "pouvoir en cassation",
       "former un pourvoi"
     ],
-    "definition": "<p>Recours formé devant la Cour de cassation, plus haute juridiction des juridictions judiciaires afin qu'elle vérifie l'exacte application des règles de droit par les tribunaux ou les cours d’appel. La Cour de cassation ne rejuge pas les faits du litige.</p>",
+    "definition": "<p>Recours formé devant la Cour de cassation ou Conseil d'Etat afin qu'il vérifie l'exacte application des règles de droit par les tribunaux ou les cours d’appel.</p>",
     "refs": []
   },
   {
@@ -2078,7 +2033,7 @@
     "slug": "preavis",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Délai qui s'écoule entre la notification d'un lienciement ou d'une démission et la date de fin du contrat de travail. </p><p>Exemple : un salarié qui donne sa démission le 1er juillet et qui a un préavis de 3 mois à effectuer, cela signifie que le salarié ne partira de l'entreprise que le 30 septembre au soir.</p>",
+    "definition": "<p>Délai qui s'écoule entre la notification d'un licenciement ou d'une démission et la date de fin du contrat de travail.Exemple : un salarié qui donne sa démission le 1er juillet et qui a un préavis de 3 mois à effectuer, cela signifie que le salarié ne partira de l'entreprise que le 30 septembre au soir. </p>",
     "refs": []
   },
   {
@@ -2088,7 +2043,7 @@
     "variants": [
       "préjudices"
     ],
-    "definition": "<p>Dommage matériel, moral ou corporel subi par une personne.</p>",
+    "definition": "<p>Dommage matériel, moral ou corporel subi par une personne. </p>",
     "refs": []
   },
   {
@@ -2096,12 +2051,8 @@
     "slug": "prescription",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Expiration d'un droit après un certain délai.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R16087"
-      }
-    ]
+    "definition": "<p>Extinction ou acquisition d'un droit après un certain délai.</p>",
+    "refs": []
   },
   {
     "title": "Prestataire de services dans l'Union Européenne",
@@ -2134,7 +2085,7 @@
     "slug": "propagande-electorale",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>L'ensemble des moyens mis en oeuvre par les candidats aux élections professionnelles afin de se faire connaître auprès des salariés et de recueillir leurs votes : tracts, documents, affiches, programmes, etc.</p>",
+    "definition": "<p>L'ensemble des moyens mis en oeuvre par les candidats aux élections professionnelles afin de se faire connaître auprès des salariés et de recueillir leurs votes : tracts, documents, affiches, programmes, courriels...  </p>",
     "refs": []
   },
   {
@@ -2168,7 +2119,7 @@
       "PAP"
     ],
     "variants": [],
-    "definition": "<p>Accord négocié entre l'employeur et les syndicats représentatifs de l'entreprise, il est préalable aux élections professionnelles et a pour objet de fixer les modalités d'organisation et de déroulement des futures élections.</p>",
+    "definition": "<p>Accord négocié entre l'employeur et les syndicats représentatifs de l'entreprise, il est préalable aux élections professionnelles et a pour objet de fixer les modalités d'organisation et de déroulement des futures élections. </p>",
     "refs": []
   },
   {
@@ -2176,12 +2127,8 @@
     "slug": "quorum",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Nombre minimum exigé de personnes présentes ou représentées pour qu'un vote ou une décision soit valable.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R37974"
-      }
-    ]
+    "definition": "<p>Nombre minimum de personnes présentes ou représentées pour qu'une instance puisse valablement délibérer ou voter. </p>",
+    "refs": []
   },
   {
     "title": "Récidive",
@@ -2200,7 +2147,7 @@
     "slug": "recours-hierarchique",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Recours en vue de contester un acte administratif ou une décision administrative auprès du supérieur hiérarchique de l'employé qui a pris l'acte ou la décision contesté.</p>",
+    "definition": "<p>Recours en vue de contester un acte administratif ou une décision administrative auprès du supérieur hiérarchique de l'auteur de cet acte ou de cette décision. </p>",
     "refs": []
   },
   {
@@ -2222,7 +2169,7 @@
       "RJ"
     ],
     "variants": [],
-    "definition": "<p>Procédure lorsqu'une entreprise est en état de cessation des paiements et que son rétablissement est encore possible. La procédure est destinée à permettre la poursuite de l'activité de l'entreprise, le maintien de l'emploi et l'apurement de ses dettes.</p>",
+    "definition": "<p>Procédure lorsqu'une entreprise est en état de cessation des paiements et que son rétablissement est encore possible. La procédure est destinée à permettre la poursuite de l'activité de l'entreprise, le maintien de l'emploi et l'apurement de ses dettes. </p>",
     "refs": []
   },
   {
@@ -2232,7 +2179,7 @@
     "variants": [
       "référés"
     ],
-    "definition": "<p>Dans le cadre de certaines situations urgentes, procédure rapide et simplifiée qui permet d'obtenir rapidement des mesures provisoires.</p>",
+    "definition": "<p>Dans le cadre de certaines situations urgentes, procédure rapide et simplifiée qui permet d'obtenir rapidement des mesures provisoires.   </p>",
     "refs": []
   },
   {
@@ -2264,7 +2211,7 @@
     "slug": "requerant",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Personne qui saisit le tribunal.</p>",
+    "definition": "<p>Personne qui saisit un juge. </p>",
     "refs": []
   },
   {
@@ -2272,12 +2219,8 @@
     "slug": "requete",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Écrit permettant de saisir un tribunal.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R12542"
-      }
-    ]
+    "definition": "<p>Ecrit permettant de formuler une demande et de saisir un tribunal sans recourir à un huissier.</p>",
+    "refs": []
   },
   {
     "title": "Rescrit",
@@ -2286,7 +2229,7 @@
     "variants": [
       "rescrits"
     ],
-    "definition": "<p>Procédure qui permet d'interroger une administration sur l'application d'un texte de loi à sa situation. L'administation est ensuite liée par sa décision tant que la loi ou la situation de la personne qui a demandé le rescrit ne changent pas.  </p><p>Exemple : rescrit aides à l'emploi, rescrit sur le règlement intérieur de l'entreprise, rescrits égalité professionnelle et handicap, etc.</p>",
+    "definition": "<p>Procédure qui permet d'interroger une administration sur l'application d'un texte de loi à sa situation. L’administration est ensuite liée par sa décision tant que la loi ou la situation de la personne qui a demandé le rescrit ne changent pas.<br>Exemples : rescrit aides à l'emploi, rescrit sur le règlement intérieur de l'entreprise, rescrits égalité professionnelle et handicap...  </p>",
     "refs": []
   },
   {
@@ -2294,7 +2237,7 @@
     "slug": "rescrit-social",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Procédure qui permet d'interroger l'Urssaf sur l'application d'un texte de loi à sa situation. L'Urssaf est ensuite lié par sa décision tant que la loi ou la situation de la personne qui a demandé le rescrit ne changent pas.</p>",
+    "definition": "<p>Procédure qui permet d'interroger l'Urssaf sur l'application d'un texte de loi à sa situation. L'Urssaf est ensuite lié par sa décision tant que la loi ou la situation de la personne qui a demandé le rescrit ne changent pas. </p>",
     "refs": []
   },
   {
@@ -2302,7 +2245,7 @@
     "slug": "retrogradation",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Sanction disciplinaire qui consiste à affecter le salarié à une fonction ou à un poste différent de niveau inférieur à celui qu'occupait l'intéressé. Le salarié doit donner son accord pour être rétrogradé.</p>",
+    "definition": "<p>Sanction disciplinaire qui \"consiste à affecter le salarié à une fonction ou à un poste différent de niveau inférieur à celui qu'occupait l'intéressé\". Le salarié doit donner son accord pour être rétrogradé.</p>",
     "refs": []
   },
   {
@@ -2340,7 +2283,7 @@
     "variants": [
       "risques professionnels"
     ],
-    "definition": "<p>Risques pour la santé et la sécurité des salariés dans le cadre de leur activité professionnelle.</p><p>Exemples : risques chimiques, risques liés au milieu hyperbare, risques liés à l'utilisation de certaines machines ou équipements de travail, risques psychosociaux, etc.</p>",
+    "definition": "<p>Risques pour la santé et la sécurité des salariés dans le cadre de leur activité professionnelle.Exemples : risques chimiques, risques liés au milieu hyperbare, risques liés à l'utilisation de certaines machines ou équipements de travail, risques psychosociaux... </p>",
     "refs": []
   },
   {
@@ -2352,7 +2295,7 @@
     "variants": [
       "risques psychosociaux"
     ],
-    "definition": "<p>Risques liés à l'environnement professionnel qui portent atteinte à la santé physique et mentale des travailleurs. Ils sont à l'interface de l'individu (psycho) et de sa situation de travail (social). </p><p>Exemples : stress, harcèlement moral ou sexuel, violences au travail, etc.</p>",
+    "definition": "<p>Risques liés à l'environnement professionnel qui portent atteinte à la santé physique et mentale des travailleurs. Ils sont à l'interface de l'individu (psycho) et de sa situation de travail (social).Exemples : stress, harcèlement moral ou sexuel, violences au travail...</p>",
     "refs": []
   },
   {
@@ -2370,7 +2313,7 @@
     "variants": [
       "salariés mandatés"
     ],
-    "definition": "<p>Salarié qui a été expressement mandaté par une organisation syndicale représentative afin de négocier une convention ou un accord collectif de travail.</p>",
+    "definition": "<p>Salarié qui a été expressément mandaté par une organisation syndicale représentative afin de négocier une convention ou un accord collectif de travail.</p>",
     "refs": []
   },
   {
@@ -2380,7 +2323,7 @@
     "variants": [
       "sanctions disciplinaires"
     ],
-    "definition": "<p>Toute mesure, autre que les observations verbales, prise par l'employeur à la suite d'un agissement du salarié considéré par l'employeur comme fautif. Cette mesure peut être de nature à affecter immédiatement ou non la présence du salarié dans l'entreprise, sa fonction, sa carrière ou sa rémunération.</p><p>Exemples de sanctions disciplinaires : avertissement, mise à pied disciplinaire, retrogradation disciplinaire, mutation disciplinaire, licenciement disciplinaire, etc.</p>",
+    "definition": "<p>Toute mesure, autre que les observations verbales, prise par l'employeur à la suite d'un agissement du salarié considéré par l'employeur comme fautif. Cette mesure peut être de nature à affecter immédiatement ou non la présence du salarié dans l'entreprise, sa fonction, sa carrière ou sa rémunération.Exemples : avertissement, mise à pied disciplinaire, rétrogradation disciplinaire, mutation disciplinaire... </p>",
     "refs": []
   },
   {
@@ -2408,19 +2351,15 @@
     "slug": "semaine",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Débute le lundi à 0 heure et se termine le dimanche à 24 heures, sauf si une convention ou un accord collectif d'entreprise ou d'établissement (ou, à défaut, une convention ou un accord de branche) fixe une autre période de 7 jours consécutifs.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R38690"
-      }
-    ]
+    "definition": "<p>Débute le lundi à 0 heure et se termine le dimanche à 24 heures, sauf si une convention ou un accord collectif fixe une autre période de 7 jours consécutifs.</p>",
+    "refs": []
   },
   {
     "title": "Seuil d'effectifs",
     "slug": "seuil-deffectifs",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Nombre de salarié dans l'entreprise ou l'établissement qui une fois franchi entraine des obligations. </p><p>Exemple : Seuil d'effectifs de 11 salariés qui entraine une fois dépassé l'obligation de mettre en place un comité social et économique.</p>",
+    "definition": "<p>Nombre de salariés dans l'entreprise ou l'établissement qui une fois franchi entraîne des obligations.Exemple : seuil d'effectifs de 11 salariés qui entraîne une fois dépassé l'obligation de mettre en place un comité social et économique. </p>",
     "refs": []
   },
   {
@@ -2466,7 +2405,7 @@
     "slug": "subrogation",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Opération par laquelle une personne ou une chose est substituée à une autre. </p><p>Exemple : subrogation de l'employeur par laquelle l'employeur se susbtitue au salarié afin de percevoir les indemnités maladie versées par le Sécurité sociale en échange de quoi, l'employeur maintien à une certaine hauteur le salaire du salarié.</p>",
+    "definition": "<p>Opération par laquelle une personne ou une chose est substituée à une autre.Exemple : subrogation de l'employeur par laquelle l'employeur se substitue au salarié afin de percevoir les indemnités maladie versées par le Sécurité sociale en échange de quoi, l'employeur maintien à une certaine hauteur le salaire du salarié. \"</p>",
     "refs": []
   },
   {
@@ -2486,7 +2425,7 @@
     "slug": "sursis-a-statuer",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Décision du juge qui suspend l'instance jusqu'à une date ou un évènement déterminé.</p>",
+    "definition": "<p>Décision du juge qui suspend sa décision jusqu'à une date ou un événement déterminé. </p>",
     "refs": []
   },
   {
@@ -2494,7 +2433,7 @@
     "slug": "suspension-du-contrat-de-travail",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Les effets du contrat de travail (l'exécution d'un travail par le salarié et le paiement d'un salaire par l'employeur) sont interrompus temporairement sans qu'il y ait rupture du contrat. Attention, certaines obligations subsistent le temps de la suspension. </p><p>Exemples de suspension : la maladie, congé maternité, congé sabbatique, chômage partiel, grève, etc.</p>",
+    "definition": "<p>Les effets du contrat de travail (l'exécution d'un travail par le salarié et le paiement d'un salaire par l'employeur) sont interrompus temporairement sans qu'il y ait rupture du contrat. Attention, certaines obligations subsistent le temps de la suspension.Exemples : la maladie, congé maternité, congé sabbatique, chômage partiel, grève...</p>",
     "refs": []
   },
   {
@@ -2504,12 +2443,8 @@
       "SIRET"
     ],
     "variants": [],
-    "definition": "<p>Identifiant géographique d'un établissement ou d'une entreprise, composé de 14 chiffres.</p>",
-    "refs": [
-      {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R1041"
-      }
-    ]
+    "definition": "<p>Numéro de 14 chiffres correspondant à l'identifiant géographique d'un établissement ou d'une entreprise. Il peut se retrouver sur la fiche de paie. </p>",
+    "refs": []
   },
   {
     "title": "Système informatique du répertoire des entreprises ",
@@ -2518,7 +2453,7 @@
       "SIREN"
     ],
     "variants": [],
-    "definition": "<p>Numéro unique composé de 9 chiffres qui permet d'identifier une entreprise.</p>",
+    "definition": "<p>Numéro unique composé de 9 chiffres qui permet d'identifier une entreprise. Il se retrouve sur la fiche de paie. </p>",
     "refs": []
   },
   {
@@ -2538,7 +2473,7 @@
     "slug": "terme-imprecis",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Il n'y a pas de date de fin du contrat précise et fixée mais il existe une durée minimale. La fin du contrat est indéterminée et arrive au moment de la survenance d'un évènement ou la réalisation de l'objet du contrat. </p><p>Exemples : CDD du 15 juillet jusqu'au retour du salarié remplacé.</p>",
+    "definition": "<p>Il n'y a pas de date de fin du contrat précise et fixée mais il existe une durée minimale. La fin du contrat est indéterminée et arrive au moment de la survenance d'un événement ou la réalisation de l'objet du contrat.Exemple : CDD du 15 juillet jusqu'au retour du salarié remplacé. </p>",
     "refs": []
   },
   {
@@ -2546,7 +2481,7 @@
     "slug": "terme-precis",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Il existe une date de fin précise ou une durée définie du contrat.</p><p>Exemple : un CDD du 15 juillet 2019 au 30 aout 2019 ou un CDD de 6 mois.</p>",
+    "definition": "<p>Il existe une date de fin précise ou une durée définie du contrat.Exemple : un CDD du 15 juillet 2019 au 30 août 2019 ou un CDD de 6 mois. </p>",
     "refs": []
   },
   {
@@ -2554,7 +2489,7 @@
     "slug": "texte-attache",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Accord ou avenant qui vient compléter, modifier ou adapter les dispositions du texte de base auquel il se rattache.</p>",
+    "definition": "<p>Accords et avenants conclus depuis la signature de la convention. Certains accords ne sont pas intégrés dans le sommaire de la convention, car ils ont vocation à être réexaminés et mis à jour régulièrement. </p>",
     "refs": []
   },
   {
@@ -2562,7 +2497,7 @@
     "slug": "texte-de-base",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Convention collective ou accord professionnel – conclu sur un sujet donné (conditions d’emploi, de travail et de formation professionnelle, garanties sociales de l’ensemble des salariés concernés, etc.) et prévoyant un champ d’application propre.</p>",
+    "definition": "<p>Convention collective ou accord professionnel conclu sur un sujet donné (conditions d’emploi, de travail et de formation professionnelle, garanties sociales de l’ensemble des salariés concernés) et prévoyant un champ d’application propre. </p>",
     "refs": []
   },
   {
@@ -2570,7 +2505,7 @@
     "slug": "textes-salaires",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Accord ou avenant qui traite exclusivement du thème des salaires.</p>",
+    "definition": "<p>Accords et avenants traitant principalement du thème des salaires conclus depuis la signature de la convention. Certains accords ne sont pas intégrés dans le sommaire de la convention, car ils ont vocation à être réexaminés et mis à jour régulièrement.</p>",
     "refs": []
   },
   {
@@ -2590,7 +2525,7 @@
     "slug": "transaction",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Accord conclu entre le salarié et l'employeur prévoyant des concessions réciproques et ayant pour but de mettre fin à un litige ou de prévenir un litige futur.</p>",
+    "definition": "<p>Accord conclu entre le salarié et l'employeur prévoyant des concessions réciproques et ayant pour but de mettre fin à un litige ou de prévenir un litige futur. </p>",
     "refs": []
   },
   {
@@ -2598,7 +2533,7 @@
     "slug": "transfert-dentreprise",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Changement d'employeur suite à une fusion, vente, scission, succesion suite au décès de l'employeur, etc. ayant des conséquences notamment sur les contrats de travail.</p>",
+    "definition": "<p>Changement d'employeur suite à une fusion, vente, scission, succession suite au décès de l'employeur... ayant des conséquences notamment sur les contrats de travail.</p>",
     "refs": []
   },
   {
@@ -2636,7 +2571,7 @@
       "UES"
     ],
     "variants": [],
-    "definition": "<p>Regroupement en une unité de plusieurs entreprises juridiquement distinctes présentant des liens étroits : activités communes ou complémentaires, unité de direction, communauté de travailleurs ayant des intérets communs.</p>",
+    "definition": "<p>Regroupement en une unité de plusieurs entreprises juridiquement distinctes présentant des liens étroits : activités communes ou complémentaires, unité de direction, communauté de travailleurs ayant des intérêts communs. La reconnaissance d'une UES intervient par accord ou décision de justice et conduit à la mise en place d'une instance représentative du personnel commune.</p>",
     "refs": []
   },
   {
@@ -2652,7 +2587,7 @@
     "slug": "usages-locaux",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Règles non écrites fixées par l'usage des lieux : coutumes locales qui s'appliquent à tous, ou usages propres qui s'appliquent à certaines catégories de personnes (agriculteurs, particuliers, etc.).</p>",
+    "definition": "<p>Règles non écrites fixées par l'usage des lieux : coutumes locales qui s'appliquent à tous, ou usages propres qui s'appliquent à certaines catégories de personnes (agriculteurs, particuliers...).</p>",
     "refs": [
       {
         "url": "https://www.service-public.fr/particuliers/glossaire/R12915"
@@ -2683,7 +2618,7 @@
     "variants": [
       "Valeurs limites d'exposition professionnelle"
     ],
-    "definition": "<p>Valeur de concentration dans l'air de la zone de respiration d'un travailleur d'un agent chimique dangereux que peut respirer le travailleur pendant un temps déterminé sans risque d'altération par sa santé. </p>",
+    "definition": "<p>Niveau d'exposition d'un travailleur à un risque professionnel qui ne doit pas être dépassé.</p>",
     "refs": [
       {}
     ]
@@ -2705,7 +2640,7 @@
     "variants": [
       "voie de recours"
     ],
-    "definition": "<p>Procédure qui permet au justificiable d'obtenir un nouvel examen d'une décision ou de faire reconnaître des irrégularités.</p>",
+    "definition": "<p>Procédure qui permet au justiciable d'obtenir un nouvel examen d'une décision ou de faire reconnaître des irrégularités.  </p>",
     "refs": []
   },
   {
@@ -2744,7 +2679,12 @@
     ],
     "variants": [],
     "definition": "<p>Périmètre où les commerces de détail peuvent être ouverts le dimanche en raison de l'affluence exceptionnelle de touristes résidant hors de France. Les commerçants qui y sont situés ont également la possibilité d'ouvrir en soirée (jusqu'à minuit) toute l'année.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R50123",
+        "valid": true
+      }
+    ]
   },
   {
     "title": "Zone urbaine sensible ",

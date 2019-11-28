@@ -7,8 +7,7 @@
         "url": "/fiche-service-public/quest-ce-quun-accident-du-travail"
       },
       {
-        "url": "/fiche-service-public/mutuelle-sante-dentreprise-les-obligations-de-lemployeur",
-        "title": "Mutuelle santé d'entreprise : les obligations de l'employeur"
+        "url": "/fiche-service-public/accident-du-travail-demarches-a-effectuer"
       },
       {
         "url": "/fiche-service-public/accident-du-travail-indemnisation-en-cas-dincapacite-permanente"
@@ -46,7 +45,8 @@
         "title": "Les absences liées à la maladie ou à l’accident non professionnel : peut-il y avoir licenciement pour maladie ?"
       },
       {
-        "url": "/fiche-service-public/accident-du-travail-demarches-a-effectuer"
+        "url": "/fiche-ministere-travail/les-absences-liees-a-la-maladie-ou-a-laccident-non-professionnel#Que-faire-en-cas-de-cure-thermale",
+        "title": "Les absences liées à la maladie ou à l’accident non professionnel : que faire en cas de cure thermale ?"
       },
       {
         "url": "/fiche-ministere-travail/larret-de-travail-pour-accident-du-travail-ou-maladie-professionnelle#Que-se-passe-t-il-pendant-l-arret-de-travail",
@@ -89,10 +89,6 @@
       {
         "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Que-percoit-le-salarie",
         "title": "L’indemnisation légale des absences pour maladie ou accident : que perçoit le salarié ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/les-absences-liees-a-la-maladie-ou-a-laccident-non-professionnel#Que-faire-en-cas-de-cure-thermale",
-        "title": "Les absences liées à la maladie ou à l’accident non professionnel : que faire en cas de cure thermale ?"
       }
     ],
     "source": "themes",
@@ -777,18 +773,6 @@
       {
         "url": "/fiche-ministere-travail/plans-de-sante-au-travail-pst#Consulter-le-bilan-du-PST-apres-deux-annees-de-mise-en-oeuvre",
         "title": "Consulter le bilan du PST après deux années de mise en oeuvre"
-      },
-      {
-        "url": "/fiche-ministere-travail/chaleur-et-canicule-au-travail-les-precautions-a-prendre#Mesures-a-appliquer-par-les-employeurs-en-cas-de-fortes-chaleurs",
-        "title": "Chaleur et canicule au travail : mesures à appliquer par les employeurs en cas de fortes chaleurs"
-      },
-      {
-        "url": "/fiche-ministere-travail/chaleur-et-canicule-au-travail-les-precautions-a-prendre#Recommandations-aux-travailleurs-en-cas-de-fortes-chaleurs",
-        "title": "Chaleur et canicule au travail : recommandations aux travailleurs en cas de fortes chaleurs"
-      },
-      {
-        "url": "/fiche-ministere-travail/chaleur-et-canicule-au-travail-les-precautions-a-prendre#Plan-national-canicule",
-        "title": "Chaleur et canicule au travail : plan national canicule"
       }
     ],
     "source": "themes",
@@ -2344,8 +2328,8 @@
         "url": "/fiche-service-public/contrat-de-travail-du-salarie-a-domicile-services-a-la-personne"
       },
       {
-        "url": "/fiche-service-public/quelles-sont-les-activites-de-services-a-la-personne-et-comment-y-recourir",
-        "title": "Quelles sont les activités de services à la personne et comment y recourir ?"
+        "url": "/fiche-service-public/cesu-declaratif-ou-cesu-prefinance-quelles-differences",
+        "title": "Cesu déclaratif ou Cesu préfinancé : quelles différences ?"
       },
       {
         "url": "/fiche-service-public/emploi-saisonnier"
@@ -2386,8 +2370,8 @@
         "title": "Le travail saisonnier : la succession de contrats saisonniers"
       },
       {
-        "url": "/fiche-service-public/cesu-declaratif-ou-cesu-prefinance-quelles-differences",
-        "title": "Cesu déclaratif ou Cesu préfinancé : quelles différences ?"
+        "url": "/fiche-ministere-travail/le-travail-saisonnier#La-clause-de-reconduction",
+        "title": "Le travail saisonnier : la clause de reconduction"
       },
       {
         "url": "/fiche-ministere-travail/le-cheque-emploi-service-universel-cesu-declaratif#Quels-sont-les-employeurs-concernes",
@@ -2436,10 +2420,6 @@
       {
         "url": "/fiche-ministere-travail/le-contrat-de-travail-intermittent#Quels-sont-les-domaines-ouverts-a-la-negociation-collective-nbsp",
         "title": "Le contrat de travail intermittent : quels sont les domaines ouverts à la négociation collective ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-travail-saisonnier#La-clause-de-reconduction",
-        "title": "Le travail saisonnier : la clause de reconduction"
       }
     ],
     "source": "themes",
@@ -2581,18 +2561,6 @@
       {
         "url": "/fiche-ministere-travail/demandeur-demploi-createur-ou-repreneur-dentreprise-cumul-de-revenus#Quels-sont-les-dispositifs-de-cumul-pour-les-beneficiaires-de-l-allocation-nbsp",
         "title": "Demandeur d’emploi créateur ou repreneur d’entreprise : quels sont les dispositifs de cumul pour les bénéficiaires de l’allocation de solidarité spécifique (ass) ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/cumul-de-lallocation-daide-au-retour-a-lemploi-avec-une-remuneration#Quelles-sont-les-situations-visees",
-        "title": "Cumul de l’allocation d’aide au retour à l’emploi avec une rémunération : quelles sont les situations visées ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/cumul-de-lallocation-daide-au-retour-a-lemploi-avec-une-remuneration#Quelle-est-la-situation-en-cas-de-reprise-d-une-activite-en-cours-nbsp",
-        "title": "Cumul de l’allocation d’aide au retour à l’emploi avec une rémunération : quelle est la situation en cas de reprise d’une activité en cours d’indemnisation ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/cumul-de-lallocation-daide-au-retour-a-lemploi-avec-une-remuneration#Quelle-est-la-situation-des-allocataires-ayant-plusieurs-activites-nbsp",
-        "title": "Cumul de l’allocation d’aide au retour à l’emploi avec une rémunération : quelle est la situation des allocataires ayant plusieurs activités professionnelles et perdant l’une ou plusieurs d’entre elles ?"
       }
     ],
     "source": "themes",
@@ -2999,7 +2967,8 @@
         "url": "/fiche-service-public/quels-sont-les-differents-dispositifs-de-formation-pour-le-secteur-prive"
       },
       {
-        "url": "/fiche-service-public/conseil-en-evolution-professionnelle-cep"
+        "url": "/fiche-ministere-travail/moncompteactivite-gouv-fr#Comment-sont-utilises-les-droits-acquis",
+        "title": "Moncompteactivite.gouv.fr : comment sont utilisés les droits acquis ?"
       },
       {
         "url": "/fiche-service-public/plan-de-developpement-des-competences"
@@ -3076,8 +3045,7 @@
         "title": "Comment est financé le CIF ?"
       },
       {
-        "url": "/fiche-ministere-travail/conge-individuel-de-formation-cif#Quelles-sont-les-incidences-du-CIF-sur-le-contrat-de-travail-nbsp",
-        "title": "Quelles sont les incidences du CIF sur le contrat de travail ?"
+        "url": "/fiche-service-public/conseil-en-evolution-professionnelle-cep"
       },
       {
         "url": "/fiche-ministere-travail/bilan-de-competences#Qui-peut-beneficier-d-un-bilan-de-competences",
@@ -3154,6 +3122,14 @@
       {
         "url": "/fiche-ministere-travail/conventions-de-fne-formation#Quelle-procedure",
         "title": "Conventions de FNE-Formation : quelle procédure ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/moncompteactivite-gouv-fr#Que-trouve-t-on-sur-www-moncompteactivite-gouv-fr",
+        "title": "Que trouve-t-on sur www.moncompteactivite.gouv.fr ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/conge-individuel-de-formation-cif#Quelles-sont-les-incidences-du-CIF-sur-le-contrat-de-travail-nbsp",
+        "title": "Quelles sont les incidences du CIF sur le contrat de travail ?"
       }
     ],
     "source": "themes",
@@ -3493,11 +3469,7 @@
   {
     "title": "Emploi",
     "position": 52,
-    "refs": [
-      {
-        "url": "/fiche-service-public/creation-dun-organisme-de-services-a-la-personne-agrement-autorisation-de-declaration"
-      }
-    ],
+    "refs": [],
     "source": "themes",
     "slug": "52-emploi",
     "breadcrumbs": [
@@ -3578,16 +3550,10 @@
         "title": "Alertes pour la prévention des difficultés des entreprises"
       },
       {
-        "url": "/fiche-service-public/secteur-prive-activite-partielle-du-salarie"
-      },
-      {
         "url": "/fiche-service-public/quelle-procedure-de-licenciement-sapplique-dans-une-entreprise-en-difficulte"
       },
       {
         "url": "/fiche-service-public/entreprise-en-difficulte-financiere-quest-ce-que-la-garantie-des-salaires"
-      },
-      {
-        "url": "/fiche-service-public/sauvegarde"
       },
       {
         "url": "/fiche-service-public/redressement-judiciaire"
@@ -3599,7 +3565,7 @@
         "url": "/fiche-service-public/fermeture-dun-etablissement-obligation-de-rechercher-un-repreneur"
       },
       {
-        "url": "https://activitepartielle.emploi.gouv.fr/apart/"
+        "url": "/fiche-service-public/secteur-prive-activite-partielle-du-salarie"
       },
       {
         "url": "/fiche-ministere-travail/activite-partielle#A-quelles-entreprises-s-adresse-l-activite-partielle",
@@ -3620,6 +3586,12 @@
       {
         "url": "/fiche-ministere-travail/activite-partielle#L-info-en",
         "title": "Activité partielle : l’info en +"
+      },
+      {
+        "url": "https://activitepartielle.emploi.gouv.fr/apart/"
+      },
+      {
+        "url": "/fiche-service-public/sauvegarde"
       },
       {
         "url": "/fiche-ministere-travail/la-garantie-en-cas-de-sauvegarde-de-redressement-ou-de-liquidation-judiciaire#Qui-sont-les-employeurs-assujettis",
@@ -3888,9 +3860,6 @@
       },
       {
         "url": "/fiche-service-public/grossesse-et-autorisation-dabsence-quelles-sont-les-regles"
-      },
-      {
-        "url": "/fiche-service-public/travail-de-nuit-dune-salariee-enceinte"
       },
       {
         "url": "/fiche-service-public/une-salariee-enceinte-peut-elle-refuser-deffectuer-certaines-taches"
@@ -4189,6 +4158,9 @@
       {
         "url": "/fiche-service-public/greve-des-transports-quels-droits-pour-le-salarie",
         "title": "Grève des transports : quels droits pour le salarié ?"
+      },
+      {
+        "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/greve-du-5-decembre-ce-qu-employeurs-et-salaries-doivent-savoir"
       }
     ],
     "source": "themes",
@@ -4206,75 +4178,11 @@
   },
   {
     "title": "Handicap",
-    "position": 644,
-    "refs": [
-      {
-        "url": "/fiche-service-public/comment-etre-reconnu-travailleur-handicape",
-        "title": "Comment être reconnu travailleur handicapé ?"
-      },
-      {
-        "url": "/fiche-service-public/handicap-travail-en-milieu-ordinaire",
-        "title": "Handicap : travail en milieu ordinaire"
-      },
-      {
-        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Qui-est-concerne-par-l-obligation-d-emploi-des-travailleurs-handicapes-nbsp",
-        "title": "Qui est concerné par l’obligation d’emploi des travailleurs handicapés (OETH) ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Comment-l-employeur-peut-il-s-acquitter-de-son-OETH",
-        "title": "Comment l’employeur peut-il s’acquitter de son OETH ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Comment-l-obligation-d-emploi-des-travailleurs-handicapes-est-elle-nbsp",
-        "title": "OETH : comment l’obligation d’emploi des travailleurs handicapés est-elle contrôlée ?"
-      }
-    ],
-    "source": "themes",
-    "slug": "644-handicap",
-    "breadcrumbs": [
-      {
-        "title": "Santé, sécurité et conditions de travail",
-        "slug": "6-sante-securite-et-conditions-de-travail"
-      },
-      {
-        "title": "Travailleurs et secteurs spécifiques",
-        "slug": "64-travailleurs-et-secteurs-specifiques"
-      }
-    ],
-    "children": [],
-    "variants": [
-      "Handicap"
-    ]
-  },
-  {
-    "title": "Handicap",
     "position": 118,
     "refs": [
       {
-        "url": "/fiche-service-public/emploi-de-personnes-handicapees-quelles-personnes-sont-concernees"
-      },
-      {
-        "url": "https://www.teledoeth.travail.gouv.fr/teledoeth/"
-      },
-      {
-        "url": "/fiche-ministere-travail/emploi-et-handicap-la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth#Qu-est-ce-que-la-reconnaissance-de-la-qualite-de-travailleur-handicape-nbsp",
-        "title": "RQTH : qu’est-ce que la reconnaissance de la qualité de travailleur handicapé ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/emploi-et-handicap-la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth#Qui-est-concerne-par-la-reconnaissance-de-travailleur-handicape-nbsp",
-        "title": "RQTH : qui est concerné par la reconnaissance de travailleur handicapé ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/emploi-et-handicap-la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth#Que-signifie-etre-reconnu-travailleur-handicape",
-        "title": "RQTH : que signifie être reconnu travailleur handicapé ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/emploi-et-handicap-la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth#Quelles-sont-les-mesures-specifiques-liees-a-la-reconnaissance-de-nbsp",
-        "title": "RQTH : quelles sont les mesures spécifiques liées à la reconnaissance de travailleur handicapé ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/emploi-et-handicap-la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth#Comment-etre-reconnu-travailleur-handicape",
-        "title": "RQTH : comment être reconnu travailleur handicapé ?"
+        "url": "/fiche-service-public/emploi-de-personnes-handicapees-quelles-personnes-sont-concernees",
+        "title": "Emploi de personnes handicapées : quelles personnes sont concernées ?"
       },
       {
         "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Qui-est-concerne-par-l-obligation-d-emploi-des-travailleurs-handicapes-nbsp",
@@ -4287,9 +4195,6 @@
       {
         "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Comment-l-obligation-d-emploi-des-travailleurs-handicapes-est-elle-nbsp",
         "title": "OETH : comment l’obligation d’emploi des travailleurs handicapés est-elle contrôlée ?"
-      },
-      {
-        "url": "/fiche-service-public/quest-ce-que-laide-a-la-lourdeur-du-handicap-et-comment-en-beneficier"
       }
     ],
     "source": "themes",
@@ -4302,6 +4207,36 @@
       {
         "title": "Embauche",
         "slug": "11-embauche"
+      }
+    ],
+    "children": [],
+    "variants": [
+      "Handicap"
+    ]
+  },
+  {
+    "title": "Handicap",
+    "position": 644,
+    "refs": [
+      {
+        "url": "/fiche-service-public/comment-etre-reconnu-travailleur-handicape",
+        "title": "Comment être reconnu travailleur handicapé ?"
+      },
+      {
+        "url": "/fiche-service-public/handicap-travail-en-milieu-ordinaire",
+        "title": "Handicap : travail en milieu ordinaire"
+      }
+    ],
+    "source": "themes",
+    "slug": "644-handicap",
+    "breadcrumbs": [
+      {
+        "title": "Santé, sécurité et conditions de travail",
+        "slug": "6-sante-securite-et-conditions-de-travail"
+      },
+      {
+        "title": "Travailleurs et secteurs spécifiques",
+        "slug": "64-travailleurs-et-secteurs-specifiques"
       }
     ],
     "children": [],
@@ -4335,10 +4270,6 @@
       {
         "url": "/fiche-ministere-travail/le-harcelement-moral#Quels-recours",
         "title": "Le harcèlement moral : quels recours ?"
-      },
-      {
-        "url": "/modeles-de-courriers/modele-signalement-de-faits-pouvant-relever-du-harcelement-moral-sur-mineur-au-travail",
-        "title": "Signalement de faits pouvant relever du harcèlement moral sur mineur au travail"
       },
       {
         "url": "/modeles-de-courriers/modele-signalement-de-faits-pouvant-relever-du-harcelement-moral",
@@ -4691,22 +4622,6 @@
       {
         "url": "/fiche-service-public/travail-de-nuit-dun-jeune-de-moins-de-18-ans",
         "title": "Travail de nuit d'un jeune de moins de 18 ans"
-      },
-      {
-        "url": "/fiche-ministere-travail/job-dete-formalites-et-obligations#Quelles-formalites",
-        "title": "Job d’été : quelles formalités ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/job-dete-formalites-et-obligations#Job-d-ete-quelles-conditions-de-travail",
-        "title": "Job d’été : quelles conditions de travail ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/job-dete-formalites-et-obligations#Quels-jeunes-peuvent-etre-embauches-dans-le-cadre-d-un-job-d-ete-nbsp",
-        "title": "Job d’été : quels jeunes peuvent être embauchés dans le cadre d’un job d’été ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/job-dete-formalites-et-obligations#Quel-avantage-fiscal-pour-le-jeune-salarie",
-        "title": "Job d’été : quel avantage fiscal pour le jeune salarié ?"
       }
     ],
     "source": "themes",
@@ -4737,9 +4652,6 @@
       {
         "url": "/fiche-ministere-travail/les-stages-etudiants-en-milieu-professionnel#Quelle-est-la-duree-maximale-du-stage",
         "title": "Les stages étudiants en milieu professionnel : quelle est la durée maximale du stage ?"
-      },
-      {
-        "url": "/fiche-service-public/formation-des-jeunes-etablissement-pour-linsertion-dans-lemploi-epide"
       },
       {
         "url": "https://travail-emploi.gouv.fr/demarches-ressources-documentaires/formulaires-et-teledeclarations/le-defenseur-syndical/"
@@ -4928,11 +4840,7 @@
     "position": 522,
     "refs": [
       {
-        "url": "/fiche-service-public/allocation-chomage-daide-au-retour-a-lemploi-are-dun-salarie-du-prive"
-      },
-      {
-        "url": "/fiche-ministere-travail/periodes-de-mise-en-situation-en-milieu-professionnel-pmsmp#Comment-faire-la-demande-d-une-PMSMP",
-        "title": "Périodes de mise en situation en milieu professionnel - PMSMP : comment faire la demande d’une pmsmp ?"
+        "url": "/fiche-service-public/prime-dactivite-salarie-ou-fonctionnaire"
       },
       {
         "url": "/fiche-service-public/prime-dactivite-etudiant-stagiaire-apprenti"
@@ -4944,6 +4852,9 @@
         "url": "/fiche-service-public/prime-dactivite-travailleur-non-salarie"
       },
       {
+        "url": "/fiche-service-public/allocation-chomage-daide-au-retour-a-lemploi-are-dun-salarie-du-prive"
+      },
+      {
         "url": "/fiche-ministere-travail/interessement-a-la-reprise-dactivite-des-beneficiaires-de-lallocation-de-solidarite-specifique-cumul-des-revenus-avec-lallocation#Quelles-sont-les-modalites-d-interessement-a-la-reprise-d-activite-des-nbsp",
         "title": "Intéressement à la reprise d’activité des bénéficiaires de l’allocation de solidarité spécifique (cumul des revenus avec l’allocation) : quelles sont les modalités d’intéressement à la reprise d’activité des bénéficiaires de l’allocation de solidarité spécifique ?"
       },
@@ -4951,25 +4862,7 @@
         "url": "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique"
       },
       {
-        "url": "/fiche-service-public/exonerations-dans-un-bassin-demploi-a-redynamiser-ber"
-      },
-      {
         "url": "/fiche-service-public/aide-a-lembauche-de-travailleurs-saisonniers-agricoles"
-      },
-      {
-        "url": "/fiche-service-public/allegements-fiscaux-dans-les-quartiers-prioritaires-de-la-ville-qpv"
-      },
-      {
-        "url": "/fiche-service-public/exonerations-dimpots-en-zone-de-revitalisation-rurale-zrr"
-      },
-      {
-        "url": "/fiche-service-public/exonerations-dimpots-sur-les-benefices-en-zone-franche-urbaine-territoire-entrepreneur-zfu-te"
-      },
-      {
-        "url": "/fiche-service-public/quel-est-le-regime-dexoneration-de-limpot-sur-les-benefices-dans-les-zfu-te-avant-2015"
-      },
-      {
-        "url": "/fiche-service-public/quelles-exonerations-dans-les-bassins-urbains-a-dynamiser-bud"
       },
       {
         "url": "/fiche-ministere-travail/preparation-operationnelle-a-lemploi-collective-poec#Quel-est-l-objectif-de-la-POEC",
@@ -5000,7 +4893,8 @@
         "title": "AGEPI : quelles sont les conditions de versement ?"
       },
       {
-        "url": "/fiche-service-public/prime-dactivite-salarie-ou-fonctionnaire"
+        "url": "/fiche-ministere-travail/cumul-de-lallocation-daide-au-retour-a-lemploi-avec-une-remuneration#Quelles-sont-les-situations-visees",
+        "title": "Cumul de l’allocation d’aide au retour à l’emploi avec une rémunération : quelles sont les situations visées ?"
       },
       {
         "url": "/fiche-ministere-travail/cumul-de-lallocation-daide-au-retour-a-lemploi-avec-une-remuneration#Quelle-est-la-situation-en-cas-de-reprise-d-une-activite-en-cours-nbsp",
@@ -5079,8 +4973,8 @@
         "title": "Périodes de mise en situation en milieu professionnel - PMSMP : quel sont l’objet et les modalités d’une pmsmp ?"
       },
       {
-        "url": "/fiche-ministere-travail/cumul-de-lallocation-daide-au-retour-a-lemploi-avec-une-remuneration#Quelles-sont-les-situations-visees",
-        "title": "Cumul de l’allocation d’aide au retour à l’emploi avec une rémunération : quelles sont les situations visées ?"
+        "url": "/fiche-ministere-travail/periodes-de-mise-en-situation-en-milieu-professionnel-pmsmp#Comment-faire-la-demande-d-une-PMSMP",
+        "title": "Périodes de mise en situation en milieu professionnel - PMSMP : comment faire la demande d’une pmsmp ?"
       }
     ],
     "source": "themes",
@@ -5105,43 +4999,8 @@
     "position": 521,
     "refs": [
       {
-        "url": "/fiche-ministere-travail/entreprises-dinsertion-ei#Qu-est-ce-qu-une-entreprise-d-insertion",
-        "title": "EI : qu’est-ce qu’une entreprise d’insertion ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/entreprises-dinsertion-ei#Quelle-aide-de-l-Etat-pour-les-entreprises-d-insertion",
-        "title": "EI : quelle aide de l’état pour les entreprises d’insertion ?"
-      },
-      {
         "url": "/fiche-ministere-travail/associations-intermediaires-ai#Qui-peut-etre-recrute-par-une-association-intermediaire",
         "title": "AI : qui peut être recruté par une association intermédiaire ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/entreprises-de-travail-temporaire-dinsertion-etti#Qu-est-ce-qu-une-entreprise-de-travail-temporaire-d-insertion-ETTI-nbsp",
-        "title": "Qu’est-ce qu’une entreprise de travail temporaire d’insertion (ETTI) ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/ateliers-et-chantiers-dinsertion-aci#Quels-organismes-peuvent-mettre-en-oeuvre-des-ateliers-et-chantiers-nbsp",
-        "title": "ACI : quels organismes peuvent mettre en œuvre des ateliers et chantiers d’insertion ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/ateliers-et-chantiers-dinsertion-aci#Qui-peut-etre-recrute-en-ateliers-et-chantiers-d-insertion-ACI-nbsp",
-        "title": "Qui peut être recruté en ateliers et chantiers d’insertion (ACI) ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/emploi-et-handicap-les-entreprises-adaptees-ea#Qui-peut-creer-une-entreprise-adaptee",
-        "title": "EA : qui peut créer une entreprise adaptée ?"
-      },
-      {
-        "url": "/fiche-service-public/formation-des-jeunes-etablissement-pour-linsertion-dans-lemploi-epide"
-      },
-      {
-        "url": "/fiche-ministere-travail/entreprises-dinsertion-ei#Qui-peut-etre-recrute-par-une-entreprise-d-insertion",
-        "title": "EI : qui peut être recruté par une entreprise d’insertion ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/entreprises-dinsertion-ei#Quel-est-le-statut-des-salaries",
-        "title": "EI : quel est le statut des salariés ?"
       },
       {
         "url": "/fiche-ministere-travail/associations-intermediaires-ai#Quels-sont-le-statut-et-les-missions-d-une-une-association-intermediaire-nbsp",
@@ -5156,6 +5015,42 @@
         "title": "AI : de quelle aide financière peut bénéficier l’association intermédiaire ?"
       },
       {
+        "url": "/fiche-ministere-travail/entreprises-dinsertion-ei#Qu-est-ce-qu-une-entreprise-d-insertion",
+        "title": "EI : qu’est-ce qu’une entreprise d’insertion ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/entreprises-dinsertion-ei#Quelle-aide-de-l-Etat-pour-les-entreprises-d-insertion",
+        "title": "EI : quelle aide de l’état pour les entreprises d’insertion ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/entreprises-dinsertion-ei#Quel-est-le-statut-des-salaries",
+        "title": "EI : quel est le statut des salariés ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/entreprises-dinsertion-ei#Qui-peut-etre-recrute-par-une-entreprise-d-insertion",
+        "title": "EI : qui peut être recruté par une entreprise d’insertion ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/entreprises-de-travail-temporaire-dinsertion-etti#Qu-est-ce-qu-une-entreprise-de-travail-temporaire-d-insertion-ETTI-nbsp",
+        "title": "Qu’est-ce qu’une entreprise de travail temporaire d’insertion (ETTI) ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/ateliers-et-chantiers-dinsertion-aci#Quels-organismes-peuvent-mettre-en-oeuvre-des-ateliers-et-chantiers-nbsp",
+        "title": "ACI : quels organismes peuvent mettre en œuvre des ateliers et chantiers d’insertion ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/ateliers-et-chantiers-dinsertion-aci#Qui-peut-etre-recrute-en-ateliers-et-chantiers-d-insertion-ACI-nbsp",
+        "title": "Qui peut être recruté en ateliers et chantiers d’insertion (ACI) ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/ateliers-et-chantiers-dinsertion-aci#Quel-est-le-statut-des-personnes-embauchees-en-ateliers-et-chantiers-nbsp",
+        "title": "Quel est le statut des personnes embauchées en ateliers et chantiers d’insertion (ACI) ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/ateliers-et-chantiers-dinsertion-aci#Quelles-sont-les-aides-accordees-par-l-Etat-aux-ateliers-et-chantiers-nbsp",
+        "title": "ACI : quelles sont les aides accordées par l’état aux ateliers et chantiers d’insertion ?"
+      },
+      {
         "url": "/fiche-ministere-travail/entreprises-de-travail-temporaire-dinsertion-etti#Qui-peut-etre-embauche-par-une-entreprise-de-travail-temporaire-d-insertion-nbsp",
         "title": "ETTI : qui peut être embauché par une entreprise de travail temporaire d’insertion ?"
       },
@@ -5168,12 +5063,8 @@
         "title": "ETTI : quelle est l’aide versée à l’entreprise de travail temporaire d’insertion ?"
       },
       {
-        "url": "/fiche-ministere-travail/ateliers-et-chantiers-dinsertion-aci#Quel-est-le-statut-des-personnes-embauchees-en-ateliers-et-chantiers-nbsp",
-        "title": "Quel est le statut des personnes embauchées en ateliers et chantiers d’insertion (ACI) ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/ateliers-et-chantiers-dinsertion-aci#Quelles-sont-les-aides-accordees-par-l-Etat-aux-ateliers-et-chantiers-nbsp",
-        "title": "ACI : quelles sont les aides accordées par l’état aux ateliers et chantiers d’insertion ?"
+        "url": "/fiche-ministere-travail/emploi-et-handicap-les-entreprises-adaptees-ea#Qui-peut-creer-une-entreprise-adaptee",
+        "title": "EA : qui peut créer une entreprise adaptée ?"
       },
       {
         "url": "/fiche-ministere-travail/emploi-et-handicap-les-entreprises-adaptees-ea#De-quelles-aides-peuvent-beneficier-les-entreprises-adaptees-nbsp",
@@ -5218,6 +5109,9 @@
       {
         "url": "/fiche-ministere-travail/groupements-demployeurs-pour-linsertion-et-la-qualification-geiq#Comment-obtenir-l-appellation-GEIQ",
         "title": "Comment obtenir l’appellation GEIQ ?"
+      },
+      {
+        "url": "/fiche-service-public/formation-des-jeunes-etablissement-pour-linsertion-dans-lemploi-epide"
       }
     ],
     "source": "themes",
@@ -5250,9 +5144,6 @@
       },
       {
         "url": "/fiche-service-public/comment-sexerce-le-droit-syndical-dans-lentreprise"
-      },
-      {
-        "url": "/fiche-service-public/quest-ce-quun-defenseur-syndical"
       },
       {
         "url": "/fiche-ministere-travail/les-delegues-syndicaux#Quelles-sont-les-missions-du-delegue-syndical",
@@ -5886,7 +5777,8 @@
         "url": "/fiche-service-public/lemployeur-doit-il-amenager-un-espace-pour-la-pause-dejeuner"
       },
       {
-        "url": "/fiche-service-public/le-local-vestiaire-est-il-obligatoire-dans-lentreprise"
+        "url": "/fiche-ministere-travail/chaleur-et-canicule-au-travail-les-precautions-a-prendre#Plan-national-canicule",
+        "title": "Chaleur et canicule au travail : plan national canicule"
       },
       {
         "url": "/fiche-service-public/existe-t-il-une-surface-minimale-pour-un-poste-de-travail"
@@ -5934,8 +5826,7 @@
         "title": "Espaces confinés : quels sont les risques ?"
       },
       {
-        "url": "/fiche-ministere-travail/espaces-confines#Les-moyens-de-prevention",
-        "title": "Espaces confinés : les moyens de prévention"
+        "url": "/fiche-service-public/le-local-vestiaire-est-il-obligatoire-dans-lentreprise"
       },
       {
         "url": "/fiche-ministere-travail/espaces-confines#Sources-reglementaires",
@@ -5984,6 +5875,18 @@
       {
         "url": "/fiche-ministere-travail/principes-generaux-de-ventilation#En-savoir-plus",
         "title": "Principes généraux de ventilation : en savoir plus"
+      },
+      {
+        "url": "/fiche-ministere-travail/chaleur-et-canicule-au-travail-les-precautions-a-prendre#Mesures-a-appliquer-par-les-employeurs-en-cas-de-fortes-chaleurs",
+        "title": "Chaleur et canicule au travail : mesures à appliquer par les employeurs en cas de fortes chaleurs"
+      },
+      {
+        "url": "/fiche-ministere-travail/chaleur-et-canicule-au-travail-les-precautions-a-prendre#Recommandations-aux-travailleurs-en-cas-de-fortes-chaleurs",
+        "title": "Chaleur et canicule au travail : recommandations aux travailleurs en cas de fortes chaleurs"
+      },
+      {
+        "url": "/fiche-ministere-travail/espaces-confines#Les-moyens-de-prevention",
+        "title": "Espaces confinés : les moyens de prévention"
       }
     ],
     "source": "themes",
@@ -6375,18 +6278,6 @@
         "title": "OPPBTP : préventionbtp en endirect : un service d’assistance en ligne pour obtenir des réponses immédiates"
       },
       {
-        "url": "/fiche-ministere-travail/danger-grave-et-imminent#Le-constat-du-danger",
-        "title": "Danger grave et imminent : le constat du danger"
-      },
-      {
-        "url": "/fiche-ministere-travail/danger-grave-et-imminent#L-appreciation-de-la-gravite",
-        "title": "Danger grave et imminent : l’appréciation de la gravité"
-      },
-      {
-        "url": "/fiche-ministere-travail/danger-grave-et-imminent#L-appreciation-de-l-imminence",
-        "title": "Danger grave et imminent : l’appréciation de l’imminence"
-      },
-      {
         "url": "/fiche-ministere-travail/addictions#Donnees-generales",
         "title": "Addictions : données générales"
       },
@@ -6537,32 +6428,20 @@
     "position": 242,
     "refs": [
       {
-        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Salaries-quels-droits",
-        "title": "Les plans d’épargne salariale : salariés : quels droits ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/epargne-salariale-principes-generaux#Une-epargne-salariale-pour-quels-objectifs",
-        "title": "Epargne salariale : une épargne salariale pour quels objectifs ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Plans-d-epargne-salariale-quels-beneficiaires",
-        "title": "Les plans d’épargne salariale : plans d’épargne salariale : quels bénéficiaires ?"
+        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Comment-mettre-en-place-un-plan-d-epargne-salariale",
+        "title": "Les plans d’épargne salariale : comment mettre en place un plan d’épargne salariale ?"
       },
       {
         "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Le-cadre-de-mise-en-place",
         "title": "Les plans d’épargne salariale : le cadre de mise en place"
       },
       {
-        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Comment-mettre-en-place-un-plan-d-epargne-salariale",
-        "title": "Les plans d’épargne salariale : comment mettre en place un plan d’épargne salariale ?"
+        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Salaries-quels-droits",
+        "title": "Les plans d’épargne salariale : salariés : quels droits ?"
       },
       {
-        "url": "/fiche-ministere-travail/epargne-salariale-principes-generaux#Epargne-salariale-comment-la-mettre-en-place",
-        "title": "Epargne salariale : épargne salariale : comment la mettre en place ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/epargne-salariale-principes-generaux#Plan-d-epargne-d-entreprise-Perco-de-quoi-s-agit-il",
-        "title": "Epargne salariale : plan d’épargne d’entreprise, perco… : de quoi s’agit-il ?"
+        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Plans-d-epargne-salariale-quels-beneficiaires",
+        "title": "Les plans d’épargne salariale : plans d’épargne salariale : quels bénéficiaires ?"
       },
       {
         "url": "/fiche-ministere-travail/les-plans-depargne-salariale#PEE-Perco-PE-I-Perco-I-De-quoi-s-agit-il-et-comment-sont-ils-nbsp",
@@ -6614,12 +6493,44 @@
     "position": 528,
     "refs": [
       {
-        "url": "/fiche-ministere-travail/fonds-pour-linsertion-professionnelle-des-jeunes-fipj#A-qui-est-destine-le-Fonds-pour-l-Insertion-Professionnelle-des-Jeunes-nbsp",
-        "title": "A qui est destiné le Fonds pour l’Insertion Professionnelle des Jeunes (FIPJ) ?"
+        "url": "/fiche-service-public/exonerations-dans-un-bassin-demploi-a-redynamiser-ber",
+        "title": "Exonérations dans un bassin d'emploi à redynamiser (BER)"
+      },
+      {
+        "url": "/fiche-service-public/exonerations-dimpots-sur-les-benefices-en-zone-franche-urbaine-territoire-entrepreneur-zfu-te",
+        "title": "Exonérations d'impôts sur les bénéfices en zone franche urbaine-territoire entrepreneur (ZFU-TE)"
+      },
+      {
+        "url": "/fiche-service-public/allegements-fiscaux-dans-les-quartiers-prioritaires-de-la-ville-qpv",
+        "title": "Allègements fiscaux dans les quartiers prioritaires de la ville (QPV)"
+      },
+      {
+        "url": "/fiche-service-public/exonerations-dimpots-en-zone-de-revitalisation-rurale-zrr",
+        "title": "Exonérations d'impôts en zone de revitalisation rurale (ZRR)"
+      },
+      {
+        "url": "/fiche-service-public/quel-est-le-regime-dexoneration-de-limpot-sur-les-benefices-dans-les-zfu-te-avant-2015",
+        "title": "Quel est le régime d'exonération de l'impôt sur les bénéfices dans les ZFU-TE avant 2015 ?"
+      },
+      {
+        "url": "/fiche-service-public/quelles-exonerations-dans-les-bassins-urbains-a-dynamiser-bud",
+        "title": "Quelles exonérations dans les bassins urbains à dynamiser (BUD) ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/projet-initiative-jeune-pij-creation-dentreprise#A-qui-s-adresse-le-Projet-initiative-jeune-PIJ",
+        "title": "PIJ – création d’entreprise : a qui s’adresse le projet initiative-jeune (pij) ?"
       },
       {
         "url": "/fiche-ministere-travail/fonds-pour-linsertion-professionnelle-des-jeunes-fipj#Le-FIPJ-c-est-quoi",
         "title": "Le FIPJ, c’est quoi ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/projet-initiative-jeune-pij-creation-dentreprise#Comment-beneficier-de-l-aide",
+        "title": "PIJ – création d’entreprise : comment bénéficier de l’aide ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/fonds-pour-linsertion-professionnelle-des-jeunes-fipj#A-qui-est-destine-le-Fonds-pour-l-Insertion-Professionnelle-des-Jeunes-nbsp",
+        "title": "A qui est destiné le Fonds pour l’Insertion Professionnelle des Jeunes (FIPJ) ?"
       },
       {
         "url": "/fiche-ministere-travail/fonds-pour-linsertion-professionnelle-des-jeunes-fipj#Comment-est-mis-en-oeuvre-le-FIPJ",
@@ -6638,16 +6549,8 @@
         "title": "Comment faire la demande du FDI ?"
       },
       {
-        "url": "/fiche-ministere-travail/projet-initiative-jeune-pij-creation-dentreprise#A-qui-s-adresse-le-Projet-initiative-jeune-PIJ",
-        "title": "PIJ – création d’entreprise : a qui s’adresse le projet initiative-jeune (pij) ?"
-      },
-      {
         "url": "/fiche-ministere-travail/projet-initiative-jeune-pij-creation-dentreprise#Le-PIJ-c-est-quoi",
         "title": "PIJ – création d’entreprise : le pij, c’est quoi ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/projet-initiative-jeune-pij-creation-dentreprise#Comment-beneficier-de-l-aide",
-        "title": "PIJ – création d’entreprise : comment bénéficier de l’aide ?"
       }
     ],
     "source": "themes",
@@ -6728,10 +6631,6 @@
       },
       {
         "url": "/fiche-service-public/contribution-de-lemployeur-aux-titres-restaurant"
-      },
-      {
-        "url": "/fiche-service-public/cheque-vacances-pour-un-salarie-du-secteur-prive",
-        "title": "Chèque-vacances pour un salarié du secteur privé"
       },
       {
         "url": "/contributions/quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
@@ -8013,26 +7912,6 @@
         "title": "Froid : pour en savoir plus"
       },
       {
-        "url": "/fiche-ministere-travail/grue-a-tour#Donnees-generales",
-        "title": "Grue à tour : données générales"
-      },
-      {
-        "url": "/fiche-ministere-travail/grue-a-tour#Quels-sont-les-risques",
-        "title": "Grue à tour : quels sont les risques ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/grue-a-tour#Les-moyens-de-prevention",
-        "title": "Grue à tour : les moyens de prévention"
-      },
-      {
-        "url": "/fiche-ministere-travail/grue-a-tour#Sources-reglementaires",
-        "title": "Grue à tour : sources réglementaires"
-      },
-      {
-        "url": "/fiche-ministere-travail/grue-a-tour#Pour-en-savoir-plus",
-        "title": "Grue à tour : pour en savoir plus"
-      },
-      {
         "url": "/fiche-ministere-travail/hydrogene-sulfure#Donnees-generales",
         "title": "Hydrogène sulfuré : données générales"
       },
@@ -8287,26 +8166,6 @@
       {
         "url": "/fiche-ministere-travail/radon#Pour-en-savoir-plus",
         "title": "Radon : pour en savoir plus"
-      },
-      {
-        "url": "/fiche-ministere-travail/rayonnage-de-stockage#Donnees-generales",
-        "title": "Rayonnage de stockage : données générales"
-      },
-      {
-        "url": "/fiche-ministere-travail/rayonnage-de-stockage#Quels-sont-les-risques",
-        "title": "Rayonnage de stockage : quels sont les risques"
-      },
-      {
-        "url": "/fiche-ministere-travail/rayonnage-de-stockage#Les-moyens-de-prevention",
-        "title": "Rayonnage de stockage : les moyens de prévention"
-      },
-      {
-        "url": "/fiche-ministere-travail/rayonnage-de-stockage#Sources-reglementaires",
-        "title": "Rayonnage de stockage : sources réglementaires"
-      },
-      {
-        "url": "/fiche-ministere-travail/rayonnage-de-stockage#Pour-en-savoir-plus",
-        "title": "Rayonnage de stockage : pour en savoir plus"
       },
       {
         "url": "/fiche-ministere-travail/risques-chimiques-fiche-de-donnees-de-securite#Donnees-generales",
@@ -9160,14 +9019,6 @@
         "url": "/fiche-service-public/saisie-sur-salaire-les-obligations-de-lemployeur"
       },
       {
-        "url": "/modeles-de-courriers/modele-lettre-de-reclamation-du-salaire-en-cas-de-non-fourniture-de-travail-par-lemployeur",
-        "title": "Modèle : lettre de réclamation du salaire en cas de non-fourniture de travail par l’employeur"
-      },
-      {
-        "url": "/modeles-de-courriers/modele-de-lettre-reclamation-des-bulletins-et-ou-salaires",
-        "title": "Modèle de lettre : Réclamation des bulletins et/ou salaires"
-      },
-      {
         "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-versement-du-salaire#t1-Comment-est-fixe-le-salaire-minimum",
         "title": "Le versement du salaire : comment est fixé le salaire minimum ?"
       },
@@ -9224,11 +9075,11 @@
         "title": "La rémuneration de l’intérimaire : les jours non travaillés sont-ils indemnisés ?"
       },
       {
-        "url": "/fiche-service-public/paiement-du-salaire"
+        "url": "/fiche-ministere-travail/la-remuneration-de-linterimaire#Le-salarie-peut-il-beneficier-d-autres-avantages",
+        "title": "La rémuneration de l’intérimaire : le salarié peut-il bénéficier d’autres avantages ?"
       },
       {
-        "url": "/fiche-ministere-travail/la-remuneration-du-salarie-en-contrat-a-duree-determinee#Qu-entend-on-par-remuneration",
-        "title": "La rémuneration du salarié en contrat à durée déterminée : qu’entend-on par rémunération ?"
+        "url": "/fiche-service-public/paiement-du-salaire"
       },
       {
         "url": "/fiche-ministere-travail/la-remuneration-du-salarie-en-contrat-a-duree-determinee#Qu-est-ce-que-l-indemnite-compensatrice-de-conges-payes",
@@ -9330,8 +9181,8 @@
         "title": "Le SMIC : comment le smic est-il revalorisé ?"
       },
       {
-        "url": "/fiche-ministere-travail/la-remuneration-de-linterimaire#Le-salarie-peut-il-beneficier-d-autres-avantages",
-        "title": "La rémuneration de l’intérimaire : le salarié peut-il bénéficier d’autres avantages ?"
+        "url": "/fiche-ministere-travail/la-remuneration-du-salarie-en-contrat-a-duree-determinee#Qu-entend-on-par-remuneration",
+        "title": "La rémuneration du salarié en contrat à durée déterminée : qu’entend-on par rémunération ?"
       }
     ],
     "source": "themes",
@@ -9759,10 +9610,6 @@
         "url": "/fiche-service-public/temps-de-travail-dune-assistante-maternelle-employee-par-un-particulier"
       },
       {
-        "url": "/fiche-service-public/le-temps-de-trajet-du-salarie-donne-t-il-droit-a-une-compensation-salariale",
-        "title": "Le temps de trajet du salarié donne-t-il droit à une compensation salariale ?"
-      },
-      {
         "url": "/fiche-ministere-travail/le-travail-a-temps-partage#Qu-est-ce-qu-une-ETTP-et-quelle-sont-les-conditions-de-son-activite-nbsp",
         "title": "Le travail à temps partagé : qu’est ce qu’une ettp et quelle sont les conditions de son activité ?"
       },
@@ -9893,20 +9740,12 @@
         "url": "/fiche-service-public/un-salarie-peut-il-etre-oblige-de-travailler-en-soiree"
       },
       {
-        "url": "/fiche-ministere-travail/le-travail-de-nuit#Le-travail-de-nuit-quelle-definition",
-        "title": "Le travail de nuit : quelle définition ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-travail-de-nuit#Le-travailleur-de-nuit-quelle-definition",
-        "title": "Le travail de nuit : le travailleur de nuit : quelle définition ?"
-      },
-      {
         "url": "/fiche-ministere-travail/le-travail-de-nuit#Comment-est-mis-en-place-le-travail-de-nuit",
         "title": "Le travail de nuit : comment est mis en place le travail de nuit ?"
       },
       {
-        "url": "/fiche-ministere-travail/le-travail-en-soiree#Quelles-sont-les-contreparties-et-les-garanties-accordees-aux-salaries-nbsp",
-        "title": "Le travail en soirée : quelles sont les contreparties et les garanties accordées aux salariés travaillant en soirée ?"
+        "url": "/fiche-ministere-travail/le-travail-de-nuit#Quelles-sont-les-durees-maximales-du-travail-de-nuit",
+        "title": "Le travail de nuit : quelles sont les durées maximales du travail de nuit ?"
       },
       {
         "url": "/fiche-ministere-travail/le-travail-de-nuit#Quelles-sont-les-contreparties-et-les-garanties-accordees-aux-travailleurs-nbsp",
@@ -9925,8 +9764,8 @@
         "title": "Le travail en soirée : les salariés sont-ils tenus d’accepter un travail en soirée ?"
       },
       {
-        "url": "/fiche-ministere-travail/le-travail-de-nuit#Quelles-sont-les-durees-maximales-du-travail-de-nuit",
-        "title": "Le travail de nuit : quelles sont les durées maximales du travail de nuit ?"
+        "url": "/fiche-ministere-travail/le-travail-en-soiree#Quelles-sont-les-contreparties-et-les-garanties-accordees-aux-salaries-nbsp",
+        "title": "Le travail en soirée : quelles sont les contreparties et les garanties accordées aux salariés travaillant en soirée ?"
       }
     ],
     "source": "themes",
@@ -10033,6 +9872,10 @@
       {
         "url": "/fiche-service-public/comment-confier-la-garde-de-son-enfant-a-une-maison-dassistantes-maternelles",
         "title": "Comment confier la garde de son enfant à une maison d'assistantes maternelles ?"
+      },
+      {
+        "url": "/fiche-service-public/creation-dun-organisme-de-services-a-la-personne-agrement-autorisation-de-declaration",
+        "title": "Création d'un organisme de services à la personne (agrément, autorisation de déclaration)"
       }
     ],
     "source": "themes",
@@ -10218,10 +10061,6 @@
         "url": "/fiche-service-public/obligation-demploi-des-travailleurs-handicapes"
       },
       {
-        "url": "/fiche-service-public/emploi-de-personnes-handicapees-quelles-personnes-sont-concernees",
-        "title": "Emploi de personnes handicapées : quelles personnes sont concernées ?"
-      },
-      {
         "url": "/fiche-service-public/handicap-travail-en-entreprise-adaptee"
       },
       {
@@ -10238,14 +10077,6 @@
       },
       {
         "url": "/fiche-service-public/declaration-obligatoire-demploi-des-travailleurs-handicapes-doeth"
-      },
-      {
-        "url": "/fiche-service-public/emploi-de-personnes-handicapees-quelles-personnes-sont-concernees",
-        "title": "Emploi de personnes handicapées : quelles personnes sont concernées ?"
-      },
-      {
-        "url": "/fiche-service-public/quest-ce-que-laide-a-la-lourdeur-du-handicap-et-comment-en-beneficier",
-        "title": "Qu'est-ce que l'aide à la lourdeur du handicap et comment en bénéficier ?"
       },
       {
         "url": "https://www.service-public.fr/particuliers/vosdroits/R16996"
@@ -10365,18 +10196,6 @@
       {
         "url": "/fiche-ministere-travail/emploi-et-handicap-la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth#Comment-etre-reconnu-travailleur-handicape",
         "title": "RQTH : comment être reconnu travailleur handicapé ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Qui-est-concerne-par-l-obligation-d-emploi-des-travailleurs-handicapes-nbsp",
-        "title": "Qui est concerné par l’obligation d’emploi des travailleurs handicapés (OETH) ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Comment-l-employeur-peut-il-s-acquitter-de-son-OETH",
-        "title": "Comment l’employeur peut-il s’acquitter de son OETH ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Comment-l-obligation-d-emploi-des-travailleurs-handicapes-est-elle-nbsp",
-        "title": "OETH : comment l’obligation d’emploi des travailleurs handicapés est-elle contrôlée ?"
       },
       {
         "url": "/fiche-ministere-travail/le-stage-de-reeducation-professionnelle#Qui-peut-etre-concerne-par-un-stage-de-reeducation-professionnelle-nbsp",
