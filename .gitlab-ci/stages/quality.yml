@@ -18,7 +18,7 @@
       - .pnp
   before_script:
     - yarn policies set-version v2
-    - yarn --frozen-lockfile
+    - yarn --immutable --immutable-cache
 
 Lint @socialgouv/react-ui:
   <<: *quality_stage
