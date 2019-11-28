@@ -10,7 +10,7 @@
 .cache_template: &cache_template
   key: "${CI_COMMIT_REF_SLUG}"
   paths:
-    - .pnp.j
+    - .pnp.js
 
 Build yarn cache:
   <<: *prepare_stage
