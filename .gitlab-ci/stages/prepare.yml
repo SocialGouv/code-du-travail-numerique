@@ -19,6 +19,7 @@ Build yarn cache:
   cache:
     <<: *cache_template
   script:
+    - yarn policies set-version v2
     - yarn --frozen-lockfile
 
 Register elasticsearch image:

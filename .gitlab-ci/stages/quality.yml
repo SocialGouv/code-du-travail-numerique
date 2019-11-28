@@ -17,6 +17,7 @@
       - .pnp.js
       - .pnp
   before_script:
+    - yarn policies set-version v2
     - yarn --frozen-lockfile
 
 Lint @socialgouv/react-ui:
