@@ -111,6 +111,7 @@ const SearchForm = styled.form`
 
 const StyledSearchIcon = styled(SearchIcon)`
   width: 3rem;
+  height: 3rem;
 `;
 
 const SearchIconLeft = styled(StyledSearchIcon)`
@@ -129,16 +130,18 @@ const SearchInput = styled(DocumentSuggester)`
   width: 100%;
   height: ${({ hasButton }) => (hasButton ? "7rem" : "5.4rem")};
   margin: 0;
-  padding: 0
-    ${({ hasButton }) =>
-      hasButton ? `18.5rem 0 6rem` : `5.5rem 0 ${spacings.base}`};
+  padding: ${({ hasButton }) =>
+    hasButton ? `2rem 18.5rem 2rem 6rem` : `1rem 5.5rem 1rem ${spacings.base}`};
   font-size: inherit;
   font-family: inherit;
   transition: border ${animations.transitionTiming} ease;
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
     height: 5.4rem;
-    padding: 0 ${spacings.base};
+    padding: ${({ hasButton }) =>
+      hasButton
+        ? `1rem ${spacings.base}`
+        : `1rem 5.5rem 1rem ${spacings.base}`};
   }
 `;
 

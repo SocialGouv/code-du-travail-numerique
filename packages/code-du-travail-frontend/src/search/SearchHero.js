@@ -87,6 +87,7 @@ const Primary = styled.span`
 const StyledConfigIcon = styled(ConfigIcon)`
   display: inline;
   width: 3rem;
+  height: 3rem;
   vertical-align: middle;
 `;
 

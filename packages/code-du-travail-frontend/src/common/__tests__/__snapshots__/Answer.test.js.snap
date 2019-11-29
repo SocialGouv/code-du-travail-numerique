@@ -1079,6 +1079,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c6 {
   width: 2rem;
+  height: 2rem;
   margin-right: 1rem;
   color: #7598d6;
 }

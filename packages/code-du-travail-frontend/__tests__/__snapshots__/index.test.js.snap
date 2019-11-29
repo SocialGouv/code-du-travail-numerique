@@ -315,9 +315,9 @@ exports[`<Home /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   text-align: left;
 }
 
@@ -341,6 +341,7 @@ exports[`<Home /> should render 1`] = `
 
 .c19 {
   width: 3rem;
+  height: 3rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -356,7 +357,7 @@ exports[`<Home /> should render 1`] = `
   width: 100%;
   height: 7rem;
   margin: 0;
-  padding: 0 18.5rem 0 6rem;
+  padding: 2rem 18.5rem 2rem 6rem;
   font-size: inherit;
   font-family: inherit;
   -webkit-transition: border 250ms ease;
@@ -423,6 +424,7 @@ exports[`<Home /> should render 1`] = `
 .c15 {
   display: inline;
   width: 3rem;
+  height: 3rem;
   vertical-align: middle;
 }
 
@@ -720,7 +722,7 @@ exports[`<Home /> should render 1`] = `
 @media (max-width:600px) {
   .c22 {
     height: 5.4rem;
-    padding: 0 1.6rem;
+    padding: 1rem 1.6rem;
   }
 }
 
@@ -1081,7 +1083,7 @@ exports[`<Home /> should render 1`] = `
                 aria-haspopup="listbox"
                 aria-owns="react-autowhatever-cdtn-documents-suggester"
                 role="combobox"
-                style="flex: 1;"
+                style="flex: 1 1 auto;"
               >
                 <input
                   aria-autocomplete="list"

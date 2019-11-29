@@ -21,6 +21,7 @@ const StyledLink = styled.a`
 
 const StyledHomeIcon = styled(HomeIcon)`
   width: 2rem;
+  height: 2rem;
   margin-right: ${spacings.small};
   color: ${({ theme }) => theme.secondary};
 `;

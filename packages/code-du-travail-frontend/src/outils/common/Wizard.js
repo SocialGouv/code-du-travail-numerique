@@ -143,6 +143,6 @@ const ToolTitle = styled(PageTitle)`
   border-bottom: 1px solid ${({ theme }) => theme.border};
 `;
 const Column = styled.div`
-  flex: 1;
+  flex: 1 1 auto;
   padding: ${spacings.medium} ${spacings.larger};
 `;
