@@ -106,7 +106,7 @@ const fetchContributions = async () => {
         conventions: getConventionsAnswers(question.id)
       }
     }))
-    .filter(q => q.answers.generic || q.answers.conventions.length);
+    .filter(q => q.answers.generic);
 
   return allAnswers;
 };
