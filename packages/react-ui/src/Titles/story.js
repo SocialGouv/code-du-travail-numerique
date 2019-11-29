@@ -1,5 +1,5 @@
 import React from "react";
-import { PageTitle, Title, Heading } from ".";
+import { Heading, PageTitle, Subtitle, Title } from ".";
 import { Section } from "../layout/Section";
 
 export default {
@@ -19,6 +19,9 @@ export const base = () => (
     <Section>
       <Heading>This is a heading (h3)</Heading>
       <Heading as="h4">This is a heading (h4)</Heading>
+    </Section>
+    <Section>
+      <Subtitle>This is a subtitle</Subtitle>
     </Section>
   </>
 );

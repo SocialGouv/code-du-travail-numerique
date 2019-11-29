@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import { Wrapper } from ".";
 
 describe("<Wrapper />", () => {
-  test.each([["default"], ["dark"], ["light"]])(
+  test.each([["default"], ["dark"], ["light"], ["main"]])(
     "it renders a %s Wrapper",
     variant => {
       const { container } = render(

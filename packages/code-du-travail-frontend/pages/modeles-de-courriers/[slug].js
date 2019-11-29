@@ -58,7 +58,7 @@ class ModeleCourrier extends React.Component {
           emptyMessage="Modèle de courrier introuvable"
           intro={description}
           date={date}
-          sourceType="Modèle de document"
+          source={{ name: "Modèle de document" }}
         >
           <Section>
             <Wrapper variant="light">

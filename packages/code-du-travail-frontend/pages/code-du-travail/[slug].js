@@ -16,12 +16,6 @@ const {
 const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`);
 
-const Source = ({ name, url }) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
-    Voir le contenu original sur : {name}{" "}
-  </a>
-);
-
 class Fiche extends React.Component {
   static async getInitialProps({ query }) {
     const response = await fetchFiche(query);
@@ -44,7 +38,6 @@ class Fiche extends React.Component {
       ogImage
     } = this.props;
 
-    const footer = <Source name="https://www.legifrance.gouv.fr" url={url} />;
     return (
       <Layout>
         <Metas
@@ -64,8 +57,7 @@ class Fiche extends React.Component {
           }
           emptyMessage="Article introuvable"
           html={html}
-          footer={footer}
-          sourceType="Code du travail"
+          source={{ name: "Code du travail", url }}
         />
       </Layout>
     );

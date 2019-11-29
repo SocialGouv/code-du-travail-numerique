@@ -66,7 +66,7 @@ const StyledToast = styled.div`
   min-height: 48px;
   color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};
-  border-color: ${({ theme, variant }) => theme[`${variant}`]};
+  border-color: ${({ theme, variant }) => theme[variant]};
   border-style: solid;
   border-width: 2px;
   border-radius: ${box.borderRadius};
@@ -106,5 +106,5 @@ const Content = styled.div`
 
 const StyledX = styled(X)`
   margin-top: ${spacings.tiny};
-  color: ${({ theme, variant }) => theme[`${variant}`]};
+  color: ${({ theme, variant }) => theme[variant]};
 `;

@@ -5,90 +5,81 @@ import styled from "styled-components";
 import {
   Container,
   PageTitle,
-  Section,
+  Stripe,
+  Subtitle,
   theme,
   Wrapper
 } from "@socialgouv/react-ui/";
 
-const Article = ({ title, sourceType, date, wide, children }) => {
+const Article = ({ subtitle, title, source, date, children }) => {
   return (
-    <ArticleSection data-main-content>
-      <Container>
-        <Wrapper variant="light">
-          <Section>
-            <Header narrow={!wide} noPadding>
-              <PageTitle>{title}</PageTitle>
-              <Meta>
-                {sourceType && <Type>{sourceType}</Type>}
-                {date && (
-                  <Date>
-                    Mis à jour le&nbsp;: <DateValue>{date}</DateValue>
-                  </Date>
-                )}
-              </Meta>
-            </Header>
-            {children && (
-              <Container narrow={!wide} noPadding>
-                {children}
-              </Container>
-            )}
-          </Section>
-        </Wrapper>
-      </Container>
-    </ArticleSection>
+    <Container>
+      <Wrapper variant="main" data-main-content>
+        {subtitle && <Subtitle>{subtitle}</Subtitle>}
+        <StyledPageTitle>
+          <Stripe position="left" length="100%" />
+          {title}
+        </StyledPageTitle>
+        <Meta>
+          {source && source.url && (
+            <Source>
+              Source:{" "}
+              <a href={source.url} target="_blank" rel="noopener noreferrer">
+                {source.name}
+              </a>
+            </Source>
+          )}
+          {date && <span>Mis à jour le&nbsp;: {date}</span>}
+        </Meta>
+        <Content>{children}</Content>
+      </Wrapper>
+    </Container>
   );
 };
 
 Article.propTypes = {
   /** article title */
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   /** article content */
   children: PropTypes.node,
   date: PropTypes.string,
-  sourceType: PropTypes.string,
-  wide: PropTypes.bool,
+  source: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+  }),
   style: PropTypes.object,
   /** when user clicks some tag */
   onTagClick: PropTypes.func
 };
 
+Article.defaultProps = {
+  subtitle: false
+};
+
 export default Article;
 
-const { breakpoints, colors, fonts, spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
-const ArticleSection = styled(Section)`
-  padding-top: 0;
-`;
-
-const Header = styled(Container)`
+const StyledPageTitle = styled(PageTitle)`
   position: relative;
-  margin-bottom: ${spacings.medium};
+  margin-left: -${spacings.larger};
+  padding-left: ${spacings.larger};
 `;
 
 const Meta = styled.div`
   display: flex;
-  align-items: flex-end;
+  font-size: ${fonts.sizes.small};
   @media (max-width: ${breakpoints.mobile}) {
     flex-flow: column;
     align-items: flex-start;
   }
 `;
 
-const Type = styled.span`
-  color: ${colors.altText};
-  font-weight: 600;
+const Source = styled.span`
+  margin-right: ${spacings.small};
 `;
 
-const Date = styled.span`
-  display: inline-block;
-  margin-left: ${spacings.base};
-  color: ${colors.altText};
-  font-size: ${fonts.sizes.small};
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-left: 0;
-  }
-`;
-const DateValue = styled.span`
-  color: ${colors.altText};
-  font-weight: 600;
+const Content = styled.div`
+  margin: ${spacings.large} 0 0 0;
 `;

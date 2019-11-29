@@ -13,7 +13,7 @@ function renderAnswer(props) {
       html="<p class='test-content'>Contenu au format <strong>html</strong></p>"
       footer="pied de page"
       date="03/11/1979"
-      sourceType="social groove"
+      source={{ name: "social groove" }}
       {...props}
     >
       <div>Contenu supplémentaire</div>

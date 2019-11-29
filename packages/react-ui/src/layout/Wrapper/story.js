@@ -1,6 +1,7 @@
 import React from "react";
 import { PageTitle, Title } from "../../Titles";
 import { Section } from "../Section";
+import { Container } from "../Container";
 import { Wrapper } from ".";
 
 export default {
@@ -12,9 +13,9 @@ export const base = () => (
   <>
     <PageTitle>Wrapper</PageTitle>
     <p>
-      The Wrapper component adds default or large surrounding paddings and can
-      have a specific background-color and border. It is usually the children of
-      a Container component.
+      The Wrapper component adds default surrounding paddings and can have a
+      specific background-color and border or even a shadow for the main one. It
+      is usually the children of a Container component.
     </p>
     <Section>
       <Wrapper>
@@ -35,10 +36,12 @@ export const base = () => (
       </Wrapper>
     </Section>
     <Section>
-      <Wrapper variant="dark" size="large">
-        <Title>Wrapper large dark</Title>
-        <div>Lorem ipsum dolor sit amet</div>
-      </Wrapper>
+      <Container>
+        <Wrapper variant="main" style={{ height: "50rem" }}>
+          <Title>Main wrapper</Title>
+          <div>Watch it gracefully fade away</div>
+        </Wrapper>
+      </Container>
     </Section>
   </>
 );

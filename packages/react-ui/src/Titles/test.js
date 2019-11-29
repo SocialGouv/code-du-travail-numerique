@@ -1,24 +1,29 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { PageTitle, Title, Heading } from ".";
+import { Heading, PageTitle, Subtitle, Title } from ".";
 
 describe("<PageTitle />", () => {
-  test("should render a H1 page title ", () => {
+  it("renders a H1 page title ", () => {
     const { container } = render(
-      <PageTitle desc="Hello">Lorem Ipsum</PageTitle>
+      <PageTitle>Lorem Ipsum</PageTitle>
     );
     expect(container).toMatchSnapshot();
   });
 });
 describe("<Title />", () => {
-  test("should render a H2 title ", () => {
-    const { container } = render(<Title desc="Hello">Lorem Ipsum</Title>);
+  it("renders a H2 title ", () => {
+    const { container } = render(<Title>Lorem Ipsum</Title>);
     expect(container).toMatchSnapshot();
   });
 });
 describe("<Heading />", () => {
-  test("should render a H3 heading ", () => {
-    const { container } = render(<Heading desc="Hello">Lorem Ipsum</Heading>);
+  it("renders a H3 heading ", () => {
+    const { container } = render(<Heading>Lorem Ipsum</Heading>);
+    expect(container).toMatchSnapshot();
+  });
+describe("<Subtitle />", () => {
+  it("renders a subtitle ", () => {
+    const { container } = render(<Subtitle>Lorem Ipsum</Subtitle>);
     expect(container).toMatchSnapshot();
   });
 });

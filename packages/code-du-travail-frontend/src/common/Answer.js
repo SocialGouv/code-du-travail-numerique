@@ -31,10 +31,8 @@ function Answer({
   intro = null,
   html = null,
   children = null,
-  wide,
-  footer,
   date,
-  sourceType,
+  source,
   additionalContent,
   breadcrumbs = [],
   relatedItems = [],
@@ -44,13 +42,15 @@ function Answer({
   const router = useRouter();
   const { relatedTools, relatedLetters, relatedArticles } = relatedItems.reduce(
     (accumulator, item) => {
-      const itemSource = item.source;
-      if (itemSource === SOURCES.TOOLS) {
-        accumulator.relatedTools.push(item);
-      } else if (itemSource === SOURCES.LETTERS) {
-        accumulator.relatedLetters.push(item);
-      } else {
-        accumulator.relatedArticles.push(item);
+      if (item.title !== title) {
+        const itemSource = item.source;
+        if (itemSource === SOURCES.TOOLS) {
+          accumulator.relatedTools.push(item);
+        } else if (itemSource === SOURCES.LETTERS) {
+          accumulator.relatedLetters.push(item);
+        } else {
+          accumulator.relatedArticles.push(item);
+        }
       }
       return accumulator;
     },
@@ -72,22 +72,24 @@ function Answer({
           {!html && !children && <BigError>{emptyMessage}</BigError>}
           {(html || children) && (
             <Article
-              wide={wide}
+              subtitle={
+                breadcrumbs.length > 0 &&
+                breadcrumbs[breadcrumbs.length - 1].title
+              }
               title={title}
               date={date}
-              sourceType={sourceType}
+              source={source}
             >
               {intro && <IntroWrapper variant="dark">{intro}</IntroWrapper>}
               {html && <Html>{html}</Html>}
               {children}
               {glossaryItems}
-              {footer && <Footer>{footer}</Footer>}
             </Article>
           )}
           {additionalContent}
           <Feedback
             query={router.query.q}
-            sourceType={sourceType}
+            sourceType={source && source.name}
             sourceFilter={router.query.source}
             url={router.asPath}
             title={title}
@@ -95,21 +97,7 @@ function Answer({
         </StyledContent>
         {relatedItems.length > 0 && (
           <RelatedItems>
-            <Heading>Autres contenus pouvant vous intéresser&nbsp;:</Heading>
-            <ul>
-              {relatedArticles
-                .filter(link => link.title !== title)
-                .slice(0, 3)
-                .map(link => (
-                  <StyledListItem key={link.slug}>
-                    <Link
-                      href={`/${getRouteBySource(link.source)}/[slug]`}
-                      as={`/${getRouteBySource(link.source)}/${link.slug}`}
-                    >
-                      <a>{link.title}</a>
-                    </Link>
-                  </StyledListItem>
-                ))}
+            <StyledList>
               {relatedLetters.length > 0 && (
                 <StyledListItem>
                   <Link
@@ -150,7 +138,22 @@ function Answer({
                   </Link>
                 </StyledListItem>
               )}
-            </ul>
+              {relatedArticles.length > 0 && (
+                <StyledListItem>
+                  <Heading>Les articles pouvant vous intéresser&nbsp;:</Heading>
+                </StyledListItem>
+              )}
+              {relatedArticles.slice(0, 3).map(link => (
+                <StyledListItem key={link.slug}>
+                  <Link
+                    href={`/${getRouteBySource(link.source)}/[slug]`}
+                    as={`/${getRouteBySource(link.source)}/${link.slug}`}
+                  >
+                    <a>{link.title}</a>
+                  </Link>
+                </StyledListItem>
+              ))}
+            </StyledList>
           </RelatedItems>
         )}
       </StyledContainer>
@@ -161,7 +164,7 @@ function Answer({
 
 export default Answer;
 
-const { box, breakpoints, colors, fonts, spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
 const StyledErrorContainer = styled(Container)`
   margin: 20%;
@@ -186,7 +189,7 @@ const StyledContent = styled.div`
 
 const RelatedItems = styled.div`
   position: sticky;
-  top: 0;
+  top: 10rem;
   width: 30%;
   padding: ${spacings.medium} ${spacings.base} ${spacings.medium} 0;
   @media (max-width: ${breakpoints.tablet}) {
@@ -194,17 +197,16 @@ const RelatedItems = styled.div`
   }
 `;
 
+const StyledList = styled.ul`
+  padding: 0;
+  list-style-type: none;
+`;
+
 const StyledListItem = styled.li`
   margin: ${spacings.base} 0;
+  padding: 0;
 `;
 
 const IntroWrapper = styled(Wrapper)`
   margin: ${spacings.base} auto;
-`;
-
-const Footer = styled.div`
-  margin-top: ${spacings.larger};
-  padding: ${spacings.base};
-  background-color: ${colors.bgSecondary};
-  border-radius: ${box.borderRadius};
 `;

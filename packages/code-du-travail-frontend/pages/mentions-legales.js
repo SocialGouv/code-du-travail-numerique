@@ -191,7 +191,7 @@ const SearchPage = ({ pageUrl, ogImage }) => {
 
       <Section>
         <Container narrow>
-          <Wrapper variant="light">
+          <Wrapper variant="main">
             <PageTitle>Mentions légales</PageTitle>
             <Alert variant="primary">
               Ce site est en cours de construction, la fiabilité des réponses

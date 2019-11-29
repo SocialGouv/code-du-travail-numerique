@@ -22,12 +22,6 @@ const {
 const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/fiches_service_public/${slug}`);
 
-const Source = ({ name, url }) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
-    Voir le contenu original sur : {name}{" "}
-  </a>
-);
-
 class Fiche extends React.Component {
   static async getInitialProps({ query }) {
     const response = await fetchFiche(query);
@@ -56,7 +50,6 @@ class Fiche extends React.Component {
       },
       relatedItems
     } = data;
-    const footer = <Source name="service-public.fr" url={url} />;
     return (
       <Layout>
         <Metas
@@ -70,9 +63,8 @@ class Fiche extends React.Component {
             title={title}
             relatedItems={relatedItems}
             emptyMessage="Cette fiche n'a pas été trouvée"
-            footer={footer}
             date={date}
-            sourceType="Fiche service-public.fr"
+            source={{ name: "Fiche service-public.fr", url }}
             additionalContent={
               <ReferencesJuridiques references={references_juridiques} />
             }

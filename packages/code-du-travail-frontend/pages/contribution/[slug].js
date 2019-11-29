@@ -65,7 +65,9 @@ class PageContribution extends React.Component {
           <Answer
             title={title}
             relatedItems={relatedItems}
-            sourceType="Réponse personnalisée selon votre convention collective"
+            source={{
+              name: "Réponse personnalisée selon votre convention collective"
+            }}
             emptyMessage="Cette question n'a pas été trouvée"
           >
             <Contribution

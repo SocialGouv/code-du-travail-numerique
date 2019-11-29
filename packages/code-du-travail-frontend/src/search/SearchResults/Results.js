@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import styled from "styled-components";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
-import { Container, LargeLink, PageTitle, Title } from "@socialgouv/react-ui";
+import { Container, Tile, PageTitle, Title, theme } from "@socialgouv/react-ui";
 
 import { LinkContent } from "./LinkContent";
 
@@ -37,7 +37,7 @@ export const ListLink = ({
   );
   if (source === SOURCES.EXTERNALS) {
     return (
-      <LargeLink
+      <Tile
         ref={ref}
         href={url}
         target="_blank"
@@ -66,7 +66,7 @@ export const ListLink = ({
       }${anchor ? `#${anchor}` : ""}`}
       passHref
     >
-      <LargeLink
+      <Tile
         ref={ref}
         onClick={onClick}
         onKeyPress={onKeyPress}
@@ -96,20 +96,19 @@ export const Results = ({ id, isSearch, items, query }) => {
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
       <StyledList>
-        {items.map((item, i) => {
-          const { slug } = item;
-          return (
-            <StyledListItem key={slug}>
-              <ListLink focused={i === 0} item={item} query={query}>
-                <LinkContent isSearch={isSearch} {...item} />
-              </ListLink>
-            </StyledListItem>
-          );
-        })}
+        {items.map((item, i) => (
+          <StyledListItem key={`item.slug${i}`}>
+            <ListLink focused={i === 0} item={item} query={query}>
+              <LinkContent isSearch={isSearch} {...item} />
+            </ListLink>
+          </StyledListItem>
+        ))}
       </StyledList>
     </Container>
   );
 };
+
+const { spacings } = theme;
 
 const StyledList = styled.ul`
   margin: 0;
@@ -118,5 +117,6 @@ const StyledList = styled.ul`
 `;
 
 const StyledListItem = styled.li`
+  margin-bottom: ${spacings.medium};
   padding: 0;
 `;

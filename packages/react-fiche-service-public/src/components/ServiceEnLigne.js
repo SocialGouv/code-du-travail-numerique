@@ -5,8 +5,6 @@ import { Button, theme } from "@socialgouv/react-ui";
 
 import { getText } from "../utils";
 
-const { colors, spacings, box } = theme;
-
 class ServiceEnLigne extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired
@@ -37,6 +35,8 @@ class ServiceEnLigne extends React.PureComponent {
 
 export default ServiceEnLigne;
 
+const { colors, fonts, spacings, box } = theme;
+
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -52,7 +52,7 @@ const Type = styled.div`
   margin-bottom: ${spacings.tiny};
   color: ${colors.paragraph};
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: ${fonts.sizes.headings.small};
 `;
 
 const Source = styled.small`

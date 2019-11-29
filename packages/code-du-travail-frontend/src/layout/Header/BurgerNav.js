@@ -69,6 +69,7 @@ const StyledLink = styled.a`
 `;
 
 const BurgerWrapper = styled.div`
+  order: 2;
   height: 100%;
   & > div {
     height: 100%;
