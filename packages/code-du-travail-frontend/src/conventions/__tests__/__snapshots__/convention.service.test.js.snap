@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`convention service can get convention 1`] = `undefined`;
-
 exports[`convention service can search IDCCs 1`] = `
 Array [
   Object {

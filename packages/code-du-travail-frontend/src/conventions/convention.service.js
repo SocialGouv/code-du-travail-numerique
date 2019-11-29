@@ -14,21 +14,6 @@ const formatIdcc = ({ idcc: num, id, slug, title }) => ({
   num: parseInt(num, 10).toString()
 });
 
-const getConventionTextes = memoizee(
-  (conventionId, typeTextes) =>
-    fetch(`${API_URL}/conventions/${conventionId}/${typeTextes}`).then(
-      response => {
-        if (response.ok) {
-          return response.json().then(data => data._source);
-        }
-        throw new Error("Un problème est survenu.");
-      }
-    ),
-  {
-    promise: true
-  }
-);
-
 // memoize search results
 const apiIdcc = memoizee(
   query => {
@@ -54,4 +39,4 @@ const apiIdcc = memoizee(
 
 const searchConvention = debounce(apiIdcc, 300);
 
-export { getConventionTextes, searchConvention };
+export { searchConvention, formatIdcc };

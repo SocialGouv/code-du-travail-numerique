@@ -1,59 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Tabs } from "@socialgouv/react-ui";
-
-import Info from "./Info";
-import Texte from "./Texte";
-import Explainer from "./Explainer";
-import ListTextes from "./ListTextes";
-
-const Convention = ({ container }) => {
+import { Explainer } from "./Explainer";
+import { Info } from "./Info";
+import { Articles } from "./Articles";
+import { TextSearch } from "./TextSearch";
+import { Contributions } from "./Contributions";
+const Convention = ({ convention }) => {
   return (
     <>
       <Explainer />
-      <Tabs
-        data={[
-          {
-            tab: "Informations",
-            panel: <Info container={container} />,
-            key: "infos"
-          },
-          {
-            tab: "Texte de base",
-            panel: <Texte node={container.content} />,
-            key: "texte-de-base"
-          },
-          {
-            tab: "Texte attachés",
-            panel: (
-              <ListTextes
-                conventionId={container.conventionId}
-                typeTextes={"attaches"}
-              />
-            ),
-            key: "attaches"
-          },
-          {
-            tab: "Texte salaires",
-            panel: (
-              <ListTextes
-                conventionId={container.conventionId}
-                typeTextes={"salaires"}
-              />
-            ),
-            key: "salaires"
-          }
-        ]}
-      />
+      <Info convention={convention} />
+      {convention.articlesByTheme.length > 0 && (
+        <Articles
+          blocs={convention.articlesByTheme}
+          containerId={convention.id}
+        />
+      )}
+      <TextSearch containerId={convention.id} />
+      {convention.answers.length > 0 && (
+        <Contributions contributions={convention.answers} />
+      )}
     </>
   );
 };
 
 Convention.propTypes = {
-  container: PropTypes.shape({
-    conventionId: PropTypes.string.isRequired,
-    content: PropTypes.object.isRequired
-  }).isRequired
+  convention: PropTypes.object.isRequired
 };
 
 export default Convention;

@@ -1,30 +1,158 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Convention /> renders 1`] = `
-.c2 {
-  position: relative;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c2,
-[aria-selected="true"] .c2 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
 .c8 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c7 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.c0 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c6 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7598d6;
+  border-color: #7598d6;
+  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  opacity: 1;
+}
+
+.c15:link,
+.c15:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #9cb5e2;
+  border-color: #9cb5e2;
+}
+
+.c15[disabled] {
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 3.2rem;
+  margin-left: calc(-1 * 1rem);
+  padding: 0;
+  list-style-type: none;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 3 - 2 * 1rem);
+  margin: 1rem;
+  padding: 0;
+}
+
+.c2 {
   position: relative;
   overflow: hidden;
 }
 
-.c8:before,
-.c8:after {
+.c2:before,
+.c2:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -38,19 +166,19 @@ exports[`<Convention /> renders 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c8:before {
+.c2:before {
   left: -2rem;
 }
 
-.c8:after {
+.c2:after {
   right: -2rem;
 }
 
-.c9 {
+.c3 {
   overflow-x: auto;
 }
 
-.c10 {
+.c4 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -59,346 +187,1546 @@ exports[`<Convention /> renders 1`] = `
   border-spacing: 0;
 }
 
-.c10 caption {
+.c4 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c10 td,
-.c10 th {
+.c4 td,
+.c4 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c10 th {
+.c4 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c10 thead,
-.c10 tfoot {
+.c4 thead,
+.c4 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c10 tfoot {
+.c4 tfoot {
   vertical-align: top;
 }
 
-.c4 {
-  margin-bottom: 3.2rem;
-}
-
-.c5 {
+.c11 {
   position: relative;
-  top: 1px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  list-style-type: none;
-}
-
-.c6 {
-  margin-left: 0.4rem;
-  padding: 1rem 1.6rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-bottom: 1px solid #bbcadf;
-  border-radius: 0.6rem 0.6rem 0 0;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-transition: opacity 250ms linear;
-  transition: opacity 250ms linear;
-}
-
-.c6[aria-selected="false"]:hover {
-  opacity: 0.7;
-}
-
-.c6[aria-selected="true"] {
-  color: #fff;
-  background-color: #7598d6;
-}
-
-.c7 {
-  color: #3e486e;
-  background-color: #fff;
-}
-
-.c7.react-tabs__tab-panel--selected {
-  padding: 2.4rem;
-  border: 1px solid #bbcadf;
-  border-radius: 0.6rem;
-}
-
-.c0 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  margin-bottom: 2rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: auto;
+  margin: 0;
+  padding: 3.2rem 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
+  transition: box-shadow 250ms linear, transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-.c3 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c11:hover,
+.c11:active,
+.c11:focus {
+  color: #3e486e;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
-@media (max-width:980px) {
-  .c5 {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
+.c13 {
+  padding-right: 1rem;
 }
 
-@media (max-width:980px) {
+.c14 {
+  margin-top: 1rem;
+}
+
+.c1 {
+  margin-bottom: 2rem;
+}
+
+.c12 {
+  min-height: 80px;
+}
+
+.c5 {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
   .c6 {
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    margin: 0.4rem;
-    border-bottom: 1px solid #bbcadf;
-    border-radius: 0.6rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:1180px) {
+  .c10 {
+    width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
 @media (max-width:980px) {
-  .c7.react-tabs__tab-panel--selected {
-    margin-top: 0.4rem;
+  .c10 {
+    width: calc( 100% / 1 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c0 {
-    padding: 1rem 2rem;
+  .c10 {
+    width: calc( 100% - 1 * 1rem );
   }
 }
 
-@media print {
-  .c0 {
-    padding: 0 5pt;
-    border: none;
+@media (max-width:600px) {
+  .c11 {
+    padding: 2rem 1.6rem;
   }
 }
 
 <div>
-  <div
+  <h3
     class="c0"
   >
-    <a
-      aria-expanded="true"
-      class="c1"
-      href="#"
-    >
-      Plus d’informations sur les conventions collectives
-      <svg
-        class="c2"
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <polyline
-          points="9 18 15 12 9 6"
-        />
-      </svg>
-    </a>
-    <p
-      class="c3"
-    >
-      Qu’est ce qu’une convention collective ?
-    </p>
-    <p>
-      Une convention collective est un accord négocié entre des organisations syndicales de salariés et des organisations d’employeurs.
-      <br />
-      Elle permet d’aménager les règles issues du code du travail concernant les conditions d’emploi, la formation professionnelle, le travail des salariés et les garanties sociales aux spécificités des secteurs d’activité et géographiques concernés. Elle peut également prévoir d’autres mesures qui ne sont pas prévues par le code du travail.
-    </p>
-    <p
-      class="c3"
-    >
-      Une convention collective de branche s’applique-t-elle à ma situation ?
-    </p>
-    <p>
-      Pour pouvoir s’appliquer à vous, la convention collective de branche doit être applicable à votre entreprise.
-      <br />
-      L’employeur a l’obligation d’appliquer la convention collective lorsque l’entreprise entre dans le champ d’application professionnel et géographie défini par la convention et que :
-    </p>
-    <ul>
-      <li>
-        La convention collective de branche a été étendue par le ministère du travail.
-      </li>
-      <li>
-        L’entreprise est adhérente à une organisation patronale signataire de la convention collective.
-      </li>
-    </ul>
-  </div>
-  <div
-    class="c4"
-    data-tabs="true"
+    Qu’est-ce qu’une convention collective ?
+  </h3>
+  <p>
+    Une convention collective est un accord négocié entre des organisations syndicales de salariés et des organisations d’employeurs.
+    <br />
+    Elle permet d’aménager les règles issues du code du travail concernant les conditions d’emploi, la formation professionnelle, le travail des salariés et les garanties sociales aux spécificités des secteurs d’activité et géographiques concernés. Elle peut également prévoir d’autres mesures qui ne sont pas prévues par le code du travail.
+  </p>
+  <h3
+    class="c0"
   >
-    <ul
-      class="c5"
-      role="tablist"
-    >
-      <li
-        aria-controls="react-tabs-1"
-        aria-disabled="false"
-        aria-selected="true"
-        class="c6 react-tabs__tab--selected"
-        id="react-tabs-0"
-        role="tab"
-        tabindex="0"
-      >
-        Informations
-      </li>
-      <li
-        aria-controls="react-tabs-3"
-        aria-disabled="false"
-        aria-selected="false"
-        class="c6"
-        id="react-tabs-2"
-        role="tab"
-      >
-        Texte de base
-      </li>
-      <li
-        aria-controls="react-tabs-5"
-        aria-disabled="false"
-        aria-selected="false"
-        class="c6"
-        id="react-tabs-4"
-        role="tab"
-      >
-        Texte attachés
-      </li>
-      <li
-        aria-controls="react-tabs-7"
-        aria-disabled="false"
-        aria-selected="false"
-        class="c6"
-        id="react-tabs-6"
-        role="tab"
-      >
-        Texte salaires
-      </li>
-    </ul>
+    Une convention collective de branche s’applique-t-elle à ma situation ?
+  </h3>
+  <p>
+    Pour pouvoir s’appliquer à vous, la convention collective de branche doit être applicable à votre entreprise.
+    <br />
+    L’employeur a l’obligation d’appliquer la convention collective lorsque l’entreprise entre dans le champ d’application professionnel et géographie défini par la convention et que :
+  </p>
+  <ul>
+    <li>
+      La convention collective de branche a été étendue par le ministère du travail.
+    </li>
+    <li>
+      L’entreprise est adhérente à une organisation patronale signataire de la convention collective.
+    </li>
+  </ul>
+  <details
+    class="c1"
+  >
+    <summary>
+      Plus d’informations sur cette convention collective.
+    </summary>
     <div
-      aria-labelledby="react-tabs-0"
-      class="c7 react-tabs__tab-panel--selected"
-      id="react-tabs-1"
-      role="tabpanel"
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <table
+          class="c4"
+        >
+          <tbody>
+            <tr>
+              <th>
+                Nom complet
+              </th>
+              <td>
+                Nouvelle convention collective nationale des ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 (c'est-à-dire occupant jusqu'à 10 salariés) du 7 mars 2018 (Avenant du 7 mars 2018) 
+              </td>
+            </tr>
+            <tr>
+              <th>
+                IDCC
+              </th>
+              <td>
+                1596
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Date d’entrée en vigueur
+              </th>
+              <td>
+                01/07/2018
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Nombre de textes
+              </th>
+              <td>
+                36
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Nombre d’articles
+              </th>
+              <td>
+                2281
+                (
+                1819 etendus
+                , 
+                462 non étendus
+                )
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p>
+      <a
+        href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Voir la convention sur Legifrance
+      </a>
+    </p>
+  </details>
+  <h3
+    class="c0"
+  >
+    Articles par themes
+  </h3>
+  <label
+    class="c5"
+    for="article-bloc"
+  >
+    Sélectionnez un thème pour consulter les articles de la convention collective :
+  </label>
+  <select
+    id="article-bloc"
+  >
+    <option
+      value="1"
+    >
+      Salaires minima hiérarchiques
+    </option>
+    <option
+      value="6"
+    >
+      Durée du travail, répartition et aménagement des horaires
+    </option>
+    <option
+      value="2"
+    >
+      Classifications
+    </option>
+  </select>
+  <header
+    class="c6"
+  >
+    <h2
+      class="c7"
     >
       <div
         class="c8"
+      />
+      
+    </h2>
+    
+  </header>
+  <ul
+    class="c9"
+  >
+    <li
+      class="c10"
+    >
+      <a
+        class="c11 c12"
+        href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=undefined"
       >
-        <div
-          class="c9"
-        >
-          <table
-            class="c10"
+        <div>
+          <div
+            class="c13"
           >
-            <tbody>
-              <tr>
-                <th>
-                  IDCC
-                </th>
-                <td>
-                  3205
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Date d’entrée en vigueur
-                </th>
-                <td>
-                  01/01/2019
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  Categories
-                </th>
-                <td>
-                  <div>
-                    Coopératives de consommation (23 novembre 2018)
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            
+          </div>
         </div>
-      </div>
-      <p>
-        <a
-          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000030185307"
-          rel="noopener noreferrer"
-          target="_blank"
+        <div
+          class="c14"
         >
-          Voir la convention sur Legifrance
-        </a>
-      </p>
-    </div>
-    <div
-      aria-labelledby="react-tabs-2"
-      class="c7"
-      id="react-tabs-3"
-      role="tabpanel"
-    />
-    <div
-      aria-labelledby="react-tabs-4"
-      class="c7"
-      id="react-tabs-5"
-      role="tabpanel"
-    />
-    <div
-      aria-labelledby="react-tabs-6"
-      class="c7"
-      id="react-tabs-7"
-      role="tabpanel"
-    />
+          Article 
+        </div>
+      </a>
+    </li>
+    <li
+      class="c10"
+    >
+      <a
+        class="c11 c12"
+        href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=undefined"
+      >
+        <div>
+          <div
+            class="c13"
+          >
+            
+          </div>
+        </div>
+        <div
+          class="c14"
+        >
+          Article 
+        </div>
+      </a>
+    </li>
+    <li
+      class="c10"
+    >
+      <a
+        class="c11 c12"
+        href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=undefined"
+      >
+        <div>
+          <div
+            class="c13"
+          >
+            
+          </div>
+        </div>
+        <div
+          class="c14"
+        >
+          Article 
+        </div>
+      </a>
+    </li>
+    <li
+      class="c10"
+    >
+      <a
+        class="c11 c12"
+        href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=undefined"
+      >
+        <div>
+          <div
+            class="c13"
+          >
+            
+          </div>
+        </div>
+        <div
+          class="c14"
+        >
+          Article 
+        </div>
+      </a>
+    </li>
+  </ul>
+  <form
+    action="https://beta.legifrance.gouv.fr/search/kali#kali"
+  >
+    <label
+      for="search-agreement"
+    >
+      <h3
+        class="c0"
+      >
+        Recherche
+      </h3>
+    </label>
+    <p>
+      <input
+        id="search-agreement"
+        name="query"
+        placeholder="congé exceptionnel, prime"
+        type="search"
+      />
+       
+      <input
+        name="cidKaliCont"
+        type="hidden"
+        value=""
+      />
+      <input
+        name="searchField"
+        type="hidden"
+        value="ALL"
+      />
+      <input
+        name="searchType"
+        type="hidden"
+        value="ALL"
+      />
+      <input
+        name="tab_selection"
+        type="hidden"
+        value="kali"
+      />
+      <input
+        name="page"
+        type="hidden"
+        value="1"
+      />
+      <button
+        class="c15"
+      >
+        Rechercher
+      </button>
+    </p>
+  </form>
+  <h3
+    class="c0"
+  >
+    Questions fréquentes sur cette convention collective
+  </h3>
+  <div>
+    <strong>
+      Départ de l'entreprise
+    </strong>
+    <ul>
+      <li>
+        <details>
+          <summary>
+             Quelle est la durée de préavis en cas de licenciement ?
+          </summary>
+          <div>
+            <p>
+              En cas de licenciement, la durée du préavis est égale à :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                De la fin de la période d'essai jusqu'à 3 mois d'ancienneté : 2 jours ;
+              </li>
+              
+
+              <li>
+                De 3 mois à 6 mois d'ancienneté : 2 semaines ;
+              </li>
+              
+
+              <li>
+                De 6 mois à 2 ans d'ancienneté : 1 mois ;
+              </li>
+              
+
+              <li>
+                Plus de 2 ans d'ancienneté : 2 mois.
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              Le salarié n'a pas droit au préavis en cas de licenciement pour faute grave.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+             Quelle est la durée du préavis en cas de démission ?
+          </summary>
+          <div>
+            <p>
+              En cas de démission, la durée du préavis est égale à :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                De la fin de la période d'essai jusqu'à 3 mois d'ancienneté : 2 jours ;
+              </li>
+              
+
+              <li>
+                Après 3 mois d'ancienneté : 2 semaines.
+              </li>
+              
+
+            </ul>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+             Quelle est la durée de préavis en cas de départ à la retraite ?
+          </summary>
+          <div>
+            <p>
+              En cas de départ à la retraite du salarié, la durée du préavis est égale à 2 mois.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+             Quelle est la durée de préavis en cas de mise à la retraite ?
+          </summary>
+          <div>
+            <p>
+              En cas de mise à la retraite du salarié, la durée du préavis est égale à 2 mois.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
+          </summary>
+          <div>
+            <p>
+              Si l'employeur ou le salarié ne respecte pas le préavis de licenciement ou de démission, l'autre partie peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant à courir.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
+          </summary>
+          <div>
+            <p>
+              Pendant le préavis, l'ouvrier licencié ou démissionnaire est autorisé, s'il en fait la demande, à s'absenter pour rechercher un nouvel emploi, pendant :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                En cas de préavis de 2 jours : 4 heures ;
+              </li>
+              
+
+              <li>
+                En cas de préavis de 2 semaines : 12 heures ;
+              </li>
+              
+
+              <li>
+                En cas de préavis égal ou supérieur à 1 mois : 25 heures.
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              Les ouvriers à temps partiel bénéficient de ces heures d'absence autorisée proportionnellement à leur temps de travail. 
+            </p>
+            
+
+            <p>
+              Les heures pour rechercher un nouvel emploi sont, en principe, prises groupées à la fin du délai de préavis. 
+            </p>
+            
+
+            <p>
+              En cas de licenciement, ces heures sont rémunérées.
+            </p>
+            
+
+            <p>
+              L'employeur ne doit pas payer d'indemnité au salarié, si ce dernier n'utilise pas ces heures pour recherche d'emploi.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <strong>
+      Congés et repos
+    </strong>
+    <ul>
+      <li>
+        <details>
+          <summary>
+            Jours fériés et ponts dans le secteur privé
+          </summary>
+          <div>
+            <p>
+              Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.
+            </p>
+            
+
+            <p>
+              Toutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                Ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé ;
+              </li>
+              
+
+              <li>
+                N'ont pas accompli, à la fois, le dernier jour du travail précédant le jour férié et le premier jour du travail qui suit, sauf autorisation d'absence préalablement accordée. Toutefois, il n'est pas tenu compte d'une absence pour maladie se terminant la dernière journée de travail précédant le jour férié, ou d'une absence pour maladie commençant la première journée de travail suivant ledit jour férié.
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              Le chômage des jours fériés ne peut pas donner lieu à récupération.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/jours-feries-et-ponts-dans-le-secteur-prive"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
+          </summary>
+          <div>
+            <p>
+              Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.
+            </p>
+            
+
+            <p>
+              Pour en bénéficier, les salariées doivent avoir une ancienneté appréciée dans les conditions suivantes :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                
+
+                <p>
+                  Pour les salariées âgées de moins de 25 ans et pour les apprenties sous contrat : 1 mois d'ancienneté dans l'entreprise ;
+                </p>
+                
+
+              </li>
+              
+
+              <li>
+                
+
+                <p>
+                  Pour les ouvrières âgées d'au moins 25 ans :
+                </p>
+                
+
+                <ul>
+                  
+
+                  <li>
+                    soit 3 mois d'ancienneté dans l'entreprise ;
+                  </li>
+                  
+
+                  <li>
+                    soit 1 mois d'ancienneté dans l'entreprise, si elles ont au moins acquis 750 points de retraite CNRO (calculés selon les dispositions prévues au règlement de cette institution), dans les 10 dernières années précédant le jour où se produit l'arrêt de travail.
+                  </li>
+                  
+
+                </ul>
+                
+
+              </li>
+              
+
+            </ul>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Les congés pour événements familiaux
+          </summary>
+          <div>
+            <p>
+              Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                Mariage du salarié : 4 jours ;
+              </li>
+              
+
+              <li>
+                Mariage d'un de ses enfants : 1 jour ;
+              </li>
+              
+
+              <li>
+                Obsèques de son conjoint : 3 jours ;
+              </li>
+              
+
+              <li>
+                Obsèques d'un de ses enfants : 3 jours ;
+              </li>
+              
+
+              <li>
+                Obsèques de son père, de sa mère : 3 jours ;
+              </li>
+              
+
+              <li>
+                Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour ;
+              </li>
+              
+
+              <li>
+                Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité.
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              Ces absences s'ajoutent aux congés payés.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/les-conges-pour-evenements-familiaux"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <strong>
+      Embauche et contrat de travail
+    </strong>
+    <ul>
+      <li>
+        <details>
+          <summary>
+            Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
+          </summary>
+          <div>
+            <p>
+              La durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008.
+            </p>
+            
+
+            <p>
+              <strong>
+                Pour les salariés en CDI
+              </strong>
+              , la durée maximale de la période d'essai est égale à 3 semaines (pas de renouvellement possible).
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Comment déterminer l'ancienneté du salarié ?
+          </summary>
+          <div>
+            <p>
+              L'ancienneté du salarié tient compte de :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                La présence continue de l'ouvrier dans l'entreprise depuis la date du dernier embauchage ;
+              </li>
+              
+
+              <li>
+                Les périodes de suspension du contrat de travail ;
+              </li>
+              
+
+              <li>
+                La durée des contrats de travail antérieurs, à l'exclusion de ceux qui ont été rompus pour faute grave.
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              Pour le calcul de l'indemnité de licenciement, l'ancienneté tient compte des périodes suivantes :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                Le temps pendant lequel l'ouvrier a travaillé en une ou plusieurs fois pour l'entreprise, le cas échéant déduction faite de la durée des contrats de travail antérieurs dont la résiliation lui est imputable ;
+              </li>
+              
+
+              <li>
+                La durée des interruptions pour maladie, accident, maternité ;
+              </li>
+              
+
+              <li>
+                Les congés payés annuels ou autorisations d'absences exceptionnelles pour événements familiaux prévues par la convention collective ;
+              </li>
+              
+
+              <li>
+                La durée des interruptions pour mobilisation ou faits de guerre et périodes militaires obligatoires.
+              </li>
+              
+
+            </ul>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/comment-determiner-lanciennete-du-salarie"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+             Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
+          </summary>
+          <div>
+            <p>
+              L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                Le nom, la raison sociale et l'adresse de l'entreprise, 
+              </li>
+              
+
+              <li>
+                Le numéro de code APE de l'entreprise et le numéro d'inscription à l'URSSAF ou à la mutualité sociale agricole ;
+              </li>
+              
+
+              <li>
+                Le nom du salarié ;
+              </li>
+              
+
+              <li>
+                La date d'embauchage du salarié ;
+              </li>
+              
+
+              <li>
+                L'emploi du salarié, sa qualification et son coefficient hiérarchique ;
+              </li>
+              
+
+              <li>
+                La durée de la période d'essai ;
+              </li>
+              
+
+              <li>
+                Le montant de son salaire mensuel correspondant à un horaire hebdomadaire de travail de 39 heures (soit un salaire mensuel calculé sur une base de 169 heures) et son taux de salaire horaire ;
+              </li>
+              
+
+              <li>
+                L'horaire de travail hebdomadaire de référence choisi dans l'entreprise ou l'établissement et le montant de son salaire mensuel effectif correspondant ;
+              </li>
+              
+
+              <li>
+                Le montant de la déduction pour 1 heure de travail non effectuée ;
+              </li>
+              
+
+              <li>
+                L'engagement du salarié, pendant la durée du contrat, de ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail ;
+              </li>
+              
+
+              <li>
+                Le cas échéant, les avantages en nature et les conditions particulières, telles que le chantier sur lequel l'intéressé est embauché ;
+              </li>
+              
+
+              <li>
+                La convention collective applicable ;
+              </li>
+              
+
+              <li>
+                Le nom des caisses de prévoyance et de retraite complémentaire où sont versées les cotisations.
+              </li>
+              
+
+            </ul>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
+          </summary>
+          <div>
+            <p>
+              L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant les conditions du poste. Ce document doit être accepté et signé par l'employeur et le salarié.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+             Embauche en contrat d'extra (CDD d'usage)
+          </summary>
+          <div>
+            <p>
+              La convention collective ne prévoit pas le recours au contrat d'usage.
+            </p>
+            
+
+            <p>
+              La liste des secteurs d'activité prévue par la loi (article D1242-1 du code du travail) permettant le recours à un CDD d'usage vise le secteur du bâtiment et des travaux publics pour les chantiers 
+              <strong>
+                à l'étranger
+              </strong>
+              . En France, l'entreprise ne peut pas embaucher de salarié en CDD d'usage.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/embauche-en-contrat-dextra-cdd-dusage"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Quelles sont les conditions de cumul d'emplois ?
+          </summary>
+          <div>
+            <p>
+              Le salarié doit s'engager dans le contrat de travail à ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelles-sont-les-conditions-de-cumul-demplois"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <strong>
+      Salaire et Rémunération
+    </strong>
+    <ul>
+      <li>
+        <details>
+          <summary>
+            Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
+          </summary>
+          <div>
+            <p>
+              La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Quelles sont les primes prévues par la convention collective ?
+          </summary>
+          <div>
+            <p>
+              La convention collective prévoit une prime de vacances.
+            </p>
+            
+
+            <p>
+              Elle est versée, en plus de l'indemnité de congé, à l'ouvrier ayant au moins 1675 heures de travail au cours de l'année de référence dans une ou plusieurs entreprises du bâtiment ou des travaux publics. 
+            </p>
+            
+
+            <p>
+              Les ouvriers qui n'auront pas atteint, en raison d'arrêt maladie, ce total de 1675 heures au cours de l'année de référence, bénéficient également de la prime de vacances.
+            </p>
+            
+
+            <p>
+              Le taux de la prime de vacances est égal à 30 % de l'indemnité de congé payés correspondant aux 24 jours ouvrables.
+            </p>
+            
+
+            <p>
+              La prime de vacances est versée à l'ouvrier en même temps que son indemnité de congé. Elle ne se cumule pas avec les versements qui auraient le même objet.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quelles-sont-les-primes-prevues-par-la-convention-collective"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
+          </summary>
+          <div>
+            <p>
+              La convention collective ne prévoit pas de prime d'ancienneté.
+            </p>
+            
+
+            <p>
+              Elle prévoit des congés pour ancienneté d'une durée de :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                2 jours pour 20 d'années de services, continus ou non, dans la même entreprise ;
+              </li>
+              
+
+              <li>
+                4 jours pour 25 d'années de services, continus ou non, dans la même entreprise ;
+              </li>
+              
+
+              <li>
+                6 jours pour 30 d'années de services, continus ou non, dans la même entreprise.
+              </li>
+              
+
+            </ul>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <strong>
+      Santé, sécurité et conditions de travail
+    </strong>
+    <ul>
+      <li>
+        <details>
+          <summary>
+            En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
+          </summary>
+          <div>
+            <p>
+              Le salarié a droit à un maintien de salaire pendant l'arrêt maladie dans les conditions suivantes.
+            </p>
+            
+
+            <h4>
+              1. Conditions pour bénéficier du maintien de salaire
+            </h4>
+            
+
+            <p>
+              Pour bénéficier du maintien de salaire, l'ouvrier doit avoir une ancienneté d'au moins :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                Pour les jeunes ouvriers âgés de moins de 25 ans et pour les apprentis sous contrat : 1 mois d'ancienneté dans l'entreprise ;
+              </li>
+              
+
+              <li>
+                Pour les ouvriers âgés d'au moins 25 ans :
+                <ul>
+                  
+
+                  <li>
+                    Soit 3 mois d'ancienneté dans l'entreprise ;
+                  </li>
+                  
+
+                  <li>
+                    Soit 1 mois d'ancienneté dans l'entreprise, s'ils ont au moins acquis 750 points de retraite CNRO (calculés selon les dispositions prévues au règlement de cette institution), dans les 10 dernières années précédant le jour où se produit l'arrêt de travail.
+                  </li>
+                  
+
+                </ul>
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              Pour le calcul de l'ancienneté, il faut tenir compte du temps de présence du salarié dans l'entreprise depuis la date du dernier embauchage et des périodes de suspension du contrat de travail.
+            </p>
+            
+
+            <p>
+              Les conditions d'ancienneté ne sont pas exigées en cas d'absence pour maladie supérieure à 30 jours, due à un accident du travail ou une maladie professionnelle.
+            </p>
+            
+
+            <p>
+              Pour pouvoir bénéficier de l'indemnisation, l'ouvrier doit :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                Avoir justifié de son absence par la production du certificat médical ;
+              </li>
+              
+
+              <li>
+                Justifier qu'il est pris en charge par la sécurité sociale ou la mutualité sociale agricole.
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              L'indemnisation est subordonnée à la possibilité pour l'employeur de faire vérifier la réalité de l'arrêt maladie de l'ouvrier.
+            </p>
+            
+
+            <h4>
+              2. Montant et durée du maintien de salaire
+            </h4>
+            
+
+            <p>
+              L'indemnité est versée après un délai de 3 jours d'arrêt de travail, sauf :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                En cas d'arrêt suite à un accident du travail ou maladie professionnelle ;
+              </li>
+              
+
+              <li>
+                En cas d'arrêt de travail supérieur à 30 jours suite à un accident de trajet. 
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              En cas d'accident ou de maladie non professionnel, le salarié a droit au maintien de :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                100 % du salaire pendant 45 jours (du 4e au 48e jour inclus d'arrêt de travail), puis;
+              </li>
+              
+
+              <li>
+                75 % du salaire du 49e au 90e jour inclus d'arrêt de travail.
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              En cas d'accident du travail ou de maladie professionnelle, le salarié a droit au maintien de :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                
+
+                <p>
+                  Arrêt maladie inférieur ou égal à 30 jours :
+                </p>
+                
+
+                <ul>
+                  
+
+                  <li>
+                    90 % du salaire du 1er au 15e jour inclus d'arrêt de travail, puis ;
+                  </li>
+                  
+
+                  <li>
+                    100 % du salaire du 16e au 30e jour inclus d'arrêt de travail.
+                  </li>
+                  
+
+                </ul>
+                
+
+              </li>
+              
+
+              <li>
+                
+
+                <p>
+                  Arrêt maladie supérieur à 30 jours :
+                </p>
+                
+
+                <ul>
+                  
+
+                  <li>
+                    100 % du salaire du 1er au 90e jour inclus d'arrêt de travail.
+                  </li>
+                  
+
+                </ul>
+                
+
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              En cas d'accident de trajet couvert par la législation de la sécurité sociale relative aux accidents du travail, le salarié a droit au maintien de : 
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                
+
+                <p>
+                  Arrêt maladie inférieur ou égal à 30 jours :
+                </p>
+                
+
+                <ul>
+                  
+
+                  <li>
+                    100 % du salaire du 4e au 30e jour inclus d'arrêt de travail ; 
+                  </li>
+                  
+
+                </ul>
+                
+
+              </li>
+              
+
+              <li>
+                
+
+                <p>
+                  Arrêt maladie supérieur à 30 jours :
+                </p>
+                
+
+                <ul>
+                  
+
+                  <li>
+                    100 % du salaire du 1er au 90e jour inclus d'arrêt de travail.
+                  </li>
+                  
+
+                </ul>
+                
+
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              Si un ouvrier est en arrêt maladie, à plusieurs reprises au cours d'une même année civile, la durée totale d'indemnisation ne peut dépasser au total celle des périodes fixées ci-dessus. Ainsi,la durée de maintien de salarié ne peut pas dépasser 90 jours au cours d'une même année civile.
+            </p>
+            
+
+            <p>
+              Lorsqu'un ouvrier est licencié pendant un arrêt de travail pour maladie ou accident non professionnels, pour nécessité de remplacement, il doit percevoir les indemnités complémentaires dans les conditions prévues ci-dessus, jusqu'à son rétablissement ou, au plus tard, jusqu'à l'expiration de la durée d'indemnisation.
+            </p>
+            
+
+            <p>
+              Les entreprises du bâtiment restant en dehors du régime professionnel mis en place en matière d'indemnisation des arrêts de travail pour maladie ou accident, professionnels ou non, inférieurs à 90 jours doivent verser elles-mêmes à leurs ouvriers remplissant les conditions prévues ci-dessus le montant des indemnités complémentaires aux indemnités journalières de la sécurité sociale.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
+          </summary>
+          <div>
+            <p>
+              En cas d'accident du travail ou de maladie professionnelle, le code du travail s'applique. 
+            </p>
+            
+
+            <p>
+              Dans les autres cas, l'employeur peut licencier l'ouvrier en arrêt maladie si il est obligé de le remplacer avant la date présumée de son retour. Ce licenciement ne peut intervenir que si la durée totale de l'absence de l'ouvrier est supérieure à 90 jours au cours de la même année civile.
+            </p>
+            
+
+            <p>
+              Dans ce cas, l'ouvrier bénéficie d'une priorité de réembauchage pendant un délai qui ne peut pas dépasser :
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                Soit 3 mois après la fin de l'incapacité résultant de la maladie ou de l'accident ;
+              </li>
+              
+
+              <li>
+                Soit la fin du chantier pour lequel il a été embauché, si celle-ci survient avant l'expiration de ces 3 mois.
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              L'ouvrier qui veut bénéficier de cette priorité doit en informer par écrit le chef d'entreprise ou son représentant en indiquant l'adresse à laquelle il sera possible de le joindre. Le chef d'entreprise ou son représentant doit avertir l'ouvrier dès qu'un emploi correspondant à ses aptitudes sera disponible.
+            </p>
+            
+
+          </div>
+          <a
+            class="c15"
+            href="/contribution/en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
+          >
+            Voir la réponse en détail
+          </a>
+        </details>
+      </li>
+    </ul>
   </div>
 </div>
 `;
