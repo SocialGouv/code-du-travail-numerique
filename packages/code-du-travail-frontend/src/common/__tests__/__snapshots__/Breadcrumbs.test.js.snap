@@ -79,6 +79,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
 
 .c5 {
   width: 1.2rem;
+  height: 1.2rem;
   margin-right: 1rem;
   color: #7598d6;
 }
@@ -121,7 +122,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         <div
           class="c3"
         >
-          <li
+          <span
             class="c4"
           >
              
@@ -130,8 +131,8 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
               item 1
                
             </span>
-          </li>
-          <li
+          </span>
+          <span
             class="c4"
           >
             <svg
@@ -150,7 +151,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
               item 2
                
             </span>
-          </li>
+          </span>
         </div>
       </div>
     </div>

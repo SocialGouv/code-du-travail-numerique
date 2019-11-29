@@ -50,14 +50,6 @@ export const ThemeBreadcrumbs = ({ theme, breadcrumbs = [] }) => {
     ))
   );
 
-  if (theme && theme.title && theme.slug) {
-    themesCrumbs.push(
-      <span title={`voir le contenu du thème ${theme.title}`}>
-        {theme.title}
-      </span>
-    );
-  }
-
   // only root
   if (themesCrumbs.length === 1) {
     return null;

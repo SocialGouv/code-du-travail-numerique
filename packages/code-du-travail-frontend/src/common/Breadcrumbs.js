@@ -43,7 +43,7 @@ const StyledContainer = styled(Container)`
   align-items: center;
 `;
 
-const NavItem = styled.li`
+const NavItem = styled.span`
   display: flex;
   align-items: center;
   padding: 0 ${spacings.small} 0 0;
@@ -61,6 +61,7 @@ const NavItem = styled.li`
 
 const StyledArrowRight = styled(ArrowRight)`
   width: 1.2rem;
+  height: 1.2rem;
   margin-right: ${spacings.small};
   color: ${({ theme }) => theme.secondary};
   @media (max-width: ${breakpoints.mobile}) {

@@ -79,6 +79,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 
 .c7 {
   width: 1.2rem;
+  height: 1.2rem;
   margin-right: 1rem;
   color: #7598d6;
 }
@@ -148,7 +149,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
         <div
           class="c3"
         >
-          <li
+          <span
             class="c4"
           >
              
@@ -169,8 +170,8 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
               </svg>
               Accueil
             </a>
-          </li>
-          <li
+          </span>
+          <span
             class="c4"
           >
             <svg
@@ -191,8 +192,8 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
             >
               theme 1
             </a>
-          </li>
-          <li
+          </span>
+          <span
             class="c4"
           >
             <svg
@@ -213,7 +214,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
             >
               theme 2
             </a>
-          </li>
+          </span>
         </div>
       </div>
     </div>
@@ -300,6 +301,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
 
 .c7 {
   width: 1.2rem;
+  height: 1.2rem;
   margin-right: 1rem;
   color: #7598d6;
 }
@@ -369,7 +371,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
         <div
           class="c3"
         >
-          <li
+          <span
             class="c4"
           >
              
@@ -390,8 +392,8 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
               </svg>
               Accueil
             </a>
-          </li>
-          <li
+          </span>
+          <span
             class="c4"
           >
             <svg
@@ -412,8 +414,8 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
             >
               theme 1
             </a>
-          </li>
-          <li
+          </span>
+          <span
             class="c4"
           >
             <svg
@@ -434,27 +436,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
             >
               theme 2
             </a>
-          </li>
-          <li
-            class="c4"
-          >
-            <svg
-              class="c7"
-              fill="none"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
-                fill="currentColor"
-              />
-            </svg>
-             
-            <span
-              title="voir le contenu du thème title theme"
-            >
-              title theme
-            </span>
-          </li>
+          </span>
         </div>
       </div>
     </div>
