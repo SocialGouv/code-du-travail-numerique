@@ -1,5 +1,6 @@
 const Router = require("koa-router");
 const API_BASE_URL = require("../v1.prefix");
+const getAgreementBody = require("./getAgreementBySlug.elastic");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 
@@ -18,26 +19,15 @@ const router = new Router({ prefix: API_BASE_URL });
  * @param {string} :type the type of texte requested (either none or "base", "attache", "salaire")
  * @returns {Object} some convention data.
  */
-router.get("/conventions/:id/:type*", async ctx => {
-  const { id, type = "base" } = ctx.params;
-
-  const body = {
-    size: 1,
-    query: {
-      bool: {
-        must: [{ match: { conventionId: id } }],
-        filter: [{ term: { type } }]
-      }
-    }
-  };
-
+router.get("/conventions/:slug", async ctx => {
+  const { slug } = ctx.params;
+  const body = getAgreementBody({ slug });
   const response = await elasticsearchClient.search({ index, body });
-
   if (response.body.hits.total.value === 0) {
-    ctx.throw(404, `No document found for kali id ${id} and type ${type}`);
+    ctx.throw(404, `agreement not found, no agreement match ${slug}`);
   }
 
-  ctx.body = { ...response.body.hits.hits[0] };
+  ctx.body = { ...response.body.hits.hits[0]._source };
 });
 
 module.exports = router;

@@ -10,7 +10,7 @@ import documents from "./cdtn_document.data.json";
 import themes from "./cdtn_theme.data.json";
 import sheetsMT from "./fiches_ministere_travail.data.json";
 import { conventionCollectiveMapping } from "@cdt/data/indexing/convention_collective.mapping";
-import conventions from "./convention.data.json";
+import agreements from "./cdtn_agreement.data.json";
 import { themesMapping } from "@cdt/data/indexing/themes.mapping";
 import { suggestionMapping } from "@cdt/data/indexing/suggestion.mapping";
 import suggestions from "./suggestions_data.json";
@@ -53,7 +53,7 @@ async function main() {
   await indexDocumentsBatched({
     client,
     indexName: conventionsIndexName,
-    documents: conventions
+    documents: agreements
   });
 
   await createIndex({
