@@ -2,7 +2,7 @@
 
 exports[`<Article /> should render 1`] = `
 .c1 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -15,23 +15,23 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  max-width: 1200px;
+.c10 {
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
   padding: 0;
 }
 
-.c9 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c0 {
+.c3 {
   padding: 2rem 0;
   color: #3e486e;
 }
@@ -52,7 +52,7 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
+.c5 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: normal;
@@ -61,8 +61,14 @@ exports[`<Article /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c3 {
-  max-width: 1200px;
+.c0 {
+  padding: 2rem 0;
+  color: #3e486e;
+  padding-top: 0;
+}
+
+.c4 {
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
@@ -71,15 +77,15 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c3 > *:first-child {
+.c4 > *:first-child {
   margin-top: 0;
 }
 
-.c3 > *:last-child {
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,19 +96,19 @@ exports[`<Article /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c6 {
+.c7 {
   color: #4d73b8;
   font-weight: 600;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.4rem;
 }
 
-.c8 {
+.c9 {
   color: #4d73b8;
   font-weight: 600;
 }
@@ -115,7 +121,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media print {
-  .c9 {
+  .c10 {
     max-width: 100%;
     padding: 0;
   }
@@ -135,14 +141,14 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media print {
-  .c3 {
+  .c4 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -154,7 +160,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     margin-left: 0;
   }
 }
@@ -171,30 +177,30 @@ exports[`<Article /> should render 1`] = `
         class="c2"
       >
         <div
-          class="c0"
+          class="c3"
         >
           <div
-            class="c3"
+            class="c4"
           >
             <h1
-              class="c4"
+              class="c5"
             >
               Contrat de travail et formalités d'embauche de l'assistante maternelle
             </h1>
             <div
-              class="c5"
+              class="c6"
             >
               <span
-                class="c6"
+                class="c7"
               >
                 Fiche service public
               </span>
               <span
-                class="c7"
+                class="c8"
               >
                 Mis à jour le : 
                 <span
-                  class="c8"
+                  class="c9"
                 >
                   26/07/2018
                 </span>
@@ -202,7 +208,7 @@ exports[`<Article /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c9"
+            class="c10"
           >
             this is an Article
           </div>

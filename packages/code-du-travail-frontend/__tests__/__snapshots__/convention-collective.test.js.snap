@@ -2,7 +2,7 @@
 
 exports[`<ConventionCollective /> should render 1`] = `
 .c5 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -253,7 +253,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 .c2 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   margin: 20%;
@@ -270,7 +270,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 .c0 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   display: -webkit-box;

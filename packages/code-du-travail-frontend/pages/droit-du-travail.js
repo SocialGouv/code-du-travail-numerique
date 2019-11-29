@@ -22,7 +22,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
       description="Le droit du travail, c'est quoi ?"
       image={ogImage}
     />
-    <StyledSection variant="white">
+    <StyledSection>
       <StyledContainer>
         <BigBlock>
           <Wrapper>

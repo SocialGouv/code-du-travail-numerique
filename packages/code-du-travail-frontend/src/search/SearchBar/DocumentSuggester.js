@@ -121,7 +121,7 @@ const renderSuggestion = (suggestion, query) => {
 };
 const Label = styled.label`
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   text-align: left;
 `;
 
@@ -141,7 +141,7 @@ const renderSuggestionsContainer = ({ containerProps, children }) => (
 // see https://github.com/moroshko/react-autosuggest#themeProp
 const suggesterTheme = {
   container: {
-    flex: 1
+    flex: "1 1 auto"
   },
   suggestionsList: {
     margin: 0,

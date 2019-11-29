@@ -2,7 +2,7 @@
 
 exports[`<Feedback/> should render 1`] = `
 .c1 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -178,7 +178,7 @@ exports[`<Feedback/> should render 1`] = `
 
 exports[`<Feedback/> should render form once user answer no 1`] = `
 .c1 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -529,7 +529,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 
 exports[`<Feedback/> should render form once user answer yes 1`] = `
 .c1 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }

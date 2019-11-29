@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import styled from "styled-components";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import { Container, LargeLink, PageTitle, Title } from "@socialgouv/react-ui";
 
@@ -94,18 +95,28 @@ export const Results = ({ id, isSearch, items, query }) => {
       ) : (
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
-      <ul>
+      <StyledList>
         {items.map((item, i) => {
           const { slug } = item;
           return (
-            <li key={slug}>
+            <StyledListItem key={slug}>
               <ListLink focused={i === 0} item={item} query={query}>
                 <LinkContent isSearch={isSearch} {...item} />
               </ListLink>
-            </li>
+            </StyledListItem>
           );
         })}
-      </ul>
+      </StyledList>
     </Container>
   );
 };
+
+const StyledList = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+`;
+
+const StyledListItem = styled.li`
+  padding: 0;
+`;

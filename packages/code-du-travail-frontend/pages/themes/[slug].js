@@ -41,7 +41,7 @@ class Theme extends React.Component {
     const { theme = {}, pageUrl, ogImage } = this.props;
 
     return (
-      <Layout>
+      <Layout currentPage="themes">
         <Metas
           url={pageUrl}
           title={`${theme.title} - Code du travail numérique`}
@@ -49,7 +49,7 @@ class Theme extends React.Component {
           image={ogImage}
         />
         <ThemeBreadcrumbs theme={theme} />
-        <Section variant="white">
+        <Section>
           <Container>
             <PageTitle>{theme.title}</PageTitle>
             {theme.children && theme.children.length > 0 && (

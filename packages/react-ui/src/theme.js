@@ -3,6 +3,8 @@ export const colors = {
   primary: "#ff7067",
   secondary: "#7598d6",
 
+  heroGradientStart: "#d1dffd",
+
   // global colors
   white: "#fff",
   bgPrimary: "#fff",
@@ -54,9 +56,12 @@ export const fonts = {
 };
 
 export const breakpoints = {
-  desktop: "1200px",
+  desktop: "1180px",
   tablet: "980px",
-  mobile: "600px"
+  mobile: "600px",
+  intDesktop: 1180,
+  intTablet: 980,
+  intMobile: 600
 };
 
 const shadowColor = "85, 112, 160";

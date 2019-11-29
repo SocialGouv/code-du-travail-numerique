@@ -60,7 +60,7 @@ export const outils = [
 
 function Outils() {
   return (
-    <Section variant="white">
+    <Section>
       <Container>
         <CardList
           title="Boîte à outils"

@@ -150,6 +150,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1;
   overflow: auto;
   background: rgba(0,0,0,0.5);
 }
@@ -239,7 +240,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   margin-top: 2rem;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1180px) {
   .c2 {
     width: 60vw;
   }

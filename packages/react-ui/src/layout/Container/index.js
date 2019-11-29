@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { breakpoints, spacings } from "../../theme";
+import { spacings } from "../../theme";
 
 export const Container = styled.div`
-  max-width: ${breakpoints.desktop};
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 ${spacings.medium};
   ${props => {

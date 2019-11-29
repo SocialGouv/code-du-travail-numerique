@@ -518,7 +518,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 
 exports[`<Contribution /> should render with both answers 1`] = `
 .c2 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -611,7 +611,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
 
 exports[`<Contribution /> should render with conventions answer 1`] = `
 .c2 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }

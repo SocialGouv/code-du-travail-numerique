@@ -221,9 +221,9 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 2rem 4rem;
 }
 
@@ -577,9 +577,9 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
 }
 
 .c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 2rem 4rem;
 }
 
@@ -942,9 +942,9 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 .c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 2rem 4rem;
 }
 
@@ -1308,9 +1308,9 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 2rem 4rem;
 }
 
@@ -1667,9 +1667,9 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 }
 
 .c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 2rem 4rem;
 }
 
@@ -2032,9 +2032,9 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 2rem 4rem;
 }
 

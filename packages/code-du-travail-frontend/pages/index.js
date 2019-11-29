@@ -13,7 +13,7 @@ const {
 } = getConfig();
 
 const Home = ({ pageUrl, ogImage, children = [] }) => (
-  <Layout hideSearch={true}>
+  <Layout currentPage="home">
     <Metas
       url={pageUrl}
       title="Code du travail numérique"

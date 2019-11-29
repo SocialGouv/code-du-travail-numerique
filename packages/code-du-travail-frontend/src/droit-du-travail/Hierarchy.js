@@ -18,7 +18,7 @@ const Hierarchy = () => {
   const [isModalGarantiesOpen, setModalGarantiesOpen] = useState(false);
   return (
     <>
-      <Section variant="white">
+      <Section>
         <Container narrow>
           <Title>Existe-t-il une hiérarchie entre les textes ?</Title>
           <p>

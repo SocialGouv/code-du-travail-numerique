@@ -24,7 +24,7 @@ export default class Error extends React.Component {
     const { statusCode } = this.props;
     return (
       <Layout>
-        <Section variant="light">
+        <Section>
           <FlexCenterer>
             <P>
               {this.props.statusCode

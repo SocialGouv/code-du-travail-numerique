@@ -10,7 +10,7 @@ export default function Metas({ url, title, description, image }) {
     url = url || `${location.protocol}//${location.host}${path}`;
     image =
       image ||
-      `${location.protocol}//${location.hostname}/static/images/social-preview.png`;
+      `${location.protocol}//${location.hostname}/static/assets/img/social-preview.png`;
   }
 
   return (

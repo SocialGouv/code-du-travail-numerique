@@ -79,7 +79,6 @@ class Outils extends React.Component {
           image={ogImage}
         />
         <Simulator q={searchTerm} />
-        <Source>-</Source>
       </Layout>
     );
   }
@@ -87,17 +86,10 @@ class Outils extends React.Component {
 
 export default Outils;
 
-const { colors, fonts, spacings } = theme;
+const { fonts } = theme;
 
 const StyledContainer = styled(Container)`
   margin: 20%;
   font-size: ${fonts.sizes.headings.large};
   text-align: center;
-`;
-
-const Source = styled.div`
-  margin-top: 50px;
-  padding: ${spacings.small};
-  text-align: center;
-  background: ${colors.bgSecondary};
 `;

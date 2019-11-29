@@ -2,7 +2,7 @@
 
 exports[`<SansIndemniteLicenciement /> should render 1`] = `
 .c0 {
-  max-width: 1200px;
+  max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }

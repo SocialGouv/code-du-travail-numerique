@@ -18,9 +18,9 @@ exports[`<DocumentSuggester /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   text-align: left;
 }
 
@@ -47,7 +47,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
       aria-haspopup="listbox"
       aria-owns="react-autowhatever-cdtn-documents-suggester"
       role="combobox"
-      style="flex: 1;"
+      style="flex: 1 1 auto;"
     >
       <input
         aria-autocomplete="list"
@@ -95,9 +95,9 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   text-align: left;
 }
 
@@ -124,7 +124,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
       aria-haspopup="listbox"
       aria-owns="react-autowhatever-cdtn-documents-suggester"
       role="combobox"
-      style="flex: 1;"
+      style="flex: 1 1 auto;"
     >
       <input
         aria-autocomplete="list"

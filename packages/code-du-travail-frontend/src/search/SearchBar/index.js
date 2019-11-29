@@ -71,7 +71,11 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
         hasButton={hasButton}
         onChange={onChange}
         query={query}
-        placeholder="Recherche"
+        placeholder={
+          hasButton
+            ? "Ex : durée du préavis, indémnités de licenciement..."
+            : "Rechercher"
+        }
         onSearch={onSearch}
         onSelect={onSelect}
         onClear={onClear}
@@ -92,9 +96,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
 
 export default SearchBar;
 
-const { animations, box, breakpoints, colors, spacings } = theme;
-
-const INPUT_HEIGHT = "5.4rem";
+const { animations, breakpoints, spacings } = theme;
 
 const SearchForm = styled.form`
   position: relative;
@@ -108,14 +110,16 @@ const SearchForm = styled.form`
 `;
 
 const StyledSearchIcon = styled(SearchIcon)`
-  width: 2.5rem;
+  width: 3rem;
+  height: 3rem;
 `;
 
 const SearchIconLeft = styled(StyledSearchIcon)`
   position: absolute;
   top: 0;
   left: 0;
-  margin: ${spacings.base} 0 0 ${spacings.medium};
+  margin: ${spacings.medium} 0 0 ${spacings.medium};
+  color: ${({ theme }) => theme.placeholder};
   @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }
@@ -124,25 +128,29 @@ const SearchIconLeft = styled(StyledSearchIcon)`
 const SearchInput = styled(DocumentSuggester)`
   display: flex;
   width: 100%;
+  height: ${({ hasButton }) => (hasButton ? "7rem" : "5.4rem")};
   margin: 0;
-  padding: 0
-    ${({ hasButton }) =>
-      hasButton
-        ? `${spacings.base} 0 6.4rem `
-        : `calc(${INPUT_HEIGHT} + ${spacings.small}) 0 ${spacings.base}`};
+  padding: ${({ hasButton }) =>
+    hasButton ? `2rem 18.5rem 2rem 6rem` : `1rem 5.5rem 1rem ${spacings.base}`};
   font-size: inherit;
   font-family: inherit;
-  background: ${colors.bgSecondary};
   transition: border ${animations.transitionTiming} ease;
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
-    padding: 0 ${spacings.base};
+    height: 5.4rem;
+    padding: ${({ hasButton }) =>
+      hasButton
+        ? `1rem ${spacings.base}`
+        : `1rem 5.5rem 1rem ${spacings.base}`};
   }
 `;
 
 const SubmitButton = styled(Button)`
-  margin-left: ${spacings.tiny};
+  position: absolute;
+  top: ${spacings.xsmall};
+  right: ${spacings.xsmall};
   @media (max-width: ${breakpoints.mobile}) {
+    position: static;
     margin-top: ${spacings.small};
     margin-left: 0;
   }
@@ -151,8 +159,7 @@ const SubmitIcon = styled(Button)`
   position: absolute;
   top: 0;
   right: 0;
-  width: calc(${INPUT_HEIGHT} - ${spacings.small});
-  height: calc(${INPUT_HEIGHT} - 2px);
-  border-top-right-radius: ${box.borderRadius};
-  border-bottom-right-radius: ${box.borderRadius};
+  width: 3rem;
+  height: 5.4rem;
+  color: ${({ theme }) => theme.secondary};
 `;
