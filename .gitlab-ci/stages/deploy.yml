@@ -15,6 +15,7 @@ Create namespace:
   extends: .base_create_namespace_stage
   stage: "Post Registration"
   variables:
+    # TODO @douglasduteil move the project-id in ci variable
     RANCHER_PROJECT_ID: c-gsm8d:p-v7cpb # the "default" project
   before_script:
     - source ./.gitlab-ci/env.sh
@@ -28,8 +29,10 @@ Create namespace:
     - envsubst < ./.k8s/secrets.yml | kubectl apply -n ${K8S_NAMESPACE} -f - || true
     #
     # Copy elasticsearch-creds
-    - kubectl get secret elasticsearch-creds --namespace=cdtn-secret --export -o yaml |
-        kubectl apply --namespace=${K8S_NAMESPACE} -f -
+    - kubectl get secret elasticsearch-cloud-data --namespace=cdtn-secret --export -o yaml |
+      kubectl apply --namespace=${K8S_NAMESPACE} -f -
+    - kubectl get secret elasticsearch-cloud-api --namespace=cdtn-secret --export -o yaml |
+      kubectl apply --namespace=${K8S_NAMESPACE} -f -
 
 #
 
@@ -46,7 +49,6 @@ Create namespace:
       --set-string ingress.annotations.kubernetes\.io/tls-acme=true \
       --set ingress.tls[0].secretName=${PROJECT}-certificate"
   fi
-
 
 #
 
@@ -155,7 +157,6 @@ Deploy @cdtn/frontend (incubateur):
     #
     - envsubst < ./.k8s/data.job.yml > ./job.yml
     - kubectl apply -f ./job.yml || true
-
 
 #
 
