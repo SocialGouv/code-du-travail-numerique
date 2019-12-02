@@ -16,7 +16,7 @@ export const outils = [
     slug: "/outils/indemnite-licenciement"
   },
   {
-    title: "Simulateur de durée de préavis de licenciement",
+    title: "Simulateur de la durée de préavis de licenciement",
     hrefTitle: "Démarrer une simulation de durée de préavis de licenciement",
     button: "Démarrer",
     text:

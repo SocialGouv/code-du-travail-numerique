@@ -14,7 +14,7 @@ function StepIntro() {
         concernant la situation de l’employé concerné, comme sa convention
         collective, sa catégorie ou son coefficient. La plupart de ces
         informations se trouvent sur le bulletin de salaire ou le contrat de
-        travail. Prévoyez deux à cinq minutes pour cette simulation.
+        travail. Prévoyez 2 à 5 minutes pour cette simulation.
       </p>
 
       <p>
