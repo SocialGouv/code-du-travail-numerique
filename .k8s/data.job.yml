@@ -18,16 +18,19 @@ spec:
             # - name: NODE_OPTIONS
             #   value: "--max_old_space_size=2048"
             - name: ELASTICSEARCH_URL
-              value: "${CI_ELASTICSEARCH_CLUSTER}"
+              valueFrom:
+                secretKeyRef:
+                  name: elasticsearch-cloud-data
+                  key: url
             - name: ELASTICSEARCH_USER
               valueFrom:
                 secretKeyRef:
-                  name: elasticsearch-creds
+                  name: elasticsearch-cloud-data
                   key: user
             - name: ELASTICSEARCH_PWD
               valueFrom:
                 secretKeyRef:
-                  name: elasticsearch-creds
+                  name: elasticsearch-cloud-data
                   key: password
             - name: ES_INDEX_PREFIX
               value: "cdtn-${BRANCH_HASH}"

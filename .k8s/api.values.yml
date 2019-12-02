@@ -3,7 +3,6 @@ image:
   tag: master
 
 deployment:
-
   port: ${PORT}
 
   resources:
@@ -23,16 +22,19 @@ deployment:
     - name: ELASTICSEARCH_LOG_LEVEL
       value: "trace"
     - name: ELASTICSEARCH_URL
-      value: "${CI_ELASTICSEARCH_CLUSTER}"
+      valueFrom:
+        secretKeyRef:
+          name: elasticsearch-cloud-api
+          key: url
     - name: ELASTICSEARCH_USER
       valueFrom:
         secretKeyRef:
-          name: elasticsearch-creds
+          name: elasticsearch-cloud-api
           key: user
     - name: ELASTICSEARCH_PWD
       valueFrom:
         secretKeyRef:
-          name: elasticsearch-creds
+          name: elasticsearch-cloud-api
           key: password
     - name: ES_INDEX_PREFIX
       value: "cdtn-${BRANCH_HASH}"
