@@ -296,6 +296,102 @@ exports[`<Outils /> should render 1`] = `
         >
           <a
             class="c8"
+            href="/modeles-de-courriers"
+            title="Consulter tous les modèles de courriers"
+          >
+            <div
+              class="c9"
+            >
+              Modèles de courriers
+            </div>
+            <div
+              class="c10"
+            >
+              <div
+                class="c11"
+              >
+                Consulter
+              </div>
+            </div>
+          </a>
+        </li>
+        <li
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="/convention-collective/recherche"
+            title="Recherchez votre convention collective"
+          >
+            <div
+              class="c9"
+            >
+              Conventions collectives
+            </div>
+            <div
+              class="c10"
+            >
+              <div
+                class="c11"
+              >
+                Consulter
+              </div>
+            </div>
+          </a>
+        </li>
+        <li
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="/outils/simulateur-embauche"
+            title="Démarrer une simulation de salaire lors d'une embauche"
+          >
+            <div
+              class="c9"
+            >
+              Simulateur d'embauche
+            </div>
+            <div
+              class="c10"
+            >
+              <div
+                class="c11"
+              >
+                Démarrer
+              </div>
+            </div>
+          </a>
+        </li>
+        <li
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="/outils/preavis-demission"
+            title="Démarrer une simulation de durée de préavis de démission"
+          >
+            <div
+              class="c9"
+            >
+              Simulateur de durée de préavis de démission
+            </div>
+            <div
+              class="c10"
+            >
+              <div
+                class="c11"
+              >
+                Démarrer
+              </div>
+            </div>
+          </a>
+        </li>
+        <li
+          class="c7"
+        >
+          <a
+            class="c8"
             href="/outils/indemnite-licenciement"
             title="Démarrer une simulation d'indemnités de licenciements"
           >
@@ -344,78 +440,6 @@ exports[`<Outils /> should render 1`] = `
         >
           <a
             class="c8"
-            href="/outils/preavis-demission"
-            title="Démarrer une simulation de durée de préavis de démission"
-          >
-            <div
-              class="c9"
-            >
-              Simulateur de durée de préavis de démission
-            </div>
-            <div
-              class="c10"
-            >
-              <div
-                class="c11"
-              >
-                Démarrer
-              </div>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c7"
-        >
-          <a
-            class="c8"
-            href="/modeles-de-courriers"
-            title="Consulter tous les modèles de courriers"
-          >
-            <div
-              class="c9"
-            >
-              Modèles de courriers
-            </div>
-            <div
-              class="c10"
-            >
-              <div
-                class="c11"
-              >
-                Consulter
-              </div>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c7"
-        >
-          <a
-            class="c8"
-            href="/outils/simulateur-embauche"
-            title="Démarrer une simulation de salaire lors d'une embauche"
-          >
-            <div
-              class="c9"
-            >
-              Simulateur d'embauche
-            </div>
-            <div
-              class="c10"
-            >
-              <div
-                class="c11"
-              >
-                Démarrer
-              </div>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c7"
-        >
-          <a
-            class="c8"
             href="/outils/indemnite-precarite"
             title="Démarrer une simulation de la prime de précarité"
           >
@@ -434,29 +458,6 @@ exports[`<Outils /> should render 1`] = `
               </div>
             </div>
           </a>
-        </li>
-        <li
-          class="c7"
-        >
-          <button
-            class="c8"
-            href=""
-          >
-            <div
-              class="c9"
-            >
-              Votre convention collective
-            </div>
-            <div
-              class="c10"
-            >
-              <div
-                class="c11"
-              >
-                Rechercher
-              </div>
-            </div>
-          </button>
         </li>
         <li
           class="c7"
