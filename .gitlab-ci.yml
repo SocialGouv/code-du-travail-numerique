@@ -15,7 +15,6 @@ stages:
   - "Prepare"
   - "Code Quality"
   - "Registration"
-  - "Vuln scanner"
-  - "Data"
+  - "Post Registration"
   - "Deploy"
   - "Notify Finished Deployment"
