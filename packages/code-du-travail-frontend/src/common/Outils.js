@@ -3,9 +3,39 @@ import Link from "next/link";
 
 import { Container, Section, CardList, Tile } from "@socialgouv/react-ui";
 
-import ConventionModal from "../conventions/Search/Modal";
-
 export const outils = [
+  {
+    title: "Modèles de courriers",
+    hrefTitle: "Consulter tous les modèles de courriers",
+    button: "Consulter",
+    text:
+      "Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail",
+    href: "/modeles-de-courriers"
+  },
+  {
+    title: "Conventions collectives",
+    hrefTitle: "Recherchez votre convention collective",
+    button: "Consulter",
+    text:
+      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.",
+    href: "/convention-collective/recherche"
+  },
+  {
+    title: "Simulateur d'embauche",
+    hrefTitle: "Démarrer une simulation de salaire lors d'une embauche",
+    button: "Démarrer",
+    text: "Estimez le salaire lors d'une embauche : total employeur, brut, net",
+    href: "/outils/[slug]",
+    slug: "/outils/simulateur-embauche"
+  },
+  {
+    title: "Simulateur de durée de préavis de démission",
+    hrefTitle: "Démarrer une simulation de durée de préavis de démission",
+    button: "Démarrer",
+    text: "Connaître la durée du préavis de démission.",
+    href: "/outils/[slug]",
+    slug: "/outils/preavis-demission"
+  },
   {
     title: "Simulateur d'indemnités de licenciements",
     hrefTitle: "Démarrer une simulation d'indemnités de licenciements",
@@ -23,30 +53,6 @@ export const outils = [
       "Estimez simplement la durée du préavis dans le cadre d'un licenciement",
     href: "/outils/[slug]",
     slug: "/outils/preavis-licenciement"
-  },
-  {
-    title: "Simulateur de durée de préavis de démission",
-    hrefTitle: "Démarrer une simulation de durée de préavis de démission",
-    button: "Démarrer",
-    text: "Connaître la durée du préavis de démission.",
-    href: "/outils/[slug]",
-    slug: "/outils/preavis-demission"
-  },
-  {
-    title: "Modèles de courriers",
-    hrefTitle: "Consulter tous les modèles de courriers",
-    button: "Consulter",
-    text:
-      "Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail",
-    href: "/modeles-de-courriers"
-  },
-  {
-    title: "Simulateur d'embauche",
-    hrefTitle: "Démarrer une simulation de salaire lors d'une embauche",
-    button: "Démarrer",
-    text: "Estimez le salaire lors d'une embauche : total employeur, brut, net",
-    href: "/outils/[slug]",
-    slug: "/outils/simulateur-embauche"
   },
   {
     title: "Simulateur de prime de précarité",
@@ -76,13 +82,6 @@ function Outils() {
               </Link>
             ))
             .concat(
-              <ConventionModal key="convention-modal">
-                {openModal => (
-                  <Tile button="Rechercher" onClick={openModal}>
-                    Votre convention collective
-                  </Tile>
-                )}
-              </ConventionModal>,
               <Tile key="next-tools">
                 Bientôt d’autres outils disponibles...
               </Tile>
