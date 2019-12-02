@@ -8,7 +8,7 @@ export const logger = createLogger({
   level: "info",
   transports: [
     new Console({
-      format: format.simple()
+      format: format.prettyPrint()
     })
   ]
 });
