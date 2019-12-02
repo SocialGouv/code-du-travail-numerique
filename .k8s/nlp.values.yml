@@ -1,0 +1,32 @@
+image:
+  repository: ${CI_REGISTRY_IMAGE}/nlp
+  tag: master
+
+deployment:
+
+  port: ${PORT}
+
+  resources:
+    limits:
+      cpu: 2
+      memory: 3Gi
+    requests:
+      cpu: 0.5
+      memory: 2Gi
+
+  readinessProbe:
+    path: /api/ready
+    initialDelaySeconds: 30
+    periodSeconds: 10
+
+  env:
+    - name: FLASK_APP
+      value: "api"
+    - name: NLP_PORT
+      value: "${PORT}"
+    - name: SUGGEST_DATA_URL
+      value: "${SUGGEST_DATA_URL}"
+    - name: PORT
+      value: "${PORT}"
+    - name: VERSION
+      value: "${VERSION}"
