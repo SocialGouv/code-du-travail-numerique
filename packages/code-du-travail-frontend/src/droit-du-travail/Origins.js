@@ -408,7 +408,7 @@ const OriginAccordion = styled(Accordion)`
     flex: 0 0 100%;
     & + & {
       margin-left: 0;
-      border-top: ${box.border};
+      border-top: ${({ theme }) => box.border(theme.border)};
     }
   }
 `;

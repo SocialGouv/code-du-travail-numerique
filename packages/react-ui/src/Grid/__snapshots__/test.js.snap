@@ -42,6 +42,7 @@ exports[`<Grid /> should render 1`] = `
   flex-shrink: 1;
   width: calc(100% / 4 - 2 * 1rem);
   margin: 1rem;
+  padding: 0;
 }
 
 @media (max-width:980px) {
@@ -126,6 +127,7 @@ exports[`<Grid /> should render 5columns 1`] = `
   flex-shrink: 1;
   width: calc(100% / 5 - 2 * 1rem);
   margin: 1rem;
+  padding: 0;
 }
 
 @media (max-width:980px) {

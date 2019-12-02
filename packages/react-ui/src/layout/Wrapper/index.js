@@ -5,7 +5,7 @@ import { box, breakpoints, spacings } from "../../theme";
 export const Wrapper = styled.div`
   padding: ${spacings.small} ${spacings.medium};
   color: ${({ theme }) => theme.paragraph};
-  border: ${box.border};
+  border: ${({ theme }) => box.border(theme.border)};
   border-radius: ${box.borderRadius};
   ${props => {
     if (props.size === "large") {
@@ -45,7 +45,7 @@ export const Wrapper = styled.div`
           height: 30rem;
           border: none;
           border-radius: ${box.borderRadius};
-          box-shadow: ${box.shadow.default};
+          box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
           content: "";
         }
       `;
@@ -69,7 +69,7 @@ export const Wrapper = styled.div`
 Wrapper.propTypes = {
   children: PropTypes.node.isRequired,
   size: PropTypes.oneOf(["default", "large"]),
-  variant: PropTypes.oneOf(["default", "light", "dark", "shadow"])
+  variant: PropTypes.oneOf(["dark", "default", "light", "main", "shadow"])
 };
 
 Wrapper.defaultProps = {

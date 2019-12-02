@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Html from "../common/Html";
 
-const { box, colors, fonts } = theme;
+const { box, fonts } = theme;
 
 const StyledTooltip = styled(Tooltip)`
   position: absolute;
@@ -14,16 +14,16 @@ const StyledTooltip = styled(Tooltip)`
   width: 300px;
   max-width: 70vw;
   padding: 0.25em 0.5em;
-  color: ${colors.paragraph};
+  color: ${({ theme }) => theme.paragraph};
   font-size: ${fonts.sizes.default};
-  background: ${colors.bgTertiary};
-  border: solid 1px ${colors.border};
-  box-shadow: ${box.shadow.default};
+  background: ${({ theme }) => theme.bgTertiary};
+  border: ${({ theme }) => box.border(theme.border)};
+  box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   pointer-events: none;
 `;
 
 const Underline = styled.span`
-  border-bottom: 1px dotted ${colors.secondary};
+  border-bottom: 1px dotted ${({ theme }) => theme.secondary};
 `;
 
 const glossaryBySlug = glossary.reduce(

@@ -1,10 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FicheContribution /> should render with external content 1`] = `
-.c22 {
+.c21 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+.c21 > *:first-child {
+  margin-top: 0;
+}
+
+.c21 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c27 {
+  padding: 2rem 0;
+  color: #3e486e;
+}
+
+.c22 {
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  position: relative;
+  padding: 4rem;
+  border: none;
+  background-color: #fff;
+}
+
+.c22:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 30rem;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  content: "";
 }
 
 .c22 > *:first-child {
@@ -15,44 +52,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 0;
 }
 
-.c29 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 74rem;
-  padding: 0;
-}
-
-.c29 > *:first-child {
-  margin-top: 0;
-}
-
-.c29 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  padding: 2rem 0;
-  color: #3e486e;
-}
-
-.c23 {
-  padding: 1rem 2rem;
-  color: #3e486e;
-  border: 1px solid #bbcadf;
-  border-radius: 0.6rem;
-  background-color: #fff;
-}
-
-.c23 > *:first-child {
-  margin-top: 0;
-}
-
-.c23 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c31 {
+.c28 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -60,24 +60,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #e4e8ef;
 }
 
-.c31 > *:first-child {
+.c28 > *:first-child {
   margin-top: 0;
 }
 
-.c31 > *:last-child {
+.c28 > *:last-child {
   margin-bottom: 0;
 }
 
-.c26 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-}
-
-.c32 {
+.c29 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: normal;
@@ -147,7 +138,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
-.c34 {
+.c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -180,20 +171,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #fff;
   background: #7598d6;
   border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
   opacity: 1;
 }
 
-.c34:link,
-.c34:visited {
+.c31:link,
+.c31:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c34:not([disabled]):hover,
-.c34:not([disabled]):active,
-.c34:not([disabled]):focus {
+.c31:not([disabled]):hover,
+.c31:not([disabled]):active,
+.c31:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -202,7 +193,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #9cb5e2;
 }
 
-.c34[disabled] {
+.c31[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -220,7 +211,33 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c38 {
+.c24 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c42 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c35 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -238,12 +255,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
-  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
+  box-shadow: 0 1rem 5rem rgba(255,112,103,0.12),0 1rem 1.5rem rgba(255,112,103,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
-.c39 {
+.c36 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -256,52 +273,36 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c41 {
+.c38 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
 
-.c21 {
-  padding: 2rem 0;
-  color: #3e486e;
-  padding-top: 0;
+.c23 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  position: relative;
+  margin-left: -4rem;
+  padding-left: 4rem;
 }
 
 .c25 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 74rem;
-  padding: 0;
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.c25 > *:first-child {
-  margin-top: 0;
-}
-
-.c25 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
+  font-size: 1.4rem;
 }
 
-.c28 {
-  color: #4d73b8;
-  font-weight: 600;
+.c26 {
+  margin: 3.2rem 0 0 0;
 }
 
-.c37 {
+.c34 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
@@ -309,11 +310,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 1.6rem;
 }
 
-.c40 {
+.c37 {
   padding: 0 0.4rem;
 }
 
-.c33 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -324,7 +325,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: space-around;
 }
 
-.c36 + .c35 {
+.c33 + .c32 {
   margin-left: 1.6rem;
 }
 
@@ -360,13 +361,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c20 {
   width: 80%;
-}
-
-.c30 {
-  margin-top: 4rem;
-  padding: 1.6rem;
-  background-color: #f2f5fa;
-  border-radius: 0.6rem;
 }
 
 .c12 {
@@ -448,6 +442,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c7 {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
   height: 100%;
 }
 
@@ -456,6 +453,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   height: 9rem;
   margin-bottom: 6rem;
   overflow: visible;
@@ -536,15 +538,26 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c9 {
   display: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
   color: #7598d6;
 }
 
 .c10 {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
   width: 31rem;
   margin-left: 1.6rem;
 }
 
-.c42 {
+.c39 {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.c40 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -552,7 +565,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #f2f5fa;
 }
 
-.c42:before {
+.c40:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -564,7 +577,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   content: "";
 }
 
-.c43 {
+.c41 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -572,20 +585,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: center;
 }
 
-.c43:before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 70px;
-  height: 3px;
-  background-color: #7598d6;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  content: "";
-}
-
-.c44 {
+.c43 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -595,27 +595,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c44 > *:first-child {
+.c43 > *:first-child {
   margin-top: 0;
 }
 
-.c44 > *:last-child {
+.c43 > *:last-child {
   margin-bottom: 0;
 }
 
-.c45 {
+.c44 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c46 {
+.c45 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c47 {
+.c46 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -629,25 +629,25 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: space-between;
 }
 
-.c47 > *:first-child {
+.c46 > *:first-child {
   margin-top: 0;
 }
 
-.c47 > *:last-child {
+.c46 > *:last-child {
   margin-bottom: 0;
 }
 
-.c49 + .c48 {
+.c48 + .c47 {
   padding-left: 1.6rem;
 }
 
-.c51 {
+.c50 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c50 {
+.c49 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -657,12 +657,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-size: 1.6rem;
 }
 
-.c52 {
+.c51 {
   margin: 0.4rem 0;
   padding: 0;
 }
 
-.c53 {
+.c52 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -692,54 +692,40 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media print {
+  .c21 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
   .c22 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c29 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c22 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c28 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c31 {
+  .c28 {
     padding: 0 5pt;
     border: none;
   }
 }
 
-@media print {
+@media (max-width:600px) {
   .c25 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -862,27 +848,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media print {
-  .c42 {
+  .c40 {
     display: none;
   }
 }
 
 @media print {
-  .c44 {
+  .c43 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c47 {
+  .c46 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c46 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -890,19 +876,19 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c49 + .c48 {
+  .c48 + .c47 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c50 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c49 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -931,7 +917,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
         <span
           class="c5"
         >
-          Le code du travail numérique
+          Code du travail numérique
         </span>
       </a>
       <div
@@ -1122,81 +1108,55 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       >
         <div
           class="c21"
-          data-main-content="true"
         >
           <div
             class="c22"
+            data-main-content="true"
           >
-            <div
+            <h1
               class="c23"
             >
               <div
                 class="c24"
-              >
-                <div
-                  class="c25"
-                >
-                  <h1
-                    class="c26"
-                  />
-                  <div
-                    class="c27"
-                  >
-                    <span
-                      class="c28"
-                    >
-                      Fiche ministère du Travail
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="c29"
-                >
-                  <div
-                    class="accordion"
-                    data-accordion-component="Accordion"
-                  />
-                  <div
-                    class="c30"
-                  >
-                    <a
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Voir le contenu original sur : 
-                      Ministère du travail
-                       
-                    </a>
-                  </div>
-                </div>
-              </div>
+              />
+            </h1>
+            <div
+              class="c25"
+            />
+            <div
+              class="c26"
+            >
+              <div
+                class="accordion"
+                data-accordion-component="Accordion"
+              />
             </div>
           </div>
         </div>
         <div
-          class="c24"
+          class="c27"
         >
           <div
-            class="c22"
+            class="c21"
           >
             <div
-              class="c31"
+              class="c28"
             >
               <h3
-                class="c32"
+                class="c29"
               >
                 Avez-vous trouvé la réponse à votre question ?
               </h3>
               <p
-                class="c33"
+                class="c30"
               >
                 <button
-                  class="c34 c35 c36"
+                  class="c31 c32 c33"
                 >
                   Non
                 </button>
                 <button
-                  class="c34 c35 c36"
+                  class="c31 c32 c33"
                 >
                   Oui
                 </button>
@@ -1207,18 +1167,18 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       </div>
     </div>
     <div
-      class="c37"
+      class="c34"
     >
       <div
-        class="c38"
+        class="c35"
       >
         <div
-          class="c39"
+          class="c36"
           role="alert"
         >
           Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
           <a
-            class="c40"
+            class="c37"
             href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
             rel="noopener noreferrer"
             target="_blank"
@@ -1233,7 +1193,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           class="c16"
         >
           <svg
-            class="c41"
+            class="c38"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -1262,210 +1222,254 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       </div>
     </div>
   </main>
-  <footer
-    class="c42"
+  <div
+    class="c39"
   >
-    <div
-      class="c43"
+    <footer
+      class="c40"
     >
       <div
-        class="c22"
+        class="c41"
       >
-        <h2
-          class="c32"
-        >
-          Besoin d’un accompagnement personnalisé ?
-        </h2>
         <div
-          class="c44"
+          class="c42"
+        />
+        <div
+          class="c21"
         >
-          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
-        </div>
-        <button
-          class="c34"
-        >
-          Contacter nos services
-          <svg
-            class="c45"
-            fill="none"
-            viewBox="0 0 28 15"
+          <h2
+            class="c29"
           >
-            <path
-              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
+            Besoin d’un accompagnement personnalisé ?
+          </h2>
+          <div
+            class="c43"
+          >
+            Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
+          </div>
+          <button
+            class="c31"
+          >
+            Contacter nos services
+            <svg
+              class="c44"
+              fill="none"
+              viewBox="0 0 28 15"
+            >
+              <path
+                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
-    <div
-      class="c46"
-    >
-      <nav>
-        <div
-          class="c47"
-        >
+      <div
+        class="c45"
+      >
+        <nav>
           <div
-            class="c48 c49"
+            class="c46"
           >
-            <h3
-              class="c50"
+            <div
+              class="c47 c48"
             >
-              Code du travail numérique
-            </h3>
-            <ul
-              class="c51"
+              <h3
+                class="c49"
+              >
+                Code du travail numérique
+              </h3>
+              <ul
+                class="c50"
+              >
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/droit-du-travail"
+                  >
+                    Le droit du travail
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/glossaire"
+                  >
+                    Glossaire
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/a-propos"
+                  >
+                    À propos
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/mentions-legales"
+                  >
+                    Mentions légales
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="mailto:codedutravailnumerique@travail.gouv.fr"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c47 c48"
             >
-              <li
-                class="c52"
+              <h3
+                class="c49"
               >
-                <a
-                  class="c53"
-                  href="/droit-du-travail"
-                >
-                  Le droit du travail
-                </a>
-              </li>
-              <li
-                class="c52"
+                Aidez-nous à améliorer cet outil
+              </h3>
+              <ul
+                class="c50"
               >
-                <a
-                  class="c53"
-                  href="/glossaire"
+                <li
+                  class="c51"
                 >
-                  Glossaire
-                </a>
-              </li>
-              <li
-                class="c52"
+                  <a
+                    class="c52"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Contribuer sur Github
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Journal des modifications
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c47 c48"
+            >
+              <h3
+                class="c49"
               >
-                <a
-                  class="c53"
-                  href="/a-propos"
-                >
-                  À propos
-                </a>
-              </li>
-              <li
-                class="c52"
+                En collaboration avec
+              </h3>
+              <ul
+                class="c50"
               >
-                <a
-                  class="c53"
-                  href="/mentions-legales"
+                <li
+                  class="c51"
                 >
-                  Mentions légales
-                </a>
-              </li>
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="mailto:codedutravailnumerique@travail.gouv.fr"
+                  <a
+                    class="c52"
+                    href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    La Direction Générale du Travail
+                  </a>
+                </li>
+                <li
+                  class="c51"
                 >
-                  Contact
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="c52"
+                    href="https://incubateur.social.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    L’incubateur des ministères sociaux
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="https://beta.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    beta.gouv.fr
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div
-            class="c48 c49"
-          >
-            <h3
-              class="c50"
-            >
-              Aidez-nous à améliorer cet outil
-            </h3>
-            <ul
-              class="c51"
-            >
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Contribuer sur Github
-                </a>
-              </li>
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Journal des modifications
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="c48 c49"
-          >
-            <h3
-              class="c50"
-            >
-              En collaboration avec
-            </h3>
-            <ul
-              class="c51"
-            >
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  La Direction Générale du Travail
-                </a>
-              </li>
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://incubateur.social.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  L’incubateur des ministères sociaux
-                </a>
-              </li>
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://beta.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  beta.gouv.fr
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </footer>
+        </nav>
+      </div>
+    </footer>
+  </div>
 </div>
 `;
 
 exports[`<FicheContribution /> should render without external content 1`] = `
-.c22 {
+.c21 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+.c21 > *:first-child {
+  margin-top: 0;
+}
+
+.c21 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c27 {
+  padding: 2rem 0;
+  color: #3e486e;
+}
+
+.c22 {
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  position: relative;
+  padding: 4rem;
+  border: none;
+  background-color: #fff;
+}
+
+.c22:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 30rem;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  content: "";
 }
 
 .c22 > *:first-child {
@@ -1476,44 +1480,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 0;
 }
 
-.c29 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 74rem;
-  padding: 0;
-}
-
-.c29 > *:first-child {
-  margin-top: 0;
-}
-
-.c29 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  padding: 2rem 0;
-  color: #3e486e;
-}
-
-.c23 {
-  padding: 1rem 2rem;
-  color: #3e486e;
-  border: 1px solid #bbcadf;
-  border-radius: 0.6rem;
-  background-color: #fff;
-}
-
-.c23 > *:first-child {
-  margin-top: 0;
-}
-
-.c23 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c31 {
+.c28 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -1521,24 +1488,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   background-color: #e4e8ef;
 }
 
-.c31 > *:first-child {
+.c28 > *:first-child {
   margin-top: 0;
 }
 
-.c31 > *:last-child {
+.c28 > *:last-child {
   margin-bottom: 0;
 }
 
-.c26 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-}
-
-.c32 {
+.c29 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: normal;
@@ -1608,7 +1566,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
-.c34 {
+.c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1641,20 +1599,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #fff;
   background: #7598d6;
   border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
   opacity: 1;
 }
 
-.c34:link,
-.c34:visited {
+.c31:link,
+.c31:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c34:not([disabled]):hover,
-.c34:not([disabled]):active,
-.c34:not([disabled]):focus {
+.c31:not([disabled]):hover,
+.c31:not([disabled]):active,
+.c31:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1663,7 +1621,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-color: #9cb5e2;
 }
 
-.c34[disabled] {
+.c31[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -1681,7 +1639,33 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c38 {
+.c24 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c42 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c35 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1699,12 +1683,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
-  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
+  box-shadow: 0 1rem 5rem rgba(255,112,103,0.12),0 1rem 1.5rem rgba(255,112,103,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
 
-.c39 {
+.c36 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1717,52 +1701,36 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c41 {
+.c38 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
 
-.c21 {
-  padding: 2rem 0;
-  color: #3e486e;
-  padding-top: 0;
+.c23 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  position: relative;
+  margin-left: -4rem;
+  padding-left: 4rem;
 }
 
 .c25 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 74rem;
-  padding: 0;
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.c25 > *:first-child {
-  margin-top: 0;
-}
-
-.c25 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
+  font-size: 1.4rem;
 }
 
-.c28 {
-  color: #4d73b8;
-  font-weight: 600;
+.c26 {
+  margin: 3.2rem 0 0 0;
 }
 
-.c37 {
+.c34 {
   position: fixed;
   bottom: 0;
   z-index: 1000;
@@ -1770,11 +1738,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 1.6rem;
 }
 
-.c40 {
+.c37 {
   padding: 0 0.4rem;
 }
 
-.c33 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1785,7 +1753,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: space-around;
 }
 
-.c36 + .c35 {
+.c33 + .c32 {
   margin-left: 1.6rem;
 }
 
@@ -1821,13 +1789,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c20 {
   width: 80%;
-}
-
-.c30 {
-  margin-top: 4rem;
-  padding: 1.6rem;
-  background-color: #f2f5fa;
-  border-radius: 0.6rem;
 }
 
 .c12 {
@@ -1909,6 +1870,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c7 {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
   height: 100%;
 }
 
@@ -1917,6 +1881,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   height: 9rem;
   margin-bottom: 6rem;
   overflow: visible;
@@ -1997,15 +1966,26 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c9 {
   display: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
   color: #7598d6;
 }
 
 .c10 {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
   width: 31rem;
   margin-left: 1.6rem;
 }
 
-.c42 {
+.c39 {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.c40 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -2013,7 +1993,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   background-color: #f2f5fa;
 }
 
-.c42:before {
+.c40:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -2025,7 +2005,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   content: "";
 }
 
-.c43 {
+.c41 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -2033,20 +2013,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: center;
 }
 
-.c43:before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 70px;
-  height: 3px;
-  background-color: #7598d6;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  content: "";
-}
-
-.c44 {
+.c43 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -2056,27 +2023,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c44 > *:first-child {
+.c43 > *:first-child {
   margin-top: 0;
 }
 
-.c44 > *:last-child {
+.c43 > *:last-child {
   margin-bottom: 0;
 }
 
-.c45 {
+.c44 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c46 {
+.c45 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c47 {
+.c46 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -2090,25 +2057,25 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: space-between;
 }
 
-.c47 > *:first-child {
+.c46 > *:first-child {
   margin-top: 0;
 }
 
-.c47 > *:last-child {
+.c46 > *:last-child {
   margin-bottom: 0;
 }
 
-.c49 + .c48 {
+.c48 + .c47 {
   padding-left: 1.6rem;
 }
 
-.c51 {
+.c50 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c50 {
+.c49 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -2118,12 +2085,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-size: 1.6rem;
 }
 
-.c52 {
+.c51 {
   margin: 0.4rem 0;
   padding: 0;
 }
 
-.c53 {
+.c52 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2153,54 +2120,40 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media print {
+  .c21 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
   .c22 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c29 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c22 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c28 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c31 {
+  .c28 {
     padding: 0 5pt;
     border: none;
   }
 }
 
-@media print {
+@media (max-width:600px) {
   .c25 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -2323,27 +2276,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media print {
-  .c42 {
+  .c40 {
     display: none;
   }
 }
 
 @media print {
-  .c44 {
+  .c43 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c47 {
+  .c46 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c46 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2351,19 +2304,19 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c49 + .c48 {
+  .c48 + .c47 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c50 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c49 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -2392,7 +2345,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
         <span
           class="c5"
         >
-          Le code du travail numérique
+          Code du travail numérique
         </span>
       </a>
       <div
@@ -2583,81 +2536,55 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       >
         <div
           class="c21"
-          data-main-content="true"
         >
           <div
             class="c22"
+            data-main-content="true"
           >
-            <div
+            <h1
               class="c23"
             >
               <div
                 class="c24"
-              >
-                <div
-                  class="c25"
-                >
-                  <h1
-                    class="c26"
-                  />
-                  <div
-                    class="c27"
-                  >
-                    <span
-                      class="c28"
-                    >
-                      Fiche ministère du Travail
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="c29"
-                >
-                  <div
-                    class="accordion"
-                    data-accordion-component="Accordion"
-                  />
-                  <div
-                    class="c30"
-                  >
-                    <a
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Voir le contenu original sur : 
-                      Ministère du travail
-                       
-                    </a>
-                  </div>
-                </div>
-              </div>
+              />
+            </h1>
+            <div
+              class="c25"
+            />
+            <div
+              class="c26"
+            >
+              <div
+                class="accordion"
+                data-accordion-component="Accordion"
+              />
             </div>
           </div>
         </div>
         <div
-          class="c24"
+          class="c27"
         >
           <div
-            class="c22"
+            class="c21"
           >
             <div
-              class="c31"
+              class="c28"
             >
               <h3
-                class="c32"
+                class="c29"
               >
                 Avez-vous trouvé la réponse à votre question ?
               </h3>
               <p
-                class="c33"
+                class="c30"
               >
                 <button
-                  class="c34 c35 c36"
+                  class="c31 c32 c33"
                 >
                   Non
                 </button>
                 <button
-                  class="c34 c35 c36"
+                  class="c31 c32 c33"
                 >
                   Oui
                 </button>
@@ -2668,18 +2595,18 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       </div>
     </div>
     <div
-      class="c37"
+      class="c34"
     >
       <div
-        class="c38"
+        class="c35"
       >
         <div
-          class="c39"
+          class="c36"
           role="alert"
         >
           Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
           <a
-            class="c40"
+            class="c37"
             href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
             rel="noopener noreferrer"
             target="_blank"
@@ -2694,7 +2621,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           class="c16"
         >
           <svg
-            class="c41"
+            class="c38"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -2723,201 +2650,208 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       </div>
     </div>
   </main>
-  <footer
-    class="c42"
+  <div
+    class="c39"
   >
-    <div
-      class="c43"
+    <footer
+      class="c40"
     >
       <div
-        class="c22"
+        class="c41"
       >
-        <h2
-          class="c32"
-        >
-          Besoin d’un accompagnement personnalisé ?
-        </h2>
         <div
-          class="c44"
+          class="c42"
+        />
+        <div
+          class="c21"
         >
-          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
-        </div>
-        <button
-          class="c34"
-        >
-          Contacter nos services
-          <svg
-            class="c45"
-            fill="none"
-            viewBox="0 0 28 15"
+          <h2
+            class="c29"
           >
-            <path
-              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
+            Besoin d’un accompagnement personnalisé ?
+          </h2>
+          <div
+            class="c43"
+          >
+            Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
+          </div>
+          <button
+            class="c31"
+          >
+            Contacter nos services
+            <svg
+              class="c44"
+              fill="none"
+              viewBox="0 0 28 15"
+            >
+              <path
+                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
-    <div
-      class="c46"
-    >
-      <nav>
-        <div
-          class="c47"
-        >
+      <div
+        class="c45"
+      >
+        <nav>
           <div
-            class="c48 c49"
+            class="c46"
           >
-            <h3
-              class="c50"
+            <div
+              class="c47 c48"
             >
-              Code du travail numérique
-            </h3>
-            <ul
-              class="c51"
+              <h3
+                class="c49"
+              >
+                Code du travail numérique
+              </h3>
+              <ul
+                class="c50"
+              >
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/droit-du-travail"
+                  >
+                    Le droit du travail
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/glossaire"
+                  >
+                    Glossaire
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/a-propos"
+                  >
+                    À propos
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/mentions-legales"
+                  >
+                    Mentions légales
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="mailto:codedutravailnumerique@travail.gouv.fr"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c47 c48"
             >
-              <li
-                class="c52"
+              <h3
+                class="c49"
               >
-                <a
-                  class="c53"
-                  href="/droit-du-travail"
-                >
-                  Le droit du travail
-                </a>
-              </li>
-              <li
-                class="c52"
+                Aidez-nous à améliorer cet outil
+              </h3>
+              <ul
+                class="c50"
               >
-                <a
-                  class="c53"
-                  href="/glossaire"
+                <li
+                  class="c51"
                 >
-                  Glossaire
-                </a>
-              </li>
-              <li
-                class="c52"
+                  <a
+                    class="c52"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Contribuer sur Github
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Journal des modifications
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c47 c48"
+            >
+              <h3
+                class="c49"
               >
-                <a
-                  class="c53"
-                  href="/a-propos"
-                >
-                  À propos
-                </a>
-              </li>
-              <li
-                class="c52"
+                En collaboration avec
+              </h3>
+              <ul
+                class="c50"
               >
-                <a
-                  class="c53"
-                  href="/mentions-legales"
+                <li
+                  class="c51"
                 >
-                  Mentions légales
-                </a>
-              </li>
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="mailto:codedutravailnumerique@travail.gouv.fr"
+                  <a
+                    class="c52"
+                    href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    La Direction Générale du Travail
+                  </a>
+                </li>
+                <li
+                  class="c51"
                 >
-                  Contact
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="c52"
+                    href="https://incubateur.social.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    L’incubateur des ministères sociaux
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="https://beta.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    beta.gouv.fr
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div
-            class="c48 c49"
-          >
-            <h3
-              class="c50"
-            >
-              Aidez-nous à améliorer cet outil
-            </h3>
-            <ul
-              class="c51"
-            >
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Contribuer sur Github
-                </a>
-              </li>
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Journal des modifications
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="c48 c49"
-          >
-            <h3
-              class="c50"
-            >
-              En collaboration avec
-            </h3>
-            <ul
-              class="c51"
-            >
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  La Direction Générale du Travail
-                </a>
-              </li>
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://incubateur.social.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  L’incubateur des ministères sociaux
-                </a>
-              </li>
-              <li
-                class="c52"
-              >
-                <a
-                  class="c53"
-                  href="https://beta.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  beta.gouv.fr
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </footer>
+        </nav>
+      </div>
+    </footer>
+  </div>
 </div>
 `;

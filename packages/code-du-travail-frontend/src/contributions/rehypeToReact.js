@@ -80,7 +80,7 @@ const { box, spacings } = theme;
 const StyledAccordion = styled(Accordion)`
   *[data-accordion-component="AccordionItem"] {
     &:nth-of-type(1) {
-      border-bottom: ${box.border};
+      border-bottom: ${({ theme }) => box.border(theme.border)};
     }
   }
   *[data-accordion-component="AccordionItemButton"] {

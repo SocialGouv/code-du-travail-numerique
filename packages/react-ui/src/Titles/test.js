@@ -4,9 +4,7 @@ import { Heading, PageTitle, Subtitle, Title } from ".";
 
 describe("<PageTitle />", () => {
   it("renders a H1 page title ", () => {
-    const { container } = render(
-      <PageTitle>Lorem Ipsum</PageTitle>
-    );
+    const { container } = render(<PageTitle>Lorem Ipsum</PageTitle>);
     expect(container).toMatchSnapshot();
   });
 });
@@ -21,6 +19,7 @@ describe("<Heading />", () => {
     const { container } = render(<Heading>Lorem Ipsum</Heading>);
     expect(container).toMatchSnapshot();
   });
+});
 describe("<Subtitle />", () => {
   it("renders a subtitle ", () => {
     const { container } = render(<Subtitle>Lorem Ipsum</Subtitle>);

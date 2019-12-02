@@ -59,7 +59,7 @@ const StyledHeader = styled.header`
         position: sticky;
         top: 0;
         z-index: 10;
-        box-shadow: ${box.shadow.default};
+        box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
       `;
     }
   }};

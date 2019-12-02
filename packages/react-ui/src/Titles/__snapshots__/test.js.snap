@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Heading /> should render a H3 heading  1`] = `
+exports[`<Heading /> renders a H3 heading  1`] = `
 .c0 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
@@ -19,7 +19,7 @@ exports[`<Heading /> should render a H3 heading  1`] = `
 </div>
 `;
 
-exports[`<PageTitle /> should render a H1 page title  1`] = `
+exports[`<PageTitle /> renders a H1 page title  1`] = `
 .c0 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
@@ -38,7 +38,28 @@ exports[`<PageTitle /> should render a H1 page title  1`] = `
 </div>
 `;
 
-exports[`<Title /> should render a H2 title  1`] = `
+exports[`<Subtitle /> renders a subtitle  1`] = `
+.c0 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+<div>
+  <span
+    class="c0"
+  >
+    Lorem Ipsum
+  </span>
+</div>
+`;
+
+exports[`<Title /> renders a H2 title  1`] = `
 .c0 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;

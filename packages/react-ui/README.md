@@ -32,6 +32,6 @@ Otherwise, the color won't change when the theme is dynamically modified. For ev
   const P = styled.p`
     margin: ${spacings.large};
     color: ${({theme}) => theme.darkBlue};
-    border: ${box.border};
+    border: ${({ theme }) => box.border(theme.border)};
   `;
 ```

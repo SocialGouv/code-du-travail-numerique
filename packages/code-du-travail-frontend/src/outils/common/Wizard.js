@@ -124,7 +124,7 @@ const StyledForm = styled.form`
   overflow: auto;
   color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};
-  border: ${box.border};
+  border: ${({ theme }) => box.border(theme.border)};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;

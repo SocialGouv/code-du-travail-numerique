@@ -116,30 +116,59 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 .c10 {
-  display: block;
-  margin-bottom: 2rem;
-  padding: 2rem;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2rem 2.4rem;
   color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #f2f5fa;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
+  cursor: pointer;
   -webkit-transition: 250ms all;
   transition: 250ms all;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-.c10:visited {
-  color: #3e486e;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10:active,
 .c10:hover {
   color: #3e486e;
   border-color: #3e486e;
-  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+}
+
+.c11 {
+  display: block;
+  max-width: 100%;
+  padding-right: 0;
+  overflow-y: auto;
 }
 
 .c0 {
@@ -245,7 +274,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     class="c10"
                     href="/code-du-travail/l1244-3"
                   >
-                    Article L1244-3 du code du travail
+                    <div
+                      class="c11"
+                    >
+                      Article L1244-3 du code du travail
+                    </div>
+                    
                   </a>
                 </li>
                 <li>
@@ -253,36 +287,58 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     class="c10"
                     href="/code-du-travail/l1244-4"
                   >
-                    Article L1244-4 du code du travail
+                    <div
+                      class="c11"
+                    >
+                      Article L1244-4 du code du travail
+                    </div>
+                    
                   </a>
                 </li>
                 <li>
-                  <a
+                  <button
                     class="c10"
+                    href=""
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Autre: 
-                    Article L3121-44 du code du travail
-                  </a>
+                    <div
+                      class="c11"
+                    >
+                      Autre: 
+                      Article L3121-44 du code du travail
+                    </div>
+                    
+                  </button>
                 </li>
                 <li>
-                  <a
+                  <button
                     class="c10"
+                    href=""
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Autre: 
-                    Article xxx du code du travail
-                  </a>
+                    <div
+                      class="c11"
+                    >
+                      Autre: 
+                      Article xxx du code du travail
+                    </div>
+                    
+                  </button>
                 </li>
                 <li>
                   <a
                     class="c10"
                     href="/convention-collective/yyy"
                   >
-                    Convention collective: 
-                    Article yyy du code du travail
+                    <div
+                      class="c11"
+                    >
+                      Convention collective: 
+                      Article yyy du code du travail
+                    </div>
+                    
                   </a>
                 </li>
               </ul>

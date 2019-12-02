@@ -26,7 +26,7 @@ const StyledTile = styled.a`
   text-decoration: none;
   background-color: ${({ theme, variant }) =>
     variant === "dark" ? theme.bgSecondary : theme.white};
-  border: ${box.border};
+  border: ${({ theme }) => box.border(theme.border)};
   border-radius: ${box.borderRadius};
   cursor: pointer;
   transition: ${animations.transitionTiming} all;
@@ -34,7 +34,7 @@ const StyledTile = styled.a`
   &:hover {
     color: ${({ theme }) => theme.paragraph};
     border-color: ${({ theme }) => theme.paragraph};
-    box-shadow: ${box.shadow.default};
+    box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   }
 `;
 
