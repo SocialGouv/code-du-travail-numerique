@@ -1,3 +1,17 @@
+// Add this to the VERY top of the first file loaded in your app
+require("elastic-apm-node").start({
+  // Override service name from package.json
+  // Allowed characters: a-z, A-Z, 0-9, -, _, and space
+  serviceName: "cdtn-api",
+
+  // Use if APM Server requires a token
+  secretToken: "JEJsmB1EuBK0HHHNmu",
+
+  // Set custom APM Server URL (default: http://localhost:8200)
+  serverUrl:
+    "https://5c7c3e9647054c79ab3d89c17009f66e.apm.europe-west1.gcp.cloud.es.io:443"
+});
+
 require("dotenv").config();
 const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
