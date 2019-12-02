@@ -1,7 +1,7 @@
 import React from "react";
 
 const SvgBurger = props => (
-  <svg viewBox="0 0 32 32" {...props}>
+  <svg fill="none" viewBox="0 0 32 32" {...props}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"

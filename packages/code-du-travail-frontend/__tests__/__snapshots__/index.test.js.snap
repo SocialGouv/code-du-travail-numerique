@@ -1169,78 +1169,6 @@ exports[`<Home /> should render 1`] = `
           >
             <a
               class="c34"
-              href="/outils/indemnite-licenciement"
-              title="Démarrer une simulation d'indemnités de licenciements"
-            >
-              <div
-                class="c35"
-              >
-                Simulateur d'indemnités de licenciements
-              </div>
-              <div
-                class="c36"
-              >
-                <div
-                  class="c37"
-                >
-                  Démarrer
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c33"
-          >
-            <a
-              class="c34"
-              href="/outils/preavis-licenciement"
-              title="Démarrer une simulation de durée de préavis de licenciement"
-            >
-              <div
-                class="c35"
-              >
-                Simulateur de la durée de préavis de licenciement
-              </div>
-              <div
-                class="c36"
-              >
-                <div
-                  class="c37"
-                >
-                  Démarrer
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c33"
-          >
-            <a
-              class="c34"
-              href="/outils/preavis-demission"
-              title="Démarrer une simulation de durée de préavis de démission"
-            >
-              <div
-                class="c35"
-              >
-                Simulateur de durée de préavis de démission
-              </div>
-              <div
-                class="c36"
-              >
-                <div
-                  class="c37"
-                >
-                  Démarrer
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c33"
-          >
-            <a
-              class="c34"
               href="/modeles-de-courriers"
               title="Consulter tous les modèles de courriers"
             >
@@ -1248,6 +1176,34 @@ exports[`<Home /> should render 1`] = `
                 class="c35"
               >
                 Modèles de courriers
+              </div>
+              <div
+                class="c36"
+              >
+                <div
+                  class="c37"
+                >
+                  Consulter
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c33"
+          >
+            <a
+              class="c34"
+              href="/convention-collective/recherche"
+              title="Recherchez votre convention collective"
+            >
+              <div
+                class="c35"
+              >
+<<<<<<< HEAD
+                Simulateur de la durée de préavis de licenciement
+=======
+                Conventions collectives
+>>>>>>> tests: update snaps
               </div>
               <div
                 class="c36"
@@ -1289,6 +1245,78 @@ exports[`<Home /> should render 1`] = `
           >
             <a
               class="c34"
+              href="/outils/preavis-demission"
+              title="Démarrer une simulation de durée de préavis de démission"
+            >
+              <div
+                class="c35"
+              >
+                Simulateur de durée de préavis de démission
+              </div>
+              <div
+                class="c36"
+              >
+                <div
+                  class="c37"
+                >
+                  Démarrer
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c33"
+          >
+            <a
+              class="c34"
+              href="/outils/indemnite-licenciement"
+              title="Démarrer une simulation d'indemnités de licenciements"
+            >
+              <div
+                class="c35"
+              >
+                Simulateur d'indemnités de licenciements
+              </div>
+              <div
+                class="c36"
+              >
+                <div
+                  class="c37"
+                >
+                  Démarrer
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c33"
+          >
+            <a
+              class="c34"
+              href="/outils/preavis-licenciement"
+              title="Démarrer une simulation de durée de préavis de licenciement"
+            >
+              <div
+                class="c35"
+              >
+                Simulateur de durée de préavis de licenciement
+              </div>
+              <div
+                class="c36"
+              >
+                <div
+                  class="c37"
+                >
+                  Démarrer
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c33"
+          >
+            <a
+              class="c34"
               href="/outils/indemnite-precarite"
               title="Démarrer une simulation de la prime de précarité"
             >
@@ -1307,29 +1335,6 @@ exports[`<Home /> should render 1`] = `
                 </div>
               </div>
             </a>
-          </li>
-          <li
-            class="c33"
-          >
-            <button
-              class="c34"
-              href=""
-            >
-              <div
-                class="c35"
-              >
-                Votre convention collective
-              </div>
-              <div
-                class="c36"
-              >
-                <div
-                  class="c37"
-                >
-                  Rechercher
-                </div>
-              </div>
-            </button>
           </li>
           <li
             class="c33"

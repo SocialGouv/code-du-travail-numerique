@@ -13,7 +13,8 @@ export const base = () => (
       <Accordion
         items={[
           {
-            title: "This is the heading of a single item accordion",
+            title:
+              "This is the heading of a single item accordion with a crazy long title so we know if the accordion arrow icon get compressed or if it keeps its width",
             as: "h5",
             body: "this is the single body"
           }

@@ -74,17 +74,18 @@ function Outils() {
           href="/outils"
         >
           {outils
-            .map(({ button, title, href, slug, hrefTitle }) => (
+            .map(({ text, title, href, slug }) => (
               <Link href={href} as={slug} passHref key={slug || "modeles"}>
-                <Tile button={button} title={hrefTitle}>
-                  {title}
+                <Tile custom title={title}>
+                  {text}
                 </Tile>
               </Link>
             ))
             .concat(
-              <Tile key="next-tools">
-                Bientôt d’autres outils disponibles...
-              </Tile>
+              <Tile
+                title="Bientôt d’autres outils disponibles..."
+                key="next-tools"
+              ></Tile>
             )}
         </CardList>
       </Container>

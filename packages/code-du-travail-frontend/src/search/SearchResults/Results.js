@@ -1,50 +1,45 @@
-import React, { useCallback, useEffect, useRef } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
-import { Container, Tile, PageTitle, Title, theme } from "@socialgouv/react-ui";
-
-import { LinkContent } from "./LinkContent";
+import { Container, Heading, Tile, Title, theme } from "@socialgouv/react-ui";
+import { summarize } from "../utils";
 
 import { matopush } from "../../piwik";
 
+function reportSelectionToMatomo(trackedUrl) {
+  matopush(["trackEvent", "selectResult", trackedUrl]);
+}
+
 export const ListLink = ({
-  focused,
-  item: { source, slug, url },
-  query,
-  ...otherProps
+  item: { breadcrumbs = [], description, source, slug, title, url },
+  isSearch,
+  query
 }) => {
-  const ref = useRef(null);
-  useEffect(() => {
-    if (focused && ref.current) {
-      ref.current.focus();
-    }
-  }, [focused]);
   const trackedUrl =
     source === SOURCES.EXTERNALS ? url : `/${getRouteBySource(source)}/${slug}`;
 
-  const onClick = useCallback(() => {
-    matopush(["trackEvent", "selectResult", trackedUrl]);
-  }, [trackedUrl]);
-  const onKeyPress = useCallback(
-    event => {
-      if (event.keyCode === 13)
-        // Enter
-        matopush(["trackEvent", "selectResult", trackedUrl]);
-    },
-    [trackedUrl]
-  );
+  let subtitle = "";
+  if (isSearch && source !== SOURCES.THEMES && breadcrumbs.length) {
+    subtitle = breadcrumbs[breadcrumbs.length - 1].title;
+  }
+
+  const tileCommonProps = {
+    wide: true,
+    onClick: () => reportSelectionToMatomo(trackedUrl),
+    onKeyPress: e => e.keyCode === 13 && reportSelectionToMatomo(trackedUrl),
+    title,
+    subtitle,
+    children: summarize(description)
+  };
+
   if (source === SOURCES.EXTERNALS) {
     return (
       <Tile
-        ref={ref}
         href={url}
         target="_blank"
         className="no-after"
-        onClick={onClick}
-        onKeyPress={onKeyPress}
-        {...otherProps}
+        {...tileCommonProps}
       />
     );
   }
@@ -54,6 +49,14 @@ export const ListLink = ({
   if (slug.includes("#")) {
     [rootSlug, anchor] = slug.split("#");
   }
+
+  let custom = false;
+  if (
+    source === SOURCES.TOOLS ||
+    source === SOURCES.CONTRIBUTIONS ||
+    source == SOURCES.LETTERS
+  )
+    custom = true;
 
   return (
     <Link
@@ -66,41 +69,23 @@ export const ListLink = ({
       }${anchor ? `#${anchor}` : ""}`}
       passHref
     >
-      <Tile
-        ref={ref}
-        onClick={onClick}
-        onKeyPress={onKeyPress}
-        variant={source === SOURCES.TOOLS ? "highlight" : "light"}
-        {...otherProps}
-      />
+      <Tile custom={custom} {...tileCommonProps} />
     </Link>
   );
-};
-
-ListLink.propTypes = {
-  focused: PropTypes.bool
-};
-
-ListLink.defaultProps = {
-  focused: false
 };
 
 export const Results = ({ id, isSearch, items, query }) => {
   return (
     <Container narrow>
       {isSearch ? (
-        <PageTitle
-          id={id}
-        >{`Résultats de recherche pour “${query}”`}</PageTitle>
+        <Heading id={id}>{`Résultats de recherche pour “${query}”`}</Heading>
       ) : (
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
       <StyledList>
         {items.map((item, i) => (
           <StyledListItem key={`item.slug${i}`}>
-            <ListLink focused={i === 0} item={item} query={query}>
-              <LinkContent isSearch={isSearch} {...item} />
-            </ListLink>
+            <ListLink item={item} isSearch={isSearch} query={query} />
           </StyledListItem>
         ))}
       </StyledList>

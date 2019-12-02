@@ -55,6 +55,7 @@ const StyledHeading = styled(Heading)`
   padding: 0;
 `;
 const StyledVerticalArrow = styled(VerticalArrow)`
+  flex: 0 0 auto;
   margin-right: ${spacings.small};
   color: ${({ theme }) => theme.secondary};
 `;

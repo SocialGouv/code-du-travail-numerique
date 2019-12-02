@@ -1,7 +1,7 @@
 import React from "react";
-import { List } from "react-feather";
 
 import { Section } from "../layout/Section";
+import { Holidays, Time, Salary } from "../icons";
 import { Tile } from ".";
 
 export default {
@@ -10,51 +10,83 @@ export default {
 };
 
 export const base = () => (
-  <div style={{ width: "400px" }}>
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "stretch",
+      width: "270px",
+      maxWidth: "100%"
+    }}
+  >
     <Section>
-      <Tile href="#">Basic light tile</Tile>
+      <Tile href="#" title="Basic tile" />
     </Section>
     <Section>
-      <Tile variant="dark" href="#">
-        Basic dark tile
+      <Tile href="#" icon={Time} title="Basic tile">
+        With some basic content only to see how it behaves
       </Tile>
     </Section>
     <Section>
-      <Tile icon={List} href="#">
-        Embauche et contrat avec une icone
+      <Tile href="#" custom title="Custom tile with purposely long title">
+        Make sure there is no collision with custom icon. Beware of mobile.
       </Tile>
     </Section>
     <Section>
-      <Tile href="#" button="click me">
-        Embauche et contrat
+      <Tile href="#" icon={Salary} title="Tile with an icon" />
+    </Section>
+    <Section>
+      <Tile href="#" icon={Holidays} custom title="Tile custom with an icon">
+        And some basic content only to see how it behaves
       </Tile>
     </Section>
     <Section>
-      <Tile size="small" href="#" button="click me">
-        Petite tuile !
+      <Tile title="Button tile, no href prop, should have an onClick" />
+    </Section>
+  </div>
+);
+
+export const wide = () => (
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "stretch",
+      width: "600px",
+      maxWidth: "100%"
+    }}
+  >
+    <Section>
+      <Tile wide href="#" title="Wide tile" subtitle="Some theme here " />
+    </Section>
+    <Section>
+      <Tile wide href="#" title="Wide tile">
+        With some basic content only to see how it behaves
       </Tile>
     </Section>
     <Section>
-      <Tile button="click me">
-        Celui-ci est un button parce qu&apos;il n&apos;a pas de href
+      <Tile
+        wide
+        href="#"
+        custom
+        title="Custom tile with purposely long title to see how it goes with custom icon"
+      >
+        Make sure there is no collision with custom icon. Beware of mobile.
       </Tile>
     </Section>
     <Section>
-      <Tile style={{ height: "100px" }} href="#">
-        Que se passe-t-il lorsque la tile est trop petite par rapport au contenu
-        ? Un titre un peu plus long ici pour voir ce que ça donne de faire
-        n&apos;importe quoi avec un titre. Un peu comme lorsque l&apos;on a de
-        supers longues questions dans certains contenus. Un titre un peu plus
-        long ici pour voir ce que ça donne de faire n&apos;importe quoi avec un
-        titre. Un peu comme lorsque l&apos;on a de supers longues questions dans
-        certains contenus
+      <Tile
+        wide
+        href="#"
+        custom
+        subtitle="Custom tile with purposely long title to see how it goes with custom icon"
+        title="Some title"
+      >
+        Make sure there is no collision with custom icon. Beware of mobile.
       </Tile>
     </Section>
     <Section>
-      <Tile button="ok ok" style={{ height: "400px" }} href="#">
-        Que se passe-t-il lorsque la tile est trop grande par rapport au contenu
-        ?
-      </Tile>
+      <Tile wide title="Button tile, no href prop, should have an onClick" />
     </Section>
   </div>
 );

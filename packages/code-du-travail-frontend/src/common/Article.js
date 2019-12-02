@@ -5,7 +5,6 @@ import styled from "styled-components";
 import {
   Container,
   PageTitle,
-  Stripe,
   Subtitle,
   theme,
   Wrapper
@@ -16,10 +15,7 @@ const Article = ({ subtitle, title, source, date, children }) => {
     <Container>
       <Wrapper variant="main" data-main-content>
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
-        <StyledPageTitle>
-          <Stripe position="left" length="100%" />
-          {title}
-        </StyledPageTitle>
+        <StyledPageTitle leftStripped>{title}</StyledPageTitle>
         <Meta>
           {source && source.url && (
             <Source>
@@ -62,9 +58,7 @@ export default Article;
 const { breakpoints, fonts, spacings } = theme;
 
 const StyledPageTitle = styled(PageTitle)`
-  position: relative;
   margin-left: -${spacings.larger};
-  padding-left: ${spacings.larger};
 `;
 
 const Meta = styled.div`

@@ -41,7 +41,7 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
                   as={`/themes/${slug}`}
                   passHref
                 >
-                  <StyledTile icon={Layers}>{title}</StyledTile>
+                  <Tile title={title} />
                 </Link>
               </GridCell>
             ))}
@@ -62,7 +62,3 @@ ThemesPage.getInitialProps = async () => {
 };
 
 export default ThemesPage;
-
-const StyledTile = styled(Tile)`
-  height: 120px;
-`;

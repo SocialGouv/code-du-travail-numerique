@@ -19,384 +19,393 @@ const Hierarchy = () => {
   return (
     <>
       <Section>
-        <Container narrow>
-          <Title>Existe-t-il une hiérarchie entre les textes ?</Title>
-          <p>
-            Le principe général en droit du travail est le suivant&nbsp;:
-            lorsqu’il existe plusieurs textes sur un même sujet, c’est le texte
-            le plus favorable au salarié qui s’applique. Ce principe continue a
-            s’appliquer en droit du travail mais il connaît quelques exceptions.
-          </p>
-          <p>
-            Pour vous aider à comprendre, vous trouverez ci-dessous un schèma
-            récapitulant la hiérarchie des textes entre eux.
-          </p>
-        </Container>
-        <Section>
+        <Container>
+          <Title topStripped>
+            Existe-t-il une hiérarchie entre les textes ?
+          </Title>
           <Container narrow>
-            <ul>
-              <Li>
-                <NumberWrapper>
-                  <Number>1</Number>
-                </NumberWrapper>
-                <HierarchyAccordion
-                  items={[
-                    {
-                      title: "Les textes internationaux et européens",
-                      as: "h3",
-                      body: (
-                        <>
-                          Les textes situés plus bas doivent être conformes aux
-                          textes internationaux et européens.
-                        </>
-                      )
-                    }
-                  ]}
-                />
-              </Li>
-              <Li>
-                <NumberWrapper>
-                  <Number>2</Number>
-                </NumberWrapper>
-                <HierarchyAccordion
-                  items={[
-                    {
-                      title: "La Constitution",
-                      as: "h3",
-                      body: (
-                        <>
-                          Les textes situés plus bas doivent être conformes à la
-                          Constitution française ainsi qu’au bloc de
-                          constitutionnalité.
-                        </>
-                      )
-                    }
-                  ]}
-                />
-              </Li>
-              <Li>
-                <NumberWrapper>
-                  <Number>3</Number>
-                </NumberWrapper>
-                <HierarchyAccordion
-                  items={[
-                    {
-                      title: "Lois, ordonnances et décrets (Code du travail)",
-                      as: "h3",
-                      body: (
-                        <>
-                          <Heading>
-                            Hiérarchie entre le Code du travail et les
-                            conventions et accords collectifs
-                          </Heading>
-                          <p>
-                            Il n’y a pas de règle de hiérarchie unique pour tous
-                            les articles du Code du travail. Il existe 3
-                            hiérarchies possibles&nbsp;:
-                          </p>
-                          <Accordion
-                            items={[
-                              {
-                                title:
-                                  "Les conventions et accords collectifs doivent respecter le Code du travail",
-                                as: "h5",
-                                body: (
-                                  <>
-                                    Il existe des règles dans le Code du travail
-                                    que les conventions et accords collectifs
-                                    doivent respecter. Les conventions et
-                                    accords collectifs peuvent toutefois prévoir
-                                    des mesures plus avantageuses pour le
-                                    salarié. Dans ce cas, c’est le texte le plus
-                                    avantageux pour le salarié qui s’applique.
-                                  </>
-                                )
-                              },
-                              {
-                                title:
-                                  "Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail.",
-                                as: "h5",
-                                body: (
-                                  <>
-                                    <p>
-                                      Il existe d’autres règles dans le Code du
-                                      travail qui permettent aux conventions et
-                                      accords collectifs, sous certaines
-                                      conditions, de prévoir des règles
-                                      différentes de celles de la loi. Dans ce
-                                      cas, c’est l’accord collectif ou la
-                                      convention collective qui s’applique même
-                                      s’il est plus défavorable pour le salarié
-                                      que la loi.
-                                    </p>
-                                    <i>
-                                      Exemples&nbsp;:
-                                      <ul>
-                                        <li>
-                                          Le taux de majoration des heures
-                                          supplémentaires&nbsp;: un accord
-                                          collectif peut prévoir dans une
-                                          certaine limite un taux inférieur à
-                                          25% (règle prévue par le Code du
-                                          travail).
-                                        </li>
-                                        <li>
-                                          Le congé sabbatique&nbsp;: un accord
-                                          collectif peut prévoir une durée
-                                          minimale et une durée maximale du
-                                          congé sabbatique différente de ce que
-                                          prévoit le code du travail.
-                                        </li>
-                                        <li>
-                                          Les négociations obligatoires en
-                                          entreprise&nbsp;: un accord
-                                          d’entreprise peut prévoir une
-                                          périodicité des négociations plus
-                                          longue que ce que prévoit le Code du
-                                          travail qui est principalement d’un
-                                          an.
-                                        </li>
-                                      </ul>
-                                    </i>
-                                  </>
-                                )
-                              },
-                              {
-                                title:
-                                  "En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique",
-                                as: "h5",
-                                body: (
-                                  <>
-                                    <p>
-                                      Il existe également des règles dans le
-                                      Code du travail qui s’appliquent par
-                                      défaut, c’est-à-dire uniquement lorsqu’il
-                                      n’y a pas de convention ou d’accord
-                                      collectif sur le sujet. S’il existe une
-                                      convention ou un accord collectif sur le
-                                      sujet alors la loi ne s’applique pas.
-                                    </p>
-                                    <i>
-                                      Exemples&nbsp;:
-                                      <ul>
-                                        <li>
-                                          Congés exceptionnels&nbsp;: en
-                                          l’absence d’accord collectif sur les
-                                          congés exceptionnels, ce que prévoit
-                                          le code du travail s’applique (4 jours
-                                          pour mariage, 1 jour pour mariage d’un
-                                          enfant, 5 jours pour le décès d’un
-                                          enfant...)
-                                        </li>
-                                        <li>
-                                          Taux de majoration des heures
-                                          supplémentaires&nbsp;: en l’absence
-                                          d’accord collectif sur le taux de
-                                          majoration des heures supplémentaires
-                                          s’applique le code du travail (25% de
-                                          majoration pour les 8 premières heures
-                                          et 50% pour les suivantes).
-                                        </li>
-                                        <li>
-                                          Aménagement du temps de travail sur
-                                          une période supérieure à la semaine
-                                          &nbsp;: en l’absence d’accord
-                                          collectif sur l’aménagement du temps
-                                          de travail, le code du travail
-                                          s’applique. L’employeur peut aménager
-                                          le temps de travail sur une période de
-                                          9 semaines pour les entreprises de
-                                          moins de 50 salariés.
-                                        </li>
-                                      </ul>
-                                    </i>
-                                  </>
-                                )
-                              }
-                            ]}
-                          />
-                          <Heading>
-                            Attention à certaines règles du Code du travail !
-                          </Heading>
-                          <p>
-                            Il existe des règles du Code du travail auxquelles
-                            tous les textes situés en bas ne peuvent pas déroger
-                            même si les textes sont plus avantageux pour le
-                            salarié. La loi interdit toute dérogation possible.
-                            Les textes situés en bas doivent purement et
-                            simplement respecter ces règles.
-                          </p>
-                          <p>
-                            <i>
-                              Exemple&nbsp;: la règle selon laquelle le Conseil
-                              des prud’hommes est le seul compétent pour les
-                              contentieux liés au travail.
-                            </i>
-                          </p>
-                        </>
-                      )
-                    }
-                  ]}
-                />
-              </Li>
-              <Li>
-                <NumberWrapper>
-                  <Number>4</Number>
-                </NumberWrapper>
-                <HierarchyAccordion
-                  items={[
-                    {
-                      title: "Les conventions et accords collectifs",
-                      as: "h3",
-                      body: (
-                        <>
-                          <Heading>
-                            Hiérarchie entre conventions et accords collectifs
-                            de niveaux différents
-                          </Heading>
-                          <p>
-                            La règle qui détermine quel est le texte applicable
-                            est différente en fonction du niveau des textes
-                            comparés.
-                          </p>
-                          <Heading>
-                            Hiérarchie entre accord de branche et accord
-                            d’entreprise
-                          </Heading>
-                          <p>
-                            Le principe est que l’accord d’entreprise s’applique
-                            en priorité par rapport à l’accord ou la convention
-                            de branche même si, l’accord d’entreprise est plus
-                            désavantageux pour le salarié que l’accord de
-                            branche.
-                          </p>
-                          <Toast>
-                            Le principe ne s’applique pas dans{" "}
-                            <Button
-                              variant="link"
-                              onClick={() => setModal13MatieresOpen(true)}
-                            >
-                              13 matières
-                            </Button>{" "}
-                            où la loi reconnait la primauté à l’accord de
-                            branche et{" "}
-                            <Button
-                              variant="link"
-                              onClick={() => setModal4MatieresOpen(true)}
-                            >
-                              4 matières
-                            </Button>{" "}
-                            où la branche elle même peut reconnaitre sa
-                            primauté, sauf si l’accord d’entreprise a{" "}
-                            <Button
-                              variant="link"
-                              onClick={() => setModalGarantiesOpen(true)}
-                            >
-                              des garanties au moins équivalentes
-                            </Button>
-                            .
-                          </Toast>
-                          <p>
-                            Ces règles sont les mêmes pour la hiérarchie entre
-                            accord de branche et accord de groupe et entre
-                            accord de branche et accord d’établissement.
-                          </p>
-                          <Heading>
-                            Hiérarchie entre accord de groupe et accord
-                            d’entreprise
-                          </Heading>
-                          <p>
-                            L’accord de groupe s’applique en priorité par
-                            rapport à l’accord d’entreprise ou l’accord
-                            d’établissement si l’accord de groupe l’indique dans
-                            son accord. Si rien n’est indiqué dans l’accord de
-                            groupe alors l’accord le plus avantageux pour le
-                            salarié s’applique.
-                          </p>
-                          <Heading>
-                            Hiérarchie entre accord d’entreprise et accord
-                            d’établissement
-                          </Heading>
-                          <p>
-                            L’accord d’entreprise s’applique en priorité par
-                            rapport à l’accord d’établissement si l’accord
-                            d’entreprise l’indique dans son accord. Si rien
-                            n’est indiqué dans l’accord d’entreprise alors
-                            l’accord le plus avantageux pour le salarié
-                            s’applique.
-                          </p>
-                        </>
-                      )
-                    }
-                  ]}
-                />
-              </Li>
-              <Li>
-                <NumberWrapper>
-                  <Number>5</Number>
-                </NumberWrapper>
-                <HierarchyAccordion
-                  items={[
-                    {
-                      title: "Les usages et les engagements unilatéraux",
-                      as: "h3",
-                      body: (
-                        <>
-                          Les usages et les engagements unilatéraux doivent
-                          respecter les textes situés en haut. Ils peuvent être
-                          plus avantageux pour le salarié. Dans ce cas, ce sont
-                          les textes les plus avantageux qui s’appliquent.
-                        </>
-                      )
-                    }
-                  ]}
-                />
-              </Li>
-              <Li>
-                <NumberWrapper>
-                  <Number>6</Number>
-                </NumberWrapper>
-                <HierarchyAccordion
-                  items={[
-                    {
-                      title: "Le règlement intérieur de l’entreprise",
-                      as: "h3",
-                      body: (
-                        <>
-                          Le règlement intérieur doit respecter les textes
-                          situés en haut. Il peut être plus avantageux pour le
-                          salarié. Dans ce cas, c’est le texte le plus
-                          avantageux pour le salarié qui s’applique.
-                        </>
-                      )
-                    }
-                  ]}
-                />
-              </Li>
-              <Li>
-                <NumberWrapper>
-                  <Number>7</Number>
-                </NumberWrapper>
-                <HierarchyAccordion
-                  items={[
-                    {
-                      title: "Le contrat de travail",
-                      as: "h3",
-                      body: (
-                        <>
-                          Le contrat de travail doit respecter les textes situés
-                          en haut. Il peut prévoir des mesures plus avantageuses
-                          pour le salarié. Dans ce cas, c’est le contrat de
-                          travail qui s’applique.
-                        </>
-                      )
-                    }
-                  ]}
-                />
-              </Li>
-            </ul>
+            <p>
+              Le principe général en droit du travail est le suivant&nbsp;:
+              lorsqu’il existe plusieurs textes sur un même sujet, c’est le
+              texte le plus favorable au salarié qui s’applique. Ce principe
+              continue a s’appliquer en droit du travail mais il connaît
+              quelques exceptions.
+            </p>
+            <p>
+              Pour vous aider à comprendre, vous trouverez ci-dessous un schèma
+              récapitulant la hiérarchie des textes entre eux.
+            </p>
           </Container>
-        </Section>
+          <Section>
+            <Container narrow>
+              <ul>
+                <Li>
+                  <NumberWrapper>
+                    <Number>1</Number>
+                  </NumberWrapper>
+                  <HierarchyAccordion
+                    items={[
+                      {
+                        title: "Les textes internationaux et européens",
+                        as: "h3",
+                        body: (
+                          <>
+                            Les textes situés plus bas doivent être conformes
+                            aux textes internationaux et européens.
+                          </>
+                        )
+                      }
+                    ]}
+                  />
+                </Li>
+                <Li>
+                  <NumberWrapper>
+                    <Number>2</Number>
+                  </NumberWrapper>
+                  <HierarchyAccordion
+                    items={[
+                      {
+                        title: "La Constitution",
+                        as: "h3",
+                        body: (
+                          <>
+                            Les textes situés plus bas doivent être conformes à
+                            la Constitution française ainsi qu’au bloc de
+                            constitutionnalité.
+                          </>
+                        )
+                      }
+                    ]}
+                  />
+                </Li>
+                <Li>
+                  <NumberWrapper>
+                    <Number>3</Number>
+                  </NumberWrapper>
+                  <HierarchyAccordion
+                    items={[
+                      {
+                        title: "Lois, ordonnances et décrets (Code du travail)",
+                        as: "h3",
+                        body: (
+                          <>
+                            <Heading>
+                              Hiérarchie entre le Code du travail et les
+                              conventions et accords collectifs
+                            </Heading>
+                            <p>
+                              Il n’y a pas de règle de hiérarchie unique pour
+                              tous les articles du Code du travail. Il existe 3
+                              hiérarchies possibles&nbsp;:
+                            </p>
+                            <Accordion
+                              items={[
+                                {
+                                  title:
+                                    "Les conventions et accords collectifs doivent respecter le Code du travail",
+                                  as: "h5",
+                                  body: (
+                                    <>
+                                      Il existe des règles dans le Code du
+                                      travail que les conventions et accords
+                                      collectifs doivent respecter. Les
+                                      conventions et accords collectifs peuvent
+                                      toutefois prévoir des mesures plus
+                                      avantageuses pour le salarié. Dans ce cas,
+                                      c’est le texte le plus avantageux pour le
+                                      salarié qui s’applique.
+                                    </>
+                                  )
+                                },
+                                {
+                                  title:
+                                    "Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail.",
+                                  as: "h5",
+                                  body: (
+                                    <>
+                                      <p>
+                                        Il existe d’autres règles dans le Code
+                                        du travail qui permettent aux
+                                        conventions et accords collectifs, sous
+                                        certaines conditions, de prévoir des
+                                        règles différentes de celles de la loi.
+                                        Dans ce cas, c’est l’accord collectif ou
+                                        la convention collective qui s’applique
+                                        même s’il est plus défavorable pour le
+                                        salarié que la loi.
+                                      </p>
+                                      <i>
+                                        Exemples&nbsp;:
+                                        <ul>
+                                          <li>
+                                            Le taux de majoration des heures
+                                            supplémentaires&nbsp;: un accord
+                                            collectif peut prévoir dans une
+                                            certaine limite un taux inférieur à
+                                            25% (règle prévue par le Code du
+                                            travail).
+                                          </li>
+                                          <li>
+                                            Le congé sabbatique&nbsp;: un accord
+                                            collectif peut prévoir une durée
+                                            minimale et une durée maximale du
+                                            congé sabbatique différente de ce
+                                            que prévoit le code du travail.
+                                          </li>
+                                          <li>
+                                            Les négociations obligatoires en
+                                            entreprise&nbsp;: un accord
+                                            d’entreprise peut prévoir une
+                                            périodicité des négociations plus
+                                            longue que ce que prévoit le Code du
+                                            travail qui est principalement d’un
+                                            an.
+                                          </li>
+                                        </ul>
+                                      </i>
+                                    </>
+                                  )
+                                },
+                                {
+                                  title:
+                                    "En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique",
+                                  as: "h5",
+                                  body: (
+                                    <>
+                                      <p>
+                                        Il existe également des règles dans le
+                                        Code du travail qui s’appliquent par
+                                        défaut, c’est-à-dire uniquement
+                                        lorsqu’il n’y a pas de convention ou
+                                        d’accord collectif sur le sujet. S’il
+                                        existe une convention ou un accord
+                                        collectif sur le sujet alors la loi ne
+                                        s’applique pas.
+                                      </p>
+                                      <i>
+                                        Exemples&nbsp;:
+                                        <ul>
+                                          <li>
+                                            Congés exceptionnels&nbsp;: en
+                                            l’absence d’accord collectif sur les
+                                            congés exceptionnels, ce que prévoit
+                                            le code du travail s’applique (4
+                                            jours pour mariage, 1 jour pour
+                                            mariage d’un enfant, 5 jours pour le
+                                            décès d’un enfant...)
+                                          </li>
+                                          <li>
+                                            Taux de majoration des heures
+                                            supplémentaires&nbsp;: en l’absence
+                                            d’accord collectif sur le taux de
+                                            majoration des heures
+                                            supplémentaires s’applique le code
+                                            du travail (25% de majoration pour
+                                            les 8 premières heures et 50% pour
+                                            les suivantes).
+                                          </li>
+                                          <li>
+                                            Aménagement du temps de travail sur
+                                            une période supérieure à la semaine
+                                            &nbsp;: en l’absence d’accord
+                                            collectif sur l’aménagement du temps
+                                            de travail, le code du travail
+                                            s’applique. L’employeur peut
+                                            aménager le temps de travail sur une
+                                            période de 9 semaines pour les
+                                            entreprises de moins de 50 salariés.
+                                          </li>
+                                        </ul>
+                                      </i>
+                                    </>
+                                  )
+                                }
+                              ]}
+                            />
+                            <Heading>
+                              Attention à certaines règles du Code du travail !
+                            </Heading>
+                            <p>
+                              Il existe des règles du Code du travail auxquelles
+                              tous les textes situés en bas ne peuvent pas
+                              déroger même si les textes sont plus avantageux
+                              pour le salarié. La loi interdit toute dérogation
+                              possible. Les textes situés en bas doivent
+                              purement et simplement respecter ces règles.
+                            </p>
+                            <p>
+                              <i>
+                                Exemple&nbsp;: la règle selon laquelle le
+                                Conseil des prud’hommes est le seul compétent
+                                pour les contentieux liés au travail.
+                              </i>
+                            </p>
+                          </>
+                        )
+                      }
+                    ]}
+                  />
+                </Li>
+                <Li>
+                  <NumberWrapper>
+                    <Number>4</Number>
+                  </NumberWrapper>
+                  <HierarchyAccordion
+                    items={[
+                      {
+                        title: "Les conventions et accords collectifs",
+                        as: "h3",
+                        body: (
+                          <>
+                            <Heading>
+                              Hiérarchie entre conventions et accords collectifs
+                              de niveaux différents
+                            </Heading>
+                            <p>
+                              La règle qui détermine quel est le texte
+                              applicable est différente en fonction du niveau
+                              des textes comparés.
+                            </p>
+                            <Heading>
+                              Hiérarchie entre accord de branche et accord
+                              d’entreprise
+                            </Heading>
+                            <p>
+                              Le principe est que l’accord d’entreprise
+                              s’applique en priorité par rapport à l’accord ou
+                              la convention de branche même si, l’accord
+                              d’entreprise est plus désavantageux pour le
+                              salarié que l’accord de branche.
+                            </p>
+                            <Toast>
+                              Le principe ne s’applique pas dans{" "}
+                              <Button
+                                variant="link"
+                                onClick={() => setModal13MatieresOpen(true)}
+                              >
+                                13 matières
+                              </Button>{" "}
+                              où la loi reconnait la primauté à l’accord de
+                              branche et{" "}
+                              <Button
+                                variant="link"
+                                onClick={() => setModal4MatieresOpen(true)}
+                              >
+                                4 matières
+                              </Button>{" "}
+                              où la branche elle même peut reconnaitre sa
+                              primauté, sauf si l’accord d’entreprise a{" "}
+                              <Button
+                                variant="link"
+                                onClick={() => setModalGarantiesOpen(true)}
+                              >
+                                des garanties au moins équivalentes
+                              </Button>
+                              .
+                            </Toast>
+                            <p>
+                              Ces règles sont les mêmes pour la hiérarchie entre
+                              accord de branche et accord de groupe et entre
+                              accord de branche et accord d’établissement.
+                            </p>
+                            <Heading>
+                              Hiérarchie entre accord de groupe et accord
+                              d’entreprise
+                            </Heading>
+                            <p>
+                              L’accord de groupe s’applique en priorité par
+                              rapport à l’accord d’entreprise ou l’accord
+                              d’établissement si l’accord de groupe l’indique
+                              dans son accord. Si rien n’est indiqué dans
+                              l’accord de groupe alors l’accord le plus
+                              avantageux pour le salarié s’applique.
+                            </p>
+                            <Heading>
+                              Hiérarchie entre accord d’entreprise et accord
+                              d’établissement
+                            </Heading>
+                            <p>
+                              L’accord d’entreprise s’applique en priorité par
+                              rapport à l’accord d’établissement si l’accord
+                              d’entreprise l’indique dans son accord. Si rien
+                              n’est indiqué dans l’accord d’entreprise alors
+                              l’accord le plus avantageux pour le salarié
+                              s’applique.
+                            </p>
+                          </>
+                        )
+                      }
+                    ]}
+                  />
+                </Li>
+                <Li>
+                  <NumberWrapper>
+                    <Number>5</Number>
+                  </NumberWrapper>
+                  <HierarchyAccordion
+                    items={[
+                      {
+                        title: "Les usages et les engagements unilatéraux",
+                        as: "h3",
+                        body: (
+                          <>
+                            Les usages et les engagements unilatéraux doivent
+                            respecter les textes situés en haut. Ils peuvent
+                            être plus avantageux pour le salarié. Dans ce cas,
+                            ce sont les textes les plus avantageux qui
+                            s’appliquent.
+                          </>
+                        )
+                      }
+                    ]}
+                  />
+                </Li>
+                <Li>
+                  <NumberWrapper>
+                    <Number>6</Number>
+                  </NumberWrapper>
+                  <HierarchyAccordion
+                    items={[
+                      {
+                        title: "Le règlement intérieur de l’entreprise",
+                        as: "h3",
+                        body: (
+                          <>
+                            Le règlement intérieur doit respecter les textes
+                            situés en haut. Il peut être plus avantageux pour le
+                            salarié. Dans ce cas, c’est le texte le plus
+                            avantageux pour le salarié qui s’applique.
+                          </>
+                        )
+                      }
+                    ]}
+                  />
+                </Li>
+                <Li>
+                  <NumberWrapper>
+                    <Number>7</Number>
+                  </NumberWrapper>
+                  <HierarchyAccordion
+                    items={[
+                      {
+                        title: "Le contrat de travail",
+                        as: "h3",
+                        body: (
+                          <>
+                            Le contrat de travail doit respecter les textes
+                            situés en haut. Il peut prévoir des mesures plus
+                            avantageuses pour le salarié. Dans ce cas, c’est le
+                            contrat de travail qui s’applique.
+                          </>
+                        )
+                      }
+                    ]}
+                  />
+                </Li>
+              </ul>
+            </Container>
+          </Section>
+        </Container>
       </Section>
       <Modal
         isOpen={isModal13MatieresOpen}

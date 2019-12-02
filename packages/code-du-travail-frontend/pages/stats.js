@@ -24,26 +24,25 @@ const About = () => (
     </Head>
     <Section>
       <Container>
-        <Wrapper variant="light">
-          <PageTitle>Statistiques du code du travail numérique</PageTitle>
-          <br />
+        <PageTitle>Statistiques du code du travail numérique</PageTitle>
+        <Wrapper variant="main">
           <Grid>
-            <GridCell>
+            <StyledGridCell>
               <Heading>Contenus référencés</Heading>
               <Num>14369</Num>
-            </GridCell>
-            <GridCell>
+            </StyledGridCell>
+            <StyledGridCell>
               <Heading>Visites</Heading>
               <Num>2992</Num>
-            </GridCell>
-            <GridCell>
+            </StyledGridCell>
+            <StyledGridCell>
               <Heading>Recherches</Heading>
               <Num>15368</Num>
-            </GridCell>
-            <GridCell>
+            </StyledGridCell>
+            <StyledGridCell>
               <Heading>Consultations</Heading>
               <Num>30736</Num>
-            </GridCell>
+            </StyledGridCell>
           </Grid>
           <br />
           <p>Statistiques d’usage depuis le 1er Janvier 2019</p>
@@ -54,6 +53,12 @@ const About = () => (
     </Section>
   </Layout>
 );
+
+const StyledGridCell = styled(GridCell)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Num = styled.div`
   font-size: 2em;

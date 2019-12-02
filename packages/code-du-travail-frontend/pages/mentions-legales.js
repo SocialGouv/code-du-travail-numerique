@@ -4,6 +4,7 @@ import {
   Accordion,
   Alert,
   Container,
+  Heading,
   PageTitle,
   Section,
   theme,
@@ -22,7 +23,7 @@ const SearchPage = ({ pageUrl, ogImage }) => {
     as: "h2",
     body: (
       <>
-        <Title as="h3">Traitement des données à caractère personnel</Title>
+        <Heading>Traitement des données à caractère personnel</Heading>
         <p>
           Le code du travail numérique ne vous demande ni ne stocke
           d’information nominative.
@@ -60,7 +61,7 @@ const SearchPage = ({ pageUrl, ogImage }) => {
           <br />
           75015 PARIS
         </Address>
-        <Title as="h3">Utilisation de témoins de connexion (« cookies »)</Title>
+        <Heading>Utilisation de témoins de connexion (« cookies »)</Heading>
         <p>
           Nous collectons également des données par l’intermédiaire de
           dispositifs appelés “cookies” permettant d’établir des mesures
@@ -143,7 +144,7 @@ const SearchPage = ({ pageUrl, ogImage }) => {
           ultérieur mais nous tâchons de rendre dès la conception, ce site
           accessible à toutes et à tous.
         </p>
-        <Title as="h3">Signaler un dysfonctionnement</Title>
+        <Heading>Signaler un dysfonctionnement</Heading>
         <p>
           Si vous rencontrez un défaut d’accessibilité vous empêchant d’accéder
           à un contenu ou une fonctionnalité du site, merci de nous en faire
@@ -154,7 +155,7 @@ const SearchPage = ({ pageUrl, ogImage }) => {
           droit de faire parvenir vos doléances ou une demande de saisine au
           Défenseur des droits.
         </p>
-        <Title as="h3">En savoir plus</Title>
+        <Heading>En savoir plus</Heading>
         <p>
           Pour en savoir plus sur la politique d’accessibilité numérique de
           l’État :{" "}
@@ -191,8 +192,8 @@ const SearchPage = ({ pageUrl, ogImage }) => {
 
       <Section>
         <Container narrow>
+          <PageTitle>Mentions légales</PageTitle>
           <Wrapper variant="main">
-            <PageTitle>Mentions légales</PageTitle>
             <Alert variant="primary">
               Ce site est en cours de construction, la fiabilité des réponses
               qui s’y trouvent ne sont pas garanties. L’ouverture officielle du
@@ -215,9 +216,9 @@ const SearchPage = ({ pageUrl, ogImage }) => {
               <br />
               Tél. : 01 40 56 60 00
             </Address>
-            <Title as="h3">Directeur de la publication</Title>
+            <Title>Directeur de la publication</Title>
             <p>Yves Struillou, Directeur Général du Travail</p>
-            <Title as="h3">Hébergement</Title>
+            <Title>Hébergement</Title>
             <p>
               Ce site est hébergé en propre par le Ministère des Affaires
               sociales et de la Santé :

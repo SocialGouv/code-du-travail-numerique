@@ -1,11 +1,12 @@
 import React from "react";
-import { Tile } from "@socialgouv/react-ui";
+import styled from "styled-components";
+import { Tile, theme } from "@socialgouv/react-ui";
 import Link from "next/link";
 import TYPE_REFERENCE from "./typeReference";
 
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link href="/code-du-travail/[slug]" as={`/code-du-travail/${slug}`} passHref>
-    <Tile variant="dark">{title}</Tile>
+    <Tile wide title={title} />
   </Link>
 );
 
@@ -15,14 +16,18 @@ const ConventionLink = ({ title, slug }) => (
     as={`/convention-collective/${slug}`}
     passHref
   >
-    <Tile variant="dark">Convention collective: {title}</Tile>
+    <Tile wide title={`Convention collective: ${title}`} />
   </Link>
 );
 
 const OtherLink = ({ title, url }) => (
-  <Tile variant="dark" href={url} rel="noopener noreferrer" target="_blank">
-    Autre: {title}
-  </Tile>
+  <Tile
+    wide
+    href={url}
+    rel="noopener noreferrer"
+    target="_blank"
+    title={`Autre: ${title}`}
+  />
 );
 
 const getLink = reference => {
@@ -38,12 +43,25 @@ const getLink = reference => {
 
 const ReferenceList = ({ references }) => {
   return (
-    <ul>
+    <StyledList>
       {references.map(reference => (
-        <li key={reference.id}>{getLink(reference)}</li>
+        <StyledListItem key={reference.id}>{getLink(reference)}</StyledListItem>
       ))}
-    </ul>
+    </StyledList>
   );
 };
 
 export default ReferenceList;
+
+const { spacings } = theme;
+
+const StyledList = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+`;
+
+const StyledListItem = styled.li`
+  margin-top: ${spacings.base};
+  padding: 0;
+`;

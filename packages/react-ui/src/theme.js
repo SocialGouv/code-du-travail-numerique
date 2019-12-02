@@ -82,10 +82,10 @@ export const box = {
       )}`;
     },
     large(color) {
-      `${largeShadow} ${rgba(color, 0.2)}, ${smallShadow} ${rgba(
+      return `${largeShadow} ${rgba(color, 0.2)}, ${smallShadow} ${rgba(
         color,
         0.25
-      )})`;
+      )}`;
     }
   }
 };

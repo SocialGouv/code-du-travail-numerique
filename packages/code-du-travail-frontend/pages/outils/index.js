@@ -28,18 +28,16 @@ const Outils = ({ pageUrl, ogImage, emailTemplates }) => (
     <Section>
       <Container>
         <PageTitle>Retrouvez tous nos outils</PageTitle>
-        <CardList title="Nos outils de calcul">
+        <CardList leftStripped title="Nos outils de calcul">
           {outils
             .filter(({ href }) => href.startsWith("/outils"))
-            .map(({ title, hrefTitle, button, slug, href }) => (
+            .map(({ title, slug, href }) => (
               <Link href={href} as={slug} passHref key={slug}>
-                <Tile button={button} title={hrefTitle}>
-                  {title}
-                </Tile>
+                <Tile custom title={title} />
               </Link>
             ))}
         </CardList>
-        <CardList title="Nos modèles de lettres personnalisables">
+        <CardList leftStripped title="Nos modèles de lettres personnalisables">
           {emailTemplates.map(({ title, slug }) => (
             <Link
               href="/modeles-de-courriers/[slug]"
@@ -47,9 +45,7 @@ const Outils = ({ pageUrl, ogImage, emailTemplates }) => (
               passHref
               key={slug}
             >
-              <Tile button="Consulter" title={`consulter le modele ${title}`}>
-                {title}
-              </Tile>
+              <Tile title={title} />
             </Link>
           ))}
         </CardList>

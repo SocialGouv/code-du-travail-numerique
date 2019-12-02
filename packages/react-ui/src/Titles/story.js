@@ -9,12 +9,27 @@ export default {
 export const base = () => (
   <>
     <Section>
-      <PageTitle>This is a page title (h1)</PageTitle>
-      <PageTitle as="h2">This is a page title (h2)</PageTitle>
+      <PageTitle subtitle="With a basic subtitle">
+        This is a page title
+      </PageTitle>
     </Section>
     <Section>
-      <Title>This is a title (h2)</Title>
-      <Title as="h3">This is a title (h3)</Title>
+      <PageTitle
+        leftStripped
+        subtitle="With a subtitle which can be very very long but this is quite an excuse I made up. Because I do loooove to talk. Yup."
+      >
+        This is a left stripped page title
+      </PageTitle>
+    </Section>
+    <Section>
+      <Title subtitle="With a subtitle which can be very very long but this is quite an excuse I made up. Because I do loooove to talk. Yup.">
+        This is a title (h2)
+      </Title>
+    </Section>
+    <Section>
+      <Title topStripped subtitle="With a basic subtitle">
+        This is a top stripped title (h2)
+      </Title>
     </Section>
     <Section>
       <Heading>This is a heading (h3)</Heading>

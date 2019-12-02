@@ -119,7 +119,7 @@ const Contribution = ({ answers, content }) => (
   <React.Fragment>
     {answers.generic && (
       <SectionAnswer>
-        <Title>Que dit le code du travail ?</Title>
+        <Title leftStripped>Que dit le code du travail ?</Title>
         <Mdx
           markdown={answers.generic.markdown}
           components={rehypeToReact(content)}

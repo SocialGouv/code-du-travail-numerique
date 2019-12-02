@@ -21,8 +21,8 @@ const About = ({ ogImage, pageUrl }) => (
     />
     <Section>
       <Container narrow>
+        <PageTitle>À propos du code du travail numérique</PageTitle>
         <Wrapper variant="main">
-          <PageTitle>À propos du code du travail numérique</PageTitle>
           <Alert>
             Ce service public vous permet d’obtenir des réponses détaillées à
             des questions de droit de travail, ainsi que des fiches explicatives

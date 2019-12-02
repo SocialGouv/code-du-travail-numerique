@@ -8,7 +8,6 @@ import {
   Heading,
   icons,
   Section,
-  Stripe,
   theme,
   Title
 } from "@socialgouv/react-ui";
@@ -24,16 +23,17 @@ const Footer = () => (
   <OverflowWrapper>
     <StyledFooter>
       <ServiceSection>
-        <Stripe rounded />
         <Container>
-          <Title>Besoin d’un accompagnement personnalisé ?</Title>
-          <SecondContainerWrapper narrow noPadding>
+          <Title as="h3" topStripped>
+            Besoin d’un accompagnement personnalisé ?
+          </Title>
+          <StyledContainer narrow noPadding>
             Les services de renseignement en droit du travail peuvent vous
             donner des informations juridiques générales relatives au Code du
             travail, aux conventions collectives, à la jurisprudence. Ils
             peuvent également vous conseiller et vous orienter dans vos
             démarches.
-          </SecondContainerWrapper>
+          </StyledContainer>
           <ServiceRenseignementModal>
             <Button>
               Contacter nos services
@@ -164,7 +164,7 @@ const StyledFooter = styled.footer`
   position: relative;
   z-index: 1;
   margin-top: ${spacings.larger};
-  padding-top: ${spacings.larger};
+  padding-top: ${spacings.base};
   background-color: ${({ theme }) => theme.bgSecondary};
   &:before {
     position: absolute;
@@ -188,7 +188,7 @@ const ServiceSection = styled(Section)`
   text-align: center;
 `;
 
-const SecondContainerWrapper = styled(Container)`
+const StyledContainer = styled(Container)`
   margin-bottom: ${spacings.medium};
   text-align: left;
 `;

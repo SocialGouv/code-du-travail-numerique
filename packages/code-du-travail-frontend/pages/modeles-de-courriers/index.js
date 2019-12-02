@@ -65,15 +65,10 @@ const ModeleCourrier = ({ modele, ...props }) => {
   const { filename, title, editor } = modele;
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   return (
-    <Tile {...props}>
-      <>
-        <strong>{title}</strong>
-        <P>
-          <Label>Source</Label>: <Label>{editor}</Label>
-          {extension && editor ? " - " : null}
-          <Value>{extension}</Value>
-        </P>
-      </>
+    <Tile wide {...props} title={title}>
+      <Label>Source</Label>: <Label>{editor}</Label>
+      {extension && editor ? " - " : null}
+      <Value>{extension}</Value>
     </Tile>
   );
 };
@@ -88,11 +83,6 @@ const StyledList = styled.ul`
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
   padding: 0;
-`;
-
-const P = styled.p`
-  margin-bottom: 0;
-  font-size: 0.9em;
 `;
 
 const Label = styled.span`
