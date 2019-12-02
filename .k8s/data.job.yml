@@ -33,7 +33,8 @@ spec:
                   name: elasticsearch-cloud-data
                   key: password
             - name: ES_INDEX_PREFIX
-              value: "cdtn-${BRANCH_HASH}"
+              value: "cdtn-prod"
+              # value: "cdtn-${BRANCH_HASH}"
           resources:
             requests:
               cpu: 5m
