@@ -18,6 +18,7 @@ deployment:
     failureThreshold: 6
     timeoutSeconds: 11
     periodSeconds: 16
+
   readinessProbe:
     path: /api/v1/version
 
