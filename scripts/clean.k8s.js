@@ -8,20 +8,19 @@ const objectTypes = [
   "statefulset",
   "deployment"
 ];
+
 const listK8sCmd = `kubectl get ${objectTypes.join(
   ","
 )}  -n cdtn -o custom-columns=":metadata.name,:metadata.labels['git/branch']"`;
 
 const listGithubBranchCmd = "git ls-remote --heads | cut -f2";
 
-const listIndicesCmd = `curl -u ${process.env.ELASTICSEARCH_USER}:${process.env.ELASTICSEARCH_PWD} ${process.env.ELASTICSEARCH_URL}/_cat/indices?h=index`;
-
-function getDeleteIndexCmd(indexName) {
-  return `curl -X "DELETE" -u ${process.env.ELASTICSEARCH_USER}:${process.env.ELASTICSEARCH_PWD} ${process.env.ELASTICSEARCH_URL}/${indexName}`;
+function getDeleteIndicesCmd(hash) {
+  return `curl -X "DELETE" -u ${process.env.ELASTICSEARCH_USER}:${process.env.ELASTICSEARCH_PWD} ${process.env.ELASTICSEARCH_URL}/cdtn-${hash}-*`;
 }
 
 function getDeleteObjectCmd(id) {
-  return `kubectl  pod,service,ingress,deployement,configmap,statefulset   -n cdtn`;
+  return `kubectl pod,service,ingress,deployement,configmap,statefulset -n cdtn`;
 }
 
 // when all items will have correct label
@@ -29,17 +28,14 @@ function getDeleteObjectFromBranchCmd(branch) {
   return `kubectl get pod,service,ingress,deployement,configmap,statefulset  -n cdtn -l 'git/branch'=${branch}`;
 }
 
+function cleanOldIndex(hashes) {
+  hashes.map(getDeleteIndicesCmd).forEach(execSync);
+}
+
 function hashBranchName(branchName) {
   return execSync(` printf "${branchName}" | shasum | cut -c1-7`)
     .toString()
     .trim();
-}
-
-function ciCommitRefSlug(str) {
-  return str
-    .toLowerCase()
-    .slice(0 - 63)
-    .replace(/[^0-9a-z]/g, "-");
 }
 
 function getk8sObject() {
@@ -62,19 +58,15 @@ function getGithubBranches() {
     .filter(Boolean);
 }
 
-function uniq(ar) {
-  return [...new Set(ar)];
+function ciCommitRefSlug(str) {
+  return str
+    .toLowerCase()
+    .slice(0 - 63)
+    .replace(/[^0-9a-z]/g, "-");
 }
 
-function cleanOldIndex(hashes) {
-  execSync(listIndicesCmd)
-    .toString()
-    .split("\n")
-    .map(indexName => {
-      if (hashes.some(hash => new RegExp(`cdtn-${hash}`).test(indexName))) {
-        execSync(getDeleteIndexCmd(indexName));
-      }
-    });
+function uniq(ar) {
+  return [...new Set(ar)];
 }
 
 const k8sObjectList = getk8sObject();
@@ -82,10 +74,10 @@ const branchList = getGithubBranches();
 const hashedBranchName = branchList.map(hashBranchName);
 
 const objectsToDelete = k8sObjectList.filter(({ id, branch }) => {
-  if (/master/.test(branch) || /-master-/.test(id)) {
+  if (/master/.test(branch) || /-master(-|$)?/.test(id)) {
     return false;
   }
-  if (/v\d+-\d+-\d+/.test(branch) || /-v\d+-\d+-\d+-/.test(id)) {
+  if (/v\d+-\d+-\d+/.test(branch) || /-v\d+-\d+-\d+(-|$)/.test(id)) {
     return false;
   }
   if (branchList.includes(branch)) {
@@ -94,36 +86,37 @@ const objectsToDelete = k8sObjectList.filter(({ id, branch }) => {
   return !hashedBranchName.some(hash => new RegExp(`-${hash}(-|$)`).test(id));
 });
 
+const hashToDelete = objectsToDelete
+  .map(({ id }) => {
+    const [, hash] =
+      id.match(
+        /cdtn-(?:api|nlp|frontend|elasticsearch|data)-([0-9a-z]{7})(-|$)/
+      ) || [];
+    return hash;
+  })
+  .filter(Boolean);
+
+const deleteCandidate = uniq(objectsToDelete.map(({ id }) => id));
+const deleteHashCandidate = uniq(hashToDelete);
+
 /**
- * Dele k8s object using label git/branch
+ * Delete ES index using deployed hashes
+ */
+// cleanOldIndex(deleteHashCandidate)
+// or
+/**
+ * Delete k8s object using label git/branch
  */
 // uniq(objectsToDelete.map(({ branch }) => branch)).map(banch =>
 //   execSync(getDeleteObjectFromBranchCmd(branch))
 // );
 
 /**
- * Delete ES index using deployed hashes
- */
-// const hashToDelete = uniq(
-//   objectsToDelete
-//     .map(({ id }) => {
-//       const [, hash] =
-//         id.match(
-//           /cdtn-(?:api|nlp|frontend|elasticsearch|data)-([0-9a-z]{7})(-|$)/
-//         ) || [];
-//       return hash;
-//     })
-//     .filter(Boolean)
-// );
-// cleanOldIndex(has)
-
-/**
  * Delete k8s object
  */
-// uniq(objectsToDelete.map(({ id }) => id)).map(id =>
-//   execSync(getDeleteObjectCmd(id))
-// );
-
-console.log(
-  `${uniq(objectsToDelete.map(({ id }) => id)).length} items to delete`
-);
+// deleteCandidate.map(id => execSync(getDeleteObjectCmd(id)));
+// console.log(JSON.stringify(deleteCandidate, 0, 2));
+// console.log(`${deleteCandidate.length} items to delete`);
+// console.log("candidate hashes to delete");
+// console.log({ deleteHashCandidate });
+branchList.forEach((b, index) => console.log(b, hashedBranchName[index]));
