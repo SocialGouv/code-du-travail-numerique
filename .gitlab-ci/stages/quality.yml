@@ -11,6 +11,8 @@
   variables:
     GIT_STRATEGY: none
   image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+  needs:
+    - Register socialgouv/cdtn base image
   before_script:
     - cd /app
 
@@ -72,6 +74,9 @@ Test @socialgouv/react-fiche-service-public:
 Test @cdtn/api:
   <<: *quality_stage
   <<: *master_based_stage
+  needs:
+    - Register elasticsearch image
+    - Register socialgouv/cdtn base image
   services:
     - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
   variables:
