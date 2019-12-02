@@ -86,8 +86,8 @@ function getIndemnite({
     differenceInMonths(dSortie, max([dEntree, year2002])) / 6
   );
 
-  labels["nombre de semestres avant 2002 (S1)"] = round(nbSemestreAvant2002);
-  labels["nombre de semestres après 2002 (S2)"] = round(nbSemestreApres2002);
+  labels["Nombre de semestres avant 2002 (S1)"] = round(nbSemestreAvant2002);
+  labels["Nombre de semestres après 2002 (S2)"] = round(nbSemestreApres2002);
 
   if (motif === NON_DISCIPLINAIRE) {
     if (nbSemestreAvant2002 > 0) {

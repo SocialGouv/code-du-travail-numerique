@@ -213,7 +213,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -250,7 +250,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"
@@ -297,7 +297,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -327,7 +327,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"
@@ -560,7 +560,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -597,7 +597,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"
@@ -644,7 +644,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -674,7 +674,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"

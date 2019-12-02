@@ -18,11 +18,14 @@ function AbsencePeriods({ name, visible = true, onChange }) {
           {visible && (
             <>
               <p>
-                Les congés maternité, arrêts de travail liés à un accident du
-                travail ou une maladie professionnelle, congés individuels de
-                formation (Cif) et stage de fin d’étude de plus de 2 mois ne
-                sont pas considérés comme des absences. Merci de ne pas les
-                renseigner.
+                Les congés payés, le congé de maternité ou d&apos;adoption, le
+                congé de présence parental ,l&apos;arrêt de travail lié à un
+                accident du travail ou une maladie professionnelle, le congé
+                individuel de formation (CIF), le congé de solidarité
+                internationale, le congé de solidarité familiale et le stage de
+                fin d&apos;étude de plus de 2 mois sont déjà prises en compte
+                dans l&apos;ancienneté et ne sont pas des périodes à renseigner
+                ci-après :
               </p>
               <Question as="p">
                 Quels sont le motif et la durée de ces absences

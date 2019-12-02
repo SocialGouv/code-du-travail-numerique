@@ -80,7 +80,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   <h2
     class="c0"
   >
-    Quelle est la catégorie dans du salarié la convention collective ?
+    Quelle est la catégorie du salarié ?
   </h2>
   <p>
     Cette information se trouve sur le bulletin de salaire.
@@ -118,7 +118,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   <h2
     class="c0"
   >
-    Précisez les périodes éventuelles passées au statut de TAM ou employé
+    Quelles sont les périodes éventuelles passées au statut de TAM ou employé ?
   </h2>
   <label
     class="c2"
@@ -160,7 +160,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
     class="c4"
     for="2"
   >
-    Quel était l'âge du salarié à la date du licenciement ?
+    Quel est l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
       class="c5"
@@ -279,7 +279,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   <h2
     class="c0"
   >
-    Quelle est la catégorie dans du salarié la convention collective ?
+    Quelle est la catégorie du salarié ?
   </h2>
   <p>
     Cette information se trouve sur le bulletin de salaire.
@@ -318,7 +318,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     class="c2"
     for="3"
   >
-    Quel était l'âge du salarié à la date du licenciement ?
+    Quel est l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
       class="c3"
@@ -449,7 +449,7 @@ exports[`<Step /> should render 1`] = `
   <h2
     class="c0"
   >
-    Quelle est la catégorie dans du salarié la convention collective ?
+    Quelle est la catégorie du salarié ?
   </h2>
   <p>
     Cette information se trouve sur le bulletin de salaire.
@@ -488,7 +488,7 @@ exports[`<Step /> should render 1`] = `
     class="c2"
     for="1"
   >
-    Quel était l'âge du salarié à la date du licenciement ?
+    Quel est l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
       class="c3"

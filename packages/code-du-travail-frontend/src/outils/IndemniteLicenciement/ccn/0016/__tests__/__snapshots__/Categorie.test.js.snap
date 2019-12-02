@@ -29,7 +29,7 @@ exports[`<Categorie /> should render 1`] = `
   <h2
     class="c0"
   >
-    Quelle est la catégorie dans du salarié la convention collective ?
+    Quelle est la catégorie du salarié ?
   </h2>
   <p>
     Cette information se trouve sur le bulletin de salaire.

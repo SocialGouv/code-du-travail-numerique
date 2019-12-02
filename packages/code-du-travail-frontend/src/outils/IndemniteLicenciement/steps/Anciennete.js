@@ -80,14 +80,14 @@ function StepAnciennete({ form }) {
       />
       <TextQuestion
         name="dateSortie"
-        label="Quelle est la date de sortie de l’entreprise (incluant la durée du préavis)&nbsp;?"
+        label="Quelle est la date de sortie de l’entreprise&nbsp;?"
         inputType="date"
         validate={isDate}
         validateOnChange
         placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
       />
       <ErrorComputedField name="anciennete" />
-      <SectionTitle>Période d’absence prolongée (plus d’un mois)</SectionTitle>
+      <SectionTitle>Période d’absence prolongée</SectionTitle>
       <YesNoQuestion
         name="hasAbsenceProlonge"
         label="Y a-t-il eu des absences de plus d’un mois durant le contrat de travail&nbsp;?"

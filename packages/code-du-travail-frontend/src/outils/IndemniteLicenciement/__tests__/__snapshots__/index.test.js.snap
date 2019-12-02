@@ -356,7 +356,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
             >
               2
             </span>
-            Informations générales
+            Contrat de travail
           </span>
           <span
             class="c8"
@@ -395,7 +395,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
           <h1
             class="c11"
           >
-            Simuler l'indemnité de licenciement
+            Simulateur de l’indemnité de licenciement
           </h1>
           <div
             class="c12"

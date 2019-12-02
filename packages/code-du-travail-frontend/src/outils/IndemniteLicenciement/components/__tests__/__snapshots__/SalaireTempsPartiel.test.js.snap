@@ -155,7 +155,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
     <div
       class="c2 c3"
     >
-      Type de contrat
+      Type de durée de travail
     </div>
     <div
       class="c4 c3"
@@ -429,7 +429,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
     <div
       class="c2 c3"
     >
-      Type de contrat
+      Type de durée de travail
     </div>
     <div
       class="c4 c3"
@@ -703,7 +703,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
     <div
       class="c2 c3"
     >
-      Type de contrat
+      Type de durée de travail
     </div>
     <div
       class="c4 c3"

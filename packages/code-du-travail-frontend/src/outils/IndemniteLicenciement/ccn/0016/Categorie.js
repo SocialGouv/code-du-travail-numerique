@@ -18,9 +18,7 @@ export const Categories = {
 function Categorie({ name }) {
   return (
     <>
-      <SectionTitle>
-        Quelle est la catégorie dans du salarié la convention collective&nbsp;?
-      </SectionTitle>
+      <SectionTitle>Quelle est la catégorie du salarié&nbsp;?</SectionTitle>
       <p>Cette information se trouve sur le bulletin de salaire.</p>
       <Field name={name} validate={required}>
         {({ input }) => (

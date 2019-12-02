@@ -16,7 +16,7 @@ function Step({ form }) {
       <TextQuestion
         inputType="number"
         name="age"
-        label="Quel était l'âge du salarié à la date du licenciement&nbsp;?"
+        label="Quel est l'âge du salarié à la date du licenciement&nbsp;?"
       />
       {age > 60 && (
         <YesNoQuestion

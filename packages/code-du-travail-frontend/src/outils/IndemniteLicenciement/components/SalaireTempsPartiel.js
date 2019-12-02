@@ -21,7 +21,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                 plein et à temps partiel&nbsp;?
               </Question>
               <Row>
-                <CellHeader as={CellType}>Type de contrat</CellHeader>
+                <CellHeader as={CellType}>Type de durée de travail</CellHeader>
                 <CellHeader as={CellDuration}>Durée en mois</CellHeader>
                 <CellHeader>Rémunération</CellHeader>
               </Row>

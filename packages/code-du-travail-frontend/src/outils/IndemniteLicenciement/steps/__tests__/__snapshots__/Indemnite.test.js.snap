@@ -93,10 +93,9 @@ exports[`<StepIndemnite /> should render 1`] = `
       class="c1"
     >
       1,250.00
-       € brut
+       € brut.
     </strong>
      
-    pour l’indemnité de licenciement.
   </p>
   <details
     class="c2"
@@ -109,7 +108,7 @@ exports[`<StepIndemnite /> should render 1`] = `
     <strong
       class="c4"
     >
-      Élements saisis :
+      Éléments saisis :
     </strong>
     <ul
       class="c5"
@@ -139,7 +138,7 @@ exports[`<StepIndemnite /> should render 1`] = `
     <strong
       class="c4"
     >
-      Formule
+      Formule :
     </strong>
     <div
       class="c7"

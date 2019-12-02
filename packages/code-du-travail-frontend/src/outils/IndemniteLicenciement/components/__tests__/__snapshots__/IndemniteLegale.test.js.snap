@@ -57,10 +57,9 @@ exports[`<IndemniteLegale /> should render 1`] = `
       class="c1"
     >
       42.00
-       € brut
+       € brut.
     </strong>
      
-    pour l’indemnité de licenciement.
   </p>
   <details
     class="c2"
@@ -73,7 +72,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
     <strong
       class="c4"
     >
-      Élements saisis :
+      Éléments saisis :
     </strong>
     <ul
       class="c5"
@@ -89,7 +88,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
     <strong
       class="c4"
     >
-      Formule
+      Formule :
     </strong>
     <div
       class="c7"

@@ -57,7 +57,7 @@ exports[`<Step /> should render 1`] = `
       class="c2"
       for="input-motif"
     >
-      Préciser le motif de licenciement :
+      Quel est le motif du licenciement ?
     </label>
     <select
       class="c3"
@@ -94,7 +94,7 @@ exports[`<Step /> should render 1`] = `
       class="c2"
       for="input-categorie"
     >
-      Précisez la categorie professionnelle du salarié :
+      Quelle est la catégorie professionnelle du salarié ?
     </label>
     <select
       class="c3"

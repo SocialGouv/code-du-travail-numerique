@@ -56,15 +56,15 @@ export function getIndemnite({
   let indemniteConventionnelle = 0;
   let formula = "-";
   const labels = {
-    "salaire de référence (Sref)": salaireRef,
+    "Salaire de référence (Sref)": salaireRef,
     ...(!tamDuration &&
-      !cadreDuration && { "ancienneté totale, en année, (A)": anciennete }),
-    catégorie: categorie,
+      !cadreDuration && { "Ancienneté totale, en année, (A)": anciennete }),
+    Catégorie: categorie,
     ...(cadreDuration > 0 && {
-      "durée comme cadre, en mois, (Dc)": cadreDuration
+      "Durée comme cadre, en mois, (Dc)": cadreDuration
     }),
     ...(tamDuration > 0 && { "durée comme TAM, en mois, (Dt)": tamDuration }),
-    "en age de partir à la retraite": hasRetirementAge ? "oui" : "non"
+    "En âge de partir à la retraite": hasRetirementAge ? "oui" : "non"
   };
 
   if (Math.floor(anciennete) < 2) {

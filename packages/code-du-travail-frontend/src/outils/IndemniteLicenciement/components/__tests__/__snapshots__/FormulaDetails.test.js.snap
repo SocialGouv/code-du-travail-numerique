@@ -38,7 +38,7 @@ exports[`<FormulaDetails /> should render 1`] = `
     <strong
       class="c2"
     >
-      Élements saisis :
+      Éléments saisis :
     </strong>
     <ul
       class="c3"
@@ -61,7 +61,7 @@ exports[`<FormulaDetails /> should render 1`] = `
     <strong
       class="c2"
     >
-      Formule
+      Formule :
     </strong>
     <div
       class="c5"

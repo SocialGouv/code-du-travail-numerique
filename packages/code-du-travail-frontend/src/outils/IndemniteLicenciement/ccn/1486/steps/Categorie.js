@@ -19,7 +19,7 @@ export const Categorie = ({ dispatch }) => (
   <>
     <SectionTitle>Catégorie professionnelle</SectionTitle>
     <p>
-      Quelle est la catégorie du salarié dans la convention collective&nbsp;?
+      Quelle est la catégorie du salarié&nbsp;?
       <br />
       Cette information se trouve sur le bulletin de salaire.
     </p>
