@@ -13,7 +13,7 @@
 
 #
 
-.Register data image:
+Register data image:
   <<: *build_and_push_stage
   except:
     variables:
