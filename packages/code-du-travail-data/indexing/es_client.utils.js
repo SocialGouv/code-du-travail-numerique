@@ -17,7 +17,7 @@ async function createIndex({ client, indexName, mappings }) {
       body: {
         settings: {
           number_of_shards: 1,
-          number_of_replicas: 0,
+          number_of_replicas: 1,
           index: {
             analysis: {
               filter,
