@@ -12,9 +12,9 @@ include:
   - /.gitlab-ci/stages/notify.yml
 
 stages:
-  - "Prepare"
-  - "Code Quality"
-  - "Registration"
+  # - "Prepare"
+  # - "Code Quality"
+  # - "Registration"
   - "Post Registration"
   - "Deploy"
   - "Notify Finished Deployment"

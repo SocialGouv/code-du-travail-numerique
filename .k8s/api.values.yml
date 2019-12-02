@@ -19,8 +19,6 @@ deployment:
     path: /api/v1/version
 
   env:
-    - name: ELASTICSEARCH_LOG_LEVEL
-      value: "trace"
     - name: ELASTICSEARCH_URL
       valueFrom:
         secretKeyRef:
@@ -37,7 +35,8 @@ deployment:
           name: elasticsearch-cloud-api
           key: password
     - name: ES_INDEX_PREFIX
-      value: "cdtn-${BRANCH_HASH}"
+        value: "cdtn-prod"
+        # value: "cdtn-${BRANCH_HASH}"
     - name: NLP_URL
       value: "${NLP_URL}"
     - name: NODE_ENV
