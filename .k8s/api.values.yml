@@ -7,14 +7,17 @@ deployment:
 
   resources:
     limits:
-      # cpu: 50m
-      memory: 256Mi
+      cpu: 1
+      memory: 1000Mi
     requests:
       # cpu: 5m
       memory: 128Mi
 
   livenessProbe:
     path: /api/v1/version
+    timeoutSeconds: 10
+    failureThreshold: 5
+    periodSeconds: 15
   readinessProbe:
     path: /api/v1/version
 
