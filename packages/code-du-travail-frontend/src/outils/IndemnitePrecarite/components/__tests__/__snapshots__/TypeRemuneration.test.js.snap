@@ -52,7 +52,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   <p
     class="c0"
   >
-    Sélectionnez la manière dont vous souhaitez indiquer la rémunération ?
+    Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
     <span
       aria-label="champs obligatoire"
       class="c1"

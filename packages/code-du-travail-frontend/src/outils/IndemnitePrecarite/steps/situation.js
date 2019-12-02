@@ -6,7 +6,7 @@ import {
 
 // humanize questions
 export const questions = {
-  cddType: "Quelle est le type du cdd ?",
+  cddType: "Quel est le type de CDD ?",
   hasCdiProposal:
     "À la fin du CDD, le salarié a-t-il reçu une proposition de CDI ?",
   hasCdiRenewal:

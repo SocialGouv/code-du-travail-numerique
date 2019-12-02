@@ -68,9 +68,9 @@ function StepIndemnite({ form }) {
         {bonusAltName} est estimée à <Highlight>{indemnite}</Highlight> €.
       </p>
       <details>
-        <Summary>Detail du calcul</Summary>
+        <Summary>Détail du calcul</Summary>
         <div>
-          <Heading>Élements saisis :</Heading>
+          <Heading>Éléments saisis :</Heading>
           {entries.length > 0 && (
             <List>
               {entries.map(([label, value], index) => (

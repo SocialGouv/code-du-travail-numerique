@@ -217,7 +217,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         class="c5"
         for="input-criteria.cddType"
       >
-        Quelle est le type du cdd ?
+        Quel est le type de CDD ?
       </label>
       <select
         class="c6"
@@ -400,7 +400,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         class="c5"
         for="input-criteria.cddType"
       >
-        Quelle est le type du cdd ?
+        Quel est le type de CDD ?
       </label>
       <select
         class="c6"
