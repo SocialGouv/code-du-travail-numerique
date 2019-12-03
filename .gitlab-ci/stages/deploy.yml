@@ -60,7 +60,7 @@ Create namespace:
   services:
     - docker:dind
   variables: &deploy_stage_variables
-    IMAGE_TAG: c55047948dfc085114962bc373121b12108a7e45
+    IMAGE_TAG: fe51a1e33f4f54955d505c9fe754fe1aa21fc685
     # IMAGE_TAG: ${CI_COMMIT_SHA}
     REGISTRY: ${CI_REGISTRY_IMAGE}
   before_script:
