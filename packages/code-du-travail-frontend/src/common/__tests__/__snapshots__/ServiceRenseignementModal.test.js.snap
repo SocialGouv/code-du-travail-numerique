@@ -43,7 +43,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   color: #fff;
   background: #7598d6;
   border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
   opacity: 1;
 }
 

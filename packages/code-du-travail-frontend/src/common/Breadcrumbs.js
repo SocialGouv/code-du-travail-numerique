@@ -36,7 +36,6 @@ const { breakpoints, fonts, spacings } = theme;
 
 const Nav = styled.nav`
   margin-bottom: ${spacings.small};
-  overflow-x: auto;
 `;
 const StyledContainer = styled(Container)`
   display: flex;

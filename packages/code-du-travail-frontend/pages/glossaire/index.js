@@ -8,7 +8,8 @@ import {
   PageTitle,
   Section,
   theme,
-  Title
+  Title,
+  Wrapper
 } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
@@ -26,9 +27,11 @@ function Glossaire({ pageUrl, ogImage }) {
       />
       <Section>
         <Container narrow>
-          <PageTitle>Glossaire</PageTitle>
-          <GlossaryNavigation letters={termsByLetters} />
-          <Glossary letters={termsByLetters} />
+          <Wrapper variant="main">
+            <PageTitle>Glossaire</PageTitle>
+            <GlossaryNavigation letters={termsByLetters} />
+            <Glossary letters={termsByLetters} />
+          </Wrapper>
         </Container>
       </Section>
     </Layout>

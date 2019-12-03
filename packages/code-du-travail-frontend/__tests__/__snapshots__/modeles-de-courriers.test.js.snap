@@ -1,10 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ModelesDeCourriers /> should render 1`] = `
-.c22 {
+.c21 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+.c21 > *:first-child {
+  margin-top: 0;
+}
+
+.c21 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c27 {
+  padding: 2rem 0;
+  color: #3e486e;
+}
+
+.c22 {
+  padding: 1rem 2rem;
+  color: #3e486e;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  position: relative;
+  padding: 4rem;
+  border: none;
+  background-color: #fff;
+}
+
+.c22:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 30rem;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  content: "";
 }
 
 .c22 > *:first-child {
@@ -15,28 +52,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c29 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 74rem;
-  padding: 0;
-}
-
-.c29 > *:first-child {
-  margin-top: 0;
-}
-
-.c29 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  padding: 2rem 0;
-  color: #3e486e;
-}
-
-.c23 {
+.c28 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -44,11 +60,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   background-color: #fff;
 }
 
-.c23 > *:first-child {
+.c28 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c28 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -68,15 +84,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c26 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-}
-
 .c35 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
@@ -86,7 +93,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c30 {
+.c29 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -189,7 +196,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   color: #fff;
   background: #7598d6;
   border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
   opacity: 1;
 }
 
@@ -217,33 +224,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c31 {
-  display: block;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  color: #3e486e;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #f2f5fa;
-  border: 1px solid #bbcadf;
-  border-radius: 0.6rem;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
-}
-
-.c31:visited {
-  color: #3e486e;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c31:active,
-.c31:hover {
-  color: #3e486e;
-  border-color: #3e486e;
-  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
-}
-
 .c13:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -254,6 +234,88 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
+}
+
+.c24 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c48 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c30 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #f2f5fa;
+  border: 1px solid #bbcadf;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c30:hover {
+  color: #3e486e;
+  border-color: #3e486e;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+}
+
+.c31 {
+  display: block;
+  max-width: 100%;
+  padding-right: 0;
+  overflow-y: auto;
 }
 
 .c41 {
@@ -274,7 +336,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
-  box-shadow: 0px 10px 50px rgba(85,112,160,0.12),0px 10px 15px rgba(85,112,160,0.1);
+  box-shadow: 0 1rem 5rem rgba(255,112,103,0.12),0 1rem 1.5rem rgba(255,112,103,0.1);
   -webkit-animation: iowhYu 300ms ease-out;
   animation: iowhYu 300ms ease-out;
 }
@@ -306,44 +368,28 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   font-size: 1.2rem;
 }
 
-.c21 {
-  padding: 2rem 0;
-  color: #3e486e;
-  padding-top: 0;
+.c23 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  position: relative;
+  margin-left: -4rem;
+  padding-left: 4rem;
 }
 
 .c25 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 74rem;
-  padding: 0;
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.c25 > *:first-child {
-  margin-top: 0;
-}
-
-.c25 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
+  font-size: 1.4rem;
 }
 
-.c28 {
-  color: #4d73b8;
-  font-weight: 600;
+.c26 {
+  margin: 3.2rem 0 0 0;
 }
 
 .c40 {
@@ -486,6 +532,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 .c7 {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
   height: 100%;
 }
 
@@ -494,6 +543,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 .c1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   height: 9rem;
   margin-bottom: 6rem;
   overflow: visible;
@@ -574,15 +628,26 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c9 {
   display: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
   color: #7598d6;
 }
 
 .c10 {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
   width: 31rem;
   margin-left: 1.6rem;
 }
 
 .c45 {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.c46 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -590,7 +655,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c45:before {
+.c46:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -602,7 +667,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   content: "";
 }
 
-.c46 {
+.c47 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -610,20 +675,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   text-align: center;
 }
 
-.c46:before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 70px;
-  height: 3px;
-  background-color: #7598d6;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  content: "";
-}
-
-.c47 {
+.c49 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -633,27 +685,27 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   text-align: left;
 }
 
-.c47 > *:first-child {
+.c49 > *:first-child {
   margin-top: 0;
 }
 
-.c47 > *:last-child {
+.c49 > *:last-child {
   margin-bottom: 0;
 }
 
-.c48 {
+.c50 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c49 {
+.c51 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c50 {
+.c52 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -667,25 +719,25 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c50 > *:first-child {
+.c52 > *:first-child {
   margin-top: 0;
 }
 
-.c50 > *:last-child {
+.c52 > *:last-child {
   margin-bottom: 0;
 }
 
-.c52 + .c51 {
+.c54 + .c53 {
   padding-left: 1.6rem;
 }
 
-.c54 {
+.c56 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c53 {
+.c55 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -695,12 +747,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c55 {
+.c57 {
   margin: 0.4rem 0;
   padding: 0;
 }
 
-.c56 {
+.c58 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -730,27 +782,33 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media print {
+  .c21 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
   .c22 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c29 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c22 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    padding: 1rem 2rem;
+  }
+}
+
+@media print {
+  .c28 {
     padding: 0 5pt;
     border: none;
   }
@@ -769,15 +827,8 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   }
 }
 
-@media print {
+@media (max-width:600px) {
   .c25 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -900,27 +951,27 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media print {
-  .c45 {
+  .c46 {
     display: none;
   }
 }
 
 @media print {
-  .c47 {
+  .c49 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c50 {
+  .c52 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c52 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -928,19 +979,19 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c52 + .c51 {
+  .c54 + .c53 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c56 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c55 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -969,7 +1020,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
         <span
           class="c5"
         >
-          Le code du travail numérique
+          Code du travail numérique
         </span>
       </a>
       <div
@@ -1160,80 +1211,71 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
       >
         <div
           class="c21"
-          data-main-content="true"
         >
           <div
             class="c22"
+            data-main-content="true"
           >
-            <div
+            <h1
               class="c23"
             >
               <div
                 class="c24"
+              />
+            </h1>
+            <div
+              class="c25"
+            />
+            <div
+              class="c26"
+            >
+              
+              <div
+                class="c27"
               >
                 <div
-                  class="c25"
+                  class="c28"
                 >
-                  <h1
-                    class="c26"
-                  />
+                  <div />
+                </div>
+              </div>
+              <h4
+                class="c29"
+              >
+                Télécharger le modèle
+              </h4>
+              <a
+                class="c30"
+                href="api.url/docs/undefined"
+                title="Télécharger le courrier type"
+              >
+                <div
+                  class="c31"
+                >
                   <div
-                    class="c27"
+                    class="c32"
                   >
+                    <span>
+                      modele
+                    </span>
+                    <br />
                     <span
-                      class="c28"
+                      class="c33"
                     >
                       Modèle de document
                     </span>
                   </div>
                 </div>
-                <div
-                  class="c29"
-                >
-                  
-                  <div
-                    class="c24"
-                  >
-                    <div
-                      class="c23"
-                    >
-                      <div />
-                    </div>
-                  </div>
-                  <h4
-                    class="c30"
-                  >
-                    Télécharger le modèle
-                  </h4>
-                  <a
-                    class="c31"
-                    href="api.url/docs/undefined"
-                    title="Télécharger le courrier type"
-                  >
-                    <div
-                      class="c32"
-                    >
-                      <span>
-                        modele
-                      </span>
-                      <br />
-                      <span
-                        class="c33"
-                      >
-                        Modèle de document
-                      </span>
-                    </div>
-                  </a>
-                </div>
-              </div>
+                
+              </a>
             </div>
           </div>
         </div>
         <div
-          class="c24"
+          class="c27"
         >
           <div
-            class="c22"
+            class="c21"
           >
             <div
               class="c34"
@@ -1318,201 +1360,208 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
       </div>
     </div>
   </main>
-  <footer
+  <div
     class="c45"
   >
-    <div
+    <footer
       class="c46"
     >
       <div
-        class="c22"
+        class="c47"
       >
-        <h2
-          class="c35"
-        >
-          Besoin d’un accompagnement personnalisé ?
-        </h2>
         <div
-          class="c47"
+          class="c48"
+        />
+        <div
+          class="c21"
         >
-          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
-        </div>
-        <button
-          class="c37"
-        >
-          Contacter nos services
-          <svg
-            class="c48"
-            fill="none"
-            viewBox="0 0 28 15"
+          <h2
+            class="c35"
           >
-            <path
-              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
+            Besoin d’un accompagnement personnalisé ?
+          </h2>
+          <div
+            class="c49"
+          >
+            Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
+          </div>
+          <button
+            class="c37"
+          >
+            Contacter nos services
+            <svg
+              class="c50"
+              fill="none"
+              viewBox="0 0 28 15"
+            >
+              <path
+                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
-    <div
-      class="c49"
-    >
-      <nav>
-        <div
-          class="c50"
-        >
+      <div
+        class="c51"
+      >
+        <nav>
           <div
-            class="c51 c52"
+            class="c52"
           >
-            <h3
-              class="c53"
+            <div
+              class="c53 c54"
             >
-              Code du travail numérique
-            </h3>
-            <ul
-              class="c54"
+              <h3
+                class="c55"
+              >
+                Code du travail numérique
+              </h3>
+              <ul
+                class="c56"
+              >
+                <li
+                  class="c57"
+                >
+                  <a
+                    class="c58"
+                    href="/droit-du-travail"
+                  >
+                    Le droit du travail
+                  </a>
+                </li>
+                <li
+                  class="c57"
+                >
+                  <a
+                    class="c58"
+                    href="/glossaire"
+                  >
+                    Glossaire
+                  </a>
+                </li>
+                <li
+                  class="c57"
+                >
+                  <a
+                    class="c58"
+                    href="/a-propos"
+                  >
+                    À propos
+                  </a>
+                </li>
+                <li
+                  class="c57"
+                >
+                  <a
+                    class="c58"
+                    href="/mentions-legales"
+                  >
+                    Mentions légales
+                  </a>
+                </li>
+                <li
+                  class="c57"
+                >
+                  <a
+                    class="c58"
+                    href="mailto:codedutravailnumerique@travail.gouv.fr"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c53 c54"
             >
-              <li
+              <h3
                 class="c55"
               >
-                <a
-                  class="c56"
-                  href="/droit-du-travail"
+                Aidez-nous à améliorer cet outil
+              </h3>
+              <ul
+                class="c56"
+              >
+                <li
+                  class="c57"
                 >
-                  Le droit du travail
-                </a>
-              </li>
-              <li
+                  <a
+                    class="c58"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Contribuer sur Github
+                  </a>
+                </li>
+                <li
+                  class="c57"
+                >
+                  <a
+                    class="c58"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Journal des modifications
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c53 c54"
+            >
+              <h3
                 class="c55"
               >
-                <a
-                  class="c56"
-                  href="/glossaire"
-                >
-                  Glossaire
-                </a>
-              </li>
-              <li
-                class="c55"
+                En collaboration avec
+              </h3>
+              <ul
+                class="c56"
               >
-                <a
-                  class="c56"
-                  href="/a-propos"
+                <li
+                  class="c57"
                 >
-                  À propos
-                </a>
-              </li>
-              <li
-                class="c55"
-              >
-                <a
-                  class="c56"
-                  href="/mentions-legales"
+                  <a
+                    class="c58"
+                    href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    La Direction Générale du Travail
+                  </a>
+                </li>
+                <li
+                  class="c57"
                 >
-                  Mentions légales
-                </a>
-              </li>
-              <li
-                class="c55"
-              >
-                <a
-                  class="c56"
-                  href="mailto:codedutravailnumerique@travail.gouv.fr"
+                  <a
+                    class="c58"
+                    href="https://incubateur.social.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    L’incubateur des ministères sociaux
+                  </a>
+                </li>
+                <li
+                  class="c57"
                 >
-                  Contact
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="c58"
+                    href="https://beta.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    beta.gouv.fr
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div
-            class="c51 c52"
-          >
-            <h3
-              class="c53"
-            >
-              Aidez-nous à améliorer cet outil
-            </h3>
-            <ul
-              class="c54"
-            >
-              <li
-                class="c55"
-              >
-                <a
-                  class="c56"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Contribuer sur Github
-                </a>
-              </li>
-              <li
-                class="c55"
-              >
-                <a
-                  class="c56"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Journal des modifications
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="c51 c52"
-          >
-            <h3
-              class="c53"
-            >
-              En collaboration avec
-            </h3>
-            <ul
-              class="c54"
-            >
-              <li
-                class="c55"
-              >
-                <a
-                  class="c56"
-                  href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  La Direction Générale du Travail
-                </a>
-              </li>
-              <li
-                class="c55"
-              >
-                <a
-                  class="c56"
-                  href="https://incubateur.social.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  L’incubateur des ministères sociaux
-                </a>
-              </li>
-              <li
-                class="c55"
-              >
-                <a
-                  class="c56"
-                  href="https://beta.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  beta.gouv.fr
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </footer>
+        </nav>
+      </div>
+    </footer>
+  </div>
 </div>
 `;

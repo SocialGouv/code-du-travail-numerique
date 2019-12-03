@@ -46,6 +46,7 @@ export const ListItem = styled.li`
   flex-shrink: 1;
   width: calc(100% / ${props => props.columns} - 2 * ${spacings.small});
   margin: ${spacings.small};
+  padding: 0;
   @media (max-width: ${breakpoints.tablet}) {
     width: calc(
       100% / ${props => Math.max(props.columns - 1, 0)} - 2 * ${spacings.small}

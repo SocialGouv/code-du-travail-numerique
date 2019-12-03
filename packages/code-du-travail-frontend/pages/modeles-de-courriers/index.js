@@ -5,7 +5,7 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import {
   Container,
-  LargeLink,
+  Tile,
   PageTitle,
   Section,
   theme
@@ -41,7 +41,19 @@ class Modeles extends React.Component {
         <Section>
           <Container narrow>
             <PageTitle>Les modèles de documents à télécharger</PageTitle>
-            <ModeleCourrierList items={data.hits.hits} />
+            <StyledList>
+              {data.hits.hits.map(({ _id, _source }) => (
+                <StyledListItem key={_id}>
+                  <Link
+                    href="modeles-de-courriers/[slug]"
+                    as={`modeles-de-courriers/${_source.slug}`}
+                    passHref
+                  >
+                    <ModeleCourrier modele={_source} />
+                  </Link>
+                </StyledListItem>
+              ))}
+            </StyledList>
           </Container>
         </Section>
       </Layout>
@@ -49,27 +61,11 @@ class Modeles extends React.Component {
   }
 }
 
-const List = ({ items = [], ...props }) => (
-  <ul {...props}>
-    {items.map(({ _id, _source }) => (
-      <li key={_id}>
-        <Link
-          href="modeles-de-courriers/[slug]"
-          as={`modeles-de-courriers/${_source.slug}`}
-          passHref
-        >
-          <ModeleCourrier modele={_source} />
-        </Link>
-      </li>
-    ))}
-  </ul>
-);
-
 const ModeleCourrier = ({ modele, ...props }) => {
   const { filename, title, editor } = modele;
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   return (
-    <LargeLink {...props}>
+    <Tile {...props}>
       <>
         <strong>{title}</strong>
         <P>
@@ -78,15 +74,20 @@ const ModeleCourrier = ({ modele, ...props }) => {
           <Value>{extension}</Value>
         </P>
       </>
-    </LargeLink>
+    </Tile>
   );
 };
 
-const { colors } = theme;
+const { colors, spacings } = theme;
 
-const ModeleCourrierList = styled(List)`
+const StyledList = styled.ul`
   padding-left: 0;
   list-style-type: none;
+`;
+
+const StyledListItem = styled.li`
+  margin-bottom: ${spacings.medium};
+  padding: 0;
 `;
 
 const P = styled.p`

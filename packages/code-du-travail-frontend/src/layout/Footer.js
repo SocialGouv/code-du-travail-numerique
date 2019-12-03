@@ -8,6 +8,7 @@ import {
   Heading,
   icons,
   Section,
+  Stripe,
   theme,
   Title
 } from "@socialgouv/react-ui";
@@ -20,135 +21,144 @@ const { publicRuntimeConfig } = getConfig();
 const GITHUB_REPO = "https://github.com/SocialGouv/code-du-travail-numerique";
 
 const Footer = () => (
-  <StyledFooter>
-    <ServiceSection>
-      <Container>
-        <Title>Besoin d’un accompagnement personnalisé ?</Title>
-        <SecondContainerWrapper narrow noPadding>
-          Les services de renseignement en droit du travail peuvent vous donner
-          des informations juridiques générales relatives au Code du travail,
-          aux conventions collectives, à la jurisprudence. Ils peuvent également
-          vous conseiller et vous orienter dans vos démarches.
-        </SecondContainerWrapper>
-        <ServiceRenseignementModal>
-          <Button>
-            Contacter nos services
-            <StyledDirectionRightIcon />
-          </Button>
-        </ServiceRenseignementModal>
-      </Container>
-    </ServiceSection>
-    <NavSection>
-      <nav>
-        <Links>
-          <Category>
-            <StyledHeading>Code du travail numérique</StyledHeading>
-            <StyledList>
-              <StyledListItem>
-                <Link passHref href="/droit-du-travail">
-                  <StyledLink>Le droit du travail</StyledLink>
-                </Link>
-              </StyledListItem>
-              <StyledListItem>
-                <Link passHref href="/glossaire">
-                  <StyledLink>Glossaire</StyledLink>
-                </Link>
-              </StyledListItem>
-              <StyledListItem>
-                <Link passHref href="/a-propos">
-                  <StyledLink>À propos</StyledLink>
-                </Link>
-              </StyledListItem>
-              <StyledListItem>
-                <Link passHref href="/mentions-legales">
-                  <StyledLink>Mentions légales</StyledLink>
-                </Link>
-              </StyledListItem>
-              <StyledListItem>
-                <StyledLink href="mailto:codedutravailnumerique@travail.gouv.fr">
-                  Contact
-                </StyledLink>
-              </StyledListItem>
-            </StyledList>
-          </Category>
-          <Category>
-            <StyledHeading>Aidez-nous à améliorer cet outil</StyledHeading>
-            <StyledList>
-              <StyledListItem>
-                <StyledLink
-                  href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Contribuer sur Github
-                </StyledLink>
-              </StyledListItem>
-              <StyledListItem>
-                {(() => {
-                  const packageVersion =
-                    publicRuntimeConfig.PACKAGE_VERSION || "";
-                  const isTag = packageVersion[0] === "v";
-                  const path = isTag
-                    ? "releases/tag"
-                    : packageVersion === "master"
-                    ? "commits"
-                    : "compare";
-                  return (
-                    <StyledLink
-                      href={`${GITHUB_REPO}/${path}/${packageVersion}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Journal des modifications
-                    </StyledLink>
-                  );
-                })()}
-              </StyledListItem>
-            </StyledList>
-          </Category>
-          <Category>
-            <StyledHeading>En collaboration avec</StyledHeading>
-            <StyledList>
-              <StyledListItem>
-                <StyledLink
-                  href={
-                    "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  La Direction Générale du Travail
-                </StyledLink>
-              </StyledListItem>
-              <StyledListItem>
-                <StyledLink
-                  href={"https://incubateur.social.gouv.fr/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  L’incubateur des ministères sociaux
-                </StyledLink>
-              </StyledListItem>
-              <StyledListItem>
-                <StyledLink
-                  href={"https://beta.gouv.fr/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  beta.gouv.fr
-                </StyledLink>
-              </StyledListItem>
-            </StyledList>
-          </Category>
-        </Links>
-      </nav>
-    </NavSection>
-  </StyledFooter>
+  <OverflowWrapper>
+    <StyledFooter>
+      <ServiceSection>
+        <Stripe rounded />
+        <Container>
+          <Title>Besoin d’un accompagnement personnalisé ?</Title>
+          <SecondContainerWrapper narrow noPadding>
+            Les services de renseignement en droit du travail peuvent vous
+            donner des informations juridiques générales relatives au Code du
+            travail, aux conventions collectives, à la jurisprudence. Ils
+            peuvent également vous conseiller et vous orienter dans vos
+            démarches.
+          </SecondContainerWrapper>
+          <ServiceRenseignementModal>
+            <Button>
+              Contacter nos services
+              <StyledDirectionRightIcon />
+            </Button>
+          </ServiceRenseignementModal>
+        </Container>
+      </ServiceSection>
+      <NavSection>
+        <nav>
+          <Links>
+            <Category>
+              <StyledHeading>Code du travail numérique</StyledHeading>
+              <StyledList>
+                <StyledListItem>
+                  <Link passHref href="/droit-du-travail">
+                    <StyledLink>Le droit du travail</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/glossaire">
+                    <StyledLink>Glossaire</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/a-propos">
+                    <StyledLink>À propos</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/mentions-legales">
+                    <StyledLink>Mentions légales</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <StyledLink href="mailto:codedutravailnumerique@travail.gouv.fr">
+                    Contact
+                  </StyledLink>
+                </StyledListItem>
+              </StyledList>
+            </Category>
+            <Category>
+              <StyledHeading>Aidez-nous à améliorer cet outil</StyledHeading>
+              <StyledList>
+                <StyledListItem>
+                  <StyledLink
+                    href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contribuer sur Github
+                  </StyledLink>
+                </StyledListItem>
+                <StyledListItem>
+                  {(() => {
+                    const packageVersion =
+                      publicRuntimeConfig.PACKAGE_VERSION || "";
+                    const isTag = packageVersion[0] === "v";
+                    const path = isTag
+                      ? "releases/tag"
+                      : packageVersion === "master"
+                      ? "commits"
+                      : "compare";
+                    return (
+                      <StyledLink
+                        href={`${GITHUB_REPO}/${path}/${packageVersion}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Journal des modifications
+                      </StyledLink>
+                    );
+                  })()}
+                </StyledListItem>
+              </StyledList>
+            </Category>
+            <Category>
+              <StyledHeading>En collaboration avec</StyledHeading>
+              <StyledList>
+                <StyledListItem>
+                  <StyledLink
+                    href={
+                      "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    La Direction Générale du Travail
+                  </StyledLink>
+                </StyledListItem>
+                <StyledListItem>
+                  <StyledLink
+                    href={"https://incubateur.social.gouv.fr/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    L’incubateur des ministères sociaux
+                  </StyledLink>
+                </StyledListItem>
+                <StyledListItem>
+                  <StyledLink
+                    href={"https://beta.gouv.fr/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    beta.gouv.fr
+                  </StyledLink>
+                </StyledListItem>
+              </StyledList>
+            </Category>
+          </Links>
+        </nav>
+      </NavSection>
+    </StyledFooter>
+  </OverflowWrapper>
 );
 
 export default Footer;
 
 const { breakpoints, fonts, spacings } = theme;
+
+const OverflowWrapper = styled.div`
+  width: 100%;
+  overflow-x: hidden;
+`;
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -176,16 +186,6 @@ const ServiceSection = styled(Section)`
   position: relative;
   padding-bottom: ${spacings.larger};
   text-align: center;
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 70px;
-    height: 3px;
-    background-color: ${({ theme }) => theme.secondary};
-    transform: translateX(-50%);
-    content: "";
-  }
 `;
 
 const SecondContainerWrapper = styled(Container)`

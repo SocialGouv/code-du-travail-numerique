@@ -53,7 +53,6 @@ class ConventionCollective extends React.Component {
           title={title}
           emptyMessage="Cette convention collective n'a pas été trouvée"
           footer="Informations fournies par la DILA"
-          wide
         >
           <Convention container={container} />
         </Answer>

@@ -1,3 +1,5 @@
+import { rgba } from "polished";
+
 export const colors = {
   // main colors
   primary: "#ff7067",
@@ -64,16 +66,27 @@ export const breakpoints = {
   intMobile: 600
 };
 
-const shadowColor = "85, 112, 160";
-const largeShadow = "0px 10px 50px";
-const smallShadow = "0px 10px 15px";
+const largeShadow = "0 1rem 5rem";
+const smallShadow = "0 1rem 1.5rem";
 
 export const box = {
-  border: `1px solid ${colors.border}`,
+  border(color) {
+    return `1px solid ${color}`;
+  },
   borderRadius: "0.6rem",
   shadow: {
-    default: `${largeShadow} rgba(${shadowColor}, 0.12), ${smallShadow} rgba(${shadowColor}, 0.1)`,
-    large: `${largeShadow} rgba(${shadowColor}, 0.2), ${smallShadow} rgba(${shadowColor}, 0.25)`
+    default(color) {
+      return `${largeShadow} ${rgba(color, 0.12)}, ${smallShadow} ${rgba(
+        color,
+        0.1
+      )}`;
+    },
+    large(color) {
+      `${largeShadow} ${rgba(color, 0.2)}, ${smallShadow} ${rgba(
+        color,
+        0.25
+      )})`;
+    }
   }
 };
 

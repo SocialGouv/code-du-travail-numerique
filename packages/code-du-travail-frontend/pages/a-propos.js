@@ -21,7 +21,7 @@ const About = ({ ogImage, pageUrl }) => (
     />
     <Section>
       <Container narrow>
-        <Wrapper variant="light">
+        <Wrapper variant="main">
           <PageTitle>À propos du code du travail numérique</PageTitle>
           <Alert>
             Ce service public vous permet d’obtenir des réponses détaillées à

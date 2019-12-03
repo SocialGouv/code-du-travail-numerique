@@ -46,7 +46,7 @@ Accordion.defaultProps = {
 
 const StyledAccordionItem = styled(AccordionItem)`
   & + & {
-    border-top: ${box.border};
+    border-top: ${({ theme }) => box.border(theme.border)};
   }
 `;
 

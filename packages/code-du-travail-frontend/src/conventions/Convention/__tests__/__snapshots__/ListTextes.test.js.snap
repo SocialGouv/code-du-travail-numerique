@@ -117,7 +117,7 @@ exports[`<ListTextes /> renders a text 1`] = `
   .c3 {
     position: -webkit-sticky;
     position: sticky;
-    top: 0px;
+    top: 10rem;
     -webkit-flex: 0 1 35%;
     -ms-flex: 0 1 35%;
     flex: 0 1 35%;

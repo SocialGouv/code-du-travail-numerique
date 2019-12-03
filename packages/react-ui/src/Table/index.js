@@ -19,7 +19,7 @@ const StyledTable = styled.table`
   text-align: left;
   empty-cells: show;
   background-color: ${({ theme }) => theme.white};
-  border: ${box.border};
+  border: ${({ theme }) => box.border(theme.border)};
   border-collapse: collapse;
   border-spacing: 0;
 
@@ -42,7 +42,7 @@ const StyledTable = styled.table`
   td,
   th {
     padding: ${spacings.small} ${spacings.base};
-    border: ${box.border};
+    border: ${({ theme }) => box.border(theme.border)};
   }
 
   th {

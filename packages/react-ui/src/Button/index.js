@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { ArrowRight } from "react-feather";
-import { lighten, transparentize } from "polished";
+import { lighten, rgba, transparentize } from "polished";
 
 import { animations, box, fonts, spacings } from "../theme";
 
@@ -44,11 +44,13 @@ export const StyledButton = styled.button`
     }
 
     let height = "5.2rem";
-    let backgroundColor = theme[`${variant}`];
-    let borderColor = theme[`${variant}`];
-    let color = theme[`${variant}Text`];
-    let boxShadow =
-      "0px 10px 30px rgba(52, 77, 122, 0.26), 0px 4px 5px rgba(117, 152, 214, 0.35)";
+    let backgroundColor = theme[variant];
+    let borderColor = theme[variant];
+    let color = theme[variant + "Text"];
+    let boxShadow = `0px 10px 30px ${rgba(
+      theme.secondary,
+      0.26
+    )}, 0px 4px 5px ${rgba(theme.secondary, 0.35)}`;
     let opacity = "1";
 
     let padding = "0 4.4rem";
@@ -75,6 +77,13 @@ export const StyledButton = styled.button`
       borderColor = "transparent";
       boxShadow = "none";
       opacity = "0.6";
+    }
+
+    if (variant === "primary") {
+      boxShadow = `0px 10px 30px ${rgba(
+        theme.primary,
+        0.26
+      )}, 0px 4px 5px ${rgba(theme.primary, 0.35)}`;
     }
 
     return css`

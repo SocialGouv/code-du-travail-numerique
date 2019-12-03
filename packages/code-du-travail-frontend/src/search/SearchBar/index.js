@@ -73,7 +73,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
         query={query}
         placeholder={
           hasButton
-            ? "Ex : durée du préavis, indémnités de licenciement..."
+            ? "Ex : durée du préavis, indémnité de licenciement"
             : "Rechercher"
         }
         onSearch={onSearch}

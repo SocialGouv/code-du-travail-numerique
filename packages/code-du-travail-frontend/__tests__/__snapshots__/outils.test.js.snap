@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Outils /> should render 1`] = `
-.c23 {
+.c25 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c23 > *:first-child {
+.c25 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c25 > *:last-child {
   margin-bottom: 0;
 }
 
-.c24 {
+.c26 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: normal;
@@ -102,7 +102,7 @@ exports[`<Outils /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c26 {
+.c28 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -135,20 +135,20 @@ exports[`<Outils /> should render 1`] = `
   color: #fff;
   background: #7598d6;
   border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(52,77,122,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
   opacity: 1;
 }
 
-.c26:link,
-.c26:visited {
+.c28:link,
+.c28:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c26:not([disabled]):hover,
-.c26:not([disabled]):active,
-.c26:not([disabled]):focus {
+.c28:not([disabled]):hover,
+.c28:not([disabled]):active,
+.c28:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -157,7 +157,7 @@ exports[`<Outils /> should render 1`] = `
   border-color: #9cb5e2;
 }
 
-.c26[disabled] {
+.c28[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -173,6 +173,19 @@ exports[`<Outils /> should render 1`] = `
   border: 0;
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
+}
+
+.c24 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .c12 {
@@ -254,6 +267,9 @@ exports[`<Outils /> should render 1`] = `
 }
 
 .c7 {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
   height: 100%;
 }
 
@@ -262,6 +278,11 @@ exports[`<Outils /> should render 1`] = `
 }
 
 .c1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   height: 9rem;
   margin-bottom: 6rem;
   overflow: visible;
@@ -342,15 +363,26 @@ exports[`<Outils /> should render 1`] = `
 
 .c9 {
   display: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
   color: #7598d6;
 }
 
 .c10 {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
   width: 31rem;
   margin-left: 1.6rem;
 }
 
 .c21 {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.c22 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -358,7 +390,7 @@ exports[`<Outils /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c21:before {
+.c22:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -370,7 +402,7 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c22 {
+.c23 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -378,20 +410,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c22:before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 70px;
-  height: 3px;
-  background-color: #7598d6;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  content: "";
-}
-
-.c25 {
+.c27 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -401,27 +420,27 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c25 > *:first-child {
+.c27 > *:first-child {
   margin-top: 0;
 }
 
-.c25 > *:last-child {
+.c27 > *:last-child {
   margin-bottom: 0;
 }
 
-.c27 {
+.c29 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c28 {
+.c30 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c29 {
+.c31 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -435,25 +454,25 @@ exports[`<Outils /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c29 > *:first-child {
+.c31 > *:first-child {
   margin-top: 0;
 }
 
-.c29 > *:last-child {
+.c31 > *:last-child {
   margin-bottom: 0;
 }
 
-.c31 + .c30 {
+.c33 + .c32 {
   padding-left: 1.6rem;
 }
 
-.c33 {
+.c35 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c32 {
+.c34 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -463,12 +482,12 @@ exports[`<Outils /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c34 {
+.c36 {
   margin: 0.4rem 0;
   padding: 0;
 }
 
-.c35 {
+.c37 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -515,7 +534,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c23 {
+  .c25 {
     max-width: 100%;
     padding: 0;
   }
@@ -620,27 +639,27 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c21 {
+  .c22 {
     display: none;
   }
 }
 
 @media print {
-  .c25 {
+  .c27 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c29 {
+  .c31 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c31 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -648,19 +667,19 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c31 + .c30 {
+  .c33 + .c32 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c35 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c34 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -696,7 +715,7 @@ exports[`<Outils /> should render 1`] = `
         <span
           class="c5"
         >
-          Le code du travail numérique
+          Code du travail numérique
         </span>
       </a>
       <div
@@ -889,201 +908,208 @@ exports[`<Outils /> should render 1`] = `
       </div>
     </div>
   </main>
-  <footer
+  <div
     class="c21"
   >
-    <div
+    <footer
       class="c22"
     >
       <div
         class="c23"
       >
-        <h2
+        <div
           class="c24"
-        >
-          Besoin d’un accompagnement personnalisé ?
-        </h2>
+        />
         <div
           class="c25"
         >
-          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
-        </div>
-        <button
-          class="c26"
-        >
-          Contacter nos services
-          <svg
+          <h2
+            class="c26"
+          >
+            Besoin d’un accompagnement personnalisé ?
+          </h2>
+          <div
             class="c27"
-            fill="none"
-            viewBox="0 0 28 15"
           >
-            <path
-              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div
-      class="c28"
-    >
-      <nav>
-        <div
-          class="c29"
-        >
-          <div
-            class="c30 c31"
-          >
-            <h3
-              class="c32"
-            >
-              Code du travail numérique
-            </h3>
-            <ul
-              class="c33"
-            >
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="/droit-du-travail"
-                >
-                  Le droit du travail
-                </a>
-              </li>
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="/glossaire"
-                >
-                  Glossaire
-                </a>
-              </li>
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="/a-propos"
-                >
-                  À propos
-                </a>
-              </li>
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="/mentions-legales"
-                >
-                  Mentions légales
-                </a>
-              </li>
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="mailto:codedutravailnumerique@travail.gouv.fr"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
+            Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
           </div>
-          <div
-            class="c30 c31"
+          <button
+            class="c28"
           >
-            <h3
-              class="c32"
+            Contacter nos services
+            <svg
+              class="c29"
+              fill="none"
+              viewBox="0 0 28 15"
             >
-              Aidez-nous à améliorer cet outil
-            </h3>
-            <ul
-              class="c33"
-            >
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Contribuer sur Github
-                </a>
-              </li>
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Journal des modifications
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="c30 c31"
-          >
-            <h3
-              class="c32"
-            >
-              En collaboration avec
-            </h3>
-            <ul
-              class="c33"
-            >
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  La Direction Générale du Travail
-                </a>
-              </li>
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="https://incubateur.social.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  L’incubateur des ministères sociaux
-                </a>
-              </li>
-              <li
-                class="c34"
-              >
-                <a
-                  class="c35"
-                  href="https://beta.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  beta.gouv.fr
-                </a>
-              </li>
-            </ul>
-          </div>
+              <path
+                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
         </div>
-      </nav>
-    </div>
-  </footer>
+      </div>
+      <div
+        class="c30"
+      >
+        <nav>
+          <div
+            class="c31"
+          >
+            <div
+              class="c32 c33"
+            >
+              <h3
+                class="c34"
+              >
+                Code du travail numérique
+              </h3>
+              <ul
+                class="c35"
+              >
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="/droit-du-travail"
+                  >
+                    Le droit du travail
+                  </a>
+                </li>
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="/glossaire"
+                  >
+                    Glossaire
+                  </a>
+                </li>
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="/a-propos"
+                  >
+                    À propos
+                  </a>
+                </li>
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="/mentions-legales"
+                  >
+                    Mentions légales
+                  </a>
+                </li>
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="mailto:codedutravailnumerique@travail.gouv.fr"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c32 c33"
+            >
+              <h3
+                class="c34"
+              >
+                Aidez-nous à améliorer cet outil
+              </h3>
+              <ul
+                class="c35"
+              >
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Contribuer sur Github
+                  </a>
+                </li>
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Journal des modifications
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c32 c33"
+            >
+              <h3
+                class="c34"
+              >
+                En collaboration avec
+              </h3>
+              <ul
+                class="c35"
+              >
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    La Direction Générale du Travail
+                  </a>
+                </li>
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="https://incubateur.social.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    L’incubateur des ministères sociaux
+                  </a>
+                </li>
+                <li
+                  class="c36"
+                >
+                  <a
+                    class="c37"
+                    href="https://beta.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    beta.gouv.fr
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </div>
 </div>
 `;

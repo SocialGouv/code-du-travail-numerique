@@ -1,11 +1,11 @@
 import React from "react";
-import { LargeLink } from "@socialgouv/react-ui";
+import { Tile } from "@socialgouv/react-ui";
 import Link from "next/link";
 import TYPE_REFERENCE from "./typeReference";
 
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link href="/code-du-travail/[slug]" as={`/code-du-travail/${slug}`} passHref>
-    <LargeLink variant="dark">{title}</LargeLink>
+    <Tile variant="dark">{title}</Tile>
   </Link>
 );
 
@@ -15,19 +15,14 @@ const ConventionLink = ({ title, slug }) => (
     as={`/convention-collective/${slug}`}
     passHref
   >
-    <LargeLink variant="dark">Convention collective: {title}</LargeLink>
+    <Tile variant="dark">Convention collective: {title}</Tile>
   </Link>
 );
 
 const OtherLink = ({ title, url }) => (
-  <LargeLink
-    variant="dark"
-    href={url}
-    rel="noopener noreferrer"
-    target="_blank"
-  >
+  <Tile variant="dark" href={url} rel="noopener noreferrer" target="_blank">
     Autre: {title}
-  </LargeLink>
+  </Tile>
 );
 
 const getLink = reference => {

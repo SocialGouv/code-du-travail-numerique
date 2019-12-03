@@ -153,6 +153,9 @@ exports[`<Header /> should render 1`] = `
 }
 
 .c6 {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
   height: 100%;
 }
 
@@ -161,6 +164,11 @@ exports[`<Header /> should render 1`] = `
 }
 
 .c0 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   height: 9rem;
   margin-bottom: 6rem;
   overflow: visible;
@@ -241,10 +249,16 @@ exports[`<Header /> should render 1`] = `
 
 .c8 {
   display: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
   color: #7598d6;
 }
 
 .c9 {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
   width: 31rem;
   margin-left: 1.6rem;
 }
@@ -367,7 +381,7 @@ exports[`<Header /> should render 1`] = `
         <span
           class="c4"
         >
-          Le code du travail numérique
+          Code du travail numérique
         </span>
       </a>
       <div

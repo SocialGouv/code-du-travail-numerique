@@ -81,7 +81,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     width: 100% !important;
     height: auto !important;
     border-radius: ${box.borderRadius};
-    box-shadow: ${box.shadow.default};
+    box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   }
   padding: ${spacings.larger} 0 ${spacings.base} 0;
   overflow: visible !important;

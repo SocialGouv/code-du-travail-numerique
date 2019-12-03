@@ -18,7 +18,7 @@ export default createGlobalStyle`
 
   fieldset {
     padding: ${spacings.base};
-    border: ${box.border};
+    border: ${({ theme }) => box.border(theme.border)};
   }
 
 
@@ -37,7 +37,7 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.white};
     border: 1px solid transparent;
     border-radius: ${box.borderRadius};
-    box-shadow: ${box.shadow.default};
+    box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
     appearance: none;
 
     label + &, label > & {
@@ -59,7 +59,7 @@ export default createGlobalStyle`
     padding: 0;
     line-height: inherit;
     background: ${({ theme }) => theme.white};
-    border: ${box.border};
+    border: ${({ theme }) => box.border(theme.border)};
     border-radius: 50%;
     box-shadow: none;
     cursor: pointer;
@@ -101,7 +101,7 @@ export default createGlobalStyle`
     background-size: 1.6rem;
     border: none;
     border-radius: ${box.borderRadius};
-    box-shadow: ${box.shadow.default};
+    box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
     cursor: pointer;
     transition: border-color ${animations.transitionTiming} ease;
     appearance: none;

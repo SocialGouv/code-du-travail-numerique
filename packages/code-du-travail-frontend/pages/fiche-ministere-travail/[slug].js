@@ -15,12 +15,6 @@ const {
 
 const fetchSheetMT = ({ slug }) => fetch(`${API_URL}/sheets-mt/${slug}`);
 
-const Source = ({ name, url }) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
-    Voir le contenu original sur : {name}{" "}
-  </a>
-);
-
 class Fiche extends React.Component {
   static async getInitialProps({ query, asPath }) {
     // beware, this one is undefined when rendered server-side
@@ -53,7 +47,6 @@ class Fiche extends React.Component {
       title: section.title,
       body: <TabContent>{section.html}</TabContent>
     }));
-    const footer = <Source name="Ministère du travail" url={url} />;
     return (
       <Layout>
         <Metas
@@ -67,9 +60,8 @@ class Fiche extends React.Component {
           relatedItems={relatedItems}
           emptyMessage="Cette fiche n'a pas été trouvée"
           intro={intro && <Intro>{intro}</Intro>}
-          footer={footer}
           date={date}
-          sourceType="Fiche ministère du Travail"
+          source={{ name: "Fiche Ministère du travail", url }}
           breadcrumbs={breadcrumbs}
         >
           <Accordion preExpanded={[anchor]} items={formattedSections} />

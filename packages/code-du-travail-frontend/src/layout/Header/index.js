@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { Container, icons, theme } from "@socialgouv/react-ui";
 
@@ -21,9 +21,7 @@ const Header = ({ currentPage = "" }) => {
               src={"/static/assets/img/marianne.svg"}
               alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail"
             />
-            {currentPage !== "home" && (
-              <Span>Le code du travail numérique</Span>
-            )}
+            {currentPage !== "home" && <Span>Code du travail numérique</Span>}
           </LogoLink>
         </Link>
         <RightSide>
@@ -49,12 +47,22 @@ const Header = ({ currentPage = "" }) => {
   );
 };
 
-const { breakpoints, fonts, spacings } = theme;
+const { box, breakpoints, fonts, spacings } = theme;
 
 const HEADER_HEIGHT = "9rem";
 const HEADER_HEIGHT_MOBILE = "5rem";
 
 const StyledHeader = styled.header`
+  ${({ currentPage }) => {
+    if (currentPage !== "home") {
+      return css`
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
+      `;
+    }
+  }};
   height: ${HEADER_HEIGHT};
   margin-bottom: ${({ currentPage }) =>
     currentPage === "home" ? "7rem" : "6rem"};
@@ -119,6 +127,7 @@ const RightSide = styled.div`
 
 const StyledLink = styled.a`
   display: none;
+  order: 1;
   color: ${({ theme }) => theme.secondary};
   @media (max-width: ${breakpoints.tablet}) {
     display: block;
@@ -134,6 +143,7 @@ const StyledLink = styled.a`
 `;
 
 const SearchBarWrapper = styled.div`
+  order: 3;
   width: 31rem;
   margin-left: ${spacings.base};
   @media (max-width: ${breakpoints.tablet}) {

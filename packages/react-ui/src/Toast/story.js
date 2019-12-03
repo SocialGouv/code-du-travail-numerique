@@ -15,6 +15,11 @@ export const base = () => (
       <Toast variant="primary">Here is an primary info.</Toast>
     </Section>
     <Section>
+      <Toast variant="primary" shadow>
+        Here is an primary info with shadow.
+      </Toast>
+    </Section>
+    <Section>
       <Toast variant="secondary">Here is a secondary info.</Toast>
     </Section>
     <Section>

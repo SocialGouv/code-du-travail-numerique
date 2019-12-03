@@ -35,7 +35,6 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 
 .c0 {
   margin-bottom: 1rem;
-  overflow-x: auto;
 }
 
 .c3 {
@@ -257,7 +256,6 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
 
 .c0 {
   margin-bottom: 1rem;
-  overflow-x: auto;
 }
 
 .c3 {
