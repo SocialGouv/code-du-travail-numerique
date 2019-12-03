@@ -18,6 +18,16 @@ const SearchConvention = ({ ogImage, pageUrl }) => (
           <PageTitle>Recherchez votre convention collective</PageTitle>
           <ConventionForm />
         </Wrapper>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </Container>
     </Section>
   </Layout>
