@@ -3,34 +3,34 @@ import { stepPrime, stepReducer, initialSteps } from "../stepReducer";
 describe("initialSteps", () => {
   it("should return default steps", () => {
     expect(initialSteps).toMatchInlineSnapshot(`
-Array [
-  Object {
-    "component": [Function],
-    "label": "Introduction",
-    "name": "introduction",
-  },
-  Object {
-    "component": [Function],
-    "label": "Informations générales",
-    "name": "info_generales",
-  },
-  Object {
-    "component": [Function],
-    "label": "Ancienneté",
-    "name": "anciennete",
-  },
-  Object {
-    "component": [Function],
-    "label": "Salaires",
-    "name": "salaires",
-  },
-  Object {
-    "component": [Function],
-    "label": "Indemnité légale",
-    "name": "indemnite_legale",
-  },
-]
-`);
+      Array [
+        Object {
+          "component": [Function],
+          "label": "Introduction",
+          "name": "introduction",
+        },
+        Object {
+          "component": [Function],
+          "label": "Contrat de travail",
+          "name": "info_generales",
+        },
+        Object {
+          "component": [Function],
+          "label": "Ancienneté",
+          "name": "anciennete",
+        },
+        Object {
+          "component": [Function],
+          "label": "Salaires",
+          "name": "salaires",
+        },
+        Object {
+          "component": [Function],
+          "label": "Indemnité légale",
+          "name": "indemnite_legale",
+        },
+      ]
+    `);
   });
 });
 

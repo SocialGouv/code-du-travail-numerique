@@ -42,7 +42,7 @@ function StepInfo() {
       <TypeContrat name="contrat" />
       <YesNoQuestion
         name="fauteGrave"
-        label="Le licenciement est-il dû à une faute grave ou lourde&nbsp;?"
+        label="Le licenciement est-il dû à une faute grave (ou lourde)&nbsp;?"
       />
       <YesNoQuestion
         name="inaptitude"

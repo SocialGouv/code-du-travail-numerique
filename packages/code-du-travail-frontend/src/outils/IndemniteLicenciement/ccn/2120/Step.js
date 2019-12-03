@@ -34,7 +34,7 @@ function Step() {
           return (
             <FormGroup>
               <Label htmlFor="input-motif">
-                Préciser le motif de licenciement :
+                Quel est le motif du licenciement&nbsp;?
               </Label>
               <Select id="input-motif" {...input}>
                 <option value="" disabled>
@@ -56,7 +56,7 @@ function Step() {
           return (
             <FormGroup>
               <Label htmlFor="input-categorie">
-                Précisez la categorie professionnelle du salarié&nbsp;:
+                Quelle est la catégorie professionnelle du salarié&nbsp;?
               </Label>
 
               <Select id="input-categorie" {...input}>

@@ -26,7 +26,7 @@ export const initialSteps = [
   {
     component: StepInfo,
     name: "info_generales",
-    label: "Informations générales"
+    label: "Contrat de travail"
   },
   {
     component: StepAnciennete,

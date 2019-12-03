@@ -70,7 +70,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   <p
     class="c1"
   >
-    Quel est l’échelon du salarié dans la convention collective ?
+    Quel est l’échelon du salarié ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>
@@ -390,7 +390,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   <p
     class="c1"
   >
-    Quel est l’échelon du salarié dans la convention collective ?
+    Quel est l’échelon du salarié ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>
@@ -673,7 +673,7 @@ exports[`<Step /> should render 1`] = `
   <p
     class="c1"
   >
-    Quel est l’échelon du salarié dans la convention collective ?
+    Quel est l’échelon du salarié ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>

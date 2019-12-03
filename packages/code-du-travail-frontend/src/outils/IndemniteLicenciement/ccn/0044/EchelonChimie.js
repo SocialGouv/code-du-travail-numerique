@@ -34,7 +34,7 @@ function EchelonChimie({ name }) {
   return (
     <>
       <Question as="p">
-        Quel est l’échelon du salarié dans la convention collective&nbsp;?
+        Quel est l’échelon du salarié&nbsp;?
         <br />
         Cette information se trouve sur le bulletin de salaire.
       </Question>

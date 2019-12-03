@@ -31,10 +31,10 @@ export function getIndemnite({
   let formula = "-";
   const labels = {
     "Salaire de référence (Sref)": salaireRef,
-    "ancienneté totale": round(anciennete),
-    "ancienneté (en année entière)": anneeAncienete,
-    groupe,
-    ...(age && { age }),
+    "Ancienneté totale": round(anciennete),
+    "Ancienneté (en année entière)": anneeAncienete,
+    Groupe: groupe,
+    ...(age && { Age: age }),
     ...(hasOpe && { "affiliation à une OPE": hasOpe ? "oui" : "non" }),
     ...(hasOpe && isEco && { "licenciement économique": isEco ? "oui" : "non" })
   };

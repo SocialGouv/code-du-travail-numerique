@@ -11,7 +11,8 @@ function CategoriePeriod() {
   return (
     <>
       <SectionTitle>
-        Précisez les périodes éventuelles passées au statut de TAM ou employé
+        Quelles sont les périodes éventuelles passées au statut de Technicien,
+        Agent de maîtrise (TAM) ou Employé&nbsp;?
       </SectionTitle>
       <Field
         name="tamDuration"

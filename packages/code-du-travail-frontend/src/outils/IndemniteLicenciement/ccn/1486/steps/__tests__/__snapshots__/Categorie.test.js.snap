@@ -32,7 +32,7 @@ exports[`<Categorie /> renders 1`] = `
     Catégorie professionnelle
   </h2>
   <p>
-    Quelle est la catégorie du salarié dans la convention collective ?
+    Quelle est la catégorie du salarié ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>

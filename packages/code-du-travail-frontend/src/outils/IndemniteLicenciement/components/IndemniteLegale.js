@@ -15,9 +15,8 @@ function IndemniteLegale({ indemnite, infoCalcul }) {
             maximumFractionDigits: 2,
             minimumFractionDigits: 2
           })}
-          &nbsp;€&nbsp;brut
+          &nbsp;€&nbsp;brut.
         </Highlight>{" "}
-        pour l’indemnité de licenciement.
       </p>
       <FormulaDetails infoCalcul={infoCalcul} />
     </>

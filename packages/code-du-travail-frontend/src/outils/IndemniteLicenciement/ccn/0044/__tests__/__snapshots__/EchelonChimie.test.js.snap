@@ -30,7 +30,7 @@ exports[`<EchelonChimie /> should render 1`] = `
   <p
     class="c0"
   >
-    Quel est l’échelon du salarié dans la convention collective ?
+    Quel est l’échelon du salarié ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>
@@ -198,7 +198,7 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   <p
     class="c0"
   >
-    Quel est l’échelon du salarié dans la convention collective ?
+    Quel est l’échelon du salarié ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>

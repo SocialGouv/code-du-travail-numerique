@@ -152,7 +152,7 @@ exports[`<Anciennete /> should render 1`] = `
       class="c1"
       for="3"
     >
-      Quelle est la date de sortie de l’entreprise (incluant la durée du préavis) ?
+      Quelle est la date de sortie de l’entreprise ?
       <span
         aria-label="champs obligatoire"
         class="c2"
@@ -175,7 +175,7 @@ exports[`<Anciennete /> should render 1`] = `
     <h2
       class="c0"
     >
-      Période d’absence prolongée (plus d’un mois)
+      Période d’absence prolongée
     </h2>
     <p
       class="c5"

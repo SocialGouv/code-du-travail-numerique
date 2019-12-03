@@ -17,9 +17,9 @@ Object {
   "labels": Object {
     "Catégorie": "Ne sait pas",
     "Motif du licenciement": "Motif économique",
+    "Nombre de semestres après 2002 (S2)": 21,
+    "Nombre de semestres avant 2002 (S1)": 0,
     "Salaire de référence (Sref)": 1846.15,
-    "nombre de semestres après 2002 (S2)": 21,
-    "nombre de semestres avant 2002 (S1)": 0,
   },
 }
 `;
@@ -30,9 +30,9 @@ Object {
   "labels": Object {
     "Catégorie": "Ne sait pas",
     "Motif du licenciement": "Motif non disciplinaire",
+    "Nombre de semestres après 2002 (S2)": 21,
+    "Nombre de semestres avant 2002 (S1)": 0,
     "Salaire de référence (Sref)": 1846.15,
-    "nombre de semestres après 2002 (S2)": 21,
-    "nombre de semestres avant 2002 (S1)": 0,
   },
 }
 `;
@@ -54,9 +54,9 @@ Object {
   "labels": Object {
     "Catégorie": "Ne sait pas",
     "Motif du licenciement": "Motif non disciplinaire",
+    "Nombre de semestres après 2002 (S2)": 35,
+    "Nombre de semestres avant 2002 (S1)": 4,
     "Salaire de référence (Sref)": 1846.15,
-    "nombre de semestres après 2002 (S2)": 35,
-    "nombre de semestres avant 2002 (S1)": 4,
   },
 }
 `;
@@ -67,9 +67,9 @@ Object {
   "labels": Object {
     "Catégorie": "Ne sait pas",
     "Motif du licenciement": "Motif économique",
+    "Nombre de semestres après 2002 (S2)": 35,
+    "Nombre de semestres avant 2002 (S1)": 4,
     "Salaire de référence (Sref)": 1846.15,
-    "nombre de semestres après 2002 (S2)": 35,
-    "nombre de semestres avant 2002 (S1)": 4,
   },
 }
 `;
@@ -80,9 +80,9 @@ Object {
   "labels": Object {
     "Catégorie": "Cadre",
     "Motif du licenciement": "Motif non disciplinaire",
+    "Nombre de semestres après 2002 (S2)": 35,
+    "Nombre de semestres avant 2002 (S1)": 6,
     "Salaire de référence (Sref)": 1846.15,
-    "nombre de semestres après 2002 (S2)": 35,
-    "nombre de semestres avant 2002 (S1)": 6,
   },
 }
 `;
@@ -93,9 +93,9 @@ Object {
   "labels": Object {
     "Catégorie": "Cadre",
     "Motif du licenciement": "Motif économique",
+    "Nombre de semestres après 2002 (S2)": 35,
+    "Nombre de semestres avant 2002 (S1)": 6,
     "Salaire de référence (Sref)": 1846.15,
-    "nombre de semestres après 2002 (S2)": 35,
-    "nombre de semestres avant 2002 (S1)": 6,
   },
 }
 `;
@@ -106,9 +106,9 @@ Object {
   "labels": Object {
     "Catégorie": "Ne sait pas",
     "Motif du licenciement": "Motif non disciplinaire",
+    "Nombre de semestres après 2002 (S2)": 35,
+    "Nombre de semestres avant 2002 (S1)": 6,
     "Salaire de référence (Sref)": 1846.15,
-    "nombre de semestres après 2002 (S2)": 35,
-    "nombre de semestres avant 2002 (S1)": 6,
   },
 }
 `;
@@ -119,9 +119,9 @@ Object {
   "labels": Object {
     "Catégorie": "Non cadre",
     "Motif du licenciement": "Motif non disciplinaire",
+    "Nombre de semestres après 2002 (S2)": 35,
+    "Nombre de semestres avant 2002 (S1)": 6,
     "Salaire de référence (Sref)": 1846.15,
-    "nombre de semestres après 2002 (S2)": 35,
-    "nombre de semestres avant 2002 (S1)": 6,
   },
 }
 `;

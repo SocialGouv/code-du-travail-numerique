@@ -1050,7 +1050,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     <div
       class="c6 c7"
     >
-      Type de contrat
+      Type de durée de travail
     </div>
     <div
       class="c8 c7"

@@ -11,7 +11,7 @@ function FormulaDetails({ infoCalcul: { labels, formula } }) {
   return (
     <Details>
       <Summary>Voir le détail du calcul</Summary>
-      <HeadingDetails>Élements saisis :</HeadingDetails>
+      <HeadingDetails>Éléments saisis :</HeadingDetails>
       <ListDetails>
         {Object.entries(labels).map(([label, value], index) => (
           <ItemDetails key={index}>
@@ -20,7 +20,7 @@ function FormulaDetails({ infoCalcul: { labels, formula } }) {
         ))}
       </ListDetails>
       <ErrorBoundary>
-        <HeadingDetails>Formule</HeadingDetails>
+        <HeadingDetails>Formule :</HeadingDetails>
         <FormuleWrapper>
           <MathJax math={"`" + formula + "`"} />
         </FormuleWrapper>

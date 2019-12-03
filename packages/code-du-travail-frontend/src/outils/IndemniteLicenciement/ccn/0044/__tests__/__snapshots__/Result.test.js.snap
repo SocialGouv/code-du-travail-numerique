@@ -173,7 +173,7 @@ exports[`<Result /> should render 1`] = `
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -203,7 +203,7 @@ exports[`<Result /> should render 1`] = `
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"
@@ -250,7 +250,7 @@ exports[`<Result /> should render 1`] = `
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -265,21 +265,21 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            ancienneté totale
+            Ancienneté totale
              : 
             2.5
           </li>
           <li
             class="c11"
           >
-            ancienneté (en année entière)
+            Ancienneté (en année entière)
              : 
             2
           </li>
           <li
             class="c11"
           >
-            groupe
+            Groupe
              : 
             I
           </li>
@@ -287,7 +287,7 @@ exports[`<Result /> should render 1`] = `
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"

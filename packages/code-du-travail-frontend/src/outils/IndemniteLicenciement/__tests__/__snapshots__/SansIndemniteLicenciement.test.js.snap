@@ -98,10 +98,9 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
         class="c3"
       >
         3,585.00
-         € brut
+         € brut.
       </strong>
        
-      pour l’indemnité de licenciement.
     </p>
     <details
       class="c4"
@@ -114,7 +113,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
       <strong
         class="c6"
       >
-        Élements saisis :
+        Éléments saisis :
       </strong>
       <ul
         class="c7"
@@ -144,7 +143,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
       <strong
         class="c6"
       >
-        Formule
+        Formule :
       </strong>
       <div
         class="c9"

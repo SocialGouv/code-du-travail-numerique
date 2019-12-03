@@ -219,7 +219,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -242,7 +242,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"
@@ -289,7 +289,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -312,7 +312,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"
@@ -509,7 +509,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -532,7 +532,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"
@@ -579,7 +579,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -602,7 +602,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"

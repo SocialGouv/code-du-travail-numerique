@@ -173,7 +173,7 @@ exports[`<Result /> should render 1`] = `
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -210,7 +210,7 @@ exports[`<Result /> should render 1`] = `
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"
@@ -257,7 +257,7 @@ exports[`<Result /> should render 1`] = `
         <strong
           class="c9"
         >
-          Élements saisis :
+          Éléments saisis :
         </strong>
         <ul
           class="c10"
@@ -265,21 +265,21 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            salaire de référence (Sref)
+            Salaire de référence (Sref)
              : 
             2000
           </li>
           <li
             class="c11"
           >
-            catégorie
+            Catégorie
              : 
             cadre
           </li>
           <li
             class="c11"
           >
-            durée comme cadre, en mois, (Dc)
+            Durée comme cadre, en mois, (Dc)
              : 
             120
           </li>
@@ -293,7 +293,7 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            en age de partir à la retraite
+            En âge de partir à la retraite
              : 
             oui
           </li>
@@ -315,7 +315,7 @@ exports[`<Result /> should render 1`] = `
         <strong
           class="c9"
         >
-          Formule
+          Formule :
         </strong>
         <div
           class="c12"
