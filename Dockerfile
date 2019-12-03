@@ -40,7 +40,7 @@ COPY ./packages/code-du-travail-api/package.json /app/packages/code-du-travail-a
 COPY ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
 
 
-RUN yarn --frozen-lockfile && yarn cache clean
+RUN yarn --production --frozen-lockfile && yarn cache clean
 
 #
 
