@@ -43,7 +43,7 @@ class SearchPage extends React.Component {
         <Metas
           url={pageUrl}
           title={`${query} - Code du travail numérique`}
-          description="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
+          description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
           image={ogImage}
         />
         <Container narrow>
