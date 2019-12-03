@@ -54,8 +54,8 @@ Notify Success:
 Release:
   stage: "Notify Finished Deployment"
   image: node:10.17.0-alpine3.10
-  only:
-    - master
+  # only:
+  #   - master
   when: manual
   before_script:
     - apk add --no-cache git=2.22.0-r0
