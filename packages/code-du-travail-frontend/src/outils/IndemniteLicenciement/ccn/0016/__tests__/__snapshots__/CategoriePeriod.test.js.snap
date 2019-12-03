@@ -40,7 +40,7 @@ exports[`<CategoryPeriod /> should render 1`] = `
   <h2
     class="c0"
   >
-    Quelles sont les périodes éventuelles passées au statut de TAM ou employé ?
+    Quelles sont les périodes éventuelles passées au statut de Technicien, Agent de maîtrise (TAM) ou Employé ?
   </h2>
   <label
     class="c1"
