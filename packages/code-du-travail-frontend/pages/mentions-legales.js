@@ -216,7 +216,7 @@ const SearchPage = ({ pageUrl, ogImage }) => {
               Tél. : 01 40 56 60 00
             </Address>
             <Title as="h3">Directeur de la publication</Title>
-            <p>Hélène BRISSET</p>
+            <p>Yves Struillou, Directeur Général du Travail</p>
             <Title as="h3">Hébergement</Title>
             <p>
               Ce site est hébergé en propre par le Ministère des Affaires
