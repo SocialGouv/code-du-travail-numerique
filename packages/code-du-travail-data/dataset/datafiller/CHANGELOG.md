@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.8.0 (2019-12-03)
+
+
+### Bug Fixes
+
+* **contributions:** remove contribution without generic answer ([#1824](https://github.com/SocialGouv/code-du-travail-numerique/issues/1824)) ([1c0430e](https://github.com/SocialGouv/code-du-travail-numerique/commit/1c0430e))
+
+
+
+
+
 # [3.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.2...v3.7.0) (2019-11-21)
 
 

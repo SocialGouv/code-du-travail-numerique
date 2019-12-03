@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.8.0 (2019-12-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @reach/tooltip to ^0.6.2 ([#1798](https://github.com/SocialGouv/code-du-travail-numerique/issues/1798)) ([c2a464e](https://github.com/SocialGouv/code-du-travail-numerique/commit/c2a464e))
+* **deps:** update dependency date-fns to ^2.8.1 ([#1787](https://github.com/SocialGouv/code-du-travail-numerique/issues/1787)) ([5f3833f](https://github.com/SocialGouv/code-du-travail-numerique/commit/5f3833f))
+* use local fonts ([#1803](https://github.com/SocialGouv/code-du-travail-numerique/issues/1803)) ([881cc5a](https://github.com/SocialGouv/code-du-travail-numerique/commit/881cc5a))
+* **wording:** hot fix [#1866](https://github.com/SocialGouv/code-du-travail-numerique/issues/1866) ([64d8333](https://github.com/SocialGouv/code-du-travail-numerique/commit/64d8333))
+
+
+### Features
+
+* **chore:** ui new step  ([#1811](https://github.com/SocialGouv/code-du-travail-numerique/issues/1811)) ([c8e9901](https://github.com/SocialGouv/code-du-travail-numerique/commit/c8e9901))
+* **frontend:** gorgeous layout ([#1828](https://github.com/SocialGouv/code-du-travail-numerique/issues/1828)) ([238be0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/238be0c))
+* **frontend:** new-ui-setup ([#1760](https://github.com/SocialGouv/code-du-travail-numerique/issues/1760)) ([eb6f032](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb6f032))
+* **frontend:** tons of improvements ([#1867](https://github.com/SocialGouv/code-du-travail-numerique/issues/1867)) ([6132e5e](https://github.com/SocialGouv/code-du-travail-numerique/commit/6132e5e))
+* **simulator:** add external link in new window ([#1805](https://github.com/SocialGouv/code-du-travail-numerique/issues/1805)) ([0d9a8c3](https://github.com/SocialGouv/code-du-travail-numerique/commit/0d9a8c3)), closes [#1688](https://github.com/SocialGouv/code-du-travail-numerique/issues/1688)
+* **simulator:** add loading / error feedback ([#1804](https://github.com/SocialGouv/code-du-travail-numerique/issues/1804)) ([51f0232](https://github.com/SocialGouv/code-du-travail-numerique/commit/51f0232)), closes [#1576](https://github.com/SocialGouv/code-du-travail-numerique/issues/1576)
+
+
+
+
+
 # [3.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.2...v3.7.0) (2019-11-21)
 
 
