@@ -52,9 +52,9 @@ deployment:
           name: elastic-apm
           key: token
     - name: ELASTIC_APM_SERVICE_NAME
-      value: cdtn-api
+      value: "cdtn-api"
     - name: ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME
-      value: true
+      value: "true"
     - name: ELASTIC_APM_ENVIRONMENT
       value: "cdtn-${BRANCH_HASH}"
     - name: NLP_URL
