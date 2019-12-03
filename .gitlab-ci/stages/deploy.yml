@@ -33,6 +33,8 @@ Create namespace:
       kubectl apply --namespace=${K8S_NAMESPACE} -f -
     - kubectl get secret elasticsearch-cloud-api --namespace=cdtn-secret --export -o yaml |
       kubectl apply --namespace=${K8S_NAMESPACE} -f -
+    - kubectl get secret elastic-apm --namespace=cdtn-secret --export -o yaml |
+      kubectl apply --namespace=${K8S_NAMESPACE} -f -
 
 #
 
