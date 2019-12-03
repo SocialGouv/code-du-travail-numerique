@@ -63,15 +63,17 @@ const References = ({ references }) => {
 const AnswersConventions = ({ answers }) => {
   const [ccInfo, setCcInfo] = useConventionState(null);
   const answer = ccInfo && answers.find(a => a.idcc === ccInfo.num);
+  // ensure we have valid data in ccInfo
+  const isCcDetected = ccInfo && ccInfo.id && ccInfo.num && ccInfo.title;
   return (
     <div>
-      {!ccInfo && (
+      {!isCcDetected && (
         <StyledSearchConvention
           title=""
           onSelectConvention={({ convention }) => setCcInfo(convention)}
         />
       )}
-      {ccInfo && (
+      {isCcDetected && (
         <React.Fragment>
           <Heading as="h6">
             <span role="img" aria-label="Icone convention collective">
