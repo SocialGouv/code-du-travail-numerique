@@ -41,6 +41,22 @@ deployment:
     - name: ES_INDEX_PREFIX
       value: "cdtn-prod"
       # value: "cdtn-${BRANCH_HASH}"
+    - name: ELASTIC_APM_SERVER_URL
+      valueFrom:
+        secretKeyRef:
+          name: elastic-apm
+          key: url
+    - name: ELASTIC_APM_SECRET_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: elastic-apm
+          key: token
+    - name: ELASTIC_APM_SERVICE_NAME
+      value: cdtn-api
+    - name: ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME
+      value: true
+    - name: ELASTIC_APM_ENVIRONMENT
+      value: "cdtn-${BRANCH_HASH}"
     - name: NLP_URL
       value: "${NLP_URL}"
     - name: NODE_ENV
