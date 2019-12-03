@@ -127,12 +127,16 @@ exports[`<Accordion /> should render 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-0"
-        class="c5"
+        class="accordion__panel"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-0"
       >
-        this is the body
+        <div
+          class="c5"
+        >
+          this is the body
+        </div>
       </div>
     </div>
   </div>

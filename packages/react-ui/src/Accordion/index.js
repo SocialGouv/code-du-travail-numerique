@@ -23,7 +23,9 @@ export const Accordion = ({ items, ...props }) => (
             <StyledHeading as={as}>{title}</StyledHeading>
           </StyledAccordionItemButton>
         </AccordionItemHeading>
-        <StyledAccordionItemPanel>{body}</StyledAccordionItemPanel>
+        <AccordionItemPanel>
+          <StyledAccordionItemPanel>{body}</StyledAccordionItemPanel>
+        </AccordionItemPanel>
       </StyledAccordionItem>
     ))}
   </RootAccordion>
@@ -72,7 +74,7 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
   }
 `;
 
-const StyledAccordionItemPanel = styled(AccordionItemPanel)`
+const StyledAccordionItemPanel = styled.div`
   padding: ${spacings.base};
   animation: ${fadeIn} 0.35s ease-in;
   & > *:first-child {

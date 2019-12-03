@@ -263,85 +263,89 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-0"
-              class="c9"
+              class="accordion__panel"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-0"
             >
-              <ul>
-                <li>
-                  <a
-                    class="c10"
-                    href="/code-du-travail/l1244-3"
-                  >
-                    <div
-                      class="c11"
+              <div
+                class="c9"
+              >
+                <ul>
+                  <li>
+                    <a
+                      class="c10"
+                      href="/code-du-travail/l1244-3"
                     >
-                      Article L1244-3 du code du travail
-                    </div>
-                    
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="c10"
-                    href="/code-du-travail/l1244-4"
-                  >
-                    <div
-                      class="c11"
+                      <div
+                        class="c11"
+                      >
+                        Article L1244-3 du code du travail
+                      </div>
+                      
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="c10"
+                      href="/code-du-travail/l1244-4"
                     >
-                      Article L1244-4 du code du travail
-                    </div>
-                    
-                  </a>
-                </li>
-                <li>
-                  <button
-                    class="c10"
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div
-                      class="c11"
+                      <div
+                        class="c11"
+                      >
+                        Article L1244-4 du code du travail
+                      </div>
+                      
+                    </a>
+                  </li>
+                  <li>
+                    <button
+                      class="c10"
+                      href=""
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
-                      Autre: 
-                      Article L3121-44 du code du travail
-                    </div>
-                    
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="c10"
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div
-                      class="c11"
+                      <div
+                        class="c11"
+                      >
+                        Autre: 
+                        Article L3121-44 du code du travail
+                      </div>
+                      
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="c10"
+                      href=""
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
-                      Autre: 
-                      Article xxx du code du travail
-                    </div>
-                    
-                  </button>
-                </li>
-                <li>
-                  <a
-                    class="c10"
-                    href="/convention-collective/yyy"
-                  >
-                    <div
-                      class="c11"
+                      <div
+                        class="c11"
+                      >
+                        Autre: 
+                        Article xxx du code du travail
+                      </div>
+                      
+                    </button>
+                  </li>
+                  <li>
+                    <a
+                      class="c10"
+                      href="/convention-collective/yyy"
                     >
-                      Convention collective: 
-                      Article yyy du code du travail
-                    </div>
-                    
-                  </a>
-                </li>
-              </ul>
+                      <div
+                        class="c11"
+                      >
+                        Convention collective: 
+                        Article yyy du code du travail
+                      </div>
+                      
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

@@ -441,23 +441,27 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-0"
-              class="c14"
+              class="accordion__panel"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-0"
             >
-              <p>
-                La démission est un mode de rupture du contrat de travail qui  vous permet de quitter votre entreprise sans avoir à justifier cette décision.
-              </p>
-              <p>
-                
+              <div
+                class="c14"
+              >
+                <p>
+                  La démission est un mode de rupture du contrat de travail qui  vous permet de quitter votre entreprise sans avoir à justifier cette décision.
+                </p>
+                <p>
+                  
                   Ce  droit peut être  exercé à tout moment, même si le  contrat de travail est
                   
-                suspendu
-                
+                  suspendu
+                  
                   .
                
-              </p>
+                </p>
+              </div>
             </div>
           </div>
           <div
@@ -506,66 +510,70 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-1"
-              class="c14"
+              class="accordion__panel"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-1"
             >
-              <p>
-                Le salarié peut mettre fin à son contrat de travail dans les cas suivants :
-              </p>
-              <ul>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    Dans le cadre d'une rupture volontaire du contrat de travail par le salarié
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    
+              <div
+                class="c14"
+              >
+                <p>
+                  Le salarié peut mettre fin à son contrat de travail dans les cas suivants :
+                </p>
+                <ul>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      Dans le cadre d'une rupture volontaire du contrat de travail par le salarié
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      
                         Pendant la
                         
-                    période d'essai
-                    
+                      période d'essai
+                      
                         sans motif particulier
                      
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      
                         En cas de
                         
-                    départ volontaire à la retraite
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    
+                      départ volontaire à la retraite
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      
                         Dans le cadre d'une
                         
-                    résiliation judiciaire
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    
+                      résiliation judiciaire
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      
                         Dans le cadre d'une
                         
-                    prise d'acte
-                  </p>
-                </li>
-              </ul>
+                      prise d'acte
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div
@@ -614,50 +622,54 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-2"
-              class="c14"
+              class="accordion__panel"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-2"
             >
-              <p>
-                Pour qu'une démission soit valable, vous devez manifester de façon claire et non équivoque votre volonté de mettre fin au contrat de travail.
-              </p>
-              <p>
-                
+              <div
+                class="c14"
+              >
+                <p>
+                  Pour qu'une démission soit valable, vous devez manifester de façon claire et non équivoque votre volonté de mettre fin au contrat de travail.
+                </p>
+                <p>
+                  
                   Une absence injustifiée ou un
                   
-                abandon de poste
-                
+                  abandon de poste
+                  
                   ne peuvent pas être considérés comme une démission.
                
-              </p>
-              <p>
-                
+                </p>
+                <p>
+                  
                   En cas d'ambiguïté sur votre volonté claire et non équivoque, le conseil de prud'hommes  peut requalifier la démission  en
                   
-                licenciement injustifié (ou sans cause réelle et sérieuse)
-                
+                  licenciement injustifié (ou sans cause réelle et sérieuse)
+                  
                   .
                
-              </p>
-              <p>
-                
+                </p>
+                <p>
+                  
                   Dans certains cas, vous pouvez
                   
-                revenir sur votre démission
-                
+                  revenir sur votre démission
+                  
                   .
                
-              </p>
-              <p>
-                
+                </p>
+                <p>
+                  
                   La démission ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur. Sinon, vous pouvez être condamné(e) au versement de
                   
-                dommages et intérêts
-                
+                  dommages et intérêts
+                  
                   à l'employeur.
                
-              </p>
+                </p>
+              </div>
             </div>
           </div>
           <div
@@ -706,52 +718,56 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-3"
-              class="c14"
+              class="accordion__panel"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-3"
             >
-              <p>
-                Pour manifester votre volonté claire et non équivoque de démissionner, vous devez nécessairement prévenir votre employeur.
-              </p>
-              <p>
-                Il n'y a pas de procédure légale imposée pour signifier une démission. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de démission.
-              </p>
               <div
-                class="c16"
+                class="c14"
               >
+                <p>
+                  Pour manifester votre volonté claire et non équivoque de démissionner, vous devez nécessairement prévenir votre employeur.
+                </p>
+                <p>
+                  Il n'y a pas de procédure légale imposée pour signifier une démission. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de démission.
+                </p>
                 <div
-                  class="c17"
+                  class="c16"
                 >
-                  Modèle de document
+                  <div
+                    class="c17"
+                  >
+                    Modèle de document
+                  </div>
+                  <a
+                    class="c18 no-after"
+                    href="https://www.service-public.fr/simulateur/calcul/Demission"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Lettre de démission du salarié
+                  </a>
+                  <small
+                    class="c19"
+                  >
+                    Direction de l'information légale et administrative (Premier ministre)
+                  </small>
                 </div>
-                <a
-                  class="c18 no-after"
-                  href="https://www.service-public.fr/simulateur/calcul/Demission"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Lettre de démission du salarié
-                </a>
-                <small
-                  class="c19"
-                >
-                  Direction de l'information légale et administrative (Premier ministre)
-                </small>
-              </div>
-              <p>
-                
+                <p>
+                  
                   Des
                   
-                dispositions conventionnelles
-                
+                  dispositions conventionnelles
+                  
                   peuvent imposer l'envoi de la lettre de démission par lettre recommandée avec
                   
-                RAR
-                
+                  RAR
+                  
                   .
                
-              </p>
+                </p>
+              </div>
             </div>
           </div>
           <div
@@ -800,417 +816,429 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-4"
-              class="c14"
+              class="accordion__panel"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-4"
             >
-              <p>
-                Vous ne pouvez pas quitter votre travail dès que vous avez signifié votre démission à votre employeur. Vous continuez de travailler jusqu'à la fin de votre contrat de travail, dans le respect du délai de préavis prévu (sauf en cas de dispense du préavis).
-              </p>
-              <h4
-                class="c20"
-              >
-                Durée
-              </h4>
               <div
-                class="c2"
-                data-tabs="true"
+                class="c14"
               >
-                <ul
-                  class="c3"
-                  role="tablist"
+                <p>
+                  Vous ne pouvez pas quitter votre travail dès que vous avez signifié votre démission à votre employeur. Vous continuez de travailler jusqu'à la fin de votre contrat de travail, dans le respect du délai de préavis prévu (sauf en cas de dispense du préavis).
+                </p>
+                <h4
+                  class="c20"
                 >
-                  <li
-                    aria-controls="react-tabs-7"
-                    aria-disabled="false"
-                    aria-selected="true"
-                    class="c4 react-tabs__tab--selected"
-                    id="react-tabs-6"
-                    role="tab"
-                    tabindex="0"
-                  >
-                    Cas général
-                  </li>
-                  <li
-                    aria-controls="react-tabs-9"
-                    aria-disabled="false"
-                    aria-selected="false"
-                    class="c4"
-                    id="react-tabs-8"
-                    role="tab"
-                  >
-                    Journaliste
-                  </li>
-                  <li
-                    aria-controls="react-tabs-11"
-                    aria-disabled="false"
-                    aria-selected="false"
-                    class="c4"
-                    id="react-tabs-10"
-                    role="tab"
-                  >
-                    VRP
-                  </li>
-                </ul>
+                  Durée
+                </h4>
                 <div
-                  aria-labelledby="react-tabs-6"
-                  class="c5 react-tabs__tab-panel--selected"
-                  id="react-tabs-7"
-                  role="tabpanel"
+                  class="c2"
+                  data-tabs="true"
                 >
-                  <div
-                    class="c6"
+                  <ul
+                    class="c3"
+                    role="tablist"
                   >
-                    <h5
-                      class="c20"
+                    <li
+                      aria-controls="react-tabs-7"
+                      aria-disabled="false"
+                      aria-selected="true"
+                      class="c4 react-tabs__tab--selected"
+                      id="react-tabs-6"
+                      role="tab"
+                      tabindex="0"
                     >
                       Cas général
-                    </h5>
-                  </div>
-                  <p>
-                    La durée du préavis de démission est fixée :
-                  </p>
-                  <ul>
-                    <li
-                      class="c15"
-                    >
-                      <p>
-                        Soit par convention collective ou accord collectif
-                      </p>
                     </li>
                     <li
-                      class="c15"
+                      aria-controls="react-tabs-9"
+                      aria-disabled="false"
+                      aria-selected="false"
+                      class="c4"
+                      id="react-tabs-8"
+                      role="tab"
                     >
-                      <p>
-                        
-                                 Soit par les
-                                 
-                        usages
-                        
-                                 pratiqués dans la localité et dans la profession
-                              
-                      </p>
+                      Journaliste
                     </li>
                     <li
-                      class="c15"
+                      aria-controls="react-tabs-11"
+                      aria-disabled="false"
+                      aria-selected="false"
+                      class="c4"
+                      id="react-tabs-10"
+                      role="tab"
                     >
-                      <p>
-                        Soit par le droit local (en Alsace-Moselle)
-                      </p>
+                      VRP
                     </li>
                   </ul>
-                  <p>
-                    Votre contrat de travail peut prévoir un préavis de démission, qui s'applique si sa durée est plus courte que celle prévue par la convention collective, l'accord collectif ou les usages.
-                  </p>
-                  <p>
-                    Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
-                  </p>
                   <div
-                    class="c21"
-                  >
-                    <h6
-                      class="c20"
-                    >
-                      À savoir
-                    </h6>
-                    <p>
-                      le préavis commence à courir à compter de la notification à l'employeur de votre démission.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  aria-labelledby="react-tabs-8"
-                  class="c5"
-                  id="react-tabs-9"
-                  role="tabpanel"
-                />
-                <div
-                  aria-labelledby="react-tabs-10"
-                  class="c5"
-                  id="react-tabs-11"
-                  role="tabpanel"
-                />
-              </div>
-              <h4
-                class="c20"
-              >
-                Dispense de préavis
-              </h4>
-              <p>
-                Vous n'êtes pas tenu(e) d'effectuer de préavis dans les cas suivants :
-              </p>
-              <ul>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    
-                           Démission
-                           
-                    pendant la grossesse ou pour élever un enfant
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    
-                           Démission à l'issue d'un
-                           
-                    congé pour création d'entreprise
-                  </p>
-                </li>
-              </ul>
-              <p>
-                En dehors de ces deux cas, vous pouvez être dispensé d'effectuer votre préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
-              </p>
-              <div
-                class="c2"
-                data-tabs="true"
-              >
-                <ul
-                  class="c3"
-                  role="tablist"
-                >
-                  <li
-                    aria-controls="react-tabs-13"
-                    aria-disabled="false"
-                    aria-selected="true"
-                    class="c4 react-tabs__tab--selected"
-                    id="react-tabs-12"
-                    role="tab"
-                    tabindex="0"
-                  >
-                    Vous demandez une dispense de préavis
-                  </li>
-                  <li
-                    aria-controls="react-tabs-15"
-                    aria-disabled="false"
-                    aria-selected="false"
-                    class="c4"
-                    id="react-tabs-14"
-                    role="tab"
-                  >
-                    Votre employeur vous dispense de préavis
-                  </li>
-                </ul>
-                <div
-                  aria-labelledby="react-tabs-12"
-                  class="c5 react-tabs__tab-panel--selected"
-                  id="react-tabs-13"
-                  role="tabpanel"
-                >
-                  <div
-                    class="c6"
-                  >
-                    <h5
-                      class="c20"
-                    >
-                      Vous demandez une dispense de préavis
-                    </h5>
-                  </div>
-                  <p>
-                    Vous pouvez demander à votre employeur de vous dispenser d'effectuer votre préavis (par écrit ou par oral) :
-                  </p>
-                  <div
-                    class="c8"
-                    data-accordion-component="Accordion"
+                    aria-labelledby="react-tabs-6"
+                    class="c5 react-tabs__tab-panel--selected"
+                    id="react-tabs-7"
+                    role="tabpanel"
                   >
                     <div
-                      class="c9 c10"
-                      data-accordion-component="AccordionItem"
+                      class="c6"
                     >
-                      <div
-                        aria-level="3"
-                        class="accordion__heading"
-                        data-accordion-component="AccordionItemHeading"
-                        role="heading"
+                      <h5
+                        class="c20"
                       >
-                        <div
-                          aria-controls="accordion__panel-5"
-                          aria-disabled="false"
-                          aria-expanded="false"
-                          class="c11"
-                          data-accordion-component="AccordionItemButton"
-                          id="accordion__heading-5"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <svg
-                            class="c12"
-                            fill="none"
-                            height="24"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <polyline
-                              points="9 18 15 12 9 6"
-                            />
-                          </svg>
-                          <h6
-                            class="c13"
-                          >
-                            Accord de l'employeur
-                          </h6>
-                        </div>
-                      </div>
-                      <div
-                        aria-hidden="true"
-                        aria-labelledby="accordion__heading-5"
-                        class="c14"
-                        data-accordion-component="AccordionItemPanel"
-                        hidden=""
-                        id="accordion__panel-5"
+                        Cas général
+                      </h5>
+                    </div>
+                    <p>
+                      La durée du préavis de démission est fixée :
+                    </p>
+                    <ul>
+                      <li
+                        class="c15"
+                      >
+                        <p>
+                          Soit par convention collective ou accord collectif
+                        </p>
+                      </li>
+                      <li
+                        class="c15"
                       >
                         <p>
                           
-                                 Si votre employeur accepte, votre contrat de travail prend fin à la date convenue entre vous. Dans ce cas, l'employeur n'est pas tenu de verser
+                                 Soit par les
                                  
-                          l'indemnité compensatrice
+                          usages
                           
-                                 .
+                                 pratiqués dans la localité et dans la profession
                               
                         </p>
-                      </div>
-                    </div>
+                      </li>
+                      <li
+                        class="c15"
+                      >
+                        <p>
+                          Soit par le droit local (en Alsace-Moselle)
+                        </p>
+                      </li>
+                    </ul>
+                    <p>
+                      Votre contrat de travail peut prévoir un préavis de démission, qui s'applique si sa durée est plus courte que celle prévue par la convention collective, l'accord collectif ou les usages.
+                    </p>
+                    <p>
+                      Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
+                    </p>
                     <div
-                      class="c9 c10"
-                      data-accordion-component="AccordionItem"
+                      class="c21"
+                    >
+                      <h6
+                        class="c20"
+                      >
+                        À savoir
+                      </h6>
+                      <p>
+                        le préavis commence à courir à compter de la notification à l'employeur de votre démission.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    aria-labelledby="react-tabs-8"
+                    class="c5"
+                    id="react-tabs-9"
+                    role="tabpanel"
+                  />
+                  <div
+                    aria-labelledby="react-tabs-10"
+                    class="c5"
+                    id="react-tabs-11"
+                    role="tabpanel"
+                  />
+                </div>
+                <h4
+                  class="c20"
+                >
+                  Dispense de préavis
+                </h4>
+                <p>
+                  Vous n'êtes pas tenu(e) d'effectuer de préavis dans les cas suivants :
+                </p>
+                <ul>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      
+                           Démission
+                           
+                      pendant la grossesse ou pour élever un enfant
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      
+                           Démission à l'issue d'un
+                           
+                      congé pour création d'entreprise
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  En dehors de ces deux cas, vous pouvez être dispensé d'effectuer votre préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
+                </p>
+                <div
+                  class="c2"
+                  data-tabs="true"
+                >
+                  <ul
+                    class="c3"
+                    role="tablist"
+                  >
+                    <li
+                      aria-controls="react-tabs-13"
+                      aria-disabled="false"
+                      aria-selected="true"
+                      class="c4 react-tabs__tab--selected"
+                      id="react-tabs-12"
+                      role="tab"
+                      tabindex="0"
+                    >
+                      Vous demandez une dispense de préavis
+                    </li>
+                    <li
+                      aria-controls="react-tabs-15"
+                      aria-disabled="false"
+                      aria-selected="false"
+                      class="c4"
+                      id="react-tabs-14"
+                      role="tab"
+                    >
+                      Votre employeur vous dispense de préavis
+                    </li>
+                  </ul>
+                  <div
+                    aria-labelledby="react-tabs-12"
+                    class="c5 react-tabs__tab-panel--selected"
+                    id="react-tabs-13"
+                    role="tabpanel"
+                  >
+                    <div
+                      class="c6"
+                    >
+                      <h5
+                        class="c20"
+                      >
+                        Vous demandez une dispense de préavis
+                      </h5>
+                    </div>
+                    <p>
+                      Vous pouvez demander à votre employeur de vous dispenser d'effectuer votre préavis (par écrit ou par oral) :
+                    </p>
+                    <div
+                      class="c8"
+                      data-accordion-component="Accordion"
                     >
                       <div
-                        aria-level="3"
-                        class="accordion__heading"
-                        data-accordion-component="AccordionItemHeading"
-                        role="heading"
+                        class="c9 c10"
+                        data-accordion-component="AccordionItem"
                       >
                         <div
-                          aria-controls="accordion__panel-6"
-                          aria-disabled="false"
-                          aria-expanded="false"
-                          class="c11"
-                          data-accordion-component="AccordionItemButton"
-                          id="accordion__heading-6"
-                          role="button"
-                          tabindex="0"
+                          aria-level="3"
+                          class="accordion__heading"
+                          data-accordion-component="AccordionItemHeading"
+                          role="heading"
                         >
-                          <svg
-                            class="c12"
-                            fill="none"
-                            height="24"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <div
+                            aria-controls="accordion__panel-5"
+                            aria-disabled="false"
+                            aria-expanded="false"
+                            class="c11"
+                            data-accordion-component="AccordionItemButton"
+                            id="accordion__heading-5"
+                            role="button"
+                            tabindex="0"
                           >
-                            <polyline
-                              points="9 18 15 12 9 6"
-                            />
-                          </svg>
-                          <h6
-                            class="c13"
+                            <svg
+                              class="c12"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <polyline
+                                points="9 18 15 12 9 6"
+                              />
+                            </svg>
+                            <h6
+                              class="c13"
+                            >
+                              Accord de l'employeur
+                            </h6>
+                          </div>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          aria-labelledby="accordion__heading-5"
+                          class="accordion__panel"
+                          data-accordion-component="AccordionItemPanel"
+                          hidden=""
+                          id="accordion__panel-5"
+                        >
+                          <div
+                            class="c14"
                           >
-                            Refus de l'employeur
-                          </h6>
+                            <p>
+                              
+                                 Si votre employeur accepte, votre contrat de travail prend fin à la date convenue entre vous. Dans ce cas, l'employeur n'est pas tenu de verser
+                                 
+                              l'indemnité compensatrice
+                              
+                                 .
+                              
+                            </p>
+                          </div>
                         </div>
                       </div>
                       <div
-                        aria-hidden="true"
-                        aria-labelledby="accordion__heading-6"
-                        class="c14"
-                        data-accordion-component="AccordionItemPanel"
-                        hidden=""
-                        id="accordion__panel-6"
+                        class="c9 c10"
+                        data-accordion-component="AccordionItem"
                       >
-                        <p>
-                          Si votre employeur refuse, vous devez effectuer votre préavis, sous peine de devoir lui verser une indemnité d'un montant égal à la rémunération brute que vous auriez perçue si vous aviez travaillé.
-                        </p>
+                        <div
+                          aria-level="3"
+                          class="accordion__heading"
+                          data-accordion-component="AccordionItemHeading"
+                          role="heading"
+                        >
+                          <div
+                            aria-controls="accordion__panel-6"
+                            aria-disabled="false"
+                            aria-expanded="false"
+                            class="c11"
+                            data-accordion-component="AccordionItemButton"
+                            id="accordion__heading-6"
+                            role="button"
+                            tabindex="0"
+                          >
+                            <svg
+                              class="c12"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <polyline
+                                points="9 18 15 12 9 6"
+                              />
+                            </svg>
+                            <h6
+                              class="c13"
+                            >
+                              Refus de l'employeur
+                            </h6>
+                          </div>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          aria-labelledby="accordion__heading-6"
+                          class="accordion__panel"
+                          data-accordion-component="AccordionItemPanel"
+                          hidden=""
+                          id="accordion__panel-6"
+                        >
+                          <div
+                            class="c14"
+                          >
+                            <p>
+                              Si votre employeur refuse, vous devez effectuer votre préavis, sous peine de devoir lui verser une indemnité d'un montant égal à la rémunération brute que vous auriez perçue si vous aviez travaillé.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div
+                    aria-labelledby="react-tabs-14"
+                    class="c5"
+                    id="react-tabs-15"
+                    role="tabpanel"
+                  />
                 </div>
-                <div
-                  aria-labelledby="react-tabs-14"
-                  class="c5"
-                  id="react-tabs-15"
-                  role="tabpanel"
-                />
-              </div>
-              <h4
-                class="c20"
-              >
-                Report ou suspension du préavis
-              </h4>
-              <p>
-                Le préavis peut être reporté ou suspendu dans les cas suivants :
-              </p>
-              <ul>
-                <li
-                  class="c15"
+                <h4
+                  class="c20"
                 >
-                  <p>
-                    Accord entre le salarié et l'employeur
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    
+                  Report ou suspension du préavis
+                </h4>
+                <p>
+                  Le préavis peut être reporté ou suspendu dans les cas suivants :
+                </p>
+                <ul>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      Accord entre le salarié et l'employeur
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      
                            Prise de
                            
-                    congés payés
-                    
+                      congés payés
+                      
                            dont la date a été fixée avant la notification de la rupture
                         
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    Arrêt de travail
-                    
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      Arrêt de travail
+                      
                            survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
                         
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    Dispositions conventionnelles
-                    
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      Dispositions conventionnelles
+                      
                            le prévoyant
                         
-                  </p>
-                </li>
-              </ul>
-              <h4
-                class="c20"
-              >
-                Absence pour recherche d'emploi
-              </h4>
-              <p>
-                
+                    </p>
+                  </li>
+                </ul>
+                <h4
+                  class="c20"
+                >
+                  Absence pour recherche d'emploi
+                </h4>
+                <p>
+                  
                      Il n'existe aucune disposition légale vous permettant de vous
                      
-                absenter
-                
+                  absenter
+                  
                      pour rechercher un emploi.
                   
-              </p>
-              <p>
-                Toutefois, des dispositions conventionnelles ou, à défaut, un usage dans la localité ou la profession peuvent prévoir des temps d'absence pour rechercher un emploi pendant la durée du préavis.
-              </p>
+                </p>
+                <p>
+                  Toutefois, des dispositions conventionnelles ou, à défaut, un usage dans la localité ou la profession peuvent prévoir des temps d'absence pour rechercher un emploi pendant la durée du préavis.
+                </p>
+              </div>
             </div>
           </div>
           <div
@@ -1259,71 +1287,75 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-7"
-              class="c14"
+              class="accordion__panel"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-7"
             >
-              <p>
-                <strong>
-                  Indemnité compensatrice de préavis
-                </strong>
-              </p>
-              <p>
-                
+              <div
+                class="c14"
+              >
+                <p>
+                  <strong>
+                    Indemnité compensatrice de préavis
+                  </strong>
+                </p>
+                <p>
+                  
                   Si vous êtes dispensé(e) d'effectuer votre préavis par votre employeur, vous avez droit au versement d'une
                   
-                indemnité compensatrice de préavis
-                
+                  indemnité compensatrice de préavis
+                  
                   .
                
-              </p>
-              <p>
-                <strong>
-                  Indemnité compensatrice de congés payés
-                </strong>
-              </p>
-              <p>
-                
+                </p>
+                <p>
+                  <strong>
+                    Indemnité compensatrice de congés payés
+                  </strong>
+                </p>
+                <p>
+                  
                   Vous avez droit à une
                   
-                indemnité compensatrice de congés payés
-                
+                  indemnité compensatrice de congés payés
+                  
                   si vous n'avez pas pu prendre la totalité des congés acquis avant la date de rupture de votre contrat.
                
-              </p>
-              <p>
-                <strong>
-                  Complémentaire santé
-                </strong>
-              </p>
-              <p>
-                
+                </p>
+                <p>
+                  <strong>
+                    Complémentaire santé
+                  </strong>
+                </p>
+                <p>
+                  
                   Certains motifs de démission ouvrent droit au versement  des
                   
-                allocations chômage
-                
+                  allocations chômage
+                  
                   . Si c'est votre cas, vous continuez à bénéficier de la couverture santé que vous avez souscrite dans le cadre de votre ancien travail, sous
                   
-                certaines conditions
-                
+                  certaines conditions
+                  
                   .
                
-              </p>
-              <p>
-                <strong>
-                  Épargne salariale
-                </strong>
-              </p>
-              <p>
-                
+                </p>
+                <p>
+                  <strong>
+                    Épargne salariale
+                  </strong>
+                </p>
+                <p>
+                  
                   Si vous bénéficiez d'un dispositif d'épargne salariale, vous pouvez
                   
-                demander le déblocage anticipé
-                
+                  demander le déblocage anticipé
+                  
                   des sommes.
                
-              </p>
+                </p>
+              </div>
             </div>
           </div>
           <div
@@ -1372,44 +1404,48 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-8"
-              class="c14"
+              class="accordion__panel"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-8"
             >
-              <p>
-                L'employeur doit remettre au salarié les documents suivants :
-              </p>
-              <ul>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    Certificat de travail
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    Attestation Pôle emploi
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    Solde de tout compte
-                  </p>
-                </li>
-                <li
-                  class="c15"
-                >
-                  <p>
-                    En cas de dispositifs de participation, d'intéressement et des plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
-                  </p>
-                </li>
-              </ul>
+              <div
+                class="c14"
+              >
+                <p>
+                  L'employeur doit remettre au salarié les documents suivants :
+                </p>
+                <ul>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      Certificat de travail
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      Attestation Pôle emploi
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      Solde de tout compte
+                    </p>
+                  </li>
+                  <li
+                    class="c15"
+                  >
+                    <p>
+                      En cas de dispositifs de participation, d'intéressement et des plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

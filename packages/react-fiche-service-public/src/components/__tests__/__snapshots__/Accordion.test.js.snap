@@ -148,17 +148,21 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-0"
-        class="c7"
+        class="accordion__panel"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-0"
       >
-        <p>
-          paragraphe 1-1
-        </p>
-        <p>
-          paragraphe 1-2
-        </p>
+        <div
+          class="c7"
+        >
+          <p>
+            paragraphe 1-1
+          </p>
+          <p>
+            paragraphe 1-2
+          </p>
+        </div>
       </div>
     </div>
     <div
@@ -207,22 +211,26 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-1"
-        class="c7"
+        class="accordion__panel"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-1"
       >
-        <p>
-          paragraphe 2-1
-        </p>
-        <p>
-          paragraphe 2-2
-        </p>
-        <h3
-          class="c0"
+        <div
+          class="c7"
         >
-          titre 2-1
-        </h3>
+          <p>
+            paragraphe 2-1
+          </p>
+          <p>
+            paragraphe 2-2
+          </p>
+          <h3
+            class="c0"
+          >
+            titre 2-1
+          </h3>
+        </div>
       </div>
     </div>
     <div
@@ -271,14 +279,18 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-2"
-        class="c7"
+        class="accordion__panel"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-2"
       >
-        <p>
-          paragraphe 3-1
-        </p>
+        <div
+          class="c7"
+        >
+          <p>
+            paragraphe 3-1
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -436,17 +448,21 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-3"
-        class="c7"
+        class="accordion__panel"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-3"
       >
-        <p>
-          paragraphe 1-1
-        </p>
-        <p>
-          paragraphe 1-2
-        </p>
+        <div
+          class="c7"
+        >
+          <p>
+            paragraphe 1-1
+          </p>
+          <p>
+            paragraphe 1-2
+          </p>
+        </div>
       </div>
     </div>
     <div
@@ -495,22 +511,26 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-4"
-        class="c7"
+        class="accordion__panel"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-4"
       >
-        <p>
-          paragraphe 2-1
-        </p>
-        <p>
-          paragraphe 2-2
-        </p>
-        <h6
-          class="c0"
+        <div
+          class="c7"
         >
-          titre 2-1
-        </h6>
+          <p>
+            paragraphe 2-1
+          </p>
+          <p>
+            paragraphe 2-2
+          </p>
+          <h6
+            class="c0"
+          >
+            titre 2-1
+          </h6>
+        </div>
       </div>
     </div>
     <div
@@ -559,14 +579,18 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-5"
-        class="c7"
+        class="accordion__panel"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-5"
       >
-        <p>
-          paragraphe 3-1
-        </p>
+        <div
+          class="c7"
+        >
+          <p>
+            paragraphe 3-1
+          </p>
+        </div>
       </div>
     </div>
   </div>
