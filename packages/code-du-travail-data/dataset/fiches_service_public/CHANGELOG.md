@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.8.0 (2019-12-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.36 ([#1786](https://github.com/SocialGouv/code-du-travail-numerique/issues/1786)) ([74fd053](https://github.com/SocialGouv/code-du-travail-numerique/commit/74fd053))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.38 ([#1800](https://github.com/SocialGouv/code-du-travail-numerique/issues/1800)) ([dfadffa](https://github.com/SocialGouv/code-du-travail-numerique/commit/dfadffa))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.40 ([#1818](https://github.com/SocialGouv/code-du-travail-numerique/issues/1818)) ([ab12ef1](https://github.com/SocialGouv/code-du-travail-numerique/commit/ab12ef1))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.41 ([#1822](https://github.com/SocialGouv/code-du-travail-numerique/issues/1822)) ([7233599](https://github.com/SocialGouv/code-du-travail-numerique/commit/7233599))
+* **deps:** update socialgouv ([#1814](https://github.com/SocialGouv/code-du-travail-numerique/issues/1814)) ([5d682f3](https://github.com/SocialGouv/code-du-travail-numerique/commit/5d682f3))
+* **deps:** update socialgouv ([#1829](https://github.com/SocialGouv/code-du-travail-numerique/issues/1829)) ([d2b7d5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/d2b7d5f))
+* **deps:** update socialgouv ([#1841](https://github.com/SocialGouv/code-du-travail-numerique/issues/1841)) ([c74fd00](https://github.com/SocialGouv/code-du-travail-numerique/commit/c74fd00))
+* **deps:** update socialgouv ([#1868](https://github.com/SocialGouv/code-du-travail-numerique/issues/1868)) ([72e02b9](https://github.com/SocialGouv/code-du-travail-numerique/commit/72e02b9))
+* remove fiche SP F22553 fix [#1732](https://github.com/SocialGouv/code-du-travail-numerique/issues/1732) ([#1853](https://github.com/SocialGouv/code-du-travail-numerique/issues/1853)) ([d9f37fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/d9f37fd))
+* remove two fiches-SP fix [#1557](https://github.com/SocialGouv/code-du-travail-numerique/issues/1557) ([#1852](https://github.com/SocialGouv/code-du-travail-numerique/issues/1852)) ([fdf0a2d](https://github.com/SocialGouv/code-du-travail-numerique/commit/fdf0a2d))
+
+
+
+
+
 # [3.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.2...v3.7.0) (2019-11-21)
 
 

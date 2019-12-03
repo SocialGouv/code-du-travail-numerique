@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.8.0 (2019-12-03)
+
+
+### Bug Fixes
+
+* **data:** update fiches-MT fix [#1742](https://github.com/SocialGouv/code-du-travail-numerique/issues/1742) ([#1776](https://github.com/SocialGouv/code-du-travail-numerique/issues/1776)) ([0468002](https://github.com/SocialGouv/code-du-travail-numerique/commit/0468002))
+* **deps:** update dependency superagent to ^5.1.1 ([#1785](https://github.com/SocialGouv/code-du-travail-numerique/issues/1785)) ([25f393b](https://github.com/SocialGouv/code-du-travail-numerique/commit/25f393b))
+* **deps:** update dependency superagent to ^5.1.2 ([#1845](https://github.com/SocialGouv/code-du-travail-numerique/issues/1845)) ([1ab348b](https://github.com/SocialGouv/code-du-travail-numerique/commit/1ab348b))
+
+
+
+
+
 # [3.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.2...v3.7.0) (2019-11-21)
 
 

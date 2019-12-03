@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.8.0 (2019-12-03)
+
+
+### Bug Fixes
+
+* **contributions:** remove contribution without generic answer ([#1824](https://github.com/SocialGouv/code-du-travail-numerique/issues/1824)) ([1c0430e](https://github.com/SocialGouv/code-du-travail-numerique/commit/1c0430e))
+* **data:** update fiches-MT fix [#1742](https://github.com/SocialGouv/code-du-travail-numerique/issues/1742) ([#1776](https://github.com/SocialGouv/code-du-travail-numerique/issues/1776)) ([0468002](https://github.com/SocialGouv/code-du-travail-numerique/commit/0468002))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.36 ([#1786](https://github.com/SocialGouv/code-du-travail-numerique/issues/1786)) ([74fd053](https://github.com/SocialGouv/code-du-travail-numerique/commit/74fd053))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.38 ([#1800](https://github.com/SocialGouv/code-du-travail-numerique/issues/1800)) ([dfadffa](https://github.com/SocialGouv/code-du-travail-numerique/commit/dfadffa))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.40 ([#1818](https://github.com/SocialGouv/code-du-travail-numerique/issues/1818)) ([ab12ef1](https://github.com/SocialGouv/code-du-travail-numerique/commit/ab12ef1))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.41 ([#1822](https://github.com/SocialGouv/code-du-travail-numerique/issues/1822)) ([7233599](https://github.com/SocialGouv/code-du-travail-numerique/commit/7233599))
+* **deps:** update dependency date-fns to ^2.8.1 ([#1787](https://github.com/SocialGouv/code-du-travail-numerique/issues/1787)) ([5f3833f](https://github.com/SocialGouv/code-du-travail-numerique/commit/5f3833f))
+* remove fiche SP F22553 fix [#1732](https://github.com/SocialGouv/code-du-travail-numerique/issues/1732) ([#1853](https://github.com/SocialGouv/code-du-travail-numerique/issues/1853)) ([d9f37fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/d9f37fd))
+* **deps:** update dependency superagent to ^5.1.1 ([#1785](https://github.com/SocialGouv/code-du-travail-numerique/issues/1785)) ([25f393b](https://github.com/SocialGouv/code-du-travail-numerique/commit/25f393b))
+* **deps:** update dependency superagent to ^5.1.2 ([#1845](https://github.com/SocialGouv/code-du-travail-numerique/issues/1845)) ([1ab348b](https://github.com/SocialGouv/code-du-travail-numerique/commit/1ab348b))
+* **deps:** update socialgouv ([#1814](https://github.com/SocialGouv/code-du-travail-numerique/issues/1814)) ([5d682f3](https://github.com/SocialGouv/code-du-travail-numerique/commit/5d682f3))
+* **deps:** update socialgouv ([#1829](https://github.com/SocialGouv/code-du-travail-numerique/issues/1829)) ([d2b7d5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/d2b7d5f))
+* **deps:** update socialgouv ([#1841](https://github.com/SocialGouv/code-du-travail-numerique/issues/1841)) ([c74fd00](https://github.com/SocialGouv/code-du-travail-numerique/commit/c74fd00))
+* **deps:** update socialgouv ([#1868](https://github.com/SocialGouv/code-du-travail-numerique/issues/1868)) ([72e02b9](https://github.com/SocialGouv/code-du-travail-numerique/commit/72e02b9))
+* remove two fiches-SP fix [#1557](https://github.com/SocialGouv/code-du-travail-numerique/issues/1557) ([#1852](https://github.com/SocialGouv/code-du-travail-numerique/issues/1852)) ([fdf0a2d](https://github.com/SocialGouv/code-du-travail-numerique/commit/fdf0a2d))
+
+
+### Features
+
+* **frontend:** gorgeous layout ([#1828](https://github.com/SocialGouv/code-du-travail-numerique/issues/1828)) ([238be0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/238be0c))
+* **frontend:** new-ui-setup ([#1760](https://github.com/SocialGouv/code-du-travail-numerique/issues/1760)) ([eb6f032](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb6f032))
+
+
+
+
+
 # [3.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.2...v3.7.0) (2019-11-21)
 
 

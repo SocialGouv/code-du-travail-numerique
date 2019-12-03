@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.8.0 (2019-12-03)
+
+
+### Features
+
+* **chore:** ui new step  ([#1811](https://github.com/SocialGouv/code-du-travail-numerique/issues/1811)) ([c8e9901](https://github.com/SocialGouv/code-du-travail-numerique/commit/c8e9901))
+* **frontend:** new-ui-setup ([#1760](https://github.com/SocialGouv/code-du-travail-numerique/issues/1760)) ([eb6f032](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb6f032))
+* **frontend:** tons of improvements ([#1867](https://github.com/SocialGouv/code-du-travail-numerique/issues/1867)) ([6132e5e](https://github.com/SocialGouv/code-du-travail-numerique/commit/6132e5e))
+
+
+
+
+
 # [3.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.6.2...v3.7.0) (2019-11-21)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public
