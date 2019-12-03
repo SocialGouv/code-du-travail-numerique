@@ -49,7 +49,7 @@ function StepStatus({ form }) {
     <>
       <YesNoQuestion
         name="seriousMisconduct"
-        label="S’agit-il d’un licenciement pour faute grave ou lourde ?"
+        label="Le licenciement est-il dû à une faute grave (ou lourde) ?"
       />
       {seriousMisconduct === false && (
         <>

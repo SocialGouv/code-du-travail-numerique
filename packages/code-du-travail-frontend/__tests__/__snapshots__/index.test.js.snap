@@ -1199,7 +1199,7 @@ exports[`<Home /> should render 1`] = `
               <div
                 class="c35"
               >
-                Simulateur de durée de préavis de licenciement
+                Simulateur de la durée de préavis de licenciement
               </div>
               <div
                 class="c36"

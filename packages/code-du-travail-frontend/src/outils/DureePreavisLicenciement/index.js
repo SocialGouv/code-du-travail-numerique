@@ -9,7 +9,7 @@ function DureePreavisLicenciement() {
     <Section>
       <Container>
         <Wizard
-          title="Simulateur de durée de préavis de licenciement"
+          title="Simulateur de la durée de préavis de licenciement"
           initialSteps={initialSteps}
           stepReducer={stepReducer}
         />
