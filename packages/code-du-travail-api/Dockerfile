@@ -12,7 +12,8 @@ COPY ./package.json /app/package.json
 COPY --from=cdtn-base-image /app/packages/code-du-travail-api/dist /app/dist
 
 COPY --from=cdtn-base-image /app/node_modules/@cdt/data...courrier-type /node_modules/@cdt/data...courrier-type
-COPY --from=cdtn-base-image /app/node_modules/elastic-apm-node /node_modules/elastic-apm-node
+
+RUN yarn add elastic-apm-node
 
 WORKDIR /app
 
