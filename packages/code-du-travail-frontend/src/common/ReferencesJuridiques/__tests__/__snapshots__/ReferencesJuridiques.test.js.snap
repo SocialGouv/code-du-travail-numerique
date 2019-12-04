@@ -15,36 +15,41 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c2 {
-  padding: 1rem 2rem;
-  color: #3e486e;
-  border: 1px solid #bbcadf;
+.c4 {
+  position: absolute;
+  background-color: #7598d6;
   border-radius: 0.6rem;
-  background-color: #fff;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .c3 {
-  margin: 0 0 1rem 0;
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c5 + .c4 {
+.c2 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c6 + .c5 {
   border-top: 1px solid #bbcadf;
 }
 
-.c8 {
+.c9 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -55,7 +60,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   padding: 0;
 }
 
-.c7 {
+.c8 {
   position: relative;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
@@ -63,18 +68,21 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   margin-right: 1rem;
   color: #7598d6;
 }
 
-[aria-expanded="true"] .c7,
-[aria-selected="true"] .c7 {
+[aria-expanded="true"] .c8,
+[aria-selected="true"] .c8 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,32 +98,32 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   cursor: pointer;
 }
 
-.c6:hover,
-.c6:focus,
-.c6:focus-within,
-.c6[aria-expanded="true"] {
+.c7:hover,
+.c7:focus,
+.c7:focus-within,
+.c7[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c9 {
+.c10 {
   padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c9 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c9.accordion__body--hidden {
+.c10.accordion__body--hidden {
   display: none;
 }
 
-.c10 {
+.c13 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -130,45 +138,69 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  box-sizing: border-box;
+  width: 100%;
   margin: 0;
-  padding: 2rem 2.4rem;
+  padding: 2rem 2rem;
   color: #3e486e;
-  font-weight: 600;
-  font-size: 1.8rem;
+  font-weight: normal;
+  font-size: 1.6rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f2f5fa;
-  border: 1px solid #bbcadf;
+  background-color: #fff;
+  border: none;
   border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   cursor: pointer;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
+  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
+  transition: box-shadow 250ms linear, transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10:hover {
+.c13:hover,
+.c13:active,
+.c13:focus {
   color: #3e486e;
-  border-color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.c14 {
+  padding-right: 1rem;
+}
+
+.c15 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
 }
 
 .c11 {
-  display: block;
-  max-width: 100%;
-  padding-right: 0;
-  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c12 {
+  margin-top: 1.6rem;
+  padding: 0;
 }
 
 .c0 {
@@ -186,15 +218,8 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding: 1rem 2rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
+  .c13 {
+    padding: 1.6rem 1.6rem;
   }
 }
 
@@ -205,144 +230,174 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
     <div
       class="c1"
     >
-      <div
+      <header
         class="c2"
       >
         <h2
           class="c3"
         >
+          <div
+            class="c4"
+          />
           Références juridiques
         </h2>
+      </header>
+      <div
+        class="accordion"
+        data-accordion-component="Accordion"
+      >
         <div
-          class="accordion"
-          data-accordion-component="Accordion"
+          class="c5 c6"
+          data-accordion-component="AccordionItem"
         >
           <div
-            class="c4 c5"
-            data-accordion-component="AccordionItem"
+            aria-level="3"
+            class="accordion__heading"
+            data-accordion-component="AccordionItemHeading"
+            role="heading"
           >
             <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
+              aria-controls="accordion__panel-0"
+              aria-disabled="false"
+              aria-expanded="false"
+              class="c7"
+              data-accordion-component="AccordionItemButton"
+              id="accordion__heading-0"
+              role="button"
+              tabindex="0"
             >
-              <div
-                aria-controls="accordion__panel-0"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c6"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-0"
-                role="button"
-                tabindex="0"
+              <svg
+                class="c8"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  class="c7"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c8"
-                >
-                  Voir références juridiques concernées
-                </h3>
-              </div>
+                <polyline
+                  points="9 18 15 12 9 6"
+                />
+              </svg>
+              <h3
+                class="c9"
+              >
+                Voir références juridiques concernées
+              </h3>
             </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-0"
-              class="c9"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-0"
+          </div>
+          <div
+            aria-hidden="true"
+            aria-labelledby="accordion__heading-0"
+            class="c10"
+            data-accordion-component="AccordionItemPanel"
+            hidden=""
+            id="accordion__panel-0"
+          >
+            <ul
+              class="c11"
             >
-              <ul>
-                <li>
-                  <a
-                    class="c10"
-                    href="/code-du-travail/l1244-3"
+              <li
+                class="c12"
+              >
+                <a
+                  class="c13"
+                  href="/code-du-travail/l1244-3"
+                >
+                  <div
+                    class="c14"
                   >
-                    <div
-                      class="c11"
+                    
+                    <h3
+                      class="c15"
                     >
                       Article L1244-3 du code du travail
-                    </div>
-                    
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="c10"
-                    href="/code-du-travail/l1244-4"
+                    </h3>
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c12"
+              >
+                <a
+                  class="c13"
+                  href="/code-du-travail/l1244-4"
+                >
+                  <div
+                    class="c14"
                   >
-                    <div
-                      class="c11"
+                    
+                    <h3
+                      class="c15"
                     >
                       Article L1244-4 du code du travail
-                    </div>
-                    
-                  </a>
-                </li>
-                <li>
-                  <button
-                    class="c10"
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
+                    </h3>
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c12"
+              >
+                <button
+                  class="c13"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <div
+                    class="c14"
                   >
-                    <div
-                      class="c11"
-                    >
-                      Autre: 
-                      Article L3121-44 du code du travail
-                    </div>
                     
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="c10"
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
+                    <h3
+                      class="c15"
+                    >
+                      Autre: Article L3121-44 du code du travail
+                    </h3>
+                  </div>
+                </button>
+              </li>
+              <li
+                class="c12"
+              >
+                <button
+                  class="c13"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <div
+                    class="c14"
                   >
-                    <div
-                      class="c11"
-                    >
-                      Autre: 
-                      Article xxx du code du travail
-                    </div>
                     
-                  </button>
-                </li>
-                <li>
-                  <a
-                    class="c10"
-                    href="/convention-collective/yyy"
+                    <h3
+                      class="c15"
+                    >
+                      Autre: Article xxx du code du travail
+                    </h3>
+                  </div>
+                </button>
+              </li>
+              <li
+                class="c12"
+              >
+                <a
+                  class="c13"
+                  href="/convention-collective/yyy"
+                >
+                  <div
+                    class="c14"
                   >
-                    <div
-                      class="c11"
-                    >
-                      Convention collective: 
-                      Article yyy du code du travail
-                    </div>
                     
-                  </a>
-                </li>
-              </ul>
-            </div>
+                    <h3
+                      class="c15"
+                    >
+                      Convention collective: Article yyy du code du travail
+                    </h3>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

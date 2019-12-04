@@ -14,7 +14,7 @@ export function CardList({
 }) {
   return (
     <>
-      <ListTitle leftStripped={leftStripped} desc={desc} href={href}>
+      <ListTitle leftStripped={leftStripped} subtitle={desc} href={href}>
         {title}
       </ListTitle>
       <Grid columns={columns}>

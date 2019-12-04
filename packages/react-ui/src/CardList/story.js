@@ -20,7 +20,7 @@ export const base = () => (
       columns={3}
     >
       {items.map(item => (
-        <Tile key={item.id}>{item.title}</Tile>
+        <Tile key={item.id} title={item.title} />
       ))}
     </CardList>
     <CardList
@@ -28,9 +28,7 @@ export const base = () => (
       desc="Trouvez des réponses personnalisées selon votre situation"
     >
       {items.map(item => (
-        <Tile href="#" key={item.id}>
-          {item.title}
-        </Tile>
+        <Tile href="#" key={item.id} title={item.title} />
       ))}
     </CardList>
     <CardList title="Les articles les plus populaires">
@@ -38,9 +36,7 @@ export const base = () => (
     </CardList>
     <CardList title="Les articles les plus populaires">
       {items.map(item => (
-        <Tile href="#" key={item.id}>
-          {item.title}
-        </Tile>
+        <Tile href="#" key={item.id} title={item.title} />
       ))}
     </CardList>
     <CardList
@@ -49,9 +45,7 @@ export const base = () => (
       desc="Retrouvez tous nos contenus autour de grands thèmes"
     >
       {items.map(item => (
-        <Tile href="#" key={item.id}>
-          {item.title}
-        </Tile>
+        <Tile href="#" key={item.id} title={item.title} />
       ))}
     </CardList>
   </>

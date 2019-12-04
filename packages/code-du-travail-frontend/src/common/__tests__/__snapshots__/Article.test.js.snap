@@ -47,10 +47,10 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c5 {
   position: absolute;
   background-color: #7598d6;
-  border-radius: none;
+  border-radius: 0.6rem;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -60,19 +60,27 @@ exports[`<Article /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
-  margin: 0 0 1rem 0;
+.c4 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 3.2rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
-  position: relative;
-  margin-left: -4rem;
-  padding-left: 4rem;
+  padding-left: 3.2rem;
 }
 
-.c4 {
+.c2 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c3 {
+  margin-left: -4rem;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,7 +88,7 @@ exports[`<Article /> should render 1`] = `
   font-size: 1.4rem;
 }
 
-.c5 {
+.c7 {
   margin: 3.2rem 0 0 0;
 }
 
@@ -105,7 +113,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c6 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -124,16 +132,20 @@ exports[`<Article /> should render 1`] = `
       class="c1"
       data-main-content="true"
     >
-      <h1
-        class="c2"
+      <header
+        class="c2 c3"
       >
-        <div
-          class="c3"
-        />
-        Contrat de travail et formalités d'embauche de l'assistante maternelle
-      </h1>
+        <h1
+          class="c4"
+        >
+          <div
+            class="c5"
+          />
+          Contrat de travail et formalités d'embauche de l'assistante maternelle
+        </h1>
+      </header>
       <div
-        class="c4"
+        class="c6"
       >
         <span>
           Mis à jour le : 
@@ -141,7 +153,7 @@ exports[`<Article /> should render 1`] = `
         </span>
       </div>
       <div
-        class="c5"
+        class="c7"
       >
         this is an Article
       </div>

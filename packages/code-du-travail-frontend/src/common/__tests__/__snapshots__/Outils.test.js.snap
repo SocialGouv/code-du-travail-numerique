@@ -20,68 +20,75 @@ exports[`<Outils /> should render 1`] = `
   color: #3e486e;
 }
 
-.c11 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
+.c4 {
+  position: absolute;
+  background-color: #7598d6;
   border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7598d6;
-  border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
-  opacity: 1;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.c11:link,
-.c11:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
+.c3 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
-.c11:not([disabled]):hover,
-.c11:not([disabled]):active,
-.c11:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #9cb5e2;
-  border-color: #9cb5e2;
-}
-
-.c11[disabled] {
-  color: rgba(255,255,255,0.4);
-  box-shadow: none;
-  cursor: not-allowed;
+.c2 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
 .c6 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.c10 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 0 0.6rem 0 0;
+}
+
+.c10:before {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent #ff7067 transparent transparent;
+  border-style: solid;
+  border-width: 0 5rem 5rem 0;
+  content: "";
+}
+
+.c11 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,7 +115,7 @@ exports[`<Outils /> should render 1`] = `
   list-style-type: none;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -125,25 +132,7 @@ exports[`<Outils /> should render 1`] = `
   padding: 0;
 }
 
-.c2 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  font-size: 3rem;
-}
-
-.c4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c5 {
   color: #2f3b6c;
   font-weight: normal;
   font-family: "Merriweather",serif;
@@ -151,25 +140,11 @@ exports[`<Outils /> should render 1`] = `
   text-decoration: none;
 }
 
-.c4:hover {
+.c5:hover {
   color: #2f3b6c;
 }
 
-.c5 {
-  margin-left: 1.6rem;
-  color: #7598d6;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c3:hover .c5 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
-}
-
-.c8 {
+.c9 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -184,49 +159,62 @@ exports[`<Outils /> should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  box-sizing: border-box;
+  width: auto;
   margin: 0;
-  padding: 2rem 2.4rem;
+  padding: 3.2rem 2rem;
   color: #3e486e;
-  font-weight: 600;
-  font-size: 1.8rem;
-  text-align: left;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #bbcadf;
+  border: none;
   border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   cursor: pointer;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
+  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
+  transition: box-shadow 250ms linear, transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c8:hover {
+.c9:hover,
+.c9:active,
+.c9:focus {
   color: #3e486e;
-  border-color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
-.c9 {
-  display: block;
-  max-width: 100%;
-  padding-right: 0;
-  overflow-y: auto;
+.c12 {
+  padding-right: 1rem;
 }
 
-.c10 {
-  margin-top: 2rem;
+.c13 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.c14 {
+  margin-top: 1rem;
 }
 
 @media print {
@@ -236,15 +224,27 @@ exports[`<Outils /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    margin-bottom: 2.4rem;
+  }
+}
+
 @media (max-width:980px) {
-  .c7 {
+  .c8 {
     width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     width: calc( 100% - 2 * 1rem );
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    padding: 2rem 1.6rem;
   }
 }
 
@@ -255,227 +255,390 @@ exports[`<Outils /> should render 1`] = `
     <div
       class="c1"
     >
-      <div>
+      <header
+        class="c2"
+      >
         <h2
-          class="c2"
+          class="c3"
         >
+          <div
+            class="c4"
+          />
           <a
-            class="c3 c4"
+            class="c5"
             href="/outils"
-            title="Trouvez des réponses personnalisées selon votre situation"
           >
             Boîte à outils
-            <svg
-              aria-hidden="true"
-              class="c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
           </a>
         </h2>
-        <div>
+        <p
+          class="c6"
+        >
           Trouvez des réponses personnalisées selon votre situation
-        </div>
-      </div>
+        </p>
+      </header>
       <ul
-        class="c6"
+        class="c7"
       >
         <li
-          class="c7"
+          class="c8"
         >
           <a
-            class="c8"
+            class="c9"
             href="/modeles-de-courriers"
-            title="Consulter tous les modèles de courriers"
           >
-            <div
-              class="c9"
-            >
-              Modèles de courriers
-            </div>
             <div
               class="c10"
             >
               <div
                 class="c11"
               >
-                Consulter
+                <svg
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
+            </div>
+            <div
+              class="c12"
+            >
+              
+              <h3
+                class="c13"
+              >
+                Modèles de courriers
+              </h3>
+            </div>
+            <div
+              class="c14"
+            >
+              Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail
             </div>
           </a>
         </li>
         <li
-          class="c7"
+          class="c8"
         >
           <a
-            class="c8"
+            class="c9"
             href="/convention-collective/recherche"
-            title="Recherchez votre convention collective"
           >
-            <div
-              class="c9"
-            >
-<<<<<<< HEAD
-              Simulateur de la durée de préavis de licenciement
-=======
-              Conventions collectives
->>>>>>> tests: update snaps
-            </div>
             <div
               class="c10"
             >
               <div
                 class="c11"
               >
-                Consulter
+                <svg
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
+            </div>
+            <div
+              class="c12"
+            >
+              
+              <h3
+                class="c13"
+              >
+                Conventions collectives
+              </h3>
+            </div>
+            <div
+              class="c14"
+            >
+              Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.
             </div>
           </a>
         </li>
         <li
-          class="c7"
+          class="c8"
         >
           <a
-            class="c8"
+            class="c9"
             href="/outils/simulateur-embauche"
-            title="Démarrer une simulation de salaire lors d'une embauche"
           >
-            <div
-              class="c9"
-            >
-              Simulateur d'embauche
-            </div>
             <div
               class="c10"
             >
               <div
                 class="c11"
               >
-                Démarrer
+                <svg
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
+            </div>
+            <div
+              class="c12"
+            >
+              
+              <h3
+                class="c13"
+              >
+                Simulateur d'embauche
+              </h3>
+            </div>
+            <div
+              class="c14"
+            >
+              Estimez le salaire lors d'une embauche : total employeur, brut, net
             </div>
           </a>
         </li>
         <li
-          class="c7"
+          class="c8"
         >
           <a
-            class="c8"
+            class="c9"
             href="/outils/preavis-demission"
-            title="Démarrer une simulation de durée de préavis de démission"
           >
-            <div
-              class="c9"
-            >
-              Simulateur de durée de préavis de démission
-            </div>
             <div
               class="c10"
             >
               <div
                 class="c11"
               >
-                Démarrer
+                <svg
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
+            </div>
+            <div
+              class="c12"
+            >
+              
+              <h3
+                class="c13"
+              >
+                Simulateur de durée de préavis de démission
+              </h3>
+            </div>
+            <div
+              class="c14"
+            >
+              Connaître la durée du préavis de démission.
             </div>
           </a>
         </li>
         <li
-          class="c7"
+          class="c8"
         >
           <a
-            class="c8"
+            class="c9"
             href="/outils/indemnite-licenciement"
-            title="Démarrer une simulation d'indemnités de licenciements"
           >
-            <div
-              class="c9"
-            >
-              Simulateur d'indemnités de licenciements
-            </div>
             <div
               class="c10"
             >
               <div
                 class="c11"
               >
-                Démarrer
+                <svg
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
+            </div>
+            <div
+              class="c12"
+            >
+              
+              <h3
+                class="c13"
+              >
+                Simulateur d'indemnités de licenciements
+              </h3>
+            </div>
+            <div
+              class="c14"
+            >
+              Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation
             </div>
           </a>
         </li>
         <li
-          class="c7"
+          class="c8"
         >
           <a
-            class="c8"
+            class="c9"
             href="/outils/preavis-licenciement"
-            title="Démarrer une simulation de durée de préavis de licenciement"
           >
-            <div
-              class="c9"
-            >
-              Simulateur de durée de préavis de licenciement
-            </div>
             <div
               class="c10"
             >
               <div
                 class="c11"
               >
-                Démarrer
+                <svg
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
+            </div>
+            <div
+              class="c12"
+            >
+              
+              <h3
+                class="c13"
+              >
+                Simulateur de durée de préavis de licenciement
+              </h3>
+            </div>
+            <div
+              class="c14"
+            >
+              Estimez simplement la durée du préavis dans le cadre d'un licenciement
             </div>
           </a>
         </li>
         <li
-          class="c7"
+          class="c8"
         >
           <a
-            class="c8"
+            class="c9"
             href="/outils/indemnite-precarite"
-            title="Démarrer une simulation de la prime de précarité"
           >
-            <div
-              class="c9"
-            >
-              Simulateur de prime de précarité
-            </div>
             <div
               class="c10"
             >
               <div
                 class="c11"
               >
-                Démarrer
+                <svg
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
+            </div>
+            <div
+              class="c12"
+            >
+              
+              <h3
+                class="c13"
+              >
+                Simulateur de prime de précarité
+              </h3>
+            </div>
+            <div
+              class="c14"
+            >
+              Simulez la prime de précarité d’un salarié.
             </div>
           </a>
         </li>
         <li
-          class="c7"
+          class="c8"
         >
           <button
-            class="c8"
-            href=""
+            class="c9"
           >
             <div
-              class="c9"
+              class="c12"
             >
-              Bientôt d’autres outils disponibles...
+              
+              <h3
+                class="c13"
+              >
+                Bientôt d’autres outils disponibles...
+              </h3>
             </div>
-            
           </button>
         </li>
       </ul>

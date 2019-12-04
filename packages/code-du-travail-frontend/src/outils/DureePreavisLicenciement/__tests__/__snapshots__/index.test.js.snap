@@ -229,12 +229,6 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
 }
 
 .c11 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
   padding: 1.6rem 0;
   border-bottom: 1px solid #bbcadf;
 }

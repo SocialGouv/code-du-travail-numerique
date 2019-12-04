@@ -16,17 +16,17 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c38 {
+.c42 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c38 > *:first-child {
+.c42 > *:first-child {
   margin-top: 0;
 }
 
-.c38 > *:last-child {
+.c42 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -35,7 +35,7 @@ exports[`<MentionLegales /> should render 1`] = `
   color: #3e486e;
 }
 
-.c21 {
+.c24 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -46,7 +46,7 @@ exports[`<MentionLegales /> should render 1`] = `
   background-color: #fff;
 }
 
-.c21:before {
+.c24:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,37 +59,100 @@ exports[`<MentionLegales /> should render 1`] = `
   content: "";
 }
 
-.c21 > *:first-child {
+.c24 > *:first-child {
   margin-top: 0;
 }
 
-.c21 > *:last-child {
+.c24 > *:last-child {
   margin-bottom: 0;
 }
 
+.c23 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c29 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c22 {
-  margin: 0 0 1rem 0;
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 3.2rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-top: 1.6rem;
 }
 
-.c25 {
-  margin: 0 0 1rem 0;
+.c28 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c28 + .c27 {
+.c43 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.c37 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c21 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c27 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c32 + .c31 {
   border-top: 1px solid #bbcadf;
 }
 
-.c31 {
+.c35 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -100,7 +163,7 @@ exports[`<MentionLegales /> should render 1`] = `
   padding: 0;
 }
 
-.c30 {
+.c34 {
   position: relative;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
@@ -108,18 +171,21 @@ exports[`<MentionLegales /> should render 1`] = `
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   margin-right: 1rem;
   color: #7598d6;
 }
 
-[aria-expanded="true"] .c30,
-[aria-selected="true"] .c30 {
+[aria-expanded="true"] .c34,
+[aria-selected="true"] .c34 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c29 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,32 +201,32 @@ exports[`<MentionLegales /> should render 1`] = `
   cursor: pointer;
 }
 
-.c29:hover,
-.c29:focus,
-.c29:focus-within,
-.c29[aria-expanded="true"] {
+.c33:hover,
+.c33:focus,
+.c33:focus-within,
+.c33[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c32 {
+.c36 {
   padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c32 > *:first-child {
+.c36 > *:first-child {
   margin-top: 0;
 }
 
-.c32 > *:last-child {
+.c36 > *:last-child {
   margin-bottom: 0;
 }
 
-.c32.accordion__body--hidden {
+.c36.accordion__body--hidden {
   display: none;
 }
 
-.c23 {
+.c25 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -170,15 +236,15 @@ exports[`<MentionLegales /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c23 > *:first-child {
+.c25 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c25 > *:last-child {
   margin-bottom: 0;
 }
 
-.c26 {
+.c30 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -187,11 +253,11 @@ exports[`<MentionLegales /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c26 > *:first-child {
+.c30 > *:first-child {
   margin-top: 0;
 }
 
-.c26 > *:last-child {
+.c30 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -256,7 +322,7 @@ exports[`<MentionLegales /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c40 {
+.c45 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -293,16 +359,16 @@ exports[`<MentionLegales /> should render 1`] = `
   opacity: 1;
 }
 
-.c40:link,
-.c40:visited {
+.c45:link,
+.c45:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c40:not([disabled]):hover,
-.c40:not([disabled]):active,
-.c40:not([disabled]):focus {
+.c45:not([disabled]):hover,
+.c45:not([disabled]):active,
+.c45:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -311,7 +377,7 @@ exports[`<MentionLegales /> should render 1`] = `
   border-color: #9cb5e2;
 }
 
-.c40[disabled] {
+.c45[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -329,19 +395,6 @@ exports[`<MentionLegales /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c37 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -354,7 +407,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 .c15 ul {
-  z-index: 100;
+  z-index: 1;
 }
 
 .c15 li[role="option"]:nth-child(2n + 1) {
@@ -435,7 +488,7 @@ exports[`<MentionLegales /> should render 1`] = `
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 2;
   box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   height: 9rem;
   margin-bottom: 6rem;
@@ -531,20 +584,20 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c34 {
+.c39 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c35 {
+.c40 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
-  padding-top: 4rem;
+  padding-top: 1.6rem;
   background-color: #f2f5fa;
 }
 
-.c35:before {
+.c40:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -556,7 +609,7 @@ exports[`<MentionLegales /> should render 1`] = `
   content: "";
 }
 
-.c36 {
+.c41 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -564,7 +617,7 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: center;
 }
 
-.c39 {
+.c44 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -574,27 +627,27 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: left;
 }
 
-.c39 > *:first-child {
+.c44 > *:first-child {
   margin-top: 0;
 }
 
-.c39 > *:last-child {
+.c44 > *:last-child {
   margin-bottom: 0;
 }
 
-.c41 {
+.c46 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c42 {
+.c47 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c43 {
+.c48 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -608,25 +661,25 @@ exports[`<MentionLegales /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c43 > *:first-child {
+.c48 > *:first-child {
   margin-top: 0;
 }
 
-.c43 > *:last-child {
+.c48 > *:last-child {
   margin-bottom: 0;
 }
 
-.c45 + .c44 {
+.c50 + .c49 {
   padding-left: 1.6rem;
 }
 
-.c47 {
+.c52 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c46 {
+.c51 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -636,12 +689,12 @@ exports[`<MentionLegales /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c48 {
+.c53 {
   margin: 0.4rem 0;
   padding: 0;
 }
 
-.c49 {
+.c54 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -670,12 +723,12 @@ exports[`<MentionLegales /> should render 1`] = `
   content: "";
 }
 
-.c24 {
+.c26 {
   display: block;
   margin: 2rem 0;
 }
 
-.c33 {
+.c38 {
   margin: 2rem 0;
   padding-left: 2rem;
   list-style-type: disc;
@@ -689,22 +742,28 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media print {
-  .c38 {
+  .c42 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c24 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c24 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c21 {
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -807,27 +866,27 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media print {
-  .c35 {
+  .c40 {
     display: none;
   }
 }
 
 @media print {
-  .c39 {
+  .c44 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c43 {
+  .c48 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c48 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -835,19 +894,19 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c45 + .c44 {
+  .c50 + .c49 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c52 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c51 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -936,6 +995,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 >
                   <svg
                     class="bm-cross"
+                    fill="none"
                     style="width: 100%; height: 100%;"
                     viewBox="0 0 32 32"
                   >
@@ -962,6 +1022,7 @@ exports[`<MentionLegales /> should render 1`] = `
               >
                 <svg
                   class="bm-icon"
+                  fill="none"
                   style="width: 100%; height: 100%;"
                   viewBox="0 0 32 32"
                 >
@@ -1065,16 +1126,23 @@ exports[`<MentionLegales /> should render 1`] = `
       <div
         class="c20"
       >
-        <div
+        <header
           class="c21"
         >
           <h1
             class="c22"
           >
+            <div
+              class="c23"
+            />
             Mentions légales
           </h1>
+        </header>
+        <div
+          class="c24"
+        >
           <div
-            class="c23"
+            class="c25"
           >
             Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties. L’ouverture officielle du site est prévue pour 2020.
           </div>
@@ -1089,7 +1157,7 @@ exports[`<MentionLegales /> should render 1`] = `
             situé :
           </p>
           <address
-            class="c24"
+            class="c26"
           >
             Tour Mirabeau
             <br />
@@ -1100,24 +1168,38 @@ exports[`<MentionLegales /> should render 1`] = `
             <br />
             Tél. : 01 40 56 60 00
           </address>
-          <h3
-            class="c25"
+          <header
+            class="c27"
           >
-            Directeur de la publication
-          </h3>
+            <h2
+              class="c28"
+            >
+              <div
+                class="c29"
+              />
+              Directeur de la publication
+            </h2>
+          </header>
           <p>
             Yves Struillou, Directeur Général du Travail
           </p>
-          <h3
-            class="c25"
+          <header
+            class="c27"
           >
-            Hébergement
-          </h3>
+            <h2
+              class="c28"
+            >
+              <div
+                class="c29"
+              />
+              Hébergement
+            </h2>
+          </header>
           <p>
             Ce site est hébergé en propre par le Ministère des Affaires sociales et de la Santé :
           </p>
           <address
-            class="c24"
+            class="c26"
           >
             Ministère des affaires sociales et de la santé
             <br />
@@ -1126,7 +1208,7 @@ exports[`<MentionLegales /> should render 1`] = `
             75530 PARIS
           </address>
           <div
-            class="c26"
+            class="c30"
           >
             <p>
               Le
@@ -1152,7 +1234,7 @@ exports[`<MentionLegales /> should render 1`] = `
             data-accordion-component="Accordion"
           >
             <div
-              class="c27 c28"
+              class="c31 c32"
               data-accordion-component="AccordionItem"
             >
               <div
@@ -1165,14 +1247,14 @@ exports[`<MentionLegales /> should render 1`] = `
                   aria-controls="accordion__panel-0"
                   aria-disabled="false"
                   aria-expanded="false"
-                  class="c29"
+                  class="c33"
                   data-accordion-component="AccordionItemButton"
                   id="accordion__heading-0"
                   role="button"
                   tabindex="0"
                 >
                   <svg
-                    class="c30"
+                    class="c34"
                     fill="none"
                     height="24"
                     stroke="currentColor"
@@ -1188,7 +1270,7 @@ exports[`<MentionLegales /> should render 1`] = `
                     />
                   </svg>
                   <h2
-                    class="c31"
+                    class="c35"
                   >
                     Modalités d’utilisation
                   </h2>
@@ -1197,13 +1279,13 @@ exports[`<MentionLegales /> should render 1`] = `
               <div
                 aria-hidden="true"
                 aria-labelledby="accordion__heading-0"
-                class="c32"
+                class="c36"
                 data-accordion-component="AccordionItemPanel"
                 hidden=""
                 id="accordion__panel-0"
               >
                 <h3
-                  class="c25"
+                  class="c37"
                 >
                   Traitement des données à caractère personnel
                 </h3>
@@ -1230,7 +1312,7 @@ exports[`<MentionLegales /> should render 1`] = `
                   ou par voie postale :
                 </p>
                 <address
-                  class="c24"
+                  class="c26"
                 >
                   Direction des systèmes d’information
                   <br />
@@ -1241,7 +1323,7 @@ exports[`<MentionLegales /> should render 1`] = `
                   75015 PARIS
                 </address>
                 <h3
-                  class="c25"
+                  class="c37"
                 >
                   Utilisation de témoins de connexion (« cookies »)
                 </h3>
@@ -1249,7 +1331,7 @@ exports[`<MentionLegales /> should render 1`] = `
                   Nous collectons également des données par l’intermédiaire de dispositifs appelés “cookies” permettant d’établir des mesures statistiques de fréquentation et d’utilisation du site pouvant être utilisées à des fins de suivi et d’amélioration du service :
                 </p>
                 <ul
-                  class="c33"
+                  class="c38"
                 >
                   <li>
                     Les données collectées ne sont pas recoupées avec d’autres traitements.
@@ -1303,7 +1385,7 @@ exports[`<MentionLegales /> should render 1`] = `
               </div>
             </div>
             <div
-              class="c27 c28"
+              class="c31 c32"
               data-accordion-component="AccordionItem"
             >
               <div
@@ -1316,14 +1398,14 @@ exports[`<MentionLegales /> should render 1`] = `
                   aria-controls="accordion__panel-1"
                   aria-disabled="false"
                   aria-expanded="false"
-                  class="c29"
+                  class="c33"
                   data-accordion-component="AccordionItemButton"
                   id="accordion__heading-1"
                   role="button"
                   tabindex="0"
                 >
                   <svg
-                    class="c30"
+                    class="c34"
                     fill="none"
                     height="24"
                     stroke="currentColor"
@@ -1339,7 +1421,7 @@ exports[`<MentionLegales /> should render 1`] = `
                     />
                   </svg>
                   <h2
-                    class="c31"
+                    class="c35"
                   >
                     Accessibilité
                   </h2>
@@ -1348,7 +1430,7 @@ exports[`<MentionLegales /> should render 1`] = `
               <div
                 aria-hidden="true"
                 aria-labelledby="accordion__heading-1"
-                class="c32"
+                class="c36"
                 data-accordion-component="AccordionItemPanel"
                 hidden=""
                 id="accordion__panel-1"
@@ -1357,7 +1439,7 @@ exports[`<MentionLegales /> should render 1`] = `
                   La conformité aux normes d’accessibilité numérique est un objectif ultérieur mais nous tâchons de rendre dès la conception, ce site accessible à toutes et à tous.
                 </p>
                 <h3
-                  class="c25"
+                  class="c37"
                 >
                   Signaler un dysfonctionnement
                 </h3>
@@ -1368,7 +1450,7 @@ exports[`<MentionLegales /> should render 1`] = `
                   Si vous n’obtenez pas de réponse rapide de notre part, vous êtes en droit de faire parvenir vos doléances ou une demande de saisine au Défenseur des droits.
                 </p>
                 <h3
-                  class="c25"
+                  class="c37"
                 >
                   En savoir plus
                 </h3>
@@ -1384,7 +1466,7 @@ exports[`<MentionLegales /> should render 1`] = `
               </div>
             </div>
             <div
-              class="c27 c28"
+              class="c31 c32"
               data-accordion-component="AccordionItem"
             >
               <div
@@ -1397,14 +1479,14 @@ exports[`<MentionLegales /> should render 1`] = `
                   aria-controls="accordion__panel-2"
                   aria-disabled="false"
                   aria-expanded="false"
-                  class="c29"
+                  class="c33"
                   data-accordion-component="AccordionItemButton"
                   id="accordion__heading-2"
                   role="button"
                   tabindex="0"
                 >
                   <svg
-                    class="c30"
+                    class="c34"
                     fill="none"
                     height="24"
                     stroke="currentColor"
@@ -1420,7 +1502,7 @@ exports[`<MentionLegales /> should render 1`] = `
                     />
                   </svg>
                   <h2
-                    class="c31"
+                    class="c35"
                   >
                     Sécurité
                   </h2>
@@ -1429,7 +1511,7 @@ exports[`<MentionLegales /> should render 1`] = `
               <div
                 aria-hidden="true"
                 aria-labelledby="accordion__heading-2"
-                class="c32"
+                class="c36"
                 data-accordion-component="AccordionItemPanel"
                 hidden=""
                 id="accordion__panel-2"
@@ -1445,36 +1527,40 @@ exports[`<MentionLegales /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c34"
+    class="c39"
   >
     <footer
-      class="c35"
+      class="c40"
     >
       <div
-        class="c36"
+        class="c41"
       >
         <div
-          class="c37"
-        />
-        <div
-          class="c38"
+          class="c42"
         >
-          <h2
-            class="c25"
+          <header
+            class="c21"
           >
-            Besoin d’un accompagnement personnalisé ?
-          </h2>
+            <h3
+              class="c43"
+            >
+              <div
+                class="c23"
+              />
+              Besoin d’un accompagnement personnalisé ?
+            </h3>
+          </header>
           <div
-            class="c39"
+            class="c44"
           >
             Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
           </div>
           <button
-            class="c40"
+            class="c45"
           >
             Contacter nos services
             <svg
-              class="c41"
+              class="c46"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1487,68 +1573,68 @@ exports[`<MentionLegales /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c42"
+        class="c47"
       >
         <nav>
           <div
-            class="c43"
+            class="c48"
           >
             <div
-              class="c44 c45"
+              class="c49 c50"
             >
               <h3
-                class="c46"
+                class="c51"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c47"
+                class="c52"
               >
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -1557,21 +1643,21 @@ exports[`<MentionLegales /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c44 c45"
+              class="c49 c50"
             >
               <h3
-                class="c46"
+                class="c51"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c47"
+                class="c52"
               >
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1580,10 +1666,10 @@ exports[`<MentionLegales /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1594,21 +1680,21 @@ exports[`<MentionLegales /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c44 c45"
+              class="c49 c50"
             >
               <h3
-                class="c46"
+                class="c51"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c47"
+                class="c52"
               >
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1617,10 +1703,10 @@ exports[`<MentionLegales /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1629,10 +1715,10 @@ exports[`<MentionLegales /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c48"
+                  class="c53"
                 >
                   <a
-                    class="c49"
+                    class="c54"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"

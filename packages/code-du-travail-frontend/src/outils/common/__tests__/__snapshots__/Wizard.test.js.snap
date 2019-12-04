@@ -210,12 +210,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c9 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
   padding: 1.6rem 0;
   border-bottom: 1px solid #bbcadf;
 }
@@ -566,12 +560,6 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
 }
 
 .c9 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
   padding: 1.6rem 0;
   border-bottom: 1px solid #bbcadf;
 }
@@ -931,12 +919,6 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 .c9 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
   padding: 1.6rem 0;
   border-bottom: 1px solid #bbcadf;
 }
@@ -1297,12 +1279,6 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c9 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
   padding: 1.6rem 0;
   border-bottom: 1px solid #bbcadf;
 }
@@ -1656,12 +1632,6 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 }
 
 .c9 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
   padding: 1.6rem 0;
   border-bottom: 1px solid #bbcadf;
 }
@@ -2021,12 +1991,6 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c9 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
   padding: 1.6rem 0;
   border-bottom: 1px solid #bbcadf;
 }

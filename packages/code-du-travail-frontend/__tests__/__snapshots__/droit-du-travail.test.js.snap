@@ -1,47 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DroitDuTravail /> should render 1`] = `
-.c28 {
+.c21 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c21 > *:first-child {
+  margin-top: 0;
+}
+
+.c21 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c31 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
 }
 
-.c28 > *:first-child {
+.c31 > *:first-child {
   margin-top: 0;
 }
 
-.c28 > *:last-child {
+.c31 > *:last-child {
   margin-bottom: 0;
 }
 
-.c52 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c52 > *:first-child {
-  margin-top: 0;
-}
-
-.c52 > *:last-child {
-  margin-bottom: 0;
+.c29 {
+  padding: 2rem 0;
+  color: #3e486e;
 }
 
 .c27 {
-  padding: 2rem 0;
-  color: #3e486e;
-  background-color: #f2f5fa;
-}
-
-.c40 {
-  padding: 2rem 0;
-  color: #3e486e;
-}
-
-.c23 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -49,33 +43,51 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-color: transparent;
 }
 
-.c23 > *:first-child {
+.c27 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c27 > *:last-child {
   margin-bottom: 0;
 }
 
 .c24 {
-  margin: 0 0 1rem 0;
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c23 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 3.2rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-top: 1.6rem;
 }
 
-.c26 {
-  margin: 0 0 1rem 0;
+.c30 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
-.c45 {
+.c47 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -84,11 +96,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c33 + .c32 {
+.c22 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c36 + .c35 {
   border-top: 1px solid #bbcadf;
 }
 
-.c36 {
+.c39 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -99,7 +117,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 0;
 }
 
-.c35 {
+.c38 {
   position: relative;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
@@ -107,18 +125,21 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   margin-right: 1rem;
   color: #7598d6;
 }
 
-[aria-expanded="true"] .c35,
-[aria-selected="true"] .c35 {
+[aria-expanded="true"] .c38,
+[aria-selected="true"] .c38 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c34 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -134,28 +155,28 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: pointer;
 }
 
-.c34:hover,
-.c34:focus,
-.c34:focus-within,
-.c34[aria-expanded="true"] {
+.c37:hover,
+.c37:focus,
+.c37:focus-within,
+.c37[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c37 {
+.c40 {
   padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c37 > *:first-child {
+.c40 > *:first-child {
   margin-top: 0;
 }
 
-.c37 > *:last-child {
+.c40 > *:last-child {
   margin-bottom: 0;
 }
 
-.c37.accordion__body--hidden {
+.c40.accordion__body--hidden {
   display: none;
 }
 
@@ -220,7 +241,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c46 {
+.c48 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -259,9 +280,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-radius: 0;
 }
 
-.c46:focus,
-.c46:hover,
-.c46:active {
+.c48:focus,
+.c48:hover,
+.c48:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -327,7 +348,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c47 {
+.c49 {
   height: 1.4rem;
   margin-left: 0.4rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -335,7 +356,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c16:hover .c47 {
+.c16:hover .c49 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -353,20 +374,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c51 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c38 {
+.c41 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -375,7 +383,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -389,7 +396,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   animation: none;
 }
 
-.c39 {
+.c42 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -414,7 +421,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c15 ul {
-  z-index: 100;
+  z-index: 1;
 }
 
 .c15 li[role="option"]:nth-child(2n + 1) {
@@ -495,7 +502,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 2;
   box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   height: 9rem;
   margin-bottom: 6rem;
@@ -591,20 +598,20 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c48 {
+.c50 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c49 {
+.c51 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
-  padding-top: 4rem;
+  padding-top: 1.6rem;
   background-color: #f2f5fa;
 }
 
-.c49:before {
+.c51:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -616,7 +623,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c50 {
+.c52 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -730,7 +737,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c29 {
+.c32 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -746,25 +753,25 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding-bottom: 4rem;
 }
 
-.c29 > *:first-child {
+.c32 > *:first-child {
   margin-top: 0;
 }
 
-.c29 > *:last-child {
+.c32 > *:last-child {
   margin-bottom: 0;
 }
 
-.c31 {
+.c34 {
   -webkit-flex: 0 1 50%;
   -ms-flex: 0 1 50%;
   flex: 0 1 50%;
 }
 
-.c31 + .c30 {
+.c34 + .c33 {
   margin-left: 4rem;
 }
 
-.c41 {
+.c43 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -776,7 +783,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   align-items: stretch;
 }
 
-.c42 {
+.c44 {
   position: absolute;
   left: -70px;
   display: -webkit-box;
@@ -797,7 +804,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   height: 100%;
 }
 
-.c42:before {
+.c44:before {
   position: absolute;
   top: 0;
   left: 50%;
@@ -807,7 +814,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c43 {
+.c45 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -830,7 +837,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c44 {
+.c46 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -843,11 +850,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 4rem 0;
 }
 
-.c21 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -856,19 +859,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
-  max-width: 1200px;
   margin-bottom: 3.2rem;
 }
 
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c22 {
+.c26 {
   position: relative;
   left: 4%;
   -webkit-flex-basis: 80%;
@@ -879,7 +873,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c25 {
+.c28 {
   position: relative;
   right: 4%;
   bottom: 2rem;
@@ -894,29 +888,35 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media print {
-  .c28 {
+  .c21 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c52 {
+  .c31 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c27 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c27 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -1019,7 +1019,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media print {
-  .c49 {
+  .c51 {
     display: none;
   }
 }
@@ -1066,14 +1066,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media print {
-  .c29 {
+  .c32 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c29 {
+  .c32 {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1081,20 +1081,20 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c31 {
+  .c34 {
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
   }
 
-  .c31 + .c30 {
+  .c34 + .c33 {
     margin-left: 0;
     border-top: 1px solid #bbcadf;
   }
 }
 
 @media (max-width:980px) {
-  .c41 {
+  .c43 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -1103,27 +1103,20 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c42 {
+  .c44 {
     position: relative;
     left: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c42:before {
+  .c44:before {
     display: none;
   }
 }
 
-@media print {
-  .c21 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 @media (max-width:980px) {
-  .c21 {
+  .c25 {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1132,7 +1125,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c22 {
+  .c26 {
     left: 0;
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1143,7 +1136,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c25 {
+  .c28 {
     right: 0;
     bottom: 0;
     -webkit-flex-basis: 100%;
@@ -1236,6 +1229,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 >
                   <svg
                     class="bm-cross"
+                    fill="none"
                     style="width: 100%; height: 100%;"
                     viewBox="0 0 32 32"
                   >
@@ -1262,6 +1256,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               >
                 <svg
                   class="bm-icon"
+                  fill="none"
                   style="width: 100%; height: 100%;"
                   viewBox="0 0 32 32"
                 >
@@ -1365,1039 +1360,1357 @@ exports[`<DroitDuTravail /> should render 1`] = `
       <div
         class="c21"
       >
-        <div
+        <header
           class="c22"
         >
-          <div
+          <h1
             class="c23"
           >
-            <h1
+            <div
               class="c24"
-            >
-              Le droit du travail, c’est quoi ?
-            </h1>
-            <strong>
-              Le droit du travail est l’ensemble des règles juridiques applicables aux relations entre employeurs privés et salariés, à l’occasion du travail.
-            </strong>
-            <p>
-              Le droit du travail organise les relations professionnelles de travail entre l’employeur et le salarié individuellement et la collectivité des salariés. Il encadre de nombreux domaines tels que la rémunération, la durée du travail, les congés, la discipline, le licenciement, l’emploi, la formation, la sécurité et la santé au travail, la négociation collective, la grève et la représentation du personnel.
-            </p>
-            <p>
-              Le droit du travail est un droit en constante évolution car il comprend des enjeux politiques, économiques et sociaux forts.
-            </p>
-          </div>
-        </div>
+            />
+            Le droit du travail, c’est quoi ?
+          </h1>
+        </header>
         <div
           class="c25"
         >
           <div
-            class="c23"
+            class="c26"
           >
-            <h2
-              class="c26"
+            <div
+              class="c27"
             >
-              Ce n’est pas... 
-            </h2>
-            <p>
-              Le droit du travail ne concerne pas les travailleurs qui sont soumis au droit public (par exemple, les fonctionnaires), les travailleurs indépendants (artisan, commerçant, professions libérales...), les bénévoles et les dirigeants d’entreprise.
-            </p>
+              <strong>
+                Le droit du travail est l’ensemble des règles juridiques applicables aux relations entre employeurs privés et salariés, à l’occasion du travail.
+              </strong>
+              <p>
+                Le droit du travail organise les relations professionnelles de travail entre l’employeur et le salarié individuellement et la collectivité des salariés. Il encadre de nombreux domaines tels que la rémunération, la durée du travail, les congés, la discipline, le licenciement, l’emploi, la formation, la sécurité et la santé au travail, la négociation collective, la grève et la représentation du personnel.
+              </p>
+              <p>
+                Le droit du travail est un droit en constante évolution car il comprend des enjeux politiques, économiques et sociaux forts.
+              </p>
+            </div>
+          </div>
+          <div
+            class="c28"
+          >
+            <div
+              class="c27"
+            >
+              <h2>
+                Ce n’est pas... 
+              </h2>
+              <p>
+                Le droit du travail ne concerne pas les travailleurs qui sont soumis au droit public (par exemple, les fonctionnaires), les travailleurs indépendants (artisan, commerçant, professions libérales...), les bénévoles et les dirigeants d’entreprise.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="c27"
+      class="c29"
     >
       <div
-        class="c28"
+        class="c21"
       >
-        <h2
-          class="c26"
+        <header
+          class="c22"
         >
-          Quels sont les textes à l’origine du droit du travail ?
-        </h2>
-        <p>
-          Le droit du travail est construit par de nombreux textes juridiques dont les sources sont diverses : sources internationales, sources européennes et sources nationales. Vous trouverez les textes participant à la construction du droit du travail en France ci-dessous.
-        </p>
-      </div>
-      <div
-        class="c29"
-      >
+          <h2
+            class="c30"
+          >
+            <div
+              class="c24"
+            />
+            Quels sont les textes à l’origine du droit du travail ?
+          </h2>
+        </header>
         <div
-          class="c30 c31"
-          data-accordion-component="Accordion"
+          class="c31"
         >
-          <div
-            class="c32 c33"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-0"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c34"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-0"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c35"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c36"
-                >
-                  Les textes internationaux
-                </h3>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-0"
-              class="c37"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-0"
-            >
-              <p>
-                Le droit du travail en France est influencé par les textes de
-                 
-                <a
-                  href="https://www.ilo.org/global/lang--fr/index.htm"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  l’Organisation internationale du travail
-                </a>
-                 
-                (OIT), agence des Nations Unies pour le monde du travail. L’OIT rédige des recommandations et des conventions.
-              </p>
-              <p>
-                Les conventions de l’OIT sont les principaux textes qui ont un effet sur le droit du travail français. Ces conventions traitent de nombreux sujets comme le travail des enfants, les activités syndicales, le travail forcé, l’emploi, le chômage, la rémunération.
-              </p>
-              <p>
-                <i>
-                  Exemple de convention :
-                   
-                  <a
-                    href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    la Convention n°158 de l’OIT sur le licenciement
-                  </a>
-                  .
-                </i>
-              </p>
-              <p>
-                Il existe également d’autres traités internationaux qui ont une influence sur le droit du travail français.
-              </p>
-              <p>
-                <i>
-                  Exemples :
-                   
-                  <a
-                    href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Le Pacte international relatif aux droits civils et politiques de 1966
-                  </a>
-                   
-                  et
-                   
-                  <a
-                    href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    le Pacte international relatif aux droits économiques, sociaux et culturels de 1966
-                  </a>
-                  .
-                </i>
-              </p>
-            </div>
-          </div>
-          <div
-            class="c32 c33"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-1"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c34"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-1"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c35"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c36"
-                >
-                  La Constitution française
-                </h3>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-1"
-              class="c37"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-1"
-            >
-              <p>
-                Texte le plus important du système juridique français,
-                 
-                <a
-                  href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  la Constitution du 4 octobre 1958
-                </a>
-                 
-                est le texte fondateur de la Vème République. La Constitution a pour objectif d’organiser les pouvoirs publics, de définir leur rôle et leurs relations entre eux.
-              </p>
-              <p>
-                Dans son préambule la Constitution de 1958 renvoie explicitement à 3 autres textes fondamentaux :
-                 
-                <a
-                  href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  la Déclaration des Droits de l’Homme et du Citoyen de 1789
-                </a>
-                ,
-                 
-                <a
-                  href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  le Préambule de la Constitution du 27 octobre 1946
-                </a>
-                 
-                et
-                 
-                <a
-                  href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/charte-de-l-environnement-de-2004"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  la Charte de l’environnement de 2004
-                </a>
-                .
-              </p>
-              <p>
-                Ces textes, qui forment le bloc de constitutionalité, énoncent des principes fondamentaux en droit du travail comme par exemple la liberté syndicale, le droit de grève et le droit d’obtenir un emploi.
-              </p>
-            </div>
-          </div>
-          <div
-            class="c32 c33"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-2"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c34"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-2"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c35"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c36"
-                >
-                  Les conventions et accords collectifs
-                </h3>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-2"
-              class="c37"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-2"
-            >
-              <p>
-                Les conventions et accords collectifs de travail sont des textes négociés entre un ou plusieurs employeurs et un ou plusieurs syndicats de salariés.
-              </p>
-              <p>
-                La différence entre les deux textes vient de leur contenu. La convention collective porte sur l’ensemble des conditions d’emploi, de travail et des garanties sociales des salariés. L’accord collectif concerne un seul ou quelques thèmes des conditions d’emploi, de travail et des garanties sociales des salariés.
-              </p>
-              <p>
-                Ces textes peuvent être conclus à différents niveaux : au niveau interprofessionnel, au niveau d’une branche professionnelle, au niveau d’un groupe, au niveau d’une entreprise ou au niveau d’un établissement.
-              </p>
-            </div>
-          </div>
-          <div
-            class="c32 c33"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-3"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c34"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-3"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c35"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c36"
-                >
-                  Le règlement intérieur de l’entreprise
-                </h3>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-3"
-              class="c37"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-3"
-            >
-              Le règlement intérieur de l’entreprise est un acte écrit par l’employeur qui fixe les règles concernant l’organisation de l’entreprise, la discipline, l’hygiène et la sécurité dans l’entreprise.
-            </div>
-          </div>
+          <p>
+            Le droit du travail est construit par de nombreux textes juridiques dont les sources sont diverses : sources internationales, sources européennes et sources nationales. Vous trouverez les textes participant à la construction du droit du travail en France ci-dessous.
+          </p>
         </div>
         <div
-          class="c30 c31"
-          data-accordion-component="Accordion"
+          class="c32"
         >
           <div
-            class="c32 c33"
-            data-accordion-component="AccordionItem"
+            class="c33 c34"
+            data-accordion-component="Accordion"
           >
             <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
+              class="c35 c36"
+              data-accordion-component="AccordionItem"
             >
               <div
-                aria-controls="accordion__panel-4"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c34"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-4"
-                role="button"
-                tabindex="0"
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
               >
-                <svg
-                  class="c35"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  aria-controls="accordion__panel-0"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c37"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-0"
+                  role="button"
+                  tabindex="0"
                 >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c36"
-                >
-                  Les textes européens
-                </h3>
+                  <svg
+                    class="c38"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="9 18 15 12 9 6"
+                    />
+                  </svg>
+                  <h3
+                    class="c39"
+                  >
+                    Les textes internationaux
+                  </h3>
+                </div>
               </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-4"
-              class="c37"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-4"
-            >
-              <p>
-                Le droit du travail français est influencé par
-                 
-                <a
-                  href="https://europa.eu/european-union/index_fr"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  l’Union Européenne
-                </a>
-                 
-                et par
-                 
-                <a
-                  href="https://www.coe.int/fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  le Conseil de l’Europe
-                </a>
-                .
-              </p>
-              <p>
-                L’Union Européenne élabore différents types de textes :
-              </p>
-              <ul>
-                <li>
-                  des traités
-                </li>
-                <li>
-                  des règlements
-                </li>
-                <li>
-                  des directives
-                </li>
-                <li>
-                  des accords collectifs européens négociés par
+              <div
+                aria-hidden="true"
+                aria-labelledby="accordion__heading-0"
+                class="c40"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-0"
+              >
+                <p>
+                  Le droit du travail en France est influencé par les textes de
                    
                   <a
-                    href="https://www.etuc.org/fr"
+                    href="https://www.ilo.org/global/lang--fr/index.htm"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    la Confédération européenne des syndicats (CES)
+                    l’Organisation internationale du travail
+                  </a>
+                   
+                  (OIT), agence des Nations Unies pour le monde du travail. L’OIT rédige des recommandations et des conventions.
+                </p>
+                <p>
+                  Les conventions de l’OIT sont les principaux textes qui ont un effet sur le droit du travail français. Ces conventions traitent de nombreux sujets comme le travail des enfants, les activités syndicales, le travail forcé, l’emploi, le chômage, la rémunération.
+                </p>
+                <p>
+                  <i>
+                    Exemple de convention :
+                     
+                    <a
+                      href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      la Convention n°158 de l’OIT sur le licenciement
+                    </a>
+                    .
+                  </i>
+                </p>
+                <p>
+                  Il existe également d’autres traités internationaux qui ont une influence sur le droit du travail français.
+                </p>
+                <p>
+                  <i>
+                    Exemples :
+                     
+                    <a
+                      href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Le Pacte international relatif aux droits civils et politiques de 1966
+                    </a>
+                     
+                    et
+                     
+                    <a
+                      href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      le Pacte international relatif aux droits économiques, sociaux et culturels de 1966
+                    </a>
+                    .
+                  </i>
+                </p>
+              </div>
+            </div>
+            <div
+              class="c35 c36"
+              data-accordion-component="AccordionItem"
+            >
+              <div
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
+              >
+                <div
+                  aria-controls="accordion__panel-1"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c37"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-1"
+                  role="button"
+                  tabindex="0"
+                >
+                  <svg
+                    class="c38"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="9 18 15 12 9 6"
+                    />
+                  </svg>
+                  <h3
+                    class="c39"
+                  >
+                    La Constitution française
+                  </h3>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                aria-labelledby="accordion__heading-1"
+                class="c40"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-1"
+              >
+                <p>
+                  Texte le plus important du système juridique français,
+                   
+                  <a
+                    href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    la Constitution du 4 octobre 1958
+                  </a>
+                   
+                  est le texte fondateur de la Vème République. La Constitution a pour objectif d’organiser les pouvoirs publics, de définir leur rôle et leurs relations entre eux.
+                </p>
+                <p>
+                  Dans son préambule la Constitution de 1958 renvoie explicitement à 3 autres textes fondamentaux :
+                   
+                  <a
+                    href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    la Déclaration des Droits de l’Homme et du Citoyen de 1789
                   </a>
                   ,
                    
                   <a
-                    href="https://www.businesseurope.eu/"
+                    href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Business Europe
+                    le Préambule de la Constitution du 27 octobre 1946
                   </a>
                    
                   et
                    
                   <a
-                    href="https://www.ceep.eu/"
+                    href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/charte-de-l-environnement-de-2004"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    le Centre européen des entreprises à participation publique
+                    la Charte de l’environnement de 2004
                   </a>
+                  .
+                </p>
+                <p>
+                  Ces textes, qui forment le bloc de constitutionalité, énoncent des principes fondamentaux en droit du travail comme par exemple la liberté syndicale, le droit de grève et le droit d’obtenir un emploi.
+                </p>
+              </div>
+            </div>
+            <div
+              class="c35 c36"
+              data-accordion-component="AccordionItem"
+            >
+              <div
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
+              >
+                <div
+                  aria-controls="accordion__panel-2"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c37"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-2"
+                  role="button"
+                  tabindex="0"
+                >
+                  <svg
+                    class="c38"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="9 18 15 12 9 6"
+                    />
+                  </svg>
+                  <h3
+                    class="c39"
+                  >
+                    Les conventions et accords collectifs
+                  </h3>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                aria-labelledby="accordion__heading-2"
+                class="c40"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-2"
+              >
+                <p>
+                  Les conventions et accords collectifs de travail sont des textes négociés entre un ou plusieurs employeurs et un ou plusieurs syndicats de salariés.
+                </p>
+                <p>
+                  La différence entre les deux textes vient de leur contenu. La convention collective porte sur l’ensemble des conditions d’emploi, de travail et des garanties sociales des salariés. L’accord collectif concerne un seul ou quelques thèmes des conditions d’emploi, de travail et des garanties sociales des salariés.
+                </p>
+                <p>
+                  Ces textes peuvent être conclus à différents niveaux : au niveau interprofessionnel, au niveau d’une branche professionnelle, au niveau d’un groupe, au niveau d’une entreprise ou au niveau d’un établissement.
+                </p>
+              </div>
+            </div>
+            <div
+              class="c35 c36"
+              data-accordion-component="AccordionItem"
+            >
+              <div
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
+              >
+                <div
+                  aria-controls="accordion__panel-3"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c37"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-3"
+                  role="button"
+                  tabindex="0"
+                >
+                  <svg
+                    class="c38"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="9 18 15 12 9 6"
+                    />
+                  </svg>
+                  <h3
+                    class="c39"
+                  >
+                    Le règlement intérieur de l’entreprise
+                  </h3>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                aria-labelledby="accordion__heading-3"
+                class="c40"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-3"
+              >
+                Le règlement intérieur de l’entreprise est un acte écrit par l’employeur qui fixe les règles concernant l’organisation de l’entreprise, la discipline, l’hygiène et la sécurité dans l’entreprise.
+              </div>
+            </div>
+          </div>
+          <div
+            class="c33 c34"
+            data-accordion-component="Accordion"
+          >
+            <div
+              class="c35 c36"
+              data-accordion-component="AccordionItem"
+            >
+              <div
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
+              >
+                <div
+                  aria-controls="accordion__panel-4"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c37"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-4"
+                  role="button"
+                  tabindex="0"
+                >
+                  <svg
+                    class="c38"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="9 18 15 12 9 6"
+                    />
+                  </svg>
+                  <h3
+                    class="c39"
+                  >
+                    Les textes européens
+                  </h3>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                aria-labelledby="accordion__heading-4"
+                class="c40"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-4"
+              >
+                <p>
+                  Le droit du travail français est influencé par
                    
-                  (CEEP)
-                </li>
-              </ul>
-              <p>
-                Le Conseil de l’Europe, organisation intergouvernementale distincte de l’Union Européenne, a adopté 2 textes importants en droit du travail :
-              </p>
-              <ul>
-                <li>
                   <a
-                    href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
+                    href="https://europa.eu/european-union/index_fr"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    La Convention européenne de sauvegarde des droits de l’Homme et des libertés fondamentales
+                    l’Union Européenne
                   </a>
                    
-                  qui évoque des droits civils et politiques comme par exemple la liberté syndicale, l’interdiction du travail forcé, des discriminations, le respect de la vie privée et familiale.
-                </li>
-                <li>
+                  et par
+                   
                   <a
-                    href="https://www.coe.int/en/web/european-social-charter"
+                    href="https://www.coe.int/fr/"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    La Charte sociale européenne
+                    le Conseil de l’Europe
                   </a>
-                   
-                  qui concerne les droits sociaux et économiques dans les domaines notamment de l’emploi et des conditions de travail.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="c32 c33"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-5"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c34"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-5"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c35"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c36"
-                >
-                  Lois, ordonnances, décrets et arrêtés
-                </h3>
+                  .
+                </p>
+                <p>
+                  L’Union Européenne élabore différents types de textes :
+                </p>
+                <ul>
+                  <li>
+                    des traités
+                  </li>
+                  <li>
+                    des règlements
+                  </li>
+                  <li>
+                    des directives
+                  </li>
+                  <li>
+                    des accords collectifs européens négociés par
+                     
+                    <a
+                      href="https://www.etuc.org/fr"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      la Confédération européenne des syndicats (CES)
+                    </a>
+                    ,
+                     
+                    <a
+                      href="https://www.businesseurope.eu/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Business Europe
+                    </a>
+                     
+                    et
+                     
+                    <a
+                      href="https://www.ceep.eu/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      le Centre européen des entreprises à participation publique
+                    </a>
+                     
+                    (CEEP)
+                  </li>
+                </ul>
+                <p>
+                  Le Conseil de l’Europe, organisation intergouvernementale distincte de l’Union Européenne, a adopté 2 textes importants en droit du travail :
+                </p>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      La Convention européenne de sauvegarde des droits de l’Homme et des libertés fondamentales
+                    </a>
+                     
+                    qui évoque des droits civils et politiques comme par exemple la liberté syndicale, l’interdiction du travail forcé, des discriminations, le respect de la vie privée et familiale.
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.coe.int/en/web/european-social-charter"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      La Charte sociale européenne
+                    </a>
+                     
+                    qui concerne les droits sociaux et économiques dans les domaines notamment de l’emploi et des conditions de travail.
+                  </li>
+                </ul>
               </div>
             </div>
             <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-5"
-              class="c37"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-5"
-            >
-              <p>
-                La loi est votée par le Parlement et fixe les principes fondamentaux du droit du travail, du droit syndical et de la sécurité sociale.
-              </p>
-              <p>
-                L’ordonnance est un texte écrit par le Gouvernement après que le Parlement l’y ait autorisé. L’ordonnance a valeur de loi lorsque le Parlement l’approuve en votant une loi de ratification. Si le Parlement n’approuve pas l’ordonnance alors l’ordonnance n’est plus applicable.
-              </p>
-              <p>
-                Le décret est un texte adopté par le Président de la République ou le Premier ministre. Généralement en droit du travail, les décrets viennent préciser une loi.
-              </p>
-              <p>
-                L’essentiel des lois, des ordonnances et des décrets en droit du travail se trouve dans le Code du travail. Il existe des règles applicables en droit du travail qui se trouvent dans d’autres codes que le Code du travail comme par exemple le Code civil, le Code de l’action sociale ou le Code de la sécurité sociale.
-              </p>
-              <p>
-                L’arrêté est un texte pris par une autorité administrative autre que le Président de la République et le Premier Ministre : ministres, des préfets, des maires...
-              </p>
-              <p>
-                <i>
-                  Exemple : arrêté préfectoral déterminant la zone touristique permettant l’ouverture le dimanche ou arrêté ministériel fixant le modèle de l’avis d’inaptitude
-                </i>
-              </p>
-            </div>
-          </div>
-          <div
-            class="c32 c33"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
+              class="c35 c36"
+              data-accordion-component="AccordionItem"
             >
               <div
-                aria-controls="accordion__panel-6"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c34"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-6"
-                role="button"
-                tabindex="0"
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
               >
-                <svg
-                  class="c35"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  aria-controls="accordion__panel-5"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c37"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-5"
+                  role="button"
+                  tabindex="0"
                 >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c36"
-                >
-                  Les usages et les engagements unilatéraux
-                </h3>
+                  <svg
+                    class="c38"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="9 18 15 12 9 6"
+                    />
+                  </svg>
+                  <h3
+                    class="c39"
+                  >
+                    Lois, ordonnances, décrets et arrêtés
+                  </h3>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                aria-labelledby="accordion__heading-5"
+                class="c40"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-5"
+              >
+                <p>
+                  La loi est votée par le Parlement et fixe les principes fondamentaux du droit du travail, du droit syndical et de la sécurité sociale.
+                </p>
+                <p>
+                  L’ordonnance est un texte écrit par le Gouvernement après que le Parlement l’y ait autorisé. L’ordonnance a valeur de loi lorsque le Parlement l’approuve en votant une loi de ratification. Si le Parlement n’approuve pas l’ordonnance alors l’ordonnance n’est plus applicable.
+                </p>
+                <p>
+                  Le décret est un texte adopté par le Président de la République ou le Premier ministre. Généralement en droit du travail, les décrets viennent préciser une loi.
+                </p>
+                <p>
+                  L’essentiel des lois, des ordonnances et des décrets en droit du travail se trouve dans le Code du travail. Il existe des règles applicables en droit du travail qui se trouvent dans d’autres codes que le Code du travail comme par exemple le Code civil, le Code de l’action sociale ou le Code de la sécurité sociale.
+                </p>
+                <p>
+                  L’arrêté est un texte pris par une autorité administrative autre que le Président de la République et le Premier Ministre : ministres, des préfets, des maires...
+                </p>
+                <p>
+                  <i>
+                    Exemple : arrêté préfectoral déterminant la zone touristique permettant l’ouverture le dimanche ou arrêté ministériel fixant le modèle de l’avis d’inaptitude
+                  </i>
+                </p>
               </div>
             </div>
             <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-6"
-              class="c37"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-6"
-            >
-              <p>
-                L’usage d’entreprise est une pratique répétée de l’employeur attribuant un avantage aux salariés ou à un groupe de salariés de l’entreprise sans que la loi, la convention collective ou le contrat de travail ne lui impose.
-              </p>
-              <p>
-                Il existe également des usages au niveau de certaines professions ou de certaines localités.
-              </p>
-              <p>
-                L’engagement unilatéral de l’employeur est un engagement écrit de l’employeur d’accorder un avantage aux salariés.
-              </p>
-              <p>
-                <i>
-                  Exemples : Note de service, procès-verbal de désaccord...
-                </i>
-              </p>
-            </div>
-          </div>
-          <div
-            class="c32 c33"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
+              class="c35 c36"
+              data-accordion-component="AccordionItem"
             >
               <div
-                aria-controls="accordion__panel-7"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c34"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-7"
-                role="button"
-                tabindex="0"
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
               >
-                <svg
-                  class="c35"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  aria-controls="accordion__panel-6"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c37"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-6"
+                  role="button"
+                  tabindex="0"
                 >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c36"
-                >
-                  Le contrat de travail
-                </h3>
+                  <svg
+                    class="c38"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="9 18 15 12 9 6"
+                    />
+                  </svg>
+                  <h3
+                    class="c39"
+                  >
+                    Les usages et les engagements unilatéraux
+                  </h3>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                aria-labelledby="accordion__heading-6"
+                class="c40"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-6"
+              >
+                <p>
+                  L’usage d’entreprise est une pratique répétée de l’employeur attribuant un avantage aux salariés ou à un groupe de salariés de l’entreprise sans que la loi, la convention collective ou le contrat de travail ne lui impose.
+                </p>
+                <p>
+                  Il existe également des usages au niveau de certaines professions ou de certaines localités.
+                </p>
+                <p>
+                  L’engagement unilatéral de l’employeur est un engagement écrit de l’employeur d’accorder un avantage aux salariés.
+                </p>
+                <p>
+                  <i>
+                    Exemples : Note de service, procès-verbal de désaccord...
+                  </i>
+                </p>
               </div>
             </div>
             <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-7"
-              class="c37"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-7"
+              class="c35 c36"
+              data-accordion-component="AccordionItem"
             >
-              <p>
-                Le contrat de travail existe dès l’instant où une personne (le salarié) s’engage à travailler, moyennant rémunération, pour le compte et sous la direction d’une autre personne (l’employeur).
-              </p>
-              <p>
-                Le contrat de travail doit en général être écrit. Il précise la rémunération, la qualification, la durée du travail et, plus généralement, les attributions du salarié.
-              </p>
-              <p>
-                Il entraîne un certain nombre d’obligations, tant pour le salarié que pour l’employeur.
-              </p>
-              <p>
-                Il existe différents types de contrat de travail selon leur durée, l’activité de l’employeur ou la nature du travail confié au salarié.
-              </p>
+              <div
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
+              >
+                <div
+                  aria-controls="accordion__panel-7"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c37"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-7"
+                  role="button"
+                  tabindex="0"
+                >
+                  <svg
+                    class="c38"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="9 18 15 12 9 6"
+                    />
+                  </svg>
+                  <h3
+                    class="c39"
+                  >
+                    Le contrat de travail
+                  </h3>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                aria-labelledby="accordion__heading-7"
+                class="c40"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-7"
+              >
+                <p>
+                  Le contrat de travail existe dès l’instant où une personne (le salarié) s’engage à travailler, moyennant rémunération, pour le compte et sous la direction d’une autre personne (l’employeur).
+                </p>
+                <p>
+                  Le contrat de travail doit en général être écrit. Il précise la rémunération, la qualification, la durée du travail et, plus généralement, les attributions du salarié.
+                </p>
+                <p>
+                  Il entraîne un certain nombre d’obligations, tant pour le salarié que pour l’employeur.
+                </p>
+                <p>
+                  Il existe différents types de contrat de travail selon leur durée, l’activité de l’employeur ou la nature du travail confié au salarié.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="c28"
-      >
         <div
-          class="c38"
+          class="c31"
         >
           <div
-            class="c39"
-            role="alert"
+            class="c41"
           >
-            La jurisprudence de la Cour Européenne des droits de l’Homme, de la Cour de justice de l’Union européenne, du Conseil Constitutionnel, du Conseil d’Etat et de la Cour de cassation influence également le droit du travail en France.
+            <div
+              class="c42"
+              role="alert"
+            >
+              La jurisprudence de la Cour Européenne des droits de l’Homme, de la Cour de justice de l’Union européenne, du Conseil Constitutionnel, du Conseil d’Etat et de la Cour de cassation influence également le droit du travail en France.
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="c40"
+      class="c29"
     >
       <div
-        class="c28"
+        class="c21"
       >
-        <h2
-          class="c26"
+        <header
+          class="c22"
         >
-          Existe-t-il une hiérarchie entre les textes ?
-        </h2>
-        <p>
-          Le principe général en droit du travail est le suivant : lorsqu’il existe plusieurs textes sur un même sujet, c’est le texte le plus favorable au salarié qui s’applique. Ce principe continue a s’appliquer en droit du travail mais il connaît quelques exceptions.
-        </p>
-        <p>
-          Pour vous aider à comprendre, vous trouverez ci-dessous un schèma récapitulant la hiérarchie des textes entre eux.
-        </p>
-      </div>
-      <div
-        class="c40"
-      >
+          <h2
+            class="c30"
+          >
+            <div
+              class="c24"
+            />
+            Existe-t-il une hiérarchie entre les textes ?
+          </h2>
+        </header>
         <div
-          class="c28"
+          class="c31"
         >
-          <ul>
-            <li
-              class="c41"
-            >
-              <div
-                class="c42"
+          <p>
+            Le principe général en droit du travail est le suivant : lorsqu’il existe plusieurs textes sur un même sujet, c’est le texte le plus favorable au salarié qui s’applique. Ce principe continue a s’appliquer en droit du travail mais il connaît quelques exceptions.
+          </p>
+          <p>
+            Pour vous aider à comprendre, vous trouverez ci-dessous un schèma récapitulant la hiérarchie des textes entre eux.
+          </p>
+        </div>
+        <div
+          class="c29"
+        >
+          <div
+            class="c31"
+          >
+            <ul>
+              <li
+                class="c43"
               >
                 <div
-                  class="c43"
-                >
-                  1
-                </div>
-              </div>
-              <div
-                class="c44"
-                data-accordion-component="Accordion"
-              >
-                <div
-                  class="c32 c33"
-                  data-accordion-component="AccordionItem"
+                  class="c44"
                 >
                   <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
+                    class="c45"
+                  >
+                    1
+                  </div>
+                </div>
+                <div
+                  class="c46"
+                  data-accordion-component="Accordion"
+                >
+                  <div
+                    class="c35 c36"
+                    data-accordion-component="AccordionItem"
                   >
                     <div
-                      aria-controls="accordion__panel-8"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c34"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-8"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        class="c35"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <h3
-                        class="c36"
-                      >
-                        Les textes internationaux et européens
-                      </h3>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-8"
-                    class="c37"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-8"
-                  >
-                    Les textes situés plus bas doivent être conformes aux textes internationaux et européens.
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c41"
-            >
-              <div
-                class="c42"
-              >
-                <div
-                  class="c43"
-                >
-                  2
-                </div>
-              </div>
-              <div
-                class="c44"
-                data-accordion-component="Accordion"
-              >
-                <div
-                  class="c32 c33"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-9"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c34"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-9"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        class="c35"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <h3
-                        class="c36"
-                      >
-                        La Constitution
-                      </h3>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-9"
-                    class="c37"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-9"
-                  >
-                    Les textes situés plus bas doivent être conformes à la Constitution française ainsi qu’au bloc de constitutionnalité.
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c41"
-            >
-              <div
-                class="c42"
-              >
-                <div
-                  class="c43"
-                >
-                  3
-                </div>
-              </div>
-              <div
-                class="c44"
-                data-accordion-component="Accordion"
-              >
-                <div
-                  class="c32 c33"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-10"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c34"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-10"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        class="c35"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <h3
-                        class="c36"
-                      >
-                        Lois, ordonnances et décrets (Code du travail)
-                      </h3>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-10"
-                    class="c37"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-10"
-                  >
-                    <h3
-                      class="c45"
-                    >
-                      Hiérarchie entre le Code du travail et les conventions et accords collectifs
-                    </h3>
-                    <p>
-                      Il n’y a pas de règle de hiérarchie unique pour tous les articles du Code du travail. Il existe 3 hiérarchies possibles :
-                    </p>
-                    <div
-                      class="accordion"
-                      data-accordion-component="Accordion"
+                      aria-level="3"
+                      class="accordion__heading"
+                      data-accordion-component="AccordionItemHeading"
+                      role="heading"
                     >
                       <div
-                        class="c32 c33"
-                        data-accordion-component="AccordionItem"
+                        aria-controls="accordion__panel-8"
+                        aria-disabled="false"
+                        aria-expanded="false"
+                        class="c37"
+                        data-accordion-component="AccordionItemButton"
+                        id="accordion__heading-8"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <svg
+                          class="c38"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="9 18 15 12 9 6"
+                          />
+                        </svg>
+                        <h3
+                          class="c39"
+                        >
+                          Les textes internationaux et européens
+                        </h3>
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      aria-labelledby="accordion__heading-8"
+                      class="c40"
+                      data-accordion-component="AccordionItemPanel"
+                      hidden=""
+                      id="accordion__panel-8"
+                    >
+                      Les textes situés plus bas doivent être conformes aux textes internationaux et européens.
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="c43"
+              >
+                <div
+                  class="c44"
+                >
+                  <div
+                    class="c45"
+                  >
+                    2
+                  </div>
+                </div>
+                <div
+                  class="c46"
+                  data-accordion-component="Accordion"
+                >
+                  <div
+                    class="c35 c36"
+                    data-accordion-component="AccordionItem"
+                  >
+                    <div
+                      aria-level="3"
+                      class="accordion__heading"
+                      data-accordion-component="AccordionItemHeading"
+                      role="heading"
+                    >
+                      <div
+                        aria-controls="accordion__panel-9"
+                        aria-disabled="false"
+                        aria-expanded="false"
+                        class="c37"
+                        data-accordion-component="AccordionItemButton"
+                        id="accordion__heading-9"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <svg
+                          class="c38"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="9 18 15 12 9 6"
+                          />
+                        </svg>
+                        <h3
+                          class="c39"
+                        >
+                          La Constitution
+                        </h3>
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      aria-labelledby="accordion__heading-9"
+                      class="c40"
+                      data-accordion-component="AccordionItemPanel"
+                      hidden=""
+                      id="accordion__panel-9"
+                    >
+                      Les textes situés plus bas doivent être conformes à la Constitution française ainsi qu’au bloc de constitutionnalité.
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="c43"
+              >
+                <div
+                  class="c44"
+                >
+                  <div
+                    class="c45"
+                  >
+                    3
+                  </div>
+                </div>
+                <div
+                  class="c46"
+                  data-accordion-component="Accordion"
+                >
+                  <div
+                    class="c35 c36"
+                    data-accordion-component="AccordionItem"
+                  >
+                    <div
+                      aria-level="3"
+                      class="accordion__heading"
+                      data-accordion-component="AccordionItemHeading"
+                      role="heading"
+                    >
+                      <div
+                        aria-controls="accordion__panel-10"
+                        aria-disabled="false"
+                        aria-expanded="false"
+                        class="c37"
+                        data-accordion-component="AccordionItemButton"
+                        id="accordion__heading-10"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <svg
+                          class="c38"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="9 18 15 12 9 6"
+                          />
+                        </svg>
+                        <h3
+                          class="c39"
+                        >
+                          Lois, ordonnances et décrets (Code du travail)
+                        </h3>
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      aria-labelledby="accordion__heading-10"
+                      class="c40"
+                      data-accordion-component="AccordionItemPanel"
+                      hidden=""
+                      id="accordion__panel-10"
+                    >
+                      <h3
+                        class="c47"
+                      >
+                        Hiérarchie entre le Code du travail et les conventions et accords collectifs
+                      </h3>
+                      <p>
+                        Il n’y a pas de règle de hiérarchie unique pour tous les articles du Code du travail. Il existe 3 hiérarchies possibles :
+                      </p>
+                      <div
+                        class="accordion"
+                        data-accordion-component="Accordion"
                       >
                         <div
-                          aria-level="3"
-                          class="accordion__heading"
-                          data-accordion-component="AccordionItemHeading"
-                          role="heading"
+                          class="c35 c36"
+                          data-accordion-component="AccordionItem"
                         >
                           <div
-                            aria-controls="accordion__panel-11"
-                            aria-disabled="false"
-                            aria-expanded="false"
-                            class="c34"
-                            data-accordion-component="AccordionItemButton"
-                            id="accordion__heading-11"
-                            role="button"
-                            tabindex="0"
+                            aria-level="3"
+                            class="accordion__heading"
+                            data-accordion-component="AccordionItemHeading"
+                            role="heading"
                           >
+                            <div
+                              aria-controls="accordion__panel-11"
+                              aria-disabled="false"
+                              aria-expanded="false"
+                              class="c37"
+                              data-accordion-component="AccordionItemButton"
+                              id="accordion__heading-11"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <svg
+                                class="c38"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <polyline
+                                  points="9 18 15 12 9 6"
+                                />
+                              </svg>
+                              <h5
+                                class="c39"
+                              >
+                                Les conventions et accords collectifs doivent respecter le Code du travail
+                              </h5>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            aria-labelledby="accordion__heading-11"
+                            class="c40"
+                            data-accordion-component="AccordionItemPanel"
+                            hidden=""
+                            id="accordion__panel-11"
+                          >
+                            Il existe des règles dans le Code du travail que les conventions et accords collectifs doivent respecter. Les conventions et accords collectifs peuvent toutefois prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                          </div>
+                        </div>
+                        <div
+                          class="c35 c36"
+                          data-accordion-component="AccordionItem"
+                        >
+                          <div
+                            aria-level="3"
+                            class="accordion__heading"
+                            data-accordion-component="AccordionItemHeading"
+                            role="heading"
+                          >
+                            <div
+                              aria-controls="accordion__panel-12"
+                              aria-disabled="false"
+                              aria-expanded="false"
+                              class="c37"
+                              data-accordion-component="AccordionItemButton"
+                              id="accordion__heading-12"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <svg
+                                class="c38"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <polyline
+                                  points="9 18 15 12 9 6"
+                                />
+                              </svg>
+                              <h5
+                                class="c39"
+                              >
+                                Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail.
+                              </h5>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            aria-labelledby="accordion__heading-12"
+                            class="c40"
+                            data-accordion-component="AccordionItemPanel"
+                            hidden=""
+                            id="accordion__panel-12"
+                          >
+                            <p>
+                              Il existe d’autres règles dans le Code du travail qui permettent aux conventions et accords collectifs, sous certaines conditions, de prévoir des règles différentes de celles de la loi. Dans ce cas, c’est l’accord collectif ou la convention collective qui s’applique même s’il est plus défavorable pour le salarié que la loi.
+                            </p>
+                            <i>
+                              Exemples :
+                              <ul>
+                                <li>
+                                  Le taux de majoration des heures supplémentaires : un accord collectif peut prévoir dans une certaine limite un taux inférieur à 25% (règle prévue par le Code du travail).
+                                </li>
+                                <li>
+                                  Le congé sabbatique : un accord collectif peut prévoir une durée minimale et une durée maximale du congé sabbatique différente de ce que prévoit le code du travail.
+                                </li>
+                                <li>
+                                  Les négociations obligatoires en entreprise : un accord d’entreprise peut prévoir une périodicité des négociations plus longue que ce que prévoit le Code du travail qui est principalement d’un an.
+                                </li>
+                              </ul>
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          class="c35 c36"
+                          data-accordion-component="AccordionItem"
+                        >
+                          <div
+                            aria-level="3"
+                            class="accordion__heading"
+                            data-accordion-component="AccordionItemHeading"
+                            role="heading"
+                          >
+                            <div
+                              aria-controls="accordion__panel-13"
+                              aria-disabled="false"
+                              aria-expanded="false"
+                              class="c37"
+                              data-accordion-component="AccordionItemButton"
+                              id="accordion__heading-13"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <svg
+                                class="c38"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <polyline
+                                  points="9 18 15 12 9 6"
+                                />
+                              </svg>
+                              <h5
+                                class="c39"
+                              >
+                                En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
+                              </h5>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            aria-labelledby="accordion__heading-13"
+                            class="c40"
+                            data-accordion-component="AccordionItemPanel"
+                            hidden=""
+                            id="accordion__panel-13"
+                          >
+                            <p>
+                              Il existe également des règles dans le Code du travail qui s’appliquent par défaut, c’est-à-dire uniquement lorsqu’il n’y a pas de convention ou d’accord collectif sur le sujet. S’il existe une convention ou un accord collectif sur le sujet alors la loi ne s’applique pas.
+                            </p>
+                            <i>
+                              Exemples :
+                              <ul>
+                                <li>
+                                  Congés exceptionnels : en l’absence d’accord collectif sur les congés exceptionnels, ce que prévoit le code du travail s’applique (4 jours pour mariage, 1 jour pour mariage d’un enfant, 5 jours pour le décès d’un enfant...)
+                                </li>
+                                <li>
+                                  Taux de majoration des heures supplémentaires : en l’absence d’accord collectif sur le taux de majoration des heures supplémentaires s’applique le code du travail (25% de majoration pour les 8 premières heures et 50% pour les suivantes).
+                                </li>
+                                <li>
+                                  Aménagement du temps de travail sur une période supérieure à la semaine  : en l’absence d’accord collectif sur l’aménagement du temps de travail, le code du travail s’applique. L’employeur peut aménager le temps de travail sur une période de 9 semaines pour les entreprises de moins de 50 salariés.
+                                </li>
+                              </ul>
+                            </i>
+                          </div>
+                        </div>
+                      </div>
+                      <h3
+                        class="c47"
+                      >
+                        Attention à certaines règles du Code du travail !
+                      </h3>
+                      <p>
+                        Il existe des règles du Code du travail auxquelles tous les textes situés en bas ne peuvent pas déroger même si les textes sont plus avantageux pour le salarié. La loi interdit toute dérogation possible. Les textes situés en bas doivent purement et simplement respecter ces règles.
+                      </p>
+                      <p>
+                        <i>
+                          Exemple : la règle selon laquelle le Conseil des prud’hommes est le seul compétent pour les contentieux liés au travail.
+                        </i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="c43"
+              >
+                <div
+                  class="c44"
+                >
+                  <div
+                    class="c45"
+                  >
+                    4
+                  </div>
+                </div>
+                <div
+                  class="c46"
+                  data-accordion-component="Accordion"
+                >
+                  <div
+                    class="c35 c36"
+                    data-accordion-component="AccordionItem"
+                  >
+                    <div
+                      aria-level="3"
+                      class="accordion__heading"
+                      data-accordion-component="AccordionItemHeading"
+                      role="heading"
+                    >
+                      <div
+                        aria-controls="accordion__panel-14"
+                        aria-disabled="false"
+                        aria-expanded="false"
+                        class="c37"
+                        data-accordion-component="AccordionItemButton"
+                        id="accordion__heading-14"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <svg
+                          class="c38"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="9 18 15 12 9 6"
+                          />
+                        </svg>
+                        <h3
+                          class="c39"
+                        >
+                          Les conventions et accords collectifs
+                        </h3>
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      aria-labelledby="accordion__heading-14"
+                      class="c40"
+                      data-accordion-component="AccordionItemPanel"
+                      hidden=""
+                      id="accordion__panel-14"
+                    >
+                      <h3
+                        class="c47"
+                      >
+                        Hiérarchie entre conventions et accords collectifs de niveaux différents
+                      </h3>
+                      <p>
+                        La règle qui détermine quel est le texte applicable est différente en fonction du niveau des textes comparés.
+                      </p>
+                      <h3
+                        class="c47"
+                      >
+                        Hiérarchie entre accord de branche et accord d’entreprise
+                      </h3>
+                      <p>
+                        Le principe est que l’accord d’entreprise s’applique en priorité par rapport à l’accord ou la convention de branche même si, l’accord d’entreprise est plus désavantageux pour le salarié que l’accord de branche.
+                      </p>
+                      <div
+                        class="c41"
+                      >
+                        <div
+                          class="c42"
+                          role="alert"
+                        >
+                          Le principe ne s’applique pas dans
+                           
+                          <button
+                            class="c16 c48"
+                          >
+                            13 matières
                             <svg
-                              class="c35"
+                              class="c49"
                               fill="none"
                               height="24"
                               stroke="currentColor"
@@ -2408,50 +2721,26 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               width="24"
                               xmlns="http://www.w3.org/2000/svg"
                             >
+                              <line
+                                x1="5"
+                                x2="19"
+                                y1="12"
+                                y2="12"
+                              />
                               <polyline
-                                points="9 18 15 12 9 6"
+                                points="12 5 19 12 12 19"
                               />
                             </svg>
-                            <h5
-                              class="c36"
-                            >
-                              Les conventions et accords collectifs doivent respecter le Code du travail
-                            </h5>
-                          </div>
-                        </div>
-                        <div
-                          aria-hidden="true"
-                          aria-labelledby="accordion__heading-11"
-                          class="c37"
-                          data-accordion-component="AccordionItemPanel"
-                          hidden=""
-                          id="accordion__panel-11"
-                        >
-                          Il existe des règles dans le Code du travail que les conventions et accords collectifs doivent respecter. Les conventions et accords collectifs peuvent toutefois prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
-                        </div>
-                      </div>
-                      <div
-                        class="c32 c33"
-                        data-accordion-component="AccordionItem"
-                      >
-                        <div
-                          aria-level="3"
-                          class="accordion__heading"
-                          data-accordion-component="AccordionItemHeading"
-                          role="heading"
-                        >
-                          <div
-                            aria-controls="accordion__panel-12"
-                            aria-disabled="false"
-                            aria-expanded="false"
-                            class="c34"
-                            data-accordion-component="AccordionItemButton"
-                            id="accordion__heading-12"
-                            role="button"
-                            tabindex="0"
+                          </button>
+                           
+                          où la loi reconnait la primauté à l’accord de branche et
+                           
+                          <button
+                            class="c16 c48"
                           >
+                            4 matières
                             <svg
-                              class="c35"
+                              class="c49"
                               fill="none"
                               height="24"
                               stroke="currentColor"
@@ -2462,66 +2751,26 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               width="24"
                               xmlns="http://www.w3.org/2000/svg"
                             >
+                              <line
+                                x1="5"
+                                x2="19"
+                                y1="12"
+                                y2="12"
+                              />
                               <polyline
-                                points="9 18 15 12 9 6"
+                                points="12 5 19 12 12 19"
                               />
                             </svg>
-                            <h5
-                              class="c36"
-                            >
-                              Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail.
-                            </h5>
-                          </div>
-                        </div>
-                        <div
-                          aria-hidden="true"
-                          aria-labelledby="accordion__heading-12"
-                          class="c37"
-                          data-accordion-component="AccordionItemPanel"
-                          hidden=""
-                          id="accordion__panel-12"
-                        >
-                          <p>
-                            Il existe d’autres règles dans le Code du travail qui permettent aux conventions et accords collectifs, sous certaines conditions, de prévoir des règles différentes de celles de la loi. Dans ce cas, c’est l’accord collectif ou la convention collective qui s’applique même s’il est plus défavorable pour le salarié que la loi.
-                          </p>
-                          <i>
-                            Exemples :
-                            <ul>
-                              <li>
-                                Le taux de majoration des heures supplémentaires : un accord collectif peut prévoir dans une certaine limite un taux inférieur à 25% (règle prévue par le Code du travail).
-                              </li>
-                              <li>
-                                Le congé sabbatique : un accord collectif peut prévoir une durée minimale et une durée maximale du congé sabbatique différente de ce que prévoit le code du travail.
-                              </li>
-                              <li>
-                                Les négociations obligatoires en entreprise : un accord d’entreprise peut prévoir une périodicité des négociations plus longue que ce que prévoit le Code du travail qui est principalement d’un an.
-                              </li>
-                            </ul>
-                          </i>
-                        </div>
-                      </div>
-                      <div
-                        class="c32 c33"
-                        data-accordion-component="AccordionItem"
-                      >
-                        <div
-                          aria-level="3"
-                          class="accordion__heading"
-                          data-accordion-component="AccordionItemHeading"
-                          role="heading"
-                        >
-                          <div
-                            aria-controls="accordion__panel-13"
-                            aria-disabled="false"
-                            aria-expanded="false"
-                            class="c34"
-                            data-accordion-component="AccordionItemButton"
-                            id="accordion__heading-13"
-                            role="button"
-                            tabindex="0"
+                          </button>
+                           
+                          où la branche elle même peut reconnaitre sa primauté, sauf si l’accord d’entreprise a
+                           
+                          <button
+                            class="c16 c48"
                           >
+                            des garanties au moins équivalentes
                             <svg
-                              class="c35"
+                              class="c49"
                               fill="none"
                               height="24"
                               stroke="currentColor"
@@ -2532,508 +2781,289 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               width="24"
                               xmlns="http://www.w3.org/2000/svg"
                             >
+                              <line
+                                x1="5"
+                                x2="19"
+                                y1="12"
+                                y2="12"
+                              />
                               <polyline
-                                points="9 18 15 12 9 6"
+                                points="12 5 19 12 12 19"
                               />
                             </svg>
-                            <h5
-                              class="c36"
-                            >
-                              En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
-                            </h5>
-                          </div>
-                        </div>
-                        <div
-                          aria-hidden="true"
-                          aria-labelledby="accordion__heading-13"
-                          class="c37"
-                          data-accordion-component="AccordionItemPanel"
-                          hidden=""
-                          id="accordion__panel-13"
-                        >
-                          <p>
-                            Il existe également des règles dans le Code du travail qui s’appliquent par défaut, c’est-à-dire uniquement lorsqu’il n’y a pas de convention ou d’accord collectif sur le sujet. S’il existe une convention ou un accord collectif sur le sujet alors la loi ne s’applique pas.
-                          </p>
-                          <i>
-                            Exemples :
-                            <ul>
-                              <li>
-                                Congés exceptionnels : en l’absence d’accord collectif sur les congés exceptionnels, ce que prévoit le code du travail s’applique (4 jours pour mariage, 1 jour pour mariage d’un enfant, 5 jours pour le décès d’un enfant...)
-                              </li>
-                              <li>
-                                Taux de majoration des heures supplémentaires : en l’absence d’accord collectif sur le taux de majoration des heures supplémentaires s’applique le code du travail (25% de majoration pour les 8 premières heures et 50% pour les suivantes).
-                              </li>
-                              <li>
-                                Aménagement du temps de travail sur une période supérieure à la semaine  : en l’absence d’accord collectif sur l’aménagement du temps de travail, le code du travail s’applique. L’employeur peut aménager le temps de travail sur une période de 9 semaines pour les entreprises de moins de 50 salariés.
-                              </li>
-                            </ul>
-                          </i>
+                          </button>
+                          .
                         </div>
                       </div>
-                    </div>
-                    <h3
-                      class="c45"
-                    >
-                      Attention à certaines règles du Code du travail !
-                    </h3>
-                    <p>
-                      Il existe des règles du Code du travail auxquelles tous les textes situés en bas ne peuvent pas déroger même si les textes sont plus avantageux pour le salarié. La loi interdit toute dérogation possible. Les textes situés en bas doivent purement et simplement respecter ces règles.
-                    </p>
-                    <p>
-                      <i>
-                        Exemple : la règle selon laquelle le Conseil des prud’hommes est le seul compétent pour les contentieux liés au travail.
-                      </i>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c41"
-            >
-              <div
-                class="c42"
-              >
-                <div
-                  class="c43"
-                >
-                  4
-                </div>
-              </div>
-              <div
-                class="c44"
-                data-accordion-component="Accordion"
-              >
-                <div
-                  class="c32 c33"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-14"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c34"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-14"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        class="c35"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
+                      <p>
+                        Ces règles sont les mêmes pour la hiérarchie entre accord de branche et accord de groupe et entre accord de branche et accord d’établissement.
+                      </p>
                       <h3
-                        class="c36"
+                        class="c47"
                       >
-                        Les conventions et accords collectifs
+                        Hiérarchie entre accord de groupe et accord d’entreprise
                       </h3>
+                      <p>
+                        L’accord de groupe s’applique en priorité par rapport à l’accord d’entreprise ou l’accord d’établissement si l’accord de groupe l’indique dans son accord. Si rien n’est indiqué dans l’accord de groupe alors l’accord le plus avantageux pour le salarié s’applique.
+                      </p>
+                      <h3
+                        class="c47"
+                      >
+                        Hiérarchie entre accord d’entreprise et accord d’établissement
+                      </h3>
+                      <p>
+                        L’accord d’entreprise s’applique en priorité par rapport à l’accord d’établissement si l’accord d’entreprise l’indique dans son accord. Si rien n’est indiqué dans l’accord d’entreprise alors l’accord le plus avantageux pour le salarié s’applique.
+                      </p>
                     </div>
                   </div>
+                </div>
+              </li>
+              <li
+                class="c43"
+              >
+                <div
+                  class="c44"
+                >
                   <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-14"
-                    class="c37"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-14"
+                    class="c45"
                   >
-                    <h3
-                      class="c45"
-                    >
-                      Hiérarchie entre conventions et accords collectifs de niveaux différents
-                    </h3>
-                    <p>
-                      La règle qui détermine quel est le texte applicable est différente en fonction du niveau des textes comparés.
-                    </p>
-                    <h3
-                      class="c45"
-                    >
-                      Hiérarchie entre accord de branche et accord d’entreprise
-                    </h3>
-                    <p>
-                      Le principe est que l’accord d’entreprise s’applique en priorité par rapport à l’accord ou la convention de branche même si, l’accord d’entreprise est plus désavantageux pour le salarié que l’accord de branche.
-                    </p>
+                    5
+                  </div>
+                </div>
+                <div
+                  class="c46"
+                  data-accordion-component="Accordion"
+                >
+                  <div
+                    class="c35 c36"
+                    data-accordion-component="AccordionItem"
+                  >
                     <div
-                      class="c38"
+                      aria-level="3"
+                      class="accordion__heading"
+                      data-accordion-component="AccordionItemHeading"
+                      role="heading"
                     >
                       <div
-                        class="c39"
-                        role="alert"
+                        aria-controls="accordion__panel-15"
+                        aria-disabled="false"
+                        aria-expanded="false"
+                        class="c37"
+                        data-accordion-component="AccordionItemButton"
+                        id="accordion__heading-15"
+                        role="button"
+                        tabindex="0"
                       >
-                        Le principe ne s’applique pas dans
-                         
-                        <button
-                          class="c16 c46"
+                        <svg
+                          class="c38"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          13 matières
-                          <svg
-                            class="c47"
-                            fill="none"
-                            height="24"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <line
-                              x1="5"
-                              x2="19"
-                              y1="12"
-                              y2="12"
-                            />
-                            <polyline
-                              points="12 5 19 12 12 19"
-                            />
-                          </svg>
-                        </button>
-                         
-                        où la loi reconnait la primauté à l’accord de branche et
-                         
-                        <button
-                          class="c16 c46"
+                          <polyline
+                            points="9 18 15 12 9 6"
+                          />
+                        </svg>
+                        <h3
+                          class="c39"
                         >
-                          4 matières
-                          <svg
-                            class="c47"
-                            fill="none"
-                            height="24"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <line
-                              x1="5"
-                              x2="19"
-                              y1="12"
-                              y2="12"
-                            />
-                            <polyline
-                              points="12 5 19 12 12 19"
-                            />
-                          </svg>
-                        </button>
-                         
-                        où la branche elle même peut reconnaitre sa primauté, sauf si l’accord d’entreprise a
-                         
-                        <button
-                          class="c16 c46"
-                        >
-                          des garanties au moins équivalentes
-                          <svg
-                            class="c47"
-                            fill="none"
-                            height="24"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <line
-                              x1="5"
-                              x2="19"
-                              y1="12"
-                              y2="12"
-                            />
-                            <polyline
-                              points="12 5 19 12 12 19"
-                            />
-                          </svg>
-                        </button>
-                        .
+                          Les usages et les engagements unilatéraux
+                        </h3>
                       </div>
                     </div>
-                    <p>
-                      Ces règles sont les mêmes pour la hiérarchie entre accord de branche et accord de groupe et entre accord de branche et accord d’établissement.
-                    </p>
-                    <h3
-                      class="c45"
-                    >
-                      Hiérarchie entre accord de groupe et accord d’entreprise
-                    </h3>
-                    <p>
-                      L’accord de groupe s’applique en priorité par rapport à l’accord d’entreprise ou l’accord d’établissement si l’accord de groupe l’indique dans son accord. Si rien n’est indiqué dans l’accord de groupe alors l’accord le plus avantageux pour le salarié s’applique.
-                    </p>
-                    <h3
-                      class="c45"
-                    >
-                      Hiérarchie entre accord d’entreprise et accord d’établissement
-                    </h3>
-                    <p>
-                      L’accord d’entreprise s’applique en priorité par rapport à l’accord d’établissement si l’accord d’entreprise l’indique dans son accord. Si rien n’est indiqué dans l’accord d’entreprise alors l’accord le plus avantageux pour le salarié s’applique.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c41"
-            >
-              <div
-                class="c42"
-              >
-                <div
-                  class="c43"
-                >
-                  5
-                </div>
-              </div>
-              <div
-                class="c44"
-                data-accordion-component="Accordion"
-              >
-                <div
-                  class="c32 c33"
-                  data-accordion-component="AccordionItem"
-                >
-                  <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
-                  >
                     <div
-                      aria-controls="accordion__panel-15"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c34"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-15"
-                      role="button"
-                      tabindex="0"
+                      aria-hidden="true"
+                      aria-labelledby="accordion__heading-15"
+                      class="c40"
+                      data-accordion-component="AccordionItemPanel"
+                      hidden=""
+                      id="accordion__panel-15"
                     >
-                      <svg
-                        class="c35"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <h3
-                        class="c36"
-                      >
-                        Les usages et les engagements unilatéraux
-                      </h3>
+                      Les usages et les engagements unilatéraux doivent respecter les textes situés en haut. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, ce sont les textes les plus avantageux qui s’appliquent.
                     </div>
                   </div>
+                </div>
+              </li>
+              <li
+                class="c43"
+              >
+                <div
+                  class="c44"
+                >
                   <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-15"
-                    class="c37"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-15"
+                    class="c45"
                   >
-                    Les usages et les engagements unilatéraux doivent respecter les textes situés en haut. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, ce sont les textes les plus avantageux qui s’appliquent.
+                    6
                   </div>
                 </div>
-              </div>
-            </li>
-            <li
-              class="c41"
-            >
-              <div
-                class="c42"
-              >
                 <div
-                  class="c43"
-                >
-                  6
-                </div>
-              </div>
-              <div
-                class="c44"
-                data-accordion-component="Accordion"
-              >
-                <div
-                  class="c32 c33"
-                  data-accordion-component="AccordionItem"
+                  class="c46"
+                  data-accordion-component="Accordion"
                 >
                   <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
+                    class="c35 c36"
+                    data-accordion-component="AccordionItem"
                   >
                     <div
-                      aria-controls="accordion__panel-16"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c34"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-16"
-                      role="button"
-                      tabindex="0"
+                      aria-level="3"
+                      class="accordion__heading"
+                      data-accordion-component="AccordionItemHeading"
+                      role="heading"
                     >
-                      <svg
-                        class="c35"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        aria-controls="accordion__panel-16"
+                        aria-disabled="false"
+                        aria-expanded="false"
+                        class="c37"
+                        data-accordion-component="AccordionItemButton"
+                        id="accordion__heading-16"
+                        role="button"
+                        tabindex="0"
                       >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <h3
-                        class="c36"
-                      >
-                        Le règlement intérieur de l’entreprise
-                      </h3>
+                        <svg
+                          class="c38"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="9 18 15 12 9 6"
+                          />
+                        </svg>
+                        <h3
+                          class="c39"
+                        >
+                          Le règlement intérieur de l’entreprise
+                        </h3>
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      aria-labelledby="accordion__heading-16"
+                      class="c40"
+                      data-accordion-component="AccordionItemPanel"
+                      hidden=""
+                      id="accordion__panel-16"
+                    >
+                      Le règlement intérieur doit respecter les textes situés en haut. Il peut être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
                     </div>
                   </div>
+                </div>
+              </li>
+              <li
+                class="c43"
+              >
+                <div
+                  class="c44"
+                >
                   <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-16"
-                    class="c37"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-16"
+                    class="c45"
                   >
-                    Le règlement intérieur doit respecter les textes situés en haut. Il peut être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                    7
                   </div>
                 </div>
-              </div>
-            </li>
-            <li
-              class="c41"
-            >
-              <div
-                class="c42"
-              >
                 <div
-                  class="c43"
-                >
-                  7
-                </div>
-              </div>
-              <div
-                class="c44"
-                data-accordion-component="Accordion"
-              >
-                <div
-                  class="c32 c33"
-                  data-accordion-component="AccordionItem"
+                  class="c46"
+                  data-accordion-component="Accordion"
                 >
                   <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
+                    class="c35 c36"
+                    data-accordion-component="AccordionItem"
                   >
                     <div
-                      aria-controls="accordion__panel-17"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c34"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-17"
-                      role="button"
-                      tabindex="0"
+                      aria-level="3"
+                      class="accordion__heading"
+                      data-accordion-component="AccordionItemHeading"
+                      role="heading"
                     >
-                      <svg
-                        class="c35"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        aria-controls="accordion__panel-17"
+                        aria-disabled="false"
+                        aria-expanded="false"
+                        class="c37"
+                        data-accordion-component="AccordionItemButton"
+                        id="accordion__heading-17"
+                        role="button"
+                        tabindex="0"
                       >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <h3
-                        class="c36"
-                      >
-                        Le contrat de travail
-                      </h3>
+                        <svg
+                          class="c38"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="9 18 15 12 9 6"
+                          />
+                        </svg>
+                        <h3
+                          class="c39"
+                        >
+                          Le contrat de travail
+                        </h3>
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      aria-labelledby="accordion__heading-17"
+                      class="c40"
+                      data-accordion-component="AccordionItemPanel"
+                      hidden=""
+                      id="accordion__panel-17"
+                    >
+                      Le contrat de travail doit respecter les textes situés en haut. Il peut prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le contrat de travail qui s’applique.
                     </div>
                   </div>
-                  <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-17"
-                    class="c37"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-17"
-                  >
-                    Le contrat de travail doit respecter les textes situés en haut. Il peut prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le contrat de travail qui s’applique.
-                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </main>
   <div
-    class="c48"
+    class="c50"
   >
     <footer
-      class="c49"
+      class="c51"
     >
       <div
-        class="c50"
+        class="c52"
       >
         <div
-          class="c51"
-        />
-        <div
-          class="c52"
+          class="c21"
         >
-          <h2
-            class="c26"
+          <header
+            class="c22"
           >
-            Besoin d’un accompagnement personnalisé ?
-          </h2>
+            <h3
+              class="c30"
+            >
+              <div
+                class="c24"
+              />
+              Besoin d’un accompagnement personnalisé ?
+            </h3>
+          </header>
           <div
             class="c53"
           >

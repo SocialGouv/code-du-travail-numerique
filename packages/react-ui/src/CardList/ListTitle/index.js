@@ -4,21 +4,21 @@ import styled from "styled-components";
 import { Title } from "../../Titles";
 
 export const ListTitle = React.forwardRef(
-  ({ as = "h2", children, desc = "", leftStripped = false, ...props }, ref) => (
-    <StyledListTitle>
-      <Title topStripped={!leftStripped} as={as}>
-        {props.href ? (
-          <>
-            <StyledLink ref={ref} {...props} title={desc}>
-              {children}
-            </StyledLink>
-          </>
-        ) : (
-          <>{children}</>
-        )}
-      </Title>
-      {desc && <div>{desc}</div>}
-    </StyledListTitle>
+  (
+    { as = "h2", children, subtitle = "", leftStripped = false, ...props },
+    ref
+  ) => (
+    <Title topStripped={!leftStripped} as={as} subtitle={subtitle}>
+      {props.href ? (
+        <>
+          <StyledLink ref={ref} {...props}>
+            {children}
+          </StyledLink>
+        </>
+      ) : (
+        <>{children}</>
+      )}
+    </Title>
   )
 );
 
@@ -27,14 +27,10 @@ ListTitle.displayName = "ListTitle";
 ListTitle.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node.isRequired,
-  desc: PropTypes.string,
+  subtitle: PropTypes.string,
   href: PropTypes.string,
   leftStripped: PropTypes.bool
 };
-
-const StyledListTitle = styled.div`
-  text-align: center;
-`;
 
 const StyledLink = styled.a`
   color: ${({ theme }) => theme.title};

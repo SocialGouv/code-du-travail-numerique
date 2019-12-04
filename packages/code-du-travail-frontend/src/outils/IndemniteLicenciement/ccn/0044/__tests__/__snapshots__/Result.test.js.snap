@@ -1,29 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Result /> should render 1`] = `
-.c0 {
-  margin: 0 0 1rem 0;
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
-.c1 {
+.c4 {
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: nowrap;
 }
 
-.c8 {
+.c11 {
   margin-bottom: 1.6rem;
 }
 
-.c4 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,46 +58,46 @@ exports[`<Result /> should render 1`] = `
   align-items: stretch;
 }
 
-.c5 {
+.c8 {
   width: calc(50% * 0.8333333333333334);
   background-color: #7598d6;
   border-radius: 0.6rem;
 }
 
-.c13 {
+.c16 {
   width: calc(50% * 1);
   background-color: #7598d6;
   border-radius: 0.6rem;
 }
 
-.c6 {
+.c9 {
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
 }
 
-.c7 {
+.c10 {
   margin-top: 2rem;
 }
 
-.c9 {
+.c12 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c10 {
+.c13 {
   list-style-type: disc;
 }
 
-.c11 {
+.c14 {
   font-size: 1.4rem;
 }
 
-.c12 {
+.c15 {
   margin: 1.6rem 0;
 }
 
-.c2 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,14 +107,14 @@ exports[`<Result /> should render 1`] = `
   flex-direction: column;
 }
 
-.c3 {
+.c6 {
   margin: 0.4rem;
   font-weight: 700;
   font-size: 1.6rem;
 }
 
 @media (max-width:980px) {
-  .c4 {
+  .c7 {
     -webkit-flex-flow: wrap;
     -ms-flex-flow: wrap;
     flex-flow: wrap;
@@ -98,102 +122,116 @@ exports[`<Result /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c5 {
+  .c8 {
     width: calc(100% * 0.8333333333333334);
   }
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c16 {
     width: calc(100% * 1);
   }
 }
 
 @media (max-width:980px) {
-  .c6 {
+  .c9 {
     width: 100%;
     margin-left: 0;
   }
 }
 
 <div>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Indemnité de licenciement
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Indemnité de licenciement
+    </h2>
+  </header>
   <p>
     À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
      
     <strong
-      class="c1"
+      class="c4"
     >
       1,500.00
        € brut
     </strong>
   </p>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Détails
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Détails
+    </h2>
+  </header>
   <p>
     Il s’agit du montant le plus important entre l’indemnité légale et l’indemnité conventionnelle.
   </p>
   <div
-    class="c2"
+    class="c5"
   >
     <div>
       <div
-        class="c3"
+        class="c6"
       >
         Votre indemnite légale
       </div>
       <div
-        class="c4"
+        class="c7"
       >
         <div
-          class="c5"
+          class="c8"
         />
         <span
-          class="c6"
+          class="c9"
         >
           1,250.00
            € brut
         </span>
       </div>
       <details
-        class="c7"
+        class="c10"
       >
         <summary
-          class="c8"
+          class="c11"
         >
           Voir le détail du calcul
         </summary>
         <strong
-          class="c9"
+          class="c12"
         >
           Éléments saisis :
         </strong>
         <ul
-          class="c10"
+          class="c13"
         >
           <li
-            class="c11"
+            class="c14"
           >
             Salaire de réference (Sref)
              : 
             2000
           </li>
           <li
-            class="c11"
+            class="c14"
           >
             Licenciement pour inaptitude
              : 
             non
           </li>
           <li
-            class="c11"
+            class="c14"
           >
             Ancienneté totale (A)
              : 
@@ -201,12 +239,12 @@ exports[`<Result /> should render 1`] = `
           </li>
         </ul>
         <strong
-          class="c9"
+          class="c12"
         >
           Formule :
         </strong>
         <div
-          class="c12"
+          class="c15"
         >
           <div
             id="react-mathjax-preview"
@@ -222,62 +260,62 @@ exports[`<Result /> should render 1`] = `
     </div>
     <div>
       <div
-        class="c3"
+        class="c6"
       >
         Votre indemnite conventionnelle
       </div>
       <div
-        class="c4"
+        class="c7"
       >
         <div
-          class="c13"
+          class="c16"
         />
         <span
-          class="c6"
+          class="c9"
         >
           1,500.00
            € brut
         </span>
       </div>
       <details
-        class="c7"
+        class="c10"
       >
         <summary
-          class="c8"
+          class="c11"
         >
           Voir le détail du calcul
         </summary>
         <strong
-          class="c9"
+          class="c12"
         >
           Éléments saisis :
         </strong>
         <ul
-          class="c10"
+          class="c13"
         >
           <li
-            class="c11"
+            class="c14"
           >
             Salaire de référence (Sref)
              : 
             2000
           </li>
           <li
-            class="c11"
+            class="c14"
           >
             Ancienneté totale
              : 
             2.5
           </li>
           <li
-            class="c11"
+            class="c14"
           >
             Ancienneté (en année entière)
              : 
             2
           </li>
           <li
-            class="c11"
+            class="c14"
           >
             Groupe
              : 
@@ -285,12 +323,12 @@ exports[`<Result /> should render 1`] = `
           </li>
         </ul>
         <strong
-          class="c9"
+          class="c12"
         >
           Formule :
         </strong>
         <div
-          class="c12"
+          class="c15"
         >
           <div
             id="react-mathjax-preview"

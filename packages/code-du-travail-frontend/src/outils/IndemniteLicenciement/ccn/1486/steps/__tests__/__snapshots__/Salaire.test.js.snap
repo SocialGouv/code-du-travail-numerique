@@ -10,7 +10,6 @@ exports[`<Salaire /> renders 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -182,7 +181,6 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -464,7 +462,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -794,7 +791,6 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;

@@ -1,7 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideration 1`] = `
-.c1 {
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -10,7 +40,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -24,7 +53,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   animation: none;
 }
 
-.c3 {
+.c6 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -37,21 +66,21 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   text-align: left;
 }
 
-.c8 {
+.c11 {
   width: 10em;
   text-align: right;
   border-color: #bbcadf;
 }
 
-.c8::-webkit-outer-spin-button,
-.c8::-webkit-inner-spin-button {
+.c11::-webkit-outer-spin-button,
+.c11::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,7 +93,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   padding: 0;
 }
 
-.c6 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,18 +112,12 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   margin-bottom: 2rem;
 }
 
-.c0 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
+.c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
-.c4 {
+.c7 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -102,7 +125,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   cursor: default;
 }
 
-.c9 {
+.c12 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -110,14 +133,14 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   cursor: pointer;
 }
 
-.c5 {
+.c8 {
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
   font-weight: 700;
 }
 
-.c11 {
+.c14 {
   width: 10em;
   text-align: right;
   border-color: #bbcadf;
@@ -125,21 +148,21 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   text-align: right;
 }
 
-.c11::-webkit-outer-spin-button,
-.c11::-webkit-inner-spin-button {
+.c14::-webkit-outer-spin-button,
+.c14::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10 {
+.c13 {
   position: relative;
   display: inline-block;
   margin-right: 1.6rem;
 }
 
-.c12 {
+.c15 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
@@ -149,16 +172,23 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   transform: translateY(-50%);
 }
 
-.c2 {
+.c5 {
   margin-top: 2rem;
 }
 
 <div>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Contrats antérieurs
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Contrats antérieurs
+    </h2>
+  </header>
   <p>
     Si le salarié a été auparavant employé par la même société et que la fin du / des contrat(s) n’est pas imputable à l’une des raisons suivantes :
   </p>
@@ -179,31 +209,31 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     .
   </p>
   <div
-    class="c1 c2"
+    class="c4 c5"
   >
     <div
-      class="c3"
+      class="c6"
       role="alert"
     >
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
   </div>
   <p
-    class="c4"
+    class="c7"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
     <span
       aria-label="champs obligatoire"
-      class="c5"
+      class="c8"
     >
       *
     </span>
   </p>
   <div
-    class="c6"
+    class="c9"
   >
     <label
-      class="c7"
+      class="c10"
     >
       <input
         checked=""
@@ -216,7 +246,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       </span>
     </label>
     <label
-      class="c7"
+      class="c10"
     >
       <input
         name="hasBrancheContrat"
@@ -229,39 +259,39 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     </label>
   </div>
   <label
-    class="c7"
+    class="c10"
     for="duration"
   >
     Durée des contrats de travail précédents (en mois)
   </label>
   <input
-    class="c8"
+    class="c11"
     id="duration"
     name="brancheContrat.duration"
     type="number"
     value="3"
   />
   <div
-    class="c1 c2"
+    class="c4 c5"
   >
     <div
-      class="c3"
+      class="c6"
       role="alert"
     >
       Il est important de préciser l’indemnité de licenciement éventuellement perçue lors d’un précédent licenciement dans la même entreprise. L’employeur actuel peut la déduire de l’indemnité de licenciement en train d’être calculée.
     </div>
   </div>
   <label
-    class="c9"
+    class="c12"
     for="currency-1"
   >
     Indemnité de licenciement précédemment perçue
   </label>
   <div
-    class="c10"
+    class="c13"
   >
     <input
-      class="c11"
+      class="c14"
       id="currency-1"
       name="brancheContrat.indemnite"
       type="number"
@@ -269,21 +299,21 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     />
     <span
       aria-hidden="true"
-      class="c12"
+      class="c15"
     >
       €
     </span>
   </div>
   <p
-    class="c4"
+    class="c7"
   >
     Souhaitez vous déduire cette indemnité ?
   </p>
   <div
-    class="c6"
+    class="c9"
   >
     <label
-      class="c7"
+      class="c10"
     >
       <input
         name="brancheContrat.considered"
@@ -295,7 +325,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       </span>
     </label>
     <label
-      class="c7"
+      class="c10"
     >
       <input
         checked=""
@@ -312,7 +342,37 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 `;
 
 exports[`<AncienneteETAMIC /> renders 1`] = `
-.c1 {
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -321,7 +381,6 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -335,7 +394,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   animation: none;
 }
 
-.c3 {
+.c6 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -348,7 +407,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -361,7 +420,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   padding: 0;
 }
 
-.c6 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -380,18 +439,12 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   margin-bottom: 2rem;
 }
 
-.c0 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
+.c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
-.c4 {
+.c7 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -399,23 +452,30 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   cursor: default;
 }
 
-.c5 {
+.c8 {
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
   font-weight: 700;
 }
 
-.c2 {
+.c5 {
   margin-top: 2rem;
 }
 
 <div>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Contrats antérieurs
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Contrats antérieurs
+    </h2>
+  </header>
   <p>
     Si le salarié a été auparavant employé par la même société et que la fin du / des contrat(s) n’est pas imputable à l’une des raisons suivantes :
   </p>
@@ -436,31 +496,31 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
     .
   </p>
   <div
-    class="c1 c2"
+    class="c4 c5"
   >
     <div
-      class="c3"
+      class="c6"
       role="alert"
     >
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
   </div>
   <p
-    class="c4"
+    class="c7"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
     <span
       aria-label="champs obligatoire"
-      class="c5"
+      class="c8"
     >
       *
     </span>
   </p>
   <div
-    class="c6"
+    class="c9"
   >
     <label
-      class="c7"
+      class="c10"
     >
       <input
         name="hasBrancheContrat"
@@ -472,7 +532,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
       </span>
     </label>
     <label
-      class="c7"
+      class="c10"
     >
       <input
         name="hasBrancheContrat"

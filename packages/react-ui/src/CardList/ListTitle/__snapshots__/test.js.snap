@@ -1,25 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ListTitle /> should render title in a link 1`] = `
-.c0 {
-  margin: 0 0 1rem 0;
+.c2 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
-  font-size: 3rem;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c0 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c3 {
   color: #2f3b6c;
   font-weight: normal;
   font-family: "Merriweather",serif;
@@ -27,105 +40,144 @@ exports[`<ListTitle /> should render title in a link 1`] = `
   text-decoration: none;
 }
 
-.c2:hover {
+.c3:hover {
   color: #2f3b6c;
 }
 
-.c3 {
-  margin-left: 1.6rem;
-  color: #7598d6;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c1:hover .c3 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
+@media (max-width:600px) {
+  .c0 {
+    margin-bottom: 2.4rem;
+  }
 }
 
 <div>
-  <div>
+  <header
+    class="c0"
+  >
     <h2
-      class="c0"
+      class="c1"
     >
+      <div
+        class="c2"
+      />
       <a
-        class="c1 c2"
+        class="c3"
         href="https://code.travail.gouv.fr"
-        title="le code du travail numérique"
       >
         Lorem Ipsum
-        <svg
-          aria-hidden="true"
-          class="c3"
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <polyline
-            points="9 18 15 12 9 6"
-          />
-        </svg>
       </a>
     </h2>
-    <div>
-      le code du travail numérique
-    </div>
-  </div>
+    
+  </header>
 </div>
 `;
 
 exports[`<ListTitle /> should render title only 1`] = `
-.c0 {
-  margin: 0 0 1rem 0;
+.c2 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
-  font-size: 3rem;
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    margin-bottom: 2.4rem;
+  }
 }
 
 <div>
-  <div>
+  <header
+    class="c0"
+  >
     <h2
-      class="c0"
+      class="c1"
     >
+      <div
+        class="c2"
+      />
       Lorem Ipsum
     </h2>
     
-  </div>
+  </header>
 </div>
 `;
 
 exports[`<ListTitle /> should render title with description 1`] = `
-.c0 {
-  margin: 0 0 1rem 0;
+.c2 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
-  font-size: 3rem;
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    margin-bottom: 2.4rem;
+  }
 }
 
 <div>
-  <div>
+  <header
+    class="c0"
+  >
     <h2
-      class="c0"
+      class="c1"
     >
+      <div
+        class="c2"
+      />
       Lorem Ipsum
     </h2>
-    <div>
-      Hello
-    </div>
-  </div>
+    
+  </header>
 </div>
 `;

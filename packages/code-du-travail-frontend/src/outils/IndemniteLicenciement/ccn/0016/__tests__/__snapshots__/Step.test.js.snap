@@ -2,20 +2,50 @@
 
 exports[`<Step /> should ask detail about categories 1`] = `
 .c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c6 {
   width: 10em;
   text-align: right;
   border-color: #bbcadf;
 }
 
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
+.c6::-webkit-outer-spin-button,
+.c6::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c1 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,18 +58,12 @@ exports[`<Step /> should ask detail about categories 1`] = `
   padding: 0;
 }
 
-.c0 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
+.c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
-.c2 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,7 +73,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   flex-direction: column;
 }
 
-.c4 {
+.c7 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -57,14 +81,14 @@ exports[`<Step /> should ask detail about categories 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c8 {
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
   font-weight: 700;
 }
 
-.c6 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,16 +101,23 @@ exports[`<Step /> should ask detail about categories 1`] = `
 }
 
 <div>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Quelle est la catégorie du salarié ?
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Quelle est la catégorie du salarié ?
+    </h2>
+  </header>
   <p>
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c1"
+    class="c4"
     for="input-categorie"
   >
     Sélectionnez une catégorie
@@ -115,20 +146,27 @@ exports[`<Step /> should ask detail about categories 1`] = `
       Cadre
     </option>
   </select>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Quelles sont les périodes éventuelles passées au statut de Technicien, Agent de maîtrise (TAM) ou Employé ?
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Quelles sont les périodes éventuelles passées au statut de Technicien, Agent de maîtrise (TAM) ou Employé ?
+    </h2>
+  </header>
   <label
-    class="c2"
+    class="c5"
   >
     <p>
       Période passée en tant que TAM ou employé
     </p>
     <div>
       <input
-        class="c3"
+        class="c6"
         min="0"
         name="tamDuration"
         type="number"
@@ -139,14 +177,14 @@ exports[`<Step /> should ask detail about categories 1`] = `
     </div>
   </label>
   <label
-    class="c2"
+    class="c5"
   >
     <p>
       Période passée en tant que cadre
     </p>
     <div>
       <input
-        class="c3"
+        class="c6"
         min="0"
         name="cadreDuration"
         type="number"
@@ -157,22 +195,22 @@ exports[`<Step /> should ask detail about categories 1`] = `
     </div>
   </label>
   <label
-    class="c4"
+    class="c7"
     for="2"
   >
     Quel est l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
-      class="c5"
+      class="c8"
     >
       *
     </span>
   </label>
   <div
-    class="c6"
+    class="c9"
   >
     <input
-      class="c3"
+      class="c6"
       id="2"
       name="age"
       type="number"
@@ -183,21 +221,51 @@ exports[`<Step /> should ask detail about categories 1`] = `
 `;
 
 exports[`<Step /> should ask detail about retirement  1`] = `
-.c5 {
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c8 {
   width: 10em;
   text-align: right;
   border-color: #bbcadf;
 }
 
-.c5::-webkit-outer-spin-button,
-.c5::-webkit-inner-spin-button {
+.c8::-webkit-outer-spin-button,
+.c8::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c1 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +278,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   padding: 0;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,18 +297,12 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   margin-bottom: 2rem;
 }
 
-.c0 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
+.c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
-.c2 {
+.c5 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -248,7 +310,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c9 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -256,14 +318,14 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   cursor: default;
 }
 
-.c3 {
+.c6 {
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
   font-weight: 700;
 }
 
-.c4 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -276,16 +338,23 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 }
 
 <div>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Quelle est la catégorie du salarié ?
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Quelle est la catégorie du salarié ?
+    </h2>
+  </header>
   <p>
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c1"
+    class="c4"
     for="input-categorie"
   >
     Sélectionnez une catégorie
@@ -315,22 +384,22 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     </option>
   </select>
   <label
-    class="c2"
+    class="c5"
     for="3"
   >
     Quel est l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
-      class="c3"
+      class="c6"
     >
       *
     </span>
   </label>
   <div
-    class="c4"
+    class="c7"
   >
     <input
-      class="c5"
+      class="c8"
       id="3"
       name="age"
       type="number"
@@ -338,21 +407,21 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     />
   </div>
   <p
-    class="c6"
+    class="c9"
   >
     Le salarié pourrait-il bénéficier de la retraite ?
     <span
       aria-label="champs obligatoire"
-      class="c3"
+      class="c6"
     >
       *
     </span>
   </p>
   <div
-    class="c7"
+    class="c10"
   >
     <label
-      class="c1"
+      class="c4"
     >
       <input
         name="hasRetirementAge"
@@ -364,7 +433,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
       </span>
     </label>
     <label
-      class="c1"
+      class="c4"
     >
       <input
         name="hasRetirementAge"
@@ -380,21 +449,51 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 `;
 
 exports[`<Step /> should render 1`] = `
-.c5 {
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c8 {
   width: 10em;
   text-align: right;
   border-color: #bbcadf;
 }
 
-.c5::-webkit-outer-spin-button,
-.c5::-webkit-inner-spin-button {
+.c8::-webkit-outer-spin-button,
+.c8::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c1 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -407,18 +506,12 @@ exports[`<Step /> should render 1`] = `
   padding: 0;
 }
 
-.c0 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
+.c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
-.c2 {
+.c5 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -426,14 +519,14 @@ exports[`<Step /> should render 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c6 {
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
   font-weight: 700;
 }
 
-.c4 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -446,16 +539,23 @@ exports[`<Step /> should render 1`] = `
 }
 
 <div>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Quelle est la catégorie du salarié ?
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Quelle est la catégorie du salarié ?
+    </h2>
+  </header>
   <p>
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c1"
+    class="c4"
     for="input-categorie"
   >
     Sélectionnez une catégorie
@@ -485,22 +585,22 @@ exports[`<Step /> should render 1`] = `
     </option>
   </select>
   <label
-    class="c2"
+    class="c5"
     for="1"
   >
     Quel est l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
-      class="c3"
+      class="c6"
     >
       *
     </span>
   </label>
   <div
-    class="c4"
+    class="c7"
   >
     <input
-      class="c5"
+      class="c8"
       id="1"
       name="age"
       type="number"

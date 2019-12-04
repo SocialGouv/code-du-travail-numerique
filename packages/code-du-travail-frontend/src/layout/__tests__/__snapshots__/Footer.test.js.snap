@@ -1,30 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> should render 1`] = `
-.c4 {
+.c3 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c4 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c4 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
+.c6 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 .c5 {
-  margin: 0 0 1rem 0;
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
-.c7 {
+.c4 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -61,16 +83,16 @@ exports[`<Footer /> should render 1`] = `
   opacity: 1;
 }
 
-.c7:link,
-.c7:visited {
+.c8:link,
+.c8:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -79,23 +101,10 @@ exports[`<Footer /> should render 1`] = `
   border-color: #9cb5e2;
 }
 
-.c7[disabled] {
+.c8[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c3 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 
 .c0 {
@@ -107,7 +116,7 @@ exports[`<Footer /> should render 1`] = `
   position: relative;
   z-index: 1;
   margin-top: 4rem;
-  padding-top: 4rem;
+  padding-top: 1.6rem;
   background-color: #f2f5fa;
 }
 
@@ -131,7 +140,7 @@ exports[`<Footer /> should render 1`] = `
   text-align: center;
 }
 
-.c6 {
+.c7 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -141,27 +150,27 @@ exports[`<Footer /> should render 1`] = `
   text-align: left;
 }
 
-.c6 > *:first-child {
+.c7 > *:first-child {
   margin-top: 0;
 }
 
-.c6 > *:last-child {
+.c7 > *:last-child {
   margin-bottom: 0;
 }
 
-.c8 {
+.c9 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c9 {
+.c10 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c10 {
+.c11 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -175,25 +184,25 @@ exports[`<Footer /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c10 > *:first-child {
+.c11 > *:first-child {
   margin-top: 0;
 }
 
-.c10 > *:last-child {
+.c11 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 + .c11 {
+.c13 + .c12 {
   padding-left: 1.6rem;
 }
 
-.c14 {
+.c15 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c13 {
+.c14 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -203,21 +212,27 @@ exports[`<Footer /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c15 {
+.c16 {
   margin: 0.4rem 0;
   padding: 0;
 }
 
-.c16 {
+.c17 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 @media print {
-  .c4 {
+  .c3 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -228,21 +243,21 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media print {
-  .c6 {
+  .c7 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c10 {
+  .c11 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -250,19 +265,19 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 + .c11 {
+  .c13 + .c12 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c15 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -280,26 +295,30 @@ exports[`<Footer /> should render 1`] = `
       >
         <div
           class="c3"
-        />
-        <div
-          class="c4"
         >
-          <h2
-            class="c5"
+          <header
+            class="c4"
           >
-            Besoin d’un accompagnement personnalisé ?
-          </h2>
+            <h3
+              class="c5"
+            >
+              <div
+                class="c6"
+              />
+              Besoin d’un accompagnement personnalisé ?
+            </h3>
+          </header>
           <div
-            class="c6"
+            class="c7"
           >
             Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
           </div>
           <button
-            class="c7"
+            class="c8"
           >
             Contacter nos services
             <svg
-              class="c8"
+              class="c9"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -312,68 +331,68 @@ exports[`<Footer /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c9"
+        class="c10"
       >
         <nav>
           <div
-            class="c10"
+            class="c11"
           >
             <div
-              class="c11 c12"
+              class="c12 c13"
             >
               <h3
-                class="c13"
+                class="c14"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c14"
+                class="c15"
               >
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -382,21 +401,21 @@ exports[`<Footer /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c11 c12"
+              class="c12 c13"
             >
               <h3
-                class="c13"
+                class="c14"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c14"
+                class="c15"
               >
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -405,10 +424,10 @@ exports[`<Footer /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -419,21 +438,21 @@ exports[`<Footer /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c11 c12"
+              class="c12 c13"
             >
               <h3
-                class="c13"
+                class="c14"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c14"
+                class="c15"
               >
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -442,10 +461,10 @@ exports[`<Footer /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -454,10 +473,10 @@ exports[`<Footer /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c15"
+                  class="c16"
                 >
                   <a
-                    class="c16"
+                    class="c17"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"

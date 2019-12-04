@@ -15,7 +15,7 @@ exports[`<Answer /> should renders 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
+.c11 {
   padding: 2rem 0;
   color: #3e486e;
 }
@@ -52,7 +52,7 @@ exports[`<Answer /> should renders 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c12 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -60,24 +60,56 @@ exports[`<Answer /> should renders 1`] = `
   background-color: #e4e8ef;
 }
 
-.c10 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c10 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c11 {
-  margin: 0 0 1rem 0;
+.c7 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+}
+
+.c13 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c13 {
+.c4 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -114,16 +146,16 @@ exports[`<Answer /> should renders 1`] = `
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c15:link,
+.c15:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -132,13 +164,13 @@ exports[`<Answer /> should renders 1`] = `
   border-color: #9cb5e2;
 }
 
-.c13[disabled] {
+.c15[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c20 {
+.c22 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -175,16 +207,16 @@ exports[`<Answer /> should renders 1`] = `
   opacity: 1;
 }
 
-.c20:link,
-.c20:visited {
+.c22:link,
+.c22:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c20:not([disabled]):hover,
-.c20:not([disabled]):active,
-.c20:not([disabled]):focus {
+.c22:not([disabled]):hover,
+.c22:not([disabled]):active,
+.c22:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -193,26 +225,13 @@ exports[`<Answer /> should renders 1`] = `
   border-color: transparent;
 }
 
-.c20[disabled] {
+.c22[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c5 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c17 {
+.c19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -221,7 +240,6 @@ exports[`<Answer /> should renders 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   min-height: 48px;
   color: #3e486e;
@@ -235,7 +253,7 @@ exports[`<Answer /> should renders 1`] = `
   animation: iowhYu 300ms ease-out;
 }
 
-.c18 {
+.c20 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -248,24 +266,16 @@ exports[`<Answer /> should renders 1`] = `
   text-align: left;
 }
 
-.c21 {
+.c23 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  position: relative;
+.c5 {
   margin-left: -4rem;
-  padding-left: 4rem;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -273,23 +283,23 @@ exports[`<Answer /> should renders 1`] = `
   font-size: 1.4rem;
 }
 
-.c7 {
+.c9 {
   margin: 3.2rem 0 0 0;
 }
 
-.c16 {
+.c18 {
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   padding: 1.6rem;
 }
 
-.c19 {
+.c21 {
   padding: 0 0.4rem;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -300,7 +310,7 @@ exports[`<Answer /> should renders 1`] = `
   justify-content: space-around;
 }
 
-.c15 + .c14 {
+.c17 + .c16 {
   margin-left: 1.6rem;
 }
 
@@ -338,7 +348,7 @@ exports[`<Answer /> should renders 1`] = `
   width: 80%;
 }
 
-.c8 {
+.c10 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -347,11 +357,11 @@ exports[`<Answer /> should renders 1`] = `
   margin: 1.6rem auto;
 }
 
-.c8 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -376,20 +386,20 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c12 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c10 {
+  .c12 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -414,13 +424,13 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c10 {
     padding: 0 5pt;
     border: none;
   }
@@ -440,16 +450,20 @@ exports[`<Answer /> should renders 1`] = `
           class="c3"
           data-main-content="true"
         >
-          <h1
-            class="c4"
+          <header
+            class="c4 c5"
           >
-            <div
-              class="c5"
-            />
-            Article du code
-          </h1>
+            <h1
+              class="c6"
+            >
+              <div
+                class="c7"
+              />
+              Article du code
+            </h1>
+          </header>
           <div
-            class="c6"
+            class="c8"
           >
             <span>
               Mis à jour le : 
@@ -457,10 +471,10 @@ exports[`<Answer /> should renders 1`] = `
             </span>
           </div>
           <div
-            class="c7"
+            class="c9"
           >
             <div
-              class="c8"
+              class="c10"
             >
               intro de l'article
             </div>
@@ -481,29 +495,36 @@ exports[`<Answer /> should renders 1`] = `
         </div>
       </div>
       <div
-        class="c9"
+        class="c11"
       >
         <div
           class="c2"
         >
           <div
-            class="c10"
+            class="c12"
           >
-            <h3
-              class="c11"
+            <header
+              class="c4"
             >
-              Avez-vous trouvé la réponse à votre question ?
-            </h3>
+              <h3
+                class="c13"
+              >
+                <div
+                  class="c7"
+                />
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+            </header>
             <p
-              class="c12"
+              class="c14"
             >
               <button
-                class="c13 c14 c15"
+                class="c15 c16 c17"
               >
                 Non
               </button>
               <button
-                class="c13 c14 c15"
+                class="c15 c16 c17"
               >
                 Oui
               </button>
@@ -514,18 +535,18 @@ exports[`<Answer /> should renders 1`] = `
     </div>
   </div>
   <div
-    class="c16"
+    class="c18"
   >
     <div
-      class="c17"
+      class="c19"
     >
       <div
-        class="c18"
+        class="c20"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c19"
+          class="c21"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -537,10 +558,10 @@ exports[`<Answer /> should renders 1`] = `
       </div>
       <button
         aria-label="Fermer"
-        class="c20"
+        class="c22"
       >
         <svg
-          class="c21"
+          class="c23"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -586,7 +607,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c18 {
+.c20 {
   padding: 2rem 0;
   color: #3e486e;
 }
@@ -623,7 +644,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c19 {
+.c21 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -631,21 +652,48 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   background-color: #e4e8ef;
 }
 
-.c19 > *:first-child {
+.c21 > *:first-child {
   margin-top: 0;
 }
 
-.c19 > *:last-child {
+.c21 > *:last-child {
   margin-bottom: 0;
 }
 
-.c20 {
-  margin: 0 0 1rem 0;
+.c16 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c15 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+}
+
+.c22 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
 .c12 {
@@ -653,13 +701,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   margin: 0 0 1rem 0;
   color: #4d73b8;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
   text-transform: uppercase;
 }
 
-.c22 {
+.c13 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c24 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -696,16 +749,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   opacity: 1;
 }
 
-.c22:link,
-.c22:visited {
+.c24:link,
+.c24:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c22:not([disabled]):hover,
-.c22:not([disabled]):active,
-.c22:not([disabled]):focus {
+.c24:not([disabled]):hover,
+.c24:not([disabled]):active,
+.c24:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -714,13 +767,13 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   border-color: #9cb5e2;
 }
 
-.c22[disabled] {
+.c24[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c29 {
+.c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -757,16 +810,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   opacity: 1;
 }
 
-.c29:link,
-.c29:visited {
+.c31:link,
+.c31:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c29:not([disabled]):hover,
-.c29:not([disabled]):active,
-.c29:not([disabled]):focus {
+.c31:not([disabled]):hover,
+.c31:not([disabled]):active,
+.c31:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -775,7 +828,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   border-color: transparent;
 }
 
-.c29[disabled] {
+.c31[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -813,20 +866,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   overflow-x: auto;
 }
 
-.c14 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c26 {
+.c28 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -835,7 +875,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   min-height: 48px;
   color: #3e486e;
@@ -849,7 +888,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   animation: iowhYu 300ms ease-out;
 }
 
-.c27 {
+.c29 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -862,24 +901,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   text-align: left;
 }
 
-.c30 {
+.c32 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
 
-.c13 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  position: relative;
+.c14 {
   margin-left: -4rem;
-  padding-left: 4rem;
 }
 
-.c15 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -887,23 +918,23 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   font-size: 1.4rem;
 }
 
-.c16 {
+.c18 {
   margin: 3.2rem 0 0 0;
 }
 
-.c25 {
+.c27 {
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   padding: 1.6rem;
 }
 
-.c28 {
+.c30 {
   padding: 0 0.4rem;
 }
 
-.c21 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -914,7 +945,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   justify-content: space-around;
 }
 
-.c24 + .c23 {
+.c26 + .c25 {
   margin-left: 1.6rem;
 }
 
@@ -1029,7 +1060,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   width: 80%;
 }
 
-.c17 {
+.c19 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -1038,11 +1069,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   margin: 1.6rem auto;
 }
 
-.c17 > *:first-child {
+.c19 > *:first-child {
   margin-top: 0;
 }
 
-.c17 > *:last-child {
+.c19 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1067,20 +1098,20 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c21 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c19 {
+  .c21 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c17 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -1130,13 +1161,13 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c19 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c17 {
+  .c19 {
     padding: 0 5pt;
     border: none;
   }
@@ -1170,7 +1201,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 viewBox="0 0 16 16"
               >
                 <path
-                  d="M12.216 6.056L8.114 2.197a.166.166 0 00-.228 0L3.784 6.056v7.089c0 .088.07.154.154.154h8.124c.08 0 .154-.069.154-.154V6.056zm.936.88v6.828c0 .253-.21.458-.47.458H3.318a.464.464 0 01-.47-.458V6.937l-1.055.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016l-1.056-.993z"
+                  d="M12 6.056L8.114 2.197a.166.166 0 00-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88l.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 01-.47-.459L3 6.937l-1.208.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016L13 6.937z"
                   fill="currentColor"
                 />
               </svg>
@@ -1243,16 +1274,20 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           >
             tag2
           </span>
-          <h1
-            class="c13"
+          <header
+            class="c13 c14"
           >
-            <div
-              class="c14"
-            />
-            Article du code
-          </h1>
+            <h1
+              class="c15"
+            >
+              <div
+                class="c16"
+              />
+              Article du code
+            </h1>
+          </header>
           <div
-            class="c15"
+            class="c17"
           >
             <span>
               Mis à jour le : 
@@ -1260,10 +1295,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
           </div>
           <div
-            class="c16"
+            class="c18"
           >
             <div
-              class="c17"
+              class="c19"
             >
               intro de l'article
             </div>
@@ -1284,29 +1319,36 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </div>
       </div>
       <div
-        class="c18"
+        class="c20"
       >
         <div
           class="c10"
         >
           <div
-            class="c19"
+            class="c21"
           >
-            <h3
-              class="c20"
+            <header
+              class="c13"
             >
-              Avez-vous trouvé la réponse à votre question ?
-            </h3>
+              <h3
+                class="c22"
+              >
+                <div
+                  class="c16"
+                />
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+            </header>
             <p
-              class="c21"
+              class="c23"
             >
               <button
-                class="c22 c23 c24"
+                class="c24 c25 c26"
               >
                 Non
               </button>
               <button
-                class="c22 c23 c24"
+                class="c24 c25 c26"
               >
                 Oui
               </button>
@@ -1317,18 +1359,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
     </div>
   </div>
   <div
-    class="c25"
+    class="c27"
   >
     <div
-      class="c26"
+      class="c28"
     >
       <div
-        class="c27"
+        class="c29"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c28"
+          class="c30"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -1340,10 +1382,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
       </div>
       <button
         aria-label="Fermer"
-        class="c29"
+        class="c31"
       >
         <svg
-          class="c30"
+          class="c32"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -1389,7 +1431,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
+.c11 {
   padding: 2rem 0;
   color: #3e486e;
 }
@@ -1426,7 +1468,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c12 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -1434,24 +1476,56 @@ exports[`<Answer /> should renders back to results link 1`] = `
   background-color: #e4e8ef;
 }
 
-.c10 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c10 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c11 {
-  margin: 0 0 1rem 0;
+.c7 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+}
+
+.c13 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c13 {
+.c4 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1488,16 +1562,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c15:link,
+.c15:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1506,13 +1580,13 @@ exports[`<Answer /> should renders back to results link 1`] = `
   border-color: #9cb5e2;
 }
 
-.c13[disabled] {
+.c15[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c20 {
+.c22 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1549,16 +1623,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
   opacity: 1;
 }
 
-.c20:link,
-.c20:visited {
+.c22:link,
+.c22:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c20:not([disabled]):hover,
-.c20:not([disabled]):active,
-.c20:not([disabled]):focus {
+.c22:not([disabled]):hover,
+.c22:not([disabled]):active,
+.c22:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1567,26 +1641,13 @@ exports[`<Answer /> should renders back to results link 1`] = `
   border-color: transparent;
 }
 
-.c20[disabled] {
+.c22[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c5 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c17 {
+.c19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1595,7 +1656,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   min-height: 48px;
   color: #3e486e;
@@ -1609,7 +1669,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   animation: iowhYu 300ms ease-out;
 }
 
-.c18 {
+.c20 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1622,24 +1682,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
   text-align: left;
 }
 
-.c21 {
+.c23 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  position: relative;
+.c5 {
   margin-left: -4rem;
-  padding-left: 4rem;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1647,23 +1699,23 @@ exports[`<Answer /> should renders back to results link 1`] = `
   font-size: 1.4rem;
 }
 
-.c7 {
+.c9 {
   margin: 3.2rem 0 0 0;
 }
 
-.c16 {
+.c18 {
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   padding: 1.6rem;
 }
 
-.c19 {
+.c21 {
   padding: 0 0.4rem;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1674,7 +1726,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   justify-content: space-around;
 }
 
-.c15 + .c14 {
+.c17 + .c16 {
   margin-left: 1.6rem;
 }
 
@@ -1712,7 +1764,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   width: 80%;
 }
 
-.c8 {
+.c10 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -1721,11 +1773,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
   margin: 1.6rem auto;
 }
 
-.c8 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1750,20 +1802,20 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c12 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c10 {
+  .c12 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -1788,13 +1840,13 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c10 {
     padding: 0 5pt;
     border: none;
   }
@@ -1814,16 +1866,20 @@ exports[`<Answer /> should renders back to results link 1`] = `
           class="c3"
           data-main-content="true"
         >
-          <h1
-            class="c4"
+          <header
+            class="c4 c5"
           >
-            <div
-              class="c5"
-            />
-            Article du code
-          </h1>
+            <h1
+              class="c6"
+            >
+              <div
+                class="c7"
+              />
+              Article du code
+            </h1>
+          </header>
           <div
-            class="c6"
+            class="c8"
           >
             <span>
               Mis à jour le : 
@@ -1831,10 +1887,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </span>
           </div>
           <div
-            class="c7"
+            class="c9"
           >
             <div
-              class="c8"
+              class="c10"
             >
               intro de l'article
             </div>
@@ -1855,29 +1911,36 @@ exports[`<Answer /> should renders back to results link 1`] = `
         </div>
       </div>
       <div
-        class="c9"
+        class="c11"
       >
         <div
           class="c2"
         >
           <div
-            class="c10"
+            class="c12"
           >
-            <h3
-              class="c11"
+            <header
+              class="c4"
             >
-              Avez-vous trouvé la réponse à votre question ?
-            </h3>
+              <h3
+                class="c13"
+              >
+                <div
+                  class="c7"
+                />
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+            </header>
             <p
-              class="c12"
+              class="c14"
             >
               <button
-                class="c13 c14 c15"
+                class="c15 c16 c17"
               >
                 Non
               </button>
               <button
-                class="c13 c14 c15"
+                class="c15 c16 c17"
               >
                 Oui
               </button>
@@ -1888,18 +1951,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
     </div>
   </div>
   <div
-    class="c16"
+    class="c18"
   >
     <div
-      class="c17"
+      class="c19"
     >
       <div
-        class="c18"
+        class="c20"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c19"
+          class="c21"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -1911,10 +1974,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
       </div>
       <button
         aria-label="Fermer"
-        class="c20"
+        class="c22"
       >
         <svg
-          class="c21"
+          class="c23"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -1960,7 +2023,7 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c12 {
   padding: 2rem 0;
   color: #3e486e;
 }
@@ -1997,7 +2060,7 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
+.c13 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -2005,24 +2068,51 @@ exports[`<Answer /> should renders related content 1`] = `
   background-color: #e4e8ef;
 }
 
-.c11 > *:first-child {
+.c13 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c13 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
-  margin: 0 0 1rem 0;
+.c7 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+}
+
+.c14 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c24 {
+.c27 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -2031,7 +2121,43 @@ exports[`<Answer /> should renders related content 1`] = `
   line-height: 1.25;
 }
 
-.c14 {
+.c4 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c25 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 0 0.6rem 0 0;
+}
+
+.c25:before {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent #ff7067 transparent transparent;
+  border-style: solid;
+  border-width: 0 5rem 5rem 0;
+  content: "";
+}
+
+.c26 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+}
+
+.c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2068,16 +2194,16 @@ exports[`<Answer /> should renders related content 1`] = `
   opacity: 1;
 }
 
-.c14:link,
-.c14:visited {
+.c16:link,
+.c16:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c16:not([disabled]):hover,
+.c16:not([disabled]):active,
+.c16:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -2086,13 +2212,13 @@ exports[`<Answer /> should renders related content 1`] = `
   border-color: #9cb5e2;
 }
 
-.c14[disabled] {
+.c16[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c29 {
+.c32 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2129,16 +2255,16 @@ exports[`<Answer /> should renders related content 1`] = `
   opacity: 1;
 }
 
-.c29:link,
-.c29:visited {
+.c32:link,
+.c32:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c29:not([disabled]):hover,
-.c29:not([disabled]):active,
-.c29:not([disabled]):focus {
+.c32:not([disabled]):hover,
+.c32:not([disabled]):active,
+.c32:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -2147,87 +2273,13 @@ exports[`<Answer /> should renders related content 1`] = `
   border-color: transparent;
 }
 
-.c29[disabled] {
+.c32[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c23 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #fff;
-  background: #7598d6;
-  border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
-  opacity: 1;
-}
-
-.c23:link,
-.c23:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c23:not([disabled]):hover,
-.c23:not([disabled]):active,
-.c23:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #9cb5e2;
-  border-color: #9cb5e2;
-}
-
-.c23[disabled] {
-  color: rgba(255,255,255,0.4);
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c5 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c20 {
+.c22 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2242,51 +2294,61 @@ exports[`<Answer /> should renders related content 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  box-sizing: border-box;
+  width: auto;
   margin: 0;
-  padding: 1.6rem 2rem;
+  padding: 3.2rem 2rem;
   color: #3e486e;
-  font-weight: 600;
-  text-align: left;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #bbcadf;
+  border: none;
   border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   cursor: pointer;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
+  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
+  transition: box-shadow 250ms linear, transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c20:hover {
+.c22:hover,
+.c22:active,
+.c22:focus {
   color: #3e486e;
-  border-color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
-.c21 {
-  display: block;
-  max-width: 100%;
-  padding-right: 0;
-  overflow-y: auto;
+.c23 {
+  padding-right: 1rem;
 }
 
-.c22 {
-  margin-top: 1.6rem;
+.c24 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
 }
 
-.c26 {
+.c29 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2295,7 +2357,6 @@ exports[`<Answer /> should renders related content 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   min-height: 48px;
   color: #3e486e;
@@ -2309,7 +2370,7 @@ exports[`<Answer /> should renders related content 1`] = `
   animation: iowhYu 300ms ease-out;
 }
 
-.c27 {
+.c30 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -2322,28 +2383,20 @@ exports[`<Answer /> should renders related content 1`] = `
   text-align: left;
 }
 
-.c30 {
+.c33 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
 
-.c9 {
+.c11 {
   border-bottom: 1px dotted #7598d6;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  position: relative;
+.c5 {
   margin-left: -4rem;
-  padding-left: 4rem;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2351,23 +2404,23 @@ exports[`<Answer /> should renders related content 1`] = `
   font-size: 1.4rem;
 }
 
-.c7 {
+.c9 {
   margin: 3.2rem 0 0 0;
 }
 
-.c25 {
+.c28 {
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   padding: 1.6rem;
 }
 
-.c28 {
+.c31 {
   padding: 0 0.4rem;
 }
 
-.c13 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2378,7 +2431,7 @@ exports[`<Answer /> should renders related content 1`] = `
   justify-content: space-around;
 }
 
-.c16 + .c15 {
+.c18 + .c17 {
   margin-left: 1.6rem;
 }
 
@@ -2416,7 +2469,7 @@ exports[`<Answer /> should renders related content 1`] = `
   width: 70%;
 }
 
-.c17 {
+.c19 {
   position: -webkit-sticky;
   position: sticky;
   top: 10rem;
@@ -2424,17 +2477,17 @@ exports[`<Answer /> should renders related content 1`] = `
   padding: 2rem 1.6rem 2rem 0;
 }
 
-.c18 {
+.c20 {
   padding: 0;
   list-style-type: none;
 }
 
-.c19 {
+.c21 {
   margin: 1.6rem 0;
   padding: 0;
 }
 
-.c8 {
+.c10 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -2443,11 +2496,11 @@ exports[`<Answer /> should renders related content 1`] = `
   margin: 1.6rem auto;
 }
 
-.c8 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -2472,20 +2525,26 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c13 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c11 {
+  .c13 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c22 {
+    padding: 2rem 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -2510,19 +2569,19 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:980px) {
-  .c17 {
+  .c19 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c10 {
     padding: 0 5pt;
     border: none;
   }
@@ -2542,16 +2601,20 @@ exports[`<Answer /> should renders related content 1`] = `
           class="c3"
           data-main-content="true"
         >
-          <h1
-            class="c4"
+          <header
+            class="c4 c5"
           >
-            <div
-              class="c5"
-            />
-            Article du code
-          </h1>
+            <h1
+              class="c6"
+            >
+              <div
+                class="c7"
+              />
+              Article du code
+            </h1>
+          </header>
           <div
-            class="c6"
+            class="c8"
           >
             <span>
               Mis à jour le : 
@@ -2559,10 +2622,10 @@ exports[`<Answer /> should renders related content 1`] = `
             </span>
           </div>
           <div
-            class="c7"
+            class="c9"
           >
             <div
-              class="c8"
+              class="c10"
             >
               intro de l'article
             </div>
@@ -2575,7 +2638,7 @@ exports[`<Answer /> should renders related content 1`] = `
                   data-tooltip-ref="__tt__0"
                 >
                   <span
-                    class="c9"
+                    class="c11"
                     data-reach-tooltip-trigger=""
                     tabindex="0"
                   >
@@ -2587,7 +2650,7 @@ exports[`<Answer /> should renders related content 1`] = `
                   data-tooltip-ref="__tt__1"
                 >
                   <span
-                    class="c9"
+                    class="c11"
                     data-reach-tooltip-trigger=""
                     tabindex="0"
                   >
@@ -2604,29 +2667,36 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="c10"
+        class="c12"
       >
         <div
           class="c2"
         >
           <div
-            class="c11"
+            class="c13"
           >
-            <h3
-              class="c12"
+            <header
+              class="c4"
             >
-              Avez-vous trouvé la réponse à votre question ?
-            </h3>
+              <h3
+                class="c14"
+              >
+                <div
+                  class="c7"
+                />
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+            </header>
             <p
-              class="c13"
+              class="c15"
             >
               <button
-                class="c14 c15 c16"
+                class="c16 c17 c18"
               >
                 Non
               </button>
               <button
-                class="c14 c15 c16"
+                class="c16 c17 c18"
               >
                 Oui
               </button>
@@ -2636,70 +2706,85 @@ exports[`<Answer /> should renders related content 1`] = `
       </div>
     </div>
     <div
-      class="c17"
+      class="c19"
     >
       <ul
-        class="c18"
+        class="c20"
       >
         <li
-          class="c19"
+          class="c21"
         >
           <a
-            class="c20"
+            class="c22"
             href="/modeles-de-courriers/LETTER_1"
-            title="related letter title 1"
           >
             <div
-              class="c21"
+              class="c23"
             >
-              related letter title 1
-            </div>
-            <div
-              class="c22"
-            >
-              <div
-                class="c23"
+              
+              <h3
+                class="c24"
               >
-                Consulter
-              </div>
+                related letter title 1
+              </h3>
             </div>
           </a>
         </li>
         <li
-          class="c19"
+          class="c21"
         >
           <a
-            class="c20"
+            class="c22"
             href="/outils/TOOL_1"
-            title="related tool title 1"
           >
             <div
-              class="c21"
-            >
-              related tool title 1
-            </div>
-            <div
-              class="c22"
+              class="c25"
             >
               <div
-                class="c23"
+                class="c26"
               >
-                Démarrer
+                <svg
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
+            </div>
+            <div
+              class="c23"
+            >
+              
+              <h3
+                class="c24"
+              >
+                related tool title 1
+              </h3>
             </div>
           </a>
         </li>
         <li
-          class="c19"
+          class="c21"
         >
           <h3
-            class="c24"
+            class="c27"
           >
             Les articles pouvant vous intéresser :
           </h3>
         </li>
         <li
-          class="c19"
+          class="c21"
         >
           <a
             href="/fiche-service-public/LINK_1"
@@ -2708,7 +2793,7 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c19"
+          class="c21"
         >
           <a
             href="/fiche-ministere-travail/LINK_2"
@@ -2717,7 +2802,7 @@ exports[`<Answer /> should renders related content 1`] = `
           </a>
         </li>
         <li
-          class="c19"
+          class="c21"
         >
           <a
             href="/external/LINK_3"
@@ -2729,18 +2814,18 @@ exports[`<Answer /> should renders related content 1`] = `
     </div>
   </div>
   <div
-    class="c25"
+    class="c28"
   >
     <div
-      class="c26"
+      class="c29"
     >
       <div
-        class="c27"
+        class="c30"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c28"
+          class="c31"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -2752,10 +2837,10 @@ exports[`<Answer /> should renders related content 1`] = `
       </div>
       <button
         aria-label="Fermer"
-        class="c29"
+        class="c32"
       >
         <svg
-          class="c30"
+          class="c33"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -2801,7 +2886,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c12 {
   padding: 2rem 0;
   color: #3e486e;
 }
@@ -2838,7 +2923,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
+.c13 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -2846,24 +2931,56 @@ exports[`<Answer /> should renders tooltip 1`] = `
   background-color: #e4e8ef;
 }
 
-.c11 > *:first-child {
+.c13 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c13 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
-  margin: 0 0 1rem 0;
+.c7 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+}
+
+.c14 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c14 {
+.c4 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2900,16 +3017,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
   opacity: 1;
 }
 
-.c14:link,
-.c14:visited {
+.c16:link,
+.c16:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c16:not([disabled]):hover,
+.c16:not([disabled]):active,
+.c16:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -2918,13 +3035,13 @@ exports[`<Answer /> should renders tooltip 1`] = `
   border-color: #9cb5e2;
 }
 
-.c14[disabled] {
+.c16[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c21 {
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2961,16 +3078,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
   opacity: 1;
 }
 
-.c21:link,
-.c21:visited {
+.c23:link,
+.c23:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):active,
-.c21:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):active,
+.c23:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -2979,26 +3096,13 @@ exports[`<Answer /> should renders tooltip 1`] = `
   border-color: transparent;
 }
 
-.c21[disabled] {
+.c23[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c5 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c18 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3007,7 +3111,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   min-height: 48px;
   color: #3e486e;
@@ -3021,7 +3124,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   animation: iowhYu 300ms ease-out;
 }
 
-.c19 {
+.c21 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -3034,28 +3137,20 @@ exports[`<Answer /> should renders tooltip 1`] = `
   text-align: left;
 }
 
-.c22 {
+.c24 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
 
-.c9 {
+.c11 {
   border-bottom: 1px dotted #7598d6;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  position: relative;
+.c5 {
   margin-left: -4rem;
-  padding-left: 4rem;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3063,23 +3158,23 @@ exports[`<Answer /> should renders tooltip 1`] = `
   font-size: 1.4rem;
 }
 
-.c7 {
+.c9 {
   margin: 3.2rem 0 0 0;
 }
 
-.c17 {
+.c19 {
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   padding: 1.6rem;
 }
 
-.c20 {
+.c22 {
   padding: 0 0.4rem;
 }
 
-.c13 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3090,7 +3185,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   justify-content: space-around;
 }
 
-.c16 + .c15 {
+.c18 + .c17 {
   margin-left: 1.6rem;
 }
 
@@ -3128,7 +3223,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   width: 80%;
 }
 
-.c8 {
+.c10 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -3137,11 +3232,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin: 1.6rem auto;
 }
 
-.c8 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -3166,20 +3261,20 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c13 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c11 {
+  .c13 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -3204,13 +3299,13 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c10 {
     padding: 0 5pt;
     border: none;
   }
@@ -3230,16 +3325,20 @@ exports[`<Answer /> should renders tooltip 1`] = `
           class="c3"
           data-main-content="true"
         >
-          <h1
-            class="c4"
+          <header
+            class="c4 c5"
           >
-            <div
-              class="c5"
-            />
-            Article du code
-          </h1>
+            <h1
+              class="c6"
+            >
+              <div
+                class="c7"
+              />
+              Article du code
+            </h1>
+          </header>
           <div
-            class="c6"
+            class="c8"
           >
             <span>
               Mis à jour le : 
@@ -3247,10 +3346,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </span>
           </div>
           <div
-            class="c7"
+            class="c9"
           >
             <div
-              class="c8"
+              class="c10"
             >
               intro de l'article
             </div>
@@ -3267,7 +3366,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   data-tooltip-ref="__tt__2"
                 >
                   <span
-                    class="c9"
+                    class="c11"
                     data-reach-tooltip-trigger=""
                     tabindex="0"
                   >
@@ -3279,7 +3378,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   data-tooltip-ref="__tt__1"
                 >
                   <span
-                    class="c9"
+                    class="c11"
                     data-reach-tooltip-trigger=""
                     tabindex="0"
                   >
@@ -3291,7 +3390,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   data-tooltip-ref="__tt__0"
                 >
                   <span
-                    class="c9"
+                    class="c11"
                     data-reach-tooltip-trigger=""
                     tabindex="0"
                   >
@@ -3307,29 +3406,36 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="c10"
+        class="c12"
       >
         <div
           class="c2"
         >
           <div
-            class="c11"
+            class="c13"
           >
-            <h3
-              class="c12"
+            <header
+              class="c4"
             >
-              Avez-vous trouvé la réponse à votre question ?
-            </h3>
+              <h3
+                class="c14"
+              >
+                <div
+                  class="c7"
+                />
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+            </header>
             <p
-              class="c13"
+              class="c15"
             >
               <button
-                class="c14 c15 c16"
+                class="c16 c17 c18"
               >
                 Non
               </button>
               <button
-                class="c14 c15 c16"
+                class="c16 c17 c18"
               >
                 Oui
               </button>
@@ -3340,18 +3446,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
     </div>
   </div>
   <div
-    class="c17"
+    class="c19"
   >
     <div
-      class="c18"
+      class="c20"
     >
       <div
-        class="c19"
+        class="c21"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c20"
+          class="c22"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -3363,10 +3469,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
       </div>
       <button
         aria-label="Fermer"
-        class="c21"
+        class="c23"
       >
         <svg
-          class="c22"
+          class="c24"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -3412,7 +3518,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin-bottom: 0;
 }
 
-.c10 {
+.c12 {
   padding: 2rem 0;
   color: #3e486e;
 }
@@ -3449,7 +3555,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin-bottom: 0;
 }
 
-.c11 {
+.c13 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -3457,24 +3563,56 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   background-color: #e4e8ef;
 }
 
-.c11 > *:first-child {
+.c13 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c13 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
-  margin: 0 0 1rem 0;
+.c7 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+}
+
+.c14 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c14 {
+.c4 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3511,16 +3649,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   opacity: 1;
 }
 
-.c14:link,
-.c14:visited {
+.c16:link,
+.c16:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c16:not([disabled]):hover,
+.c16:not([disabled]):active,
+.c16:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3529,13 +3667,13 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   border-color: #9cb5e2;
 }
 
-.c14[disabled] {
+.c16[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c21 {
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3572,16 +3710,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   opacity: 1;
 }
 
-.c21:link,
-.c21:visited {
+.c23:link,
+.c23:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):active,
-.c21:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):active,
+.c23:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3590,26 +3728,13 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   border-color: transparent;
 }
 
-.c21[disabled] {
+.c23[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c5 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c18 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3618,7 +3743,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   min-height: 48px;
   color: #3e486e;
@@ -3632,7 +3756,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   animation: iowhYu 300ms ease-out;
 }
 
-.c19 {
+.c21 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -3645,28 +3769,20 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   text-align: left;
 }
 
-.c22 {
+.c24 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
 
-.c9 {
+.c11 {
   border-bottom: 1px dotted #7598d6;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  position: relative;
+.c5 {
   margin-left: -4rem;
-  padding-left: 4rem;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3674,23 +3790,23 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   font-size: 1.4rem;
 }
 
-.c7 {
+.c9 {
   margin: 3.2rem 0 0 0;
 }
 
-.c17 {
+.c19 {
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   padding: 1.6rem;
 }
 
-.c20 {
+.c22 {
   padding: 0 0.4rem;
 }
 
-.c13 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3701,7 +3817,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   justify-content: space-around;
 }
 
-.c16 + .c15 {
+.c18 + .c17 {
   margin-left: 1.6rem;
 }
 
@@ -3739,7 +3855,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   width: 80%;
 }
 
-.c8 {
+.c10 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -3748,11 +3864,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin: 1.6rem auto;
 }
 
-.c8 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -3777,20 +3893,20 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c13 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c11 {
+  .c13 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -3815,13 +3931,13 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c10 {
     padding: 0 5pt;
     border: none;
   }
@@ -3841,16 +3957,20 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           class="c3"
           data-main-content="true"
         >
-          <h1
-            class="c4"
+          <header
+            class="c4 c5"
           >
-            <div
-              class="c5"
-            />
-            Article du code
-          </h1>
+            <h1
+              class="c6"
+            >
+              <div
+                class="c7"
+              />
+              Article du code
+            </h1>
+          </header>
           <div
-            class="c6"
+            class="c8"
           >
             <span>
               Mis à jour le : 
@@ -3858,10 +3978,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </span>
           </div>
           <div
-            class="c7"
+            class="c9"
           >
             <div
-              class="c8"
+              class="c10"
             >
               intro de l'article
             </div>
@@ -3875,7 +3995,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                     data-tooltip-ref="__tt__1"
                   >
                     <span
-                      class="c9"
+                      class="c11"
                       data-reach-tooltip-trigger=""
                       tabindex="0"
                     >
@@ -3888,7 +4008,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   data-tooltip-ref="__tt__0"
                 >
                   <span
-                    class="c9"
+                    class="c11"
                     data-reach-tooltip-trigger=""
                     tabindex="0"
                   >
@@ -3904,29 +4024,36 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="c10"
+        class="c12"
       >
         <div
           class="c2"
         >
           <div
-            class="c11"
+            class="c13"
           >
-            <h3
-              class="c12"
+            <header
+              class="c4"
             >
-              Avez-vous trouvé la réponse à votre question ?
-            </h3>
+              <h3
+                class="c14"
+              >
+                <div
+                  class="c7"
+                />
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+            </header>
             <p
-              class="c13"
+              class="c15"
             >
               <button
-                class="c14 c15 c16"
+                class="c16 c17 c18"
               >
                 Non
               </button>
               <button
-                class="c14 c15 c16"
+                class="c16 c17 c18"
               >
                 Oui
               </button>
@@ -3937,18 +4064,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
     </div>
   </div>
   <div
-    class="c17"
+    class="c19"
   >
     <div
-      class="c18"
+      class="c20"
     >
       <div
-        class="c19"
+        class="c21"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c20"
+          class="c22"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -3960,10 +4087,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
       </div>
       <button
         aria-label="Fermer"
-        class="c21"
+        class="c23"
       >
         <svg
-          class="c22"
+          class="c24"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -4009,7 +4136,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin-bottom: 0;
 }
 
-.c10 {
+.c12 {
   padding: 2rem 0;
   color: #3e486e;
 }
@@ -4046,7 +4173,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin-bottom: 0;
 }
 
-.c11 {
+.c13 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -4054,24 +4181,56 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   background-color: #e4e8ef;
 }
 
-.c11 > *:first-child {
+.c13 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c13 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
-  margin: 0 0 1rem 0;
+.c7 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+}
+
+.c14 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c14 {
+.c4 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4108,16 +4267,16 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   opacity: 1;
 }
 
-.c14:link,
-.c14:visited {
+.c16:link,
+.c16:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c16:not([disabled]):hover,
+.c16:not([disabled]):active,
+.c16:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -4126,13 +4285,13 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   border-color: #9cb5e2;
 }
 
-.c14[disabled] {
+.c16[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c21 {
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4169,16 +4328,16 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   opacity: 1;
 }
 
-.c21:link,
-.c21:visited {
+.c23:link,
+.c23:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):active,
-.c21:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):active,
+.c23:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -4187,26 +4346,13 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   border-color: transparent;
 }
 
-.c21[disabled] {
+.c23[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c5 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c18 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4215,7 +4361,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   min-height: 48px;
   color: #3e486e;
@@ -4229,7 +4374,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   animation: iowhYu 300ms ease-out;
 }
 
-.c19 {
+.c21 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -4242,28 +4387,20 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   text-align: left;
 }
 
-.c22 {
+.c24 {
   margin-top: 0.4rem;
   color: #ff7067;
 }
 
-.c9 {
+.c11 {
   border-bottom: 1px dotted #7598d6;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  position: relative;
+.c5 {
   margin-left: -4rem;
-  padding-left: 4rem;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4271,23 +4408,23 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   font-size: 1.4rem;
 }
 
-.c7 {
+.c9 {
   margin: 3.2rem 0 0 0;
 }
 
-.c17 {
+.c19 {
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   padding: 1.6rem;
 }
 
-.c20 {
+.c22 {
   padding: 0 0.4rem;
 }
 
-.c13 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4298,7 +4435,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   justify-content: space-around;
 }
 
-.c16 + .c15 {
+.c18 + .c17 {
   margin-left: 1.6rem;
 }
 
@@ -4336,7 +4473,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   width: 80%;
 }
 
-.c8 {
+.c10 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -4345,11 +4482,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin: 1.6rem auto;
 }
 
-.c8 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -4374,20 +4511,20 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c13 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c11 {
+  .c13 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -4412,13 +4549,13 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c10 {
     padding: 0 5pt;
     border: none;
   }
@@ -4438,16 +4575,20 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           class="c3"
           data-main-content="true"
         >
-          <h1
-            class="c4"
+          <header
+            class="c4 c5"
           >
-            <div
-              class="c5"
-            />
-            Article du code
-          </h1>
+            <h1
+              class="c6"
+            >
+              <div
+                class="c7"
+              />
+              Article du code
+            </h1>
+          </header>
           <div
-            class="c6"
+            class="c8"
           >
             <span>
               Mis à jour le : 
@@ -4455,10 +4596,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </span>
           </div>
           <div
-            class="c7"
+            class="c9"
           >
             <div
-              class="c8"
+              class="c10"
             >
               intro de l'article
             </div>
@@ -4471,7 +4612,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   data-tooltip-ref="__tt__0"
                 >
                   <span
-                    class="c9"
+                    class="c11"
                     data-reach-tooltip-trigger=""
                     tabindex="0"
                   >
@@ -4483,7 +4624,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   data-tooltip-ref="__tt__1"
                 >
                   <span
-                    class="c9"
+                    class="c11"
                     data-reach-tooltip-trigger=""
                     tabindex="0"
                   >
@@ -4500,29 +4641,36 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="c10"
+        class="c12"
       >
         <div
           class="c2"
         >
           <div
-            class="c11"
+            class="c13"
           >
-            <h3
-              class="c12"
+            <header
+              class="c4"
             >
-              Avez-vous trouvé la réponse à votre question ?
-            </h3>
+              <h3
+                class="c14"
+              >
+                <div
+                  class="c7"
+                />
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+            </header>
             <p
-              class="c13"
+              class="c15"
             >
               <button
-                class="c14 c15 c16"
+                class="c16 c17 c18"
               >
                 Non
               </button>
               <button
-                class="c14 c15 c16"
+                class="c16 c17 c18"
               >
                 Oui
               </button>
@@ -4533,18 +4681,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
     </div>
   </div>
   <div
-    class="c17"
+    class="c19"
   >
     <div
-      class="c18"
+      class="c20"
     >
       <div
-        class="c19"
+        class="c21"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c20"
+          class="c22"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -4556,10 +4704,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
       </div>
       <button
         aria-label="Fermer"
-        class="c21"
+        class="c23"
       >
         <svg
-          class="c22"
+          class="c24"
           fill="none"
           height="24"
           stroke="currentColor"

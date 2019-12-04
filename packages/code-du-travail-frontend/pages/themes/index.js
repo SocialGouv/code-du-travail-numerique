@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import styled from "styled-components";
 import getConfig from "next/config";
 import {
   Container,
@@ -10,7 +9,6 @@ import {
   Section,
   Tile
 } from "@socialgouv/react-ui";
-import { Layers } from "react-feather";
 import fetch from "isomorphic-unfetch";
 
 import { Layout } from "../../src/layout/Layout";

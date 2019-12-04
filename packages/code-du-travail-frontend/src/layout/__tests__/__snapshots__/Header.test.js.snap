@@ -86,7 +86,7 @@ exports[`<Header /> should render 1`] = `
 }
 
 .c14 ul {
-  z-index: 100;
+  z-index: 1;
 }
 
 .c14 li[role="option"]:nth-child(2n + 1) {
@@ -167,7 +167,7 @@ exports[`<Header /> should render 1`] = `
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 2;
   box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   height: 9rem;
   margin-bottom: 6rem;
@@ -441,6 +441,7 @@ exports[`<Header /> should render 1`] = `
                 >
                   <svg
                     class="bm-cross"
+                    fill="none"
                     style="width: 100%; height: 100%;"
                     viewBox="0 0 32 32"
                   >
@@ -467,6 +468,7 @@ exports[`<Header /> should render 1`] = `
               >
                 <svg
                   class="bm-icon"
+                  fill="none"
                   style="width: 100%; height: 100%;"
                   viewBox="0 0 32 32"
                 >
