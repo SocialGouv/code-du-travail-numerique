@@ -9,6 +9,7 @@ export { Wrapper } from "./layout/Wrapper";
 // Components
 import * as icons from "./icons";
 export { Accordion } from "./Accordion";
+export { Badge } from "./Badge";
 export { Alert } from "./Alert";
 export { Button } from "./Button";
 export { CardList } from "./CardList";

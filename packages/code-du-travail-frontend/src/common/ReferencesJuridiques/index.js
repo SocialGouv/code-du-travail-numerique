@@ -6,8 +6,7 @@ import {
   Container,
   Section,
   theme,
-  Title,
-  Wrapper
+  Title
 } from "@socialgouv/react-ui";
 import ReferenceList from "./ReferenceList";
 import TYPE_REFERENCE from "./typeReference";
@@ -29,10 +28,8 @@ class ReferencesJuridiques extends React.PureComponent {
     return (
       <StyledSection>
         <Container>
-          <Wrapper variant="light">
-            <Title>Références juridiques</Title>
-            <Accordion items={items} />
-          </Wrapper>
+          <Title>Références juridiques</Title>
+          <Accordion items={items} />
         </Container>
       </StyledSection>
     );

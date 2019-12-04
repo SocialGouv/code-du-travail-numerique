@@ -2,6 +2,7 @@ import React from "react";
 import glossary from "@cdt/data...datafiller/glossary.data.json";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styled from "styled-components";
 import {
   Container,
   PageTitle,
@@ -29,9 +30,8 @@ function Term({ pageUrl, ogImage }) {
       />
       <Section>
         <Container narrow>
+          <PageTitle>{term.title}</PageTitle>
           <Wrapper variant="main">
-            <PageTitle>{term.title}</PageTitle>
-
             <Table>
               <tbody>
                 <tr>
@@ -44,9 +44,9 @@ function Term({ pageUrl, ogImage }) {
                   <tr>
                     <th>Sources</th>
                     <td>
-                      <ul>
+                      <StyledList>
                         {term.refs.map(({ url }) => (
-                          <li key={url}>
+                          <StyledListItem key={url}>
                             <a
                               href={url}
                               target="_blank"
@@ -55,9 +55,9 @@ function Term({ pageUrl, ogImage }) {
                             >
                               {url}
                             </a>
-                          </li>
+                          </StyledListItem>
                         ))}
-                      </ul>
+                      </StyledList>
                     </td>
                   </tr>
                 )}
@@ -76,3 +76,11 @@ function Term({ pageUrl, ogImage }) {
 }
 
 export default Term;
+
+const StyledList = styled.ul`
+  padding: 0;
+  list-style-type: none;
+`;
+const StyledListItem = styled.li`
+  padding-left: 0;
+`;

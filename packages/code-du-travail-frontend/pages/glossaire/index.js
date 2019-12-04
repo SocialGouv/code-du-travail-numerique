@@ -15,6 +15,9 @@ import {
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
+const subtitle =
+  "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.";
+
 function Glossaire({ pageUrl, ogImage }) {
   const termsByLetters = getGlossaryLetters(glossary);
   return (
@@ -27,8 +30,8 @@ function Glossaire({ pageUrl, ogImage }) {
       />
       <Section>
         <Container narrow>
+          <PageTitle subtitle={subtitle}>Glossaire</PageTitle>
           <Wrapper variant="main">
-            <PageTitle>Glossaire</PageTitle>
             <GlossaryNavigation letters={termsByLetters} />
             <Glossary letters={termsByLetters} />
           </Wrapper>
@@ -66,15 +69,15 @@ function Glossary({ letters }) {
     return (
       <div key={letter}>
         <LetterTitle letter={letter} />
-        <ul>
+        <StyledList>
           {terms.map(({ title, slug }) => (
-            <li key={slug}>
+            <StyledListItem key={slug}>
               <Link href="/glossaire/[slug]" as={`/glossaire/${slug}`}>
                 <a>{title}</a>
               </Link>
-            </li>
+            </StyledListItem>
           ))}
-        </ul>
+        </StyledList>
       </div>
     );
   });
@@ -106,4 +109,12 @@ const Item = styled.li`
   display: inline-block;
   padding: ${spacings.tiny};
   font-size: ${fonts.sizes.headings.small};
+`;
+
+const StyledList = styled.ul`
+  padding: 0;
+  list-style-type: none;
+`;
+const StyledListItem = styled.li`
+  padding-left: 0;
 `;

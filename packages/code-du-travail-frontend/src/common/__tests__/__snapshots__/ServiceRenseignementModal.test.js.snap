@@ -150,7 +150,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   overflow: auto;
   background: rgba(0,0,0,0.5);
 }

@@ -16,92 +16,110 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  box-sizing: border-box;
+  width: 100%;
   margin: 0;
-  padding: 2rem 2.4rem;
+  padding: 2rem 2rem;
   color: #3e486e;
-  font-weight: 600;
-  font-size: 1.8rem;
+  font-weight: normal;
+  font-size: 1.6rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f2f5fa;
-  border: 1px solid #bbcadf;
+  background-color: #fff;
+  border: none;
   border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   cursor: pointer;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
+  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
+  transition: box-shadow 250ms linear, transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:active,
+.c0:focus {
   color: #3e486e;
-  border-color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .c1 {
-  display: block;
-  max-width: 100%;
-  padding-right: 0;
-  overflow-y: auto;
+  padding-right: 1rem;
 }
 
 .c2 {
-  color: #3e486e;
-  font-weight: bold;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
 }
 
 .c3 {
-  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .c4 {
+  font-size: 1.2rem;
+}
+
+.c5 {
   color: #4d73b8;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 1.6rem 1.6rem;
+  }
+}
+
 <div>
   <a
-    class="c0"
+    class="c0 no-after"
     href="http://file.url"
-    title="Télécharger le courrier type"
   >
     <div
       class="c1"
     >
-      <div
+      
+      <h3
         class="c2"
       >
-        <span>
-          FooFile
-        </span>
-        <br />
-        <span
-          class="c3"
-        >
-          Courrier
-        </span>
-        <span
-          class="c4"
-        >
-           - 
-          url
-        </span>
-      </div>
+        FooFile
+      </h3>
     </div>
-    
+    <div
+      class="c3"
+    >
+      <span
+        class="c4"
+      >
+        Courrier
+      </span>
+      <span
+        class="c5"
+      >
+         - 
+        url
+      </span>
+    </div>
   </a>
 </div>
 `;

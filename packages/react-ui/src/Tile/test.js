@@ -1,37 +1,40 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { List } from "react-feather";
+
+import { Time } from "../icons";
 import { Tile } from ".";
 
 describe("<Tile />", () => {
-  it("renders a button tile", () => {
-    const { container } = render(<Tile>Hello !</Tile>);
+  it("renders a tile with text inside", () => {
+    const { container } = render(
+      <Tile title="Hello !">There is text inside</Tile>
+    );
     expect(container).toMatchSnapshot();
     expect(container.getElementsByTagName("button").length).toBe(1);
   });
-  it("renders a link tile", () => {
-    const { container } = render(<Tile href="#">Hello !</Tile>);
-    expect(container.getElementsByTagName("a").length).toBe(1);
-    expect(container.getElementsByTagName("button").length).toBe(0);
-  });
-  it("renders with a div fake button inside", () => {
+  it("renders a tile with a custom badge", () => {
     const { container } = render(
-      <Tile href="#" button="bouton">
-        Hello !
+      <Tile title="Hello !">There is text inside</Tile>
+    );
+    expect(container).toMatchSnapshot();
+    expect(container.getElementsByTagName("button").length).toBe(1);
+  });
+  it("renders a tile with an icon", () => {
+    const { container } = render(
+      <Tile title="Hello !" icon={Time}>
+        There is text inside
       </Tile>
     );
     expect(container).toMatchSnapshot();
+    expect(container.getElementsByTagName("button").length).toBe(1);
   });
-  it("renders with an icon", () => {
-    const { container } = render(<Tile icon={List}>Hello !</Tile>);
-    expect(container).toMatchSnapshot();
-  });
-  it("renders dark and small", () => {
+  it("renders a wide tile with a subtitle", () => {
     const { container } = render(
-      <Tile variant="dark" size="small">
-        Hello !
+      <Tile subtitle="This is a theme" title="Hello !">
+        There is text inside
       </Tile>
     );
     expect(container).toMatchSnapshot();
+    expect(container.getElementsByTagName("button").length).toBe(1);
   });
 });

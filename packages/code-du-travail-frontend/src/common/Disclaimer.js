@@ -43,7 +43,7 @@ const { spacings } = theme;
 const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   padding: ${spacings.base};
 `;

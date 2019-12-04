@@ -109,13 +109,7 @@ function Answer({
                     }`}
                     passHref
                   >
-                    <Tile
-                      size="small"
-                      button={"Consulter"}
-                      title={relatedLetters[0].title}
-                    >
-                      {relatedLetters[0].title}
-                    </Tile>
+                    <Tile title={relatedLetters[0].title} />
                   </Link>
                 </StyledListItem>
               )}
@@ -128,13 +122,7 @@ function Answer({
                     }`}
                     passHref
                   >
-                    <Tile
-                      size="small"
-                      button={"Démarrer"}
-                      title={relatedTools[0].title}
-                    >
-                      {relatedTools[0].title}
-                    </Tile>
+                    <Tile custom title={relatedTools[0].title} />
                   </Link>
                 </StyledListItem>
               )}

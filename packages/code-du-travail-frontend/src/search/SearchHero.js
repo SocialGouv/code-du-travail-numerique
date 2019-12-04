@@ -88,7 +88,7 @@ const StyledConfigIcon = styled(ConfigIcon)`
   display: inline;
   width: 3rem;
   height: 3rem;
-  vertical-align: middle;
+  vertical-align: bottom;
 `;
 
 const Label = styled.label`

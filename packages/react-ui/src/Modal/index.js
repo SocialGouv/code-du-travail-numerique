@@ -40,7 +40,7 @@ Modal.propTypes = {
   onDismiss: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
   ContentWrapper: PropTypes.object,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string
 };
 
 const StyledDialogOverlay = styled(DialogOverlay)`
@@ -49,7 +49,7 @@ const StyledDialogOverlay = styled(DialogOverlay)`
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   overflow: auto;
   background: rgba(0, 0, 0, 0.5);
 `;

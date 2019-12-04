@@ -6,13 +6,9 @@ import { Tile, theme } from "@socialgouv/react-ui";
 const DownloadFile = ({ title, type, file }) => {
   const [, extension] = file.split(/\.([a-z]{2,4})$/);
   return (
-    <Tile variant="dark" title="Télécharger le courrier type" href={file}>
-      <DownloadLabel>
-        <span>{title}</span>
-        <br />
-        <DownloadType>{type}</DownloadType>
-        {extension && <DownloadExtension> - {extension}</DownloadExtension>}
-      </DownloadLabel>
+    <Tile className="no-after" wide title={title} href={file}>
+      <DownloadType>{type}</DownloadType>
+      {extension && <DownloadExtension> - {extension}</DownloadExtension>}
     </Tile>
   );
 };
@@ -26,11 +22,6 @@ DownloadFile.propTypes = {
 export { DownloadFile };
 
 const { colors, fonts } = theme;
-
-const DownloadLabel = styled.div`
-  color: ${colors.paragraph};
-  font-weight: bold;
-`;
 
 const DownloadType = styled.span`
   font-size: ${fonts.sizes.tiny};

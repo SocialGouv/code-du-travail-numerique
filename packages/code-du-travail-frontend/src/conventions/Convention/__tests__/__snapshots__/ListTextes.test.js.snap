@@ -28,16 +28,32 @@ exports[`<ListTextes /> renders a list of textes 1`] = `
 `;
 
 exports[`<ListTextes /> renders a text 1`] = `
-.c1 {
-  margin: 0 0 1rem 0;
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c9 {
+.c11 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -46,27 +62,32 @@ exports[`<ListTextes /> renders a text 1`] = `
   line-height: 1.25;
 }
 
-.c5 {
+.c1 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c7 {
   font-size: 1.4rem;
 }
 
-.c6 {
+.c8 {
   display: block;
   padding: 0.4rem 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:hover {
+.c8:hover {
   font-weight: bold;
 }
 
-.c3 {
+.c5 {
   padding: 2rem 0;
   color: #3e486e;
 }
 
-.c4 {
+.c6 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -76,26 +97,26 @@ exports[`<ListTextes /> renders a text 1`] = `
   overflow: auto;
 }
 
-.c4 > *:first-child {
+.c6 > *:first-child {
   margin-top: 0;
 }
 
-.c4 > *:last-child {
+.c6 > *:last-child {
   margin-bottom: 0;
 }
 
-.c8 {
+.c10 {
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1em;
   font-style: italic;
 }
 
-.c10 {
+.c12 {
   margin-bottom: 1rem;
 }
 
-.c7 {
+.c9 {
   padding: 2rem 0;
   color: #3e486e;
 }
@@ -114,7 +135,7 @@ exports[`<ListTextes /> renders a text 1`] = `
 }
 
 @media (min-width:980px) {
-  .c3 {
+  .c5 {
     position: -webkit-sticky;
     position: sticky;
     top: 10rem;
@@ -127,20 +148,20 @@ exports[`<ListTextes /> renders a text 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c6 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c4 {
+  .c6 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (min-width:980px) {
-  .c7 {
+  .c9 {
     -webkit-flex: 0 1 65%;
     -ms-flex: 0 1 65%;
     flex: 0 1 65%;
@@ -149,7 +170,7 @@ exports[`<ListTextes /> renders a text 1`] = `
 }
 
 @media (min-width:980px) {
-  .c2 {
+  .c4 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -167,54 +188,62 @@ exports[`<ListTextes /> renders a text 1`] = `
   >
     &lt; Retour à la liste des textes
   </button>
-  <h2
+  <header
     class="c1"
-  />
-  <div
-    class="c2"
   >
-    <div
-      class="c3"
+    <h2
+      class="c2"
     >
       <div
-        class="c4"
+        class="c3"
+      />
+    </h2>
+  </header>
+  <div
+    class="c4"
+  >
+    <div
+      class="c5"
+    >
+      <div
+        class="c6"
       >
         <ol>
           <li
-            class="c5"
+            class="c7"
           >
             <a
-              class="c6"
+              class="c8"
               href="#KALIARTI000033084096"
             >
               Objet de l'avenant
             </a>
           </li>
           <li
-            class="c5"
+            class="c7"
           >
             <a
-              class="c6"
+              class="c8"
               href="#KALIARTI000033084097"
             >
               Revalorisation des salaires minima
             </a>
           </li>
           <li
-            class="c5"
+            class="c7"
           >
             <a
-              class="c6"
+              class="c8"
               href="#KALIARTI000033084098"
             >
               Date d'application
             </a>
           </li>
           <li
-            class="c5"
+            class="c7"
           >
             <a
-              class="c6"
+              class="c8"
               href="#KALIARTI000033084099"
             >
               Formalité, publicité
@@ -224,30 +253,45 @@ exports[`<ListTextes /> renders a text 1`] = `
       </div>
     </div>
     <div
-      class="c7"
+      class="c9"
     >
-      <h2
+      <header
         class="c1"
       >
-        Avenant n° 0914 du 8 avril 2016 relatif aux rémunérations minimales au 1er mai 2016
-      </h2>
-      <h3
+        <h2
+          class="c2"
+        >
+          <div
+            class="c3"
+          />
+          Avenant n° 0914 du 8 avril 2016 relatif aux rémunérations minimales au 1er mai 2016
+        </h2>
+      </header>
+      <header
         class="c1"
         id="KALIARTI000033084096"
-      />
+      >
+        <h3
+          class="c2"
+        >
+          <div
+            class="c3"
+          />
+        </h3>
+      </header>
       <div
-        class="c8"
+        class="c10"
       >
         Article non étendu
       </div>
       <h5
-        class="c9"
+        class="c11"
         id="KALIARTI000033084096"
       >
         Objet de l'avenant
       </h5>
       <div
-        class="c10"
+        class="c12"
       >
         <p
           align="left"
@@ -256,23 +300,31 @@ exports[`<ListTextes /> renders a text 1`] = `
           Le présent avenant s'applique aux salariés entrant dans le champ d'application de la convention collective nationale du personnel des coopératives de consommateurs et a pour objet de déterminer les évolutions des salaires minima à compter du 1er mai 2016.
         </p>
       </div>
-      <h3
+      <header
         class="c1"
         id="KALIARTI000033084097"
-      />
+      >
+        <h3
+          class="c2"
+        >
+          <div
+            class="c3"
+          />
+        </h3>
+      </header>
       <div
-        class="c8"
+        class="c10"
       >
         Article non étendu
       </div>
       <h5
-        class="c9"
+        class="c11"
         id="KALIARTI000033084097"
       >
         Revalorisation des salaires minima
       </h5>
       <div
-        class="c10"
+        class="c12"
       >
         <p
           align="left"
@@ -443,23 +495,31 @@ exports[`<ListTextes /> renders a text 1`] = `
         </div>
         <p />
       </div>
-      <h3
+      <header
         class="c1"
         id="KALIARTI000033084098"
-      />
+      >
+        <h3
+          class="c2"
+        >
+          <div
+            class="c3"
+          />
+        </h3>
+      </header>
       <div
-        class="c8"
+        class="c10"
       >
         Article non étendu
       </div>
       <h5
-        class="c9"
+        class="c11"
         id="KALIARTI000033084098"
       >
         Date d'application
       </h5>
       <div
-        class="c10"
+        class="c12"
       >
         <p
           align="left"
@@ -468,23 +528,31 @@ exports[`<ListTextes /> renders a text 1`] = `
           Les dispositions du présent avenant sont applicables au 1er mai 2016.
         </p>
       </div>
-      <h3
+      <header
         class="c1"
         id="KALIARTI000033084099"
-      />
+      >
+        <h3
+          class="c2"
+        >
+          <div
+            class="c3"
+          />
+        </h3>
+      </header>
       <div
-        class="c8"
+        class="c10"
       >
         Article non étendu
       </div>
       <h5
-        class="c9"
+        class="c11"
         id="KALIARTI000033084099"
       >
         Formalité, publicité
       </h5>
       <div
-        class="c10"
+        class="c12"
       >
         <p
           align="left"

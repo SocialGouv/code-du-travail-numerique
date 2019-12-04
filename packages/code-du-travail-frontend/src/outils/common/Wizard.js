@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
-import { PageTitle, theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/react-ui";
 
 import { StepItems } from "./StepItems";
 import { PrevNextBar } from "./PrevNextBar";
@@ -138,7 +138,7 @@ const StepWrapper = styled.div`
   flex-basis: 240px;
   margin: ${spacings.large} 0;
 `;
-const ToolTitle = styled(PageTitle)`
+const ToolTitle = styled.h1`
   padding: ${spacings.base} 0;
   border-bottom: 1px solid ${({ theme }) => theme.border};
 `;

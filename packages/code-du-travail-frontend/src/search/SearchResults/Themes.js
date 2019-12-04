@@ -1,7 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import styled from "styled-components";
-import { Layers } from "react-feather";
 
 import { getRouteBySource } from "@cdt/sources";
 import {
@@ -16,7 +14,10 @@ export const Themes = ({ items, query }) => (
   <Section>
     <Container>
       <Wrapper>
-        <CardList title="Les thèmes suivants peuvent vous intéresser">
+        <CardList
+          leftStripped
+          title="Les thèmes suivants peuvent vous intéresser"
+        >
           {items.map(({ slug, title, source }) => (
             <Link
               key={slug}
@@ -29,7 +30,7 @@ export const Themes = ({ items, query }) => (
               }`}
               passHref
             >
-              <StyledTile icon={Layers}>{title}</StyledTile>
+              <Tile wide title={title} />
             </Link>
           ))}
         </CardList>
@@ -37,7 +38,3 @@ export const Themes = ({ items, query }) => (
     </Container>
   </Section>
 );
-
-const StyledTile = styled(Tile)`
-  min-height: 120px;
-`;

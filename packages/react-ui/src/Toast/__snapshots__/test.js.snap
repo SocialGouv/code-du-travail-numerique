@@ -10,7 +10,6 @@ exports[`<Toast /> Should render a wide toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   min-height: 48px;
   color: #3e486e;
@@ -61,7 +60,6 @@ exports[`<Toast /> render default toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -112,7 +110,6 @@ exports[`<Toast /> render primary toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -164,7 +161,6 @@ exports[`<Toast /> render secondary toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -216,7 +212,6 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -268,7 +263,6 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -320,7 +314,6 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;
@@ -372,7 +365,6 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: auto;
   min-height: 48px;
   color: #3e486e;

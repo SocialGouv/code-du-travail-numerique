@@ -15,55 +15,70 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .c2 {
-  margin: 0 0 1rem 0;
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c1 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c4 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
-.c3 {
+.c5 {
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: nowrap;
 }
 
-.c5 {
+.c7 {
   margin-bottom: 1.6rem;
 }
 
-.c4 {
+.c6 {
   margin-top: 2rem;
 }
 
-.c6 {
+.c8 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c7 {
+.c9 {
   list-style-type: disc;
 }
 
-.c8 {
+.c10 {
   font-size: 1.4rem;
 }
 
-.c9 {
+.c11 {
   margin: 1.6rem 0;
 }
 
@@ -78,24 +93,38 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   <div
     class="c0"
   >
-    <h3
+    <header
       class="c1"
     >
-      Convention collective nationale de l’Animation
-    </h3>
+      <h3
+        class="c2"
+      >
+        <div
+          class="c3"
+        />
+        Convention collective nationale de l’Animation
+      </h3>
+    </header>
     <p>
       Pour cette branche, le calcul de l’indemnité de licenciement se base sur l’indemnité légale de licenciement.
     </p>
-    <h2
-      class="c2"
+    <header
+      class="c1 c4"
     >
-      Indemnité légale
-    </h2>
+      <h2
+        class="c2"
+      >
+        <div
+          class="c3"
+        />
+        Indemnité légale
+      </h2>
+    </header>
     <p>
       Le code du travail prévoit un montant minimum de
        
       <strong
-        class="c3"
+        class="c5"
       >
         3,585.00
          € brut.
@@ -103,37 +132,37 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
        
     </p>
     <details
-      class="c4"
+      class="c6"
     >
       <summary
-        class="c5"
+        class="c7"
       >
         Voir le détail du calcul
       </summary>
       <strong
-        class="c6"
+        class="c8"
       >
         Éléments saisis :
       </strong>
       <ul
-        class="c7"
+        class="c9"
       >
         <li
-          class="c8"
+          class="c10"
         >
           Salaire de réference (Sref)
            : 
           2390
         </li>
         <li
-          class="c8"
+          class="c10"
         >
           Licenciement pour inaptitude
            : 
           non
         </li>
         <li
-          class="c8"
+          class="c10"
         >
           Ancienneté totale (A)
            : 
@@ -141,12 +170,12 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
         </li>
       </ul>
       <strong
-        class="c6"
+        class="c8"
       >
         Formule :
       </strong>
       <div
-        class="c9"
+        class="c11"
       >
         <div
           id="react-mathjax-preview"

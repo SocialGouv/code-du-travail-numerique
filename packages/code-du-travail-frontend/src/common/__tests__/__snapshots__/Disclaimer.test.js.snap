@@ -71,7 +71,6 @@ exports[`<Disclaimer /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   min-height: 48px;
   color: #3e486e;
@@ -106,7 +105,7 @@ exports[`<Disclaimer /> should render 1`] = `
 .c0 {
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   padding: 1.6rem;
 }

@@ -1,60 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndemniteLegale /> should render 1`] = `
-.c0 {
-  margin: 0 0 1rem 0;
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
-.c1 {
+.c4 {
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: nowrap;
 }
 
-.c3 {
+.c6 {
   margin-bottom: 1.6rem;
 }
 
-.c2 {
+.c5 {
   margin-top: 2rem;
 }
 
-.c4 {
+.c7 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c5 {
+.c8 {
   list-style-type: disc;
 }
 
-.c6 {
+.c9 {
   font-size: 1.4rem;
 }
 
-.c7 {
+.c10 {
   margin: 1.6rem 0;
 }
 
 <div>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Indemnité légale
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Indemnité légale
+    </h2>
+  </header>
   <p>
     Le code du travail prévoit un montant minimum de
      
     <strong
-      class="c1"
+      class="c4"
     >
       42.00
        € brut.
@@ -62,23 +93,23 @@ exports[`<IndemniteLegale /> should render 1`] = `
      
   </p>
   <details
-    class="c2"
+    class="c5"
   >
     <summary
-      class="c3"
+      class="c6"
     >
       Voir le détail du calcul
     </summary>
     <strong
-      class="c4"
+      class="c7"
     >
       Éléments saisis :
     </strong>
     <ul
-      class="c5"
+      class="c8"
     >
       <li
-        class="c6"
+        class="c9"
       >
         value
          : 
@@ -86,12 +117,12 @@ exports[`<IndemniteLegale /> should render 1`] = `
       </li>
     </ul>
     <strong
-      class="c4"
+      class="c7"
     >
       Formule :
     </strong>
     <div
-      class="c7"
+      class="c10"
     >
       <div
         id="react-mathjax-preview"

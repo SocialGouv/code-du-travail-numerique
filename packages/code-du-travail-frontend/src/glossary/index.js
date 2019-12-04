@@ -10,7 +10,7 @@ const { box, fonts } = theme;
 
 const StyledTooltip = styled(Tooltip)`
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   width: 300px;
   max-width: 70vw;
   padding: 0.25em 0.5em;

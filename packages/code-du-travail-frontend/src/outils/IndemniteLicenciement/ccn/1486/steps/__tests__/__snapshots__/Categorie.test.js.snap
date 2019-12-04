@@ -1,7 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Categorie /> renders 1`] = `
-.c1 {
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14,30 +44,31 @@ exports[`<Categorie /> renders 1`] = `
   padding: 0;
 }
 
-.c0 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
+.c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
 <div>
-  <h2
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Catégorie professionnelle
-  </h2>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Catégorie professionnelle
+    </h2>
+  </header>
   <p>
     Quelle est la catégorie du salarié ?
     <br />
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c1"
+    class="c4"
     for="categorie"
   >
     Sélectionnez une catégorie professionnelle

@@ -7,11 +7,14 @@ export { default as Document } from "./components/bicolor/Document";
 export { default as Formation } from "./components/bicolor/Formation";
 export { default as Health } from "./components/bicolor/Health";
 export { default as Holidays } from "./components/bicolor/Holidays";
+export { default as Indemnity } from "./components/bicolor/Indemnity";
 export { default as Nego } from "./components/bicolor/Nego";
 export { default as Precarity } from "./components/bicolor/Precarity";
 export { default as PriorNotice } from "./components/bicolor/PriorNotice";
-export { default as Rules } from "./components/bicolor/Rules";
+export { default as Resignation } from "./components/bicolor/Rules";
+export { default as Rules } from "./components/bicolor/Resignation";
 export { default as Salary } from "./components/bicolor/Salary";
+export { default as Termination } from "./components/bicolor/Termination";
 export { default as Time } from "./components/bicolor/Time";
 
 // Monochrome icons

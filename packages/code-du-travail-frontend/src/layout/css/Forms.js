@@ -10,6 +10,7 @@ const INPUT_HEIGHT = "5.4rem";
 export default createGlobalStyle`
   input {
     height: ${INPUT_HEIGHT};
+    padding: 0 ${spacings.medium};
   }
 
   label {
@@ -24,12 +25,12 @@ export default createGlobalStyle`
 
   textarea {
     min-height: 8rem;
+    padding: ${spacings.medium};
   }
 
   textarea,
   input {
     max-width: 100%;
-    padding: 0 ${spacings.medium};
     color: ${({ theme }) => theme.paragraph};
     font-size: ${fonts.sizes.default};
     font-family: "Open Sans", sans-serif;

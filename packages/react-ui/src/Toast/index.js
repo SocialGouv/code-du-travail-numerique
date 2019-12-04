@@ -61,7 +61,6 @@ Toast.defaultProps = {
 const StyledToast = styled.div`
   display: inline-flex;
   justify-content: space-between;
-  box-sizing: border-box;
   width: ${props => (props.wide ? "100%" : "auto")};
   min-height: 48px;
   color: ${({ theme }) => theme.paragraph};

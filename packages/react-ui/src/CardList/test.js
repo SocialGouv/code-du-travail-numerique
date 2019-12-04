@@ -45,7 +45,7 @@ describe("<CardList />", () => {
         desc="le code du travail numérique"
       >
         {items.map(item => (
-          <Tile key={item.id}>{item.title}</Tile>
+          <Tile key={item.id} title={item.title} />
         ))}
       </CardList>
     );
@@ -55,7 +55,7 @@ describe("<CardList />", () => {
     const { container } = render(
       <CardList title="Hello" columns={3}>
         {items.map(item => (
-          <Tile key={item.id}>{item.title}</Tile>
+          <Tile key={item.id} title={item.title} />
         ))}
       </CardList>
     );

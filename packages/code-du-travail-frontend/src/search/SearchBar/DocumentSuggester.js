@@ -127,7 +127,7 @@ const Label = styled.label`
 
 const SuggestionsContainer = styled.div`
   ul {
-    z-index: 100;
+    z-index: 1;
   }
   li[role="option"]:nth-child(2n + 1) {
     background: ${colors.bgSecondary};

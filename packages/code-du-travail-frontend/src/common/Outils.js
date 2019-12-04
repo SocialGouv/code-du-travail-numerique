@@ -3,26 +3,30 @@ import Link from "next/link";
 
 import { Container, Section, CardList, Tile } from "@socialgouv/react-ui";
 
-import ConventionModal from "../conventions/Search/Modal";
-
 export const outils = [
   {
-    title: "Simulateur d'indemnités de licenciements",
-    hrefTitle: "Démarrer une simulation d'indemnités de licenciements",
-    button: "Démarrer",
+    title: "Modèles de courriers",
+    hrefTitle: "Consulter tous les modèles de courriers",
+    button: "Consulter",
     text:
-      "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
-    href: "/outils/[slug]",
-    slug: "/outils/indemnite-licenciement"
+      "Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail",
+    href: "/modeles-de-courriers"
   },
   {
-    title: "Simulateur de la durée de préavis de licenciement",
-    hrefTitle: "Démarrer une simulation de durée de préavis de licenciement",
-    button: "Démarrer",
+    title: "Conventions collectives",
+    hrefTitle: "Recherchez votre convention collective",
+    button: "Consulter",
     text:
-      "Estimez simplement la durée du préavis dans le cadre d'un licenciement",
+      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.",
+    href: "/convention-collective/recherche"
+  },
+  {
+    title: "Simulateur d'embauche",
+    hrefTitle: "Démarrer une simulation de salaire lors d'une embauche",
+    button: "Démarrer",
+    text: "Estimez le salaire lors d'une embauche : total employeur, brut, net",
     href: "/outils/[slug]",
-    slug: "/outils/preavis-licenciement"
+    slug: "/outils/simulateur-embauche"
   },
   {
     title: "Simulateur de durée de préavis de démission",
@@ -33,20 +37,22 @@ export const outils = [
     slug: "/outils/preavis-demission"
   },
   {
-    title: "Modèles de courriers",
-    hrefTitle: "Consulter tous les modèles de courriers",
-    button: "Consulter",
+    title: "Simulateur d'indemnités de licenciements",
+    hrefTitle: "Démarrer une simulation d'indemnités de licenciements",
+    button: "Démarrer",
     text:
-      "Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail",
-    href: "/modeles-de-courriers"
+      "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
+    href: "/outils/[slug]",
+    slug: "/outils/indemnite-licenciement"
   },
   {
-    title: "Simulateur d'embauche",
-    hrefTitle: "Démarrer une simulation de salaire lors d'une embauche",
+    title: "Simulateur de durée de préavis de licenciement",
+    hrefTitle: "Démarrer une simulation de durée de préavis de licenciement",
     button: "Démarrer",
-    text: "Estimez le salaire lors d'une embauche : total employeur, brut, net",
+    text:
+      "Estimez simplement la durée du préavis dans le cadre d'un licenciement",
     href: "/outils/[slug]",
-    slug: "/outils/simulateur-embauche"
+    slug: "/outils/preavis-licenciement"
   },
   {
     title: "Simulateur de prime de précarité",
@@ -68,24 +74,18 @@ function Outils() {
           href="/outils"
         >
           {outils
-            .map(({ button, title, href, slug, hrefTitle }) => (
+            .map(({ text, title, href, slug }) => (
               <Link href={href} as={slug} passHref key={slug || "modeles"}>
-                <Tile button={button} title={hrefTitle}>
-                  {title}
+                <Tile custom title={title}>
+                  {text}
                 </Tile>
               </Link>
             ))
             .concat(
-              <ConventionModal key="convention-modal">
-                {openModal => (
-                  <Tile button="Rechercher" onClick={openModal}>
-                    Votre convention collective
-                  </Tile>
-                )}
-              </ConventionModal>,
-              <Tile key="next-tools">
-                Bientôt d’autres outils disponibles...
-              </Tile>
+              <Tile
+                title="Bientôt d’autres outils disponibles..."
+                key="next-tools"
+              ></Tile>
             )}
         </CardList>
       </Container>

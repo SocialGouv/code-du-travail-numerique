@@ -10,7 +10,6 @@ import {
   Tile
 } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
-import { Layers } from "react-feather";
 
 import { SearchResults } from "../../src/search/SearchResults";
 import { Layout } from "../../src/layout/Layout";
@@ -62,7 +61,7 @@ class Theme extends React.Component {
                       as={`/themes/${slug}`}
                       passHref
                     >
-                      <Tile icon={Layers}>{title}</Tile>
+                      <Tile title={title} />
                     </Link>
                   </GridCell>
                 ))}

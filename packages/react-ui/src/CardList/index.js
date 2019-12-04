@@ -4,10 +4,17 @@ import PropTypes from "prop-types";
 import { Grid, GridCell } from "../Grid";
 import { ListTitle } from "./ListTitle";
 
-export function CardList({ title, href, desc, columns, children }) {
+export function CardList({
+  leftStripped = false,
+  title,
+  href,
+  desc,
+  columns,
+  children
+}) {
   return (
     <>
-      <ListTitle desc={desc} href={href}>
+      <ListTitle leftStripped={leftStripped} subtitle={desc} href={href}>
         {title}
       </ListTitle>
       <Grid columns={columns}>
@@ -25,10 +32,11 @@ export function CardList({ title, href, desc, columns, children }) {
 
 CardList.propTypes = {
   children: PropTypes.node.isRequired,
+  columns: PropTypes.number,
   desc: PropTypes.string,
-  title: PropTypes.string.isRequired,
   href: PropTypes.string,
-  columns: PropTypes.number
+  leftStripped: PropTypes.bool,
+  title: PropTypes.string.isRequired
 };
 
 CardList.defaultProps = {

@@ -25,7 +25,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
 }
 
 .c2 ul {
-  z-index: 100;
+  z-index: 1;
 }
 
 .c2 li[role="option"]:nth-child(2n + 1) {
@@ -102,7 +102,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
 }
 
 .c2 ul {
-  z-index: 100;
+  z-index: 1;
 }
 
 .c2 li[role="option"]:nth-child(2n + 1) {

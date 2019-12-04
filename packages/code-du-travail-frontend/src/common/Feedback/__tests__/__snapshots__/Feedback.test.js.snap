@@ -36,16 +36,37 @@ exports[`<Feedback/> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
-  margin: 0 0 1rem 0;
+.c5 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c4 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c5 {
+.c3 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -82,16 +103,16 @@ exports[`<Feedback/> should render 1`] = `
   opacity: 1;
 }
 
-.c5:link,
-.c5:visited {
+.c7:link,
+.c7:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):active,
-.c5:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -100,13 +121,13 @@ exports[`<Feedback/> should render 1`] = `
   border-color: #9cb5e2;
 }
 
-.c5[disabled] {
+.c7[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -117,7 +138,7 @@ exports[`<Feedback/> should render 1`] = `
   justify-content: space-around;
 }
 
-.c7 + .c6 {
+.c9 + .c8 {
   margin-left: 1.6rem;
 }
 
@@ -151,21 +172,28 @@ exports[`<Feedback/> should render 1`] = `
       <div
         class="c2"
       >
-        <h3
+        <header
           class="c3"
         >
-          Avez-vous trouvé la réponse à votre question ?
-        </h3>
+          <h3
+            class="c4"
+          >
+            <div
+              class="c5"
+            />
+            Avez-vous trouvé la réponse à votre question ?
+          </h3>
+        </header>
         <p
-          class="c4"
+          class="c6"
         >
           <button
-            class="c5 c6 c7"
+            class="c7 c8 c9"
           >
             Non
           </button>
           <button
-            class="c5 c6 c7"
+            class="c7 c8 c9"
           >
             Oui
           </button>
@@ -212,16 +240,37 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
-  margin: 0 0 1rem 0;
+.c5 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c4 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c8 {
+.c3 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -258,16 +307,16 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   opacity: 1;
 }
 
-.c8:link,
-.c8:visited {
+.c10:link,
+.c10:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c10:not([disabled]):hover,
+.c10:not([disabled]):active,
+.c10:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -276,13 +325,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   border-color: #ffa09a;
 }
 
-.c8[disabled] {
+.c10[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c10 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -321,14 +370,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   border-radius: 0;
 }
 
-.c10:focus,
-.c10:hover,
-.c10:active {
+.c12:focus,
+.c12:hover,
+.c12:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c11 {
+.c13 {
   height: 1.4rem;
   margin-left: 0.4rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -336,13 +385,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transition: transform 250ms linear;
 }
 
-.c7:hover .c11 {
+.c9:hover .c13 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -357,11 +406,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c7 {
   margin-bottom: 2rem;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -371,7 +420,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   flex-wrap: wrap;
 }
 
-.c9 {
+.c11 {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -409,14 +458,21 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
       <div
         class="c2"
       >
-        <h3
+        <header
           class="c3"
         >
-          Avez-vous trouvé la réponse à votre question ?
-        </h3>
+          <h3
+            class="c4"
+          >
+            <div
+              class="c5"
+            />
+            Avez-vous trouvé la réponse à votre question ?
+          </h3>
+        </header>
         <form
           action="https://formspree.io/xbalrgzm"
-          class="c4"
+          class="c6"
         >
           <p>
             <strong>
@@ -442,7 +498,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             value="Fiches Service Public"
           />
           <select
-            class="c5"
+            class="c7"
             name="motif"
           >
             <option
@@ -472,20 +528,20 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </option>
           </select>
           <textarea
-            class="c5"
+            class="c7"
             name="message"
             placeholder="Les informations ..."
           />
           <div
-            class="c6"
+            class="c8"
           >
             <button
-              class="c7 c8"
+              class="c9 c10"
             >
               Envoyer mon commentaire
             </button>
             <div
-              class="c9"
+              class="c11"
             />
           </div>
         </form>
@@ -493,11 +549,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
            
           <button
-            class="c7 c10"
+            class="c9 c12"
           >
             services de renseignement
             <svg
-              class="c11"
+              class="c13"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -563,16 +619,37 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
-  margin: 0 0 1rem 0;
+.c5 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c4 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c7 {
+.c3 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -609,16 +686,16 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   opacity: 1;
 }
 
-.c7:link,
-.c7:visited {
+.c9:link,
+.c9:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -627,13 +704,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   border-color: #ffa09a;
 }
 
-.c7[disabled] {
+.c9[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -648,11 +725,11 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c7 {
   margin-bottom: 2rem;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -662,7 +739,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   flex-wrap: wrap;
 }
 
-.c8 {
+.c10 {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -700,14 +777,21 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
       <div
         class="c2"
       >
-        <h3
+        <header
           class="c3"
         >
-          Avez-vous trouvé la réponse à votre question ?
-        </h3>
+          <h3
+            class="c4"
+          >
+            <div
+              class="c5"
+            />
+            Avez-vous trouvé la réponse à votre question ?
+          </h3>
+        </header>
         <form
           action="https://formspree.io/xbalrgzm"
-          class="c4"
+          class="c6"
         >
           <p>
             <strong>
@@ -733,20 +817,20 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             value="Fiches Service Public"
           />
           <textarea
-            class="c5"
+            class="c7"
             name="message"
             placeholder="Les informations ..."
           />
           <div
-            class="c6"
+            class="c8"
           >
             <button
-              class="c7"
+              class="c9"
             >
               Envoyer mon commentaire
             </button>
             <div
-              class="c8"
+              class="c10"
             />
           </div>
         </form>

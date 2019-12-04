@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import Link from "next/link";
-import { Layers } from "react-feather";
 import { Container, Section, CardList, Tile } from "@socialgouv/react-ui";
 
 export default class Themes extends React.Component {
@@ -35,7 +33,7 @@ export default class Themes extends React.Component {
                 as={`/themes/${slug}`}
                 passHref
               >
-                <StyledTile icon={Layers}>{title}</StyledTile>
+                <Tile title={title} />
               </Link>
             ))}
           </CardList>
@@ -44,7 +42,3 @@ export default class Themes extends React.Component {
     );
   }
 }
-
-const StyledTile = styled(Tile)`
-  min-height: 120px;
-`;

@@ -18,26 +18,26 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
+.c13 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c9 > *:first-child {
+.c13 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c13 > *:last-child {
   margin-bottom: 0;
 }
 
-.c8 {
+.c12 {
   padding: 2rem 0;
   color: #3e486e;
 }
 
-.c10 {
+.c14 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -45,24 +45,76 @@ exports[`<SearchResults/> should render results 1`] = `
   border-color: transparent;
 }
 
-.c10 > *:first-child {
+.c14 > *:first-child {
   margin-top: 0;
 }
 
-.c10 > *:last-child {
+.c14 > *:last-child {
   margin-bottom: 0;
 }
 
-.c1 {
-  margin: 0 0 1rem 0;
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
   color: #2f3b6c;
   font-weight: normal;
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
-.c12 {
+.c1 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c10 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 0 0.6rem 0 0;
+}
+
+.c10:before {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent #ff7067 transparent transparent;
+  border-style: solid;
+  border-width: 0 5rem 5rem 0;
+  content: "";
+}
+
+.c11 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+}
+
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -89,7 +141,7 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c13 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -106,7 +158,7 @@ exports[`<SearchResults/> should render results 1`] = `
   padding: 0;
 }
 
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -123,17 +175,7 @@ exports[`<SearchResults/> should render results 1`] = `
   padding: 0;
 }
 
-.c11 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  font-size: 3rem;
-}
-
-.c4 {
+.c6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -148,104 +190,73 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  box-sizing: border-box;
+  width: 100%;
   margin: 0;
-  padding: 2rem 2.4rem;
+  padding: 2rem 2rem;
   color: #3e486e;
-  font-weight: 600;
-  font-size: 1.8rem;
+  font-weight: normal;
+  font-size: 1.6rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #bbcadf;
+  border: none;
   border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
   cursor: pointer;
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
+  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
+  transition: box-shadow 250ms linear, transform 100ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c4:hover {
+.c6:hover,
+.c6:active,
+.c6:focus {
   color: #3e486e;
-  border-color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
-.c5 {
-  display: block;
-  max-width: 100%;
-  padding-right: 0;
-  overflow-y: auto;
+.c7 {
+  padding-right: 1rem;
 }
 
-.c19 {
-  display: block;
-  max-width: 100%;
-  padding-right: 1.6rem;
-  overflow-y: auto;
-}
-
-.c18 {
-  position: absolute;
-  top: 0.4rem;
-  right: 0.4rem;
-}
-
-.c6 {
+.c8 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c7 {
   margin: 0;
-  color: #3e486e;
 }
 
-.c2 {
+.c9 {
+  margin-top: 1rem;
+}
+
+.c4 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c3 {
+.c5 {
   margin-bottom: 2rem;
   padding: 0;
-}
-
-.c14 {
-  min-height: 120px;
-}
-
-.c15 {
-  max-height: calc(2 * 1.625 * 1rem);
-  margin: 0;
-  overflow-y: hidden;
-  color: #3e486e;
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: calc(1.625 * 1rem);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.c17 {
-  min-height: 120px;
 }
 
 @media print {
@@ -256,46 +267,52 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media print {
-  .c9 {
+  .c13 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c14 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c10 {
+  .c14 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c16 {
     width: calc( 100% / 1 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c16 {
     width: calc( 100% - 0 * 1rem );
   }
 }
 
 @media (max-width:980px) {
-  .c16 {
+  .c17 {
     width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     width: calc( 100% - 2 * 1rem );
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    padding: 1.6rem 1.6rem;
   }
 }
 
@@ -303,175 +320,241 @@ exports[`<SearchResults/> should render results 1`] = `
   <div
     class="c0"
   >
-    <h2
+    <header
       class="c1"
     >
-      Contenu correspondant
-    </h2>
+      <h2
+        class="c2"
+      >
+        <div
+          class="c3"
+        />
+        Contenu correspondant
+      </h2>
+    </header>
     <ul
-      class="c2"
+      class="c4"
     >
       <li
-        class="c3"
+        class="c5"
       >
         <a
-          class="c4"
+          class="c6"
           href="/fiche-service-public/mer-il-est-fou?q=search test"
         >
           <div
-            class="c5"
+            class="c7"
           >
+            
             <h3
-              class="c6"
+              class="c8"
             >
               Mer il est fou!
             </h3>
-            <p
-              class="c7"
-            >
-              description
-            </p>
           </div>
-          
+          <div
+            class="c9"
+          >
+            description
+          </div>
         </a>
       </li>
       <li
-        class="c3"
+        class="c5"
       >
         <a
-          class="c4"
+          class="c6"
           href="/outils/simulateur-precarite?q=search test"
         >
           <div
-            class="c5"
+            class="c10"
           >
+            <div
+              class="c11"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c7"
+          >
+            
             <h3
-              class="c6"
+              class="c8"
             >
               simulateur de prime de précarite
             </h3>
-            <p
-              class="c7"
-            >
-              description
-            </p>
           </div>
-          
+          <div
+            class="c9"
+          >
+            description
+          </div>
         </a>
       </li>
       <li
-        class="c3"
+        class="c5"
       >
         <a
-          class="c4 no-after"
+          class="c6 no-after"
           href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
           target="_blank"
         >
           <div
-            class="c5"
+            class="c7"
           >
+            
             <h3
-              class="c6"
+              class="c8"
             >
               telerc
             </h3>
-            <p
-              class="c7"
-            >
-              description
-            </p>
           </div>
-          
+          <div
+            class="c9"
+          >
+            description
+          </div>
         </a>
       </li>
       <li
-        class="c3"
+        class="c5"
       >
         <a
-          class="c4"
+          class="c6"
           href="/outils/mer-il-est-fou2?q=search test"
         >
           <div
-            class="c5"
+            class="c10"
           >
+            <div
+              class="c11"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c7"
+          >
+            
             <h3
-              class="c6"
+              class="c8"
             >
               Mer il est fou 2!
             </h3>
-            <p
-              class="c7"
-            >
-              description
-            </p>
           </div>
-          
+          <div
+            class="c9"
+          >
+            description
+          </div>
         </a>
       </li>
       <li
-        class="c3"
+        class="c5"
       >
         <a
-          class="c4"
+          class="c6"
           href="/undefined/mer-il-est-fou4?q=search test"
         >
           <div
-            class="c5"
+            class="c7"
           >
+            
             <h3
-              class="c6"
+              class="c8"
             >
               Mer il est fou 4!
             </h3>
-            <p
-              class="c7"
-            >
-              description
-            </p>
           </div>
-          
+          <div
+            class="c9"
+          >
+            description
+          </div>
         </a>
       </li>
     </ul>
   </div>
   <div
-    class="c8"
+    class="c12"
   >
     <div
-      class="c9"
+      class="c13"
     >
       <div
-        class="c10"
+        class="c14"
       >
-        <div>
+        <header
+          class="c1"
+        >
           <h2
-            class="c11"
+            class="c2"
           >
+            <div
+              class="c3"
+            />
             Que dit le code du travail ?
           </h2>
           
-        </div>
+        </header>
         <ul
-          class="c12"
+          class="c15"
         >
           <li
-            class="c13"
+            class="c16"
           >
             <a
-              class="c4 c14"
+              class="c6"
               href="/code-du-travail/L1243-1?q=search test"
             >
               <div
-                class="c5"
+                class="c7"
               >
-                L1243-1
-                <p
-                  class="c15"
+                
+                <h3
+                  class="c8"
                 >
-                  la description
-                </p>
+                  L1243-1
+                </h3>
               </div>
-              
+              <div
+                class="c9"
+              >
+                la description
+              </div>
             </a>
           </li>
         </ul>
@@ -479,63 +562,47 @@ exports[`<SearchResults/> should render results 1`] = `
     </div>
   </div>
   <div
-    class="c8"
+    class="c12"
   >
     <div
-      class="c9"
+      class="c13"
     >
       <div
-        class="c10"
+        class="c14"
       >
-        <div>
+        <header
+          class="c1"
+        >
           <h2
-            class="c11"
+            class="c2"
           >
+            <div
+              class="c3"
+            />
             Les thèmes suivants peuvent vous intéresser
           </h2>
           
-        </div>
+        </header>
         <ul
-          class="c12"
+          class="c15"
         >
           <li
-            class="c16"
+            class="c17"
           >
             <a
-              class="c4 c17"
+              class="c6"
               href="/themes/1-contrat?q=search test"
             >
               <div
-                class="c18"
+                class="c7"
               >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                
+                <h3
+                  class="c8"
                 >
-                  <polygon
-                    points="12 2 2 7 12 12 22 7 12 2"
-                  />
-                  <polyline
-                    points="2 17 12 22 22 17"
-                  />
-                  <polyline
-                    points="2 12 12 17 22 12"
-                  />
-                </svg>
+                  Contrat
+                </h3>
               </div>
-              <div
-                class="c19"
-              >
-                Contrat
-              </div>
-              
             </a>
           </li>
         </ul>

@@ -1,21 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Anciennete /> should render 1`] = `
-.c4 {
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c7 {
   width: auto;
   text-align: left;
   border-color: #bbcadf;
 }
 
-.c4::-webkit-outer-spin-button,
-.c4::-webkit-inner-spin-button {
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,7 +58,7 @@ exports[`<Anciennete /> should render 1`] = `
   padding: 0;
 }
 
-.c6 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -47,18 +77,12 @@ exports[`<Anciennete /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c0 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
+.c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
 }
 
-.c1 {
+.c4 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -66,7 +90,7 @@ exports[`<Anciennete /> should render 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c8 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -74,14 +98,14 @@ exports[`<Anciennete /> should render 1`] = `
   cursor: default;
 }
 
-.c2 {
+.c5 {
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
   font-weight: 700;
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,28 +119,35 @@ exports[`<Anciennete /> should render 1`] = `
 
 <div>
   <form>
-    <h2
-      class="c0"
+    <header
+      class="c0 c1"
     >
-      Dates d’entrée et de sortie de l’entreprise
-    </h2>
+      <h2
+        class="c2"
+      >
+        <div
+          class="c3"
+        />
+        Dates d’entrée et de sortie de l’entreprise
+      </h2>
+    </header>
     <label
-      class="c1"
+      class="c4"
       for="1"
     >
       Quelle est la date d’entrée dans l’entreprise ?
       <span
         aria-label="champs obligatoire"
-        class="c2"
+        class="c5"
       >
         *
       </span>
     </label>
     <div
-      class="c3"
+      class="c6"
     >
       <input
-        class="c4"
+        class="c7"
         id="1"
         name="dateEntree"
         placeholder=" jj/mm/yyyy"
@@ -125,22 +156,22 @@ exports[`<Anciennete /> should render 1`] = `
       />
     </div>
     <label
-      class="c1"
+      class="c4"
       for="2"
     >
       Quelle est la date de notification du licenciement ?
       <span
         aria-label="champs obligatoire"
-        class="c2"
+        class="c5"
       >
         *
       </span>
     </label>
     <div
-      class="c3"
+      class="c6"
     >
       <input
-        class="c4"
+        class="c7"
         id="2"
         name="dateNotification"
         placeholder=" jj/mm/yyyy"
@@ -149,22 +180,22 @@ exports[`<Anciennete /> should render 1`] = `
       />
     </div>
     <label
-      class="c1"
+      class="c4"
       for="3"
     >
       Quelle est la date de sortie de l’entreprise ?
       <span
         aria-label="champs obligatoire"
-        class="c2"
+        class="c5"
       >
         *
       </span>
     </label>
     <div
-      class="c3"
+      class="c6"
     >
       <input
-        class="c4"
+        class="c7"
         id="3"
         name="dateSortie"
         placeholder=" jj/mm/yyyy"
@@ -172,27 +203,34 @@ exports[`<Anciennete /> should render 1`] = `
         value=""
       />
     </div>
-    <h2
-      class="c0"
+    <header
+      class="c0 c1"
     >
-      Période d’absence prolongée
-    </h2>
+      <h2
+        class="c2"
+      >
+        <div
+          class="c3"
+        />
+        Période d’absence prolongée
+      </h2>
+    </header>
     <p
-      class="c5"
+      class="c8"
     >
       Y a-t-il eu des absences de plus d’un mois durant le contrat de travail ?
       <span
         aria-label="champs obligatoire"
-        class="c2"
+        class="c5"
       >
         *
       </span>
     </p>
     <div
-      class="c6"
+      class="c9"
     >
       <label
-        class="c7"
+        class="c10"
       >
         <input
           name="hasAbsenceProlonge"
@@ -204,7 +242,7 @@ exports[`<Anciennete /> should render 1`] = `
         </span>
       </label>
       <label
-        class="c7"
+        class="c10"
       >
         <input
           name="hasAbsenceProlonge"

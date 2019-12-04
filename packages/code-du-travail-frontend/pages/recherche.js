@@ -52,7 +52,8 @@ class SearchPage extends React.Component {
             <SearchBar />
           </SearchBarWrapper>
         </Container>
-        {items.documents.length === 0 &&
+        {query &&
+        items.documents.length === 0 &&
         items.articles.length === 0 &&
         items.themes.length === 0 ? (
           <Section>
