@@ -2270,20 +2270,20 @@
     eslint-plugin-jest "^23.0.3"
     eslint-plugin-prettier "~3.1.1"
 
-"@socialgouv/fiches-vdd@^1.0.46":
-  version "1.0.46"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.46.tgz#9a68d5c573270c0364210a8e0fed702d6f5f13c7"
-  integrity sha512-wJY4vyfXRBJ+6jjeQpb0h9pnlPDiBAc/Fbggr+rAWgdn8E8LmZTlXG21QHVF/q+IhcNoAZVV3hSlEPrpMGdEQA==
+"@socialgouv/fiches-vdd@^1.0.47":
+  version "1.0.47"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.47.tgz#befc0528adf8decc631105dddc253c2be1e4f1f3"
+  integrity sha512-GikHDYuOw4FiVYp3E0icfe97S6GriDEpfCZKo4QSKdVyt2W94AUXLvl4pJ7oSgsjcWzpU4z9GAxoQ+KXOlotLQ==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.3"
     unzipper "^0.10.5"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.2.78":
-  version "1.2.78"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.78.tgz#95c272332c01770d97252b8583e4b8475a77a56f"
-  integrity sha512-bugefH6t+6pOV/mEjwKDOG/mA6ETFn4yyDXicfRawQg9mDdWzGgpZtY32uZIJ59SXFQeZ1uFOhZc5rbj+Du+0g==
+"@socialgouv/kali-data@^1.2.85":
+  version "1.2.85"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.85.tgz#2f05c97555151ccbaf8fe088e2deecabc45ecf7c"
+  integrity sha512-IWc6BxYwvgb6Y7y5Iwd2aS1VV6O8r0RhUVzwo/GLWw23DfZVXKfwk0XqlciATY/Z2NPO8Bz0kROiMs5Iq6bdvg==
   dependencies:
     "@socialgouv/dila-api-client" "^1.0.5"
     p-map "^3.0.0"
