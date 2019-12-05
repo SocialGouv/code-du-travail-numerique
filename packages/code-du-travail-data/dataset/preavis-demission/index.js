@@ -3,7 +3,7 @@ const GoogleSpreadsheets = require("google-spreadsheets");
 
 const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
 const SPREADSHEET_DATA_TAB = 4;
-const SPREADSHEET_QUESTIONS_TAB = 6;
+const SPREADSHEET_QUESTIONS_TAB = 5;
 
 const getCells = promisify(GoogleSpreadsheets.cells);
 
@@ -16,25 +16,25 @@ const csvColumns = {
 };
 
 const criteriaIndex = [
-  4, // catégorie
-  5, // personnel de conduite
-  6, // motif de rupture
-  7, // durée du travail
-  8, // durée de préavis
-  9, // type de rupture
-  10, // niveau
-  11, // classe
-  12, // position
-  13, // groupe
-  14, // age
-  15, // date contrat travail
-  16, // ancienneté
-  17, // coefficient
-  18, // échelon
-  19, // période d'essai
-  20, // logement
-  21, // aéroport paris
-  22 // agents payés a l'heure
+  4, // aéroport paris
+  5, // agents payés a l'heure
+  6, // catégorie
+  7, // personnel de conduite
+  8, // motif de rupture
+  9, // durée du travail
+  10, // durée de préavis
+  11, // type de rupture
+  12, // conclusion contrat
+  13, // période d'essai
+  14, // logement
+  15, // niveau
+  16, // classe
+  17, // position
+  18, // groupe
+  19, // coefficient
+  20, // échelon
+  21, // ancienneté
+  22 // age
 ];
 
 function getHeaders(row) {
@@ -70,7 +70,7 @@ async function getData() {
   });
 
   const [headersRow] = Object.values(cells).slice(0, 1);
-
+  console.log();
   const headers = getHeaders(headersRow);
   const createRowWithHeaders = headers => row => transformRow(headers, row);
   const rowTransformer = createRowWithHeaders(headers);
@@ -82,6 +82,7 @@ async function getData() {
 
 function transformRow(headers, row) {
   const data = { criteria: {} };
+  console.error(row[csvColumns.type].value);
   // we are only intereeted in type: préavis de démission
   if (row[csvColumns.type].value !== "préavis de démission") {
     return null;
@@ -109,5 +110,7 @@ async function main() {
 }
 
 if (module === require.main) {
-  main();
+  main().catch(error => {
+    console.error(error);
+  });
 }

@@ -10,6 +10,7 @@ import {
 } from "../situations.utils";
 
 import data from "@cdt/data...prime-precarite/precarite.data.json";
+const criteriaOrder = ["bar", "foo", "baz", "yolo"];
 
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
   { idcc: "10", criteria: { foo: "1| foo", bar: "baz" } },
@@ -69,12 +70,14 @@ describe("situations", () => {
     it("should return foo question key", () => {
       const idcc = "10";
       const situations = getSituationsFor(data, { idcc });
-      expect(getNextQuestionKey(situations)).toBe("bar");
+      expect(getNextQuestionKey(situations, criteriaOrder)).toBe("bar");
     });
     it("should return bar question key", () => {
       const idcc = "10";
       const situations = getSituationsFor(data, { idcc });
-      expect(getNextQuestionKey(situations, { foo: "1| foo" })).toBe("bar");
+      expect(
+        getNextQuestionKey(situations, criteriaOrder, { foo: "1| foo" })
+      ).toBe("bar");
     });
   });
 
@@ -100,12 +103,14 @@ describe("situations", () => {
   describe("getPastQuestions", () => {
     it("should return empty questions array", () => {
       const situations = getSituationsFor(data, { idcc: "10" });
-      expect(getPastQuestions(situations, {})).toEqual([]);
+      expect(getPastQuestions(situations, criteriaOrder, {})).toEqual([]);
     });
 
     it("should return a tuple array of questions key and questions option for branch and bar", () => {
       const situations = getSituationsFor(data, { idcc: "10" });
-      expect(getPastQuestions(situations, { bar: "baz" })).toEqual([
+      expect(
+        getPastQuestions(situations, criteriaOrder, { bar: "baz" })
+      ).toEqual([
         [
           "bar",
           [

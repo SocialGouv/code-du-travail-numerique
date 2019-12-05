@@ -18,6 +18,7 @@ import {
 import {
   hasConventionalProvision,
   questions,
+  criteriaOrder,
   validateSituation
 } from "./situation";
 
@@ -35,10 +36,18 @@ function StepInfosGenerales({ form }) {
   const { values } = form.getState();
   const idcc = values.ccn ? values.ccn.num : "0000";
   const initialSituations = getSituationsFor(data, { idcc });
-  const pastQuestions = getPastQuestions(initialSituations, values.criteria);
+  const pastQuestions = getPastQuestions(
+    initialSituations,
+    criteriaOrder,
+    values.criteria
+  );
 
   const situations = filterSituations(initialSituations, values.criteria);
-  const nextQuestionKey = getNextQuestionKey(situations, values.criteria);
+  const nextQuestionKey = getNextQuestionKey(
+    situations,
+    criteriaOrder,
+    values.criteria
+  );
   let nextQuestionOptions = getOptions(situations, nextQuestionKey);
 
   function concatenateCddType(additionnalTypes) {

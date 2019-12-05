@@ -4,13 +4,13 @@ import { isNotYetProcessed, validateSituation } from "../situation";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
-  { idcc: "10", criteria: { foo: "1| foo", bar: "baz" } },
-  { idcc: "10", criteria: { foo: "1| foo", bar: "bar" } },
-  { idcc: "10", criteria: { foo: "2| baz" } },
+  { idcc: "10", criteria: { cddType: "1| foo", hasCdiProposal: "baz" } },
+  { idcc: "10", criteria: { cddType: "1| foo", hasCdiRenewal: "bar" } },
+  { idcc: "10", criteria: { cddType: "2| baz" } },
   {
     idcc: "20",
     criteria: {
-      foo: "3| bar"
+      cddType: "3| bar"
     },
     allowBonus: false,
     endMessage: "nope",
@@ -19,7 +19,7 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
   {
     idcc: "20",
     criteria: {
-      foo: "4| baz"
+      cddType: "4| baz"
     },
     allowBonus: true,
     hasConventionalProvision: true
@@ -35,16 +35,16 @@ describe("situations", () => {
   describe("validateSituation", () => {
     it("should return correct error message", () => {
       const situations = getSituationsFor(data, { idcc: "20" });
-      expect(validateSituation(situations, { foo: "3| bar" })).toEqual({
-        criteria: { foo: "nope" }
+      expect(validateSituation(situations, { cddType: "3| bar" })).toEqual({
+        criteria: { cddType: "nope" }
       });
     });
     it("should not touch error message if multiple situations match", () => {
       const situations = getSituationsFor(data, { idcc: "20" });
       expect(
-        validateSituation(situations, {}, { criteria: { foo: "yoyo" } })
+        validateSituation(situations, {}, { criteria: { cddType: "yoyo" } })
       ).toEqual({
-        criteria: { foo: "yoyo" }
+        criteria: { cddType: "yoyo" }
       });
     });
     it("should override previous error message", () => {
@@ -52,11 +52,11 @@ describe("situations", () => {
       expect(
         validateSituation(
           situations,
-          { foo: "4| baz" },
-          { criteria: { foo: "yoyo" } }
+          { cddType: "4| baz" },
+          { criteria: { cddType: "yoyo" } }
         )
       ).toEqual({
-        criteria: { foo: undefined }
+        criteria: { cddType: undefined }
       });
     });
   });

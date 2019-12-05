@@ -23,8 +23,19 @@ export const labels = {
   hasEquivalentCdiRenewal: "renouvellement en cdi équivalent"
 };
 
+export const criteriaOrder = [
+  "cddType",
+  "hasCdiProposal",
+  "hasCdiRenewal",
+  "hasEquivalentCdiRenewal"
+];
+
 export function validateSituation(initialSituations, criteria, errors) {
-  const pastQuestions = getPastQuestions(initialSituations, criteria);
+  const pastQuestions = getPastQuestions(
+    initialSituations,
+    criteriaOrder,
+    criteria
+  );
   const situations = filterSituations(initialSituations, criteria);
 
   if (pastQuestions.length > 0) {

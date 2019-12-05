@@ -1,16 +1,17 @@
+
 {
   "questions": [
     {
-      "name": "convention collective",
-      "question": "Quelle est la convention collective du salarié ?"
+      "name": "aéroport paris",
+      "question": "L'entreprise appliquait elle la convention collective régionale \"Manutention et nettoyage sur les aéroports (région parisienne)\" ?"
+    },
+    {
+      "name": "agents payés à l'heure",
+      "question": "L'agent est-il payé à l'heure ?"
     },
     {
       "name": "durée d'accueil de l'enfant",
       "question": "Quelle est la durée d'accueil de l'enfant ?"
-    },
-    {
-      "name": "catégorie",
-      "question": "Quelle est la catégorie du salarié ?"
     },
     {
       "name": "catégorie socio-professionnelle",
@@ -37,6 +38,18 @@
       "question": "Pour quelle raison le contrat de travail a-t-il été rompu ?"
     },
     {
+      "name": "période essai",
+      "question": "Le salarié est-il en période d'essai ?"
+    },
+    {
+      "name": "conclusion contrat travail",
+      "question": "Quelle est la date d'entrée du salarié dans l'entreprise?"
+    },
+    {
+      "name": "logement",
+      "question": "Le salarié est-il logé ?"
+    },
+    {
       "name": "niveau",
       "question": "Quel est le niveau du salarié ?"
     },
@@ -53,18 +66,6 @@
       "question": "Dans quel groupe professionnel le salarié se situe-t-il ?"
     },
     {
-      "name": "âge",
-      "question": "Quel est l'âge du salarié ?"
-    },
-    {
-      "name": "date contrat travail",
-      "question": "Quelle est la date d'entrée du salarié dans l'entreprise?"
-    },
-    {
-      "name": "ancienneté",
-      "question": "Quelle est l'ancienneté du salarié ?"
-    },
-    {
       "name": "coefficient",
       "question": "Quel est le coefficient hiérarchique du salarié ?"
     },
@@ -73,20 +74,12 @@
       "question": "Quel est l'échelon du salarié ?"
     },
     {
-      "name": "période essai",
-      "question": "Le salarié est-il en période d'essai ?"
+      "name": "ancienneté",
+      "question": "Quelle est l'ancienneté du salarié ?"
     },
     {
-      "name": "logement",
-      "question": "Le salarié est-il logé ?"
-    },
-    {
-      "name": "aéroport paris",
-      "question": "L'entreprise appliquait elle la convention collective régionale \"Manutention et nettoyage sur les aéroports (région parisienne)\" ?"
-    },
-    {
-      "name": "agents payés à l'heure",
-      "question": "L'agent est-il payé à l'heure ?"
+      "name": "âge",
+      "question": "Quel est l'âge du salarié ?"
     },
     {
       "name": "secteur d'activité",
@@ -97,8 +90,16 @@
       "question": "Quelle est la durée initiale du contrat du salarié ?"
     },
     {
+      "name": "catégorie",
+      "question": "Quelle est la catégorie du salarié ?"
+    },
+    {
       "name": "déjà exercé pendant plus de 1 an au cours des 5 dernières années des fonctions de cadre chez un autre employeur",
       "question": "Le salarié a-t-il déjà exercé pendant plus de 1 an au cours des 5 dernières années des fonctions de cadre pour un autre employeur ?"
+    },
+    {
+      "name": "convention collective",
+      "question": "Quelle est la convention collective du salarié ?"
     }
   ],
   "situations": [
@@ -186,7 +187,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "70| directeurs généraux"
+        "catégorie socio-professionnelle": "70| directeurs généraux",
+        "ancienneté": "55| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -207,7 +209,30 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "71| directeurs-adjoints"
+        "catégorie socio-professionnelle": "39| Directeurs",
+        "ancienneté": "55| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de démission",
+      "idcc": "0029",
+      "answer": "3 mois",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "39| Directeurs",
+        "ancienneté": "14| moins de 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "0029",
+      "answer": "2 mois",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "71| directeurs-adjoints",
+        "ancienneté": "55| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -228,7 +253,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "72| gestionnaires"
+        "catégorie socio-professionnelle": "72| gestionnaires",
+        "ancienneté": "55| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -249,7 +275,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "73| médecins"
+        "catégorie socio-professionnelle": "73| médecins",
+        "ancienneté": "55| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -270,7 +297,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "74| pharmaciens"
+        "catégorie socio-professionnelle": "74| pharmaciens",
+        "ancienneté": "55| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -291,7 +319,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "75| biologistes"
+        "catégorie socio-professionnelle": "75| biologistes",
+        "ancienneté": "55| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -313,7 +342,8 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "coefficient": "26| supérieur à 715"
+        "coefficient": "26| 715 et supérieur",
+        "ancienneté": "55| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -324,7 +354,8 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "coefficient": "27| inférieur à 715"
+        "coefficient": "27| inférieur à 715",
+        "ancienneté": "55| de plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -335,8 +366,8 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "26| supérieur à 715"
+        "coefficient": "26| 715 et supérieur",
+        "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -347,8 +378,8 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "27| inférieur à 715"
+        "coefficient": "27| inférieur à 715",
+        "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "0029",
@@ -368,7 +399,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "63| Autres",
+        "catégorie socio-professionnelle": "89| ouvriers, collaborateurs et tehniciens",
+        "groupe": "1| de I à III",
         "coefficient": "1| inférieur à 160"
       },
       "type": "préavis de démission",
@@ -379,8 +411,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "63| Autres",
-        "coefficient": "5| entre 160 (inclus) et 190"
+        "catégorie socio-professionnelle": "89| ouvriers, collaborateurs et tehniciens",
+        "groupe": "1| de I à III",
+        "coefficient": "5| entre 160 (inclus) et 175"
       },
       "type": "préavis de démission",
       "idcc": "0044",
@@ -390,18 +423,20 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "63| Autres",
-        "coefficient": "8| supérieur à 190 (inclus)"
+        "catégorie socio-professionnelle": "89| ouvriers, collaborateurs et tehniciens",
+        "groupe": "1| de I à III",
+        "coefficient": "4| 190 et plus"
       },
       "type": "préavis de démission",
       "idcc": "0044",
       "answer": "2 mois",
       "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "63| Autres",
+        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
+        "groupe": "2| IV",
         "coefficient": "9| inférieur à 275"
       },
       "type": "préavis de démission",
@@ -412,7 +447,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "63| Autres",
+        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
+        "groupe": "2| IV",
         "coefficient": "12| supérieur à 275 (inclus)"
       },
       "type": "préavis de démission",
@@ -423,7 +459,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres"
+        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres",
+        "groupe": "7| V"
       },
       "type": "préavis de démission",
       "idcc": "0044",
@@ -463,8 +500,7 @@
     },
     {
       "criteria": {
-        "groupe": "1| de I à III",
-        "date contrat travail": "2| contrat de travail conclu avant 2009"
+        "groupe": "42| 1 à 3"
       },
       "type": "préavis de démission",
       "idcc": "0176",
@@ -474,8 +510,7 @@
     },
     {
       "criteria": {
-        "groupe": "2| IV",
-        "date contrat travail": "2| contrat de travail conclu avant 2009"
+        "groupe": "25| 4"
       },
       "type": "préavis de démission",
       "idcc": "0176",
@@ -485,8 +520,7 @@
     },
     {
       "criteria": {
-        "groupe": "7| V",
-        "date contrat travail": "2| contrat de travail conclu avant 2009"
+        "groupe": "47| 5 et suivants"
       },
       "type": "préavis de démission",
       "idcc": "0176",
@@ -496,8 +530,7 @@
     },
     {
       "criteria": {
-        "groupe": "1| de I à III",
-        "date contrat travail": "1| contrat de travail conclu après 2009"
+        "groupe": "42| 1 à 3"
       },
       "type": "préavis de démission",
       "idcc": "0176",
@@ -507,8 +540,7 @@
     },
     {
       "criteria": {
-        "groupe": "36| IV à VI",
-        "date contrat travail": "1| contrat de travail conclu après 2009"
+        "groupe": "46| 4 à 5"
       },
       "type": "préavis de démission",
       "idcc": "0176",
@@ -518,8 +550,7 @@
     },
     {
       "criteria": {
-        "groupe": "38| VI et suivants",
-        "date contrat travail": "1| contrat de travail conclu après 2009"
+        "groupe": "44| 6 et suivants "
       },
       "type": "préavis de démission",
       "idcc": "0176",
@@ -529,8 +560,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "aéroport paris": "2| non"
+        "aéroport paris": "2| non",
+        "catégorie socio-professionnelle": "6| Ouvriers, Employés"
       },
       "type": "préavis de démission",
       "idcc": "0275",
@@ -540,8 +571,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "aéroport paris": "2| non"
+        "aéroport paris": "2| non",
+        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens"
       },
       "type": "préavis de démission",
       "idcc": "0275",
@@ -551,8 +582,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "aéroport paris": "2| non"
+        "aéroport paris": "2| non",
+        "catégorie socio-professionnelle": "20| Cadres"
       },
       "type": "préavis de démission",
       "idcc": "0275",
@@ -562,8 +593,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "aéroport paris": "1| oui"
+        "aéroport paris": "1| oui",
+        "catégorie socio-professionnelle": "1| Ouvriers"
       },
       "type": "préavis de démission",
       "idcc": "0275",
@@ -573,8 +604,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "aéroport paris": "1| oui"
+        "aéroport paris": "1| oui",
+        "catégorie socio-professionnelle": "15| Agents de maîtrise"
       },
       "type": "préavis de démission",
       "idcc": "0275",
@@ -584,8 +615,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "aéroport paris": "1| oui"
+        "aéroport paris": "1| oui",
+        "catégorie socio-professionnelle": "20| Cadres"
       },
       "type": "préavis de démission",
       "idcc": "0275",
@@ -741,7 +772,7 @@
       "idcc": "0573",
       "answer": "1 mois",
       "ref": "Article 35",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8F0A015EC69AE0F899489E29A88831C7.tplgfr27s_1?idArticle=KALIARTI000005872089&cidTexte=KALITEXT000005688165&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228"
     },
     {
       "criteria": {
@@ -751,7 +782,7 @@
       "idcc": "0573",
       "answer": "2 mois",
       "ref": "Article 35",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8F0A015EC69AE0F899489E29A88831C7.tplgfr27s_1?idArticle=KALIARTI000005872089&cidTexte=KALITEXT000005688165&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228"
     },
     {
       "criteria": {
@@ -761,11 +792,13 @@
       "idcc": "0573",
       "answer": "3 mois",
       "ref": "Article 35",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8F0A015EC69AE0F899489E29A88831C7.tplgfr27s_1?idArticle=KALIARTI000005872089&cidTexte=KALITEXT000005688165&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres"
+        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres",
+        "groupe": "3| I",
+        "ancienneté": "14| moins de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "0650",
@@ -775,7 +808,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres"
+        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres",
+        "groupe": "3| I",
+        "ancienneté": "13| 2 ans ou plus"
       },
       "type": "préavis de démission",
       "idcc": "0650",
@@ -785,7 +820,19 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres"
+        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres",
+        "groupe": "4| II"
+      },
+      "type": "préavis de démission",
+      "idcc": "0650",
+      "answer": "3 mois",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres",
+        "groupe": "5| III"
       },
       "type": "préavis de démission",
       "idcc": "0650",
@@ -812,6 +859,17 @@
       "answer": "3 mois",
       "ref": "Article 13 de l'avenant Cadres Convention collective nationale du 30 juin 1972\r\n",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752482&cidTexte=KALITEXT000005679774&idConvention=KALICONT000005635617&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Employés",
+        "ancienneté": "56| moins de 1 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "0675",
+      "answer": "La convention collective ne prévoit pas de préavis dans ce cas de figure. ",
+      "ref": "Article 38 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617"
     },
     {
       "criteria": {
@@ -856,25 +914,9 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=CFEA1065D76552B48FA299221688C973.tpdila22v_3?idArticle=KALIARTI000005839444&cidTexte=KALITEXT000005674852&dateTexte=19910731"
     },
     {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0822",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0836",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
       "criteria": {
         "catégorie socio-professionnelle": "19| Personnel de fabrication, personnel de vente et personnel de services",
-        "ancienneté": "4| 6 mois ou moins"
+        "ancienneté": "17| moins de 6 mois"
       },
       "type": "préavis de démission",
       "idcc": "0843",
@@ -904,64 +946,7 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000038678849&cidTexte=KALITEXT000005688564&dateTexte=20190827"
     },
     {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0860",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0878",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0898",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0914",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0923",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0937",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "0965",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
       "criteria": {
-        "coefficient": "15| inférieur à 602",
         "logement": "1| non-logé"
       },
       "type": "préavis de démission",
@@ -972,8 +957,8 @@
     },
     {
       "criteria": {
-        "coefficient": "16| supérieur à 602",
-        "logement": "1| non-logé"
+        "logement": "1| non-logé",
+        "coefficient": "16| supérieur à 602"
       },
       "type": "préavis de démission",
       "idcc": "1043",
@@ -1053,7 +1038,7 @@
       "idcc": "1147",
       "answer": "3 mois",
       "ref": "Article 25 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856089&cidTexte=KALITEXT000005681857&dateTexte=20121022"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
@@ -1064,7 +1049,7 @@
       "idcc": "1147",
       "answer": "15 jours",
       "ref": "Article 25 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856089&cidTexte=KALITEXT000005681857&dateTexte=20121022"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
@@ -1075,7 +1060,7 @@
       "idcc": "1147",
       "answer": "1 mois",
       "ref": "Article 25 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856089&cidTexte=KALITEXT000005681857&dateTexte=20121022"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
@@ -1157,6 +1142,18 @@
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "1| I",
+        "ancienneté": "57| moins de 15 jours"
+      },
+      "type": "préavis de démission",
+      "idcc": "1351",
+      "answer": "La convention collective ne prévoit pas de préavis dans ce cas de figure. ",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "1| I",
         "ancienneté": "32| de 15 jours à 1 mois"
       },
       "type": "préavis de démission",
@@ -1192,8 +1189,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "1| I",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "niveau": "1| I"
       },
       "type": "préavis de démission",
       "idcc": "1351",
@@ -1210,6 +1206,18 @@
       "type": "préavis de démission",
       "idcc": "1351",
       "answer": "1 mois",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "3| II",
+        "ancienneté": "57| moins de 15 jours"
+      },
+      "type": "préavis de démission",
+      "idcc": "1351",
+      "answer": "La convention collective ne prévoit pas de préavis dans ce cas de figure. ",
       "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
     },
@@ -1252,8 +1260,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "3| II",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "niveau": "3| II"
       },
       "type": "préavis de démission",
       "idcc": "1351",
@@ -1276,7 +1283,19 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
+        "niveau": "5| IV",
+        "ancienneté": "57| moins de 15 jours"
+      },
+      "type": "préavis de démission",
+      "idcc": "1351",
+      "answer": "La convention collective ne prévoit pas de préavis dans ce cas de figure. ",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
         "ancienneté": "32| de 15 jours à 1 mois"
       },
       "type": "préavis de démission",
@@ -1288,7 +1307,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
+        "niveau": "5| IV",
         "ancienneté": "33| de plus de 1 mois à 2 mois"
       },
       "type": "préavis de démission",
@@ -1300,7 +1319,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
+        "niveau": "5| IV",
         "ancienneté": "34| de plus de 2 mois à 6 mois"
       },
       "type": "préavis de démission",
@@ -1312,8 +1331,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "niveau": "5| IV"
       },
       "type": "préavis de démission",
       "idcc": "1351",
@@ -1324,7 +1342,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
+        "niveau": "5| IV",
         "ancienneté": "36| de plus de 2 ans"
       },
       "type": "préavis de démission",
@@ -1336,7 +1354,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
+        "niveau": "22| II à V",
         "ancienneté": "32| de 15 jours à 1 mois"
       },
       "type": "préavis de démission",
@@ -1348,7 +1366,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
+        "niveau": "22| II à V",
         "ancienneté": "33| de plus de 1 mois à 2 mois"
       },
       "type": "préavis de démission",
@@ -1360,7 +1378,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
+        "niveau": "22| II à V",
         "ancienneté": "34| de plus de 2 mois à 6 mois"
       },
       "type": "préavis de démission",
@@ -1372,8 +1390,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "niveau": "22| II à V"
       },
       "type": "préavis de démission",
       "idcc": "1351",
@@ -1384,7 +1401,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
+        "niveau": "22| II à V",
         "ancienneté": "36| de plus de 2 ans"
       },
       "type": "préavis de démission",
@@ -1432,8 +1449,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "7| V",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "niveau": "7| V"
       },
       "type": "préavis de démission",
       "idcc": "1351",
@@ -1492,8 +1508,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "1| I",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "niveau": "1| I"
       },
       "type": "préavis de démission",
       "idcc": "1351",
@@ -1552,8 +1567,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "3| II",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "niveau": "3| II"
       },
       "type": "préavis de démission",
       "idcc": "1351",
@@ -1565,66 +1579,6 @@
       "criteria": {
         "catégorie socio-professionnelle": "15| Agents de maîtrise",
         "niveau": "3| II",
-        "ancienneté": "36| de plus de 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "1351",
-      "answer": "1 mois",
-      "ref": "Annexe V: Agents de maîtrise, article 8",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
-        "ancienneté": "37| de 15 jours à 2 mois"
-      },
-      "type": "préavis de démission",
-      "idcc": "1351",
-      "answer": "1 semaine",
-      "ref": "Annexe V: Agents de maîtrise, article 8",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
-        "ancienneté": "38| de plus de 2 mois à 3 mois"
-      },
-      "type": "préavis de démission",
-      "idcc": "1351",
-      "answer": "1 semaine",
-      "ref": "Annexe V: Agents de maîtrise, article 8",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
-        "ancienneté": "39| de plus de 3 mois à 6 mois"
-      },
-      "type": "préavis de démission",
-      "idcc": "1351",
-      "answer": "2 semaines",
-      "ref": "Annexe V: Agents de maîtrise, article 8",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
-      },
-      "type": "préavis de démission",
-      "idcc": "1351",
-      "answer": "1 mois",
-      "ref": "Annexe V: Agents de maîtrise, article 8",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
         "ancienneté": "36| de plus de 2 ans"
       },
       "type": "préavis de démission",
@@ -1653,7 +1607,7 @@
       },
       "type": "préavis de démission",
       "idcc": "1351",
-      "answer": "2 semaines",
+      "answer": "1 semaine",
       "ref": "Annexe V: Agents de maîtrise, article 8",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
     },
@@ -1672,8 +1626,66 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "niveau": "5| IV"
+      },
+      "type": "préavis de démission",
+      "idcc": "1351",
+      "answer": "1 mois",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "15| Agents de maîtrise",
         "niveau": "5| IV",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "ancienneté": "36| de plus de 2 ans"
+      },
+      "type": "préavis de démission",
+      "idcc": "1351",
+      "answer": "1 mois",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "niveau": "22| II à V",
+        "ancienneté": "37| de 15 jours à 2 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "1351",
+      "answer": "1 semaine",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "niveau": "22| II à V",
+        "ancienneté": "38| de plus de 2 mois à 3 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "1351",
+      "answer": "2 semaines",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "niveau": "22| II à V",
+        "ancienneté": "39| de plus de 3 mois à 6 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "1351",
+      "answer": "2 semaines",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "niveau": "22| II à V"
       },
       "type": "préavis de démission",
       "idcc": "1351",
@@ -1684,7 +1696,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "5| IV",
+        "niveau": "22| II à V",
         "ancienneté": "36| de plus de 2 ans"
       },
       "type": "préavis de démission",
@@ -1732,8 +1744,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "7| V",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "niveau": "7| V"
       },
       "type": "préavis de démission",
       "idcc": "1351",
@@ -1865,7 +1876,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "10| Ouvriers, Employés (niveaux I et II) "
+        "catégorie socio-professionnelle": "10| Ouvriers, Employés (niveaux I et II) ",
+        "niveau": "2| I à II"
       },
       "type": "préavis de démission",
       "idcc": "1404",
@@ -1875,7 +1887,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "11| Ouvriers, Employés (niveau III)"
+        "catégorie socio-professionnelle": "11| Ouvriers, Employés (niveau III)",
+        "niveau": "5| IV"
       },
       "type": "préavis de démission",
       "idcc": "1404",
@@ -1926,7 +1939,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "4| 6 mois ou moins"
+        "ancienneté": "17| moins de 6 mois"
       },
       "type": "préavis de démission",
       "idcc": "1483",
@@ -1957,9 +1970,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
-        "ancienneté": "11| 2 ans ou moins",
-        "coefficient": "13| de 200 à 355"
+        "catégorie socio-professionnelle": "14| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "13| de 200 à 355",
+        "ancienneté": "11| 2 ans ou moins"
       },
       "type": "préavis de démission",
       "idcc": "1486",
@@ -1969,9 +1982,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
-        "ancienneté": "12| plus de 2 ans",
-        "coefficient": "13| de 200 à 355"
+        "catégorie socio-professionnelle": "14| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "13| de 200 à 355",
+        "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "1486",
@@ -1981,9 +1994,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
-        "ancienneté": "11| 2 ans ou moins",
-        "coefficient": "14| de 400 à 500"
+        "catégorie socio-professionnelle": "14| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "14| de 400 à 500",
+        "ancienneté": "11| 2 ans ou moins"
       },
       "type": "préavis de démission",
       "idcc": "1486",
@@ -1993,9 +2006,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
-        "ancienneté": "12| plus de 2 ans",
-        "coefficient": "14| de 400 à 500"
+        "catégorie socio-professionnelle": "14| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "14| de 400 à 500",
+        "ancienneté": "12| plus de 2 ans"
       },
       "type": "préavis de démission",
       "idcc": "1486",
@@ -2194,7 +2207,7 @@
     },
     {
       "criteria": {
-        "niveau": "4| III"
+        "niveau": "5| IV"
       },
       "type": "préavis de démission",
       "idcc": "1517",
@@ -2204,7 +2217,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de démission",
       "idcc": "1517",
@@ -2320,7 +2333,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "48| Animateurs, techniciens et professeurs",
-        "niveau": "20| A"
+        "niveau": "13| A"
       },
       "type": "préavis de démission",
       "idcc": "1518",
@@ -2331,7 +2344,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "48| Animateurs, techniciens et professeurs",
-        "niveau": "21| B"
+        "niveau": "14| B"
       },
       "type": "préavis de démission",
       "idcc": "1518",
@@ -2493,22 +2506,6 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "1560",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "1564",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
       "criteria": {
         "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
@@ -2583,22 +2580,6 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000024633414&cidTexte=KALITEXT000005687520&idConvention=KALICONT000005635871&dateTexte=29990101"
     },
     {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "1626",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "1635",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
       "criteria": {
         "catégorie socio-professionnelle": "53| Cadres (Classes 5 à 7)"
       },
@@ -2620,6 +2601,7 @@
     },
     {
       "criteria": {
+        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de démission",
@@ -2630,6 +2612,7 @@
     },
     {
       "criteria": {
+        "catégorie socio-professionnelle": "1| Ouvriers",
         "ancienneté": "46| plus de 3 mois"
       },
       "type": "préavis de démission",
@@ -2657,27 +2640,11 @@
       "answer": "2 semaines",
       "ref": "article 1.1.9",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "1885",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "1960",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
     },
     {
       "criteria": {
         "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "ancienneté": "4| 6 mois ou moins"
+        "ancienneté": "17| moins de 6 mois"
       },
       "type": "préavis de démission",
       "idcc": "1979",
@@ -2710,7 +2677,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "4| 6 mois ou moins"
+        "ancienneté": "17| moins de 6 mois"
       },
       "type": "préavis de démission",
       "idcc": "1979",
@@ -2732,7 +2699,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "4| 6 mois ou moins"
+        "ancienneté": "17| moins de 6 mois"
       },
       "type": "préavis de démission",
       "idcc": "1979",
@@ -2861,14 +2828,6 @@
       "answer": "3 mois",
       "ref": "Article 30 de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005784453&cidTexte=KALITEXT000005678018"
-    },
-    {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "2126",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
     },
     {
       "criteria": {
@@ -3029,16 +2988,6 @@
     {
       "criteria": {},
       "type": "préavis de démission",
-      "idcc": "2266",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
-      "criteria": {
-        "ancienneté": "22| au moins un an"
-      },
-      "type": "préavis de démission",
       "idcc": "2395",
       "answer": "15 jours calendaires",
       "ref": "article 18 de la convention collective nationale des assistants maternels du par",
@@ -3105,16 +3054,7 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
     },
     {
-      "criteria": {},
-      "type": "préavis de démission",
-      "idcc": "2542",
-      "answer": "NON PUBLIABLE",
-      "ref": null,
-      "refUrl": null
-    },
-    {
       "criteria": {
-        "catégorie socio-professionnelle": "41| Salariés occupant un emploi technique de la coiffure, un emploi non technique ou un emploi de l'esthétique cosmétique",
         "ancienneté": "4| 6 mois ou moins"
       },
       "type": "préavis de démission",
@@ -3125,7 +3065,47 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "41| Salariés occupant un emploi technique de la coiffure, un emploi non technique ou un emploi de l'esthétique cosmétique",
+        "catégorie socio-professionnelle": "87| Salariés occupant un emploi technique de la coiffure",
+        "ancienneté": "7| plus de 6 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "2596",
+      "answer": "1 mois",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "ancienneté": "4| 6 mois ou moins"
+      },
+      "type": "préavis de démission",
+      "idcc": "2596",
+      "answer": "1 semaine",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "ancienneté": "7| plus de 6 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "2596",
+      "answer": "1 mois",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "ancienneté": "4| 6 mois ou moins"
+      },
+      "type": "préavis de démission",
+      "idcc": "2596",
+      "answer": "1 semaine",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
         "ancienneté": "7| plus de 6 mois"
       },
       "type": "préavis de démission",
@@ -3465,6 +3445,17 @@
       "type": "préavis de démission",
       "idcc": "3043",
       "answer": "3 mois",
+      "ref": "Article 4.11.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "2| Agents de propreté",
+        "ancienneté": "56| moins de 1 mois"
+      },
+      "type": "préavis de démission",
+      "idcc": "3043",
+      "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
       "ref": "Article 4.11.2 de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
     },
