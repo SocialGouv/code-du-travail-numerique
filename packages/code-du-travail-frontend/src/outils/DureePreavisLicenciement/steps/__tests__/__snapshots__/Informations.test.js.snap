@@ -244,7 +244,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 </div>
 `;
 
-exports[`<StepInformations /> should render coefficient 1`] = `
+exports[`<StepInformations /> should render groupe 1`] = `
 .c3 {
   position: absolute;
   background-color: #7598d6;
@@ -275,6 +275,28 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   text-align: left;
 }
 
+.c5 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.c6 {
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+
+.c4 {
+  margin: 2rem 0;
+}
+
 .c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -293,5 +315,79 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       Statut du salarié
     </h2>
   </header>
+  <div
+    class="c4"
+  >
+    <label
+      class="c5"
+      for="input-criteria.catégorie socio-professionnelle"
+    >
+      Quelle est la catégorie professionnelle du salarié ?
+    </label>
+    <select
+      class="c6"
+      id="input-criteria.catégorie socio-professionnelle"
+      name="criteria.catégorie socio-professionnelle"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="4| Ouvriers"
+      >
+        Ouvriers
+      </option>
+      <option
+        value="16| Employés"
+      >
+        Employés
+      </option>
+      <option
+        value="23| Agents de maîtrise"
+      >
+        Agents de maîtrise
+      </option>
+      <option
+        value="28| Techniciens"
+      >
+        Techniciens
+      </option>
+      <option
+        value="60| Ingénieurs, Cadres"
+      >
+        Ingénieurs, Cadres
+      </option>
+    </select>
+  </div>
+  <div
+    class="c4"
+  >
+    <label
+      class="c5"
+      for="input-criteria.groupe"
+    >
+      Dans quel groupe professionnel le salarié se situe-t-il ?
+    </label>
+    <select
+      class="c6"
+      id="input-criteria.groupe"
+      name="criteria.groupe"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="6| IV"
+      >
+        IV
+      </option>
+    </select>
+  </div>
 </div>
 `;

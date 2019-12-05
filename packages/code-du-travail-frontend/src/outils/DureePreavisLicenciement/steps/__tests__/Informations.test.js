@@ -12,10 +12,10 @@ describe("<StepInformations />", () => {
     });
     expect(container).toMatchSnapshot();
   });
-  it("should render coefficient", () => {
+  it("should render groupe", () => {
     const { container } = renderForm(StepInformations, {
       ccn: { num: "0044" },
-      criteria: { "catégorie socio-professionnelle": "60| Ingénieurs, Cadres" }
+      criteria: { "catégorie socio-professionnelle": "23| Agents de maîtrise" }
     });
     expect(container).toMatchSnapshot();
   });
