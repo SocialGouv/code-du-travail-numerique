@@ -146,7 +146,11 @@ describe("situations", () => {
       const key = "bar";
       const initialSituations = getSituationsFor(data, { idcc: "10" });
       const criteria = { foo: "1| foo", bar: "baz" };
-      const pastQuestions = getPastQuestions(initialSituations, criteria);
+      const pastQuestions = getPastQuestions(
+        initialSituations,
+        criteriaOrder,
+        criteria
+      );
 
       expect(
         getFormProps({
