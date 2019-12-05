@@ -104,19 +104,19 @@ exports[`<StepInformations /> should render 1`] = `
         ...
       </option>
       <option
-        value="12| plus de 2 ans"
-      >
-        plus de 2 ans
-      </option>
-      <option
-        value="17| moins de 6 mois"
+        value="13| moins de 6 mois"
       >
         moins de 6 mois
       </option>
       <option
-        value="20| 6 mois à moins de 2 ans"
+        value="31| 6 mois à moins de 2 ans"
       >
         6 mois à moins de 2 ans
+      </option>
+      <option
+        value="41| plus de 2 ans"
+      >
+        plus de 2 ans
       </option>
     </select>
   </div>
@@ -215,27 +215,27 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         ...
       </option>
       <option
-        value="1| Ouvriers"
+        value="4| Ouvriers"
       >
         Ouvriers
       </option>
       <option
-        value="4| Employés"
+        value="16| Employés"
       >
         Employés
       </option>
       <option
-        value="5| Techniciens"
-      >
-        Techniciens
-      </option>
-      <option
-        value="15| Agents de maîtrise"
+        value="23| Agents de maîtrise"
       >
         Agents de maîtrise
       </option>
       <option
-        value="16| Ingénieurs, Cadres"
+        value="28| Techniciens"
+      >
+        Techniciens
+      </option>
+      <option
+        value="60| Ingénieurs, Cadres"
       >
         Ingénieurs, Cadres
       </option>

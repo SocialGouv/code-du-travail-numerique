@@ -82,7 +82,6 @@ async function getData() {
 
 function transformRow(headers, row) {
   const data = { criteria: {} };
-  console.error(row[csvColumns.type].value);
   // we are only intereeted in type: préavis de démission
   if (row[csvColumns.type].value !== "préavis de démission") {
     return null;

@@ -6,8 +6,8 @@ describe("<StepResult />", () => {
     const { container } = renderForm(StepResult, {
       ccn: { num: "0292", title: "Plasturgie" },
       criteria: {
-        "catégorie socio-professionnelle": "38| Collaborateurs",
-        coefficient: "19| 800 à 830 inclus"
+        "catégorie socio-professionnelle": "42| Collaborateurs",
+        coefficient: "27| 910 à 940"
       }
     });
     expect(container).toMatchSnapshot();
