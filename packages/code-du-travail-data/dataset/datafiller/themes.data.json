@@ -10061,7 +10061,8 @@
         "url": "/fiche-service-public/obligation-demploi-des-travailleurs-handicapes"
       },
       {
-        "url": "/fiche-service-public/handicap-travail-en-entreprise-adaptee"
+        "url": "/fiche-service-public/quest-ce-que-laide-a-la-lourdeur-du-handicap-et-comment-en-beneficier",
+        "title": "Qu'est-ce que l'aide à la lourdeur du handicap et comment en bénéficier ?"
       },
       {
         "url": "/fiche-service-public/handicap-travail-en-etablissement-et-service-daide-par-le-travail-esat"
@@ -10166,8 +10167,7 @@
         "title": "Emploi et handicap : handicap : qui peut percevoir l’aide à l’exercice d’une activité non salariée ?"
       },
       {
-        "url": "/fiche-ministere-travail/emploi-et-handicap-aide-a-lexercice-dune-activite-non-salariee#Handicap-quel-est-l-objectif-de-l-aide-a-l-exercice-d-une-activite-non-nbsp",
-        "title": "Emploi et handicap : handicap : quel est l’objectif de l’aide à l’exercice d’une activité non salariée ?"
+        "url": "/fiche-service-public/handicap-travail-en-entreprise-adaptee"
       },
       {
         "url": "/fiche-ministere-travail/emploi-et-handicap-aide-a-lexercice-dune-activite-non-salariee#Handicap-comment-beneficier-de-l-aide-a-l-exercice-d-une-activite-non-nbsp",
@@ -10280,6 +10280,10 @@
       {
         "url": "/fiche-ministere-travail/esat-etablissements-ou-services-daide-par-le-travail#Mise-a-disposition-d-une-entreprise",
         "title": "ESAT | Etablissements ou services d’aide par le travail : mise à disposition d’une entreprise"
+      },
+      {
+        "url": "/fiche-ministere-travail/emploi-et-handicap-aide-a-lexercice-dune-activite-non-salariee#Handicap-quel-est-l-objectif-de-l-aide-a-l-exercice-d-une-activite-non-nbsp",
+        "title": "Emploi et handicap : handicap : quel est l’objectif de l’aide à l’exercice d’une activité non salariée ?"
       }
     ],
     "source": "themes",
