@@ -112,16 +112,16 @@ Not OK: ~~`color: ${theme.colors.blueDark};`~~<br />
 OK: `color: ${({theme }) => theme.blueDark};`
 
 Otherwise, the color won't change when the theme is dynamically modified. For eveything else, using the `theme` from `@socialgouv/react-ui` is always the right thing to do: <br />
-``` js
-  import { theme } from "@socialgouv/react-ui"
-  const { box, spacing } = theme;
-  const P = styled.p`
-    margin: ${spacing.large};
-    color: ${({theme}) => theme.darkBlue};
-    border: ${({ theme }) => box.border(theme.border)};
-  `;
-```
 
+```js
+import { theme } from "@socialgouv/react-ui";
+const { box, spacing } = theme;
+const P = styled.p`
+  margin: ${spacing.large};
+  color: ${({ theme }) => theme.darkBlue};
+  border: ${({ theme }) => box.border(theme.border)};
+`;
+```
 
 ### Build
 
@@ -177,7 +177,7 @@ This is the process to release to the preprod URL like : `https://x-y-z.codedutr
 
 ### Auto
 
-First, trigger a custom build on [Travis CI > code-du-travail-numerique]((https://travis-ci.com/SocialGouv/code-du-travail-numerique)) > master branch > in the "More options" right menu > trigger custom build.
+First, trigger a custom build on [Travis CI > code-du-travail-numerique](<(https://travis-ci.com/SocialGouv/code-du-travail-numerique)>) > master branch > in the "More options" right menu > trigger custom build.
 Add a message like "Release v2.1.0".
 Use this YAML config:
 
@@ -198,15 +198,15 @@ env:
 
 > This will :
 >
-> -  tag the release on GitHub
-> -  update the changelogs
-> -  build Docker images
-> -  push them to DockerHub
+> - tag the release on GitHub
+> - update the changelogs
+> - build Docker images
+> - push them to DockerHub
 
 Optionally needed:
 
--   update environment variables with `vim dev/.env`
--   refresh NLP data with: `sh dev/scripts/download-nlp-data.sh`
+- update environment variables with `vim dev/.env`
+- refresh NLP data with: `sh dev/scripts/download-nlp-data.sh`
 
 ### Manual
 
@@ -276,29 +276,30 @@ env:
 
 ### Demos
 
--  Production
-  -  <https://code.travail.gouv.fr/> (previously codedutravail.num.social.gouv.fr )
+- Production
+- <https://code.travail.gouv.fr/> (previously codedutravail.num.social.gouv.fr )
 
--  master (dev)
-  -  <http://master.code-du-travail-numerique.dev.factory.social.gouv.fr(previously> codedutravail-dev.num.social.gouv.fr)
+- master (dev)
+- <http://master.code-du-travail-numerique.dev.factory.social.gouv.fr(previously> codedutravail-dev.num.social.gouv.fr)
 
--  staging (tag):
-  -  <https://v3-2-0.code-du-travail-numerique.incubateur.social.gouv.fr>
-  -  <https://v3-1-0.code-du-travail-numerique.incubateur.social.gouv.fr>
+- staging (tag):
+- <https://v3-2-0.code-du-travail-numerique.incubateur.social.gouv.fr>
+- <https://v3-1-0.code-du-travail-numerique.incubateur.social.gouv.fr>
 
 ### Tools
 
--  Issues GitHub : <https://github.com/SocialGouv/code-du-travail-numerique/issues>
--  nomenclature des labels :
-    -  t : `t`ype of issue
-    -  p : name of `p`roduct (we differentiate ES and nav by themes for now)
-    -  s : `s`tatus of the issue
-    -  o : name of the dedicated t`o`ol
+- Issues GitHub : <https://github.com/SocialGouv/code-du-travail-numerique/issues>
+- nomenclature des labels :
 
--  Matomo (piwik) : <https://matomo.tools.factory.social.gouv.fr>
--  Sentry : <https://sentry.tools.factory.social.gouv.fr>
--  Mattermost : <https://mattermost.num.social.gouv.fr/>
--  Trello orga : <https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique>
+  - t : `t`ype of issue
+  - p : name of `p`roduct (we differentiate ES and nav by themes for now)
+  - s : `s`tatus of the issue
+  - o : name of the dedicated t`o`ol
+
+- Matomo (piwik) : <https://matomo.tools.factory.social.gouv.fr>
+- Sentry : <https://sentry.tools.factory.social.gouv.fr>
+- Mattermost : <https://mattermost.num.social.gouv.fr/>
+- Trello orga : <https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique>
 
 <br>
 <br>
@@ -307,9 +308,9 @@ env:
 
 ## Setup
 
--  ElasticSearch & nlp : `docker-compose up elasticsearch nlp_api`
--  API : `yarn api`
--  FrontEnd : `yarn frontend`
+- ElasticSearch & nlp : `docker-compose up elasticsearch nlp_api`
+- API : `yarn api`
+- FrontEnd : `yarn frontend`
 
 <br>
 <br>
@@ -318,9 +319,9 @@ env:
 
 ## Contributions
 
--  Work on feature branches
--  Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
--  Submit PR on current's sprint branch
+- Work on feature branches
+- Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
+- Submit PR on current's sprint branch
 
 <br>
 <br>
@@ -329,10 +330,10 @@ env:
 
 ## HOW TO
 
-### To print SHA1 hashe to a given revision you can use :
+### Retrieve data used on master branch:
 
-```ssh
-$ git rev-parse origin/master
+```sh
+$ docker run --rm --entrypoint cat registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$(git rev-parse origin/master) /app/dump.tf.json >! ./packages/code-du-travail-nlp/data/dump.tf.json
 ```
 
 <br>
@@ -346,16 +347,15 @@ Fichier > Publier pour le web
 ```
 
 On displayed modal you have to select
+
 ```
 > Tabs that you want to publish
 > Page web
 ```
+
 Then click on **"Publier"** button
 
 Once the data are published you can execute your import script
-
-> **Don't forget to unpublish when you have done**
-
 
 <br>
 <br>
@@ -372,6 +372,6 @@ You must add it to the `/packages/code-du-travail-api/Dockerfile`
 + COPY ./packages/code-du-travail-data/dataset/yolo/package.json /app/packages/code-du-travail-data/dataset/yolo/package.json
 ```
 
-
 ## License
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique?ref=badge_large)
