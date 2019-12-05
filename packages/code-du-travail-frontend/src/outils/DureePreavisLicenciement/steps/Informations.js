@@ -8,7 +8,8 @@ import {
   getPastQuestions,
   getNextQuestionKey,
   filterSituations,
-  getSituationsFor
+  getSituationsFor,
+  getFormProps
 } from "../../common/situations.utils";
 
 const { questions, situations: allSituations } = data;
@@ -44,6 +45,15 @@ function StepInformations({ form }) {
           options={answers}
           label={questionsMap[key]}
           subLabel={subLabel(key)}
+          onChange={() =>
+            form.batch(() => {
+              getFormProps({
+                key,
+                criteria,
+                pastQuestions
+              }).forEach(key => form.change(`criteria.${key}`, undefined));
+            })
+          }
         />
       ))}
       {nextQuestionKey && nextQuestionOptions && (
