@@ -5,7 +5,8 @@ import {
   getOptions,
   getPastQuestions,
   isNotYetProcessed,
-  recapSituation
+  recapSituation,
+  getFormProps
 } from "../situations.utils";
 
 import data from "@cdt/data...prime-precarite/precarite.data.json";
@@ -132,6 +133,26 @@ describe("situations", () => {
         catégorie: "15| Agents de maîtrise"
       };
       expect(recapSituation(criteria)).toMatchSnapshot();
+    });
+  });
+
+  describe("getFormProps", () => {
+    it("should return anlist keys", () => {
+      const idcc = "10";
+
+      const key = "foo";
+      const initialSituations = getSituationsFor(data, { idcc });
+      const pastQuestions = getPastQuestions(initialSituations, {
+        foo: "1| foo",
+        bar: "baz"
+      });
+
+      expect(getFormProps(key, initialSituations, pastQuestions)).toEqual([
+        "0",
+        "1",
+        "2",
+        "3"
+      ]);
     });
   });
 });

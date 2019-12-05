@@ -112,3 +112,14 @@ export function getRef({ ref, refUrl }) {
     </p>
   );
 }
+
+export const getFormProps = (key, initialSituations, pastQuestions) =>
+  // list keys that no longer exist
+  Object.keys(initialSituations)
+    .filter(k => !pastQuestions.find(([key]) => k === key))
+    .concat(
+      // list keys that need to be reseted
+      pastQuestions
+        .slice(pastQuestions.findIndex(([k]) => k === key) + 1)
+        .map(([key]) => key)
+    );

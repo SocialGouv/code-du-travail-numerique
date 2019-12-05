@@ -8,7 +8,8 @@ import {
   getPastQuestions,
   getNextQuestionKey,
   filterSituations,
-  getSituationsFor
+  getSituationsFor,
+  getFormProps
 } from "../../common/situations.utils";
 
 const { questions, situations: allSituations } = data;
@@ -37,20 +38,13 @@ function StepInformations({ form }) {
           name={`criteria.${key}`}
           options={answers}
           label={questionsMap[key]}
-          onChange={() => {
+          onChange={() =>
             form.batch(() => {
-              // list keys that no longer exist
-              const resetFormProps = Object.keys(initialSituations)
-                .filter(k => !pastQuestions.find(([key]) => k === key))
-                .concat(
-                  // list keys that need to be reseted
-                  pastQuestions
-                    .slice(pastQuestions.findIndex(([k]) => k === key) + 1)
-                    .map(([key]) => key)
-                );
-              resetFormProps.forEach(key => form.change(key, undefined));
-            });
-          }}
+              getFormProps(key, initialSituations, pastQuestions).forEach(key =>
+                form.change(`criteria.${key}`, undefined)
+              );
+            })
+          }
         />
       ))}
       {nextQuestionKey && nextQuestionOptions && (
