@@ -2335,10 +2335,10 @@
     unzipper "^0.10.5"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.2.85":
-  version "1.2.85"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.85.tgz#2f05c97555151ccbaf8fe088e2deecabc45ecf7c"
-  integrity sha512-IWc6BxYwvgb6Y7y5Iwd2aS1VV6O8r0RhUVzwo/GLWw23DfZVXKfwk0XqlciATY/Z2NPO8Bz0kROiMs5Iq6bdvg==
+"@socialgouv/kali-data@^1.2.86":
+  version "1.2.86"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.86.tgz#6842b42faf17dfb051c301c202e59a1603b64282"
+  integrity sha512-kLMCGiashvy4p4hl1mIotLl7NRXvV2KuxonjvExKZ0MJMunXx6taoqD7S0V8gt/ib1j2LFd3TYnzMwmGogmsDA==
   dependencies:
     "@socialgouv/dila-api-client" "^1.0.5"
     p-map "^3.0.0"
