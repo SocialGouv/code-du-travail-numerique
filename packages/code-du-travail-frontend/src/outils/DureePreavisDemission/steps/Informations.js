@@ -40,9 +40,11 @@ function StepInformations({ form }) {
           label={questionsMap[key]}
           onChange={() =>
             form.batch(() => {
-              getFormProps(key, initialSituations, pastQuestions).forEach(key =>
-                form.change(`criteria.${key}`, undefined)
-              );
+              getFormProps({
+                key,
+                criteria,
+                pastQuestions
+              }).forEach(key => form.change(`criteria.${key}`, undefined));
             })
           }
         />

@@ -47,10 +47,11 @@ function StepInformations({ form }) {
           subLabel={subLabel(key)}
           onChange={() =>
             form.batch(() => {
-              // list keys that no longer exist
-              getFormProps(key, initialSituations, pastQuestions).forEach(key =>
-                form.change(`criteria.${key}`, undefined)
-              );
+              getFormProps({
+                key,
+                criteria,
+                pastQuestions
+              }).forEach(key => form.change(`criteria.${key}`, undefined));
             })
           }
         />

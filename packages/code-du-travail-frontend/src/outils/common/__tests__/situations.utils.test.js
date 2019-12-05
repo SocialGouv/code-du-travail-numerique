@@ -138,21 +138,18 @@ describe("situations", () => {
 
   describe("getFormProps", () => {
     it("should return anlist keys", () => {
-      const idcc = "10";
+      const key = "bar";
+      const initialSituations = getSituationsFor(data, { idcc: "10" });
+      const criteria = { foo: "1| foo", bar: "baz" };
+      const pastQuestions = getPastQuestions(initialSituations, criteria);
 
-      const key = "foo";
-      const initialSituations = getSituationsFor(data, { idcc });
-      const pastQuestions = getPastQuestions(initialSituations, {
-        foo: "1| foo",
-        bar: "baz"
-      });
-
-      expect(getFormProps(key, initialSituations, pastQuestions)).toEqual([
-        "0",
-        "1",
-        "2",
-        "3"
-      ]);
+      expect(
+        getFormProps({
+          key,
+          criteria,
+          pastQuestions
+        })
+      ).toEqual(["foo"]);
     });
   });
 });

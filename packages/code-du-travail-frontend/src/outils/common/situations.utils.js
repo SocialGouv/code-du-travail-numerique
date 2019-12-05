@@ -113,9 +113,9 @@ export function getRef({ ref, refUrl }) {
   );
 }
 
-export const getFormProps = (key, initialSituations, pastQuestions) =>
+export const getFormProps = ({ key, criteria, pastQuestions }) =>
   // list keys that no longer exist
-  Object.keys(initialSituations)
+  Object.keys(criteria)
     .filter(k => !pastQuestions.find(([key]) => k === key))
     .concat(
       // list keys that need to be reseted
