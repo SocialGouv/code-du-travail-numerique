@@ -17,7 +17,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
   const [ccInfo, setCcInfo] = useConventionState({});
   useEffect(() => {
     form.batch(() => {
-      form.change(CCN, ccInfo.convention);
+      form.change(CCN, ccInfo ? ccInfo.convention : null);
     });
   }, [ccInfo, form]);
   return (
