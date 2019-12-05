@@ -4,6 +4,7 @@ import { Alert, Container, theme } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
+import { outils } from "../../src/common/Outils";
 
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
@@ -19,47 +20,29 @@ const BigError = ({ children }) => (
 
 const OutilIntrouvable = () => <BigError>Cet outil est introuvable</BigError>;
 
+const outilsBySlug = {
+  "indemnite-licenciement": CalculateurIndemnite,
+  "preavis-licenciement": DureePreavisLicenciement,
+  "simulateur-embauche": SimulateurEmbauche,
+  "indemnite-precarite": SimulateurIndemnitePrecarite,
+  "preavis-demission": DureePreavisDemission
+};
+
 const getSimulator = function(name) {
-  switch (name) {
-    case "indemnite-licenciement":
-      return {
-        title: "Calculer une indemnité de licenciement",
-        description:
-          "Calculez votre indemnité de licenciement en tenant compte des dispositions conventionnelles",
-        component: CalculateurIndemnite
-      };
-    case "preavis-licenciement":
-      return {
-        title: "Simulateur de durée de préavis de licenciement",
-        description:
-          "Estimez simplement la durée du préavis dans le cadre d'un licenciement",
-        component: DureePreavisLicenciement
-      };
-    case "simulateur-embauche":
-      return {
-        title: "Simulateur d'embauche",
-        description:
-          "Simuler le coût d'une embauche en France et calculer le salaire net à partir du brut : CDD, statut cadre, cotisations sociales, retraite…",
-        component: SimulateurEmbauche
-      };
-    case "indemnite-precarite":
-      return {
-        title: "Calculer une indemnite de précarité",
-        description: "Calculez votre prime de précarité",
-        component: SimulateurIndemnitePrecarite
-      };
-    case "preavis-demission":
-      return {
-        title: "Calculer un préavis de démission",
-        description: "Calculer un préavis de démission",
-        component: DureePreavisDemission
-      };
-    default:
-      return {
-        title: "Outil introuvable",
-        component: OutilIntrouvable
-      };
+  const outil = outils.find(({ slug = "" }) =>
+    new RegExp(`^${name}$`).test(slug)
+  );
+  if (outil) {
+    return {
+      title: outil.title,
+      description: outil.text,
+      component: outilsBySlug[name]
+    };
   }
+  return {
+    title: "Outil introuvable",
+    component: OutilIntrouvable
+  };
 };
 
 class Outils extends React.Component {
