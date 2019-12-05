@@ -29,7 +29,7 @@
   "dependencies": {
     "@cdt/sources": "^3.8.0",
     "@elastic/elasticsearch": "^7.5.0",
-    "@socialgouv/kali-data": "^1.2.86",
+    "@socialgouv/kali-data": "^1.2.92",
     "@socialgouv/legi-data": "^1.1.10",
     "esm": "^3.2.25",
     "unist-util-find": "^1.0.1",
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
-    "@socialgouv/eslint-config-recommended": "^0.10.3",
+    "@socialgouv/eslint-config-recommended": "^0.10.4",
     "@zeit/ncc": "^0.20.5",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
