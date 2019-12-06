@@ -389,7 +389,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
           <h1
             class="c11"
           >
-            Simulateur de l’indemnité de licenciement
+            Simulateur d'indemnité de licenciement
           </h1>
           <div
             class="c12"

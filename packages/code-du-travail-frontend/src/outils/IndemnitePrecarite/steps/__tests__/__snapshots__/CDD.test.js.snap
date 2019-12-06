@@ -53,7 +53,7 @@ exports[`<StepCDD /> should render 1`] = `
     <p
       class="c0"
     >
-      Le CDD a-t-il été rompu pendant votre période d’essai ?
+      Le CDD a-t-il été rompu pendant la période d’essai du salarié ?
       <span
         aria-label="champs obligatoire"
         class="c1"
@@ -93,7 +93,7 @@ exports[`<StepCDD /> should render 1`] = `
     <p
       class="c0"
     >
-      À la fin du CDD, la salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
+      À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
       <span
         aria-label="champs obligatoire"
         class="c1"

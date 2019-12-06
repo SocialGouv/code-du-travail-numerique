@@ -33,12 +33,12 @@ function StepCDD() {
       <YesNoQuestion
         data-testid="finContratPeriodeDessai"
         name="finContratPeriodeDessai"
-        label="Le CDD a-t-il été rompu pendant votre période d’essai&nbsp;?"
+        label="Le CDD a-t-il été rompu pendant la période d’essai du salarié&nbsp;?"
       />
       <YesNoQuestion
         data-testid="propositionCDIFindeContrat"
         name="propositionCDIFindeContrat"
-        label="À la fin du CDD, la salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent&nbsp;?"
+        label="À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent&nbsp;?"
       />
       <Field name="propositionCDIFindeContrat">
         {({ input }) => {

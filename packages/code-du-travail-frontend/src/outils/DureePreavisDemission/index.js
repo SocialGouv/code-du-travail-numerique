@@ -4,12 +4,12 @@ import { Container, Section } from "@socialgouv/react-ui";
 import { Wizard } from "../common/Wizard";
 import { initialSteps, stepReducer } from "./stepReducer";
 
-function DureePreavisDemission() {
+function DureePreavisDemission({ title }) {
   return (
     <Section>
       <Container>
         <Wizard
-          title="Simuler la durée du préavis de démission"
+          title={title}
           initialSteps={initialSteps}
           stepReducer={stepReducer}
         />

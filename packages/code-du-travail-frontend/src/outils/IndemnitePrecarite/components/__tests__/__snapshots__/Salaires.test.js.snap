@@ -124,7 +124,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
 
 <div>
   <p>
-    Indiquez les salaires mensuels bruts perçus pendant le contrat *
+    Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
   </p>
   <div
     class="c0"
@@ -279,7 +279,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 
 <div>
   <p>
-    Indiquez les salaires mensuels bruts perçus pendant le contrat *
+    Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
   </p>
   <button
     class="c0 c1 c2"
@@ -436,7 +436,7 @@ exports[`<Salaires /> should render 1`] = `
 
 <div>
   <p>
-    Indiquez les salaires mensuels bruts perçus pendant le contrat *
+    Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
   </p>
   <div
     class="c0"

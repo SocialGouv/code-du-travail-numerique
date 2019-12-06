@@ -37,14 +37,11 @@ export const initialSteps = [
   }
 ];
 
-function SimulateurIndemnitePrecarite() {
+function SimulateurIndemnitePrecarite({ title }) {
   return (
     <Section>
       <Container>
-        <Wizard
-          title="Simuler la prime de précarité"
-          initialSteps={initialSteps}
-        />
+        <Wizard title={title} initialSteps={initialSteps} />
       </Container>
     </Section>
   );

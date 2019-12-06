@@ -4,7 +4,9 @@ import { SimulateurIndemnitePrecarite } from "..";
 
 describe("<SimulateurIndemnitePrecarite />", () => {
   it("should render", () => {
-    const { container } = render(<SimulateurIndemnitePrecarite />);
+    const { container } = render(
+      <SimulateurIndemnitePrecarite title="Simulateur de l'indemnité de précarité" />
+    );
     expect(container).toMatchSnapshot();
   });
 });

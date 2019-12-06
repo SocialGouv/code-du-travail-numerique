@@ -11,7 +11,7 @@ import {
 } from "./stepReducer";
 import { Wizard } from "../common/Wizard";
 
-function CalculateurIndemnite() {
+function CalculateurIndemnite({ title }) {
   /**
    * The rules defined here allows to manage additionnal steps to the wizard
    */
@@ -47,7 +47,7 @@ function CalculateurIndemnite() {
     <Section>
       <Container>
         <Wizard
-          title="Simulateur de l’indemnité de licenciement"
+          title={title}
           stepReducer={stepReducer}
           initialSteps={initialSteps}
           Rules={Rules}

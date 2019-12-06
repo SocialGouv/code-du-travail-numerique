@@ -14,8 +14,8 @@ function Salaires({ name, visible = true, onChange }) {
           <>
             {visible && (
               <p>
-                Indiquez les salaires mensuels bruts perçus pendant le
-                contrat&nbsp;*
+                Quels sont les salaires mensuels bruts perçus durant le contrat
+                de travail&nbsp;?
               </p>
             )}
             {fields.map((name, index) => (
