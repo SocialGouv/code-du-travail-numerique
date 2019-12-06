@@ -2,6 +2,8 @@ image:
   repository: ${CI_REGISTRY_IMAGE}/api
   tag: master
 
+fullnameOverride: "nodejs-api"
+
 deployment:
   port: ${PORT}
 
