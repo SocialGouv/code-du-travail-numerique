@@ -144,14 +144,14 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         ...
       </option>
       <option
-        value="20| Cadres"
-      >
-        Cadres
-      </option>
-      <option
-        value="38| Collaborateurs"
+        value="42| Collaborateurs"
       >
         Collaborateurs
+      </option>
+      <option
+        value="48| Cadres"
+      >
+        Cadres
       </option>
     </select>
   </div>
@@ -250,14 +250,14 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="20| Cadres"
-      >
-        Cadres
-      </option>
-      <option
-        value="38| Collaborateurs"
+        value="42| Collaborateurs"
       >
         Collaborateurs
+      </option>
+      <option
+        value="48| Cadres"
+      >
+        Cadres
       </option>
     </select>
   </div>
@@ -282,14 +282,14 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="18| 700 à 750"
+        value="23| 715 et supérieur"
       >
-        700 à 750
+        715 et supérieur
       </option>
       <option
-        value="19| 800 à 830 inclus"
+        value="27| 910 à 940"
       >
-        800 à 830 inclus
+        910 à 940
       </option>
     </select>
   </div>

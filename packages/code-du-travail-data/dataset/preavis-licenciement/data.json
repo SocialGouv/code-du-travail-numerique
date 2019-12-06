@@ -1,16 +1,16 @@
 {
   "questions": [
     {
-      "name": "convention collective",
-      "question": "Quelle est la convention collective du salarié ?"
+      "name": "aéroport paris",
+      "question": "L'entreprise appliquait elle la convention collective régionale \"Manutention et nettoyage sur les aéroports (région parisienne)\" ?"
+    },
+    {
+      "name": "agents payés à l'heure",
+      "question": "L'agent est-il payé à l'heure ?"
     },
     {
       "name": "durée d'accueil de l'enfant",
       "question": "Quelle est la durée d'accueil de l'enfant ?"
-    },
-    {
-      "name": "catégorie",
-      "question": "Quelle est la catégorie du salarié ?"
     },
     {
       "name": "catégorie socio-professionnelle",
@@ -37,6 +37,18 @@
       "question": "Pour quelle raison le contrat de travail a-t-il été rompu ?"
     },
     {
+      "name": "période essai",
+      "question": "Le salarié est-il en période d'essai ?"
+    },
+    {
+      "name": "conclusion contrat travail",
+      "question": "Quelle est la date d'entrée du salarié dans l'entreprise?"
+    },
+    {
+      "name": "logement",
+      "question": "Le salarié est-il logé ?"
+    },
+    {
       "name": "niveau",
       "question": "Quel est le niveau du salarié ?"
     },
@@ -53,18 +65,6 @@
       "question": "Dans quel groupe professionnel le salarié se situe-t-il ?"
     },
     {
-      "name": "âge",
-      "question": "Quel est l'âge du salarié ?"
-    },
-    {
-      "name": "date contrat travail",
-      "question": "Quelle est la date d'entrée du salarié dans l'entreprise?"
-    },
-    {
-      "name": "ancienneté",
-      "question": "Quelle est l'ancienneté du salarié ?"
-    },
-    {
       "name": "coefficient",
       "question": "Quel est le coefficient hiérarchique du salarié ?"
     },
@@ -73,20 +73,12 @@
       "question": "Quel est l'échelon du salarié ?"
     },
     {
-      "name": "période essai",
-      "question": "Le salarié est-il en période d'essai ?"
+      "name": "ancienneté",
+      "question": "Quelle est l'ancienneté du salarié ?"
     },
     {
-      "name": "logement",
-      "question": "Le salarié est-il logé ?"
-    },
-    {
-      "name": "aéroport paris",
-      "question": "L'entreprise appliquait elle la convention collective régionale \"Manutention et nettoyage sur les aéroports (région parisienne)\" ?"
-    },
-    {
-      "name": "agents payés à l'heure",
-      "question": "L'agent est-il payé à l'heure ?"
+      "name": "âge",
+      "question": "Quel est l'âge du salarié ?"
     },
     {
       "name": "secteur d'activité",
@@ -97,14 +89,22 @@
       "question": "Quelle est la durée initiale du contrat du salarié ?"
     },
     {
+      "name": "catégorie",
+      "question": "Quelle est la catégorie du salarié ?"
+    },
+    {
       "name": "déjà exercé pendant plus de 1 an au cours des 5 dernières années des fonctions de cadre chez un autre employeur",
       "question": "Le salarié a-t-il déjà exercé pendant plus de 1 an au cours des 5 dernières années des fonctions de cadre pour un autre employeur ?"
+    },
+    {
+      "name": "convention collective",
+      "question": "Quelle est la convention collective du salarié ?"
     }
   ],
   "situations": [
     {
       "criteria": {
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0000",
@@ -115,7 +115,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "20| 6 mois à moins de 2 ans"
+        "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0000",
@@ -126,7 +126,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0000",
@@ -137,8 +137,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "ancienneté": "17| moins de 6 mois"
+        "catégorie socio-professionnelle": "4| Ouvriers",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0016",
@@ -149,8 +149,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "4| Ouvriers"
       },
       "type": "préavis de licenciement",
       "idcc": "0016",
@@ -161,8 +160,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "4| Ouvriers",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0016",
@@ -173,8 +172,19 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "50| de 1 mois à moins de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "3| moins de 1 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0016",
+      "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "30",
+      "ref": "Annexe II, article 13",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "16| Employés"
       },
       "type": "préavis de licenciement",
       "idcc": "0016",
@@ -185,8 +195,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0016",
@@ -197,9 +207,21 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
-        "groupe": "39| 1 à 5 ",
-        "ancienneté": "50| de 1 mois à moins de 2 ans"
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "groupe": "25| 1 à 5 ",
+        "ancienneté": "3| moins de 1 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0016",
+      "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "30",
+      "ref": "Annexe III, article 17",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849262&cidTexte=KALITEXT000005678889&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "groupe": "25| 1 à 5 "
       },
       "type": "préavis de licenciement",
       "idcc": "0016",
@@ -210,9 +232,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
-        "groupe": "39| 1 à 5 ",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "groupe": "25| 1 à 5 ",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0016",
@@ -223,8 +245,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
-        "groupe": "40| 6 à 8"
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "groupe": "30| 6 à 8"
       },
       "type": "préavis de licenciement",
       "idcc": "0016",
@@ -235,7 +257,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "32| Ingénieurs et Cadres "
+        "catégorie socio-professionnelle": "61| Ingénieurs et Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0016",
@@ -246,8 +268,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -258,8 +280,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -270,97 +292,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "77| autres cadres"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0029",
-      "answer": "4 mois",
-      "duration": "120",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "70| directeurs généraux"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0029",
-      "answer": "6 mois",
-      "duration": "180",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "71| directeurs-adjoints"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0029",
-      "answer": "6 mois",
-      "duration": "180",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "72| gestionnaires"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0029",
-      "answer": "6 mois",
-      "duration": "180",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "73| médecins"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0029",
-      "answer": "6 mois",
-      "duration": "180",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "74| pharmaciens"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0029",
-      "answer": "6 mois",
-      "duration": "180",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "75| biologistes"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0029",
-      "answer": "6 mois",
-      "duration": "180",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "coefficient": "26| supérieur à 715"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0029",
-      "answer": "6 mois",
-      "duration": "180",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "76| cadres administratifs et de gestion",
-        "coefficient": "27| inférieur à 715"
+        "catégorie socio-professionnelle": "75| autres cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0029",
@@ -371,10 +303,111 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "3| I",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "1| inférieur à 160"
+        "catégorie socio-professionnelle": "74| directeurs généraux"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "6 mois",
+      "duration": "180",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "73| Directeurs"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "6 mois",
+      "duration": "180",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "69| directeurs-adjoints"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "6 mois",
+      "duration": "180",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "67| gestionnaires"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "6 mois",
+      "duration": "180",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "66| médecins"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "6 mois",
+      "duration": "180",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "65| pharmaciens"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "6 mois",
+      "duration": "180",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "64| biologistes"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "6 mois",
+      "duration": "180",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "62| cadres administratifs et de gestion",
+        "coefficient": "25| 800 à 830 inclus"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "6 mois",
+      "duration": "180",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "62| cadres administratifs et de gestion",
+        "coefficient": "24| 720 à 750 inclus"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0029",
+      "answer": "4 mois",
+      "duration": "120",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Ouvriers",
+        "groupe": "1| I",
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -385,10 +418,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "3| I",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "1| inférieur à 160"
+        "catégorie socio-professionnelle": "4| Ouvriers",
+        "groupe": "1| I",
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -399,10 +432,23 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
+        "catégorie socio-professionnelle": "4| Ouvriers",
+        "groupe": "1| I",
+        "coefficient": "8| supérieur à 190 (inclus)"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "4| Ouvriers",
         "groupe": "4| II",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "1| inférieur à 160"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -413,24 +459,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
+        "catégorie socio-professionnelle": "4| Ouvriers",
         "groupe": "4| II",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "5| entre 160 (inclus) et 190"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "0044",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "1| inférieur à 160"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -441,10 +473,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
+        "catégorie socio-professionnelle": "4| Ouvriers",
         "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "5| entre 160 (inclus) et 190"
+        "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -455,10 +486,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
+        "catégorie socio-professionnelle": "4| Ouvriers",
         "groupe": "5| III",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "5| entre 160 (inclus) et 190"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -469,10 +500,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
+        "catégorie socio-professionnelle": "4| Ouvriers",
         "groupe": "5| III",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "5| entre 160 (inclus) et 190"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -483,7 +514,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
+        "catégorie socio-professionnelle": "4| Ouvriers",
         "groupe": "5| III",
         "coefficient": "8| supérieur à 190 (inclus)"
       },
@@ -496,9 +527,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "3| I",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "28| Techniciens",
+        "groupe": "1| I",
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -509,9 +541,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "3| I",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "28| Techniciens",
+        "groupe": "1| I",
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -522,9 +555,23 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
+        "catégorie socio-professionnelle": "28| Techniciens",
+        "groupe": "1| I",
+        "coefficient": "8| supérieur à 190 (inclus)"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "28| Techniciens",
         "groupe": "4| II",
-        "ancienneté": "14| moins de 2 ans"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -535,9 +582,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
+        "catégorie socio-professionnelle": "28| Techniciens",
         "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -548,10 +596,23 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
+        "catégorie socio-professionnelle": "28| Techniciens",
+        "groupe": "4| II",
+        "coefficient": "8| supérieur à 190 (inclus)"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "28| Techniciens",
         "groupe": "5| III",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "5| entre 160 (inclus) et 190"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -562,10 +623,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
+        "catégorie socio-professionnelle": "28| Techniciens",
         "groupe": "5| III",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "5| entre 160 (inclus) et 190"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -576,7 +637,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
+        "catégorie socio-professionnelle": "28| Techniciens",
         "groupe": "5| III",
         "coefficient": "8| supérieur à 190 (inclus)"
       },
@@ -585,13 +646,13 @@
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "2| IV",
-        "coefficient": "9| inférieur à 275"
+        "catégorie socio-professionnelle": "28| Techniciens",
+        "groupe": "6| IV",
+        "coefficient": "11| 275 et plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -602,9 +663,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "groupe": "2| IV",
-        "coefficient": "12| supérieur à 275 (inclus)"
+        "catégorie socio-professionnelle": "28| Techniciens",
+        "groupe": "6| IV",
+        "coefficient": "14| inférieur à 300"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -615,9 +676,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "3| I",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "groupe": "1| I",
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -628,9 +690,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "groupe": "3| I",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "16| Employés",
+        "groupe": "1| I",
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -641,9 +704,23 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
+        "catégorie socio-professionnelle": "16| Employés",
+        "groupe": "1| I",
+        "coefficient": "8| supérieur à 190 (inclus)"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "16| Employés",
         "groupe": "4| II",
-        "ancienneté": "14| moins de 2 ans"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -654,9 +731,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
+        "catégorie socio-professionnelle": "16| Employés",
         "groupe": "4| II",
-        "ancienneté": "13| 2 ans ou plus"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -667,10 +745,23 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
+        "catégorie socio-professionnelle": "16| Employés",
+        "groupe": "4| II",
+        "coefficient": "8| supérieur à 190 (inclus)"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0044",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "16| Employés",
         "groupe": "5| III",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "5| entre 160 (inclus) et 190"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -681,10 +772,10 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
+        "catégorie socio-professionnelle": "16| Employés",
         "groupe": "5| III",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "5| entre 160 (inclus) et 190"
+        "coefficient": "7| 190 et plus",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -695,7 +786,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
+        "catégorie socio-professionnelle": "16| Employés",
         "groupe": "5| III",
         "coefficient": "8| supérieur à 190 (inclus)"
       },
@@ -708,9 +799,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "groupe": "2| IV",
-        "coefficient": "9| inférieur à 275"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "groupe": "6| IV",
+        "coefficient": "11| 275 et plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -721,9 +812,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "groupe": "2| IV",
-        "coefficient": "12| supérieur à 275 (inclus)"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "groupe": "6| IV",
+        "coefficient": "14| inférieur à 300"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -734,8 +825,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres",
-        "groupe": "7| V"
+        "catégorie socio-professionnelle": "60| Ingénieurs, Cadres",
+        "groupe": "9| V"
       },
       "type": "préavis de licenciement",
       "idcc": "0044",
@@ -747,7 +838,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0054",
@@ -758,8 +849,7 @@
     },
     {
       "criteria": {
-        "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "niveau": "1| I"
       },
       "type": "préavis de licenciement",
       "idcc": "0054",
@@ -771,7 +861,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0054",
@@ -783,7 +873,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0054",
@@ -795,7 +885,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0054",
@@ -806,8 +896,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "14| moins de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0054",
@@ -818,8 +908,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "13| 2 ans ou plus"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0054",
@@ -830,7 +920,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "0054",
@@ -852,8 +942,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0086",
@@ -864,8 +954,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0086",
@@ -876,7 +966,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens"
+        "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens"
       },
       "type": "préavis de licenciement",
       "idcc": "0086",
@@ -887,7 +977,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0086",
@@ -898,9 +988,9 @@
     },
     {
       "criteria": {
-        "groupe": "1| de I à III",
-        "date contrat travail": "2| contrat de travail conclu avant 2009",
-        "ancienneté": "14| moins de 2 ans"
+        "conclusion contrat travail": "1| contrat de travail conclu après le 1er juillet 2009",
+        "groupe": "24| 1 à 3",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0176",
@@ -911,9 +1001,9 @@
     },
     {
       "criteria": {
-        "groupe": "1| de I à III",
-        "date contrat travail": "2| contrat de travail conclu avant 2009",
-        "ancienneté": "12| plus de 2 ans"
+        "conclusion contrat travail": "1| contrat de travail conclu après le 1er juillet 2009",
+        "groupe": "24| 1 à 3",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0176",
@@ -924,8 +1014,8 @@
     },
     {
       "criteria": {
-        "groupe": "1| de I à III",
-        "date contrat travail": "1| contrat de travail conclu après 2009"
+        "conclusion contrat travail": "2| contrat de travail conclu avant le 1er juillet 2009",
+        "groupe": "24| 1 à 3"
       },
       "type": "préavis de licenciement",
       "idcc": "0176",
@@ -936,8 +1026,8 @@
     },
     {
       "criteria": {
-        "groupe": "2| IV",
-        "date contrat travail": "2| contrat de travail conclu avant 2009"
+        "conclusion contrat travail": "1| contrat de travail conclu après le 1er juillet 2009",
+        "groupe": "15| 4"
       },
       "type": "préavis de licenciement",
       "idcc": "0176",
@@ -948,7 +1038,8 @@
     },
     {
       "criteria": {
-        "date contrat travail": "2| contrat de travail conclu avant 2009"
+        "conclusion contrat travail": "1| contrat de travail conclu après le 1er juillet 2009",
+        "groupe": "29| 5 et suivants"
       },
       "type": "préavis de licenciement",
       "idcc": "0176",
@@ -959,8 +1050,8 @@
     },
     {
       "criteria": {
-        "groupe": "36| IV à VI",
-        "date contrat travail": "1| contrat de travail conclu après 2009"
+        "conclusion contrat travail": "2| contrat de travail conclu avant le 1er juillet 2009",
+        "groupe": "28| 4 à 6 "
       },
       "type": "préavis de licenciement",
       "idcc": "0176",
@@ -971,8 +1062,8 @@
     },
     {
       "criteria": {
-        "groupe": "38| VI et suivants",
-        "date contrat travail": "1| contrat de travail conclu après 2009"
+        "conclusion contrat travail": "2| contrat de travail conclu avant le 1er juillet 2009",
+        "groupe": "31| 6 et suivants "
       },
       "type": "préavis de licenciement",
       "idcc": "0176",
@@ -983,8 +1074,9 @@
     },
     {
       "criteria": {
+        "aéroport paris": "2| non",
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -995,8 +1087,9 @@
     },
     {
       "criteria": {
+        "aéroport paris": "2| non",
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1007,8 +1100,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "ancienneté": "14| moins de 2 ans"
+        "aéroport paris": "2| non",
+        "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1019,8 +1113,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "ancienneté": "13| 2 ans ou plus"
+        "aéroport paris": "2| non",
+        "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1031,7 +1126,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "aéroport paris": "2| non",
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1042,9 +1138,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "ancienneté": "17| moins de 6 mois",
-        "aéroport paris": "1| oui"
+        "aéroport paris": "1| oui",
+        "catégorie socio-professionnelle": "4| Ouvriers",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1055,9 +1151,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "ancienneté": "21| plus de 6 mois à 2 ans",
-        "aéroport paris": "1| oui"
+        "aéroport paris": "1| oui",
+        "catégorie socio-professionnelle": "4| Ouvriers",
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1068,9 +1164,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "1| Ouvriers",
-        "ancienneté": "13| 2 ans ou plus",
-        "aéroport paris": "1| oui"
+        "aéroport paris": "1| oui",
+        "catégorie socio-professionnelle": "4| Ouvriers",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1081,9 +1177,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "ancienneté": "14| moins de 2 ans",
-        "aéroport paris": "1| oui"
+        "aéroport paris": "1| oui",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1094,9 +1190,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "ancienneté": "13| 2 ans ou plus",
-        "aéroport paris": "1| oui"
+        "aéroport paris": "1| oui",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1107,8 +1203,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "aéroport paris": "1| oui"
+        "aéroport paris": "1| oui",
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0275",
@@ -1119,9 +1215,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "38| Collaborateurs",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "18| 700 à 750"
+        "catégorie socio-professionnelle": "42| Collaborateurs",
+        "coefficient": "23| 715 et supérieur",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0292",
@@ -1132,9 +1228,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "38| Collaborateurs",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "18| 700 à 750"
+        "catégorie socio-professionnelle": "42| Collaborateurs",
+        "coefficient": "23| 715 et supérieur",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0292",
@@ -1145,8 +1241,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "38| Collaborateurs",
-        "coefficient": "19| 800 à 830 inclus"
+        "catégorie socio-professionnelle": "42| Collaborateurs",
+        "coefficient": "27| 910 à 940"
       },
       "type": "préavis de licenciement",
       "idcc": "0292",
@@ -1157,7 +1253,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0292",
@@ -1168,8 +1264,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1180,8 +1276,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1192,7 +1288,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "77| autres cadres"
+        "catégorie socio-professionnelle": "75| autres cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1203,8 +1299,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "70| directeurs généraux",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "74| directeurs généraux",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1215,8 +1311,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "70| directeurs généraux",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "74| directeurs généraux",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1227,8 +1323,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "80| directeurs de centre de formation en travail social",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "72| directeurs de centre de formation en travail social",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1239,8 +1335,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "80| directeurs de centre de formation en travail social",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "72| directeurs de centre de formation en travail social",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1251,8 +1347,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "78| directeurs d'établissement",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "71| directeurs d'établissement",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1263,8 +1359,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "78| directeurs d'établissement",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "71| directeurs d'établissement",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1275,8 +1371,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "79| directeurs de service",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "70| directeurs de service",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1287,8 +1383,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "79| directeurs de service",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "70| directeurs de service",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0413",
@@ -1301,7 +1397,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "motif de rupture": "2| autre motif (hors faute grave ou lourde)",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0573",
@@ -1314,7 +1410,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "motif de rupture": "2| autre motif (hors faute grave ou lourde)",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0573",
@@ -1337,7 +1433,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens"
+        "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens"
       },
       "type": "préavis de licenciement",
       "idcc": "0573",
@@ -1348,7 +1444,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0573",
@@ -1360,8 +1456,8 @@
     {
       "criteria": {
         "position": "1| I",
-        "âge": "1| moins de 50 ans",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans",
+        "âge": "1| moins de 50 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0650",
@@ -1373,8 +1469,8 @@
     {
       "criteria": {
         "position": "1| I",
-        "âge": "1| moins de 50 ans",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus",
+        "âge": "1| moins de 50 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0650",
@@ -1409,8 +1505,20 @@
     },
     {
       "criteria": {
-        "âge": "2| 50 ans à 55 ans",
-        "ancienneté": "18| entre 1 an et moins de 5 ans "
+        "ancienneté": "22| moins de 1 an",
+        "âge": "2| 50 ans à 55 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0650",
+      "answer": "3 mois",
+      "duration": "120",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "ancienneté": "42| entre 1 an et moins de 5 ans",
+        "âge": "2| 50 ans à 55 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0650",
@@ -1421,8 +1529,8 @@
     },
     {
       "criteria": {
-        "âge": "2| 50 ans à 55 ans",
-        "ancienneté": "19| 5 ans et plus"
+        "ancienneté": "46| 5 ans et plus",
+        "âge": "2| 50 ans à 55 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0650",
@@ -1444,8 +1552,20 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "5| de 1 mois à moins de 6 mois "
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "3| moins de 1 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0675",
+      "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "15",
+      "ref": "Article 38",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=42225D4AAFE4AE3882C5685E66B8B640.tpdjo02v_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "12| 1 mois à moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0675",
@@ -1456,8 +1576,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "20| 6 mois à moins de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0675",
@@ -1468,8 +1588,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0675",
@@ -1480,7 +1600,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise"
       },
       "type": "préavis de licenciement",
       "idcc": "0675",
@@ -1491,7 +1611,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0675",
@@ -1502,7 +1622,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "0787",
@@ -1513,7 +1633,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés"
+        "catégorie socio-professionnelle": "16| Employés"
       },
       "type": "préavis de licenciement",
       "idcc": "0787",
@@ -1524,8 +1644,19 @@
     },
     {
       "criteria": {
+        "catégorie socio-professionnelle": "16| Employés"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "0787",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "Article 6.2.0",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=CFEA1065D76552B48FA299221688C973.tpdila22v_3?idArticle=KALIARTI000005839444&cidTexte=KALITEXT000005674852&dateTexte=19910731"
+    },
+    {
+      "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0822",
@@ -1537,7 +1668,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0822",
@@ -1549,7 +1680,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0822",
@@ -1561,7 +1692,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0822",
@@ -1573,7 +1704,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0822",
@@ -1584,8 +1715,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0822",
@@ -1596,8 +1727,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0822",
@@ -1608,7 +1739,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "0822",
@@ -1630,8 +1761,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "19| Personnel de fabrication, personnel de vente et personnel de services",
-        "ancienneté": "17| moins de 6 mois"
+        "catégorie socio-professionnelle": "35| Personnel de fabrication, personnel de vente et personnel de services",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0843",
@@ -1642,8 +1773,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "19| Personnel de fabrication, personnel de vente et personnel de services",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "35| Personnel de fabrication, personnel de vente et personnel de services",
+        "ancienneté": "32| plus de 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0843",
@@ -1654,8 +1785,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "19| Personnel de fabrication, personnel de vente et personnel de services",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "35| Personnel de fabrication, personnel de vente et personnel de services",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0843",
@@ -1666,8 +1797,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0843",
@@ -1678,8 +1809,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0843",
@@ -1691,7 +1822,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0860",
@@ -1703,7 +1834,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0860",
@@ -1715,7 +1846,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0860",
@@ -1727,7 +1858,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0860",
@@ -1739,7 +1870,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0860",
@@ -1750,8 +1881,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0860",
@@ -1762,8 +1893,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0860",
@@ -1774,7 +1905,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "0860",
@@ -1797,7 +1928,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0878",
@@ -1809,7 +1940,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0878",
@@ -1821,7 +1952,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0878",
@@ -1833,7 +1964,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0878",
@@ -1845,7 +1976,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0878",
@@ -1856,8 +1987,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0878",
@@ -1868,8 +1999,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0878",
@@ -1880,7 +2011,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "0878",
@@ -1903,7 +2034,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0898",
@@ -1915,7 +2046,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0898",
@@ -1927,7 +2058,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0898",
@@ -1939,7 +2070,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0898",
@@ -1951,7 +2082,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0898",
@@ -1962,8 +2093,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0898",
@@ -1974,8 +2105,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0898",
@@ -1986,7 +2117,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "0898",
@@ -2009,7 +2140,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0914",
@@ -2021,7 +2152,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0914",
@@ -2033,7 +2164,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0914",
@@ -2045,7 +2176,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0914",
@@ -2057,7 +2188,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0914",
@@ -2068,8 +2199,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "0914",
@@ -2080,8 +2211,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0914",
@@ -2092,7 +2223,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "0914",
@@ -2115,7 +2246,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0937",
@@ -2127,7 +2258,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0937",
@@ -2139,7 +2270,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0937",
@@ -2151,7 +2282,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0937",
@@ -2163,7 +2294,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0937",
@@ -2174,8 +2305,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "14| moins de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0937",
@@ -2186,8 +2317,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "13| 2 ans ou plus"
+        "niveau": "5| IV",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0937",
@@ -2198,7 +2329,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "0937",
@@ -2221,7 +2352,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "0965",
@@ -2233,7 +2364,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "20| 6 mois à moins de 2 ans"
+        "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0965",
@@ -2245,7 +2376,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0965",
@@ -2257,7 +2388,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0965",
@@ -2269,7 +2400,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0965",
@@ -2280,8 +2411,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "14| moins de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "0965",
@@ -2292,8 +2423,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "13| 2 ans ou plus"
+        "niveau": "5| IV",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "0965",
@@ -2304,7 +2435,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "0965",
@@ -2326,8 +2457,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "54| A",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "79| A",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1043",
@@ -2338,8 +2469,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "54| A",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "79| A",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1043",
@@ -2350,7 +2481,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "55| B"
+        "catégorie socio-professionnelle": "80| B"
       },
       "type": "préavis de licenciement",
       "idcc": "1043",
@@ -2362,8 +2493,8 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "17| moins de 6 mois",
-        "échelon": "1| 1 et 2"
+        "échelon": "2| de 3 à 12",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1090",
@@ -2375,8 +2506,8 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "10| de 6 mois à 2 ans",
-        "échelon": "1| 1 et 2"
+        "échelon": "2| de 3 à 12",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1090",
@@ -2388,8 +2519,8 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "13| 2 ans ou plus",
-        "échelon": "1| 1 et 2"
+        "échelon": "2| de 3 à 12",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1090",
@@ -2401,8 +2532,8 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "14| moins de 2 ans",
-        "échelon": "2| de 3 à 12"
+        "échelon": "3| de 17 à 19",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1090",
@@ -2414,8 +2545,8 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "13| 2 ans ou plus",
-        "échelon": "2| de 3 à 12"
+        "échelon": "3| de 17 à 19",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1090",
@@ -2426,31 +2557,20 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "échelon": "3| de 17 à 19"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1090",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "Article 4.10",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "échelon": "4| de 20 à 25"
       },
       "type": "préavis de licenciement",
       "idcc": "1090",
-      "answer": "3 mois",
-      "duration": "90",
+      "answer": "2 mois",
+      "duration": "60",
       "ref": "Article 4.10",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "échelon": "5| 1"
       },
       "type": "préavis de licenciement",
       "idcc": "1090",
@@ -2461,8 +2581,19 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "17| moins de 6 mois"
+        "catégorie socio-professionnelle": "48| Cadres"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1090",
+      "answer": "3 mois",
+      "duration": "90",
+      "ref": "Article 4.10",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1147",
@@ -2473,8 +2604,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1147",
@@ -2485,8 +2616,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1147",
@@ -2497,7 +2628,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "1147",
@@ -2508,8 +2639,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "17| moins de 6 mois"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "1266",
@@ -2520,32 +2650,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "10| de 6 mois à 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1266",
-      "answer": "3 mois",
-      "duration": "90",
-      "ref": "Article 13",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "12| plus de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1266",
-      "answer": "3 mois",
-      "duration": "90",
-      "ref": "Article 13",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "17| Maîtrises",
-        "ancienneté": "17| moins de 6 mois"
+        "catégorie socio-professionnelle": "26| Maîtrises",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1266",
@@ -2556,20 +2662,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "17| Maîtrises",
-        "ancienneté": "10| de 6 mois à 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1266",
-      "answer": "1 mois",
-      "duration": "30",
-      "ref": "Article 13",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "17| Maîtrises",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "26| Maîtrises",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1266",
@@ -2580,8 +2674,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "17| moins de 6 mois"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1266",
@@ -2592,8 +2686,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1266",
@@ -2604,8 +2698,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1266",
@@ -2616,9 +2710,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "1| I",
-        "ancienneté": "32| de 15 jours à 1 mois"
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "1| I",
+        "ancienneté": "2| 15 jours à 1 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2629,9 +2736,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "1| I",
-        "ancienneté": "33| de plus de 1 mois à 2 mois"
+        "ancienneté": "7| plus de 1 mois à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2642,9 +2749,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "1| I",
-        "ancienneté": "34| de plus de 2 mois à 6 mois"
+        "ancienneté": "16| plus de 2 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2655,9 +2762,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "1| I",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2668,9 +2775,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "1| I",
-        "ancienneté": "36| de plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2681,9 +2788,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "3| II",
-        "ancienneté": "32| de 15 jours à 1 mois"
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "3| II",
+        "ancienneté": "2| 15 jours à 1 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2694,9 +2814,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "3| II",
-        "ancienneté": "33| de plus de 1 mois à 2 mois"
+        "ancienneté": "7| plus de 1 mois à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2707,9 +2827,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "3| II",
-        "ancienneté": "34| de plus de 2 mois à 6 mois"
+        "ancienneté": "16| plus de 2 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2720,9 +2840,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "3| II",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2733,9 +2853,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "3| II",
-        "ancienneté": "36| de plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2746,9 +2866,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
-        "ancienneté": "32| de 15 jours à 1 mois"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "2| 15 jours à 1 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2759,9 +2892,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
-        "ancienneté": "33| de plus de 1 mois à 2 mois"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "7| plus de 1 mois à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2772,9 +2905,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
-        "ancienneté": "34| de plus de 2 mois à 6 mois"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "16| plus de 2 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2785,9 +2918,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2798,9 +2931,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "4| III",
-        "ancienneté": "36| de plus de 2 ans"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2811,9 +2944,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
-        "ancienneté": "32| de 15 jours à 1 mois"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "22| II à V",
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "22| II à V",
+        "ancienneté": "2| 15 jours à 1 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2824,9 +2970,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
-        "ancienneté": "33| de plus de 1 mois à 2 mois"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "22| II à V",
+        "ancienneté": "7| plus de 1 mois à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2837,9 +2983,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
-        "ancienneté": "34| de plus de 2 mois à 6 mois"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "22| II à V",
+        "ancienneté": "16| plus de 2 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2850,9 +2996,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "22| II à V",
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2863,9 +3009,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "5| IV",
-        "ancienneté": "36| de plus de 2 ans"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "22| II à V",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2876,9 +3022,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "7| V",
-        "ancienneté": "32| de 15 jours à 1 mois"
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "7| V",
+        "ancienneté": "2| 15 jours à 1 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2889,9 +3048,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "7| V",
-        "ancienneté": "33| de plus de 1 mois à 2 mois"
+        "ancienneté": "7| plus de 1 mois à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2902,9 +3061,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
-        "niveau": "7| V",
-        "ancienneté": "34| de plus de 2 mois à 6 mois"
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "7| V"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2915,9 +3073,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "7| V",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2928,9 +3086,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "44| Agents d'exploitation, employés administratifs et techniciens",
+        "catégorie socio-professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
         "niveau": "7| V",
-        "ancienneté": "36| de plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2941,9 +3099,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "1| I",
-        "ancienneté": "37| de 15 jours à 2 mois"
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "1| I",
+        "ancienneté": "6| 15 jours à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2954,9 +3125,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "1| I",
-        "ancienneté": "38| de plus de 2 mois à 3 mois"
+        "ancienneté": "10| plus de 2 mois à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2967,9 +3138,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "1| I",
-        "ancienneté": "39| de plus de 3 mois à 6 mois"
+        "ancienneté": "18| plus de 3 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2980,9 +3151,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "1| I",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -2993,9 +3164,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "1| I",
-        "ancienneté": "36| de plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3006,9 +3177,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "3| II",
-        "ancienneté": "37| de 15 jours à 2 mois"
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "3| II",
+        "ancienneté": "6| 15 jours à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3019,9 +3203,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "3| II",
-        "ancienneté": "38| de plus de 2 mois à 3 mois"
+        "ancienneté": "10| plus de 2 mois à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3032,9 +3216,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "3| II",
-        "ancienneté": "39| de plus de 3 mois à 6 mois"
+        "ancienneté": "18| plus de 3 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3045,9 +3229,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "3| II",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3058,9 +3242,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "3| II",
-        "ancienneté": "36| de plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3071,9 +3255,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
-        "ancienneté": "37| de 15 jours à 2 mois"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "6| 15 jours à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3084,9 +3281,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
-        "ancienneté": "38| de plus de 2 mois à 3 mois"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "10| plus de 2 mois à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3097,9 +3294,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
-        "ancienneté": "39| de plus de 3 mois à 6 mois"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "18| plus de 3 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3110,9 +3307,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3123,9 +3320,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "4| III",
-        "ancienneté": "36| de plus de 2 ans"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3136,9 +3333,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "5| IV",
-        "ancienneté": "37| de 15 jours à 2 mois"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "22| II à V",
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "22| II à V",
+        "ancienneté": "6| 15 jours à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3149,9 +3359,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "5| IV",
-        "ancienneté": "38| de plus de 2 mois à 3 mois"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "22| II à V",
+        "ancienneté": "10| plus de 2 mois à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3162,9 +3372,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "5| IV",
-        "ancienneté": "39| de plus de 3 mois à 6 mois"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "22| II à V",
+        "ancienneté": "18| plus de 3 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3175,9 +3385,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "5| IV",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "22| II à V",
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3188,9 +3398,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "niveau": "5| IV",
-        "ancienneté": "36| de plus de 2 ans"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "22| II à V",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3201,9 +3411,22 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "7| V",
-        "ancienneté": "37| de 15 jours à 2 mois"
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "niveau": "7| V",
+        "ancienneté": "6| 15 jours à 2 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3214,9 +3437,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "7| V",
-        "ancienneté": "38| de plus de 2 mois à 3 mois"
+        "ancienneté": "10| plus de 2 mois à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3227,9 +3450,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "7| V",
-        "ancienneté": "39| de plus de 3 mois à 6 mois"
+        "ancienneté": "18| plus de 3 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3240,9 +3463,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "7| V",
-        "ancienneté": "35| de plus de 6 mois à 2 ans"
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3253,9 +3476,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
         "niveau": "7| V",
-        "ancienneté": "36| de plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3266,8 +3489,20 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "32| de 15 jours à 1 mois"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "1| moins de 15 jours"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1351",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "7",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "2| 15 jours à 1 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3278,8 +3513,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "42| de plus de 1 mois à 3 mois"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "9| plus de 1 mois à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3290,8 +3525,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "39| de plus de 3 mois à 6 mois"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "18| plus de 3 mois à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3302,8 +3537,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "44| de plus de 6 mois à 1 an"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "24| plus de 6 mois à 1 an"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3314,8 +3549,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "45| de plus de 1 an"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "25| plus de 1 an"
       },
       "type": "préavis de licenciement",
       "idcc": "1351",
@@ -3328,7 +3563,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "niveau": "1| I",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1404",
@@ -3341,7 +3576,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "niveau": "1| I",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1404",
@@ -3354,7 +3589,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "niveau": "3| II",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1404",
@@ -3367,7 +3602,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "niveau": "3| II",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1404",
@@ -3379,22 +3614,22 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "niveau": "4| III"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1404",
-      "answer": "2 mois",
-      "duration": "60",
-      "ref": "article 3-41-0",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
         "niveau": "5| IV"
       },
       "type": "préavis de licenciement",
       "idcc": "1404",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "article 3-41-0",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "niveau": "22| II à V"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1404",
       "answer": "3 mois",
       "duration": "90",
       "ref": "article 3-41-0",
@@ -3402,7 +3637,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
         "niveau": "7| V"
       },
       "type": "préavis de licenciement",
@@ -3414,7 +3649,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
         "niveau": "8| VI"
       },
       "type": "préavis de licenciement",
@@ -3426,8 +3661,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "niveau": "9| VII et plus"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "niveau": "10| VII"
       },
       "type": "préavis de licenciement",
       "idcc": "1404",
@@ -3438,8 +3673,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "4| 6 mois ou moins"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "19| 6 mois ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1483",
@@ -3450,8 +3685,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "21| plus de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1483",
@@ -3462,8 +3697,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1483",
@@ -3474,7 +3709,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise"
       },
       "type": "préavis de licenciement",
       "idcc": "1483",
@@ -3485,7 +3720,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "1483",
@@ -3496,9 +3731,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
-        "ancienneté": "14| moins de 2 ans",
-        "coefficient": "13| de 200 à 355"
+        "catégorie socio-professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "16| 220 à 390",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1486",
@@ -3509,9 +3744,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
-        "ancienneté": "13| 2 ans ou plus",
-        "coefficient": "13| de 200 à 355"
+        "catégorie socio-professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "16| 220 à 390",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1486",
@@ -3522,8 +3757,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ETAM",
-        "coefficient": "14| de 400 à 500"
+        "catégorie socio-professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "18| inférieur à 602"
       },
       "type": "préavis de licenciement",
       "idcc": "1486",
@@ -3534,7 +3769,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "16| Ingénieurs, Cadres"
+        "catégorie socio-professionnelle": "60| Ingénieurs, Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "1486",
@@ -3545,8 +3780,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "21| Chargés d'enquête intermittents",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "78| Chargés d'enquête intermittents",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1486",
@@ -3557,8 +3792,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "21| Chargés d'enquête intermittents",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "78| Chargés d'enquête intermittents",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1486",
@@ -3570,7 +3805,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1501",
@@ -3582,7 +3817,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1501",
@@ -3594,7 +3829,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1501",
@@ -3605,8 +3840,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "17| Maîtrises",
-        "ancienneté": "11| 2 ans ou moins"
+        "catégorie socio-professionnelle": "26| Maîtrises",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1501",
@@ -3617,8 +3852,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "17| Maîtrises",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "26| Maîtrises",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1501",
@@ -3629,7 +3864,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "1501",
@@ -3641,7 +3876,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1505",
@@ -3653,7 +3888,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1505",
@@ -3664,7 +3899,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise"
       },
       "type": "préavis de licenciement",
       "idcc": "1505",
@@ -3675,7 +3910,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "1505",
@@ -3686,8 +3921,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "11| 2 ans ou moins"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1516",
@@ -3698,8 +3933,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1516",
@@ -3710,7 +3945,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens"
+        "catégorie socio-professionnelle": "28| Techniciens"
       },
       "type": "préavis de licenciement",
       "idcc": "1516",
@@ -3721,7 +3956,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "1516",
@@ -3733,7 +3968,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3745,7 +3980,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3757,7 +3992,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3769,7 +4004,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3780,8 +4015,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3792,8 +4027,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "14| moins de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3804,8 +4039,8 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV",
-        "ancienneté": "14| moins de 2 ans"
+        "niveau": "22| II à V",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3816,8 +4051,8 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "22| II à V",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3829,7 +4064,7 @@
     {
       "criteria": {
         "niveau": "7| V",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3841,7 +4076,7 @@
     {
       "criteria": {
         "niveau": "7| V",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3853,7 +4088,7 @@
     {
       "criteria": {
         "niveau": "8| VI",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3865,7 +4100,7 @@
     {
       "criteria": {
         "niveau": "8| VI",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3876,8 +4111,8 @@
     },
     {
       "criteria": {
-        "niveau": "10| VII",
-        "ancienneté": "14| moins de 2 ans"
+        "niveau": "9| VII et plus",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3888,20 +4123,8 @@
     },
     {
       "criteria": {
-        "niveau": "10| VII",
-        "ancienneté": "12| plus de 2 ans"
-      },
-      "type": "préavis de licenciement",
-      "idcc": "1517",
-      "answer": "3 mois",
-      "duration": "90",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "niveau": "11| VIII",
-        "ancienneté": "14| moins de 2 ans"
+        "niveau": "9| VII et plus",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3913,7 +4136,19 @@
     {
       "criteria": {
         "niveau": "11| VIII",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1517",
+      "answer": "3 mois",
+      "duration": "90",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "11| VIII",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3925,7 +4160,7 @@
     {
       "criteria": {
         "niveau": "12| IX",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3937,7 +4172,7 @@
     {
       "criteria": {
         "niveau": "12| IX",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1517",
@@ -3949,143 +4184,143 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "groupe": "23| 2",
-        "ancienneté": "11| 2 ans ou moins"
+        "groupe": "13| 2",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "groupe": "23| 2",
-        "ancienneté": "12| plus de 2 ans"
+        "groupe": "13| 2",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "groupe": "24| 3",
-        "ancienneté": "11| 2 ans ou moins"
+        "groupe": "14| 3",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "groupe": "24| 3",
-        "ancienneté": "12| plus de 2 ans"
+        "groupe": "14| 3",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "groupe": "25| 4"
+        "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens",
+        "groupe": "15| 4"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "groupe": "26| 5"
+        "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens",
+        "groupe": "16| 5"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "31| Agents de maîtrise et Techniciens",
-        "groupe": "27| 6"
+        "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens",
+        "groupe": "17| 6"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "48| Animateurs, techniciens et professeurs",
-        "niveau": "20| A"
+        "catégorie socio-professionnelle": "45| Animateurs, techniciens et professeurs",
+        "niveau": "13| A"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "48| Animateurs, techniciens et professeurs",
-        "niveau": "21| B"
+        "catégorie socio-professionnelle": "45| Animateurs, techniciens et professeurs",
+        "niveau": "14| B"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "groupe": "28| 7"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "groupe": "18| 7"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "groupe": "29| 8"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "groupe": "19| 8"
       },
       "type": "préavis de licenciement",
       "idcc": "1518",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4097,7 +4332,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4108,8 +4343,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "ancienneté": "23| moins de un an"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "22| moins de 1 an"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4120,8 +4355,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "ancienneté": "22| au moins un an"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "23| au moins 1 an"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4132,7 +4367,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4143,8 +4378,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "36| Négociateur non VRP",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "76| Négociateur non VRP",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4155,8 +4390,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "36| Négociateur non VRP",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "76| Négociateur non VRP",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4167,8 +4402,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "37| Négociateur VRP",
-        "ancienneté": "23| moins de un an"
+        "catégorie socio-professionnelle": "77| Négociateur VRP",
+        "ancienneté": "22| moins de 1 an"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4179,8 +4414,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "37| Négociateur VRP",
-        "ancienneté": "31| de un an à moins de deux ans"
+        "catégorie socio-professionnelle": "77| Négociateur VRP",
+        "ancienneté": "35| 1 an à moins de deux ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4191,8 +4426,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "37| Négociateur VRP",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "77| Négociateur VRP",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1527",
@@ -4204,7 +4439,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1560",
@@ -4216,7 +4451,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1560",
@@ -4228,7 +4463,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1560",
@@ -4240,7 +4475,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1560",
@@ -4252,7 +4487,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1560",
@@ -4263,8 +4498,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1560",
@@ -4275,8 +4510,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1560",
@@ -4287,7 +4522,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "1560",
@@ -4310,7 +4545,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1564",
@@ -4322,7 +4557,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1564",
@@ -4334,7 +4569,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1564",
@@ -4346,7 +4581,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1564",
@@ -4358,7 +4593,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1564",
@@ -4369,8 +4604,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1564",
@@ -4381,8 +4616,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1564",
@@ -4393,7 +4628,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "1564",
@@ -4415,7 +4650,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
+        "ancienneté": "8| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1596",
@@ -4426,7 +4661,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "28| de 3 à 6 mois"
+        "ancienneté": "17| de 3 à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1596",
@@ -4437,7 +4672,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1596",
@@ -4448,7 +4683,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1596",
@@ -4459,7 +4694,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
+        "ancienneté": "8| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1597",
@@ -4470,7 +4705,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "28| de 3 à 6 mois"
+        "ancienneté": "17| de 3 à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1597",
@@ -4481,7 +4716,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1597",
@@ -4492,7 +4727,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1597",
@@ -4503,8 +4738,20 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "5| de 1 mois à moins de 6 mois "
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "3| moins de 1 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "1606",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "15",
+      "ref": "article 9.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "12| 1 mois à moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1606",
@@ -4515,8 +4762,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1606",
@@ -4527,8 +4774,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1606",
@@ -4539,8 +4786,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "ancienneté": "25| entre 2 et 6 mois"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "15| entre 2 et 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1606",
@@ -4551,8 +4798,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise",
-        "ancienneté": "7| plus de 6 mois"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "20| plus de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1606",
@@ -4563,8 +4810,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "28| de 3 à 6 mois"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "17| de 3 à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1606",
@@ -4575,8 +4822,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "7| plus de 6 mois"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "20| plus de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1606",
@@ -4588,7 +4835,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1626",
@@ -4600,7 +4847,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1626",
@@ -4612,7 +4859,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1626",
@@ -4624,7 +4871,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1626",
@@ -4635,8 +4882,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1626",
@@ -4647,8 +4894,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1626",
@@ -4659,7 +4906,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "1626",
@@ -4681,9 +4928,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
+        "catégorie socio-professionnelle": "38| Non-cadres",
         "classe": "1| 1",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1672",
@@ -4694,9 +4941,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
+        "catégorie socio-professionnelle": "38| Non-cadres",
         "classe": "2| 2",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1672",
@@ -4707,9 +4954,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
+        "catégorie socio-professionnelle": "38| Non-cadres",
         "classe": "3| 3",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1672",
@@ -4720,9 +4967,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
+        "catégorie socio-professionnelle": "38| Non-cadres",
         "classe": "4| 4",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1672",
@@ -4733,9 +4980,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
+        "catégorie socio-professionnelle": "38| Non-cadres",
         "classe": "1| 1",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1672",
@@ -4746,9 +4993,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
+        "catégorie socio-professionnelle": "38| Non-cadres",
         "classe": "2| 2",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1672",
@@ -4759,9 +5006,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
+        "catégorie socio-professionnelle": "38| Non-cadres",
         "classe": "3| 3",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1672",
@@ -4772,9 +5019,9 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
+        "catégorie socio-professionnelle": "38| Non-cadres",
         "classe": "4| 4",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1672",
@@ -4785,7 +5032,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
+        "catégorie socio-professionnelle": "48| Cadres",
         "classe": "5| 5"
       },
       "type": "préavis de licenciement",
@@ -4797,7 +5044,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
+        "catégorie socio-professionnelle": "48| Cadres",
         "classe": "6| 6"
       },
       "type": "préavis de licenciement",
@@ -4809,7 +5056,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
+        "catégorie socio-professionnelle": "48| Cadres",
         "classe": "7| 7"
       },
       "type": "préavis de licenciement",
@@ -4821,7 +5068,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
+        "ancienneté": "8| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1702",
@@ -4832,7 +5079,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "28| de 3 à 6 mois"
+        "ancienneté": "17| de 3 à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1702",
@@ -4843,7 +5090,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1702",
@@ -4854,7 +5101,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1702",
@@ -4865,7 +5112,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "27| au delà de la période d'essai et jusqu'à 3 mois"
+        "ancienneté": "8| au delà de la période d'essai et jusqu'à 3 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1740",
@@ -4876,7 +5123,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "28| de 3 à 6 mois"
+        "ancienneté": "17| de 3 à 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1740",
@@ -4887,7 +5134,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1740",
@@ -4898,7 +5145,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1740",
@@ -4910,7 +5157,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1885",
@@ -4922,7 +5169,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1885",
@@ -4934,7 +5181,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1885",
@@ -4946,7 +5193,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1885",
@@ -4958,7 +5205,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1885",
@@ -4969,8 +5216,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1885",
@@ -4981,8 +5228,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1885",
@@ -4993,7 +5240,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "1885",
@@ -5016,7 +5263,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1960",
@@ -5028,7 +5275,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1960",
@@ -5040,7 +5287,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1960",
@@ -5052,7 +5299,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1960",
@@ -5064,7 +5311,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1960",
@@ -5075,8 +5322,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "1960",
@@ -5087,8 +5334,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1960",
@@ -5099,7 +5346,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "1960",
@@ -5121,8 +5368,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "4| 6 mois ou moins"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1979",
@@ -5133,8 +5380,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1979",
@@ -5145,8 +5392,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1979",
@@ -5157,8 +5404,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "17| Maîtrises",
-        "ancienneté": "4| 6 mois ou moins"
+        "catégorie socio-professionnelle": "26| Maîtrises",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1979",
@@ -5169,8 +5416,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "17| Maîtrises",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "26| Maîtrises",
+        "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1979",
@@ -5181,8 +5428,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "17| Maîtrises",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "26| Maîtrises",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1979",
@@ -5193,8 +5440,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "4| 6 mois ou moins"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "1979",
@@ -5205,8 +5452,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1979",
@@ -5217,8 +5464,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "48| Cadres",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1979",
@@ -5229,8 +5476,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "1996",
@@ -5241,8 +5488,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "1996",
@@ -5253,7 +5500,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "1996",
@@ -5264,8 +5511,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "2098",
@@ -5276,8 +5523,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2098",
@@ -5288,7 +5535,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)"
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)"
       },
       "type": "préavis de licenciement",
       "idcc": "2098",
@@ -5299,7 +5546,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "2098",
@@ -5310,7 +5557,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "2111",
@@ -5321,7 +5568,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "20| 6 mois à moins de 2 ans"
+        "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2111",
@@ -5332,7 +5579,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "2111",
@@ -5343,8 +5590,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "28| Techniciens",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2120",
@@ -5355,8 +5602,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "28| Techniciens",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "2120",
@@ -5367,7 +5614,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "2120",
@@ -5379,7 +5626,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "2126",
@@ -5391,7 +5638,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2126",
@@ -5403,7 +5650,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2126",
@@ -5415,7 +5662,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "2126",
@@ -5427,7 +5674,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "2126",
@@ -5438,8 +5685,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "2126",
@@ -5450,8 +5697,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "13| 2 ans ou plus"
+        "niveau": "5| IV",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "2126",
@@ -5462,7 +5709,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "2126",
@@ -5484,8 +5731,8 @@
     },
     {
       "criteria": {
-        "groupe": "31| A et B",
-        "ancienneté": "14| moins de 2 ans"
+        "groupe": "20| A et B",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "2148",
@@ -5496,8 +5743,8 @@
     },
     {
       "criteria": {
-        "groupe": "31| A et B",
-        "ancienneté": "12| plus de 2 ans"
+        "groupe": "20| A et B",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2148",
@@ -5508,7 +5755,7 @@
     },
     {
       "criteria": {
-        "groupe": "32| C et D"
+        "groupe": "21| C et D"
       },
       "type": "préavis de licenciement",
       "idcc": "2148",
@@ -5519,7 +5766,7 @@
     },
     {
       "criteria": {
-        "groupe": "33| E, F et G"
+        "groupe": "22| E, F et G"
       },
       "type": "préavis de licenciement",
       "idcc": "2148",
@@ -5529,7 +5776,9 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {},
+      "criteria": {
+        "groupe": "23| Hors classification"
+      },
       "type": "préavis de licenciement",
       "idcc": "2148",
       "answer": "pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois",
@@ -5540,7 +5789,19 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "8| de 1 mois à 2 ans"
+        "ancienneté": "3| moins de 1 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2216",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "30",
+      "ref": "article 3 de l'annexe I",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005770839&cidTexte=KALITEXT000005642626&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
+        "ancienneté": "29| 1 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2216",
@@ -5552,7 +5813,7 @@
     {
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "2216",
@@ -5563,7 +5824,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise"
       },
       "type": "préavis de licenciement",
       "idcc": "2216",
@@ -5574,7 +5835,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "5| Techniciens"
+        "catégorie socio-professionnelle": "28| Techniciens"
       },
       "type": "préavis de licenciement",
       "idcc": "2216",
@@ -5585,7 +5846,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "2216",
@@ -5596,8 +5857,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2264",
@@ -5608,8 +5869,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "2264",
@@ -5620,8 +5881,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2264",
@@ -5632,8 +5893,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
-        "ancienneté": "13| 2 ans ou plus"
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "2264",
@@ -5644,7 +5905,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "2264",
@@ -5655,7 +5916,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "45| Cadres supérieurs"
+        "catégorie socio-professionnelle": "63| Cadres supérieurs"
       },
       "type": "préavis de licenciement",
       "idcc": "2264",
@@ -5666,7 +5927,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "65| Cadres dirigeants"
+        "catégorie socio-professionnelle": "68| Cadres dirigeants"
       },
       "type": "préavis de licenciement",
       "idcc": "2264",
@@ -5678,7 +5939,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "2266",
@@ -5690,7 +5951,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2266",
@@ -5702,7 +5963,7 @@
     {
       "criteria": {
         "niveau": "1| I",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2266",
@@ -5714,7 +5975,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "11| 2 ans ou moins"
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "2266",
@@ -5726,7 +5987,7 @@
     {
       "criteria": {
         "niveau": "3| II",
-        "ancienneté": "12| plus de 2 ans"
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2266",
@@ -5737,8 +5998,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "11| 2 ans ou moins"
+        "niveau": "5| IV",
+        "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "2266",
@@ -5749,8 +6010,8 @@
     },
     {
       "criteria": {
-        "niveau": "4| III",
-        "ancienneté": "12| plus de 2 ans"
+        "niveau": "5| IV",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2266",
@@ -5761,7 +6022,7 @@
     },
     {
       "criteria": {
-        "niveau": "5| IV"
+        "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
       "idcc": "2266",
@@ -5783,7 +6044,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "23| moins de un an"
+        "ancienneté": "22| moins de 1 an"
       },
       "type": "préavis de licenciement",
       "idcc": "2395",
@@ -5794,7 +6055,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "22| au moins un an"
+        "ancienneté": "23| au moins 1 an"
       },
       "type": "préavis de licenciement",
       "idcc": "2395",
@@ -5805,7 +6066,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2420",
@@ -5816,7 +6077,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "2420",
@@ -5827,8 +6088,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2511",
@@ -5839,8 +6100,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "3| Non-cadres",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "38| Non-cadres",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2511",
@@ -5851,7 +6112,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "2511",
@@ -5862,8 +6123,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "41| Salariés occupant un emploi technique de la coiffure, un emploi non technique ou un emploi de l'esthétique cosmétique",
-        "ancienneté": "4| 6 mois ou moins"
+        "catégorie socio-professionnelle": "31| Salariés occupant un emploi technique de la coiffure",
+        "ancienneté": "19| 6 mois ou moins"
       },
       "type": "préavis de licenciement",
       "idcc": "2596",
@@ -5874,8 +6135,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "41| Salariés occupant un emploi technique de la coiffure, un emploi non technique ou un emploi de l'esthétique cosmétique",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "31| Salariés occupant un emploi technique de la coiffure",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2596",
@@ -5886,8 +6147,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "41| Salariés occupant un emploi technique de la coiffure, un emploi non technique ou un emploi de l'esthétique cosmétique",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "31| Salariés occupant un emploi technique de la coiffure",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2596",
@@ -5898,7 +6159,79 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "15| Agents de maîtrise"
+        "catégorie socio-professionnelle": "32| Salariés occupant un emploi non-technique de la coiffure",
+        "ancienneté": "19| 6 mois ou moins"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2596",
+      "answer": "1 semaine",
+      "duration": "7",
+      "ref": "article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "32| Salariés occupant un emploi non-technique de la coiffure",
+        "ancienneté": "33| 6 mois à 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2596",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "32| Salariés occupant un emploi non-technique de la coiffure",
+        "ancienneté": "41| plus de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2596",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "33| Salariés occupant un emploi de l'esthétique-cosmétique",
+        "ancienneté": "19| 6 mois ou moins"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2596",
+      "answer": "1 semaine",
+      "duration": "7",
+      "ref": "article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "33| Salariés occupant un emploi de l'esthétique-cosmétique",
+        "ancienneté": "33| 6 mois à 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2596",
+      "answer": "1 mois",
+      "duration": "30",
+      "ref": "article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "33| Salariés occupant un emploi de l'esthétique-cosmétique",
+        "ancienneté": "41| plus de 2 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2596",
+      "answer": "2 mois",
+      "duration": "60",
+      "ref": "article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "23| Agents de maîtrise"
       },
       "type": "préavis de licenciement",
       "idcc": "2596",
@@ -5909,7 +6242,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "2596",
@@ -5920,8 +6253,8 @@
     },
     {
       "criteria": {
-        "âge": "3| moins de 55 ans",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "36| moins de 2 ans",
+        "âge": "3| moins de 55 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2609",
@@ -5932,8 +6265,8 @@
     },
     {
       "criteria": {
-        "âge": "3| moins de 55 ans",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus",
+        "âge": "3| moins de 55 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2609",
@@ -5944,8 +6277,8 @@
     },
     {
       "criteria": {
-        "âge": "4| 55 ans et plus",
-        "ancienneté": "29| Au moins 15 ans d'ancienneté"
+        "ancienneté": "48| Au moins 15 ans d'ancienneté",
+        "âge": "5| plus de 55 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2609",
@@ -5956,8 +6289,20 @@
     },
     {
       "criteria": {
-        "âge": "3| moins de 55 ans",
-        "ancienneté": "14| moins de 2 ans"
+        "ancienneté": "47| moins de 15 ans d'ancienneté",
+        "âge": "5| plus de 55 ans"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2609",
+      "answer": "2 mois",
+      "duration": "90",
+      "ref": "Article 8.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7C6D5292CB5A9AA0DB357C8DEC36C6EB.tplgfr36s_2?idArticle=KALIARTI000018773769&cidTexte=KALITEXT000018773681&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "ancienneté": "36| moins de 2 ans",
+        "âge": "3| moins de 55 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2614",
@@ -5968,8 +6313,8 @@
     },
     {
       "criteria": {
-        "âge": "3| moins de 55 ans",
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus",
+        "âge": "3| moins de 55 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2614",
@@ -5980,8 +6325,8 @@
     },
     {
       "criteria": {
-        "âge": "4| 55 ans et plus",
-        "ancienneté": "29| Au moins 15 ans d'ancienneté"
+        "ancienneté": "48| Au moins 15 ans d'ancienneté",
+        "âge": "4| 55 ans et plus"
       },
       "type": "préavis de licenciement",
       "idcc": "2614",
@@ -5992,8 +6337,20 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "54| A",
-        "ancienneté": "17| moins de 6 mois"
+        "ancienneté": "47| moins de 15 ans d'ancienneté",
+        "âge": "4| 55 ans et plus"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "2614",
+      "answer": "2 mois",
+      "duration": "90",
+      "ref": "Article 8.1 de la convention collective\r\n",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E154C093E99FDBC15E7328F16C01CDA4.tplgfr37s_1?idArticle=KALIARTI000018926304&cidTexte=KALITEXT000018926214&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "79| A",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6004,8 +6361,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "54| A",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "79| A",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6016,8 +6373,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "54| A",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "79| A",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6028,8 +6385,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "55| B",
-        "ancienneté": "17| moins de 6 mois"
+        "catégorie socio-professionnelle": "80| B",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6040,8 +6397,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "55| B",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "80| B",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6052,8 +6409,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "55| B",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "80| B",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6064,8 +6421,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "56| C",
-        "ancienneté": "17| moins de 6 mois"
+        "catégorie socio-professionnelle": "81| C",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6076,8 +6433,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "56| C",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "81| C",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6088,8 +6445,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "56| C",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "81| C",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6100,8 +6457,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "57| D",
-        "ancienneté": "17| moins de 6 mois"
+        "catégorie socio-professionnelle": "82| D",
+        "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6112,8 +6469,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "57| D",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "82| D",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6124,8 +6481,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "57| D",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "82| D",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6136,8 +6493,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "58| E",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "84| E",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6148,8 +6505,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "58| E",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "84| E",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6160,8 +6517,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "59| F",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "85| F",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6172,8 +6529,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "59| F",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "85| F",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6184,8 +6541,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "60| G",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "86| G",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6196,8 +6553,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "60| G",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "86| G",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6208,8 +6565,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "61| H",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "87| H",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6220,8 +6577,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "61| H",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "87| H",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6232,8 +6589,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "62| I",
-        "ancienneté": "14| moins de 2 ans"
+        "catégorie socio-professionnelle": "88| I",
+        "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6244,8 +6601,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "62| I",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "88| I",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "2941",
@@ -6256,8 +6613,20 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "2| Agents de propreté",
-        "ancienneté": "5| de 1 mois à moins de 6 mois "
+        "catégorie socio-professionnelle": "1| Agents de propreté",
+        "ancienneté": "3| moins de 1 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "3043",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "7",
+      "ref": "Article 4.11.2",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "1| Agents de propreté",
+        "ancienneté": "12| 1 mois à moins de 6 mois"
       },
       "type": "préavis de licenciement",
       "idcc": "3043",
@@ -6268,8 +6637,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "2| Agents de propreté",
-        "ancienneté": "10| de 6 mois à 2 ans"
+        "catégorie socio-professionnelle": "1| Agents de propreté",
+        "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "3043",
@@ -6280,8 +6649,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "2| Agents de propreté",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "1| Agents de propreté",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "3043",
@@ -6292,8 +6661,20 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "8| de 1 mois à 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "3| moins de 1 mois"
+      },
+      "type": "préavis de licenciement",
+      "idcc": "3043",
+      "answer": "la convention collective ne prévoit pas de préavis pour ce cas de figure",
+      "duration": "30",
+      "ref": "Article 4.11.2",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "29| 1 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "3043",
@@ -6304,8 +6685,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "4| Employés",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "3043",
@@ -6316,8 +6697,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
-        "ancienneté": "9| de 2 mois à 2 ans"
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "ancienneté": "30| 2 mois à 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "3043",
@@ -6328,8 +6709,8 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "12| Techniciens et agents de maîtrise (TAM)",
-        "ancienneté": "12| plus de 2 ans"
+        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "3043",
@@ -6340,7 +6721,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "20| Cadres"
+        "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
       "idcc": "3043",
@@ -6351,7 +6732,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "20| 6 mois à moins de 2 ans"
+        "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
       "idcc": "3127",
@@ -6362,7 +6743,7 @@
     },
     {
       "criteria": {
-        "ancienneté": "13| 2 ans ou plus"
+        "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
       "idcc": "3127",

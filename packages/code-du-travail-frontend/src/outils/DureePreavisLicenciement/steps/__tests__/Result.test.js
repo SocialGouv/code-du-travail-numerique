@@ -7,7 +7,7 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "12| plus de 2 ans"
+        ancienneté: "41| plus de 2 ans"
       },
       ccn: {
         id: "KALICONT000005635413",
@@ -19,7 +19,7 @@ describe("<StepResult />", () => {
       },
       criteria: {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        ancienneté: "13| 2 ans ou plus"
+        ancienneté: "40| 2 ans ou plus"
       }
     });
     expect(container).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "12| plus de 2 ans"
+        ancienneté: "41| plus de 2 ans"
       },
       ccn: {
         id: "KALICONT000005635413",

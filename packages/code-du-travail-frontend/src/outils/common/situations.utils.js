@@ -17,29 +17,17 @@ export function filterSituations(situations, criteria = {}) {
   return situations.filter(matchValues);
 }
 
-export function getNextQuestionKey(possibleSituations, values = {}) {
-  const dupCriteria = possibleSituations.reduce((state, { criteria }) => {
-    const availableCriteria = Object.keys(criteria).filter(
-      criterion =>
-        !Object.hasOwnProperty.call(values, criterion) && !values[criterion]
-    );
-    for (const criterion of availableCriteria) {
-      state[criterion] = (state[criterion] || 0) + 1;
-    }
-    return state;
-  }, {});
-  const [criterion] = Object.entries(dupCriteria).sort(
-    ([critA, countA], [critB, countB]) => {
-      if (countA === countB) {
-        return critA.localeCompare(critB);
-      }
-      return countB - countA;
-    }
-  );
-  if (criterion) {
-    return criterion[0];
-  }
-  return;
+export function getNextQuestionKey(
+  possibleSituations,
+  criteriaOrder,
+  values = {}
+) {
+  const [criterion] = criteriaOrder
+    .filter(criterion =>
+      possibleSituations.some(situation => situation.criteria[criterion])
+    )
+    .filter(criterion => !values[criterion]);
+  return criterion;
 }
 
 export function getOptions(possibleSituations, nextQuestionKey) {
@@ -56,18 +44,30 @@ export function getOptions(possibleSituations, nextQuestionKey) {
     .map(a => [a, a.replace(/([0-9]+\|)?/, "").trim()]);
 }
 
-export function getPastQuestions(initialSituations, criteria = {}) {
+export function getPastQuestions(
+  initialSituations,
+  criteriaOrder,
+  criteria = {}
+) {
   const questions = {};
   const answers = [];
 
-  let questionKey = getNextQuestionKey(initialSituations, questions);
+  let questionKey = getNextQuestionKey(
+    initialSituations,
+    criteriaOrder,
+    questions
+  );
 
   while (Object.prototype.hasOwnProperty.call(criteria, questionKey)) {
     questions[questionKey] = criteria[questionKey];
     answers.push([questionKey, getOptions(initialSituations, questionKey)]);
 
     initialSituations = filterSituations(initialSituations, questions);
-    questionKey = getNextQuestionKey(initialSituations, questions);
+    questionKey = getNextQuestionKey(
+      initialSituations,
+      criteriaOrder,
+      questions
+    );
   }
   return answers;
 }
