@@ -26,9 +26,9 @@
     "@socialgouv/react-ui": "^3.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.4",
+    "@babel/core": "^7.7.5",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-env": "^7.7.5",
     "@babel/preset-react": "^7.7.4",
     "@socialgouv/eslint-config-react": "^0.10.4",
     "@testing-library/react": "^9.3.2",
