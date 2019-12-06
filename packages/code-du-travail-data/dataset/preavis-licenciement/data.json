@@ -107,7 +107,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0000",
+      "idcc": "0",
       "answer": "Pas de préavis",
       "duration": "0",
       "ref": "Article L1234-1",
@@ -118,7 +118,7 @@
         "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0000",
+      "idcc": "0",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article L1234-1",
@@ -129,7 +129,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0000",
+      "idcc": "0",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article L1234-1",
@@ -141,7 +141,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "1 semaine",
       "duration": "7",
       "ref": "Annexe I, chapitre Ier, article 5",
@@ -152,7 +152,7 @@
         "catégorie socio-professionnelle": "4| Ouvriers"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Annexe I, chapitre Ier, article 5",
@@ -164,7 +164,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Annexe I, chapitre Ier, article 5",
@@ -176,7 +176,7 @@
         "ancienneté": "3| moins de 1 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
       "duration": "30",
       "ref": "Annexe II, article 13",
@@ -187,7 +187,7 @@
         "catégorie socio-professionnelle": "16| Employés"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Annexe II, article 13",
@@ -199,7 +199,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Annexe II, article 13",
@@ -212,7 +212,7 @@
         "ancienneté": "3| moins de 1 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
       "duration": "30",
       "ref": "Annexe III, article 17",
@@ -224,7 +224,7 @@
         "groupe": "25| 1 à 5 "
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Annexe III, article 17",
@@ -237,7 +237,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Annexe III, article 17",
@@ -249,7 +249,7 @@
         "groupe": "30| 6 à 8"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Annexe III, article 17",
@@ -260,7 +260,7 @@
         "catégorie socio-professionnelle": "61| Ingénieurs et Cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0016",
+      "idcc": "16",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Annexe IV, Article 15",
@@ -272,7 +272,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 15.02.2.1",
@@ -284,7 +284,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 15.02.2.1",
@@ -295,7 +295,7 @@
         "catégorie socio-professionnelle": "75| autres cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "4 mois",
       "duration": "120",
       "ref": "Article 15.02.2.1",
@@ -306,7 +306,7 @@
         "catégorie socio-professionnelle": "74| directeurs généraux"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 15.02.2.1",
@@ -317,7 +317,7 @@
         "catégorie socio-professionnelle": "73| Directeurs"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 15.02.2.1",
@@ -328,7 +328,7 @@
         "catégorie socio-professionnelle": "69| directeurs-adjoints"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 15.02.2.1",
@@ -339,7 +339,7 @@
         "catégorie socio-professionnelle": "67| gestionnaires"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 15.02.2.1",
@@ -350,7 +350,7 @@
         "catégorie socio-professionnelle": "66| médecins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 15.02.2.1",
@@ -361,7 +361,7 @@
         "catégorie socio-professionnelle": "65| pharmaciens"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 15.02.2.1",
@@ -372,7 +372,7 @@
         "catégorie socio-professionnelle": "64| biologistes"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 15.02.2.1",
@@ -384,7 +384,7 @@
         "coefficient": "25| 800 à 830 inclus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 15.02.2.1",
@@ -396,7 +396,7 @@
         "coefficient": "24| 720 à 750 inclus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0029",
+      "idcc": "29",
       "answer": "4 mois",
       "duration": "120",
       "ref": "Article 15.02.2.1",
@@ -410,7 +410,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant n°1 article 27",
@@ -424,7 +424,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -437,7 +437,7 @@
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -451,7 +451,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant n°1 article 27",
@@ -465,7 +465,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -478,7 +478,7 @@
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -492,7 +492,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant n°1 article 27",
@@ -506,7 +506,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -519,7 +519,7 @@
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -533,7 +533,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant n°1 article 27",
@@ -547,7 +547,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -560,7 +560,7 @@
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -574,7 +574,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant n°1 article 27",
@@ -588,7 +588,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -601,7 +601,7 @@
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -615,7 +615,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant n°1 article 27",
@@ -629,7 +629,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -642,7 +642,7 @@
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -655,7 +655,7 @@
         "coefficient": "11| 275 et plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant 2, article 20",
@@ -668,7 +668,7 @@
         "coefficient": "14| inférieur à 300"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Avenant 2, article 20",
@@ -682,7 +682,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant n°1 article 27",
@@ -696,7 +696,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -709,7 +709,7 @@
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -723,7 +723,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant n°1 article 27",
@@ -737,7 +737,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -750,7 +750,7 @@
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -764,7 +764,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant n°1 article 27",
@@ -778,7 +778,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -791,7 +791,7 @@
         "coefficient": "8| supérieur à 190 (inclus)"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant n°1 article 27",
@@ -804,7 +804,7 @@
         "coefficient": "11| 275 et plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant 2, article 20",
@@ -817,7 +817,7 @@
         "coefficient": "14| inférieur à 300"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Avenant 2, article 20",
@@ -829,7 +829,7 @@
         "groupe": "9| V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0044",
+      "idcc": "44",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Avenant n°3 article 4",
@@ -841,7 +841,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0054",
+      "idcc": "54",
       "answer": "2 semaines",
       "duration": "14",
       "ref": "Article 32 - avenant \"Mensuels\"",
@@ -852,7 +852,7 @@
         "niveau": "1| I"
       },
       "type": "préavis de licenciement",
-      "idcc": "0054",
+      "idcc": "54",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 32 - avenant \"Mensuels\"",
@@ -864,7 +864,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0054",
+      "idcc": "54",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 32 - avenant \"Mensuels\"",
@@ -876,7 +876,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0054",
+      "idcc": "54",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 32 - avenant \"Mensuels\"",
@@ -888,7 +888,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0054",
+      "idcc": "54",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 32 - avenant \"Mensuels\"",
@@ -900,7 +900,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0054",
+      "idcc": "54",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 32 - avenant \"Mensuels\"",
@@ -912,7 +912,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0054",
+      "idcc": "54",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 32 - avenant \"Mensuels\"",
@@ -923,7 +923,7 @@
         "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0054",
+      "idcc": "54",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 32 - avenant \"Mensuels\"",
@@ -934,7 +934,7 @@
         "niveau": "7| V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0054",
+      "idcc": "54",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 32 - avenant \"Mensuels\"",
@@ -946,7 +946,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0086",
+      "idcc": "86",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 30",
@@ -958,7 +958,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0086",
+      "idcc": "86",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 30",
@@ -969,7 +969,7 @@
         "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens"
       },
       "type": "préavis de licenciement",
-      "idcc": "0086",
+      "idcc": "86",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 49",
@@ -980,7 +980,7 @@
         "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0086",
+      "idcc": "86",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 68",
@@ -993,7 +993,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0176",
+      "idcc": "176",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 32, 2°",
@@ -1006,7 +1006,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0176",
+      "idcc": "176",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 32, 2°",
@@ -1018,7 +1018,7 @@
         "groupe": "24| 1 à 3"
       },
       "type": "préavis de licenciement",
-      "idcc": "0176",
+      "idcc": "176",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 32, 2°",
@@ -1030,7 +1030,7 @@
         "groupe": "15| 4"
       },
       "type": "préavis de licenciement",
-      "idcc": "0176",
+      "idcc": "176",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 32, 2°",
@@ -1042,7 +1042,7 @@
         "groupe": "29| 5 et suivants"
       },
       "type": "préavis de licenciement",
-      "idcc": "0176",
+      "idcc": "176",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 32, 2°",
@@ -1054,7 +1054,7 @@
         "groupe": "28| 4 à 6 "
       },
       "type": "préavis de licenciement",
-      "idcc": "0176",
+      "idcc": "176",
       "answer": "3 mois (si les salariés ne bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947)",
       "duration": "90",
       "ref": "Article 32, 2°",
@@ -1066,7 +1066,7 @@
         "groupe": "31| 6 et suivants "
       },
       "type": "préavis de licenciement",
-      "idcc": "0176",
+      "idcc": "176",
       "answer": "4 mois (si les salariés bénéficient  des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947)",
       "duration": "120",
       "ref": "Article 32, 2°",
@@ -1079,7 +1079,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 15, Annexe III",
@@ -1092,7 +1092,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 15, Annexe III",
@@ -1105,7 +1105,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 11, Annexe II",
@@ -1118,7 +1118,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 11, Annexe II",
@@ -1130,7 +1130,7 @@
         "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 10, Annexe I",
@@ -1143,7 +1143,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "6 jours ouvrables",
       "duration": "6",
       "ref": "Annexe I et II, article 3 (CCN rattachée)",
@@ -1156,7 +1156,7 @@
         "ancienneté": "34| plus de 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Annexe I et II, article 3 (CCN rattachée)",
@@ -1169,7 +1169,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Annexe I et II, article 3 (CCN rattachée)",
@@ -1182,7 +1182,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Annexe III, article 3 (CCN rattachée)",
@@ -1195,7 +1195,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Annexe III, article 3 (CCN rattachée)",
@@ -1207,7 +1207,7 @@
         "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0275",
+      "idcc": "275",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Annexe III, article 3 (CCN rattachée)",
@@ -1220,7 +1220,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0292",
+      "idcc": "292",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Avenant Collaborateurs, Article 15\r\n",
@@ -1233,7 +1233,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0292",
+      "idcc": "292",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant Collaborateurs, Article 15\r\n",
@@ -1245,7 +1245,7 @@
         "coefficient": "27| 910 à 940"
       },
       "type": "préavis de licenciement",
-      "idcc": "0292",
+      "idcc": "292",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Avenant Collaborateurs, Article 15\r\n",
@@ -1256,7 +1256,7 @@
         "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0292",
+      "idcc": "292",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Avenant Cadres, Article 8\r\n",
@@ -1268,7 +1268,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 16",
@@ -1280,7 +1280,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 16",
@@ -1291,7 +1291,7 @@
         "catégorie socio-professionnelle": "75| autres cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "4 mois",
       "duration": "120",
       "ref": "Article 9, de l'annexe 6",
@@ -1303,7 +1303,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 9, de l'annexe 6",
@@ -1315,7 +1315,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "4 mois",
       "duration": "120",
       "ref": "Article 9, de l'annexe 6",
@@ -1327,7 +1327,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 9, de l'annexe 6",
@@ -1339,7 +1339,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "4 mois",
       "duration": "120",
       "ref": "Article 9, de l'annexe 6",
@@ -1351,7 +1351,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 9, de l'annexe 6",
@@ -1363,7 +1363,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "4 mois",
       "duration": "120",
       "ref": "Article 9, de l'annexe 6",
@@ -1375,7 +1375,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 9, de l'annexe 6",
@@ -1387,7 +1387,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0413",
+      "idcc": "413",
       "answer": "4 mois",
       "duration": "120",
       "ref": "Article 9, de l'annexe 6",
@@ -1400,7 +1400,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0573",
+      "idcc": "573",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 35",
@@ -1413,7 +1413,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0573",
+      "idcc": "573",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 35",
@@ -1425,7 +1425,7 @@
         "motif de rupture": "1| motif économique"
       },
       "type": "préavis de licenciement",
-      "idcc": "0573",
+      "idcc": "573",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 38",
@@ -1436,7 +1436,7 @@
         "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens"
       },
       "type": "préavis de licenciement",
-      "idcc": "0573",
+      "idcc": "573",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 35",
@@ -1447,7 +1447,7 @@
         "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0573",
+      "idcc": "573",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 35",
@@ -1460,7 +1460,7 @@
         "âge": "1| moins de 50 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0650",
+      "idcc": "650",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 27",
@@ -1473,7 +1473,7 @@
         "âge": "1| moins de 50 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0650",
+      "idcc": "650",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 27",
@@ -1485,7 +1485,7 @@
         "âge": "1| moins de 50 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0650",
+      "idcc": "650",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 27",
@@ -1497,7 +1497,7 @@
         "âge": "1| moins de 50 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0650",
+      "idcc": "650",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 27",
@@ -1509,7 +1509,7 @@
         "âge": "2| 50 ans à 55 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0650",
+      "idcc": "650",
       "answer": "3 mois",
       "duration": "120",
       "ref": "Article 27",
@@ -1521,7 +1521,7 @@
         "âge": "2| 50 ans à 55 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0650",
+      "idcc": "650",
       "answer": "4 mois",
       "duration": "120",
       "ref": "Article 27",
@@ -1533,7 +1533,7 @@
         "âge": "2| 50 ans à 55 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0650",
+      "idcc": "650",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 27",
@@ -1544,7 +1544,7 @@
         "âge": "4| 55 ans et plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0650",
+      "idcc": "650",
       "answer": "6 mois",
       "duration": "180",
       "ref": "Article 27",
@@ -1556,7 +1556,7 @@
         "ancienneté": "3| moins de 1 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0675",
+      "idcc": "675",
       "answer": "La convention collective ne prévoit pas de préavis pour ce cas de figure",
       "duration": "15",
       "ref": "Article 38",
@@ -1568,7 +1568,7 @@
         "ancienneté": "12| 1 mois à moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0675",
+      "idcc": "675",
       "answer": "15 jours",
       "duration": "15",
       "ref": "Article 38",
@@ -1580,7 +1580,7 @@
         "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0675",
+      "idcc": "675",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 38",
@@ -1592,7 +1592,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0675",
+      "idcc": "675",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 38",
@@ -1603,7 +1603,7 @@
         "catégorie socio-professionnelle": "23| Agents de maîtrise"
       },
       "type": "préavis de licenciement",
-      "idcc": "0675",
+      "idcc": "675",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 9 de l'avenant « Maîtrise »",
@@ -1614,7 +1614,7 @@
         "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0675",
+      "idcc": "675",
       "answer": "3 mois",
       "duration": "90",
       "ref": "article 13 de l'avenant « Cadres »",
@@ -1625,7 +1625,7 @@
         "catégorie socio-professionnelle": "48| Cadres"
       },
       "type": "préavis de licenciement",
-      "idcc": "0787",
+      "idcc": "787",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 6.2.0",
@@ -1636,7 +1636,7 @@
         "catégorie socio-professionnelle": "16| Employés"
       },
       "type": "préavis de licenciement",
-      "idcc": "0787",
+      "idcc": "787",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 6.2.0",
@@ -1647,7 +1647,7 @@
         "catégorie socio-professionnelle": "16| Employés"
       },
       "type": "préavis de licenciement",
-      "idcc": "0787",
+      "idcc": "787",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 6.2.0",
@@ -1659,7 +1659,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0822",
+      "idcc": "822",
       "answer": "2 semaines",
       "duration": "14",
       "ref": "article 14",
@@ -1671,7 +1671,7 @@
         "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0822",
+      "idcc": "822",
       "answer": "1 mois",
       "duration": "30",
       "ref": "article 14",
@@ -1683,7 +1683,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0822",
+      "idcc": "822",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 14",
@@ -1695,7 +1695,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0822",
+      "idcc": "822",
       "answer": "1 mois",
       "duration": "30",
       "ref": "article 14",
@@ -1707,7 +1707,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0822",
+      "idcc": "822",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 14",
@@ -1719,7 +1719,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0822",
+      "idcc": "822",
       "answer": "1 mois",
       "duration": "30",
       "ref": "article 14",
@@ -1731,7 +1731,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0822",
+      "idcc": "822",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 14",
@@ -1742,7 +1742,7 @@
         "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0822",
+      "idcc": "822",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 14",
@@ -1753,7 +1753,7 @@
         "niveau": "7| V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0822",
+      "idcc": "822",
       "answer": "3 mois",
       "duration": "90",
       "ref": "article 14",
@@ -1765,7 +1765,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0843",
+      "idcc": "843",
       "answer": "1 semaine",
       "duration": "7",
       "ref": "Article 32",
@@ -1777,7 +1777,7 @@
         "ancienneté": "32| plus de 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0843",
+      "idcc": "843",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 32",
@@ -1789,7 +1789,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0843",
+      "idcc": "843",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 32",
@@ -1801,7 +1801,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0843",
+      "idcc": "843",
       "answer": "1 mois et demi",
       "duration": "45",
       "ref": "Annexe : Statut du personnel d'encadrement, article 6",
@@ -1813,7 +1813,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0843",
+      "idcc": "843",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Annexe : Statut du personnel d'encadrement, article 6",
@@ -1825,7 +1825,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0860",
+      "idcc": "860",
       "answer": "2 semaines",
       "duration": "14",
       "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
@@ -1837,7 +1837,7 @@
         "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0860",
+      "idcc": "860",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
@@ -1849,7 +1849,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0860",
+      "idcc": "860",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
@@ -1861,7 +1861,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0860",
+      "idcc": "860",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
@@ -1873,7 +1873,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0860",
+      "idcc": "860",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
@@ -1885,7 +1885,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0860",
+      "idcc": "860",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
@@ -1897,7 +1897,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0860",
+      "idcc": "860",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
@@ -1908,7 +1908,7 @@
         "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0860",
+      "idcc": "860",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
@@ -1919,7 +1919,7 @@
         "niveau": "7| V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0860",
+      "idcc": "860",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 34 de l'avenant relatif aux mensuels de la convention collective départementale",
@@ -1931,7 +1931,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0878",
+      "idcc": "878",
       "answer": "2 semaines",
       "duration": "14",
       "ref": "Article 46",
@@ -1943,7 +1943,7 @@
         "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0878",
+      "idcc": "878",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 46",
@@ -1955,7 +1955,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0878",
+      "idcc": "878",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 46",
@@ -1967,7 +1967,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0878",
+      "idcc": "878",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 46",
@@ -1979,7 +1979,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0878",
+      "idcc": "878",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 46",
@@ -1991,7 +1991,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0878",
+      "idcc": "878",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 46",
@@ -2003,7 +2003,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0878",
+      "idcc": "878",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 46",
@@ -2014,7 +2014,7 @@
         "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0878",
+      "idcc": "878",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 46",
@@ -2025,7 +2025,7 @@
         "niveau": "7| V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0878",
+      "idcc": "878",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 46",
@@ -2037,7 +2037,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0898",
+      "idcc": "898",
       "answer": "2 semaines",
       "duration": "14",
       "ref": "article 24\r\n",
@@ -2049,7 +2049,7 @@
         "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0898",
+      "idcc": "898",
       "answer": "1 mois",
       "duration": "30",
       "ref": "article 24\r\n",
@@ -2061,7 +2061,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0898",
+      "idcc": "898",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 24\r\n",
@@ -2073,7 +2073,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0898",
+      "idcc": "898",
       "answer": "1 mois",
       "duration": "30",
       "ref": "article 24\r\n",
@@ -2085,7 +2085,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0898",
+      "idcc": "898",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 24\r\n",
@@ -2097,7 +2097,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0898",
+      "idcc": "898",
       "answer": "1 mois",
       "duration": "30",
       "ref": "article 24\r\n",
@@ -2109,7 +2109,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0898",
+      "idcc": "898",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 24\r\n",
@@ -2120,7 +2120,7 @@
         "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0898",
+      "idcc": "898",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 24\r\n",
@@ -2131,7 +2131,7 @@
         "niveau": "7| V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0898",
+      "idcc": "898",
       "answer": "3 mois",
       "duration": "90",
       "ref": "article 24\r\n",
@@ -2143,7 +2143,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0914",
+      "idcc": "914",
       "answer": "2 semaines",
       "duration": "14",
       "ref": "Article 52",
@@ -2155,7 +2155,7 @@
         "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0914",
+      "idcc": "914",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 52",
@@ -2167,7 +2167,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0914",
+      "idcc": "914",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 52",
@@ -2179,7 +2179,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0914",
+      "idcc": "914",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 52",
@@ -2191,7 +2191,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0914",
+      "idcc": "914",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 52",
@@ -2203,7 +2203,7 @@
         "ancienneté": "38| 2 ans ou moins"
       },
       "type": "préavis de licenciement",
-      "idcc": "0914",
+      "idcc": "914",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 52",
@@ -2215,7 +2215,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0914",
+      "idcc": "914",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 52",
@@ -2226,7 +2226,7 @@
         "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0914",
+      "idcc": "914",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 52",
@@ -2237,7 +2237,7 @@
         "niveau": "7| V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0914",
+      "idcc": "914",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 52",
@@ -2249,7 +2249,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0937",
+      "idcc": "937",
       "answer": "2 semaines",
       "duration": "14",
       "ref": "article 36 de l'avenant mensuels",
@@ -2261,7 +2261,7 @@
         "ancienneté": "33| 6 mois à 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0937",
+      "idcc": "937",
       "answer": "1 mois",
       "duration": "30",
       "ref": "article 36 de l'avenant mensuels",
@@ -2273,7 +2273,7 @@
         "ancienneté": "41| plus de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0937",
+      "idcc": "937",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 36 de l'avenant mensuels",
@@ -2285,7 +2285,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0937",
+      "idcc": "937",
       "answer": "1 mois",
       "duration": "30",
       "ref": "article 36 de l'avenant mensuels",
@@ -2297,7 +2297,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0937",
+      "idcc": "937",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 36 de l'avenant mensuels",
@@ -2309,7 +2309,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0937",
+      "idcc": "937",
       "answer": "1 mois",
       "duration": "30",
       "ref": "article 36 de l'avenant mensuels",
@@ -2321,7 +2321,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0937",
+      "idcc": "937",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 36 de l'avenant mensuels",
@@ -2332,7 +2332,7 @@
         "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0937",
+      "idcc": "937",
       "answer": "2 mois",
       "duration": "60",
       "ref": "article 36 de l'avenant mensuels",
@@ -2343,7 +2343,7 @@
         "niveau": "7| V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0937",
+      "idcc": "937",
       "answer": "3 mois",
       "duration": "90",
       "ref": "article 36 de l'avenant mensuels",
@@ -2355,7 +2355,7 @@
         "ancienneté": "13| moins de 6 mois"
       },
       "type": "préavis de licenciement",
-      "idcc": "0965",
+      "idcc": "965",
       "answer": "15 jours",
       "duration": "15",
       "ref": "Article 27 de l'avenant mensuels",
@@ -2367,7 +2367,7 @@
         "ancienneté": "31| 6 mois à moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0965",
+      "idcc": "965",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 27 de l'avenant mensuels",
@@ -2379,7 +2379,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0965",
+      "idcc": "965",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 27 de l'avenant mensuels",
@@ -2391,7 +2391,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0965",
+      "idcc": "965",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 27 de l'avenant mensuels",
@@ -2403,7 +2403,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0965",
+      "idcc": "965",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 27 de l'avenant mensuels",
@@ -2415,7 +2415,7 @@
         "ancienneté": "36| moins de 2 ans"
       },
       "type": "préavis de licenciement",
-      "idcc": "0965",
+      "idcc": "965",
       "answer": "1 mois",
       "duration": "30",
       "ref": "Article 27 de l'avenant mensuels",
@@ -2427,7 +2427,7 @@
         "ancienneté": "40| 2 ans ou plus"
       },
       "type": "préavis de licenciement",
-      "idcc": "0965",
+      "idcc": "965",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 27 de l'avenant mensuels",
@@ -2438,7 +2438,7 @@
         "niveau": "22| II à V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0965",
+      "idcc": "965",
       "answer": "2 mois",
       "duration": "60",
       "ref": "Article 27 de l'avenant mensuels",
@@ -2449,7 +2449,7 @@
         "niveau": "7| V"
       },
       "type": "préavis de licenciement",
-      "idcc": "0965",
+      "idcc": "965",
       "answer": "3 mois",
       "duration": "90",
       "ref": "Article 27 de l'avenant mensuels",

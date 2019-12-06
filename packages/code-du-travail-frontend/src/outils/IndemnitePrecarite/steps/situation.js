@@ -63,7 +63,9 @@ export const hasConventionalProvision = (data, idcc) => {
 };
 
 export const isNotYetProcessed = idcc => {
-  const situations = data.filter(situation => situation.idcc === idcc);
+  const situations = data.filter(
+    situation => parseInt(situation.idcc) === parseInt(idcc)
+  );
   return (
     situations.length === 0 ||
     situations.some(situation => situation.hasConventionalProvision === null)

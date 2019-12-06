@@ -16,11 +16,11 @@ const { situations: allSituations } = data;
 function StepResult({ form }) {
   const { values } = form.getState();
   const { ccn, cdt, seriousMisconduct, disabledWorker, criteria = {} } = values;
-  const idcc = ccn ? ccn.num : "0000";
+  const idcc = ccn ? ccn.num : "0";
 
   // Situation CDT
   const initialCDTSituations = getSituationsFor(allSituations, {
-    idcc: "0000"
+    idcc: "0"
   });
   const possibleCDTSituations = filterSituations(initialCDTSituations, cdt);
 

@@ -17,7 +17,7 @@ import {
 function StepResult({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
-  const idcc = ccn ? ccn.num : "0000";
+  const idcc = ccn ? ccn.num : "0";
 
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
@@ -46,7 +46,7 @@ function StepResult({ form }) {
       const [situation] = possibleSituations;
       const { idcc } = situation;
       const { title: ccLabel } = ccn;
-      if (idcc === "0000") {
+      if (idcc === "0") {
         return (
           <>
             <p>

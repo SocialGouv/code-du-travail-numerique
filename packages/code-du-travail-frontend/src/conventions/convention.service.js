@@ -7,11 +7,11 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const formatIdcc = ({ idcc, id, slug, title }) => ({
+const formatIdcc = ({ idcc: num, id, slug, title }) => ({
   id,
   slug,
   title,
-  num: `0000${idcc}`.slice(-4)
+  num
 });
 
 const getConventionTextes = memoizee(

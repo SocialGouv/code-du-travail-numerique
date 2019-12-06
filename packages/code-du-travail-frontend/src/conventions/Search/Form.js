@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { formatIdcc } from "@cdt/data/lib";
+
 import styled from "styled-components";
 import Link from "next/link";
 import Spinner from "react-svg-spinner";
@@ -10,7 +12,7 @@ import SearchCC from "./SearchCC";
 
 // following data/populate.js slug rules
 const getConventionSlug = convention =>
-  slugify(`${convention.num}-${convention.title}`.substring(0, 80));
+  slugify(`${formatIdcc(convention.num)}-${convention.title}`.substring(0, 80));
 
 // link to a Convention
 const Convention = ({ num, title, onClick }) => {
