@@ -2,6 +2,8 @@ image:
   repository: ${CI_REGISTRY_IMAGE}/frontend
   tag: master
 
+fullnameOverride: "frontend-nodejs"
+
 deployment:
 
   port: 3000
