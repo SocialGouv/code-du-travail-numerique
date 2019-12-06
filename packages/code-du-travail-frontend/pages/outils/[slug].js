@@ -61,7 +61,7 @@ class Outils extends React.Component {
           description={description}
           image={ogImage}
         />
-        <Simulator q={searchTerm} />
+        <Simulator q={searchTerm} title={title} />
       </Layout>
     );
   }

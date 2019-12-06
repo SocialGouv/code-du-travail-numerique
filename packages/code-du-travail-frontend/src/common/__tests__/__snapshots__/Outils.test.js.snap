@@ -515,7 +515,7 @@ exports[`<Outils /> should render 1`] = `
               <h3
                 class="c13"
               >
-                Simulateur d'indemnités de licenciements
+                Simulateur d'indemnité de licenciement
               </h3>
             </div>
             <div
@@ -613,7 +613,7 @@ exports[`<Outils /> should render 1`] = `
               <h3
                 class="c13"
               >
-                Simulation de l'indemnité de précarité
+                Simulateur de l'indemnité de précarité
               </h3>
             </div>
             <div

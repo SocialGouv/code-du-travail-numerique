@@ -37,7 +37,7 @@ export const outils = [
     slug: "/outils/preavis-demission"
   },
   {
-    title: "Simulateur d'indemnités de licenciements",
+    title: "Simulateur d'indemnité de licenciement",
     hrefTitle: "Démarrer une simulation d'indemnités de licenciements",
     button: "Démarrer",
     text:
@@ -55,7 +55,7 @@ export const outils = [
     slug: "/outils/preavis-licenciement"
   },
   {
-    title: "Simulation de l'indemnité de précarité",
+    title: "Simulateur de l'indemnité de précarité",
     hrefTitle: "Démarrer une simulation de l'indemnnité de précarité",
     button: "Démarrer",
     text: "Simulez l'indemnité de précarité d’un salarié.",
