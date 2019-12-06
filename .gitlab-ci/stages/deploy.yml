@@ -4,6 +4,7 @@ include:
   #
   - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.2.1/base_create_namespace_stage.yml"
   - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.2.1/base_deploy_nodejs_chart_stage.yml"
+  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/feat/hpa/base_deploy_hpa_chart_stage.yml"
   - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.2.1/base_docker_helm_image_stage.yml"
   - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.2.1/base_docker_kubectl_image_stage.yml"
   - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v2.2.1/base_semantic_release_stage.yml"
@@ -14,9 +15,6 @@ include:
 Create namespace:
   extends: .base_create_namespace_stage
   stage: "Post Registration"
-  variables:
-    # TODO @douglasduteil move the project-id in ci variable
-    RANCHER_PROJECT_ID: c-gsm8d:p-v7cpb # the "default" project
   before_script:
     - source ./.gitlab-ci/env.sh
   after_script:
@@ -95,7 +93,7 @@ Create namespace:
 
 .deploy_api_stage: &deploy_api_stage
   <<: *deploy_stage
-  extends: .base_deploy_nodejs_chart_stage
+  extends: .base_deploy_hpa_chart_stage
   variables:
     <<: *deploy_stage_variables
     CONTEXT: api
