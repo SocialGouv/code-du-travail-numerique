@@ -86,7 +86,4 @@ autoscaling:
   enabled: true
   minReplicas: 1
   maxReplicas: 10
-  # Se baser sur la moyenne utilisation CPU pour faire l'autoscaling :
   targetCPUAverageUtilizationPercentage: 80
-  # Se baser sur la moyenne utilisation RAM pour faire l'autoscaling :
-  # targetMemoryAverageUtilizationPercentage: 60

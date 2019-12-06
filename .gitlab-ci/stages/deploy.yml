@@ -120,7 +120,7 @@ Deploy @cdtn/api (incubateur):
 
 .deploy_frontend_stage: &deploy_frontend_stage
   <<: *deploy_stage
-  extends: .base_deploy_nodejs_chart_stage
+  extends: .base_deploy_hpa_chart_stage
   variables:
     <<: *deploy_stage_variables
     PORT: ${FRONTEND_PORT}
