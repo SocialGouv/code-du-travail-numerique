@@ -2215,10 +2215,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/tooltip@^0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.6.2.tgz#16fdb5bc5dfb449105c81c7bf41649b3e12dfa6c"
-  integrity sha512-utYnabu12SJcNHRoxbliE3mPvSo3wETI5uT4YE0p/uiIATYP0VwOSSnIyZNPZFLmf/hzkwiInirNXdbtpKBeiw==
+"@reach/tooltip@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.6.3.tgz#190a204b34331fed2c4384e0dda76184332e8ca9"
+  integrity sha512-9OJz7iWdEt33nMOdBigwJR0YGw+otIW/1m9hfGsIHju6LQf9K7j+7F3pxi8qf6j59y0dbCdn0S6JJ3DKJ2bUBw==
   dependencies:
     "@reach/auto-id" "^0.6.1"
     "@reach/portal" "^0.6.2"
