@@ -1347,36 +1347,6 @@ exports[`<MentionLegales /> should render 1`] = `
                   La mesure d’audience (nombre de visites, pages consultées) est réalisée par un outil libre intitulé Matomo spécifiquement paramétré, respectant les conditions d’exemption du consentement de l’internaute définies par la recommandation « Cookies » de la Commission nationale informatique et libertés (CNIL).
                 </p>
                 <p>
-                  Pour la période de construction, ce site utilise l’outil Hotjar, notamment pour obtenir les retours écrits des utilisateurs concernant la pertinence des résultats proposés dans le cadre de leurs recherches. Hotjar utilise des cookies et d’autres technologies pour collecter des informations sur l’équipement et les comportements des visiteurs. Cet outil stocke ces informations dans un profil utilisateur pseudonymisé. Ni Hotjar ni l’éditeur n’utiliseront ces informations pour identifier des utilisateurs individuels ou pour les associer à d’autres données. Vous pouvez consulter la politique de confidentialité de
-                   
-                  <a
-                    href="https://www.hotjar.com/legal/policies/privacy"
-                  >
-                    Hotjar
-                  </a>
-                   . Ces données ne seront jamais cédées. La durée de conservation de ces informations ne saurait dépasser deux ans.
-                </p>
-                <p>
-                  Vous pouvez librement désactiver ce service, sur l’ensemble des sites internet susceptibles de l’utiliser en suivant la procédure présentée
-                   
-                  <a
-                    href="https://www.hotjar.com/legal/compliance/opt-out"
-                  >
-                    ici: https://www.hotjar.com/legal/compliance/opt-out
-                  </a>
-                  .
-                </p>
-                <p>
-                  Le site utilise également la solution
-                   
-                  <a
-                    href="https://polyfill.io/v3/"
-                  >
-                    Polyfill.io
-                  </a>
-                  , ce service permet de faire fonctionner l’ensemble des fonctionnalités du code du travail numérique sur tous les navigateurs, quelless que soient leurs générations.
-                </p>
-                <p>
                   À tout moment, vous pouvez refuser l’utilisation des cookies et désactiver le dépôt sur votre ordinateur en utilisant la fonction dédiée de votre navigateur (fonction disponible notamment sur Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple Safari et Opera).
                 </p>
                 <p>

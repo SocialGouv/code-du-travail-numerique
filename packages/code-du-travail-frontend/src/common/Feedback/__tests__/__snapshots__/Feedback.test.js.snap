@@ -270,68 +270,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   text-align: left;
 }
 
-.c10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
-  opacity: 1;
-}
-
-.c10:link,
-.c10:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c10:not([disabled]):hover,
-.c10:not([disabled]):active,
-.c10:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
-}
-
-.c10[disabled] {
-  color: rgba(255,255,255,0.4);
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c12 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -370,14 +309,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   border-radius: 0;
 }
 
-.c12:focus,
-.c12:hover,
-.c12:active {
+.c7:focus,
+.c7:hover,
+.c7:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c13 {
+.c8 {
   height: 1.4rem;
   margin-left: 0.4rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -385,47 +324,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transition: transform 250ms linear;
 }
 
-.c9:hover .c13 {
+.c6:hover .c8 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
-}
-
-.c7 {
-  margin-bottom: 2rem;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.c11 {
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  margin: 0;
-  margin-top: 2rem;
 }
 
 @media print {
@@ -470,90 +372,15 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             Avez-vous trouvé la réponse à votre question ?
           </h3>
         </header>
-        <form
-          action="https://formspree.io/xbalrgzm"
-          class="c6"
-        >
-          <p>
-            <strong>
-              Merci pour votre réponse !
-            </strong>
-          </p>
-          <p>
-            Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
-          </p>
-          <input
-            name="question"
-            type="hidden"
-            value="Query"
-          />
-          <input
-            name="url"
-            type="hidden"
-            value="http://server/fiches/fiche1"
-          />
-          <input
-            name="sourceType"
-            type="hidden"
-            value="Fiches Service Public"
-          />
-          <select
-            class="c7"
-            name="motif"
-          >
-            <option
-              value="Les informations proposées ne sont pas à jour"
-            >
-              Les informations proposées ne sont pas à jour
-            </option>
-            <option
-              value="Les informations me paraissent erronées"
-            >
-              Les informations me paraissent erronées
-            </option>
-            <option
-              value="Les informations me paraissent incomplètes"
-            >
-              Les informations me paraissent incomplètes
-            </option>
-            <option
-              value="Les informations me paraissent hors-sujet"
-            >
-              Les informations me paraissent hors-sujet
-            </option>
-            <option
-              value="Je n'ai pas trouvé la réponse à ma question"
-            >
-              Je n'ai pas trouvé la réponse à ma question
-            </option>
-          </select>
-          <textarea
-            class="c7"
-            name="message"
-            placeholder="Les informations ..."
-          />
-          <div
-            class="c8"
-          >
-            <button
-              class="c9 c10"
-            >
-              Envoyer mon commentaire
-            </button>
-            <div
-              class="c11"
-            />
-          </div>
-        </form>
         <p>
           Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
            
           <button
-            class="c9 c12"
+            class="c6 c7"
           >
             services de renseignement
             <svg
-              class="c13"
+              class="c8"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -649,104 +476,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   text-align: left;
 }
 
-.c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
-  opacity: 1;
-}
-
-.c9:link,
-.c9:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c9:not([disabled]):hover,
-.c9:not([disabled]):active,
-.c9:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
-}
-
-.c9[disabled] {
-  color: rgba(255,255,255,0.4);
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
-}
-
-.c7 {
-  margin-bottom: 2rem;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.c10 {
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  margin: 0;
-  margin-top: 2rem;
-}
-
 @media print {
   .c1 {
     max-width: 100%;
@@ -789,51 +518,9 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             Avez-vous trouvé la réponse à votre question ?
           </h3>
         </header>
-        <form
-          action="https://formspree.io/xbalrgzm"
-          class="c6"
-        >
-          <p>
-            <strong>
-              Merci pour votre réponse !
-            </strong>
-          </p>
-          <p>
-            Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
-          </p>
-          <input
-            name="question"
-            type="hidden"
-            value="Query"
-          />
-          <input
-            name="url"
-            type="hidden"
-            value="http://server/fiches/fiche1"
-          />
-          <input
-            name="sourceType"
-            type="hidden"
-            value="Fiches Service Public"
-          />
-          <textarea
-            class="c7"
-            name="message"
-            placeholder="Les informations ..."
-          />
-          <div
-            class="c8"
-          >
-            <button
-              class="c9"
-            >
-              Envoyer mon commentaire
-            </button>
-            <div
-              class="c10"
-            />
-          </div>
-        </form>
+        <p>
+          Merci pour votre réponse.
+        </p>
       </div>
     </div>
   </div>

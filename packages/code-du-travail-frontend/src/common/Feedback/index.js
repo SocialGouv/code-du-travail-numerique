@@ -9,24 +9,13 @@ import {
 } from "@socialgouv/react-ui";
 import styled from "styled-components";
 import { matopush } from "../../piwik";
-
-import { FeedbackForm } from "./FeedbackForm";
-import {
-  feedbackUrl,
-  feedbackLightUrl,
-  postFeedback
-} from "./feedback.service";
 import ServiceRenseignementModal from "../ServiceRenseignementModal";
 
 function Feedback({
   query = "",
-  sourceType = "",
-  sourceFilter = "Tous contenus",
-  url = document ? document.location.href : "",
-  title = ""
+  url = document ? document.location.href : ""
 }) {
   const [isSatisfied, setSatisfaction] = useState(null); // null, true, false,
-  const [isSent, setSent] = useState(false); // false, true,
 
   const onSetSatisfaction = answer => {
     matopush([
@@ -36,30 +25,7 @@ function Feedback({
       url,
       query
     ]);
-    postFeedback(feedbackLightUrl, {
-      sourceFilter,
-      isSatisfied: answer,
-      query,
-      title,
-      sourceType,
-      url: document.location.href,
-      userAgent: typeof navigator !== "undefined" && navigator.userAgent
-    });
     setSatisfaction(answer);
-  };
-
-  const submitFeedback = data => {
-    matopush([
-      "trackEvent",
-      "feedback",
-      isSatisfied ? "submit positive form" : "submit negative form",
-      url,
-      query
-    ]);
-
-    return postFeedback(feedbackUrl, data).then(() => {
-      setSent(true);
-    });
   };
 
   return (
@@ -80,18 +46,7 @@ function Feedback({
               </StyledButton>
             </P>
           )}
-          {isSatisfied !== null && !isSent && (
-            <FeedbackForm
-              query={query}
-              sourceFilter={sourceFilter}
-              sourceType={sourceType}
-              url={url}
-              title={title}
-              onSubmit={submitFeedback}
-              isSatisfied={isSatisfied}
-            />
-          )}
-          {isSent && <p>Nous avons bien reçu votre commentaire. Merci !</p>}
+          {isSatisfied === true && <p>Merci pour votre réponse.</p>}
           {isSatisfied === false && (
             <p>
               Pour obtenir une réponse à votre question de droit du travail,
