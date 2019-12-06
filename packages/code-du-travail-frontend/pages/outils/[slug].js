@@ -30,7 +30,7 @@ const outilsBySlug = {
 
 const getSimulator = function(name) {
   const outil = outils.find(({ slug = "" }) =>
-    new RegExp(`^${name}$`).test(slug)
+    new RegExp(`/${name}$`).test(slug)
   );
   if (outil) {
     return {
