@@ -1571,6 +1571,15 @@ exports[`<Glossaire /> should render 1`] = `
                 class="c31"
               >
                 <a
+                  href="/glossaire/arret-de-la-cour-de-cassation"
+                >
+                  arrêt de la cour de cassation
+                </a>
+              </li>
+              <li
+                class="c31"
+              >
+                <a
                   href="/glossaire/arret-de-travail"
                 >
                   arrêt de travail
@@ -1816,15 +1825,6 @@ exports[`<Glossaire /> should render 1`] = `
                 class="c31"
               >
                 <a
-                  href="/glossaire/clause-dindexation"
-                >
-                  Clause d'indexation
-                </a>
-              </li>
-              <li
-                class="c31"
-              >
-                <a
                   href="/glossaire/clause-penale"
                 >
                   Clause pénale
@@ -1861,18 +1861,9 @@ exports[`<Glossaire /> should render 1`] = `
                 class="c31"
               >
                 <a
-                  href="/glossaire/commissaire-aux-comptes"
-                >
-                  Commissaire aux comptes
-                </a>
-              </li>
-              <li
-                class="c31"
-              >
-                <a
                   href="/glossaire/commission-nationale-de-linformatique-et-des-libertes"
                 >
-                  Commission nationale de l’informatique et des libertés 
+                  Commission nationale de l’informatique et des libertés
                 </a>
               </li>
               <li
@@ -2322,6 +2313,15 @@ exports[`<Glossaire /> should render 1`] = `
                 class="c31"
               >
                 <a
+                  href="/glossaire/employeurs-multiples"
+                >
+                  Employeurs multiples
+                </a>
+              </li>
+              <li
+                class="c31"
+              >
+                <a
                   href="/glossaire/emprisonnement"
                 >
                   Emprisonnement
@@ -2425,6 +2425,15 @@ exports[`<Glossaire /> should render 1`] = `
                   href="/glossaire/faute-lourde"
                 >
                   Faute lourde
+                </a>
+              </li>
+              <li
+                class="c31"
+              >
+                <a
+                  href="/glossaire/fetes-legales"
+                >
+                  Fêtes légales
                 </a>
               </li>
               <li
@@ -2664,15 +2673,6 @@ exports[`<Glossaire /> should render 1`] = `
                   Institutions représentatives du personnel 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
-                <a
-                  href="/glossaire/intermittent-du-spectacle"
-                >
-                  Intermittent du spectacle
-                </a>
-              </li>
             </ul>
           </div>
           <div>
@@ -2744,15 +2744,6 @@ exports[`<Glossaire /> should render 1`] = `
                   href="/glossaire/jour-ouvre"
                 >
                   Jour ouvré
-                </a>
-              </li>
-              <li
-                class="c31"
-              >
-                <a
-                  href="/glossaire/jours-de-fractionnement"
-                >
-                  Jours de fractionnement
                 </a>
               </li>
               <li
@@ -3064,15 +3055,6 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
-                <a
-                  href="/glossaire/negociation-triennale"
-                >
-                  Négociation triennale 
-                </a>
-              </li>
               <li
                 class="c31"
               >
