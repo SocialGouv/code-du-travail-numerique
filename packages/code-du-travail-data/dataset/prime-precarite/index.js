@@ -49,9 +49,6 @@ function transformRow(row) {
       if (data[key] === "oui" || data[key] === "non") {
         data[key] = data[key] === "oui";
       }
-      if (key === "idcc" && data[key]) {
-        data[key] = `000${data[key]}`.slice(-4);
-      }
     }
     for (const [index, key] of Object.entries(criteriaIndex)) {
       if (row[index]) {

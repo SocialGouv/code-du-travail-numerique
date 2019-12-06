@@ -25,7 +25,7 @@ function StepIndemnite({ form }) {
     criteria = {}
   } = state.values;
 
-  const idcc = ccn ? ccn.num : "0000";
+  const idcc = ccn ? ccn.num : "0";
   const initialSituations = getSituationsFor(data, { idcc, contractType });
   const situations = filterSituations(initialSituations, criteria);
 
@@ -42,7 +42,7 @@ function StepIndemnite({ form }) {
       break;
     }
     default: {
-      const situations = getSituationsFor(data, { idcc: "0000", contractType });
+      const situations = getSituationsFor(data, { idcc: "0", contractType });
       const [situation] = situations;
       references = getRef(situation);
     }

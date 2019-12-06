@@ -34,7 +34,7 @@ const excludeContracts = [
 
 function StepInfosGenerales({ form }) {
   const { values } = form.getState();
-  const idcc = values.ccn ? values.ccn.num : "0000";
+  const idcc = values.ccn ? values.ccn.num : "0";
   const initialSituations = getSituationsFor(data, { idcc });
   const pastQuestions = getPastQuestions(
     initialSituations,
@@ -151,7 +151,7 @@ function StepInfosGenerales({ form }) {
 }
 
 function validate(values) {
-  const idcc = values.ccn ? values.ccn.num : "0000";
+  const idcc = values.ccn ? values.ccn.num : "0";
   const initialSituations = getSituationsFor(data, { idcc });
 
   const errors = {

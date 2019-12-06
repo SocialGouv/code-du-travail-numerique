@@ -1,12 +1,12 @@
+import { formatIdcc } from "@cdt/data/lib";
+
 import getQueryType from "./getQueryType";
 import { searchConvention } from "../convention.service";
 import {
   searchEntrepriseByName,
   searchEntrepriseBySiret
 } from "../entreprise.service";
-
 const cleanIdcc = str => (str && str.replace(/^0+/, "").trim()) || "";
-const formatIdcc = str => `0000${str}`.slice(-4);
 
 // build a result list based on query type
 export const loadResults = async query => {

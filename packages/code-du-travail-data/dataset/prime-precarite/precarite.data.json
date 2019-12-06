@@ -2,7 +2,7 @@
   {
     "criteria": {},
     "contractType": "CTT",
-    "idcc": "0000",
+    "idcc": "0",
     "hasConventionalProvision": null,
     "allowBonus": true,
     "endMessage": null,
@@ -16,7 +16,7 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": "0000",
+    "idcc": "0",
     "hasConventionalProvision": null,
     "allowBonus": true,
     "endMessage": null,
@@ -28,7 +28,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0000",
+    "idcc": "0",
     "hasConventionalProvision": null,
     "allowBonus": false,
     "endMessage": null,
@@ -40,7 +40,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0000",
+    "idcc": "0",
     "hasConventionalProvision": null,
     "allowBonus": false,
     "endMessage": null,
@@ -52,7 +52,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0016",
+    "idcc": "16",
     "hasConventionalProvision": null,
     "allowBonus": false,
     "endMessage": null,
@@ -64,7 +64,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0010",
+    "idcc": "10",
     "hasConventionalProvision": null,
     "allowBonus": true,
     "endMessage": null,
@@ -76,7 +76,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0029",
+    "idcc": "29",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -88,7 +88,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0044",
+    "idcc": "44",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -100,7 +100,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0054",
+    "idcc": "54",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -112,7 +112,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0086",
+    "idcc": "86",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -124,7 +124,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0176",
+    "idcc": "176",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -136,7 +136,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0275",
+    "idcc": "275",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -148,7 +148,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0292",
+    "idcc": "292",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -160,7 +160,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0413",
+    "idcc": "413",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -172,7 +172,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0573",
+    "idcc": "573",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -184,7 +184,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0650",
+    "idcc": "650",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -196,7 +196,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0675",
+    "idcc": "675",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -208,7 +208,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0714",
+    "idcc": "714",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -220,7 +220,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0787",
+    "idcc": "787",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -232,7 +232,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0822",
+    "idcc": "822",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -244,7 +244,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0827",
+    "idcc": "827",
     "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
@@ -256,7 +256,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0828",
+    "idcc": "828",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -268,7 +268,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0829",
+    "idcc": "829",
     "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
@@ -280,7 +280,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0836",
+    "idcc": "836",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -292,7 +292,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0843",
+    "idcc": "843",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -304,7 +304,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0860",
+    "idcc": "860",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -316,7 +316,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0863",
+    "idcc": "863",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -328,7 +328,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0878",
+    "idcc": "878",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -340,7 +340,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0887",
+    "idcc": "887",
     "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
@@ -352,7 +352,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0898",
+    "idcc": "898",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -364,7 +364,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0899",
+    "idcc": "899",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -376,7 +376,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0911",
+    "idcc": "911",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -388,7 +388,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0914",
+    "idcc": "914",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -400,7 +400,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0920",
+    "idcc": "920",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -412,7 +412,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0923",
+    "idcc": "923",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -424,7 +424,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0930",
+    "idcc": "930",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -436,7 +436,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0934",
+    "idcc": "934",
     "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
@@ -448,7 +448,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0937",
+    "idcc": "937",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -460,7 +460,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0943",
+    "idcc": "943",
     "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
@@ -472,7 +472,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0948",
+    "idcc": "948",
     "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
@@ -484,7 +484,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0965",
+    "idcc": "965",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
@@ -496,7 +496,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0979",
+    "idcc": "979",
     "hasConventionalProvision": null,
     "allowBonus": null,
     "endMessage": null,
@@ -508,7 +508,7 @@
   {
     "criteria": {},
     "contractType": "CDD",
-    "idcc": "0984",
+    "idcc": "984",
     "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,

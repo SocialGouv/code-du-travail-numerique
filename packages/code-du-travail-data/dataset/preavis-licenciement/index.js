@@ -89,8 +89,6 @@ function transformRow(headers, row) {
   for (const [key, index] of Object.entries(csvColumns)) {
     data[key] = (row[index] && row[index].value) || null;
   }
-  //Format idcc
-  data.idcc = ("0000" + data.idcc).slice(-4);
 
   for (const index of criteriaIndex) {
     if (row[index]) {

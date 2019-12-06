@@ -41,7 +41,7 @@ function StepStatus({ form }) {
   const { seriousMisconduct, disabledWorker } = form.getState().values;
   const seniorityKey = "ancienneté";
 
-  const initialSituations = getSituationsFor(allSituations, { idcc: "0000" });
+  const initialSituations = getSituationsFor(allSituations, { idcc: "0" });
   const possibleSituations = filterSituations(initialSituations, {});
   const seniorityOptions = getOptions(possibleSituations, seniorityKey);
 
