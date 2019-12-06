@@ -5,7 +5,7 @@ import Spinner from "react-svg-spinner";
 class SimulateurEmbauche extends React.PureComponent {
   simRef = React.createRef();
   state = {
-    simulator: "error"
+    simulator: "loading"
   };
 
   onError = error => {
@@ -14,7 +14,7 @@ class SimulateurEmbauche extends React.PureComponent {
 
   onLoad = () => {
     this.setState({ simulator: "success" });
-    if (this.simRef.current.children.length === 0) {
+    if (!this.simRef.current.querySelector("#simulateurEmbauche")) {
       this.setState({ simulator: "error", error: "empty child" });
     }
   };
