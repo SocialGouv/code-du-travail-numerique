@@ -40,7 +40,14 @@ function StepResult({ form }) {
     criteria: { ancienneté: seniorityCC, ...situationCCCriteria },
     duration: durationCC
   } = situationCC || { criteria: {} };
-
+  const refs = [
+    {
+      ref: "Article L.1234-1 du code du travail",
+      refUrl:
+        "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+    },
+    { ref: situationCC.ref, refUrl: situationCC.refUrl }
+  ];
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
@@ -97,7 +104,7 @@ function StepResult({ form }) {
             "Convention collective": ccn.title
           })}
           <SectionTitle>Source</SectionTitle>
-          {situationCC.ref && situationCC.refUrl && getRef(situationCC)}
+          {situationCC.ref && situationCC.refUrl && getRef(refs)}
         </>
       )}
     </>

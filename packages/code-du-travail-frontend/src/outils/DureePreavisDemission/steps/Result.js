@@ -20,47 +20,12 @@ function StepResult({ form }) {
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
 
-  /**
-   * NOTE @lionelb
-   * this code is never executed since users can't
-   * go to the results with an un processed agreement
-   */
-  // if (!possibleSituations.length && isNotYetProcessed(data.situations, idcc)) {
-  //   return (
-  //     <>
-  //       <Toast>
-  //         Nous n’avons pas encore traité cette convention collective. Le code du
-  //         travail ne prévoyant pas de durée précise du préavis de démission,
-  //         nous vous invitons à consulter le contenu de la convention collective.
-  //         <br />
-  //         <Link
-  //           href="/fiche-service-public/[slug]"
-  //           as={`/fiche-service-public/${ccn.slug}`}
-  //         >
-  //           <a>{ccn.title}</a>
-  //         </Link>
-  //       </Toast>
-  //     </>
-  //   );
-  // }
-
   switch (possibleSituations.length) {
     case 1: {
       const [situation] = possibleSituations;
       const { idcc } = situation;
       const { title: ccLabel } = ccn;
-      if (idcc === "0") {
-        return (
-          <>
-            <p>
-              Le code du travail ne prévoit pas une durée précise du préavis de
-              démission. Il prévoit qu’une convention collective ou un accord
-              d’entreprise, voire un usage, en prévoit les durées et modalités.
-            </p>
-            {situation.ref && situation.refUrl && getRef(situation)}
-          </>
-        );
-      }
+
       return (
         <>
           <SectionTitle>Durée du préavis</SectionTitle>
@@ -83,7 +48,7 @@ function StepResult({ form }) {
             ...situation.criteria
           })}
           <SectionTitle>Source</SectionTitle>
-          {situation.ref && situation.refUrl && getRef(situation)}
+          {situation.ref && situation.refUrl && getRef([situation])}
         </>
       );
     }

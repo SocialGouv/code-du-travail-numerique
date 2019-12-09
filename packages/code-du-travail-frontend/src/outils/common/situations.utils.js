@@ -1,4 +1,5 @@
 import React from "react";
+import { jsxJoin } from "../../lib/jsxJoin";
 
 const createValuesMatcher = values => item => {
   function swallowEqual(a, b) {
@@ -100,19 +101,19 @@ export function recapSituation(criteria) {
   );
 }
 
-export function getRef({ ref, refUrl }) {
-  return (
-    <p>
-      <a
-        href={refUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        title={`Consultez l’${ref.toLowerCase()}`}
-      >
-        {ref}
-      </a>
-    </p>
-  );
+export function getRef(refs) {
+  const jsxRefs = refs.map(({ ref, refUrl }) => (
+    <a
+      key={refUrl}
+      href={refUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`Consultez l’${ref.toLowerCase()}`}
+    >
+      {ref}
+    </a>
+  ));
+  return <p>{jsxJoin(jsxRefs)}</p>;
 }
 
 export const getFormProps = ({ key, criteria, pastQuestions }) =>
