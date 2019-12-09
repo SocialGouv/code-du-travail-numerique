@@ -1,6 +1,7 @@
 import React from "react";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
+import * as Sentry from "@sentry/browser";
 
 import SearchHero from "../src/search/SearchHero";
 import { Layout } from "../src/layout/Layout";
@@ -27,12 +28,18 @@ const Home = ({ pageUrl, ogImage, children = [] }) => (
 );
 
 Home.getInitialProps = async () => {
-  const response = await fetch(`${API_URL}/themes`);
-  if (!response.ok) {
-    return { statusCode: response.status };
+  try {
+    const response = await fetch(`${API_URL}/themes`);
+    if (response.ok) {
+      const { children } = await response.json();
+      return { children };
+    }
+  } catch (e) {
+    console.error(e);
+    Sentry.captureException(e);
   }
-  const { children } = await response.json();
-  return { children };
+
+  return { children: [] };
 };
 
 export default Home;
