@@ -45,6 +45,9 @@ const fetchWithTimeout = (url, options, timeout = 500) =>
 
 /**
  */
+
+const query_vector = Array.from({ length: 512 }, () => 0);
+
 /**
  * Return documents matching the given query.
  *
@@ -95,14 +98,14 @@ router.get("/search", async ctx => {
         query
       )}`
     );
-    const query_vector = await fetchWithTimeout(
-      `${NLP_URL}/api/search?q=${encodeURIComponent(query)}`
-    )
-      .then(response => (response = response.json()))
-      .catch(error => {
-        logger.error(error);
-        return [];
-      });
+    // const query_vector = await fetchWithTimeout(
+    //   `${NLP_URL}/api/search?q=${encodeURIComponent(query)}`
+    // )
+    //   .then(response => (response = response.json()))
+    //   .catch(error => {
+    //     logger.error(error);
+    //     return [];
+    //   });
 
     if (!knownQueryResult) {
       searches[DOCUMENTS_ES] = [
