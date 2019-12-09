@@ -32,7 +32,11 @@ const mergeDuplicate = arr => {
   return Object.values(
     arr.reduce((acc, current) => {
       const unique = current._source.source + "/" + current._source.slug;
-      if (acc[unique] != undefined) {
+      // case we've already seen the same result from a different algo
+      if (
+        acc[unique] != undefined &&
+        acc[unique]._source.algo != current._source.algo
+      ) {
         acc[unique]._source.algo = "both";
       } else {
         acc[unique] = current;
@@ -43,6 +47,8 @@ const mergeDuplicate = arr => {
 };
 
 const mergePipe = (a, b, max_result) => {
+  // console.log(a);
+  // console.log(b);
   const res = merge(a, b, a.length + b.length);
   return mergeDuplicate(res).slice(0, max_result);
 };
