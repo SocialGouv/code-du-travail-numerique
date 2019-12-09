@@ -31,8 +31,9 @@ const DOCUMENTS_ES = "documents_es";
 const THEMES_ES = "themes_es";
 const THEMES_SEM = "themes_sem";
 const CDT_ES = "cdt_es";
-/**
- */
+
+const query_vector = Array.from({ length: 512 }, () => 0);
+
 /**
  * Return documents matching the given query.
  *
@@ -83,14 +84,14 @@ router.get("/search", async ctx => {
         query
       )}`
     );
-    const query_vector = await fetch(
-      `${NLP_URL}/api/search?q=${encodeURIComponent(query)}`
-    )
-      .then(response => (response = response.json()))
-      .catch(error => {
-        logger.error(error);
-        return [];
-      });
+    // const query_vector = await fetch(
+    //   `${NLP_URL}/api/search?q=${encodeURIComponent(query)}`
+    // )
+    // .then(response => (response = response.json()))
+    // .catch(error => {
+    //   logger.error(error);
+    //   return [];
+    // });
 
     if (!knownQueryResult) {
       searches[DOCUMENTS_ES] = [
