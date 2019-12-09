@@ -3,16 +3,15 @@ image:
   tag: master
 
 deployment:
-
   port: ${PORT}
 
   resources:
     limits:
-      cpu: 2
-      memory: 3Gi
+      cpu: 3
+      memory: 4Gi
     requests:
       cpu: 0.5
-      memory: 2Gi
+      memory: 2.5Gi
 
   readinessProbe:
     path: /api/ready
