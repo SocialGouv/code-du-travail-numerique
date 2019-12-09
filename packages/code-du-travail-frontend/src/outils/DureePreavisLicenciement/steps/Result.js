@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Toast } from "@socialgouv/react-ui";
 import data from "@cdt/data...preavis-licenciement/data.json";
 
 import { SectionTitle, Highlight } from "../../common/stepStyles";
@@ -39,7 +40,14 @@ function StepResult({ form }) {
     criteria: { ancienneté: seniorityCC, ...situationCCCriteria },
     duration: durationCC
   } = situationCC || { criteria: {} };
-
+  const refs = [
+    {
+      ref: "Article L.1234-1 du code du travail",
+      refUrl:
+        "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+    },
+    { ref: situationCC.ref, refUrl: situationCC.refUrl }
+  ];
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
@@ -56,6 +64,11 @@ function StepResult({ form }) {
           })}
         </Highlight>
       </p>
+      <Toast>
+        Une durée de préavis de licenciement plus favorable au salarié peut
+        aussi être prévue dans un accord d’entreprise, le contrat de travail ou
+        un usage dans la localité ou la profession.
+      </Toast>
       <SectionTitle>Détails</SectionTitle>
       <p>
         Il s’agit de la durée la plus longue entre la durée légale prévue par le
@@ -91,7 +104,7 @@ function StepResult({ form }) {
             "Convention collective": ccn.title
           })}
           <SectionTitle>Source</SectionTitle>
-          {situationCC.ref && situationCC.refUrl && getRef(situationCC)}
+          {situationCC.ref && situationCC.refUrl && getRef(refs)}
         </>
       )}
     </>

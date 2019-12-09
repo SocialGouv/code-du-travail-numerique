@@ -102,6 +102,16 @@ exports[`<StepResult /> should render CC answer 1`] = `
     </strong>
     .
   </p>
+  <div
+    class="c5"
+  >
+    <div
+      class="c6"
+      role="alert"
+    >
+      Une durée de préavis de licenciement plus favorable au salarié peut aussi être prévue dans un accord d’entreprise, le contrat de travail ou un usage dans la localité ou la profession.
+    </div>
+  </div>
   <header
     class="c0 c1"
   >
@@ -162,16 +172,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
       Article 15
     </a>
   </p>
-  <div
-    class="c5"
-  >
-    <div
-      class="c6"
-      role="alert"
-    >
-      Si le contrat de travail, un accord collectif d’entreprise ou un usage prévoit une durée de préavis différente, il faut appliquer la durée la plus courte.
-    </div>
-  </div>
 </div>
 `;
 
