@@ -106,7 +106,11 @@ StepResult.propTypes = {
 
 export { StepResult };
 
-function getResult({ durationCDT = 0, durationCC = 0, disabledWorker = true }) {
+export function getResult({
+  durationCDT = 0,
+  durationCC = 0,
+  disabledWorker = true
+}) {
   const durationMax = Math.max(durationCDT, durationCC);
   const durationHandicappedMax = 90;
   let durationHandicapped = 1;
