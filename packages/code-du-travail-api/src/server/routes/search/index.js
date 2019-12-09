@@ -32,6 +32,18 @@ const DOCUMENTS_ES = "documents_es";
 const THEMES_ES = "themes_es";
 const THEMES_SEM = "themes_sem";
 const CDT_ES = "cdt_es";
+
+const fetchWithTimeout = (url, options, timeout = 500) =>
+  Promise.race([
+    fetch(url, options),
+    new Promise((_, reject) =>
+      setTimeout(() => {
+        logger.error(`fetch timeout for ${url}`);
+        reject(new Error("Timeout"));
+      }, timeout)
+    )
+  ]);
+
 /**
  */
 /**
@@ -84,7 +96,7 @@ router.get("/search", async ctx => {
         query
       )}`
     );
-    const query_vector = await fetch(
+    const query_vector = await fetchWithTimeout(
       `${NLP_URL}/api/search?q=${encodeURIComponent(query)}`
     )
       .then(response => (response = response.json()))
