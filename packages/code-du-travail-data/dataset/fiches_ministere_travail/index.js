@@ -24,6 +24,13 @@ const formatAnchor = node => {
   }
 };
 
+const getSectionTag = article => {
+  const h3 = $$(article, "H3").length && "H3";
+  const h4 = $$(article, "H4").length && "H4";
+  const h5 = $$(article, "H5").length && "H5";
+  return h3 || h4 || h5;
+};
+
 function parseDom(dom, url) {
   const description = $(
     dom.window.document,
@@ -50,7 +57,9 @@ function parseDom(dom, url) {
   let elIntro = $(article, ".main-article__texte > *");
   let intro = "";
 
-  while (elIntro && elIntro.tagName !== "H3") {
+  const sectionTag = getSectionTag(article);
+
+  while (elIntro && elIntro.tagName !== sectionTag) {
     intro += elIntro.outerHTML.trim();
     elIntro = elIntro.nextElementSibling;
   }
@@ -77,7 +86,7 @@ function parseDom(dom, url) {
   articleChildren
     .filter(el => el.getAttribute("id"))
     .forEach(function(el) {
-      if (el.tagName === "H3") {
+      if (el.tagName === sectionTag) {
         let nextEl = el.nextElementSibling;
         const section = {
           anchor: el.id,
@@ -86,7 +95,7 @@ function parseDom(dom, url) {
           text: "",
           title: el.textContent.trim()
         };
-        while (nextEl && nextEl.tagName !== "H3") {
+        while (nextEl && nextEl.tagName !== sectionTag) {
           section.text += nextEl.textContent.trim();
           section.html += nextEl.outerHTML;
           nextEl = nextEl.nextElementSibling;
