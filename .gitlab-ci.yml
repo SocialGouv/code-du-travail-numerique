@@ -10,7 +10,11 @@ include:
   - /.gitlab-ci/stages/data.yml
 
   - /.gitlab-ci/stages/deploy.yml
+
   - /.gitlab-ci/stages/notify.yml
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_notify_github_stage.yml
+    ref: boni
 
 stages:
   - "Prepare"

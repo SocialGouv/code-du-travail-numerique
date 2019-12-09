@@ -2,6 +2,8 @@ image:
   repository: ${CI_REGISTRY_IMAGE}/frontend
   tag: master
 
+fullnameOverride: "frontend-nodejs"
+
 deployment:
 
   port: 3000
@@ -121,3 +123,9 @@ ingress:
     - hosts:
         - "code.travail.dev.fabrique.social.gouv.fr"
       secretName: wildcard-crt
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUAverageUtilizationPercentage: 80
