@@ -26,7 +26,7 @@
     "@cdt/data...prime-precarite": "^3.8.0",
     "@cdt/sources": "^3.8.0",
     "@reach/tooltip": "^0.6.3",
-    "@sentry/browser": "^5.10.1",
+    "@sentry/browser": "^5.10.2",
     "@socialgouv/react-fiche-service-public": "^3.8.0",
     "@socialgouv/react-ui": "^3.8.0",
     "@zeit/next-source-maps": "^0.0.3",
