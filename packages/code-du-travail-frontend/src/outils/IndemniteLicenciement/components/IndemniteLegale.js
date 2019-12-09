@@ -19,6 +19,16 @@ function IndemniteLegale({ indemnite, infoCalcul }) {
         </Highlight>{" "}
       </p>
       <FormulaDetails infoCalcul={infoCalcul} />
+      <p>
+        Source&nbsp;:{" "}
+        <a
+          rel="nofollow noopener noreferrer"
+          href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+          title="voir l'article L.1234-1 du code du travial sur légifrance"
+        >
+          Article L.1234-1 du code du travail
+        </a>
+      </p>
     </>
   );
 }
