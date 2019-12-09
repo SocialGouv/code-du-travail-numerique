@@ -3,22 +3,24 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
+import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Alert,
   Container,
   Heading,
+  icons,
   theme,
-  Tile,
   Wrapper
 } from "@socialgouv/react-ui";
 
 import useGlossary from "../glossary";
 import Article from "./Article";
-import Disclaimer from "./Disclaimer";
 import { Feedback } from "./Feedback";
 import Html from "./Html";
 import { ThemeBreadcrumbs } from "./ThemeBreadcrumbs";
+import { CustomTile } from "./tiles/Custom";
+
+const { DirectionRight } = icons;
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
@@ -42,15 +44,13 @@ function Answer({
   const router = useRouter();
   const { relatedTools, relatedLetters, relatedArticles } = relatedItems.reduce(
     (accumulator, item) => {
-      if (item.title !== title) {
-        const itemSource = item.source;
-        if (itemSource === SOURCES.TOOLS) {
-          accumulator.relatedTools.push(item);
-        } else if (itemSource === SOURCES.LETTERS) {
-          accumulator.relatedLetters.push(item);
-        } else {
-          accumulator.relatedArticles.push(item);
-        }
+      const itemSource = item.source;
+      if (itemSource === SOURCES.TOOLS) {
+        accumulator.relatedTools.push(item);
+      } else if (itemSource === SOURCES.LETTERS) {
+        accumulator.relatedLetters.push(item);
+      } else {
+        accumulator.relatedArticles.push(item);
       }
       return accumulator;
     },
@@ -109,7 +109,12 @@ function Answer({
                     }`}
                     passHref
                   >
-                    <Tile title={relatedLetters[0].title} />
+                    <CustomTile
+                      action="Consulter"
+                      icon={icons.Document}
+                      title={relatedLetters[0].title}
+                      subtitle={getLabelBySource(relatedLetters[0].source)}
+                    />
                   </Link>
                 </StyledListItem>
               )}
@@ -122,7 +127,14 @@ function Answer({
                     }`}
                     passHref
                   >
-                    <Tile custom title={relatedTools[0].title} />
+                    <CustomTile
+                      action={relatedTools[0].action}
+                      icon={icons[relatedTools[0].icon]}
+                      title={relatedTools[0].title}
+                      subtitle={getLabelBySource(relatedTools[0].source)}
+                    >
+                      {relatedTools[0].description}
+                    </CustomTile>
                   </Link>
                 </StyledListItem>
               )}
@@ -136,8 +148,12 @@ function Answer({
                   <Link
                     href={`/${getRouteBySource(link.source)}/[slug]`}
                     as={`/${getRouteBySource(link.source)}/${link.slug}`}
+                    passHref
                   >
-                    <a>{link.title}</a>
+                    <StyledLink>
+                      <StyledDirectionRight />
+                      {link.title}
+                    </StyledLink>
                   </Link>
                 </StyledListItem>
               ))}
@@ -145,7 +161,6 @@ function Answer({
           </RelatedItems>
         )}
       </StyledContainer>
-      <Disclaimer />
     </>
   );
 }
@@ -197,4 +212,16 @@ const StyledListItem = styled.li`
 
 const IntroWrapper = styled(Wrapper)`
   margin: ${spacings.base} auto;
+`;
+
+const StyledLink = styled.a`
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+`;
+
+const StyledDirectionRight = styled(DirectionRight)`
+  flex: 0 0 2.5rem;
+  margin: ${spacings.xsmall} ${spacings.base} 0 0;
+  color: ${({ theme }) => theme.primary};
 `;

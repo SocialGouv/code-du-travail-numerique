@@ -1,5 +1,8 @@
 export const documentMapping = {
   properties: {
+    description: { type: "text" },
+    icon: { type: "keyword" },
+    action: { type: "text" },
     // Indicates the origin of the document, e.g. 'code_du_travail', 'fiches_service_public' etc.
     source: {
       type: "keyword"

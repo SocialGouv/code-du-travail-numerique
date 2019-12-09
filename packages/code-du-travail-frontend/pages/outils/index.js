@@ -1,24 +1,26 @@
 import React from "react";
 import getConfig from "next/config";
+import fetch from "isomorphic-unfetch";
+import Link from "next/link";
+import * as Sentry from "@sentry/browser";
 import {
   Container,
   CardList,
+  icons,
   PageTitle,
   Section,
   Tile
 } from "@socialgouv/react-ui";
-import fetch from "isomorphic-unfetch";
-import Link from "next/link";
-import * as Sentry from "@sentry/browser";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
-import { outils } from "../../src/common/Outils";
+import { CustomTile } from "../../src/common/tiles/Custom";
+import { tools } from "../../src/common/tools";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
-const Outils = ({ pageUrl, ogImage, emailTemplates }) => (
+const Outils = ({ pageUrl, ogImage, modeles }) => (
   <Layout currentPage="tools">
     <Metas
       url={pageUrl}
@@ -30,26 +32,34 @@ const Outils = ({ pageUrl, ogImage, emailTemplates }) => (
       <Container>
         <PageTitle>Retrouvez tous nos outils</PageTitle>
         <CardList leftStripped title="Nos outils de calcul">
-          {outils
-            .filter(({ href }) => href.startsWith("/outils"))
-            .map(({ title, slug, href }) => (
-              <Link href={href} as={slug} passHref key={slug}>
-                <Tile custom title={title} />
+          {tools
+            .slice(1)
+            .map(({ action, as, description, href, icon, title }) => (
+              <Link href={href} as={as} passHref key={as || "modeles"}>
+                <CustomTile action={action} title={title} icon={icons[icon]}>
+                  {description}
+                </CustomTile>
               </Link>
             ))}
         </CardList>
-        <CardList leftStripped title="Nos modèles de lettres personnalisables">
-          {emailTemplates.map(({ title, slug }) => (
-            <Link
-              href="/modeles-de-courriers/[slug]"
-              as={`/modeles-de-courriers/${slug}`}
-              passHref
-              key={slug}
-            >
-              <Tile title={title} />
-            </Link>
-          ))}
-        </CardList>
+        {modeles.length > 0 && (
+          <CardList leftStripped title="Nos modèles de documents">
+            {modeles.map(({ title, slug }) => (
+              <Link
+                href="/modeles-de-courriers/[slug]"
+                as={`/modeles-de-courriers/${slug}`}
+                passHref
+                key={slug}
+              >
+                <CustomTile
+                  title={title}
+                  action="Consulter"
+                  icon={icons.Document}
+                />
+              </Link>
+            ))}
+          </CardList>
+        )}
       </Container>
     </Section>
   </Layout>
@@ -62,15 +72,15 @@ Outils.getInitialProps = async () => {
       const {
         hits: { hits }
       } = await response.json();
-      const emailTemplates = hits.map(({ _source }) => _source);
-      return { emailTemplates };
+      const modeles = hits.map(({ _source }) => _source);
+      return { modeles };
     }
   } catch (e) {
     console.error(e);
     Sentry.captureException(e);
   }
 
-  return { emailTemplates: [] };
+  return { modeles: [] };
 };
 
 export default Outils;

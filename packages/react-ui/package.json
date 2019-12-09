@@ -1,7 +1,6 @@
 {
   "name": "@socialgouv/react-ui",
   "version": "3.8.0",
-  "private": true,
   "description": "Composants ReactJS",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

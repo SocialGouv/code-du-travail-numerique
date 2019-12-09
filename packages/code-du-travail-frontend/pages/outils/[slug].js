@@ -1,10 +1,9 @@
 import React from "react";
-import styled from "styled-components";
-import { Alert, Container, theme } from "@socialgouv/react-ui";
+import getConfig from "next/config";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
-import { outils } from "../../src/common/Outils";
 
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
@@ -12,13 +11,9 @@ import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 
-const BigError = ({ children }) => (
-  <StyledContainer>
-    <Alert>{children}</Alert>
-  </StyledContainer>
-);
-
-const OutilIntrouvable = () => <BigError>Cet outil est introuvable</BigError>;
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
 
 const outilsBySlug = {
   "indemnite-licenciement": CalculateurIndemnite,
@@ -28,31 +23,16 @@ const outilsBySlug = {
   "preavis-demission": DureePreavisDemission
 };
 
-const getSimulator = function(name) {
-  const outil = outils.find(({ slug = "" }) =>
-    new RegExp(`/${name}$`).test(slug)
-  );
-  if (outil) {
-    return {
-      title: outil.title,
-      description: outil.text,
-      component: outilsBySlug[name]
-    };
-  }
-  return {
-    title: "Outil introuvable",
-    component: OutilIntrouvable
-  };
-};
-
 class Outils extends React.Component {
-  static async getInitialProps({ query }) {
-    // we don't request data from api since outils are client side only
-    return { slug: query.slug, searchTerm: query.q };
-  }
   render() {
-    const { searchTerm, slug, pageUrl, ogImage } = this.props;
-    const { component: Simulator, title, description } = getSimulator(slug);
+    const {
+      description,
+      ogImage,
+      pageUrl,
+      searchTerm,
+      Simulator,
+      title
+    } = this.props;
     return (
       <Layout>
         <Metas
@@ -69,10 +49,24 @@ class Outils extends React.Component {
 
 export default Outils;
 
-const { fonts } = theme;
+Outils.getInitialProps = async ({ query }) => {
+  // we don't request data from api since outils are client side only
+  const { slug, q: searchTerm } = query;
+  const toolResponse = await fetch(
+    `${API_URL}/items/${getRouteBySource(SOURCES.TOOLS)}/${slug}`
+  );
+  if (!toolResponse.ok) {
+    return { statusCode: toolResponse.status };
+  }
+  const {
+    _source: { title, description }
+  } = await toolResponse.json();
 
-const StyledContainer = styled(Container)`
-  margin: 20%;
-  font-size: ${fonts.sizes.headings.large};
-  text-align: center;
-`;
+  // const tools = toolHits.map(({ _source }) => _source);
+  return {
+    description,
+    title,
+    searchTerm,
+    Simulator: outilsBySlug[slug]
+  };
+};

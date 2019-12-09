@@ -3,7 +3,15 @@ const { SOURCES } = require("@cdt/sources");
 function getRelatedArticlesBody({ query, size = 5 }) {
   return {
     size,
-    _source: ["title", "slug", "url", "source", "description"],
+    _source: [
+      "action",
+      "icon",
+      "title",
+      "slug",
+      "url",
+      "source",
+      "description"
+    ],
     query: {
       bool: {
         filter: {

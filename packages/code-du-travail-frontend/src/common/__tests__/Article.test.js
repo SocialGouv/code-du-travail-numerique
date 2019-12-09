@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Article from "../Article";
-import { icons } from "@socialgouv/react-ui/";
 
 const articleProps = {
   title:
@@ -13,9 +12,7 @@ const articleProps = {
 describe("<Article />", () => {
   test("should render", () => {
     const { container } = render(
-      <Article {...articleProps} icon={icons.Question}>
-        this is an Article
-      </Article>
+      <Article {...articleProps}>this is an Article</Article>
     );
     expect(container).toMatchSnapshot();
   });

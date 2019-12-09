@@ -15,15 +15,17 @@ export const Tile = React.forwardRef(
       {...props}
     >
       {custom && <Badge />}
-      {Icon && (
-        <IconWrapper>
-          <Icon />
-        </IconWrapper>
-      )}
-      <HeadingWrapper custom>
-        {subtitle && <Subtitle>{subtitle}</Subtitle>}
-        {title && <StyledHeading>{title}</StyledHeading>}
-      </HeadingWrapper>
+      <div>
+        {Icon && (
+          <IconWrapper>
+            <Icon />
+          </IconWrapper>
+        )}
+        <HeadingWrapper custom>
+          {subtitle && <Subtitle>{subtitle}</Subtitle>}
+          {title && <StyledHeading>{title}</StyledHeading>}
+        </HeadingWrapper>
+      </div>
       {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
     </StyledTile>
   )
@@ -32,7 +34,7 @@ export const Tile = React.forwardRef(
 Tile.displayName = "Tile";
 
 Tile.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   custom: PropTypes.bool,
   href: PropTypes.string,
   icon: PropTypes.elementType,
@@ -56,7 +58,7 @@ const StyledTile = styled.a`
   flex-direction: column;
   flex-wrap: wrap;
   align-items: stretch;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: ${({ wide }) => (wide ? "100%" : "auto")};
   margin: 0;
   padding: ${({ wide }) =>

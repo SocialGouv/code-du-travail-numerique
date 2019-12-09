@@ -1,7 +1,7 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
-import { Maximize, Search, X } from "react-feather";
+import { Close, More, Search } from "../icons";
 import { Section } from "../layout/Section";
 import { spacings } from "../theme";
 import { Button } from ".";
@@ -12,10 +12,19 @@ export default {
 };
 
 const StyledSearchRight = styled(Search)`
+  width: 4rem;
   padding-left: ${spacings.small};
 `;
 const StyledSearchLeft = styled(Search)`
+  width: 4rem;
   padding-right: ${spacings.small};
+`;
+
+const StyledClose = styled(Close)`
+  width: 2.4rem;
+`;
+const StyledMore = styled(More)`
+  width: 2.4rem;
 `;
 
 export const base = () =>
@@ -55,13 +64,13 @@ export const icons = () => (
       </Button>
     </Section>
     <Section>
-      <Button variant="primary" narrow onClick={action("button X clicked")}>
-        <X />
+      <Button variant="primary" narrow onClick={action("button Close clicked")}>
+        <StyledClose />
       </Button>
     </Section>
     <Section>
-      <Button variant="naked" narrow onClick={action("button X clicked")}>
-        <X />
+      <Button variant="naked" narrow onClick={action("button Close clicked")}>
+        <StyledClose />
       </Button>
     </Section>
     <Section>
@@ -70,7 +79,7 @@ export const icons = () => (
         small
         onClick={action("Button Maximize clicked")}
       >
-        <X />
+        <StyledClose />
       </Button>
     </Section>
     <Section>
@@ -78,9 +87,9 @@ export const icons = () => (
         variant="secondary"
         narrow
         small
-        onClick={action("Button Maximize clicked")}
+        onClick={action("Button More clicked")}
       >
-        <Maximize />
+        <StyledMore />
       </Button>
     </Section>
   </>
@@ -94,6 +103,9 @@ export const link = () => (
       </Button>
     </Section>
     <Section>
+      <Button variant="link" onClick={action("link button clicked")} />
+    </Section>
+    <Section>
       <Button variant="secondary" as="a" href="https://code.travail.gouv.fr">
         Button with &lt;a&gt; tag
       </Button>
@@ -101,9 +113,16 @@ export const link = () => (
   </>
 );
 export const div = () => (
-  <Section>
-    <Button variant="secondary" as="div">
-      Button with &lt;div&gt; tag
-    </Button>
-  </Section>
+  <>
+    <Section>
+      <Button variant="secondary" as="div">
+        Button with &lt;div&gt; tag
+      </Button>
+    </Section>
+    <Section>
+      <Button variant="link" as="div">
+        Button variant link with &lt;div&gt; tag
+      </Button>
+    </Section>
+  </>
 );

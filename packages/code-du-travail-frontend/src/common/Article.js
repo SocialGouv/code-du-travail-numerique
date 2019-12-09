@@ -41,8 +41,8 @@ Article.propTypes = {
   children: PropTypes.node,
   date: PropTypes.string,
   source: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
+    name: PropTypes.string,
+    url: PropTypes.string
   }),
   style: PropTypes.object,
   /** when user clicks some tag */
