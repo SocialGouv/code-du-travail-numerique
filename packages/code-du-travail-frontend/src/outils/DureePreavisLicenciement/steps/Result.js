@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Toast } from "@socialgouv/react-ui";
 import data from "@cdt/data...preavis-licenciement/data.json";
 
 import { SectionTitle, Highlight } from "../../common/stepStyles";
@@ -56,6 +57,11 @@ function StepResult({ form }) {
           })}
         </Highlight>
       </p>
+      <Toast>
+        Une durée de préavis de licenciement plus favorable au salarié peut
+        aussi être prévue dans un accord d’entreprise, le contrat de travail ou
+        un usage dans la localité ou la profession.
+      </Toast>
       <SectionTitle>Détails</SectionTitle>
       <p>
         Il s’agit de la durée la plus longue entre la durée légale prévue par le
