@@ -13,7 +13,7 @@ deployment:
       memory: 1000Mi
     requests:
       cpu: 400m
-      memory: 128Mi
+      memory: 256Mi
 
   livenessProbe:
     path: /api/v1/version
