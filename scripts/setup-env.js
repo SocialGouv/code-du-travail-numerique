@@ -38,7 +38,7 @@ const promisedAccess = promisify(access);
       "docker-compose.override.yml"
     );
     console.log(
-      `Copy "docker-composeoverride.override.${env}.yml" to "docker-compose.override.yml"`
+      `Copy "docker-compose.override.${env}.yml" to "docker-compose.override.yml"`
     );
   }
 })();
