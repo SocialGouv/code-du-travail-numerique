@@ -9,6 +9,7 @@ import {
 } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
 import Link from "next/link";
+import * as Sentry from "@sentry/browser";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
@@ -55,15 +56,21 @@ const Outils = ({ pageUrl, ogImage, emailTemplates }) => (
 );
 
 Outils.getInitialProps = async () => {
-  const response = await fetch(`${API_URL}/modeles`);
-  if (!response.ok) {
-    return { statusCode: response.status };
+  try {
+    const response = await fetch(`${API_URL}/modeles`);
+    if (response.ok) {
+      const {
+        hits: { hits }
+      } = await response.json();
+      const emailTemplates = hits.map(({ _source }) => _source);
+      return { emailTemplates };
+    }
+  } catch (e) {
+    console.error(e);
+    Sentry.captureException(e);
   }
-  const {
-    hits: { hits }
-  } = await response.json();
-  const emailTemplates = hits.map(({ _source }) => _source);
-  return { emailTemplates };
+
+  return { emailTemplates: [] };
 };
 
 export default Outils;
