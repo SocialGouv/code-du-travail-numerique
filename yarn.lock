@@ -2222,13 +2222,13 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@reach/dialog@^0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.6.3.tgz#2e330c2277a2935245a10641f491dfbf52cb69d0"
-  integrity sha512-DDsStcPlPLqYG2uR0WOXBikEUECIEyrEPsIlgMUVwXwwqB6/nS3KDp3QCIuW628godvddKZ2vIg3/mnrH3S0Wg==
+"@reach/dialog@^0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.6.4.tgz#a02b6343d036be7b06c091cabfa139e8550e927b"
+  integrity sha512-w0879aEclyvTyF8dSUOE/jAzZjKutpOqr0owhEkt8HwVtYzk7Bukm+AKQfc2/7wZQ31GMp0P85FRsdxr5t9xcQ==
   dependencies:
     "@reach/portal" "^0.6.2"
-    "@reach/utils" "^0.6.1"
+    "@reach/utils" "^0.6.4"
     prop-types "^15.7.2"
     react-focus-lock "^2.2.1"
     react-remove-scroll "^2.2.0"
