@@ -5,7 +5,7 @@ import { Results } from "./Results";
 import { Law } from "./Law";
 import { Themes } from "./Themes";
 import { matopush } from "../../piwik";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
+import { formatUrlMatomo } from "../utils";
 
 const SearchResults = ({
   items: { documents, themes, articles },
@@ -15,10 +15,7 @@ const SearchResults = ({
   const router = useRouter();
   useEffect(() => {
     const toLogCandidate = ({ url, source, slug, algo }) => {
-      const trackedUrl =
-        source === SOURCES.EXTERNALS
-          ? url
-          : `/${getRouteBySource(source)}/${slug}`;
+      const trackedUrl = formatUrlMatomo(source, slug, url);
       return {
         slug: trackedUrl,
         algo

@@ -47,8 +47,6 @@ const mergeDuplicate = arr => {
 };
 
 const mergePipe = (a, b, max_result) => {
-  // console.log(a);
-  // console.log(b);
   const res = merge(a, b, a.length + b.length);
   return mergeDuplicate(res).slice(0, max_result);
 };

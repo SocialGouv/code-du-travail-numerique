@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { getRouteBySource } from "@cdt/sources";
 import {
   CardList,
   Container,
@@ -8,7 +9,6 @@ import {
   Wrapper
 } from "@socialgouv/react-ui";
 import { summarize, reportSelectionToMatomo } from "../utils";
-import { getRouteBySource } from "@cdt/sources";
 
 export const Law = ({ items, query }) => {
   return (
