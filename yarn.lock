@@ -2264,22 +2264,22 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/tooltip@^0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.6.3.tgz#190a204b34331fed2c4384e0dda76184332e8ca9"
-  integrity sha512-9OJz7iWdEt33nMOdBigwJR0YGw+otIW/1m9hfGsIHju6LQf9K7j+7F3pxi8qf6j59y0dbCdn0S6JJ3DKJ2bUBw==
+"@reach/tooltip@^0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.6.4.tgz#d1744e7345cb3addb96450e0b437cadb678676b4"
+  integrity sha512-VCMbiR2xxnYbF8UmU/cs86ulqv8D9Y4fG1SZpT7JIX60uQEPp+qOWGPUNxka5kBh+5zZ5NHTCb/YAxZ952cT8A==
   dependencies:
     "@reach/auto-id" "^0.6.1"
     "@reach/portal" "^0.6.2"
     "@reach/rect" "^0.6.2"
-    "@reach/utils" "^0.6.1"
+    "@reach/utils" "^0.6.4"
     "@reach/visually-hidden" "^0.6.2"
     prop-types "^15.7.2"
 
-"@reach/utils@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.6.1.tgz#7345dcd624f92779fb4a0fc4a28ab16d69b53476"
-  integrity sha512-SMGDydSjmvOz3Q4faGGJikdeqHumHmxB1YfYR7XTWrDQxJMod+J7mSkaS12NY4o/uPQ4xOwwL6cXWN+KpFjOQg==
+"@reach/utils@^0.6.1", "@reach/utils@^0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.6.4.tgz#be268e1a7d04f921596b3672888a932c1832074a"
+  integrity sha512-jUWNb1STgR69WGkV4O/N4XOcUvM0u5LP1b9SR6VZsPRazpmzM8HUl3WsBVgMOnSCefZtk+wM4ig2/iYgdElwPw==
 
 "@reach/visually-hidden@^0.6.2":
   version "0.6.2"
@@ -2374,10 +2374,10 @@
     eslint-plugin-jest "^23.1.1"
     eslint-plugin-prettier "~3.1.1"
 
-"@socialgouv/fiches-vdd@^1.0.52":
-  version "1.0.52"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.52.tgz#d8efd8fee9f779a4e33ff38dbcb596abe41f7240"
-  integrity sha512-Sz+lHIvh/MGdOmHKWGyIiKp9+qFHWk0fJesi/+l/t4DvnCPLqg1sEpscVupQ+BVB3zDFHNCVlgs6RAHHyof0rw==
+"@socialgouv/fiches-vdd@^1.0.53":
+  version "1.0.53"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.53.tgz#5f2ab2a67ebbedbcef4d86e633079b814f697c20"
+  integrity sha512-mrqfF2n756+13pf6xh7uY/oC8cCBhdHrZProKiX92knF4pEPjlzEUf231vrQCzc+2y6dQ9MHWXWZdIyFWKH2Pg==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.3"
