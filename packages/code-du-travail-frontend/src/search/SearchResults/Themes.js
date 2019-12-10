@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
+import { reportSelectionToMatomo } from "../utils";
 import { getRouteBySource } from "@cdt/sources";
 import {
   CardList,
@@ -18,7 +18,7 @@ export const Themes = ({ items, query }) => (
           leftStripped
           title="Les thèmes suivants peuvent vous intéresser"
         >
-          {items.map(({ slug, title, source }) => (
+          {items.map(({ slug, title, source, url, algo }) => (
             <Link
               key={slug}
               href={{
@@ -30,7 +30,11 @@ export const Themes = ({ items, query }) => (
               }`}
               passHref
             >
-              <Tile wide title={title} />
+              <Tile
+                onClick={() => reportSelectionToMatomo(source, slug, url, algo)}
+                wide
+                title={title}
+              />
             </Link>
           ))}
         </CardList>
