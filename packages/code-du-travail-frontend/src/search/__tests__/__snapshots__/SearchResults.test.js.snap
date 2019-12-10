@@ -18,26 +18,26 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-bottom: 0;
 }
 
-.c13 {
+.c18 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c13 > *:first-child {
+.c18 > *:first-child {
   margin-top: 0;
 }
 
-.c13 > *:last-child {
+.c18 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
+.c17 {
   padding: 2rem 0;
   color: #3e486e;
 }
 
-.c14 {
+.c19 {
   padding: 1rem 2rem;
   color: #3e486e;
   border: 1px solid #bbcadf;
@@ -45,11 +45,11 @@ exports[`<SearchResults/> should render results 1`] = `
   border-color: transparent;
 }
 
-.c14 > *:first-child {
+.c19 > *:first-child {
   margin-top: 0;
 }
 
-.c14 > *:last-child {
+.c19 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -76,6 +76,17 @@ exports[`<SearchResults/> should render results 1`] = `
   line-height: 1.25;
   padding-left: 3.2rem;
   text-align: left;
+}
+
+.c12 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 
 .c1 {
@@ -115,6 +126,66 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 .c15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #ff7067;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.c15:focus,
+.c15:hover,
+.c15:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c16 {
+  height: 1.4rem;
+  margin-left: 1rem;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c14:hover .c16 {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -141,7 +212,7 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c16 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -153,12 +224,12 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 2 - 2 * 1rem);
+  width: calc(100% / 3 - 2 * 1rem);
   margin: 1rem;
   padding: 0;
 }
 
-.c17 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -194,10 +265,10 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 2rem 2rem;
@@ -248,6 +319,10 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-top: 1rem;
 }
 
+.c13 {
+  margin-top: 1.6rem;
+}
+
 .c4 {
   margin: 0;
   padding: 0;
@@ -267,45 +342,57 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media print {
-  .c13 {
+  .c18 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c19 {
     padding: 1rem 2rem;
   }
 }
 
 @media print {
-  .c14 {
+  .c19 {
     padding: 0 5pt;
     border: none;
   }
 }
 
+@media (max-width:1180px) {
+  .c21 {
+    width: calc( 100% / 2 - 2 * 1rem );
+  }
+}
+
 @media (max-width:980px) {
-  .c16 {
+  .c21 {
     width: calc( 100% / 1 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
-    width: calc( 100% - 0 * 1rem );
+  .c21 {
+    width: calc( 100% - 1 * 1rem );
   }
 }
 
-@media (max-width:980px) {
-  .c17 {
+@media (max-width:1180px) {
+  .c22 {
     width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
+@media (max-width:980px) {
+  .c22 {
+    width: calc( 100% / 2 - 2 * 1rem );
+  }
+}
+
 @media (max-width:600px) {
-  .c17 {
+  .c22 {
     width: calc( 100% - 2 * 1rem );
   }
 }
@@ -342,15 +429,17 @@ exports[`<SearchResults/> should render results 1`] = `
           class="c6"
           href="/fiche-service-public/mer-il-est-fou?q=search test"
         >
-          <div
-            class="c7"
-          >
-            
-            <h3
-              class="c8"
+          <div>
+            <div
+              class="c7"
             >
-              Mer il est fou!
-            </h3>
+              
+              <h3
+                class="c8"
+              >
+                Mer il est fou!
+              </h3>
+            </div>
           </div>
           <div
             class="c9"
@@ -391,20 +480,45 @@ exports[`<SearchResults/> should render results 1`] = `
               </svg>
             </div>
           </div>
-          <div
-            class="c7"
-          >
-            
-            <h3
-              class="c8"
+          <div>
+            <div
+              class="c7"
             >
-              simulateur de prime de précarite
-            </h3>
+              <span
+                class="c12"
+              >
+                Outils
+              </span>
+              <h3
+                class="c8"
+              >
+                simulateur de prime de précarite
+              </h3>
+            </div>
           </div>
           <div
             class="c9"
           >
             description
+            <div
+              class="c13"
+            >
+              <div
+                class="c14 c15"
+              >
+                Consulter
+                <svg
+                  class="c16"
+                  fill="none"
+                  viewBox="0 0 28 15"
+                >
+                  <path
+                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </a>
       </li>
@@ -416,15 +530,17 @@ exports[`<SearchResults/> should render results 1`] = `
           href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
           target="_blank"
         >
-          <div
-            class="c7"
-          >
-            
-            <h3
-              class="c8"
+          <div>
+            <div
+              class="c7"
             >
-              telerc
-            </h3>
+              
+              <h3
+                class="c8"
+              >
+                telerc
+              </h3>
+            </div>
           </div>
           <div
             class="c9"
@@ -465,20 +581,45 @@ exports[`<SearchResults/> should render results 1`] = `
               </svg>
             </div>
           </div>
-          <div
-            class="c7"
-          >
-            
-            <h3
-              class="c8"
+          <div>
+            <div
+              class="c7"
             >
-              Mer il est fou 2!
-            </h3>
+              <span
+                class="c12"
+              >
+                Outils
+              </span>
+              <h3
+                class="c8"
+              >
+                Mer il est fou 2!
+              </h3>
+            </div>
           </div>
           <div
             class="c9"
           >
             description
+            <div
+              class="c13"
+            >
+              <div
+                class="c14 c15"
+              >
+                Consulter
+                <svg
+                  class="c16"
+                  fill="none"
+                  viewBox="0 0 28 15"
+                >
+                  <path
+                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </a>
       </li>
@@ -489,15 +630,17 @@ exports[`<SearchResults/> should render results 1`] = `
           class="c6"
           href="/undefined/mer-il-est-fou4?q=search test"
         >
-          <div
-            class="c7"
-          >
-            
-            <h3
-              class="c8"
+          <div>
+            <div
+              class="c7"
             >
-              Mer il est fou 4!
-            </h3>
+              
+              <h3
+                class="c8"
+              >
+                Mer il est fou 4!
+              </h3>
+            </div>
           </div>
           <div
             class="c9"
@@ -509,13 +652,13 @@ exports[`<SearchResults/> should render results 1`] = `
     </ul>
   </div>
   <div
-    class="c12"
+    class="c17"
   >
     <div
-      class="c13"
+      class="c18"
     >
       <div
-        class="c14"
+        class="c19"
       >
         <header
           class="c1"
@@ -531,24 +674,26 @@ exports[`<SearchResults/> should render results 1`] = `
           
         </header>
         <ul
-          class="c15"
+          class="c20"
         >
           <li
-            class="c16"
+            class="c21"
           >
             <a
               class="c6"
               href="/code-du-travail/L1243-1?q=search test"
             >
-              <div
-                class="c7"
-              >
-                
-                <h3
-                  class="c8"
+              <div>
+                <div
+                  class="c7"
                 >
-                  L1243-1
-                </h3>
+                  
+                  <h3
+                    class="c8"
+                  >
+                    L1243-1
+                  </h3>
+                </div>
               </div>
               <div
                 class="c9"
@@ -562,13 +707,13 @@ exports[`<SearchResults/> should render results 1`] = `
     </div>
   </div>
   <div
-    class="c12"
+    class="c17"
   >
     <div
-      class="c13"
+      class="c18"
     >
       <div
-        class="c14"
+        class="c19"
       >
         <header
           class="c1"
@@ -584,24 +729,26 @@ exports[`<SearchResults/> should render results 1`] = `
           
         </header>
         <ul
-          class="c15"
+          class="c20"
         >
           <li
-            class="c17"
+            class="c22"
           >
             <a
               class="c6"
               href="/themes/1-contrat?q=search test"
             >
-              <div
-                class="c7"
-              >
-                
-                <h3
-                  class="c8"
+              <div>
+                <div
+                  class="c7"
                 >
-                  Contrat
-                </h3>
+                  
+                  <h3
+                    class="c8"
+                  >
+                    Contrat
+                  </h3>
+                </div>
               </div>
             </a>
           </li>

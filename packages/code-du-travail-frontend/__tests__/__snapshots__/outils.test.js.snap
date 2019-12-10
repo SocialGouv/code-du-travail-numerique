@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Outils /> should render 1`] = `
-.c24 {
+.c22 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c24 > *:first-child {
+.c22 > *:first-child {
   margin-top: 0;
 }
 
-.c24 > *:last-child {
+.c22 > *:last-child {
   margin-bottom: 0;
 }
 
-.c27 {
+.c25 {
   position: absolute;
   background-color: #7598d6;
   border-radius: 0.6rem;
@@ -28,7 +28,7 @@ exports[`<Outils /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c26 {
+.c24 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -40,27 +40,10 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c25 {
+.c23 {
   margin: 0 auto 1rem;
   margin-bottom: 4rem;
   text-align: center;
-}
-
-.c20 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
-  color: #3e486e;
-  background-color: #f2f5fa;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-}
-
-.c20 > *:first-child {
-  margin-top: 0;
-}
-
-.c20 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c16 {
@@ -124,7 +107,7 @@ exports[`<Outils /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c29 {
+.c27 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -161,16 +144,16 @@ exports[`<Outils /> should render 1`] = `
   opacity: 1;
 }
 
-.c29:link,
-.c29:visited {
+.c27:link,
+.c27:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c29:not([disabled]):hover,
-.c29:not([disabled]):active,
-.c29:not([disabled]):focus {
+.c27:not([disabled]):hover,
+.c27:not([disabled]):active,
+.c27:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -179,7 +162,7 @@ exports[`<Outils /> should render 1`] = `
   border-color: #9cb5e2;
 }
 
-.c29[disabled] {
+.c27[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -386,12 +369,12 @@ exports[`<Outils /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c21 {
+.c19 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c22 {
+.c20 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -399,7 +382,7 @@ exports[`<Outils /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c22:before {
+.c20:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -411,7 +394,7 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c23 {
+.c21 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -419,7 +402,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c28 {
+.c26 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -429,27 +412,27 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c28 > *:first-child {
+.c26 > *:first-child {
   margin-top: 0;
 }
 
-.c28 > *:last-child {
+.c26 > *:last-child {
   margin-bottom: 0;
 }
 
-.c30 {
+.c28 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c31 {
+.c29 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c32 {
+.c30 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -463,25 +446,25 @@ exports[`<Outils /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c32 > *:first-child {
+.c30 > *:first-child {
   margin-top: 0;
 }
 
-.c32 > *:last-child {
+.c30 > *:last-child {
   margin-bottom: 0;
 }
 
-.c34 + .c33 {
+.c32 + .c31 {
   padding-left: 1.6rem;
 }
 
-.c36 {
+.c34 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c35 {
+.c33 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -491,12 +474,12 @@ exports[`<Outils /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c37 {
+.c35 {
   margin: 0.4rem 0;
   padding: 0;
 }
 
-.c38 {
+.c36 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -525,32 +508,15 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c19 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  margin: 20%;
-  font-size: 3.2rem;
-  text-align: center;
-}
-
-.c19 > *:first-child {
-  margin-top: 0;
-}
-
-.c19 > *:last-child {
-  margin-bottom: 0;
-}
-
 @media print {
-  .c24 {
+  .c22 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c23 {
     margin-bottom: 2.4rem;
   }
 }
@@ -654,27 +620,27 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c22 {
+  .c20 {
     display: none;
   }
 }
 
 @media print {
-  .c28 {
+  .c26 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c32 {
+  .c30 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c30 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -682,28 +648,21 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c34 + .c33 {
+  .c32 + .c31 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c34 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c33 {
     margin-top: 1rem;
     text-align: center;
-  }
-}
-
-@media print {
-  .c19 {
-    max-width: 100%;
-    padding: 0;
   }
 }
 
@@ -912,54 +871,44 @@ exports[`<Outils /> should render 1`] = `
       </div>
     </div>
   </header>
-  <main
-    id="main"
-  >
-    <div
-      class="c19"
-    >
-      <div
-        class="c20"
-      >
-        Cet outil est introuvable
-      </div>
-    </div>
-  </main>
+  <i>
+    Une erreur est survenue
+  </i>
   <div
-    class="c21"
+    class="c19"
   >
     <footer
-      class="c22"
+      class="c20"
     >
       <div
-        class="c23"
+        class="c21"
       >
         <div
-          class="c24"
+          class="c22"
         >
           <header
-            class="c25"
+            class="c23"
           >
             <h3
-              class="c26"
+              class="c24"
             >
               <div
-                class="c27"
+                class="c25"
               />
               Besoin d’un accompagnement personnalisé ?
             </h3>
           </header>
           <div
-            class="c28"
+            class="c26"
           >
             Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
           </div>
           <button
-            class="c29"
+            class="c27"
           >
             Contacter nos services
             <svg
-              class="c30"
+              class="c28"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -972,68 +921,68 @@ exports[`<Outils /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c31"
+        class="c29"
       >
         <nav>
           <div
-            class="c32"
+            class="c30"
           >
             <div
-              class="c33 c34"
+              class="c31 c32"
             >
               <h3
-                class="c35"
+                class="c33"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c36"
+                class="c34"
               >
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -1042,21 +991,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c33 c34"
+              class="c31 c32"
             >
               <h3
-                class="c35"
+                class="c33"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c36"
+                class="c34"
               >
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1065,10 +1014,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1079,21 +1028,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c33 c34"
+              class="c31 c32"
             >
               <h3
-                class="c35"
+                class="c33"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c36"
+                class="c34"
               >
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1102,10 +1051,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1114,10 +1063,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c37"
+                  class="c35"
                 >
                   <a
-                    class="c38"
+                    class="c36"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"

@@ -125,7 +125,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
     </h2>
   </header>
   <p>
-    Élements saisis :
+    Éléments saisis :
   </p>
   <ul>
     <li>

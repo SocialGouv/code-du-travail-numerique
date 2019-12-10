@@ -20,10 +20,10 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 2rem 2rem;
@@ -95,15 +95,17 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
     class="c0 no-after"
     href="http://file.url"
   >
-    <div
-      class="c1"
-    >
-      
-      <h3
-        class="c2"
+    <div>
+      <div
+        class="c1"
       >
-        FooFile
-      </h3>
+        
+        <h3
+          class="c2"
+        >
+          FooFile
+        </h3>
+      </div>
     </div>
     <div
       class="c3"

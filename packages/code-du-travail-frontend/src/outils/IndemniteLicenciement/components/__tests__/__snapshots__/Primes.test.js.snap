@@ -31,7 +31,7 @@ exports[`<Primes /> should add a prime 1`] = `
   appearance: none;
   padding: 0;
   color: #ff7067;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
   text-align: left;
@@ -49,7 +49,7 @@ exports[`<Primes /> should add a prime 1`] = `
 
 .c7 {
   height: 1.4rem;
-  margin-left: 0.4rem;
+  margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
@@ -148,23 +148,11 @@ exports[`<Primes /> should add a prime 1`] = `
       <svg
         class="c7"
         fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 28 15"
       >
-        <line
-          x1="5"
-          x2="19"
-          y1="12"
-          y2="12"
-        />
-        <polyline
-          points="12 5 19 12 12 19"
+        <path
+          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+          fill="currentColor"
         />
       </svg>
     </button>
@@ -177,23 +165,11 @@ exports[`<Primes /> should add a prime 1`] = `
     <svg
       class="c7"
       fill="none"
-      height="24"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 28 15"
     >
-      <line
-        x1="5"
-        x2="19"
-        y1="12"
-        y2="12"
-      />
-      <polyline
-        points="12 5 19 12 12 19"
+      <path
+        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        fill="currentColor"
       />
     </svg>
   </button>
@@ -231,7 +207,7 @@ exports[`<Primes /> should delete a primes 1`] = `
   appearance: none;
   padding: 0;
   color: #ff7067;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
   text-align: left;
@@ -249,7 +225,7 @@ exports[`<Primes /> should delete a primes 1`] = `
 
 .c3 {
   height: 1.4rem;
-  margin-left: 0.4rem;
+  margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
@@ -277,23 +253,11 @@ exports[`<Primes /> should delete a primes 1`] = `
     <svg
       class="c3"
       fill="none"
-      height="24"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 28 15"
     >
-      <line
-        x1="5"
-        x2="19"
-        y1="12"
-        y2="12"
-      />
-      <polyline
-        points="12 5 19 12 12 19"
+      <path
+        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        fill="currentColor"
       />
     </svg>
   </button>
@@ -331,7 +295,7 @@ exports[`<Primes /> should render 1`] = `
   appearance: none;
   padding: 0;
   color: #ff7067;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
   text-align: left;
@@ -349,7 +313,7 @@ exports[`<Primes /> should render 1`] = `
 
 .c7 {
   height: 1.4rem;
-  margin-left: 0.4rem;
+  margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
@@ -448,23 +412,11 @@ exports[`<Primes /> should render 1`] = `
       <svg
         class="c7"
         fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 28 15"
       >
-        <line
-          x1="5"
-          x2="19"
-          y1="12"
-          y2="12"
-        />
-        <polyline
-          points="12 5 19 12 12 19"
+        <path
+          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+          fill="currentColor"
         />
       </svg>
     </button>
@@ -477,23 +429,11 @@ exports[`<Primes /> should render 1`] = `
     <svg
       class="c7"
       fill="none"
-      height="24"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 28 15"
     >
-      <line
-        x1="5"
-        x2="19"
-        y1="12"
-        y2="12"
-      />
-      <polyline
-        points="12 5 19 12 12 19"
+      <path
+        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        fill="currentColor"
       />
     </svg>
   </button>

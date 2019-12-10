@@ -8,8 +8,7 @@ import {
   CardList,
   icons,
   PageTitle,
-  Section,
-  Tile
+  Section
 } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
@@ -20,7 +19,7 @@ import { tools } from "../../src/common/tools";
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
-const Outils = ({ pageUrl, ogImage, modeles }) => (
+const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
   <Layout currentPage="tools">
     <Metas
       url={pageUrl}

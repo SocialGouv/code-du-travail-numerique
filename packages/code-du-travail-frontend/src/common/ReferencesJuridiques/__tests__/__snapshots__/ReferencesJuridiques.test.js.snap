@@ -142,10 +142,10 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 2rem 2rem;
@@ -307,15 +307,17 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   class="c13"
                   href="/code-du-travail/l1244-3"
                 >
-                  <div
-                    class="c14"
-                  >
-                    
-                    <h3
-                      class="c15"
+                  <div>
+                    <div
+                      class="c14"
                     >
-                      Article L1244-3 du code du travail
-                    </h3>
+                      
+                      <h3
+                        class="c15"
+                      >
+                        Article L1244-3 du code du travail
+                      </h3>
+                    </div>
                   </div>
                 </a>
               </li>
@@ -326,15 +328,17 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   class="c13"
                   href="/code-du-travail/l1244-4"
                 >
-                  <div
-                    class="c14"
-                  >
-                    
-                    <h3
-                      class="c15"
+                  <div>
+                    <div
+                      class="c14"
                     >
-                      Article L1244-4 du code du travail
-                    </h3>
+                      
+                      <h3
+                        class="c15"
+                      >
+                        Article L1244-4 du code du travail
+                      </h3>
+                    </div>
                   </div>
                 </a>
               </li>
@@ -346,15 +350,17 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <div
-                    class="c14"
-                  >
-                    
-                    <h3
-                      class="c15"
+                  <div>
+                    <div
+                      class="c14"
                     >
-                      Autre: Article L3121-44 du code du travail
-                    </h3>
+                      
+                      <h3
+                        class="c15"
+                      >
+                        Autre: Article L3121-44 du code du travail
+                      </h3>
+                    </div>
                   </div>
                 </button>
               </li>
@@ -366,15 +372,17 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <div
-                    class="c14"
-                  >
-                    
-                    <h3
-                      class="c15"
+                  <div>
+                    <div
+                      class="c14"
                     >
-                      Autre: Article xxx du code du travail
-                    </h3>
+                      
+                      <h3
+                        class="c15"
+                      >
+                        Autre: Article xxx du code du travail
+                      </h3>
+                    </div>
                   </div>
                 </button>
               </li>
@@ -385,15 +393,17 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   class="c13"
                   href="/convention-collective/yyy"
                 >
-                  <div
-                    class="c14"
-                  >
-                    
-                    <h3
-                      class="c15"
+                  <div>
+                    <div
+                      class="c14"
                     >
-                      Convention collective: Article yyy du code du travail
-                    </h3>
+                      
+                      <h3
+                        class="c15"
+                      >
+                        Convention collective: Article yyy du code du travail
+                      </h3>
+                    </div>
                   </div>
                 </a>
               </li>

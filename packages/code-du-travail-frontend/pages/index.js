@@ -21,7 +21,7 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const Home = ({ pageUrl, ogImage, themes }) => (
+const Home = ({ pageUrl, ogImage, themes = [] }) => (
   <Layout currentPage="home">
     <Metas
       url={pageUrl}

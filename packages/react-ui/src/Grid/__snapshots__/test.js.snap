@@ -45,9 +45,15 @@ exports[`<Grid /> should render 1`] = `
   padding: 0;
 }
 
-@media (max-width:980px) {
+@media (max-width:1180px) {
   .c1 {
     width: calc( 100% / 3 - 2 * 1rem );
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
@@ -130,9 +136,15 @@ exports[`<Grid /> should render 5columns 1`] = `
   padding: 0;
 }
 
-@media (max-width:980px) {
+@media (max-width:1180px) {
   .c1 {
     width: calc( 100% / 4 - 2 * 1rem );
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
