@@ -597,7 +597,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <p
       class="c0"
     >
-      Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure&nsbp;?
+      Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
       <span
         aria-label="champs obligatoire"
         class="c1"

@@ -48,7 +48,7 @@ function StepCTT() {
       <YesNoQuestion
         data-testid="ruptureContratFauteGrave"
         name="ruptureContratFauteGrave"
-        label="Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes&nbsp;: la propre initiative du salarié, la faute grave du salarié, cas de force majeure&nsbp;?"
+        label="Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes&nbsp;: la propre initiative du salarié, la faute grave du salarié, cas de force majeure&nbsp;?"
       />
       <YesNoQuestion
         data-testid="propositionCDIFinContrat"
