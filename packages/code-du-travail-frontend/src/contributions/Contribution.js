@@ -62,7 +62,9 @@ const References = ({ references }) => {
 // search CC + display filtered answer
 const AnswersConventions = ({ answers }) => {
   const [ccInfo, setCcInfo] = useConventionState(null);
-  const answer = ccInfo && answers.find(a => a.idcc === ccInfo.num);
+  const answer =
+    ccInfo &&
+    answers.find(a => parseInt(a.idcc, 10) === parseInt(ccInfo.num, 10));
   // ensure we have valid data in ccInfo
   const isCcDetected = ccInfo && ccInfo.id && ccInfo.num && ccInfo.title;
   return (
