@@ -10,10 +10,10 @@ deployment:
 
   resources:
     limits:
-      # cpu: 50m
+      cpu: 150m
       memory: 256Mi
     requests:
-      # cpu: 5m
+      cpu: 25m
       memory: 128Mi
 
   livenessProbe:

@@ -1,5 +1,8 @@
 #
 
+# .base_register_stage: removed since present on gitlab-ci-yml/base_register_stage.yml
+# TODO check if `stage: `"Registration"` does not cause problem
+
 .build_and_push_stage: &build_and_push_stage
   extends: .base_register_stage
   stage: "Registration"

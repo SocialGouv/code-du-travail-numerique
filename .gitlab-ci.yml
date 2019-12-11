@@ -1,24 +1,20 @@
 ---
 include:
   - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/extends.yml
+  - /.gitlab-ci/stages/01-register-base.yml
+  - /.gitlab-ci/stages/02-quality.yml
+  - /.gitlab-ci/stages/03-register.yml
+  - /.gitlab-ci/stages/04-scan.yml
+  - /.gitlab-ci/stages/05-register-data.yml
 
-  - /.gitlab-ci/stages/prepare.yml
-  # - /.gitlab-ci/stages/quality.yml
-  - /.gitlab-ci/stages/register.yml
-  # - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/data.yml
+  - /.gitlab-ci/stages/06-deploy.yml
 
-  - /.gitlab-ci/stages/deploy.yml
+  - /.gitlab-ci/stages/07-notify.yml
 
-  - /.gitlab-ci/stages/notify.yml
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_notify_github_stage.yml
-    ref: boni
 
 stages:
   - "Prepare"
-  # - "Code Quality"
+  - "Code Quality"
   - "Registration"
 
   - "Post Registration"
