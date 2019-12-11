@@ -38,11 +38,9 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 .c19 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  border-color: transparent;
 }
 
 .c19 > *:first-child {

@@ -21,13 +21,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c22 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
   position: relative;
   padding: 4rem;
-  border: none;
   background-color: #fff;
 }
 
@@ -53,11 +51,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c30 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c30 > *:first-child {
@@ -105,18 +102,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-left: 3.2rem;
 }
 
-.c31 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c40 {
   position: relative;
   margin: 0;
@@ -127,6 +112,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   line-height: 1.25;
   padding-top: 1.6rem;
   text-align: center;
+}
+
+.c31 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c23 {
@@ -1130,18 +1124,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <div
               class="c30"
             >
-              <header
-                class="c23"
+              <h3
+                class="c31"
               >
-                <h3
-                  class="c31"
-                >
-                  <div
-                    class="c26"
-                  />
-                  Avez-vous trouvé la réponse à votre question ?
-                </h3>
-              </header>
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
               <p
                 class="c32"
               >
@@ -1393,13 +1380,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c22 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
   position: relative;
   padding: 4rem;
-  border: none;
   background-color: #fff;
 }
 
@@ -1425,11 +1410,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c30 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c30 > *:first-child {
@@ -1477,18 +1461,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-left: 3.2rem;
 }
 
-.c31 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c40 {
   position: relative;
   margin: 0;
@@ -1499,6 +1471,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   line-height: 1.25;
   padding-top: 1.6rem;
   text-align: center;
+}
+
+.c31 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c23 {
@@ -2502,18 +2483,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <div
               class="c30"
             >
-              <header
-                class="c23"
+              <h3
+                class="c31"
               >
-                <h3
-                  class="c31"
-                >
-                  <div
-                    class="c26"
-                  />
-                  Avez-vous trouvé la réponse à votre question ?
-                </h3>
-              </header>
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
               <p
                 class="c32"
               >

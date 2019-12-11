@@ -51,6 +51,7 @@ exports[`<Accordion /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  overflow: hidden;
   cursor: pointer;
 }
 

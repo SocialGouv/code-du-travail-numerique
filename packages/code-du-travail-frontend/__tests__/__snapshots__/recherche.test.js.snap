@@ -36,11 +36,9 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 .c24 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  border-color: transparent;
 }
 
 .c24 > *:first-child {

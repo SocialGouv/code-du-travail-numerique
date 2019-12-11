@@ -1,73 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReferenceList /> should render 1`] = `
-.c2 {
-  position: relative;
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-  padding: 2rem 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-align: left;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
-  cursor: pointer;
-  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
-  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
-  transition: box-shadow 250ms linear, transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
-.c2:hover,
-.c2:active,
-.c2:focus {
-  color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
+.c6 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: auto;
 }
 
-.c3 {
-  padding-right: 1rem;
+.c5 {
+  -webkit-flex: 0 0 2.8rem;
+  -ms-flex: 0 0 2.8rem;
+  flex: 0 0 2.8rem;
+  width: 2.8rem;
+  margin: 0 1.6rem 0 0;
+  padding-top: 0.6rem;
+  color: #ff7067;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin: 0;
+.c2:hover .c5 {
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 .c0 {
@@ -77,14 +47,11 @@ exports[`<ReferenceList /> should render 1`] = `
 }
 
 .c1 {
-  margin-top: 1.6rem;
   padding: 0;
 }
 
-@media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1.6rem;
-  }
+.c4 {
+  padding: 1.6rem 0;
 }
 
 <div>
@@ -95,64 +62,73 @@ exports[`<ReferenceList /> should render 1`] = `
       class="c1"
     >
       <a
-        class="c2"
+        class="c2 c3 c4"
         href="/code-du-travail/xxx"
       >
-        <div>
-          <div
-            class="c3"
-          >
-            
-            <h3
-              class="c4"
-            >
-              Article xxx du code du travail
-            </h3>
-          </div>
-        </div>
+        <svg
+          class="c5"
+          fill="none"
+          viewBox="0 0 28 15"
+        >
+          <path
+            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="c6"
+        >
+          Article xxx du code du travail
+        </span>
       </a>
     </li>
     <li
       class="c1"
     >
-      <button
-        class="c2"
+      <a
+        class="c2 c3 c4"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <div>
-          <div
-            class="c3"
-          >
-            
-            <h3
-              class="c4"
-            >
-              Autre: Article yyy du code du travail
-            </h3>
-          </div>
-        </div>
-      </button>
+        <svg
+          class="c5"
+          fill="none"
+          viewBox="0 0 28 15"
+        >
+          <path
+            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="c6"
+        >
+          Autre: Article yyy du code du travail
+        </span>
+      </a>
     </li>
     <li
       class="c1"
     >
       <a
-        class="c2"
+        class="c2 c3 c4"
         href="/convention-collective/zzz"
       >
-        <div>
-          <div
-            class="c3"
-          >
-            
-            <h3
-              class="c4"
-            >
-              Convention collective: Article zzz du code du travail
-            </h3>
-          </div>
-        </div>
+        <svg
+          class="c5"
+          fill="none"
+          viewBox="0 0 28 15"
+        >
+          <path
+            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="c6"
+        >
+          Convention collective: Article zzz du code du travail
+        </span>
       </a>
     </li>
   </ul>

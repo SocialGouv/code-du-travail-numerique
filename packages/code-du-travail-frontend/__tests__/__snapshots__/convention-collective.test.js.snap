@@ -21,11 +21,10 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 .c6 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c6 > *:first-child {
@@ -36,34 +35,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  position: absolute;
-  background-color: #7598d6;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c8 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c7 {
-  margin: 0 auto 1rem;
-  text-align: left;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c3 {
@@ -83,7 +61,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -120,16 +98,16 @@ exports[`<ConventionCollective /> should render 1`] = `
   opacity: 1;
 }
 
-.c11:link,
-.c11:visited {
+.c9:link,
+.c9:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c11:not([disabled]):hover,
-.c11:not([disabled]):active,
-.c11:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -138,13 +116,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   border-color: #9cb5e2;
 }
 
-.c11[disabled] {
+.c9[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c10 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,7 +133,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c13 + .c12 {
+.c11 + .c10 {
   margin-left: 1.6rem;
 }
 
@@ -275,28 +253,21 @@ exports[`<ConventionCollective /> should render 1`] = `
           <div
             class="c6"
           >
-            <header
+            <h3
               class="c7"
             >
-              <h3
-                class="c8"
-              >
-                <div
-                  class="c9"
-                />
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-            </header>
+              Avez-vous trouvé la réponse à votre question ?
+            </h3>
             <p
-              class="c10"
+              class="c8"
             >
               <button
-                class="c11 c12 c13"
+                class="c9 c10 c11"
               >
                 Non
               </button>
               <button
-                class="c11 c12 c13"
+                class="c9 c10 c11"
               >
                 Oui
               </button>

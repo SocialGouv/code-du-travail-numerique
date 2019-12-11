@@ -19,11 +19,10 @@ exports[`<Explainer /> is togglable 1`] = `
 }
 
 .c0 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
   margin-bottom: 2rem;
 }
 

@@ -21,13 +21,11 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c3 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
   position: relative;
   padding: 4rem;
-  border: none;
   background-color: #fff;
 }
 
@@ -53,11 +51,10 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c12 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c12 > *:first-child {
@@ -93,15 +90,12 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c13 {
-  position: relative;
-  margin: 0;
+  margin: 0 0 1rem 0;
   color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
 }
 
 .c4 {
@@ -236,11 +230,10 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c10 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
   margin: 1.6rem auto;
 }
 
@@ -390,18 +383,11 @@ exports[`<Answer /> should renders 1`] = `
           <div
             class="c12"
           >
-            <header
-              class="c4"
+            <h3
+              class="c13"
             >
-              <h3
-                class="c13"
-              >
-                <div
-                  class="c7"
-                />
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-            </header>
+              Avez-vous trouvé la réponse à votre question ?
+            </h3>
             <p
               class="c14"
             >
@@ -445,13 +431,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c11 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
   position: relative;
   padding: 4rem;
-  border: none;
   background-color: #fff;
 }
 
@@ -477,11 +461,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c21 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c21 > *:first-child {
@@ -517,15 +500,12 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c22 {
-  position: relative;
-  margin: 0;
+  margin: 0 0 1rem 0;
   color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
 }
 
 .c12 {
@@ -780,11 +760,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c19 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
   margin: 1.6rem auto;
 }
 
@@ -1046,18 +1025,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           <div
             class="c21"
           >
-            <header
-              class="c13"
+            <h3
+              class="c22"
             >
-              <h3
-                class="c22"
-              >
-                <div
-                  class="c16"
-                />
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-            </header>
+              Avez-vous trouvé la réponse à votre question ?
+            </h3>
             <p
               class="c23"
             >
@@ -1101,13 +1073,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c3 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
   position: relative;
   padding: 4rem;
-  border: none;
   background-color: #fff;
 }
 
@@ -1133,11 +1103,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c12 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c12 > *:first-child {
@@ -1173,15 +1142,12 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c13 {
-  position: relative;
-  margin: 0;
+  margin: 0 0 1rem 0;
   color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
 }
 
 .c4 {
@@ -1328,11 +1294,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c10 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
   margin: 1.6rem auto;
 }
 
@@ -1482,18 +1447,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
           <div
             class="c12"
           >
-            <header
-              class="c4"
+            <h3
+              class="c13"
             >
-              <h3
-                class="c13"
-              >
-                <div
-                  class="c7"
-                />
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-            </header>
+              Avez-vous trouvé la réponse à votre question ?
+            </h3>
             <p
               class="c14"
             >
@@ -1537,13 +1495,11 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c3 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
   position: relative;
   padding: 4rem;
-  border: none;
   background-color: #fff;
 }
 
@@ -1569,11 +1525,10 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c13 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c13 > *:first-child {
@@ -1609,18 +1564,6 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c14 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c35 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1629,7 +1572,7 @@ exports[`<Answer /> should renders related content 1`] = `
   line-height: 1.25;
 }
 
-.c28 {
+.c27 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -1645,7 +1588,46 @@ exports[`<Answer /> should renders related content 1`] = `
   text-align: left;
 }
 
-.c24 {
+.c35 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c37 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: auto;
+}
+
+.c36 {
+  -webkit-flex: 0 0 2.8rem;
+  -ms-flex: 0 0 2.8rem;
+  flex: 0 0 2.8rem;
+  width: 2.8rem;
+  margin: 0 1.6rem 0 0;
+  padding-top: 0.6rem;
+  color: #ff7067;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c34:hover .c36 {
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+.c23 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1656,7 +1638,7 @@ exports[`<Answer /> should renders related content 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c24:before {
+.c23:before {
   position: absolute;
   display: block;
   width: 0;
@@ -1667,7 +1649,7 @@ exports[`<Answer /> should renders related content 1`] = `
   content: "";
 }
 
-.c25 {
+.c24 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1737,7 +1719,7 @@ exports[`<Answer /> should renders related content 1`] = `
   cursor: not-allowed;
 }
 
-.c32 {
+.c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1776,16 +1758,29 @@ exports[`<Answer /> should renders related content 1`] = `
   border-radius: 0;
 }
 
-.c32:focus,
-.c32:hover,
-.c32:active {
+.c31:focus,
+.c31:hover,
+.c31:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c33 {
+.c32 {
   height: 1.4rem;
   margin-left: 1rem;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c16:hover .c32 {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
+.c33 {
+  height: 1.4rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
@@ -1797,20 +1792,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transform: translateX(5px);
 }
 
-.c34 {
-  height: 1.4rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c16:hover .c34 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
-}
-
-.c23 {
+.c22 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1855,9 +1837,9 @@ exports[`<Answer /> should renders related content 1`] = `
   appearance: none;
 }
 
-.c23:hover,
-.c23:active,
-.c23:focus {
+.c22:hover,
+.c22:active,
+.c22:focus {
   color: #3e486e;
   box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
   -webkit-transform: translateY(-2px);
@@ -1865,7 +1847,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transform: translateY(-2px);
 }
 
-.c26 {
+.c25 {
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto 1.6rem;
@@ -1874,11 +1856,11 @@ exports[`<Answer /> should renders related content 1`] = `
   border-radius: 50%;
 }
 
-.c27 {
+.c26 {
   padding-right: 1rem;
 }
 
-.c29 {
+.c28 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1888,7 +1870,7 @@ exports[`<Answer /> should renders related content 1`] = `
   margin: 0;
 }
 
-.c30 {
+.c29 {
   margin-top: 1rem;
 }
 
@@ -1927,8 +1909,23 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-left: 1.6rem;
 }
 
-.c31 {
+.c30 {
   margin-top: 1rem;
+}
+
+.c20 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 12rem;
+  width: 30%;
+  margin: 0;
+  padding: 0 1.6rem 0 0;
+  list-style-type: none;
+}
+
+.c21 {
+  margin: 1.6rem 0;
+  padding: 0;
 }
 
 .c0 {
@@ -1965,30 +1962,11 @@ exports[`<Answer /> should renders related content 1`] = `
   width: 70%;
 }
 
-.c20 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10rem;
-  width: 30%;
-  padding: 2rem 1.6rem 2rem 0;
-}
-
-.c21 {
-  padding: 0;
-  list-style-type: none;
-}
-
-.c22 {
-  margin: 1.6rem 0;
-  padding: 0;
-}
-
 .c10 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
   margin: 1.6rem auto;
 }
 
@@ -1998,27 +1976,6 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c10 > *:last-child {
   margin-bottom: 0;
-}
-
-.c36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c37 {
-  -webkit-flex: 0 0 2.5rem;
-  -ms-flex: 0 0 2.5rem;
-  flex: 0 0 2.5rem;
-  margin: 0.8rem 1.6rem 0 0;
-  color: #ff7067;
 }
 
 @media print {
@@ -2055,7 +2012,7 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c22 {
     padding: 2rem 1.6rem;
   }
 }
@@ -2072,6 +2029,12 @@ exports[`<Answer /> should renders related content 1`] = `
   }
 }
 
+@media (max-width:980px) {
+  .c20 {
+    display: none;
+  }
+}
+
 @media print {
   .c0 {
     max-width: 100%;
@@ -2082,12 +2045,6 @@ exports[`<Answer /> should renders related content 1`] = `
 @media (max-width:980px) {
   .c1 {
     width: 100%;
-  }
-}
-
-@media (max-width:980px) {
-  .c20 {
-    display: none;
   }
 }
 
@@ -2192,18 +2149,11 @@ exports[`<Answer /> should renders related content 1`] = `
           <div
             class="c13"
           >
-            <header
-              class="c4"
+            <h3
+              class="c14"
             >
-              <h3
-                class="c14"
-              >
-                <div
-                  class="c7"
-                />
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-            </header>
+              Avez-vous trouvé la réponse à votre question ?
+            </h3>
             <p
               class="c15"
             >
@@ -2222,248 +2172,252 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
     </div>
-    <div
+    <ul
       class="c20"
     >
-      <ul
+      <li
         class="c21"
       >
-        <li
+        <a
           class="c22"
+          href="/modeles-de-courriers/LETTER_1"
         >
-          <a
+          <div
             class="c23"
-            href="/modeles-de-courriers/LETTER_1"
           >
             <div
               class="c24"
             >
-              <div
-                class="c25"
+              <svg
+                fill="none"
+                viewBox="0 0 32 32"
               >
-                <svg
-                  fill="none"
-                  viewBox="0 0 32 32"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                  />
-                  <path
-                    clip-rule="evenodd"
-                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
+                <path
+                  clip-rule="evenodd"
+                  d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
-            <div>
-              <div
-                class="c26"
+          </div>
+          <div>
+            <div
+              class="c25"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 52 52"
               >
-                <svg
-                  fill="none"
-                  viewBox="0 0 52 52"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M26.567 3.89L32.544 8H42a1 1 0 011 1v6.188l6.566 4.514a1 1 0 01.434.824V47a1 1 0 01-1 1H3a1 1 0 01-1-1V20.526a1 1 0 01.433-.824L9 15.188V9a1 1 0 011-1h9.455l5.979-4.11a1 1 0 011.133 0zM22.985 8h6.03L26 5.927 22.985 8zM9 17.615l-5 3.437v.323l5 3.438v-7.198zm2 8.573l10.537 7.244 2.873-1.796a3 3 0 013.18 0l2.873 1.796L41 26.188V10H11v16.188zm32-1.375l5-3.438v-.323l-5-3.437v7.198zm5-1.01L32.313 34.586 48 44.392v-20.59zM4 44.391l15.687-9.805L4 23.802v20.59zm21.47-11.06L5.2 46h41.6L26.53 33.332a1 1 0 00-1.06 0z"
-                    fill="#4E6896"
-                    fill-rule="evenodd"
-                  />
-                  <path
-                    d="M16 17c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H17.053C16.47 18 16 17.552 16 17zm1.053 5C16.47 22 16 22.448 16 23s.471 1 1.053 1h17.894C35.53 24 36 23.552 36 23s-.471-1-1.053-1H17.053z"
-                    fill="#FF7067"
-                  />
-                </svg>
-              </div>
-              <div
+                <path
+                  clip-rule="evenodd"
+                  d="M26.567 3.89L32.544 8H42a1 1 0 011 1v6.188l6.566 4.514a1 1 0 01.434.824V47a1 1 0 01-1 1H3a1 1 0 01-1-1V20.526a1 1 0 01.433-.824L9 15.188V9a1 1 0 011-1h9.455l5.979-4.11a1 1 0 011.133 0zM22.985 8h6.03L26 5.927 22.985 8zM9 17.615l-5 3.437v.323l5 3.438v-7.198zm2 8.573l10.537 7.244 2.873-1.796a3 3 0 013.18 0l2.873 1.796L41 26.188V10H11v16.188zm32-1.375l5-3.438v-.323l-5-3.437v7.198zm5-1.01L32.313 34.586 48 44.392v-20.59zM4 44.391l15.687-9.805L4 23.802v20.59zm21.47-11.06L5.2 46h41.6L26.53 33.332a1 1 0 00-1.06 0z"
+                  fill="#4E6896"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M16 17c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H17.053C16.47 18 16 17.552 16 17zm1.053 5C16.47 22 16 22.448 16 23s.471 1 1.053 1h17.894C35.53 24 36 23.552 36 23s-.471-1-1.053-1H17.053z"
+                  fill="#FF7067"
+                />
+              </svg>
+            </div>
+            <div
+              class="c26"
+            >
+              <span
                 class="c27"
               >
-                <span
-                  class="c28"
-                >
-                  Modèles de documents
-                </span>
-                <h3
-                  class="c29"
-                >
-                  related letter title 1
-                </h3>
-              </div>
+                Modèles de documents
+              </span>
+              <h3
+                class="c28"
+              >
+                related letter title 1
+              </h3>
             </div>
+          </div>
+          <div
+            class="c29"
+          >
             <div
               class="c30"
             >
               <div
-                class="c31"
+                class="c16 c31"
               >
-                <div
-                  class="c16 c32"
+                Consulter
+                <svg
+                  class="c32"
+                  fill="none"
+                  viewBox="0 0 28 15"
                 >
-                  Consulter
-                  <svg
-                    class="c33"
-                    fill="none"
-                    viewBox="0 0 28 15"
-                  >
-                    <path
-                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                    fill="currentColor"
+                  />
+                </svg>
               </div>
             </div>
-          </a>
-        </li>
-        <li
+          </div>
+        </a>
+      </li>
+      <li
+        class="c21"
+      >
+        <a
           class="c22"
+          href="/outils/TOOL_1"
         >
-          <a
+          <div
             class="c23"
-            href="/outils/TOOL_1"
           >
             <div
               class="c24"
             >
-              <div
-                class="c25"
+              <svg
+                fill="none"
+                viewBox="0 0 32 32"
               >
-                <svg
-                  fill="none"
-                  viewBox="0 0 32 32"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                  />
-                  <path
-                    clip-rule="evenodd"
-                    d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
+                <path
+                  clip-rule="evenodd"
+                  d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
-            <div>
-              <div
+          </div>
+          <div>
+            <div
+              class="c26"
+            >
+              <span
                 class="c27"
               >
-                <span
-                  class="c28"
-                >
-                  Outils
-                </span>
-                <h3
-                  class="c29"
-                >
-                  related tool title 1
-                </h3>
-              </div>
+                Outils
+              </span>
+              <h3
+                class="c28"
+              >
+                related tool title 1
+              </h3>
             </div>
+          </div>
+          <div
+            class="c29"
+          >
             <div
               class="c30"
             >
               <div
-                class="c31"
+                class="c16 c31"
               >
-                <div
-                  class="c16 c32"
+                
+                <svg
+                  class="c33"
+                  fill="none"
+                  viewBox="0 0 28 15"
                 >
-                  
-                  <svg
-                    class="c34"
-                    fill="none"
-                    viewBox="0 0 28 15"
-                  >
-                    <path
-                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                    fill="currentColor"
+                  />
+                </svg>
               </div>
             </div>
-          </a>
-        </li>
-        <li
-          class="c22"
+          </div>
+        </a>
+      </li>
+      <h3
+        class="c14"
+      >
+        Les articles pouvant vous intéresser :
+      </h3>
+      <li
+        class="c21"
+      >
+        <a
+          class="c34 c35"
+          href="/fiche-service-public/LINK_1"
         >
-          <h3
-            class="c35"
-          >
-            Les articles pouvant vous intéresser :
-          </h3>
-        </li>
-        <li
-          class="c22"
-        >
-          <a
+          <svg
             class="c36"
-            href="/fiche-service-public/LINK_1"
+            fill="none"
+            viewBox="0 0 28 15"
           >
-            <svg
-              class="c37"
-              fill="none"
-              viewBox="0 0 28 15"
-            >
-              <path
-                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                fill="currentColor"
-              />
-            </svg>
+            <path
+              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            class="c37"
+          >
             related sheet sp title 1
-          </a>
-        </li>
-        <li
-          class="c22"
+          </span>
+        </a>
+      </li>
+      <li
+        class="c21"
+      >
+        <a
+          class="c34 c35"
+          href="/fiche-ministere-travail/LINK_2"
         >
-          <a
+          <svg
             class="c36"
-            href="/fiche-ministere-travail/LINK_2"
+            fill="none"
+            viewBox="0 0 28 15"
           >
-            <svg
-              class="c37"
-              fill="none"
-              viewBox="0 0 28 15"
-            >
-              <path
-                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                fill="currentColor"
-              />
-            </svg>
+            <path
+              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            class="c37"
+          >
             related sheet mt title 1
-          </a>
-        </li>
-        <li
-          class="c22"
+          </span>
+        </a>
+      </li>
+      <li
+        class="c21"
+      >
+        <a
+          class="c34 c35"
+          href="/external/LINK_3"
         >
-          <a
+          <svg
             class="c36"
-            href="/external/LINK_3"
+            fill="none"
+            viewBox="0 0 28 15"
           >
-            <svg
-              class="c37"
-              fill="none"
-              viewBox="0 0 28 15"
-            >
-              <path
-                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                fill="currentColor"
-              />
-            </svg>
+            <path
+              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            class="c37"
+          >
             related external title 1
-          </a>
-        </li>
-      </ul>
-    </div>
+          </span>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -2489,13 +2443,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c3 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
   position: relative;
   padding: 4rem;
-  border: none;
   background-color: #fff;
 }
 
@@ -2521,11 +2473,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c13 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c13 > *:first-child {
@@ -2561,15 +2512,12 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c14 {
-  position: relative;
-  margin: 0;
+  margin: 0 0 1rem 0;
   color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
 }
 
 .c4 {
@@ -2708,11 +2656,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c10 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
   margin: 1.6rem auto;
 }
 
@@ -2898,18 +2845,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
           <div
             class="c13"
           >
-            <header
-              class="c4"
+            <h3
+              class="c14"
             >
-              <h3
-                class="c14"
-              >
-                <div
-                  class="c7"
-                />
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-            </header>
+              Avez-vous trouvé la réponse à votre question ?
+            </h3>
             <p
               class="c15"
             >
@@ -2953,13 +2893,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c3 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
   position: relative;
   padding: 4rem;
-  border: none;
   background-color: #fff;
 }
 
@@ -2985,11 +2923,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c13 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c13 > *:first-child {
@@ -3025,15 +2962,12 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c14 {
-  position: relative;
-  margin: 0;
+  margin: 0 0 1rem 0;
   color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
 }
 
 .c4 {
@@ -3172,11 +3106,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c10 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
   margin: 1.6rem auto;
 }
 
@@ -3348,18 +3281,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           <div
             class="c13"
           >
-            <header
-              class="c4"
+            <h3
+              class="c14"
             >
-              <h3
-                class="c14"
-              >
-                <div
-                  class="c7"
-                />
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-            </header>
+              Avez-vous trouvé la réponse à votre question ?
+            </h3>
             <p
               class="c15"
             >
@@ -3403,13 +3329,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c3 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
   position: relative;
   padding: 4rem;
-  border: none;
   background-color: #fff;
 }
 
@@ -3435,11 +3359,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c13 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
 }
 
 .c13 > *:first-child {
@@ -3475,15 +3398,12 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c14 {
-  position: relative;
-  margin: 0;
+  margin: 0 0 1rem 0;
   color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
 }
 
 .c4 {
@@ -3622,11 +3542,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c10 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
   margin: 1.6rem auto;
 }
 
@@ -3797,18 +3716,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           <div
             class="c13"
           >
-            <header
-              class="c4"
+            <h3
+              class="c14"
             >
-              <h3
-                class="c14"
-              >
-                <div
-                  class="c7"
-                />
-                Avez-vous trouvé la réponse à votre question ?
-              </h3>
-            </header>
+              Avez-vous trouvé la réponse à votre question ?
+            </h3>
             <p
               class="c15"
             >
