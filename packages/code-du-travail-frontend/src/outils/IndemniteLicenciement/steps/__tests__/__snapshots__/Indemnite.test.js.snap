@@ -31,17 +31,39 @@ exports[`<StepIndemnite /> should render 1`] = `
   text-align: left;
 }
 
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7598d6;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
 .c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
-  padding: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  color: #3e486e;
+  text-align: left;
 }
 
 .c1 {
@@ -79,29 +101,6 @@ exports[`<StepIndemnite /> should render 1`] = `
 
 .c10 {
   margin: 1.6rem 0;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  max-width: 100%;
-}
-
-.c13 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  margin-right: 2rem;
 }
 
 <div>
@@ -189,120 +188,30 @@ exports[`<StepIndemnite /> should render 1`] = `
     Source :
      
     <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-      rel="nofollow noopener noreferrer"
-      title="voir l'article L.1234-1 du code du travial sur légifrance"
+      href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=A95D336F1F70D58757C202BA1D670CF4.tplgfr31s_1?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
+      rel="nofollow noopener"
+      title="voir l'article L.1234-9 du code du travail sur légifrance"
     >
-      Article L.1234-1 du code du travail
+      Article L.1234-9 du code du travail
+    </a>
+    ,
+    <a
+      href="https://www.legifrance.gouv.fr/affichCode.do;jsessionid=A95D336F1F70D58757C202BA1D670CF4.tplgfr31s_1?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
+      rel="nofollow noopener"
+      title="voir les articles R1234-1 à R1234-4 du code du travail sur légifrance"
+    >
+      Article R1234-1 à R1234-4 du code du travail
     </a>
   </p>
-  <header
-    class="c0 c1"
-  >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      La convention collective peut prévoir un montant plus important
-    </h2>
-  </header>
-  <p>
-    Selon la convention collective applicable, le montant minimum de l’indemnité de licenciement peut être supérieur au montant de l’indemnité légale.
-  </p>
-  <label
+  <div
     class="c11"
   >
-    <label
+    <div
       class="c12"
-      for="ccn"
+      role="alert"
     >
-      Sélectionnez la convention collective pour en savoir plus :
-    </label>
-    <select
-      class="c13"
-      id="ccn"
-      name="branche"
-    >
-      <option
-        disabled=""
-        value=""
-      >
-        Sélectionner
-      </option>
-      <option
-        value="0016"
-      >
-        Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
-      </option>
-      <option
-        value="0044"
-      >
-        Convention collective nationale des industries chimiques et connexes
-      </option>
-      <option
-        value="1518"
-      >
-        Convention collective nationale de l’Animation
-      </option>
-      <option
-        value="0843"
-      >
-        Convention collective nationale de la Boulangerie-pâtisserie artisanale
-      </option>
-      <option
-        value="1351"
-      >
-        Convention collective nationale de la Prévention et sécurité
-      </option>
-      <option
-        value="1486"
-      >
-        Convention collective nationale des bureaux d’études techniques, des cabinets d’ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987
-      </option>
-      <option
-        value="1534"
-      >
-        Convention collective nationale Viandes industries commerces en gros
-      </option>
-      <option
-        value="0992"
-      >
-        Convention collective nationale Boucherie boucherie-charcuterie triperie
-      </option>
-      <option
-        value="2120"
-      >
-        Convention collective nationale des banques
-      </option>
-      <option
-        value="2344"
-      >
-        Convention collective nationale de la Sidérurgie
-      </option>
-      <option
-        value="0029"
-      >
-        Etablissements privés d’hospitalisation (FEHAP)
-      </option>
-      <option
-        value="1596"
-      >
-        Ouvriers du bâtiment (entreprises jusqu’à 10 salariés)
-      </option>
-      <option
-        value="1597"
-      >
-        Ouvriers du bâtiment (entreprises de plus 10 salariés)
-      </option>
-      <option
-        value="3043"
-      >
-        Propreté : entreprises et services associés
-      </option>
-    </select>
-    
-  </label>
+      Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le plus favorable pour le salarié.
+    </div>
+  </div>
 </div>
 `;
