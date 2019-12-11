@@ -4,6 +4,7 @@ import { logger } from "./logger";
 import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
 import { parseIdcc, formatIdcc } from "../lib";
+import { getCourriers } from "../dataset/courrier-type";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -139,30 +140,30 @@ function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Courriers ===");
-  yield require("../dataset/courrier-type/export-courriers.json").map(
-    ({
-      titre,
-      filename,
-      description,
-      questions,
-      html,
-      tags,
-      date_redaction,
-      redacteur,
-      source
-    }) => ({
-      source: SOURCES.LETTERS,
-      title: titre,
-      slug: slugify(titre),
-      description,
-      text: questions.join("\n"),
-      html,
-      filename,
-      date: date_redaction,
-      editor: source,
-      author: redacteur,
-      tags: flattenTags(tags)
-    })
+  yield getCourriers().then(courriers =>
+    courriers.map(
+      ({
+        titre,
+        filename,
+        description,
+        questions,
+        html,
+        date_redaction,
+        redacteur,
+        source
+      }) => ({
+        source: SOURCES.LETTERS,
+        title: titre,
+        slug: slugify(titre),
+        description,
+        text: questions.join("\n"),
+        html,
+        filename,
+        date: date_redaction,
+        editor: source,
+        author: redacteur
+      })
+    )
   );
   logger.info("=== Outils ===");
   yield require("../dataset/tools").map(

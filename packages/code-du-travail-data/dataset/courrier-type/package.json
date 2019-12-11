@@ -4,10 +4,6 @@
   "private": true,
   "description": "generate courrier-type.json",
   "main": "index.js",
-  "scripts": {
-    "start": "node index > ./export-courriers.json"
-  },
-  "license": "MIT",
   "dependencies": {
     "mammoth": "^1.4.9"
   }

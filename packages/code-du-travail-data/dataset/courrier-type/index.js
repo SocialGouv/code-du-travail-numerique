@@ -2,12 +2,14 @@ const mammoth = require("mammoth");
 const data = require("./courriers.json");
 
 const DOC_DIR = "docx";
+
 const basic_styles = `<style>
 .courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}
 .courrier-destinataire {display: flex; align-items: flex-end; flex-direction:column;}
 .courrier-signature {display: flex; flex-direction:column; align-items: flex-end;}
 .editable {color: #4d73b8}
 </style>`;
+
 const options = {
   styleMap: [
     "p[style-name='signature'] => div.courrier-signature > p:fresh",
@@ -36,6 +38,6 @@ const convertFile2Html = ({ filename, ...rest }) => {
     }));
 };
 
-Promise.all(data.map(convertFile2Html)).then(result =>
-  console.log(JSON.stringify(result, null, 2))
-);
+const getCourriers = () => Promise.all(data.map(convertFile2Html));
+
+module.exports = { getCourriers };
