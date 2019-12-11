@@ -40,7 +40,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: 456,
+          idcc: "456",
           markdown: "hello **123**"
         }
       ]
@@ -54,7 +54,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: 456,
+          idcc: "456",
           markdown: "hello **123**"
         }
       ]
@@ -65,7 +65,7 @@ describe("<Contribution />", () => {
   it("should render preselected convention", () => {
     mockPreselectedConvention = {
       title: "preselected convention",
-      num: "idcc-preselected",
+      num: "0044",
       id: 123
     };
     const answers = {
@@ -73,7 +73,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: "idcc-preselected",
+          idcc: "0044",
           markdown: "hello **123**"
         }
       ]
@@ -86,7 +86,7 @@ describe("<Contribution />", () => {
   it("should NOT render invalid preselected convention", () => {
     mockPreselectedConvention = {
       title: "unknown convention",
-      num: "idcc-unknown",
+      num: "0000",
       id: 456
     };
     const answers = {
@@ -94,7 +94,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: "idcc-preselected",
+          idcc: "0044",
           markdown: "hello **123**"
         }
       ]
@@ -107,7 +107,7 @@ describe("<Contribution />", () => {
   it("should render answer references", () => {
     mockPreselectedConvention = {
       title: "preselected convention",
-      num: "idcc-preselected",
+      num: "0044",
       id: 123
     };
     const answers = {
@@ -115,7 +115,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: "idcc-preselected",
+          idcc: "0044",
           markdown: "hello **123**",
           references: [
             {

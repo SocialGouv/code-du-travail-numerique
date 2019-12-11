@@ -182,7 +182,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         >
           unknown convention
            (IDCC 
-          idcc-unknown
+          0000
           )
         </a>
       </h6>
@@ -372,7 +372,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         >
           preselected convention
            (IDCC 
-          idcc-preselected
+          0044
           )
         </a>
       </h6>
@@ -604,7 +604,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         >
           preselected convention
            (IDCC 
-          idcc-preselected
+          0044
           )
         </a>
       </h6>
