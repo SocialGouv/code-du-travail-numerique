@@ -162,7 +162,7 @@ function* cdtnDocumentsGen() {
     })
   );
   logger.info("=== Outils ===");
-  yield require("../dataset/tools").tools.map(
+  yield require("../dataset/tools").map(
     ({ action, date, description, icon, questions, slug, themes, title }) => ({
       action,
       date,
