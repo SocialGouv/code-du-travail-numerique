@@ -5,6 +5,7 @@ import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
 import { parseIdcc, formatIdcc } from "../lib";
 import { getCourriers } from "../dataset/courrier-type";
+import { getFichesSP } from "../dataset/fiches_service_public";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -89,7 +90,7 @@ async function* cdtnDocumentsGen() {
   }));
 
   logger.info("=== Fiches SP ===");
-  yield require("../dataset/fiches_service_public/fiches-sp.json").map(
+  yield getFichesSP().map(
     ({
       id,
       title,

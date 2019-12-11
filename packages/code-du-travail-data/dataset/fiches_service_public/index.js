@@ -2,6 +2,7 @@
 const fiches = require("@socialgouv/fiches-vdd");
 const filter = require("./filter");
 const format = require("./format");
+const { getThemeFiche } = require("./getThemeFiche");
 
 const TYPES = ["particuliers", "professionnels", "associations"];
 
@@ -13,9 +14,15 @@ const fullFiches = [].concat(
   )
 );
 
-const filteredFiches = filter(fullFiches);
-const formatedFiches = filteredFiches.map(format).filter(Boolean);
+const setTheme = fiche => ({
+  ...fiche,
+  ...getThemeFiche(fiche)
+});
 
-if (module === require.main) {
-  console.log(JSON.stringify(formatedFiches, null, 2));
-}
+const getFichesSP = () =>
+  filter(fullFiches)
+    .map(format)
+    .map(setTheme)
+    .filter(Boolean);
+
+module.exports = { getFichesSP };
