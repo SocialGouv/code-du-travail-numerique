@@ -1,9 +1,11 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import {
-  Alert,
   Container,
   PageTitle,
+  Title,
+  Heading,
   Section,
   theme,
   Wrapper
@@ -20,68 +22,127 @@ const About = ({ ogImage, pageUrl }) => (
       image={ogImage}
     />
     <Section>
-      <Container narrow>
-        <PageTitle>À propos du code du travail numérique</PageTitle>
+      <Container narrow noPadding>
+        <PageTitle subtitle="Apprenez-en plus sur notre histoire, notre équipe et nos méthodes">
+          À propos du Code du travail numérique
+        </PageTitle>
         <Wrapper variant="main">
-          <Alert>
-            Ce service public vous permet d’obtenir des réponses détaillées à
-            des questions de droit de travail, ainsi que des fiches explicatives
-            et les articles de loi correspondants.
-            <P>
-              <a
-                href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
-                title="lien vers l’ordonnance relative à la création du Code du travail numérique"
-              >
-                L’ouverture officielle du site est prévue pour 2020.
-              </a>
-            </P>
-          </Alert>
+          <StyledTitle>
+            Qu’est-ce que le Code du travail numérique&nbsp;?
+          </StyledTitle>
           <p>
-            Seul un public expert maîtrise la complexité du droit du travail et
-            de ses différentes sources de droit (conventions collectives,
-            accords de branches et accords d’entreprises…). En plus de la
-            diversité des sources de droit, la technicité de la matière la rend
-            peu accessible pour les concernés : les employeurs et les salariés.
+            Le Code du travail numérique est un service public en ligne et
+            gratuit vous permettant d’obtenir des réponses personnalisées sur le
+            droit de travail.
           </p>
-
           <p>
-            Or tous les actifs sont impactés tous les jours par le droit qui
-            régit leurs relations au travail, qui, mal compris, mal appliqué,
-            peut avoir des conséquences importantes pour le salarié comme pour
-            l’employeur.
+            L’ouverture officielle du site a eu lieu le 1<sup>er</sup> janvier
+            2020.
           </p>
-
+          <Heading>Pourquoi le Code du travail numérique&nbsp;?</Heading>
           <p>
-            Les services de renseignement en droit du travail (dans les
-            DIRECCTE) répondent à plus de 900 000 demandes par an concernant le
-            droit du travail, des questions les plus simples aux cas les plus
-            complexes.
+            Aujourd’hui, seul un public expert maîtrise la complexité du droit
+            du travail et de ses différentes sources (code du travail,
+            conventions collectives, accords d’entreprises, etc.). La technicité
+            du sujet le rend également peu accessible pour les salariés et les
+            employeurs. Or, le droit est d’autant plus facilement appliqué et
+            respecté qu’il est connu et compris.
           </p>
-
           <p>
-            L’objectif du code du travail numérique est d’améliorer la
-            lisibilité du droit pour ceux qu’il concerne.
+            La décision de créer le Code du travail numérique a donc été prise
+            et inscrite dans{" "}
+            <a
+              title="voir l'ordonnance du code du travail numérique"
+              href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=F175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3?cidTexte=JORFTEXT000035607388&idArticle=LEGIARTI000036762196&dateTexte=20191129&categorieLien=id#LEGIARTI000036762196"
+            >
+              les ordonnances sur le renforcement du dialogue social de 2017.
+            </a>
           </p>
-
+          <Heading>À qui ce service s’adresse-t-il&nbsp;?</Heading>
           <p>
-            Construit avec les utilisateurs (employeurs et salariés) et les
-            experts du terrain (inspecteur du travail services d’inspection du
-            travail et de renseignements en droit du travail notamment), le
-            service répondra aux questions que se posent les employeurs,
-            notamment de TPE PME, quant aux règles applicables à leur situation,
-            ainsi qu’à celles que se posent les salariés
+            Le Code du travail numérique s’adresse à tous les salariés et
+            employeurs de droit privé relevant du code du travail. Les
+            fonctionnaires et les indépendants ne sont par exemple pas
+            concernés. Plus d’informations à ce sujet dans notre{" "}
+            <Link
+              href="/droit-du-travail"
+              title="Qu'est ce que le droit du travail ?"
+            >
+              <a>page d’introduction au droit du travail.</a>
+            </Link>
           </p>
-
+          <Heading>Que peut-on trouver sur le site&nbsp;?</Heading>
           <p>
-            Pour rendre le droit accessible et compréhensible, nous devons
-            construire un modèle exécutable qui, en fonction de la situation
-            d’une entreprise ou d’un salarié, sera capable de servir les droits
-            et les obligations associées aux différentes thématiques comme la
-            durée du travail, la rémunération, le contrat de travail
-            (l’embauche, son exécution, sa rupture) ou la maladie par exemple.
-            L’enjeu est donc d’identifier la source de droit applicable à des
-            situations spécifiques et de donner une réponse claire sur les
-            dispositions propres à la situation de l’utilisateur.
+            Le Code du travail numérique rassemble différents contenus sur le
+            droit du travail ainsi que des réponses personnalisées selon votre
+            situation.
+          </p>
+          <p>Plus précisément, vous retrouverez sur le site&nbsp;:</p>
+          <ul>
+            <li>
+              des réponses génériques sur le droit du travail dans un langage
+              accessible&nbsp;;
+            </li>
+            <li>
+              des réponses personnalisées selon votre convention
+              collective&nbsp;;
+            </li>
+            <li>
+              des simulateurs permettant d’estimer des durées de préavis, des
+              montants d’indemnités…&nbsp;;
+            </li>
+            <li>des modèles de courrier.</li>
+          </ul>
+          <StyledTitle>Qui sommes-nous&nbsp;?</StyledTitle>
+          <Heading>Notre équipe</Heading>
+          <p>
+            Nous sommes une équipe pluridisciplinaire d’une dizaine de personnes
+            composée de développeurs web, designers d’interface et d’expérience,
+            juristes, inspecteurs du travail, spécialistes de la donnée…
+            L’ensemble des agents du ministère du Travail contribue également au
+            produit en rédigeant des contenus et en assurant la validité
+            juridique des réponses.
+          </p>
+          <p>
+            Le Code du travail numérique est un service public initié par
+            <a
+              title="le site du ministère du travail"
+              href="https://travail.gouv.fr"
+            >
+              le ministère du Travail
+            </a>
+            , conçu et développé au sein de{" "}
+            <a
+              title="le site de l'incubateur des ministères sociaux"
+              href="https://incubateur.social.gouv.fr/"
+            >
+              l’incubateur des ministères sociaux
+            </a>
+            en partenariat avec la communauté{" "}
+            <a title="le site beta.gouv" href="https://beta.gouv.fr/">
+              beta.gouv.fr
+            </a>
+            .
+          </p>
+          <StyledTitle>Notre méthode</StyledTitle>
+          <p>
+            Le service est développé en lien étroit avec les utilisateurs
+            (employeurs et salariés) et les praticiens du droit du travail
+            (services du ministère du Travail en région, conseillers du salarié,
+            maisons d’accès au droit, professeurs en droit du travail...).
+          </p>
+          <p>
+            Le site sur lequel vous naviguez est en évolution continue et
+            s’enrichit régulièrement de nouveaux contenus et de nouvelles
+            fonctionnalités. Nous vous invitons à{" "}
+            <a
+              title="contactez nous par courriel"
+              href="mailto:codedutravailnumerique@travail.gouv.fr"
+            >
+              nous contacter
+            </a>{" "}
+            si vous souhaitez nous faire part d’une proposition
+            d’amélioration&nbsp;!
           </p>
         </Wrapper>
       </Container>
@@ -90,8 +151,19 @@ const About = ({ ogImage, pageUrl }) => (
 );
 export default About;
 
-const { spacings } = theme;
+const { spacings, breakpoints } = theme;
 
-const P = styled.p`
-  margin-top: ${spacings.medium};
+const StyledTitle = styled(Title)`
+  margin-top: ${spacings.larger};
+  margin-bottom: ${spacings.large};
+  margin-left: calc(-1 * ${spacings.larger});
+  & > * {
+    padding-left: ${spacings.larger};
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-left: calc(-1 * ${spacings.medium});
+    & > * {
+      padding-left: ${spacings.medium};
+    }
+  }
 `;
