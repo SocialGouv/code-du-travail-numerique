@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@cdt/data": "^3.8.0",
-    "@socialgouv/eslint-config-recommended": "^0.10.4",
+    "@socialgouv/eslint-config-recommended": "^0.11.0",
     "@zeit/ncc": "^0.20.5",
     "eslint": "^6.7.2",
     "nodemon": "^2.0.1",
