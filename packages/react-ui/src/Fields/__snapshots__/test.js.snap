@@ -1,0 +1,545 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render input field 1`] = `
+.c0 {
+  position: relative;
+  width: 40rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c1 {
+  width: 40rem;
+  max-width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  background: #fff;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  text-align: left;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #3e486e;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  line-height: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c1::-moz-placeholder {
+  color: #9298af;
+}
+
+.c1:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c1::placeholder {
+  color: #9298af;
+}
+
+.c1:focus {
+  border-color: #7598d6;
+}
+
+.c1:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c1:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c1:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c1:focus::placeholder {
+  color: transparent;
+}
+
+.c1::-webkit-outer-spin-button,
+.c1::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <input
+      class="c1"
+      name="input"
+    />
+  </div>
+</div>
+`;
+
+exports[`<InputCheckbox /> should render checkbox field 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding-bottom: 0.4rem;
+  line-height: 2;
+  cursor: pointer;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c6 {
+  position: absolute;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  border: 1px solid #bbcadf;
+}
+
+.c6:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.c4 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  margin: 0 1.6rem 0 0;
+  padding: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2 {
+  font-weight: normal;
+  font-size: 1.6rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2:hover .c3 ~ .c5 {
+  background-color: #bbcadf;
+  border: 0;
+}
+
+.c2 .c3:checked ~ .c5 {
+  background-color: #ff7067;
+  border: 0;
+}
+
+.c2 .c3:checked ~ .c5:after {
+  display: block;
+}
+
+.c2 .c5:after {
+  left: 0.8rem;
+  top: 0.4rem;
+  width: 0.5rem;
+  height: 1rem;
+  border: solid #fff;
+  border-width: 0 0.2rem 0.2rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1 c2"
+      for="checkbox"
+    >
+      <input
+        class="c3 c4"
+        id="checkbox"
+        name="checkbox"
+        type="checkbox"
+      />
+      option
+      <span
+        class="c5 c6"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<InputDate /> should render input date field 1`] = `
+.c0 {
+  position: relative;
+  width: 40rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c1 {
+  width: 40rem;
+  max-width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  background: #fff;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  text-align: left;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #3e486e;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  line-height: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c1::-moz-placeholder {
+  color: #9298af;
+}
+
+.c1:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c1::placeholder {
+  color: #9298af;
+}
+
+.c1:focus {
+  border-color: #7598d6;
+}
+
+.c1:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c1:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c1:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c1:focus::placeholder {
+  color: transparent;
+}
+
+.c1::-webkit-outer-spin-button,
+.c1::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2 {
+  width: 40rem;
+  padding-right: 0;
+  width: 20rem;
+}
+
+.c2[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0,0,0,0);
+  opacity: 1;
+  display: block;
+  background-color: #9298af;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMC45NDcgNy42MDFoMS42MDFjMS40NzIgMCAyLjUyMSAxLjE5OCAyLjUyMSAyLjY2OXYyLjMwNmwtLjAwMSAxMC4zOTJjMCAxLjQ3Mi0xLjA0OSAyLjY2OS0yLjUyMSAyLjY2OUg4LjY2OUEyLjY3MiAyLjY3MiAwIDAxNiAyMi45NjdsLjAwMS0xMi42OTdhMi42NzIgMi42NzIgMCAwMTIuNjctMi42NjloMS4zMzFWNmguOTk5djEuNjAxSDIwVjZoLjk0N3YxLjYwMXptMS42IDE3LjAzNmMuODgzIDAgMS40NTQtLjc4NiAxLjQ1NC0xLjY3di0xMC4zM2gtMTdMNyAyMi45NjdjMCAuODg0Ljc4NSAxLjY3IDEuNjY4IDEuNjdoMTMuODc5em0tMTUuNTQ4LTEzaDE3LjAwMmwuMDAxLTEuMzY3YzAtLjg4My0uNTctMS42MDEtMS40NTMtMS42MDFoLTEuNnYxLjA2OEgyMFY4LjY2OWgtOXYxLjA2OGgtMVY4LjY2OUg4LjY2OUM3Ljc4NiA4LjY2OSA3IDkuMzg3IDcgMTAuMjd2MS4zNjd6bTkuNjc3IDYuMjc3aC0yLjEzNWExLjA3IDEuMDcgMCAwMS0xLjA2OC0xLjA2OHYtMi4xMzVhMS4wNyAxLjA3IDAgMDExLjA2OC0xLjA2OGgyLjEzNWExLjA3IDEuMDcgMCAwMTEuMDY4IDEuMDY4djIuMTM1YTEuMDcgMS4wNyAwIDAxLTEuMDY4IDEuMDY4em0wLTMuMjAzaC0yLjEzNXYyLjEzNWgyLjEzNnYtMi4xMzV6bTMuMjAzIDMuMjAzaDIuMTM1YTEuMDcgMS4wNyAwIDAwMS4wNjgtMS4wNjh2LTIuMTM1YTEuMDcgMS4wNyAwIDAwLTEuMDY4LTEuMDY4SDE5Ljg4YTEuMDcgMS4wNyAwIDAwLTEuMDY4IDEuMDY4djIuMTM1YTEuMDcgMS4wNyAwIDAwMS4wNjggMS4wNjh6bTAtMy4yMDNoMi4xMzVsLjAwMSAyLjEzNUgxOS44OHYtMi4xMzV6bS04LjU0IDguNTQxSDkuMjA0YTEuMDcgMS4wNyAwIDAxLTEuMDY4LTEuMDY4di0yLjEzNWExLjA3IDEuMDcgMCAwMTEuMDY4LTEuMDY4aDIuMTM1YTEuMDcgMS4wNyAwIDAxMS4wNjggMS4wNjh2Mi4xMzVhMS4wNyAxLjA3IDAgMDEtMS4wNjggMS4wNjh6bTAtMy4yMDNIOS4yMDR2Mi4xMzVoMi4xMzZsLS4wMDEtMi4xMzV6bTMuMjAyIDMuMjAzaDIuMTM1YTEuMDcgMS4wNyAwIDAwMS4wNjgtMS4wNjh2LTIuMTM1YTEuMDcgMS4wNyAwIDAwLTEuMDY4LTEuMDY4aC0yLjEzNWExLjA3IDEuMDcgMCAwMC0xLjA2OCAxLjA2OHYyLjEzNWExLjA3IDEuMDcgMCAwMDEuMDY4IDEuMDY4em0wLTMuMjAzaDIuMTM1bC4wMDEgMi4xMzVoLTIuMTM2di0yLjEzNXptNy40NzMgMy4yMDNIMTkuODhhMS4wNyAxLjA3IDAgMDEtMS4wNjgtMS4wNjh2LTIuMTM1YTEuMDcgMS4wNyAwIDAxMS4wNjgtMS4wNjhoMi4xMzVhMS4wNyAxLjA3IDAgMDExLjA2OCAxLjA2OHYyLjEzNWExLjA3IDEuMDcgMCAwMS0xLjA2OCAxLjA2OHptMC0zLjIwM0gxOS44OHYyLjEzNWgyLjEzNnYtMi4xMzV6IiBmaWxsPSJjdXJyZW50Q29sb3IiLz48L3N2Zz4=');
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMC45NDcgNy42MDFoMS42MDFjMS40NzIgMCAyLjUyMSAxLjE5OCAyLjUyMSAyLjY2OXYyLjMwNmwtLjAwMSAxMC4zOTJjMCAxLjQ3Mi0xLjA0OSAyLjY2OS0yLjUyMSAyLjY2OUg4LjY2OUEyLjY3MiAyLjY3MiAwIDAxNiAyMi45NjdsLjAwMS0xMi42OTdhMi42NzIgMi42NzIgMCAwMTIuNjctMi42NjloMS4zMzFWNmguOTk5djEuNjAxSDIwVjZoLjk0N3YxLjYwMXptMS42IDE3LjAzNmMuODgzIDAgMS40NTQtLjc4NiAxLjQ1NC0xLjY3di0xMC4zM2gtMTdMNyAyMi45NjdjMCAuODg0Ljc4NSAxLjY3IDEuNjY4IDEuNjdoMTMuODc5em0tMTUuNTQ4LTEzaDE3LjAwMmwuMDAxLTEuMzY3YzAtLjg4My0uNTctMS42MDEtMS40NTMtMS42MDFoLTEuNnYxLjA2OEgyMFY4LjY2OWgtOXYxLjA2OGgtMVY4LjY2OUg4LjY2OUM3Ljc4NiA4LjY2OSA3IDkuMzg3IDcgMTAuMjd2MS4zNjd6bTkuNjc3IDYuMjc3aC0yLjEzNWExLjA3IDEuMDcgMCAwMS0xLjA2OC0xLjA2OHYtMi4xMzVhMS4wNyAxLjA3IDAgMDExLjA2OC0xLjA2OGgyLjEzNWExLjA3IDEuMDcgMCAwMTEuMDY4IDEuMDY4djIuMTM1YTEuMDcgMS4wNyAwIDAxLTEuMDY4IDEuMDY4em0wLTMuMjAzaC0yLjEzNXYyLjEzNWgyLjEzNnYtMi4xMzV6bTMuMjAzIDMuMjAzaDIuMTM1YTEuMDcgMS4wNyAwIDAwMS4wNjgtMS4wNjh2LTIuMTM1YTEuMDcgMS4wNyAwIDAwLTEuMDY4LTEuMDY4SDE5Ljg4YTEuMDcgMS4wNyAwIDAwLTEuMDY4IDEuMDY4djIuMTM1YTEuMDcgMS4wNyAwIDAwMS4wNjggMS4wNjh6bTAtMy4yMDNoMi4xMzVsLjAwMSAyLjEzNUgxOS44OHYtMi4xMzV6bS04LjU0IDguNTQxSDkuMjA0YTEuMDcgMS4wNyAwIDAxLTEuMDY4LTEuMDY4di0yLjEzNWExLjA3IDEuMDcgMCAwMTEuMDY4LTEuMDY4aDIuMTM1YTEuMDcgMS4wNyAwIDAxMS4wNjggMS4wNjh2Mi4xMzVhMS4wNyAxLjA3IDAgMDEtMS4wNjggMS4wNjh6bTAtMy4yMDNIOS4yMDR2Mi4xMzVoMi4xMzZsLS4wMDEtMi4xMzV6bTMuMjAyIDMuMjAzaDIuMTM1YTEuMDcgMS4wNyAwIDAwMS4wNjgtMS4wNjh2LTIuMTM1YTEuMDcgMS4wNyAwIDAwLTEuMDY4LTEuMDY4aC0yLjEzNWExLjA3IDEuMDcgMCAwMC0xLjA2OCAxLjA2OHYyLjEzNWExLjA3IDEuMDcgMCAwMDEuMDY4IDEuMDY4em0wLTMuMjAzaDIuMTM1bC4wMDEgMi4xMzVoLTIuMTM2di0yLjEzNXptNy40NzMgMy4yMDNIMTkuODhhMS4wNyAxLjA3IDAgMDEtMS4wNjgtMS4wNjh2LTIuMTM1YTEuMDcgMS4wNyAwIDAxMS4wNjgtMS4wNjhoMi4xMzVhMS4wNyAxLjA3IDAgMDExLjA2OCAxLjA2OHYyLjEzNWExLjA3IDEuMDcgMCAwMS0xLjA2OCAxLjA2OHptMC0zLjIwM0gxOS44OHYyLjEzNWgyLjEzNnYtMi4xMzV6IiBmaWxsPSJjdXJyZW50Q29sb3IiLz48L3N2Zz4=');
+  mask-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMC45NDcgNy42MDFoMS42MDFjMS40NzIgMCAyLjUyMSAxLjE5OCAyLjUyMSAyLjY2OXYyLjMwNmwtLjAwMSAxMC4zOTJjMCAxLjQ3Mi0xLjA0OSAyLjY2OS0yLjUyMSAyLjY2OUg4LjY2OUEyLjY3MiAyLjY3MiAwIDAxNiAyMi45NjdsLjAwMS0xMi42OTdhMi42NzIgMi42NzIgMCAwMTIuNjctMi42NjloMS4zMzFWNmguOTk5djEuNjAxSDIwVjZoLjk0N3YxLjYwMXptMS42IDE3LjAzNmMuODgzIDAgMS40NTQtLjc4NiAxLjQ1NC0xLjY3di0xMC4zM2gtMTdMNyAyMi45NjdjMCAuODg0Ljc4NSAxLjY3IDEuNjY4IDEuNjdoMTMuODc5em0tMTUuNTQ4LTEzaDE3LjAwMmwuMDAxLTEuMzY3YzAtLjg4My0uNTctMS42MDEtMS40NTMtMS42MDFoLTEuNnYxLjA2OEgyMFY4LjY2OWgtOXYxLjA2OGgtMVY4LjY2OUg4LjY2OUM3Ljc4NiA4LjY2OSA3IDkuMzg3IDcgMTAuMjd2MS4zNjd6bTkuNjc3IDYuMjc3aC0yLjEzNWExLjA3IDEuMDcgMCAwMS0xLjA2OC0xLjA2OHYtMi4xMzVhMS4wNyAxLjA3IDAgMDExLjA2OC0xLjA2OGgyLjEzNWExLjA3IDEuMDcgMCAwMTEuMDY4IDEuMDY4djIuMTM1YTEuMDcgMS4wNyAwIDAxLTEuMDY4IDEuMDY4em0wLTMuMjAzaC0yLjEzNXYyLjEzNWgyLjEzNnYtMi4xMzV6bTMuMjAzIDMuMjAzaDIuMTM1YTEuMDcgMS4wNyAwIDAwMS4wNjgtMS4wNjh2LTIuMTM1YTEuMDcgMS4wNyAwIDAwLTEuMDY4LTEuMDY4SDE5Ljg4YTEuMDcgMS4wNyAwIDAwLTEuMDY4IDEuMDY4djIuMTM1YTEuMDcgMS4wNyAwIDAwMS4wNjggMS4wNjh6bTAtMy4yMDNoMi4xMzVsLjAwMSAyLjEzNUgxOS44OHYtMi4xMzV6bS04LjU0IDguNTQxSDkuMjA0YTEuMDcgMS4wNyAwIDAxLTEuMDY4LTEuMDY4di0yLjEzNWExLjA3IDEuMDcgMCAwMTEuMDY4LTEuMDY4aDIuMTM1YTEuMDcgMS4wNyAwIDAxMS4wNjggMS4wNjh2Mi4xMzVhMS4wNyAxLjA3IDAgMDEtMS4wNjggMS4wNjh6bTAtMy4yMDNIOS4yMDR2Mi4xMzVoMi4xMzZsLS4wMDEtMi4xMzV6bTMuMjAyIDMuMjAzaDIuMTM1YTEuMDcgMS4wNyAwIDAwMS4wNjgtMS4wNjh2LTIuMTM1YTEuMDcgMS4wNyAwIDAwLTEuMDY4LTEuMDY4aC0yLjEzNWExLjA3IDEuMDcgMCAwMC0xLjA2OCAxLjA2OHYyLjEzNWExLjA3IDEuMDcgMCAwMDEuMDY4IDEuMDY4em0wLTMuMjAzaDIuMTM1bC4wMDEgMi4xMzVoLTIuMTM2di0yLjEzNXptNy40NzMgMy4yMDNIMTkuODhhMS4wNyAxLjA3IDAgMDEtMS4wNjgtMS4wNjh2LTIuMTM1YTEuMDcgMS4wNyAwIDAxMS4wNjgtMS4wNjhoMi4xMzVhMS4wNyAxLjA3IDAgMDExLjA2OCAxLjA2OHYyLjEzNWExLjA3IDEuMDcgMCAwMS0xLjA2OCAxLjA2OHptMC0zLjIwM0gxOS44OHYyLjEzNWgyLjEzNnYtMi4xMzV6IiBmaWxsPSJjdXJyZW50Q29sb3IiLz48L3N2Zz4=');
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <input
+      class="c1 c2"
+      name="input_date"
+      type="date"
+    />
+  </div>
+</div>
+`;
+
+exports[`<InputRadio /> should render input radio field 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding-bottom: 0.4rem;
+  line-height: 2;
+  cursor: pointer;
+}
+
+.c1 {
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1.6rem 0 0;
+  padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2:checked {
+  background-color: #fff;
+  border-color: #ff7067;
+}
+
+.c2::before {
+  position: absolute;
+  top: calc(50% - 2rem / 4);
+  left: calc(50% - 2rem / 4);
+  width: calc(2rem / 2);
+  height: calc(2rem / 2);
+  background-color: #7598d6;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  content: "";
+}
+
+.c2:checked::before {
+  background-color: #ff7067;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+<div>
+  <label
+    class="c0 c1"
+    for="radio"
+  >
+    <input
+      class="c2"
+      id="radio"
+      name="radio"
+      type="radio"
+    />
+    option
+  </label>
+</div>
+`;
+
+exports[`<Select /> should render select field 1`] = `
+.c0 {
+  width: 40rem;
+  max-width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 3.2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  vertical-align: middle;
+  background: #fff url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+PHBhdGggZD0iTTguNDI1IDExLjU3M2w3LjExLTYuMDcyYS43MDkuNzA5IDAgMDAuMjYtLjUzNy43MDkuNzA5IDAgMDAtLjI2LS41MzcuOTczLjk3MyAwIDAwLS42MjktLjIyMy45NzMuOTczIDAgMDAtLjYzLjIyM2wtNi40OCA1LjUzNi02LjQ4MS01LjUzNmEuOTczLjk3MyAwIDAwLS42My0uMjIzLjk3My45NzMgMCAwMC0uNjI4LjIyMy43MDguNzA4IDAgMDAtLjI2MS41MzdjMCAuMjAyLjA5NC4zOTUuMjYuNTM3bDcuMTEgNi4wNzJhLjkxLjkxIDAgMDAuMjkuMTY1IDEuMDIxIDEuMDIxIDAgMDAuNjggMCAuOTEuOTEgMCAwMC4yOS0uMTY1eiIgZmlsbD0icmdiKDI1NSwgMTEyLCAxMDMpIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTAgMGgxNnYxNkgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==') no-repeat;
+  background-position: top 2rem right 2rem;
+  background-size: 1.6rem;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  cursor: pointer;
+  -webkit-transition: border-color 250ms ease;
+  transition: border-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c0:disabled {
+  background-color: #e4e8ef;
+}
+
+<div>
+  <select
+    class="c0"
+  >
+    <option>
+      ...
+    </option>
+    <option>
+      Option 1
+    </option>
+    <option>
+      Option 2
+    </option>
+  </select>
+</div>
+`;
+
+exports[`<Textarea /> should render textarea 1`] = `
+.c0 {
+  min-height: 8rem;
+  padding: 2rem;
+  max-width: 100%;
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c0::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c0::-moz-placeholder {
+  color: #9298af;
+}
+
+.c0:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c0::placeholder {
+  color: #9298af;
+}
+
+.c0:focus {
+  border-color: #7598d6;
+}
+
+.c0:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c0:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c0:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c0:focus::placeholder {
+  color: transparent;
+}
+
+.c0::-webkit-outer-spin-button,
+.c0::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+<div>
+  <textarea
+    class="c0"
+    name="textarea"
+  />
+</div>
+`;
