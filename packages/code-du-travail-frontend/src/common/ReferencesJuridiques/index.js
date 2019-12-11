@@ -1,17 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import {
   Accordion,
   Container,
+  Heading,
   Section,
-  theme,
-  Title
+  Wrapper
 } from "@socialgouv/react-ui";
 import ReferenceList from "./ReferenceList";
 import TYPE_REFERENCE from "./typeReference";
-
-const { spacings } = theme;
 
 class ReferencesJuridiques extends React.PureComponent {
   render() {
@@ -26,12 +23,14 @@ class ReferencesJuridiques extends React.PureComponent {
     ];
 
     return (
-      <StyledSection>
+      <Section>
         <Container>
-          <Title>Références juridiques</Title>
-          <Accordion items={items} />
+          <Wrapper variant="light">
+            <Heading>Références juridiques</Heading>
+            <Accordion items={items} />
+          </Wrapper>
         </Container>
-      </StyledSection>
+      </Section>
     );
   }
 }
@@ -51,8 +50,3 @@ ReferencesJuridiques.defaultProps = {
 };
 
 export default ReferencesJuridiques;
-
-const StyledSection = styled(Section)`
-  padding-top: ${spacings.base};
-  padding-bottom: ${spacings.base};
-`;

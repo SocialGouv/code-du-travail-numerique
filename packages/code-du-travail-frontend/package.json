@@ -24,6 +24,7 @@
     "@cdt/data...preavis-demission": "^3.8.0",
     "@cdt/data...preavis-licenciement": "^3.8.0",
     "@cdt/data...prime-precarite": "^3.8.0",
+    "@cdt/data...tools": "^3.8.0",
     "@cdt/sources": "^3.8.0",
     "@reach/tooltip": "^0.6.4",
     "@sentry/browser": "^5.10.2",

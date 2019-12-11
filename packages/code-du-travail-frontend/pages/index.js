@@ -10,16 +10,28 @@ import {
   Section,
   Tile
 } from "@socialgouv/react-ui";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
+import tools from "@cdt/data...tools";
 
 import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
 import SearchHero from "../src/search/SearchHero";
 import { CustomTile } from "../src/common/tiles/Custom";
-import { tools } from "../src/common/tools";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
+
+const additionalTools = [
+  {
+    title: "Modèles de documents",
+    action: "Découvrir",
+    description:
+      "Téléchargez et utilisez des modèles de lettres et de documents personnalisables",
+    href: "/modeles-de-courriers",
+    icon: "Document"
+  }
+];
 
 const Home = ({ pageUrl, ogImage, themes = [] }) => (
   <Layout currentPage="home">
@@ -37,15 +49,26 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
           desc="Trouvez des réponses personnalisées selon votre situation"
           href="/outils"
         >
-          {tools
+          {additionalTools
+            .concat(tools)
             .slice(0, 4)
-            .map(({ action, as, description, href, icon, title }) => (
-              <Link href={href} as={as} passHref key={as || "modeles"}>
-                <CustomTile action={action} icon={icons[icon]} title={title}>
-                  {description}
-                </CustomTile>
-              </Link>
-            ))}
+            .map(({ action, description, href, icon, slug, title }) => {
+              const linkProps = {
+                href,
+                passHref: true
+              };
+              if (!href) {
+                linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/[slug]`;
+                linkProps.as = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+              }
+              return (
+                <Link {...linkProps} key={slug || href}>
+                  <CustomTile action={action} icon={icons[icon]} title={title}>
+                    {description}
+                  </CustomTile>
+                </Link>
+              );
+            })}
         </CardList>
       </Container>
     </Section>

@@ -10,11 +10,12 @@ import {
   PageTitle,
   Section
 } from "@socialgouv/react-ui";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
+import tools from "@cdt/data...tools";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import { CustomTile } from "../../src/common/tiles/Custom";
-import { tools } from "../../src/common/tools";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -31,15 +32,18 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
       <Container>
         <PageTitle>Retrouvez tous nos outils</PageTitle>
         <CardList leftStripped title="Nos outils de calcul">
-          {tools
-            .slice(1)
-            .map(({ action, as, description, href, icon, title }) => (
-              <Link href={href} as={as} passHref key={as || "modeles"}>
-                <CustomTile action={action} title={title} icon={icons[icon]}>
-                  {description}
-                </CustomTile>
-              </Link>
-            ))}
+          {tools.map(({ action, description, icon, slug, title }) => (
+            <Link
+              href={`/${getRouteBySource(SOURCES.TOOLS)}/[slug]`}
+              as={`/${getRouteBySource(SOURCES.TOOLS)}/${slug}`}
+              passHref
+              key={slug}
+            >
+              <CustomTile action={action} title={title} icon={icons[icon]}>
+                {description}
+              </CustomTile>
+            </Link>
+          ))}
         </CardList>
         {modeles.length > 0 && (
           <CardList leftStripped title="Nos modèles de documents">

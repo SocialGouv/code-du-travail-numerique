@@ -4,13 +4,9 @@
   "private": true,
   "description": "generate courrier-type.json",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "start": "node index > ./export-courriers.json"
   },
-  "author": "Lionel Breduillieard <lionel@lumographe.fr>",
   "license": "ISC",
   "dependencies": {
     "mammoth": "^1.4.9"

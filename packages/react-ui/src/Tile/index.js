@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { lighten } from "polished";
+import styled from "styled-components";
 import { Badge } from "../Badge";
 import { Subtitle, Heading } from "../Titles";
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
-import styled from "styled-components";
 
 export const Tile = React.forwardRef(
   ({ children, custom, icon: Icon, subtitle, title, wide, ...props }, ref) => (

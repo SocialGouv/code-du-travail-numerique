@@ -20,7 +20,7 @@
     "filename": "certificat-de-travail.docx"
   },
   {
-    "titre": "convocation à entretien préalable",
+    "titre": "Convocation à un entretien préalable",
     "description": "L’employeur qui envisage de licencier un salarié doit le convoquer à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l’entretien préalable.",
     "questions": [
       "comment faire une demande d’entretien préalable en vue d’un licenciement"
@@ -36,7 +36,7 @@
     "filename": "convocation-a-entretien-prealable.docx"
   },
   {
-    "titre": "demande de rendez-vous en vue d’une rupture conventionnelle",
+    "titre": "Demande de rendez-vous en vue d’une rupture conventionnelle",
     "description": "La rupture conventionnelle permet la rupture du CDI par commun accord (elle ne peut être imposée). L’employeur et le salarié conviennent du principe d’une rupture conventionnelle lors d’un ou plusieurs entretiens. Ce courrier n’est pas prévu dans la procédure, mais permettra de l’initier et pourra servir à déterminer votre consentement.",
     "questions": [
       "comment demander un rendez-vous en vue d’une rupture conventionnelle"
@@ -68,7 +68,7 @@
     "filename": "demande-paiement-salaire-salarie.docx"
   },
   {
-    "titre": "Rupture du contrat en période d’essai à l'initiative du salarié",
+    "titre": "Rupture du contrat en période d’essai à l’initiative du salarié",
     "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par le salarié. Cette demande doit se faire avec une lettre recommandée à accusé de réception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
       "comment rédiger une demande pour mettre fin à la période d’essai ?",
@@ -86,7 +86,7 @@
     "filename": "fin-periode-essai-initiative-du-salarie.docx"
   },
   {
-    "titre": "rupture de période d’essai, à l'initiative de l'employeur",
+    "titre": "Rupture de période d’essai, à l’initiative de l’employeur",
     "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. Cette demande doit se faire avec une lettre recommandée à accusé de réception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": ["comment rédiger une rupture de période d’essai ?"],
     "tags": {
@@ -101,8 +101,8 @@
     "filename": "fin-periode-essai-initiative-employeur.docx"
   },
   {
-    "titre": "réclamation de congés payés",
-    "description": "L’employeur a le dernier mot sur l’ordre de départ des congés payés. Le salarié doit pouvoir prendre l’ensemble des congés dus: L’employeur n’a pas le droit de les payer en lieu et place. Ce modèle de courrier permet de demander à l'employeur la prise des congés de droit.",
+    "titre": "Réclamation de congés payés",
+    "description": "L’employeur a le dernier mot sur l’ordre de départ des congés payés. Le salarié doit pouvoir prendre l’ensemble des congés dus: L’employeur n’a pas le droit de les payer en lieu et place. Ce modèle de courrier permet de demander à l’employeur la prise des congés de droit.",
     "questions": [
       "faire une réclamation pour les congés payés ?",
       "rédiger une réclamation pour les congés payés"
@@ -119,8 +119,8 @@
     "filename": "reclamation-de-cp.docx"
   },
   {
-    "titre": "lettre de réclamation des documents de fin de contrat",
-    "description": "Les documents de fin de contrat sont dus par l'employeur et le salarié, au moment de la rupture du contrat de travail. Cette obligation est de dans tous les cas de rupture du contrat de travail.  Il est conseillé au salarié de transmettre cette lettre en recommandée avec accusé de réception ou en remise en main propre contre décharge, et d'en garder une copie.",
+    "titre": "Lettre de réclamation des documents de fin de contrat",
+    "description": "Les documents de fin de contrat sont dus par l’employeur et le salarié, au moment de la rupture du contrat de travail. Cette obligation est de dans tous les cas de rupture du contrat de travail.  Il est conseillé au salarié de transmettre cette lettre en recommandée avec accusé de réception ou en remise en main propre contre décharge, et d’en garder une copie.",
     "questions": ["Récupérer les documents relatifs à la fin de contrat ?"],
     "tags": {
       "theme": "fin de contrat",
@@ -134,8 +134,8 @@
     "filename": "reclamation-des-documents-de-fin-de-contrat.docx"
   },
   {
-    "titre": "lettre de réclamation des heures supplémentaires",
-    "description": "Les heures travaillées au-delà de la durée légale (35 heures) ouvrent droit à une majoration du salaire ou à des contreparties sous forme de repos (repos compensateur équivalent).  Il est conseillé au salarié de transmettre cette demande par lettre recommandée avec accusé de réception, ou remise en main propre contre décharge. Le demandeur doit aussi garder une copie de la lettre. Afin de s'assurer que tous les termes employés dans ce modèle de lettre correspondent à la situation du salarié : Il est vivement conseillé au salarié de se rapprocher des services de renseignements juridiques ",
+    "titre": "Lettre de réclamation des heures supplémentaires",
+    "description": "Les heures travaillées au-delà de la durée légale (35 heures) ouvrent droit à une majoration du salaire ou à des contreparties sous forme de repos (repos compensateur équivalent).  Il est conseillé au salarié de transmettre cette demande par lettre recommandée avec accusé de réception, ou remise en main propre contre décharge. Le demandeur doit aussi garder une copie de la lettre. Afin de s’assurer que tous les termes employés dans ce modèle de lettre correspondent à la situation du salarié : Il est vivement conseillé au salarié de se rapprocher des services de renseignements juridiques ",
     "questions": ["Comment se faire payer ses heures supplémentaires ?"],
     "tags": {
       "theme": "heures supplementaires",
@@ -149,8 +149,8 @@
     "filename": "reclamation-des-heures-sup.docx"
   },
   {
-    "titre": "lettre de réclamation du salaire en cas de non-fourniture de travail par l’employeur",
-    "description": "Le salarié privé de travail, du fait de l'employeur, a droit au paiement de son salaire. Ce modèle de courrier permettra au salarié de réclamer le paiement de son salaire dans ce cas précis. Il est conseillé de transmettre ce courrier en recommandé avec accusé de réception ou en remise en main propre contre décharge. Il est également conseillé au salarié de se rapprocher des services de renseignements juridiques des DIRECCTE. ",
+    "titre": "Lettre de réclamation du salaire en cas de non-fourniture de travail par l’employeur",
+    "description": "Le salarié privé de travail, du fait de l’employeur, a droit au paiement de son salaire. Ce modèle de courrier permettra au salarié de réclamer le paiement de son salaire dans ce cas précis. Il est conseillé de transmettre ce courrier en recommandé avec accusé de réception ou en remise en main propre contre décharge. Il est également conseillé au salarié de se rapprocher des services de renseignements juridiques des DIRECCTE. ",
     "questions": [
       "Comment se faire payer ses salaires impayés après un renvoi oral?"
     ],
@@ -166,7 +166,7 @@
     "filename": "reclamation-des-salaires-apres-renvoi-oral-du-salarie.docx"
   },
   {
-    "titre": "demande de prise en compte des temps de trajet dans le temps de travail (bâtiment)",
+    "titre": "Demande de prise en compte des temps de trajet dans le temps de travail (bâtiment)",
     "description": "Le temps de trajet entre le siège de l’entreprise ou le dépôt et le chantier constitue du temps de travail effectif. Le salarié est en droit d’en réclamer la prise dans la durée du travail et la rémunération. Le modèle ci-joint permet au salarié de faire cette demande. Il est conseillé au salarié de se rapprocher des services de renseignements juridiques des DIRECCTE.",
     "questions": [""],
     "tags": {
@@ -183,7 +183,7 @@
   },
   {
     "titre": "Réclamation des bulletins et/ou salaires",
-    "description": "Tout salarié doit percevoir son salaire une fois par mois et recevoir un bulletin de paie lors du paiement du salaire. Il est conseillé de faire avec une lettre recommandée à accusé de réception. Le demandeur devra conserver une copie de la lettre. Il est également conseillé au salarié de se rapprocher des services de renseignements juridiques des DIRECCTE ou de l'agent de contrôle de l'inspection du travail qui suit l'entreprise.",
+    "description": "Tout salarié doit percevoir son salaire une fois par mois et recevoir un bulletin de paie lors du paiement du salaire. Il est conseillé de faire avec une lettre recommandée à accusé de réception. Le demandeur devra conserver une copie de la lettre. Il est également conseillé au salarié de se rapprocher des services de renseignements juridiques des DIRECCTE ou de l’agent de contrôle de l’inspection du travail qui suit l’entreprise.",
     "questions": [""],
     "tags": {
       "theme": "bulletin de salaire",
@@ -212,7 +212,7 @@
     "filename": "recu-solde-de-tout-compte.docx"
   },
   {
-    "titre": "Demande d'accord du salarié pour le renouvellement de période d’essai",
+    "titre": "Demande d’accord du salarié pour le renouvellement de période d’essai",
     "description": "La période d’essai peut être renouvelée, si la branche le prévoit et si cette possibilité est inscrite dans le contrat de travail ou la lettre d’engagement. Dans ces conditions, ce modèle permet de demander le renouvellement du contrat de travail.",
     "questions": [
       "comment rédiger une demande de renouvellement de période d’essai ?"
@@ -230,7 +230,7 @@
   },
   {
     "titre": "Rupture d’un commun accord d’un contrat d’apprentissage",
-    "description": "Le contrat d'apprentissage peut être rompu par l'apprenti ou par l'employeur jusqu'à la fin des 45 premiers jours de la formation pratique en entreprise. Passé ce délai, le contrat d'apprentissage peut être rompu : - en cas de force majeure, - en cas de faute grave de l’apprenti, - en cas d'inaptitude de l'apprenti, - en cas de décès de l'employeur et maître d'apprentissage (entreprise unipersonnelle) - en cas d'obtention du diplôme avant le terme fixé (le contrat peut être réduit d'un an si l'apprenti décide ne pas poursuivre son bac pro et passer le CAP). Passé ce délai le contrat d'apprentissage peut être rompu par l'apprenti. Il devra saisir le médiateur et informer préalablement l'employeur. Passé ce délai, le contrat d'apprentissage peut être rompu d'un commun accord entre le salarié et l'employeur. Le modèle ci-dessous est un exemple personnalisable de rupture d'un commun accord entre le salarié et l'employeur.",
+    "description": "Le contrat d’apprentissage peut être rompu par l’apprenti ou par l’employeur jusqu’à la fin des 45 premiers jours de la formation pratique en entreprise. Passé ce délai, le contrat d’apprentissage peut être rompu : - en cas de force majeure, - en cas de faute grave de l’apprenti, - en cas d’inaptitude de l’apprenti, - en cas de décès de l’employeur et maître d’apprentissage (entreprise unipersonnelle) - en cas d’obtention du diplôme avant le terme fixé (le contrat peut être réduit d’un an si l’apprenti décide ne pas poursuivre son bac pro et passer le CAP). Passé ce délai le contrat d’apprentissage peut être rompu par l’apprenti. Il devra saisir le médiateur et informer préalablement l’employeur. Passé ce délai, le contrat d’apprentissage peut être rompu d’un commun accord entre le salarié et l’employeur. Le modèle ci-dessous est un exemple personnalisable de rupture d’un commun accord entre le salarié et l’employeur.",
     "questions": ["comment rompre un contrat d’apprentissage"],
     "tags": {
       "theme": "contrat d’apprentissage",
@@ -258,7 +258,7 @@
   },
   {
     "titre": "Signalement de faits pouvant relever du harcèlement moral sur mineur au travail",
-    "description": " Ce modèle de courrier permet d'aider le salarié mineur ou son tuteur légal, à informer l'employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d'agir. Le harcèlement moral est un cas juridique particulier, et les faits en question sont d'une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d'utiliser ce modèle ce courrier.",
+    "description": " Ce modèle de courrier permet d’aider le salarié mineur ou son tuteur légal, à informer l’employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d’agir. Le harcèlement moral est un cas juridique particulier, et les faits en question sont d’une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d’utiliser ce modèle ce courrier.",
     "questions": [
       "Comment mettre fin à un contrat de travail d’un jeune travailleur en cas de faits pouvant relever du harcèlement moral."
     ],
@@ -275,7 +275,7 @@
   {
     "titre": "Signalement de faits pouvant relever du harcèlement moral",
 
-    "description": "Ce modèle de courrier permet d'aider le salarié mineur ou son tuteur légal, à informer l'employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d'agir. Le harcèlement moral est un cas juridique particulier, et les faits en question sont d'une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d'utiliser ce modèle ce courrier",
+    "description": "Ce modèle de courrier permet d’aider le salarié mineur ou son tuteur légal, à informer l’employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d’agir. Le harcèlement moral est un cas juridique particulier, et les faits en question sont d’une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d’utiliser ce modèle ce courrier",
     "questions": [
       "Quelles sont les solutions en cas de maltraitance ou de harcèlement au travail"
     ],

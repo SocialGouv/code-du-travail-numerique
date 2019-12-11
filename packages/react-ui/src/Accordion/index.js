@@ -64,6 +64,7 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  overflow: hidden;
   cursor: pointer;
   &:hover,
   &:focus,
