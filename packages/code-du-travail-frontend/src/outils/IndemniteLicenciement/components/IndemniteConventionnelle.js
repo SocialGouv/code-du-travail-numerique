@@ -60,7 +60,7 @@ function IndemniteCCn({
                 Source&nbsp;:{" "}
                 <a
                   rel="nofollow noopener"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=A95D336F1F70D58757C202BA1D670CF4.tplgfr31s_1?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
+                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
                   title="voir l'article L.1234-9 du code du travail sur légifrance"
                 >
                   Article L.1234-9 du code du travail
@@ -68,7 +68,7 @@ function IndemniteCCn({
                 ,
                 <a
                   rel="nofollow noopener"
-                  href="https://www.legifrance.gouv.fr/affichCode.do;jsessionid=A95D336F1F70D58757C202BA1D670CF4.tplgfr31s_1?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
+                  href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
                   title="voir les articles R1234-1 à R1234-4 du code du travail sur légifrance"
                 >
                   Article R1234-1 à R1234-4 du code du travail
