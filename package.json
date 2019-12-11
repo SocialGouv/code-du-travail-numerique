@@ -1,6 +1,7 @@
 {
   "name": "@socialgouv/code-du-travail",
   "private": true,
+  "license": "MIT",
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
