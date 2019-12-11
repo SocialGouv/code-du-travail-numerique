@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index > ./export-courriers.json"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "mammoth": "^1.4.9"
   }

@@ -2,7 +2,7 @@
   "name": "@cdt/data...fiches_ministere_travail",
   "version": "3.8.0",
   "private": true,
-  "license": "Apache 2.0",
+  "license": "MIT",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique",
   "bugs": {
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"

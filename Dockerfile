@@ -16,17 +16,18 @@ COPY ./scripts /app/scripts
 COPY ./package.json /app/package.json
 COPY ./yarn.lock /app/yarn.lock
 
-COPY ./packages/code-du-travail-data/dataset/courrier-type/package.json /app/packages/code-du-travail-data/dataset/courrier-type/package.json
-COPY ./packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json /app/packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json
-COPY ./packages/code-du-travail-data/dataset/stop_words/package.json /app/packages/code-du-travail-data/dataset/stop_words/package.json
-COPY ./packages/code-du-travail-data/dataset/synonyms/package.json /app/packages/code-du-travail-data/dataset/synonyms/package.json
-COPY ./packages/code-du-travail-data/dataset/stats/package.json /app/packages/code-du-travail-data/dataset/stats/package.json
-COPY ./packages/code-du-travail-data/dataset/datafiller/package.json /app/packages/code-du-travail-data/dataset/datafiller/package.json
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
-COPY ./packages/react-fiche-service-public/package.json /app/packages/react-fiche-service-public/package.json
+COPY ./packages/code-du-travail-data/dataset/courrier-type/package.json /app/packages/code-du-travail-data/dataset/courrier-type/package.json
+COPY ./packages/code-du-travail-data/dataset/datafiller/package.json /app/packages/code-du-travail-data/dataset/datafiller/package.json
+COPY ./packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json /app/packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json
 COPY ./packages/code-du-travail-data/dataset/preavis-demission/package.json /app/packages/code-du-travail-data/dataset/preavis-demission/package.json
 COPY ./packages/code-du-travail-data/dataset/preavis-licenciement/package.json /app/packages/code-du-travail-data/dataset/preavis-licenciement/package.json
 COPY ./packages/code-du-travail-data/dataset/prime-precarite/package.json /app/packages/code-du-travail-data/dataset/prime-precarite/package.json
+COPY ./packages/code-du-travail-data/dataset/stats/package.json /app/packages/code-du-travail-data/dataset/stats/package.json
+COPY ./packages/code-du-travail-data/dataset/stop_words/package.json /app/packages/code-du-travail-data/dataset/stop_words/package.json
+COPY ./packages/code-du-travail-data/dataset/synonyms/package.json /app/packages/code-du-travail-data/dataset/synonyms/package.json
+COPY ./packages/code-du-travail-data/dataset/tools/package.json /app/packages/code-du-travail-data/dataset/tools/package.json
+COPY ./packages/react-fiche-service-public/package.json /app/packages/react-fiche-service-public/package.json
 COPY ./packages/sources/package.json /app/packages/sources/package.json
 
 
