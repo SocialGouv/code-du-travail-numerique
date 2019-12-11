@@ -1,9 +1,11 @@
+import React from "react";
 import { StepInfoCCnMandatory } from "../../common/InfosCCn";
 import data from "@cdt/data...preavis-demission/data.json";
 
 import { isNotYetProcessed } from "../../common/situations.utils";
 
-StepInfoCCnMandatory.validate = values => {
+const StepInfoCCn = props => <StepInfoCCnMandatory {...props} />;
+StepInfoCCn.validate = values => {
   const errors = {};
   const { ccn } = values;
   if (Object.keys(values).length === 0) {
@@ -16,4 +18,4 @@ StepInfoCCnMandatory.validate = values => {
   return errors;
 };
 
-export const StepInfoCCn = StepInfoCCnMandatory;
+export { StepInfoCCn };

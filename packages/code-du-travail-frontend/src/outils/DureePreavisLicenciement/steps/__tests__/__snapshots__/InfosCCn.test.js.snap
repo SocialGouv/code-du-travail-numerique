@@ -124,6 +124,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
   </label>
   <p>
     <br />
+    (ccn des 5 mondes)
   </p>
   <button
     class="c1 c2"

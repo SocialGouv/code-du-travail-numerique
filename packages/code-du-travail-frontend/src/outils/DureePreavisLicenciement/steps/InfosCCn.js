@@ -10,8 +10,8 @@ import {
 import { getResult } from "./Result";
 import { Highlight } from "../../common/stepStyles";
 
-// const StepInfoCCn = props => <StepInfoCCnMandatory {...props} />;
-StepInfoCCnMandatory.validate = values => {
+const StepInfoCCn = props => <StepInfoCCnMandatory {...props} />;
+StepInfoCCn.validate = values => {
   const errors = {};
   const { ccn, cdt, disabledWorker } = values;
   const initialCDTSituations = getSituationsFor(data.situations, {
@@ -45,4 +45,4 @@ StepInfoCCnMandatory.validate = values => {
   return errors;
 };
 
-export const StepInfoCCn = StepInfoCCnMandatory;
+export { StepInfoCCn };
