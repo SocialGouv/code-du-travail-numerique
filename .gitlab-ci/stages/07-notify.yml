@@ -1,5 +1,10 @@
 #
 
+include:
+- project: SocialGouv/gitlab-ci-yml
+  file: /base_notify_github_stage.yml
+  ref: master
+
 Notify Starting Deployment:
   extends: .base_notify_pending_stage
   stage: Deploy

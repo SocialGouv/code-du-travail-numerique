@@ -1,5 +1,8 @@
+
 .build_and_push_stage: &build_and_push_stage
-  extends: .base_docker_image_stage
+  image: docker:$DOCKER_VERSION
+  services:
+    - docker:$DOCKER_VERSION-dind
   stage: "Post Registration"
   dependencies: []
   needs:
