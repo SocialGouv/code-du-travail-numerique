@@ -13,16 +13,18 @@ describe("<CardList />", () => {
     const { container } = render(
       <CardList title="Hello" desc="Hello Tiles">
         {items.map(item => (
-          <Tile key={item.id}>{item.title}</Tile>
+          <Tile key={item.id} title={item.title} />
         ))}
       </CardList>
     );
     expect(container).toMatchSnapshot();
   });
-  test("should render a signle title", () => {
+  test("should render a single title", () => {
     const { container } = render(
       <CardList title="Hello">
-        <Tile href="#">coucou</Tile>
+        <Tile title="ok" href="#">
+          coucou
+        </Tile>
       </CardList>
     );
     expect(container).toMatchSnapshot();
@@ -31,7 +33,7 @@ describe("<CardList />", () => {
     const { container } = render(
       <CardList title="Hello">
         {items.map(item => (
-          <Tile key={item.id}>{item.title}</Tile>
+          <Tile key={item.id} title={item.title} />
         ))}
       </CardList>
     );

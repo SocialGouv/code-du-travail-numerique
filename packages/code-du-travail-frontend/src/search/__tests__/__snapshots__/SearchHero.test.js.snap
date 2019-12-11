@@ -298,15 +298,12 @@ exports[`<SearchHero /> should render 1`] = `
         >
           Vous cherchez une information sur le droit du travail ? Vous avez besoin d’accompagnement ?
           <br />
-          Nous vous proposons 
-          <b>
-            des réponses
-          </b>
+          Nous vous proposons
            
           <span
             class="c6"
           >
-            personnalisées selon votre situation. 
+            des réponses personnalisées selon votre situation. 
             <svg
               class="c7"
               fill="none"
@@ -332,7 +329,7 @@ exports[`<SearchHero /> should render 1`] = `
         class="c8"
         for="searchbar"
       >
-         Recherchez par mots clefs
+         Recherchez par mots-clés
       </label>
       <div
         class="c9"
@@ -374,7 +371,7 @@ exports[`<SearchHero /> should render 1`] = `
                 class="c14"
                 id="searchbar"
                 name="q"
-                placeholder="Ex : durée du préavis, indémnité de licenciement"
+                placeholder="congés payés, durée de préavis"
                 type="search"
                 value=""
               />

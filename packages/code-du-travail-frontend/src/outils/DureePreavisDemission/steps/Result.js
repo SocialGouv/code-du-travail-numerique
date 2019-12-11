@@ -42,7 +42,7 @@ function StepResult({ form }) {
             ou un usage dans la localité ou la profession.
           </Toast>
           <SectionTitle>Détails</SectionTitle>
-          <p>Élements saisis&nbsp;:</p>
+          <p>Éléments saisis&nbsp;:</p>
           {recapSituation({
             "Convention collective": `${ccLabel} (${idcc})`,
             ...situation.criteria

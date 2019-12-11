@@ -17,14 +17,14 @@ const SearchHero = () => (
         <P>
           Vous cherchez une information sur le droit du travail ? Vous avez
           besoin d’accompagnement ?<br />
-          Nous vous proposons <b>des réponses</b>{" "}
+          Nous vous proposons{" "}
           <Primary>
-            personnalisées selon votre situation.&nbsp;
+            des réponses personnalisées selon votre situation.&nbsp;
             <StyledConfigIcon />
           </Primary>
         </P>
       </Header>
-      <Label htmlFor={SEARCH_ID}> Recherchez par mots clefs</Label>
+      <Label htmlFor={SEARCH_ID}> Recherchez par mots-clés</Label>
       <SearchBarWrapper>
         <SearchBar inputId={SEARCH_ID} hasFocus hasButton />
       </SearchBarWrapper>

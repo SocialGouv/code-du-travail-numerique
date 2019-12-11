@@ -28,9 +28,10 @@ export default class Error extends React.Component {
           <FlexCenterer>
             <P>
               {this.props.statusCode
-                ? `Une erreur ${statusCode} est apparue sur le serveur`
+                ? `Une erreur ${statusCode} est apparue sur le serveur :/`
                 : "Une erreur est apparue sur le client"}
               <br />
+              <Smaller>Notre équipe technique à été informée.</Smaller>
               <br />
               <Link href="/">
                 <a>Retour à la page d’accueil</a>
@@ -55,4 +56,8 @@ const FlexCenterer = styled.div`
 
 const P = styled.p`
   font-size: ${fonts.sizes.headings.large};
+`;
+
+const Smaller = styled.div`
+  font-size: ${fonts.sizes.headings.small};
 `;

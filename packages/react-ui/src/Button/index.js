@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { ArrowRight } from "react-feather";
+import { DirectionRight } from "../icons";
 import { lighten, rgba, transparentize } from "polished";
 
 import { animations, box, fonts, spacings } from "../theme";
@@ -28,7 +28,7 @@ export const StyledButton = styled.button`
       return css`
         padding: 0;
         color: ${theme.primary};
-        font-weight: 400;
+        font-weight: 600;
         font-size: ${fonts.sizes.default};
         line-height: ${fonts.lineHeight};
         text-align: left;
@@ -120,9 +120,12 @@ export const StyledButton = styled.button`
   }}
 `;
 
-const StyledArrowRight = styled(ArrowRight)`
+// eslint-disable-next-line no-unused-vars
+const StyledArrowRight = styled(({ hasText, ...props }) => (
+  <DirectionRight {...props} />
+))`
   height: 1.4rem;
-  margin-left: ${spacings.tiny};
+  margin-left: ${({ hasText }) => (hasText ? spacings.small : "")};
   transition: transform ${animations.transitionTiming} linear;
   /* stylelint-disable-next-line */
   ${StyledButton}:hover & {
@@ -133,13 +136,15 @@ const StyledArrowRight = styled(ArrowRight)`
 export const Button = React.forwardRef(({ children, ...props }, ref) => (
   <StyledButton {...props} ref={ref}>
     {children}
-    {props.variant === "link" && <StyledArrowRight />}
+    {props.variant === "link" && (
+      <StyledArrowRight hasText={Boolean(children)} />
+    )}
   </StyledButton>
 ));
 Button.displayName = "Button";
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   onClick: PropTypes.func,
   small: PropTypes.bool,
   narrow: PropTypes.bool,
@@ -147,6 +152,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  children: "",
   onClick: () => {},
   narrow: false,
   small: false,

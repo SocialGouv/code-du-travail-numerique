@@ -31,7 +31,7 @@ const labelBySource = {
   [SOURCES.SHEET_SP]: "service-public.fr",
   [SOURCES.SHEET_MT]: "Ministère du Travail",
   [SOURCES.CDT]: "Code du travail",
-  [SOURCES.LETTERS]: "Courrier Type",
+  [SOURCES.LETTERS]: "Modèles de documents",
   [SOURCES.THEMES]: "Themes",
   [SOURCES.TOOLS]: "Outils",
   [SOURCES.IDCC]: "Legifrance",

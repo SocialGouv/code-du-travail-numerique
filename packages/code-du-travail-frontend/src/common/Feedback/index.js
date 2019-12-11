@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import {
   Button,
   Container,
+  Heading,
   Section,
   theme,
-  Title,
   Wrapper
 } from "@socialgouv/react-ui";
 import styled from "styled-components";
@@ -32,7 +32,7 @@ function Feedback({
     <Section>
       <Container>
         <Wrapper variant="dark">
-          <Title as="h3">Avez-vous trouvé la réponse à votre question ?</Title>
+          <Heading>Avez-vous trouvé la réponse à votre question ?</Heading>
           {isSatisfied === null && (
             <P>
               <StyledButton
@@ -52,7 +52,9 @@ function Feedback({
               Pour obtenir une réponse à votre question de droit du travail,
               nous vous invitons à joindre les{" "}
               <ServiceRenseignementModal>
-                <Button variant="link">services de renseignement</Button>
+                <Button variant="link">
+                  services du ministère du Travail en région
+                </Button>
               </ServiceRenseignementModal>
               .
             </p>

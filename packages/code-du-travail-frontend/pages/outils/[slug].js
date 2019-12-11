@@ -1,24 +1,14 @@
 import React from "react";
-import styled from "styled-components";
-import { Alert, Container, theme } from "@socialgouv/react-ui";
+import tools from "@cdt/data...tools";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
-import { outils } from "../../src/common/Outils";
 
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
-
-const BigError = ({ children }) => (
-  <StyledContainer>
-    <Alert>{children}</Alert>
-  </StyledContainer>
-);
-
-const OutilIntrouvable = () => <BigError>Cet outil est introuvable</BigError>;
 
 const outilsBySlug = {
   "indemnite-licenciement": CalculateurIndemnite,
@@ -28,31 +18,16 @@ const outilsBySlug = {
   "preavis-demission": DureePreavisDemission
 };
 
-const getSimulator = function(name) {
-  const outil = outils.find(({ slug = "" }) =>
-    new RegExp(`/${name}$`).test(slug)
-  );
-  if (outil) {
-    return {
-      title: outil.title,
-      description: outil.text,
-      component: outilsBySlug[name]
-    };
-  }
-  return {
-    title: "Outil introuvable",
-    component: OutilIntrouvable
-  };
-};
-
 class Outils extends React.Component {
-  static async getInitialProps({ query }) {
-    // we don't request data from api since outils are client side only
-    return { slug: query.slug, searchTerm: query.q };
-  }
   render() {
-    const { searchTerm, slug, pageUrl, ogImage } = this.props;
-    const { component: Simulator, title, description } = getSimulator(slug);
+    const {
+      description,
+      ogImage,
+      pageUrl,
+      searchTerm,
+      Simulator,
+      title
+    } = this.props;
     return (
       <Layout>
         <Metas
@@ -69,10 +44,13 @@ class Outils extends React.Component {
 
 export default Outils;
 
-const { fonts } = theme;
-
-const StyledContainer = styled(Container)`
-  margin: 20%;
-  font-size: ${fonts.sizes.headings.large};
-  text-align: center;
-`;
+Outils.getInitialProps = async ({ query }) => {
+  const { slug, q: searchTerm } = query;
+  const { description, title } = tools.find(tool => tool.slug === slug);
+  return {
+    description,
+    title,
+    searchTerm,
+    Simulator: outilsBySlug[slug]
+  };
+};

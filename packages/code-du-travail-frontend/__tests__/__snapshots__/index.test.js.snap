@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> should render 1`] = `
-.c27 {
+.c28 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c27 > *:first-child {
+.c28 > *:first-child {
   margin-top: 0;
 }
 
-.c27 > *:last-child {
+.c28 > *:last-child {
   margin-bottom: 0;
 }
 
-.c26 {
+.c27 {
   padding: 2rem 0;
   color: #3e486e;
 }
 
-.c30 {
+.c31 {
   position: absolute;
   background-color: #7598d6;
   border-radius: 0.6rem;
@@ -33,7 +33,7 @@ exports[`<Home /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c29 {
+.c30 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -45,19 +45,19 @@ exports[`<Home /> should render 1`] = `
   text-align: center;
 }
 
-.c28 {
+.c29 {
   margin: 0 auto 1rem;
   margin-bottom: 4rem;
   text-align: center;
 }
 
-.c32 {
+.c33 {
   margin-top: 1rem;
   margin-bottom: 0;
   padding-left: 0;
 }
 
-.c36 {
+.c37 {
   position: absolute;
   top: 0;
   right: 0;
@@ -68,7 +68,7 @@ exports[`<Home /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c36:before {
+.c37:before {
   position: absolute;
   display: block;
   width: 0;
@@ -79,7 +79,7 @@ exports[`<Home /> should render 1`] = `
   content: "";
 }
 
-.c37 {
+.c38 {
   position: absolute;
   top: 0;
   right: 0;
@@ -88,7 +88,7 @@ exports[`<Home /> should render 1`] = `
   height: 3rem;
 }
 
-.c24 {
+.c25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -125,16 +125,16 @@ exports[`<Home /> should render 1`] = `
   opacity: 1;
 }
 
-.c24:link,
-.c24:visited {
+.c25:link,
+.c25:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c24:not([disabled]):hover,
-.c24:not([disabled]):active,
-.c24:not([disabled]):focus {
+.c25:not([disabled]):hover,
+.c25:not([disabled]):active,
+.c25:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -143,13 +143,59 @@ exports[`<Home /> should render 1`] = `
   border-color: #ffa09a;
 }
 
-.c24[disabled] {
+.c25[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c45 {
+.c44 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #ff7067;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.c44:focus,
+.c44:hover,
+.c44:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c50 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -186,16 +232,16 @@ exports[`<Home /> should render 1`] = `
   opacity: 1;
 }
 
-.c45:link,
-.c45:visited {
+.c50:link,
+.c50:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c45:not([disabled]):hover,
-.c45:not([disabled]):active,
-.c45:not([disabled]):focus {
+.c50:not([disabled]):hover,
+.c50:not([disabled]):active,
+.c50:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -204,13 +250,27 @@ exports[`<Home /> should render 1`] = `
   border-color: #9cb5e2;
 }
 
-.c45[disabled] {
+.c50[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c33 {
+.c45 {
+  height: 1.4rem;
+  margin-left: 1rem;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c24:hover .c45 {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -237,7 +297,7 @@ exports[`<Home /> should render 1`] = `
   list-style-type: none;
 }
 
-.c34 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -254,7 +314,7 @@ exports[`<Home /> should render 1`] = `
   padding: 0;
 }
 
-.c31 {
+.c32 {
   color: #2f3b6c;
   font-weight: normal;
   font-family: "Merriweather",serif;
@@ -262,7 +322,7 @@ exports[`<Home /> should render 1`] = `
   text-decoration: none;
 }
 
-.c31:hover {
+.c32:hover {
   color: #2f3b6c;
 }
 
@@ -278,7 +338,7 @@ exports[`<Home /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c35 {
+.c36 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -297,10 +357,10 @@ exports[`<Home /> should render 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: auto;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -323,9 +383,9 @@ exports[`<Home /> should render 1`] = `
   appearance: none;
 }
 
-.c35:hover,
-.c35:active,
-.c35:focus {
+.c36:hover,
+.c36:active,
+.c36:focus {
   color: #3e486e;
   box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
   -webkit-transform: translateY(-2px);
@@ -333,11 +393,20 @@ exports[`<Home /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c38 {
+.c39 {
+  width: 7.2rem;
+  height: 7.2rem;
+  margin: 0 auto 1.6rem;
+  padding: 1.4rem;
+  background-color: #ebf0f9;
+  border-radius: 50%;
+}
+
+.c40 {
   padding-right: 1rem;
 }
 
-.c39 {
+.c41 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -347,7 +416,7 @@ exports[`<Home /> should render 1`] = `
   margin: 0;
 }
 
-.c40 {
+.c42 {
   margin-top: 1rem;
 }
 
@@ -408,78 +477,10 @@ exports[`<Home /> should render 1`] = `
   appearance: none;
 }
 
-.c25 {
+.c26 {
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
-}
-
-.c8 {
-  padding: 2rem 0;
-  color: #3e486e;
-  padding-bottom: 12rem;
-}
-
-.c9 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  padding-left: 12rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c10 {
-  margin-top: 0;
-  color: #3e486e;
-  line-height: 1.625;
-}
-
-.c11 {
-  font-size: 2.8rem;
-}
-
-.c13 {
-  margin-top: 1rem;
-  margin-bottom: 3.2rem;
-}
-
-.c12 {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
-  font-size: 4.6rem;
-}
-
-.c14 {
-  color: #ff7067;
-  font-weight: normal;
-}
-
-.c15 {
-  display: inline;
-  width: 3rem;
-  height: 3rem;
-  vertical-align: bottom;
-}
-
-.c16 {
-  display: block;
-  margin-bottom: 0.8rem;
-  color: #3e486e;
-  font-weight: bold;
-  font-size: 1.6rem;
-}
-
-.c17 {
-  width: 77rem;
-  margin: 0;
 }
 
 .c7 {
@@ -582,12 +583,12 @@ exports[`<Home /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c41 {
+.c46 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c42 {
+.c47 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -595,7 +596,7 @@ exports[`<Home /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c42:before {
+.c47:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -607,7 +608,7 @@ exports[`<Home /> should render 1`] = `
   content: "";
 }
 
-.c43 {
+.c48 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -615,7 +616,7 @@ exports[`<Home /> should render 1`] = `
   text-align: center;
 }
 
-.c44 {
+.c49 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -625,27 +626,27 @@ exports[`<Home /> should render 1`] = `
   text-align: left;
 }
 
-.c44 > *:first-child {
+.c49 > *:first-child {
   margin-top: 0;
 }
 
-.c44 > *:last-child {
+.c49 > *:last-child {
   margin-bottom: 0;
 }
 
-.c46 {
+.c51 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c47 {
+.c52 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c48 {
+.c53 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -659,25 +660,25 @@ exports[`<Home /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c48 > *:first-child {
+.c53 > *:first-child {
   margin-top: 0;
 }
 
-.c48 > *:last-child {
+.c53 > *:last-child {
   margin-bottom: 0;
 }
 
-.c50 + .c49 {
+.c55 + .c54 {
   padding-left: 1.6rem;
 }
 
-.c52 {
+.c57 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c51 {
+.c56 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -687,12 +688,12 @@ exports[`<Home /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c53 {
+.c58 {
   margin: 0.4rem 0;
   padding: 0;
 }
 
-.c54 {
+.c59 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -721,33 +722,111 @@ exports[`<Home /> should render 1`] = `
   content: "";
 }
 
+.c8 {
+  padding: 2rem 0;
+  color: #3e486e;
+  padding-bottom: 12rem;
+}
+
+.c9 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  padding-left: 12rem;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c10 {
+  margin-top: 0;
+  color: #3e486e;
+  line-height: 1.625;
+}
+
+.c11 {
+  font-size: 2.8rem;
+}
+
+.c13 {
+  margin-top: 1rem;
+  margin-bottom: 3.2rem;
+}
+
+.c12 {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 4.6rem;
+}
+
+.c14 {
+  color: #ff7067;
+  font-weight: normal;
+}
+
+.c15 {
+  display: inline;
+  width: 3rem;
+  height: 3rem;
+  vertical-align: bottom;
+}
+
+.c16 {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #3e486e;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.c17 {
+  width: 77rem;
+  margin: 0;
+}
+
+.c43 {
+  margin-top: 1.6rem;
+}
+
 @media print {
-  .c27 {
+  .c28 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c29 {
     margin-bottom: 2.4rem;
   }
 }
 
-@media (max-width:980px) {
-  .c34 {
+@media (max-width:1180px) {
+  .c35 {
     width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
-@media (max-width:600px) {
-  .c34 {
-    width: calc( 100% - 2 * 1rem );
+@media (max-width:980px) {
+  .c35 {
+    width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
   .c35 {
+    width: calc( 100% - 2 * 1rem );
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
     padding: 2rem 1.6rem;
   }
 }
@@ -775,47 +854,10 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     position: static;
     margin-top: 1rem;
     margin-left: 0;
-  }
-}
-
-@media print {
-  .c8 {
-    display: none;
-  }
-}
-
-@media print {
-  .c9 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c9 {
-    padding-left: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    font-size: 3.2rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c17 {
-    width: 100%;
   }
 }
 
@@ -872,27 +914,27 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media print {
-  .c42 {
+  .c47 {
     display: none;
   }
 }
 
 @media print {
-  .c44 {
+  .c49 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c48 {
+  .c53 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c53 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -900,21 +942,58 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 + .c49 {
+  .c55 + .c54 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c57 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c56 {
     margin-top: 1rem;
     text-align: center;
+  }
+}
+
+@media print {
+  .c8 {
+    display: none;
+  }
+}
+
+@media print {
+  .c9 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c9 {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c17 {
+    width: 100%;
   }
 }
 
@@ -1074,15 +1153,12 @@ exports[`<Home /> should render 1`] = `
           >
             Vous cherchez une information sur le droit du travail ? Vous avez besoin d’accompagnement ?
             <br />
-            Nous vous proposons 
-            <b>
-              des réponses
-            </b>
+            Nous vous proposons
              
             <span
               class="c14"
             >
-              personnalisées selon votre situation. 
+              des réponses personnalisées selon votre situation. 
               <svg
                 class="c15"
                 fill="none"
@@ -1108,7 +1184,7 @@ exports[`<Home /> should render 1`] = `
           class="c16"
           for="searchbar"
         >
-           Recherchez par mots clefs
+           Recherchez par mots-clés
         </label>
         <div
           class="c17"
@@ -1150,7 +1226,7 @@ exports[`<Home /> should render 1`] = `
                   class="c22"
                   id="searchbar"
                   name="q"
-                  placeholder="Ex : durée du préavis, indémnité de licenciement"
+                  placeholder="congés payés, durée de préavis"
                   type="search"
                   value=""
                 />
@@ -1162,7 +1238,7 @@ exports[`<Home /> should render 1`] = `
               </div>
             </label>
             <button
-              class="c24 c25"
+              class="c24 c25 c26"
               type="submit"
             >
               Rechercher
@@ -1172,48 +1248,48 @@ exports[`<Home /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c26"
+      class="c27"
     >
       <div
-        class="c27"
+        class="c28"
       >
         <header
-          class="c28"
+          class="c29"
         >
           <h2
-            class="c29"
+            class="c30"
           >
             <div
-              class="c30"
+              class="c31"
             />
             <a
-              class="c31"
+              class="c32"
               href="/outils"
             >
               Boîte à outils
             </a>
           </h2>
           <p
-            class="c32"
+            class="c33"
           >
             Trouvez des réponses personnalisées selon votre situation
           </p>
         </header>
         <ul
-          class="c33"
+          class="c34"
         >
           <li
-            class="c34"
+            class="c35"
           >
             <a
-              class="c35"
+              class="c36"
               href="/modeles-de-courriers"
             >
               <div
-                class="c36"
+                class="c37"
               >
                 <div
-                  class="c37"
+                  class="c38"
                 >
                   <svg
                     fill="none"
@@ -1234,182 +1310,75 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c38"
-              >
-                
-                <h3
-                  class="c39"
-                >
-                  Modèles de courriers
-                </h3>
-              </div>
-              <div
-                class="c40"
-              >
-                Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail
-              </div>
-            </a>
-          </li>
-          <li
-            class="c34"
-          >
-            <a
-              class="c35"
-              href="/convention-collective/recherche"
-            >
-              <div
-                class="c36"
-              >
+              <div>
                 <div
-                  class="c37"
+                  class="c39"
                 >
                   <svg
                     fill="none"
-                    viewBox="0 0 32 32"
+                    viewBox="0 0 52 52"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
+                      d="M26.567 3.89L32.544 8H42a1 1 0 011 1v6.188l6.566 4.514a1 1 0 01.434.824V47a1 1 0 01-1 1H3a1 1 0 01-1-1V20.526a1 1 0 01.433-.824L9 15.188V9a1 1 0 011-1h9.455l5.979-4.11a1 1 0 011.133 0zM22.985 8h6.03L26 5.927 22.985 8zM9 17.615l-5 3.437v.323l5 3.438v-7.198zm2 8.573l10.537 7.244 2.873-1.796a3 3 0 013.18 0l2.873 1.796L41 26.188V10H11v16.188zm32-1.375l5-3.438v-.323l-5-3.437v7.198zm5-1.01L32.313 34.586 48 44.392v-20.59zM4 44.391l15.687-9.805L4 23.802v20.59zm21.47-11.06L5.2 46h41.6L26.53 33.332a1 1 0 00-1.06 0z"
+                      fill="#4E6896"
                       fill-rule="evenodd"
                     />
                     <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
+                      d="M16 17c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H17.053C16.47 18 16 17.552 16 17zm1.053 5C16.47 22 16 22.448 16 23s.471 1 1.053 1h17.894C35.53 24 36 23.552 36 23s-.471-1-1.053-1H17.053z"
+                      fill="#FF7067"
                     />
                   </svg>
                 </div>
-              </div>
-              <div
-                class="c38"
-              >
-                
-                <h3
-                  class="c39"
-                >
-                  Conventions collectives
-                </h3>
-              </div>
-              <div
-                class="c40"
-              >
-                Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.
-              </div>
-            </a>
-          </li>
-          <li
-            class="c34"
-          >
-            <a
-              class="c35"
-              href="/outils/simulateur-embauche"
-            >
-              <div
-                class="c36"
-              >
                 <div
-                  class="c37"
+                  class="c40"
                 >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
+                  
+                  <h3
+                    class="c41"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
+                    Modèles de documents
+                  </h3>
                 </div>
               </div>
               <div
-                class="c38"
+                class="c42"
               >
-                
-                <h3
-                  class="c39"
-                >
-                  Simulateur d'embauche
-                </h3>
-              </div>
-              <div
-                class="c40"
-              >
-                Estimez le salaire lors d'une embauche : total employeur, brut, net
-              </div>
-            </a>
-          </li>
-          <li
-            class="c34"
-          >
-            <a
-              class="c35"
-              href="/outils/preavis-demission"
-            >
-              <div
-                class="c36"
-              >
+                Téléchargez et utilisez des modèles de lettres et de documents personnalisables
                 <div
-                  class="c37"
+                  class="c43"
                 >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
+                  <div
+                    class="c24 c44"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
+                    Découvrir
+                    <svg
+                      class="c45"
+                      fill="none"
+                      viewBox="0 0 28 15"
+                    >
+                      <path
+                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="c38"
-              >
-                
-                <h3
-                  class="c39"
-                >
-                  Simulateur de durée de préavis de démission
-                </h3>
-              </div>
-              <div
-                class="c40"
-              >
-                Connaître la durée du préavis de démission.
               </div>
             </a>
           </li>
           <li
-            class="c34"
+            class="c35"
           >
             <a
-              class="c35"
+              class="c36"
               href="/outils/indemnite-licenciement"
             >
               <div
-                class="c36"
+                class="c37"
               >
                 <div
-                  class="c37"
+                  class="c38"
                 >
                   <svg
                     fill="none"
@@ -1430,35 +1399,99 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c38"
-              >
-                
-                <h3
+              <div>
+                <div
                   class="c39"
                 >
-                  Simulateur d'indemnité de licenciement
-                </h3>
+                  <svg
+                    fill="none"
+                    viewBox="0 0 52 52"
+                  >
+                    <g
+                      clip-path="url(#indemnity_svg__clip0)"
+                    >
+                      <path
+                        d="M41 2H11a3 3 0 00-3 3v10s0 1 1 1 1-1 1-1V5a1 1 0 011-1h30a1 1 0 011 1v27h2V5a3 3 0 00-3-3zM30 48v2H10.733a3 3 0 01-3-3V24s0-1 1-1 1 1 1 1v23a1 1 0 001 1H30zM9 20a1 1 0 100-2 1 1 0 000 2z"
+                        fill="#4E6896"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M47.935 40.394a3.677 3.677 0 011.192 2.712c0 1.073-.46 2.04-1.192 2.713a3.68 3.68 0 01-2.478 6.394h-10.33c-1.5 0-2.688-1.938-2.688-1.938a3.677 3.677 0 01.753-4.456A3.677 3.677 0 0132 43.106c0-1.072.46-2.039 1.192-2.712A3.68 3.68 0 0135.67 34h9.787a3.68 3.68 0 012.478 6.394zM35.67 50.275h9.787a1.743 1.743 0 000-3.487H35.67a1.743 1.743 0 000 3.487zm0-5.425h9.787a1.743 1.743 0 000-3.488H35.67a1.743 1.743 0 000 3.488zm0-5.425h9.787a1.743 1.743 0 000-3.487H35.67a1.743 1.743 0 000 3.487z"
+                        fill="#4E6896"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M14 12a1 1 0 011-1h22a1 1 0 011 1v6a1 1 0 01-1 1H15a1 1 0 01-1-1v-6zm2 5v-4h20v4H16z"
+                        fill="#FF7067"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M15 26a1 1 0 100 2h3a1 1 0 100-2h-3zm10 0a1 1 0 100 2h3a1 1 0 100-2h-3zm8 1a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm-18 6a1 1 0 100 2h3a1 1 0 100-2h-3zm9 1a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm-10 7a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm11-1a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                        fill="#FF7067"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="indemnity_svg__clip0"
+                      >
+                        <path
+                          d="M0 0h52v52H0z"
+                          fill="#fff"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="c40"
+                >
+                  
+                  <h3
+                    class="c41"
+                  >
+                    Indemnité de licenciement
+                  </h3>
+                </div>
               </div>
               <div
-                class="c40"
+                class="c42"
               >
-                Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation
+                Estimez le montant de l’indemnité de licenciement
+                <div
+                  class="c43"
+                >
+                  <div
+                    class="c24 c44"
+                  >
+                    Estimer
+                    <svg
+                      class="c45"
+                      fill="none"
+                      viewBox="0 0 28 15"
+                    >
+                      <path
+                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </a>
           </li>
           <li
-            class="c34"
+            class="c35"
           >
             <a
-              class="c35"
-              href="/outils/preavis-licenciement"
+              class="c36"
+              href="/outils/preavis-demission"
             >
               <div
-                class="c36"
+                class="c37"
               >
                 <div
-                  class="c37"
+                  class="c38"
                 >
                   <svg
                     fill="none"
@@ -1479,35 +1512,83 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c38"
-              >
-                
-                <h3
+              <div>
+                <div
                   class="c39"
                 >
-                  Simulateur de durée de préavis de licenciement
-                </h3>
+                  <svg
+                    fill="none"
+                    viewBox="0 0 52 52"
+                  >
+                    <path
+                      d="M42.953 2H10.047A3.05 3.05 0 007 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016V27H46V5.047A3.05 3.05 0 0042.953 2zM46 43h-2.031v3.953c0 .56-.456 1.016-1.016 1.016H10.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 0010.047 50h32.906A3.05 3.05 0 0046 46.953V43zM8.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297z"
+                      fill="#4E6896"
+                    />
+                    <path
+                      d="M19.689 36.297a1.016 1.016 0 011.436 1.437l-3.418 3.418a1.016 1.016 0 01-1.436 0l-1.974-1.974a1.015 1.015 0 111.437-1.436l1.255 1.255 2.7-2.7zm1.496-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
+                      fill="#4E6896"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M23.016 10h-10c-.561 0-1.016.455-1.016 1.016v9.968c0 .561.455 1.016 1.016 1.016h10c.56 0 1.015-.455 1.015-1.016v-9.968c0-.561-.454-1.016-1.015-1.016zm-8.985 9.969H22V12.03h-7.969v7.938z"
+                      fill="#4E6896"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M30.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0-4h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm12.079 13a.752.752 0 01.47.192l6.259 6.133a.645.645 0 010 .885l-6.277 6.143a.614.614 0 01-.45.183.636.636 0 01-.445-.18.611.611 0 01-.185-.437v-3.682H28v-4.94h13.465v-3.68a.583.583 0 01.177-.443.606.606 0 01.453-.174z"
+                      fill="#FF7067"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="c40"
+                >
+                  
+                  <h3
+                    class="c41"
+                  >
+                    Préavis de démission
+                  </h3>
+                </div>
               </div>
               <div
-                class="c40"
+                class="c42"
               >
-                Estimez simplement la durée du préavis dans le cadre d'un licenciement
+                Calculez la durée de préavis de démission
+                <div
+                  class="c43"
+                >
+                  <div
+                    class="c24 c44"
+                  >
+                    Calculer
+                    <svg
+                      class="c45"
+                      fill="none"
+                      viewBox="0 0 28 15"
+                    >
+                      <path
+                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </a>
           </li>
           <li
-            class="c34"
+            class="c35"
           >
             <a
-              class="c35"
-              href="/outils/indemnite-precarite"
+              class="c36"
+              href="/outils/simulateur-embauche"
             >
               <div
-                class="c36"
+                class="c37"
               >
                 <div
-                  class="c37"
+                  class="c38"
                 >
                   <svg
                     fill="none"
@@ -1528,80 +1609,108 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c38"
-              >
-                
-                <h3
+              <div>
+                <div
                   class="c39"
                 >
-                  Simulateur de l'indemnité de précarité
-                </h3>
+                  <svg
+                    fill="none"
+                    viewBox="0 0 52 52"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M17.709 34.456A7.002 7.002 0 0015 21a7 7 0 00-2.715 13.454H9.967l-.417.029C4.557 34.933 1 39.152 1 44.275v4.757c0 .535.432.969.966.969H46.33a3.68 3.68 0 002.478-6.394A3.677 3.677 0 0050 40.894c0-1.072-.46-2.039-1.192-2.712a3.68 3.68 0 00-2.478-6.394h-9.787a3.68 3.68 0 00-2.478 6.394 3.677 3.677 0 00-1.192 2.712c0 1.073.46 2.04 1.192 2.713a3.677 3.677 0 00-.754 4.456H29v-3.788c0-5.123-3.618-9.343-8.61-9.792l-.417-.03c.073.003-.9.004-2.264.003zM20 28a5 5 0 11-10 0 5 5 0 0110 0zm-2.37 8L15 39l-2.5-3h5.13zM27 48.063H3v-2.788l.057-1.938c.427-3.6 3.294-6.844 6.882-7.278l4.378 4.949a.962.962 0 001.366 0l4.316-4.949c3.894.472 7.001 4.185 7.001 8.216v3.788zm19.33 0h-9.787a1.743 1.743 0 010-3.487h9.787a1.743 1.743 0 010 3.487zm0-5.425h-9.787a1.743 1.743 0 010-3.487h9.787a1.743 1.743 0 010 3.487zm0-5.425h-9.787a1.743 1.743 0 010-3.487h9.787a1.743 1.743 0 010 3.487z"
+                      fill="#4E6896"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M38.311 11.64l3.401-7.964a.937.937 0 00-.387-1.176l-1.668-.988a3.66 3.66 0 00-4.158.308l-.258.21a1.76 1.76 0 01-2.211-.001l-.01-.008a3.66 3.66 0 00-4.606.004 1.759 1.759 0 01-2.213.002l-.262-.213a3.663 3.663 0 00-4.144-.317l-1.713 1.004a.941.941 0 00-.39 1.18l3.422 7.952c-2.475.89-5.036 3.337-6.421 5.573A.938.938 0 0017 18.5a.947.947 0 001.3-.307c1.19-1.92 3.461-4.113 5.604-4.846H37.5a9.724 9.724 0 016.612 9.218v2.495c0 .519.422.94.944.94a.942.942 0 00.944-.94v-2.495c0-4.918-3.074-9.26-7.689-10.926zm-1.978-.174H25.098l-3.342-7.764.997-.584a1.76 1.76 0 011.991.152l.262.213a3.66 3.66 0 004.605-.004 1.759 1.759 0 012.214-.001l.01.008a3.66 3.66 0 004.6 0l.258-.21a1.76 1.76 0 011.998-.147l.96.567-3.318 7.77z"
+                      fill="#FF7067"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M45 30a1 1 0 100-2 1 1 0 000 2zm-6.504-9.417c-.551 0-1.002.164-1.354.492-.348.328-.58.824-.697 1.489H39s.567-.032.567.435c0 .467-.567.467-.567.467h-2.643l-.012.264v.322l.012.228h2.303s.566 0 .566.448c0 .449-.566.449-.566.449h-2.203c.25 1.218.96 1.828 2.132 1.828.3 0 .505.008.686 0 .397-.017.805.241.805.639 0 .216-.123.423-.331.483-.317.09-.59.062-1.23.062-.941 0-1.707-.258-2.297-.774-.586-.516-.968-1.262-1.148-2.238h-.89s-.404 0-.404-.448c0-.449.403-.449.403-.449h.797l-.012-.216v-.217l.012-.381h-.797s-.503 0-.503-.467.503-.435.503-.435h.88c.148-.981.52-1.75 1.118-2.31.598-.558 1.37-.837 2.315-.837.566 0 1.036.075 1.486.247.299.113.41.463.28.754-.143.317-.519.445-.847.33a2.69 2.69 0 00-.92-.165z"
+                      fill="#FF7067"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="c40"
+                >
+                  
+                  <h3
+                    class="c41"
+                  >
+                    Salaire brut/net
+                  </h3>
+                </div>
               </div>
               <div
-                class="c40"
+                class="c42"
               >
-                Simulez l'indemnité de précarité d’un salarié.
+                Estimez le salaire : brut, net, heures supplémentaires, coût total employeur
+                <div
+                  class="c43"
+                >
+                  <div
+                    class="c24 c44"
+                  >
+                    Estimer
+                    <svg
+                      class="c45"
+                      fill="none"
+                      viewBox="0 0 28 15"
+                    >
+                      <path
+                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </a>
-          </li>
-          <li
-            class="c34"
-          >
-            <button
-              class="c35"
-            >
-              <div
-                class="c38"
-              >
-                
-                <h3
-                  class="c39"
-                >
-                  Bientôt d’autres outils disponibles...
-                </h3>
-              </div>
-            </button>
           </li>
         </ul>
       </div>
     </div>
   </main>
   <div
-    class="c41"
+    class="c46"
   >
     <footer
-      class="c42"
+      class="c47"
     >
       <div
-        class="c43"
+        class="c48"
       >
         <div
-          class="c27"
+          class="c28"
         >
           <header
-            class="c28"
+            class="c29"
           >
             <h3
-              class="c29"
+              class="c30"
             >
               <div
-                class="c30"
+                class="c31"
               />
               Besoin d’un accompagnement personnalisé ?
             </h3>
           </header>
           <div
-            class="c44"
+            class="c49"
           >
             Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
           </div>
           <button
-            class="c45"
+            class="c24 c50"
           >
             Contacter nos services
             <svg
-              class="c46"
+              class="c51"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1614,68 +1723,68 @@ exports[`<Home /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c47"
+        class="c52"
       >
         <nav>
           <div
-            class="c48"
+            class="c53"
           >
             <div
-              class="c49 c50"
+              class="c54 c55"
             >
               <h3
-                class="c51"
+                class="c56"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c52"
+                class="c57"
               >
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -1684,21 +1793,21 @@ exports[`<Home /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c49 c50"
+              class="c54 c55"
             >
               <h3
-                class="c51"
+                class="c56"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c52"
+                class="c57"
               >
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1707,10 +1816,10 @@ exports[`<Home /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1721,21 +1830,21 @@ exports[`<Home /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c49 c50"
+              class="c54 c55"
             >
               <h3
-                class="c51"
+                class="c56"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c52"
+                class="c57"
               >
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1744,10 +1853,10 @@ exports[`<Home /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1756,10 +1865,10 @@ exports[`<Home /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c53"
+                  class="c58"
                 >
                   <a
-                    class="c54"
+                    class="c59"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"

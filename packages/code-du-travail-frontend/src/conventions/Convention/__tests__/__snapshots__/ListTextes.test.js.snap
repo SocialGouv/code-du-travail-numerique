@@ -88,11 +88,10 @@ exports[`<ListTextes /> renders a text 1`] = `
 }
 
 .c6 {
-  padding: 1rem 2rem;
+  padding: 2rem 2.4rem;
   color: #3e486e;
-  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
   max-height: 100%;
   overflow: auto;
 }

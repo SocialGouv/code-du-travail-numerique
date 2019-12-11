@@ -164,11 +164,6 @@ const LegalPage = ({ pageUrl, ogImage }) => {
         <Container narrow>
           <PageTitle>Mentions légales</PageTitle>
           <Wrapper variant="main">
-            <Alert variant="primary">
-              Ce site est en cours de construction, la fiabilité des réponses
-              qui s’y trouvent ne sont pas garanties. L’ouverture officielle du
-              site est prévue pour 2020.
-            </Alert>
             <p>
               Le site est édité par l’
               <a href="https://incubateur.social.gouv.fr/">

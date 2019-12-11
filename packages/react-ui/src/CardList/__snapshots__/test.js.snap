@@ -95,10 +95,10 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: auto;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -145,9 +145,15 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   margin: 0;
 }
 
-@media (max-width:980px) {
+@media (max-width:1180px) {
   .c4 {
     width: calc( 100% / 2 - 2 * 1rem );
+  }
+}
+
+@media (max-width:980px) {
+  .c4 {
+    width: calc( 100% / 1 - 2 * 1rem );
   }
 }
 
@@ -192,15 +198,17 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-          <h3
-            class="c7"
+        <div>
+          <div
+            class="c6"
           >
-            Title 1
-          </h3>
+            
+            <h3
+              class="c7"
+            >
+              Title 1
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -210,15 +218,17 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-          <h3
-            class="c7"
+        <div>
+          <div
+            class="c6"
           >
-            Title 2
-          </h3>
+            
+            <h3
+              class="c7"
+            >
+              Title 2
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -228,15 +238,17 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-          <h3
-            class="c7"
+        <div>
+          <div
+            class="c6"
           >
-            Title 3
-          </h3>
+            
+            <h3
+              class="c7"
+            >
+              Title 3
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -246,15 +258,17 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-          <h3
-            class="c7"
+        <div>
+          <div
+            class="c6"
           >
-            Title 4
-          </h3>
+            
+            <h3
+              class="c7"
+            >
+              Title 4
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -264,15 +278,17 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-          <h3
-            class="c7"
+        <div>
+          <div
+            class="c6"
           >
-            Title 5
-          </h3>
+            
+            <h3
+              class="c7"
+            >
+              Title 5
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -282,15 +298,17 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-          <h3
-            class="c7"
+        <div>
+          <div
+            class="c6"
           >
-            Title 6
-          </h3>
+            
+            <h3
+              class="c7"
+            >
+              Title 6
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -300,15 +318,17 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-          <h3
-            class="c7"
+        <div>
+          <div
+            class="c6"
           >
-            Title 7
-          </h3>
+            
+            <h3
+              class="c7"
+            >
+              Title 7
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -411,10 +431,10 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: auto;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -452,12 +472,24 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 }
 
 .c7 {
-  margin-top: 1rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
+}
+
+@media (max-width:1180px) {
+  .c4 {
+    width: calc( 100% / 3 - 2 * 1rem );
+  }
 }
 
 @media (max-width:980px) {
   .c4 {
-    width: calc( 100% / 3 - 2 * 1rem );
+    width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
@@ -502,33 +534,17 @@ exports[`<CardList /> should render a collection with a title 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-        </div>
-        <div
-          class="c7"
-        >
-          Title 1
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
-        >
-          
-        </div>
-        <div
-          class="c7"
-        >
-          Title 2
+        <div>
+          <div
+            class="c6"
+          >
+            
+            <h3
+              class="c7"
+            >
+              Title 1
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -538,33 +554,17 @@ exports[`<CardList /> should render a collection with a title 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-        </div>
-        <div
-          class="c7"
-        >
-          Title 3
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
-        >
-          
-        </div>
-        <div
-          class="c7"
-        >
-          Title 4
+        <div>
+          <div
+            class="c6"
+          >
+            
+            <h3
+              class="c7"
+            >
+              Title 2
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -574,33 +574,17 @@ exports[`<CardList /> should render a collection with a title 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
-        </div>
-        <div
-          class="c7"
-        >
-          Title 5
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
-        >
-          
-        </div>
-        <div
-          class="c7"
-        >
-          Title 6
+        <div>
+          <div
+            class="c6"
+          >
+            
+            <h3
+              class="c7"
+            >
+              Title 3
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -610,15 +594,77 @@ exports[`<CardList /> should render a collection with a title 1`] = `
       <button
         class="c5"
       >
-        <div
-          class="c6"
-        >
-          
+        <div>
+          <div
+            class="c6"
+          >
+            
+            <h3
+              class="c7"
+            >
+              Title 4
+            </h3>
+          </div>
         </div>
-        <div
-          class="c7"
-        >
-          Title 7
+      </button>
+    </li>
+    <li
+      class="c4"
+    >
+      <button
+        class="c5"
+      >
+        <div>
+          <div
+            class="c6"
+          >
+            
+            <h3
+              class="c7"
+            >
+              Title 5
+            </h3>
+          </div>
+        </div>
+      </button>
+    </li>
+    <li
+      class="c4"
+    >
+      <button
+        class="c5"
+      >
+        <div>
+          <div
+            class="c6"
+          >
+            
+            <h3
+              class="c7"
+            >
+              Title 6
+            </h3>
+          </div>
+        </div>
+      </button>
+    </li>
+    <li
+      class="c4"
+    >
+      <button
+        class="c5"
+      >
+        <div>
+          <div
+            class="c6"
+          >
+            
+            <h3
+              class="c7"
+            >
+              Title 7
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -727,10 +773,10 @@ exports[`<CardList /> should render a collection with a title and description 1`
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: auto;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -768,12 +814,24 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 .c8 {
-  margin-top: 1rem;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
+}
+
+@media (max-width:1180px) {
+  .c5 {
+    width: calc( 100% / 3 - 2 * 1rem );
+  }
 }
 
 @media (max-width:980px) {
   .c5 {
-    width: calc( 100% / 3 - 2 * 1rem );
+    width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
@@ -822,33 +880,17 @@ exports[`<CardList /> should render a collection with a title and description 1`
       <button
         class="c6"
       >
-        <div
-          class="c7"
-        >
-          
-        </div>
-        <div
-          class="c8"
-        >
-          Title 1
-        </div>
-      </button>
-    </li>
-    <li
-      class="c5"
-    >
-      <button
-        class="c6"
-      >
-        <div
-          class="c7"
-        >
-          
-        </div>
-        <div
-          class="c8"
-        >
-          Title 2
+        <div>
+          <div
+            class="c7"
+          >
+            
+            <h3
+              class="c8"
+            >
+              Title 1
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -858,33 +900,17 @@ exports[`<CardList /> should render a collection with a title and description 1`
       <button
         class="c6"
       >
-        <div
-          class="c7"
-        >
-          
-        </div>
-        <div
-          class="c8"
-        >
-          Title 3
-        </div>
-      </button>
-    </li>
-    <li
-      class="c5"
-    >
-      <button
-        class="c6"
-      >
-        <div
-          class="c7"
-        >
-          
-        </div>
-        <div
-          class="c8"
-        >
-          Title 4
+        <div>
+          <div
+            class="c7"
+          >
+            
+            <h3
+              class="c8"
+            >
+              Title 2
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -894,33 +920,17 @@ exports[`<CardList /> should render a collection with a title and description 1`
       <button
         class="c6"
       >
-        <div
-          class="c7"
-        >
-          
-        </div>
-        <div
-          class="c8"
-        >
-          Title 5
-        </div>
-      </button>
-    </li>
-    <li
-      class="c5"
-    >
-      <button
-        class="c6"
-      >
-        <div
-          class="c7"
-        >
-          
-        </div>
-        <div
-          class="c8"
-        >
-          Title 6
+        <div>
+          <div
+            class="c7"
+          >
+            
+            <h3
+              class="c8"
+            >
+              Title 3
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -930,15 +940,77 @@ exports[`<CardList /> should render a collection with a title and description 1`
       <button
         class="c6"
       >
-        <div
-          class="c7"
-        >
-          
+        <div>
+          <div
+            class="c7"
+          >
+            
+            <h3
+              class="c8"
+            >
+              Title 4
+            </h3>
+          </div>
         </div>
-        <div
-          class="c8"
-        >
-          Title 7
+      </button>
+    </li>
+    <li
+      class="c5"
+    >
+      <button
+        class="c6"
+      >
+        <div>
+          <div
+            class="c7"
+          >
+            
+            <h3
+              class="c8"
+            >
+              Title 5
+            </h3>
+          </div>
+        </div>
+      </button>
+    </li>
+    <li
+      class="c5"
+    >
+      <button
+        class="c6"
+      >
+        <div>
+          <div
+            class="c7"
+          >
+            
+            <h3
+              class="c8"
+            >
+              Title 6
+            </h3>
+          </div>
+        </div>
+      </button>
+    </li>
+    <li
+      class="c5"
+    >
+      <button
+        class="c6"
+      >
+        <div>
+          <div
+            class="c7"
+          >
+            
+            <h3
+              class="c8"
+            >
+              Title 7
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -1059,10 +1131,10 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: auto;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -1109,9 +1181,15 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   margin: 0;
 }
 
-@media (max-width:980px) {
+@media (max-width:1180px) {
   .c6 {
     width: calc( 100% / 3 - 2 * 1rem );
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
+    width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
@@ -1165,15 +1243,17 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       <button
         class="c7"
       >
-        <div
-          class="c8"
-        >
-          
-          <h3
-            class="c9"
+        <div>
+          <div
+            class="c8"
           >
-            Title 1
-          </h3>
+            
+            <h3
+              class="c9"
+            >
+              Title 1
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -1183,15 +1263,17 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       <button
         class="c7"
       >
-        <div
-          class="c8"
-        >
-          
-          <h3
-            class="c9"
+        <div>
+          <div
+            class="c8"
           >
-            Title 2
-          </h3>
+            
+            <h3
+              class="c9"
+            >
+              Title 2
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -1201,15 +1283,17 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       <button
         class="c7"
       >
-        <div
-          class="c8"
-        >
-          
-          <h3
-            class="c9"
+        <div>
+          <div
+            class="c8"
           >
-            Title 3
-          </h3>
+            
+            <h3
+              class="c9"
+            >
+              Title 3
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -1219,15 +1303,17 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       <button
         class="c7"
       >
-        <div
-          class="c8"
-        >
-          
-          <h3
-            class="c9"
+        <div>
+          <div
+            class="c8"
           >
-            Title 4
-          </h3>
+            
+            <h3
+              class="c9"
+            >
+              Title 4
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -1237,15 +1323,17 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       <button
         class="c7"
       >
-        <div
-          class="c8"
-        >
-          
-          <h3
-            class="c9"
+        <div>
+          <div
+            class="c8"
           >
-            Title 5
-          </h3>
+            
+            <h3
+              class="c9"
+            >
+              Title 5
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -1255,15 +1343,17 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       <button
         class="c7"
       >
-        <div
-          class="c8"
-        >
-          
-          <h3
-            class="c9"
+        <div>
+          <div
+            class="c8"
           >
-            Title 6
-          </h3>
+            
+            <h3
+              class="c9"
+            >
+              Title 6
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -1273,15 +1363,17 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       <button
         class="c7"
       >
-        <div
-          class="c8"
-        >
-          
-          <h3
-            class="c9"
+        <div>
+          <div
+            class="c8"
           >
-            Title 7
-          </h3>
+            
+            <h3
+              class="c9"
+            >
+              Title 7
+            </h3>
+          </div>
         </div>
       </button>
     </li>
@@ -1289,7 +1381,7 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 </div>
 `;
 
-exports[`<CardList /> should render a signle title 1`] = `
+exports[`<CardList /> should render a single title 1`] = `
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1384,10 +1476,10 @@ exports[`<CardList /> should render a signle title 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: auto;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -1425,12 +1517,28 @@ exports[`<CardList /> should render a signle title 1`] = `
 }
 
 .c7 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.c8 {
   margin-top: 1rem;
+}
+
+@media (max-width:1180px) {
+  .c4 {
+    width: calc( 100% / 3 - 2 * 1rem );
+  }
 }
 
 @media (max-width:980px) {
   .c4 {
-    width: calc( 100% / 3 - 2 * 1rem );
+    width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
@@ -1476,13 +1584,20 @@ exports[`<CardList /> should render a signle title 1`] = `
         class="c5"
         href="#"
       >
-        <div
-          class="c6"
-        >
-          
+        <div>
+          <div
+            class="c6"
+          >
+            
+            <h3
+              class="c7"
+            >
+              ok
+            </h3>
+          </div>
         </div>
         <div
-          class="c7"
+          class="c8"
         >
           coucou
         </div>

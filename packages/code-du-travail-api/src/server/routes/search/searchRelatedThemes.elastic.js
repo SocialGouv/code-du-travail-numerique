@@ -7,7 +7,7 @@
 function getRelatedThemesBody({ query, size = 5 }) {
   return {
     size,
-    _source: ["title", "slug", "url", "source"],
+    _source: ["icon", "title", "slug", "url", "source"],
     query: {
       bool: {
         should: [

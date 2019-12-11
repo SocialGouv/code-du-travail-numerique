@@ -1,22 +1,13 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
-import {
-  Alert,
-  Container,
-  Heading,
-  theme,
-  Tile,
-  Wrapper
-} from "@socialgouv/react-ui";
+import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
 
 import useGlossary from "../glossary";
 import Article from "./Article";
-import Disclaimer from "./Disclaimer";
 import { Feedback } from "./Feedback";
+import { RelatedItems } from "./RelatedItems";
 import Html from "./Html";
 import { ThemeBreadcrumbs } from "./ThemeBreadcrumbs";
 
@@ -40,26 +31,6 @@ function Answer({
 }) {
   const glossaryItems = useGlossary(children, html);
   const router = useRouter();
-  const { relatedTools, relatedLetters, relatedArticles } = relatedItems.reduce(
-    (accumulator, item) => {
-      if (item.title !== title) {
-        const itemSource = item.source;
-        if (itemSource === SOURCES.TOOLS) {
-          accumulator.relatedTools.push(item);
-        } else if (itemSource === SOURCES.LETTERS) {
-          accumulator.relatedLetters.push(item);
-        } else {
-          accumulator.relatedArticles.push(item);
-        }
-      }
-      return accumulator;
-    },
-    {
-      relatedTools: [],
-      relatedLetters: [],
-      relatedArticles: []
-    }
-  );
 
   return (
     <>
@@ -95,57 +66,8 @@ function Answer({
             title={title}
           />
         </StyledContent>
-        {relatedItems.length > 0 && (
-          <RelatedItems>
-            <StyledList>
-              {relatedLetters.length > 0 && (
-                <StyledListItem>
-                  <Link
-                    href={`/${getRouteBySource(
-                      relatedLetters[0].source
-                    )}/[slug]`}
-                    as={`/${getRouteBySource(relatedLetters[0].source)}/${
-                      relatedLetters[0].slug
-                    }`}
-                    passHref
-                  >
-                    <Tile title={relatedLetters[0].title} />
-                  </Link>
-                </StyledListItem>
-              )}
-              {relatedTools.length > 0 && (
-                <StyledListItem>
-                  <Link
-                    href={`/${getRouteBySource(relatedTools[0].source)}/[slug]`}
-                    as={`/${getRouteBySource(relatedTools[0].source)}/${
-                      relatedTools[0].slug
-                    }`}
-                    passHref
-                  >
-                    <Tile custom title={relatedTools[0].title} />
-                  </Link>
-                </StyledListItem>
-              )}
-              {relatedArticles.length > 0 && (
-                <StyledListItem>
-                  <Heading>Les articles pouvant vous intéresser&nbsp;:</Heading>
-                </StyledListItem>
-              )}
-              {relatedArticles.slice(0, 3).map(link => (
-                <StyledListItem key={link.slug}>
-                  <Link
-                    href={`/${getRouteBySource(link.source)}/[slug]`}
-                    as={`/${getRouteBySource(link.source)}/${link.slug}`}
-                  >
-                    <a>{link.title}</a>
-                  </Link>
-                </StyledListItem>
-              ))}
-            </StyledList>
-          </RelatedItems>
-        )}
+        {relatedItems.length > 0 && <RelatedItems items={relatedItems} />}
       </StyledContainer>
-      <Disclaimer />
     </>
   );
 }
@@ -173,26 +95,6 @@ const StyledContent = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
   }
-`;
-
-const RelatedItems = styled.div`
-  position: sticky;
-  top: 10rem;
-  width: 30%;
-  padding: ${spacings.medium} ${spacings.base} ${spacings.medium} 0;
-  @media (max-width: ${breakpoints.tablet}) {
-    display: none;
-  }
-`;
-
-const StyledList = styled.ul`
-  padding: 0;
-  list-style-type: none;
-`;
-
-const StyledListItem = styled.li`
-  margin: ${spacings.base} 0;
-  padding: 0;
 `;
 
 const IntroWrapper = styled(Wrapper)`

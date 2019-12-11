@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Tile, theme } from "@socialgouv/react-ui";
+import { ArrowLink, theme } from "@socialgouv/react-ui";
 import Link from "next/link";
 import TYPE_REFERENCE from "./typeReference";
 
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link href="/code-du-travail/[slug]" as={`/code-du-travail/${slug}`} passHref>
-    <Tile wide title={title} />
+    <StyledArrowLink arrowPosition="left">{title}</StyledArrowLink>
   </Link>
 );
 
@@ -16,18 +16,17 @@ const ConventionLink = ({ title, slug }) => (
     as={`/convention-collective/${slug}`}
     passHref
   >
-    <Tile wide title={`Convention collective: ${title}`} />
+    <StyledArrowLink arrowPosition="left">{`Convention collective: ${title}`}</StyledArrowLink>
   </Link>
 );
 
 const OtherLink = ({ title, url }) => (
-  <Tile
-    wide
+  <StyledArrowLink
     href={url}
     rel="noopener noreferrer"
     target="_blank"
-    title={`Autre: ${title}`}
-  />
+    arrowPosition="left"
+  >{`Autre: ${title}`}</StyledArrowLink>
 );
 
 const getLink = reference => {
@@ -62,6 +61,9 @@ const StyledList = styled.ul`
 `;
 
 const StyledListItem = styled.li`
-  margin-top: ${spacings.base};
   padding: 0;
+`;
+
+const StyledArrowLink = styled(ArrowLink)`
+  padding: ${spacings.base} 0;
 `;

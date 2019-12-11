@@ -1,12 +1,23 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
+import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 import { Container, Heading, Tile, Title, theme } from "@socialgouv/react-ui";
+
 import { summarize, reportSelectionToMatomo } from "../utils";
+import { CustomTile } from "../../common/tiles/Custom";
 
 export const ListLink = ({
-  item: { breadcrumbs = [], description, source, slug, title, url, algo },
+  item: {
+    action,
+    algo,
+    breadcrumbs = [],
+    description,
+    source,
+    slug,
+    title,
+    url
+  },
   isSearch,
   query
 }) => {
@@ -42,13 +53,16 @@ export const ListLink = ({
     [rootSlug, anchor] = slug.split("#");
   }
 
-  let custom = false;
+  let ResultTile = Tile;
   if (
     source === SOURCES.TOOLS ||
     source === SOURCES.CONTRIBUTIONS ||
-    source == SOURCES.LETTERS
-  )
-    custom = true;
+    source === SOURCES.LETTERS
+  ) {
+    ResultTile = CustomTile;
+    tileCommonProps.subtitle = getLabelBySource(source);
+    tileCommonProps.action = action || "Consulter";
+  }
 
   return (
     <Link
@@ -61,7 +75,7 @@ export const ListLink = ({
       }${anchor ? `#${anchor}` : ""}`}
       passHref
     >
-      <Tile custom={custom} {...tileCommonProps} />
+      <ResultTile {...tileCommonProps} />
     </Link>
   );
 };

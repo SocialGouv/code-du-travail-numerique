@@ -47,9 +47,14 @@ export const ListItem = styled.li`
   width: calc(100% / ${props => props.columns} - 2 * ${spacings.small});
   margin: ${spacings.small};
   padding: 0;
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.desktop}) {
     width: calc(
       100% / ${props => Math.max(props.columns - 1, 0)} - 2 * ${spacings.small}
+    );
+  }
+  @media (max-width: ${breakpoints.tablet}) {
+    width: calc(
+      100% / ${props => Math.max(props.columns - 2, 0)} - 2 * ${spacings.small}
     );
   }
   @media (max-width: ${breakpoints.mobile}) {

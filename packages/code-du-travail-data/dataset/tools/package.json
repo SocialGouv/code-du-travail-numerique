@@ -1,0 +1,10 @@
+{
+  "name": "@cdt/data...tools",
+  "version": "3.8.0",
+  "private": true,
+  "license": "Apache 2.0",
+  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique",
+  "bugs": {
+    "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
+  }
+}

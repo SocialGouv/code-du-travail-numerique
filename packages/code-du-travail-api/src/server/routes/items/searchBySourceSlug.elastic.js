@@ -14,6 +14,7 @@ function getSearchBody({ source, slug }) {
       }
     },
     _source: [
+      "action", // outils
       "date",
       "date_debut", // code-du-travail
       "date_fin", // code-du-travail
@@ -21,6 +22,7 @@ function getSearchBody({ source, slug }) {
       "filename", // filename
       "intro",
       "html",
+      "icon", // outils
       "id",
       "path", // code-du-travail
       "raw", // service-public

@@ -3,9 +3,8 @@ import styled, { css } from "styled-components";
 import { box, breakpoints, spacings } from "../../theme";
 
 export const Wrapper = styled.div`
-  padding: ${spacings.small} ${spacings.medium};
+  padding: ${spacings.medium} ${spacings.xmedium};
   color: ${({ theme }) => theme.paragraph};
-  border: ${({ theme }) => box.border(theme.border)};
   border-radius: ${box.borderRadius};
   ${props => {
     if (props.size === "large") {
@@ -15,26 +14,21 @@ export const Wrapper = styled.div`
     }
   }}
   ${props => {
-    if (props.variant === "default") {
-      return css`
-        border-color: transparent;
-      `;
-    }
     if (props.variant === "light") {
       return css`
+        border: ${({ theme }) => box.border(theme.border)};
         background-color: ${props.theme.white};
       `;
     }
     if (props.variant === "dark") {
       return css`
-        background-color: ${props.theme.bgTertiary};
+        background-color: ${props.theme.bgSecondary};
       `;
     }
     if (props.variant === "main") {
       return css`
         position: relative;
         padding: ${spacings.larger};
-        border: none;
         background-color: ${props.theme.white};
         &:before {
           position: absolute;
