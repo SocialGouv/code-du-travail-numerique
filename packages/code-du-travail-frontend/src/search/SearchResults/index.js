@@ -5,6 +5,7 @@ import { Results } from "./Results";
 import { Law } from "./Law";
 import { Themes } from "./Themes";
 import { matopush } from "../../piwik";
+import { formatUrlMatomo } from "../utils";
 
 const SearchResults = ({
   items: { documents, themes, articles },
@@ -13,11 +14,17 @@ const SearchResults = ({
 }) => {
   const router = useRouter();
   useEffect(() => {
-    const toSlug = ({ source, slug }) => `${source}/${slug}`;
+    const toLogCandidate = ({ url, source, slug, algo }) => {
+      const trackedUrl = formatUrlMatomo(source, slug, url);
+      return {
+        slug: trackedUrl,
+        algo
+      };
+    };
     const results = JSON.stringify({
-      documents: documents.map(toSlug),
-      themes: themes.map(toSlug),
-      articles: articles.map(toSlug)
+      documents: documents.map(toLogCandidate),
+      themes: themes.map(toLogCandidate),
+      articles: articles.map(toLogCandidate)
     });
     matopush(["trackEvent", "candidateResults", router.query.q, results]);
   });

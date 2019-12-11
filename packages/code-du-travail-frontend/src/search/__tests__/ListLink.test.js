@@ -16,6 +16,7 @@ const item = {
   title: "Mer il est fou!",
   slug: "mer-il-est-fou",
   description: "description",
+  algo: "semantic",
   breadcrumbs: [
     { slug: "theme-root", title: "test content" },
     { slug: "theme-test", title: "test theme content" }
@@ -36,7 +37,7 @@ describe("ListLink", () => {
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
       "selectResult",
-      "/fiche-service-public/mer-il-est-fou"
+      '{"url":"/fiche-service-public/mer-il-est-fou","algo":"semantic"}'
     ]);
   });
 });

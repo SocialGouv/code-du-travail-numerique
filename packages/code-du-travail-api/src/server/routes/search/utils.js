@@ -28,9 +28,27 @@ const removeDuplicate = arr =>
     )
   );
 
+const mergeDuplicate = arr => {
+  return Object.values(
+    arr.reduce((acc, current) => {
+      const unique = current._source.source + "/" + current._source.slug;
+      // case we've already seen the same result from a different algo
+      if (
+        acc[unique] != undefined &&
+        acc[unique]._source.algo != current._source.algo
+      ) {
+        acc[unique]._source.algo = "both";
+      } else {
+        acc[unique] = current;
+      }
+      return acc;
+    }, {})
+  );
+};
+
 const mergePipe = (a, b, max_result) => {
   const res = merge(a, b, a.length + b.length);
-  return removeDuplicate(res).slice(0, max_result);
+  return mergeDuplicate(res).slice(0, max_result);
 };
 
 exports.merge = merge;

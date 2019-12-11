@@ -3,22 +3,13 @@ import Link from "next/link";
 import styled from "styled-components";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import { Container, Heading, Tile, Title, theme } from "@socialgouv/react-ui";
-import { summarize } from "../utils";
-
-import { matopush } from "../../piwik";
-
-function reportSelectionToMatomo(trackedUrl) {
-  matopush(["trackEvent", "selectResult", trackedUrl]);
-}
+import { summarize, reportSelectionToMatomo } from "../utils";
 
 export const ListLink = ({
-  item: { breadcrumbs = [], description, source, slug, title, url },
+  item: { breadcrumbs = [], description, source, slug, title, url, algo },
   isSearch,
   query
 }) => {
-  const trackedUrl =
-    source === SOURCES.EXTERNALS ? url : `/${getRouteBySource(source)}/${slug}`;
-
   let subtitle = "";
   if (isSearch && source !== SOURCES.THEMES && breadcrumbs.length) {
     subtitle = breadcrumbs[breadcrumbs.length - 1].title;
@@ -26,8 +17,9 @@ export const ListLink = ({
 
   const tileCommonProps = {
     wide: true,
-    onClick: () => reportSelectionToMatomo(trackedUrl),
-    onKeyPress: e => e.keyCode === 13 && reportSelectionToMatomo(trackedUrl),
+    onClick: () => reportSelectionToMatomo(source, slug, url, algo),
+    onKeyPress: e =>
+      e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
     title,
     subtitle,
     children: summarize(description)
