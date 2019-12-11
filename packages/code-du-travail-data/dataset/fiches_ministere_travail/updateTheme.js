@@ -4,7 +4,8 @@ const themes = require("../datafiller/themes.data.json");
 
 function updateTheme(fiches) {
   fiches.forEach(fiche => {
-    const ficheUrl = `/${getRouteBySource(SOURCES.SHEET_MT)}/${fiche.slug}`;
+    const strippedSlug = fiche.slug.split("#")[0];
+    const ficheUrl = `/${getRouteBySource(SOURCES.SHEET_MT)}/${strippedSlug}`;
     const theme = themes.find(theme =>
       theme.refs.map(r => r.url.split("#")[0]).includes(ficheUrl)
     );

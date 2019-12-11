@@ -32,7 +32,7 @@ function splitArticle(article) {
         anchor,
         description,
         html,
-        slug: `${slug}#${anchor}`,
+        slug: `${slug}${anchor ? `#${anchor}` : ""}`,
         text,
         title
       };
@@ -51,7 +51,7 @@ function transformSectionTitle({ sectionTitle: title, prefixTitle }) {
   sectionTitle = sectionTitle.replace(/question\s?\d\s?:?\s?/i, "");
   // add the prefix, only if it is not present in the sectionTitle
   // and if sectionTitle doesn't contains ":" ( there is already a prefix)
-  if (sectionTitle.indexOf(prefixTitle) === -1) {
+  if (sectionTitle && sectionTitle.indexOf(prefixTitle) === -1) {
     sectionTitle = `${prefixTitle} : ${sectionTitle.toLowerCase()}`;
   }
 

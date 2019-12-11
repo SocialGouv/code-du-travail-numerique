@@ -4,46 +4,52 @@ exports[`ensure results are only returned when enough characters passed 1`] = `A
 
 exports[`fuzzy matching results are lower than exact matchs 1`] = `
 Array [
-  "contractuelle",
-  "composition",
+  "heures complémentaires",
+  "heures supplémentaires et congés payés",
+  "heures de travail et contrat",
+  "heure de congé contrat 104heures",
+  "heures supplémentaires en formation contrat pro non payé",
 ]
 `;
 
-
 exports[`fuzzy matching works 1`] = `
 Array [
-  "retraite",
+  "heures complémentaires et retraite",
+  "heures supplémentaires restauration",
+  "heures négatives et retenue sur salaire",
+  "heures retirées pour fermeture de magasin",
+  "heures perdues retour chez moi imposé avant la fin de ma journée initialement prévue",
 ]
 `;
 
 exports[`return suggestions for re in the right format 1`] = `
 Array [
-  "renseignements",
-  "repos",
-  "retraite",
-  "réintégration",
-  "déplacement régulier",
+  "heures de récupération",
+  "heures sup et jour de repos",
+  "heures supplémentaires restauration",
+  "heures de récup",
+  "heures a récupérer",
 ]
 `;
 
 exports[`when query match several suggestions with same prefix, 
   ensure order is based on rank 1`] = `
 Array [
-  "renseignements",
-  "repos",
-  "retraite",
-  "réintégration",
-  "déplacement régulier",
+  "heures de récupération",
+  "heures sup et jour de repos",
+  "heures supplémentaires restauration",
+  "heures de récup",
+  "heures a récupérer",
 ]
 `;
 
 exports[`when query match several suggestions with same rank, 
   ensure order is based on query prefix matching position 1`] = `
 Array [
-  "renseignements",
-  "repos",
-  "retraite",
-  "réintégration",
-  "déplacement régulier",
+  "heures de récupération",
+  "heures sup et jour de repos",
+  "heures supplémentaires restauration",
+  "heures de récup",
+  "heures a récupérer",
 ]
 `;

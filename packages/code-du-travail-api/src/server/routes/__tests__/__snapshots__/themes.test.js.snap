@@ -34,7 +34,74 @@ Object {
     },
   ],
   "position": 8,
-  "refs": Array [],
+  "refs": Array [
+    Object {
+      "breadcrumbs": Array [
+        Object {
+          "slug": "8-depart-de-lentreprise",
+          "title": "Départ de l'entreprise",
+        },
+      ],
+      "description": "Le salarié ne bénéficie pas d'heures de recherche d'emploi pendant son préavis, sauf dispositions conventionnelles.",
+      "slug": "le-salarie-beneficie-t-il-dheures-de-recherche-demploi-pendant-son-preavis",
+      "source": "fiches_service_public",
+      "title": "Le salarié bénéficie-t-il d'heures de recherche d'emploi pendant son préavis ?",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F1054",
+    },
+    Object {
+      "description": "Il est possible de travailler pour un nouvel employeur sans attendre la fin de son préavis si l'employeur ou la convention collective l'autorise.",
+      "slug": "demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
+      "source": "fiches_service_public",
+      "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F1980",
+    },
+    Object {
+      "breadcrumbs": Array [
+        Object {
+          "slug": "8-depart-de-lentreprise",
+          "title": "Départ de l'entreprise",
+        },
+      ],
+      "description": "Oui, vous pouvez continuer à bénéficier de la mutuelle (complémentaire santé) de votre entreprise à l'issue de votre contrat de travail, sous réserve de remplir certaines conditions. C'est ce qu'on appelle la portabilité. Les mêmes règles s'appliquent si vous êtes salarié d'une association.",
+      "slug": "peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail",
+      "source": "fiches_service_public",
+      "title": "Peut-on garder la mutuelle de l'entreprise à la fin du contrat de travail ?",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F20744",
+    },
+    Object {
+      "description": "La faute grave ou lourde commise par le salarié pendant un préavis autorise l'employeur à rompre le contrat de travail.",
+      "slug": "faute-grave-ou-lourde-commise-pendant-un-preavis-quelles-consequences",
+      "source": "fiches_service_public",
+      "title": "Faute grave ou lourde commise pendant un préavis : quelles conséquences ?",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F22",
+    },
+    Object {
+      "breadcrumbs": Array [
+        Object {
+          "slug": "8-depart-de-lentreprise",
+          "title": "Départ de l'entreprise",
+        },
+      ],
+      "description": "Le salarié qui n'exécute pas son préavis a droit dans certains cas au bénéfice d'une indemnité s'il est dispensé de préavis par son employeur.",
+      "slug": "indemnite-compensatrice-de-preavis",
+      "source": "fiches_service_public",
+      "title": "Indemnité compensatrice de préavis",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F24660",
+    },
+    Object {
+      "breadcrumbs": Array [
+        Object {
+          "slug": "8-depart-de-lentreprise",
+          "title": "Départ de l'entreprise",
+        },
+      ],
+      "description": "Le salarié qui ne liquide pas la totalité de ses congés payés acquis avant son départ de l'entreprise a droit au bénéfice d'une indemnité.",
+      "slug": "indemnite-compensatrice-de-conges-payes",
+      "source": "fiches_service_public",
+      "title": "Indemnité compensatrice de congés payés",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F24661",
+    },
+  ],
   "slug": "8-depart-de-lentreprise",
   "title": "Départ de l'entreprise",
 }
@@ -44,9 +111,49 @@ exports[`return themes root themes 1`] = `
 Object {
   "children": Array [
     Object {
+      "position": 1,
+      "slug": "1-embauche-et-contrat-de-travail",
+      "title": "Embauche et contrat de travail",
+    },
+    Object {
+      "position": 2,
+      "slug": "2-salaire-et-remuneration",
+      "title": "Salaire et Rémunération",
+    },
+    Object {
+      "position": 3,
+      "slug": "3-temps-de-travail",
+      "title": "Temps de travail",
+    },
+    Object {
+      "position": 4,
+      "slug": "4-conges-et-repos",
+      "title": "Congés et repos",
+    },
+    Object {
+      "position": 5,
+      "slug": "5-emploi-et-formation-professionnelle",
+      "title": "Emploi et formation professionnelle",
+    },
+    Object {
+      "position": 6,
+      "slug": "6-sante-securite-et-conditions-de-travail",
+      "title": "Santé, sécurité et conditions de travail",
+    },
+    Object {
+      "position": 7,
+      "slug": "7-representation-du-personnel-et-negociation-collective",
+      "title": "Représentation du personnel et négociation collective",
+    },
+    Object {
       "position": 8,
       "slug": "8-depart-de-lentreprise",
       "title": "Départ de l'entreprise",
+    },
+    Object {
+      "position": 9,
+      "slug": "9-conflits-au-travail-et-controle-de-la-reglementation",
+      "title": "Conflits au travail et contrôle de la réglementation",
     },
   ],
 }

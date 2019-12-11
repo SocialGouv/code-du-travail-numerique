@@ -42,11 +42,17 @@ class Fiche extends React.Component {
       },
       relatedItems
     } = data;
-    const formattedSections = sections.map(section => ({
-      id: section.anchor,
-      title: section.title,
-      body: <TabContent>{section.html}</TabContent>
-    }));
+
+    const untitledSection = sections.find(section => !section.title);
+    /* .map(({ html, slug }) => <Html key={slug}>{html}</Html>); */
+    const titledSections = sections
+      .filter(section => section.title)
+      .map(({ anchor, html, tag, title }) => ({
+        id: anchor,
+        as: tag,
+        title: title,
+        body: <TabContent>{html}</TabContent>
+      }));
     return (
       <Layout>
         <Metas
@@ -64,7 +70,8 @@ class Fiche extends React.Component {
           source={{ name: "Fiche Ministère du travail", url }}
           breadcrumbs={breadcrumbs}
         >
-          <Accordion preExpanded={[anchor]} items={formattedSections} />
+          <Html>{untitledSection.html}</Html>
+          <Accordion preExpanded={[anchor]} items={titledSections} />
         </Answer>
       </Layout>
     );
