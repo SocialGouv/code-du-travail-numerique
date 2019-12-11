@@ -81,7 +81,7 @@ export function getSituationsFor(data, obj) {
 
 export const isNotYetProcessed = (data, idcc) => {
   const situtation = data.filter(
-    situation => parseInt(situation.idcc) === parseInt(idcc)
+    situation => parseInt(situation.idcc, 10) === parseInt(idcc, 10)
   );
   return !situtation.length;
 };

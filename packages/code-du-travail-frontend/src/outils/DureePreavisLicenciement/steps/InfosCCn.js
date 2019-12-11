@@ -20,7 +20,8 @@ StepInfoCCn.validate = values => {
   const [situation] = filterSituations(initialCDTSituations, {
     ...cdt
   });
-  if (ccn && isNotYetProcessed(data.situations, ccn.num)) {
+
+  if (ccn && isNotYetProcessed(data.situations, ccn.convention.num)) {
     errors.ccn = (
       <>
         <p>
