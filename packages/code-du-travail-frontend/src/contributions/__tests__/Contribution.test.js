@@ -2,15 +2,8 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Contribution from "../Contribution";
 
-let mockPreselectedConvention = null;
-
-jest.mock("use-persisted-state", () => () /*key*/ => () => [
-  mockPreselectedConvention,
-  () => {}
-]);
-
 beforeEach(() => {
-  mockPreselectedConvention = null;
+  localStorage.clear();
 });
 
 describe("<Contribution />", () => {
@@ -63,11 +56,16 @@ describe("<Contribution />", () => {
     expect(container).toMatchSnapshot();
   });
   it("should render preselected convention", () => {
-    mockPreselectedConvention = {
-      title: "preselected convention",
-      num: "0044",
-      id: 123
-    };
+    localStorage.setItem(
+      "convention",
+      JSON.stringify({
+        convention: {
+          title: "preselected convention",
+          num: "0044",
+          id: 123
+        }
+      })
+    );
     const answers = {
       generic: { markdown: "hello **generic**" },
       conventions: [
@@ -84,11 +82,16 @@ describe("<Contribution />", () => {
   });
 
   it("should NOT render invalid preselected convention", () => {
-    mockPreselectedConvention = {
-      title: "unknown convention",
-      num: "0000",
-      id: 456
-    };
+    localStorage.setItem(
+      "convention",
+      JSON.stringify({
+        convention: {
+          title: "preselected convention",
+          num: "0000",
+          id: 123
+        }
+      })
+    );
     const answers = {
       generic: { markdown: "hello **generic**" },
       conventions: [
@@ -105,11 +108,16 @@ describe("<Contribution />", () => {
   });
 
   it("should render answer references", () => {
-    mockPreselectedConvention = {
-      title: "preselected convention",
-      num: "0044",
-      id: 123
-    };
+    localStorage.setItem(
+      "convention",
+      JSON.stringify({
+        convention: {
+          title: "preselected convention",
+          num: "0044",
+          id: 123
+        }
+      })
+    );
     const answers = {
       generic: { markdown: "hello **generic**" },
       conventions: [

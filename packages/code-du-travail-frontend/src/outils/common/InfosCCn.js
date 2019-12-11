@@ -1,25 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
-import createPersistedState from "use-persisted-state";
+
 import { Button, Toast, theme } from "@socialgouv/react-ui";
 
 import Search from "../../conventions/Search/Form";
 import { required } from "./validators";
 import { ErrorField } from "./ErrorField";
 import { Question } from "./Question";
+import { useLocalStorage } from "../../lib/useLocalStorage";
+
 export const CCN = "ccn";
 
-// store selected convention in localStorage
-const useConventionState = createPersistedState("convention");
-
 function StepInfoCCn({ form, isOptionnal = true }) {
-  const [ccInfo, setCcInfo] = useConventionState({});
+  const [ccInfo, setCcInfo] = useLocalStorage("convention", {});
+
+  const clearCCInfo = useCallback(() => {
+    setCcInfo();
+  }, [setCcInfo]);
+
+  const setCCInfoMemo = useCallback(
+    ({ convention, label }) => {
+      setCcInfo({ convention, label });
+    },
+    [setCcInfo]
+  );
   useEffect(() => {
     form.batch(() => {
-      form.change(CCN, ccInfo ? ccInfo.convention : null);
+      const { convention, label } = ccInfo || {};
+      form.change(CCN, convention && label ? { convention, label } : null);
     });
-  }, [ccInfo, form]);
+    // INFO(@lionelb): do not put form in useEffect dependencies
+    // it will cause useEffect to run continuously in IE11
+    // eslint-disable-next-line
+  }, [ccInfo]);
   return (
     <>
       <Field
@@ -31,16 +45,12 @@ function StepInfoCCn({ form, isOptionnal = true }) {
               <>
                 <Question>La convention collective</Question>
                 <p>
-                  {input.value.title}
+                  {input.value.convention.title}
                   <br />
-                  {ccInfo.label && `(${ccInfo.label})`}
+                  {input.value.label && `(${input.value.label})`}
                 </p>
 
-                <Button
-                  variant="link"
-                  type="button"
-                  onClick={() => setCcInfo({})}
-                >
+                <Button variant="link" type="button" onClick={clearCCInfo}>
                   Changer de convention collective
                 </Button>
                 {error && <StyledToast>{error}</StyledToast>}
@@ -59,7 +69,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                   en cliquant sur le bouton Suivant.
                 </P>
               )}
-              <SearchStyled title="" onSelectConvention={setCcInfo} />
+              <SearchStyled title="" onSelectConvention={setCCInfoMemo} />
               <ErrorField name={CCN} />
             </>
           );

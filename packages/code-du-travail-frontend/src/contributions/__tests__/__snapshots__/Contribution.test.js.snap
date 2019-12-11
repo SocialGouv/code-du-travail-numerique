@@ -176,11 +176,11 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         </span>
          
         <a
-          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=456"
+          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
           rel="noopener noreferrer"
           target="_blank"
         >
-          unknown convention
+          preselected convention
            (IDCC 
           0000
           )
