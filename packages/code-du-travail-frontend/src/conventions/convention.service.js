@@ -18,7 +18,7 @@ const formatIdcc = ({ idcc: num, id, slug, title }) => ({
 const apiIdcc = memoizee(
   query => {
     const url = `${API_URL}/idcc?q=${encodeURIComponent(
-      query.replace(/ /g, "")
+      query.replace(/ +/g, " ")
     )}`;
 
     return fetch(url).then(response => {

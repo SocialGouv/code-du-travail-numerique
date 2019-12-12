@@ -3,7 +3,7 @@ import { selectAll } from "unist-util-select";
 import { logger } from "./logger";
 import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
-import { formatIdcc } from "@cdt/data/lib";
+import { parseIdcc, formatIdcc } from "../lib";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -63,7 +63,7 @@ function* cdtnDocumentsGen() {
       return {
         source: SOURCES.CCN,
         id,
-        idcc: num,
+        idcc: parseIdcc(num),
         title,
         slug: slugify(`${idcc}-${title}`.substring(0, 80)),
         text: `IDCC ${num} ${title}`,
