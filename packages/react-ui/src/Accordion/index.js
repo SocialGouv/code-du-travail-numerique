@@ -20,7 +20,11 @@ export const Accordion = ({ items, ...props }) => (
         <AccordionItemHeading>
           <StyledAccordionItemButton>
             <StyledVerticalArrow />
-            <StyledHeading as={as}>{title}</StyledHeading>
+            {typeof title === "string" ? (
+              <StyledHeading as={as}>{title}</StyledHeading>
+            ) : (
+              <>{title}</>
+            )}
           </StyledAccordionItemButton>
         </AccordionItemHeading>
         <StyledAccordionItemPanel>{body}</StyledAccordionItemPanel>
