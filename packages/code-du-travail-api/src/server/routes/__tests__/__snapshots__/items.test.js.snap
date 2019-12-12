@@ -640,6 +640,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
+      "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
       "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",
       "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
