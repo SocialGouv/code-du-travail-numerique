@@ -24,15 +24,16 @@ const formatAnchor = node => {
   }
 };
 
+const getSectionTag = article => {
+  const h3 = $$(article, ".main-article__texte > H3").length && "H3";
+  const h4 = $$(article, ".main-article__texte > H4").length && "H4";
+  const h5 = $$(article, ".main-article__texte > H5").length && "H5";
+  return h3 || h4 || h5;
+};
+
 function parseDom(dom, url) {
-  const description = $(
-    dom.window.document,
-    "meta[name=description]"
-  ).getAttribute("content");
   const article = $(dom.window.document, "main");
-
   $$(article, "a").forEach(formatAnchor);
-
   $$(article, "img")
     .filter(node => node.getAttribute("src").indexOf("data:image") === -1)
     .forEach(node => {
@@ -46,38 +47,50 @@ function parseDom(dom, url) {
       }
     });
 
-  // get Intro image + text before first Question
-  let elIntro = $(article, ".main-article__texte > *");
-  let intro = "";
-
-  while (elIntro && elIntro.tagName !== "H3") {
-    intro += elIntro.outerHTML.trim();
-    elIntro = elIntro.nextElementSibling;
-  }
-
-  let chapo = $(article, ".main-article__chapo");
-  chapo = chapo && chapo.innerHTML.trim();
-
+  const title = $(article, "h1").textContent.trim();
+  const slug = slugify(title);
   const dateRaw =
     $(dom.window.document, "meta[property*=modified_time]") ||
     $(dom.window.document, "meta[property$=published_time]");
   const [year, month, day] = dateRaw.getAttribute("content").split("-");
-  const title = $(article, "h1").textContent.trim();
+  let intro = $(article, ".main-article__chapo") || "";
+  intro = intro && intro.innerHTML.trim();
+  const description = $(
+    dom.window.document,
+    "meta[name=description]"
+  ).getAttribute("content");
+  const sections = [];
+  const sectionTag = getSectionTag(article);
 
-  const result = {
-    date: `${day}/${month}/${year}`,
-    description,
-    intro: `${chapo || ""}${intro}`,
-    sections: [],
-    slug: slugify(title),
-    title,
-    url
+  // First pass is only to get a potential untitled section at the top of the article
+  // This section has neither anchor nor title
+  let nextArticleElement = $(article, ".main-article__texte > *");
+  const untitledSection = {
+    title: "",
+    anchor: "",
+    html: "",
+    text: ""
   };
-  const articleChildren = $$(article, "*");
+  while (nextArticleElement && nextArticleElement.tagName !== sectionTag) {
+    if (nextArticleElement.textContent) {
+      if (!untitledSection.description) {
+        untitledSection.description = nextArticleElement.textContent.trim();
+      }
+      untitledSection.html += nextArticleElement.outerHTML;
+      untitledSection.text += " " + nextArticleElement.textContent.trim();
+    }
+    nextArticleElement = nextArticleElement.nextElementSibling;
+  }
+  if (untitledSection.description) {
+    untitledSection.text.trim();
+    sections.push(untitledSection);
+  }
+  // Gets all the titled content
+  const articleChildren = $$(article, ".main-article__texte > *");
   articleChildren
     .filter(el => el.getAttribute("id"))
     .forEach(function(el) {
-      if (el.tagName === "H3") {
+      if (el.tagName === sectionTag) {
         let nextEl = el.nextElementSibling;
         const section = {
           anchor: el.id,
@@ -86,16 +99,24 @@ function parseDom(dom, url) {
           text: "",
           title: el.textContent.trim()
         };
-        while (nextEl && nextEl.tagName !== "H3") {
+        while (nextEl && nextEl.tagName !== sectionTag) {
           section.text += nextEl.textContent.trim();
           section.html += nextEl.outerHTML;
           nextEl = nextEl.nextElementSibling;
         }
-        result.sections.push(section);
+        sections.push(section);
       }
     });
 
-  return result;
+  return {
+    date: `${day}/${month}/${year}`,
+    description,
+    intro,
+    sections,
+    slug,
+    title,
+    url
+  };
 }
 
 const limit = pLimit(15);

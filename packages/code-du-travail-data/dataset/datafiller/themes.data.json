@@ -4137,7 +4137,8 @@
       }
     ],
     "variants": [
-      "Formation professionnelle"
+      "Formation professionnelle",
+      "budget de formation"
     ]
   },
   {
@@ -9246,7 +9247,8 @@
       }
     ],
     "variants": [
-      "Salaire et Rémunération"
+      "Salaire et Rémunération",
+      "appointements"
     ]
   },
   {
@@ -9586,7 +9588,8 @@
     ],
     "children": [],
     "variants": [
-      "Télétravail"
+      "Télétravail",
+      "le télétravail est-il possible en CDD?"
     ]
   },
   {
