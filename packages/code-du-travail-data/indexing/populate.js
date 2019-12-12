@@ -3,6 +3,7 @@ import { selectAll } from "unist-util-select";
 import { logger } from "./logger";
 import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
+import { formatIdcc } from "@cdt/data/lib";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -58,7 +59,7 @@ function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
     ({ id, num, title }) => {
-      const idcc = `0000${num}`.slice(-4);
+      const idcc = formatIdcc(num);
       return {
         source: SOURCES.CCN,
         id,

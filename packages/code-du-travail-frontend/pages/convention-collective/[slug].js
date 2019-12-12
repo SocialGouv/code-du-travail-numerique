@@ -29,21 +29,20 @@ class ConventionCollective extends React.Component {
       );
     }
     const { pageUrl, ogImage, convention } = this.props;
-    const { shortTitle, title, date_publi } = convention;
+    const { url, shortTitle, title, date_publi } = convention;
     return (
       <Layout>
         <Metas
           url={pageUrl}
-          title={shortTitle}
+          title={`Convention collective ${shortTitle}`}
           description={title}
           image={ogImage}
         />
         <Answer
           title={shortTitle}
           emptyMessage="Cette convention collective n'a pas été trouvée"
-          footer="Informations fournies par la DILA"
           date={format(parseISO(date_publi), "dd/MM/yyyy")}
-          sourceType="Legifrance"
+          source={{ name: "Légifrance", url }}
           wide
         >
           <Convention convention={convention} />

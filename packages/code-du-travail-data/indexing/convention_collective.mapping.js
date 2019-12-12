@@ -30,7 +30,14 @@ export const conventionCollectiveMapping = {
         question: { type: "text" },
         answer: { type: "text" },
         theme: { type: "text" },
-        slug: { type: "keyword" }
+        slug: { type: "keyword" },
+        references: {
+          properties: {
+            value: { type: "text" },
+            category: { type: "keyword" },
+            url: { type: "keyword" }
+          }
+        }
       }
     }
   }

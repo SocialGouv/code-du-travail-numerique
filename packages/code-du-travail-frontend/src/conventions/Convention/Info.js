@@ -1,16 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import { format, parseISO } from "date-fns";
-import { Table, theme } from "@socialgouv/react-ui";
+import { Accordion, Table } from "@socialgouv/react-ui";
 import { pluralize } from "../../lib/pluralize";
 const Info = ({
   convention: { idcc, title, date_publi, url, nbTextes, nbArticles }
-}) => {
-  return (
-    <Details>
-      <summary>Plus d’informations sur cette convention collective.</summary>
+}) => (
+  <Accordion
+    items={[
+      {
+        title: "Plus d’informations sur cette convention collective.",
+        body: Details({ idcc, title, date_publi, url, nbTextes, nbArticles })
+      }
+    ]}
+  />
+);
 
+function Details({ idcc, title, date_publi, url, nbTextes, nbArticles }) {
+  return (
+    <>
       <Table>
         <tbody>
           <tr>
@@ -65,9 +73,9 @@ const Info = ({
           Voir la convention sur Legifrance
         </a>
       </p>
-    </Details>
+    </>
   );
-};
+}
 
 Info.propTypes = {
   convention: PropTypes.shape({
@@ -78,9 +86,3 @@ Info.propTypes = {
 };
 
 export { Info };
-
-const { spacings } = theme;
-
-const Details = styled.details`
-  margin-bottom: ${spacings.medium};
-`;

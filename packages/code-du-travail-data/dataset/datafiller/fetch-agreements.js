@@ -2,6 +2,8 @@ import fetch from "node-fetch";
 import kaliData from "@socialgouv/kali-data/data/index.json";
 import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
+import parents from "unist-util-parents";
+
 import contributions from "../contributions/contributions.data.json";
 import themes from "./themes.data.json";
 import remark from "remark";
@@ -115,6 +117,17 @@ function getContributionAnswers(agreementNum) {
           question: value,
           answer: compiler.processSync(answer.markdown).contents,
           theme: theme.breadcrumbs ? theme.breadcrumbs[0].title : theme.title,
+          references: answer.references.map(
+            ({ value, url, category, agreement }) => ({
+              value: `${
+                category === "agreement"
+                  ? `IDCC ${agreement.num} - ${value}`
+                  : value
+              }`,
+              url: url || (agreement && agreement.url),
+              category: category
+            })
+          ),
           slug
         };
       }
@@ -126,20 +139,24 @@ function getContributionAnswers(agreementNum) {
  * @param {Object} agreementTree
  */
 function getArticleByBlock(groups, agreementTree) {
-  return groups.map(({ id, selection }) => ({
-    bloc: id,
-    articles: selection.map(articleId => {
-      const node = find(agreementTree, node => node.data.id === articleId);
-      return node
-        ? {
-            title: node.data.num,
-            id: node.data.id,
-            cid: node.data.cid,
-            content: node.data.content
-          }
-        : null;
-    })
-  }));
+  const treeWithParents = parents(agreementTree);
+
+  return groups
+    .filter(({ selection }) => selection.length > 0)
+    .map(({ id, selection }) => ({
+      bloc: id,
+      articles: selection.map(articleId => {
+        const node = find(treeWithParents, node => node.data.id === articleId);
+        return node
+          ? {
+              title: node.data.num || "non numéroté",
+              id: node.data.id,
+              cid: node.data.cid,
+              section: node.parent.data.title
+            }
+          : null;
+      })
+    }));
 }
 
 export { fetchAgreements };
