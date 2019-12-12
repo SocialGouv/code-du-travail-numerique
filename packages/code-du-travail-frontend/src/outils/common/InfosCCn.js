@@ -28,6 +28,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
   useEffect(() => {
     form.batch(() => {
       const { convention, label } = ccInfo || {};
+      form.change("criteria", undefined);
       form.change(CCN, convention && label ? { convention, label } : null);
     });
     // INFO(@lionelb): do not put form in useEffect dependencies

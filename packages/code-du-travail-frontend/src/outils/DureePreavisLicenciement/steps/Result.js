@@ -17,7 +17,7 @@ const { situations: allSituations } = data;
 function StepResult({ form }) {
   const { values } = form.getState();
   const { ccn, cdt, seriousMisconduct, disabledWorker, criteria = {} } = values;
-  const idcc = ccn ? ccn.num : "0";
+  const idcc = ccn ? ccn.convention.num : "0";
 
   // Situation CDT
   const initialCDTSituations = getSituationsFor(allSituations, {
@@ -101,7 +101,7 @@ function StepResult({ form }) {
             ...(seniorityCC && {
               "Ancienneté selon la convention collective": seniorityCC
             }),
-            "Convention collective": ccn.title
+            "Convention collective": ccn.convention.title
           })}
           <SectionTitle>Source</SectionTitle>
           {situationCC.ref && situationCC.refUrl && getRef(refs)}

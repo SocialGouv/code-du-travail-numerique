@@ -18,39 +18,29 @@ const outilsBySlug = {
   "preavis-demission": DureePreavisDemission
 };
 
-class Outils extends React.Component {
-  render() {
-    const {
-      description,
-      ogImage,
-      pageUrl,
-      searchTerm,
-      Simulator,
-      title
-    } = this.props;
-    return (
-      <Layout>
-        <Metas
-          url={pageUrl}
-          title={title}
-          description={description}
-          image={ogImage}
-        />
-        <Simulator q={searchTerm} title={title} />
-      </Layout>
-    );
-  }
+function Outils({ description, ogImage, pageUrl, slug, title }) {
+  const Simulator = outilsBySlug[slug];
+  return (
+    <Layout>
+      <Metas
+        url={pageUrl}
+        title={title}
+        description={description}
+        image={ogImage}
+      />
+      <Simulator title={title} />
+    </Layout>
+  );
 }
 
 export default Outils;
 
 Outils.getInitialProps = async ({ query }) => {
-  const { slug, q: searchTerm } = query;
+  const { slug } = query;
   const { description, title } = tools.find(tool => tool.slug === slug);
   return {
+    slug,
     description,
-    title,
-    searchTerm,
-    Simulator: outilsBySlug[slug]
+    title
   };
 };
