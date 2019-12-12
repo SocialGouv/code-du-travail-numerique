@@ -12,7 +12,7 @@ export function StepInfoCCn(props) {
   return (
     <>
       <StepInfoCCnOptionnal {...props} />
-      {ccn && isNotYetProcessed(ccn.num) && (
+      {ccn && isNotYetProcessed(ccn.convention.num) && (
         <StyledToast>
           Nous n’avons pas encore traité cette convention collective mais nous
           vous invitons à poursuivre la simulation afin d’obtenir le montant

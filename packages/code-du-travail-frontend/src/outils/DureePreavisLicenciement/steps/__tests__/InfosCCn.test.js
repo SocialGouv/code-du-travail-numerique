@@ -3,11 +3,6 @@ import { render } from "@testing-library/react";
 import { StepInfoCCn } from "../InfosCCn";
 import { Form } from "react-final-form";
 
-jest.mock("use-persisted-state", () => {
-  const hookResult = [{ convention: { num: "3109" } }];
-  return () => jest.fn().mockImplementation(() => hookResult);
-});
-
 function renderForm(data) {
   return render(
     <Form
@@ -29,6 +24,10 @@ function renderForm(data) {
 
 describe("<StepInfoCCn />", () => {
   it("should render cdd infos step", () => {
+    localStorage.setItem(
+      "convention",
+      JSON.stringify({ convention: { num: "3109" }, label: "ccn des 5 mondes" })
+    );
     const { container } = renderForm({
       cdt: { ancienneté: "31| 6 mois à moins de 2 ans" }
     });

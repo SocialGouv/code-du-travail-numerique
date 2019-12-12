@@ -1,14 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import createPersistedState from "use-persisted-state";
 import { Alert, Button, Heading, theme, Title } from "@socialgouv/react-ui";
 
 import SearchConvention from "../../src/conventions/Search/Form";
 import rehypeToReact from "./rehypeToReact";
 import Mdx from "../../src/common/Mdx";
-
-// store selected convention in localStorage
-const useConventionState = createPersistedState("convention");
+import { useLocalStorage } from "../lib/useLocalStorage";
 
 const getConventionUrl = id =>
   `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`;
@@ -61,18 +58,22 @@ const References = ({ references }) => {
 
 // search CC + display filtered answer
 const AnswersConventions = ({ answers }) => {
-  const [ccInfo, setCcInfo] = useConventionState(null);
+  const [ccInfo, setCcInfo] = useLocalStorage("convention", {});
+  const { convention = {} } = ccInfo;
   const answer =
-    ccInfo &&
-    answers.find(a => parseInt(a.idcc, 10) === parseInt(ccInfo.num, 10));
+    convention &&
+    answers.find(a => parseInt(a.idcc, 10) === parseInt(convention.num, 10));
   // ensure we have valid data in ccInfo
-  const isCcDetected = ccInfo && ccInfo.id && ccInfo.num && ccInfo.title;
+  const isCcDetected =
+    ccInfo && convention.id && convention.num && convention.title;
   return (
     <div>
       {!isCcDetected && (
         <StyledSearchConvention
           title=""
-          onSelectConvention={({ convention }) => setCcInfo(convention)}
+          onSelectConvention={({ convention, label }) =>
+            setCcInfo({ convention, label })
+          }
         />
       )}
       {isCcDetected && (
@@ -82,13 +83,13 @@ const AnswersConventions = ({ answers }) => {
               📖
             </span>{" "}
             <a
-              href={getConventionUrl(ccInfo.id)}
+              href={getConventionUrl(convention.id)}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {ccInfo.title}
-              {ccInfo.num && (
-                <React.Fragment> (IDCC {ccInfo.num})</React.Fragment>
+              {convention.title}
+              {convention.num && (
+                <React.Fragment> (IDCC {convention.num})</React.Fragment>
               )}
             </a>
           </Heading>

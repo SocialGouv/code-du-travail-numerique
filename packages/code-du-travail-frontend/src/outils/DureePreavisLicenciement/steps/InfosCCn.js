@@ -10,8 +10,8 @@ import {
 import { getResult } from "./Result";
 import { Highlight } from "../../common/stepStyles";
 
-// const StepInfoCCn = props => <StepInfoCCnMandatory {...props} />;
-StepInfoCCnMandatory.validate = values => {
+const StepInfoCCn = props => <StepInfoCCnMandatory {...props} />;
+StepInfoCCn.validate = values => {
   const errors = {};
   const { ccn, cdt, disabledWorker } = values;
   const initialCDTSituations = getSituationsFor(data.situations, {
@@ -20,7 +20,8 @@ StepInfoCCnMandatory.validate = values => {
   const [situation] = filterSituations(initialCDTSituations, {
     ...cdt
   });
-  if (ccn && isNotYetProcessed(data.situations, ccn.num)) {
+
+  if (ccn && isNotYetProcessed(data.situations, ccn.convention.num)) {
     errors.ccn = (
       <>
         <p>
@@ -45,4 +46,4 @@ StepInfoCCnMandatory.validate = values => {
   return errors;
 };
 
-export const StepInfoCCn = StepInfoCCnMandatory;
+export { StepInfoCCn };

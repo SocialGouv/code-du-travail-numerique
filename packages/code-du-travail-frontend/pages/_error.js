@@ -31,8 +31,9 @@ export default class Error extends React.Component {
                 ? `Une erreur ${statusCode} est apparue sur le serveur :/`
                 : "Une erreur est apparue sur le client"}
               <br />
-              <Smaller>Notre équipe technique à été informée.</Smaller>
-              <br />
+            </P>
+            <Smaller>Notre équipe technique à été informée.</Smaller>
+            <P>
               <Link href="/">
                 <a>Retour à la page d’accueil</a>
               </Link>
@@ -48,6 +49,7 @@ const { fonts } = theme;
 
 const FlexCenterer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: calc(90vh - 15rem);
@@ -58,6 +60,6 @@ const P = styled.p`
   font-size: ${fonts.sizes.headings.large};
 `;
 
-const Smaller = styled.div`
+const Smaller = styled.p`
   font-size: ${fonts.sizes.headings.small};
 `;

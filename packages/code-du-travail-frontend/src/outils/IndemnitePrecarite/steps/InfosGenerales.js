@@ -34,7 +34,7 @@ const excludeContracts = [
 
 function StepInfosGenerales({ form }) {
   const { values } = form.getState();
-  const idcc = values.ccn ? values.ccn.num : "0";
+  const idcc = values.ccn ? values.ccn.convention.num : "0";
   const initialSituations = getSituationsFor(data, { idcc });
   const pastQuestions = getPastQuestions(
     initialSituations,
@@ -60,6 +60,7 @@ function StepInfosGenerales({ form }) {
   if (nextQuestionKey === "cddType") {
     nextQuestionOptions = concatenateCddType(nextQuestionOptions);
   }
+
   // update cddType in pastQuestions
   const cddTypeTuple = pastQuestions.find(
     ([questionKey]) => questionKey === "cddType"
@@ -77,7 +78,7 @@ function StepInfosGenerales({ form }) {
             case CONTRACT_TYPE.CDD:
               if (
                 values.ccn &&
-                hasConventionalProvision(data, values.ccn.num)
+                hasConventionalProvision(data, values.ccn.convention.num)
               ) {
                 return (
                   <>
@@ -151,7 +152,7 @@ function StepInfosGenerales({ form }) {
 }
 
 function validate(values) {
-  const idcc = values.ccn ? values.ccn.num : "0";
+  const idcc = values.ccn ? values.ccn.convention.num : "0";
   const initialSituations = getSituationsFor(data, { idcc });
 
   const errors = {

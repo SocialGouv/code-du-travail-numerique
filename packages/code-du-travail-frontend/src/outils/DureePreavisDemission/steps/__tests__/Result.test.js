@@ -4,7 +4,7 @@ import { renderForm } from "../../../../../test/renderForm";
 describe("<StepResult />", () => {
   it("should render CC answer", () => {
     const { container } = renderForm(StepResult, {
-      ccn: { num: "292", title: "Plasturgie" },
+      ccn: { convention: { num: "292", title: "Plasturgie" } },
       criteria: {
         "catégorie socio-professionnelle": "42| Collaborateurs",
         coefficient: "27| 910 à 940"
@@ -14,7 +14,7 @@ describe("<StepResult />", () => {
   });
   it("should render with no cc", () => {
     const { container } = renderForm(StepResult, {
-      ccn: { num: "292" }
+      ccn: { convention: { num: "292" } }
     });
     expect(container).toMatchSnapshot();
   });

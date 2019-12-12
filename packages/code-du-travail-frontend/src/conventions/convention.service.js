@@ -11,7 +11,7 @@ const formatIdcc = ({ idcc: num, id, slug, title }) => ({
   id,
   slug,
   title,
-  num
+  num: parseInt(num, 10).toString()
 });
 
 const getConventionTextes = memoizee(
@@ -54,4 +54,4 @@ const apiIdcc = memoizee(
 
 const searchConvention = debounce(apiIdcc, 300);
 
-export { getConventionTextes, searchConvention, formatIdcc };
+export { getConventionTextes, searchConvention };
