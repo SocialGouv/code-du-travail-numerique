@@ -109,4 +109,5 @@ const StyledCustomTile = styled(CustomTile)`
 
 const StyledListItem = styled.li`
   margin: ${spacings.base} 0;
+  padding: 0;
 `;

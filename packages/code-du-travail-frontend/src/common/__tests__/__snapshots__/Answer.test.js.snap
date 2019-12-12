@@ -1961,6 +1961,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c20 {
   margin: 1.6rem 0;
+  padding: 0;
 }
 
 .c0 {
