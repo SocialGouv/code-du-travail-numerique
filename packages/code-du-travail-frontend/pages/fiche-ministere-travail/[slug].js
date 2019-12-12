@@ -70,7 +70,7 @@ class Fiche extends React.Component {
           source={{ name: "Fiche Ministère du travail", url }}
           breadcrumbs={breadcrumbs}
         >
-          <Html>{untitledSection.html}</Html>
+          {untitledSection && <Html>{untitledSection.html}</Html>}
           <Accordion preExpanded={[anchor]} items={titledSections} />
         </Answer>
       </Layout>
