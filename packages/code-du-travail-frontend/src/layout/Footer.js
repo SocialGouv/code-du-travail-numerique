@@ -7,6 +7,7 @@ import {
   Container,
   Heading,
   icons,
+  NakedList,
   Section,
   theme,
   Title
@@ -220,10 +221,7 @@ const Category = styled.div`
   }
 `;
 
-const StyledList = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+const StyledList = styled(NakedList)`
   @media (max-width: ${breakpoints.mobile}) {
     text-align: center;
   }
@@ -239,7 +237,6 @@ const StyledHeading = styled(Heading)`
 
 const StyledListItem = styled.li`
   margin: ${spacings.tiny} 0;
-  padding: 0;
 `;
 const StyledLink = styled.a`
   font-weight: normal;

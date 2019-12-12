@@ -100,6 +100,12 @@ exports[`<Step /> should ask detail about categories 1`] = `
   margin-bottom: 2rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"
@@ -337,6 +343,12 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   margin-bottom: 2rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"
@@ -536,6 +548,12 @@ exports[`<Step /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
 }
 
 <div>

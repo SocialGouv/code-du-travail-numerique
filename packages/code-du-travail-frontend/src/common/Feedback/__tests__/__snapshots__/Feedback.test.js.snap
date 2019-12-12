@@ -129,7 +129,7 @@ exports[`<Feedback/> should render 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -256,6 +256,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c5:focus,
@@ -266,6 +267,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 .c6 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -288,7 +290,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -393,7 +395,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 

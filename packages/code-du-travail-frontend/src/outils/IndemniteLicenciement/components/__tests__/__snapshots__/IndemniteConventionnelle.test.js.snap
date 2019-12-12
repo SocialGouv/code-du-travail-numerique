@@ -53,6 +53,12 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   margin-bottom: 2rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"
@@ -188,6 +194,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   margin: 0.4rem;
   font-weight: 700;
   font-size: 1.6rem;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
 }
 
 @media (max-width:980px) {
@@ -535,6 +547,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   margin: 0.4rem;
   font-weight: 700;
   font-size: 1.6rem;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
 }
 
 @media (max-width:980px) {

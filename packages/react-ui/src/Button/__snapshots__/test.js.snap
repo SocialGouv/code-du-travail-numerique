@@ -247,6 +247,7 @@ exports[`<Button /> it renders a Button link 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c1:focus,
@@ -257,6 +258,7 @@ exports[`<Button /> it renders a Button link 1`] = `
 }
 
 .c2 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;

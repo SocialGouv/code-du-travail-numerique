@@ -5,6 +5,7 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import {
   Container,
+  NakedList,
   Tile,
   PageTitle,
   Section,
@@ -77,14 +78,12 @@ const ModeleCourrier = ({ modele, ...props }) => {
 
 const { colors, spacings } = theme;
 
-const StyledList = styled.ul`
-  padding-left: 0;
-  list-style-type: none;
+const StyledList = styled(NakedList)`
+  margin: ${spacings.small} 0;
 `;
 
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
-  padding: 0;
 `;
 
 const Label = styled.span`

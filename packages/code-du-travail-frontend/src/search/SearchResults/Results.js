@@ -2,7 +2,14 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
-import { Container, Heading, Tile, Title, theme } from "@socialgouv/react-ui";
+import {
+  Container,
+  Heading,
+  NakedList,
+  Tile,
+  Title,
+  theme
+} from "@socialgouv/react-ui";
 
 import { summarize, reportSelectionToMatomo } from "../utils";
 import { CustomTile } from "../../common/tiles/Custom";
@@ -88,26 +95,19 @@ export const Results = ({ id, isSearch, items, query }) => {
       ) : (
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
-      <StyledList>
+      <NakedList>
         {items.map((item, i) => (
           <StyledListItem key={`item.slug${i}`}>
             <ListLink item={item} isSearch={isSearch} query={query} />
           </StyledListItem>
         ))}
-      </StyledList>
+      </NakedList>
     </Container>
   );
 };
 
 const { spacings } = theme;
 
-const StyledList = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-`;
-
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
-  padding: 0;
 `;

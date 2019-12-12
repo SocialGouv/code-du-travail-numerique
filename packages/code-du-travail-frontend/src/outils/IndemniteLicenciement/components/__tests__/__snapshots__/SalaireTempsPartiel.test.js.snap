@@ -38,6 +38,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c10:focus,
@@ -48,6 +49,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 }
 
 .c12 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -288,6 +290,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c10:focus,
@@ -298,6 +301,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 .c12 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -538,6 +542,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c10:focus,
@@ -548,6 +553,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 }
 
 .c12 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;

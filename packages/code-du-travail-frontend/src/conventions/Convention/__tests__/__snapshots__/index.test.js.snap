@@ -356,8 +356,20 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
   .c15 {
     padding-right: 5.5rem;
+=======
+  .c0 {
+    padding: 1.6rem 2rem;
+  }
+}
+
+@media print {
+  .c0 {
+    padding: 0 5pt;
+    border: none;
+>>>>>>> feat(frontend) add NakedList and shif prop to title and bugfix
   }
 }
 

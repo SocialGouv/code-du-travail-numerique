@@ -78,6 +78,12 @@ exports[`<StepResult /> should render CC answer 1`] = `
   white-space: nowrap;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"

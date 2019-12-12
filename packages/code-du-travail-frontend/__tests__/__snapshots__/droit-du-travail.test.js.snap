@@ -277,6 +277,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c48:focus,
@@ -348,6 +349,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c49 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -692,6 +694,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
   list-style-type: none;
 }
 
+.c61 > li {
+  padding-left: 0;
+}
+
 .c60 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
@@ -704,7 +710,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c62 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c63 {
@@ -902,7 +907,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 @media (max-width:600px) {
   .c27 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 

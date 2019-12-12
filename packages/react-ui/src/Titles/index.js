@@ -8,24 +8,30 @@ export const PageTitle = ({
   as,
   children,
   leftStripped = false,
+  shift = "",
   subtitle,
   ...props
 }) => (
-  <Header leftStripped={leftStripped} {...props}>
-    <StyledPageTitle leftStripped={leftStripped} as={as}>
+  <Header leftStripped={leftStripped} shift={shift} {...props}>
+    <StyledPageTitle leftStripped={leftStripped} as={as} shift={shift}>
       <Stripe
         rounded
         {...(leftStripped && { position: "left", length: "100%" })}
       />
       {children}
     </StyledPageTitle>
-    {subtitle && <P leftStripped={leftStripped}>{subtitle}</P>}
+    {subtitle && (
+      <P leftStripped={leftStripped} shift={shift}>
+        {subtitle}
+      </P>
+    )}
   </Header>
 );
 
 PageTitle.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
+  shift: PropTypes.string,
   leftStripped: PropTypes.bool,
   subtitle: PropTypes.string
 };
@@ -38,10 +44,21 @@ const StyledPageTitle = styled.h1`
   font-size: ${fonts.sizes.headings.large};
   font-family: "Merriweather", serif;
   line-height: ${fonts.lineHeightTitle};
-  ${({ leftStripped }) => {
+  ${({ leftStripped, shift }) => {
     if (leftStripped) {
+      if (shift) {
+        return css`
+          padding-left: ${shift};
+          @media (max-width: ${breakpoints.mobile}) {
+            padding-left: ${spacings.base};
+          }
+        `;
+      }
       return css`
         padding-left: ${spacings.large};
+        @media (max-width: ${breakpoints.mobile}) {
+          padding-left: ${spacings.base};
+        }
       `;
     }
     return css`
@@ -54,24 +71,30 @@ export const Title = ({
   as,
   children,
   topStripped = false,
+  shift = "",
   subtitle,
   ...props
 }) => (
-  <Header leftStripped={!topStripped} {...props}>
-    <StyledTitle leftStripped={!topStripped} as={as}>
+  <Header leftStripped={!topStripped} shift={shift} {...props}>
+    <StyledTitle leftStripped={!topStripped} as={as} shift={shift}>
       <Stripe
         rounded
         {...(!topStripped && { position: "left", length: "100%" })}
       />
       {children}
     </StyledTitle>
-    {subtitle && <P leftStripped={!topStripped}>{subtitle}</P>}
+    {subtitle && (
+      <P leftStripped={!topStripped} shift={shift}>
+        {subtitle}
+      </P>
+    )}
   </Header>
 );
 
 Title.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
+  shift: PropTypes.string,
   subtitle: PropTypes.string,
   topStripped: PropTypes.bool
 };
@@ -84,11 +107,23 @@ const StyledTitle = styled.h2`
   font-size: ${fonts.sizes.headings.medium};
   font-family: "Merriweather", serif;
   line-height: ${fonts.lineHeightTitle};
-  ${({ leftStripped }) => {
+  ${({ leftStripped, shift }) => {
     if (leftStripped) {
+      if (shift) {
+        return css`
+          padding-left: ${shift};
+          text-align: left;
+          @media (max-width: ${breakpoints.mobile}) {
+            padding-left: ${spacings.base};
+          }
+        `;
+      }
       return css`
         padding-left: ${spacings.large};
         text-align: left;
+        @media (max-width: ${breakpoints.mobile}) {
+          padding-left: ${spacings.base};
+        }
       `;
     }
     return css`
@@ -120,8 +155,17 @@ export const Subtitle = styled.span`
 
 const Header = styled.header`
   margin: 0 auto ${spacings.small};
-  ${({ leftStripped }) => {
+  ${({ leftStripped, shift }) => {
     if (leftStripped) {
+      if (shift) {
+        return css`
+          margin-left: -${shift};
+          text-align: left;
+          @media (max-width: ${breakpoints.mobile}) {
+            margin-left: 0;
+          }
+        `;
+      }
       return css`
         text-align: left;
       `;
@@ -139,5 +183,17 @@ const Header = styled.header`
 const P = styled.p`
   margin-top: ${spacings.small};
   margin-bottom: 0;
-  padding-left: ${({ leftStripped }) => (leftStripped ? spacings.large : "0")};
+  padding-left: ${({ leftStripped, shift }) => {
+    if (leftStripped) {
+      if (shift) {
+        return shift;
+      }
+      return spacings.large;
+    }
+    return "0";
+  }};
+  @media (max-width: ${breakpoints.mobile}) {
+    padding-left: ${({ leftStripped }) =>
+      leftStripped ? spacings.large : "0"};
+  }
 `;

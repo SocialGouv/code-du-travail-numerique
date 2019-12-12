@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { ArrowLink, Heading, icons, theme } from "@socialgouv/react-ui";
+import { ArrowLink, icons, theme } from "@socialgouv/react-ui";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 
 import { CustomTile } from "./tiles/Custom";
@@ -36,7 +36,7 @@ export const RelatedItems = ({ items = [] }) => {
             }`}
             passHref
           >
-            <CustomTile
+            <StyledCustomTile
               action="Consulter"
               icon={icons.Document}
               title={relatedLetters[0].title}
@@ -54,19 +54,19 @@ export const RelatedItems = ({ items = [] }) => {
             }`}
             passHref
           >
-            <CustomTile
+            <StyledCustomTile
               action={relatedTools[0].action}
               icon={icons[relatedTools[0].icon]}
               title={relatedTools[0].title}
               subtitle={getLabelBySource(relatedTools[0].source)}
             >
               {relatedTools[0].description}
-            </CustomTile>
+            </StyledCustomTile>
           </Link>
         </StyledListItem>
       )}
       {relatedArticles.length > 0 && (
-        <Heading>Les articles pouvant vous intéresser&nbsp;:</Heading>
+        <span>Les articles pouvant vous intéresser&nbsp;:</span>
       )}
       {relatedArticles.slice(0, 3).map(({ slug, source, title }) => (
         <StyledListItem key={slug}>
@@ -90,14 +90,23 @@ const StyledList = styled.ul`
   top: 12rem;
   width: 30%;
   margin: 0;
-  padding: 0 ${spacings.base} 0 0;
+  padding: 0 ${spacings.base} 0 ${spacings.larger};
+  @media (max-width: ${breakpoints.desktop}) {
+    padding-left: ${spacings.base};
+  }
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
   list-style-type: none;
+  & > *:first-child {
+    margin-top: 0;
+  }
+`;
+
+const StyledCustomTile = styled(CustomTile)`
+  max-width: 28rem;
 `;
 
 const StyledListItem = styled.li`
   margin: ${spacings.base} 0;
-  padding: 0;
 `;

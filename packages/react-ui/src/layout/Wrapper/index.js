@@ -52,7 +52,7 @@ export const Wrapper = styled.div`
     margin-bottom: 0;
   }
   @media (max-width: ${breakpoints.mobile}) {
-    padding: ${spacings.small} ${spacings.medium};
+    padding: ${spacings.base} ${spacings.medium};
   }
   @media print {
     padding: 0 5pt;

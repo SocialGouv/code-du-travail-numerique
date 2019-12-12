@@ -176,6 +176,12 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   margin-top: 2rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"
@@ -461,6 +467,12 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
 
 .c5 {
   margin-top: 2rem;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
 }
 
 <div>

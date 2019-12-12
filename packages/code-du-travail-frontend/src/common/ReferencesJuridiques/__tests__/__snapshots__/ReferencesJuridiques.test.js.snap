@@ -124,7 +124,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   display: none;
 }
 
-.c13 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -137,18 +137,19 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   text-decoration: none;
 }
 
-.c16 {
+.c15 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
   width: 2.8rem;
+  height: 2.1rem;
   margin: 0 1.6rem 0 0;
   padding-top: 0.6rem;
   color: #ff7067;
@@ -157,7 +158,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c12:hover .c15 {
+.c11:hover .c14 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -169,11 +170,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   list-style-type: none;
 }
 
-.c11 {
-  padding: 0;
+.c10 > li {
+  padding-left: 0;
 }
 
-.c14 {
+.c13 {
   padding: 1.6rem 0;
 }
 
@@ -186,7 +187,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -270,15 +271,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               <ul
                 class="c10"
               >
-                <li
-                  class="c11"
-                >
+                <li>
                   <a
-                    class="c12 c13 c14"
+                    class="c11 c12 c13"
                     href="/code-du-travail/l1244-3"
                   >
                     <svg
-                      class="c15"
+                      class="c14"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -288,21 +287,19 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c16"
+                      class="c15"
                     >
                       Article L1244-3 du code du travail
                     </span>
                   </a>
                 </li>
-                <li
-                  class="c11"
-                >
+                <li>
                   <a
-                    class="c12 c13 c14"
+                    class="c11 c12 c13"
                     href="/code-du-travail/l1244-4"
                   >
                     <svg
-                      class="c15"
+                      class="c14"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -312,22 +309,20 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c16"
+                      class="c15"
                     >
                       Article L1244-4 du code du travail
                     </span>
                   </a>
                 </li>
-                <li
-                  class="c11"
-                >
+                <li>
                   <a
-                    class="c12 c13 c14"
+                    class="c11 c12 c13"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <svg
-                      class="c15"
+                      class="c14"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -337,22 +332,20 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c16"
+                      class="c15"
                     >
                       Autre: Article L3121-44 du code du travail
                     </span>
                   </a>
                 </li>
-                <li
-                  class="c11"
-                >
+                <li>
                   <a
-                    class="c12 c13 c14"
+                    class="c11 c12 c13"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <svg
-                      class="c15"
+                      class="c14"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -362,21 +355,19 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c16"
+                      class="c15"
                     >
                       Autre: Article xxx du code du travail
                     </span>
                   </a>
                 </li>
-                <li
-                  class="c11"
-                >
+                <li>
                   <a
-                    class="c12 c13 c14"
+                    class="c11 c12 c13"
                     href="/convention-collective/yyy"
                   >
                     <svg
-                      class="c15"
+                      class="c14"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -386,7 +377,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c16"
+                      class="c15"
                     >
                       Convention collective: Article yyy du code du travail
                     </span>

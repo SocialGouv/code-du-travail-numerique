@@ -45,7 +45,7 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c5 {
+.c4 {
   position: absolute;
   background-color: #7598d6;
   border-radius: 0.6rem;
@@ -58,7 +58,7 @@ exports[`<Article /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c4 {
+.c3 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -66,19 +66,16 @@ exports[`<Article /> should render 1`] = `
   font-size: 3.2rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
+  padding-left: 4rem;
 }
 
 .c2 {
   margin: 0 auto 1rem;
+  margin-left: -4rem;
   text-align: left;
 }
 
-.c3 {
-  margin-left: -4rem;
-}
-
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,7 +83,7 @@ exports[`<Article /> should render 1`] = `
   font-size: 1.4rem;
 }
 
-.c7 {
+.c6 {
   margin: 3.2rem 0 0 0;
 }
 
@@ -99,7 +96,7 @@ exports[`<Article /> should render 1`] = `
 
 @media (max-width:600px) {
   .c1 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -111,7 +108,19 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c3 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -131,19 +140,19 @@ exports[`<Article /> should render 1`] = `
       data-main-content="true"
     >
       <header
-        class="c2 c3"
+        class="c2"
       >
         <h1
-          class="c4"
+          class="c3"
         >
           <div
-            class="c5"
+            class="c4"
           />
           Contrat de travail et formalités d'embauche de l'assistante maternelle
         </h1>
       </header>
       <div
-        class="c6"
+        class="c5"
       >
         <span>
           Mis à jour le : 
@@ -151,7 +160,7 @@ exports[`<Article /> should render 1`] = `
         </span>
       </div>
       <div
-        class="c7"
+        class="c6"
       >
         this is an Article
       </div>

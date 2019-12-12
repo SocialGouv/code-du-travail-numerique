@@ -7,10 +7,22 @@ describe("<PageTitle />", () => {
     const { container } = render(<PageTitle>Lorem Ipsum</PageTitle>);
     expect(container).toMatchSnapshot();
   });
+  it("renders a leftStripped shifted H1 page title ", () => {
+    const { container } = render(
+      <PageTitle leftStripped shif="10rem">
+        Lorem Ipsum
+      </PageTitle>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 describe("<Title />", () => {
   it("renders a H2 title ", () => {
     const { container } = render(<Title>Lorem Ipsum</Title>);
+    expect(container).toMatchSnapshot();
+  });
+  it("renders a shifted H2 title (the stripe should be 10rem to the left)", () => {
+    const { container } = render(<Title shift="10rem">Lorem Ipsum</Title>);
     expect(container).toMatchSnapshot();
   });
 });

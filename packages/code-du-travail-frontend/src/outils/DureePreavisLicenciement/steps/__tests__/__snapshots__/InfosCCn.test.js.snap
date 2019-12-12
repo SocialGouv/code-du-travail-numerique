@@ -38,6 +38,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c2:focus,
@@ -48,6 +49,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
 }
 
 .c3 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;

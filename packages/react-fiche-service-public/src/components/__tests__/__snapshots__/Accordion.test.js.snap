@@ -114,6 +114,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   margin-bottom: 3.2rem;
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0"

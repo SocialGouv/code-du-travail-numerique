@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ArrowLink, theme } from "@socialgouv/react-ui";
+import { ArrowLink, NakedList, theme } from "@socialgouv/react-ui";
 import Link from "next/link";
 import TYPE_REFERENCE from "./typeReference";
 
@@ -42,27 +42,17 @@ const getLink = reference => {
 
 const ReferenceList = ({ references }) => {
   return (
-    <StyledList>
+    <NakedList>
       {references.map(reference => (
-        <StyledListItem key={reference.id}>{getLink(reference)}</StyledListItem>
+        <li key={reference.id}>{getLink(reference)}</li>
       ))}
-    </StyledList>
+    </NakedList>
   );
 };
 
 export default ReferenceList;
 
 const { spacings } = theme;
-
-const StyledList = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-`;
-
-const StyledListItem = styled.li`
-  padding: 0;
-`;
 
 const StyledArrowLink = styled(ArrowLink)`
   padding: ${spacings.base} 0;

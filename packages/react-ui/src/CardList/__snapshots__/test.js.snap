@@ -848,6 +848,12 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 @media (max-width:600px) {
+  .c3 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
   .c6 {
     padding: 2rem 1.6rem;
   }
@@ -1202,6 +1208,12 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 @media (max-width:600px) {
   .c0 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    padding-left: 0;
   }
 }
 
