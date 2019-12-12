@@ -1,10 +1,10 @@
 import React from "react";
-import { Heading } from "./index";
+import { Title } from "./index";
 
 const Explainer = () => {
   return (
     <>
-      <Heading>Qu’est-ce qu’une convention collective&nbsp;?</Heading>
+      <Title>Qu’est-ce qu’une convention collective&nbsp;?</Title>
       <p>
         Une convention collective est un accord négocié entre des organisations
         syndicales de salariés et des organisations d’employeurs.

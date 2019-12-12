@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from "react";
 import styled from "styled-components";
 import { Button, icons, theme } from "@socialgouv/react-ui";
 
-import { Heading } from "./index";
+import { Title } from "./index";
 
 const mobileMediaQuery = `(max-width: ${theme.breakpoints.mobile})`;
 
@@ -36,7 +36,7 @@ export function TextSearch({ containerId }) {
       target="_blank"
       action="https://beta.legifrance.gouv.fr/search/kali#kali"
     >
-      <Heading>Recherche</Heading>
+      <Title>Recherche</Title>
       <p>
         <label htmlFor="search-agreement">
           Effectuez une recherche dans le texte de la convention collective sur

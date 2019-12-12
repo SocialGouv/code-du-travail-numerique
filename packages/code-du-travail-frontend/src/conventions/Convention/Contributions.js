@@ -1,10 +1,11 @@
 import React from "react";
-import { Accordion, Button, Heading as SubHeading } from "@socialgouv/react-ui";
+import styled from "styled-components";
 import Link from "next/link";
+import { Accordion, Button, theme } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import { slugify } from "@cdt/data/slugify";
 
-import { Heading } from "./index";
+import { Title, Heading } from "./index";
 import Html from "../../common/Html";
 import { jsxJoin } from "../../lib/jsxJoin";
 
@@ -23,27 +24,23 @@ function Contributions({ contributions }) {
 
   return (
     <>
-      <Heading>Questions fréquentes sur cette convention collective</Heading>
+      <Title>Questions fréquentes sur cette convention collective</Title>
       {Object.entries(contributionsByTheme).map(([theme, items]) => (
         <div key={theme}>
-          <SubHeading as="h4">{theme}</SubHeading>
-          {items.map(answer => (
-            <Accordion
-              key={answer.slug}
-              items={[
-                {
-                  id: answer.slug,
-                  as: "h6",
-                  title: answer.question,
-                  body: AccordionContent({ ...answer })
-                }
-              ]}
-            />
-          ))}
+          <Heading>{theme}</Heading>
+          <Accordion items={accordionize(items)} />
         </div>
       ))}
     </>
   );
+}
+
+function accordionize(items) {
+  return items.map(item => ({
+    id: item.slug,
+    title: <AccordionHeader>{item.question}</AccordionHeader>,
+    body: AccordionContent({ ...item })
+  }));
 }
 
 function AccordionContent({ answer, slug, references }) {
@@ -98,5 +95,10 @@ function AnswerReferences({ articles }) {
   });
   return <p>Sources {jsxJoin(refs)}</p>;
 }
+
+const { spacings } = theme;
+const AccordionHeader = styled.strong`
+  margin: ${spacings.base} 0;
+`;
 
 export { Contributions };

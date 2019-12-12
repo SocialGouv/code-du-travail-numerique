@@ -1,20 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Convention /> renders 1`] = `
-.c16 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c3 {
+  position: absolute;
+  background-color: #7598d6;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.c2 + .c1 {
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c5 + .c4 {
   border-top: 1px solid #bbcadf;
 }
 
-.c5 {
+.c8 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -25,7 +46,7 @@ exports[`<Convention /> renders 1`] = `
   padding: 0;
 }
 
-.c4 {
+.c7 {
   position: relative;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
@@ -40,14 +61,14 @@ exports[`<Convention /> renders 1`] = `
   color: #7598d6;
 }
 
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c4 {
+[aria-expanded="true"] .c7,
+[aria-selected="true"] .c7 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,32 +85,32 @@ exports[`<Convention /> renders 1`] = `
   cursor: pointer;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c6:hover,
+.c6:focus,
+.c6:focus-within,
+.c6[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c6 {
+.c9 {
   padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c6 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c6 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6.accordion__body--hidden {
+.c9.accordion__body--hidden {
   display: none;
 }
 
-.c13 {
+.c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -126,16 +147,16 @@ exports[`<Convention /> renders 1`] = `
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c16:link,
+.c16:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c16:not([disabled]):hover,
+.c16:not([disabled]):active,
+.c16:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -144,13 +165,13 @@ exports[`<Convention /> renders 1`] = `
   border-color: transparent;
 }
 
-.c13[disabled] {
+.c16[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c17 {
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -187,16 +208,16 @@ exports[`<Convention /> renders 1`] = `
   opacity: 1;
 }
 
-.c17:link,
-.c17:visited {
+.c21:link,
+.c21:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c17:not([disabled]):hover,
-.c17:not([disabled]):active,
-.c17:not([disabled]):focus {
+.c21:not([disabled]):hover,
+.c21:not([disabled]):active,
+.c21:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -205,19 +226,19 @@ exports[`<Convention /> renders 1`] = `
   border-color: #9cb5e2;
 }
 
-.c17[disabled] {
+.c21[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c7 {
+.c10 {
   position: relative;
   overflow: hidden;
 }
 
-.c7:before,
-.c7:after {
+.c10:before,
+.c10:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -231,19 +252,19 @@ exports[`<Convention /> renders 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c7:before {
+.c10:before {
   left: -2rem;
 }
 
-.c7:after {
+.c10:after {
   right: -2rem;
 }
 
-.c8 {
+.c11 {
   overflow-x: auto;
 }
 
-.c9 {
+.c12 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -252,41 +273,41 @@ exports[`<Convention /> renders 1`] = `
   border-spacing: 0;
 }
 
-.c9 caption {
+.c12 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c9 td,
-.c9 th {
+.c12 td,
+.c12 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c9 th {
+.c12 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c9 thead,
-.c9 tfoot {
+.c12 thead,
+.c12 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c9 tfoot {
+.c12 tfoot {
   vertical-align: top;
 }
 
-.c10 {
+.c13 {
   display: inline-block;
   margin-bottom: 2rem;
 }
 
-.c11 {
+.c14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -294,13 +315,13 @@ exports[`<Convention /> renders 1`] = `
   display: flex;
 }
 
-.c12 {
+.c15 {
   -webkit-flex: 1 1 40%;
   -ms-flex: 1 1 40%;
   flex: 1 1 40%;
 }
 
-.c14 {
+.c17 {
   position: absolute;
   top: 0;
   right: 0;
@@ -309,34 +330,50 @@ exports[`<Convention /> renders 1`] = `
   color: #7598d6;
 }
 
-.c15 {
+.c18 {
   width: 3rem;
   height: 3rem;
 }
 
-.c0 {
+.c20 {
+  margin: 1.6rem 0;
+}
+
+.c1 {
+  margin-top: 4rem;
+  margin-bottom: 3.2rem;
+}
+
+.c19 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  margin-top: 4rem;
-  margin-bottom: 3.2rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c15 {
     padding-right: 5.5rem;
   }
 }
 
 <div>
-  <h3
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Qu’est-ce qu’une convention collective ?
-  </h3>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Qu’est-ce qu’une convention collective ?
+    </h2>
+  </header>
   <p>
     Une convention collective est un accord négocié entre des organisations syndicales de salariés et des organisations d’employeurs.
     <br />
@@ -347,7 +384,7 @@ exports[`<Convention /> renders 1`] = `
     data-accordion-component="Accordion"
   >
     <div
-      class="c1 c2"
+      class="c4 c5"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -360,14 +397,14 @@ exports[`<Convention /> renders 1`] = `
           aria-controls="accordion__panel-0"
           aria-disabled="false"
           aria-expanded="false"
-          class="c3"
+          class="c6"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-0"
           role="button"
           tabindex="0"
         >
           <svg
-            class="c4"
+            class="c7"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -383,7 +420,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <h3
-            class="c5"
+            class="c8"
           >
             Plus d’informations sur cette convention collective.
           </h3>
@@ -392,19 +429,19 @@ exports[`<Convention /> renders 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-0"
-        class="c6"
+        class="c9"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-0"
       >
         <div
-          class="c7"
+          class="c10"
         >
           <div
-            class="c8"
+            class="c11"
           >
             <table
-              class="c9"
+              class="c12"
             >
               <tbody>
                 <tr>
@@ -468,13 +505,20 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
   </div>
-  <h3
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Articles par themes
-  </h3>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Articles par themes
+    </h2>
+  </header>
   <label
-    class="c10"
+    class="c13"
     for="article-bloc"
   >
     Sélectionnez un thème parmi ceux traités dans la convention collective pour consulter les articles qui y sont rattachés :
@@ -509,11 +553,18 @@ exports[`<Convention /> renders 1`] = `
     action="https://beta.legifrance.gouv.fr/search/kali#kali"
     target="_blank"
   >
-    <h3
-      class="c0"
+    <header
+      class="c0 c1"
     >
-      Recherche
-    </h3>
+      <h2
+        class="c2"
+      >
+        <div
+          class="c3"
+        />
+        Recherche
+      </h2>
+    </header>
     <p>
       <label
         for="search-agreement"
@@ -522,10 +573,10 @@ exports[`<Convention /> renders 1`] = `
       </label>
     </p>
     <div
-      class="c11"
+      class="c14"
     >
       <input
-        class="c12"
+        class="c15"
         id="search-agreement"
         placeholder="congé exceptionnel, prime"
         type="search"
@@ -562,11 +613,11 @@ exports[`<Convention /> renders 1`] = `
         value="1"
       />
       <button
-        class="c13 c14"
+        class="c16 c17"
         type="submit"
       >
         <svg
-          class="c15"
+          class="c18"
           fill="none"
           viewBox="0 0 32 32"
         >
@@ -578,23 +629,30 @@ exports[`<Convention /> renders 1`] = `
       </button>
     </div>
   </form>
-  <h3
-    class="c0"
+  <header
+    class="c0 c1"
   >
-    Questions fréquentes sur cette convention collective
-  </h3>
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+      Questions fréquentes sur cette convention collective
+    </h2>
+  </header>
   <div>
-    <h4
-      class="c16"
+    <h3
+      class="c19"
     >
       Départ de l'entreprise
-    </h4>
+    </h3>
     <div
       class="accordion"
       data-accordion-component="Accordion"
     >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -607,14 +665,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -629,17 +687,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
                Quelle est la durée de préavis en cas de licenciement ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
@@ -701,20 +759,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -727,14 +780,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -749,17 +802,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
                Quelle est la durée du préavis en cas de démission ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
@@ -798,20 +851,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -824,14 +872,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -846,17 +894,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
                Quelle est la durée de préavis en cas de départ à la retraite ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
@@ -888,20 +936,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -914,14 +957,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -936,17 +979,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
                Quelle est la durée de préavis en cas de mise à la retraite ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
@@ -978,20 +1021,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -1004,14 +1042,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1026,17 +1064,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
@@ -1059,20 +1097,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -1085,14 +1118,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1107,17 +1140,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
@@ -1181,7 +1214,7 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
           >
             Voir la fiche complète
@@ -1191,17 +1224,17 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </div>
   <div>
-    <h4
-      class="c16"
+    <h3
+      class="c19"
     >
       Congés et repos
-    </h4>
+    </h3>
     <div
       class="accordion"
       data-accordion-component="Accordion"
     >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -1214,14 +1247,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1236,17 +1269,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Jours fériés et ponts dans le secteur privé
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
@@ -1295,20 +1328,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/jours-feries-et-ponts-dans-le-secteur-prive"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -1321,14 +1349,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1343,17 +1371,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
@@ -1433,20 +1461,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -1459,14 +1482,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-les-conges-pour-evenements-familiaux"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-les-conges-pour-evenements-familiaux"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1481,17 +1504,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Les congés pour événements familiaux
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-les-conges-pour-evenements-familiaux"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-les-conges-pour-evenements-familiaux"
@@ -1560,7 +1583,7 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/les-conges-pour-evenements-familiaux"
           >
             Voir la fiche complète
@@ -1570,17 +1593,17 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </div>
   <div>
-    <h4
-      class="c16"
+    <h3
+      class="c19"
     >
       Embauche et contrat de travail
-    </h4>
+    </h3>
     <div
       class="accordion"
       data-accordion-component="Accordion"
     >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -1593,14 +1616,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1615,17 +1638,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
@@ -1656,20 +1679,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -1682,14 +1700,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-comment-determiner-lanciennete-du-salarie"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-comment-determiner-lanciennete-du-salarie"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1704,17 +1722,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Comment déterminer l'ancienneté du salarié ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-comment-determiner-lanciennete-du-salarie"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-comment-determiner-lanciennete-du-salarie"
@@ -1797,20 +1815,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/comment-determiner-lanciennete-du-salarie"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -1823,14 +1836,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1845,17 +1858,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
                Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
@@ -1949,20 +1962,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -1975,14 +1983,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1997,17 +2005,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
@@ -2030,20 +2038,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -2056,14 +2059,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -2078,17 +2081,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
                Embauche en contrat d'extra (CDD d'usage)
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
@@ -2113,20 +2116,15 @@ exports[`<Convention /> renders 1`] = `
             Sources 
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/embauche-en-contrat-dextra-cdd-dusage"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -2139,14 +2137,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -2161,17 +2159,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Quelles sont les conditions de cumul d'emplois ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
@@ -2194,7 +2192,7 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelles-sont-les-conditions-de-cumul-demplois"
           >
             Voir la fiche complète
@@ -2204,17 +2202,17 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </div>
   <div>
-    <h4
-      class="c16"
+    <h3
+      class="c19"
     >
       Salaire et Rémunération
-    </h4>
+    </h3>
     <div
       class="accordion"
       data-accordion-component="Accordion"
     >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -2227,14 +2225,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -2249,17 +2247,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
@@ -2275,20 +2273,15 @@ exports[`<Convention /> renders 1`] = `
             Sources 
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -2301,14 +2294,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -2323,17 +2316,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Quelles sont les primes prévues par la convention collective ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
@@ -2376,20 +2369,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quelles-sont-les-primes-prevues-par-la-convention-collective"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -2402,14 +2390,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -2424,17 +2412,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
@@ -2483,7 +2471,7 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
           >
             Voir la fiche complète
@@ -2493,17 +2481,17 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </div>
   <div>
-    <h4
-      class="c16"
+    <h3
+      class="c19"
     >
       Santé, sécurité et conditions de travail
-    </h4>
+    </h3>
     <div
       class="accordion"
       data-accordion-component="Accordion"
     >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -2516,14 +2504,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -2538,17 +2526,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
@@ -2856,20 +2844,15 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
           >
             Voir la fiche complète
           </a>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
       <div
-        class="c1 c2"
+        class="c4 c5"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -2882,14 +2865,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c6"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c7"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -2904,17 +2887,17 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <h6
-              class="c5"
+            <strong
+              class="c20"
             >
               En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
-            </h6>
+            </strong>
           </div>
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-          class="c6"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
@@ -2968,7 +2951,7 @@ exports[`<Convention /> renders 1`] = `
             </a>
           </p>
           <a
-            class="c17"
+            class="c21"
             href="/contribution/en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
           >
             Voir la fiche complète

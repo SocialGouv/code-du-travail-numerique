@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { CardList, Tile, theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
-import { Heading } from "./index";
+import { Title } from "./index";
 import { blocs } from "./blocs.data";
 
 function getBlocLabel(id) {
@@ -24,7 +24,7 @@ function Articles({ blocs, containerId }) {
 
   return (
     <>
-      <Heading>Articles par themes</Heading>
+      <Title>Articles par themes</Title>
       <Label htmlFor="article-bloc">
         Sélectionnez un thème parmi ceux traités dans la convention collective
         pour consulter les articles qui y sont rattachés&nbsp;:
@@ -46,6 +46,8 @@ function Articles({ blocs, containerId }) {
             <Tile
               key={id}
               wide
+              target="_blank"
+              rel="nofollow noopener"
               href={getArticleUrl({ id, containerId })}
               title={`Article ${title}`}
               subtitle={section}

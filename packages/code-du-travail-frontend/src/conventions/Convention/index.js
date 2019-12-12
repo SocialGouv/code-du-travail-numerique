@@ -1,7 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Heading as HeadingUi, theme } from "@socialgouv/react-ui";
+import {
+  Heading as HeadingUi,
+  Title as TitleUi,
+  theme
+} from "@socialgouv/react-ui";
 
 import { Explainer } from "./Explainer";
 import { Info } from "./Info";
@@ -29,19 +33,13 @@ const Convention = ({ convention }) => {
 };
 const { spacings } = theme;
 
-export const Heading = styled(HeadingUi)`
+export const Title = styled(TitleUi)`
   margin-top: ${spacings.larger};
   margin-bottom: ${spacings.large};
 `;
-
-export const List = styled.ul`
-  padding-left: 0;
-  list-style-type: none;
-`;
-
-export const ListItem = styled.li`
+export const Heading = styled(HeadingUi)`
+  margin-top: ${spacings.large};
   margin-bottom: ${spacings.medium};
-  padding: 0;
 `;
 
 Convention.propTypes = {

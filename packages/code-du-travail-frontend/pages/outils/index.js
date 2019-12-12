@@ -44,6 +44,16 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
               </CustomTile>
             </Link>
           ))}
+          <Link href={`/${getRouteBySource(SOURCES.CCN)}/recherche`} passHref>
+            <CustomTile
+              action="Consulter"
+              title="Recherchez votre convention collective"
+              icon={icons.Nego}
+            >
+              Recherchez une convention collective par Entreprise, SIRET, Nom ou
+              numéro IDCC.
+            </CustomTile>
+          </Link>
         </CardList>
         {modeles.length > 0 && (
           <CardList leftStripped title="Nos modèles de documents">
