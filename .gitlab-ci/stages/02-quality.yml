@@ -74,6 +74,7 @@ Test @socialgouv/react-fiche-service-public:
 Test @cdtn/api:
   <<: *quality_stage
   <<: *master_based_stage
+  allow_failure: true
   needs:
     - Register elasticsearch image
     - Register socialgouv/cdtn base image

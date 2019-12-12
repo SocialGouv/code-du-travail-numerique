@@ -1,22 +1,26 @@
 ---
 include:
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_register_stage.yml
+    ref: v3.1.0
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_docker_helm_image_stage.yml
+    ref: v3.1.0
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_docker_kubectl_image_stage.yml
+    ref: v3.1.0
+  #
   - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/01-register-base.yml
   - /.gitlab-ci/stages/02-quality.yml
   - /.gitlab-ci/stages/03-register.yml
   - /.gitlab-ci/stages/04-scan.yml
-  - /.gitlab-ci/stages/05-register-data.yml
-
   - /.gitlab-ci/stages/06-deploy.yml
-
   - /.gitlab-ci/stages/07-notify.yml
-
 
 stages:
   - "Prepare"
   - "Code Quality"
   - "Registration"
-
   - "Post Registration"
   - "Deploy"
   - "Notify Finished Deployment"

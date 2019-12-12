@@ -1,17 +1,31 @@
 #
 
-# .base_register_stage: removed since present on gitlab-ci-yml/base_register_stage.yml
-# TODO check if `stage: `"Registration"` does not cause problem
-
-.build_and_push_stage: &build_and_push_stage
+.register_stage: &register_stage
   extends: .base_register_stage
   stage: "Registration"
   except:
     variables:
       - $PRODUCTION
 
+#
+
+Register socialgouv/cdtn base image:
+  <<: *register_stage
+  stage: "Prepare"
+  variables:
+    CONTEXT: .
+    IMAGE_NAME: $CI_REGISTRY_IMAGE
+
+Register elasticsearch image:
+  <<: *register_stage
+  stage: "Prepare"
+  variables:
+    CONTEXT: ./docker/elasticsearch
+    DOCKER_BUILD_ARGS: ""
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
+
 Register api image:
-  <<: *build_and_push_stage
+  <<: *register_stage
   variables:
     CONTEXT: packages/code-du-travail-api
     DOCKER_BUILD_ARGS: >-
@@ -20,7 +34,7 @@ Register api image:
     IMAGE_NAME: $CI_REGISTRY_IMAGE/api
 
 Register frontend image:
-  <<: *build_and_push_stage
+  <<: *register_stage
   variables:
     CONTEXT: packages/code-du-travail-frontend
     DOCKER_BUILD_ARGS: >-
@@ -29,7 +43,8 @@ Register frontend image:
     IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
 
 Register nlp image:
-  <<: *build_and_push_stage
+  <<: *register_stage
+  needs: []
   variables:
     CONTEXT: packages/code-du-travail-nlp
     DOCKER_BUILD_ARGS: >-
@@ -37,3 +52,15 @@ Register nlp image:
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
       --build-arg SUGGEST_DATA_URL=$SUGGEST_DATA_URL
     IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
+
+Register data image:
+  <<: *register_stage
+  stage: "Post Registration"
+  needs:
+    - Register nlp image
+  variables:
+    CONTEXT: packages/code-du-travail-data
+    DOCKER_BUILD_ARGS: >-
+      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/data

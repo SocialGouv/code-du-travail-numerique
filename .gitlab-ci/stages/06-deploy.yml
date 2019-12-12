@@ -1,14 +1,15 @@
 #
 
 include:
-  #
-  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v3.0.7/base_create_namespace_stage.yml"
-  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v3.0.7/base_deploy_nodejs_chart_stage.yml"
-  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v3.0.7/base_deploy_hpa_chart_stage.yml"
-  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v3.0.7/base_docker_helm_image_stage.yml"
-  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v3.0.7/base_docker_kubectl_image_stage.yml"
-  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v3.0.7/base_semantic_release_stage.yml"
-  - "https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/v3.0.7/base_register_stage.yml"
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_create_namespace_stage.yml
+    ref: v3.1.0
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_deploy_nodejs_chart_stage.yml
+    ref: v3.1.0
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_deploy_hpa_chart_stage.yml
+    ref: v3.1.0
 
 #
 
