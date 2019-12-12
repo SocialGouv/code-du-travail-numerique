@@ -2,13 +2,15 @@
 
 exports[`return theme data for slug 5-questions-reponses-sur-la-sante-au-travail 1`] = `
 Object {
-  "_id": "8KWi-W4Bqv02PjDyFoRf",
-  "_index": "fiches_ministere_du_travail-1576146155972",
+  "_id": "0",
+  "_index": "cdtn_fiches_ministere_du_travail_test",
   "_score": 0,
   "_source": Object {
     "date": "23/05/2017",
     "description": "1) Visite d'information et de prévention : pour qui ? Depuis le 1er janvier 2017, la visite d'information et de prévention vient remplacer la (...)",
-    "intro": "",
+    "intro": "<dl class=\\"spip_document_432939 spip_documents spip_documents_center\\">
+<dt><img src=\\"https://travail-emploi.gouv.fr/IMG/png/caroussel---santeautravail.png\\" width=\\"720\\" height=\\"420\\" alt=\\"\\"></dt>
+</dl>",
     "sections": Array [
       Object {
         "anchor": "t1-Visite-d-information-et-de-prevention-pour-qui",
@@ -53,29 +55,29 @@ Si l’avis d’inaptitude mentionne expressément que tout maintien du salarié
   "_type": "_doc",
   "relatedItems": Array [
     Object {
-      "slug": "oppbtp-deux-outils-digitaux-innovants-dans-laccompagnement-a-la-prevention-des-risques-professionnels-aupres-des-tpe-pme#PreventionBTP-en-EnDirect-un-service-d-assistance-en-ligne-pour-obtenir-nbsp",
+      "slug": "la-demission#Comment-presenter-une-demission",
       "source": "fiches_ministere_travail",
-      "title": "OPPBTP : préventionbtp en endirect : un service d’assistance en ligne pour obtenir des réponses immédiates",
+      "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "slug": "amiante#Metrologie",
-      "source": "fiches_ministere_travail",
-      "title": "Amiante : métrologie",
+      "slug": "demission-dun-salarie",
+      "source": "fiches_service_public",
+      "title": "Démission d'un salarié",
     },
     Object {
-      "slug": "questions-reponses-le-comite-social-et-economique",
-      "source": "fiches_ministere_travail",
-      "title": "",
+      "slug": "demission-dune-assistante-maternelle",
+      "source": "fiches_service_public",
+      "title": "Démission d'une assistante maternelle",
     },
     Object {
-      "slug": "comment-decrocher-un-contrat-en-apprentissage#J-ai-decroche-un-entretien-d-embauche-maintenant-que-dois-je-faire-nbsp",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",
-      "title": "Comment décrocher un contrat en apprentissage ? : j’ai décroché un entretien d’embauche, maintenant que dois-je faire ?",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
     Object {
-      "slug": "apprentissage-questions-reponses-sur-la-remuneration-des-apprentis",
-      "source": "fiches_ministere_travail",
-      "title": "",
+      "slug": "preavis-demission",
+      "source": "outils",
+      "title": "Simulateur de durée de préavis de démission",
     },
   ],
 }

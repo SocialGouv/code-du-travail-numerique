@@ -44,7 +44,6 @@ class Fiche extends React.Component {
     } = data;
 
     const untitledSection = sections.find(section => !section.title);
-    /* .map(({ html, slug }) => <Html key={slug}>{html}</Html>); */
     const titledSections = sections
       .filter(section => section.title)
       .map(({ anchor, html, tag, title }) => ({

@@ -4,49 +4,17 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 62.4775,
+      "_score": 20.589056,
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
       "source": "code_du_travail",
       "title": "R1225-18",
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
-    Object {
-      "_score": 30.221498,
-      "description": "Lorsque des naissances multiples sont prévues, la période de congé de maternité varie dans les conditions suivantes : 1° Pour la naissance de deux enfants, cette période commence douze semaines avant la date présumée de l'accouchement et se termine vingt-deux semaines après la date de l'accouchement. La période de suspension antérieure à la date présumée de l'accouchement peut être augmentée d'une durée maximale de quatre semaines. La période de vingt-deux semaines postérieure à l'accouchement est alors réduite d'autant ; 2° Pour la naissance de trois enfants ou plus, cette période commence vingt-quatre semaines avant la date présumée de l'accouchement et se termine vingt-deux semaines après la date de l'accouchement",
-      "slug": "l1225-18",
-      "source": "code_du_travail",
-      "title": "L1225-18",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006900898&cidTexte=LEGITEXT000006072050",
-    },
-    Object {
-      "_score": 10.597134,
-      "description": "Le mandataire prévu à l'article L. 1441-18 dépose la ou les listes de l'organisation pour chaque conseil de prud'hommes du département au titre duquel il est mandaté",
-      "slug": "r1441-18",
-      "source": "code_du_travail",
-      "title": "R1441-18",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033232006&cidTexte=LEGITEXT000006072050",
-    },
-    Object {
-      "_score": 10.304581,
-      "description": "Les institutions mentionnées à l'article L. 3253-14 informent, en cas de demande, toutes autres institutions de garantie des Etats membres de la Communauté européenne ou de l'Espace économique européen sur la législation et la réglementation nationales applicables en cas de mise en œuvre d'une procédure d'insolvabilité définie aux articles L. 3253-18-1 et L. 3253-18-2",
-      "slug": "l3253-18-9",
-      "source": "code_du_travail",
-      "title": "L3253-18-9",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018050525&cidTexte=LEGITEXT000006072050",
-    },
-    Object {
-      "_score": 10.13496,
-      "description": "Les articles L. 3253-7 , L. 3253-10 à L. 3253-13 et L. 3253-17 sont applicables aux procédures définies aux articles L. 3253-18-1 et L. 3253-18-2. Les jugements mentionnés à l'article L. 3253-12 s'entendent de toute décision équivalente prise par l'autorité étrangère compétente. Les institutions mentionnées à l'article L. 3253-14 sont subrogées dans les droits des salariés pour lesquels elles ont réalisé des avances",
-      "slug": "l3253-18-7",
-      "source": "code_du_travail",
-      "title": "L3253-18-7",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018050532&cidTexte=LEGITEXT000006072050",
-    },
   ],
   "documents": Array [
     Object {
-      "_score": 1.2591128,
+      "_score": 1.2627374,
       "algo": "semantic",
       "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
       "slug": "la-demission#Comment-presenter-une-demission",
@@ -54,151 +22,7 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "_score": 9.856446,
-      "algo": "fulltext",
-      "description": "L’employeur a l’obligation de reclasser la salariée enceinte lorsqu’elle est exposée à certains risques déterminés par décret.",
-      "slug": "la-protection-des-femmes-enceintes-et-les-risques-lies-a-la-grossesse#Protection-contre-certains-risques-en-cas-de-grossesse",
-      "source": "fiches_ministere_travail",
-      "title": "La protection des femmes enceintes et les risques liés à la grossesse : protection contre certains risques en cas de grossesse",
-    },
-    Object {
-      "_score": 1.2327001,
-      "algo": "semantic",
-      "description": "Calculez la durée de préavis de démission",
-      "slug": "preavis-demission",
-      "source": "outils",
-      "title": "Préavis de démission",
-    },
-    Object {
-      "_score": 9.269246,
-      "algo": "fulltext",
-      "description": "Le code du travail prévoit la durée maximale de la période d’essai. Il précise que, dans certains cas, la période d’essai est automatiquement réduite ou supprimée.
-En effet, après la fin du contrat d’apprentissage, il ne peut pas y avoir de période d’essai en cas d’embauche en CDI, CDD ou contrat de mission (intérim), sauf si une convention collective ou un accord d’entreprise en prévoit une.
-
-La durée de la période d’essai normalement prévue est automatiquement réduite dans les cas suivants :
-
-En cas de poursuite du contrat de travail en CDI après la fin d’un CDD, la durée du CDD est déduite de la période d’essai du CDI ;
-
-En cas d’embauche après la fin du contrat de mission (intérim), la durée des missions effectuées par le salarié dans l'entreprise au cours des 3 mois précédant l'embauche est déduite de la période d'essai ;
-
-En cas d’embauche après un stage intégré à un cursus pédagogique réalisé lors de la dernière année d'études, la durée de ce stage est déduite de la période d’essai, dans la limite de la moitié de la durée normalement applicable. Une convention collective ou un accord d’entreprise peut prévoir une mesure plus avantageuse pour le salarié.
-
-La durée de la période d'essai varie selon le type de contrat de travail. 
-
-Sources :
-Article L1243-11 du code du travail
-Article L6222-16 du code du travail
-Article L1251-38 du code du travail
-Article L1221-24 du code du travail
-
-
-
-La période d’essai, appelée période d’essai initiale, peut être renouvelée une fois. Sa durée maximale varie en fonction de la catégorie professionnelle du salarié.
-
-Ouvriers et Employés : 
-
-Durée de la période d’essai initiale : 2 mois ;
-
-Durée totale de la période d’essai avec renouvellement : 4 mois.
-
-Agents de maîtrise :
-
-Durée de la période d’essai initiale : 3 mois ;
-
-Durée totale de la période d’essai avec renouvellement : 6 mois.
-
-Cadres :
-
-Durée de la période d’essai initiale : 4 mois ;
-
-Durée totale de la période d’essai avec renouvellement : 8 mois.
-
-
-
-Si une convention ou un accord collectif ou le contrat de travail prévoit des durées différentes, l’employeur et le salarié appliquent :
-
-La durée de la période d’essai prévue par une convention ou un accord de branche conclu avant le 26 juin 2008, si cette durée est plus longue que celle prévue par le code du travail ;
-
-ou
-
-La durée de la période d’essai initiale de l’accord d’entreprise, si elle est plus longue que celle prévue par une convention ou un accord de branche et plus courte que celle prévue par le code du travail, pour les contrats de travail conclus depuis le 1er janvier 2018.
-
-L'employeur et le salarié peuvent fixer, dans le contrat de travail, une durée plus courte.
-
-
-
-Sources :
-Article L1221-19 du code du travail
-Article L1221-21 du code du travail
-Article L1221-22 du code du travail
-
-
-
-La durée de la période d’essai dépend de la durée du CDD. Si le CDD n’a pas de terme précis, la durée de la période d’essai est fixée par rapport à la durée minimale du CDD.
-
-CDD de 6 mois maximum : 1 jour par semaine de travail, sans dépasser 2 semaines de période d’essai ;
-
-CDD de plus de 6 mois : 1 mois maximum.
-
-
-
-Si une convention ou un accord collectif de branche ou d’entreprise prévoit une durée différente de celle prévue par le code du travail, l'employeur et le salarié appliquent la durée la plus courte. 
-
-Le contrat de travail peut toujours prévoir une durée de période d'essai plus courte, qui s’appliquera. 
-
-
-
-Source :
-Article L1242-10 du code du travail
-
-
-
-La durée de la période d’essai est fixée par une convention ou accord de branche, ou à défaut par un accord d’entreprise, ou à défaut par le code du travail. 
-
-La durée de la période d’essai dépend de la durée du contrat de mission (intérim) :
-
-Contrat de mission de 1 mois maximum : 2 jours ;
-
-Contrat de mission de 1 à 2 mois : 3 jours ;
-
-Contrat de mission de plus de 2 mois : 5 jours.
-
-
-
-Si une convention ou un accord collectif de branche ou d’entreprise prévoit une durée différente de celle prévue par le code du travail, l'employeur et le salarié appliquent la durée la plus courte. 
-
-Le contrat de travail peut toujours prévoir une durée de période d'essai plus courte, qui s’appliquera. 
-
-
-
-Source :
-Article L1251-14 du code du travail
-
-
-
-Source :
-Article L6222-18 du code du travail
-
-
-
-La durée de la période d’essai du contrat de travail à temps partiel est celle du CDD ou du CDI, selon le type de contrat qui a été conclu. La période d'essai d'un salarié à temps partiel ne peut pas avoir une durée calendaire supérieure à celle du salarié à temps complet.
-
-Source : 
-Article L3123-5 du code du travail
-
-
-
-La durée de la période d’essai du contrat de professionnalisation est celle du CDD ou du CDI, selon le type de contrat conclu.
-
-
-
-La durée de la période d’essai du contrat de portage salarial est celle du CDD ou du CDI, selon le type de contrat conclu.",
-      "slug": "quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
-      "source": "contributions",
-      "title": "Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?",
-    },
-    Object {
-      "_score": 1.1892301,
+      "_score": 1.1894766,
       "algo": "semantic",
       "breadcrumbs": Array [
         Object {
@@ -217,45 +41,58 @@ La durée de la période d’essai du contrat de portage salarial est celle du C
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 8.743978,
-      "algo": "fulltext",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "6-sante-securite-et-conditions-de-travail",
-          "title": "Santé, sécurité et conditions de travail",
-        },
-        Object {
-          "slug": "64-travailleurs-et-secteurs-specifiques",
-          "title": "Travailleurs et secteurs spécifiques",
-        },
-        Object {
-          "slug": "641-jeunes-travailleurs",
-          "title": "Jeunes travailleurs",
-        },
-      ],
-      "description": "Le travail de nuit est interdit aux mineurs, qu'ils soient salariés ou stagiaires en milieu professionnel. Toutefois, des dérogations sont possibles dans certains secteurs d'activité ou dans des situations d'urgence. Les règles sont différentes selon l'age du jeune travailleur.",
-      "slug": "travail-de-nuit-dun-jeune-de-moins-de-18-ans",
-      "source": "fiches_service_public",
-      "title": "Travail de nuit d'un jeune de moins de 18 ans",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F1688",
+      "_score": 1.1810381,
+      "algo": "semantic",
+      "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
     Object {
-      "_score": 1.1875747,
+      "_score": 1.1642654,
       "algo": "semantic",
-      "description": "Sauf dans certaines circonstances (par exemple, démission à la suite d’une grossesse, la salariée devant toutefois alerter son employeur quinze jours avant la date effective de sa démission,), le préavis, lorsqu’il est prévu, doit toujours être effectué. Si le salarié ne l’exécute pas, son employeur peut lui en réclamer le paiement devant le conseil de prud’hommes.",
-      "slug": "la-demission#Faut-il-respecter-un-preavis",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : faut-il respecter un préavis ?",
+      "breadcrumbs": Array [
+        Object {
+          "slug": "8-depart-de-lentreprise",
+          "title": "Départ de l'entreprise",
+        },
+        Object {
+          "slug": "81-demission",
+          "title": "Démission",
+        },
+      ],
+      "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
+      "slug": "demission-dune-assistante-maternelle",
+      "source": "fiches_service_public",
+      "title": "Démission d'une assistante maternelle",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
+    },
+    Object {
+      "_score": 1.1540345,
+      "algo": "semantic",
+      "description": "Connaître la durée du préavis de démission",
+      "slug": "preavis-demission",
+      "source": "outils",
+      "title": "Simulateur de durée de préavis de démission",
+    },
+    Object {
+      "_score": 1.1081983,
+      "algo": "semantic",
+      "description": "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
+      "slug": "indemnite-licenciement",
+      "source": "outils",
+      "title": "Simulateur d'indemnité de licenciement",
+    },
+    Object {
+      "_score": 1.0708303,
+      "algo": "semantic",
+      "description": "La rupture anticipée du contrat à déterminée n’est possible que dans certains cas. La rupture d’un commun accord est l’un de ces cas : ce modèle permet à l’une des parties de demander à l’autre, la rupture du CDD.",
+      "slug": "modele-rupture-dun-commun-accord-dun-contrat-a-duree-determinee",
+      "source": "modeles_de_courriers",
+      "title": "Modèle : Rupture d’un commun accord d’un contrat à durée déterminée",
     },
   ],
   "themes": Array [
-    Object {
-      "_score": 3.100482,
-      "algo": "fulltext",
-      "slug": "313-duree-du-travail-dun-jeune-avant-18-ans",
-      "source": "themes",
-      "title": "Durée du travail d'un jeune avant 18 ans",
-    },
     Object {
       "_score": 1.1876618,
       "algo": "semantic",
@@ -264,25 +101,11 @@ La durée de la période d’essai du contrat de portage salarial est celle du C
       "title": "Démission",
     },
     Object {
-      "_score": 1.1696222,
+      "_score": 1.1013293,
       "algo": "semantic",
-      "slug": "84-licenciement",
+      "slug": "1-embauche-et-contrat-de-travail",
       "source": "themes",
-      "title": "Licenciement",
-    },
-    Object {
-      "_score": 1.1550603,
-      "algo": "semantic",
-      "slug": "843-licenciement-pour-inaptitude",
-      "source": "themes",
-      "title": "Licenciement pour inaptitude",
-    },
-    Object {
-      "_score": 1.1475254,
-      "algo": "semantic",
-      "slug": "842-licenciement-pour-motif-personnel",
-      "source": "themes",
-      "title": "Licenciement pour motif personnel",
+      "title": "Embauche et contrat de travail",
     },
   ],
 }
@@ -292,17 +115,7 @@ exports[`returns search results for demission from datafiller 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 12.476724,
-      "algo": "pre-qualified",
-      "description": "Le contrat de travail à durée indéterminée peut être rompu à l'initiative de l'employeur ou du salarié, ou d'un commun accord, dans les conditions prévues par les dispositions du présent titre. Ces dispositions ne sont pas applicables pendant la période d'essai",
-      "slug": "l1231-1",
-      "source": "code_du_travail",
-      "title": "L1231-1",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000019071194&cidTexte=LEGITEXT000006072050",
-    },
-    Object {
-      "_score": 10.248782,
-      "algo": "pre-qualified",
+      "_score": 2.6640253,
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
       "source": "code_du_travail",
@@ -310,34 +123,17 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 10.687358,
-      "algo": "pre-qualified",
-      "description": "La rupture d'un contrat de travail à durée indéterminée à l'initiative du salarié ouvre droit, si elle est abusive, à des dommages et intérêts pour l'employeur. En cas de litige, le juge se prononce conformément aux dispositions de l'article L. 1235-1 . Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
-      "slug": "l1237-2",
+      "_score": 2.7267747,
+      "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
+      "slug": "r1225-18",
       "source": "code_du_travail",
-      "title": "L1237-2",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901175&cidTexte=LEGITEXT000006072050",
-    },
-    Object {
-      "_score": 21.956333,
-      "description": "Le membre de la commission qui désire renoncer à son mandat adresse sa  démission au garde des sceaux, ministre de la justice. La démission  n'est définitive qu'après acceptation par le ministre",
-      "slug": "r1442-22-4",
-      "source": "code_du_travail",
-      "title": "R1442-22-4",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
-    },
-    Object {
-      "_score": 20.936636,
-      "description": "Le conseiller qui renonce à son mandat adresse sa démission au président du conseil de prud'hommes et en informe le procureur  général près la cour d'appel par lettre recommandée avec avis de réception. La démission devient définitive à compter d'un mois après l'expédition de cette lettre",
-      "slug": "d1442-17",
-      "source": "code_du_travail",
-      "title": "D1442-17",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033232120&cidTexte=LEGITEXT000006072050",
+      "title": "R1225-18",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
   ],
   "documents": Array [
     Object {
-      "_score": 20.418674,
+      "_score": 7.277507,
       "algo": "pre-qualified",
       "breadcrumbs": Array [
         Object {
@@ -356,7 +152,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 33.878044,
+      "_score": 11.7543745,
       "algo": "pre-qualified",
       "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
       "slug": "la-demission#Comment-presenter-une-demission",
@@ -364,122 +160,7 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "_score": 33.609592,
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "4-conges-et-repos",
-          "title": "Congés et repos",
-        },
-        Object {
-          "slug": "41-conges",
-          "title": "Congés",
-        },
-        Object {
-          "slug": "1-conges-payes",
-          "title": "Congés payés",
-        },
-      ],
-      "description": "Le salarié peut démissionner pendant ses congés payés, mais le préavis commence à courir à l'issue de ses congés (sauf accord avec l'employeur).",
-      "slug": "peut-on-demissionner-pendant-ses-conges-payes",
-      "source": "fiches_service_public",
-      "title": "Peut-on démissionner pendant ses congés payés ?",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F12598",
-    },
-    Object {
-      "_score": 31.735996,
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "8-depart-de-lentreprise",
-          "title": "Départ de l'entreprise",
-        },
-        Object {
-          "slug": "81-demission",
-          "title": "Démission",
-        },
-      ],
-      "description": "Oui. Toute salariée peut démissionner pendant un congé maternité, dans les conditions habituelles prévues en matière de démission.",
-      "slug": "peut-on-demissionner-pendant-un-conge-maternite",
-      "source": "fiches_service_public",
-      "title": "Peut-on démissionner pendant un congé maternité ?",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F1730",
-    },
-    Object {
-      "_score": 31.667423,
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "8-depart-de-lentreprise",
-          "title": "Départ de l'entreprise",
-        },
-        Object {
-          "slug": "81-demission",
-          "title": "Démission",
-        },
-      ],
-      "description": "Tout salarié peut démissionner pendant son congé parental, dans le respect de la procédure habituelle prévue en matière de démission.",
-      "slug": "peut-on-demissionner-pendant-un-conge-parental",
-      "source": "fiches_service_public",
-      "title": "Peut-on démissionner pendant un congé parental ?",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F540",
-    },
-    Object {
-      "_score": 32.544865,
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "8-depart-de-lentreprise",
-          "title": "Départ de l'entreprise",
-        },
-        Object {
-          "slug": "81-demission",
-          "title": "Démission",
-        },
-      ],
-      "description": "Le salarié peut démissionner pendant un arrêt maladie, sauf s'il est en période d'essai.",
-      "slug": "peut-on-demissionner-pendant-un-arret-maladie",
-      "source": "fiches_service_public",
-      "title": "Peut-on démissionner pendant un arrêt maladie ?",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F31679",
-    },
-    Object {
-      "_score": 40.237045,
-      "algo": "pre-qualified",
-      "description": "Oui, mais à condition de justifier d’une embauche en contrat à durée indéterminée (CDI) et de respecter un préavis. Il ne s’agit d’ailleurs pas d’une démission (ce terme étant réservé à la rupture par le salarié de son contrat à durée indéterminée), mais d’une rupture anticipée autorisée d’un CDD.",
-      "slug": "la-demission#Le-salarie-peut-il-lt-lt-demissionner-dans-le-cadre-d-un-contrat-a-nbsp",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : le salarié peut-il « démissionner » dans le cadre d’un contrat à durée déterminée ?",
-    },
-    Object {
-      "_score": 30.48274,
-      "algo": "pre-qualified",
-      "description": "Sauf dans certaines circonstances (par exemple, démission à la suite d’une grossesse, la salariée devant toutefois alerter son employeur quinze jours avant la date effective de sa démission,), le préavis, lorsqu’il est prévu, doit toujours être effectué. Si le salarié ne l’exécute pas, son employeur peut lui en réclamer le paiement devant le conseil de prud’hommes.",
-      "slug": "la-demission#Faut-il-respecter-un-preavis",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : faut-il respecter un préavis ?",
-    },
-    Object {
-      "_score": 33.34332,
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "8-depart-de-lentreprise",
-          "title": "Départ de l'entreprise",
-        },
-        Object {
-          "slug": "81-demission",
-          "title": "Démission",
-        },
-      ],
-      "description": "Le salarié d'un particulier employeur qui souhaite démissionner doit informer son employeur par écrit et respecter un préavis. Dans certains cas, il peut bénéficier d'une indemnité compensatrice de préavis. L'employeur doit lui remettre des documents de fin de contrat.",
-      "slug": "demission-du-salarie-a-domicile-employe-par-un-particulier",
-      "source": "fiches_service_public",
-      "title": "Démission du salarié à domicile employé par un particulier",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F32431",
-    },
-    Object {
-      "_score": 29.445469,
+      "_score": 10.619121,
       "algo": "pre-qualified",
       "breadcrumbs": Array [
         Object {
@@ -497,41 +178,6 @@ Object {
       "title": "Démission d'une assistante maternelle",
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
-    Object {
-      "_score": 36.526356,
-      "algo": "pre-qualified",
-      "description": "Le refus du salarié d’accepter un changement des conditions de travail ne constitue pas une démission. Il s’agit d’un manquement aux obligations du contrat que l’employeur peut sanctionner, au besoin, par un licenciement pour faute. Pour plus de précisions, on se reportera à la fiche consacrée à la modification du contrat de travail.",
-      "slug": "la-demission#Le-refus-par-le-salarie-d-accepter-un-changement-des-conditions-de-nbsp",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : le refus, par le salarié, d’accepter un changement des conditions de travail est-il une démission ?",
-    },
-    Object {
-      "_score": 34.017227,
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "8-depart-de-lentreprise",
-          "title": "Départ de l'entreprise",
-        },
-        Object {
-          "slug": "81-demission",
-          "title": "Démission",
-        },
-      ],
-      "description": "Le salarié qui démissionne n'a pas droit aux allocations chômage (ARE), sauf cas particuliers (démission légitime, reliquat de droits...).",
-      "slug": "peut-on-percevoir-lallocation-chomage-en-cas-de-demission",
-      "source": "fiches_service_public",
-      "title": "Peut-on percevoir l'allocation chômage en cas de démission ?",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F89",
-    },
-    Object {
-      "_score": 29.220596,
-      "algo": "pre-qualified",
-      "description": "La loi n’en prévoit pas. En revanche, certaines conventions collectives organisent en faveur des salariés licenciés (rarement pour ceux qui donnent leur démission) des temps d’absence - rémunérés ou non - pour rechercher un emploi pendant le préavis. Il convient donc, sur ce point, de se reporter aux conventions ou aux accords collectifs applicables dans l’entreprise.",
-      "slug": "la-demission#Et-les-heures-pour-recherche-d-emploi",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : et les heures pour recherche d’emploi ?",
-    },
   ],
   "themes": Array [
     Object {
@@ -542,25 +188,11 @@ Object {
       "title": "Démission",
     },
     Object {
-      "_score": 1.1696222,
+      "_score": 1.1013293,
       "algo": "semantic",
-      "slug": "84-licenciement",
+      "slug": "1-embauche-et-contrat-de-travail",
       "source": "themes",
-      "title": "Licenciement",
-    },
-    Object {
-      "_score": 1.1550603,
-      "algo": "semantic",
-      "slug": "843-licenciement-pour-inaptitude",
-      "source": "themes",
-      "title": "Licenciement pour inaptitude",
-    },
-    Object {
-      "_score": 1.1475254,
-      "algo": "semantic",
-      "slug": "842-licenciement-pour-motif-personnel",
-      "source": "themes",
-      "title": "Licenciement pour motif personnel",
+      "title": "Embauche et contrat de travail",
     },
   ],
 }
@@ -570,49 +202,25 @@ exports[`returns search results for demission from elastic 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 21.956333,
-      "description": "Le membre de la commission qui désire renoncer à son mandat adresse sa  démission au garde des sceaux, ministre de la justice. La démission  n'est définitive qu'après acceptation par le ministre",
-      "slug": "r1442-22-4",
+      "_score": 2.7267747,
+      "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
+      "slug": "r1225-18",
       "source": "code_du_travail",
-      "title": "R1442-22-4",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
+      "title": "R1225-18",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 20.936636,
-      "description": "Le conseiller qui renonce à son mandat adresse sa démission au président du conseil de prud'hommes et en informe le procureur  général près la cour d'appel par lettre recommandée avec avis de réception. La démission devient définitive à compter d'un mois après l'expédition de cette lettre",
-      "slug": "d1442-17",
+      "_score": 2.6640253,
+      "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
+      "slug": "l1237-1",
       "source": "code_du_travail",
-      "title": "D1442-17",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033232120&cidTexte=LEGITEXT000006072050",
-    },
-    Object {
-      "_score": 18.921444,
-      "description": "L'employeur qui démissionne de l'organisation ou du groupement signataire postérieurement à la signature de la convention ou de l'accord demeure lié par ces derniers",
-      "slug": "l2262-3",
-      "source": "code_du_travail",
-      "title": "L2262-3",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901812&cidTexte=LEGITEXT000006072050",
-    },
-    Object {
-      "_score": 18.893137,
-      "description": "Le conseiller prud'homme qui, en cours de mandat, devient employeur alors qu'il siégeait en tant que salarié, ou devient salarié alors qu'il siégeait en tant qu'employeur, doit le déclarer au procureur général près la cour d'appel et au président du conseil de prud'hommes. Cette déclaration entraîne sa démission de plein droit. A défaut d'une telle déclaration, le procureur général près la cour d'appel saisit la chambre sociale de la cour d'appel laquelle, après avoir invité le membre du conseil en cause à justifier de sa qualité actuelle, prononce, s'il y a lieu, sa démission d'office",
-      "slug": "d1442-18",
-      "source": "code_du_travail",
-      "title": "D1442-18",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000033232118&cidTexte=LEGITEXT000006072050",
-    },
-    Object {
-      "_score": 18.59665,
-      "description": "Lorsqu'il démissionne d'une organisation signataire d'une convention ou d'un accord, l'employeur en informe sans délai le personnel dans les conditions définies à l'article L. 2262-6 ",
-      "slug": "l2262-7",
-      "source": "code_du_travail",
-      "title": "L2262-7",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901816&cidTexte=LEGITEXT000006072050",
+      "title": "L1237-1",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
     },
   ],
   "documents": Array [
     Object {
-      "_score": 1.2591128,
+      "_score": 1.2627374,
       "algo": "both",
       "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
       "slug": "la-demission#Comment-presenter-une-demission",
@@ -620,7 +228,7 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "_score": 42.85269,
+      "_score": 7.800238,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -639,62 +247,24 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 1.2327001,
+      "_score": 7.500506,
       "algo": "both",
-      "description": "Calculez la durée de préavis de démission",
+      "description": "Connaître la durée du préavis de démission",
       "slug": "preavis-demission",
       "source": "outils",
-      "title": "Préavis de démission",
+      "title": "Simulateur de durée de préavis de démission",
     },
     Object {
-      "_score": 1.1875747,
+      "_score": 1.1810381,
       "algo": "both",
-      "description": "Sauf dans certaines circonstances (par exemple, démission à la suite d’une grossesse, la salariée devant toutefois alerter son employeur quinze jours avant la date effective de sa démission,), le préavis, lorsqu’il est prévu, doit toujours être effectué. Si le salarié ne l’exécute pas, son employeur peut lui en réclamer le paiement devant le conseil de prud’hommes.",
-      "slug": "la-demission#Faut-il-respecter-un-preavis",
+      "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",
-      "title": "La démission : faut-il respecter un préavis ?",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
     Object {
-      "_score": 36.71627,
-      "algo": "fulltext",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "8-depart-de-lentreprise",
-          "title": "Départ de l'entreprise",
-        },
-        Object {
-          "slug": "81-demission",
-          "title": "Démission",
-        },
-      ],
-      "description": "Le salarié d'un particulier employeur qui souhaite démissionner doit informer son employeur par écrit et respecter un préavis. Dans certains cas, il peut bénéficier d'une indemnité compensatrice de préavis. L'employeur doit lui remettre des documents de fin de contrat.",
-      "slug": "demission-du-salarie-a-domicile-employe-par-un-particulier",
-      "source": "fiches_service_public",
-      "title": "Démission du salarié à domicile employé par un particulier",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F32431",
-    },
-    Object {
-      "_score": 1.1836644,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "slug": "8-depart-de-lentreprise",
-          "title": "Départ de l'entreprise",
-        },
-        Object {
-          "slug": "81-demission",
-          "title": "Démission",
-        },
-      ],
-      "description": "Le salarié peut revenir sur sa démission. La rétractation s'impose à l'employeur si la volonté réelle de démissionner du salarié est remise en cause.",
-      "slug": "le-salarie-peut-il-revenir-sur-sa-demission",
-      "source": "fiches_service_public",
-      "title": "Le salarié peut-il revenir sur sa démission ?",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F131",
-    },
-    Object {
-      "_score": 36.122364,
-      "algo": "fulltext",
+      "_score": 1.1642654,
+      "algo": "both",
       "breadcrumbs": Array [
         Object {
           "slug": "8-depart-de-lentreprise",
@@ -711,6 +281,22 @@ Object {
       "title": "Démission d'une assistante maternelle",
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
+    Object {
+      "_score": 1.1081983,
+      "algo": "semantic",
+      "description": "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
+      "slug": "indemnite-licenciement",
+      "source": "outils",
+      "title": "Simulateur d'indemnité de licenciement",
+    },
+    Object {
+      "_score": 1.0708303,
+      "algo": "semantic",
+      "description": "La rupture anticipée du contrat à déterminée n’est possible que dans certains cas. La rupture d’un commun accord est l’un de ces cas : ce modèle permet à l’une des parties de demander à l’autre, la rupture du CDD.",
+      "slug": "modele-rupture-dun-commun-accord-dun-contrat-a-duree-determinee",
+      "source": "modeles_de_courriers",
+      "title": "Modèle : Rupture d’un commun accord d’un contrat à durée déterminée",
+    },
   ],
   "themes": Array [
     Object {
@@ -721,25 +307,11 @@ Object {
       "title": "Démission",
     },
     Object {
-      "_score": 1.1696222,
+      "_score": 1.1013293,
       "algo": "semantic",
-      "slug": "84-licenciement",
+      "slug": "1-embauche-et-contrat-de-travail",
       "source": "themes",
-      "title": "Licenciement",
-    },
-    Object {
-      "_score": 1.1550603,
-      "algo": "semantic",
-      "slug": "843-licenciement-pour-inaptitude",
-      "source": "themes",
-      "title": "Licenciement pour inaptitude",
-    },
-    Object {
-      "_score": 1.1475254,
-      "algo": "semantic",
-      "slug": "842-licenciement-pour-motif-personnel",
-      "source": "themes",
-      "title": "Licenciement pour motif personnel",
+      "title": "Embauche et contrat de travail",
     },
   ],
 }

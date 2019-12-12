@@ -62,7 +62,7 @@ function parseDom(dom, url) {
   const sections = [];
   const sectionTag = getSectionTag(article);
 
-  // First pass only to get untitled section at the top of the article
+  // First pass is only to get a potential untitled section at the top of the article
   // This section has neither anchor nor title
   let nextArticleElement = $(article, ".main-article__texte > *");
   const untitledSection = {
