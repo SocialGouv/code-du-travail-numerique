@@ -14,6 +14,8 @@ Select.propTypes = {
 
 const INPUT_HEIGHT = "5.4rem";
 
+const iconArrowDownSvg = `<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g clip-path="url(#clip0)"><path d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z" fill="rgb(255, 112, 103)"/></g><defs><clipPath id="clip0"><path fill="currentColor" d="M0 0h16v16H0z"/></clipPath></defs></svg>`;
+
 const StyledSelect = styled.select`
   width: 40rem;
   max-width: 100%;
@@ -24,8 +26,9 @@ const StyledSelect = styled.select`
   font-size: ${fonts.sizes.default};
   font-family: "Open Sans", sans-serif;
   vertical-align: middle;
-  background: ${({ theme }) => theme.white}
-    url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+PHBhdGggZD0iTTguNDI1IDExLjU3M2w3LjExLTYuMDcyYS43MDkuNzA5IDAgMDAuMjYtLjUzNy43MDkuNzA5IDAgMDAtLjI2LS41MzcuOTczLjk3MyAwIDAwLS42MjktLjIyMy45NzMuOTczIDAgMDAtLjYzLjIyM2wtNi40OCA1LjUzNi02LjQ4MS01LjUzNmEuOTczLjk3MyAwIDAwLS42My0uMjIzLjk3My45NzMgMCAwMC0uNjI4LjIyMy43MDguNzA4IDAgMDAtLjI2MS41MzdjMCAuMjAyLjA5NC4zOTUuMjYuNTM3bDcuMTEgNi4wNzJhLjkxLjkxIDAgMDAuMjkuMTY1IDEuMDIxIDEuMDIxIDAgMDAuNjggMCAuOTEuOTEgMCAwMC4yOS0uMTY1eiIgZmlsbD0icmdiKDI1NSwgMTEyLCAxMDMpIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTAgMGgxNnYxNkgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==")
+  background: ${({ theme }) => theme.white} url("data:image/svg+xml;,${encodeURIComponent(
+      iconArrowDownSvg
+    )}")
     no-repeat;
   background-position: top ${spacings.medium} right ${spacings.medium};
   background-size: 1.6rem;

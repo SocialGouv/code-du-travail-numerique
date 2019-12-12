@@ -5,33 +5,36 @@ import styled from "styled-components";
 import { Label } from "./Label";
 import { box, fonts, spacings } from "../theme";
 
-export const InputCheckbox = ({ label, name, id, ...props }) => (
-  <StyledWrapper>
-    <StyledLabel htmlFor={id}>
-      <StyledCheckbox type="checkbox" name={name} id={id} {...props} />
-      {label}
-      <StyledCheckmark />
-    </StyledLabel>
-  </StyledWrapper>
+export const InputCheckbox = ({ label, name, id, size, ...props }) => (
+  <StyledLabel htmlFor={id}>
+    <StyledCheckbox
+      type="checkbox"
+      name={name}
+      id={id}
+      size={size}
+      {...props}
+    />
+    {label}
+    <StyledCheckmark size={size} />
+  </StyledLabel>
 );
 
 InputCheckbox.propTypes = {
   label: PropTypes.string.required,
   name: PropTypes.string.required,
-  id: PropTypes.string.required
+  id: PropTypes.string.required,
+  size: PropTypes.string
 };
 
-const CHECKBOX_SIZE = "2rem";
-
-const StyledWrapper = styled.div`
-  position: relative;
-`;
+InputCheckbox.defaultProps = {
+  size: "2rem"
+};
 
 const StyledCheckmark = styled.span`
   position: absolute;
   left: 0;
-  width: ${CHECKBOX_SIZE};
-  height: ${CHECKBOX_SIZE};
+  width: ${props => props.size};
+  height: ${props => props.size};
   border-radius: ${spacings.tiny};
   background-color: transparent;
   border: ${({ theme }) => box.border(theme.border)};
@@ -46,8 +49,8 @@ const StyledCheckbox = styled.input`
   position: relative;
   display: inline-block;
   flex-shrink: 0;
-  width: ${CHECKBOX_SIZE};
-  height: ${CHECKBOX_SIZE};
+  width: ${props => props.size};
+  height: ${props => props.size};
   border-radius: ${spacings.tiny};
   margin: 0 ${spacings.base} 0 0;
   padding: 0;
@@ -56,6 +59,7 @@ const StyledCheckbox = styled.input`
 `;
 
 const StyledLabel = styled(Label)`
+  position: relative;
   font-weight: normal;
   font-size: ${fonts.sizes.default};
   cursor: pointer;

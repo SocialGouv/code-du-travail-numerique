@@ -5,9 +5,9 @@ import styled from "styled-components";
 import { Label } from "./Label";
 import { animations, box, fonts, spacings } from "../theme";
 
-export const InputRadio = ({ label, name, id, ...props }) => (
+export const InputRadio = ({ label, name, id, size, ...props }) => (
   <StyledLabel htmlFor={id}>
-    <StyledRadio type="radio" name={name} id={id} {...props} />
+    <StyledRadio type="radio" name={name} id={id} size={size} {...props} />
     {label}
   </StyledLabel>
 );
@@ -15,10 +15,13 @@ export const InputRadio = ({ label, name, id, ...props }) => (
 InputRadio.propTypes = {
   label: PropTypes.string.required,
   name: PropTypes.string.required,
-  id: PropTypes.string.required
+  id: PropTypes.string.required,
+  size: PropTypes.string.required
 };
 
-const RADIO_SIZE = "2rem";
+InputRadio.defaultProps = {
+  size: "2rem"
+};
 
 const StyledLabel = styled(Label)`
   font-weight: normal;
@@ -29,8 +32,8 @@ const StyledRadio = styled.input`
   position: relative;
   display: inline-block;
   flex-shrink: 0;
-  width: ${RADIO_SIZE};
-  height: ${RADIO_SIZE};
+  width: ${props => props.size};
+  height: ${props => props.size};
   margin: 0 ${spacings.base} 0 0;
   padding: 0;
   line-height: inherit;
@@ -46,10 +49,10 @@ const StyledRadio = styled.input`
   }
   &::before {
     position: absolute;
-    top: calc(50% - ${RADIO_SIZE} / 4);
-    left: calc(50% - ${RADIO_SIZE} / 4);
-    width: calc(${RADIO_SIZE} / 2);
-    height: calc(${RADIO_SIZE} / 2);
+    top: calc(50% - ${props => props.size} / 4);
+    left: calc(50% - ${props => props.size} / 4);
+    width: calc(${props => props.size} / 2);
+    height: calc(${props => props.size} / 2);
     background-color: ${({ theme }) => theme.secondary};
     border-radius: 50%;
     transform: scale(0);
