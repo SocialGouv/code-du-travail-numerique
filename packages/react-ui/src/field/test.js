@@ -41,11 +41,13 @@ describe("<InputRadio />", () => {
 
 describe("<Select />", () => {
   it("should render select field", () => {
-    const { container } = render(<Select>
-    <option>...</option>
-    <option>Option 1</option>
-    <option>Option 2</option>
-  </Select>);
+    const { container } = render(
+      <Select>
+        <option>...</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </Select>
+    );
     expect(container).toMatchSnapshot();
   });
 });
