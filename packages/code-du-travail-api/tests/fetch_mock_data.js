@@ -4,6 +4,7 @@ import { promisify } from "util";
 import { join } from "path";
 import getDocumentByUrlQuery from "../src/server/routes/search/getDocumentByUrlQuery";
 import { getSheetMTQuery } from "../src/server/routes/sheets-mt/search.elastic.js";
+import getAgreementBody from "../src/server/routes/conventions/getAgreementBySlug.elastic.js";
 
 import themes from "@cdt/data...datafiller/themes.data.json";
 
@@ -35,6 +36,10 @@ const documentsSlugs = [
 ];
 
 const themesSlugs = ["8-depart-de-lentreprise", "81-demission"];
+
+const agreementSlugs = [
+  "1596-nouvelle-convention-collective-nationale-des-ouvriers-employes-par-les-entr"
+];
 
 const ficheMTSlugs = [
   "5-questions-reponses-sur-la-sante-au-travail",
@@ -103,10 +108,37 @@ async function updateFichesMT(slugs) {
   }
 }
 
+async function updateAgreements(slugs) {
+  const index =
+    process.env.ELASTICSEARCH_CONVENTION_INDEX || "conventions_collectives";
+  const requests = [];
+  slugs.forEach(slug => {
+    requests.push({ index });
+    requests.push(getAgreementBody({ slug }));
+  });
+  try {
+    const { body } = await client.msearch({ body: requests });
+    const data = [];
+    body.responses.forEach(res => {
+      if (res.hits.hits.length === 1) {
+        const [item] = res.hits.hits;
+        data.push(item._source);
+      }
+    });
+    await writeFile(
+      join(__dirname, "./cdtn_agreement.data.json"),
+      JSON.stringify(data, 0, 2)
+    );
+  } catch (error) {
+    console.error(error.meta || error);
+  }
+}
+
 if (module === require.main) {
   updateDocumentsData(documentsSlugs).catch(error =>
     console.error("›››" + error)
   );
   updateThemes(themesSlugs).catch(error => console.error("›››" + error));
   updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
+  updateAgreements(agreementSlugs).catch(error => console.error("›››" + error));
 }

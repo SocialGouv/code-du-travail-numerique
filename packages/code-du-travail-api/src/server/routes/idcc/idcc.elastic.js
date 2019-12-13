@@ -32,7 +32,7 @@ function getIdccBody({ query }) {
               },
               {
                 match_phrase_prefix: {
-                  title: {
+                  "title.french": {
                     query: `${query}`
                   }
                 }

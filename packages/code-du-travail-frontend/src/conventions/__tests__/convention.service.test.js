@@ -1,5 +1,5 @@
-import { searchConvention, getConventionTextes } from "../convention.service";
-import { idccPayload, texteDeBase } from "./api.conventions.mock";
+import { searchConvention } from "../convention.service";
+import { idccPayload } from "./api.conventions.mock";
 
 import fetch from "isomorphic-unfetch";
 import { fetchResponse } from "../../../test/mockFetch";
@@ -13,13 +13,6 @@ describe("convention service", () => {
     const results = await searchConvention("foo");
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(/api\.url\/idcc\?q=foo$/);
-    expect(results).toMatchSnapshot();
-  });
-  it("can get convention", async () => {
-    fetch.mockResolvedValue(fetchResponse(texteDeBase));
-    const results = await getConventionTextes("foo", "base");
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch.mock.calls[0][0]).toMatch(/api\.url\/conventions\/foo\/base$/);
     expect(results).toMatchSnapshot();
   });
 });

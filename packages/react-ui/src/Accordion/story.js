@@ -1,10 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Section } from "../layout/Section";
 import { Accordion } from ".";
 
 export default {
   component: Accordion,
   title: "Components|Accordion"
+};
+
+const CustomTitle = ({ children }) => <strong>{children}</strong>;
+CustomTitle.propTypes = {
+  children: PropTypes.node
 };
 
 export const base = () => (
@@ -48,6 +54,23 @@ export const base = () => (
           },
           {
             title: "This bloc could be extended too if needed",
+            as: "h2",
+            body: "this is the body"
+          }
+        ]}
+      />
+    </Section>
+    <h2> Using custom component as title</h2>
+    <Section>
+      <Accordion
+        items={[
+          {
+            title: <CustomTitle>This is a jsx title</CustomTitle>,
+            as: "h2",
+            body: "this is the body"
+          },
+          {
+            title: <em>Another jsx title</em>,
             as: "h2",
             body: "this is the body"
           }

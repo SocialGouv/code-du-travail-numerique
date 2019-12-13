@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
+import { format, parseISO } from "date-fns";
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Convention from "../../src/conventions/Convention";
@@ -13,24 +14,12 @@ const {
 
 class ConventionCollective extends React.Component {
   static async getInitialProps({ query: { slug } }) {
-    const responseConvention = await fetch(
-      `${API_URL}/items/conventions_collectives/${slug}`
-    );
-    if (!responseConvention.ok) {
-      return { statusCode: responseConvention.status };
-    }
-    const convention = await responseConvention
-      .json()
-      .then(data => data._source);
-
-    const responseContainer = await fetch(
-      `${API_URL}/conventions/${convention.id}`
-    );
+    const responseContainer = await fetch(`${API_URL}/conventions/${slug}`);
     if (!responseContainer.ok) {
       return { statusCode: responseContainer.status };
     }
-    const container = await responseContainer.json().then(data => data._source);
-    return { convention, container };
+    const convention = await responseContainer.json();
+    return { convention };
   }
 
   render() {
@@ -39,22 +28,24 @@ class ConventionCollective extends React.Component {
         <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
       );
     }
-    const { pageUrl, ogImage, convention, container } = this.props;
-    const { title } = convention;
+    const { pageUrl, ogImage, convention } = this.props;
+    const { url, shortTitle, title, date_publi } = convention;
     return (
       <Layout>
         <Metas
           url={pageUrl}
-          title={title}
+          title={`Convention collective ${shortTitle}`}
           description={title}
           image={ogImage}
         />
         <Answer
-          title={title}
+          title={shortTitle}
           emptyMessage="Cette convention collective n'a pas été trouvée"
-          footer="Informations fournies par la DILA"
+          date={format(parseISO(date_publi), "dd/MM/yyyy")}
+          source={{ name: "Légifrance", url }}
+          wide
         >
-          <Convention container={container} />
+          <Convention convention={convention} />
         </Answer>
       </Layout>
     );

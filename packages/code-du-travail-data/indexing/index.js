@@ -10,11 +10,11 @@ import {
   indexDocumentsBatched,
   deleteOldIndex
 } from "./es_client.utils";
-import { cdtnCcnGen, cdtnMTGen } from "./populate";
 import { populateSuggestions } from "./suggestion";
 
-import conventionList from "@socialgouv/kali-data/data/index.json";
 import themes from "../dataset/datafiller/themes.data.json";
+import agreements from "../dataset/datafiller/agreements.data.json";
+import mtSheets from "../dataset/fiches_ministere_travail/fiches-mt.json";
 
 const CDTN_INDEX_NAME =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
@@ -42,7 +42,6 @@ const client = new Client({
 
 async function main() {
   const ts = Date.now();
-
   await version({ client });
 
   // Indexing CCN data
@@ -51,13 +50,11 @@ async function main() {
     indexName: `${CDTN_CCN_NAME}-${ts}`,
     mappings: conventionCollectiveMapping
   });
-  for (const documents of cdtnCcnGen(conventionList, 10000000)) {
-    await indexDocumentsBatched({
-      indexName: `${CDTN_CCN_NAME}-${ts}`,
-      client,
-      documents
-    });
-  }
+  await indexDocumentsBatched({
+    indexName: `${CDTN_CCN_NAME}-${ts}`,
+    client,
+    documents: agreements
+  });
 
   // Indexing documents/search data
   await createIndex({
@@ -65,7 +62,6 @@ async function main() {
     indexName: `${CDTN_INDEX_NAME}-${ts}`,
     mappings: documentMapping
   });
-
   const documents = require(DUMP_PATH);
   await indexDocumentsBatched({
     indexName: `${CDTN_INDEX_NAME}-${ts}`,
@@ -79,13 +75,11 @@ async function main() {
     indexName: `${FICHES_MT_INDEX_NAME}-${ts}`,
     mappings: documentMapping
   });
-  for (const documents of cdtnMTGen()) {
-    await indexDocumentsBatched({
-      indexName: `${FICHES_MT_INDEX_NAME}-${ts}`,
-      client,
-      documents: documents
-    });
-  }
+  await indexDocumentsBatched({
+    indexName: `${FICHES_MT_INDEX_NAME}-${ts}`,
+    client,
+    documents: mtSheets
+  });
 
   // Indexing Themes data
   await createIndex({
@@ -187,7 +181,7 @@ main().catch(response => {
       (response.body.error && response.body.error.reason) || response.body
     );
   } else {
-    logger.error(`${response}`);
+    logger.error(response);
   }
   process.exit(-1);
 });

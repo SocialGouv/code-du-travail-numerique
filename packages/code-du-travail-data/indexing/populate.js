@@ -1,9 +1,9 @@
 import crypto from "crypto";
 import { selectAll } from "unist-util-select";
-import find from "unist-util-find";
 import { logger } from "./logger";
 import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
+import { parseIdcc, formatIdcc } from "../lib";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -58,15 +58,18 @@ function getDuplicateSlugs(allDocuments) {
 function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
-    ({ id, num, title }) => ({
-      source: SOURCES.CCN,
-      id,
-      idcc: num,
-      title,
-      slug: slugify(`${num}-${title}`.substring(0, 80)),
-      text: `IDCC ${num} ${title}`,
-      url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
-    })
+    ({ id, num, title }) => {
+      const idcc = formatIdcc(num);
+      return {
+        source: SOURCES.CCN,
+        id,
+        idcc: parseIdcc(num),
+        title,
+        slug: slugify(`${idcc}-${title}`.substring(0, 80)),
+        text: `IDCC ${num} ${title}`,
+        url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
+      };
+    }
   );
 
   logger.info("=== Code du travail ===");
@@ -191,98 +194,4 @@ function* cdtnDocumentsGen() {
   );
 }
 
-export const conventionTextType = {
-  BASE: "base",
-  SALARY: "salaires",
-  ATTACHED: "attaches"
-};
-
-/**
- *
- * @param {array} list - a array of document abstract
- * @param {number} batchSize - the max size of the batch
- */
-function* cdtnCcnGen(list, batchSize = 10000000) {
-  let buffer = [];
-  let bufferSize = 0;
-
-  for (const { id, shortTitle, date_publi, url } of list) {
-    const jsonPath = `@socialgouv/kali-data/data/${id}.json`;
-    const tree = require(jsonPath);
-    const {
-      data: { num, title, categorisation }
-    } = tree;
-    const texteDeBase = find(tree, node =>
-      node.data.title.startsWith("Texte de base")
-    );
-    const textesAttaches = find(
-      tree,
-      node => node.data.title === "Textes Attachés"
-    );
-    const texteSalaires = find(
-      tree,
-      node => node.data.title === "Textes Salaires"
-    );
-    const data = [];
-    const meta = {
-      idcc: num,
-      title,
-      shortTitle,
-      date_publi,
-      categorisation,
-      conventionId: id,
-      url
-    };
-    data.push({
-      ...meta,
-      type: conventionTextType.BASE,
-      content: texteDeBase
-    });
-
-    if (textesAttaches) {
-      data.push({
-        ...meta,
-        title: textesAttaches.data.title,
-        type: conventionTextType.ATTACHED,
-        content: textesAttaches
-      });
-    }
-    if (texteSalaires) {
-      data.push({
-        ...meta,
-        title: texteSalaires.data.title,
-        type: conventionTextType.SALARY,
-        content: texteSalaires
-      });
-    }
-
-    const jsonSize = JSON.stringify(data).length;
-
-    if (bufferSize + jsonSize >= batchSize) {
-      logger.debug(`batch max size ${bufferSize}`);
-      yield buffer;
-      buffer = [].concat(data);
-      bufferSize = jsonSize;
-    } else {
-      buffer = buffer.concat(data);
-      bufferSize += jsonSize;
-    }
-  }
-  if (buffer.length > 0) {
-    yield buffer;
-  }
-}
-
-// Elle est compliquée cette fonction dites donc !
-function* cdtnMTGen() {
-  yield require("../dataset/fiches_ministere_travail/fiches-mt.json");
-}
-
-export {
-  flattenTags,
-  makeSlug,
-  getDuplicateSlugs,
-  cdtnDocumentsGen,
-  cdtnCcnGen,
-  cdtnMTGen
-};
+export { flattenTags, makeSlug, getDuplicateSlugs, cdtnDocumentsGen };

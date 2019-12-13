@@ -5,26 +5,17 @@ const router = require("../conventions");
 const app = new Koa();
 app.use(router.routes());
 
-it("returns a convention container with base text", async () => {
+it("returns an agreement document", async () => {
   const response = await request(app.callback()).get(
-    "/api/v1/conventions/KALICONT000030185307"
+    "/api/v1/conventions/1596-nouvelle-convention-collective-nationale-des-ouvriers-employes-par-les-entr"
   );
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();
 });
 
-it("returns a convention container with textes attaches", async () => {
+test("returns 404 when slug match no agreement", async () => {
   const response = await request(app.callback()).get(
-    "/api/v1/conventions/KALICONT000030185307/attaches"
+    `/api/v1/conventions/slug`
   );
-  expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot();
-});
-
-it("returns a convention container with textes salaires", async () => {
-  const response = await request(app.callback()).get(
-    "/api/v1/conventions/KALICONT000030185307/salaires"
-  );
-  expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot();
+  expect(response.status).toBe(404);
 });

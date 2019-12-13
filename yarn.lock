@@ -2374,7 +2374,7 @@
     eslint-plugin-jest "^23.1.1"
     eslint-plugin-prettier "~3.1.1"
 
-"@socialgouv/fiches-vdd@^1.0.55":
+"@socialgouv/fiches-vdd@^1.0.56":
   version "1.0.56"
   resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.56.tgz#0fc6fb952c8cdc007127847070deaf265148e302"
   integrity sha512-7lXcJ6FfZHal7xOUc/m5uX0dOY7wGfYMk8VCC5f9r1O+X9Gtk33e8Zg3Am4+hzA37lUGQjch+ilSYUYdnZcBOg==
@@ -2384,7 +2384,7 @@
     unzipper "^0.10.5"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.2.98":
+"@socialgouv/kali-data@^1.2.34", "@socialgouv/kali-data@^1.2.98":
   version "1.2.98"
   resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.98.tgz#73404dfb98f87862f2ac1b942f80ce44189d734a"
   integrity sha512-e0UHf5DNIZu2cPODRet4AUzOrJLeT9Lc7BDnIdhYDSK8Bx9ZAqSqxZTU4XKD37/PGgtWSf4jok5Nry/KkVXH6g==
@@ -6824,7 +6824,7 @@ es6-symbol@^3.1.1, es6-symbol@~3.1.3:
     d "^1.0.1"
     ext "^1.1.2"
 
-es6-weak-map@^2.0.2:
+es6-weak-map@^2.0.1, es6-weak-map@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/es6-weak-map/-/es6-weak-map-2.0.3.tgz#b6da1f16cc2cc0d9be43e6bdbfc5e7dfcdf31d53"
   integrity sha512-p5um32HOTO1kP+w7PRnB+5lQ43Z6muuMuIMffvDN8ZB4GcnjLBV6zGStpbASIMk4DCAvEaamhe2zhyCb/QXXsA==
@@ -16918,6 +16918,13 @@ unist-util-is@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.0.1.tgz#ae3e39b9ad1b138c8e3b9d2f4658ad0031be4610"
   integrity sha512-7NYjErP4LJtkEptPR22wO5RsCPnHZZrop7t2SoQzjvpFedCFer4WW8ujj9GI5DkUX7yVcffXLjoURf6h2QUv6Q==
+
+unist-util-parents@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/unist-util-parents/-/unist-util-parents-1.0.2.tgz#f982bf0feb4fa472d60209224bfb42f513468673"
+  integrity sha512-GwY81F/q2KMYi+A7+A0QZCJX/GlmRfeU4fRlEmndSgLGPWLBBcR/xKb5B5irFSzzrbTK94XgBQ++s7c9/Jdoig==
+  dependencies:
+    es6-weak-map "^2.0.1"
 
 unist-util-position@^3.0.0:
   version "3.0.4"
