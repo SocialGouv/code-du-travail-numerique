@@ -29,12 +29,12 @@ export { Toast } from "./Toast";
 export { VerticalArrow } from "./VerticalArrow";
 
 // Fields
-export { Input } from "./Fields/Input";
-export { InputCheckbox } from "./Fields/Checkbox";
-export { InputDate } from "./Fields/InputDate";
-export { InputRadio } from "./Fields/Radio";
-export { Label } from "./Fields/Label";
-export { Select } from "./Fields/Select";
-export { Textarea } from "./Fields/Textarea";
+export { Input } from "./field/Input";
+export { InputCheckbox } from "./field/Checkbox";
+export { InputDate } from "./field/InputDate";
+export { InputRadio } from "./field/Radio";
+export { Label } from "./field/Label";
+export { Select } from "./field/Select";
+export { Textarea } from "./field/Textarea";
 
 export { keyframes, theme, icons };

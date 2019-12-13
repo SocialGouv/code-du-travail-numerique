@@ -11,7 +11,7 @@ import { Euro, Search } from "../icons";
 
 export default {
   component: Select,
-  title: "Components|Fields"
+  title: "Field|Components"
 };
 
 export const base = () => (

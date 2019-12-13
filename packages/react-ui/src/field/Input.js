@@ -6,7 +6,7 @@ import { box, breakpoints, colors, fonts, spacings } from "../theme";
 export const Input = ({ name, icon: Icon, ...props }) => {
   return (
     <StyledWrapper>
-      <StyledInput name={name} hasIcon={!!Icon} {...props} />
+      <StyledInput name={name} hasIcon={Boolean(Icon)} {...props} />
       {Icon && (
         <StyledIcon>
           <Icon />
@@ -40,8 +40,7 @@ const StyledInput = styled.input`
   width: 100%;
   height: ${INPUT_HEIGHT};
   padding: 0 ${spacings.medium};
-  padding-right: ${props =>
-    props.hasIcon ? spacings.xlarger : spacings.medium};
+  padding-right: ${props => (props.hasIcon ? "5rem" : spacings.medium)};
   background: ${({ theme }) => theme.white};
   box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
   text-align: ${props => (props.type === "number" ? "right" : "left")};

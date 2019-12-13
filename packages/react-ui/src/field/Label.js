@@ -20,6 +20,6 @@ const StyledLabel = styled.label`
   font-weight: 600;
   font-size: ${fonts.sizes.small};
   padding-bottom: ${spacings.tiny};
-  line-height: ${fonts.lineHeightLabel};
+  line-height: 2;
   cursor: pointer;
 `;

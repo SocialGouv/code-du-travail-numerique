@@ -55,6 +55,7 @@ const StyledCheckbox = styled.input`
   margin: 0 ${spacings.base} 0 0;
   padding: 0;
   box-shadow: none;
+  opacity: 0;
   appearance: none;
 `;
 
