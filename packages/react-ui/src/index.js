@@ -15,7 +15,7 @@ export { Alert } from "./Alert";
 export { Button } from "./Button";
 export { CardList } from "./CardList";
 export { Grid, GridCell } from "./Grid";
-export { NakedList } from "./NakedList";
+export { FlatList } from "./FlatList";
 export { Modal, ModalContentWrapper } from "./Modal";
 export { OverflowWrapper } from "./OverflowWrapper";
 export { Heading, PageTitle, Subtitle, Title } from "./Titles";

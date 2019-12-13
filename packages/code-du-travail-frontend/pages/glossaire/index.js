@@ -5,7 +5,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import {
   Container,
-  NakedList,
+  FlatList,
   PageTitle,
   Section,
   theme,
@@ -116,6 +116,6 @@ const Item = styled.li`
   font-size: ${fonts.sizes.headings.small};
 `;
 
-const StyledList = styled(NakedList)`
+const StyledList = styled(FlatList)`
   margin: ${spacings.small} 0;
 `;

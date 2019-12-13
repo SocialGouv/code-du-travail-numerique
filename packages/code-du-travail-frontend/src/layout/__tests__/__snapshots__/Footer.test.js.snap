@@ -202,10 +202,6 @@ exports[`<Footer /> should render 1`] = `
   list-style-type: none;
 }
 
-.c15 > li {
-  padding-left: 0;
-}
-
 .c14 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;

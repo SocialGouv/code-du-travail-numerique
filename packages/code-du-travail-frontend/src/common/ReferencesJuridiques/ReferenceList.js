@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ArrowLink, NakedList, theme } from "@socialgouv/react-ui";
+import { ArrowLink, FlatList, theme } from "@socialgouv/react-ui";
 import Link from "next/link";
 import TYPE_REFERENCE from "./typeReference";
 
@@ -42,11 +42,11 @@ const getLink = reference => {
 
 const ReferenceList = ({ references }) => {
   return (
-    <NakedList>
+    <FlatList>
       {references.map(reference => (
         <li key={reference.id}>{getLink(reference)}</li>
       ))}
-    </NakedList>
+    </FlatList>
   );
 };
 

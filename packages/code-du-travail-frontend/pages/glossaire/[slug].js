@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import {
   Container,
-  NakedList,
+  FlatList,
   PageTitle,
   Section,
   Table,
@@ -81,7 +81,7 @@ export default Term;
 
 const { spacings } = theme;
 
-const StyledList = styled(NakedList)`
+const StyledList = styled(FlatList)`
   margin: ${spacings.small} 0;
   padding: 0;
   list-style-type: none;

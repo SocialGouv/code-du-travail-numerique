@@ -5,7 +5,7 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import {
   Container,
-  NakedList,
+  FlatList,
   Tile,
   PageTitle,
   Section,
@@ -78,7 +78,7 @@ const ModeleCourrier = ({ modele, ...props }) => {
 
 const { colors, spacings } = theme;
 
-const StyledList = styled(NakedList)`
+const StyledList = styled(FlatList)`
   margin: ${spacings.small} 0;
 `;
 

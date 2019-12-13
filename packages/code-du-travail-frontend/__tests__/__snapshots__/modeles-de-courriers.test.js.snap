@@ -707,10 +707,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   list-style-type: none;
 }
 
-.c54 > li {
-  padding-left: 0;
-}
-
 .c53 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;

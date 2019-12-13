@@ -1,18 +1,18 @@
 import React from "react";
-import { NakedList } from ".";
+import { FlatList } from ".";
 
 export default {
-  component: NakedList,
-  title: "Components|NakedList"
+  component: FlatList,
+  title: "Components|FlatList"
 };
 
 export const base = () => (
   <>
-    <NakedList>
+    <FlatList>
       <li>This is the most</li>
       <li>minimalist</li>
       <li>list</li>
       <li>you’ll ever get</li>
-    </NakedList>
+    </FlatList>
   </>
 );

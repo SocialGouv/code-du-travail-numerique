@@ -46,16 +46,8 @@ const StyledPageTitle = styled.h1`
   line-height: ${fonts.lineHeightTitle};
   ${({ leftStripped, shift }) => {
     if (leftStripped) {
-      if (shift) {
-        return css`
-          padding-left: ${shift};
-          @media (max-width: ${breakpoints.mobile}) {
-            padding-left: ${spacings.base};
-          }
-        `;
-      }
       return css`
-        padding-left: ${spacings.large};
+        padding-left: ${shift ? shift : spacings.large};
         @media (max-width: ${breakpoints.mobile}) {
           padding-left: ${spacings.base};
         }
@@ -109,17 +101,8 @@ const StyledTitle = styled.h2`
   line-height: ${fonts.lineHeightTitle};
   ${({ leftStripped, shift }) => {
     if (leftStripped) {
-      if (shift) {
-        return css`
-          padding-left: ${shift};
-          text-align: left;
-          @media (max-width: ${breakpoints.mobile}) {
-            padding-left: ${spacings.base};
-          }
-        `;
-      }
       return css`
-        padding-left: ${spacings.large};
+        padding-left: ${shift ? shift : spacings.large};
         text-align: left;
         @media (max-width: ${breakpoints.mobile}) {
           padding-left: ${spacings.base};
@@ -185,10 +168,7 @@ const P = styled.p`
   margin-bottom: 0;
   padding-left: ${({ leftStripped, shift }) => {
     if (leftStripped) {
-      if (shift) {
-        return shift;
-      }
-      return spacings.large;
+      return shift ? shift : spacings.large;
     }
     return "0";
   }};

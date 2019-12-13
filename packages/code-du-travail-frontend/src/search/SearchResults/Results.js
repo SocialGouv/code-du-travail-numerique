@@ -5,7 +5,7 @@ import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Container,
   Heading,
-  NakedList,
+  FlatList,
   Tile,
   Title,
   theme
@@ -95,13 +95,13 @@ export const Results = ({ id, isSearch, items, query }) => {
       ) : (
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
-      <NakedList>
+      <FlatList>
         {items.map((item, i) => (
           <StyledListItem key={`item.slug${i}`}>
             <ListLink item={item} isSearch={isSearch} query={query} />
           </StyledListItem>
         ))}
-      </NakedList>
+      </FlatList>
     </Container>
   );
 };

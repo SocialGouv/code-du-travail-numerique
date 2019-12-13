@@ -576,10 +576,6 @@ exports[`<FicheSP /> should render 1`] = `
   list-style-type: none;
 }
 
-.c45 > li {
-  padding-left: 0;
-}
-
 .c44 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;

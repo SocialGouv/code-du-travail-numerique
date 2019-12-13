@@ -595,10 +595,6 @@ exports[`<Term /> should render 1`] = `
   list-style-type: none;
 }
 
-.c41 > li {
-  padding-left: 0;
-}
-
 .c40 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;

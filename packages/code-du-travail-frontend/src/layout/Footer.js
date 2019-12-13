@@ -7,7 +7,7 @@ import {
   Container,
   Heading,
   icons,
-  NakedList,
+  FlatList,
   Section,
   theme,
   Title
@@ -221,7 +221,7 @@ const Category = styled.div`
   }
 `;
 
-const StyledList = styled(NakedList)`
+const StyledList = styled(FlatList)`
   @media (max-width: ${breakpoints.mobile}) {
     text-align: center;
   }

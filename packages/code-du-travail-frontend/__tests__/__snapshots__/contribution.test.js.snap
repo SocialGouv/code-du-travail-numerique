@@ -614,10 +614,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   list-style-type: none;
 }
 
-.c48 > li {
-  padding-left: 0;
-}
-
 .c47 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
@@ -1983,10 +1979,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c48 > li {
-  padding-left: 0;
 }
 
 .c47 {

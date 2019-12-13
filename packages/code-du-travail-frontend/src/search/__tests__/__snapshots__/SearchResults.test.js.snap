@@ -252,10 +252,6 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c4 > li {
-  padding-left: 0;
-}
-
 .c6 {
   position: relative;
   display: -webkit-inline-box;

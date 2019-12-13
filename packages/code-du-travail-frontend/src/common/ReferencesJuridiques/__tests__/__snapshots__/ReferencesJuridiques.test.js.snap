@@ -170,10 +170,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   list-style-type: none;
 }
 
-.c10 > li {
-  padding-left: 0;
-}
-
 .c13 {
   padding: 1.6rem 0;
 }
