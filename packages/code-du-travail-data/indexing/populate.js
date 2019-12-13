@@ -42,9 +42,9 @@ function fixArticleNum(id, num) {
  * Find duplicate slugs
  * @param {iterable} allDocuments is an iterable generator
  */
-function getDuplicateSlugs(allDocuments) {
+async function getDuplicateSlugs(allDocuments) {
   let slugs = [];
-  for (const documents of allDocuments) {
+  for await (const documents of allDocuments) {
     slugs = slugs.concat(
       documents.map(({ source, slug }) => `${source}/${slug}`)
     );
@@ -140,22 +140,7 @@ async function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Courriers ===");
-  const courriers = await getCourriers();
-
-  for (const courrier of courriers) {
-    yield {
-      source: SOURCES.LETTERS,
-      title: courrier.titre,
-      slug: slugify(courrier.titre),
-      description: courrier.description,
-      text: courrier.questions.join("\n"),
-      html: courrier.html,
-      filename: courrier.filanem,
-      date: courrier.date_redaction,
-      editor: courrier.source,
-      author: courrier.redacteur
-    };
-  }
+  yield getCourriers();
 
   logger.info("=== Outils ===");
   yield require("../dataset/tools").map(
