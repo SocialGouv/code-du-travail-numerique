@@ -2384,7 +2384,7 @@
     unzipper "^0.10.5"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.2.34", "@socialgouv/kali-data@^1.2.98":
+"@socialgouv/kali-data@^1.2.98":
   version "1.2.98"
   resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.98.tgz#73404dfb98f87862f2ac1b942f80ce44189d734a"
   integrity sha512-e0UHf5DNIZu2cPODRet4AUzOrJLeT9Lc7BDnIdhYDSK8Bx9ZAqSqxZTU4XKD37/PGgtWSf4jok5Nry/KkVXH6g==
