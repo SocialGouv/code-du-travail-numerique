@@ -17,8 +17,18 @@ export default {
 export const base = () => (
   <>
     <Section>
-      <InputCheckbox label="Option 1" name="checkbox" value="option_1" />
-      <InputCheckbox label="Option 2" name="checkbox" value="option_2" />
+      <InputCheckbox
+        label="Option 1"
+        name="checkbox"
+        id="option_1"
+        value="option_1"
+      />
+      <InputCheckbox
+        label="Option 2"
+        name="checkbox"
+        id="option_2"
+        value="option_2"
+      />
     </Section>
     <Section>
       <Label htmlFor="input">Input</Label>
@@ -29,8 +39,18 @@ export const base = () => (
       <InputDate name="input_date" id="input_date" />
     </Section>
     <Section>
-      <InputRadio label="Option 1" name="radio" value="option_1" />
-      <InputRadio label="Option 2" name="radio" value="option_2" />
+      <InputRadio
+        label="Option 1"
+        name="radio"
+        id="option_1"
+        value="option_1"
+      />
+      <InputRadio
+        label="Option 2"
+        name="radio"
+        id="option_2"
+        value="option_2"
+      />
     </Section>
     <Section>
       <Label htmlFor="select">Select</Label>
@@ -51,8 +71,18 @@ export const base = () => (
 export const checkbox = () => (
   <>
     <Section>
-      <InputCheckbox label="Option 1" name="checkbox" value="option_1" />
-      <InputCheckbox label="Option 2" name="checkbox" value="option_2" />
+      <InputCheckbox
+        label="Option 1"
+        name="checkbox"
+        id="option_1"
+        value="option_1"
+      />
+      <InputCheckbox
+        label="Option 2"
+        name="checkbox"
+        id="option_2"
+        value="option_2"
+      />
     </Section>
   </>
 );
@@ -118,8 +148,18 @@ export const inputDate = () => (
 export const radio = () => (
   <>
     <Section>
-      <InputRadio label="Option 1" name="radio" value="option_1" />
-      <InputRadio label="Option 2" name="radio" value="option_2" />
+      <InputRadio
+        label="Option 1"
+        name="radio"
+        id="option_1"
+        value="option_1"
+      />
+      <InputRadio
+        label="Option 2"
+        name="radio"
+        id="option_2"
+        value="option_2"
+      />
     </Section>
   </>
 );

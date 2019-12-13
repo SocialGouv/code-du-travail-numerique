@@ -20,9 +20,9 @@ export const InputCheckbox = ({ label, name, id, size, ...props }) => (
 );
 
 InputCheckbox.propTypes = {
-  label: PropTypes.string.required,
-  name: PropTypes.string.required,
-  id: PropTypes.string.required,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   size: PropTypes.string
 };
 
@@ -32,6 +32,7 @@ InputCheckbox.defaultProps = {
 
 const StyledCheckmark = styled.span`
   position: absolute;
+  top: 0.6rem;
   left: 0;
   width: ${props => props.size};
   height: ${props => props.size};
@@ -55,8 +56,11 @@ const StyledCheckbox = styled.input`
   margin: 0 ${spacings.base} 0 0;
   padding: 0;
   box-shadow: none;
-  opacity: 0;
   appearance: none;
+  *::-ms-backdrop,
+  & {
+    visibility: hidden;
+  }
 `;
 
 const StyledLabel = styled(Label)`

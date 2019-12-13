@@ -9,13 +9,13 @@ export const Textarea = ({ name, ...props }) => (
 );
 
 Textarea.propTypes = {
-  name: PropTypes.string.required
+  name: PropTypes.string.isRequired
 };
 
 const StyledTextarea = styled.textarea`
-  min-height: 8rem;
+  width: 100%;
+  min-height: 12rem;
   padding: ${spacings.medium};
-  max-width: 100%;
   color: ${({ theme }) => theme.paragraph};
   font-size: ${fonts.sizes.default};
   font-family: "Open Sans", sans-serif;

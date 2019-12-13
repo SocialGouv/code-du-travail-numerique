@@ -17,8 +17,8 @@ export const Input = ({ name, icon: Icon, ...props }) => {
 };
 
 Input.propTypes = {
-  name: PropTypes.string.required,
-  icon: PropTypes.node
+  name: PropTypes.string.isRequired,
+  icon: PropTypes.oneOfType([() => null, PropTypes.node])
 };
 
 Input.defaultProps = {
@@ -76,6 +76,7 @@ const StyledInput = styled.input`
 const StyledIcon = styled.div`
   color: ${({ theme }) => theme.placeholder};
   position: absolute;
+  top: 1rem;
   right: ${spacings.small};
   width: 100%;
   max-width: ${spacings.large};

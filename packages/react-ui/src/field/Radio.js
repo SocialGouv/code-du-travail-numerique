@@ -13,10 +13,10 @@ export const InputRadio = ({ label, name, id, size, ...props }) => (
 );
 
 InputRadio.propTypes = {
-  label: PropTypes.string.required,
-  name: PropTypes.string.required,
-  id: PropTypes.string.required,
-  size: PropTypes.string.required
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired
 };
 
 InputRadio.defaultProps = {

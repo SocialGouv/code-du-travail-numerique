@@ -38,13 +38,11 @@ export const spacings = {
   medium: "2rem",
   xmedium: "2.4rem",
   large: "3.2rem",
-  larger: "4rem",
-  xlarger: "5rem"
+  larger: "4rem"
 };
 
 export const fonts = {
   lineHeight: "1.625",
-  lineHeightLabel: "2",
   lineHeightTitle: "1.25",
   sizes: {
     tiny: "1.2rem",
