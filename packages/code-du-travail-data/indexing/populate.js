@@ -56,7 +56,7 @@ function getDuplicateSlugs(allDocuments) {
     .reduce((state, { slug, count }) => ({ ...state, [slug]: count }), {});
 }
 
-function* cdtnDocumentsGen() {
+async function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
     ({ id, num, title }) => {
@@ -140,31 +140,23 @@ function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Courriers ===");
-  yield getCourriers().then(courriers =>
-    courriers.map(
-      ({
-        titre,
-        filename,
-        description,
-        questions,
-        html,
-        date_redaction,
-        redacteur,
-        source
-      }) => ({
-        source: SOURCES.LETTERS,
-        title: titre,
-        slug: slugify(titre),
-        description,
-        text: questions.join("\n"),
-        html,
-        filename,
-        date: date_redaction,
-        editor: source,
-        author: redacteur
-      })
-    )
-  );
+  const courriers = await getCourriers();
+
+  for (const courrier of courriers) {
+    yield {
+      source: SOURCES.LETTERS,
+      title: courrier.titre,
+      slug: slugify(courrier.titre),
+      description: courrier.description,
+      text: courrier.questions.join("\n"),
+      html: courrier.html,
+      filename: courrier.filanem,
+      date: courrier.date_redaction,
+      editor: courrier.source,
+      author: courrier.redacteur
+    };
+  }
+
   logger.info("=== Outils ===");
   yield require("../dataset/tools").map(
     ({ action, date, description, icon, questions, slug, themes, title }) => ({
@@ -179,6 +171,7 @@ function* cdtnDocumentsGen() {
       title
     })
   );
+
   // Temporary removed from ES
   logger.info("=== Contributions ===");
   yield require("../dataset/contributions/contributions.data.json").map(
