@@ -4,7 +4,7 @@ ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
 
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE} as cdtn-base-image
-FROM tensorflow/tensorflow:1.14.0-py3
+FROM tensorflow/tensorflow:2.0.0b1-py3
 
 ARG SUGGEST_DATA_URL=https://gist.githubusercontent.com/ArmandGiraud/aaa65ed694e6b8d46918d44e41bae9e4/raw/2b5fa5ff67d87bbf08b33fecfe2fb98e15c73a06/data-test.txt
 ENV SUGGEST_DATA_URL=$SUGGEST_DATA_URL
