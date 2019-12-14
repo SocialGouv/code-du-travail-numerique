@@ -1,7 +1,7 @@
 import { getDuplicateSlugs, flattenTags, makeSlug } from "../populate";
 
 describe("getDuplicateSlug", () => {
-  test("should return an empty array if there is no duplicate slug", () => {
+  test("should return an empty array if there is no duplicate slug", async () => {
     const documents = [
       [
         { slug: "slug-1", source: "cdt" },
@@ -12,11 +12,11 @@ describe("getDuplicateSlug", () => {
         { slug: "slug-2", source: "contribution" }
       ]
     ];
-    const duplicateSlugs = getDuplicateSlugs(documents);
+    const duplicateSlugs = await getDuplicateSlugs(documents);
     expect(Object.entries(duplicateSlugs).length).toBe(0);
   });
 
-  test("should return an array of duplicated slug", () => {
+  test("should return an array of duplicated slug", async () => {
     const documents = [
       [
         { slug: "slug-1", source: "cdt" },
@@ -31,7 +31,7 @@ describe("getDuplicateSlug", () => {
         { slug: "slug-3", source: "fiche" }
       ]
     ];
-    const duplicateSlugs = getDuplicateSlugs(documents);
+    const duplicateSlugs = await getDuplicateSlugs(documents);
     expect(Object.entries(duplicateSlugs).length).toBe(1);
   });
 });
