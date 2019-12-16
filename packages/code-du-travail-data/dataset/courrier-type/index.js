@@ -1,6 +1,7 @@
 const mammoth = require("mammoth");
 const data = require("./courriers.json");
-
+const { SOURCES } = require("@cdt/sources");
+const slugify = require("../../slugify");
 const DOC_DIR = "docx";
 
 const basic_styles = `<style>
@@ -19,7 +20,7 @@ const options = {
   ]
 };
 
-const convertFile2Html = ({ filename, ...rest }) => {
+const convertFile2Html = ({ filename, title, questions, ...rest }) => {
   return mammoth
     .convertToHtml(
       {
@@ -29,6 +30,9 @@ const convertFile2Html = ({ filename, ...rest }) => {
     )
     .then(result => ({
       filename,
+      source: SOURCES.LETTERS,
+      slug: slugify(title),
+      text: questions.join("\n"),
       ...rest,
       html:
         basic_styles +
