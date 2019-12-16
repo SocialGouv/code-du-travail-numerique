@@ -15,6 +15,10 @@ const formatAnchor = node => {
   // remove ATTAg(...) on pdf link
   node.removeAttribute("onclick");
   if (!href) return;
+  // unwrap link with href="javascript:"
+  if (/^javascript:/.test(href)) {
+    node.parentNode.innerHTML = node.textContent;
+  }
   if (!href.match(/^https?:\/\//)) {
     if (href.slice(0, 1) !== "/") {
       href = "/" + href;
@@ -25,16 +29,22 @@ const formatAnchor = node => {
   }
 };
 
+const smooshCsBlocs = node => {
+  node.insertAdjacentHTML("afterend", node.innerHTML);
+  node.parentNode.removechild(node);
+};
+
 const getSectionTag = article => {
-  const h3 = $$(article, ".main-article__texte > H3").length && "H3";
-  const h4 = $$(article, ".main-article__texte > H4").length && "H4";
-  const h5 = $$(article, ".main-article__texte > H5").length && "H5";
+  const h3 = $$(article, ".main-article__texte h3").length && "h3";
+  const h4 = $$(article, ".main-article__texte h4").length && "h4";
+  const h5 = $$(article, ".main-article__texte h5").length && "h5";
   return h3 || h4 || h5;
 };
 
 function parseDom(dom, url) {
   const article = $(dom.window.document, "main");
   $$(article, "a").forEach(formatAnchor);
+  $$(article, ".cs_blocs").forEach(smooshCsBlocs);
   $$(article, "img")
     .filter(node => node.getAttribute("src").indexOf("data:image") === -1)
     .forEach(node => {
@@ -173,5 +183,7 @@ async function parseFiches(urls) {
 }
 
 if (module === require.main) {
-  parseFiches(urls);
+  parseFiches(urls).catch(error => {
+    console.error(error);
+  });
 }
