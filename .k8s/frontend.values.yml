@@ -116,12 +116,12 @@ ingress:
     appgw.ingress.kubernetes.io/ssl-redirect: "true"
     kubernetes.io/ingress.class: "azure/application-gateway"
   hosts:
-    - host: code.travail.dev.fabrique.social.gouv.fr
+    - host: ${FRONTEND_HOST}
       paths:
         - /
   tls:
     - hosts:
-        - "code.travail.dev.fabrique.social.gouv.fr"
+        - "${FRONTEND_HOST}"
       secretName: wildcard-crt
 
 autoscaling:
