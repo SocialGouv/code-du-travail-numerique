@@ -62,6 +62,7 @@ class SemSearch():
         #    [tf.global_variables_initializer(), tf.tables_initializer()])
         #g.finalize()
         #session = tf.Session(graph=g)
+
         #session.run(init_op)
         #self.session = session
 
