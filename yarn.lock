@@ -2364,15 +2364,15 @@
     eslint-plugin-react "~7.17.0"
     eslint-plugin-react-hooks "~2.3.0"
 
-"@socialgouv/eslint-config-recommended@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-0.11.0.tgz#1058a4dc599d76e8ca488510df5dcdaaa7d62cb6"
-  integrity sha512-uQyWtyu5/9X3PHUzAp800wCsJT2jynQlTAurbzpdHcdEPfn8kOsxalknSlfzJkziYVyDGLnOyg7RN05VadRn8w==
+"@socialgouv/eslint-config-recommended@^0.11.0", "@socialgouv/eslint-config-recommended@^0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-0.11.1.tgz#0bc9d33ce7b59a639c0c36e2193ecc513269490b"
+  integrity sha512-gw7UN1CNtJD+kCuBHawZszxxAahLda1GdXhQYTjCWFbkP7S8GAF2/MKZPuKfyd1Tzsngyq0oNfoMO7Ab/hsLnA==
   dependencies:
     eslint-config-prettier "~6.7.0"
     eslint-plugin-import "~2.19.1"
     eslint-plugin-jest "^23.1.1"
-    eslint-plugin-prettier "~3.1.1"
+    eslint-plugin-prettier "~3.1.2"
 
 "@socialgouv/fiches-vdd@^1.0.59":
   version "1.0.59"
@@ -6935,10 +6935,10 @@ eslint-plugin-jsx-a11y@~6.2.3:
     has "^1.0.3"
     jsx-ast-utils "^2.2.1"
 
-eslint-plugin-prettier@~3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.1.tgz#507b8562410d02a03f0ddc949c616f877852f2ba"
-  integrity sha512-A+TZuHZ0KU0cnn56/9mfR7/KjUJ9QNVXUhwvRFSR7PGPe0zQR6PTkmyqg1AtUUEOzTqeRsUwyKFh0oVZKVCrtA==
+eslint-plugin-prettier@~3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.2.tgz#432e5a667666ab84ce72f945c72f77d996a5c9ba"
+  integrity sha512-GlolCC9y3XZfv3RQfwGew7NnuFDKsfI4lbvRK+PIIo23SFH+LemGs4cKwzAaRa+Mdb+lQO/STaIayno8T5sJJA==
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
