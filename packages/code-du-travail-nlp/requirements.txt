@@ -4,6 +4,6 @@ gunicorn==20.0.4
 sentencepiece
 tf-sentencepiece==0.1.82
 tensorflow_hub
-tensorflow==1.13.1
+tensorflow==1.15.0
 gevent
 unidecode
