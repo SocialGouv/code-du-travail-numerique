@@ -78,25 +78,24 @@ class SemSearch():
 
         # return self.question_results["outputs"].squeeze().tolist()
     
-    ''' not used :
-    def compute_vector(self, string, context):
-        cleanStr = self.remove_stops(self.strip_accents(string))
-        out = self.session.run(self.response_embeddings, {self.r_placeholder: [
-                               cleanStr], self.c_placeholder: [context]})
-        return out["outputs"].squeeze().tolist()
-    '''
 
-    def compute_batch_vectors(self, strings, contexts):
+    def compute_batch(self, strings, contexts):
         cleanStr = [self.remove_stops(self.strip_accents(s)) for s in strings]
             
         tf_title = tf.constant(cleanStr)
         tf_context = tf.constant(contexts)
 
         out = self.model.signatures['response_encoder'](input=tf_title, context=tf_context)
+        return out["outputs"]
 
         # out = self.session.run(self.response_embeddings, {
                             #    self.r_placeholder: cleanStr, self.c_placeholder: contexts})
-        return out["outputs"].tolist()
+
+    def compute_batch_vectors(self, strings, contexts):
+        return compute_batch(strings, contexts).tolist()
+
+    def compute_vector(self, string, context):
+        return compute_batch([string], [context]).squeeze().tolist()
 
     def strip_accents(self, s: str):
         return unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode('utf-8')
