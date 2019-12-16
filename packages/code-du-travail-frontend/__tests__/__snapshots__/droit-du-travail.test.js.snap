@@ -915,8 +915,50 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c23 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c47 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c22 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c39 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c48 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c54 {
+    font-size: 1.4rem;
   }
 }
 
@@ -958,6 +1000,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -1055,6 +1104,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
 @media (max-width:600px) {
   .c61 {
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c60 {
+    font-size: 1.6rem;
   }
 }
 

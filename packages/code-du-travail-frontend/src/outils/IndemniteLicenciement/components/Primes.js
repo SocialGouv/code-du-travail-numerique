@@ -43,7 +43,7 @@ function Primes({ name, visible = true, onChange }) {
                   </>
                 )}
               />
-              <DelButton variant="link" onClick={() => fields.remove(index)}>
+              <DelButton variant="flat" onClick={() => fields.remove(index)}>
                 Supprimer
               </DelButton>
             </Row>
@@ -69,7 +69,7 @@ Primes.propTypes = {
 };
 export { Primes };
 
-const { colors, fonts, spacings } = theme;
+const { colors, spacings } = theme;
 
 const Row = styled.div`
   display: flex;
@@ -98,7 +98,6 @@ const Currency = styled.span`
 `;
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
   margin-left: ${spacings.medium};
-  font-size: ${fonts.sizes.small};
 `;
 
 const AddButton = styled(Button).attrs(() => ({ type: "button" }))`

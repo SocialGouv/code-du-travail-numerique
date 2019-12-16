@@ -74,6 +74,10 @@ const StyledHeader = styled.header`
     margin-bottom: ${({ currentPage }) =>
       currentPage === "home" ? spacings.large : spacings.medium};
   }
+  @media print {
+    position: relative;
+    box-shadow: none;
+  }
 `;
 
 const StyledContainer = styled(Container)`

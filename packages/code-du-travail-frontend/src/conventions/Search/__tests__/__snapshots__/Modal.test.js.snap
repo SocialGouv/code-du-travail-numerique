@@ -148,6 +148,18 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width:1180px) {
   .c1 {
     width: 60vw;

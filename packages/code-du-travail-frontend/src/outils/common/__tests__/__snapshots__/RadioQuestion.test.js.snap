@@ -32,6 +32,12 @@ exports[`<RadioQuestion /> should render with default value 1`] = `
   margin-bottom: 1rem;
 }
 
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <fieldset
     class="c0"
@@ -103,6 +109,12 @@ exports[`<RadioQuestion /> should render with selectedValue value 1`] = `
 
 .c2 {
   margin-bottom: 1rem;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>

@@ -184,6 +184,24 @@ exports[`<Button /> it renders a Button flat 1`] = `
   cursor: not-allowed;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.4rem;
+  }
+}
+
 <div>
   <button
     class="c0"
@@ -270,6 +288,12 @@ exports[`<Button /> it renders a Button link 1`] = `
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.4rem;
+  }
 }
 
 <div>
@@ -511,6 +535,24 @@ exports[`<Button /> it renders a Button naked 1`] = `
   cursor: not-allowed;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.4rem;
+  }
+}
+
 <div>
   <button
     class="c0"
@@ -724,6 +766,24 @@ exports[`<Button /> it renders a Button primary 1`] = `
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.4rem;
+  }
 }
 
 <div>
@@ -941,6 +1001,24 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   transform: translateX(5px);
 }
 
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.4rem;
+  }
+}
+
 <div>
   <button
     class="c0 c1"
@@ -1028,6 +1106,12 @@ exports[`<Button /> renders 1`] = `
   cursor: not-allowed;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
+}
+
 <div>
   <button
     class="c0"
@@ -1097,6 +1181,12 @@ exports[`<Button /> renders as a link 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
 }
 
 <div>
@@ -1169,6 +1259,12 @@ exports[`<Button /> renders as div 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
 }
 
 <div>

@@ -114,6 +114,12 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   right: 0;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width:1180px) {
   .c1 {
     width: 60vw;
@@ -315,6 +321,12 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
 
 .c1 {
   background-color: red;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width:600px) {

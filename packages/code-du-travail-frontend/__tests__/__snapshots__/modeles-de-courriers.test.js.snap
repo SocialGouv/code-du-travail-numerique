@@ -820,6 +820,24 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c24 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c45 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c23 {
     margin-left: 0;
   }
@@ -832,8 +850,31 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
   .c32 {
+=======
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c38 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c31 {
+>>>>>>> test(chore): update snaps
     padding: 1.6rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c33 {
+    font-size: 1.6rem;
   }
 }
 
@@ -900,6 +941,13 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -1001,7 +1049,17 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
   .c54 {
+=======
+  .c53 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c53 {
+>>>>>>> test(chore): update snaps
     margin-top: 1rem;
     text-align: center;
   }

@@ -41,6 +41,12 @@ exports[`<List /> should render and increment heading level of children by one 1
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
 <div>
   <ul>
     <li

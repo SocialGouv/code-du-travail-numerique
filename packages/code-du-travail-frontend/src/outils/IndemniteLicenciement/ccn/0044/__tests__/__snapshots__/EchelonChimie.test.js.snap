@@ -26,6 +26,12 @@ exports[`<EchelonChimie /> should render 1`] = `
   width: 100%;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <p
     class="c0"
@@ -192,6 +198,12 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
 
 .c2 {
   width: 100%;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>

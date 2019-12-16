@@ -742,14 +742,56 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c22 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
   .c27 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
+  .c27 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c42 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c44 {
+    font-size: 1.4rem;
   }
 }
 
@@ -791,6 +833,13 @@ exports[`<MentionLegales /> should render 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -888,6 +937,12 @@ exports[`<MentionLegales /> should render 1`] = `
 @media (max-width:600px) {
   .c51 {
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c50 {
+    font-size: 1.6rem;
   }
 }
 

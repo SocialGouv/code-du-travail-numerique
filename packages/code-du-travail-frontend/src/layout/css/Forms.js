@@ -89,6 +89,7 @@ export default createGlobalStyle`
 
   select {
     position: relative;
+    max-width: 100%;
     height: ${INPUT_HEIGHT};
     padding: 0 ${spacings.medium};
     padding-right: ${spacings.large};

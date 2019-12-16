@@ -206,6 +206,12 @@ exports[`<SearchHero /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c10 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;

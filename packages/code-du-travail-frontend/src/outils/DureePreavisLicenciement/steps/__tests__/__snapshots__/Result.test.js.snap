@@ -84,6 +84,18 @@ exports[`<StepResult /> should render CDT and CC answer 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"
@@ -310,6 +322,18 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
 @media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
   }
 }
 

@@ -80,6 +80,12 @@ exports[`<Accordion /> should render 1`] = `
   display: none;
 }
 
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
     class="accordion"

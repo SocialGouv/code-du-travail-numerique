@@ -160,6 +160,12 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -269,6 +275,12 @@ exports[`<Search /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -329,6 +341,12 @@ exports[`<Search /> should show no results when no result 1`] = `
   .c0 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
   }
 }
 
@@ -398,6 +416,12 @@ exports[`<Search /> should show spinner when loading 1`] = `
   .c0 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
   }
 }
 
@@ -633,6 +657,12 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   .c0 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
   }
 }
 
@@ -898,6 +928,12 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   }
 }
 
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -1130,6 +1166,12 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   .c0 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
   }
 }
 
@@ -1373,6 +1415,12 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   .c0 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
   }
 }
 

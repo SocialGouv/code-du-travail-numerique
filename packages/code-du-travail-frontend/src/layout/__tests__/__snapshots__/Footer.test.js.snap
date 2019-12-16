@@ -230,8 +230,20 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c5 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.4rem;
   }
 }
 
@@ -272,6 +284,12 @@ exports[`<Footer /> should render 1`] = `
 @media (max-width:600px) {
   .c15 {
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    font-size: 1.6rem;
   }
 }
 

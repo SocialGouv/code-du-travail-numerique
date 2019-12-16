@@ -646,8 +646,26 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c22 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
   .c28 {
     padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c35 {
+    font-size: 2.2rem;
   }
 }
 
@@ -666,6 +684,18 @@ exports[`<Glossaire /> should render 1`] = `
 @media (max-width:600px) {
   .c24 {
     padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c37 {
+    font-size: 1.4rem;
   }
 }
 
@@ -707,6 +737,13 @@ exports[`<Glossaire /> should render 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -809,8 +846,20 @@ exports[`<Glossaire /> should render 1`] = `
 
 @media (max-width:600px) {
   .c43 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c43 {
     margin-top: 1rem;
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    font-size: 1.6rem;
   }
 }
 

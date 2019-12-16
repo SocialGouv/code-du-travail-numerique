@@ -697,6 +697,24 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c24 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c39 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c23 {
     margin-left: 0;
   }
@@ -705,6 +723,18 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 @media (max-width:600px) {
   .c38 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c32 {
+    font-size: 1.4rem;
   }
 }
 
@@ -771,6 +801,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -868,6 +905,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 @media (max-width:600px) {
   .c48 {
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c47 {
+    font-size: 1.6rem;
   }
 }
 
@@ -2064,6 +2107,24 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c24 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c39 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c23 {
     margin-left: 0;
   }
@@ -2072,6 +2133,18 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c38 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c32 {
+    font-size: 1.4rem;
   }
 }
 
@@ -2138,6 +2211,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -2235,6 +2315,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c48 {
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c47 {
+    font-size: 1.6rem;
   }
 }
 

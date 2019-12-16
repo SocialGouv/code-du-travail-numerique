@@ -531,8 +531,32 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c22 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c27 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
+    font-size: 1.4rem;
   }
 }
 
@@ -574,6 +598,13 @@ exports[`<Theme /> should render 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -671,6 +702,12 @@ exports[`<Theme /> should render 1`] = `
 @media (max-width:600px) {
   .c36 {
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c35 {
+    font-size: 1.6rem;
   }
 }
 

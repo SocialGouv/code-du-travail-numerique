@@ -29,6 +29,67 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c7:link,
+.c7:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #fff;
+  border-color: #dee5ef;
+}
+
+.c7[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
   color: #ff7067;
   font-weight: 600;
@@ -41,14 +102,14 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   overflow: visible;
 }
 
-.c7:focus,
-.c7:hover,
-.c7:active {
+.c9:focus,
+.c9:hover,
+.c9:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c9 {
+.c11 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -57,7 +118,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   transition: transform 250ms linear;
 }
 
-.c6:hover .c9 {
+.c6:hover .c11 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -106,9 +167,9 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 }
 
 .c2 {
-  -webkit-flex-basis: 25rem;
-  -ms-flex-preferred-size: 25rem;
-  flex-basis: 25rem;
+  -webkit-flex: 0 1 25rem;
+  -ms-flex: 0 1 25rem;
+  flex: 0 1 25rem;
   margin-right: 2rem;
 }
 
@@ -122,7 +183,24 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 
 .c8 {
   margin-left: 2rem;
-  font-size: 1.4rem;
+}
+
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -201,31 +279,21 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
         type="number"
         value=""
       />
-      <button
-        class="c6 c7 c8"
-        type="button"
-      >
-        Supprimer
-        <svg
-          class="c9"
-          fill="none"
-          viewBox="0 0 28 15"
-        >
-          <path
-            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-            fill="currentColor"
-          />
-        </svg>
-      </button>
     </div>
+    <button
+      class="c6 c7 c8"
+      type="button"
+    >
+      Supprimer
+    </button>
   </div>
   <button
-    class="c6 c7 c10"
+    class="c6 c9 c10"
     type="button"
   >
     Ajouter une période
     <svg
-      class="c9"
+      class="c11"
       fill="none"
       viewBox="0 0 28 15"
     >
@@ -330,9 +398,9 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 }
 
 .c2 {
-  -webkit-flex-basis: 25rem;
-  -ms-flex-preferred-size: 25rem;
-  flex-basis: 25rem;
+  -webkit-flex: 0 1 25rem;
+  -ms-flex: 0 1 25rem;
+  flex: 0 1 25rem;
   margin-right: 2rem;
 }
 
@@ -342,6 +410,18 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 
 .c3 {
   font-weight: 700;
+}
+
+@media (max-width:600px) {
+  .c6 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -415,6 +495,67 @@ exports[`<AbsencePeriods /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c7:link,
+.c7:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #fff;
+  border-color: #dee5ef;
+}
+
+.c7[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
   color: #ff7067;
   font-weight: 600;
@@ -427,14 +568,14 @@ exports[`<AbsencePeriods /> should render 1`] = `
   overflow: visible;
 }
 
-.c7:focus,
-.c7:hover,
-.c7:active {
+.c9:focus,
+.c9:hover,
+.c9:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c9 {
+.c11 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -443,7 +584,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c6:hover .c9 {
+.c6:hover .c11 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -492,9 +633,9 @@ exports[`<AbsencePeriods /> should render 1`] = `
 }
 
 .c2 {
-  -webkit-flex-basis: 25rem;
-  -ms-flex-preferred-size: 25rem;
-  flex-basis: 25rem;
+  -webkit-flex: 0 1 25rem;
+  -ms-flex: 0 1 25rem;
+  flex: 0 1 25rem;
   margin-right: 2rem;
 }
 
@@ -508,7 +649,24 @@ exports[`<AbsencePeriods /> should render 1`] = `
 
 .c8 {
   margin-left: 2rem;
-  font-size: 1.4rem;
+}
+
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -587,31 +745,21 @@ exports[`<AbsencePeriods /> should render 1`] = `
         type="number"
         value="3"
       />
-      <button
-        class="c6 c7 c8"
-        type="button"
-      >
-        Supprimer
-        <svg
-          class="c9"
-          fill="none"
-          viewBox="0 0 28 15"
-        >
-          <path
-            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-            fill="currentColor"
-          />
-        </svg>
-      </button>
     </div>
+    <button
+      class="c6 c7 c8"
+      type="button"
+    >
+      Supprimer
+    </button>
   </div>
   <button
-    class="c6 c7 c10"
+    class="c6 c9 c10"
     type="button"
   >
     Ajouter une période
     <svg
-      class="c9"
+      class="c11"
       fill="none"
       viewBox="0 0 28 15"
     >

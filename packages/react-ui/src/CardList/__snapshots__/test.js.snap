@@ -164,6 +164,12 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     margin-bottom: 2.4rem;
   }
@@ -172,6 +178,13 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
 @media (max-width:600px) {
   .c5 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
   }
 }
 
@@ -500,6 +513,12 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     margin-bottom: 2.4rem;
   }
@@ -508,6 +527,13 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 @media (max-width:600px) {
   .c5 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
   }
 }
 
@@ -842,6 +868,12 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 @media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     margin-bottom: 2.4rem;
   }
@@ -856,6 +888,13 @@ exports[`<CardList /> should render a collection with a title and description 1`
 @media (max-width:600px) {
   .c6 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.6rem;
   }
 }
 
@@ -1206,6 +1245,12 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 }
 
 @media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     margin-bottom: 2.4rem;
   }
@@ -1220,6 +1265,13 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 @media (max-width:600px) {
   .c7 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    font-size: 1.6rem;
   }
 }
 
@@ -1561,6 +1613,12 @@ exports[`<CardList /> should render a single title 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     margin-bottom: 2.4rem;
   }
@@ -1569,6 +1627,13 @@ exports[`<CardList /> should render a single title 1`] = `
 @media (max-width:600px) {
   .c5 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
   }
 }
 

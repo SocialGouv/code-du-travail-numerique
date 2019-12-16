@@ -75,7 +75,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c5 {
@@ -85,6 +84,18 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 @media (max-width:600px) {
   .c1 {
     padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
   }
 }
 
@@ -417,7 +428,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c5 {
@@ -439,6 +449,24 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 @media (max-width:600px) {
   .c1 {
     padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.6rem;
   }
 }
 
@@ -756,6 +784,18 @@ exports[`<Step /> should render 1`] = `
 @media (max-width:600px) {
   .c1 {
     padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
   }
 }
 

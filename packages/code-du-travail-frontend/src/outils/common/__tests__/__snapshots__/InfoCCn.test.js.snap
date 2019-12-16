@@ -43,6 +43,12 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <p
     class="c0"

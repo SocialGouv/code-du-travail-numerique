@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Section, Title, Wrapper } from "@socialgouv/react-ui";
+import { Title } from "@socialgouv/react-ui";
 import Spinner from "react-svg-spinner";
 
 class SimulateurEmbauche extends React.PureComponent {

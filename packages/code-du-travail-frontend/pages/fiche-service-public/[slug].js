@@ -1,7 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
-import styled from "styled-components";
 import getConfig from "next/config";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
 import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";

@@ -106,6 +106,12 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c6 {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width:980px) {
   .c1 {
     -webkit-flex-wrap: wrap;
@@ -122,6 +128,12 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
     margin: 0.4rem;
     border-bottom: 1px solid #bbcadf;
     border-radius: 0.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -289,6 +301,12 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   border-radius: 0.6rem;
 }
 
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width:980px) {
   .c1 {
     -webkit-flex-wrap: wrap;
@@ -305,6 +323,12 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
     margin: 0.4rem;
     border-bottom: 1px solid #bbcadf;
     border-radius: 0.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -458,6 +482,12 @@ exports[`<Tabulator /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width:980px) {
   .c1 {
     -webkit-flex-wrap: wrap;
@@ -474,6 +504,12 @@ exports[`<Tabulator /> should render 1`] = `
     margin: 0.4rem;
     border-bottom: 1px solid #bbcadf;
     border-radius: 0.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.6rem;
   }
 }
 

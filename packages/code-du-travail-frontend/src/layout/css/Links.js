@@ -12,6 +12,10 @@ export default createGlobalStyle`
     transition: color ${animations.transitionTiming} linear, text-decoration ${
   animations.transitionTiming
 } linear;
+    @media print {
+      text-decoration: none;
+    }
+
   }
 
   a:focus,
@@ -32,5 +36,9 @@ export default createGlobalStyle`
     height: 23px;
     margin-left: 5px;
     content: url("/static/assets/icons/external.svg");
+    @media print {
+      margin-left: 0;
+      content: "";
+    }
   }
 `;

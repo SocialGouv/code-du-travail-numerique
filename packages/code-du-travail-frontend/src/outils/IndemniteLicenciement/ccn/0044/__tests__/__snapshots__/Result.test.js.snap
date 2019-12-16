@@ -119,6 +119,18 @@ exports[`<Result /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width:980px) {
   .c7 {
     -webkit-flex-flow: wrap;
@@ -143,6 +155,12 @@ exports[`<Result /> should render 1`] = `
   .c9 {
     width: 100%;
     margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    font-size: 1.6rem;
   }
 }
 

@@ -118,6 +118,24 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
   white-space: nowrap;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <label
     class="c0"

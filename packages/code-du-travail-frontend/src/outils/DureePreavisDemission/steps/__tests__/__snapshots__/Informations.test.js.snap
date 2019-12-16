@@ -42,6 +42,12 @@ exports[`<StepInformations /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"
@@ -119,6 +125,18 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 @media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
   }
 }
 
@@ -231,6 +249,18 @@ exports[`<StepInformations /> should render coefficient 1`] = `
 @media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
   }
 }
 

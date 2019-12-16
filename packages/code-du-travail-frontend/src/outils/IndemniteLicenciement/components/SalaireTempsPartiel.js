@@ -86,7 +86,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                       </CurrencyWrapper>
 
                       <DelButton
-                        variant="link"
+                        variant="flat"
                         onClick={() => fields.remove(index)}
                       >
                         Supprimer
@@ -125,7 +125,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
 }
 export { SalaireTempsPartiel };
 
-const { colors, fonts, spacings } = theme;
+const { colors, spacings } = theme;
 
 const AddButton = styled(Button)`
   margin: ${spacings.medium} 0;
@@ -171,7 +171,6 @@ const Currency = styled.span`
 `;
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
   margin-left: ${spacings.medium};
-  font-size: ${fonts.sizes.small};
 `;
 
 export const TEMPS_PLEIN = "Temps plein";
