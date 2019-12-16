@@ -74,6 +74,7 @@ class SemSearch():
         return(result)
 
         # self.question_results = self.session.run(
+
         # self.question_embeddings, {self.q_placeholder: questions})
         # return self.question_results["outputs"].squeeze().tolist()
     
