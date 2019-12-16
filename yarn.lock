@@ -2353,18 +2353,18 @@
     p-all "^2.1.0"
     simple-oauth2 "^2.5.1"
 
-"@socialgouv/eslint-config-react@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-0.11.0.tgz#ae1629eac9d5cb353886f8f7aa83ad385b688805"
-  integrity sha512-b+mFRA2HALhQNuSMezAS7ElcD8X8JtxDcDlFl3ZOAHrC0aNi8Eiggpck55gkZF8xRkrkLLjIGEGffq688sAzHA==
+"@socialgouv/eslint-config-react@^0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-0.11.1.tgz#564da839ce6e969bfc6b969b625d3e238bab4726"
+  integrity sha512-45NRkl0n+TnaMSTe1w5HOrh+88fVVKm7DjGyKK5+5YRt1TexD+/um70Zrssqn4bFMMw4RXVDu6aNXwJHkAl5Lg==
   dependencies:
-    "@socialgouv/eslint-config-recommended" "^0.11.0"
+    "@socialgouv/eslint-config-recommended" "^0.11.1"
     babel-eslint "^10.0.3"
     eslint-plugin-jsx-a11y "~6.2.3"
     eslint-plugin-react "~7.17.0"
     eslint-plugin-react-hooks "~2.3.0"
 
-"@socialgouv/eslint-config-recommended@^0.11.0", "@socialgouv/eslint-config-recommended@^0.11.1":
+"@socialgouv/eslint-config-recommended@^0.11.1":
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-0.11.1.tgz#0bc9d33ce7b59a639c0c36e2193ecc513269490b"
   integrity sha512-gw7UN1CNtJD+kCuBHawZszxxAahLda1GdXhQYTjCWFbkP7S8GAF2/MKZPuKfyd1Tzsngyq0oNfoMO7Ab/hsLnA==
