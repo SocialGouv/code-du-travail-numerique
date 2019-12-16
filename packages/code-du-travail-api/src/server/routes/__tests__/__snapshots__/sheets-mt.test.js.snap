@@ -81,30 +81,19 @@ Si l’avis d’inaptitude mentionne expressément que tout maintien du salarié
       "title": "Démission d'un salarié",
     },
     Object {
-<<<<<<< HEAD
-=======
+      "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Dans ces hypothèses (souvent qualifiées d’abandon de poste), l’employeur doit demander à l’intéressé les raisons de son absence. Si le salarié ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement pour absence injustifiée Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
+    },
+    Object {
       "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
       "slug": "demission-dune-assistante-maternelle",
       "source": "fiches_service_public",
       "title": "Démission d'une assistante maternelle",
     },
     Object {
-      "description": "En cas d’absence prolongée de l’entreprise, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Il convient dans ce cas de demander à l’intéressé les raisons de son absence. S’il ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement. Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
->>>>>>> test(api): update snap
-      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
-    },
-    Object {
-<<<<<<< HEAD
-      "slug": "demission-dune-assistante-maternelle",
-      "source": "fiches_service_public",
-      "title": "Démission d'une assistante maternelle",
-    },
-    Object {
-=======
       "description": "Connaître la durée du préavis de démission",
->>>>>>> test(api): update snap
       "slug": "preavis-demission",
       "source": "outils",
       "title": "Simulateur de durée de préavis de démission",

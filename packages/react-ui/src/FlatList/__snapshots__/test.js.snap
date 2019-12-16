@@ -7,10 +7,6 @@ exports[`<Naked /> renders 1`] = `
   list-style-type: none;
 }
 
-.c0 > li {
-  padding-left: 0;
-}
-
 <div>
   <ul
     class="c0"
