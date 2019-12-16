@@ -3,13 +3,13 @@
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_create_namespace_stage.yml
-    ref: v3.1.0
+    ref: v4.0.1
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_nodejs_chart_stage.yml
-    ref: v3.1.0
+    ref: v4.0.1
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_hpa_chart_stage.yml
-    ref: v3.1.0
+    ref: v4.0.1
 
 #
 
@@ -20,9 +20,6 @@ Create namespace:
     - source ./.gitlab-ci/env.sh
   after_script:
     - source ./.gitlab-ci/env.sh
-    #
-    # Use wild cart certificate
-    - kubectl label namespace ${K8S_NAMESPACE} cert=wildcard || true
     #
     # Create cdtn secrets
     - envsubst < ./.k8s/secrets.yml | kubectl apply -n ${K8S_NAMESPACE} -f - || true
@@ -37,22 +34,6 @@ Create namespace:
 
 #
 
-.resolve_helm_render_args: &resolve_helm_render_args |
-  HELM_RENDER_ARGS="\
-    --set image.tag=${IMAGE_TAG} \
-    --set ingress.hosts[0].host=${HOST} \
-    --set ingress.tls[0].hosts[0]=${HOST}"
-
-  if [[ "${BRANCH_NAME}" = "master" ]]; then
-    HELM_RENDER_ARGS=" \
-      ${HELM_RENDER_ARGS} \
-      --set ingress.annotations.certmanager\.k8s\.io/cluster-issuer=letsencrypt-prod \
-      --set-string ingress.annotations.kubernetes\.io/tls-acme=true \
-      --set ingress.tls[0].secretName=${PROJECT}-certificate"
-  fi
-
-#
-
 .deploy_stage: &deploy_stage
   stage: "Deploy"
   dependencies: []
@@ -60,11 +41,7 @@ Create namespace:
     - docker:dind
   variables: &deploy_stage_variables
     IMAGE_TAG: ${CI_COMMIT_SHA}
-    # IMAGE_TAG: ${CI_COMMIT_SHA}
     REGISTRY: ${CI_REGISTRY_IMAGE}
-  before_script:
-    - source ./.gitlab-ci/env.sh
-    - kubectl config set-context --current --namespace=${K8S_NAMESPACE}
 
 .incubateur_stage: &incubateur_stage
   environment:
@@ -103,7 +80,6 @@ Create namespace:
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${API_HOST}
-    - *resolve_helm_render_args
 
 #
 
@@ -130,7 +106,6 @@ Deploy @cdtn/api (incubateur):
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${FRONTEND_HOST}
-    - *resolve_helm_render_args
 
 #
 
@@ -191,7 +166,6 @@ Create Elasticsearch Index (incubateur):
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${NLP_HOST}
-    - *resolve_helm_render_args
 
 #
 
