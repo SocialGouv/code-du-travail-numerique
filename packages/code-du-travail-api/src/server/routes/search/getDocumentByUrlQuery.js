@@ -15,20 +15,9 @@ const getDocumentByUrlQuery = (
     size: 1,
     query: {
       bool: {
-        must: [
-          {
-            match: {
-              slug: {
-                query: slug,
-                minimum_should_match: "70%"
-              }
-            }
-          },
-          {
-            term: {
-              source: getSourceByRoute(source)
-            }
-          }
+        filter: [
+          { term: { slug } },
+          { term: { source: getSourceByRoute(source) } }
         ]
       }
     }

@@ -3,7 +3,7 @@ function getSearchBody({ source, slug }) {
     size: 1,
     query: {
       bool: {
-        must: [
+        filter: [
           {
             term: { source }
           },
