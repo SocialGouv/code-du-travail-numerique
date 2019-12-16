@@ -12,13 +12,14 @@ const $ = (node, selector) => node.querySelector(selector);
 
 const formatAnchor = node => {
   let href = node.getAttribute("href");
+  // remove ATTAg(...) on pdf link
+  node.removeAttribute("onclick");
   if (!href) return;
   if (!href.match(/^https?:\/\//)) {
     if (href.slice(0, 1) !== "/") {
       href = "/" + href;
     }
-    href = `https://travail-emploi.gouv.fr${href}`;
-    node.setAttribute("href", href);
+    node.setAttribute("href", `https://travail-emploi.gouv.fr${href}`);
     node.setAttribute("target", "_blank");
     node.setAttribute("rel", "nofollow, noopener");
   }
@@ -37,6 +38,8 @@ function parseDom(dom, url) {
   $$(article, "img")
     .filter(node => node.getAttribute("src").indexOf("data:image") === -1)
     .forEach(node => {
+      // remove adaptImgFix(this) on hero img
+      node.removeAttribute("onmousedown");
       let src = node.getAttribute("src");
       if (!src.match(/^https?:\/\//)) {
         if (src.slice(0, 1) !== "/") {
@@ -66,7 +69,7 @@ function parseDom(dom, url) {
   // This section has neither anchor nor title
   let nextArticleElement = $(article, ".main-article__texte > *");
   const untitledSection = {
-    title: "",
+    title: title,
     anchor: "",
     html: "",
     text: ""
@@ -156,9 +159,12 @@ async function parseFiches(urls) {
       2
     )
   );
-  const fiches = results
-    .map(splitArticle)
-    .reduce((accumulator, documents) => accumulator.concat(documents), []);
+  const fiches = results.map(splitArticle).reduce(
+    (accumulator, documents) =>
+      // we remove section with no title (text before the first sectionTag)
+      accumulator.concat(documents),
+    []
+  );
   fs.writeFileSync(
     "./fiches-mt-split.json",
     JSON.stringify(fiches.filter(Boolean), null, 2)
