@@ -61,7 +61,7 @@ const StyledGridCell = styled(GridCell)`
 `;
 
 const Num = styled.div`
-  font-size: ${fonts.headings.title.small};
+  font-size: ${fonts.sizes.headings.small};
 `;
 
 export default About;
