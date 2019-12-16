@@ -32,6 +32,7 @@ const convertFile2Html = ({ filename, title, questions, ...rest }) => {
       filename,
       source: SOURCES.LETTERS,
       slug: slugify(title),
+      title,
       text: questions.join("\n"),
       ...rest,
       html:
