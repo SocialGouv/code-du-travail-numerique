@@ -5,6 +5,7 @@
   "description": "generate courrier-type.json",
   "main": "index.js",
   "dependencies": {
+    "@cdt/sources": "^3.8.0",
     "mammoth": "^1.4.9"
   }
 }
