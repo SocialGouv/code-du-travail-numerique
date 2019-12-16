@@ -92,10 +92,10 @@ class SemSearch():
                             #    self.r_placeholder: cleanStr, self.c_placeholder: contexts})
 
     def compute_batch_vectors(self, strings, contexts):
-        return self.compute_batch(strings, contexts).tolist()
+        return self.compute_batch(strings, contexts).numpy().tolist()
 
     def compute_vector(self, string, context):
-        return self.compute_batch([string], [context]).squeeze().tolist()
+        return self.compute_batch([string], [context])[0].numpy().tolist()
 
     def strip_accents(self, s: str):
         return unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode('utf-8')
