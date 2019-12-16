@@ -44,7 +44,6 @@ Register frontend image:
 
 Register nlp image:
   <<: *register_stage
-  needs: []
   variables:
     CONTEXT: packages/code-du-travail-nlp
     DOCKER_BUILD_ARGS: >-

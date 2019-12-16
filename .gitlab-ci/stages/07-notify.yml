@@ -2,11 +2,8 @@
 
 include:
   - project: SocialGouv/gitlab-ci-yml
-    file: /base_semantic_release_stage.yml
-    ref: v3.1.0
-  - project: SocialGouv/gitlab-ci-yml
     file: /base_notify_github_stage.yml
-    ref: master
+    ref: v4.0.1
 
 #
 
@@ -62,10 +59,8 @@ Production:
     variables:
       - $PRODUCTION
   script:
-    - echo "Put ${CI_COMMIT_REF_NAME}@${CI_COMMIT_SHORT_SHA} in production"
-    - echo "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline"
-    # - curl --request POST
-    #   --form ref="${CI_COMMIT_REF_NAME}"
-    #   --form token="${CI_DEPLOY_TRIGGER}"
-    #   --form variables[PRODUCTION]="true"
-    #   ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+    - curl --request POST
+      --form ref="${CI_COMMIT_REF_NAME}"
+      --form token="${CI_JOB_TOKEN}"
+      --form variables[PRODUCTION]="true"
+      ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline

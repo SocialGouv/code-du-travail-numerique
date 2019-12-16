@@ -9,6 +9,7 @@ Snyk docker scan:
     variables:
       - $PRODUCTION
   dependencies: []
+  when: manual
   needs:
     - Register api image
     - Register frontend image
@@ -19,4 +20,3 @@ Snyk docker scan:
     - source .gitlab-ci/env.sh
   script:
     - ./scripts/snyk-docker-scan.sh
-
