@@ -28,16 +28,15 @@ const StyledTextarea = styled.textarea`
   &::placeholder {
     color: ${({ theme }) => theme.placeholder};
   }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
   &:focus {
     border-color: ${colors.secondary};
   }
   &:focus::placeholder {
     color: transparent;
-  }
-  appearance: none;
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    margin: 0;
-    appearance: none;
   }
 `;

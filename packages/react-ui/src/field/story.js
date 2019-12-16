@@ -20,13 +20,13 @@ export const base = () => (
       <InputCheckbox
         label="Option 1"
         name="checkbox"
-        id="option_1"
+        id="option_checkbox_1"
         value="option_1"
       />
       <InputCheckbox
         label="Option 2"
         name="checkbox"
-        id="option_2"
+        id="option_checkbox_2"
         value="option_2"
       />
     </Section>
@@ -42,8 +42,8 @@ export const base = () => (
       <InputRadio
         label="Option 1"
         name="radio"
-        id="option_1"
-        value="option_1"
+        id="option_radio_1"
+        value="option_radio_1"
       />
       <InputRadio
         label="Option 2"
@@ -55,7 +55,7 @@ export const base = () => (
     <Section>
       <Label htmlFor="select">Select</Label>
       <Select id="select">
-        <option>...</option>
+        <option></option>
         <option>Option 1</option>
         <option>Option 2</option>
         <option>Option 3</option>

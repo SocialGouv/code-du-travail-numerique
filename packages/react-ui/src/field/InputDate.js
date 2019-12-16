@@ -23,16 +23,13 @@ const iconDateSvg = `<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox
 const StyledInputDate = styled(Input)`
   padding-right: 0;
   &::-webkit-calendar-picker-indicator {
-    color: rgba(0, 0, 0, 0);
-    opacity: 1;
     display: block;
-    background-color: ${({ theme }) => theme.placeholder};
-    -webkit-mask-image: url("data:image/svg+xml;,${encodeURIComponent(
-      iconDateSvg
-    )}");
-    mask-image: url("data:image/svg+xml;,${encodeURIComponent(iconDateSvg)}");
     width: ${spacings.large};
     height: ${spacings.large};
+    color: rgba(0, 0, 0, 0);
+    background-color: ${({ theme }) => theme.placeholder};
     cursor: pointer;
+    opacity: 1;
+    mask-image: url("data:image/svg+xml;,${encodeURIComponent(iconDateSvg)}");
   }
 `;

@@ -41,18 +41,26 @@ const StyledInput = styled.input`
   height: ${INPUT_HEIGHT};
   padding: 0 ${spacings.medium};
   padding-right: ${props => (props.hasIcon ? "5rem" : spacings.medium)};
-  background: ${({ theme }) => theme.white};
-  box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
-  text-align: ${props => (props.type === "number" ? "right" : "left")};
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
+  color: ${({ theme }) => theme.paragraph};
   font-weight: normal;
   font-size: ${fonts.sizes.default};
-  color: ${({ theme }) => theme.paragraph};
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: ${props => (props.type === "number" ? "right" : "left")};
+  background: ${({ theme }) => theme.white};
   border: 1px solid transparent;
   border-color: ${props => (props.invalid ? colors.error : "transparent")};
   border-radius: ${box.borderRadius};
-  line-height: inherit;
+  box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+  &:invalid {
+    border-color: ${colors.error};
+  }
   &::placeholder {
     color: ${({ theme }) => theme.placeholder};
   }
@@ -63,18 +71,12 @@ const StyledInput = styled.input`
     color: transparent;
   }
   appearance: none;
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    margin: 0;
-    appearance: none;
-  }
   @media (max-width: ${breakpoints.mobile}) {
     padding: 0 ${spacings.small};
   }
 `;
 
 const StyledIcon = styled.div`
-  color: ${({ theme }) => theme.placeholder};
   position: absolute;
   top: 1rem;
   right: ${spacings.small};
@@ -82,4 +84,5 @@ const StyledIcon = styled.div`
   max-width: ${spacings.large};
   height: 100%;
   max-height: ${spacings.large};
+  color: ${({ theme }) => theme.placeholder};
 `;

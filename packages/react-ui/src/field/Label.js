@@ -15,11 +15,11 @@ Label.propTypes = {
 const StyledLabel = styled.label`
   display: flex;
   align-items: center;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
+  padding-bottom: ${spacings.tiny};
   font-weight: 600;
   font-size: ${fonts.sizes.small};
-  padding-bottom: ${spacings.tiny};
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
   line-height: 2;
   cursor: pointer;
 `;

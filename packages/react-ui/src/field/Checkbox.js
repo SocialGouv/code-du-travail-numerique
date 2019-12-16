@@ -36,13 +36,20 @@ const StyledCheckmark = styled.span`
   left: 0;
   width: ${props => props.size};
   height: ${props => props.size};
-  border-radius: ${spacings.tiny};
   background-color: transparent;
   border: ${({ theme }) => box.border(theme.border)};
+  border-radius: ${spacings.tiny};
   &:after {
-    content: "";
     position: absolute;
+    top: ${spacings.tiny};
+    left: ${spacings.xsmall};
     display: none;
+    width: 0.5rem;
+    height: ${spacings.small};
+    border: solid ${({ theme }) => theme.white};
+    border-width: 0 0.2rem 0.2rem 0;
+    transform: rotate(45deg);
+    content: "";
   }
 `;
 
@@ -52,9 +59,9 @@ const StyledCheckbox = styled.input`
   flex-shrink: 0;
   width: ${props => props.size};
   height: ${props => props.size};
-  border-radius: ${spacings.tiny};
   margin: 0 ${spacings.base} 0 0;
   padding: 0;
+  border-radius: ${spacings.tiny};
   box-shadow: none;
   appearance: none;
   *::-ms-backdrop,
@@ -68,30 +75,18 @@ const StyledLabel = styled(Label)`
   font-weight: normal;
   font-size: ${fonts.sizes.default};
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  &:hover ${StyledCheckbox} ~ ${StyledCheckmark} {
+  /* stylelint-disable-next-line */
+  &:hover > ${StyledCheckbox} ~ ${StyledCheckmark} {
     background-color: ${({ theme }) => theme.border};
     border: 0;
   }
+  /* stylelint-disable-next-line */
   & ${StyledCheckbox}:checked ~ ${StyledCheckmark} {
     background-color: ${({ theme }) => theme.primary};
     border: 0;
-  }
-  & ${StyledCheckbox}:checked ~ ${StyledCheckmark}:after {
-    display: block;
-  }
-  & ${StyledCheckmark}:after {
-    left: ${spacings.xsmall};
-    top: ${spacings.tiny};
-    width: 0.5rem;
-    height: ${spacings.small};
-    border: solid ${({ theme }) => theme.white};
-    border-width: 0 0.2rem 0.2rem 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    &:after {
+      display: block;
+    }
   }
 `;
