@@ -46,6 +46,7 @@ const StyledArrowRight = styled(({ arrowPosition, ...props }) => (
 ))`
   flex: 0 0 2.8rem;
   width: 2.8rem;
+  height: 2.1rem;
   margin: ${({ arrowPosition }) =>
     arrowPosition === "left"
       ? `0 ${spacings.base} 0 0`

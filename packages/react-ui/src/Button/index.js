@@ -35,6 +35,7 @@ export const StyledButton = styled.button`
         background: none;
         border: none;
         border-radius: 0;
+        overflow: visible;
         &:focus,
         &:hover,
         &:active {
@@ -124,6 +125,7 @@ export const StyledButton = styled.button`
 const StyledArrowRight = styled(({ hasText, ...props }) => (
   <DirectionRight {...props} />
 ))`
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: ${({ hasText }) => (hasText ? spacings.small : "")};
   transition: transform ${animations.transitionTiming} linear;

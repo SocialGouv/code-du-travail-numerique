@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReferenceList /> should render 1`] = `
-.c3 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -14,18 +14,19 @@ exports[`<ReferenceList /> should render 1`] = `
   text-decoration: none;
 }
 
-.c6 {
+.c5 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c5 {
+.c4 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
   width: 2.8rem;
+  height: 2.1rem;
   margin: 0 1.6rem 0 0;
   padding-top: 0.6rem;
   color: #ff7067;
@@ -34,7 +35,7 @@ exports[`<ReferenceList /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c2:hover .c5 {
+.c1:hover .c4 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -46,11 +47,7 @@ exports[`<ReferenceList /> should render 1`] = `
   list-style-type: none;
 }
 
-.c1 {
-  padding: 0;
-}
-
-.c4 {
+.c3 {
   padding: 1.6rem 0;
 }
 
@@ -58,15 +55,13 @@ exports[`<ReferenceList /> should render 1`] = `
   <ul
     class="c0"
   >
-    <li
-      class="c1"
-    >
+    <li>
       <a
-        class="c2 c3 c4"
+        class="c1 c2 c3"
         href="/code-du-travail/xxx"
       >
         <svg
-          class="c5"
+          class="c4"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -76,22 +71,20 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c6"
+          class="c5"
         >
           Article xxx du code du travail
         </span>
       </a>
     </li>
-    <li
-      class="c1"
-    >
+    <li>
       <a
-        class="c2 c3 c4"
+        class="c1 c2 c3"
         rel="noopener noreferrer"
         target="_blank"
       >
         <svg
-          class="c5"
+          class="c4"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -101,21 +94,19 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c6"
+          class="c5"
         >
           Autre: Article yyy du code du travail
         </span>
       </a>
     </li>
-    <li
-      class="c1"
-    >
+    <li>
       <a
-        class="c2 c3 c4"
+        class="c1 c2 c3"
         href="/convention-collective/zzz"
       >
         <svg
-          class="c5"
+          class="c4"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -125,7 +116,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c6"
+          class="c5"
         >
           Convention collective: Article zzz du code du travail
         </span>

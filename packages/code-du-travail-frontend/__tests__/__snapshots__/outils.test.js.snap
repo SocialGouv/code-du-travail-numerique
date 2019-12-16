@@ -476,7 +476,6 @@ exports[`<Outils /> should render 1`] = `
 
 .c35 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c36 {

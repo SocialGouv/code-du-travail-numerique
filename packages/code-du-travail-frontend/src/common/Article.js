@@ -15,7 +15,9 @@ const Article = ({ subtitle, title, source, date, children }) => {
     <Container>
       <Wrapper variant="main" data-main-content>
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
-        <StyledPageTitle leftStripped>{title}</StyledPageTitle>
+        <PageTitle leftStripped shift={theme.spacings.larger}>
+          {title}
+        </PageTitle>
         <Meta>
           {source && source.url && (
             <Source>
@@ -56,10 +58,6 @@ Article.defaultProps = {
 export default Article;
 
 const { breakpoints, fonts, spacings } = theme;
-
-const StyledPageTitle = styled(PageTitle)`
-  margin-left: -${spacings.larger};
-`;
 
 const Meta = styled.div`
   display: flex;

@@ -672,7 +672,6 @@ exports[`<MentionLegales /> should render 1`] = `
 
 .c52 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c53 {
@@ -731,7 +730,7 @@ exports[`<MentionLegales /> should render 1`] = `
 
 @media (max-width:600px) {
   .c24 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -739,6 +738,12 @@ exports[`<MentionLegales /> should render 1`] = `
   .c24 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c27 {
+    padding-left: 1.6rem;
   }
 }
 

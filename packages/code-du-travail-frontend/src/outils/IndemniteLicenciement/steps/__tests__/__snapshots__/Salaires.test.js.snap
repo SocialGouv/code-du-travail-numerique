@@ -846,6 +846,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c14:focus,
@@ -856,6 +857,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 }
 
 .c16 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;

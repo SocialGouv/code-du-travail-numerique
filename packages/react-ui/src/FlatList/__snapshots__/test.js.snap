@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Naked /> renders 1`] = `
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+<div>
+  <ul
+    class="c0"
+  >
+    <li>
+      OK
+    </li>
+    <li>
+      sure
+    </li>
+  </ul>
+</div>
+`;

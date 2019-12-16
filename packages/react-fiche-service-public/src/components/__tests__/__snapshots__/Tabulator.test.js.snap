@@ -100,6 +100,12 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   border-radius: 0.6rem;
 }
 
+@media (max-width:600px) {
+  .c6 {
+    padding-left: 1.6rem;
+  }
+}
+
 @media (max-width:980px) {
   .c1 {
     -webkit-flex-wrap: wrap;

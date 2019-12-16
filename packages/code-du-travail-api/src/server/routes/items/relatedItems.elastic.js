@@ -4,7 +4,7 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
   }
   return {
     size,
-    _source: ["title", "source", "slug"],
+    _source: ["action", "description", "icon", "title", "source", "slug"],
     query: {
       bool: {
         must: {

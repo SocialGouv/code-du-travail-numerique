@@ -22,12 +22,12 @@ const About = ({ ogImage, pageUrl }) => (
       image={ogImage}
     />
     <Section>
-      <Container narrow noPadding>
+      <Container narrow>
         <PageTitle subtitle="Apprenez-en plus sur notre histoire, notre équipe et nos méthodes">
           À propos du Code du travail numérique
         </PageTitle>
         <Wrapper variant="main">
-          <StyledTitle>
+          <StyledTitle shift={theme.spacings.larger}>
             Qu’est-ce que le Code du travail numérique&nbsp;?
           </StyledTitle>
           <p>
@@ -93,7 +93,9 @@ const About = ({ ogImage, pageUrl }) => (
             </li>
             <li>des modèles de courrier.</li>
           </ul>
-          <StyledTitle>Qui sommes-nous&nbsp;?</StyledTitle>
+          <StyledTitle shift={theme.spacings.larger}>
+            Qui sommes-nous&nbsp;?
+          </StyledTitle>
           <Heading>Notre équipe</Heading>
           <p>
             Nous sommes une équipe pluridisciplinaire d’une dizaine de personnes
@@ -104,7 +106,7 @@ const About = ({ ogImage, pageUrl }) => (
             juridique des réponses.
           </p>
           <p>
-            Le Code du travail numérique est un service public initié par
+            Le Code du travail numérique est un service public initié par{" "}
             <a
               title="le site du ministère du travail"
               href="https://travail.gouv.fr"
@@ -117,14 +119,14 @@ const About = ({ ogImage, pageUrl }) => (
               href="https://incubateur.social.gouv.fr/"
             >
               l’incubateur des ministères sociaux
-            </a>
+            </a>{" "}
             en partenariat avec la communauté{" "}
             <a title="le site beta.gouv" href="https://beta.gouv.fr/">
               beta.gouv.fr
             </a>
             .
           </p>
-          <StyledTitle>Notre méthode</StyledTitle>
+          <StyledTitle shift={theme.spacings.larger}>Notre méthode</StyledTitle>
           <p>
             Le service est développé en lien étroit avec les utilisateurs
             (employeurs et salariés) et les praticiens du droit du travail
@@ -151,19 +153,9 @@ const About = ({ ogImage, pageUrl }) => (
 );
 export default About;
 
-const { spacings, breakpoints } = theme;
+const { spacings } = theme;
 
 const StyledTitle = styled(Title)`
   margin-top: ${spacings.larger};
   margin-bottom: ${spacings.large};
-  margin-left: calc(-1 * ${spacings.larger});
-  & > * {
-    padding-left: ${spacings.larger};
-  }
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-left: calc(-1 * ${spacings.medium});
-    & > * {
-      padding-left: ${spacings.medium};
-    }
-  }
 `;

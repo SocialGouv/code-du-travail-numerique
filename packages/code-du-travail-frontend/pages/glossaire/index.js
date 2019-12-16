@@ -5,6 +5,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import {
   Container,
+  FlatList,
   PageTitle,
   Section,
   theme,
@@ -57,7 +58,11 @@ function getGlossaryLetters(glossary) {
 }
 
 function LetterTitle({ letter }) {
-  return <Title id={`ancre-${letter}`}>{letter}</Title>;
+  return (
+    <Title shift={theme.spacings.larger} id={`ancre-${letter}`}>
+      {letter}
+    </Title>
+  );
 }
 
 function Glossary({ letters }) {
@@ -71,11 +76,11 @@ function Glossary({ letters }) {
         <LetterTitle letter={letter} />
         <StyledList>
           {terms.map(({ title, slug }) => (
-            <StyledListItem key={slug}>
+            <li key={slug}>
               <Link href="/glossaire/[slug]" as={`/glossaire/${slug}`}>
                 <a>{title}</a>
               </Link>
-            </StyledListItem>
+            </li>
           ))}
         </StyledList>
       </div>
@@ -111,10 +116,6 @@ const Item = styled.li`
   font-size: ${fonts.sizes.headings.small};
 `;
 
-const StyledList = styled.ul`
-  padding: 0;
-  list-style-type: none;
-`;
-const StyledListItem = styled.li`
-  padding-left: 0;
+const StyledList = styled(FlatList)`
+  margin: ${spacings.small} 0;
 `;

@@ -588,7 +588,6 @@ exports[`<FicheSP /> should render 1`] = `
 
 .c46 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c47 {
@@ -633,7 +632,7 @@ exports[`<FicheSP /> should render 1`] = `
 
 @media (max-width:600px) {
   .c26 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 

@@ -186,6 +186,7 @@ exports[`<Home /> should render 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c44:focus,
@@ -257,6 +258,7 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c45 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -690,7 +692,6 @@ exports[`<Home /> should render 1`] = `
 
 .c58 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c59 {
@@ -804,6 +805,12 @@ exports[`<Home /> should render 1`] = `
 @media (max-width:600px) {
   .c29 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c33 {
+    padding-left: 0;
   }
 }
 

@@ -124,6 +124,12 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   padding: 1rem 2rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <section
     class="c0"
@@ -312,6 +318,12 @@ exports[`<Contribution /> should render answer references 1`] = `
 .c0 {
   margin-bottom: 2rem;
   padding: 1rem 2rem;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
 }
 
 <div>
@@ -546,6 +558,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   padding: 1rem 2rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <section
     class="c0"
@@ -694,6 +712,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <section
     class="c0"
@@ -822,6 +846,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <section
     class="c0"
@@ -896,6 +926,12 @@ exports[`<Contribution /> should render with generic answer 1`] = `
   padding: 1rem 2rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <section
     class="c0"
@@ -958,6 +994,12 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
 .c0 {
   margin-bottom: 2rem;
   padding: 1rem 2rem;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
 }
 
 <div>

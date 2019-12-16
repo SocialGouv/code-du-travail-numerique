@@ -18,7 +18,7 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -57,7 +57,7 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -98,7 +98,7 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -153,7 +153,7 @@ exports[`<Wrapper /> it renders a main Wrapper 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -193,7 +193,7 @@ exports[`<Wrapper /> should render a large wrapper 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 

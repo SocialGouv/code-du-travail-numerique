@@ -8,9 +8,6 @@ export default createGlobalStyle`
     margin: ${spacings.small} 0;
     padding: 0 0 0 2rem;
   }
-  li {
-    padding-left: ${spacings.small};
-  }
   ul {
     list-style-type: disc;
     ul {

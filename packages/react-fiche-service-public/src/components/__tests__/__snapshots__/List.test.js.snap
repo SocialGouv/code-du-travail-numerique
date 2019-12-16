@@ -35,6 +35,12 @@ exports[`<List /> should render and increment heading level of children by one 1
   margin-bottom: 0.4rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <ul>
     <li

@@ -505,7 +505,6 @@ exports[`<Recherche /> should render 1`] = `
 
 .c38 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c39 {
@@ -557,7 +556,7 @@ exports[`<Recherche /> should render 1`] = `
 
 @media (max-width:600px) {
   .c24 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 

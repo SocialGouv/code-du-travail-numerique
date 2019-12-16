@@ -38,6 +38,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c7:focus,
@@ -48,6 +49,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 }
 
 .c9 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -274,6 +276,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c6:focus,
@@ -284,6 +287,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 }
 
 .c8 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -420,6 +424,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c7:focus,
@@ -430,6 +435,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
 }
 
 .c9 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;

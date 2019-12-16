@@ -38,6 +38,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c6:focus,
@@ -48,6 +49,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
 }
 
 .c8 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -226,6 +228,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c1:focus,
@@ -236,6 +239,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 }
 
 .c3 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -314,6 +318,7 @@ exports[`<Salaires /> should render 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c6:focus,
@@ -324,6 +329,7 @@ exports[`<Salaires /> should render 1`] = `
 }
 
 .c8 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;

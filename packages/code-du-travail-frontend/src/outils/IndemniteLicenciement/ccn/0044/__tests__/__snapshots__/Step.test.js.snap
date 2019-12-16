@@ -82,6 +82,12 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   width: 100%;
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0"
@@ -430,6 +436,12 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   margin-bottom: 2rem;
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0"
@@ -739,6 +751,12 @@ exports[`<Step /> should render 1`] = `
 
 .c5 {
   width: 100%;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
 }
 
 <div>

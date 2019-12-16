@@ -492,7 +492,6 @@ exports[`<Theme /> should render 1`] = `
 
 .c37 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c38 {

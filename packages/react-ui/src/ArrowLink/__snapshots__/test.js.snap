@@ -26,6 +26,7 @@ exports[`<ArrowLink /> renders an arrow on the left  1`] = `
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
   width: 2.8rem;
+  height: 2.1rem;
   margin: 0 0.4rem 0 1rem;
   padding-top: 0.6rem;
   color: #ff7067;
@@ -89,6 +90,7 @@ exports[`<ArrowLink /> renders an arrow on the right  1`] = `
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
   width: 2.8rem;
+  height: 2.1rem;
   margin: 0 0.4rem 0 1rem;
   padding-top: 0.6rem;
   color: #ff7067;

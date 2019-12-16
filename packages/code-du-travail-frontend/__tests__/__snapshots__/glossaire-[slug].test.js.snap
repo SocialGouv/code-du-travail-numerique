@@ -607,7 +607,6 @@ exports[`<Term /> should render 1`] = `
 
 .c42 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c43 {
@@ -655,7 +654,7 @@ exports[`<Term /> should render 1`] = `
 
 @media (max-width:600px) {
   .c24 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 

@@ -214,7 +214,6 @@ exports[`<Footer /> should render 1`] = `
 
 .c16 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c17 {

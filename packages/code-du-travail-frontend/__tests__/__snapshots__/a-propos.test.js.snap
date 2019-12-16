@@ -6,7 +6,6 @@ exports[`<About /> should render 1`] = `
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
-  padding: 0;
 }
 
 .c20 > *:first-child {
@@ -111,7 +110,7 @@ exports[`<About /> should render 1`] = `
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
+  padding-left: 4rem;
   text-align: left;
 }
 
@@ -144,6 +143,7 @@ exports[`<About /> should render 1`] = `
 
 .c26 {
   margin: 0 auto 1rem;
+  margin-left: -4rem;
   text-align: left;
 }
 
@@ -583,7 +583,6 @@ exports[`<About /> should render 1`] = `
 
 .c45 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c46 {
@@ -618,11 +617,6 @@ exports[`<About /> should render 1`] = `
 .c27 {
   margin-top: 4rem;
   margin-bottom: 3.2rem;
-  margin-left: calc(-1 * 4rem);
-}
-
-.c27 > * {
-  padding-left: 4rem;
 }
 
 @media print {
@@ -641,7 +635,7 @@ exports[`<About /> should render 1`] = `
 
 @media (max-width:600px) {
   .c25 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -653,8 +647,26 @@ exports[`<About /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c28 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c24 {
+    padding-left: 0;
   }
 }
 
@@ -800,16 +812,6 @@ exports[`<About /> should render 1`] = `
   .c43 {
     margin-top: 1rem;
     text-align: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    margin-left: calc(-1 * 2rem);
-  }
-
-  .c27 > * {
-    padding-left: 2rem;
   }
 }
 
@@ -1140,6 +1142,7 @@ exports[`<About /> should render 1`] = `
           </p>
           <p>
             Le Code du travail numérique est un service public initié par
+             
             <a
               href="https://travail.gouv.fr"
               title="le site du ministère du travail"
@@ -1154,6 +1157,7 @@ exports[`<About /> should render 1`] = `
             >
               l’incubateur des ministères sociaux
             </a>
+             
             en partenariat avec la communauté
              
             <a

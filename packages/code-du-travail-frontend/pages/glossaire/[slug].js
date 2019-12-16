@@ -5,9 +5,11 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import {
   Container,
+  FlatList,
   PageTitle,
   Section,
   Table,
+  theme,
   Wrapper
 } from "@socialgouv/react-ui";
 
@@ -46,7 +48,7 @@ function Term({ pageUrl, ogImage }) {
                     <td>
                       <StyledList>
                         {term.refs.map(({ url }) => (
-                          <StyledListItem key={url}>
+                          <li key={url}>
                             <a
                               href={url}
                               target="_blank"
@@ -55,7 +57,7 @@ function Term({ pageUrl, ogImage }) {
                             >
                               {url}
                             </a>
-                          </StyledListItem>
+                          </li>
                         ))}
                       </StyledList>
                     </td>
@@ -77,10 +79,10 @@ function Term({ pageUrl, ogImage }) {
 
 export default Term;
 
-const StyledList = styled.ul`
+const { spacings } = theme;
+
+const StyledList = styled(FlatList)`
+  margin: ${spacings.small} 0;
   padding: 0;
   list-style-type: none;
-`;
-const StyledListItem = styled.li`
-  padding-left: 0;
 `;

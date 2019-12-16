@@ -16,17 +16,17 @@ exports[`<Glossaire /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c35 {
+.c34 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c35 > *:first-child {
+.c34 > *:first-child {
   margin-top: 0;
 }
 
-.c35 > *:last-child {
+.c34 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -110,11 +110,11 @@ exports[`<Glossaire /> should render 1`] = `
   font-size: 2.8rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
+  padding-left: 4rem;
   text-align: left;
 }
 
-.c36 {
+.c35 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -134,6 +134,7 @@ exports[`<Glossaire /> should render 1`] = `
 
 .c27 {
   margin: 0 auto 1rem;
+  margin-left: -4rem;
   text-align: left;
 }
 
@@ -204,7 +205,7 @@ exports[`<Glossaire /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c38 {
+.c37 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -241,16 +242,16 @@ exports[`<Glossaire /> should render 1`] = `
   opacity: 1;
 }
 
-.c38:link,
-.c38:visited {
+.c37:link,
+.c37:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c38:not([disabled]):hover,
-.c38:not([disabled]):active,
-.c38:not([disabled]):focus {
+.c37:not([disabled]):hover,
+.c37:not([disabled]):active,
+.c37:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -259,7 +260,7 @@ exports[`<Glossaire /> should render 1`] = `
   border-color: #9cb5e2;
 }
 
-.c38[disabled] {
+.c37[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -466,12 +467,12 @@ exports[`<Glossaire /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c32 {
+.c31 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c33 {
+.c32 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -479,7 +480,7 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c33:before {
+.c32:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -491,7 +492,7 @@ exports[`<Glossaire /> should render 1`] = `
   content: "";
 }
 
-.c34 {
+.c33 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -499,7 +500,7 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: center;
 }
 
-.c37 {
+.c36 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -509,27 +510,27 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: left;
 }
 
-.c37 > *:first-child {
+.c36 > *:first-child {
   margin-top: 0;
 }
 
-.c37 > *:last-child {
+.c36 > *:last-child {
   margin-bottom: 0;
 }
 
-.c39 {
+.c38 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c40 {
+.c39 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c41 {
+.c40 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -543,25 +544,25 @@ exports[`<Glossaire /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c41 > *:first-child {
+.c40 > *:first-child {
   margin-top: 0;
 }
 
-.c41 > *:last-child {
+.c40 > *:last-child {
   margin-bottom: 0;
 }
 
-.c43 + .c42 {
+.c42 + .c41 {
   padding-left: 1.6rem;
 }
 
-.c45 {
+.c44 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c44 {
+.c43 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -571,12 +572,11 @@ exports[`<Glossaire /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c46 {
+.c45 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
-.c47 {
+.c46 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -612,12 +612,10 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 .c30 {
+  margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c31 {
-  padding-left: 0;
+  margin: 1rem 0;
 }
 
 @media print {
@@ -628,7 +626,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media print {
-  .c35 {
+  .c34 {
     max-width: 100%;
     padding: 0;
   }
@@ -636,7 +634,7 @@ exports[`<Glossaire /> should render 1`] = `
 
 @media (max-width:600px) {
   .c25 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -648,8 +646,26 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c28 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c27 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c24 {
+    padding-left: 0;
   }
 }
 
@@ -752,27 +768,27 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media print {
-  .c33 {
+  .c32 {
     display: none;
   }
 }
 
 @media print {
-  .c37 {
+  .c36 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c41 {
+  .c40 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c40 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -780,19 +796,19 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c43 + .c42 {
+  .c42 + .c41 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c44 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c43 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1277,405 +1293,315 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/a-titre-conservatoire"
                 >
                   A titre conservatoire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/abrogation"
                 >
                   Abrogation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/abroge"
                 >
                   Abrogé
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accessoires-de-salaire"
                 >
                   Accessoires de salaire 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accident-de-mission"
                 >
                   Accident de mission
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accident-de-travail"
                 >
                   Accident de travail
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-atypique"
                 >
                   Accord atypique
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-collectif"
                 >
                   Accord collectif
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-dentreprise"
                 >
                   Accord d'entreprise
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-de-branche"
                 >
                   Accord de branche
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-de-branche-etendu"
                 >
                   Accord de branche étendu
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-de-branche-non-etendu"
                 >
                   Accord de branche non étendu
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-de-groupe"
                 >
                   Accord de groupe
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-de-methode"
                 >
                   Accord de méthode
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-derogatoire"
                 >
                   Accord dérogatoire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-interentreprises"
                 >
                   Accord interentreprises
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/accord-national-interprofessionnel"
                 >
                   Accord national interprofessionnel
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/acte-reglementaire"
                 >
                   Acte réglementaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/actes-positifs-de-recherche-demploi"
                 >
                   Actes positifs de recherche d'emploi
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/actionnariat-des-salaries"
                 >
                   Actionnariat des salariés
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/activite-partielle"
                 >
                   Activité partielle
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/activite-principale-exercee"
                 >
                   Activité principale exercée
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/activites-sociales-et-culturelles"
                 >
                   Activités sociales et culturelles 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/adhesion-accord-collectif-ou-convention-collective"
                 >
                   Adhésion (accord collectif ou convention collective) 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/affection-de-longue-duree"
                 >
                   Affection de longue durée 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/affiliation"
                 >
                   Affiliation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/aide-au-retour-a-lemploi"
                 >
                   Aide au retour à l’emploi 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/aide-juridictionnelle"
                 >
                   Aide juridictionnelle 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/amplitude-horaire"
                 >
                   Amplitude horaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/annee-civile"
                 >
                   Année civile
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/annualisation-du-temps-de-travail"
                 >
                   Annualisation du temps de travail
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/appel"
                 >
                   Appel 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/arret-de-la-cour-de-cassation"
                 >
                   arrêt de la cour de cassation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/arret-de-travail"
                 >
                   arrêt de travail
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/arrete"
                 >
                   Arrêté
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/article-etendu"
                 >
                   Article étendu 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/article-non-etendu"
                 >
                   Article non étendu
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/assiette"
                 >
                   Assiette
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/astreinte"
                 >
                   Astreinte
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/audience-electorale"
                 >
                   Audience électorale
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/autorite-de-la-chose-jugee"
                 >
                   Autorité de la chose jugée
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/avantages-en-nature"
                 >
                   Avantages en nature
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/avenant"
                 >
                   Avenant
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/avertissement"
                 >
                   Avertissement
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/ayant-droit"
                 >
@@ -1701,45 +1627,35 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/base-de-donnees-economiques-et-sociales"
                 >
                   Base de données économiques et sociales 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/bilan-social"
                 >
                   Bilan social
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/bon-de-delegation"
                 >
                   Bon de délégation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/branche-professionnelle"
                 >
                   Branche professionnelle
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/bulletin-de-paye"
                 >
@@ -1765,279 +1681,217 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/cadre-dirigeant"
                 >
                   Cadre dirigeant
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/certificat-de-travail"
                 >
                   Certificat de travail
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/chambre-sociale-de-la-cour-de-cassation"
                 >
                   Chambre sociale de la cour de cassation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/champ-dapplication-dun-accord-collectif"
                 >
                   Champ d’application d'un accord collectif
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/circulaire"
                 >
                   Circulaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/classification-professionnelle"
                 >
                   Classification professionnelle
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/clause-penale"
                 >
                   Clause pénale
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/clause-resolutoire"
                 >
                   Clause résolutoire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/coefficient-hierarchique"
                 >
                   Coefficient hiérarchique
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/comite-social-et-economique"
                 >
                   Comité social et économique 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/commission-nationale-de-linformatique-et-des-libertes"
                 >
                   Commission nationale de l’informatique et des libertés
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/commission-sante-securite-et-conditions-de-travail"
                 >
                   Commission santé, sécurité et conditions de travail
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/conciliation"
                 >
                   Conciliation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/conges-familiaux"
                 >
                   Congés familiaux
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/conges-speciaux"
                 >
                   Congés spéciaux
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/conseil-detat"
                 >
                   Conseil d’Etat 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/conseil-de-prudhommes"
                 >
                   Conseil de prud’hommes 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/conseiller-du-salarie"
                 >
                   Conseiller du salarié
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/conseiller-prudhomal"
                 >
                   Conseiller prud'homal
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/constitution"
                 >
                   Constitution
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/contrat-de-service"
                 >
                   Contrat de service
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/contravention"
                 >
                   Contravention
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/convention-collective"
                 >
                   Convention collective
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/convention-collective-de-branche"
                 >
                   Convention collective de branche
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/cour-administrative-dappel-caa"
                 >
                   Cour administrative d’appel (CAA)
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/cour-dappel"
                 >
                   Cour d’appel
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/cour-de-cassation"
                 >
                   Cour de cassation 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/cour-de-justice-de-lunion-europeenne"
                 >
                   Cour de justice de l’Union Européenne 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/cour-europeenne-des-droits-de-lhomme"
                 >
                   Cour européenne des droits de l’homme 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/creance"
                 >
                   Créance
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/credit-dheures-de-delegation"
                 >
@@ -2063,198 +1917,154 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/de-gre-a-gre"
                 >
                   De gré à gré
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/decret"
                 >
                   Décret
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/decret-en-conseil-detat"
                 >
                   Décret en conseil d'état
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/defendeur"
                 >
                   Défendeur 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/defenseur-syndical"
                 >
                   Défenseur syndical
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/delai-de-carence"
                 >
                   Délai de carence
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/delai-de-prevenance"
                 >
                   Délai de prévenance
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/delibere"
                 >
                   Délibéré
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/delit"
                 >
                   Délit
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/delit-dentrave"
                 >
                   Délit d'entrave
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/demandeur"
                 >
                   Demandeur 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/denonciation-dun-accord-collectif"
                 >
                   Dénonciation d'un accord collectif
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/depens"
                 >
                   Dépens
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/derogation"
                 >
                   Dérogation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/disposition"
                 >
                   Disposition
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/dividende"
                 >
                   Dividende
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/domicile"
                 >
                   Domicile
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/domiciliation-dune-entreprise"
                 >
                   Domiciliation d'une entreprise
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/dommages-et-interets"
                 >
                   Dommages et intérêts
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/droit-communautaire"
                 >
                   Droit communautaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/droit-du-travail"
                 >
                   Droit du travail
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/duplicata"
                 >
@@ -2280,99 +2090,77 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/echelon"
                 >
                   Echelon
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/effectif-de-lentreprise"
                 >
                   Effectif de l'entreprise
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/eligible"
                 >
                   Eligible
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/employeurs-multiples"
                 >
                   Employeurs multiples
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/emprisonnement"
                 >
                   Emprisonnement
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/en-numeraire"
                 >
                   En numéraire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/engagement-unilateral-de-lemployeur"
                 >
                   Engagement unilatéral de l'employeur
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/entreprise-de-taille-intermediaire"
                 >
                   Entreprise de taille intermédiaire 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/ester-en-justice"
                 >
                   Ester en justice 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/etat-divresse-manifeste"
                 >
                   Etat d'ivresse manifeste
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/extrait-kbis"
                 >
@@ -2398,81 +2186,63 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/faute-grave"
                 >
                   Faute grave
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/faute-inexcusable-de-lemployeur"
                 >
                   Faute inexcusable de l'employeur
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/faute-lourde"
                 >
                   Faute lourde
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/fetes-legales"
                 >
                   Fêtes légales
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/filiale"
                 >
                   Filiale
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/force-executoire"
                 >
                   Force exécutoire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/force-majeure"
                 >
                   Force majeure
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/forclusion"
                 >
                   Forclusion
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/fractionnement-des-conges-payes"
                 >
@@ -2498,36 +2268,28 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/gratification"
                 >
                   Gratification
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/gratification-stagiaire"
                 >
                   Gratification stagiaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/greffe"
                 >
                   Greffe
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/grossesse-pathologique"
                 >
@@ -2553,45 +2315,35 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/heures-complementaires"
                 >
                   Heures complémentaires
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/heures-dequivalence"
                 >
                   Heures d'équivalence
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/heures-pour-recherche-demploi"
                 >
                   Heures pour recherche d'emploi
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/homologation"
                 >
                   Homologation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/hyperbare"
                 >
@@ -2617,54 +2369,42 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/indemnites"
                 >
                   Indemnités
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/indemnites-journalieres-de-securite-sociale"
                 >
                   indemnités journalières de sécurité sociale
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/indexation-des-salaires"
                 >
                   Indexation des salaires
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/infraction"
                 >
                   Infraction
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/instance"
                 >
                   Instance
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/institutions-representatives-du-personnel"
                 >
@@ -2690,99 +2430,77 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/jour-calendaire"
                 >
                   Jour calendaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/jour-chome"
                 >
                   Jour chômé
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/jour-ferie"
                 >
                   Jour férié
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/jour-franc"
                 >
                   Jour franc
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/jour-ouvrable"
                 >
                   Jour ouvrable
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/jour-ouvre"
                 >
                   Jour ouvré
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/jugement-definitif"
                 >
                   Jugement définitif
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/jugement-passe-en-force-de-chose-jugee"
                 >
                   Jugement passé en force de chose jugée
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/juridictions-administratives"
                 >
                   Juridictions administratives
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/juridictions-judiciaires"
                 >
                   Juridictions judiciaires
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/jurisprudence"
                 >
@@ -2808,90 +2526,70 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/licenciement-disciplinaire"
                 >
                   Licenciement disciplinaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/licenciement-irregulier"
                 >
                   Licenciement irrégulier
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/licenciement-nul"
                 >
                   Licenciement nul
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/licenciement-pour-motif-economique"
                 >
                   Licenciement pour motif économique
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/licenciement-pour-motif-personnel"
                 >
                   Licenciement pour motif personnel
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/licenciement-sans-cause-reelle-et-serieuse"
                 >
                   Licenciement sans cause réelle et sérieuse 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/lien-de-subordination"
                 >
                   Lien de subordination
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/liquidation-judiciaire"
                 >
                   Liquidation judiciaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/litige"
                 >
                   Litige
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/lock-out"
                 >
@@ -2917,117 +2615,91 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/maladie-professionnelle"
                 >
                   Maladie professionnelle
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/mandat-dun-representant-du-personnel"
                 >
                   Mandat d'un représentant du personnel
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/mandataire-social"
                 >
                   Mandataire social
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/marche-reglemente"
                 >
                   Marché réglementé
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/mensualisation"
                 >
                   Mensualisation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/minimum-garanti"
                 >
                   Minimum garanti 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/mise-a-pied-conservatoire"
                 >
                   Mise à pied conservatoire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/mise-a-pied-disciplinaire"
                 >
                   Mise à pied disciplinaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/mise-en-demeure"
                 >
                   Mise en demeure
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/modification-juridique-de-la-situation-de-lemployeur"
                 >
                   Modification juridique de la situation de l'employeur
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/mutation"
                 >
                   Mutation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/mutation-disciplinaire"
                 >
                   Mutation disciplinaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/mutile-du-travail"
                 >
@@ -3053,18 +2725,14 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/norme-nf-x35-102"
                 >
                   Norme nf x35-102
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/notification"
                 >
@@ -3090,36 +2758,28 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/operateurs-de-competences"
                 >
                   Opérateurs de compétences 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/ordre-du-jour"
                 >
                   Ordre du jour
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/ordre-public"
                 >
                   Ordre public
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/outplacement"
                 >
@@ -3145,180 +2805,140 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/part-sociale"
                 >
                   Part sociale
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/parties-au-contrat-de-travail"
                 >
                   Parties au contrat de travail
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/pays-avec-lesquels-la-france-a-signe-une-convention-de-securite-sociale"
                 >
                   Pays avec lesquels la france a signé une convention de sécurité sociale
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/pays-ayant-conclu-un-accord-avec-la-france-sur-limmigration-professionnelle"
                 >
                   Pays ayant conclu un accord avec la France sur l'immigration professionnelle
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/pays-de-lunion-europeenne"
                 >
                   Pays de l'Union Européenne
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/pecule-de-liberation"
                 >
                   Pécule de libération
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/penibilite"
                 >
                   Pénibilité 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/periode-probatoire"
                 >
                   Période probatoire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/personne-morale"
                 >
                   Personne morale
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/pme-au-sens-communautaire"
                 >
                   PME au sens communautaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/pourvoi-en-cassation"
                 >
                   Pourvoi en cassation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/preavis"
                 >
                   Préavis
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/prejudice"
                 >
                   Préjudice
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/prescription"
                 >
                   Prescription
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/prestataire-de-services-dans-lunion-europeenne"
                 >
                   Prestataire de services dans l'Union Européenne
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/proche-aidant-dune-personne-agee"
                 >
                   Proche aidant d'une personne âgée
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/propagande-electorale"
                 >
                   Propagande électorale
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/prorata-temporis"
                 >
                   Prorata temporis
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/prorogation"
                 >
                   Prorogation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/protocole-daccord-preelectoral-pap"
                 >
@@ -3344,9 +2964,7 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/quorum"
                 >
@@ -3372,153 +2990,119 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/recidive"
                 >
                   Récidive
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/recours-hierarchique"
                 >
                   Recours hiérarchique
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/recours-juridictionnel-suspensif"
                 >
                   Recours juridictionnel suspensif
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/redressement-judiciaire"
                 >
                   Redressement judiciaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/refere"
                 >
                   Référé
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/reglement-amiable-dun-litige"
                 >
                   Règlement amiable d'un litige
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/representant-legal"
                 >
                   Représentant légal
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/requerant"
                 >
                   Requérant
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/requete"
                 >
                   Requête
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/rescrit"
                 >
                   Rescrit
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/rescrit-social"
                 >
                   Rescrit social
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/retrogradation"
                 >
                   Rétrogradation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/revenus-de-remplacement"
                 >
                   Revenus de remplacement
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/revenus-nets-categoriels"
                 >
                   Revenus nets catégoriels
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/risque-professionnel"
                 >
                   Risque professionnel
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/risque-psychosociaux"
                 >
                   Risque psychosociaux
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/rupture-amiable"
                 >
@@ -3544,135 +3128,105 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/salarie-mandate"
                 >
                   Salarié mandaté
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/sanction-disciplinaire"
                 >
                   Sanction disciplinaire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/secretariat-greffe"
                 >
                   Secrétariat-greffe
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/sejour-irregulier"
                 >
                   Séjour irrégulier
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/semaine"
                 >
                   Semaine 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/seuil-deffectifs"
                 >
                   Seuil d'effectifs
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/signification"
                 >
                   Signification
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/silence-garde-par-ladministration"
                 >
                   Silence gardé par l'administration
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/statut-particulier"
                 >
                   Statut particulier
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/subrogation"
                 >
                   Subrogation
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/sujetion"
                 >
                   Sujétion
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/sursis-a-statuer"
                 >
                   Sursis à statuer
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/suspension-du-contrat-de-travail"
                 >
                   Suspension du contrat de travail
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/systeme-didentification-du-repertoire-des-entreprises"
                 >
                   Système d'identification du répertoire des entreprises 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/systeme-informatique-du-repertoire-des-entreprises"
                 >
@@ -3698,90 +3252,70 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/temps-de-travail-effectif"
                 >
                   Temps de travail effectif
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/terme-imprecis"
                 >
                   Terme imprécis
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/terme-precis"
                 >
                   Terme précis
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/texte-attache"
                 >
                   Texte attaché
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/texte-de-base"
                 >
                   Texte de base
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/textes-salaires"
                 >
                   Textes salaires
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/titre-executoire"
                 >
                   Titre exécutoire
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/transaction"
                 >
                   Transaction
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/transfert-dentreprise"
                 >
                   Transfert d'entreprise
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/travailleur-frontalier"
                 >
@@ -3807,36 +3341,28 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/union-europeenne"
                 >
                   Union Européenne 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/unite-economique-et-sociale"
                 >
                   Unité économique et sociale 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/usages"
                 >
                   Usages
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/usages-locaux"
                 >
@@ -3862,36 +3388,28 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/vacant"
                 >
                   Vacant 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/valeur-limite-dexposition"
                 >
                   valeur limite d'exposition
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/vigueur"
                 >
                   Vigueur
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/voies-de-recours"
                 >
@@ -3917,36 +3435,28 @@ exports[`<Glossaire /> should render 1`] = `
             <ul
               class="c30"
             >
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/zone-de-revitalisation-rurale"
                 >
                   Zone de revitalisation rurale 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/zone-franche-urbaine"
                 >
                   Zone franche urbaine 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/zone-touristique-internationale"
                 >
                   Zone touristique internationale 
                 </a>
               </li>
-              <li
-                class="c31"
-              >
+              <li>
                 <a
                   href="/glossaire/zone-urbaine-sensible"
                 >
@@ -3960,22 +3470,22 @@ exports[`<Glossaire /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c32"
+    class="c31"
   >
     <footer
-      class="c33"
+      class="c32"
     >
       <div
-        class="c34"
+        class="c33"
       >
         <div
-          class="c35"
+          class="c34"
         >
           <header
             class="c21"
           >
             <h3
-              class="c36"
+              class="c35"
             >
               <div
                 class="c23"
@@ -3984,16 +3494,16 @@ exports[`<Glossaire /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c37"
+            class="c36"
           >
             Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
           </div>
           <button
-            class="c38"
+            class="c37"
           >
             Contacter nos services
             <svg
-              class="c39"
+              class="c38"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -4006,68 +3516,68 @@ exports[`<Glossaire /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c40"
+        class="c39"
       >
         <nav>
           <div
-            class="c41"
+            class="c40"
           >
             <div
-              class="c42 c43"
+              class="c41 c42"
             >
               <h3
-                class="c44"
+                class="c43"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c45"
+                class="c44"
               >
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -4076,21 +3586,21 @@ exports[`<Glossaire /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c42 c43"
+              class="c41 c42"
             >
               <h3
-                class="c44"
+                class="c43"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c45"
+                class="c44"
               >
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -4099,10 +3609,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -4113,21 +3623,21 @@ exports[`<Glossaire /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c42 c43"
+              class="c41 c42"
             >
               <h3
-                class="c44"
+                class="c43"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c45"
+                class="c44"
               >
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -4136,10 +3646,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -4148,10 +3658,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c45"
                 >
                   <a
-                    class="c47"
+                    class="c46"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"

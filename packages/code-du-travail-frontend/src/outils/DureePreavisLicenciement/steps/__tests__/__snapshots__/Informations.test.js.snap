@@ -65,6 +65,12 @@ exports[`<StepInformations /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"
@@ -179,6 +185,12 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 .c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
 }
 
 <div>
@@ -300,6 +312,12 @@ exports[`<StepInformations /> should render groupe 1`] = `
 .c1 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
 }
 
 <div>

@@ -160,6 +160,7 @@ exports[`<SearchResults/> should render results 1`] = `
   background: none;
   border: none;
   border-radius: 0;
+  overflow: visible;
 }
 
 .c15:focus,
@@ -170,6 +171,7 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 .c16 {
+  width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -242,6 +244,12 @@ exports[`<SearchResults/> should render results 1`] = `
   width: calc(100% / 4 - 2 * 1rem);
   margin: 1rem;
   padding: 0;
+}
+
+.c4 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c6 {
@@ -321,15 +329,8 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-top: 1.6rem;
 }
 
-.c4 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c5 {
   margin-bottom: 2rem;
-  padding: 0;
 }
 
 @media print {
@@ -348,7 +349,7 @@ exports[`<SearchResults/> should render results 1`] = `
 
 @media (max-width:600px) {
   .c19 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
@@ -356,6 +357,12 @@ exports[`<SearchResults/> should render results 1`] = `
   .c19 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
   }
 }
 

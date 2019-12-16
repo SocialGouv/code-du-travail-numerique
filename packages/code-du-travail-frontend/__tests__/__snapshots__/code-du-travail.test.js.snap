@@ -588,7 +588,6 @@ exports[`<CodeDuTravail /> should render 1`] = `
 
 .c45 {
   margin: 0.4rem 0;
-  padding: 0;
 }
 
 .c46 {
@@ -629,7 +628,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
 
 @media (max-width:600px) {
   .c25 {
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
   }
 }
 
