@@ -5,7 +5,7 @@ Object {
   "hits": Array [
     Object {
       "_id": "12",
-      "_index": "cdtn_document_test",
+      "_index": "cdtn_test_documents",
       "_score": 1.0166607,
       "_source": Object {
         "id": "KALICONT000005635691",
@@ -18,7 +18,7 @@ Object {
     },
     Object {
       "_id": "13",
-      "_index": "cdtn_document_test",
+      "_index": "cdtn_test_documents",
       "_score": 1.0166607,
       "_source": Object {
         "id": "KALICONT000005635886",
@@ -43,7 +43,7 @@ Object {
   "hits": Array [
     Object {
       "_id": "12",
-      "_index": "cdtn_document_test",
+      "_index": "cdtn_test_documents",
       "_score": 1.0166607,
       "_source": Object {
         "id": "KALICONT000005635691",
@@ -56,7 +56,7 @@ Object {
     },
     Object {
       "_id": "13",
-      "_index": "cdtn_document_test",
+      "_index": "cdtn_test_documents",
       "_score": 1.0166607,
       "_source": Object {
         "id": "KALICONT000005635886",
