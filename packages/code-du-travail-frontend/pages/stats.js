@@ -8,6 +8,7 @@ import {
   Heading,
   PageTitle,
   Section,
+  theme,
   Wrapper
 } from "@socialgouv/react-ui";
 
@@ -44,15 +45,14 @@ const About = () => (
               <Num>30736</Num>
             </StyledGridCell>
           </Grid>
-          <br />
           <p>Statistiques d’usage depuis le 1er Janvier 2019</p>
-          <br />
-          <br />
         </Wrapper>
       </Container>
     </Section>
   </Layout>
 );
+
+const { fonts } = theme;
 
 const StyledGridCell = styled(GridCell)`
   display: flex;
@@ -61,7 +61,7 @@ const StyledGridCell = styled(GridCell)`
 `;
 
 const Num = styled.div`
-  font-size: 2em;
+  font-size: ${fonts.headings.title.small};
 `;
 
 export default About;

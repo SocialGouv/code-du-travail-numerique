@@ -65,13 +65,16 @@ SelectQuestion.propTypes = {
 
 export { SelectQuestion };
 
-const { spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
 const SubLabel = styled.label`
   display: block;
   margin-bottom: ${theme.spacings.tiny};
-  font-size: ${theme.fonts.sizes.default};
+  font-size: ${fonts.sizes.default};
   cursor: ${props => (props.as ? "default" : "pointer")};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.small};
+  }
 `;
 
 const Select = styled.select`

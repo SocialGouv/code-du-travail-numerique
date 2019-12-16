@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { DirectionRight } from "../icons";
 import { lighten, rgba, transparentize } from "polished";
 
-import { animations, box, fonts, spacings } from "../theme";
+import { animations, box, breakpoints, fonts, spacings } from "../theme";
 
 export const StyledButton = styled.button`
   display: inline-flex;
@@ -22,7 +22,9 @@ export const StyledButton = styled.button`
   transition: background-color ${animations.transitionTiming} linear,
     border-color ${animations.transitionTiming} linear, transform 100ms linear;
   appearance: none;
-
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.small};
+  }
   ${({ narrow, theme, small, variant }) => {
     if (variant === "link") {
       return css`

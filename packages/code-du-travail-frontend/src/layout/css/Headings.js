@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "@socialgouv/react-ui";
 
-const { fonts, spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
 export default createGlobalStyle`
   h1,
@@ -18,15 +18,31 @@ export default createGlobalStyle`
     font-weight: normal;
     font-size: ${fonts.sizes.headings.large};
     font-family: 'Merriweather', serif;
+    @media (max-width: ${breakpoints.mobile}) {
+      font-size: ${fonts.sizes.headings.medium};
+    }
   }
+
+  h2 {
+    @media (max-width: ${breakpoints.mobile}) {
+      font-size: ${fonts.sizes.headings.xmedium};
+    }
+  }
+
   h2, h3, h4 {
     font-weight: normal;
     font-size: ${fonts.sizes.headings.medium};
     font-family: 'Merriweather', serif;
+    @media (max-width: ${breakpoints.mobile}) {
+      font-size: ${fonts.sizes.headings.small};
+    }
   }
   h5, h6 {
     font-weight: 600;
     font-size: ${fonts.sizes.headings.small};
     font-family: "Open Sans", sans-serif;
+    @media (max-width: ${breakpoints.mobile}) {
+      font-size: ${fonts.sizes.headings.default};
+    }
   }
 `;

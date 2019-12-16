@@ -91,6 +91,9 @@ const StyledTab = styled(Tab)`
     border-bottom: ${({ theme }) => box.border(theme.border)};
     border-radius: ${box.borderRadius};
   }
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
 `;
 
 const StyledTabPanel = styled(TabPanel)`

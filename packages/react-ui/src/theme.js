@@ -50,6 +50,7 @@ export const fonts = {
     default: "1.6rem",
     headings: {
       small: "1.8rem",
+      xmedium: "2.2rem",
       medium: "2.8rem",
       large: "3.2rem"
     },

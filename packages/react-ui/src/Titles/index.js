@@ -57,6 +57,9 @@ const StyledPageTitle = styled.h1`
       padding-top: ${spacings.base};
     `;
   }};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.headings.medium};
+  }
 `;
 
 export const Title = ({
@@ -114,6 +117,9 @@ const StyledTitle = styled.h2`
       text-align: center;
     `;
   }};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.headings.xmedium};
+  }
 `;
 
 export const Heading = styled.h3`
@@ -123,6 +129,9 @@ export const Heading = styled.h3`
   font-size: ${fonts.sizes.headings.small};
   font-family: "Open Sans", sans-serif;
   line-height: ${fonts.lineHeightTitle};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
 `;
 
 export const Subtitle = styled.span`

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { OnChange } from "react-final-form-listeners";
-import { Container, Section } from "@socialgouv/react-ui";
 
 import {
   stepPrime,
@@ -11,7 +10,7 @@ import {
 } from "./stepReducer";
 import { Wizard } from "../common/Wizard";
 
-function CalculateurIndemnite({ title }) {
+function CalculateurIndemnite({ icon, title }) {
   /**
    * The rules defined here allows to manage additionnal steps to the wizard
    */
@@ -44,16 +43,13 @@ function CalculateurIndemnite({ title }) {
   );
 
   return (
-    <Section>
-      <Container>
-        <Wizard
-          title={title}
-          stepReducer={stepReducer}
-          initialSteps={initialSteps}
-          Rules={Rules}
-        />
-      </Container>
-    </Section>
+    <Wizard
+      icon={icon}
+      title={title}
+      stepReducer={stepReducer}
+      initialSteps={initialSteps}
+      Rules={Rules}
+    />
   );
 }
 

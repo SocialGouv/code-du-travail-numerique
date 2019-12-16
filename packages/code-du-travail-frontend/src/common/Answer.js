@@ -80,6 +80,9 @@ const StyledErrorContainer = styled(Container)`
   margin: 20%;
   font-size: ${fonts.sizes.headings.large};
   text-align: center;
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.headings.medium};
+  }
 `;
 
 const StyledContainer = styled(Container)`

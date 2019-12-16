@@ -37,14 +37,8 @@ export const initialSteps = [
   }
 ];
 
-function SimulateurIndemnitePrecarite({ title }) {
-  return (
-    <Section>
-      <Container>
-        <Wizard title={title} initialSteps={initialSteps} />
-      </Container>
-    </Section>
-  );
+function SimulateurIndemnitePrecarite({ icon, title }) {
+  return <Wizard icon={icon} title={title} initialSteps={initialSteps} />;
 }
 
 export { SimulateurIndemnitePrecarite };

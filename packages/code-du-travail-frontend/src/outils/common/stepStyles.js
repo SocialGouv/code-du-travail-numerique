@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme, Title } from "@socialgouv/react-ui";
 
-const { fonts, colors, spacings } = theme;
+const { breakpoints, fonts, colors, spacings } = theme;
 
 export const Input = styled.input`
   width: ${props => (props.type === "number" ? "10em" : "auto")};
@@ -45,6 +45,9 @@ export const Highlight = styled.strong`
   font-weight: 700;
   font-size: ${fonts.sizes.headings.small};
   white-space: nowrap;
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
 `;
 
 export const SmallText = styled.span`

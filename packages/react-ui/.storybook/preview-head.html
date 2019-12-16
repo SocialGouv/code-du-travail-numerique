@@ -22,6 +22,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    @media (max-width: 600px) {
+      font-size: 1.4rem;
+    }
   }
   h1,
   h2,
@@ -37,16 +40,32 @@
     font-weight: normal;
     font-size: 3.2rem;
     font-family: 'Merriweather', serif;
+    @media (max-width: 600px) {
+      font-size: 2.8rem;
+    }
   }
+
+  h2 {
+    @media (max-width: 600px) {
+      font-size: 2.2rem;
+    }
+  }
+
   h2, h3, h4 {
     font-weight: normal;
     font-size: 2.8rem;
     font-family: 'Merriweather', serif;
+    @media (max-width: 600px) {
+      font-size: 1.8rem;
+    }
   }
   h5, h6 {
     font-weight: 600;
     font-size: 1.8rem;
     font-family: "Open Sans", sans-serif;
+    @media (max-width: 600px) {
+      font-size: 1.6rem;
+    }
   }
   a {
     color: #3e486e;

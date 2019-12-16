@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "@socialgouv/react-ui";
 
-const { fonts } = theme;
+const { breakpoints, fonts } = theme;
 
 export default createGlobalStyle`
   html {
@@ -21,6 +21,9 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     background-color: ${({ theme }) => theme.white};
+    @media (max-width: ${breakpoints.mobile}) {
+      font-size: ${fonts.sizes.small};
+    }
     @media print {
       font-size: 10pt;
     }
