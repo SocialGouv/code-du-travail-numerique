@@ -5,10 +5,10 @@ function getSearchBody({ source, slug }) {
       bool: {
         must: [
           {
-            match: { source }
+            term: { source }
           },
           {
-            match: { slug }
+            term: { slug }
           }
         ]
       }
