@@ -74,12 +74,12 @@ ingress:
     appgw.ingress.kubernetes.io/ssl-redirect: "true"
     kubernetes.io/ingress.class: "azure/application-gateway"
   hosts:
-    - host: api.code.travail.dev.fabrique.social.gouv.fr
+    - host: ${API_HOST}
       paths:
         - /
   tls:
     - hosts:
-        - api.code.travail.dev.fabrique.social.gouv.fr
+        - ${API_HOST}
       secretName: wildcard-crt
 
 autoscaling:
