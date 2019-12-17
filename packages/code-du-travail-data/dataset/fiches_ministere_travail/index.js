@@ -84,7 +84,10 @@ function parseDom(dom, url) {
     html: "",
     text: ""
   };
-  while (nextArticleElement && nextArticleElement.tagName !== sectionTag) {
+  while (
+    nextArticleElement &&
+    nextArticleElement.tagName.toLowerCase() !== sectionTag
+  ) {
     if (nextArticleElement.textContent) {
       if (!untitledSection.description) {
         untitledSection.description = nextArticleElement.textContent.trim();
