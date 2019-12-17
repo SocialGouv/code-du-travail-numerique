@@ -12,20 +12,20 @@ RUN useradd -ms /bin/bash worker
 WORKDIR /home/worker
 USER worker
 
-COPY requirements.txt .
+COPY --chown=worker:worker requirements.txt .
 
 # hadolint ignore=SC1091
 RUN pip install --user -r requirements.txt
 #RUN pip install -r requirements.txt
 
-COPY ./data ./data
-COPY ./api ./api
-COPY ./scripts ./scripts
+COPY --chown=worker:worker ./data ./data
+COPY --chown=worker:worker ./api ./api
+COPY --chown=worker:worker ./scripts ./scripts
 
 #ENV PYTHONPATH="/home/worker/.local/bin:${PATH}"
 ENV PYTHONPATH=.
 
-COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist/dump.data.json ./data/dump.json
+COPY --chown=worker:worker --from=cdtn-base-image /app/packages/code-du-travail-data/dist/dump.data.json ./data/dump.json
 
 RUN python scripts/dump.py
 
