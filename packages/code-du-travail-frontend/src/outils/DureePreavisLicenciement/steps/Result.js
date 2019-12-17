@@ -48,6 +48,19 @@ function StepResult({ form }) {
     },
     { ref: situationCC.ref, refUrl: situationCC.refUrl }
   ];
+
+  let disclaimer =
+    "Une durée de préavis de licenciement ou une condition d'ancienneté plus favorable au salarié peut être prévue dans un accord d'entreprise, le contrat de travail ou les usages.";
+  if (durationCDT === 0) {
+    if (durationCC === 0) {
+      disclaimer =
+        "La durée de préavis de licenciement peut aussi être prévue dans une convention ou un accord au niveau de l'entreprise, ou à défaut par les usages pratiqués dans la profession.";
+    } else {
+      disclaimer =
+        "La durée de préavis de licenciement peut aussi être prévue dans une convention ou un accord au niveau de l'entreprise.";
+    }
+  }
+
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
@@ -64,11 +77,7 @@ function StepResult({ form }) {
           })}
         </Highlight>
       </p>
-      <Toast>
-        Une durée de préavis de licenciement plus favorable au salarié peut
-        aussi être prévue dans un accord d’entreprise, le contrat de travail ou
-        un usage dans la localité ou la profession.
-      </Toast>
+      <Toast>{disclaimer}</Toast>
       <SectionTitle>Détails</SectionTitle>
       <p>
         Il s’agit de la durée la plus longue entre la durée légale prévue par le
