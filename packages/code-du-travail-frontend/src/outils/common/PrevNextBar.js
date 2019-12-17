@@ -50,7 +50,11 @@ export { PrevNextBar };
 
 const { breakpoints, spacings } = theme;
 
-const StyledButton = styled(Button)``;
+const StyledButton = styled(Button)`
+  & + & {
+    margin-top: ${spacings.base};
+  }
+`;
 
 const Box = styled.div`
   display: flex;
@@ -60,10 +64,6 @@ const Box = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     flex-flow: column;
     align-items: stretch;
-      /* stylelint-disable-next-line */
-    ${StyledButton} + ${StyledButton} {
-      margin-top: ${spacings.base};
-    }
   }
   @media print {
     display: none;

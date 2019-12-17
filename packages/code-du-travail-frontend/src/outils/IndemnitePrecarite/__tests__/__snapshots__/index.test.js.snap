@@ -197,6 +197,10 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
   border-radius: 49%;
 }
 
+.c16 + .c15 {
+  margin-top: 1.6rem;
+}
+
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -337,10 +341,6 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
     -ms-flex-align: stretch;
     align-items: stretch;
   }
-
-  .c13 .c15 + .c15 {
-    margin-top: 1.6rem;
-  }
 }
 
 @media print {
@@ -477,7 +477,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
       class="c13"
     >
       <button
-        class="c14 c15 "
+        class="c14 c15 c16"
       >
         Suivant
       </button>

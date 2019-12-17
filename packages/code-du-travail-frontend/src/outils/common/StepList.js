@@ -8,7 +8,7 @@ export function StepList({ activeIndex = 0, items = [] }) {
   return (
     <StyledWrapper variant="dark">
       <Title>
-        Étape<Plural>s</Plural>
+        Étape<HideOnMobile>s</HideOnMobile>
         <StepProgress>
           &nbsp;{`${activeIndex + 1}/${items.length}`}
         </StepProgress>
@@ -63,7 +63,7 @@ const Title = styled.span`
     margin: 0;
   }
 `;
-const Plural = styled.span`
+const HideOnMobile = styled.span`
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }

@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "@socialgouv/react-ui";
 
-const { breakpoints, fonts } = theme;
+import { breakpoints, fonts } from "../../theme";
 
 export default createGlobalStyle`
   html {

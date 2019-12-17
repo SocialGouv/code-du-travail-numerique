@@ -62,7 +62,7 @@ exports[`<PrevNextBar /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c3 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -99,16 +99,16 @@ exports[`<PrevNextBar /> should render 1`] = `
   opacity: 1;
 }
 
-.c3:link,
-.c3:visited {
+.c4:link,
+.c4:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -117,10 +117,14 @@ exports[`<PrevNextBar /> should render 1`] = `
   border-color: #dee5ef;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c3 + .c2 {
+  margin-top: 1.6rem;
 }
 
 .c0 {
@@ -145,7 +149,7 @@ exports[`<PrevNextBar /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     font-size: 1.4rem;
   }
 }
@@ -160,10 +164,6 @@ exports[`<PrevNextBar /> should render 1`] = `
     -ms-flex-align: stretch;
     align-items: stretch;
   }
-
-  .c0 .c2 + .c2 {
-    margin-top: 1.6rem;
-  }
 }
 
 @media print {
@@ -177,12 +177,12 @@ exports[`<PrevNextBar /> should render 1`] = `
     class="c0"
   >
     <button
-      class="c1 c2 "
+      class="c1 c2 c3"
     >
       Suivant
     </button>
     <button
-      class="c3 c2 "
+      class="c4 c2 c3"
       type="button"
     >
       Précédent
@@ -253,7 +253,7 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   cursor: not-allowed;
 }
 
-.c3 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -290,16 +290,16 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   opacity: 1;
 }
 
-.c3:link,
-.c3:visited {
+.c4:link,
+.c4:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -308,10 +308,14 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   border-color: #dee5ef;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c3 + .c2 {
+  margin-top: 1.6rem;
 }
 
 .c0 {
@@ -336,7 +340,7 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     font-size: 1.4rem;
   }
 }
@@ -351,10 +355,6 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
     -ms-flex-align: stretch;
     align-items: stretch;
   }
-
-  .c0 .c2 + .c2 {
-    margin-top: 1.6rem;
-  }
 }
 
 @media print {
@@ -368,13 +368,13 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
     class="c0"
   >
     <button
-      class="c1 c2 "
+      class="c1 c2 c3"
       disabled=""
     >
       Suivant
     </button>
     <button
-      class="c3 c2 "
+      class="c4 c2 c3"
       type="button"
     >
       Précédent
@@ -445,7 +445,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   cursor: not-allowed;
 }
 
-.c3 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -482,16 +482,16 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   opacity: 1;
 }
 
-.c3:link,
-.c3:visited {
+.c4:link,
+.c4:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -500,10 +500,14 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   border-color: #dee5ef;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c3 + .c2 {
+  margin-top: 1.6rem;
 }
 
 .c0 {
@@ -528,7 +532,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     font-size: 1.4rem;
   }
 }
@@ -543,10 +547,6 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
     -ms-flex-align: stretch;
     align-items: stretch;
   }
-
-  .c0 .c2 + .c2 {
-    margin-top: 1.6rem;
-  }
 }
 
 @media print {
@@ -560,12 +560,12 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
     class="c0"
   >
     <button
-      class="c1 c2 "
+      class="c1 c2 c3"
     >
       Suivant
     </button>
     <button
-      class="c3 c2 "
+      class="c4 c2 c3"
       type="button"
     >
       Précédent
@@ -636,6 +636,10 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   cursor: not-allowed;
 }
 
+.c3 + .c2 {
+  margin-top: 1.6rem;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -667,10 +671,6 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
     -ms-flex-align: stretch;
     align-items: stretch;
   }
-
-  .c0 .c2 + .c2 {
-    margin-top: 1.6rem;
-  }
 }
 
 @media print {
@@ -684,7 +684,7 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
     class="c0"
   >
     <button
-      class="c1 c2 "
+      class="c1 c2 c3"
       type="button"
     >
       Précédent

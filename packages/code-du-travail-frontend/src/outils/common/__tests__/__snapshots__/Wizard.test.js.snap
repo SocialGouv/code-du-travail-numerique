@@ -197,6 +197,10 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   border-radius: 49%;
 }
 
+.c16 + .c15 {
+  margin-top: 1.6rem;
+}
+
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -337,10 +341,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
     -ms-flex-align: stretch;
     align-items: stretch;
   }
-
-  .c13 .c15 + .c15 {
-    margin-top: 1.6rem;
-  }
 }
 
 @media print {
@@ -438,7 +438,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       class="c13"
     >
       <button
-        class="c14 c15 "
+        class="c14 c15 c16"
       >
         Suivant
       </button>
@@ -509,7 +509,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   cursor: not-allowed;
 }
 
-.c16 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -546,16 +546,16 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   opacity: 1;
 }
 
-.c16:link,
-.c16:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c16:not([disabled]):hover,
-.c16:not([disabled]):active,
-.c16:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -564,7 +564,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   border-color: #dee5ef;
 }
 
-.c16[disabled] {
+.c17[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -705,6 +705,10 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   border-radius: 49%;
 }
 
+.c16 + .c15 {
+  margin-top: 1.6rem;
+}
+
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -756,7 +760,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
@@ -850,10 +854,6 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-  }
-
-  .c13 .c15 + .c15 {
-    margin-top: 1.6rem;
   }
 }
 
@@ -955,12 +955,12 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
       class="c13"
     >
       <button
-        class="c14 c15 "
+        class="c14 c15 c16"
       >
         Imprimer le résultat
       </button>
       <button
-        class="c16 c15 "
+        class="c17 c15 c16"
         type="button"
       >
         Précédent
@@ -1167,6 +1167,10 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   border-radius: 49%;
 }
 
+.c16 + .c15 {
+  margin-top: 1.6rem;
+}
+
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1307,10 +1311,6 @@ exports[`<Wizard /> should handle initialValues 1`] = `
     -ms-flex-align: stretch;
     align-items: stretch;
   }
-
-  .c13 .c15 + .c15 {
-    margin-top: 1.6rem;
-  }
 }
 
 @media print {
@@ -1418,7 +1418,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       class="c13"
     >
       <button
-        class="c14 c15 "
+        class="c14 c15 c16"
       >
         Suivant
       </button>
@@ -1624,6 +1624,10 @@ exports[`<Wizard /> should inject rules component 1`] = `
   border-radius: 49%;
 }
 
+.c16 + .c15 {
+  margin-top: 1.6rem;
+}
+
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1764,10 +1768,6 @@ exports[`<Wizard /> should inject rules component 1`] = `
     -ms-flex-align: stretch;
     align-items: stretch;
   }
-
-  .c13 .c15 + .c15 {
-    margin-top: 1.6rem;
-  }
 }
 
 @media print {
@@ -1868,7 +1868,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
       class="c13"
     >
       <button
-        class="c14 c15 "
+        class="c14 c15 c16"
       >
         Suivant
       </button>
@@ -1939,7 +1939,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   cursor: not-allowed;
 }
 
-.c16 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1976,16 +1976,16 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   opacity: 1;
 }
 
-.c16:link,
-.c16:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c16:not([disabled]):hover,
-.c16:not([disabled]):active,
-.c16:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1994,7 +1994,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   border-color: #dee5ef;
 }
 
-.c16[disabled] {
+.c17[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -2135,6 +2135,10 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   border-radius: 49%;
 }
 
+.c16 + .c15 {
+  margin-top: 1.6rem;
+}
+
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2186,7 +2190,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
@@ -2280,10 +2284,6 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-  }
-
-  .c13 .c15 + .c15 {
-    margin-top: 1.6rem;
   }
 }
 
@@ -2385,12 +2385,12 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       class="c13"
     >
       <button
-        class="c14 c15 "
+        class="c14 c15 c16"
       >
         Imprimer le résultat
       </button>
       <button
-        class="c16 c15 "
+        class="c17 c15 c16"
         type="button"
       >
         Précédent
@@ -2597,6 +2597,10 @@ exports[`<Wizard /> should render a step 1`] = `
   border-radius: 49%;
 }
 
+.c16 + .c15 {
+  margin-top: 1.6rem;
+}
+
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2737,10 +2741,6 @@ exports[`<Wizard /> should render a step 1`] = `
     -ms-flex-align: stretch;
     align-items: stretch;
   }
-
-  .c13 .c15 + .c15 {
-    margin-top: 1.6rem;
-  }
 }
 
 @media print {
@@ -2838,7 +2838,7 @@ exports[`<Wizard /> should render a step 1`] = `
       class="c13"
     >
       <button
-        class="c14 c15 "
+        class="c14 c15 c16"
       >
         Suivant
       </button>

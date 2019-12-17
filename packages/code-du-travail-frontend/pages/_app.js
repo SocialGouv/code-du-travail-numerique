@@ -4,15 +4,13 @@ import App from "next/app";
 import getConfig from "next/config";
 import { ThemeProvider } from "styled-components";
 import * as Sentry from "@sentry/browser";
-import { theme } from "@socialgouv/react-ui";
+import { GlobalStyles, theme } from "@socialgouv/react-ui";
 import ErrorPage from "./_error";
 
 import CookieConsent from "../src/common/CookieConsent";
 
 import { initPiwik } from "../src/piwik";
 import { initializeSentry } from "../src/sentry";
-
-import GlobalStyles from "../src/layout/css/index.js";
 
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }

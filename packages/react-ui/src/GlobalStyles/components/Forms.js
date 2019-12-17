@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "@socialgouv/react-ui";
 
-const { animations, box, fonts, spacings } = theme;
+import { animations, box, fonts, spacings } from "../../theme";
 
 const RADIO_SIZE = "1.6rem";
 const INPUT_HEIGHT = "5.4rem";
