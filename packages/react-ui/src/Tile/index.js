@@ -90,6 +90,7 @@ const StyledTile = styled.a`
       wide
         ? `${spacings.base} ${spacings.base}`
         : `${spacings.medium} ${spacings.base}`};
+    font-size: ${fonts.sizes.small};
   }
 `;
 

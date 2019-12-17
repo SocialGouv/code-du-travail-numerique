@@ -109,6 +109,18 @@ exports[`<StepIndemnite /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"

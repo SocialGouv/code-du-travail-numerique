@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
-import { theme } from "@socialgouv/react-ui";
+import { icons, theme } from "@socialgouv/react-ui";
 
-import { StepItems } from "./StepItems";
+import { StepList, STEP_LIST_WIDTH } from "./StepList";
 import { PrevNextBar } from "./PrevNextBar";
 
 function Wizard({
@@ -13,6 +13,7 @@ function Wizard({
   initialStepIndex = 0,
   initialValues = {},
   title,
+  icon,
   Rules = null,
   stepReducer = step => step
 }) {
@@ -59,6 +60,8 @@ function Wizard({
 
   const Step = steps[stepIndex].component;
 
+  const Icon = icons[icon];
+
   return (
     <Form
       initialValues={initialValues}
@@ -76,20 +79,25 @@ function Wizard({
               {Rules && (
                 <Rules values={form.getState().values} dispatch={dispatch} />
               )}
-              <StepItems activeIndex={stepIndex} items={stepItems} />
-              <Column>
-                <ToolTitle>{title}</ToolTitle>
-                <StepWrapper noPadding>
-                  <Step form={form} dispatch={dispatch} />
-                </StepWrapper>
-                <PrevNextBar
-                  hasError={invalid && submitFailed}
-                  onPrev={prevStep}
-                  nextVisible={nextVisible}
-                  printVisible={printVisible}
-                  previousVisible={previousVisible}
-                />
-              </Column>
+              <ToolTitle>
+                {Icon && (
+                  <IconWrapper>
+                    <Icon />
+                  </IconWrapper>
+                )}
+                {title}
+              </ToolTitle>
+              <StepList activeIndex={stepIndex} items={stepItems} />
+              <StepWrapper>
+                <Step form={form} dispatch={dispatch} />
+              </StepWrapper>
+              <PrevNextBar
+                hasError={invalid && submitFailed}
+                onPrev={prevStep}
+                nextVisible={nextVisible}
+                printVisible={printVisible}
+                previousVisible={previousVisible}
+              />
             </StyledForm>
           </>
         );
@@ -99,8 +107,8 @@ function Wizard({
 }
 
 Wizard.propTypes = {
-  title: PropTypes.string.isRequired,
   stepReducer: PropTypes.func,
+  icon: PropTypes.string,
   initialSteps: PropTypes.arrayOf(
     PropTypes.shape({
       component: PropTypes.func.isRequired,
@@ -110,24 +118,21 @@ Wizard.propTypes = {
   ).isRequired,
   initialStepIndex: PropTypes.number,
   initialValues: PropTypes.object,
-  Rules: PropTypes.func
+  Rules: PropTypes.func,
+  title: PropTypes.string.isRequired
 };
 
 export { Wizard };
 
-const { box, spacings, breakpoints } = theme;
+const { spacings, breakpoints } = theme;
 
 const StyledForm = styled.form`
   display: flex;
-  flex-direction: row;
-  padding: 0;
-  overflow: auto;
-  color: ${({ theme }) => theme.paragraph};
-  background-color: ${({ theme }) => theme.white};
-  border: ${({ theme }) => box.border(theme.border)};
-  border-radius: ${box.borderRadius};
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-direction: column;
+  flex-direction: column;
+  padding: 0 0 0 ${STEP_LIST_WIDTH};
+  overflow: visible;
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: 0;
   }
   @media print {
     border: 0;
@@ -135,14 +140,26 @@ const StyledForm = styled.form`
 `;
 
 const StepWrapper = styled.div`
-  flex-basis: 240px;
-  margin: ${spacings.large} 0;
+  margin: ${spacings.base} 0;
+  @media (max-width: ${breakpoints.tablet}) {
+    margin: ${spacings.small} 0 0 0;
+  }
 `;
 const ToolTitle = styled.h1`
-  padding: ${spacings.base} 0;
+  display: flex;
+  align-items: center;
+  padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: ${spacings.base} 0 ${spacings.small} 0;
+    border-bottom: 0;
+  }
 `;
-const Column = styled.div`
-  flex: 1 1 auto;
-  padding: ${spacings.medium} ${spacings.larger};
+
+const IconWrapper = styled.span`
+  display: block;
+  flex: 0 0 auto;
+  width: 5.2rem;
+  height: 5.2rem;
+  margin-right: ${spacings.base};
 `;

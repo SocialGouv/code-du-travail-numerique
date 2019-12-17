@@ -114,6 +114,12 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     margin-left: 0;
   }

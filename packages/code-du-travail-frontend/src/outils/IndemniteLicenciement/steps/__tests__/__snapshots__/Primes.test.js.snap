@@ -29,6 +29,67 @@ exports[`<StepPrimes /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c9:link,
+.c9:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #fff;
+  border-color: #dee5ef;
+}
+
+.c9[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
   color: #ff7067;
   font-weight: 600;
@@ -41,14 +102,14 @@ exports[`<StepPrimes /> should render 1`] = `
   overflow: visible;
 }
 
-.c9:focus,
-.c9:hover,
-.c9:active {
+.c11:focus,
+.c11:hover,
+.c11:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c11 {
+.c13 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -57,7 +118,7 @@ exports[`<StepPrimes /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c8:hover .c11 {
+.c8:hover .c13 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -107,7 +168,6 @@ exports[`<StepPrimes /> should render 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c4 {
@@ -160,11 +220,28 @@ exports[`<StepPrimes /> should render 1`] = `
 
 .c10 {
   margin-left: 2rem;
-  font-size: 1.4rem;
 }
 
 .c12 {
   margin: 2rem 0;
+}
+
+@media (max-width:600px) {
+  .c9 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -236,25 +313,15 @@ exports[`<StepPrimes /> should render 1`] = `
       type="button"
     >
       Supprimer
-      <svg
-        class="c11"
-        fill="none"
-        viewBox="0 0 28 15"
-      >
-        <path
-          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-          fill="currentColor"
-        />
-      </svg>
     </button>
   </div>
   <button
-    class="c8 c9 c12"
+    class="c8 c11 c12"
     type="button"
   >
     Ajouter une prime
     <svg
-      class="c11"
+      class="c13"
       fill="none"
       viewBox="0 0 28 15"
     >

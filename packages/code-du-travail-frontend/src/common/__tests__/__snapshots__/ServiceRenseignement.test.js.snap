@@ -76,6 +76,12 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   margin-top: 2rem;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width:980px) {
   .c1 {
     text-align: center;

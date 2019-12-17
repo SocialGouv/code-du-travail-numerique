@@ -1,19 +1,12 @@
 import React from "react";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
-import styled from "styled-components";
 import getConfig from "next/config";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
 import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
-
-const ServicePublic = styled.div`
-  .sp__Titre {
-    font-size: 1.5rem;
-  }
-`;
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -58,23 +51,21 @@ class Fiche extends React.Component {
           description={description}
           image={ogImage}
         />
-        <ServicePublic>
-          <Answer
-            title={title}
-            relatedItems={relatedItems}
-            emptyMessage="Cette fiche n'a pas été trouvée"
-            date={date}
-            source={{ name: "Fiche service-public.fr", url }}
-            additionalContent={
-              <ReferencesJuridiques references={references_juridiques} />
-            }
-            breadcrumbs={breadcrumbs}
-          >
-            {// Without the check, the prop children of the Answer will evaluate to true
-            // even if in the end, <FicheServicePublic /> returns null
-            raw && <FicheServicePublic data={raw.children} />}
-          </Answer>
-        </ServicePublic>
+        <Answer
+          title={title}
+          relatedItems={relatedItems}
+          emptyMessage="Cette fiche n'a pas été trouvée"
+          date={date}
+          source={{ name: "Fiche service-public.fr", url }}
+          additionalContent={
+            <ReferencesJuridiques references={references_juridiques} />
+          }
+          breadcrumbs={breadcrumbs}
+        >
+          {// Without the check, the prop children of the Answer will evaluate to true
+          // even if in the end, <FicheServicePublic /> returns null
+          raw && <FicheServicePublic data={raw.children} />}
+        </Answer>
       </Layout>
     );
   }

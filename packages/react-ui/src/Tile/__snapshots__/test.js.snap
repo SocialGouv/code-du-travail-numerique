@@ -77,6 +77,13 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 @media (max-width:600px) {
   .c0 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -191,6 +198,13 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 @media (max-width:600px) {
   .c0 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
   }
 }
 
@@ -323,6 +337,13 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 @media (max-width:600px) {
   .c0 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -439,6 +460,13 @@ exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
 @media (max-width:600px) {
   .c0 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
   }
 }
 

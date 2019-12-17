@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "@socialgouv/react-ui";
 
-const { animations } = theme;
+import { animations } from "../../theme";
+
 export default createGlobalStyle`
   a {
     color: ${({ theme }) => theme.paragraph};
@@ -12,6 +12,13 @@ export default createGlobalStyle`
     transition: color ${animations.transitionTiming} linear, text-decoration ${
   animations.transitionTiming
 } linear;
+    @media print {
+      text-decoration: none;
+      &:after {
+        content: " (" attr(href) ") ";
+      }
+    }
+
   }
 
   a:focus,
@@ -32,5 +39,9 @@ export default createGlobalStyle`
     height: 23px;
     margin-left: 5px;
     content: url("/static/assets/icons/external.svg");
+    @media print {
+      margin-left: 0;
+      content: " (" attr(href) ") ";
+    }
   }
 `;

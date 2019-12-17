@@ -116,6 +116,12 @@ exports[`<CookieConsent /> should render 1`] = `
   padding: 0 0.4rem;
 }
 
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.4rem;
+  }
+}
+
 <div>
   <div
     class="c0"

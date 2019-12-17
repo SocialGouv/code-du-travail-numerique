@@ -45,6 +45,12 @@ exports[`<ListTitle /> should render title in a link 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     margin-bottom: 2.4rem;
   }
@@ -105,6 +111,12 @@ exports[`<ListTitle /> should render title only 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     margin-bottom: 2.4rem;
   }
@@ -157,6 +169,12 @@ exports[`<ListTitle /> should render title with description 1`] = `
   margin: 0 auto 1rem;
   margin-bottom: 4rem;
   text-align: center;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width:600px) {

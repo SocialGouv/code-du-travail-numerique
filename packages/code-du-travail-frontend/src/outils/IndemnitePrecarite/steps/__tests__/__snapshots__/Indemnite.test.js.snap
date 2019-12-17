@@ -29,6 +29,12 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
   margin: 1.6rem 0;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <p>
     La prime de précarité
@@ -143,6 +149,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 
 .c5 {
   margin: 1.6rem 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>

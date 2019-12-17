@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "@socialgouv/react-ui";
 
-const { spacings } = theme;
+import { spacings } from "../../theme";
+
 export default createGlobalStyle`
   ul, ol {
     display: block;

@@ -63,18 +63,18 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                         type="number"
                         invalid={touched && invalid}
                       />
-                      <DelButton
-                        variant="link"
-                        type="button"
-                        onClick={() => fields.remove(index)}
-                      >
-                        Supprimer
-                      </DelButton>
                       {error && touched && invalid && <Error>{error}</Error>}
                     </>
                   )}
                 />
               </DurationCell>
+              <DelButton
+                variant="flat"
+                type="button"
+                onClick={() => fields.remove(index)}
+              >
+                Supprimer
+              </DelButton>
             </Row>
           ))}
           {visible && (
@@ -109,7 +109,7 @@ AbsencePeriods.propTypes = {
 };
 export { AbsencePeriods };
 
-const { fonts, spacings } = theme;
+const { spacings } = theme;
 
 const AddButton = styled(Button)`
   margin: ${spacings.medium} 0;
@@ -121,7 +121,7 @@ const Row = styled.div`
   margin-bottom: ${spacings.tiny};
 `;
 const MotifCell = styled.div`
-  flex-basis: 25rem;
+  flex: 0 1 25rem;
   margin-right: ${spacings.medium};
 `;
 const DurationCell = styled.div`
@@ -133,7 +133,6 @@ const CellHeader = styled.div`
 
 const DelButton = styled(Button)`
   margin-left: ${spacings.medium};
-  font-size: ${fonts.sizes.small};
 `;
 
 export const motifs = [

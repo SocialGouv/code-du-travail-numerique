@@ -55,6 +55,12 @@ exports[`<Categorie /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
 <div>
   <header
     class="c0 c1"

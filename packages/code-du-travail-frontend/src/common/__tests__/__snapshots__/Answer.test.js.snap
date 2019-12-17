@@ -282,8 +282,26 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
+  .c5 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    font-size: 1.4rem;
   }
 }
 
@@ -821,8 +839,26 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
+  .c14 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c21 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c13 {
     margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 1.4rem;
   }
 }
 
@@ -1364,8 +1400,26 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
+  .c5 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
   }
 }
 
@@ -2054,14 +2108,45 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c5 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c31 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    font-size: 1.6rem;
   }
 }
 
@@ -2760,8 +2845,26 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
+  .c5 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
   }
 }
 
@@ -3219,8 +3322,26 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
+  .c5 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
   }
 }
 
@@ -3664,8 +3785,26 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
+  .c5 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
   }
 }
 

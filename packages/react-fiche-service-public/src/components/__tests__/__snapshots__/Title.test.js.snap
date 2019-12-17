@@ -10,6 +10,12 @@ exports[`<Title /> heading should default to H6 1`] = `
   line-height: 1.25;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <h6
     class="c0"
@@ -25,6 +31,12 @@ exports[`<Title /> should render a H{x} whose {x} is headingLevel + 2 1`] = `
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>

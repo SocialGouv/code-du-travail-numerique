@@ -45,7 +45,7 @@ export default class Error extends React.Component {
   }
 }
 
-const { fonts } = theme;
+const { breakpoints, fonts } = theme;
 
 const FlexCenterer = styled.div`
   display: flex;
@@ -58,8 +58,14 @@ const FlexCenterer = styled.div`
 
 const P = styled.p`
   font-size: ${fonts.sizes.headings.large};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.headings.medium};
+  }
 `;
 
 const Smaller = styled.p`
   font-size: ${fonts.sizes.headings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
 `;

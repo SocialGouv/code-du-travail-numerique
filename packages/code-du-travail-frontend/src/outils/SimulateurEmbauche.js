@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Section, Title, Wrapper } from "@socialgouv/react-ui";
+import { Title } from "@socialgouv/react-ui";
 import Spinner from "react-svg-spinner";
 
 class SimulateurEmbauche extends React.PureComponent {
@@ -36,34 +36,27 @@ class SimulateurEmbauche extends React.PureComponent {
   render() {
     const { simulator } = this.state;
     return (
-      <Section>
-        <Container>
-          <Wrapper>
-            <Title>Simulateur d’embauche</Title>
-            {simulator === "loading" && (
-              <p>
-                <Spinner /> Chargement de l’outil
-              </p>
-            )}
-            {simulator === "error" ? (
-              <p>
-                Le simulateur d’embauche n’est pas disponible actuellement.
-                <br />
-                Retrouvez les autres simulateurs autour du thème de
-                l’entreprise, sur le site:{" "}
-                <a
-                  title="Voir les simulateurs"
-                  href="https://mon-entreprise.fr/"
-                >
-                  https://mon-entreprise.fr/
-                </a>
-              </p>
-            ) : (
-              <div ref={this.simRef} />
-            )}
-          </Wrapper>
-        </Container>
-      </Section>
+      <>
+        <Title>Simulateur d’embauche</Title>
+        {simulator === "loading" && (
+          <p>
+            <Spinner /> Chargement de l’outil
+          </p>
+        )}
+        {simulator === "error" ? (
+          <p>
+            Le simulateur d’embauche n’est pas disponible actuellement.
+            <br />
+            Retrouvez les autres simulateurs autour du thème de l’entreprise,
+            sur le site:{" "}
+            <a title="Voir les simulateurs" href="https://mon-entreprise.fr/">
+              https://mon-entreprise.fr/
+            </a>
+          </p>
+        ) : (
+          <div ref={this.simRef} />
+        )}
+      </>
     );
   }
 }

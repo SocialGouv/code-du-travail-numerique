@@ -194,6 +194,18 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
     class="c0"

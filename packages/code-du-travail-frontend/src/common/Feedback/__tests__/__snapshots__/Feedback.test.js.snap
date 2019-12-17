@@ -140,6 +140,18 @@ exports[`<Feedback/> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.4rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -301,6 +313,18 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.4rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -403,6 +427,12 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   .c2 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
   }
 }
 

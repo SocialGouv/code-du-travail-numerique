@@ -181,8 +181,21 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c9 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
   }
 }
 

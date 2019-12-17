@@ -108,12 +108,15 @@ function GlossaryNavigation({ letters }) {
     </ul>
   );
 }
-const { spacings, fonts } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
 const Item = styled.li`
   display: inline-block;
   padding: ${spacings.tiny};
   font-size: ${fonts.sizes.headings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
 `;
 
 const StyledList = styled(FlatList)`

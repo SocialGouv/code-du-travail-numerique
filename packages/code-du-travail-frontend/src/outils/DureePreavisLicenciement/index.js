@@ -1,20 +1,16 @@
 import React from "react";
-import { Container, Section } from "@socialgouv/react-ui";
 
 import { Wizard } from "../common/Wizard";
 import { initialSteps, stepReducer } from "./stepReducer";
 
-function DureePreavisLicenciement({ title }) {
+function DureePreavisLicenciement({ icon, title }) {
   return (
-    <Section>
-      <Container>
-        <Wizard
-          title={title}
-          initialSteps={initialSteps}
-          stepReducer={stepReducer}
-        />
-      </Container>
-    </Section>
+    <Wizard
+      icon={icon}
+      title={title}
+      initialSteps={initialSteps}
+      stepReducer={stepReducer}
+    />
   );
 }
 

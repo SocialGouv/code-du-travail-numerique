@@ -14,6 +14,7 @@ export { Badge } from "./Badge";
 export { Alert } from "./Alert";
 export { Button } from "./Button";
 export { CardList } from "./CardList";
+export { GlobalStyles } from "./GlobalStyles";
 export { Grid, GridCell } from "./Grid";
 export { FlatList } from "./FlatList";
 export { Modal, ModalContentWrapper } from "./Modal";

@@ -14,18 +14,20 @@ function PrevNextBar({
   return (
     <>
       <Box>
-        {previousVisible && (
-          <PreviousButton type="button" onClick={onPrev} variant="secondary">
-            Précédent
-          </PreviousButton>
+        {printVisible && (
+          <StyledButton onClick={printResult}>
+            Imprimer le résultat
+          </StyledButton>
         )}
         {nextVisible && (
-          <NextButton disabled={hasError} variant="primary">
+          <StyledButton disabled={hasError} variant="primary">
             Suivant
-          </NextButton>
+          </StyledButton>
         )}
-        {printVisible && (
-          <Button onClick={printResult}>Imprimer le résultat</Button>
+        {previousVisible && (
+          <StyledButton type="button" onClick={onPrev} variant="flat">
+            Précédent
+          </StyledButton>
         )}
       </Box>
     </>
@@ -46,18 +48,24 @@ PrevNextBar.defaultProps = {
 
 export { PrevNextBar };
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
+
+const StyledButton = styled(Button)`
+  & + & {
+    margin-top: ${spacings.base};
+  }
+`;
 
 const Box = styled.div`
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   margin: ${spacings.large} 0;
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-flow: column;
+    align-items: stretch;
+  }
   @media print {
     display: none;
   }
-`;
-const NextButton = styled(Button)`
-  margin-left: auto;
-`;
-const PreviousButton = styled(Button)`
-  margin-right: auto;
 `;

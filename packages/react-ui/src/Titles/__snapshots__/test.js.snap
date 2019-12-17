@@ -10,6 +10,12 @@ exports[`<Heading /> renders a H3 heading  1`] = `
   line-height: 1.25;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <h3
     class="c0"
@@ -48,6 +54,12 @@ exports[`<PageTitle /> renders a H1 page title  1`] = `
   margin: 0 auto 1rem;
   margin-bottom: 4rem;
   text-align: center;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.8rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -105,6 +117,12 @@ exports[`<PageTitle /> renders a leftStripped shifted H1 page title  1`] = `
 @media (max-width:600px) {
   .c1 {
     padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.8rem;
   }
 }
 
@@ -182,6 +200,12 @@ exports[`<Title /> renders a H2 title  1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
 <div>
   <header
     class="c0"
@@ -233,6 +257,12 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
 @media (max-width:600px) {
   .c1 {
     padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
   }
 }
 

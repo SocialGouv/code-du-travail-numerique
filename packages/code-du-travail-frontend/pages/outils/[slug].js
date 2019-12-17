@@ -1,5 +1,6 @@
 import React from "react";
 import tools from "@cdt/data...tools";
+import { Badge, Container, Section, Wrapper } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
@@ -10,7 +11,7 @@ import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 
-const outilsBySlug = {
+const toolsBySlug = {
   "indemnite-licenciement": CalculateurIndemnite,
   "preavis-licenciement": DureePreavisLicenciement,
   "simulateur-embauche": SimulateurEmbauche,
@@ -18,8 +19,8 @@ const outilsBySlug = {
   "preavis-demission": DureePreavisDemission
 };
 
-function Outils({ description, ogImage, pageUrl, slug, title }) {
-  const Simulator = outilsBySlug[slug];
+function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
+  const Tool = toolsBySlug[slug];
   return (
     <Layout>
       <Metas
@@ -28,7 +29,14 @@ function Outils({ description, ogImage, pageUrl, slug, title }) {
         description={description}
         image={ogImage}
       />
-      <Simulator title={title} />
+      <Section>
+        <Container>
+          <Wrapper variant="main">
+            <Badge />
+            <Tool icon={icon} title={title} />
+          </Wrapper>
+        </Container>
+      </Section>
     </Layout>
   );
 }
@@ -37,10 +45,11 @@ export default Outils;
 
 Outils.getInitialProps = async ({ query }) => {
   const { slug } = query;
-  const { description, title } = tools.find(tool => tool.slug === slug);
+  const { description, icon, title } = tools.find(tool => tool.slug === slug);
   return {
-    slug,
     description,
+    icon,
+    slug,
     title
   };
 };

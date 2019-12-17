@@ -666,8 +666,32 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c22 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c32 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    font-size: 1.4rem;
   }
 }
 
@@ -709,6 +733,13 @@ exports[`<Term /> should render 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -806,6 +837,12 @@ exports[`<Term /> should render 1`] = `
 @media (max-width:600px) {
   .c41 {
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c40 {
+    font-size: 1.6rem;
   }
 }
 

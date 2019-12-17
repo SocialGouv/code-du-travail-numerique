@@ -45,7 +45,12 @@ exports[`<StepStatus /> should render 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -144,7 +149,6 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c6 {
@@ -166,6 +170,24 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 
 .c4 {
   margin: 2rem 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    font-size: 1.4rem;
+  }
 }
 
 <div>
@@ -339,7 +361,12 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>

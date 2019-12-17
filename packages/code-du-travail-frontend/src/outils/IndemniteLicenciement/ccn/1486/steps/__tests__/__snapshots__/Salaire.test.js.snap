@@ -80,11 +80,16 @@ exports[`<Salaire /> renders 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c1 {
   margin-top: 2rem;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -251,11 +256,16 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c1 {
   margin-top: 2rem;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -532,7 +542,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c1 {
@@ -574,6 +583,12 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -861,7 +876,6 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c1 {
@@ -898,6 +912,12 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>

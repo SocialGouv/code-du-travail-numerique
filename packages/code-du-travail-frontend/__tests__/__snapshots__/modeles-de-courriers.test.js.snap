@@ -820,6 +820,24 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c24 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c46 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c23 {
     margin-left: 0;
   }
@@ -832,8 +850,27 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c39 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c32 {
     padding: 1.6rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    font-size: 1.6rem;
   }
 }
 
@@ -900,6 +937,13 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -997,6 +1041,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 @media (max-width:600px) {
   .c55 {
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c54 {
+    font-size: 1.6rem;
   }
 }
 

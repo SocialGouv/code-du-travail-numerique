@@ -11,17 +11,21 @@ export function Question({ required, children, ...otherProps }) {
   );
 }
 
+const { breakpoints, fonts, spacings } = theme;
+
 const Label = styled.label`
   display: block;
-  margin-top: ${theme.spacings.medium};
-  margin-bottom: ${theme.spacings.small};
-  font-size: ${theme.fonts.sizes.headings.small};
+  margin-top: ${spacings.medium};
+  margin-bottom: ${spacings.small};
+  font-size: ${fonts.sizes.headings.small};
   cursor: ${props => (props.as ? "default" : "pointer")};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
 `;
 
 const Mandatory = styled.span`
   display: inline-block;
-  margin-left: ${theme.spacings.small};
+  margin-left: ${spacings.small};
   color: ${({ theme }) => theme.error};
-  font-weight: 700;
 `;

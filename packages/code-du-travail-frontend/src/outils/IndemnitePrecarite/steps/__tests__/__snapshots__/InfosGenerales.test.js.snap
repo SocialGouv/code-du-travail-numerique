@@ -45,7 +45,12 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -151,7 +156,6 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c6 {
@@ -166,6 +170,18 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 
 .c4 {
   margin: 2rem 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -334,7 +350,6 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c6 {
@@ -349,6 +364,18 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 
 .c4 {
   margin: 2rem 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
@@ -509,7 +536,12 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>

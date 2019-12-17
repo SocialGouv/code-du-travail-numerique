@@ -13,7 +13,6 @@ exports[`<TextQuestion /> should render 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
-  font-weight: 700;
 }
 
 .c3 {
@@ -40,6 +39,12 @@ exports[`<TextQuestion /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>

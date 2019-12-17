@@ -366,6 +366,18 @@ exports[`<SearchResults/> should render results 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width:1180px) {
   .c21 {
     width: calc( 100% / 2 - 2 * 1rem );
@@ -405,6 +417,13 @@ exports[`<SearchResults/> should render results 1`] = `
 @media (max-width:600px) {
   .c6 {
     padding: 1.6rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.6rem;
   }
 }
 

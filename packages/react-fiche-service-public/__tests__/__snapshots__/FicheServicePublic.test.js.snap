@@ -323,6 +323,30 @@ exports[`<FicheServicePublic /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c8 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width:980px) {
   .c3 {
     -webkit-flex-wrap: wrap;
@@ -342,9 +366,21 @@ exports[`<FicheServicePublic /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width:980px) {
   .c5.react-tabs__tab-panel--selected {
     margin-top: 0.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c19 {
+    font-size: 1.6rem;
   }
 }
 

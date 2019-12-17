@@ -35,7 +35,7 @@ class ServiceEnLigne extends React.PureComponent {
 
 export default ServiceEnLigne;
 
-const { colors, fonts, spacings, box } = theme;
+const { breakpoints, colors, fonts, spacings, box } = theme;
 
 const Wrapper = styled.div`
   display: flex;
@@ -53,6 +53,9 @@ const Type = styled.div`
   color: ${colors.paragraph};
   font-weight: bold;
   font-size: ${fonts.sizes.headings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
 `;
 
 const Source = styled.small`

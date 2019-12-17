@@ -803,6 +803,12 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c30 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c29 {
     margin-bottom: 2.4rem;
   }
@@ -811,6 +817,24 @@ exports[`<Home /> should render 1`] = `
 @media (max-width:600px) {
   .c33 {
     padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c25 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c44 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c50 {
+    font-size: 1.4rem;
   }
 }
 
@@ -835,6 +859,13 @@ exports[`<Home /> should render 1`] = `
 @media (max-width:600px) {
   .c36 {
     padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c41 {
+    font-size: 1.6rem;
   }
 }
 
@@ -890,6 +921,13 @@ exports[`<Home /> should render 1`] = `
   .c1 {
     height: 5rem;
     margin-bottom: 3.2rem;
+  }
+}
+
+@media print {
+  .c1 {
+    position: relative;
+    box-shadow: none;
   }
 }
 
@@ -957,6 +995,12 @@ exports[`<Home /> should render 1`] = `
 @media (max-width:600px) {
   .c57 {
     text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c56 {
+    font-size: 1.6rem;
   }
 }
 

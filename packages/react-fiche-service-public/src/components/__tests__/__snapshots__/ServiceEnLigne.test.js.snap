@@ -95,6 +95,18 @@ exports[`<ServiceEnLigne /> should render 1`] = `
   margin-top: 0.4rem;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
     class="c0"

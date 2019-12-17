@@ -14,6 +14,12 @@ describe("<Question />", () => {
         cursor: pointer;
       }
 
+      @media (max-width:600px) {
+        .c0 {
+          font-size: 1.6rem;
+        }
+      }
+
       <div>
         <label
           class="c0"
@@ -40,7 +46,12 @@ describe("<Question />", () => {
         display: inline-block;
         margin-left: 1rem;
         color: #eb5757;
-        font-weight: 700;
+      }
+
+      @media (max-width:600px) {
+        .c0 {
+          font-size: 1.6rem;
+        }
       }
 
       <div>

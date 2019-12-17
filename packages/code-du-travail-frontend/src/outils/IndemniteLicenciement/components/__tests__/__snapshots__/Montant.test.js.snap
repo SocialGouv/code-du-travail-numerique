@@ -45,6 +45,12 @@ exports[`<Montant /> renders with ratio 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
     class="c0"

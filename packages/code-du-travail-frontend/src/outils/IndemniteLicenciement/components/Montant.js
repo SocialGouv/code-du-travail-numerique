@@ -44,4 +44,7 @@ const Value = styled.span`
     width: 100%;
     margin-left: 0;
   }
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
 `;
