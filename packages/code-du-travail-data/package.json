@@ -32,6 +32,8 @@
     "@socialgouv/kali-data": "^1.2.98",
     "@socialgouv/legi-data": "^1.1.10",
     "esm": "^3.2.25",
+    "lodash.uniqby": "^4.7.0",
+    "query-string": "^6.9.0",
     "unist-util-find": "^1.0.1",
     "unist-util-select": "^3.0.0",
     "winston": "^3.2.1"
