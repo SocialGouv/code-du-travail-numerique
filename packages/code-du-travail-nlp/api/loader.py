@@ -57,8 +57,8 @@ class NLP:
         if not self.ready.get(target, False):
             raise NotReady(error_message)
 
-    def get(self, target, check_ready=True)
-       if check_ready:
+    def get(self, target, check_ready=True):
+        if check_ready:
             self.check_status(target)
         return self.data.get(target)
 
