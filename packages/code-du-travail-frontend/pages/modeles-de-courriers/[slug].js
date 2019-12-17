@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { Heading, Section, Wrapper } from "@socialgouv/react-ui";
+import { Heading, Section, Wrapper, Alert } from "@socialgouv/react-ui";
 
 import Html from "../../src/common/Html";
 import { DownloadFile } from "../../src/common/DownloadFile";
@@ -66,6 +66,12 @@ class ModeleCourrier extends React.Component {
             </Wrapper>
           </Section>
           <Heading as="h4">Télécharger le modèle</Heading>
+          <Alert varaint="primary">
+            Attention, chaque modèle de document proposé est à personnaliser
+            selon votre situation et est susceptible d’évoluer suite à des
+            changements de règlementation. Assurez-vous d’avoir la dernière
+            version mise à jour avant toute utilisation.
+          </Alert>
           <DownloadFile
             title={title || "modele"}
             file={`${API_URL}/docs/${filename}`}
