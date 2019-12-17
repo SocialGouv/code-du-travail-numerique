@@ -12,31 +12,44 @@ const $ = (node, selector) => node.querySelector(selector);
 
 const formatAnchor = node => {
   let href = node.getAttribute("href");
+  // remove ATTAg(...) on pdf link
+  node.removeAttribute("onclick");
   if (!href) return;
+  // unwrap link with href="javascript:"
+  if (/^javascript:/.test(href)) {
+    node.parentNode.innerHTML = node.textContent;
+  }
   if (!href.match(/^https?:\/\//)) {
     if (href.slice(0, 1) !== "/") {
       href = "/" + href;
     }
-    href = `https://travail-emploi.gouv.fr${href}`;
-    node.setAttribute("href", href);
+    node.setAttribute("href", `https://travail-emploi.gouv.fr${href}`);
     node.setAttribute("target", "_blank");
     node.setAttribute("rel", "nofollow, noopener");
   }
 };
 
+const smooshCsBlocs = node => {
+  node.insertAdjacentHTML("afterend", node.innerHTML);
+  node.parentNode.removeChild(node);
+};
+
 const getSectionTag = article => {
-  const h3 = $$(article, ".main-article__texte > H3").length && "H3";
-  const h4 = $$(article, ".main-article__texte > H4").length && "H4";
-  const h5 = $$(article, ".main-article__texte > H5").length && "H5";
+  const h3 = $$(article, ".main-article__texte h3").length && "h3";
+  const h4 = $$(article, ".main-article__texte h4").length && "h4";
+  const h5 = $$(article, ".main-article__texte h5").length && "h5";
   return h3 || h4 || h5;
 };
 
 function parseDom(dom, url) {
   const article = $(dom.window.document, "main");
   $$(article, "a").forEach(formatAnchor);
+  $$(article, ".cs_blocs").forEach(smooshCsBlocs);
   $$(article, "img")
     .filter(node => node.getAttribute("src").indexOf("data:image") === -1)
     .forEach(node => {
+      // remove adaptImgFix(this) on hero img
+      node.removeAttribute("onmousedown");
       let src = node.getAttribute("src");
       if (!src.match(/^https?:\/\//)) {
         if (src.slice(0, 1) !== "/") {
@@ -66,12 +79,15 @@ function parseDom(dom, url) {
   // This section has neither anchor nor title
   let nextArticleElement = $(article, ".main-article__texte > *");
   const untitledSection = {
-    title: "",
+    title: title,
     anchor: "",
     html: "",
     text: ""
   };
-  while (nextArticleElement && nextArticleElement.tagName !== sectionTag) {
+  while (
+    nextArticleElement &&
+    nextArticleElement.tagName.toLowerCase() !== sectionTag
+  ) {
     if (nextArticleElement.textContent) {
       if (!untitledSection.description) {
         untitledSection.description = nextArticleElement.textContent.trim();
@@ -90,7 +106,7 @@ function parseDom(dom, url) {
   articleChildren
     .filter(el => el.getAttribute("id"))
     .forEach(function(el) {
-      if (el.tagName === sectionTag) {
+      if (el.tagName.toLowerCase() === sectionTag) {
         let nextEl = el.nextElementSibling;
         const section = {
           anchor: el.id,
@@ -134,7 +150,7 @@ async function parseFiche(url) {
     } else {
       spinner.fail(`${url} - ${error}`).start();
     }
-    return null;
+    return error;
   }
 }
 
@@ -167,5 +183,7 @@ async function parseFiches(urls) {
 }
 
 if (module === require.main) {
-  parseFiches(urls);
+  parseFiches(urls).catch(error => {
+    console.error(error);
+  });
 }
