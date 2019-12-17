@@ -826,7 +826,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c46 {
     font-size: 2.2rem;
   }
 }
@@ -850,30 +850,26 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c32 {
-=======
   .c16 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c39 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
->>>>>>> test(chore): update snaps
+  .c32 {
     padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c34 {
     font-size: 1.6rem;
   }
 }
@@ -1049,17 +1045,13 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c54 {
-=======
-  .c53 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
->>>>>>> test(chore): update snaps
+  .c54 {
     margin-top: 1rem;
     text-align: center;
   }
