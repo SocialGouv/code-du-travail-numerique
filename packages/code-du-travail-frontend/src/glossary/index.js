@@ -62,7 +62,7 @@ export default function useGlossary(children, html) {
         // So we do a kind of \b equivalent.
         // the main différence is that matched pattern can include a whitespace as first char
         const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒÆ";
-        const wordBoundaryStart = `(?!^|[^\\w${frDiacritics}])`;
+        const wordBoundaryStart = `(?<=^|[^-/_\\w${frDiacritics}])`;
         const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
         const patterns = [...new Set([item.title, ...item.variants])]
           .map(
