@@ -8,6 +8,7 @@ from api.ready import add_ready
 from api.search import add_search
 from api.index import add_index
 
+from .sem_search import SemSearch
 
 data_path = os.path.join(
     os.path.dirname(os.path.abspath(__name__)),
@@ -58,7 +59,7 @@ class NLP:
         if not self.ready.get(target, False):
             raise NotReady(error_message)
 
-    def get(self, target, check_ready=True):
+    def get(self, target, check_ready=True) -> SemSearch:
         if check_ready:
             self.check_status(target)
         return self.data.get(target)

@@ -22,9 +22,9 @@ def add_search(app, nlp, stops_path):
     @app.route('/api/search', methods=['GET'])
     @cross_origin()
     def search():  # pylint: disable=unused-variable
-        ss = nlp.get('search', check_ready=True)
+        sem_search = nlp.get('search', check_ready=True)
 
         # maybe add a default to get (risky because of no exclude sources)
         query = request.args.get('q', default="")
-        results = ss.predict_query_vector(query)  # return a vector directly
+        results = sem_search.embed_query(query)  # return a vector directly
         return jsonify(results)
