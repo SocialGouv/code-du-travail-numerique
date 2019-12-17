@@ -14,7 +14,7 @@ function getSheetMTQuery({ slug }) {
       bool: {
         filter: {
           term: {
-            "slug.asKeyword": slug
+            slug
           }
         }
       }

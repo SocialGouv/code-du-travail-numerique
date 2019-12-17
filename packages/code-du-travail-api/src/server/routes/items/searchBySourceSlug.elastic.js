@@ -3,12 +3,12 @@ function getSearchBody({ source, slug }) {
     size: 1,
     query: {
       bool: {
-        must: [
+        filter: [
           {
-            match: { source }
+            term: { source }
           },
           {
-            match: { slug }
+            term: { slug }
           }
         ]
       }
