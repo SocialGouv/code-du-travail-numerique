@@ -15,11 +15,11 @@ const getConventionSlug = convention =>
   slugify(`${formatIdcc(convention.num)}-${convention.title}`.substring(0, 80));
 
 // link to a Convention
-const Convention = ({ num, title, onClick }) => {
+const Convention = ({ num, shortTitle, title, onClick }) => {
   return (
     <Box>
       {onClick ? (
-        <ConventionLink onClick={onClick}>{title}</ConventionLink>
+        <ConventionLink onClick={onClick}>{shortTitle}</ConventionLink>
       ) : (
         <Link
           href="/convention-collective/[slug]"
@@ -29,7 +29,7 @@ const Convention = ({ num, title, onClick }) => {
           })}`}
           passHref
         >
-          <ConventionLink>{title}</ConventionLink>
+          <ConventionLink>{shortTitle || title}</ConventionLink>
         </Link>
       )}
     </Box>
@@ -48,32 +48,34 @@ const TagSiret = ({ siret }) => (
   </a>
 );
 
-const SearchResult = ({ label, siret, conventions, selectConvention }) => (
-  <tr>
-    <td>
-      <Flex>
-        <ResultLabel>{label}</ResultLabel>
-        {siret && <TagSiret siret={siret} />}
-      </Flex>
-      <ConventionsContainer>
-        {conventions && conventions.length ? (
-          conventions.map(convention => (
-            <Convention
-              onClick={
-                selectConvention &&
-                (() => selectConvention({ convention, label }))
-              }
-              key={convention.id}
-              {...convention}
-            />
-          ))
-        ) : (
-          <div>Aucune convention collective connue pour cette entreprise</div>
-        )}
-      </ConventionsContainer>
-    </td>
-  </tr>
-);
+const SearchResult = ({ label, siret, conventions, selectConvention }) => {
+  return (
+    <tr>
+      <td>
+        <Flex>
+          <ResultLabel>{label}</ResultLabel>
+          {siret && <TagSiret siret={siret} />}
+        </Flex>
+        <ConventionsContainer>
+          {conventions && conventions.length ? (
+            conventions.map(convention => (
+              <Convention
+                onClick={
+                  selectConvention &&
+                  (() => selectConvention({ convention, label }))
+                }
+                key={convention.id}
+                {...convention}
+              />
+            ))
+          ) : (
+            <div>Aucune convention collective connue pour cette entreprise</div>
+          )}
+        </ConventionsContainer>
+      </td>
+    </tr>
+  );
+};
 
 // demo app
 // userland UI

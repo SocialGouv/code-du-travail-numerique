@@ -1,7 +1,7 @@
 function getIdccBody({ query }) {
   return {
     size: 1000,
-    _source: ["id", "title", "url", "idcc", "slug"],
+    _source: ["id", "title", "shortTitle", "url", "idcc", "slug"],
     query: {
       bool: {
         filter: [
@@ -16,7 +16,7 @@ function getIdccBody({ query }) {
             should: [
               {
                 match: {
-                  "title.french": {
+                  "shortTitle.french": {
                     query: `${query}`,
                     fuzziness: "AUTO",
                     boost: ".9"

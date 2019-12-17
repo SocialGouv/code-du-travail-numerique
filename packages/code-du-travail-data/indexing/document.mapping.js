@@ -79,6 +79,16 @@ export const documentMapping = {
     theme: {
       type: "keyword"
     },
+    shortTitle: {
+      type: "text",
+      fields: {
+        french: {
+          type: "text",
+          analyzer: "french_indexing",
+          search_analyzer: "french"
+        }
+      }
+    },
     idcc: {
       type: "keyword",
       fields: {

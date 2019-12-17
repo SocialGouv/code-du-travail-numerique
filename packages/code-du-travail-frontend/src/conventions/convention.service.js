@@ -7,10 +7,11 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const formatIdcc = ({ idcc: num, id, slug, title }) => ({
+const formatIdcc = ({ idcc: num, id, slug, title, shortTitle }) => ({
   id,
   slug,
   title,
+  shortTitle,
   num: parseInt(num, 10).toString()
 });
 
