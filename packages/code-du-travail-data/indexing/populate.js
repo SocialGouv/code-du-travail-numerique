@@ -4,6 +4,7 @@ import { logger } from "./logger";
 import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
 import { parseIdcc, formatIdcc } from "../lib";
+import { getCourriers } from "../dataset/courrier-type";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -41,9 +42,9 @@ function fixArticleNum(id, num) {
  * Find duplicate slugs
  * @param {iterable} allDocuments is an iterable generator
  */
-function getDuplicateSlugs(allDocuments) {
+async function getDuplicateSlugs(allDocuments) {
   let slugs = [];
-  for (const documents of allDocuments) {
+  for await (const documents of allDocuments) {
     slugs = slugs.concat(
       documents.map(({ source, slug }) => `${source}/${slug}`)
     );
@@ -55,7 +56,7 @@ function getDuplicateSlugs(allDocuments) {
     .reduce((state, { slug, count }) => ({ ...state, [slug]: count }), {});
 }
 
-function* cdtnDocumentsGen() {
+async function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
     ({ id, num, title }) => {
@@ -139,31 +140,8 @@ function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Courriers ===");
-  yield require("../dataset/courrier-type/export-courriers.json").map(
-    ({
-      titre,
-      filename,
-      description,
-      questions,
-      html,
-      tags,
-      date_redaction,
-      redacteur,
-      source
-    }) => ({
-      source: SOURCES.LETTERS,
-      title: titre,
-      slug: slugify(titre),
-      description,
-      text: questions.join("\n"),
-      html,
-      filename,
-      date: date_redaction,
-      editor: source,
-      author: redacteur,
-      tags: flattenTags(tags)
-    })
-  );
+  yield getCourriers();
+
   logger.info("=== Outils ===");
   yield require("../dataset/tools").map(
     ({ action, date, description, icon, questions, slug, themes, title }) => ({
@@ -178,6 +156,7 @@ function* cdtnDocumentsGen() {
       title
     })
   );
+
   // Temporary removed from ES
   logger.info("=== Contributions ===");
   yield require("../dataset/contributions/contributions.data.json").map(
