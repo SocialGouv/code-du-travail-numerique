@@ -16,7 +16,7 @@ RUN apk add --no-cache curl=7.66.0-r0
 
 COPY ./package.json /app/package.json
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
-COPY --from=cdtn-nlp-image /app/data/dump.tf.json /app/dump.tf.json
+COPY --from=cdtn-nlp-image /home/worker/dump.tf.json /app/dump.tf.json
 COPY --from=cdtn-base-image /app/node_modules/@socialgouv/kali-data/data /app/node_modules/@socialgouv/kali-data/data
 COPY --from=cdtn-base-image /app/node_modules/@socialgouv/legi-data/package.json /app/node_modules/@socialgouv/legi-data/package.json
 

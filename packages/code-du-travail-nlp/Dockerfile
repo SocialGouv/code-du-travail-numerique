@@ -22,8 +22,8 @@ COPY --chown=worker:worker ./data ./data
 COPY --chown=worker:worker ./api ./api
 COPY --chown=worker:worker ./scripts ./scripts
 
-#ENV PYTHONPATH="/home/worker/.local/bin:${PATH}"
-ENV PYTHONPATH=.
+ENV PATH="/home/worker/.local/bin:${PATH}"
+ENV PYTHONPATH="."
 
 COPY --chown=worker:worker --from=cdtn-base-image /app/packages/code-du-travail-data/dist/dump.data.json ./data/dump.json
 
