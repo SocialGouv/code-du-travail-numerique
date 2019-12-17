@@ -17,7 +17,7 @@
     "superagent": "^5.1.2"
   },
   "scripts": {
-    "prestart": "node verifyUrl",
+    "#prestart": "node verifyUrl",
     "start": "node index",
     "updateTheme": "node updateTheme && node report"
   }

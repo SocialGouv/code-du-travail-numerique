@@ -31,7 +31,7 @@ const formatAnchor = node => {
 
 const smooshCsBlocs = node => {
   node.insertAdjacentHTML("afterend", node.innerHTML);
-  node.parentNode.removechild(node);
+  node.parentNode.removeChild(node);
 };
 
 const getSectionTag = article => {
@@ -103,7 +103,7 @@ function parseDom(dom, url) {
   articleChildren
     .filter(el => el.getAttribute("id"))
     .forEach(function(el) {
-      if (el.tagName === sectionTag) {
+      if (el.tagName.toLowerCase() === sectionTag) {
         let nextEl = el.nextElementSibling;
         const section = {
           anchor: el.id,
@@ -147,7 +147,7 @@ async function parseFiche(url) {
     } else {
       spinner.fail(`${url} - ${error}`).start();
     }
-    return null;
+    return error;
   }
 }
 
@@ -169,12 +169,9 @@ async function parseFiches(urls) {
       2
     )
   );
-  const fiches = results.map(splitArticle).reduce(
-    (accumulator, documents) =>
-      // we remove section with no title (text before the first sectionTag)
-      accumulator.concat(documents),
-    []
-  );
+  const fiches = results
+    .map(splitArticle)
+    .reduce((accumulator, documents) => accumulator.concat(documents), []);
   fs.writeFileSync(
     "./fiches-mt-split.json",
     JSON.stringify(fiches.filter(Boolean), null, 2)
