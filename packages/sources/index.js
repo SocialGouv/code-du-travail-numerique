@@ -36,7 +36,7 @@ const labelBySource = {
   [SOURCES.TOOLS]: "Outils",
   [SOURCES.IDCC]: "Legifrance",
   [SOURCES.CCN]: "Legifrance",
-  [SOURCES.EXTERNALS]: "Lien externe",
+  [SOURCES.EXTERNALS]: "Outils externes",
   [SOURCES.SHEET]: "Fiches",
   [SOURCES.CONTRIBUTIONS]: "Contributions"
 };

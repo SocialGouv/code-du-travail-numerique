@@ -14,7 +14,6 @@ module.exports = [
     ],
     description: "Estimez le montant de l’indemnité de licenciement",
     action: "Estimer",
-    themes: [300, 28300, 21512],
     date: "18/10/2018"
   },
   {
@@ -31,7 +30,6 @@ module.exports = [
     ],
     description: "Calculez la durée de préavis de démission",
     action: "Calculer",
-    themes: [],
     date: "24/07/2019"
   },
   {
@@ -60,7 +58,6 @@ module.exports = [
     description:
       "Estimez le salaire : brut, net, heures supplémentaires, coût total employeur",
     action: "Estimer",
-    themes: [3800, 42200, 42300],
     date: "14/03/2019"
   },
   {
@@ -80,7 +77,6 @@ module.exports = [
     ],
     description: "Estimez le montant de l’indemnité de fin de CDD ou intérim",
     action: "Estimer",
-    themes: [300, 28300, 21512],
     date: "14/03/2019"
   },
   {
@@ -96,7 +92,6 @@ module.exports = [
     ],
     description: "Calculez la durée de préavis de licenciement",
     action: "Calculer",
-    themes: [],
     date: "08/11/2019"
   }
 ];

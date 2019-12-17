@@ -12,6 +12,7 @@ import {
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import tools from "@cdt/data...tools";
+import externalTools from "@cdt/data...tools/externals.json";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
@@ -54,6 +55,22 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
               numéro IDCC.
             </CustomTile>
           </Link>
+          {externalTools.map(
+            ({ action, description, icon, url, slug, title }) => (
+              <CustomTile
+                key={slug}
+                action={action}
+                title={title}
+                icon={icons[icon]}
+                href={url}
+                rel="noopener nofollow"
+                target="_blank"
+                className="no-after"
+              >
+                {description}
+              </CustomTile>
+            )
+          )}
         </CardList>
         {modeles.length > 0 && (
           <CardList leftStripped title="Nos modèles de documents">

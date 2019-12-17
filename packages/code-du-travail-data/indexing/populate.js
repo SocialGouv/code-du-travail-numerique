@@ -57,7 +57,7 @@ async function getDuplicateSlugs(allDocuments) {
 }
 
 async function* cdtnDocumentsGen() {
-  logger.info("=== Conventions Collectives ===");
+  logger.info("=== Collectives Agreement ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
     ({ id, num, title }) => {
       const idcc = formatIdcc(num);
@@ -73,7 +73,7 @@ async function* cdtnDocumentsGen() {
     }
   );
 
-  logger.info("=== Code du travail ===");
+  logger.info("=== LabourCode ===");
   yield selectAll(
     "article",
     require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
@@ -88,7 +88,7 @@ async function* cdtnDocumentsGen() {
     url: getArticleUrl(id)
   }));
 
-  logger.info("=== Fiches SP ===");
+  logger.info("=== SP Sheet ===");
   yield require("../dataset/fiches_service_public/fiches-sp.json").map(
     ({
       id,
@@ -117,7 +117,7 @@ async function* cdtnDocumentsGen() {
     })
   );
 
-  logger.info("=== Fiches MT Split ===");
+  logger.info("=== MT Sheet Split ===");
   yield require("../dataset/fiches_ministere_travail/fiches-mt-split.json").map(
     ({ anchor, description, html, slug, text, title }) => ({
       source: SOURCES.SHEET_MT,
@@ -139,10 +139,10 @@ async function* cdtnDocumentsGen() {
     })
   );
 
-  logger.info("=== Courriers ===");
+  logger.info("=== Mail ===");
   yield getCourriers();
 
-  logger.info("=== Outils ===");
+  logger.info("=== Tools ===");
   yield require("../dataset/tools").map(
     ({ action, date, description, icon, questions, slug, themes, title }) => ({
       action,
@@ -153,6 +153,19 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.TOOLS,
       text: questions.join("\n"),
       themes: themes,
+      title
+    })
+  );
+
+  logger.info("=== External Tools ===");
+  yield require("../dataset/tools/externals.json").map(
+    ({ action, description, icon, title }) => ({
+      action,
+      description,
+      icon,
+      slug: slugify(title),
+      source: SOURCES.EXTERNALS,
+      text: description,
       title
     })
   );
