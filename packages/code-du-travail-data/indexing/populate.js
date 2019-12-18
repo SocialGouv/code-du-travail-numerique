@@ -159,13 +159,14 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== External Tools ===");
   yield require("../dataset/tools/externals.json").map(
-    ({ action, description, icon, title }) => ({
+    ({ action, description, icon, title, url }) => ({
       action,
       description,
       icon,
       slug: slugify(title),
       source: SOURCES.EXTERNALS,
       text: description,
+      url,
       title
     })
   );

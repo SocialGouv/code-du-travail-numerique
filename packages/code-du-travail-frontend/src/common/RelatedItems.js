@@ -7,68 +7,70 @@ import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 import { CustomTile } from "./tiles/Custom";
 
 export const RelatedItems = ({ items = [] }) => {
-  const { relatedTools, relatedLetters, relatedArticles } = items.reduce(
-    (accumulator, item) => {
-      const itemSource = item.source;
-      if (itemSource === SOURCES.TOOLS) {
-        accumulator.relatedTools.push(item);
-      } else if (itemSource === SOURCES.LETTERS) {
-        accumulator.relatedLetters.push(item);
-      } else {
-        accumulator.relatedArticles.push(item);
-      }
-      return accumulator;
-    },
-    {
-      relatedTools: [],
-      relatedLetters: [],
-      relatedArticles: []
-    }
+  const tool = items.find(({ source }) => source === SOURCES.TOOLS);
+  const letter = items.find(({ source }) => source === SOURCES.LETTERS);
+  const external = items.find(({ source }) => source === SOURCES.EXTERNALS);
+  const relatedItems = items.filter(item =>
+    [SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].some(
+      source => source !== item.source
+    )
   );
+
   return (
     <StyledList>
-      {relatedLetters.length > 0 && (
+      {letter && (
         <StyledListItem>
           <Link
-            href={`/${getRouteBySource(relatedLetters[0].source)}/[slug]`}
-            as={`/${getRouteBySource(relatedLetters[0].source)}/${
-              relatedLetters[0].slug
-            }`}
+            href={`/${getRouteBySource(letter.source)}/[slug]`}
+            as={`/${getRouteBySource(letter.source)}/${letter.slug}`}
             passHref
           >
             <StyledCustomTile
               action="Consulter"
               icon={icons.Document}
-              title={relatedLetters[0].title}
-              subtitle={getLabelBySource(relatedLetters[0].source)}
+              title={letter.title}
+              subtitle={getLabelBySource(letter.source)}
             />
           </Link>
         </StyledListItem>
       )}
-      {relatedTools.length > 0 && (
+      {tool && (
         <StyledListItem>
           <Link
-            href={`/${getRouteBySource(relatedTools[0].source)}/[slug]`}
-            as={`/${getRouteBySource(relatedTools[0].source)}/${
-              relatedTools[0].slug
-            }`}
+            href={`/${getRouteBySource(tool.source)}/[slug]`}
+            as={`/${getRouteBySource(tool.source)}/${tool.slug}`}
             passHref
           >
             <StyledCustomTile
-              action={relatedTools[0].action}
-              icon={icons[relatedTools[0].icon]}
-              title={relatedTools[0].title}
-              subtitle={getLabelBySource(relatedTools[0].source)}
+              action={tool.action}
+              icon={icons[tool.icon]}
+              title={tool.title}
+              subtitle={getLabelBySource(tool.source)}
             >
-              {relatedTools[0].description}
+              {tool.description}
             </StyledCustomTile>
           </Link>
         </StyledListItem>
       )}
-      {relatedArticles.length > 0 && (
+      {external && (
+        <StyledListItem>
+          <StyledCustomTile
+            href={tool.url}
+            rel="noopener nofollow"
+            target="_blank"
+            action={tool.action}
+            icon={icons[tool.icon]}
+            title={tool.title}
+            subtitle={getLabelBySource(tool.source)}
+          >
+            {tool.description}
+          </StyledCustomTile>
+        </StyledListItem>
+      )}
+      {relatedItems.length > 0 && (
         <span>Les articles pouvant vous intéresser&nbsp;:</span>
       )}
-      {relatedArticles.slice(0, 3).map(({ slug, source, title }) => (
+      {relatedItems.slice(0, 3).map(({ slug, source, title }) => (
         <StyledListItem key={slug}>
           <Link
             href={`/${getRouteBySource(source)}/[slug]`}

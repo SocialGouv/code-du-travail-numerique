@@ -16,7 +16,8 @@ async function getRelatedItems({ queryVector, settings, slug }) {
     SOURCES.SHEET_SP,
     SOURCES.SHEET_MT,
     SOURCES.LETTERS,
-    SOURCES.CONTRIBUTIONS
+    SOURCES.CONTRIBUTIONS,
+    SOURCES.EXTERNALS
   ];
   const {
     body: {

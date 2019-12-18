@@ -33,7 +33,6 @@ const documentsSlugs = [
   "/modeles-de-courriers/modele-rupture-de-periode-dessai-a-linitiative-de-lemployeur",
   "/convention-collective/1747-convention-collective-nationale-des-activites-industrielles-de-boulangerie",
   "/convention-collective/0843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-197",
-  "/outils-externe/mon-compte-formation",
   "/external/mon-compte-formation",
   "/external/index-egapro"
 ];
@@ -141,7 +140,7 @@ if (module === require.main) {
   updateDocumentsData(documentsSlugs).catch(error =>
     console.error("›››" + error)
   );
-  updateThemes(themesSlugs).catch(error => console.error("›››" + error));
-  updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
-  updateAgreements(agreementSlugs).catch(error => console.error("›››" + error));
+  // updateThemes(themesSlugs).catch(error => console.error("›››" + error));
+  // updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
+  // updateAgreements(agreementSlugs).catch(error => console.error("›››" + error));
 }
