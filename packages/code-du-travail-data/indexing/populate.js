@@ -117,7 +117,7 @@ async function* cdtnDocumentsGen() {
     })
   );
 
-  logger.info("=== Fiches MT Split ===");
+  logger.info("=== Fiche MT(split) ===");
   yield require("../dataset/fiches_ministere_travail/fiches-mt-split.json").map(
     ({ anchor, description, html, slug, text, title }) => ({
       source: SOURCES.SHEET_MT,
@@ -153,6 +153,20 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.TOOLS,
       text: questions.join("\n"),
       themes: themes,
+      title
+    })
+  );
+
+  logger.info("=== Outils externes ===");
+  yield require("../dataset/tools/externals.json").map(
+    ({ action, description, icon, title, url }) => ({
+      action,
+      description,
+      icon,
+      slug: slugify(title),
+      source: SOURCES.EXTERNALS,
+      text: description,
+      url,
       title
     })
   );

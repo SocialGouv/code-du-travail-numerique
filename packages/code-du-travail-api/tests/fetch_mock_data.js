@@ -32,7 +32,9 @@ const documentsSlugs = [
   "/modeles-de-courriers/modele-rupture-dun-commun-accord-dun-contrat-a-duree-determinee",
   "/modeles-de-courriers/modele-rupture-de-periode-dessai-a-linitiative-de-lemployeur",
   "/convention-collective/1747-convention-collective-nationale-des-activites-industrielles-de-boulangerie",
-  "/convention-collective/0843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-197"
+  "/convention-collective/0843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-197",
+  "/external/mon-compte-formation",
+  "/external/index-egapro"
 ];
 
 const themesSlugs = ["8-depart-de-lentreprise", "81-demission"];
@@ -138,7 +140,7 @@ if (module === require.main) {
   updateDocumentsData(documentsSlugs).catch(error =>
     console.error("›››" + error)
   );
-  updateThemes(themesSlugs).catch(error => console.error("›››" + error));
-  updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
-  updateAgreements(agreementSlugs).catch(error => console.error("›››" + error));
+  // updateThemes(themesSlugs).catch(error => console.error("›››" + error));
+  // updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
+  // updateAgreements(agreementSlugs).catch(error => console.error("›››" + error));
 }

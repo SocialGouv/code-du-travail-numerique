@@ -45,10 +45,12 @@ export const ListLink = ({
 
   if (source === SOURCES.EXTERNALS) {
     return (
-      <Tile
+      <CustomTile
         href={url}
         target="_blank"
+        rel="noreferer noopener"
         className="no-after"
+        action="Consulter"
         {...tileCommonProps}
       />
     );

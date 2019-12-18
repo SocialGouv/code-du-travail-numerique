@@ -64,7 +64,8 @@ router.get("/search", async ctx => {
     SOURCES.SHEET_SP,
     SOURCES.LETTERS,
     SOURCES.TOOLS,
-    SOURCES.CONTRIBUTIONS
+    SOURCES.CONTRIBUTIONS,
+    SOURCES.EXTERNALS
   ];
   const skipSavedResults =
     ctx.query.skipSavedResults === "" || ctx.query.skipSavedResults === "true";
