@@ -11,12 +11,12 @@ const addedFiches = nextFiches.filter(
 );
 
 console.log(`
-    ## ${suppressedFiches.length} Fiches supprimées
-    ${suppressedFiches
-      .map(fiche => `[${fiche.id} - ${fiche.title}] ${fiche.url}`)
-      .join("\n")}
-    ## ${addedFiches.length} Fiches ajoutées
-    ${addedFiches
-      .map(fiche => `[${fiche.id} -${fiche.title}] ${fiche.url}`)
-      .join("\n")}
+### ${suppressedFiches.length} Fiches supprimées
+${suppressedFiches
+  .map(fiche => `- [${fiche.id} - ${fiche.title}](${fiche.url})`)
+  .join("\n")}
+### ${addedFiches.length} Fiches ajoutées
+${addedFiches
+  .map(fiche => `- [${fiche.id} - ${fiche.title}](${fiche.url})`)
+  .join("\n")}
 `);
