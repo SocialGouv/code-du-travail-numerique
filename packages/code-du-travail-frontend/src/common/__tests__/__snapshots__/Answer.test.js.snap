@@ -2246,9 +2246,20 @@ exports[`<Answer /> should renders related content 1`] = `
               <p
                 class="test-content"
               >
-                annualisation du temps de travail. 
                 <span
                   data-tooltip-ref="__tt__0"
+                >
+                  <span
+                    class="c10"
+                    data-reach-tooltip-trigger=""
+                    tabindex="0"
+                  >
+                    annualisation du temps de travail
+                  </span>
+                </span>
+                . 
+                <span
+                  data-tooltip-ref="__tt__1"
                 >
                   <span
                     class="c10"
@@ -2260,7 +2271,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 </span>
                  de l'
                 <span
-                  data-tooltip-ref="__tt__1"
+                  data-tooltip-ref="__tt__2"
                 >
                   <span
                     class="c10"
@@ -3892,9 +3903,20 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               <p
                 class="test-content"
               >
-                annualisation du temps de travail. 
                 <span
                   data-tooltip-ref="__tt__0"
+                >
+                  <span
+                    class="c10"
+                    data-reach-tooltip-trigger=""
+                    tabindex="0"
+                  >
+                    annualisation du temps de travail
+                  </span>
+                </span>
+                . 
+                <span
+                  data-tooltip-ref="__tt__1"
                 >
                   <span
                     class="c10"
@@ -3906,7 +3928,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 </span>
                  de l'
                 <span
-                  data-tooltip-ref="__tt__1"
+                  data-tooltip-ref="__tt__2"
                 >
                   <span
                     class="c10"

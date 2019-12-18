@@ -46,7 +46,7 @@ class Fiche extends React.Component {
     // titleless section have the page title but no anchor.
     const untitledSection = sections.find(section => !section.anchor);
     const titledSections = sections
-      .filter(section => section.title)
+      .filter(section => section.anchor)
       .map(({ anchor, html, tag, title }) => ({
         id: anchor,
         as: tag,
