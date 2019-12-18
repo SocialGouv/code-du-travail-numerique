@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.9.0 (2019-12-18)
+
+
+### Bug Fixes
+
+* **api:** remove current item from relatedItems ([#2000](https://github.com/SocialGouv/code-du-travail-numerique/issues/2000)) ([eb34bb7](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb34bb7e2afcf968238ace9a6012d71401baa9b7)), closes [#1874](https://github.com/SocialGouv/code-du-travail-numerique/issues/1874)
+* **deps:** update dependency next to ^9.1.5 ([#1925](https://github.com/SocialGouv/code-du-travail-numerique/issues/1925)) ([c1aa17e](https://github.com/SocialGouv/code-du-travail-numerique/commit/c1aa17e12a296851194f3d709ec9d1c8e7b1e720))
+* **es:** re-make slug a keyword ([#1969](https://github.com/SocialGouv/code-du-travail-numerique/issues/1969)) ([447ebfc](https://github.com/SocialGouv/code-du-travail-numerique/commit/447ebfcd1a05df60856d30ea6ac2b6cb097994e7))
+* **fiches-MT:** deeper sectionification ([#1921](https://github.com/SocialGouv/code-du-travail-numerique/issues/1921)) ([5a636b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/5a636b0d3aa87e64667e10497ca7d2cb82d2d90d)), closes [#1898](https://github.com/SocialGouv/code-du-travail-numerique/issues/1898) [#1929](https://github.com/SocialGouv/code-du-travail-numerique/issues/1929)
+
+
+### Features
+
+* **agreement:** add new agreement page ([#1840](https://github.com/SocialGouv/code-du-travail-numerique/issues/1840)) ([97ec7ad](https://github.com/SocialGouv/code-du-travail-numerique/commit/97ec7ad5790d569ad705d9825df4c521a4136319)), closes [#1398](https://github.com/SocialGouv/code-du-travail-numerique/issues/1398) [#1871](https://github.com/SocialGouv/code-du-travail-numerique/issues/1871)
+* **frontend:** CustomTiles and related items ([#1933](https://github.com/SocialGouv/code-du-travail-numerique/issues/1933)) ([7d03762](https://github.com/SocialGouv/code-du-travail-numerique/commit/7d03762ea76006586aea64140a41b79ac17c45b9))
+* **template:** add date of day in filename  when download file ([#1996](https://github.com/SocialGouv/code-du-travail-numerique/issues/1996)) ([f9c6a69](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9c6a691775ec7e8925b02c0d5f58e8a76967b30)), closes [#1810](https://github.com/SocialGouv/code-du-travail-numerique/issues/1810)
+
+
+
+
+
 # 3.8.0 (2019-12-03)
 
 

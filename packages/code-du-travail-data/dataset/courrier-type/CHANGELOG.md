@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.9.0 (2019-12-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency next to ^9.1.5 ([#1925](https://github.com/SocialGouv/code-du-travail-numerique/issues/1925)) ([c1aa17e](https://github.com/SocialGouv/code-du-travail-numerique/commit/c1aa17e12a296851194f3d709ec9d1c8e7b1e720))
+* **deps:** update dependency react-tabs to ^3.1.0 ([#1956](https://github.com/SocialGouv/code-du-travail-numerique/issues/1956)) ([0da96a9](https://github.com/SocialGouv/code-du-travail-numerique/commit/0da96a9d7eea3c35be3c31337ebbf922ba57db6c)), closes [#1958](https://github.com/SocialGouv/code-du-travail-numerique/issues/1958) [#1957](https://github.com/SocialGouv/code-du-travail-numerique/issues/1957)
+* courriers indexation ([#1943](https://github.com/SocialGouv/code-du-travail-numerique/issues/1943)) ([903a280](https://github.com/SocialGouv/code-du-travail-numerique/commit/903a280276285fe8f40d6713c70c9945ec791846))
+
+
+### Features
+
+* **frontend:** CustomTiles and related items ([#1933](https://github.com/SocialGouv/code-du-travail-numerique/issues/1933)) ([7d03762](https://github.com/SocialGouv/code-du-travail-numerique/commit/7d03762ea76006586aea64140a41b79ac17c45b9))
+
+
+
+
+
 # 3.8.0 (2019-12-03)
 
 

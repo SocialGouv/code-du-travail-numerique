@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.9.0 (2019-12-18)
+
+
+### Bug Fixes
+
+* **data:** add title to titleless sections ([#1972](https://github.com/SocialGouv/code-du-travail-numerique/issues/1972)) ([f9b0118](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9b0118ae7c180282e23c06cc0a6567310249bdc)), closes [#1971](https://github.com/SocialGouv/code-du-travail-numerique/issues/1971)
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.53 ([#1927](https://github.com/SocialGouv/code-du-travail-numerique/issues/1927)) ([9e36b4b](https://github.com/SocialGouv/code-du-travail-numerique/commit/9e36b4bad475aa17054cef1fae3c61db2d758228))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.54 ([#1937](https://github.com/SocialGouv/code-du-travail-numerique/issues/1937)) ([f2a6978](https://github.com/SocialGouv/code-du-travail-numerique/commit/f2a6978e0c9127443fa303bd0e6d0c56d9bcbac5))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.55 ([#1951](https://github.com/SocialGouv/code-du-travail-numerique/issues/1951)) ([72193a3](https://github.com/SocialGouv/code-du-travail-numerique/commit/72193a36eb84f9a7ecebb595c85c8171a22928d9))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.56 ([#1957](https://github.com/SocialGouv/code-du-travail-numerique/issues/1957)) ([bd1dde4](https://github.com/SocialGouv/code-du-travail-numerique/commit/bd1dde4af7b585508709565515046f54680d5646))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.59 ([#1963](https://github.com/SocialGouv/code-du-travail-numerique/issues/1963)) ([2baecce](https://github.com/SocialGouv/code-du-travail-numerique/commit/2baecce717d35b151bf54c567547e2916d363009))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.60 ([#1992](https://github.com/SocialGouv/code-du-travail-numerique/issues/1992)) ([dfdaf2c](https://github.com/SocialGouv/code-du-travail-numerique/commit/dfdaf2cd868c099ff98893b23149e647da6e6c64))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.61 ([#2001](https://github.com/SocialGouv/code-du-travail-numerique/issues/2001)) ([74684e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/74684e3aa67fbaecc2efb05afe32daef4c75cfaf))
+* **deps:** update dependency @socialgouv/kali-data to ^1.2.98 ([#1959](https://github.com/SocialGouv/code-du-travail-numerique/issues/1959)) ([bfe5ad2](https://github.com/SocialGouv/code-du-travail-numerique/commit/bfe5ad25d7ec6694997bc90bae15243d74535713))
+* **deps:** update dependency next to ^9.1.5 ([#1925](https://github.com/SocialGouv/code-du-travail-numerique/issues/1925)) ([c1aa17e](https://github.com/SocialGouv/code-du-travail-numerique/commit/c1aa17e12a296851194f3d709ec9d1c8e7b1e720))
+* **deps:** update dependency react-tabs to ^3.1.0 ([#1956](https://github.com/SocialGouv/code-du-travail-numerique/issues/1956)) ([0da96a9](https://github.com/SocialGouv/code-du-travail-numerique/commit/0da96a9d7eea3c35be3c31337ebbf922ba57db6c)), closes [#1958](https://github.com/SocialGouv/code-du-travail-numerique/issues/1958) [#1957](https://github.com/SocialGouv/code-du-travail-numerique/issues/1957)
+* courriers indexation ([#1943](https://github.com/SocialGouv/code-du-travail-numerique/issues/1943)) ([903a280](https://github.com/SocialGouv/code-du-travail-numerique/commit/903a280276285fe8f40d6713c70c9945ec791846))
+* **es:** re-make slug a keyword ([#1969](https://github.com/SocialGouv/code-du-travail-numerique/issues/1969)) ([447ebfc](https://github.com/SocialGouv/code-du-travail-numerique/commit/447ebfcd1a05df60856d30ea6ac2b6cb097994e7))
+* **fiches-MT:** deeper sectionification ([#1921](https://github.com/SocialGouv/code-du-travail-numerique/issues/1921)) ([5a636b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/5a636b0d3aa87e64667e10497ca7d2cb82d2d90d)), closes [#1898](https://github.com/SocialGouv/code-du-travail-numerique/issues/1898) [#1929](https://github.com/SocialGouv/code-du-travail-numerique/issues/1929)
+* **fiches-sp:** update data ([#1930](https://github.com/SocialGouv/code-du-travail-numerique/issues/1930)) ([f8a3a25](https://github.com/SocialGouv/code-du-travail-numerique/commit/f8a3a25487c80ad617c7c89bfc9385cfc495b0ac))
+
+
+### Features
+
+* **agreement:** add new agreement page ([#1840](https://github.com/SocialGouv/code-du-travail-numerique/issues/1840)) ([97ec7ad](https://github.com/SocialGouv/code-du-travail-numerique/commit/97ec7ad5790d569ad705d9825df4c521a4136319)), closes [#1398](https://github.com/SocialGouv/code-du-travail-numerique/issues/1398) [#1871](https://github.com/SocialGouv/code-du-travail-numerique/issues/1871)
+* **frontend:** CustomTiles and related items ([#1933](https://github.com/SocialGouv/code-du-travail-numerique/issues/1933)) ([7d03762](https://github.com/SocialGouv/code-du-travail-numerique/commit/7d03762ea76006586aea64140a41b79ac17c45b9))
+* ajout fiche SP "Avantages en nature" ([#1953](https://github.com/SocialGouv/code-du-travail-numerique/issues/1953)) ([6c33f31](https://github.com/SocialGouv/code-du-travail-numerique/commit/6c33f319c4a8ddbefc38b0c82e99cae31bc8a552))
+
+
+
+
+
 # 3.8.0 (2019-12-03)
 
 

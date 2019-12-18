@@ -1,11 +1,11 @@
 {
   "name": "@cdt/data...courrier-type",
-  "version": "3.8.0",
+  "version": "3.9.0",
   "private": true,
   "description": "generate courrier-type.json",
   "main": "index.js",
   "dependencies": {
-    "@cdt/sources": "^3.8.0",
+    "@cdt/sources": "^3.9.0",
     "mammoth": "^1.4.9"
   }
 }
