@@ -18,46 +18,35 @@ async function getRelatedItems({ queryVector, settings, slug }) {
     SOURCES.LETTERS,
     SOURCES.CONTRIBUTIONS
   ];
-  const {
-    body: {
-      responses: [esResponse, semResponse]
+
+  const requestBodies = [
+    { index },
+    {
+      ...getRelatedItemsBody({
+        settings,
+        sources
+      })
     }
-  } = await elasticsearchClient.msearch({
-    body: [
-      { index },
-      {
-        ...getRelatedItemsBody({
-          settings,
-          sources
-        })
-      },
+  ];
+  if (queryVector) {
+    requestBodies.push(
       { index },
       // we +1 the size to remove the document source that should match perfectly for the given vector
       { ...getSemBody({ query_vector: queryVector, size: size + 1, sources }) }
-    ]
-  });
+    );
+  }
+  const {
+    body: {
+      responses: [esResponse = [], semResponse = []]
+    }
+  } = await elasticsearchClient.msearch({ body: requestBodies });
 
   const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
   const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
 
-  const filteredFullTextHits = fullTextHits.filter(
-    ({ _source }) => !_source.slug.includes(slug)
-  );
-
-  if (!queryVector) {
-    return filteredFullTextHits
-      .slice(0, MAX_RESULTS)
-      .map(({ _source }) => _source);
-  }
-
-  const referenceId = settings[0].id;
-
   return utils
-    .mergePipe(
-      semanticHits.filter(doc => doc._id !== referenceId),
-      filteredFullTextHits,
-      MAX_RESULTS
-    )
+    .mergePipe(semanticHits, fullTextHits, MAX_RESULTS)
+    .filter(({ _source }) => !_source.slug.includes(slug))
     .map(({ _source }) => _source);
 }
 
