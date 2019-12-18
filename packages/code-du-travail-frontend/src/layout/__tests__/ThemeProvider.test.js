@@ -4,7 +4,7 @@ import { ThemeProvider, useTheme } from "../ThemeProvider";
 
 const checkFunction = jest.fn();
 
-const DummyComponent = ({ checkFunction }) => {
+const DummyComponent = () => {
   const { currentTheme, toggleTheme } = useTheme();
   if (typeof currentTheme === "object" && typeof toggleTheme === "function") {
     checkFunction();
@@ -14,9 +14,10 @@ const DummyComponent = ({ checkFunction }) => {
 
 describe("<ThemeProvider />", () => {
   it("make sure the correct context is passed to wrapped component", () => {
+    expect(checkFunction).not.toHaveBeenCalled();
     render(
       <ThemeProvider>
-        <DummyComponent checkFunction={checkFunction} />
+        <DummyComponent />
       </ThemeProvider>
     );
     expect(checkFunction).toHaveBeenCalled();
