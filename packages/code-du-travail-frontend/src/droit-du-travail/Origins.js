@@ -20,7 +20,7 @@ const accordionItemsLeft = [
           <a
             href="https://www.ilo.org/global/lang--fr/index.htm"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             l’Organisation internationale du travail
           </a>{" "}
@@ -31,7 +31,8 @@ const accordionItemsLeft = [
           Les conventions de l’OIT sont les principaux textes qui ont un effet
           sur le droit du travail français. Ces conventions traitent de nombreux
           sujets comme le travail des enfants, les activités syndicales, le
-          travail forcé, l’emploi, le chômage, la rémunération.
+          travail forcé, l’emploi, le chômage, la rémunération, le rôle de
+          l’inspection du travail.
         </p>
         <p>
           <i>
@@ -39,7 +40,7 @@ const accordionItemsLeft = [
             <a
               href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               la Convention n°158 de l’OIT sur le licenciement
             </a>
@@ -56,7 +57,7 @@ const accordionItemsLeft = [
             <a
               href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               Le Pacte international relatif aux droits civils et politiques de
               1966
@@ -65,7 +66,7 @@ const accordionItemsLeft = [
             <a
               href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               le Pacte international relatif aux droits économiques, sociaux et
               culturels de 1966
@@ -86,7 +87,7 @@ const accordionItemsLeft = [
           <a
             href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             la Constitution du 4 octobre 1958
           </a>{" "}
@@ -123,9 +124,12 @@ const accordionItemsLeft = [
           .
         </p>
         <p>
-          Ces textes, qui forment le bloc de constitutionalité, énoncent des
-          principes fondamentaux en droit du travail comme par exemple la
-          liberté syndicale, le droit de grève et le droit d’obtenir un emploi.
+          Ces textes, qui forment le bloc de constitutionnalité, énoncent des
+          principes fondamentaux en droit du travail comme par exemple l’égalité
+          entre les femmes et les hommes, le droit à la protection de la santé,
+          le droit à être représenté par des délégués, la liberté syndicale, le
+          droit de grève, le droit à une formation professionnelle, le droit
+          d’obtenir un emploi et l’absence de discrimination.
         </p>
       </>
     )
@@ -162,8 +166,8 @@ const accordionItemsLeft = [
     body: (
       <>
         Le règlement intérieur de l’entreprise est un acte écrit par l’employeur
-        qui fixe les règles concernant l’organisation de l’entreprise, la
-        discipline, l’hygiène et la sécurité dans l’entreprise.
+        qui fixe les règles concernant la discipline, la santé et la sécurité
+        dans l’entreprise.
       </>
     )
   }
@@ -180,7 +184,7 @@ const accordionItemsRight = [
           <a
             href="https://europa.eu/european-union/index_fr"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             l’Union Européenne
           </a>{" "}
@@ -188,7 +192,7 @@ const accordionItemsRight = [
           <a
             href="https://www.coe.int/fr/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             le Conseil de l’Europe
           </a>
@@ -204,7 +208,7 @@ const accordionItemsRight = [
             <a
               href="https://www.etuc.org/fr"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               la Confédération européenne des syndicats (CES)
             </a>
@@ -212,7 +216,7 @@ const accordionItemsRight = [
             <a
               href="https://www.businesseurope.eu/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               Business Europe
             </a>{" "}
@@ -220,7 +224,7 @@ const accordionItemsRight = [
             <a
               href="https://www.ceep.eu/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               le Centre européen des entreprises à participation publique
             </a>{" "}
@@ -237,7 +241,7 @@ const accordionItemsRight = [
             <a
               href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               La Convention européenne de sauvegarde des droits de l’Homme et
               des libertés fondamentales
@@ -250,7 +254,7 @@ const accordionItemsRight = [
             <a
               href="https://www.coe.int/en/web/european-social-charter"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               La Charte sociale européenne
             </a>{" "}
@@ -268,7 +272,7 @@ const accordionItemsRight = [
       <>
         <p>
           La loi est votée par le Parlement et fixe les principes fondamentaux
-          du droit du travail, du droit syndical et de la sécurité sociale.
+          du droit du travail et de la sécurité sociale.
         </p>
         <p>
           L’ordonnance est un texte écrit par le Gouvernement après que le
@@ -287,18 +291,19 @@ const accordionItemsRight = [
           travail se trouve dans le Code du travail. Il existe des règles
           applicables en droit du travail qui se trouvent dans d’autres codes
           que le Code du travail comme par exemple le Code civil, le Code de
-          l’action sociale ou le Code de la sécurité sociale.
+          l’action sociale ou le Code de la sécurité sociale, le code des
+          transports ou le code rural et de la pêche maritime.
         </p>
         <p>
           L’arrêté est un texte pris par une autorité administrative autre que
-          le Président de la République et le Premier Ministre&nbsp;: ministres,
-          des préfets, des maires...
+          le Président de la République et le Premier Ministre : il peut ainsi
+          être pris par les ministres, les préfets, les maires…
         </p>
         <p>
           <i>
             Exemple&nbsp;: arrêté préfectoral déterminant la zone touristique
             permettant l’ouverture le dimanche ou arrêté ministériel fixant le
-            modèle de l’avis d’inaptitude
+            modèle de l’avis d’inaptitude.
           </i>
         </p>
       </>
@@ -313,7 +318,7 @@ const accordionItemsRight = [
           L’usage d’entreprise est une pratique répétée de l’employeur
           attribuant un avantage aux salariés ou à un groupe de salariés de
           l’entreprise sans que la loi, la convention collective ou le contrat
-          de travail ne lui impose.
+          de travail ne le lui impose.
         </p>
         <p>
           Il existe également des usages au niveau de certaines professions ou
@@ -324,7 +329,10 @@ const accordionItemsRight = [
           l’employeur d’accorder un avantage aux salariés.
         </p>
         <p>
-          <i>Exemples&nbsp;: Note de service, procès-verbal de désaccord...</i>
+          <i>
+            Exemples&nbsp;: on peut trouver de tels engagements dans une note de
+            service, un procès-verbal de désaccord…
+          </i>
         </p>
       </>
     )

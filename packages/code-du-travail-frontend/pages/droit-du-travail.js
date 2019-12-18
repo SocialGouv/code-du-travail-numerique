@@ -23,7 +23,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
     />
     <StyledSection>
       <Container>
-        <PageTitle>Le droit du travail, c’est quoi ?</PageTitle>
+        <PageTitle>Le droit du travail, c’est quoi&nbsp;?</PageTitle>
         <FlexContainer>
           <BigBlock>
             <Wrapper>
@@ -36,10 +36,10 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
                 Le droit du travail organise les relations professionnelles de
                 travail entre l’employeur et le salarié individuellement et la
                 collectivité des salariés. Il encadre de nombreux domaines tels
-                que la rémunération, la durée du travail, les congés, la
-                discipline, le licenciement, l’emploi, la formation, la sécurité
-                et la santé au travail, la négociation collective, la grève et
-                la représentation du personnel.
+                que le contrat de travail, la rémunération, la durée du travail,
+                les congés, la discipline, le licenciement, l’emploi, la
+                formation, la sécurité et la santé au travail, la négociation
+                collective, la grève et la représentation du personnel.
               </p>
               <p>
                 Le droit du travail est un droit en constante évolution car il
@@ -49,7 +49,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
           </BigBlock>
           <SmallBlock>
             <Wrapper>
-              <h2>Ce n’est pas... </h2>
+              <h2>Ce n’est pas…</h2>
               <p>
                 Le droit du travail ne concerne pas les travailleurs qui sont
                 soumis au droit public (par exemple, les fonctionnaires), les
