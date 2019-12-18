@@ -6,14 +6,15 @@ const Explainer = () => {
     <>
       <Title>Qu’est-ce qu’une convention collective&nbsp;?</Title>
       <p>
-        Une convention collective est un accord négocié entre des organisations
-        syndicales de salariés et des organisations d’employeurs.
+        Une convention collective est un acte écrit, conclu entre des
+        organisations syndicales de salariés reconnues représentatives et des
+        organisations syndicales d’employeurs ou un ou plusieurs employeurs.
         <br />
-        Elle permet d’aménager les règles issues du code du travail concernant
-        les conditions d’emploi, la formation professionnelle, le travail des
-        salariés et les garanties sociales aux spécificités des secteurs
-        d’activité et géographiques concernés. Elle peut également prévoir
-        d’autres mesures qui ne sont pas prévues par le code du travail.
+        La convention collective se doit de traiter de l’ensemble des conditions
+        d’emploi, de travail et de formation professionnelle des salariés et de
+        leurs garanties sociales pour toutes les catégories professionnelles.
+        L’accord collectif ne traite que d’un ou de plusieurs sujets déterminés
+        dans cet ensemble.
       </p>
     </>
   );
