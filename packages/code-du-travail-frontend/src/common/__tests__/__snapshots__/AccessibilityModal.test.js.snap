@@ -1,13 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
-.c3 {
+exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
+.c5 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c4 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.c6 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
+}
+
+.c3 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
 .c0 {
@@ -71,7 +102,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   cursor: not-allowed;
 }
 
-.c10 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -108,16 +139,16 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   opacity: 1;
 }
 
-.c10:link,
-.c10:visited {
+.c12:link,
+.c12:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):active,
-.c10:not([disabled]):focus {
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -126,13 +157,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   border-color: transparent;
 }
 
-.c10[disabled] {
+.c12[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c12:not(:focus):not(:active) {
+.c14:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -168,34 +199,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   outline: none;
 }
 
-.c11 {
+.c13 {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 1.6rem 0 3.2rem;
-  font-weight: bold;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #7994d4;
-}
-
-.c6 {
-  padding: 0 1.6rem;
-  color: #3e486e;
-  font-size: 2rem;
-}
-
 .c7 {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -204,45 +214,98 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1.6rem 0 2rem;
-  color: #fff;
-  font-size: 1.6rem;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
   font-style: normal;
-  background-color: #7994d4;
+  line-height: 2;
+  cursor: pointer;
 }
 
-.c7::before {
+.c11 {
   position: absolute;
-  top: 50%;
+  top: 0.6rem;
   left: 0;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent transparent #fff;
-  border-style: solid;
-  border-width: 10px 0 10px 10px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 1px solid #bbcadf;
+  border-radius: 0.4rem;
+}
+
+.c11:after {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.8rem;
+  display: none;
+  width: 0.5rem;
+  height: 1rem;
+  border: solid #fff;
+  border-width: 0 0.2rem 0.2rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   content: "";
 }
 
-.c8 {
-  width: 100%;
-  margin-top: 1rem;
+.c9 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1.6rem 0 0;
+  padding: 0;
+  border-radius: 0.4rem;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
+.c9 *::-ms-backdrop,
 .c9 {
+  visibility: hidden;
+}
+
+.c9:checked ~ .c10 {
+  background-color: #f66663;
+  border: 0;
+}
+
+.c9:checked ~ .c10:after {
   display: block;
-  margin-top: 2rem;
+}
+
+.c8 {
+  position: relative;
+  font-weight: normal;
+  font-size: 1.6rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
   .c3 {
-    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -253,7 +316,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c12 {
     font-size: 1.4rem;
   }
 }
@@ -279,36 +342,10 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c13 {
     position: fixed;
     top: 1rem;
     right: 1rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c4 {
-    text-align: center;
-  }
-}
-
-@media (max-width:980px) {
-  .c5 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:980px) {
-  .c7 {
-    padding: 1rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c7::before {
-    display: none;
   }
 }
 
@@ -342,80 +379,51 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
           data-reach-dialog-overlay="true"
         >
           <div
-            aria-label="Service de renseignement"
+            aria-label="Accessibilité"
             aria-modal="true"
             class="c2"
             data-reach-dialog-content="true"
             role="dialog"
             tabindex="-1"
           >
-            <h4
+            <header
               class="c3"
             >
-              Contacter les services de renseignement par téléphone
-            </h4>
-            <div
-              class="c4"
-            >
-              <a
-                class="c5"
-                href="tel:+0033806000126"
+              <h2
+                class="c4"
               >
-                <strong
-                  class="c6"
-                >
-                  0 806 000 126
-                </strong>
-                <em
-                  class="c7"
-                >
-                  Service gratuit + prix appel
-                </em>
-              </a>
-            </div>
-            <h4
-              class="c3"
+                <div
+                  class="c5"
+                />
+                Accessibilité
+              </h2>
+            </header>
+            <h3
+              class="c6"
             >
-              Trouver les coordonnées du service de renseignement de mon département
-            </h4>
-            <p>
-              <label
-                for="id_1"
-              >
-                Saisissez votre numéro de département :
-              </label>
+              Couleurs
+            </h3>
+            <label
+              class="c7 c8"
+              for="blackAndWhiteTheme"
+            >
               <input
-                class="c8"
-                id="id_1"
-                maxlength="3"
-                type="text"
+                class="c9"
+                id="blackAndWhiteTheme"
+                name="blackAndWhiteTheme"
+                type="checkbox"
               />
-            </p>
-            <small
-              class="c9"
-            >
-              Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
-              <ul>
-                <li>
-                  les demandes d'intervention en entreprise
-                </li>
-                <li>
-                  le règlement des litiges, et la constitution des dossiers prud'homaux
-                </li>
-                <li>
-                  les calculs de droit au chômage
-                </li>
-                <li>
-                  vous renseigner sur les cotisations sociales
-                </li>
-              </ul>
-            </small>
+              Passer le site en noir et blanc
+              <span
+                class="c10 c11"
+              />
+            </label>
             <button
-              class="c10 c11"
+              class="c12 c13"
               title="fermer la modale"
             >
               <div
-                class="c12"
+                class="c14"
               >
                 fermer la modale
               </div>

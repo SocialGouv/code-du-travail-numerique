@@ -14,7 +14,7 @@ exports[`<Salaire /> renders 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -190,7 +190,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -476,7 +476,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -810,7 +810,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;

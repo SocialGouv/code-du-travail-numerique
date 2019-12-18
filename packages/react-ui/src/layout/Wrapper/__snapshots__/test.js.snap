@@ -139,7 +139,7 @@ exports[`<Wrapper /> it renders a main Wrapper 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
   content: "";
 }
 

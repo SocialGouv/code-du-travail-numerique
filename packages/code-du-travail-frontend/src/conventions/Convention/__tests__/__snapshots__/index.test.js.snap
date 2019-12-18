@@ -3,7 +3,7 @@
 exports[`<Convention /> renders 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -58,7 +58,7 @@ exports[`<Convention /> renders 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   margin-right: 1rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 [aria-expanded="true"] .c7,
@@ -202,9 +202,9 @@ exports[`<Convention /> renders 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #7598d6;
-  border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  background: #7994d4;
+  border-color: #7994d4;
+  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -222,8 +222,8 @@ exports[`<Convention /> renders 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #9cb5e2;
-  border-color: #9cb5e2;
+  background: #a0b3e0;
+  border-color: #a0b3e0;
 }
 
 .c21[disabled] {
@@ -327,7 +327,7 @@ exports[`<Convention /> renders 1`] = `
   right: 0;
   width: 3rem;
   height: 5.4rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 .c18 {

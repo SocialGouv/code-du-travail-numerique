@@ -9,7 +9,7 @@ import {
 } from "@socialgouv/react-ui";
 import styled from "styled-components";
 import { matopush } from "../../piwik";
-import ServiceRenseignementModal from "../ServiceRenseignementModal";
+import { ServiceRenseignementModal } from "../ServiceRenseignementModal";
 
 function Feedback({
   query = "",
@@ -52,9 +52,11 @@ function Feedback({
               Pour obtenir une réponse à votre question de droit du travail,
               nous vous invitons à joindre les{" "}
               <ServiceRenseignementModal>
-                <Button variant="link">
-                  services du ministère du Travail en région
-                </Button>
+                {openModal => (
+                  <Button variant="link" onClick={openModal}>
+                    services du ministère du Travail en région
+                  </Button>
+                )}
               </ServiceRenseignementModal>
               .
             </p>

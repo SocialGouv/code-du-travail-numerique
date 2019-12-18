@@ -32,9 +32,9 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
@@ -52,8 +52,8 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #f99593;
+  border-color: #f99593;
 }
 
 .c14[disabled] {
@@ -168,7 +168,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
   margin: 0.4rem 1rem;
   margin-left: 0;
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 

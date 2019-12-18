@@ -3,7 +3,7 @@
 exports[`<StepInformations /> should render 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -150,7 +150,7 @@ exports[`<StepInformations /> should render 1`] = `
 exports[`<StepInformations /> should render catégorie 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -289,7 +289,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 exports[`<StepInformations /> should render groupe 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;

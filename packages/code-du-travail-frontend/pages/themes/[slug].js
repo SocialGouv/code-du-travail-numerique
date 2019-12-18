@@ -40,7 +40,7 @@ class Theme extends React.Component {
     const { theme = {}, pageUrl, ogImage } = this.props;
 
     return (
-      <Layout currentPage="themes">
+      <Layout>
         <Metas
           url={pageUrl}
           title={`${theme.title} - Code du travail numérique`}

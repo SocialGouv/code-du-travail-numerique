@@ -132,7 +132,7 @@ exports[`<StepList /> should render 1`] = `
   margin: 0.4rem 1rem;
   margin-left: 0;
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 

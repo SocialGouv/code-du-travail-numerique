@@ -3,13 +3,15 @@ import Link from "next/link";
 import styled from "styled-components";
 import { slide as Menu } from "react-burger-menu";
 import { icons, theme } from "@socialgouv/react-ui";
+
+import { AccessibilityModal } from "../../common/AccessibilityModal";
 import { BurgerStyles } from "./BurgerStyles";
 
 const { Burger: BurgerIcon, Close: CloseIcon } = icons;
 
 const TabIndexedLink = ({ href, children, ...props }) => (
   <Link href={href} passHref>
-    <StyledLink {...props}>{children}</StyledLink>
+    <LinkItem {...props}>{children}</LinkItem>
   </Link>
 );
 
@@ -30,41 +32,79 @@ export const BurgerNav = ({ currentPage }) => {
         customBurgerIcon={<BurgerIcon />}
         customCrossIcon={<CloseIcon />}
       >
-        {currentPage !== "tools" && (
+        <AccessibilityModal>
+          {openModal => (
+            <BaseNavItem onClick={openModal}>Accessibilité</BaseNavItem>
+          )}
+        </AccessibilityModal>
+        {currentPage !== "tools" ? (
           <TabIndexedLink href="/outils" passHref>
             Boîte à outils
           </TabIndexedLink>
+        ) : (
+          <CurrentPageItem>Boîte à outils</CurrentPageItem>
         )}
-        {currentPage !== "themes" && (
+        {currentPage !== "themes" ? (
           <TabIndexedLink href="/themes" passHref>
             Thèmes
           </TabIndexedLink>
-        )}
-        {currentPage !== "about" && (
-          <TabIndexedLink href="/a-propos" passHref>
-            À propos
-          </TabIndexedLink>
+        ) : (
+          <CurrentPageItem>Thèmes</CurrentPageItem>
         )}
       </Menu>
     </BurgerWrapper>
   );
 };
 
-const { breakpoints, fonts, spacings } = theme;
+const { box, breakpoints, fonts, spacings } = theme;
 
-const StyledLink = styled.a`
+const BaseNavItem = styled.button`
+  position: relative;
   display: flex !important;
   align-items: center;
   height: 100%;
   padding: 0 ${spacings.base};
+  color: ${({ theme }) => theme.title};
   font-weight: normal;
   font-size: ${fonts.sizes.default};
-  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
   @media (max-width: ${breakpoints.tablet}) {
     justify-content: center;
+    width: 100%;
     height: 5.4rem;
     font-weight: 600;
     font-size: ${fonts.sizes.headings.small};
+  }
+`;
+
+const LinkItem = styled(BaseNavItem).attrs(() => ({ as: "a" }))`
+  text-decoration: none;
+`;
+
+const CurrentPageItem = styled(BaseNavItem).attrs(() => ({ as: "span" }))`
+  cursor: inherit;
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 90%;
+    height: 3px;
+    background-color: ${({ theme }) => theme.primary};
+    border-radius: ${box.borderRadius};
+    transform: translateX(-50%);
+    content: "";
+  }
+  @media (max-width: ${breakpoints.tablet}) {
+    &:after {
+      bottom: auto;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      transform: none;
+    }
   }
 `;
 

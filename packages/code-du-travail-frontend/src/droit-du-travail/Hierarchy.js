@@ -501,7 +501,7 @@ const Hierarchy = () => {
 
 export default Hierarchy;
 
-const { breakpoints, colors, fonts, spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
 const Li = styled.li`
   position: relative;
@@ -531,7 +531,7 @@ const NumberWrapper = styled.div`
     left: 50%;
     width: 1px;
     height: 100%;
-    background-color: ${colors.border};
+    background-color: ${({ theme }) => theme.border};
     content: "";
     @media (max-width: ${breakpoints.tablet}) {
       display: none;
@@ -546,10 +546,10 @@ const Number = styled.div`
   justify-content: center;
   width: 4.8rem;
   height: 4.8rem;
-  color: ${colors.white};
+  color: ${({ theme }) => theme.white};
   font-weight: bold;
   font-size: ${fonts.sizes.headings.small};
-  background-color: ${colors.secondary};
+  background-color: ${({ theme }) => theme.secondary};
   border-radius: 50%;
 `;
 

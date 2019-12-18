@@ -3,7 +3,7 @@
 exports[`<Accordion /> should have two different levels of headings 1`] = `
 .c2 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -58,7 +58,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   margin-right: 1rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 [aria-expanded="true"] .c7,
@@ -382,7 +382,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   margin-right: 1rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 [aria-expanded="true"] .c5,

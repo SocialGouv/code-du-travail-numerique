@@ -28,7 +28,7 @@ exports[`<Heading /> renders a H3 heading  1`] = `
 exports[`<PageTitle /> renders a H1 page title  1`] = `
 .c2 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 0;
   left: 50%;
@@ -87,7 +87,7 @@ exports[`<PageTitle /> renders a H1 page title  1`] = `
 exports[`<PageTitle /> renders a leftStripped shifted H1 page title  1`] = `
 .c2 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -166,7 +166,7 @@ exports[`<Subtitle /> renders a subtitle  1`] = `
 exports[`<Title /> renders a H2 title  1`] = `
 .c2 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -225,7 +225,7 @@ exports[`<Title /> renders a H2 title  1`] = `
 exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the left) 1`] = `
 .c2 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;

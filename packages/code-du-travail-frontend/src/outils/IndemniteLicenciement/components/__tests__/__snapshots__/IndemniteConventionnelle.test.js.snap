@@ -3,7 +3,7 @@
 exports[`<IndemniteCCn /> should render error 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -92,7 +92,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
 exports[`<IndemniteCCn /> should render results with highlight on indemnité conventionnelle 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -149,13 +149,13 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c8 {
   width: calc(50% * 0.021);
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
 }
 
 .c16 {
   width: calc(50% * 1);
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
 }
 
@@ -463,7 +463,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 exports[`<IndemniteCCn /> should render results with highlight on indemnité legale 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -520,13 +520,13 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c8 {
   width: calc(50% * 1);
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
 }
 
 .c16 {
   width: calc(50% * 0.5348);
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
 }
 

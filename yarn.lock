@@ -2374,10 +2374,10 @@
     eslint-plugin-jest "^23.1.1"
     eslint-plugin-prettier "~3.1.2"
 
-"@socialgouv/fiches-vdd@^1.0.60":
-  version "1.0.60"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.60.tgz#03081f727c22939c24ff8506cdc5c5460296b714"
-  integrity sha512-UAF/rnXBaELbL7JUTHmA490FvfmnOt1qSfcG2uY85vIB4QB7SnUwYSR8exB8+HS6pFhglWhZkd7jm1VI8NWTLg==
+"@socialgouv/fiches-vdd@^1.0.61":
+  version "1.0.61"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.61.tgz#dc8dddc26259949b2d0c26846c2fb208aa94e581"
+  integrity sha512-mdaFzvzdsGi3hC91SA/FBNgYOL20K9kcGaLoXJYvUOb5mNhOZJkr8Imt244gbfuC+Sij+cjNKdIITnLdbemfpw==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.3"
