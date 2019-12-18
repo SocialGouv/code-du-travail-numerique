@@ -15,7 +15,6 @@ import {
 const Hierarchy = () => {
   const [isModal13MatieresOpen, setModal13MatieresOpen] = useState(false);
   const [isModal4MatieresOpen, setModal4MatieresOpen] = useState(false);
-  const [isModalGarantiesOpen, setModalGarantiesOpen] = useState(false);
   return (
     <>
       <Section>
@@ -509,14 +508,5 @@ const Ul = styled.ul`
     @media (max-width: ${breakpoints.mobile}) {
       margin-left: 0;
     }
-  }
-`;
-
-const NoMarginContainer = styled.div`
-  & > *:first-child {
-    margin-top: 0;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
   }
 `;
