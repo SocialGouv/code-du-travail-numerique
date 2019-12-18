@@ -164,7 +164,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       Coefficient
        : 
       <strong>
-        910 à 940
+        800 à 830 inclus
       </strong>
     </li>
   </ul>

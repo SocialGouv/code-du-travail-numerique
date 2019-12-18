@@ -7,7 +7,7 @@ describe("<StepResult />", () => {
       ccn: { convention: { num: "292", title: "Plasturgie" } },
       criteria: {
         "catégorie socio-professionnelle": "42| Collaborateurs",
-        coefficient: "27| 910 à 940"
+        coefficient: "28| 800 à 830 inclus"
       }
     });
     expect(container).toMatchSnapshot();

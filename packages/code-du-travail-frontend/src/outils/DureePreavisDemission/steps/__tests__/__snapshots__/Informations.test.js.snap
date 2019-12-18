@@ -330,14 +330,14 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="23| 715 et supérieur"
+        value="24| 700 à 750"
       >
-        715 et supérieur
+        700 à 750
       </option>
       <option
-        value="27| 910 à 940"
+        value="28| 800 à 830 inclus"
       >
-        910 à 940
+        800 à 830 inclus
       </option>
     </select>
   </div>
