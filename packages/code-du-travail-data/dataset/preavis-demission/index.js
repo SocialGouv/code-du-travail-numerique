@@ -2,8 +2,8 @@ const { promisify } = require("util");
 const GoogleSpreadsheets = require("google-spreadsheets");
 
 const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
-const SPREADSHEET_DATA_TAB = 4;
-const SPREADSHEET_QUESTIONS_TAB = 5;
+const SPREADSHEET_DATA_TAB = 5;
+const SPREADSHEET_QUESTIONS_TAB = 7;
 
 const getCells = promisify(GoogleSpreadsheets.cells);
 

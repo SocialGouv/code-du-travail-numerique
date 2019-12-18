@@ -7,7 +7,8 @@ const isFicheAssociation = fiche => fiche.url.match(/associations/);
 const isFicheEntreprise = fiche => fiche.url.match(/professionnels/);
 const hasNoTheme = fiche =>
   !fiche.breadcrumbs || fiche.breadcrumbs.length === 0;
-const printFicheLink = fiche => console.log(`- [${fiche.id}](${fiche.url})`);
+const printFicheLink = fiche =>
+  console.log(`  - [${fiche.id} - ${fiche.title}](${fiche.url})`);
 
 const themeLessFiches = fiches.filter(hasNoTheme);
 const fichesParticulier = themeLessFiches.filter(isFicheParticulier);
@@ -24,20 +25,20 @@ const fichesAssociationInfo = fichesAssociation.filter(isFicheInfo);
 
 console.log(`### ${themeLessFiches.length}/${fiches.length} fiches sans theme`);
 
-console.log(`### ${fichesParticulierQR.length} fiches Q/R particuliers`);
+console.log(`- __${fichesParticulierQR.length} fiches__ Q/R particuliers`);
 fichesParticulierQR.forEach(printFicheLink);
 
-console.log(`### ${fichesParticulierInfo.length} fiches Info particuliers`);
+console.log(`- __${fichesParticulierInfo.length} fiches__ Info particuliers`);
 fichesParticulierInfo.forEach(printFicheLink);
 
-console.log(`### ${fichesEntrepriseQR.length} fiches Q/R entreprise`);
+console.log(`- __${fichesEntrepriseQR.length} fiches__ Q/R entreprise`);
 fichesEntrepriseQR.forEach(printFicheLink);
 
-console.log(`### ${fichesEntrepriseInfo.length} fiches Info entreprise`);
+console.log(`- __${fichesEntrepriseInfo.length} fiches__ Info entreprise`);
 fichesEntrepriseInfo.forEach(printFicheLink);
 
-console.log(`### ${fichesAssociationQR.length} fiches Q/R Association`);
+console.log(`- __${fichesAssociationQR.length} fiches__ Q/R Association`);
 fichesAssociationQR.forEach(printFicheLink);
 
-console.log(`### ${fichesAssociationInfo.length} fiches Info Association`);
+console.log(`- __${fichesAssociationInfo.length} fiches__ Info Association`);
 fichesAssociationInfo.forEach(printFicheLink);
