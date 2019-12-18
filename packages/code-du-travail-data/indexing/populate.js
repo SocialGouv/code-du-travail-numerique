@@ -57,7 +57,7 @@ async function getDuplicateSlugs(allDocuments) {
 }
 
 async function* cdtnDocumentsGen() {
-  logger.info("=== Collectives Agreement ===");
+  logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
     ({ id, num, title }) => {
       const idcc = formatIdcc(num);
@@ -73,7 +73,7 @@ async function* cdtnDocumentsGen() {
     }
   );
 
-  logger.info("=== LabourCode ===");
+  logger.info("=== Code du travail ===");
   yield selectAll(
     "article",
     require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
@@ -88,7 +88,7 @@ async function* cdtnDocumentsGen() {
     url: getArticleUrl(id)
   }));
 
-  logger.info("=== SP Sheet ===");
+  logger.info("=== Fiches SP ===");
   yield require("../dataset/fiches_service_public/fiches-sp.json").map(
     ({
       id,
@@ -117,7 +117,7 @@ async function* cdtnDocumentsGen() {
     })
   );
 
-  logger.info("=== MT Sheet Split ===");
+  logger.info("=== Fiche MT(split) ===");
   yield require("../dataset/fiches_ministere_travail/fiches-mt-split.json").map(
     ({ anchor, description, html, slug, text, title }) => ({
       source: SOURCES.SHEET_MT,
@@ -139,10 +139,10 @@ async function* cdtnDocumentsGen() {
     })
   );
 
-  logger.info("=== Mail ===");
+  logger.info("=== Courriers ===");
   yield getCourriers();
 
-  logger.info("=== Tools ===");
+  logger.info("=== Outils ===");
   yield require("../dataset/tools").map(
     ({ action, date, description, icon, questions, slug, themes, title }) => ({
       action,
@@ -157,7 +157,7 @@ async function* cdtnDocumentsGen() {
     })
   );
 
-  logger.info("=== External Tools ===");
+  logger.info("=== Outils externes ===");
   yield require("../dataset/tools/externals.json").map(
     ({ action, description, icon, title, url }) => ({
       action,
