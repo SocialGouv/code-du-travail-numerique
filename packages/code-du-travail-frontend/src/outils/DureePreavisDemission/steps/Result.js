@@ -19,7 +19,11 @@ function StepResult({ form }) {
 
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
-
+  const refLegal = {
+    ref: " Article L.1237-1 du code du travail",
+    refUrl:
+      "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
+  };
   switch (possibleSituations.length) {
     case 1: {
       const [situation] = possibleSituations;
@@ -37,9 +41,9 @@ function StepResult({ form }) {
             <Highlight>{situation.answer}</Highlight>.
           </p>
           <Toast>
-            Une durée de préavis de licenciement plus favorable au salarié peut
-            aussi être prévue dans un accord d’entreprise, le contrat de travail
-            ou un usage dans la localité ou la profession.
+            Une durée de préavis de démission plus favorable au salarié peut
+            aussi être prévue dans une convention ou un accord au niveau de
+            l’entreprise
           </Toast>
           <SectionTitle>Détails</SectionTitle>
           <p>Éléments saisis&nbsp;:</p>
@@ -48,7 +52,7 @@ function StepResult({ form }) {
             ...situation.criteria
           })}
           <SectionTitle>Source</SectionTitle>
-          {situation.ref && situation.refUrl && getRef([situation])}
+          {getRef([refLegal, situation])}
         </>
       );
     }
