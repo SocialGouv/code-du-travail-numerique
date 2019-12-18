@@ -1,11 +1,11 @@
-
 import logging
 import json
-import tensorflow as tf
-import tensorflow_hub as hub
-import tf_sentencepiece
 import unicodedata
 import time
+from typing import List
+import tensorflow.compat.v2 as tf
+import tensorflow_hub as hub
+from tensorflow_text import SentencepieceTokenizer
 
 stops_path = "../data/stops.txt"
 
@@ -29,66 +29,62 @@ class SemSearch():
             stops = f.read().splitlines()
 
         # make a hashtable for performance
-        strp = self.strip_accents
+        strp = self.__strip_accents
         self.stops = dict.fromkeys(map(strp, stops), "")
 
-        self.load_graph()
+        self.__load_graph()
         logger.info("loading graph 🕸")
         end = time.time()
         logger.info("SemSearch ready in {} secondes ✅".format(end-start))
 
-    def load_graph(self):
-        g = tf.Graph()
-        with g.as_default():
-            self.q_placeholder = tf.placeholder(tf.string, shape=[None])
-            self.r_placeholder = tf.placeholder(tf.string, shape=[None])
-            self.c_placeholder = tf.placeholder(tf.string, shape=[None])
-            module = hub.Module(
-                "https://tfhub.dev/google/universal-sentence-encoder-multilingual-qa/1")
-            self.question_embeddings = module(
-                dict(input=self.q_placeholder),
-                signature="question_encoder", as_dict=True)
+    def __load_graph(self):
+        module = hub.load(
+            'https://tfhub.dev/google/universal-sentence-encoder-multilingual-qa/3')
+        self.model = module
 
-            self.response_embeddings = module(
-                dict(input=self.r_placeholder,
-                     context=self.c_placeholder),
-                signature="response_encoder", as_dict=True)
-            init_op = tf.group(
-                [tf.global_variables_initializer(), tf.tables_initializer()])
-        g.finalize()
-        session = tf.Session(graph=g)
-        session.run(init_op)
-        self.session = session
-
-    def predict_query_vector(self, query: str):
-        query = self.remove_stops(self.strip_accents(query))
-        questions = [query]
-
-        self.question_results = self.session.run(
-            self.question_embeddings, {self.q_placeholder: questions})
-
-        return self.question_results["outputs"].squeeze().tolist()
-
-    def compute_vector(self, string, context):
-        cleanStr = self.remove_stops(self.strip_accents(string))
-        out = self.session.run(self.response_embeddings, {self.r_placeholder: [
-                               cleanStr], self.c_placeholder: [context]})
-        return out["outputs"].squeeze().tolist()
-
-    def compute_batch_vectors(self, strings, contexts):
-        cleanStr = [self.remove_stops(self.strip_accents(s)) for s in strings]
-        out = self.session.run(self.response_embeddings, {
-                               self.r_placeholder: cleanStr, self.c_placeholder: contexts})
-        return out["outputs"].tolist()
-
-    def strip_accents(self, s: str):
+    def __strip_accents(self, s: str):
         return unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode('utf-8')
 
-    def remove_stops(self, string: str):
-        tokens = string.split()
+    def __remove_stops(self, s: str):
+        tokens = s.split()
         tokens_filtered = [
             t for t in tokens if self.stops.get(t.lower()) is None]
         return " ".join(tokens_filtered)
+
+    def __preprocess_query(self, query: str):
+        no_accent = self.__strip_accents(query)
+        cleaned = self.__remove_stops(no_accent)
+        return cleaned
+
+    def __embed_title_content_tensor(self, titles: List[str], contents: List[str]):
+        cleaned_titles = [self.__preprocess_query(s) for s in titles]
+
+        tf_titles = tf.constant(cleaned_titles)
+        tf_contents = tf.constant(contents)
+
+        # map document title as Answer and document content as Context in the QA model
+        out = self.model.signatures['response_encoder'](
+            input=tf_titles, context=tf_contents)
+
+        return out["outputs"]
+
+    def embed_title_content_batch(self, titles: List[str], contents: List[str]):
+        embedding = self.__embed_title_content_tensor(titles, contents)
+        # return embedding as python list
+        return embedding.numpy().tolist()
+
+    def embed_title_content_sample(self, title: str, content: str):
+        embedding = self.__embed_title_content_tensor([title], [content])
+        # return embedding as python list
+        return embedding[0].numpy().tolist()
+
+    def embed_query(self, query: str):
+        query = self.__preprocess_query(query)
+        tf_query = tf.constant([query])
+        result = self.model.signatures['question_encoder'](
+            tf_query)['outputs'][0].numpy().tolist()
+
+        return(result)
 
 # _______________ utils to add api route
 

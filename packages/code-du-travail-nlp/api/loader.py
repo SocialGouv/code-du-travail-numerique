@@ -8,7 +8,6 @@ from api.ready import add_ready
 from api.search import add_search
 from api.index import add_index
 
-
 data_path = os.path.join(
     os.path.dirname(os.path.abspath(__name__)),
     "data"

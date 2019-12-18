@@ -27,7 +27,7 @@ with open(dump_path, "r") as dump:
                  for d in documents]
     for document in documents:
         if document.get("source") != "code_du_travail":
-            document["title_vector"] = ss.compute_vector(
+            document["title_vector"] = ss.embed_title_content_sample(
                 document.get("title"), document.get("text"))
 
     with open(dump_path.replace(".json", ".tf.json"), 'w') as fp:
