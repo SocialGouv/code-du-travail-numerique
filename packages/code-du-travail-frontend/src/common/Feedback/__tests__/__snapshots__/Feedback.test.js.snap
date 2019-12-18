@@ -75,9 +75,9 @@ exports[`<Feedback/> should render 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #7598d6;
-  border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  background: #7994d4;
+  border-color: #7994d4;
+  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -95,8 +95,8 @@ exports[`<Feedback/> should render 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #9cb5e2;
-  border-color: #9cb5e2;
+  background: #a0b3e0;
+  border-color: #a0b3e0;
 }
 
 .c5[disabled] {
@@ -260,7 +260,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #ff7067;
+  color: #f66663;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;

@@ -1,43 +1,36 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import { Modal } from "@socialgouv/react-ui";
 import { ServiceRenseignement } from "./ServiceRenseignement";
 
-class ServiceRenseignementModal extends React.Component {
-  static propTypes = {
-    children: PropTypes.element.isRequired
-  };
-  state = {
-    modalIsOpen: false
-  };
-  openModal = e => {
-    e.preventDefault();
-    this.setState({
-      modalIsOpen: true
-    });
-  };
+export const ServiceRenseignementModal = ({ children: renderProp }) => {
+  const [isModalVisible, setModalVisibility] = useState(false);
 
-  closeModal = () => {
-    this.setState({
-      modalIsOpen: false
-    });
-  };
-  render() {
-    return (
-      <React.Fragment>
-        {React.cloneElement(this.props.children, {
-          onClick: this.openModal
-        })}
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onDismiss={this.closeModal}
-          title="Service de renseignement"
-        >
-          <ServiceRenseignement />
-        </Modal>
-      </React.Fragment>
-    );
-  }
-}
+  const openModal = useCallback(e => {
+    e.preventDefault();
+    setModalVisibility(true);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setModalVisibility(false);
+  }, []);
+
+  return (
+    <>
+      {renderProp(openModal)}
+      <Modal
+        isOpen={isModalVisible}
+        onDismiss={closeModal}
+        title="Service de renseignement"
+      >
+        <ServiceRenseignement />
+      </Modal>
+    </>
+  );
+};
 
 export default ServiceRenseignementModal;
+
+ServiceRenseignementModal.propTypes = {
+  children: PropTypes.func.isRequired
+};

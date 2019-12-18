@@ -68,6 +68,14 @@ const StyledCheckbox = styled.input`
   & {
     visibility: hidden;
   }
+  /* stylelint-disable-next-line */
+  &:checked ~ ${StyledCheckmark} {
+    background-color: ${({ theme }) => theme.primary};
+    border: 0;
+    &:after {
+      display: block;
+    }
+  }
 `;
 
 const StyledLabel = styled(Label)`
@@ -76,17 +84,4 @@ const StyledLabel = styled(Label)`
   font-size: ${fonts.sizes.default};
   cursor: pointer;
   user-select: none;
-  /* stylelint-disable-next-line */
-  &:hover > ${StyledCheckbox} ~ ${StyledCheckmark} {
-    background-color: ${({ theme }) => theme.border};
-    border: 0;
-  }
-  /* stylelint-disable-next-line */
-  & ${StyledCheckbox}:checked ~ ${StyledCheckmark} {
-    background-color: ${({ theme }) => theme.primary};
-    border: 0;
-    &:after {
-      display: block;
-    }
-  }
 `;

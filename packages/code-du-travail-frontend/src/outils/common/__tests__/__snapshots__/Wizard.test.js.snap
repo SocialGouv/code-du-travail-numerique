@@ -32,9 +32,9 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
@@ -52,8 +52,8 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #f99593;
+  border-color: #f99593;
 }
 
 .c14[disabled] {
@@ -168,7 +168,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   margin: 0.4rem 1rem;
   margin-left: 0;
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 
@@ -479,9 +479,9 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #7598d6;
-  border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  background: #7994d4;
+  border-color: #7994d4;
+  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -499,8 +499,8 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #9cb5e2;
-  border-color: #9cb5e2;
+  background: #a0b3e0;
+  border-color: #a0b3e0;
 }
 
 .c14[disabled] {
@@ -676,7 +676,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   margin: 0.4rem 1rem;
   margin-left: 0;
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 
@@ -1002,9 +1002,9 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
@@ -1022,8 +1022,8 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #f99593;
+  border-color: #f99593;
 }
 
 .c14[disabled] {
@@ -1138,7 +1138,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   margin: 0.4rem 1rem;
   margin-left: 0;
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 
@@ -1459,9 +1459,9 @@ exports[`<Wizard /> should inject rules component 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
@@ -1479,8 +1479,8 @@ exports[`<Wizard /> should inject rules component 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #f99593;
+  border-color: #f99593;
 }
 
 .c14[disabled] {
@@ -1595,7 +1595,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   margin: 0.4rem 1rem;
   margin-left: 0;
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 
@@ -1909,9 +1909,9 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #7598d6;
-  border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  background: #7994d4;
+  border-color: #7994d4;
+  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -1929,8 +1929,8 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #9cb5e2;
-  border-color: #9cb5e2;
+  background: #a0b3e0;
+  border-color: #a0b3e0;
 }
 
 .c14[disabled] {
@@ -2106,7 +2106,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   margin: 0.4rem 1rem;
   margin-left: 0;
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 
@@ -2432,9 +2432,9 @@ exports[`<Wizard /> should render a step 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
@@ -2452,8 +2452,8 @@ exports[`<Wizard /> should render a step 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #f99593;
+  border-color: #f99593;
 }
 
 .c14[disabled] {
@@ -2568,7 +2568,7 @@ exports[`<Wizard /> should render a step 1`] = `
   margin: 0.4rem 1rem;
   margin-left: 0;
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 

@@ -68,7 +68,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
 
 export default DroitDuTravail;
 
-const { box, breakpoints, colors, spacings } = theme;
+const { box, breakpoints, spacings } = theme;
 
 const StyledSection = styled(Section)`
   padding: ${spacings.larger} 0;
@@ -89,7 +89,7 @@ const BigBlock = styled.div`
   left: 4%;
   flex-basis: 80%;
   padding-right: 8%;
-  background-color: ${colors.bgSecondary};
+  background-color: ${({ theme }) => theme.bgSecondary};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     left: 0;
@@ -105,7 +105,7 @@ const SmallBlock = styled.div`
   bottom: ${spacings.medium};
   flex-basis: 410px;
   flex-shrink: 0;
-  background-color: ${colors.bgTertiary};
+  background-color: ${({ theme }) => theme.bgTertiary};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     right: 0;

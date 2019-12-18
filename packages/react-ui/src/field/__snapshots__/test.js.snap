@@ -37,7 +37,7 @@ exports[`<Input /> should render input field 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -72,7 +72,7 @@ exports[`<Input /> should render input field 1`] = `
 }
 
 .c1:focus {
-  border-color: #7598d6;
+  border-color: #7994d4;
 }
 
 .c1:focus::-webkit-input-placeholder {
@@ -128,7 +128,7 @@ exports[`<InputCheckbox /> should render checkbox field 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c4 {
   position: absolute;
   top: 0.6rem;
   left: 0;
@@ -139,7 +139,7 @@ exports[`<InputCheckbox /> should render checkbox field 1`] = `
   border-radius: 0.4rem;
 }
 
-.c5:after {
+.c4:after {
   position: absolute;
   top: 0.4rem;
   left: 0.8rem;
@@ -154,7 +154,7 @@ exports[`<InputCheckbox /> should render checkbox field 1`] = `
   content: "";
 }
 
-.c3 {
+.c2 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -171,9 +171,18 @@ exports[`<InputCheckbox /> should render checkbox field 1`] = `
   appearance: none;
 }
 
-.c3 *::-ms-backdrop,
-.c3 {
+.c2 *::-ms-backdrop,
+.c2 {
   visibility: hidden;
+}
+
+.c2:checked ~ .c3 {
+  background-color: #f66663;
+  border: 0;
+}
+
+.c2:checked ~ .c3:after {
+  display: block;
 }
 
 .c1 {
@@ -187,34 +196,20 @@ exports[`<InputCheckbox /> should render checkbox field 1`] = `
   user-select: none;
 }
 
-.c1:hover > .c2 ~ .c4 {
-  background-color: #bbcadf;
-  border: 0;
-}
-
-.c1 .c2:checked ~ .c4 {
-  background-color: #ff7067;
-  border: 0;
-}
-
-.c1 .c2:checked ~ .c4:after {
-  display: block;
-}
-
 <div>
   <label
     class="c0 c1"
     for="checkbox"
   >
     <input
-      class="c2 c3"
+      class="c2"
       id="checkbox"
       name="checkbox"
       type="checkbox"
     />
     option
     <span
-      class="c4 c5"
+      class="c3 c4"
     />
   </label>
 </div>
@@ -257,7 +252,7 @@ exports[`<InputDate /> should render input date field 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -292,7 +287,7 @@ exports[`<InputDate /> should render input date field 1`] = `
 }
 
 .c1:focus {
-  border-color: #7598d6;
+  border-color: #7994d4;
 }
 
 .c1:focus::-webkit-input-placeholder {
@@ -394,7 +389,7 @@ exports[`<InputRadio /> should render input radio field 1`] = `
 
 .c2:checked {
   background-color: #fff;
-  border-color: #ff7067;
+  border-color: #f66663;
 }
 
 .c2::before {
@@ -403,7 +398,7 @@ exports[`<InputRadio /> should render input radio field 1`] = `
   left: calc(50% - 2rem / 4);
   width: calc(2rem / 2);
   height: calc(2rem / 2);
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 50%;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -414,7 +409,7 @@ exports[`<InputRadio /> should render input radio field 1`] = `
 }
 
 .c2:checked::before {
-  background-color: #ff7067;
+  background-color: #f66663;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -463,7 +458,7 @@ exports[`<Select /> should render select field 1`] = `
   right: 2rem;
   width: 1.6rem;
   height: 1.6rem;
-  color: #ff7067;
+  color: #f66663;
   pointer-events: none;
 }
 
@@ -478,7 +473,7 @@ exports[`<Select /> should render select field 1`] = `
   vertical-align: middle;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   cursor: pointer;
   -webkit-transition: border-color 250ms ease;
   transition: border-color 250ms ease;
@@ -566,7 +561,7 @@ exports[`<Textarea /> should render textarea 1`] = `
   background: #fff;
   border: 1px solid transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -597,7 +592,7 @@ exports[`<Textarea /> should render textarea 1`] = `
 }
 
 .c0:focus {
-  border-color: #7598d6;
+  border-color: #7994d4;
 }
 
 .c0:focus::-webkit-input-placeholder {

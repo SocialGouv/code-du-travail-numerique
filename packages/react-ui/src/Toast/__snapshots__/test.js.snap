@@ -14,11 +14,11 @@ exports[`<Toast /> Should render a wide toast 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
   -webkit-animation: none;
   animation: none;
 }
@@ -64,7 +64,7 @@ exports[`<Toast /> render default toast 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -114,7 +114,7 @@ exports[`<Toast /> render primary toast 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #ff7067;
+  border-color: #f66663;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -165,7 +165,7 @@ exports[`<Toast /> render secondary toast 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -216,7 +216,7 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -267,7 +267,7 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -318,7 +318,7 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -369,7 +369,7 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;

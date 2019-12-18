@@ -13,7 +13,7 @@ import {
   Title
 } from "@socialgouv/react-ui";
 
-import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
+import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
 
 const { DirectionRight: DirectionRightIcon } = icons;
 const { publicRuntimeConfig } = getConfig();
@@ -36,10 +36,12 @@ const Footer = () => (
             démarches.
           </StyledContainer>
           <ServiceRenseignementModal>
-            <Button>
-              Contacter nos services
-              <StyledDirectionRightIcon />
-            </Button>
+            {openModal => (
+              <Button onClick={openModal}>
+                Contacter nos services
+                <StyledDirectionRightIcon />
+              </Button>
+            )}
           </ServiceRenseignementModal>
         </Container>
       </ServiceSection>

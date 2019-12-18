@@ -1,28 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> should render 1`] = `
-.c28 {
+.c29 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c28 > *:first-child {
+.c29 > *:first-child {
   margin-top: 0;
 }
 
-.c28 > *:last-child {
+.c29 > *:last-child {
   margin-bottom: 0;
 }
 
-.c27 {
+.c28 {
   padding: 2rem 0;
   color: #3e486e;
 }
 
-.c31 {
+.c32 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 0;
   left: 50%;
@@ -33,7 +33,7 @@ exports[`<Home /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c30 {
+.c31 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -45,19 +45,19 @@ exports[`<Home /> should render 1`] = `
   text-align: center;
 }
 
-.c29 {
+.c30 {
   margin: 0 auto 1rem;
   margin-bottom: 4rem;
   text-align: center;
 }
 
-.c33 {
+.c34 {
   margin-top: 1rem;
   margin-bottom: 0;
   padding-left: 0;
 }
 
-.c37 {
+.c38 {
   position: absolute;
   top: 0;
   right: 0;
@@ -68,18 +68,18 @@ exports[`<Home /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c37:before {
+.c38:before {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border-color: transparent #ff7067 transparent transparent;
+  border-color: transparent #f66663 transparent transparent;
   border-style: solid;
   border-width: 0 5rem 5rem 0;
   content: "";
 }
 
-.c38 {
+.c39 {
   position: absolute;
   top: 0;
   right: 0;
@@ -88,7 +88,7 @@ exports[`<Home /> should render 1`] = `
   height: 3rem;
 }
 
-.c25 {
+.c26 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -119,37 +119,37 @@ exports[`<Home /> should render 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
-.c25:link,
-.c25:visited {
+.c26:link,
+.c26:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c25:not([disabled]):hover,
-.c25:not([disabled]):active,
-.c25:not([disabled]):focus {
+.c26:not([disabled]):hover,
+.c26:not([disabled]):active,
+.c26:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #f99593;
+  border-color: #f99593;
 }
 
-.c25[disabled] {
+.c26[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c44 {
+.c45 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -178,7 +178,7 @@ exports[`<Home /> should render 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #ff7067;
+  color: #f66663;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
@@ -189,14 +189,14 @@ exports[`<Home /> should render 1`] = `
   overflow: visible;
 }
 
-.c44:focus,
-.c44:hover,
-.c44:active {
+.c45:focus,
+.c45:hover,
+.c45:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c50 {
+.c51 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -227,37 +227,37 @@ exports[`<Home /> should render 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #7598d6;
-  border-color: #7598d6;
-  box-shadow: 0px 10px 30px rgba(117,152,214,0.26),0px 4px 5px rgba(117,152,214,0.35);
+  background: #7994d4;
+  border-color: #7994d4;
+  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
-.c50:link,
-.c50:visited {
+.c51:link,
+.c51:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c50:not([disabled]):hover,
-.c50:not([disabled]):active,
-.c50:not([disabled]):focus {
+.c51:not([disabled]):hover,
+.c51:not([disabled]):active,
+.c51:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #9cb5e2;
-  border-color: #9cb5e2;
+  background: #a0b3e0;
+  border-color: #a0b3e0;
 }
 
-.c50[disabled] {
+.c51[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c45 {
+.c46 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -266,13 +266,13 @@ exports[`<Home /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c24:hover .c45 {
+.c25:hover .c46 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
 }
 
-.c34 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,7 +299,7 @@ exports[`<Home /> should render 1`] = `
   list-style-type: none;
 }
 
-.c35 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -316,7 +316,7 @@ exports[`<Home /> should render 1`] = `
   padding: 0;
 }
 
-.c32 {
+.c33 {
   color: #2f3b6c;
   font-weight: normal;
   font-family: "Merriweather",serif;
@@ -324,11 +324,11 @@ exports[`<Home /> should render 1`] = `
   text-decoration: none;
 }
 
-.c32:hover {
+.c33:hover {
   color: #2f3b6c;
 }
 
-.c21:not(:focus):not(:active) {
+.c22:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -340,7 +340,7 @@ exports[`<Home /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c36 {
+.c37 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -375,7 +375,7 @@ exports[`<Home /> should render 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -385,30 +385,30 @@ exports[`<Home /> should render 1`] = `
   appearance: none;
 }
 
-.c36:hover,
-.c36:active,
-.c36:focus {
+.c37:hover,
+.c37:active,
+.c37:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c39 {
+.c40 {
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto 1.6rem;
   padding: 1.4rem;
-  background-color: #ebf0f9;
+  background-color: #f2f5fa;
   border-radius: 50%;
 }
 
-.c40 {
+.c41 {
   padding-right: 1rem;
 }
 
-.c41 {
+.c42 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -418,11 +418,11 @@ exports[`<Home /> should render 1`] = `
   margin: 0;
 }
 
-.c42 {
+.c43 {
   margin-top: 1rem;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -433,15 +433,15 @@ exports[`<Home /> should render 1`] = `
   text-align: left;
 }
 
-.c23 ul {
+.c24 ul {
   z-index: 1;
 }
 
-.c23 li[role="option"]:nth-child(2n + 1) {
+.c24 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
-.c18 {
+.c19 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -451,7 +451,7 @@ exports[`<Home /> should render 1`] = `
   padding: 0;
 }
 
-.c19 {
+.c20 {
   width: 3rem;
   height: 3rem;
   position: absolute;
@@ -461,7 +461,7 @@ exports[`<Home /> should render 1`] = `
   color: #9298af;
 }
 
-.c22 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -479,13 +479,14 @@ exports[`<Home /> should render 1`] = `
   appearance: none;
 }
 
-.c26 {
+.c27 {
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
 }
 
 .c7 {
+  position: relative;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -496,8 +497,34 @@ exports[`<Home /> should render 1`] = `
   align-items: center;
   height: 100%;
   padding: 0 1.6rem;
+  color: #2f3b6c;
   font-weight: normal;
   font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.c8 {
+  position: relative;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.6rem;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -585,12 +612,12 @@ exports[`<Home /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c46 {
+.c47 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c47 {
+.c48 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -598,7 +625,7 @@ exports[`<Home /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c47:before {
+.c48:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -610,7 +637,7 @@ exports[`<Home /> should render 1`] = `
   content: "";
 }
 
-.c48 {
+.c49 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -618,7 +645,7 @@ exports[`<Home /> should render 1`] = `
   text-align: center;
 }
 
-.c49 {
+.c50 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -628,27 +655,27 @@ exports[`<Home /> should render 1`] = `
   text-align: left;
 }
 
-.c49 > *:first-child {
+.c50 > *:first-child {
   margin-top: 0;
 }
 
-.c49 > *:last-child {
+.c50 > *:last-child {
   margin-bottom: 0;
 }
 
-.c51 {
+.c52 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c52 {
+.c53 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c53 {
+.c54 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -662,25 +689,25 @@ exports[`<Home /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c53 > *:first-child {
+.c54 > *:first-child {
   margin-top: 0;
 }
 
-.c53 > *:last-child {
+.c54 > *:last-child {
   margin-bottom: 0;
 }
 
-.c55 + .c54 {
+.c56 + .c55 {
   padding-left: 1.6rem;
 }
 
-.c57 {
+.c58 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c56 {
+.c57 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -690,11 +717,11 @@ exports[`<Home /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c58 {
+.c59 {
   margin: 0.4rem 0;
 }
 
-.c59 {
+.c60 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -723,62 +750,62 @@ exports[`<Home /> should render 1`] = `
   content: "";
 }
 
-.c8 {
+.c9 {
   padding: 2rem 0;
   color: #3e486e;
   padding-bottom: 12rem;
 }
 
-.c9 {
+.c10 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   padding-left: 12rem;
 }
 
-.c9 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c10 {
+.c11 {
   margin-top: 0;
   color: #3e486e;
   line-height: 1.625;
 }
 
-.c11 {
+.c12 {
   font-size: 2.8rem;
 }
 
-.c13 {
+.c14 {
   margin-top: 1rem;
   margin-bottom: 3.2rem;
 }
 
-.c12 {
+.c13 {
   display: inline-block;
   margin-top: 1rem;
   font-weight: bold;
   font-size: 4.6rem;
 }
 
-.c14 {
-  color: #ff7067;
+.c15 {
+  color: #f66663;
   font-weight: normal;
 }
 
-.c15 {
+.c16 {
   display: inline;
   width: 3rem;
   height: 3rem;
   vertical-align: bottom;
 }
 
-.c16 {
+.c17 {
   display: block;
   margin-bottom: 0.8rem;
   color: #3e486e;
@@ -786,91 +813,91 @@ exports[`<Home /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c17 {
+.c18 {
   width: 77rem;
   margin: 0;
 }
 
-.c43 {
+.c44 {
   margin-top: 1.6rem;
 }
 
 @media print {
-  .c28 {
+  .c29 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c31 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c30 {
     margin-bottom: 2.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c34 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c45 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c51 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:1180px) {
-  .c35 {
+  .c36 {
     width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:980px) {
-  .c35 {
+  .c36 {
     width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c36 {
     width: calc( 100% - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c37 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c42 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c19 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -879,20 +906,20 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c20 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c23 {
     height: 5.4rem;
     padding: 1rem 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c27 {
     position: static;
     margin-top: 1rem;
     margin-left: 0;
@@ -905,6 +932,20 @@ exports[`<Home /> should render 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    width: 100%;
+    height: 5.4rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c8 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
     height: 5.4rem;
     font-weight: 600;
     font-size: 1.8rem;
@@ -959,27 +1000,27 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media print {
-  .c47 {
+  .c48 {
     display: none;
   }
 }
 
 @media print {
-  .c49 {
+  .c50 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c53 {
+  .c54 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c54 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -987,63 +1028,63 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c55 + .c54 {
+  .c56 + .c55 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c58 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c57 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c57 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media print {
-  .c8 {
+  .c9 {
     display: none;
   }
 }
 
 @media print {
-  .c9 {
+  .c10 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c9 {
+  .c10 {
     padding-left: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     font-size: 1.8rem;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c13 {
     font-size: 3.2rem;
   }
 }
 
 @media (max-width:980px) {
-  .c17 {
+  .c18 {
     width: 100%;
   }
 }
@@ -1093,8 +1134,13 @@ exports[`<Home /> should render 1`] = `
                   class="bm-item-list"
                   style="height: 100%;"
                 >
+                  <button
+                    class="c7"
+                  >
+                    Accessibilité
+                  </button>
                   <a
-                    class="c7 bm-item"
+                    class="c8 bm-item"
                     href="/outils"
                     style="display: block;"
                     tabindex="0"
@@ -1102,20 +1148,12 @@ exports[`<Home /> should render 1`] = `
                     Boîte à outils
                   </a>
                   <a
-                    class="c7 bm-item"
+                    class="c8 bm-item"
                     href="/themes"
                     style="display: block;"
                     tabindex="0"
                   >
                     Thèmes
-                  </a>
-                  <a
-                    class="c7 bm-item"
-                    href="/a-propos"
-                    style="display: block;"
-                    tabindex="0"
-                  >
-                    À propos
                   </a>
                 </nav>
               </div>
@@ -1180,38 +1218,38 @@ exports[`<Home /> should render 1`] = `
     id="main"
   >
     <div
-      class="c8"
+      class="c9"
     >
       <div
-        class="c9"
+        class="c10"
       >
         <header
-          class="c10"
+          class="c11"
         >
           <h1
-            class="c11"
+            class="c12"
           >
             Bienvenue sur 
             <br />
             <span
-              class="c12"
+              class="c13"
             >
               le Code du travail numérique
             </span>
           </h1>
           <p
-            class="c13"
+            class="c14"
           >
             Vous cherchez une information sur le droit du travail ? Vous avez besoin d’accompagnement ?
             <br />
             Nous vous proposons
              
             <span
-              class="c14"
+              class="c15"
             >
               des réponses personnalisées selon votre situation. 
               <svg
-                class="c15"
+                class="c16"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -1232,20 +1270,20 @@ exports[`<Home /> should render 1`] = `
           </p>
         </header>
         <label
-          class="c16"
+          class="c17"
           for="searchbar"
         >
            Recherchez par mots-clés
         </label>
         <div
-          class="c17"
+          class="c18"
         >
           <form
             action="/recherche"
-            class="c18"
+            class="c19"
           >
             <svg
-              class="c19"
+              class="c20"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -1255,11 +1293,11 @@ exports[`<Home /> should render 1`] = `
               />
             </svg>
             <label
-              class="c20"
+              class="c21"
               for="searchbar"
             >
               <span
-                class="c21"
+                class="c22"
               >
                 Rechercher
               </span>
@@ -1274,7 +1312,7 @@ exports[`<Home /> should render 1`] = `
                   aria-autocomplete="list"
                   aria-controls="react-autowhatever-cdtn-documents-suggester"
                   autocomplete="off"
-                  class="c22"
+                  class="c23"
                   id="searchbar"
                   name="q"
                   placeholder="congés payés, durée de préavis"
@@ -1282,14 +1320,14 @@ exports[`<Home /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="c23"
+                  class="c24"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
               </div>
             </label>
             <button
-              class="c24 c25 c26"
+              class="c25 c26 c27"
               type="submit"
             >
               Rechercher
@@ -1299,48 +1337,48 @@ exports[`<Home /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c27"
+      class="c28"
     >
       <div
-        class="c28"
+        class="c29"
       >
         <header
-          class="c29"
+          class="c30"
         >
           <h2
-            class="c30"
+            class="c31"
           >
             <div
-              class="c31"
+              class="c32"
             />
             <a
-              class="c32"
+              class="c33"
               href="/outils"
             >
               Boîte à outils
             </a>
           </h2>
           <p
-            class="c33"
+            class="c34"
           >
             Trouvez des réponses personnalisées selon votre situation
           </p>
         </header>
         <ul
-          class="c34"
+          class="c35"
         >
           <li
-            class="c35"
+            class="c36"
           >
             <a
-              class="c36"
+              class="c37"
               href="/modeles-de-courriers"
             >
               <div
-                class="c37"
+                class="c38"
               >
                 <div
-                  class="c38"
+                  class="c39"
                 >
                   <svg
                     fill="none"
@@ -1363,7 +1401,7 @@ exports[`<Home /> should render 1`] = `
               </div>
               <div>
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   <svg
                     fill="none"
@@ -1382,29 +1420,29 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c40"
+                  class="c41"
                 >
                   
                   <h3
-                    class="c41"
+                    class="c42"
                   >
                     Modèles de documents
                   </h3>
                 </div>
               </div>
               <div
-                class="c42"
+                class="c43"
               >
                 Téléchargez et utilisez des modèles de lettres et de documents personnalisables
                 <div
-                  class="c43"
+                  class="c44"
                 >
                   <div
-                    class="c24 c44"
+                    class="c25 c45"
                   >
                     Découvrir
                     <svg
-                      class="c45"
+                      class="c46"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -1419,17 +1457,17 @@ exports[`<Home /> should render 1`] = `
             </a>
           </li>
           <li
-            class="c35"
+            class="c36"
           >
             <a
-              class="c36"
+              class="c37"
               href="/outils/indemnite-licenciement"
             >
               <div
-                class="c37"
+                class="c38"
               >
                 <div
-                  class="c38"
+                  class="c39"
                 >
                   <svg
                     fill="none"
@@ -1452,7 +1490,7 @@ exports[`<Home /> should render 1`] = `
               </div>
               <div>
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   <svg
                     fill="none"
@@ -1495,29 +1533,29 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c40"
+                  class="c41"
                 >
                   
                   <h3
-                    class="c41"
+                    class="c42"
                   >
                     Indemnité de licenciement
                   </h3>
                 </div>
               </div>
               <div
-                class="c42"
+                class="c43"
               >
                 Estimez le montant de l’indemnité de licenciement
                 <div
-                  class="c43"
+                  class="c44"
                 >
                   <div
-                    class="c24 c44"
+                    class="c25 c45"
                   >
                     Estimer
                     <svg
-                      class="c45"
+                      class="c46"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -1532,17 +1570,17 @@ exports[`<Home /> should render 1`] = `
             </a>
           </li>
           <li
-            class="c35"
+            class="c36"
           >
             <a
-              class="c36"
+              class="c37"
               href="/outils/preavis-demission"
             >
               <div
-                class="c37"
+                class="c38"
               >
                 <div
-                  class="c38"
+                  class="c39"
                 >
                   <svg
                     fill="none"
@@ -1565,7 +1603,7 @@ exports[`<Home /> should render 1`] = `
               </div>
               <div>
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   <svg
                     fill="none"
@@ -1592,29 +1630,29 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c40"
+                  class="c41"
                 >
                   
                   <h3
-                    class="c41"
+                    class="c42"
                   >
                     Préavis de démission
                   </h3>
                 </div>
               </div>
               <div
-                class="c42"
+                class="c43"
               >
                 Calculez la durée de préavis de démission
                 <div
-                  class="c43"
+                  class="c44"
                 >
                   <div
-                    class="c24 c44"
+                    class="c25 c45"
                   >
                     Calculer
                     <svg
-                      class="c45"
+                      class="c46"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -1629,17 +1667,17 @@ exports[`<Home /> should render 1`] = `
             </a>
           </li>
           <li
-            class="c35"
+            class="c36"
           >
             <a
-              class="c36"
+              class="c37"
               href="/outils/simulateur-embauche"
             >
               <div
-                class="c37"
+                class="c38"
               >
                 <div
-                  class="c38"
+                  class="c39"
                 >
                   <svg
                     fill="none"
@@ -1662,7 +1700,7 @@ exports[`<Home /> should render 1`] = `
               </div>
               <div>
                 <div
-                  class="c39"
+                  class="c40"
                 >
                   <svg
                     fill="none"
@@ -1687,29 +1725,29 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c40"
+                  class="c41"
                 >
                   
                   <h3
-                    class="c41"
+                    class="c42"
                   >
                     Salaire brut/net
                   </h3>
                 </div>
               </div>
               <div
-                class="c42"
+                class="c43"
               >
                 Estimez le salaire : brut, net, heures supplémentaires, coût total employeur
                 <div
-                  class="c43"
+                  class="c44"
                 >
                   <div
-                    class="c24 c44"
+                    class="c25 c45"
                   >
                     Estimer
                     <svg
-                      class="c45"
+                      class="c46"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -1728,40 +1766,40 @@ exports[`<Home /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c46"
+    class="c47"
   >
     <footer
-      class="c47"
+      class="c48"
     >
       <div
-        class="c48"
+        class="c49"
       >
         <div
-          class="c28"
+          class="c29"
         >
           <header
-            class="c29"
+            class="c30"
           >
             <h3
-              class="c30"
+              class="c31"
             >
               <div
-                class="c31"
+                class="c32"
               />
               Besoin d’un accompagnement personnalisé ?
             </h3>
           </header>
           <div
-            class="c49"
+            class="c50"
           >
             Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
           </div>
           <button
-            class="c24 c50"
+            class="c25 c51"
           >
             Contacter nos services
             <svg
-              class="c51"
+              class="c52"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1774,68 +1812,68 @@ exports[`<Home /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c52"
+        class="c53"
       >
         <nav>
           <div
-            class="c53"
+            class="c54"
           >
             <div
-              class="c54 c55"
+              class="c55 c56"
             >
               <h3
-                class="c56"
+                class="c57"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c57"
+                class="c58"
               >
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -1844,21 +1882,21 @@ exports[`<Home /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c54 c55"
+              class="c55 c56"
             >
               <h3
-                class="c56"
+                class="c57"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c57"
+                class="c58"
               >
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1867,10 +1905,10 @@ exports[`<Home /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1881,21 +1919,21 @@ exports[`<Home /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c54 c55"
+              class="c55 c56"
             >
               <h3
-                class="c56"
+                class="c57"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c57"
+                class="c58"
               >
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1904,10 +1942,10 @@ exports[`<Home /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1916,10 +1954,10 @@ exports[`<Home /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c59"
                 >
                   <a
-                    class="c59"
+                    class="c60"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"

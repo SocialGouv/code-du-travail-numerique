@@ -1,9 +1,25 @@
-import { rgba } from "polished";
+import { darken, getContrast, lighten, rgba } from "polished";
+
+const WCAG_AA_MINIMAL_CONTRAST = 3;
+const BORDER_BLACK_CONTRAST = 12.62;
+
+const maximiseContrast = color => {
+  const whiteContrast = getContrast(color, "#fff");
+  const blackContrast = getContrast(color, "#000");
+  if (
+    whiteContrast >= WCAG_AA_MINIMAL_CONTRAST ||
+    blackContrast <= BORDER_BLACK_CONTRAST
+  ) {
+    return darken(1, color);
+  } else {
+    return lighten(1, color);
+  }
+};
 
 export const colors = {
   // main colors
-  primary: "#ff7067",
-  secondary: "#7598d6",
+  primary: "#f66663", //geniune color -> #ff7067
+  secondary: "#7994d4", //geniune color -> #7598d6
 
   heroGradientStart: "#d1dffd",
 
@@ -27,6 +43,14 @@ export const colors = {
 
 colors.primaryText = colors.white;
 colors.secondaryText = colors.white;
+
+export const blackAndWhiteColors = Object.entries(colors).reduce(
+  (blackAndWhiteColors, [colorName, colorValue]) => {
+    blackAndWhiteColors[colorName] = maximiseContrast(colorValue);
+    return blackAndWhiteColors;
+  },
+  {}
+);
 
 /* Rem with a 10px base */
 

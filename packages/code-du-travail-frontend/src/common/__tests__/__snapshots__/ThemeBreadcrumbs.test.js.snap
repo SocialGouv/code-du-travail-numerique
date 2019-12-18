@@ -80,7 +80,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 1rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 .c5 {
@@ -107,7 +107,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 @media print {
@@ -301,7 +301,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 1rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 .c5 {
@@ -328,7 +328,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 @media print {

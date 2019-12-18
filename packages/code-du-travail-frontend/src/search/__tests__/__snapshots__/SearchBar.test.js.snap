@@ -132,7 +132,7 @@ exports[`<SearchBar /> should render 1`] = `
   right: 0;
   width: 3rem;
   height: 5.4rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 @media (max-width:600px) {
@@ -355,7 +355,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   right: 0;
   width: 3rem;
   height: 5.4rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 @media (max-width:600px) {

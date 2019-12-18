@@ -3,7 +3,7 @@
 exports[`<StepResult /> should render show result with collective or compagny agreement disclaimer 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -44,7 +44,7 @@ exports[`<StepResult /> should render show result with collective or compagny ag
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -244,7 +244,7 @@ exports[`<StepResult /> should render show result with collective or compagny ag
 exports[`<StepResult /> should render show result with company agreement disclaimer 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -285,7 +285,7 @@ exports[`<StepResult /> should render show result with company agreement disclai
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -485,7 +485,7 @@ exports[`<StepResult /> should render show result with company agreement disclai
 exports[`<StepResult /> should render with CDT no CC 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -526,7 +526,7 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #7598d6;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;

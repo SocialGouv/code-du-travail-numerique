@@ -72,7 +72,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   margin-right: 1rem;
-  color: #7598d6;
+  color: #7994d4;
 }
 
 [aria-expanded="true"] .c7,
@@ -152,7 +152,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   height: 2.1rem;
   margin: 0 1.6rem 0 0;
   padding-top: 0.6rem;
-  color: #ff7067;
+  color: #f66663;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;

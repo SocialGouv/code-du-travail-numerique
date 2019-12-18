@@ -17,7 +17,7 @@ exports[`<Article /> should render 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border-color: transparent #ff7067 transparent transparent;
+  border-color: transparent #f66663 transparent transparent;
   border-style: solid;
   border-width: 0 5rem 5rem 0;
   content: "";
@@ -61,7 +61,7 @@ exports[`<Article /> should render 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #ff7067;
+  color: #f66663;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
@@ -129,7 +129,7 @@ exports[`<Article /> should render 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -143,7 +143,7 @@ exports[`<Article /> should render 1`] = `
 .c0:active,
 .c0:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
@@ -154,7 +154,7 @@ exports[`<Article /> should render 1`] = `
   height: 7.2rem;
   margin: 0 auto 1.6rem;
   padding: 1.4rem;
-  background-color: #ebf0f9;
+  background-color: #f2f5fa;
   border-radius: 50%;
 }
 

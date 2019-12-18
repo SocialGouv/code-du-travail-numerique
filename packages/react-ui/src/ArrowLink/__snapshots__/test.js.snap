@@ -29,7 +29,7 @@ exports[`<ArrowLink /> renders an arrow on the left  1`] = `
   height: 2.1rem;
   margin: 0 0.4rem 0 1rem;
   padding-top: 0.6rem;
-  color: #ff7067;
+  color: #f66663;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
@@ -93,7 +93,7 @@ exports[`<ArrowLink /> renders an arrow on the right  1`] = `
   height: 2.1rem;
   margin: 0 0.4rem 0 1rem;
   padding-top: 0.6rem;
-  color: #ff7067;
+  color: #f66663;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;

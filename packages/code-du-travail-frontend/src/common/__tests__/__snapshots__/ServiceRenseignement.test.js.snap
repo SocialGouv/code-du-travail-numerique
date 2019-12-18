@@ -21,7 +21,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #7598d6;
+  border: 1px solid #7994d4;
 }
 
 .c3 {
@@ -48,7 +48,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   color: #fff;
   font-size: 1.6rem;
   font-style: normal;
-  background-color: #7598d6;
+  background-color: #7994d4;
 }
 
 .c4::before {

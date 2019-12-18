@@ -3,7 +3,7 @@
 exports[`<Table /> renders 1`] = `
 .c0 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: none;
   top: 0;
   left: 50%;
@@ -24,7 +24,7 @@ exports[`<Table /> renders 1`] = `
 exports[`<Table /> renders with correct styles 1`] = `
 .c0 {
   position: absolute;
-  background-color: #ff7067;
+  background-color: #f66663;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;

@@ -4,7 +4,7 @@ import { withContexts } from "@storybook/addon-contexts/react";
 import { withA11y } from "@storybook/addon-a11y";
 import { ThemeProvider } from "styled-components";
 import { invert } from "polished";
-import { colors } from "../src/theme";
+import { colors, blackAndWhiteColors } from "../src/theme";
 import { GlobalStyles } from "../src/GlobalStyles";
 import { Wrapper } from "../src/layout/Wrapper";
 
@@ -17,11 +17,6 @@ const CustomThemeWrapper = ({ theme, children }) => (<>
   </ThemeProvider>
 </>);
 
-const invertedColors = Object.keys(colors).reduce((invertedColors, color) => {
-  invertedColors[color] = invert(colors[color]);
-  return invertedColors;
-}, {});
-
 addDecorator(
   withContexts([
     {
@@ -29,8 +24,8 @@ addDecorator(
       title: "Color toggle",
       components: [CustomThemeWrapper],
       params: [
-        { name: "Default Theme", props: { theme: colors }, default: true },
-        { name: "Inverted Theme", props: { theme: invertedColors } }
+        { name: "Default Theme", props: { theme: colors }, default: true},
+        { name: "High Contrast Theme", props: { theme: blackAndWhiteColors }}
       ]
     }
   ])

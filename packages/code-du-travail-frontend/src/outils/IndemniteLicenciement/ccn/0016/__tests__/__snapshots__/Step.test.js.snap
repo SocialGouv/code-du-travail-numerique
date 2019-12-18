@@ -3,7 +3,7 @@
 exports[`<Step /> should ask detail about categories 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -240,7 +240,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
 exports[`<Step /> should ask detail about retirement  1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -491,7 +491,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 exports[`<Step /> should render 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;

@@ -91,7 +91,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #ff7067;
+  color: #f66663;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
@@ -282,7 +282,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #ff7067;
+  color: #f66663;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
@@ -439,7 +439,7 @@ exports[`<Salaires /> should render 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding: 0;
-  color: #ff7067;
+  color: #f66663;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;

@@ -3,7 +3,7 @@
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
 .c7 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -86,7 +86,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 
 .c2[aria-selected="true"] {
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
 }
 
 .c3 {
@@ -287,7 +287,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 
 .c2[aria-selected="true"] {
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
 }
 
 .c3 {
@@ -468,7 +468,7 @@ exports[`<Tabulator /> should render 1`] = `
 
 .c2[aria-selected="true"] {
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
 }
 
 .c3 {

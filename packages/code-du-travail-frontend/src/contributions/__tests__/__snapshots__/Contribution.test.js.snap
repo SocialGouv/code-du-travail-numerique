@@ -3,7 +3,7 @@
 exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -71,9 +71,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
@@ -91,8 +91,8 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #f99593;
+  border-color: #f99593;
 }
 
 .c6[disabled] {
@@ -230,7 +230,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 exports[`<Contribution /> should render answer references 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -298,9 +298,9 @@ exports[`<Contribution /> should render answer references 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
@@ -318,8 +318,8 @@ exports[`<Contribution /> should render answer references 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #f99593;
+  border-color: #f99593;
 }
 
 .c6[disabled] {
@@ -491,7 +491,7 @@ exports[`<Contribution /> should render answer references 1`] = `
 exports[`<Contribution /> should render preselected convention 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -559,9 +559,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   height: 5.2rem;
   padding: 0 4.4rem;
   color: #fff;
-  background: #ff7067;
-  border-color: #ff7067;
-  box-shadow: 0px 10px 30px rgba(255,112,103,0.26),0px 4px 5px rgba(255,112,103,0.35);
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
@@ -579,8 +579,8 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #ffa09a;
-  border-color: #ffa09a;
+  background: #f99593;
+  border-color: #f99593;
 }
 
 .c5[disabled] {
@@ -717,7 +717,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
 
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -857,7 +857,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -959,7 +959,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 exports[`<Contribution /> should render with generic answer 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;
@@ -1035,7 +1035,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 exports[`<Contribution /> should render with generic answer and content 1`] = `
 .c3 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;

@@ -33,7 +33,7 @@ exports[`<Article /> should render 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
   content: "";
 }
 
@@ -47,7 +47,7 @@ exports[`<Article /> should render 1`] = `
 
 .c4 {
   position: absolute;
-  background-color: #7598d6;
+  background-color: #7994d4;
   border-radius: 0.6rem;
   top: 50%;
   left: 0;

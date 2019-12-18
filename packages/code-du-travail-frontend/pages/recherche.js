@@ -13,7 +13,7 @@ import {
   Wrapper
 } from "@socialgouv/react-ui";
 
-import ConventionModal from "../src/conventions/Search/Modal";
+import { ConventionModal } from "../src/conventions/Search/Modal";
 import { fetchSearchResults } from "../src/search/search.service";
 import { SearchResults } from "../src/search/SearchResults";
 import SearchBar from "../src/search/SearchBar";

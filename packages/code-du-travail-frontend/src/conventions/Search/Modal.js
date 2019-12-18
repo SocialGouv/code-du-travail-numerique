@@ -1,9 +1,10 @@
 import React, { useCallback, useState } from "react";
+import PropTypes from "prop-types";
 import { Modal } from "@socialgouv/react-ui";
 
 import ConventionForm from "./Form";
 
-function ConventionModal({ children: renderProp }) {
+export const ConventionModal = ({ children: renderProp }) => {
   const [isModalVisible, setModalVisibility] = useState(false);
 
   const openModal = useCallback(e => {
@@ -27,6 +28,8 @@ function ConventionModal({ children: renderProp }) {
       </Modal>
     </>
   );
-}
+};
 
-export default ConventionModal;
+ConventionModal.propTypes = {
+  children: PropTypes.element.isRequired
+};

@@ -36,7 +36,7 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.12),0 1rem 1.5rem rgba(117,152,214,0.1);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -50,7 +50,7 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
 .c0:active,
 .c0:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(117,152,214,0.2),0 1rem 1.5rem rgba(117,152,214,0.25);
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);

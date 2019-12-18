@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { lighten } from "polished";
 import styled from "styled-components";
 import { Badge } from "../Badge";
 import { Subtitle, Heading } from "../Titles";
@@ -99,7 +98,7 @@ const IconWrapper = styled.div`
   height: 7.2rem;
   margin: 0 auto ${spacings.base};
   padding: 1.4rem;
-  background-color: ${({ theme }) => lighten(0.3, theme.secondary)};
+  background-color: ${({ theme }) => theme.bgSecondary};
   border-radius: 50%;
 `;
 

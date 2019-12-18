@@ -44,7 +44,7 @@ exports[`<Tabs /> renders 1`] = `
 
 .c2[aria-selected="true"] {
   color: #fff;
-  background-color: #7598d6;
+  background-color: #7994d4;
 }
 
 .c3 {
