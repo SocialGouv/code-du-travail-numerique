@@ -8,7 +8,7 @@ git:
 _steps:
   - &node_stage
     language: node_js
-    node_js: 10
+    node_js: 12
     before_install:
       - export TZ=Europe/Paris
       - curl -o- -L https://yarnpkg.com/install.sh | bash
