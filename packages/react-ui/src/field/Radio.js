@@ -2,11 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Label } from "./Label";
-import { animations, box, fonts, spacings } from "../theme";
+import { box } from "../theme";
 
 export const InputRadio = ({ label, name, id, size, ...props }) => (
-  <StyledLabel htmlFor={id}>
+  <StyledLabel htmlFor={id} size={size}>
     <StyledRadio type="radio" name={name} id={id} size={size} {...props} />
     {label}
   </StyledLabel>
@@ -20,21 +19,23 @@ InputRadio.propTypes = {
 };
 
 InputRadio.defaultProps = {
-  size: "2rem"
+  size: "1.6rem"
 };
 
-const StyledLabel = styled(Label)`
-  font-weight: normal;
-  font-size: ${fonts.sizes.default};
+const StyledLabel = styled.label`
+  display: flex;
+  font-size: ${props => props.size};
+  cursor: pointer;
 `;
 
 const StyledRadio = styled.input`
   position: relative;
   display: inline-block;
   flex-shrink: 0;
-  width: ${props => props.size};
-  height: ${props => props.size};
-  margin: 0 ${spacings.base} 0 0;
+  width: calc(${props => props.size} * 1.25);
+  height: calc(${props => props.size} * 1.25);
+  margin: calc(${props => props.size} / 5) calc(2 * ${props => props.size} / 3)
+    0 0;
   padding: 0;
   line-height: inherit;
   background: ${({ theme }) => theme.white};
@@ -43,24 +44,23 @@ const StyledRadio = styled.input`
   box-shadow: none;
   cursor: pointer;
   appearance: none;
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    width: calc(${props => props.size} / 1.5);
+    height: calc(${props => props.size} / 1.5);
+    background-color: ${({ theme }) => theme.primary};
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+  }
   &:checked {
     background-color: ${({ theme }) => theme.white};
     border-color: ${({ theme }) => theme.primary};
-  }
-  &::before {
-    position: absolute;
-    top: calc(50% - ${props => props.size} / 4);
-    left: calc(50% - ${props => props.size} / 4);
-    width: calc(${props => props.size} / 2);
-    height: calc(${props => props.size} / 2);
-    background-color: ${({ theme }) => theme.secondary};
-    border-radius: 50%;
-    transform: scale(0);
-    transition: all ${animations.transitionTiming} ease-out;
-    content: "";
-  }
-  &:checked::before {
-    background-color: ${({ theme }) => theme.primary};
-    transform: scale(1);
+    &:before {
+      display: block;
+    }
   }
 `;
