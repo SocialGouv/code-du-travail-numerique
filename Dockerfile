@@ -2,7 +2,7 @@ FROM node:12.13-alpine3.10
 
 # NOTE(douglasduteil): add `curl` in the master image
 # `curl` is very useful for later health check tests ;)
-RUN apk add --no-cache --update git=2.22.0-r0 curl=7.66.0-r0
+RUN apk add --no-cache git=~2 curl=~7
 
 #
 
