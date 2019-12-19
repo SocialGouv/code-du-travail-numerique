@@ -1,12 +1,12 @@
 Deploy:
-  stage: "manual deploy"
+  stage: "Manual deplo"
   rules:
     - if: $PRODUCTION
       when: always
     - when: manual
   allow_failure: false
 
-  #
+#
 #
 #
 

@@ -4,7 +4,9 @@ include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_notify_github_stage.yml
     ref: v4.0.1
-
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_delete_useless_k8s_ns_stage.yml
+    ref: v4.0.1
 #
 
 Notify Starting Deployment:
@@ -22,3 +24,6 @@ Notify Success:
   stage: Notify Finished Deployment
   dependencies:
     - Notify Starting Deployment
+
+Delete useless k8s namespaces:
+  extends: .base_delete_useless_k8s_ns_stage
