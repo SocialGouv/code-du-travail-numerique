@@ -20,6 +20,7 @@ include:
 stages:
   - "Prepare"
   - "Code Quality"
+  - "Feature deploy"
   - "Registration"
   - "Post Registration"
   - "Deploy"

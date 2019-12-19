@@ -1,29 +1,12 @@
-#
+Deploy feature (manual):
+  stage: "Feature deploy"
+  rules:
+    - if: $PRODUCTION
+      when: always
+    - when: manual
+  allow_failure: false
 
-include:
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_notify_github_stage.yml
-    ref: v4.0.1
-
-#
-
-Notify Starting Deployment:
-  extends: .base_notify_pending_stage
-  stage: Deploy
-
-Notify Fail:
-  extends: .base_notify_fail_stage
-  stage: Notify Finished Deployment
-  dependencies:
-    - Notify Starting Deployment
-
-Notify Success:
-  extends: .base_notify_success_stage
-  stage: Notify Finished Deployment
-  dependencies:
-    - Notify Starting Deployment
-
-#
+  #
 #
 #
 
@@ -31,9 +14,13 @@ Release:
   stage: "Deploy"
   image: node:12.14-alpine3.10
   dependencies: []
-  only:
-    - branches
   when: manual
+  only:
+    refs:
+      - external_pull_requests
+  except:
+    refs:
+      - branches
   before_script:
     - apk add --no-cache git=~2
     - git checkout ${CI_COMMIT_REF_NAME}
@@ -54,7 +41,8 @@ Production:
   dependencies: []
   when: manual
   only:
-    - branches
+    refs:
+      - tags
   except:
     variables:
       - $PRODUCTION

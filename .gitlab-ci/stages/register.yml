@@ -1,28 +1,52 @@
 #
 
-.register_stage: &register_stage
+.prepare_stage: &prepare_stage
   extends: .base_register_stage
-  stage: "Registration"
+  stage: "Prepare"
+  only:
+    refs:
+      - external_pull_requests
+      - tags
   except:
+    ref:
+      - branches
     variables:
       - $PRODUCTION
+      # Don't register a base image for release commit
+      # that only bump version / udpate changelog
+      - $CI_COMMIT_MESSAGE =~ /chore(release):/
+
+.register_stage: &register_stage
+  extends: .base_register_stage
+  only:
+    refs:
+      - external_pull_requests
+      - tags
+  except:
+    ref:
+      - branches
+    variables:
+      - $PRODUCTION
+      # Don't register a base image for release commit
+      # that only bump version / udpate changelog
+      - $CI_COMMIT_MESSAGE =~ /chore(release):/
 
 #
 
 Register socialgouv/cdtn base image:
-  <<: *register_stage
-  stage: "Prepare"
+  <<: *prepare_stage
   variables:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
 
 Register elasticsearch image:
-  <<: *register_stage
-  stage: "Prepare"
+  <<: *prepare_stage
   variables:
     CONTEXT: ./docker/elasticsearch
     DOCKER_BUILD_ARGS: ""
     IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
+
+#
 
 Register api image:
   <<: *register_stage

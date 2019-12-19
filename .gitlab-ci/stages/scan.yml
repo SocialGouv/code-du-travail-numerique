@@ -5,7 +5,12 @@ Snyk docker scan:
   image: snyk/snyk-cli:docker
   services:
     - docker:$DOCKER_VERSION-dind
+  only:
+    refs:
+      - external_pull_requests
   except:
+    ref:
+      - branches
     variables:
       - $PRODUCTION
   dependencies: []

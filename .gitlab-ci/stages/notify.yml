@@ -1,0 +1,24 @@
+#
+
+include:
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_notify_github_stage.yml
+    ref: v4.0.1
+
+#
+
+Notify Starting Deployment:
+  extends: .base_notify_pending_stage
+  stage: Deploy
+
+Notify Fail:
+  extends: .base_notify_fail_stage
+  stage: Notify Finished Deployment
+  dependencies:
+    - Notify Starting Deployment
+
+Notify Success:
+  extends: .base_notify_success_stage
+  stage: Notify Finished Deployment
+  dependencies:
+    - Notify Starting Deployment
