@@ -8,7 +8,7 @@
       - external_pull_requests
       - tags
   except:
-    ref:
+    refs:
       - branches
     variables:
       - $PRODUCTION
@@ -23,7 +23,7 @@
       - external_pull_requests
       - tags
   except:
-    ref:
+    refs:
       - branches
     variables:
       - $PRODUCTION
