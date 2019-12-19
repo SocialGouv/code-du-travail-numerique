@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { box, breakpoints, colors, fonts, spacings } from "../theme";
+import { box, breakpoints, fonts, spacings } from "../theme";
 
 export const Input = ({ name, icon: Icon, ...props }) => {
   return (
@@ -50,7 +50,8 @@ const StyledInput = styled.input`
   text-align: ${props => (props.type === "number" ? "right" : "left")};
   background: ${({ theme }) => theme.white};
   border: 1px solid transparent;
-  border-color: ${props => (props.invalid ? colors.error : "transparent")};
+  border-color: ${({ invalid, theme }) =>
+    invalid ? theme.error : "transparent"};
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
   &::-webkit-outer-spin-button,
@@ -59,13 +60,13 @@ const StyledInput = styled.input`
     appearance: none;
   }
   &:invalid {
-    border-color: ${colors.error};
+    border-color: ${({ theme }) => theme.error};
   }
   &::placeholder {
     color: ${({ theme }) => theme.placeholder};
   }
   &:focus {
-    border-color: ${colors.secondary};
+    border-color: ${({ theme }) => theme.secondary};
   }
   &:focus::placeholder {
     color: transparent;

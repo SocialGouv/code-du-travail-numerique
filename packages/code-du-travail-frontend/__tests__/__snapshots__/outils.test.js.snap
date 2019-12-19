@@ -69,7 +69,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c46 {
+.c47 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -90,6 +90,12 @@ exports[`<Outils /> should render 1`] = `
 .c27 {
   margin: 0 auto 1rem;
   text-align: left;
+}
+
+.c46 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
 }
 
 .c33 {
@@ -231,7 +237,7 @@ exports[`<Outils /> should render 1`] = `
   text-decoration: underline;
 }
 
-.c48 {
+.c49 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -268,16 +274,16 @@ exports[`<Outils /> should render 1`] = `
   opacity: 1;
 }
 
-.c48:link,
-.c48:visited {
+.c49:link,
+.c49:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c48:not([disabled]):hover,
-.c48:not([disabled]):active,
-.c48:not([disabled]):focus {
+.c49:not([disabled]):hover,
+.c49:not([disabled]):active,
+.c49:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -286,7 +292,7 @@ exports[`<Outils /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c48[disabled] {
+.c49[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -502,13 +508,35 @@ exports[`<Outils /> should render 1`] = `
   height: 5.4rem;
   margin: 0;
   padding: 1rem 5.5rem 1rem 1.6rem;
-  font-size: inherit;
-  font-family: inherit;
-  -webkit-transition: border 250ms ease;
-  transition: border 250ms ease;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c16::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c16::-moz-placeholder {
+  color: #9298af;
+}
+
+.c16:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c16::placeholder {
+  color: #9298af;
 }
 
 .c20 {
@@ -744,37 +772,36 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c47 {
+.c48 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
   padding: 0;
   margin-bottom: 2rem;
-  text-align: left;
 }
 
-.c47 > *:first-child {
+.c48 > *:first-child {
   margin-top: 0;
 }
 
-.c47 > *:last-child {
+.c48 > *:last-child {
   margin-bottom: 0;
 }
 
-.c49 {
+.c50 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c50 {
+.c51 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c51 {
+.c52 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -788,25 +815,25 @@ exports[`<Outils /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c51 > *:first-child {
+.c52 > *:first-child {
   margin-top: 0;
 }
 
-.c51 > *:last-child {
+.c52 > *:last-child {
   margin-bottom: 0;
 }
 
-.c53 + .c52 {
+.c54 + .c53 {
   padding-left: 1.6rem;
 }
 
-.c55 {
+.c56 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c54 {
+.c55 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -816,11 +843,11 @@ exports[`<Outils /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c56 {
+.c57 {
   margin: 0.4rem 0;
 }
 
-.c57 {
+.c58 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -879,7 +906,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c47 {
     font-size: 2.2rem;
   }
 }
@@ -887,6 +914,12 @@ exports[`<Outils /> should render 1`] = `
 @media (max-width:600px) {
   .c24 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c46 {
+    margin-bottom: 1rem;
   }
 }
 
@@ -903,7 +936,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c49 {
     font-size: 1.4rem;
   }
 }
@@ -1090,21 +1123,21 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c47 {
+  .c48 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c51 {
+  .c52 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c52 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1112,25 +1145,25 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c53 + .c52 {
+  .c54 + .c53 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c55 {
+  .c56 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c55 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c55 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -2595,28 +2628,28 @@ exports[`<Outils /> should render 1`] = `
           class="c23"
         >
           <header
-            class="c24"
+            class="c46"
           >
             <h3
-              class="c46"
+              class="c47"
             >
               <div
                 class="c26"
               />
-              Besoin d’un accompagnement personnalisé ?
+              Besoin de plus d’information ?
             </h3>
           </header>
           <div
-            class="c47"
+            class="c48"
           >
-            Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
+            Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c18 c48"
+            class="c18 c49"
           >
-            Contacter nos services
+            Contacter nos services en région
             <svg
-              class="c49"
+              class="c50"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -2629,68 +2662,68 @@ exports[`<Outils /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c50"
+        class="c51"
       >
         <nav>
           <div
-            class="c51"
+            class="c52"
           >
             <div
-              class="c52 c53"
+              class="c53 c54"
             >
               <h3
-                class="c54"
+                class="c55"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c55"
+                class="c56"
               >
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -2699,21 +2732,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c52 c53"
+              class="c53 c54"
             >
               <h3
-                class="c54"
+                class="c55"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c55"
+                class="c56"
               >
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2722,10 +2755,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2736,21 +2769,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c52 c53"
+              class="c53 c54"
             >
               <h3
-                class="c54"
+                class="c55"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c55"
+                class="c56"
               >
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2759,10 +2792,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2771,10 +2804,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c56"
+                  class="c57"
                 >
                   <a
-                    class="c57"
+                    class="c58"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"

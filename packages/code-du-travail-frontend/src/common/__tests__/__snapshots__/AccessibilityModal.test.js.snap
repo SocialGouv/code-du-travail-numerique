@@ -37,7 +37,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
 
 .c3 {
   margin: 0 auto 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.6rem;
   text-align: center;
 }
 
@@ -102,7 +102,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
   cursor: not-allowed;
 }
 
-.c12 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -139,16 +139,16 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
   opacity: 1;
 }
 
-.c12:link,
-.c12:visited {
+.c9:link,
+.c9:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -157,13 +157,13 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
   border-color: transparent;
 }
 
-.c12[disabled] {
+.c9[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c14:not(:focus):not(:active) {
+.c11:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -199,7 +199,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
   outline: none;
 }
 
-.c13 {
+.c10 {
   position: absolute;
   top: 0;
   right: 0;
@@ -210,85 +210,49 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 2;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
-.c11 {
-  position: absolute;
-  top: 0.6rem;
-  left: 0;
-  width: 2rem;
-  height: 2rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 0.4rem;
-}
-
-.c11:after {
-  position: absolute;
-  top: 0.4rem;
-  left: 0.8rem;
-  display: none;
-  width: 0.5rem;
-  height: 1rem;
-  border: solid #fff;
-  border-width: 0 0.2rem 0.2rem 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  content: "";
-}
-
-.c9 {
+.c8 {
   position: relative;
-  display: inline-block;
+  display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
-  margin: 0 1.6rem 0 0;
-  padding: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
+  background: #fff;
+  border: 1px solid #bbcadf;
   border-radius: 0.4rem;
-  box-shadow: none;
+  cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9 *::-ms-backdrop,
-.c9 {
-  visibility: hidden;
+.c8:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 3);
+  height: calc(1.6rem / 1.7);
+  border: 1px solid #fff;
+  border-width: 0 calc(1.6rem / 10) calc(1.6rem / 10) 0;
+  -webkit-transform: translate(-50%,-60%) rotate(45deg);
+  -ms-transform: translate(-50%,-60%) rotate(45deg);
+  transform: translate(-50%,-60%) rotate(45deg);
+  content: "";
 }
 
-.c9:checked ~ .c10 {
+.c8:checked {
   background-color: #f66663;
-  border: 0;
 }
 
-.c9:checked ~ .c10:after {
+.c8:checked:before {
   display: block;
-}
-
-.c8 {
-  position: relative;
-  font-weight: normal;
-  font-size: 1.6rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 @media (max-width:600px) {
@@ -305,7 +269,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
 
 @media (max-width:600px) {
   .c3 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -316,7 +280,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c9 {
     font-size: 1.4rem;
   }
 }
@@ -342,7 +306,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c10 {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -404,26 +368,23 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
               Couleurs
             </h3>
             <label
-              class="c7 c8"
+              class="c7"
               for="blackAndWhiteTheme"
             >
               <input
-                class="c9"
+                class="c8"
                 id="blackAndWhiteTheme"
                 name="blackAndWhiteTheme"
                 type="checkbox"
               />
               Passer le site en noir et blanc
-              <span
-                class="c10 c11"
-              />
             </label>
             <button
-              class="c12 c13"
+              class="c9 c10"
               title="fermer la modale"
             >
               <div
-                class="c14"
+                class="c11"
               >
                 fermer la modale
               </div>

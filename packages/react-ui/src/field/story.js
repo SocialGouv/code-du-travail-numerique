@@ -17,40 +17,12 @@ export default {
 export const base = () => (
   <>
     <Section>
-      <InputCheckbox
-        label="Option 1"
-        name="checkbox"
-        id="option_checkbox_1"
-        value="option_1"
-      />
-      <InputCheckbox
-        label="Option 2"
-        name="checkbox"
-        id="option_checkbox_2"
-        value="option_2"
-      />
-    </Section>
-    <Section>
       <Label htmlFor="input">Input</Label>
       <Input name="input" id="input" />
     </Section>
     <Section>
       <Label htmlFor="input_date">Input Date</Label>
       <InputDate name="input_date" id="input_date" />
-    </Section>
-    <Section>
-      <InputRadio
-        label="Option 1"
-        name="radio"
-        id="option_radio_1"
-        value="option_radio_1"
-      />
-      <InputRadio
-        label="Option 2"
-        name="radio"
-        id="option_2"
-        value="option_2"
-      />
     </Section>
     <Section>
       <Label htmlFor="select">Select</Label>
@@ -65,6 +37,50 @@ export const base = () => (
       <Label htmlFor="textarea">Textarea</Label>
       <Textarea name="textarea" id="textarea" />
     </Section>
+    <Section>
+      <InputCheckbox
+        label="Option 1"
+        name="checkbox"
+        id="option_checkbox_1"
+        value="option_1"
+      />
+      <InputCheckbox
+        label="Option 2 (3rem)"
+        name="checkbox"
+        id="option_checkbox_2"
+        value="option_2"
+        size="3rem"
+      />
+      <InputCheckbox
+        label="Option 3 (4rem)"
+        name="checkbox"
+        id="option_checkbox_3"
+        value="option_3"
+        size="4rem"
+      />
+    </Section>
+    <Section>
+      <InputRadio
+        label="Option 1"
+        name="radio"
+        id="option_radio_1"
+        value="option_radio_1"
+      />
+      <InputRadio
+        label="Option 2 (3rem)"
+        name="radio"
+        id="option_2"
+        value="option_2"
+        size="3rem"
+      />
+      <InputRadio
+        label="Option 3 (4rem)"
+        name="radio"
+        id="option_3"
+        value="option_3"
+        size="4rem"
+      />
+    </Section>
   </>
 );
 
@@ -72,16 +88,24 @@ export const checkbox = () => (
   <>
     <Section>
       <InputCheckbox
-        label="Option 1"
+        label="Option 1 with a very long label so you get what happens when it is on 2 lines"
         name="checkbox"
         id="option_1"
         value="option_1"
       />
       <InputCheckbox
-        label="Option 2"
+        label="Option 2 (3rem)"
         name="checkbox"
         id="option_2"
         value="option_2"
+        size="3rem"
+      />
+      <InputCheckbox
+        label="Option 3 (4rem)"
+        name="checkbox"
+        id="option_3"
+        value="option_3"
+        size="4rem"
       />
     </Section>
   </>
@@ -149,16 +173,24 @@ export const radio = () => (
   <>
     <Section>
       <InputRadio
-        label="Option 1"
+        label="Option 1 with a very long label so you get what happens when it is on 2 lines"
         name="radio"
         id="option_1"
         value="option_1"
       />
       <InputRadio
-        label="Option 2"
+        label="Option 2 (3rem)"
         name="radio"
         id="option_2"
         value="option_2"
+        size="3rem"
+      />
+      <InputRadio
+        label="Option 3 (4rem)"
+        name="radio"
+        id="option_3"
+        value="option_3"
+        size="4rem"
       />
     </Section>
   </>
