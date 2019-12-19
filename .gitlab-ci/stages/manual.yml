@@ -1,5 +1,5 @@
-Deploy feature (manual):
-  stage: "Feature deploy"
+Deploy:
+  stage: "manual deploy"
   rules:
     - if: $PRODUCTION
       when: always
