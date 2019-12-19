@@ -1,4 +1,6 @@
-const fiches = require("./fiches-sp.json");
+const { getFichesSP } = require("./index");
+
+const fiches = getFichesSP();
 
 const isFicheInfo = fiche => fiche.type !== "Fiche Question-réponse";
 const isFicheQR = fiche => fiche.type === "Fiche Question-réponse";

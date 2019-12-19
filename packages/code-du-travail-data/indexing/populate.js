@@ -5,6 +5,7 @@ import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
 import { parseIdcc, formatIdcc } from "../lib";
 import { getCourriers } from "../dataset/courrier-type";
+import { getFichesSP } from "../dataset/fiches_service_public";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -89,33 +90,7 @@ async function* cdtnDocumentsGen() {
   }));
 
   logger.info("=== Fiches SP ===");
-  yield require("../dataset/fiches_service_public/fiches-sp.json").map(
-    ({
-      id,
-      title,
-      description,
-      breadcrumbs,
-      theme,
-      text,
-      raw,
-      date,
-      references_juridiques,
-      url
-    }) => ({
-      id,
-      source: SOURCES.SHEET_SP,
-      title,
-      slug: slugify(title),
-      description,
-      breadcrumbs,
-      theme,
-      text,
-      raw,
-      date,
-      references_juridiques,
-      url
-    })
-  );
+  yield getFichesSP();
 
   logger.info("=== Fiche MT(split) ===");
   yield require("../dataset/fiches_ministere_travail/fiches-mt-split.json").map(
