@@ -77,6 +77,7 @@ describe("<Answer />", () => {
         {
           source: SOURCES.EXTERNALS,
           slug: `${SLUG_LINK_BASE}3`,
+          url: "url.extrenal/tool",
           title: "related external title 1"
         },
         {

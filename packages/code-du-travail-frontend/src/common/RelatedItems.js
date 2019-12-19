@@ -55,15 +55,14 @@ export const RelatedItems = ({ items = [] }) => {
       {external && (
         <StyledListItem>
           <StyledCustomTile
-            href={tool.url}
+            href={external.url}
             rel="noopener nofollow"
             target="_blank"
-            action={tool.action}
-            icon={icons[tool.icon]}
-            title={tool.title}
-            subtitle={getLabelBySource(tool.source)}
+            action={external.action}
+            icon={icons[external.icon]}
+            title={external.title}
           >
-            {tool.description}
+            {external.description}
           </StyledCustomTile>
         </StyledListItem>
       )}

@@ -2493,8 +2493,9 @@ exports[`<Answer /> should renders related content 1`] = `
       <li
         class="c20"
       >
-        <button
+        <a
           class="c21 c22"
+          href="url.extrenal/tool"
           rel="noopener nofollow"
           target="_blank"
         >
@@ -2527,15 +2528,11 @@ exports[`<Answer /> should renders related content 1`] = `
             <div
               class="c26"
             >
-              <span
-                class="c27"
-              >
-                Outils
-              </span>
+              
               <h3
                 class="c28"
               >
-                related tool title 1
+                related external title 1
               </h3>
             </div>
           </div>
@@ -2562,7 +2559,7 @@ exports[`<Answer /> should renders related content 1`] = `
               </div>
             </div>
           </div>
-        </button>
+        </a>
       </li>
       <span>
         Les articles pouvant vous intéresser :
