@@ -115,63 +115,102 @@ exports[`<InputCheckbox /> should render checkbox field 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.6rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
   cursor: pointer;
 }
 
-.c1 {
+.c4 {
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 1px solid #bbcadf;
+  border-radius: 0.4rem;
+}
+
+.c4:after {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.8rem;
+  display: none;
+  width: 0.5rem;
+  height: 1rem;
+  border: solid #fff;
+  border-width: 0 0.2rem 0.2rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+}
+
+.c2 {
   position: relative;
-  display: block;
+  display: inline-block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  background: #fff;
-  border: 1px solid #bbcadf;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1.6rem 0 0;
+  padding: 0;
   border-radius: 0.4rem;
-  cursor: pointer;
+  box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c1:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 3);
-  height: calc(1.6rem / 1.7);
-  border: 1px solid #fff;
-  border-width: 0 calc(1.6rem / 10) calc(1.6rem / 10) 0;
-  -webkit-transform: translate(-50%,-60%) rotate(45deg);
-  -ms-transform: translate(-50%,-60%) rotate(45deg);
-  transform: translate(-50%,-60%) rotate(45deg);
-  content: "";
+.c2 *::-ms-backdrop,
+.c2 {
+  visibility: hidden;
 }
 
-.c1:checked {
+.c2:checked ~ .c3 {
   background-color: #f66663;
+  border: 0;
 }
 
-.c1:checked:before {
+.c2:checked ~ .c3:after {
   display: block;
+}
+
+.c1 {
+  position: relative;
+  font-weight: normal;
+  font-size: 1.6rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <div>
   <label
-    class="c0"
+    class="c0 c1"
     for="checkbox"
   >
     <input
-      class="c1"
+      class="c2"
       id="checkbox"
       name="checkbox"
       type="checkbox"
     />
     option
+    <span
+      class="c3 c4"
+    />
   </label>
 </div>
 `;
@@ -309,19 +348,33 @@ exports[`<InputRadio /> should render input radio field 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.6rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
   cursor: pointer;
 }
 
 .c1 {
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+.c2 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1.6rem 0 0;
   padding: 0;
   line-height: inherit;
   background: #fff;
@@ -334,37 +387,41 @@ exports[`<InputRadio /> should render input radio field 1`] = `
   appearance: none;
 }
 
-.c1:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c1:checked {
+.c2:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c1:checked:before {
-  display: block;
+.c2::before {
+  position: absolute;
+  top: calc(50% - 2rem / 4);
+  left: calc(50% - 2rem / 4);
+  width: calc(2rem / 2);
+  height: calc(2rem / 2);
+  background-color: #7994d4;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  content: "";
+}
+
+.c2:checked::before {
+  background-color: #f66663;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 <div>
   <label
-    class="c0"
+    class="c0 c1"
     for="radio"
   >
     <input
-      class="c1"
+      class="c2"
       id="radio"
       name="radio"
       type="radio"
@@ -397,8 +454,8 @@ exports[`<Select /> should render select field 1`] = `
 
 .c2 {
   position: absolute;
-  top: 1.6rem;
-  right: 1.6rem;
+  top: 2rem;
+  right: 2rem;
   width: 1.6rem;
   height: 1.6rem;
   color: #f66663;
@@ -414,7 +471,6 @@ exports[`<Select /> should render select field 1`] = `
   font-size: 1.6rem;
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
-  background-color: #fff;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
