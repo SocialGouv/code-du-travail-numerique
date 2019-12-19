@@ -14,6 +14,7 @@ Label.propTypes = {
 
 const StyledLabel = styled.label`
   display: flex;
+  align-items: center;
   padding-bottom: ${spacings.tiny};
   font-weight: 600;
   font-size: ${fonts.sizes.small};

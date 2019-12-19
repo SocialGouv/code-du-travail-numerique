@@ -48,14 +48,9 @@ Sidebar wrapper styles
 Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
 */
 .bm-menu-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2 !important;
-  height: 100%;
-  opacity: 0.95;
   @media (min-width: ${BURGER_BREAKPOINT}) {
     position: relative !important;
+    z-index: auto !important;
     width: auto !important;
     height: 100% !important;
     transform: none !important;
@@ -68,6 +63,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
     height: auto !important;
     padding: ${spacings.small};
   }
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0.95;
 }
 
 /* General sidebar styles */
@@ -100,13 +100,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .bm-overlay {
-  top: 0;
-  left: 0;
-  z-index: 2 !important;
-  display: block;
-  background: rgba(0, 0, 0, 0.3);
   @media (min-width: ${BURGER_BREAKPOINT}) {
     display: none;
   }
+  top: 0;
+  left: 0;
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
 }
 `;
