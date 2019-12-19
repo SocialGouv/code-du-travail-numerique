@@ -117,35 +117,13 @@ exports[`<Header /> should render 1`] = `
   height: 5.4rem;
   margin: 0;
   padding: 1rem 5.5rem 1rem 1.6rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  font-size: inherit;
+  font-family: inherit;
+  -webkit-transition: border 250ms ease;
+  transition: border 250ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.c14::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c14::-moz-placeholder {
-  color: #9298af;
-}
-
-.c14:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c14::placeholder {
-  color: #9298af;
 }
 
 .c17 {

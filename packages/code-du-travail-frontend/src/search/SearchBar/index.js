@@ -94,7 +94,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
 
 export default SearchBar;
 
-const { box, breakpoints, fonts, spacings } = theme;
+const { animations, breakpoints, spacings } = theme;
 
 const SearchForm = styled.form`
   position: relative;
@@ -130,20 +130,10 @@ const SearchInput = styled(DocumentSuggester)`
   margin: 0;
   padding: ${({ hasButton }) =>
     hasButton ? `2rem 18.5rem 2rem 6rem` : `1rem 5.5rem 1rem ${spacings.base}`};
-  color: ${({ theme }) => theme.paragraph};
-  font-weight: normal;
-  font-size: ${fonts.sizes.default};
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: ${({ theme }) => theme.white};
-  border: 1px solid transparent;
-  border-radius: ${box.borderRadius};
-  box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
+  font-size: inherit;
+  font-family: inherit;
+  transition: border ${animations.transitionTiming} ease;
   appearance: none;
-  &::placeholder {
-    color: ${({ theme }) => theme.placeholder};
-  }
   @media (max-width: ${breakpoints.mobile}) {
     height: 5.4rem;
     padding: ${({ hasButton }) =>

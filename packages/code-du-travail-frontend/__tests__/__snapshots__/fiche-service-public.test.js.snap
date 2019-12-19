@@ -71,7 +71,7 @@ exports[`<FicheSP /> should render 1`] = `
 
 .c35 {
   margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 
@@ -335,35 +335,13 @@ exports[`<FicheSP /> should render 1`] = `
   height: 5.4rem;
   margin: 0;
   padding: 1rem 5.5rem 1rem 1.6rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  font-size: inherit;
+  font-family: inherit;
+  -webkit-transition: border 250ms ease;
+  transition: border 250ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.c15::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c15::-moz-placeholder {
-  color: #9298af;
-}
-
-.c15:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c15::placeholder {
-  color: #9298af;
 }
 
 .c18 {
@@ -570,6 +548,7 @@ exports[`<FicheSP /> should render 1`] = `
   max-width: 74rem;
   padding: 0;
   margin-bottom: 2rem;
+  text-align: left;
 }
 
 .c38 > *:first-child {
@@ -701,7 +680,7 @@ exports[`<FicheSP /> should render 1`] = `
 
 @media (max-width:600px) {
   .c35 {
-    margin-bottom: 1rem;
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -1190,18 +1169,18 @@ exports[`<FicheSP /> should render 1`] = `
               <div
                 class="c37"
               />
-              Besoin de plus d’information ?
+              Besoin d’un accompagnement personnalisé ?
             </h3>
           </header>
           <div
             class="c38"
           >
-            Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+            Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
           </div>
           <button
             class="c29"
           >
-            Contacter nos services en région
+            Contacter nos services
             <svg
               class="c39"
               fill="none"

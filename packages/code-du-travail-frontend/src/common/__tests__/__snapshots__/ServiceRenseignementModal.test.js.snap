@@ -352,7 +352,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             <h4
               class="c3"
             >
-              Contact téléphonique
+              Contacter les services de renseignement par téléphone
             </h4>
             <div
               class="c4"

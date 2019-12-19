@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { box, spacings } from "../theme";
+import { Label } from "./Label";
+import { box, fonts, spacings } from "../theme";
 
 export const InputCheckbox = ({ label, name, id, size, ...props }) => (
-  <StyledLabel htmlFor={id} size={size}>
+  <StyledLabel htmlFor={id}>
     <StyledCheckbox
       type="checkbox"
       name={name}
@@ -14,6 +15,7 @@ export const InputCheckbox = ({ label, name, id, size, ...props }) => (
       {...props}
     />
     {label}
+    <StyledCheckmark size={size} />
   </StyledLabel>
 );
 
@@ -25,45 +27,61 @@ InputCheckbox.propTypes = {
 };
 
 InputCheckbox.defaultProps = {
-  size: "1.6rem"
+  size: "2rem"
 };
 
-const StyledLabel = styled.label`
-  display: flex;
-  font-size: ${props => props.size};
-  cursor: pointer;
+const StyledCheckmark = styled.span`
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+  width: ${props => props.size};
+  height: ${props => props.size};
+  background-color: transparent;
+  border: ${({ theme }) => box.border(theme.border)};
+  border-radius: ${spacings.tiny};
+  &:after {
+    position: absolute;
+    top: ${spacings.tiny};
+    left: ${spacings.xsmall};
+    display: none;
+    width: 0.5rem;
+    height: ${spacings.small};
+    border: solid ${({ theme }) => theme.white};
+    border-width: 0 0.2rem 0.2rem 0;
+    transform: rotate(45deg);
+    content: "";
+  }
 `;
 
 const StyledCheckbox = styled.input`
   position: relative;
-  display: block;
+  display: inline-block;
   flex-shrink: 0;
-  width: calc(${props => props.size} * 1.25);
-  height: calc(${props => props.size} * 1.25);
-  margin: calc(${props => props.size} / 5) calc(2 * ${props => props.size} / 3)
-    0 0;
-  background: ${({ theme }) => theme.white};
-  border: ${({ theme }) => box.border(theme.border)};
+  width: ${props => props.size};
+  height: ${props => props.size};
+  margin: 0 ${spacings.base} 0 0;
+  padding: 0;
   border-radius: ${spacings.tiny};
-  cursor: pointer;
+  box-shadow: none;
   appearance: none;
-  &:before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: none;
-    width: calc(${props => props.size} / 3);
-    height: calc(${props => props.size} / 1.7);
-    border: ${({ theme }) => box.border(theme.white)};
-    border-width: 0 calc(${props => props.size} / 10)
-      calc(${props => props.size} / 10) 0;
-    transform: translate(-50%, -60%) rotate(45deg);
-    content: "";
+  *::-ms-backdrop,
+  & {
+    visibility: hidden;
   }
-  &:checked {
+  /* stylelint-disable-next-line */
+  &:checked ~ ${StyledCheckmark} {
     background-color: ${({ theme }) => theme.primary};
-    &:before {
+    border: 0;
+    &:after {
       display: block;
     }
   }
+`;
+
+const StyledLabel = styled(Label)`
+  position: relative;
+  font-weight: normal;
+  font-size: ${fonts.sizes.default};
+  cursor: pointer;
+  user-select: none;
 `;

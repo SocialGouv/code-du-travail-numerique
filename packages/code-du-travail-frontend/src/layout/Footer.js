@@ -26,17 +26,19 @@ const Footer = () => (
       <ServiceSection>
         <Container>
           <Title as="h3" topStripped>
-            Besoin de plus d’information&nbsp;?
+            Besoin d’un accompagnement personnalisé ?
           </Title>
           <StyledContainer narrow noPadding>
-            Les services du ministère du Travail en région informent,
-            conseillent et orientent les salariés et les employeurs du secteur
-            privé sur leurs questions en droit du travail.
+            Les services de renseignement en droit du travail peuvent vous
+            donner des informations juridiques générales relatives au Code du
+            travail, aux conventions collectives, à la jurisprudence. Ils
+            peuvent également vous conseiller et vous orienter dans vos
+            démarches.
           </StyledContainer>
           <ServiceRenseignementModal>
             {openModal => (
               <Button onClick={openModal}>
-                Contacter nos services en région
+                Contacter nos services
                 <StyledDirectionRightIcon />
               </Button>
             )}
@@ -191,6 +193,7 @@ const ServiceSection = styled(Section)`
 
 const StyledContainer = styled(Container)`
   margin-bottom: ${spacings.medium};
+  text-align: left;
 `;
 
 const StyledDirectionRightIcon = styled(DirectionRightIcon)`

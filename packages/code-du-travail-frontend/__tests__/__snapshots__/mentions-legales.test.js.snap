@@ -114,7 +114,7 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: left;
 }
 
-.c44 {
+.c43 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -144,12 +144,6 @@ exports[`<MentionLegales /> should render 1`] = `
 .c27 {
   margin: 0 auto 1rem;
   text-align: left;
-}
-
-.c43 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
 }
 
 .c32 + .c31 {
@@ -309,7 +303,7 @@ exports[`<MentionLegales /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c46 {
+.c45 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -346,16 +340,16 @@ exports[`<MentionLegales /> should render 1`] = `
   opacity: 1;
 }
 
-.c46:link,
-.c46:visited {
+.c45:link,
+.c45:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c46:not([disabled]):hover,
-.c46:not([disabled]):active,
-.c46:not([disabled]):focus {
+.c45:not([disabled]):hover,
+.c45:not([disabled]):active,
+.c45:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -364,7 +358,7 @@ exports[`<MentionLegales /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c46[disabled] {
+.c45[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -425,35 +419,13 @@ exports[`<MentionLegales /> should render 1`] = `
   height: 5.4rem;
   margin: 0;
   padding: 1rem 5.5rem 1rem 1.6rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  font-size: inherit;
+  font-family: inherit;
+  -webkit-transition: border 250ms ease;
+  transition: border 250ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.c15::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c15::-moz-placeholder {
-  color: #9298af;
-}
-
-.c15:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c15::placeholder {
-  color: #9298af;
 }
 
 .c18 {
@@ -653,36 +625,37 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: center;
 }
 
-.c45 {
+.c44 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
   padding: 0;
   margin-bottom: 2rem;
+  text-align: left;
 }
 
-.c45 > *:first-child {
+.c44 > *:first-child {
   margin-top: 0;
 }
 
-.c45 > *:last-child {
+.c44 > *:last-child {
   margin-bottom: 0;
 }
 
-.c47 {
+.c46 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c48 {
+.c47 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c49 {
+.c48 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -696,25 +669,25 @@ exports[`<MentionLegales /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c49 > *:first-child {
+.c48 > *:first-child {
   margin-top: 0;
 }
 
-.c49 > *:last-child {
+.c48 > *:last-child {
   margin-bottom: 0;
 }
 
-.c51 + .c50 {
+.c50 + .c49 {
   padding-left: 1.6rem;
 }
 
-.c53 {
+.c52 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c52 {
+.c51 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -724,11 +697,11 @@ exports[`<MentionLegales /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c54 {
+.c53 {
   margin: 0.4rem 0;
 }
 
-.c55 {
+.c54 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -814,7 +787,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c43 {
     font-size: 2.2rem;
   }
 }
@@ -832,12 +805,6 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c43 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
   .c35 {
     font-size: 1.6rem;
   }
@@ -850,7 +817,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c45 {
     font-size: 1.4rem;
   }
 }
@@ -981,21 +948,21 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media print {
-  .c45 {
+  .c44 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c49 {
+  .c48 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c48 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1003,25 +970,25 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c51 + .c50 {
+  .c50 + .c49 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c52 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c51 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c51 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1616,28 +1583,28 @@ exports[`<MentionLegales /> should render 1`] = `
           class="c42"
         >
           <header
-            class="c43"
+            class="c22"
           >
             <h3
-              class="c44"
+              class="c43"
             >
               <div
                 class="c24"
               />
-              Besoin de plus d’information ?
+              Besoin d’un accompagnement personnalisé ?
             </h3>
           </header>
           <div
-            class="c45"
+            class="c44"
           >
-            Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+            Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
           </div>
           <button
-            class="c46"
+            class="c45"
           >
-            Contacter nos services en région
+            Contacter nos services
             <svg
-              class="c47"
+              class="c46"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1650,68 +1617,68 @@ exports[`<MentionLegales /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c48"
+        class="c47"
       >
         <nav>
           <div
-            class="c49"
+            class="c48"
           >
             <div
-              class="c50 c51"
+              class="c49 c50"
             >
               <h3
-                class="c52"
+                class="c51"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c53"
+                class="c52"
               >
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -1720,21 +1687,21 @@ exports[`<MentionLegales /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c50 c51"
+              class="c49 c50"
             >
               <h3
-                class="c52"
+                class="c51"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c53"
+                class="c52"
               >
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1743,10 +1710,10 @@ exports[`<MentionLegales /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1757,21 +1724,21 @@ exports[`<MentionLegales /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c50 c51"
+              class="c49 c50"
             >
               <h3
-                class="c52"
+                class="c51"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c53"
+                class="c52"
               >
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1780,10 +1747,10 @@ exports[`<MentionLegales /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1792,10 +1759,10 @@ exports[`<MentionLegales /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c54"
+                  class="c53"
                 >
                   <a
-                    class="c55"
+                    class="c54"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
