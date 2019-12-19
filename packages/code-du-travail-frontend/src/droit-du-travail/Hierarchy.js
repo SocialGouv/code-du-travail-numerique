@@ -15,7 +15,6 @@ import {
 const Hierarchy = () => {
   const [isModal13MatieresOpen, setModal13MatieresOpen] = useState(false);
   const [isModal4MatieresOpen, setModal4MatieresOpen] = useState(false);
-  const [isModalGarantiesOpen, setModalGarantiesOpen] = useState(false);
   return (
     <>
       <Section>
@@ -50,8 +49,8 @@ const Hierarchy = () => {
                         as: "h3",
                         body: (
                           <>
-                            Les textes situés plus bas doivent être conformes
-                            aux textes internationaux et européens.
+                            Les textes nationaux doivent être conformes aux
+                            textes internationaux et européens.
                           </>
                         )
                       }
@@ -69,7 +68,7 @@ const Hierarchy = () => {
                         as: "h3",
                         body: (
                           <>
-                            Les textes situés plus bas doivent être conformes à
+                            Tous les textes nationaux doivent être conformes à
                             la Constitution française ainsi qu’au bloc de
                             constitutionnalité.
                           </>
@@ -119,7 +118,7 @@ const Hierarchy = () => {
                                 },
                                 {
                                   title:
-                                    "Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail.",
+                                    "Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail",
                                   as: "h5",
                                   body: (
                                     <>
@@ -138,28 +137,12 @@ const Hierarchy = () => {
                                         Exemples&nbsp;:
                                         <ul>
                                           <li>
-                                            Le taux de majoration des heures
-                                            supplémentaires&nbsp;: un accord
-                                            collectif peut prévoir dans une
-                                            certaine limite un taux inférieur à
-                                            25% (règle prévue par le Code du
+                                            le taux de majoration des heures
+                                            supplémentaires. Un accord collectif
+                                            peut prévoir dans une certaine
+                                            limite un taux inférieur à 25%
+                                            (règle prévue par le Code du
                                             travail).
-                                          </li>
-                                          <li>
-                                            Le congé sabbatique&nbsp;: un accord
-                                            collectif peut prévoir une durée
-                                            minimale et une durée maximale du
-                                            congé sabbatique différente de ce
-                                            que prévoit le code du travail.
-                                          </li>
-                                          <li>
-                                            Les négociations obligatoires en
-                                            entreprise&nbsp;: un accord
-                                            d’entreprise peut prévoir une
-                                            périodicité des négociations plus
-                                            longue que ce que prévoit le Code du
-                                            travail qui est principalement d’un
-                                            an.
                                           </li>
                                         </ul>
                                       </i>
@@ -186,34 +169,14 @@ const Hierarchy = () => {
                                         Exemples&nbsp;:
                                         <ul>
                                           <li>
-                                            Congés exceptionnels&nbsp;: en
-                                            l’absence d’accord collectif sur les
-                                            congés exceptionnels, ce que prévoit
-                                            le code du travail s’applique (4
-                                            jours pour mariage, 1 jour pour
-                                            mariage d’un enfant, 5 jours pour le
-                                            décès d’un enfant...)
-                                          </li>
-                                          <li>
                                             Taux de majoration des heures
-                                            supplémentaires&nbsp;: en l’absence
+                                            supplémentaires. En l’absence
                                             d’accord collectif sur le taux de
                                             majoration des heures
                                             supplémentaires s’applique le code
                                             du travail (25% de majoration pour
                                             les 8 premières heures et 50% pour
                                             les suivantes).
-                                          </li>
-                                          <li>
-                                            Aménagement du temps de travail sur
-                                            une période supérieure à la semaine
-                                            &nbsp;: en l’absence d’accord
-                                            collectif sur l’aménagement du temps
-                                            de travail, le code du travail
-                                            s’applique. L’employeur peut
-                                            aménager le temps de travail sur une
-                                            période de 9 semaines pour les
-                                            entreprises de moins de 50 salariés.
                                           </li>
                                         </ul>
                                       </i>
@@ -285,7 +248,7 @@ const Hierarchy = () => {
                               >
                                 13 matières
                               </Button>{" "}
-                              où la loi reconnait la primauté à l’accord de
+                              où la loi reconnaît la primauté à l’accord de
                               branche et{" "}
                               <Button
                                 variant="link"
@@ -293,15 +256,9 @@ const Hierarchy = () => {
                               >
                                 4 matières
                               </Button>{" "}
-                              où la branche elle même peut reconnaitre sa
-                              primauté, sauf si l’accord d’entreprise a{" "}
-                              <Button
-                                variant="link"
-                                onClick={() => setModalGarantiesOpen(true)}
-                              >
-                                des garanties au moins équivalentes
-                              </Button>
-                              .
+                              où la branche elle-même peut reconnaître sa
+                              primauté, sauf si l’accord d’entreprise a des
+                              garanties au moins équivalentes.
                             </Toast>
                             <p>
                               Ces règles sont les mêmes pour la hiérarchie entre
@@ -472,29 +429,6 @@ const Hierarchy = () => {
           </Ul>
         </ListContainer>
       </Modal>
-      <Modal
-        isOpen={isModalGarantiesOpen}
-        onDismiss={() => setModalGarantiesOpen(false)}
-      >
-        <NoMarginContainer>
-          <p>
-            Si l’accord d’entreprise assure des garanties au moins équivalentes,
-            c’est-à-dire qu’il “fait aussi bien”, que la branche dans une des 17
-            matières alors il s’applique en priorité par rapport à la convention
-            ou l’accord de branche.
-            <br />
-            Pour cela, il faut comparer par matière (exemple, égalité
-            professionnelle) les mesures prévues par l’accord d’entreprise et
-            les mesures prévues par l’accord de branche.
-          </p>
-          <p>
-            Dans la matière en question, les mesures prévues par l’accord
-            d’entreprise doivent avoir au global la même valeur pour la
-            collectivité des salariés que les mesures prévues par l’accord de
-            branche. La collectivités des salariés ne doit pas y perdre.
-          </p>
-        </NoMarginContainer>
-      </Modal>
     </>
   );
 };
@@ -518,9 +452,10 @@ const NumberWrapper = styled.div`
   left: -70px;
   display: flex;
   flex: 0 0 auto;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 100%;
+  padding-top: ${fonts.sizes.headings.small};
   @media (max-width: ${breakpoints.tablet}) {
     position: relative;
     left: 0;
@@ -573,14 +508,5 @@ const Ul = styled.ul`
     @media (max-width: ${breakpoints.mobile}) {
       margin-left: 0;
     }
-  }
-`;
-
-const NoMarginContainer = styled.div`
-  & > *:first-child {
-    margin-top: 0;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
   }
 `;
