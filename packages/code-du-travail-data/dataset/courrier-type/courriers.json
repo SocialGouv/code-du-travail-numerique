@@ -1,200 +1,129 @@
 [
   {
-    "title": "Certificat de travail",
-    "questions": ["comment rédiger un certificat de travail ?"],
-    "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail. Le modèle ci-après est une proposition de certificat de travail.",
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "test",
-    "filename": "certificat-de-travail.docx"
-  },
-  {
-    "title": "Convocation à un entretien préalable",
-    "description": "L’employeur qui envisage de licencier un salarié doit le convoquer à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l’entretien préalable.",
-    "questions": [
-      "comment faire une demande d’entretien préalable en vue d’un licenciement"
-    ],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "convocation-a-entretien-prealable.docx"
-  },
-  {
-    "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
-    "description": "La rupture conventionnelle permet la rupture du CDI par commun accord (elle ne peut être imposée). L’employeur et le salarié conviennent du principe d’une rupture conventionnelle lors d’un ou plusieurs entretiens. Ce courrier n’est pas prévu dans la procédure, mais permettra de l’initier et pourra servir à déterminer votre consentement.",
-    "questions": [
-      "comment demander un rendez-vous en vue d’une rupture conventionnelle"
-    ],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "demande-rdv-rupture-conventionnelle.docx"
-  },
-  {
-    "title": "Demande de paiement de salaire",
-    "description": "Le salarié peut adresser un courrier à son employeur, exigeant le paiement du salaire. Cette demande doit se faire avec une lettre recommandée à accusé de réception. Le demandeur doit aussi garder une copie de la lettre",
-    "questions": [""],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "demande-paiement-salaire-salarie.docx"
-  },
-  {
-    "title": "Rupture du contrat en période d’essai à l’initiative du salarié",
-    "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par le salarié. Cette demande doit se faire avec une lettre recommandée à accusé de réception. Le demandeur doit aussi garder une copie de la lettre",
-    "questions": [
-      "comment rédiger une demande pour mettre fin à la période d’essai ?",
-      "comment faire pour rompre la période d’essai?"
-    ],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "test",
-    "filename": "fin-periode-essai-initiative-du-salarie.docx"
-  },
-  {
-    "title": "Rupture de période d’essai, à l’initiative de l’employeur",
-    "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. Cette demande doit se faire avec une lettre recommandée à accusé de réception. Le demandeur doit aussi garder une copie de la lettre",
-    "questions": ["comment rédiger une rupture de période d’essai ?"],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "test",
-    "filename": "fin-periode-essai-initiative-employeur.docx"
-  },
-  {
-    "title": "Réclamation de congés payés",
-    "description": "L’employeur a le dernier mot sur l’ordre de départ des congés payés. Le salarié doit pouvoir prendre l’ensemble des congés dus: L’employeur n’a pas le droit de les payer en lieu et place. Ce modèle de courrier permet de demander à l’employeur la prise des congés de droit.",
-    "questions": [
-      "faire une réclamation pour les congés payés ?",
-      "rédiger une réclamation pour les congés payés"
-    ],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "reclamation-de-cp.docx"
-  },
-  {
-    "title": "Lettre de réclamation des documents de fin de contrat",
-    "description": "Les documents de fin de contrat sont dus par l’employeur et le salarié, au moment de la rupture du contrat de travail. Cette obligation est de dans tous les cas de rupture du contrat de travail.  Il est conseillé au salarié de transmettre cette lettre en recommandée avec accusé de réception ou en remise en main propre contre décharge, et d’en garder une copie.",
-    "questions": ["Récupérer les documents relatifs à la fin de contrat ?"],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "test",
-    "filename": "reclamation-des-documents-de-fin-de-contrat.docx"
-  },
-  {
-    "title": "Lettre de réclamation des heures supplémentaires",
-    "description": "Les heures travaillées au-delà de la durée légale (35 heures) ouvrent droit à une majoration du salaire ou à des contreparties sous forme de repos (repos compensateur équivalent).  Il est conseillé au salarié de transmettre cette demande par lettre recommandée avec accusé de réception, ou remise en main propre contre décharge. Le demandeur doit aussi garder une copie de la lettre. Afin de s’assurer que tous les termes employés dans ce modèle de lettre correspondent à la situation du salarié : Il est vivement conseillé au salarié de se rapprocher des services de renseignements juridiques ",
-    "questions": ["Comment se faire payer ses heures supplémentaires ?"],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "reclamation-des-heures-sup.docx"
-  },
-  {
-    "title": "Lettre de réclamation du salaire en cas de non-fourniture de travail par l’employeur",
-    "description": "Le salarié privé de travail, du fait de l’employeur, a droit au paiement de son salaire. Ce modèle de courrier permettra au salarié de réclamer le paiement de son salaire dans ce cas précis. Il est conseillé de transmettre ce courrier en recommandé avec accusé de réception ou en remise en main propre contre décharge. Il est également conseillé au salarié de se rapprocher des services de renseignements juridiques des DIRECCTE. ",
-    "questions": [
-      "Comment se faire payer ses salaires impayés après un renvoi oral?"
-    ],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "reclamation-des-salaires-apres-renvoi-oral-du-salarie.docx"
-  },
-  {
-    "title": "Demande de prise en compte des temps de trajet dans le temps de travail (bâtiment)",
-    "description": "Le temps de trajet entre le siège de l’entreprise ou le dépôt et le chantier constitue du temps de travail effectif. Le salarié est en droit d’en réclamer la prise dans la durée du travail et la rémunération. Le modèle ci-joint permet au salarié de faire cette demande. Il est conseillé au salarié de se rapprocher des services de renseignements juridiques des DIRECCTE.",
-    "questions": [""],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "reclamation-des-salaires-batiment-temps-de-trajet.docx"
-  },
-  {
-    "title": "Réclamation des bulletins et/ou salaires",
-    "description": "Tout salarié doit percevoir son salaire une fois par mois et recevoir un bulletin de paie lors du paiement du salaire. Il est conseillé de faire avec une lettre recommandée à accusé de réception. Le demandeur devra conserver une copie de la lettre. Il est également conseillé au salarié de se rapprocher des services de renseignements juridiques des DIRECCTE ou de l’agent de contrôle de l’inspection du travail qui suit l’entreprise.",
-    "questions": [""],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "reclamation-des-salaires-et-ou-bulletins.docx"
-  },
-  {
-    "title": "Reçu pour solde de tout compte",
-    "description": "Le solde de tout compte est établi par l’employeur et remis (contre reçu) au salarié qui quitte son emploi. Ce document est un modèle de reçu pour solde de tout compte. C’est un document obligatoire de fin contrat.",
-    "questions": ["comment rédiger un reçu pour solde de tout compte ?"],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "test",
-    "filename": "recu-solde-de-tout-compte.docx"
-  },
-  {
-    "title": "Demande d’accord du salarié pour le renouvellement de période d’essai",
-    "description": "La période d’essai peut être renouvelée, si la branche le prévoit et si cette possibilité est inscrite dans le contrat de travail ou la lettre d’engagement. Dans ces conditions, ce modèle permet de demander le renouvellement du contrat de travail.",
-    "questions": [
-      "comment rédiger une demande de renouvellement de période d’essai ?"
-    ],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "test",
-    "filename": "renouvellement-periode-essai-initiative-employeur.docx"
-  },
-  {
-    "title": "Rupture d’un commun accord d’un contrat d’apprentissage",
-    "description": "Le contrat d’apprentissage peut être rompu par l’apprenti ou par l’employeur jusqu’à la fin des 45 premiers jours de la formation pratique en entreprise. Passé ce délai, le contrat d’apprentissage peut être rompu : - en cas de force majeure, - en cas de faute grave de l’apprenti, - en cas d’inaptitude de l’apprenti, - en cas de décès de l’employeur et maître d’apprentissage (entreprise unipersonnelle) - en cas d’obtention du diplôme avant le terme fixé (le contrat peut être réduit d’un an si l’apprenti décide ne pas poursuivre son bac pro et passer le CAP). Passé ce délai le contrat d’apprentissage peut être rompu par l’apprenti. Il devra saisir le médiateur et informer préalablement l’employeur. Passé ce délai, le contrat d’apprentissage peut être rompu d’un commun accord entre le salarié et l’employeur. Le modèle ci-dessous est un exemple personnalisable de rupture d’un commun accord entre le salarié et l’employeur.",
-    "questions": ["comment rompre un contrat d’apprentissage"],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "test",
-    "filename": "rupture-amiable-du-contrat-d-apprentissage.docx"
-  },
-  {
-    "title": "Rupture d’un commun accord d’un contrat à durée déterminée",
-    "description": "La rupture anticipée du contrat à déterminée n’est possible que dans certains cas. La rupture d’un commun accord est l’un de ces cas : ce modèle permet à l’une des parties de demander à l’autre, la rupture du CDD.",
-    "questions": ["comment rompre un CDD"],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "test",
-    "filename": "rupture-commun-accord-du-cdd.docx"
-  },
-  {
-    "title": "Signalement de faits pouvant relever du harcèlement moral sur mineur au travail",
-    "description": " Ce modèle de courrier permet d’aider le salarié mineur ou son tuteur légal, à informer l’employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d’agir. Le harcèlement moral est un cas juridique particulier, et les faits en question sont d’une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d’utiliser ce modèle ce courrier.",
-    "questions": [
-      "Comment mettre fin à un contrat de travail d’un jeune travailleur en cas de faits pouvant relever du harcèlement moral."
-    ],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "signalement-harcelement-mineur.docx"
-  },
-  {
-    "title": "Signalement de faits pouvant relever du harcèlement moral",
-    "description": "Ce modèle de courrier permet d’aider le salarié mineur ou son tuteur légal, à informer l’employeur de faits pouvant relever du harcèlement moral, pour lesquels il a le devoir d’agir. Le harcèlement moral est un cas juridique particulier, et les faits en question sont d’une particulière gravité: aussi nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail, qui suit votre entreprise ou les services de renseignements juridiques des DIRECCTE avant d’utiliser ce modèle ce courrier",
-    "questions": [
-      "Quelles sont les solutions en cas de maltraitance ou de harcèlement au travail"
-    ],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "signalement-harcelement.docx"
-  },
-  {
-    "title": "Demande de dérogation pour un temps partiel",
-    "description": "Le salarié à temps partiel peut demander une durée du travail hebdomadaire inférieure à celle prévue soit par le code du travail ou par un accord de branche étendu. Le modèle permet d’en faire la demande.",
-    "questions": ["Comment faire une demande de temps partiel"],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "temps-partiel-demande-de-derogation-du-salarie.docx"
-  },
-  {
-    "title": "Relevé d’heures supplémentaires",
-    "description": "En cas d’horaires individualisé dans l’entreprise, l’employeur a l’obligation de mettre en place un dispositif de décompte de la durée du travail.",
-    "questions": ["Qu’est-ce qu’un relevé d’heures supplémentaires ?"],
-    "date": "25/10/2019",
-    "author": "cdtn",
-    "editor": "DIRECCTE",
-    "filename": "tableau-recap-des-heures-supplementaires.docx"
-  }
+		"title": "Modèle : Affichage obligatoire relatif au harcèlement sexuel",
+		"description": "Un affichage obligatoire est prévu en matière de lutte contre le harcèlement sexuel: dans les lieux de travail, et sur les portes ou dans les locaux où ont lieu les embauches. Cet affichage indique les sanctions applicables, les actions contentieuses civiles et pénales en matière de harcèlement sexuel et les coordonnées des autorités et services compétents. Le modèle ci-dessous propose cet affichage obligatoire. ",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "Affichage_Lutte_contre_harcelement_sexuel.docx"
+	},
+	{
+		"title": "Modèle : Certificat de travail",
+		"description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail. Le modèle ci-après est une proposition de certificat de travail.",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "Certificat_de_travail.docx"
+
+	},
+	{
+		"titre": "Modèle : Demande de rendez-vous en vue d’une rupture conventionnelle",
+		"description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation de l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "demande_rdv_rupture_conventionnelle.docx"
+	},
+	{
+		"titre": "Modèle : convocation à un entretien préalable au licenciement pour motif personnel",
+		"description": "L’employeur qui envisage de licencier un salarié doit le convoquer à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l’entretien préalable. Ce modèle propose une telle convocation.",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "entretien_préalable_au_licenciement_personnel.docx"
+	},
+	{
+		"titre": "Modèle : convocation à un entretien préalable au licenciement économique de moins de 10 salariés pendant 30 jours",
+		"description": "L’employeur qui envisage le licenciement pour motif économique de moins de 10 salariés durant une période de trente jours, doit convoquer chaque salarié à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l’entretien préalable. Ce modèle propose une telle convocation. ",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "entretien_préalable_au_licenciement_économique_de_moins_de_10_salariés_pendant_30_jours.docx"
+	},
+	{
+		"titre": "Modèle : lettre de réclamation des documents de fin de contrat",
+		"description": "À la rupture du contrat de travail, dans tous les cas de rupture: l'employeur doit délivrer au salarié des documents ( ex: certificat de travail). Ce modèle permet au salarié de réclamer ces documents à l'employeur qui n'aurait pas satisfait à cette obligation ",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "reclamation_des_documents_de_fin_de_contrat.docx"
+	},
+	{
+		"titre": "Modèle: Reçu pour solde de tout compte",
+		"description": "Le solde de tout compte est un document obligatoire, remis en fin de contrat de travail. Il est établi par l’employeur et remis (contre reçu) au salarié qui quitte son emploi. Ce document est un modèle de reçu pour solde de tout compte. ",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "Recu_solde_de_tout_compte.docx"
+	},
+	{
+		"titre": "Modèle : Demande d'accord du salarié pour le renouvellement de période d’essai",
+		"description": "La période d’essai peut être renouvelée, si la branche le prévoit et si cette possibilité est inscrite dans le contrat de travail ou la lettre d’engagement. Dans ces conditions, ce modèle permet de demander le renouvellement du contrat de travail.",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "renouvellement_periode_essai_initiative_employeur.docx"
+	},
+	{
+		"titre": "Modèle : Réponse à Signalement de harcèlement sexuel",
+		"description": "L'employeur doit prendre toutes les mesures en vue de de prévenir les faits de harcèlement sexuel, y mettre un terme ou les sanctionner. Le modèle ci-après propose une réponse au salarié ayant signalé des faits de harcèlement sexuel en tant que victime ou témoin. ",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "reponse_a_signalement_harcelement_sexuel.docx"
+	},
+	{
+		"titre": "Modèle de rupture du contrat en période d’essai à l'initiative du salarié",
+		"description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par le salarié. Le salarié devra informer l'employeur et respecter un délai de prévenance avant de quitter ses fonctions. Le modèle ci-dessous permet au salarié d'avertir l'employeur de son intention de mettre fin à la période d'essai. ",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "Rupture_periode_d'essai_salarie.docx"
+	},
+	{
+		"titre": "Modèle : Rupture de période d’essai à l'initiative de l'employeur",
+		"description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. Pour ce faire l'employeur devra informer le salarié et respecter un délai dit de prévenance avant de quitter effectivement ses fonctions. Le modèle ci-dessous permet à l'employeur d'avertir le salarié qu'il sera mis fin à la période d'essai.",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "Rupture_periode_d'essai_employeur.docx"
+	},
+	{
+		"titre": "Modèle : Signalement de faits pouvant relever du harcèlement (moral ou sexuel)",
+		"description": "L'employeur doit agir pour faire cesser ou sanctionner les faits relevant du harcèlement sexuel ou les agissements répétés de harcèlement moral. Ce modèle permet au salarié victime ou témoin de ces faits d’avertir l'employeur. ",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "signalement_harcelement.docx"
+	},
+	{
+		"titre": "Modèle : Signalement de harcèlement sexuel",
+		"description": "L'employeur doit prendre toutes les mesures en vue de de prévenir les faits de harcèlement sexuel, les faire cesser ou les sanctionner. Le présent modèle permet à un salarié victime ou témoin d'une telle situation d'alerter l'employeur. ",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "signalement_harcelement_sexuel.docx"
+	},
+	{
+		"titre": "Modèle : réclamation de congés payés",
+		"description": "L’employeur décide de l’ordre de départ des congés payés. Le salarié doit pouvoir prendre l’ensemble de ses congés dus. L’employeur ne peut pas les payer en lieu et place. Ce modèle de courrier permet de demander à l'employeur la prise des congés de droit.",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "reclamation_de_cp.docx"
+	},
+	{
+		"titre": "Modèle : lettre de réclamation des heures supplémentaires",
+		"description": "Les heures travaillées au-delà de la durée légale (35 heures) ouvrent droit en plus du taux horaire, à une contrepartie soit sous la forme d'une majoration salariale soit, en tout ou partie, à des contreparties sous forme de repos (repos compensateur équivalent). Ce modèle permet au salarié de demander le paiement des heures supplémentaires et le droit aux contreparties prévues ",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "reclamation_des_heures_sup.docx"
+	},
+	{
+		"titre": "Modèle : Demande de paiement de salaire",
+		"description": "Tout salarié doit percevoir son salaire une fois par mois.Le modèle ci-après permet au salarié de demander voire d'exiger le paiement du salaire du en cas de non paiement de salaire. Le demandeur doit aussi garder une copie de ce courrier.",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "demande_paiement_salaire.docx"
+	},
+	{
+		"titre": "Modèle : Demande de dérogation à la durée minimale de travail pour un temps partiel",
+		"description": "Le code du travail fixe une durée minimale de travail pour les salariés à temps partiel. Une convention de branche étendue peut prévoir une durée plus courte. Il peut être dérogé à cette règle : pour faire face à des contraintes personnelles, un cumul d’activité ou permettre à un étudiant de moins de 26 ans d’avoir une activité salariée pendant ses études. Le modèle ci-dessous propose cette de demande de dérogation.",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "temps_partiel_demande_de_derogation_du_salarie.docx"
+	},
+	{
+		"titre": "Modèle : Relevé d’heures supplémentaires",
+		"description": "Les heures supplémentaires sont décomptées à la semaine et font l'objet de contreparties. Le document ci-après permet à l'appui d'une demande de réclamation des heures supplémentaires, de présenter le décompte des heures supplémentaires et les contreparties dues.",
+		"date_redaction": "01/01/2020",
+		"source": "Ministère du Travail",
+		"filename": "tableau_recap_des_heures_supplementaires.docx"
+	}
 ]
