@@ -11,11 +11,12 @@ include:
     ref: v4.0.1
   #
   - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/02-quality.yml
-  - /.gitlab-ci/stages/03-register.yml
-  - /.gitlab-ci/stages/04-scan.yml
-  - /.gitlab-ci/stages/06-deploy.yml
-  - /.gitlab-ci/stages/07-notify.yml
+  - /.gitlab-ci/stages/quality.yml
+  - /.gitlab-ci/stages/register.yml
+  - /.gitlab-ci/stages/scan.yml
+  - /.gitlab-ci/stages/deploy.yml
+  - /.gitlab-ci/stages/notify.yml
+  - /.gitlab-ci/stages/manual.yml
 
 stages:
   - "Prepare"
