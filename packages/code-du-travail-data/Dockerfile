@@ -24,7 +24,7 @@ COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/datafiller/themes.data.json ./dataset/datafiller/themes.data.json
 
-ENV SUGGEST_DATA_URL=https://gist.github.com/rmelisson/31a6a17284d4022baa1faeda13afcc3a/raw/d543c94f83978b48e96591219e3e48b160d416f8/cdtn_entities.txt
+ENV SUGGEST_DATA_URL=https://cdtndata.blob.core.windows.net/public/cdtn_entities_latest
 RUN curl -L $SUGGEST_DATA_URL -o ./dataset/suggestions.txt
 
 WORKDIR /app
