@@ -11,7 +11,7 @@ include:
 
 Notify Starting Deployment:
   extends: .base_notify_pending_stage
-  stage: Deploy
+  stage: "Manual Deploy"
 
 Notify Fail:
   extends: .base_notify_fail_stage

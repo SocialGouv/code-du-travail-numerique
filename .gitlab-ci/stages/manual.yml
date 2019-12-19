@@ -1,10 +1,11 @@
 Deploy:
-  stage: "Manual deplo"
+  stage: "Manual Deploy"
   rules:
     - if: $PRODUCTION
       when: always
     - when: manual
   allow_failure: false
+  script: echo "Register & Deploy"
 
 #
 #

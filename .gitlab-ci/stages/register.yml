@@ -18,6 +18,7 @@
 
 .register_stage: &register_stage
   extends: .base_register_stage
+  stage: "Register"
   only:
     refs:
       - external_pull_requests
