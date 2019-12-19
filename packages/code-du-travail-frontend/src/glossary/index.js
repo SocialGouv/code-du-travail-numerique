@@ -62,21 +62,27 @@ export default function useGlossary(children, html) {
         // So we do a kind of \b equivalent.
         // the main différence is that matched pattern can include a whitespace as first char
         const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒÆ";
-        const wordBoundaryStart = `(?<=^|[^-/_\\w${frDiacritics}])`;
+        const wordBoundaryStart = `(?:^|[^\\w${frDiacritics}])`;
         const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
         const patterns = [...new Set([item.title, ...item.variants])]
           .map(
             term =>
-              new RegExp(`${wordBoundaryStart}${term}${wordBoundaryEnd}`, "gi")
+              new RegExp(
+                `${wordBoundaryStart}(${term})${wordBoundaryEnd}`,
+                "gi"
+              )
           )
-          .concat(item.abbrs.map(abbr => new RegExp(`\\b${abbr}\\b`, "g")));
+          .concat(item.abbrs.map(abbr => new RegExp(`\\b(${abbr})\\b`, "g")));
 
         patterns.forEach(pattern => {
           // we use an internal ref counter to track pattern replacement
-          node.innerHTML = node.innerHTML.replace(pattern, function(term) {
+          node.innerHTML = node.innerHTML.replace(pattern, function(_, term) {
             const internalRef = `__tt__${refCounter++}`;
             internalRefMap.set(internalRef, { slug: item.slug, term });
-            return `<span data-tooltip-ref="${internalRef}"></span>`;
+            return _.replace(
+              new RegExp(term),
+              `<span data-tooltip-ref="${internalRef}"></span>`
+            );
           });
         });
       });
