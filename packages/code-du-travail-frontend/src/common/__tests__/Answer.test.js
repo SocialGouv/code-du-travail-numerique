@@ -56,6 +56,13 @@ describe("<Answer />", () => {
     });
     expect(container).toMatchSnapshot();
   });
+  it("should renders tooltip without breaking a tag", () => {
+    const { container } = renderAnswer({
+      html: `<p class='test-content'><a href="emploi/accompagnement-des-mutations-economiques/csp" class="spip_in">le contrat de sécurisation professionnelle APE</a></p>`
+    });
+    expect(container).toMatchSnapshot();
+  });
+
   it("should renders related content", () => {
     const SLUG_LINK_BASE = "LINK_";
     const SLUG_TOOL_BASE = "TOOL_";
