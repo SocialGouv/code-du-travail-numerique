@@ -26,7 +26,7 @@ const Footer = () => (
       <ServiceSection>
         <Container>
           <Title as="h3" topStripped>
-            Besoin de plus d’information ?
+            Besoin de plus d’information&nbsp;?
           </Title>
           <StyledContainer narrow noPadding>
             Les services du ministère du Travail en région informent,
