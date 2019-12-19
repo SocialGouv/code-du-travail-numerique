@@ -9,7 +9,7 @@ Snyk docker scan:
     refs:
       - external_pull_requests
   except:
-    ref:
+    refs:
       - branches
     variables:
       - $PRODUCTION
