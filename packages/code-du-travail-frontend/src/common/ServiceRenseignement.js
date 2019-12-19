@@ -37,9 +37,7 @@ class ServiceRenseignement extends React.Component {
 
     return (
       <>
-        <Heading as="h4">
-          Contacter les services de renseignement par téléphone
-        </Heading>
+        <Heading as="h4">Contact téléphonique</Heading>
         <NumberInsertWrapper>
           <NumberInsert href="tel:+0033806000126">
             <Number>0 806 000 126</Number>
