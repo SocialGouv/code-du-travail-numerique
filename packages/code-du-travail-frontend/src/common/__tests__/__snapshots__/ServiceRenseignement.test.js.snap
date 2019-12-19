@@ -112,7 +112,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   <h4
     class="c0"
   >
-    Contacter les services de renseignement par téléphone
+    Contact téléphonique
   </h4>
   <div
     class="c1"
