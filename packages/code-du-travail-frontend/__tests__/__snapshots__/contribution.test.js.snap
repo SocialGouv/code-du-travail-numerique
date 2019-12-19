@@ -1280,7 +1280,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               <div
                 class="c41"
               />
-              Besoin de plus d’information ?
+              Besoin de plus d’information ?
             </h3>
           </header>
           <div
@@ -2749,7 +2749,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               <div
                 class="c41"
               />
-              Besoin de plus d’information ?
+              Besoin de plus d’information ?
             </h3>
           </header>
           <div

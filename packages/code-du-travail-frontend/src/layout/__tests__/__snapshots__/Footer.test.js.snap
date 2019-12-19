@@ -321,7 +321,7 @@ exports[`<Footer /> should render 1`] = `
               <div
                 class="c6"
               />
-              Besoin de plus d’information ?
+              Besoin de plus d’information ?
             </h3>
           </header>
           <div
