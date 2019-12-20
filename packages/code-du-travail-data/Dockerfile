@@ -24,7 +24,7 @@ COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/datafiller/themes.data.json ./dataset/datafiller/themes.data.json
 
-ENV SUGGEST_DATA_URL=https://cdtndata.blob.core.windows.net/public/cdtn_entities_latest
+ENV SUGGEST_DATA_URL=https://cdtndata.blob.core.windows.net/public/cdtn_entities_2019-12-20
 RUN curl -L $SUGGEST_DATA_URL -o ./dataset/suggestions.txt
 
 WORKDIR /app
