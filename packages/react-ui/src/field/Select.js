@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import { ArrowDown } from "../icons";
-import { animations, box, colors, fonts, spacings } from "../theme";
+import { animations, box, fonts, spacings } from "../theme";
 
 export const Select = ({ children, disabled, ...props }) => (
   <StyledWrapper>
     <StyledSelect disabled={disabled} {...props}>
       {children}
     </StyledSelect>
-    <StyledArrowDown aria-hidden="true" isdisabled={disabled}>
+    <StyledArrowDown aria-hidden="true" isDisabled={disabled}>
       <ArrowDown />
     </StyledArrowDown>
   </StyledWrapper>
@@ -38,11 +38,12 @@ const StyledWrapper = styled.div`
 
 const StyledArrowDown = styled.div`
   position: absolute;
-  top: ${spacings.medium};
-  right: ${spacings.medium};
+  top: ${spacings.base};
+  right: ${spacings.base};
   width: 1.6rem;
   height: 1.6rem;
-  color: ${props => (props.isdisabled ? colors.placeholder : colors.primary)};
+  color: ${({ isDisabled, theme }) =>
+    isDisabled ? theme.placeholder : theme.primary};
   pointer-events: none;
 `;
 
@@ -55,6 +56,7 @@ const StyledSelect = styled.select`
   font-size: ${fonts.sizes.default};
   font-family: "Open Sans", sans-serif;
   vertical-align: middle;
+  background-color: ${({ theme }) => theme.white};
   border: none;
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
@@ -71,7 +73,7 @@ const StyledSelect = styled.select`
     padding-right: ${spacings.base};
   }
   &:invalid {
-    border-color: ${colors.error};
+    border-color: ${({ theme }) => theme.error};
   }
   &:disabled {
     background-color: ${({ theme }) => theme.bgTertiary};

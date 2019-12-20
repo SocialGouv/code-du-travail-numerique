@@ -12,7 +12,7 @@ export const PageTitle = ({
   subtitle,
   ...props
 }) => (
-  <Header leftStripped={leftStripped} shift={shift} {...props}>
+  <Header pageTitle leftStripped={leftStripped} shift={shift} {...props}>
     <StyledPageTitle leftStripped={leftStripped} as={as} shift={shift}>
       <Stripe
         rounded
@@ -163,10 +163,12 @@ const Header = styled.header`
       `;
     }
     return css`
-      margin-bottom: ${spacings.larger};
+      margin-bottom: ${({ pageTitle }) =>
+        pageTitle ? spacings.larger : spacings.base};
       text-align: center;
       @media (max-width: ${breakpoints.mobile}) {
-        margin-bottom: ${spacings.xmedium};
+        margin-bottom: ${({ pageTitle }) =>
+          pageTitle ? spacings.xmedium : spacings.small};
       }
     `;
   }};

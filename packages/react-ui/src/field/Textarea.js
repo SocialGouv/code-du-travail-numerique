@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { box, colors, fonts, spacings } from "../theme";
+import { box, fonts, spacings } from "../theme";
 
 export const Textarea = ({ name, ...props }) => (
   <StyledTextarea name={name} {...props} />
@@ -34,7 +34,7 @@ const StyledTextarea = styled.textarea`
     appearance: none;
   }
   &:focus {
-    border-color: ${colors.secondary};
+    border-color: ${({ theme }) => theme.secondary};
   }
   &:focus::placeholder {
     color: transparent;
