@@ -3,7 +3,7 @@ import { selectAll } from "unist-util-select";
 import { logger } from "./logger";
 import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
-import { parseIdcc, formatIdcc } from "../lib";
+import { parseIdcc } from "../lib";
 import { getCourriers } from "../dataset/courrier-type";
 import { getFichesSP } from "../dataset/fiches_service_public";
 
