@@ -47,16 +47,15 @@ if (require.main === module) {
  * @param {Object} agreement
  */
 function getCCNInfo({ id, num, date_publi, mtime, title, shortTitle, url }) {
-  const idcc = `0000${num}`.slice(-4);
   return {
     id,
-    slug: slugify(`${idcc}-${title}`.substring(0, 80)),
+    slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
     date_publi,
     mtime,
     title,
     shortTitle,
     url,
-    idcc
+    num
   };
 }
 /**

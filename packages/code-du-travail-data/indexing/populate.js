@@ -61,14 +61,13 @@ async function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
     ({ id, num, title, shortTitle }) => {
-      const idcc = formatIdcc(num);
       return {
         source: SOURCES.CCN,
         id,
         idcc: parseIdcc(num),
         title,
         shortTitle,
-        slug: slugify(`${idcc}-${title}`.substring(0, 80)),
+        slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
         text: `IDCC ${num} ${title}`,
         url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
       };
