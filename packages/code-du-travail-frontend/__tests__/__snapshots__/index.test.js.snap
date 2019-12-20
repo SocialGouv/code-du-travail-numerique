@@ -47,7 +47,7 @@ exports[`<Home /> should render 1`] = `
 
 .c30 {
   margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 
@@ -858,7 +858,7 @@ exports[`<Home /> should render 1`] = `
 
 @media (max-width:600px) {
   .c30 {
-    margin-bottom: 1rem;
+    margin-bottom: 2.4rem;
   }
 }
 

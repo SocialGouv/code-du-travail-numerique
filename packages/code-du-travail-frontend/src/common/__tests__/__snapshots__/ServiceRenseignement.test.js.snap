@@ -10,48 +10,51 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   line-height: 1.25;
 }
 
-.c2 {
+.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 1.6rem 0 3.2rem;
+  padding-right: 1rem;
   font-weight: bold;
-  text-align: center;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #7994d4;
+  border: 1px solid #9298af;
+}
+
+.c2 {
+  padding: 0 1rem;
+  color: #9298af;
+  font-size: 2.8rem;
+  text-align: center;
 }
 
 .c3 {
-  padding: 0 1.6rem;
-  color: #3e486e;
-  font-size: 2rem;
-}
-
-.c4 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 1.6rem 0 2rem;
+  margin: -3px 0 -3px 0;
+  padding: 0 1rem 0 2rem;
   color: #fff;
   font-size: 1.6rem;
   font-style: normal;
-  background-color: #7994d4;
+  background-color: #9298af;
 }
 
-.c4::before {
+.c3:before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -66,12 +69,25 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   content: "";
 }
 
-.c5 {
+.c3:after {
+  position: absolute;
+  top: 0;
+  left: 0.9rem;
+  display: none;
+  width: 0;
+  height: 0;
+  border-color: #fff transparent transparent transparent;
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  content: "";
+}
+
+.c4 {
   width: 100%;
   margin-top: 1rem;
 }
 
-.c6 {
+.c5 {
   display: block;
   margin-top: 2rem;
 }
@@ -82,29 +98,36 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   }
 }
 
-@media (max-width:980px) {
+@media (max-width:600px) {
   .c1 {
-    text-align: center;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding-right: 0;
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    padding: 1rem;
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0;
+    padding: 0 1rem 0 1.6rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
   }
 }
 
-@media (max-width:980px) {
-  .c4::before {
+@media (max-width:600px) {
+  .c3:before {
     display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c3:after {
+    display: block;
   }
 }
 
@@ -114,29 +137,28 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   >
     Contact téléphonique
   </h4>
-  <div
+  <a
     class="c1"
+    href="tel:+0033806000126"
   >
-    <a
+    <strong
       class="c2"
-      href="tel:+0033806000126"
     >
-      <strong
-        class="c3"
-      >
-        0 806 000 126
-      </strong>
-      <em
-        class="c4"
-      >
-        Service gratuit + prix appel
-      </em>
-    </a>
-  </div>
+      0 806 000 126
+    </strong>
+    <em
+      class="c3"
+    >
+      Service gratuit 
+      <span>
+        + prix appel
+      </span>
+    </em>
+  </a>
   <h4
     class="c0"
   >
-    Trouver les coordonnées du service de renseignement de mon département
+    Coordonnées du service de votre département
   </h4>
   <p>
     <label
@@ -145,9 +167,10 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       Saisissez votre numéro de département :
     </label>
     <input
-      class="c5"
+      class="c4"
       id="id_1"
       maxlength="3"
+      placeholder="ex. 31, 35, 75"
       type="text"
     />
   </p>
@@ -157,13 +180,11 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       rel="noopener noreferrer"
       target="_blank"
     >
-      <mark>
-        link.url
-      </mark>
+      link.url
     </a>
   </p>
   <small
-    class="c6"
+    class="c5"
   >
     Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
     <ul>

@@ -9,7 +9,7 @@ function DepartmentComponent(data) {
   return (
     <p>
       <a target="_blank" rel="noopener noreferrer" href={data.url}>
-        <mark>{data.url}</mark>
+        {data.url}
       </a>
     </p>
   );
@@ -38,28 +38,27 @@ class ServiceRenseignement extends React.Component {
     return (
       <>
         <Heading as="h4">Contact téléphonique</Heading>
-        <NumberInsertWrapper>
-          <NumberInsert href="tel:+0033806000126">
-            <Number>0 806 000 126</Number>
-            <Pricing>Service gratuit + prix appel</Pricing>
-          </NumberInsert>
-        </NumberInsertWrapper>
+        <NumberInsert href="tel:+0033806000126">
+          <Number>0 806 000 126</Number>
+          <Pricing>
+            Service gratuit <span>+ prix appel</span>
+          </Pricing>
+        </NumberInsert>
 
-        <Heading as="h4">
-          Trouver les coordonnées du service de renseignement de mon département
-        </Heading>
+        <Heading as="h4">Coordonnées du service de votre département</Heading>
         <p>
           <UID name={id => `id_${id}`}>
             {id => (
               <>
                 <label htmlFor={id}>
-                  Saisissez votre numéro de département :
+                  Saisissez votre numéro de département&nbsp;:
                 </label>
                 <Input
                   id={id}
                   ref={this.inputRef}
                   type="text"
                   maxLength="3"
+                  placeholder="ex. 31, 35, 75"
                   onChange={this.onDepartmentInput}
                 />
               </>
@@ -88,59 +87,79 @@ class ServiceRenseignement extends React.Component {
 
 export { ServiceRenseignement };
 
-const { breakpoints, colors, fonts, spacings } = theme;
-
-const NumberInsertWrapper = styled.div`
-  @media (max-width: ${breakpoints.tablet}) {
-    text-align: center;
-  }
-`;
+const { box, breakpoints, fonts, spacings } = theme;
 
 const NumberInsert = styled.a`
   display: inline-flex;
   margin: ${spacings.base} 0 ${spacings.large};
+  padding-right: ${spacings.small};
   font-weight: bold;
-  text-align: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.3;
   text-decoration: none;
-  background-color: ${colors.white};
-  border: 1px solid ${colors.secondary};
-  @media (max-width: ${breakpoints.tablet}) {
+  background-color: ${({ theme }) => theme.white};
+  border: ${({ theme }) => box.border(theme.placeholder)};
+  @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
+    padding-right: 0;
   }
 `;
 
 const Number = styled.strong`
-  padding: 0 ${spacings.base};
-  color: ${colors.paragraph};
-  font-size: 2rem;
+  padding: 0 ${spacings.small};
+  color: ${({ theme }) => theme.placeholder};
+  font-size: ${fonts.sizes.headings.medium};
+  text-align: center;
 `;
 
 const Pricing = styled.em`
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 0 ${spacings.base} 0 ${spacings.medium};
-  color: ${colors.white};
+  margin: -3px 0 -3px 0;
+  padding: 0 ${spacings.small} 0 ${spacings.medium};
+  color: ${({ theme }) => theme.white};
   font-size: ${fonts.sizes.default};
   font-style: normal;
-  background-color: ${colors.secondary};
-  @media (max-width: ${breakpoints.tablet}) {
-    padding: ${spacings.small};
+  background-color: ${({ theme }) => theme.placeholder};
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: row;
+    margin: 0;
+    padding: 0 ${spacings.small} 0 ${spacings.base};
+    font-size: ${fonts.sizes.tiny};
+    line-height: 1.8;
   }
-  &::before {
+  &:before {
     position: absolute;
     top: 50%;
     left: 0;
     width: 0;
     height: 0;
-    border-color: transparent transparent transparent ${colors.white};
+    border-color: transparent transparent transparent
+      ${({ theme }) => theme.white};
     border-style: solid;
     border-width: 10px 0 10px 10px;
     transform: translateY(-50%);
     content: "";
-    @media (max-width: ${breakpoints.tablet}) {
+    @media (max-width: ${breakpoints.mobile}) {
       display: none;
+    }
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0.9rem;
+    display: none;
+    width: 0;
+    height: 0;
+    border-color: ${({ theme }) => theme.white} transparent transparent
+      transparent;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    content: "";
+    @media (max-width: ${breakpoints.mobile}) {
+      display: block;
     }
   }
 `;
