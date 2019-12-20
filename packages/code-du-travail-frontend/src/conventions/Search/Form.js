@@ -181,7 +181,7 @@ const Search = ({
   );
 };
 
-const { colors, fonts, spacings } = theme;
+const { colors, fonts, spacings, breakpoints } = theme;
 
 const FixedTable = styled(Table)`
   width: 100%;
@@ -216,19 +216,30 @@ const ConventionsContainer = styled.div`
 
 const Flex = styled.div`
   display: flex;
-  align-items: baseline;
+  flex-direction: column-reverse;
+  align-items: flex-end;
   justify-content: space-between;
+  @media screen and (min-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    align-items: baseline;
+  }
 `;
 
 const ResultLabel = styled.div`
   flex: 1 1 calc(100% - 200px);
+  align-self: flex-start;
+  margin-top: ${spacings.small};
   margin-right: ${spacings.small};
   overflow: hidden;
   color: ${colors.paragraph};
   font-weight: bold;
   font-size: ${fonts.sizes.headings.small};
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  @media screen and (min-width: ${breakpoints.tablet}) {
+    align-self: baseline;
+    margin-top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 `;
 
 export default Search;
