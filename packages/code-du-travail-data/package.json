@@ -28,7 +28,7 @@
   "dependencies": {
     "@cdt/sources": "^3.9.0",
     "@elastic/elasticsearch": "^7.5.0",
-    "@socialgouv/fiches-vdd": "^1.0.60",
+    "@socialgouv/fiches-vdd": "^1.0.63",
     "@socialgouv/kali-data": "^1.2.98",
     "@socialgouv/legi-data": "^1.1.10",
     "esm": "^3.2.25",
