@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import styled from "styled-components";
 import getConfig from "next/config";
 import {
   Container,
-  Grid,
-  GridCell,
   PageTitle,
   Section,
-  Tile
+  theme,
+  Toast
 } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
 
@@ -51,22 +51,21 @@ class Theme extends React.Component {
         <Section>
           <Container>
             <PageTitle>{theme.title}</PageTitle>
-            {theme.children && theme.children.length > 0 && (
-              <Grid>
-                {theme.children.map(({ slug, title }) => (
-                  <GridCell key={slug}>
-                    <Link
-                      key={slug}
-                      href="/themes/[slug]"
-                      as={`/themes/${slug}`}
-                      passHref
-                    >
-                      <Tile title={title} />
-                    </Link>
-                  </GridCell>
+            <StyledContainer narrow noPadding>
+              {theme.children &&
+                theme.children.map(({ slug, title }) => (
+                  <Link
+                    key={slug}
+                    href="/themes/[slug]"
+                    as={`/themes/${slug}`}
+                    passHref
+                  >
+                    <StyledLink>
+                      <StyledToast shadow>{title}</StyledToast>
+                    </StyledLink>
+                  </Link>
                 ))}
-              </Grid>
-            )}
+            </StyledContainer>
           </Container>
         </Section>
         {theme.refs && theme.refs.length > 0 && (
@@ -82,3 +81,32 @@ class Theme extends React.Component {
 }
 
 export default Theme;
+
+const { box, breakpoints, spacings } = theme;
+
+const StyledContainer = styled(Container)`
+  text-align: center;
+`;
+
+const StyledLink = styled.a`
+  display: inline-block;
+  margin-bottom: ${spacings.base};
+  text-decoration: none;
+  & + & {
+    margin-left: ${spacings.base};
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+    & + & {
+      margin-left: 0;
+    }
+  }
+`;
+
+const StyledToast = styled(Toast)`
+  color: ${({ theme }) => theme.altText};
+  border: ${({ theme }) => box.border(theme.border)};
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+  }
+`;

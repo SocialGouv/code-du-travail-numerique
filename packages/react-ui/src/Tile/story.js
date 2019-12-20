@@ -36,6 +36,9 @@ export const base = () => (
       <Tile href="#" icon={Salary} title="Tile with an icon" />
     </Section>
     <Section>
+      <Tile href="#" striped title="Tile with an stripe" />
+    </Section>
+    <Section>
       <Tile href="#" icon={Holidays} custom title="Tile custom with an icon">
         And some basic content only to see how it behaves
       </Tile>

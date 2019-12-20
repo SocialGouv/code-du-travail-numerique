@@ -6,6 +6,7 @@ import {
   CardList,
   Container,
   Section,
+  Stripe,
   Tile,
   Wrapper
 } from "@socialgouv/react-ui";
@@ -32,8 +33,8 @@ export const Themes = ({ items, query }) => (
             >
               <Tile
                 onClick={() => reportSelectionToMatomo(source, slug, url, algo)}
-                wide
                 title={title}
+                striped
               />
             </Link>
           ))}

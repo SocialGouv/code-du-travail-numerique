@@ -108,7 +108,6 @@ const AnswersConventions = ({ answers }) => {
             </React.Fragment>
           )}
           <br />
-          <br />
           <Button variant="primary" onClick={() => setCcInfo(null)}>
             Changer de convention collective
           </Button>
