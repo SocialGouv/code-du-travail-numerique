@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.9.0...v3.10.0) (2019-12-20)
+
+
+### Bug Fixes
+
+* **frontend:** don't break url with tooltip ([#2026](https://github.com/SocialGouv/code-du-travail-numerique/issues/2026)) ([01cbea8](https://github.com/SocialGouv/code-du-travail-numerique/commit/01cbea84970c742ec9c4bcb19a6b84feb354d8f6))
+* **frontend:** fix related item wrong object ([#2018](https://github.com/SocialGouv/code-du-travail-numerique/issues/2018)) ([21f1e5e](https://github.com/SocialGouv/code-du-travail-numerique/commit/21f1e5e8cfdd0570d77860c81702ab91b599605e))
+* **glossary:** remove unsupported lookbehind ([#2017](https://github.com/SocialGouv/code-du-travail-numerique/issues/2017)) ([5bb5e2d](https://github.com/SocialGouv/code-du-travail-numerique/commit/5bb5e2d9317c58df89a0d4dd351de2698bb1c689))
+
+
+### Features
+
+* **ccn:** update ccn definition ([#2009](https://github.com/SocialGouv/code-du-travail-numerique/issues/2009)) ([136e554](https://github.com/SocialGouv/code-du-travail-numerique/commit/136e55427d0ad9c2ce2bc6d05185c65929cc9472)), closes [#1984](https://github.com/SocialGouv/code-du-travail-numerique/issues/1984)
+* **external:** add external tools ([#1999](https://github.com/SocialGouv/code-du-travail-numerique/issues/1999)) ([7ed9007](https://github.com/SocialGouv/code-du-travail-numerique/commit/7ed9007dca02dbf986fdbd64c166279c7fece9b4)), closes [#1833](https://github.com/SocialGouv/code-du-travail-numerique/issues/1833)
+* **frontend:** add color switch ([#2003](https://github.com/SocialGouv/code-du-travail-numerique/issues/2003)) ([66ce399](https://github.com/SocialGouv/code-du-travail-numerique/commit/66ce39940c4a03072b5b37317b5ffbff1535f6b9))
+* **frontend:** update droit-du-travail page ([#2008](https://github.com/SocialGouv/code-du-travail-numerique/issues/2008)) ([9e6ae2c](https://github.com/SocialGouv/code-du-travail-numerique/commit/9e6ae2c7c306110c92e6f88340336f0c8441f8b2)), closes [#1914](https://github.com/SocialGouv/code-du-travail-numerique/issues/1914)
+* **ui:** update fields ([#2015](https://github.com/SocialGouv/code-du-travail-numerique/issues/2015)) ([04109e0](https://github.com/SocialGouv/code-du-travail-numerique/commit/04109e0d6be98809ce4ec16d3c27f3a4e0127304))
+
+
+### Reverts
+
+* Revert "Unrevert "feat(ui): update fields" (#2023)" (#2025) ([78980ee](https://github.com/SocialGouv/code-du-travail-numerique/commit/78980ee0b4c00a62fb904051dc7fdb98bff96468)), closes [#2023](https://github.com/SocialGouv/code-du-travail-numerique/issues/2023) [#2025](https://github.com/SocialGouv/code-du-travail-numerique/issues/2025)
+* Revert "feat(ui): update fields (#2015)" (#2022) ([1e20b12](https://github.com/SocialGouv/code-du-travail-numerique/commit/1e20b1259b122f12bc8d46190b6ee30098805339)), closes [#2015](https://github.com/SocialGouv/code-du-travail-numerique/issues/2015) [#2022](https://github.com/SocialGouv/code-du-travail-numerique/issues/2022)
+
+
+
+
+
 # 3.9.0 (2019-12-18)
 
 

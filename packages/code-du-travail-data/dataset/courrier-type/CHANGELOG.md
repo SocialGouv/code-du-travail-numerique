@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.9.0...v3.10.0) (2019-12-20)
+
+
+### Features
+
+* index fiches SP directly ([#1993](https://github.com/SocialGouv/code-du-travail-numerique/issues/1993)) ([fdcf28f](https://github.com/SocialGouv/code-du-travail-numerique/commit/fdcf28f36e14d2a25d28bac9eb4c7a5066d83be1))
+
+
+
+
+
 # 3.9.0 (2019-12-18)
 
 

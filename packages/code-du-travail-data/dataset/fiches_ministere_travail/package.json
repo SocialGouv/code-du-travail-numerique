@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data...fiches_ministere_travail",
-  "version": "3.9.0",
+  "version": "3.10.0",
   "private": true,
   "license": "MIT",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique",
@@ -8,8 +8,8 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "@cdt/data": "^3.9.0",
-    "@cdt/sources": "^3.9.0",
+    "@cdt/data": "^3.10.0",
+    "@cdt/sources": "^3.10.0",
     "google-spreadsheets": "^2.0.0",
     "jsdom": "^15.2.1",
     "ora": "^4.0.3",

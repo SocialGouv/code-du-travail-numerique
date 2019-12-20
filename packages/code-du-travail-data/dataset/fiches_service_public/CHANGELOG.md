@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.9.0...v3.10.0) (2019-12-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.62 ([#2013](https://github.com/SocialGouv/code-du-travail-numerique/issues/2013)) ([c4633e5](https://github.com/SocialGouv/code-du-travail-numerique/commit/c4633e580b68953530f26338e17d7186e8c16568))
+* **deps:** update dependency @socialgouv/fiches-vdd to ^1.0.63 ([#2028](https://github.com/SocialGouv/code-du-travail-numerique/issues/2028)) ([18e9dde](https://github.com/SocialGouv/code-du-travail-numerique/commit/18e9dde21d12b005210cb9f24634123618627cef))
+
+
+### Features
+
+* index fiches SP directly ([#1993](https://github.com/SocialGouv/code-du-travail-numerique/issues/1993)) ([fdcf28f](https://github.com/SocialGouv/code-du-travail-numerique/commit/fdcf28f36e14d2a25d28bac9eb4c7a5066d83be1))
+
+
+
+
+
 # 3.9.0 (2019-12-18)
 
 

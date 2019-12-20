@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.9.0...v3.10.0) (2019-12-20)
+
+
+### Features
+
+* **frontend:** add color switch ([#2003](https://github.com/SocialGouv/code-du-travail-numerique/issues/2003)) ([66ce399](https://github.com/SocialGouv/code-du-travail-numerique/commit/66ce39940c4a03072b5b37317b5ffbff1535f6b9))
+
+
+
+
+
 # 3.9.0 (2019-12-18)
 
 
