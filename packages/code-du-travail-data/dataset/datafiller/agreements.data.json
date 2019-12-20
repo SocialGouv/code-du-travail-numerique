@@ -9,10 +9,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000038661444",
     "num": 3230,
     "nbTextes": 0,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 51
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -26,10 +22,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000030185307",
     "num": 3205,
     "nbTextes": 12,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 67
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -43,10 +35,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
     "num": 1596,
     "nbTextes": 36,
-    "nbArticles": {
-      "vigueurEtendu": 105,
-      "vigueurNonEtendu": 115
-    },
     "articlesByTheme": [
       {
         "bloc": "1",
@@ -508,10 +496,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635220",
     "num": 1597,
     "nbTextes": 20,
-    "nbArticles": {
-      "vigueurEtendu": 103,
-      "vigueurNonEtendu": 112
-    },
     "articlesByTheme": [
       {
         "bloc": "6",
@@ -985,10 +969,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635186",
     "num": 207,
     "nbTextes": 31,
-    "nbArticles": {
-      "vigueurEtendu": 38,
-      "vigueurNonEtendu": 78
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1002,10 +982,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000037974872",
     "num": 3228,
     "nbTextes": 2,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 45
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1019,10 +995,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000036872099",
     "num": 3220,
     "nbTextes": 4,
-    "nbArticles": {
-      "vigueurEtendu": 143,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1036,10 +1008,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000037263473",
     "num": 3227,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 137
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1053,10 +1021,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635255",
     "num": 1618,
     "nbTextes": 15,
-    "nbArticles": {
-      "vigueurEtendu": 51,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1070,10 +1034,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000036605374",
     "num": 3224,
     "nbTextes": 0,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 73
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1087,10 +1047,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000038263817",
     "num": 7023,
     "nbTextes": 1,
-    "nbArticles": {
-      "vigueurEtendu": 74,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1104,10 +1060,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000036572933",
     "num": 3225,
     "nbTextes": 0,
-    "nbArticles": {
-      "vigueurEtendu": 50,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1121,10 +1073,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000033373201",
     "num": 3217,
     "nbTextes": 4,
-    "nbArticles": {
-      "vigueurEtendu": 203,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1138,10 +1086,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000035385554",
     "num": 3221,
     "nbTextes": 4,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 18
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1155,10 +1099,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000035326397",
     "num": 3219,
     "nbTextes": 5,
-    "nbArticles": {
-      "vigueurEtendu": 45,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1172,10 +1112,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635269",
     "num": 7010,
     "nbTextes": 0,
-    "nbArticles": {
-      "vigueurEtendu": 106,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1189,10 +1125,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000034335661",
     "num": 3216,
     "nbTextes": 8,
-    "nbArticles": {
-      "vigueurEtendu": 330,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1206,10 +1138,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635524",
     "num": 1930,
     "nbTextes": 16,
-    "nbArticles": {
-      "vigueurEtendu": 103,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1223,10 +1151,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635520",
     "num": 7001,
     "nbTextes": 37,
-    "nbArticles": {
-      "vigueurEtendu": 77,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1240,10 +1164,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000032494008",
     "num": 3213,
     "nbTextes": 5,
-    "nbArticles": {
-      "vigueurEtendu": 88,
-      "vigueurNonEtendu": 5
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1257,10 +1177,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000032437525",
     "num": 3212,
     "nbTextes": 2,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 105
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1274,10 +1190,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635629",
     "num": 733,
     "nbTextes": 38,
-    "nbArticles": {
-      "vigueurEtendu": 52,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1291,10 +1203,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635851",
     "num": 635,
     "nbTextes": 11,
-    "nbArticles": {
-      "vigueurEtendu": 42,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1308,10 +1216,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000031197865",
     "num": 3210,
     "nbTextes": 21,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 128
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1325,10 +1229,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027343232",
     "num": 3123,
     "nbTextes": 1,
-    "nbArticles": {
-      "vigueurEtendu": 102,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1342,10 +1242,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635092",
     "num": 2205,
     "nbTextes": 66,
-    "nbArticles": {
-      "vigueurEtendu": 40,
-      "vigueurNonEtendu": 49
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1359,10 +1255,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000035564539",
     "num": 3223,
     "nbTextes": 5,
-    "nbArticles": {
-      "vigueurEtendu": 79,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1376,10 +1268,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027084096",
     "num": 3127,
     "nbTextes": 15,
-    "nbArticles": {
-      "vigueurEtendu": 68,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -1692,10 +1580,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635399",
     "num": 1710,
     "nbTextes": 18,
-    "nbArticles": {
-      "vigueurEtendu": 109,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1709,10 +1593,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000030264028",
     "num": 172,
     "nbTextes": 6,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 112
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1726,10 +1606,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635844",
     "num": 959,
     "nbTextes": 55,
-    "nbArticles": {
-      "vigueurEtendu": 46,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1743,10 +1619,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027334050",
     "num": 3144,
     "nbTextes": 5,
-    "nbArticles": {
-      "vigueurEtendu": 110,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1760,10 +1632,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005636018",
     "num": 7002,
     "nbTextes": 49,
-    "nbArticles": {
-      "vigueurEtendu": 79,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -1777,10 +1645,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635653",
     "num": 1404,
     "nbTextes": 76,
-    "nbArticles": {
-      "vigueurEtendu": 183,
-      "vigueurNonEtendu": 8
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -2231,10 +2095,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000028059838",
     "num": 3097,
     "nbTextes": 12,
-    "nbArticles": {
-      "vigueurEtendu": 190,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2248,10 +2108,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000028157262",
     "num": 3090,
     "nbTextes": 25,
-    "nbArticles": {
-      "vigueurEtendu": 106,
-      "vigueurNonEtendu": 20
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2265,10 +2121,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027343053",
     "num": 3107,
     "nbTextes": 1,
-    "nbArticles": {
-      "vigueurEtendu": 94,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2282,10 +2134,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000029100418",
     "num": 3203,
     "nbTextes": 9,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 55
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2299,10 +2147,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027939865",
     "num": 3160,
     "nbTextes": 2,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 218
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2316,10 +2160,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635438",
     "num": 493,
     "nbTextes": 58,
-    "nbArticles": {
-      "vigueurEtendu": 60,
-      "vigueurNonEtendu": 179
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2333,10 +2173,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027961162",
     "num": 3168,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 63,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2350,10 +2186,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635223",
     "num": 897,
     "nbTextes": 41,
-    "nbArticles": {
-      "vigueurEtendu": 52,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2367,10 +2199,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635906",
     "num": 1182,
     "nbTextes": 17,
-    "nbArticles": {
-      "vigueurEtendu": 59,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2384,10 +2212,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027180935",
     "num": 3013,
     "nbTextes": 22,
-    "nbArticles": {
-      "vigueurEtendu": 58,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2401,10 +2225,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027172335",
     "num": 3043,
     "nbTextes": 31,
-    "nbArticles": {
-      "vigueurEtendu": 90,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [
       {
         "bloc": "16",
@@ -2965,10 +2785,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635504",
     "num": 7003,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 83,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2982,10 +2798,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027199162",
     "num": 3105,
     "nbTextes": 20,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 129
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -2999,10 +2811,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635870",
     "num": 1517,
     "nbTextes": 46,
-    "nbArticles": {
-      "vigueurEtendu": 103,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -3340,10 +3148,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019074546",
     "num": 2603,
     "nbTextes": 20,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 55
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3357,10 +3161,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027040696",
     "num": 3109,
     "nbTextes": 9,
-    "nbArticles": {
-      "vigueurEtendu": 11,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3374,10 +3174,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000026950865",
     "num": 405,
     "nbTextes": 14,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 185
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3391,10 +3187,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005636001",
     "num": 7017,
     "nbTextes": 17,
-    "nbArticles": {
-      "vigueurEtendu": 77,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3408,10 +3200,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000025844703",
     "num": 2972,
     "nbTextes": 10,
-    "nbArticles": {
-      "vigueurEtendu": 26,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3425,10 +3213,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635752",
     "num": 7006,
     "nbTextes": 28,
-    "nbArticles": {
-      "vigueurEtendu": 53,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3442,10 +3226,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027065067",
     "num": 3032,
     "nbTextes": 33,
-    "nbArticles": {
-      "vigueurEtendu": 15,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3459,10 +3239,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000029142476",
     "num": 3017,
     "nbTextes": 74,
-    "nbArticles": {
-      "vigueurEtendu": 60,
-      "vigueurNonEtendu": 18
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3476,10 +3252,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635612",
     "num": 43,
     "nbTextes": 82,
-    "nbArticles": {
-      "vigueurEtendu": 36,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3493,10 +3265,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000027181035",
     "num": 3016,
     "nbTextes": 33,
-    "nbArticles": {
-      "vigueurEtendu": 136,
-      "vigueurNonEtendu": 9
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3510,10 +3278,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635181",
     "num": 1512,
     "nbTextes": 34,
-    "nbArticles": {
-      "vigueurEtendu": 39,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -3527,10 +3291,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000025393730",
     "num": 1635,
     "nbTextes": 1,
-    "nbArticles": {
-      "vigueurEtendu": 85,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -4037,10 +3797,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635640",
     "num": 500,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -4054,10 +3810,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019074623",
     "num": 2658,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 101,
-      "vigueurNonEtendu": 6
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -4071,10 +3823,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635413",
     "num": 1527,
     "nbTextes": 34,
-    "nbArticles": {
-      "vigueurEtendu": 43,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -4533,10 +4281,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635411",
     "num": 1513,
     "nbTextes": 22,
-    "nbArticles": {
-      "vigueurEtendu": 208,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -4550,10 +4294,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000025496787",
     "num": 2931,
     "nbTextes": 14,
-    "nbArticles": {
-      "vigueurEtendu": 132,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -4567,10 +4307,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000025805800",
     "num": 2941,
     "nbTextes": 30,
-    "nbArticles": {
-      "vigueurEtendu": 324,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [
       {
         "bloc": "16",
@@ -5601,10 +5337,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000025278390",
     "num": 2847,
     "nbTextes": 37,
-    "nbArticles": {
-      "vigueurEtendu": 52,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -5618,10 +5350,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019901252",
     "num": 2683,
     "nbTextes": 8,
-    "nbArticles": {
-      "vigueurEtendu": 29,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -5635,10 +5363,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635953",
     "num": 1043,
     "nbTextes": 74,
-    "nbArticles": {
-      "vigueurEtendu": 34,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -5932,10 +5656,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635325",
     "num": 7018,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 139,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -5949,10 +5669,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000021636922",
     "num": 2785,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 81,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -5966,10 +5682,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023974594",
     "num": 2796,
     "nbTextes": 40,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 48
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -5983,10 +5695,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019765628",
     "num": 2754,
     "nbTextes": 20,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 44
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6000,10 +5708,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023974024",
     "num": 2770,
     "nbTextes": 19,
-    "nbArticles": {
-      "vigueurEtendu": 23,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6017,10 +5721,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019382978",
     "num": 7021,
     "nbTextes": 5,
-    "nbArticles": {
-      "vigueurEtendu": 106,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6034,10 +5734,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023822189",
     "num": 2798,
     "nbTextes": 47,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 86
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6051,10 +5747,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023973762",
     "num": 2727,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 77
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6068,10 +5760,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019906603",
     "num": 2717,
     "nbTextes": 22,
-    "nbArticles": {
-      "vigueurEtendu": 53,
-      "vigueurNonEtendu": 13
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6085,10 +5773,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000024794551",
     "num": 2707,
     "nbTextes": 1,
-    "nbArticles": {
-      "vigueurEtendu": 100,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6102,10 +5786,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000025196564",
     "num": 2728,
     "nbTextes": 24,
-    "nbArticles": {
-      "vigueurEtendu": 275,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6119,10 +5799,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635592",
     "num": 731,
     "nbTextes": 17,
-    "nbArticles": {
-      "vigueurEtendu": 34,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6136,10 +5812,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023973390",
     "num": 2701,
     "nbTextes": 10,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 98
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6153,10 +5825,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023973576",
     "num": 2702,
     "nbTextes": 9,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 98
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6170,10 +5838,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019647748",
     "num": 2706,
     "nbTextes": 30,
-    "nbArticles": {
-      "vigueurEtendu": 66,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6187,10 +5851,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023973173",
     "num": 2704,
     "nbTextes": 11,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 99
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6204,10 +5864,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019647647",
     "num": 2697,
     "nbTextes": 25,
-    "nbArticles": {
-      "vigueurEtendu": 38,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6221,10 +5877,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019593660",
     "num": 2691,
     "nbTextes": 46,
-    "nbArticles": {
-      "vigueurEtendu": 82,
-      "vigueurNonEtendu": 9
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6238,10 +5890,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023974782",
     "num": 2797,
     "nbTextes": 37,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 49
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6255,10 +5903,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018773893",
     "num": 2609,
     "nbTextes": 16,
-    "nbArticles": {
-      "vigueurEtendu": 99,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -6533,10 +6177,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000020089210",
     "num": 2666,
     "nbTextes": 17,
-    "nbArticles": {
-      "vigueurEtendu": 79,
-      "vigueurNonEtendu": 5
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6550,10 +6190,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018563755",
     "num": 2596,
     "nbTextes": 48,
-    "nbArticles": {
-      "vigueurEtendu": 132,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -6834,10 +6470,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635375",
     "num": 953,
     "nbTextes": 72,
-    "nbArticles": {
-      "vigueurEtendu": 150,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6851,10 +6483,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018828041",
     "num": 2642,
     "nbTextes": 13,
-    "nbArticles": {
-      "vigueurEtendu": 59,
-      "vigueurNonEtendu": 6
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -6868,10 +6496,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018926209",
     "num": 2614,
     "nbTextes": 13,
-    "nbArticles": {
-      "vigueurEtendu": 111,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -7253,10 +6877,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635593",
     "num": 992,
     "nbTextes": 68,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 5
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -7270,10 +6890,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018977636",
     "num": 2583,
     "nbTextes": 11,
-    "nbArticles": {
-      "vigueurEtendu": 64,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -7287,10 +6903,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635449",
     "num": 112,
     "nbTextes": 32,
-    "nbArticles": {
-      "vigueurEtendu": 118,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -7304,10 +6916,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635824",
     "num": 2564,
     "nbTextes": 42,
-    "nbArticles": {
-      "vigueurEtendu": 93,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -7321,10 +6929,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635410",
     "num": 1504,
     "nbTextes": 79,
-    "nbArticles": {
-      "vigueurEtendu": 45,
-      "vigueurNonEtendu": 62
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -7338,10 +6942,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019938657",
     "num": 2542,
     "nbTextes": 15,
-    "nbArticles": {
-      "vigueurEtendu": 63,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -7787,10 +7387,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635804",
     "num": 2543,
     "nbTextes": 45,
-    "nbArticles": {
-      "vigueurEtendu": 97,
-      "vigueurNonEtendu": 7
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -7804,10 +7400,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635376",
     "num": 2526,
     "nbTextes": 19,
-    "nbArticles": {
-      "vigueurEtendu": 13,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -7821,10 +7413,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635109",
     "num": 2528,
     "nbTextes": 17,
-    "nbArticles": {
-      "vigueurEtendu": 42,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -7838,10 +7426,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652",
     "num": 2511,
     "nbTextes": 133,
-    "nbArticles": {
-      "vigueurEtendu": 68,
-      "vigueurNonEtendu": 24
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -8250,10 +7834,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635594",
     "num": 1483,
     "nbTextes": 41,
-    "nbArticles": {
-      "vigueurEtendu": 62,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -8660,10 +8240,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018563634",
     "num": 2494,
     "nbTextes": 11,
-    "nbArticles": {
-      "vigueurEtendu": 79,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -8677,10 +8253,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017941839",
     "num": 2420,
     "nbTextes": 8,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 52
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -8974,10 +8546,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635840",
     "num": 1396,
     "nbTextes": 54,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -8991,10 +8559,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635585",
     "num": 2411,
     "nbTextes": 12,
-    "nbArticles": {
-      "vigueurEtendu": 38,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9008,10 +8572,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635129",
     "num": 2412,
     "nbTextes": 10,
-    "nbArticles": {
-      "vigueurEtendu": 68,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9025,10 +8585,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635807",
     "num": 2395,
     "nbTextes": 31,
-    "nbArticles": {
-      "vigueurEtendu": 20,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -9292,10 +8848,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635138",
     "num": 2397,
     "nbTextes": 22,
-    "nbArticles": {
-      "vigueurEtendu": 35,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9309,10 +8861,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635128",
     "num": 2372,
     "nbTextes": 33,
-    "nbArticles": {
-      "vigueurEtendu": 29,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9326,10 +8874,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635351",
     "num": 2230,
     "nbTextes": 4,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9343,10 +8887,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000022206280",
     "num": 2480,
     "nbTextes": 11,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 24
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9360,10 +8900,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635560",
     "num": 2336,
     "nbTextes": 62,
-    "nbArticles": {
-      "vigueurEtendu": 116,
-      "vigueurNonEtendu": 7
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9377,10 +8913,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635361",
     "num": 2335,
     "nbTextes": 26,
-    "nbArticles": {
-      "vigueurEtendu": 61,
-      "vigueurNonEtendu": 6
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9394,10 +8926,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635365",
     "num": 2332,
     "nbTextes": 59,
-    "nbArticles": {
-      "vigueurEtendu": 174,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9411,10 +8939,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635350",
     "num": 7008,
     "nbTextes": 20,
-    "nbArticles": {
-      "vigueurEtendu": 107,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9428,10 +8952,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635133",
     "num": 2272,
     "nbTextes": 30,
-    "nbArticles": {
-      "vigueurEtendu": 42,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -9445,10 +8965,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635813",
     "num": 2264,
     "nbTextes": 77,
-    "nbArticles": {
-      "vigueurEtendu": 104,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [
       {
         "bloc": "16",
@@ -9996,10 +9512,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635618",
     "num": 2257,
     "nbTextes": 35,
-    "nbArticles": {
-      "vigueurEtendu": 70,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -10013,10 +9525,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635927",
     "num": 1659,
     "nbTextes": 24,
-    "nbArticles": {
-      "vigueurEtendu": 106,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -10030,10 +9538,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019906336",
     "num": 2622,
     "nbTextes": 18,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 114
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -10047,10 +9551,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635720",
     "num": 2247,
     "nbTextes": 34,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -10064,10 +9564,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000021284958",
     "num": 2344,
     "nbTextes": 13,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 87
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -10081,10 +9577,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000021125058",
     "num": 2219,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 39,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -10098,10 +9590,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635782",
     "num": 2149,
     "nbTextes": 51,
-    "nbArticles": {
-      "vigueurEtendu": 91,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -10115,10 +9603,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635085",
     "num": 2216,
     "nbTextes": 69,
-    "nbArticles": {
-      "vigueurEtendu": 186,
-      "vigueurNonEtendu": 62
-    },
     "articlesByTheme": [
       {
         "bloc": "7",
@@ -10984,10 +10468,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635091",
     "num": 2190,
     "nbTextes": 60,
-    "nbArticles": {
-      "vigueurEtendu": 117,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -11001,10 +10481,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635798",
     "num": 2198,
     "nbTextes": 27,
-    "nbArticles": {
-      "vigueurEtendu": 43,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -11018,10 +10494,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635557",
     "num": 2148,
     "nbTextes": 43,
-    "nbArticles": {
-      "vigueurEtendu": 60,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -11350,10 +10822,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635374",
     "num": 7019,
     "nbTextes": 18,
-    "nbArticles": {
-      "vigueurEtendu": 97,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -11367,10 +10835,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635584",
     "num": 2174,
     "nbTextes": 14,
-    "nbArticles": {
-      "vigueurEtendu": 42,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -11384,10 +10848,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635093",
     "num": 2156,
     "nbTextes": 13,
-    "nbArticles": {
-      "vigueurEtendu": 108,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -11401,10 +10861,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635331",
     "num": 2150,
     "nbTextes": 26,
-    "nbArticles": {
-      "vigueurEtendu": 13,
-      "vigueurNonEtendu": 28
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -11418,10 +10874,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635338",
     "num": 2147,
     "nbTextes": 13,
-    "nbArticles": {
-      "vigueurEtendu": 13,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -11435,10 +10887,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635792",
     "num": 2111,
     "nbTextes": 35,
-    "nbArticles": {
-      "vigueurEtendu": 26,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -11789,10 +11237,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635550",
     "num": 2098,
     "nbTextes": 110,
-    "nbArticles": {
-      "vigueurEtendu": 37,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -12306,10 +11750,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635784",
     "num": 2128,
     "nbTextes": 57,
-    "nbArticles": {
-      "vigueurEtendu": 62,
-      "vigueurNonEtendu": 15
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -12323,10 +11763,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635096",
     "num": 2121,
     "nbTextes": 31,
-    "nbArticles": {
-      "vigueurEtendu": 36,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -12340,10 +11776,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
     "num": 2120,
     "nbTextes": 69,
-    "nbArticles": {
-      "vigueurEtendu": 67,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [
       {
         "bloc": "7",
@@ -12803,10 +12235,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635545",
     "num": 2104,
     "nbTextes": 30,
-    "nbArticles": {
-      "vigueurEtendu": 61,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -12820,10 +12248,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635326",
     "num": 2060,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 49,
-      "vigueurNonEtendu": 9
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -12837,10 +12261,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635337",
     "num": 2089,
     "nbTextes": 39,
-    "nbArticles": {
-      "vigueurEtendu": 77,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -12854,10 +12274,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635097",
     "num": 2075,
     "nbTextes": 21,
-    "nbArticles": {
-      "vigueurEtendu": 116,
-      "vigueurNonEtendu": 5
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -12871,10 +12287,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635559",
     "num": 2021,
     "nbTextes": 44,
-    "nbArticles": {
-      "vigueurEtendu": 57,
-      "vigueurNonEtendu": 6
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -12888,10 +12300,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000021213367",
     "num": 2046,
     "nbTextes": 15,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 150
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -12905,10 +12313,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635528",
     "num": 1996,
     "nbTextes": 107,
-    "nbArticles": {
-      "vigueurEtendu": 31,
-      "vigueurNonEtendu": 9
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -13374,10 +12778,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005636009",
     "num": 1951,
     "nbTextes": 59,
-    "nbArticles": {
-      "vigueurEtendu": 161,
-      "vigueurNonEtendu": 13
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13391,10 +12791,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005636023",
     "num": 1982,
     "nbTextes": 39,
-    "nbArticles": {
-      "vigueurEtendu": 17,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13408,10 +12804,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635534",
     "num": 1979,
     "nbTextes": 49,
-    "nbArticles": {
-      "vigueurEtendu": 41,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [
       {
         "bloc": "16",
@@ -13812,10 +13204,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635491",
     "num": 2002,
     "nbTextes": 40,
-    "nbArticles": {
-      "vigueurEtendu": 56,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13829,10 +13217,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635758",
     "num": 1987,
     "nbTextes": 26,
-    "nbArticles": {
-      "vigueurEtendu": 77,
-      "vigueurNonEtendu": 5
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13846,10 +13230,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635578",
     "num": 1974,
     "nbTextes": 15,
-    "nbArticles": {
-      "vigueurEtendu": 55,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13863,10 +13243,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635507",
     "num": 1978,
     "nbTextes": 90,
-    "nbArticles": {
-      "vigueurEtendu": 45,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13880,10 +13256,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635751",
     "num": 1947,
     "nbTextes": 40,
-    "nbArticles": {
-      "vigueurEtendu": 66,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13897,10 +13269,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635523",
     "num": 1944,
     "nbTextes": 7,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13914,10 +13282,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635284",
     "num": 1938,
     "nbTextes": 29,
-    "nbArticles": {
-      "vigueurEtendu": 80,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13931,10 +13295,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005636003",
     "num": 1942,
     "nbTextes": 10,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13948,10 +13308,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635741",
     "num": 1922,
     "nbTextes": 19,
-    "nbArticles": {
-      "vigueurEtendu": 22,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13965,10 +13321,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635521",
     "num": 1921,
     "nbTextes": 50,
-    "nbArticles": {
-      "vigueurEtendu": 83,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13982,10 +13334,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635728",
     "num": 1909,
     "nbTextes": 29,
-    "nbArticles": {
-      "vigueurEtendu": 45,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -13999,10 +13347,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635994",
     "num": 1875,
     "nbTextes": 60,
-    "nbArticles": {
-      "vigueurEtendu": 76,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14016,10 +13360,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635259",
     "num": 1895,
     "nbTextes": 7,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 32
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14033,10 +13373,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635115",
     "num": 1880,
     "nbTextes": 62,
-    "nbArticles": {
-      "vigueurEtendu": 54,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14050,10 +13386,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005636008",
     "num": 1850,
     "nbTextes": 19,
-    "nbArticles": {
-      "vigueurEtendu": 39,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14067,10 +13399,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018902144",
     "num": 1821,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 42,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14084,10 +13412,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635938",
     "num": 1760,
     "nbTextes": 37,
-    "nbArticles": {
-      "vigueurEtendu": 48,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14101,10 +13425,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635708",
     "num": 1800,
     "nbTextes": 9,
-    "nbArticles": {
-      "vigueurEtendu": 31,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14118,10 +13438,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635497",
     "num": 1801,
     "nbTextes": 42,
-    "nbArticles": {
-      "vigueurEtendu": 80,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14135,10 +13451,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635453",
     "num": 1790,
     "nbTextes": 59,
-    "nbArticles": {
-      "vigueurEtendu": 60,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14152,10 +13464,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635247",
     "num": 1761,
     "nbTextes": 24,
-    "nbArticles": {
-      "vigueurEtendu": 49,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14169,10 +13477,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635698",
     "num": 1794,
     "nbTextes": 49,
-    "nbArticles": {
-      "vigueurEtendu": 55,
-      "vigueurNonEtendu": 5
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14186,10 +13490,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635691",
     "num": 1747,
     "nbTextes": 18,
-    "nbArticles": {
-      "vigueurEtendu": 152,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14203,10 +13503,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635917",
     "num": 1671,
     "nbTextes": 41,
-    "nbArticles": {
-      "vigueurEtendu": 51,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14220,10 +13516,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635252",
     "num": 1631,
     "nbTextes": 55,
-    "nbArticles": {
-      "vigueurEtendu": 11,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14237,10 +13529,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635467",
     "num": 1702,
     "nbTextes": 19,
-    "nbArticles": {
-      "vigueurEtendu": 110,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [
       {
         "bloc": "6",
@@ -14793,10 +14081,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635164",
     "num": 1686,
     "nbTextes": 29,
-    "nbArticles": {
-      "vigueurEtendu": 109,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14810,10 +14094,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635286",
     "num": 1734,
     "nbTextes": 31,
-    "nbArticles": {
-      "vigueurEtendu": 52,
-      "vigueurNonEtendu": 6
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14827,10 +14107,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635475",
     "num": 1679,
     "nbTextes": 25,
-    "nbArticles": {
-      "vigueurEtendu": 76,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14844,10 +14120,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635232",
     "num": 1621,
     "nbTextes": 33,
-    "nbArticles": {
-      "vigueurEtendu": 43,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -14861,10 +14133,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635918",
     "num": 1672,
     "nbTextes": 87,
-    "nbArticles": {
-      "vigueurEtendu": 101,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -15254,10 +14522,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635655",
     "num": 1619,
     "nbTextes": 65,
-    "nbArticles": {
-      "vigueurEtendu": 73,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15271,10 +14535,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635437",
     "num": 1605,
     "nbTextes": 19,
-    "nbArticles": {
-      "vigueurEtendu": 43,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15288,10 +14548,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635225",
     "num": 1624,
     "nbTextes": 16,
-    "nbArticles": {
-      "vigueurEtendu": 69,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15305,10 +14561,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635474",
     "num": 1611,
     "nbTextes": 17,
-    "nbArticles": {
-      "vigueurEtendu": 58,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15322,10 +14574,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023278100",
     "num": 2579,
     "nbTextes": 6,
-    "nbArticles": {
-      "vigueurEtendu": 21,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15339,10 +14587,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635904",
     "num": 1607,
     "nbTextes": 46,
-    "nbArticles": {
-      "vigueurEtendu": 65,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15356,10 +14600,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635916",
     "num": 1612,
     "nbTextes": 10,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 34
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15373,10 +14613,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635535",
     "num": 7014,
     "nbTextes": 37,
-    "nbArticles": {
-      "vigueurEtendu": 31,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15390,10 +14626,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635209",
     "num": 1589,
     "nbTextes": 43,
-    "nbArticles": {
-      "vigueurEtendu": 55,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15407,10 +14639,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635907",
     "num": 1588,
     "nbTextes": 16,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 35
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15424,10 +14652,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635436",
     "num": 1580,
     "nbTextes": 38,
-    "nbArticles": {
-      "vigueurEtendu": 91,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15441,10 +14665,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635434",
     "num": 1539,
     "nbTextes": 50,
-    "nbArticles": {
-      "vigueurEtendu": 59,
-      "vigueurNonEtendu": 5
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15458,10 +14678,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635486",
     "num": 1563,
     "nbTextes": 2,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 23
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15475,10 +14691,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635662",
     "num": 1561,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 80,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15492,10 +14704,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635944",
     "num": 1558,
     "nbTextes": 65,
-    "nbArticles": {
-      "vigueurEtendu": 33,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15509,10 +14717,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635435",
     "num": 1516,
     "nbTextes": 47,
-    "nbArticles": {
-      "vigueurEtendu": 28,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -15819,10 +15023,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635645",
     "num": 1557,
     "nbTextes": 59,
-    "nbArticles": {
-      "vigueurEtendu": 83,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15836,10 +15036,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635442",
     "num": 1543,
     "nbTextes": 5,
-    "nbArticles": {
-      "vigueurEtendu": 31,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15853,10 +15049,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635900",
     "num": 1555,
     "nbTextes": 60,
-    "nbArticles": {
-      "vigueurEtendu": 42,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -15870,10 +15062,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635177",
     "num": 1518,
     "nbTextes": 127,
-    "nbArticles": {
-      "vigueurEtendu": 77,
-      "vigueurNonEtendu": 16
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -16269,10 +15457,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635657",
     "num": 1536,
     "nbTextes": 41,
-    "nbArticles": {
-      "vigueurEtendu": 87,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -16286,10 +15470,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635180",
     "num": 1499,
     "nbTextes": 13,
-    "nbArticles": {
-      "vigueurEtendu": 42,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -16303,10 +15483,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635871",
     "num": 1606,
     "nbTextes": 34,
-    "nbArticles": {
-      "vigueurEtendu": 43,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -16694,10 +15870,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635596",
     "num": 1501,
     "nbTextes": 42,
-    "nbArticles": {
-      "vigueurEtendu": 77,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [
       {
         "bloc": "16",
@@ -17127,10 +16299,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635421",
     "num": 1505,
     "nbTextes": 65,
-    "nbArticles": {
-      "vigueurEtendu": 110,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -17442,10 +16610,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635194",
     "num": 1495,
     "nbTextes": 22,
-    "nbArticles": {
-      "vigueurEtendu": 40,
-      "vigueurNonEtendu": 5
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -17459,10 +16623,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635192",
     "num": 1492,
     "nbTextes": 17,
-    "nbArticles": {
-      "vigueurEtendu": 50,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -17476,10 +16636,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635827",
     "num": 1487,
     "nbTextes": 45,
-    "nbArticles": {
-      "vigueurEtendu": 56,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -17493,10 +16649,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173",
     "num": 1486,
     "nbTextes": 66,
-    "nbArticles": {
-      "vigueurEtendu": 96,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [
       {
         "bloc": "6",
@@ -17997,10 +17149,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635444",
     "num": 1480,
     "nbTextes": 43,
-    "nbArticles": {
-      "vigueurEtendu": 54,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18014,10 +17162,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635912",
     "num": 1431,
     "nbTextes": 51,
-    "nbArticles": {
-      "vigueurEtendu": 43,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18031,10 +17175,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635740",
     "num": 1424,
     "nbTextes": 39,
-    "nbArticles": {
-      "vigueurEtendu": 64,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18048,10 +17188,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635282",
     "num": 7005,
     "nbTextes": 41,
-    "nbArticles": {
-      "vigueurEtendu": 72,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18065,10 +17201,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635142",
     "num": 1405,
     "nbTextes": 41,
-    "nbArticles": {
-      "vigueurEtendu": 43,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18082,10 +17214,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635616",
     "num": 1411,
     "nbTextes": 48,
-    "nbArticles": {
-      "vigueurEtendu": 39,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18099,10 +17227,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635396",
     "num": 1412,
     "nbTextes": 49,
-    "nbArticles": {
-      "vigueurEtendu": 106,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18116,10 +17240,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635427",
     "num": 1408,
     "nbTextes": 28,
-    "nbArticles": {
-      "vigueurEtendu": 87,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18133,10 +17253,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635473",
     "num": 1391,
     "nbTextes": 20,
-    "nbArticles": {
-      "vigueurEtendu": 43,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18150,10 +17266,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635267",
     "num": 1388,
     "nbTextes": 29,
-    "nbArticles": {
-      "vigueurEtendu": 355,
-      "vigueurNonEtendu": 8
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18167,10 +17279,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635405",
     "num": 1351,
     "nbTextes": 63,
-    "nbArticles": {
-      "vigueurEtendu": 14,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [
       {
         "bloc": "16",
@@ -18685,10 +17793,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635591",
     "num": 1383,
     "nbTextes": 13,
-    "nbArticles": {
-      "vigueurEtendu": 109,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18702,10 +17806,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000022238768",
     "num": 7007,
     "nbTextes": 12,
-    "nbArticles": {
-      "vigueurEtendu": 60,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18719,10 +17819,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635867",
     "num": 1316,
     "nbTextes": 42,
-    "nbArticles": {
-      "vigueurEtendu": 62,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18736,10 +17832,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635694",
     "num": 1311,
     "nbTextes": 4,
-    "nbArticles": {
-      "vigueurEtendu": 19,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -18753,10 +17845,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635373",
     "num": 573,
     "nbTextes": 48,
-    "nbArticles": {
-      "vigueurEtendu": 66,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [
       {
         "bloc": "16",
@@ -19105,10 +18193,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635700",
     "num": 7004,
     "nbTextes": 27,
-    "nbArticles": {
-      "vigueurEtendu": 94,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19122,10 +18206,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635203",
     "num": 1307,
     "nbTextes": 34,
-    "nbArticles": {
-      "vigueurEtendu": 68,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19139,10 +18219,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017789780",
     "num": 1314,
     "nbTextes": 29,
-    "nbArticles": {
-      "vigueurEtendu": 50,
-      "vigueurNonEtendu": 22
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19156,10 +18232,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635418",
     "num": 1266,
     "nbTextes": 51,
-    "nbArticles": {
-      "vigueurEtendu": 45,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -19468,10 +18540,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635615",
     "num": 1281,
     "nbTextes": 2,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 27
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19485,10 +18553,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635899",
     "num": 1286,
     "nbTextes": 48,
-    "nbArticles": {
-      "vigueurEtendu": 48,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19502,10 +18566,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635964",
     "num": 1285,
     "nbTextes": 54,
-    "nbArticles": {
-      "vigueurEtendu": 131,
-      "vigueurNonEtendu": 22
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19519,10 +18579,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635652",
     "num": 1278,
     "nbTextes": 38,
-    "nbArticles": {
-      "vigueurEtendu": 42,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19536,10 +18592,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635611",
     "num": 1267,
     "nbTextes": 38,
-    "nbArticles": {
-      "vigueurEtendu": 70,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19553,10 +18605,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635384",
     "num": 1261,
     "nbTextes": 88,
-    "nbArticles": {
-      "vigueurEtendu": 120,
-      "vigueurNonEtendu": 8
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19570,10 +18618,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635671",
     "num": 1256,
     "nbTextes": 15,
-    "nbArticles": {
-      "vigueurEtendu": 42,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19587,10 +18631,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635909",
     "num": 1237,
     "nbTextes": 24,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 40
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19604,10 +18644,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635254",
     "num": 1194,
     "nbTextes": 4,
-    "nbArticles": {
-      "vigueurEtendu": 21,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19621,10 +18657,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635251",
     "num": 1170,
     "nbTextes": 31,
-    "nbArticles": {
-      "vigueurEtendu": 26,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -19638,10 +18670,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635409",
     "num": 1147,
     "nbTextes": 41,
-    "nbArticles": {
-      "vigueurEtendu": 78,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -19978,10 +19006,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
     "num": 1090,
     "nbTextes": 233,
-    "nbArticles": {
-      "vigueurEtendu": 72,
-      "vigueurNonEtendu": 51
-    },
     "articlesByTheme": [
       {
         "bloc": "10",
@@ -20446,10 +19470,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635245",
     "num": 1083,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 56
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20463,10 +19483,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635910",
     "num": 1077,
     "nbTextes": 37,
-    "nbArticles": {
-      "vigueurEtendu": 70,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20480,10 +19496,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635887",
     "num": 1044,
     "nbTextes": 38,
-    "nbArticles": {
-      "vigueurEtendu": 53,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20497,10 +19509,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635947",
     "num": 1016,
     "nbTextes": 4,
-    "nbArticles": {
-      "vigueurEtendu": 19,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20514,10 +19522,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635952",
     "num": 1018,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 23
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20531,10 +19535,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635429",
     "num": 1423,
     "nbTextes": 28,
-    "nbArticles": {
-      "vigueurEtendu": 88,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20548,10 +19548,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635414",
     "num": 993,
     "nbTextes": 55,
-    "nbArticles": {
-      "vigueurEtendu": 49,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20565,10 +19561,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635179",
     "num": 1001,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 13
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20582,10 +19574,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635185",
     "num": 1000,
     "nbTextes": 70,
-    "nbArticles": {
-      "vigueurEtendu": 46,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20599,10 +19587,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635452",
     "num": 998,
     "nbTextes": 27,
-    "nbArticles": {
-      "vigueurEtendu": 47,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20616,10 +19600,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635489",
     "num": 7013,
     "nbTextes": 20,
-    "nbArticles": {
-      "vigueurEtendu": 46,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20633,10 +19613,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635660",
     "num": 915,
     "nbTextes": 16,
-    "nbArticles": {
-      "vigueurEtendu": 60,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -20650,10 +19626,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635407",
     "num": 413,
     "nbTextes": 65,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 51
-    },
     "articlesByTheme": [
       {
         "bloc": "6",
@@ -21054,10 +20026,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635265",
     "num": 892,
     "nbTextes": 12,
-    "nbArticles": {
-      "vigueurEtendu": 22,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21071,10 +20039,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
     "num": 843,
     "nbTextes": 122,
-    "nbArticles": {
-      "vigueurEtendu": 59,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -21359,10 +20323,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635676",
     "num": 833,
     "nbTextes": 16,
-    "nbArticles": {
-      "vigueurEtendu": 46,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21376,10 +20336,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635684",
     "num": 832,
     "nbTextes": 28,
-    "nbArticles": {
-      "vigueurEtendu": 49,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21393,10 +20349,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635936",
     "num": 7012,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 77,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21410,10 +20362,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635826",
     "num": 787,
     "nbTextes": 38,
-    "nbArticles": {
-      "vigueurEtendu": 69,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -21699,10 +20647,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635651",
     "num": 779,
     "nbTextes": 7,
-    "nbArticles": {
-      "vigueurEtendu": 77,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21716,10 +20660,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635480",
     "num": 7009,
     "nbTextes": 20,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 3
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21733,10 +20673,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635490",
     "num": 759,
     "nbTextes": 40,
-    "nbArticles": {
-      "vigueurEtendu": 140,
-      "vigueurNonEtendu": 5
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21750,10 +20686,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635951",
     "num": 781,
     "nbTextes": 2,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 31
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21767,10 +20699,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635412",
     "num": 567,
     "nbTextes": 63,
-    "nbArticles": {
-      "vigueurEtendu": 113,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21784,10 +20712,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635264",
     "num": 716,
     "nbTextes": 11,
-    "nbArticles": {
-      "vigueurEtendu": 35,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21801,10 +20725,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635873",
     "num": 715,
     "nbTextes": 12,
-    "nbArticles": {
-      "vigueurEtendu": 40,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21818,10 +20738,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635669",
     "num": 707,
     "nbTextes": 19,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 53
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21835,10 +20751,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635465",
     "num": 698,
     "nbTextes": 9,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 26
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21852,10 +20764,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635891",
     "num": 706,
     "nbTextes": 11,
-    "nbArticles": {
-      "vigueurEtendu": 98,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21869,10 +20777,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635440",
     "num": 700,
     "nbTextes": 17,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 54
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21886,10 +20790,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635680",
     "num": 693,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 24
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -21903,10 +20803,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635617",
     "num": 675,
     "nbTextes": 25,
-    "nbArticles": {
-      "vigueurEtendu": 64,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -22398,10 +21294,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635193",
     "num": 673,
     "nbTextes": 5,
-    "nbArticles": {
-      "vigueurEtendu": 37,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -22415,10 +21307,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635650",
     "num": 669,
     "nbTextes": 21,
-    "nbArticles": {
-      "vigueurEtendu": 60,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -22432,10 +21320,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635631",
     "num": 1586,
     "nbTextes": 54,
-    "nbArticles": {
-      "vigueurEtendu": 86,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -22449,10 +21333,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
     "num": 650,
     "nbTextes": 6,
-    "nbArticles": {
-      "vigueurEtendu": 37,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [
       {
         "bloc": "1",
@@ -22917,10 +21797,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635466",
     "num": 637,
     "nbTextes": 100,
-    "nbArticles": {
-      "vigueurEtendu": 103,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -22934,10 +21810,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635394",
     "num": 468,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 52,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -22951,10 +21823,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019459287",
     "num": 598,
     "nbTextes": 4,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 55
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -22968,10 +21836,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635648",
     "num": 614,
     "nbTextes": 22,
-    "nbArticles": {
-      "vigueurEtendu": 23,
-      "vigueurNonEtendu": 11
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -22985,10 +21849,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635702",
     "num": 538,
     "nbTextes": 36,
-    "nbArticles": {
-      "vigueurEtendu": 57,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23002,10 +21862,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635451",
     "num": 1534,
     "nbTextes": 58,
-    "nbArticles": {
-      "vigueurEtendu": 77,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23019,10 +21875,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635973",
     "num": 489,
     "nbTextes": 37,
-    "nbArticles": {
-      "vigueurEtendu": 88,
-      "vigueurNonEtendu": 8
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23036,10 +21888,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635810",
     "num": 478,
     "nbTextes": 38,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 102
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23053,10 +21901,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635642",
     "num": 454,
     "nbTextes": 55,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23070,10 +21914,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635847",
     "num": 412,
     "nbTextes": 6,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 21
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23087,10 +21927,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635689",
     "num": 18,
     "nbTextes": 164,
-    "nbArticles": {
-      "vigueurEtendu": 101,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23104,10 +21940,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635462",
     "num": 363,
     "nbTextes": 12,
-    "nbArticles": {
-      "vigueurEtendu": 23,
-      "vigueurNonEtendu": 13
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23121,10 +21953,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635149",
     "num": 54,
     "nbTextes": 11,
-    "nbArticles": {
-      "vigueurEtendu": 9,
-      "vigueurNonEtendu": 12
-    },
     "articlesByTheme": [
       {
         "bloc": "1",
@@ -23214,10 +22042,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635552",
     "num": 303,
     "nbTextes": 31,
-    "nbArticles": {
-      "vigueurEtendu": 71,
-      "vigueurNonEtendu": 36
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23231,10 +22055,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635856",
     "num": 292,
     "nbTextes": 54,
-    "nbArticles": {
-      "vigueurEtendu": 31,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -23693,10 +22513,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017960049",
     "num": 1843,
     "nbTextes": 4,
-    "nbArticles": {
-      "vigueurEtendu": 70,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -23710,10 +22526,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635872",
     "num": 275,
     "nbTextes": 34,
-    "nbArticles": {
-      "vigueurEtendu": 44,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -24228,10 +23040,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635647",
     "num": 247,
     "nbTextes": 49,
-    "nbArticles": {
-      "vigueurEtendu": 61,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -24245,10 +23053,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000038292684",
     "num": 218,
     "nbTextes": 1,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 65
-    },
     "articlesByTheme": [
       {
         "bloc": "1",
@@ -24344,10 +23148,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635430",
     "num": 211,
     "nbTextes": 23,
-    "nbArticles": {
-      "vigueurEtendu": 34,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -24361,10 +23161,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635258",
     "num": 200,
     "nbTextes": 30,
-    "nbArticles": {
-      "vigueurEtendu": 82,
-      "vigueurNonEtendu": 29
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -24378,10 +23174,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635955",
     "num": 184,
     "nbTextes": 97,
-    "nbArticles": {
-      "vigueurEtendu": 99,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -24395,10 +23187,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635184",
     "num": 176,
     "nbTextes": 98,
-    "nbArticles": {
-      "vigueurEtendu": 43,
-      "vigueurNonEtendu": 48
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -24492,10 +23280,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635966",
     "num": 158,
     "nbTextes": 57,
-    "nbArticles": {
-      "vigueurEtendu": 69,
-      "vigueurNonEtendu": 2
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -24509,10 +23293,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635649",
     "num": 135,
     "nbTextes": 34,
-    "nbArticles": {
-      "vigueurEtendu": 21,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -24526,10 +23306,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635206",
     "num": 87,
     "nbTextes": 38,
-    "nbArticles": {
-      "vigueurEtendu": 8,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -24543,10 +23319,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635630",
     "num": 86,
     "nbTextes": 22,
-    "nbArticles": {
-      "vigueurEtendu": 78,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -25096,10 +23868,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635597",
     "num": 45,
     "nbTextes": 41,
-    "nbArticles": {
-      "vigueurEtendu": 35,
-      "vigueurNonEtendu": 1
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -25113,10 +23881,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635613",
     "num": 44,
     "nbTextes": 63,
-    "nbArticles": {
-      "vigueurEtendu": 28,
-      "vigueurNonEtendu": 4
-    },
     "articlesByTheme": [
       {
         "bloc": "10",
@@ -25650,10 +24414,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
     "num": 16,
     "nbTextes": 169,
-    "nbArticles": {
-      "vigueurEtendu": 32,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [
       {
         "bloc": "9",
@@ -26300,10 +25060,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635234",
     "num": 29,
     "nbTextes": 58,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 358
-    },
     "articlesByTheme": [],
     "answers": [
       {
@@ -26636,10 +25392,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000029100418",
     "num": 3203,
     "nbTextes": 9,
-    "nbArticles": {
-      "vigueurEtendu": 0,
-      "vigueurNonEtendu": 55
-    },
     "articlesByTheme": [],
     "answers": []
   },
@@ -26651,10 +25403,6 @@
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635685",
     "num": 1740,
     "nbTextes": 3,
-    "nbArticles": {
-      "vigueurEtendu": 132,
-      "vigueurNonEtendu": 0
-    },
     "articlesByTheme": [],
     "answers": [
       {
