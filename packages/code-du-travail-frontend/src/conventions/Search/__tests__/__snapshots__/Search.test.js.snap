@@ -130,10 +130,13 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -144,13 +147,15 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 1rem;
   margin-right: 1rem;
   overflow: hidden;
   color: #3e486e;
   font-weight: bold;
   font-size: 1.8rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 @media print {
@@ -163,6 +168,29 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c10 {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+    margin-top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -225,7 +253,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
                       <a
                         class="c13"
                       >
-                        titre convention 1
+                        small title 1
                       </a>
                     </div>
                   </div>
@@ -630,10 +658,13 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -644,13 +675,15 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 1rem;
   margin-right: 1rem;
   overflow: hidden;
   color: #3e486e;
   font-weight: bold;
   font-size: 1.8rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 @media print {
@@ -663,6 +696,29 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c10 {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+    margin-top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -724,9 +780,9 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
                     >
                       <a
                         class="c13"
-                        href="/convention-collective/0275-titre-convention-1"
+                        href="/convention-collective/275-small-titre"
                       >
-                        titre convention 1
+                        small titre
                       </a>
                     </div>
                   </div>
@@ -751,9 +807,9 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
                     >
                       <a
                         class="c13"
-                        href="/convention-collective/0276-titre-convention-2"
+                        href="/convention-collective/276-smaller-convention-2"
                       >
-                        titre convention 2
+                        smaller convention 2
                       </a>
                     </div>
                   </div>
@@ -898,10 +954,13 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -912,13 +971,15 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 1rem;
   margin-right: 1rem;
   overflow: hidden;
   color: #3e486e;
   font-weight: bold;
   font-size: 1.8rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 @media print {
@@ -931,6 +992,29 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c10 {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+    margin-top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -992,9 +1076,9 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
                     >
                       <a
                         class="c13"
-                        href="/convention-collective/4567-titre-convention-2"
+                        href="/convention-collective/4567-smaller-convention-2"
                       >
-                        titre convention 2
+                        smaller convention 2
                       </a>
                     </div>
                   </div>
@@ -1139,10 +1223,13 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -1153,13 +1240,15 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 1rem;
   margin-right: 1rem;
   overflow: hidden;
   color: #3e486e;
   font-weight: bold;
   font-size: 1.8rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 @media print {
@@ -1172,6 +1261,29 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c10 {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+    margin-top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -1242,9 +1354,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
                     >
                       <a
                         class="c13"
-                      >
-                        Convention 1
-                      </a>
+                      />
                     </div>
                   </div>
                 </td>
@@ -1388,10 +1498,13 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -1402,13 +1515,15 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 1rem;
   margin-right: 1rem;
   overflow: hidden;
   color: #3e486e;
   font-weight: bold;
   font-size: 1.8rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 @media print {
@@ -1421,6 +1536,29 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width:980px) {
+  .c10 {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+    margin-top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -1525,7 +1663,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
                       <a
                         class="c13"
                       >
-                        Convention 1
+                        Short Convention 1
                       </a>
                     </div>
                   </div>

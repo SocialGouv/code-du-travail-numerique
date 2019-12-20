@@ -48,7 +48,6 @@ const TagSiret = ({ siret }) => (
 );
 
 const SearchResult = ({ label, siret, conventions, selectConvention }) => {
-  console.log(conventions);
   return (
     <tr>
       <td>

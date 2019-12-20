@@ -52,17 +52,19 @@ describe("<Search />", () => {
         hits: [
           {
             _source: {
-              idcc: "275",
+              idcc: 275,
               id: "KALICONT000000000001",
               title: "titre convention 1",
+              shortTitle: "small titre",
               slug: "slug-convention-1"
             }
           },
           {
             _source: {
-              idcc: "276",
+              idcc: 276,
               id: "KALICONT000000000002",
               title: "titre convention 2",
+              shortTitle: "smaller convention 2",
               slug: "slug-convention-2"
             }
           }
@@ -86,17 +88,19 @@ describe("<Search />", () => {
         hits: [
           {
             _source: {
-              idcc: "275",
+              idcc: 275,
               id: "KALICONT000000000001",
               title: "titre convention 1",
+              shortTitle: "small titre",
               slug: "slug-convention-1"
             }
           },
           {
             _source: {
-              idcc: "4567",
+              idcc: 4567,
               id: "KALICONT000000000002",
               title: "titre convention 2",
+              shortTitle: "smaller convention 2",
               slug: "slug-convention-2"
             }
           }
@@ -137,17 +141,19 @@ describe("<Search />", () => {
         hits: [
           {
             _source: {
-              idcc: "275",
+              idcc: 275,
               id: "KALICONT000000000001",
               title: "titre convention 1",
+              shortTitle: "small titre",
               slug: "slug-convention-1"
             }
           },
           {
             _source: {
-              idcc: "4567",
+              idcc: 4567,
               id: "KALICONT000000000002",
               title: "titre convention 2",
+              shortTitle: "smaller convention 2",
               slug: "slug-convention-2"
             }
           }
@@ -162,15 +168,16 @@ describe("<Search />", () => {
     jest.runAllTimers();
     await wait();
     expect(onSelectConvention).toHaveBeenCalledTimes(0);
-    const link = getByText("titre convention 2");
+    const link = getByText("smaller convention 2");
     fireEvent.click(link);
     expect(onSelectConvention).toHaveBeenCalledTimes(1);
     expect(onSelectConvention).toHaveBeenCalledWith({
       convention: {
         id: "KALICONT000000000002",
-        num: "4567",
+        num: 4567,
         slug: "slug-convention-2",
-        title: "titre convention 2"
+        title: "titre convention 2",
+        shortTitle: "smaller convention 2"
       },
       label: "IDCC 4567"
     });
@@ -187,9 +194,10 @@ describe("<Search />", () => {
                 hits: [
                   {
                     _source: {
-                      idcc: "275",
+                      idcc: 275,
                       id: "KALICONT000000000001",
                       title: "titre convention 1",
+                      shortTitle: "titre convention 1",
                       slug: "slug-convention-1"
                     }
                   }
@@ -197,8 +205,7 @@ describe("<Search />", () => {
               }
             });
           } else if (
-            url ===
-            "https://entreprise.data.gouv.fr/api/sirene/v1/full_text/hello?per_page=50"
+            url === "api-entreprises.url/full_text/hello?per_page=50"
           ) {
             return Promise.resolve({
               etablissement: [
@@ -211,10 +218,7 @@ describe("<Search />", () => {
                 }
               ]
             });
-          } else if (
-            url ===
-            "https://siret2idcc.incubateur.social.gouv.fr/api/v2/44144914700020"
-          ) {
+          } else if (url === "siret2idcc.url/44144914700020") {
             return Promise.resolve([
               {
                 siret: "44144914700020",
@@ -225,8 +229,9 @@ describe("<Search />", () => {
                     etat: "VIGUEUR_ETEN",
                     id: "KALICONT000005635886",
                     nature: "IDCC",
-                    num: "843",
-                    title: "Convention 1"
+                    num: 843,
+                    title: "Convention 1",
+                    shortTitle: "Short Convention 1"
                   }
                 ]
               }
@@ -257,9 +262,10 @@ describe("<Search />", () => {
                 hits: [
                   {
                     _source: {
-                      idcc: "275",
+                      idcc: 275,
                       id: "KALICONT000000000001",
                       title: "titre convention 1",
+                      shortTitle: "small title 1",
                       slug: "slug-convention-1"
                     }
                   }
@@ -294,10 +300,7 @@ describe("<Search />", () => {
       return Promise.resolve({
         ok: true,
         json: () => {
-          if (
-            url ===
-            "https://entreprise.data.gouv.fr/api/sirene/v1/siret/01234567891011"
-          ) {
+          if (url === "api-entreprises.url/siret/01234567891011") {
             return Promise.resolve({
               etablissement: {
                 id: 199308119,
@@ -307,10 +310,7 @@ describe("<Search />", () => {
                 libelle_commune: "Commune test"
               }
             });
-          } else if (
-            url ===
-            "https://siret2idcc.incubateur.social.gouv.fr/api/v2/01234567891011"
-          ) {
+          } else if (url === "siret2idcc.url/01234567891011") {
             return Promise.resolve([
               {
                 siret: "01234567891011",

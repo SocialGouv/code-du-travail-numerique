@@ -512,19 +512,6 @@ exports[`<Convention /> renders 1`] = `
                     36
                   </td>
                 </tr>
-                <tr>
-                  <th>
-                    Nombre d’articles
-                  </th>
-                  <td>
-                    529
-                    (
-                    350 etendus
-                    , 
-                    179 non étendus
-                    )
-                  </td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -532,7 +519,7 @@ exports[`<Convention /> renders 1`] = `
         <p>
           <a
             href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             target="_blank"
           >
             Voir la convention sur Legifrance
@@ -1327,24 +1314,8 @@ exports[`<Convention /> renders 1`] = `
             
 
             <p>
-              Toutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui :
+              Toutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé.
             </p>
-            
-
-            <ul>
-              
-
-              <li>
-                Ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé ;
-              </li>
-              
-
-              <li>
-                N'ont pas accompli, à la fois, le dernier jour du travail précédant le jour férié et le premier jour du travail qui suit, sauf autorisation d'absence préalablement accordée. Toutefois, il n'est pas tenu compte d'une absence pour maladie se terminant la dernière journée de travail précédant le jour férié, ou d'une absence pour maladie commençant la première journée de travail suivant ledit jour férié.
-              </li>
-              
-
-            </ul>
             
 
             <p>
@@ -1575,6 +1546,11 @@ exports[`<Convention /> renders 1`] = `
               
 
               <li>
+                Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité ;
+              </li>
+              
+
+              <li>
                 Obsèques de son conjoint : 3 jours ;
               </li>
               
@@ -1590,12 +1566,7 @@ exports[`<Convention /> renders 1`] = `
               
 
               <li>
-                Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour ;
-              </li>
-              
-
-              <li>
-                Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité.
+                Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour.
               </li>
               
 
@@ -2369,7 +2340,11 @@ exports[`<Convention /> renders 1`] = `
         >
           <div>
             <p>
-              La convention collective prévoit une prime de vacances.
+              La convention collective prévoit une 
+              <strong>
+                prime de vacances
+              </strong>
+              .
             </p>
             
 

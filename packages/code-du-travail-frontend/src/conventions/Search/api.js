@@ -49,7 +49,7 @@ export const loadResults = async query => {
     const perfectMatch =
       matches &&
       matches.length &&
-      matches.find(match => parseIdcc(match.idcc) === parseIdcc(query));
+      matches.find(match => parseIdcc(match.num) === parseIdcc(query));
     if (perfectMatch) {
       return [
         {
@@ -65,7 +65,7 @@ export const loadResults = async query => {
       // show first 5 results
       return matches.slice(0, 5).map(match => ({
         type: "convention",
-        id: match.idcc,
+        id: match.num,
         label: `IDCC ${formatIdcc(match.num)}`,
         conventions: [match]
       }));
