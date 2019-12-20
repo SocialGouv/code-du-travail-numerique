@@ -29,7 +29,7 @@ const Convention = ({ num, shortTitle, title, onClick }) => {
           })}`}
           passHref
         >
-          <ConventionLink>{shortTitle || title}</ConventionLink>
+          <ConventionLink>{shortTitle}</ConventionLink>
         </Link>
       )}
     </Box>
