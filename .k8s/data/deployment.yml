@@ -18,13 +18,12 @@ spec:
   restartPolicy: Never
   initContainers:
     - name: wait-for-elasticsearch
-      image: alpine
+      image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.14.0
       imagePullPolicy: Always
       command:
         - sh
         - -c
         - |
-          apk add --no-cache curl=7.66.0-r0;
           sleep 10s # delay wait for elastic to be sure elastic had been removed first
           retry=120; # 5s * (12 * 10) = 10min
           while
