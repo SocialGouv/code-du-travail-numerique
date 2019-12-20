@@ -147,7 +147,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c46 {
   margin: 0 auto 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.6rem;
   text-align: center;
 }
 
@@ -893,7 +893,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 @media (max-width:600px) {
   .c46 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1rem;
   }
 }
 

@@ -131,7 +131,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c39 {
   margin: 0 auto 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.6rem;
   text-align: center;
 }
 
@@ -770,7 +770,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 @media (max-width:600px) {
   .c39 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1600,7 +1600,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c39 {
   margin: 0 auto 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.6rem;
   text-align: center;
 }
 
@@ -2239,7 +2239,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 @media (max-width:600px) {
   .c39 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1rem;
   }
 }
 

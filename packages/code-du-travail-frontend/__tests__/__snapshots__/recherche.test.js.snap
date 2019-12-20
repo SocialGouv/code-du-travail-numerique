@@ -73,7 +73,7 @@ exports[`<Recherche /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c30 {
+.c31 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -88,6 +88,12 @@ exports[`<Recherche /> should render 1`] = `
 .c11 {
   margin: 0 auto 1rem;
   margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c30 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
   text-align: center;
 }
 
@@ -480,7 +486,7 @@ exports[`<Recherche /> should render 1`] = `
   text-align: center;
 }
 
-.c31 {
+.c32 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -489,27 +495,27 @@ exports[`<Recherche /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c31 > *:first-child {
+.c32 > *:first-child {
   margin-top: 0;
 }
 
-.c31 > *:last-child {
+.c32 > *:last-child {
   margin-bottom: 0;
 }
 
-.c32 {
+.c33 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c33 {
+.c34 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c34 {
+.c35 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -523,25 +529,25 @@ exports[`<Recherche /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c34 > *:first-child {
+.c35 > *:first-child {
   margin-top: 0;
 }
 
-.c34 > *:last-child {
+.c35 > *:last-child {
   margin-bottom: 0;
 }
 
-.c36 + .c35 {
+.c37 + .c36 {
   padding-left: 1.6rem;
 }
 
-.c38 {
+.c39 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c37 {
+.c38 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -551,11 +557,11 @@ exports[`<Recherche /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c39 {
+.c40 {
   margin: 0.4rem 0;
 }
 
-.c40 {
+.c41 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -622,7 +628,7 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c31 {
     font-size: 2.2rem;
   }
 }
@@ -630,6 +636,12 @@ exports[`<Recherche /> should render 1`] = `
 @media (max-width:600px) {
   .c11 {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    margin-bottom: 1rem;
   }
 }
 
@@ -748,21 +760,21 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media print {
-  .c31 {
+  .c32 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c34 {
+  .c35 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c35 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -770,25 +782,25 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c36 + .c35 {
+  .c37 + .c36 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c39 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c38 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c38 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1042,10 +1054,10 @@ exports[`<Recherche /> should render 1`] = `
           class="c24"
         >
           <header
-            class="c11"
+            class="c30"
           >
             <h3
-              class="c30"
+              class="c31"
             >
               <div
                 class="c13"
@@ -1054,7 +1066,7 @@ exports[`<Recherche /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c31"
+            class="c32"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
@@ -1063,7 +1075,7 @@ exports[`<Recherche /> should render 1`] = `
           >
             Contacter nos services en région
             <svg
-              class="c32"
+              class="c33"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1076,68 +1088,68 @@ exports[`<Recherche /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c33"
+        class="c34"
       >
         <nav>
           <div
-            class="c34"
+            class="c35"
           >
             <div
-              class="c35 c36"
+              class="c36 c37"
             >
               <h3
-                class="c37"
+                class="c38"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c38"
+                class="c39"
               >
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -1146,21 +1158,21 @@ exports[`<Recherche /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c35 c36"
+              class="c36 c37"
             >
               <h3
-                class="c37"
+                class="c38"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c38"
+                class="c39"
               >
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1169,10 +1181,10 @@ exports[`<Recherche /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1183,21 +1195,21 @@ exports[`<Recherche /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c35 c36"
+              class="c36 c37"
             >
               <h3
-                class="c37"
+                class="c38"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c38"
+                class="c39"
               >
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1206,10 +1218,10 @@ exports[`<Recherche /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1218,10 +1230,10 @@ exports[`<Recherche /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c39"
+                  class="c40"
                 >
                   <a
-                    class="c40"
+                    class="c41"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"

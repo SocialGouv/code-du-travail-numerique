@@ -42,7 +42,7 @@ exports[`<Footer /> should render 1`] = `
 
 .c4 {
   margin: 0 auto 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.6rem;
   text-align: center;
 }
 
@@ -236,7 +236,7 @@ exports[`<Footer /> should render 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1rem;
   }
 }
 

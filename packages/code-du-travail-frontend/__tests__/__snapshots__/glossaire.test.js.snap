@@ -114,7 +114,7 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: left;
 }
 
-.c36 {
+.c37 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -136,6 +136,12 @@ exports[`<Glossaire /> should render 1`] = `
   margin: 0 auto 1rem;
   margin-left: -4rem;
   text-align: left;
+}
+
+.c36 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
 }
 
 .c25 {
@@ -205,7 +211,7 @@ exports[`<Glossaire /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c38 {
+.c39 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -242,16 +248,16 @@ exports[`<Glossaire /> should render 1`] = `
   opacity: 1;
 }
 
-.c38:link,
-.c38:visited {
+.c39:link,
+.c39:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c38:not([disabled]):hover,
-.c38:not([disabled]):active,
-.c38:not([disabled]):focus {
+.c39:not([disabled]):hover,
+.c39:not([disabled]):active,
+.c39:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -260,7 +266,7 @@ exports[`<Glossaire /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c38[disabled] {
+.c39[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -549,7 +555,7 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: center;
 }
 
-.c37 {
+.c38 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -558,27 +564,27 @@ exports[`<Glossaire /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c37 > *:first-child {
+.c38 > *:first-child {
   margin-top: 0;
 }
 
-.c37 > *:last-child {
+.c38 > *:last-child {
   margin-bottom: 0;
 }
 
-.c39 {
+.c40 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c40 {
+.c41 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c41 {
+.c42 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -592,25 +598,25 @@ exports[`<Glossaire /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c41 > *:first-child {
+.c42 > *:first-child {
   margin-top: 0;
 }
 
-.c41 > *:last-child {
+.c42 > *:last-child {
   margin-bottom: 0;
 }
 
-.c43 + .c42 {
+.c44 + .c43 {
   padding-left: 1.6rem;
 }
 
-.c45 {
+.c46 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c44 {
+.c45 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -620,11 +626,11 @@ exports[`<Glossaire /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c46 {
+.c47 {
   margin: 0.4rem 0;
 }
 
-.c47 {
+.c48 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -712,7 +718,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c37 {
     font-size: 2.2rem;
   }
 }
@@ -730,6 +736,12 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c36 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
   .c25 {
     padding-left: 0;
   }
@@ -742,7 +754,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c39 {
     font-size: 1.4rem;
   }
 }
@@ -873,21 +885,21 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media print {
-  .c37 {
+  .c38 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c41 {
+  .c42 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c42 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -895,25 +907,25 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c43 + .c42 {
+  .c44 + .c43 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c46 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c45 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c45 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -3590,10 +3602,10 @@ exports[`<Glossaire /> should render 1`] = `
           class="c35"
         >
           <header
-            class="c22"
+            class="c36"
           >
             <h3
-              class="c36"
+              class="c37"
             >
               <div
                 class="c24"
@@ -3602,16 +3614,16 @@ exports[`<Glossaire /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c37"
+            class="c38"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c38"
+            class="c39"
           >
             Contacter nos services en région
             <svg
-              class="c39"
+              class="c40"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -3624,68 +3636,68 @@ exports[`<Glossaire /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c40"
+        class="c41"
       >
         <nav>
           <div
-            class="c41"
+            class="c42"
           >
             <div
-              class="c42 c43"
+              class="c43 c44"
             >
               <h3
-                class="c44"
+                class="c45"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c45"
+                class="c46"
               >
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -3694,21 +3706,21 @@ exports[`<Glossaire /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c42 c43"
+              class="c43 c44"
             >
               <h3
-                class="c44"
+                class="c45"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c45"
+                class="c46"
               >
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3717,10 +3729,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3731,21 +3743,21 @@ exports[`<Glossaire /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c42 c43"
+              class="c43 c44"
             >
               <h3
-                class="c44"
+                class="c45"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c45"
+                class="c46"
               >
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3754,10 +3766,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3766,10 +3778,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c46"
+                  class="c47"
                 >
                   <a
-                    class="c47"
+                    class="c48"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
