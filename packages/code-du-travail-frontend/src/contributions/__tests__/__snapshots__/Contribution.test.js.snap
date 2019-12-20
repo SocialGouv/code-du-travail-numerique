@@ -216,7 +216,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         Désolé nous n'avons pas de réponse pour cette convention collective
       </div>
       <br />
-      <br />
       <button
         class="c6"
       >
@@ -477,7 +476,6 @@ exports[`<Contribution /> should render answer references 1`] = `
         </a>
       </li>
       <br />
-      <br />
       <button
         class="c6"
       >
@@ -689,7 +687,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         </p>
       </div>
       <br />
-      <br />
       <button
         class="c5"
       >
@@ -746,7 +743,93 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 .c6 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c7 {
   width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7:invalid {
+  border-color: #eb5757;
+}
+
+.c7::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c7::-moz-placeholder {
+  color: #9298af;
+}
+
+.c7:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c7::placeholder {
+  color: #9298af;
+}
+
+.c7:focus {
+  border-color: #7994d4;
+}
+
+.c7:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c7:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c7:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c7:focus::placeholder {
+  color: transparent;
 }
 
 .c0 {
@@ -775,6 +858,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
 @media (max-width:600px) {
   .c2 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    padding: 0 1rem;
   }
 }
 
@@ -826,13 +915,17 @@ exports[`<Contribution /> should render with both answers 1`] = `
         <p>
           Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
         </p>
-        <input
+        <div
           class="c6"
-          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-          role="search"
-          type="search"
-          value=""
-        />
+        >
+          <input
+            class="c7"
+            placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+            role="search"
+            type="search"
+            value=""
+          />
+        </div>
         
       </div>
     </div>
@@ -886,7 +979,93 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 .c6 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c7 {
   width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7:invalid {
+  border-color: #eb5757;
+}
+
+.c7::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c7::-moz-placeholder {
+  color: #9298af;
+}
+
+.c7:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c7::placeholder {
+  color: #9298af;
+}
+
+.c7:focus {
+  border-color: #7994d4;
+}
+
+.c7:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c7:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c7:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c7:focus::placeholder {
+  color: transparent;
 }
 
 .c0 {
@@ -918,6 +1097,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c7 {
+    padding: 0 1rem;
+  }
+}
+
 <div>
   <section
     class="c0"
@@ -942,13 +1127,17 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         <p>
           Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
         </p>
-        <input
+        <div
           class="c6"
-          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-          role="search"
-          type="search"
-          value=""
-        />
+        >
+          <input
+            class="c7"
+            placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+            role="search"
+            type="search"
+            value=""
+          />
+        </div>
         
       </div>
     </div>

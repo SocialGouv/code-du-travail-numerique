@@ -34,7 +34,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   line-height: 1.25;
 }
 
-.c5 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -71,16 +71,16 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   opacity: 1;
 }
 
-.c5:link,
-.c5:visited {
+.c6:link,
+.c6:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):active,
-.c5:not([disabled]):focus {
+.c6:not([disabled]):hover,
+.c6:not([disabled]):active,
+.c6:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -89,13 +89,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   border-color: transparent;
 }
 
-.c5[disabled] {
+.c6[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c7:not(:focus):not(:active) {
+.c8:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -131,14 +131,100 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   outline: none;
 }
 
-.c6 {
+.c7 {
   position: absolute;
   top: 0;
   right: 0;
 }
 
 .c4 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c5 {
   width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5:invalid {
+  border-color: #eb5757;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c5::-moz-placeholder {
+  color: #9298af;
+}
+
+.c5:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c5::placeholder {
+  color: #9298af;
+}
+
+.c5:focus {
+  border-color: #7994d4;
+}
+
+.c5:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c5:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c5:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c5:focus::placeholder {
+  color: transparent;
 }
 
 @media print {
@@ -155,7 +241,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     font-size: 1.4rem;
   }
 }
@@ -181,10 +267,16 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     position: fixed;
     top: 1rem;
     right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 0 1rem;
   }
 }
 
@@ -236,21 +328,25 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               <p>
                 Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
               </p>
-              <input
+              <div
                 class="c4"
-                placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-                role="search"
-                type="search"
-                value=""
-              />
+              >
+                <input
+                  class="c5"
+                  placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+                  role="search"
+                  type="search"
+                  value=""
+                />
+              </div>
               
             </div>
             <button
-              class="c5 c6"
+              class="c6 c7"
               title="fermer la modale"
             >
               <div
-                class="c7"
+                class="c8"
               >
                 fermer la modale
               </div>

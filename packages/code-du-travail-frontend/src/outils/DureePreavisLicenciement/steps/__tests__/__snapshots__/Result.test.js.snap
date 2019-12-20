@@ -62,7 +62,6 @@ exports[`<StepResult /> should render show result with collective or compagny ag
   -ms-flex-item-align: center;
   align-self: center;
   padding: 1rem 1.6rem;
-  color: #3e486e;
   text-align: left;
 }
 
@@ -303,7 +302,6 @@ exports[`<StepResult /> should render show result with company agreement disclai
   -ms-flex-item-align: center;
   align-self: center;
   padding: 1rem 1.6rem;
-  color: #3e486e;
   text-align: left;
 }
 
@@ -544,7 +542,6 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
   -ms-flex-item-align: center;
   align-self: center;
   padding: 1rem 1.6rem;
-  color: #3e486e;
   text-align: left;
 }
 

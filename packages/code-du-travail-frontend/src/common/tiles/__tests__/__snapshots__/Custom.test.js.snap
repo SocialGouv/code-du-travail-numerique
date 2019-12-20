@@ -32,7 +32,7 @@ exports[`<Article /> should render 1`] = `
   height: 3rem;
 }
 
-.c9 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -72,14 +72,14 @@ exports[`<Article /> should render 1`] = `
   overflow: visible;
 }
 
-.c9:focus,
-.c9:hover,
-.c9:active {
+.c11:focus,
+.c11:hover,
+.c11:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10 {
+.c12 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -88,7 +88,7 @@ exports[`<Article /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c8:hover .c10 {
+.c10:hover .c12 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -100,24 +100,16 @@ exports[`<Article /> should render 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: auto;
+  max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
   color: #3e486e;
@@ -149,7 +141,7 @@ exports[`<Article /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c3 {
+.c4 {
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto 1.6rem;
@@ -158,11 +150,17 @@ exports[`<Article /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c4 {
-  padding-right: 1rem;
+.c3 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c5 {
+  padding-right: 1rem;
+}
+
+.c6 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -172,16 +170,34 @@ exports[`<Article /> should render 1`] = `
   margin: 0;
 }
 
-.c6 {
+.c7 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-.c7 {
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.c9 {
   margin-top: 1.6rem;
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
@@ -194,7 +210,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
@@ -228,9 +244,11 @@ exports[`<Article /> should render 1`] = `
         </svg>
       </div>
     </div>
-    <div>
+    <div
+      class="c3"
+    >
       <div
-        class="c3"
+        class="c4"
       >
         <svg
           fill="none"
@@ -255,37 +273,41 @@ exports[`<Article /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c4"
+        class="c5"
       >
         
         <h3
-          class="c5"
+          class="c6"
         >
           Saluez moi
         </h3>
       </div>
     </div>
     <div
-      class="c6"
+      class="c7"
     >
-      Cette tuile vous fera dire bonjour !
       <div
-        class="c7"
+        class="c8"
       >
+        Cette tuile vous fera dire bonjour !
         <div
-          class="c8 c9"
+          class="c9"
         >
-          Bonjour
-          <svg
-            class="c10"
-            fill="none"
-            viewBox="0 0 28 15"
+          <div
+            class="c10 c11"
           >
-            <path
-              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-              fill="currentColor"
-            />
-          </svg>
+            Bonjour
+            <svg
+              class="c12"
+              fill="none"
+              viewBox="0 0 28 15"
+            >
+              <path
+                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>

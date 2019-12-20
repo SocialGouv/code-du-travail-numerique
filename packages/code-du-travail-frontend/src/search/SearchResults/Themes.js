@@ -6,7 +6,6 @@ import {
   CardList,
   Container,
   Section,
-  Stripe,
   Tile,
   Wrapper
 } from "@socialgouv/react-ui";

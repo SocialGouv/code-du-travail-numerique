@@ -7,23 +7,15 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 2rem 2rem;
@@ -57,10 +49,16 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
 }
 
 .c1 {
-  padding-right: 1rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c2 {
+  padding-right: 1rem;
+}
+
+.c3 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -70,15 +68,18 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
   margin: 0;
 }
 
-.c3 {
+.c4 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-.c4 {
+.c5 {
   font-size: 1.2rem;
 }
 
-.c5 {
+.c6 {
   color: #4d73b8;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -92,7 +93,7 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c3 {
     font-size: 1.6rem;
   }
 }
@@ -102,28 +103,30 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
     class="c0 no-after"
     href="http://file.url"
   >
-    <div>
+    <div
+      class="c1"
+    >
       <div
-        class="c1"
+        class="c2"
       >
         
         <h3
-          class="c2"
+          class="c3"
         >
           FooFile
         </h3>
       </div>
     </div>
     <div
-      class="c3"
+      class="c4"
     >
       <span
-        class="c4"
+        class="c5"
       >
         Courrier
       </span>
       <span
-        class="c5"
+        class="c6"
       >
          - 
         url

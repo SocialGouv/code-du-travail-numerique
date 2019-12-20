@@ -44,6 +44,36 @@ exports[`return themes root themes 1`] = `
 Object {
   "children": Array [
     Object {
+      "children": Array [
+        Object {
+          "slug": "81-demission",
+          "title": "Démission",
+        },
+        Object {
+          "slug": "82-fin-dun-cdd-ctt",
+          "title": "Fin d'un CDD - CTT",
+        },
+        Object {
+          "slug": "83-rupture-conventionnelle",
+          "title": "Rupture conventionnelle",
+        },
+        Object {
+          "slug": "84-licenciement",
+          "title": "Licenciement",
+        },
+        Object {
+          "slug": "85-retraite",
+          "title": "Retraite",
+        },
+        Object {
+          "slug": "86-autres-departs",
+          "title": "Autres départs",
+        },
+        Object {
+          "slug": "87-documents-a-remettre-au-salarie",
+          "title": "Documents à remettre au salarié",
+        },
+      ],
       "position": 8,
       "slug": "8-depart-de-lentreprise",
       "title": "Départ de l'entreprise",
