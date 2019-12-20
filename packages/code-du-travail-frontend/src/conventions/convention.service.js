@@ -7,27 +7,25 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const formatIdcc = ({ idcc: num, id, slug, title, shortTitle }) => ({
+const formatCCn = ({ idcc: num, id, slug, title, shortTitle }) => ({
   id,
   slug,
   title,
   shortTitle,
-  num: parseInt(num, 10).toString()
+  num
 });
 
 // memoize search results
 const apiIdcc = memoizee(
   query => {
-    const url = `${API_URL}/idcc?q=${encodeURIComponent(
-      query.replace(/ +/g, " ")
-    )}`;
+    const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
 
     return fetch(url).then(response => {
       if (response.ok) {
         return response
           .json()
           .then(results =>
-            results.hits.hits.map(({ _source }) => formatIdcc(_source))
+            results.hits.hits.map(({ _source }) => formatCCn(_source))
           );
       }
       throw new Error("Un problème est survenu.");
@@ -40,4 +38,4 @@ const apiIdcc = memoizee(
 
 const searchConvention = debounce(apiIdcc, 300);
 
-export { searchConvention, formatIdcc };
+export { searchConvention };

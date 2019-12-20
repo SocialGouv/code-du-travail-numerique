@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { formatIdcc } from "@cdt/data/lib";
 
 import styled from "styled-components";
 import Link from "next/link";
@@ -12,10 +11,10 @@ import SearchCC from "./SearchCC";
 
 // following data/populate.js slug rules
 const getConventionSlug = convention =>
-  slugify(`${formatIdcc(convention.num)}-${convention.title}`.substring(0, 80));
+  slugify(`${convention.num}-${convention.shortTitle}`.substring(0, 80));
 
 // link to a Convention
-const Convention = ({ num, shortTitle, title, onClick }) => {
+const Convention = ({ num, shortTitle, onClick }) => {
   return (
     <Box>
       {onClick ? (
@@ -25,7 +24,7 @@ const Convention = ({ num, shortTitle, title, onClick }) => {
           href="/convention-collective/[slug]"
           as={`/convention-collective/${getConventionSlug({
             num,
-            title
+            shortTitle
           })}`}
           passHref
         >
@@ -49,6 +48,7 @@ const TagSiret = ({ siret }) => (
 );
 
 const SearchResult = ({ label, siret, conventions, selectConvention }) => {
+  console.log(conventions);
   return (
     <tr>
       <td>
