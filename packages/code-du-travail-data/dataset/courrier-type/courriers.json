@@ -19,28 +19,28 @@
 		"description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation de l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
 		"date_redaction": "01/01/2020",
 		"source": "Ministère du Travail",
-		"filename": "demande_rdv_rupture_conventionnelle.docx"
+		"filename": "Demande_rdv_rupture_conventionnelle.docx"
 	},
 	{
 		"titre": "Modèle : convocation à un entretien préalable au licenciement pour motif personnel",
 		"description": "L’employeur qui envisage de licencier un salarié doit le convoquer à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l’entretien préalable. Ce modèle propose une telle convocation.",
 		"date_redaction": "01/01/2020",
 		"source": "Ministère du Travail",
-		"filename": "entretien_préalable_au_licenciement_personnel.docx"
+		"filename": "Entretien_préalable_au_licenciement_personnel.docx"
 	},
 	{
 		"titre": "Modèle : convocation à un entretien préalable au licenciement économique de moins de 10 salariés pendant 30 jours",
 		"description": "L’employeur qui envisage le licenciement pour motif économique de moins de 10 salariés durant une période de trente jours, doit convoquer chaque salarié à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l’entretien préalable. Ce modèle propose une telle convocation. ",
 		"date_redaction": "01/01/2020",
 		"source": "Ministère du Travail",
-		"filename": "entretien_préalable_au_licenciement_économique_de_moins_de_10_salariés_pendant_30_jours.docx"
+		"filename": "Entretien_préalable_au_licenciement_économique_de_moins_de_10_salariés_pendant_30_jours.docx"
 	},
 	{
 		"titre": "Modèle : lettre de réclamation des documents de fin de contrat",
 		"description": "À la rupture du contrat de travail, dans tous les cas de rupture: l'employeur doit délivrer au salarié des documents ( ex: certificat de travail). Ce modèle permet au salarié de réclamer ces documents à l'employeur qui n'aurait pas satisfait à cette obligation ",
 		"date_redaction": "01/01/2020",
 		"source": "Ministère du Travail",
-		"filename": "reclamation_des_documents_de_fin_de_contrat.docx"
+		"filename": "Reclamation_des_documents_de_fin_de_contrat.docx"
 	},
 	{
 		"titre": "Modèle: Reçu pour solde de tout compte",
@@ -54,14 +54,14 @@
 		"description": "La période d’essai peut être renouvelée, si la branche le prévoit et si cette possibilité est inscrite dans le contrat de travail ou la lettre d’engagement. Dans ces conditions, ce modèle permet de demander le renouvellement du contrat de travail.",
 		"date_redaction": "01/01/2020",
 		"source": "Ministère du Travail",
-		"filename": "renouvellement_periode_essai_initiative_employeur.docx"
+		"filename": "Renouvellement_periode_essai_initiative_employeur.docx"
 	},
 	{
 		"titre": "Modèle : Réponse à Signalement de harcèlement sexuel",
 		"description": "L'employeur doit prendre toutes les mesures en vue de de prévenir les faits de harcèlement sexuel, y mettre un terme ou les sanctionner. Le modèle ci-après propose une réponse au salarié ayant signalé des faits de harcèlement sexuel en tant que victime ou témoin. ",
 		"date_redaction": "01/01/2020",
 		"source": "Ministère du Travail",
-		"filename": "reponse_a_signalement_harcelement_sexuel.docx"
+		"filename": "Reponse_a_signalement_harcelement_sexuel.docx"
 	},
 	{
 		"titre": "Modèle de rupture du contrat en période d’essai à l'initiative du salarié",
@@ -96,14 +96,14 @@
 		"description": "L’employeur décide de l’ordre de départ des congés payés. Le salarié doit pouvoir prendre l’ensemble de ses congés dus. L’employeur ne peut pas les payer en lieu et place. Ce modèle de courrier permet de demander à l'employeur la prise des congés de droit.",
 		"date_redaction": "01/01/2020",
 		"source": "Ministère du Travail",
-		"filename": "reclamation_de_cp.docx"
+		"filename": "Reclamation_de_cp.docx"
 	},
 	{
 		"titre": "Modèle : lettre de réclamation des heures supplémentaires",
 		"description": "Les heures travaillées au-delà de la durée légale (35 heures) ouvrent droit en plus du taux horaire, à une contrepartie soit sous la forme d'une majoration salariale soit, en tout ou partie, à des contreparties sous forme de repos (repos compensateur équivalent). Ce modèle permet au salarié de demander le paiement des heures supplémentaires et le droit aux contreparties prévues ",
 		"date_redaction": "01/01/2020",
 		"source": "Ministère du Travail",
-		"filename": "reclamation_des_heures_sup.docx"
+		"filename": "Reclamation_des_heures_sup.docx"
 	},
 	{
 		"titre": "Modèle : Demande de paiement de salaire",
@@ -124,6 +124,6 @@
 		"description": "Les heures supplémentaires sont décomptées à la semaine et font l'objet de contreparties. Le document ci-après permet à l'appui d'une demande de réclamation des heures supplémentaires, de présenter le décompte des heures supplémentaires et les contreparties dues.",
 		"date_redaction": "01/01/2020",
 		"source": "Ministère du Travail",
-		"filename": "tableau_recap_des_heures_supplementaires.docx"
+		"filename": "Tableau_recap_des_heures_supplementaires.docx"
 	}
 ]
