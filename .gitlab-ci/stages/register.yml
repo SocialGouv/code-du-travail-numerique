@@ -20,8 +20,6 @@ Test PR Only:
     - external_pull_requests
     - tags
   except:
-    refs:
-      - branches
     variables:
       - $PRODUCTION
       # Don't register a base image for release commit
