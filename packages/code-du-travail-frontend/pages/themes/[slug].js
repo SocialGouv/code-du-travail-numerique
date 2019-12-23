@@ -51,9 +51,9 @@ class Theme extends React.Component {
         <Section>
           <Container>
             <PageTitle>{theme.title}</PageTitle>
-            <StyledContainer narrow noPadding>
-              {theme.children &&
-                theme.children.map(({ slug, title }) => (
+            {theme.children && theme.children.length > 0 && (
+              <StyledContainer narrow noPadding>
+                {theme.children.map(({ slug, title }) => (
                   <Link
                     key={slug}
                     href="/themes/[slug]"
@@ -65,7 +65,8 @@ class Theme extends React.Component {
                     </StyledLink>
                   </Link>
                 ))}
-            </StyledContainer>
+              </StyledContainer>
+            )}
           </Container>
         </Section>
         {theme.refs && theme.refs.length > 0 && (

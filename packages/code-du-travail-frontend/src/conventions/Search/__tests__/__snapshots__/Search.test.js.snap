@@ -257,9 +257,14 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   }
 }
 
-<<<<<<< HEAD
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -271,18 +276,13 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
     margin-top: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
-=======
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
->>>>>>> test(frontend): update snapshots
   }
 }
 
@@ -1169,9 +1169,14 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   }
 }
 
-<<<<<<< HEAD
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1183,18 +1188,13 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
     margin-top: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
-=======
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
->>>>>>> test(frontend): update snapshots
   }
 }
 
@@ -1259,13 +1259,8 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
                       class="c13"
                     >
                       <a
-<<<<<<< HEAD
-                        class="c13"
-                        href="/convention-collective/275-small-titre"
-=======
                         class="c14"
-                        href="/convention-collective/0275-titre-convention-1"
->>>>>>> test(frontend): update snapshots
+                        href="/convention-collective/275-small-titre"
                       >
                         small titre
                       </a>
@@ -1291,13 +1286,8 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
                       class="c13"
                     >
                       <a
-<<<<<<< HEAD
-                        class="c13"
-                        href="/convention-collective/276-smaller-convention-2"
-=======
                         class="c14"
-                        href="/convention-collective/0276-titre-convention-2"
->>>>>>> test(frontend): update snapshots
+                        href="/convention-collective/276-smaller-convention-2"
                       >
                         smaller convention 2
                       </a>
@@ -1571,9 +1561,14 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   }
 }
 
-<<<<<<< HEAD
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1585,18 +1580,13 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
     margin-top: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
-=======
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
->>>>>>> test(frontend): update snapshots
   }
 }
 
@@ -1661,13 +1651,8 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
                       class="c13"
                     >
                       <a
-<<<<<<< HEAD
-                        class="c13"
-                        href="/convention-collective/4567-smaller-convention-2"
-=======
                         class="c14"
-                        href="/convention-collective/4567-titre-convention-2"
->>>>>>> test(frontend): update snapshots
+                        href="/convention-collective/4567-smaller-convention-2"
                       >
                         smaller convention 2
                       </a>
@@ -1941,9 +1926,14 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   }
 }
 
-<<<<<<< HEAD
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1955,18 +1945,13 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
     margin-top: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
-=======
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
->>>>>>> test(frontend): update snapshots
   }
 }
 
@@ -2040,15 +2025,8 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
                       class="c13"
                     >
                       <a
-<<<<<<< HEAD
-                        class="c13"
-                      />
-=======
                         class="c14"
-                      >
-                        Convention 1
-                      </a>
->>>>>>> test(frontend): update snapshots
+                      />
                     </div>
                   </div>
                 </td>
@@ -2319,9 +2297,14 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   }
 }
 
-<<<<<<< HEAD
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -2333,18 +2316,13 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
     margin-top: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
-=======
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
->>>>>>> test(frontend): update snapshots
   }
 }
 
