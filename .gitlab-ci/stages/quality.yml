@@ -3,12 +3,7 @@
 .quality_stage: &quality_stage
   stage: "Code Quality"
   dependencies: []
-  only:
-    refs:
-      - external_pull_requests
   except:
-    refs:
-      - branches
     variables:
       # Don't run test when deploy on production an existing image
       - $PRODUCTION

@@ -58,12 +58,6 @@ Create namespace:
   environment:
     name: fabrique-dev
   only:
-    refs:
-      - external_pull_requests
-      - tags
-  except:
-    refs:
-      - branches
     variables:
       - $PRODUCTION
 
