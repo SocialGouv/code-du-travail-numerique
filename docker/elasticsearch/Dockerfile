@@ -6,5 +6,4 @@ RUN bin/elasticsearch-plugin install --silent analysis-icu
 
 RUN  bin/elasticsearch-keystore create
 
-COPY ./elasticsearch.yml  config/elasticsearch.yml
-
+COPY ./elasticsearch.yml config/elasticsearch.yml
