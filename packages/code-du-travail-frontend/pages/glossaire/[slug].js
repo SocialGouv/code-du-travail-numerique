@@ -23,7 +23,7 @@ function Term({ pageUrl, ogImage }) {
   const [term] = glossary.filter(term => slug === term.slug);
 
   return (
-    <Layout>
+    <Layout title={title}>
       <Metas
         url={pageUrl}
         title={`${term.title} - Code du travail numérique`}

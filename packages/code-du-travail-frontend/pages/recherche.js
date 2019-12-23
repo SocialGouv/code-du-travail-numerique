@@ -39,7 +39,10 @@ class SearchPage extends React.Component {
     } = this.props;
     const { q: query = "" } = router.query;
     return (
-      <Layout currentPage="search">
+      <Layout
+        currentPage="search"
+        title={`${query} - Code du travail numérique`}
+      >
         <Head>
           <meta name="robots" content="noindex, follow" />
         </Head>

@@ -22,7 +22,7 @@ const subtitle =
 function Glossaire({ pageUrl, ogImage }) {
   const termsByLetters = getGlossaryLetters(glossary);
   return (
-    <Layout>
+    <Layout title={title}>
       <Metas
         url={pageUrl}
         title="Glossaire - Code du travail numérique"
