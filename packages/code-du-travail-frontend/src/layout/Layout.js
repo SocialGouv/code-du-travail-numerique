@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-import React from "react";
-import styled, { css } from "styled-components";
-import { theme } from "@socialgouv/react-ui";
-||||||| constructed merge base
-import React from "react";
-import styled from "styled-components";
-=======
 import React, { useState, useEffect } from "react";
+import styled, { css } from "styled-components";
+import { ScreenReaderOnly, theme } from "@socialgouv/react-ui";
 import { useRouter } from "next/router";
-import styled from "styled-components";
-import { ScreenReaderOnly } from "@socialgouv/react-ui";
->>>>>>> wip: live region a11y
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -52,18 +43,14 @@ const Layout = ({ title, children, currentPage }) => {
 
 export { Layout };
 
-<<<<<<< HEAD
 const { breakpoints } = theme;
 
-||||||| constructed merge base
-=======
 const Main = styled.main`
   /* we don't want to focus explicitely main
   it's only use to reset the focus position */
   outline: none;
 `;
 
->>>>>>> wip: live region a11y
 const BackgroundLayer = styled.div`
   position: absolute;
   top: 0;

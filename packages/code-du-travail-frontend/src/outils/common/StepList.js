@@ -4,10 +4,15 @@ import { FlatList, theme, Wrapper } from "@socialgouv/react-ui";
 
 export const STEP_LIST_WIDTH = "28rem";
 
-export function StepList({ activeIndex = 0, items = [] }) {
+export function StepList({
+  activeIndex = 0,
+  items = [],
+  anchorName,
+  anchorRef
+}) {
   return (
     <StyledWrapper variant="dark">
-      <Title>
+      <Title tabindex="-1" ref={anchorRef}>
         Étape<HideOnMobile>s</HideOnMobile>
         <StepProgress>
           &nbsp;{`${activeIndex + 1}/${items.length}`}
