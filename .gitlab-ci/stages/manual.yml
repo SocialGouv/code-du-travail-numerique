@@ -45,8 +45,7 @@ Production:
   dependencies: []
   when: manual
   only:
-    refs:
-      - tags
+    - tags
   except:
     variables:
       - $PRODUCTION

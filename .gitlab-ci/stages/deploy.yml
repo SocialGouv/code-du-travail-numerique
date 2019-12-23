@@ -61,7 +61,8 @@ Create namespace:
     - external_pull_requests
     - tags
   except:
-    - branches
+    refs:
+      - branches
     variables:
       - $PRODUCTION
 

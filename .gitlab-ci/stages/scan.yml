@@ -8,7 +8,8 @@ Snyk docker scan:
   only:
     - external_pull_requests
   except:
-    - branches
+    refs:
+      - branches
     variables:
       - $PRODUCTION
   dependencies: []

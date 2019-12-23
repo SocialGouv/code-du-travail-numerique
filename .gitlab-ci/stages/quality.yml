@@ -6,7 +6,8 @@
   only:
     - external_pull_requests
   except:
-    - branches
+    refs:
+      - branches
     variables:
       # Don't run test when deploy on production an existing image
       - $PRODUCTION

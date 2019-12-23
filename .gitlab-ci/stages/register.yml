@@ -2,15 +2,15 @@
 Test PR:
   stage: "Prepare"
   only:
-      - external_pull_requests
+    - external_pull_requests
   script: echo "Prepare Pull requests"
 
 Test PR Only:
   stage: "Prepare"
   only:
-      - external_pull_requests
+    - external_pull_requests
   except:
-      - branches
+    - branches
   script: echo "Prepare Pull requests Only"
 
 .prepare_stage: &prepare_stage
@@ -20,7 +20,8 @@ Test PR Only:
     - external_pull_requests
     - tags
   except:
-    - branches
+    refs:
+      - branches
     variables:
       - $PRODUCTION
       # Don't register a base image for release commit
@@ -34,7 +35,8 @@ Test PR Only:
     - external_pull_requests
     - tags
   except:
-    - branches
+    refs:
+      - branches
     variables:
       - $PRODUCTION
       # Don't register a base image for release commit
