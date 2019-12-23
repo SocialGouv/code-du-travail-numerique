@@ -1,5 +1,12 @@
 export const themesMapping = {
   properties: {
+    icon: { type: "keyword" },
+    children: {
+      properties: {
+        title: { type: "text" },
+        slug: { type: "text" }
+      }
+    },
     // The local document slug
     slug: {
       type: "keyword"

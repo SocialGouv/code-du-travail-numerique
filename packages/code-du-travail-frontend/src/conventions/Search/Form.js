@@ -5,7 +5,7 @@ import Link from "next/link";
 import Spinner from "react-svg-spinner";
 
 import slugify from "@cdt/data/slugify";
-import { Table, Container, Heading, theme } from "@socialgouv/react-ui";
+import { Table, Container, Heading, Input, theme } from "@socialgouv/react-ui";
 
 import SearchCC from "./SearchCC";
 
@@ -199,10 +199,6 @@ const ResultsContainer = styled.div`
 const ConventionLink = styled.a`
   color: ${colors.altText};
   cursor: pointer;
-`;
-
-const Input = styled.input`
-  width: 100%;
 `;
 
 const Box = styled.div`

@@ -24,13 +24,13 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   line-height: 1.25;
 }
 
-.c4 {
+.c5 {
   position: relative;
   overflow: hidden;
 }
 
-.c4:before,
-.c4:after {
+.c5:before,
+.c5:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -44,19 +44,19 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c4:before {
+.c5:before {
   left: -2rem;
 }
 
-.c4:after {
+.c5:after {
   right: -2rem;
 }
 
-.c5 {
+.c6 {
   overflow-x: auto;
 }
 
-.c6 {
+.c7 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -65,67 +65,153 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   border-spacing: 0;
 }
 
-.c6 caption {
+.c7 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c6 td,
-.c6 th {
+.c7 td,
+.c7 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c6 th {
+.c7 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c6 thead,
-.c6 tfoot {
+.c7 thead,
+.c7 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c6 tfoot {
+.c7 tfoot {
   vertical-align: top;
 }
 
-.c7 {
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c3 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:invalid {
+  border-color: #eb5757;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c3::-moz-placeholder {
+  color: #9298af;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c3::placeholder {
+  color: #9298af;
+}
+
+.c3:focus {
+  border-color: #7994d4;
+}
+
+.c3:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c3:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::placeholder {
+  color: transparent;
+}
+
+.c8 {
   width: 100%;
   table-layout: fixed;
 }
 
-.c8 {
+.c9 {
   font-weight: bold;
   background: #e4e8ef;
 }
 
-.c3 {
+.c4 {
   margin-top: 2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c2 {
-  width: 100%;
-}
-
-.c12 {
+.c13 {
   margin: 1rem 0;
 }
 
-.c11 {
+.c12 {
   margin-top: 1rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -143,7 +229,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   justify-content: space-between;
 }
 
-.c10 {
+.c11 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -171,8 +257,14 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -184,7 +276,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -206,28 +298,32 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
     <p>
       Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
     </p>
-    <input
-      class="c2"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-      role="search"
-      type="search"
-      value="xxxx"
-    />
     <div
-      class="c3"
+      class="c2"
+    >
+      <input
+        class="c3"
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        role="search"
+        type="search"
+        value="xxxx"
+      />
+    </div>
+    <div
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         >
           <table
-            class="c6 c7"
+            class="c7 c8"
           >
             <tbody>
               <tr
-                class="c8"
+                class="c9"
               >
                 <td>
                   Conventions collectives
@@ -236,22 +332,22 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
               <tr>
                 <td>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
                       IDCC 0275
                     </div>
                   </div>
                   <div
-                    class="c11"
+                    class="c12"
                   >
                     <div
-                      class="c12"
+                      class="c13"
                     >
                       <a
-                        class="c13"
+                        class="c14"
                       >
                         small title 1
                       </a>
@@ -293,7 +389,93 @@ exports[`<Search /> should render 1`] = `
 }
 
 .c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c3 {
   width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:invalid {
+  border-color: #eb5757;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c3::-moz-placeholder {
+  color: #9298af;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c3::placeholder {
+  color: #9298af;
+}
+
+.c3:focus {
+  border-color: #7994d4;
+}
+
+.c3:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c3:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::placeholder {
+  color: transparent;
 }
 
 @media print {
@@ -309,6 +491,12 @@ exports[`<Search /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -321,13 +509,17 @@ exports[`<Search /> should render 1`] = `
     <p>
       Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
     </p>
-    <input
+    <div
       class="c2"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-      role="search"
-      type="search"
-      value=""
-    />
+    >
+      <input
+        class="c3"
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        role="search"
+        type="search"
+        value=""
+      />
+    </div>
     
   </div>
 </div>
@@ -357,12 +549,98 @@ exports[`<Search /> should show no results when no result 1`] = `
   line-height: 1.25;
 }
 
-.c3 {
-  margin-top: 2rem;
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
 }
 
-.c2 {
+.c3 {
   width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:invalid {
+  border-color: #eb5757;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c3::-moz-placeholder {
+  color: #9298af;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c3::placeholder {
+  color: #9298af;
+}
+
+.c3:focus {
+  border-color: #7994d4;
+}
+
+.c3:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c3:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::placeholder {
+  color: transparent;
+}
+
+.c4 {
+  margin-top: 2rem;
 }
 
 @media print {
@@ -378,6 +656,12 @@ exports[`<Search /> should show no results when no result 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -390,15 +674,19 @@ exports[`<Search /> should show no results when no result 1`] = `
     <p>
       Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
     </p>
-    <input
-      class="c2"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-      role="search"
-      type="search"
-      value="9999"
-    />
     <div
-      class="c3"
+      class="c2"
+    >
+      <input
+        class="c3"
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        role="search"
+        type="search"
+        value="9999"
+      />
+    </div>
+    <div
+      class="c4"
     >
       <div>
         Aucun résultat pour votre recherche.
@@ -432,12 +720,98 @@ exports[`<Search /> should show spinner when loading 1`] = `
   line-height: 1.25;
 }
 
-.c3 {
-  margin-top: 2rem;
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
 }
 
-.c2 {
+.c3 {
   width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:invalid {
+  border-color: #eb5757;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c3::-moz-placeholder {
+  color: #9298af;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c3::placeholder {
+  color: #9298af;
+}
+
+.c3:focus {
+  border-color: #7994d4;
+}
+
+.c3:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c3:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::placeholder {
+  color: transparent;
+}
+
+.c4 {
+  margin-top: 2rem;
 }
 
 @media print {
@@ -453,6 +827,12 @@ exports[`<Search /> should show spinner when loading 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -465,15 +845,19 @@ exports[`<Search /> should show spinner when loading 1`] = `
     <p>
       Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
     </p>
-    <input
-      class="c2"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-      role="search"
-      type="search"
-      value="8888"
-    />
     <div
-      class="c3"
+      class="c2"
+    >
+      <input
+        class="c3"
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        role="search"
+        type="search"
+        value="8888"
+      />
+    </div>
+    <div
+      class="c4"
     >
       <div>
         <svg
@@ -552,13 +936,13 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   line-height: 1.25;
 }
 
-.c4 {
+.c5 {
   position: relative;
   overflow: hidden;
 }
 
-.c4:before,
-.c4:after {
+.c5:before,
+.c5:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -572,19 +956,19 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c4:before {
+.c5:before {
   left: -2rem;
 }
 
-.c4:after {
+.c5:after {
   right: -2rem;
 }
 
-.c5 {
+.c6 {
   overflow-x: auto;
 }
 
-.c6 {
+.c7 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -593,67 +977,153 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   border-spacing: 0;
 }
 
-.c6 caption {
+.c7 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c6 td,
-.c6 th {
+.c7 td,
+.c7 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c6 th {
+.c7 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c6 thead,
-.c6 tfoot {
+.c7 thead,
+.c7 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c6 tfoot {
+.c7 tfoot {
   vertical-align: top;
 }
 
-.c7 {
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c3 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:invalid {
+  border-color: #eb5757;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c3::-moz-placeholder {
+  color: #9298af;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c3::placeholder {
+  color: #9298af;
+}
+
+.c3:focus {
+  border-color: #7994d4;
+}
+
+.c3:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c3:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::placeholder {
+  color: transparent;
+}
+
+.c8 {
   width: 100%;
   table-layout: fixed;
 }
 
-.c8 {
+.c9 {
   font-weight: bold;
   background: #e4e8ef;
 }
 
-.c3 {
+.c4 {
   margin-top: 2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c2 {
-  width: 100%;
-}
-
-.c12 {
+.c13 {
   margin: 1rem 0;
 }
 
-.c11 {
+.c12 {
   margin-top: 1rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -671,7 +1141,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   justify-content: space-between;
 }
 
-.c10 {
+.c11 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -699,8 +1169,14 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -712,7 +1188,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -734,28 +1210,32 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     <p>
       Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
     </p>
-    <input
-      class="c2"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-      role="search"
-      type="search"
-      value="1234"
-    />
     <div
-      class="c3"
+      class="c2"
+    >
+      <input
+        class="c3"
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        role="search"
+        type="search"
+        value="1234"
+      />
+    </div>
+    <div
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         >
           <table
-            class="c6 c7"
+            class="c7 c8"
           >
             <tbody>
               <tr
-                class="c8"
+                class="c9"
               >
                 <td>
                   Conventions collectives
@@ -764,22 +1244,22 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
               <tr>
                 <td>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
                       IDCC 0275
                     </div>
                   </div>
                   <div
-                    class="c11"
+                    class="c12"
                   >
                     <div
-                      class="c12"
+                      class="c13"
                     >
                       <a
-                        class="c13"
+                        class="c14"
                         href="/convention-collective/275-small-titre"
                       >
                         small titre
@@ -791,22 +1271,22 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
               <tr>
                 <td>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
                       IDCC 0276
                     </div>
                   </div>
                   <div
-                    class="c11"
+                    class="c12"
                   >
                     <div
-                      class="c12"
+                      class="c13"
                     >
                       <a
-                        class="c13"
+                        class="c14"
                         href="/convention-collective/276-smaller-convention-2"
                       >
                         smaller convention 2
@@ -848,13 +1328,13 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   line-height: 1.25;
 }
 
-.c4 {
+.c5 {
   position: relative;
   overflow: hidden;
 }
 
-.c4:before,
-.c4:after {
+.c5:before,
+.c5:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -868,19 +1348,19 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c4:before {
+.c5:before {
   left: -2rem;
 }
 
-.c4:after {
+.c5:after {
   right: -2rem;
 }
 
-.c5 {
+.c6 {
   overflow-x: auto;
 }
 
-.c6 {
+.c7 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -889,67 +1369,153 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   border-spacing: 0;
 }
 
-.c6 caption {
+.c7 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c6 td,
-.c6 th {
+.c7 td,
+.c7 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c6 th {
+.c7 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c6 thead,
-.c6 tfoot {
+.c7 thead,
+.c7 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c6 tfoot {
+.c7 tfoot {
   vertical-align: top;
 }
 
-.c7 {
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c3 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:invalid {
+  border-color: #eb5757;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c3::-moz-placeholder {
+  color: #9298af;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c3::placeholder {
+  color: #9298af;
+}
+
+.c3:focus {
+  border-color: #7994d4;
+}
+
+.c3:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c3:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::placeholder {
+  color: transparent;
+}
+
+.c8 {
   width: 100%;
   table-layout: fixed;
 }
 
-.c8 {
+.c9 {
   font-weight: bold;
   background: #e4e8ef;
 }
 
-.c3 {
+.c4 {
   margin-top: 2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c2 {
-  width: 100%;
-}
-
-.c12 {
+.c13 {
   margin: 1rem 0;
 }
 
-.c11 {
+.c12 {
   margin-top: 1rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -967,7 +1533,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   justify-content: space-between;
 }
 
-.c10 {
+.c11 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -995,8 +1561,14 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1008,7 +1580,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -1030,28 +1602,32 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
     <p>
       Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
     </p>
-    <input
-      class="c2"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-      role="search"
-      type="search"
-      value="4567"
-    />
     <div
-      class="c3"
+      class="c2"
+    >
+      <input
+        class="c3"
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        role="search"
+        type="search"
+        value="4567"
+      />
+    </div>
+    <div
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         >
           <table
-            class="c6 c7"
+            class="c7 c8"
           >
             <tbody>
               <tr
-                class="c8"
+                class="c9"
               >
                 <td>
                   Conventions collectives
@@ -1060,22 +1636,22 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
               <tr>
                 <td>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
                       IDCC 4567
                     </div>
                   </div>
                   <div
-                    class="c11"
+                    class="c12"
                   >
                     <div
-                      class="c12"
+                      class="c13"
                     >
                       <a
-                        class="c13"
+                        class="c14"
                         href="/convention-collective/4567-smaller-convention-2"
                       >
                         smaller convention 2
@@ -1117,13 +1693,13 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   line-height: 1.25;
 }
 
-.c4 {
+.c5 {
   position: relative;
   overflow: hidden;
 }
 
-.c4:before,
-.c4:after {
+.c5:before,
+.c5:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1137,19 +1713,19 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c4:before {
+.c5:before {
   left: -2rem;
 }
 
-.c4:after {
+.c5:after {
   right: -2rem;
 }
 
-.c5 {
+.c6 {
   overflow-x: auto;
 }
 
-.c6 {
+.c7 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -1158,67 +1734,153 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   border-spacing: 0;
 }
 
-.c6 caption {
+.c7 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c6 td,
-.c6 th {
+.c7 td,
+.c7 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c6 th {
+.c7 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c6 thead,
-.c6 tfoot {
+.c7 thead,
+.c7 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c6 tfoot {
+.c7 tfoot {
   vertical-align: top;
 }
 
-.c7 {
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c3 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:invalid {
+  border-color: #eb5757;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c3::-moz-placeholder {
+  color: #9298af;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c3::placeholder {
+  color: #9298af;
+}
+
+.c3:focus {
+  border-color: #7994d4;
+}
+
+.c3:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c3:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::placeholder {
+  color: transparent;
+}
+
+.c8 {
   width: 100%;
   table-layout: fixed;
 }
 
-.c8 {
+.c9 {
   font-weight: bold;
   background: #e4e8ef;
 }
 
-.c3 {
+.c4 {
   margin-top: 2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c2 {
-  width: 100%;
-}
-
-.c12 {
+.c13 {
   margin: 1rem 0;
 }
 
-.c11 {
+.c12 {
   margin-top: 1rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1236,7 +1898,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   justify-content: space-between;
 }
 
-.c10 {
+.c11 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -1264,8 +1926,14 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1277,7 +1945,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -1299,28 +1967,32 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
     <p>
       Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
     </p>
-    <input
-      class="c2"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-      role="search"
-      type="search"
-      value="01234567891011"
-    />
     <div
-      class="c3"
+      class="c2"
+    >
+      <input
+        class="c3"
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        role="search"
+        type="search"
+        value="01234567891011"
+      />
+    </div>
+    <div
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         >
           <table
-            class="c6 c7"
+            class="c7 c8"
           >
             <tbody>
               <tr
-                class="c8"
+                class="c9"
               >
                 <td>
                   Entreprises
@@ -1329,10 +2001,10 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
               <tr>
                 <td>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
                       Entreprise 1 93100 Commune test
                     </div>
@@ -1347,13 +2019,13 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
                     </a>
                   </div>
                   <div
-                    class="c11"
+                    class="c12"
                   >
                     <div
-                      class="c12"
+                      class="c13"
                     >
                       <a
-                        class="c13"
+                        class="c14"
                       />
                     </div>
                   </div>
@@ -1392,13 +2064,13 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   line-height: 1.25;
 }
 
-.c4 {
+.c5 {
   position: relative;
   overflow: hidden;
 }
 
-.c4:before,
-.c4:after {
+.c5:before,
+.c5:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1412,19 +2084,19 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c4:before {
+.c5:before {
   left: -2rem;
 }
 
-.c4:after {
+.c5:after {
   right: -2rem;
 }
 
-.c5 {
+.c6 {
   overflow-x: auto;
 }
 
-.c6 {
+.c7 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -1433,67 +2105,153 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   border-spacing: 0;
 }
 
-.c6 caption {
+.c7 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c6 td,
-.c6 th {
+.c7 td,
+.c7 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c6 th {
+.c7 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c6 thead,
-.c6 tfoot {
+.c7 thead,
+.c7 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c6 tfoot {
+.c7 tfoot {
   vertical-align: top;
 }
 
-.c7 {
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c3 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:invalid {
+  border-color: #eb5757;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c3::-moz-placeholder {
+  color: #9298af;
+}
+
+.c3:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c3::placeholder {
+  color: #9298af;
+}
+
+.c3:focus {
+  border-color: #7994d4;
+}
+
+.c3:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c3:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c3:focus::placeholder {
+  color: transparent;
+}
+
+.c8 {
   width: 100%;
   table-layout: fixed;
 }
 
-.c8 {
+.c9 {
   font-weight: bold;
   background: #e4e8ef;
 }
 
-.c3 {
+.c4 {
   margin-top: 2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c2 {
-  width: 100%;
-}
-
-.c12 {
+.c13 {
   margin: 1rem 0;
 }
 
-.c11 {
+.c12 {
   margin-top: 1rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1511,7 +2269,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   justify-content: space-between;
 }
 
-.c10 {
+.c11 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -1539,8 +2297,14 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (min-width:980px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1552,7 +2316,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 }
 
 @media screen and (min-width:980px) {
-  .c10 {
+  .c11 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -1574,28 +2338,32 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
     <p>
       Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
     </p>
-    <input
-      class="c2"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-      role="search"
-      type="search"
-      value="hello"
-    />
     <div
-      class="c3"
+      class="c2"
+    >
+      <input
+        class="c3"
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        role="search"
+        type="search"
+        value="hello"
+      />
+    </div>
+    <div
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         >
           <table
-            class="c6 c7"
+            class="c7 c8"
           >
             <tbody>
               <tr
-                class="c8"
+                class="c9"
               >
                 <td>
                   Conventions collectives
@@ -1604,22 +2372,22 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
               <tr>
                 <td>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
                       IDCC 0275
                     </div>
                   </div>
                   <div
-                    class="c11"
+                    class="c12"
                   >
                     <div
-                      class="c12"
+                      class="c13"
                     >
                       <a
-                        class="c13"
+                        class="c14"
                       >
                         titre convention 1
                       </a>
@@ -1628,7 +2396,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
                 </td>
               </tr>
               <tr
-                class="c8"
+                class="c9"
               >
                 <td>
                   Entreprises
@@ -1637,10 +2405,10 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
               <tr>
                 <td>
                   <div
-                    class="c9"
+                    class="c10"
                   >
                     <div
-                      class="c10"
+                      class="c11"
                     >
                       Entreprise 1 93100 Commune test
                     </div>
@@ -1655,13 +2423,13 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
                     </a>
                   </div>
                   <div
-                    class="c11"
+                    class="c12"
                   >
                     <div
-                      class="c12"
+                      class="c13"
                     >
                       <a
-                        class="c13"
+                        class="c14"
                       >
                         Short Convention 1
                       </a>

@@ -1,12 +1,14 @@
 import React from "react";
+import styled from "styled-components";
 import Link from "next/link";
 import getConfig from "next/config";
 import {
+  Button,
+  CardList,
   Container,
-  Grid,
-  GridCell,
-  PageTitle,
+  icons,
   Section,
+  theme,
   Tile
 } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
@@ -18,6 +20,25 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
+const SubThemes = ({ children = [] }) => {
+  return (
+    <div>
+      {children.slice(0, 3).map(({ title }, index) => (
+        <>
+          {title}
+          {index < 2 ? (
+            index < children.length - 1 && (
+              <PrimaryColored> &bull;&nbsp;</PrimaryColored>
+            )
+          ) : (
+            <PrimaryColored>&nbsp;&hellip;</PrimaryColored>
+          )}
+        </>
+      ))}
+    </div>
+  );
+};
+
 const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
   <Layout currentPage="themes">
     <Metas
@@ -28,23 +49,29 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
     />
     <Section>
       <Container>
-        <PageTitle>Retrouvez toutes nos thématiques</PageTitle>
-        {children && children.length > 0 && (
-          <Grid>
-            {children.map(({ slug, title }) => (
-              <GridCell key={slug}>
-                <Link
-                  key={slug}
-                  href="/themes/[slug]"
-                  as={`/themes/${slug}`}
-                  passHref
-                >
-                  <Tile title={title} />
-                </Link>
-              </GridCell>
+        <CardList
+          title="Contenus par thème"
+          desc="Découvrez l’intégralité de nos contenus organisés par grands thèmes"
+        >
+          {children &&
+            children.map(({ children, icon, slug, title }) => (
+              <Link
+                key={slug}
+                href="/themes/[slug]"
+                as={`/themes/${slug}`}
+                passHref
+              >
+                <Tile icon={icons[icon]} title={title}>
+                  <TileChildren>
+                    <SubThemes>{children}</SubThemes>
+                    <StyledDiv hasContentAbove={Boolean(children)}>
+                      <Button variant="link" as="div" />
+                    </StyledDiv>
+                  </TileChildren>
+                </Tile>
+              </Link>
             ))}
-          </Grid>
-        )}
+        </CardList>
       </Container>
     </Section>
   </Layout>
@@ -60,3 +87,21 @@ ThemesPage.getInitialProps = async () => {
 };
 
 export default ThemesPage;
+
+const { spacings } = theme;
+
+const TileChildren = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+`;
+
+const PrimaryColored = styled.span`
+  color: ${({ theme }) => theme.primary};
+`;
+
+const StyledDiv = styled.div`
+  margin-top: ${({ hasContentAbove }) =>
+    hasContentAbove ? spacings.base : spacings.small};
+`;

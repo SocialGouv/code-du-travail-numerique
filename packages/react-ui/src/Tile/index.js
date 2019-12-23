@@ -2,11 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Badge } from "../Badge";
+import { Stripe } from "../Stripe";
 import { Subtitle, Heading } from "../Titles";
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
 
 export const Tile = React.forwardRef(
-  ({ children, custom, icon: Icon, subtitle, title, wide, ...props }, ref) => (
+  (
+    { children, custom, icon: Icon, striped, subtitle, title, wide, ...props },
+    ref
+  ) => (
     <StyledTile
       as={props.href ? "a" : "button"}
       ref={ref}
@@ -14,7 +18,8 @@ export const Tile = React.forwardRef(
       {...props}
     >
       {custom && <Badge />}
-      <div>
+      <TopWrapper>
+        {striped && <Stripe length="5rem" />}
         {Icon && (
           <IconWrapper>
             <Icon />
@@ -24,7 +29,7 @@ export const Tile = React.forwardRef(
           {subtitle && <Subtitle>{subtitle}</Subtitle>}
           {title && <StyledHeading>{title}</StyledHeading>}
         </HeadingWrapper>
-      </div>
+      </TopWrapper>
       {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
     </StyledTile>
   )
@@ -38,6 +43,7 @@ Tile.propTypes = {
   href: PropTypes.string,
   icon: PropTypes.elementType,
   subtitle: PropTypes.string,
+  striped: PropTypes.bool,
   title: PropTypes.string.isRequired,
   wide: PropTypes.bool
 };
@@ -46,6 +52,7 @@ Tile.defaultProps = {
   custom: false,
   href: undefined,
   icon: null,
+  striped: false,
   subtitle: "",
   wide: false
 };
@@ -53,12 +60,10 @@ Tile.defaultProps = {
 const StyledTile = styled.a`
   position: relative;
   display: inline-flex;
-  flex: 1 1 100%;
+  flex: 1 1 auto;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  width: ${({ wide }) => (wide ? "100%" : "auto")};
+  ${({ wide }) => (wide ? "width: 100%" : "max-width: 100%")};
   margin: 0;
   padding: ${({ wide }) =>
     wide
@@ -102,6 +107,10 @@ const IconWrapper = styled.div`
   border-radius: 50%;
 `;
 
+const TopWrapper = styled.div`
+  flex: 0 0 auto;
+`;
+
 const HeadingWrapper = styled.div`
   padding-right: ${({ custom }) => (custom ? spacings.small : "0")};
 `;
@@ -111,5 +120,6 @@ const StyledHeading = styled(Heading)`
 `;
 
 const ChildrenWrapper = styled.div`
+  flex: 1 1 auto;
   margin-top: ${spacings.small};
 `;

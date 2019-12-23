@@ -20,17 +20,21 @@ const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/the
 /*
 
  {
-  id: "fzef-zefzef-zefzef-zefzef",
-  title: "some title",
-  variants: "variant 1\nvariant 2\nvariant 3",
-  parent: "nbz-zefzef-yukyuk-qcqc",
-  refs:[{
-    url: "/fiche-service-public/titre-de-la-fiche,
-    position: 1
-  },{
-    url: "/fiche-service-public/titre-de-la-fiche-2,
-    position: 2
-  }]
+  "icon": "Depart",
+  "refs": [{
+      "url":"/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
+      "title":"D\u00e9mission, licenciement : peut-on travailler ailleurs avant la fin du pr\u00e9avis ?"
+    },
+    {
+      "url":"/contributions/arret-maladie-pendant-le-preavis-quelles-consequences",
+      "title":"Arr\u00eat maladie pendant le pr\u00e9avis\u00a0:\u00a0quelles cons\u00e9quences\u00a0?"
+    }
+  ],
+  "title": "D\u00e9part de l'entreprise",
+  "parent": null,
+  "position": 8,
+  "id": "a91437fb-e493-4e18-8f7d-7ffe8d16ff1f",
+  "last_modified": 1576665139553
  }
 
 */
@@ -74,13 +78,14 @@ const fetchAll = async () => {
     const breadcrumbs = row.parent && getParents(sortedRows, row);
     const children = getChildren(sortedRows, row);
     return {
-      title: row.title,
-      position: row.position,
-      refs: row.refs.map(({ url, title }) => ({ url, title })),
-      source: SOURCES.THEMES,
-      slug: getSlug(row),
       breadcrumbs,
       children,
+      icon: row.icon,
+      position: row.position,
+      refs: row.refs.map(({ url, title }) => ({ url, title })),
+      slug: getSlug(row),
+      source: SOURCES.THEMES,
+      title: row.title,
       variants: getVariants(row)
     };
   });

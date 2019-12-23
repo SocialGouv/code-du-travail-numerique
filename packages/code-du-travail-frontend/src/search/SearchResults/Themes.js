@@ -32,8 +32,8 @@ export const Themes = ({ items, query }) => (
             >
               <Tile
                 onClick={() => reportSelectionToMatomo(source, slug, url, algo)}
-                wide
                 title={title}
+                striped
               />
             </Link>
           ))}

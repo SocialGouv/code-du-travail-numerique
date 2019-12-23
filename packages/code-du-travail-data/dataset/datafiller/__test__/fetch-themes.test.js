@@ -38,6 +38,7 @@ const requetes = [
     title: "title1",
     position: 1,
     parent: null,
+    icon: "Indemnity",
     id: "theme1",
     last_modified: 1574180872936,
     variants: "known-query1\nknown-query2"

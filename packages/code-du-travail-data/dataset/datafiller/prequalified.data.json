@@ -262,23 +262,23 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/accident-du-travail-demarches-a-effectuer",
-        "title": "Accident du travail : démarches à effectuer",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-service-public/quest-ce-quun-accident-du-travail",
         "title": "Qu'est-ce qu'un accident du travail ?",
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/comment-calculer-les-cotisations-accident-du-travail-et-maladie-professionnelle",
-        "title": "Comment calculer les cotisations accident du travail et maladie professionnelle ?",
-        "relevance": 4
+        "url": "/fiche-service-public/accident-du-travail-demarches-a-effectuer",
+        "title": "Accident du travail : démarches à effectuer",
+        "relevance": 5
       },
       {
         "url": "/fiche-service-public/accident-du-travail-reprise-du-travail-du-salarie",
         "title": "Accident du travail : reprise du travail du salarié",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-service-public/comment-calculer-les-cotisations-accident-du-travail-et-maladie-professionnelle",
+        "title": "Comment calculer les cotisations accident du travail et maladie professionnelle ?",
         "relevance": 4
       },
       {
@@ -541,6 +541,11 @@
         "relevance": 3
       },
       {
+        "url": "/code-du-travail/l5422-2-1",
+        "title": "Article L5422-2-1",
+        "relevance": 3
+      },
+      {
         "url": "/code-du-travail/l5421-1",
         "title": "Article L5421-1",
         "relevance": 3
@@ -558,11 +563,6 @@
       {
         "url": "/code-du-travail/l5421-4",
         "title": "Article L5421-4",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/l5422-2-1",
-        "title": "Article L5422-2-1",
         "relevance": 3
       },
       {
@@ -949,13 +949,13 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/d3142-65",
-        "title": "Article D3142-65",
+        "url": "/code-du-travail/l3142-105",
+        "title": "Article L3142-105",
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l3142-105",
-        "title": "Article L3142-105",
+        "url": "/code-du-travail/d3142-65",
+        "title": "Article D3142-65",
         "relevance": 5
       },
       {
@@ -1286,8 +1286,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/controle-dun-salarie-en-arret-de-travail-quelles-sont-les-regles",
-        "title": "Contrôle d'un salarié en arrêt de travail : quelles sont les règles ?",
+        "url": "/fiche-service-public/quelles-sont-les-heures-dautorisation-de-sortie-du-salarie-en-arret-maladie",
+        "title": "Quelles sont les heures d'autorisation de sortie du salarié en arrêt maladie ?",
         "relevance": 4
       },
       {
@@ -1296,8 +1296,8 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/quelles-sont-les-heures-dautorisation-de-sortie-du-salarie-en-arret-maladie",
-        "title": "Quelles sont les heures d'autorisation de sortie du salarié en arrêt maladie ?",
+        "url": "/fiche-service-public/controle-dun-salarie-en-arret-de-travail-quelles-sont-les-regles",
+        "title": "Contrôle d'un salarié en arrêt de travail : quelles sont les règles ?",
         "relevance": 4
       },
       {
@@ -1306,8 +1306,8 @@
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/l1226-8",
-        "title": "Article L1226-8",
+        "url": "/code-du-travail/l1226-9",
+        "title": "Article L1226-9",
         "relevance": 4
       },
       {
@@ -1316,8 +1316,8 @@
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/l1226-9",
-        "title": "Article L1226-9",
+        "url": "/code-du-travail/l1226-8",
+        "title": "Article L1226-8",
         "relevance": 4
       },
       {
@@ -1359,6 +1359,11 @@
     "theme": "0a0ffae1-7226-4dac-9ce3-d099109e0252",
     "refs": [
       {
+        "url": "/fiche-service-public/licenciement-quest-ce-quun-conseiller-du-salarie",
+        "title": "Licenciement : qu'est-ce qu'un conseiller du salarié ?",
+        "relevance": 5
+      },
+      {
         "url": "/fiche-service-public/licenciement-economique-entretien-prealable",
         "title": "Licenciement économique : entretien préalable",
         "relevance": 5
@@ -1369,8 +1374,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/licenciement-quest-ce-quun-conseiller-du-salarie",
-        "title": "Licenciement : qu'est-ce qu'un conseiller du salarié ?",
+        "url": "/fiche-ministere-travail/le-conseiller-du-salarie#Comment-se-faire-assister-par-un-conseiller-du-salarie",
+        "title": "Le conseiller du salarié : comment se faire assister par un conseiller du salarié ?",
         "relevance": 5
       },
       {
@@ -1379,8 +1384,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/le-conseiller-du-salarie#Comment-se-faire-assister-par-un-conseiller-du-salarie",
-        "title": "Le conseiller du salarié : comment se faire assister par un conseiller du salarié ?",
+        "url": "/code-du-travail/l1233-13",
+        "title": "Article L1233-13",
         "relevance": 5
       },
       {
@@ -1404,11 +1409,6 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1233-13",
-        "title": "Article L1233-13",
-        "relevance": 5
-      },
-      {
         "url": "/code-du-travail/l1232-2",
         "title": "Article L1232-2",
         "relevance": 5
@@ -1429,13 +1429,13 @@
         "relevance": 3
       },
       {
-        "url": "/fiche-ministere-travail/la-procedure-en-cas-de-licenciement-individuel-pour-motif-economique#En-quoi-consiste-l-entretien-prealable-au-licenciement",
-        "title": "La procédure en cas de licenciement individuel pour motif économique : en quoi consiste l’entretien préalable au licenciement ?",
+        "url": "/fiche-ministere-travail/le-conseiller-du-salarie#Quel-est-le-champ-d-intervention-du-conseiller-du-salarie",
+        "title": "Le conseiller du salarié : quel est le champ d’intervention du conseiller du salarié ?",
         "relevance": 3
       },
       {
-        "url": "/fiche-ministere-travail/le-conseiller-du-salarie#Quel-est-le-champ-d-intervention-du-conseiller-du-salarie",
-        "title": "Le conseiller du salarié : quel est le champ d’intervention du conseiller du salarié ?",
+        "url": "/fiche-ministere-travail/la-procedure-en-cas-de-licenciement-individuel-pour-motif-economique#En-quoi-consiste-l-entretien-prealable-au-licenciement",
+        "title": "La procédure en cas de licenciement individuel pour motif économique : en quoi consiste l’entretien préalable au licenciement ?",
         "relevance": 3
       },
       {
@@ -1904,13 +1904,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/a-t-on-droit-a-des-conges-payes-pendant-un-cdd",
-        "title": "A-t-on droit à des congés payés pendant un CDD ?",
+        "url": "/fiche-service-public/labsence-du-salarie-est-elle-prise-en-compte-pour-le-calcul-de-ses-conges",
+        "title": "L'absence du salarié est-elle prise en compte pour le calcul de ses congés ?",
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/labsence-du-salarie-est-elle-prise-en-compte-pour-le-calcul-de-ses-conges",
-        "title": "L'absence du salarié est-elle prise en compte pour le calcul de ses congés ?",
+        "url": "/fiche-service-public/a-t-on-droit-a-des-conges-payes-pendant-un-cdd",
+        "title": "A-t-on droit à des congés payés pendant un CDD ?",
         "relevance": 5
       },
       {
@@ -1944,13 +1944,13 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/les-conges-payes#Qui-a-droit-aux-conges-payes",
-        "title": "Les congés payés : qui a droit aux congés payés ?",
+        "url": "/fiche-ministere-travail/les-conges-payes#Quelles-sont-les-consequences-de-la-maladie-durant-les-conges-payes-nbsp",
+        "title": "Les congés payés : quelles sont les conséquences de la maladie durant les congés payés ?",
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/les-conges-payes#Quelles-sont-les-consequences-de-la-maladie-durant-les-conges-payes-nbsp",
-        "title": "Les congés payés : quelles sont les conséquences de la maladie durant les congés payés ?",
+        "url": "/fiche-ministere-travail/les-conges-payes#Qui-a-droit-aux-conges-payes",
+        "title": "Les congés payés : qui a droit aux congés payés ?",
         "relevance": 4
       },
       {
@@ -2068,6 +2068,11 @@
         "relevance": 5
       },
       {
+        "url": "/code-du-travail/r1234-1",
+        "title": "Article R1234-1",
+        "relevance": 5
+      },
+      {
         "url": "/code-du-travail/r1234-2",
         "title": "Article R1234-2",
         "relevance": 5
@@ -2088,18 +2093,13 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/r1234-1",
-        "title": "Article R1234-1",
-        "relevance": 5
+        "url": "/fiche-service-public/rupture-conventionnelle",
+        "title": "Rupture conventionnelle",
+        "relevance": 4
       },
       {
         "url": "/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi",
         "title": "Indemnité de licenciement",
-        "relevance": 4
-      },
-      {
-        "url": "/fiche-service-public/rupture-conventionnelle",
-        "title": "Rupture conventionnelle",
         "relevance": 4
       },
       {
@@ -2771,6 +2771,11 @@
         "relevance": 5
       },
       {
+        "url": "/code-du-travail/l5122-1",
+        "title": "Article L5122-1",
+        "relevance": 5
+      },
+      {
         "url": "/code-du-travail/r5122-1",
         "title": "Article R5122-1",
         "relevance": 5
@@ -2783,11 +2788,6 @@
       {
         "url": "/code-du-travail/d5122-13",
         "title": "Article D5122-13",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/l5122-1",
-        "title": "Article L5122-1",
         "relevance": 5
       },
       {
@@ -2861,6 +2861,11 @@
         "relevance": 3
       },
       {
+        "url": "/code-du-travail/r5122-3",
+        "title": "Article R5122-3",
+        "relevance": 3
+      },
+      {
         "url": "/code-du-travail/r5122-4",
         "title": "Article R5122-4",
         "relevance": 3
@@ -2878,11 +2883,6 @@
       {
         "url": "/code-du-travail/r5122-17",
         "title": "Article R5122-17",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/r5122-3",
-        "title": "Article R5122-3",
         "relevance": 3
       },
       {
@@ -3031,13 +3031,13 @@
         "relevance": 3
       },
       {
-        "url": "/fiche-service-public/harcelement-moral-au-travail",
-        "title": "Harcèlement moral au travail",
+        "url": "/fiche-service-public/lanceur-dalerte-dans-lentreprise-quelles-sont-les-regles",
+        "title": "Lanceur d'alerte dans l'entreprise : quelles sont les règles ?",
         "relevance": 3
       },
       {
-        "url": "/fiche-service-public/lanceur-dalerte-dans-lentreprise-quelles-sont-les-regles",
-        "title": "Lanceur d'alerte dans l'entreprise : quelles sont les règles ?",
+        "url": "/fiche-service-public/harcelement-moral-au-travail",
+        "title": "Harcèlement moral au travail",
         "relevance": 3
       },
       {
@@ -3221,14 +3221,19 @@
         "relevance": 5
       },
       {
+        "url": "/code-du-travail/l1226-1",
+        "title": "Article L1226-1",
+        "relevance": 5
+      },
+      {
         "url": "/code-du-travail/d1226-1",
         "title": "Article D1226-1",
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1226-1",
-        "title": "Article L1226-1",
-        "relevance": 5
+        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quand-debute-l-indemnisation-complementaire",
+        "title": "L’indemnisation légale des absences pour maladie ou accident : quand débute l’indemnisation complémentaire ?",
+        "relevance": 4
       },
       {
         "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quelles-maladies-quels-accidents-ouvrent-droit-a-l-indemnisation-nbsp",
@@ -3238,11 +3243,6 @@
       {
         "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quels-salaries-ont-droit-a-cette-indemnisation-complementaire-nbsp",
         "title": "L’indemnisation légale des absences pour maladie ou accident : quels salariés ont droit à cette indemnisation complémentaire ?",
-        "relevance": 4
-      },
-      {
-        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quand-debute-l-indemnisation-complementaire",
-        "title": "L’indemnisation légale des absences pour maladie ou accident : quand débute l’indemnisation complémentaire ?",
         "relevance": 4
       },
       {
@@ -3335,13 +3335,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-3-Comment-les-saisir-Dans-quel-delai",
-        "title": "Le recours devant les \"Prud’hommes\" : comment les saisir ? dans quel délai ?",
+        "url": "/fiche-ministere-travail/le-conseil-de-prudhommes#A-quel-conseil-de-prud-039-hommes-s-039-adresser",
+        "title": "Le conseil de prud’hommes : à quel conseil de prud’hommes s’adresser ?",
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/le-conseil-de-prudhommes#A-quel-conseil-de-prud-039-hommes-s-039-adresser",
-        "title": "Le conseil de prud’hommes : à quel conseil de prud’hommes s’adresser ?",
+        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-3-Comment-les-saisir-Dans-quel-delai",
+        "title": "Le recours devant les \"Prud’hommes\" : comment les saisir ? dans quel délai ?",
         "relevance": 5
       },
       {
@@ -3410,13 +3410,13 @@
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/r1452-4",
-        "title": "Article R1452-4",
+        "url": "/code-du-travail/r1452-3",
+        "title": "Article R1452-3",
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/r1452-3",
-        "title": "Article R1452-3",
+        "url": "/code-du-travail/r1452-4",
+        "title": "Article R1452-4",
         "relevance": 3
       },
       {
@@ -3594,13 +3594,13 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-parental",
-        "title": "Peut-on démissionner pendant un congé parental ?",
+        "url": "/fiche-service-public/peut-on-demissionner-pendant-un-arret-maladie",
+        "title": "Peut-on démissionner pendant un arrêt maladie ?",
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/peut-on-demissionner-pendant-un-arret-maladie",
-        "title": "Peut-on démissionner pendant un arrêt maladie ?",
+        "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-parental",
+        "title": "Peut-on démissionner pendant un congé parental ?",
         "relevance": 4
       },
       {
@@ -3942,6 +3942,11 @@
         "relevance": 5
       },
       {
+        "url": "/code-du-travail/l6323-3",
+        "title": "Article L6323-3",
+        "relevance": 5
+      },
+      {
         "url": "/code-du-travail/l6323-4",
         "title": "Article L6323-4",
         "relevance": 5
@@ -3954,11 +3959,6 @@
       {
         "url": "/code-du-travail/r6323-1",
         "title": "Article R6323-1",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/l6323-3",
-        "title": "Article L6323-3",
         "relevance": 5
       },
       {
@@ -4231,13 +4231,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-conges-familiaux#Question-4-Conge-de-maternite-quelle-duree",
-        "title": "Les congés \"familiaux\" : congé de maternité : quelle durée ?",
+        "url": "/fiche-ministere-travail/le-conge-de-maternite#Quelle-est-la-duree-du-conge-de-maternite",
+        "title": "Le congé de maternité : quelle est la durée du congé de maternité ?",
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/le-conge-de-maternite#Quelle-est-la-duree-du-conge-de-maternite",
-        "title": "Le congé de maternité : quelle est la durée du congé de maternité ?",
+        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-conges-familiaux#Question-4-Conge-de-maternite-quelle-duree",
+        "title": "Les congés \"familiaux\" : congé de maternité : quelle durée ?",
         "relevance": 5
       },
       {
@@ -4251,13 +4251,13 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1225-17",
-        "title": "Article L1225-17",
+        "url": "/code-du-travail/l1225-24",
+        "title": "Article L1225-24",
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1225-24",
-        "title": "Article L1225-24",
+        "url": "/code-du-travail/l1225-17",
+        "title": "Article L1225-17",
         "relevance": 5
       },
       {
@@ -4291,11 +4291,6 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/deces-de-la-mere-pendant-le-conge-maternite-quelles-consequences-sur-les-ij",
-        "title": "Décès de la mère pendant le congé maternité : quelles conséquences sur les IJ ?",
-        "relevance": 3
-      },
-      {
         "url": "/fiche-service-public/maternite-pendant-le-conge-parental-quelles-sont-les-regles",
         "title": "Maternité pendant le congé parental : quelles sont les règles ?",
         "relevance": 3
@@ -4303,6 +4298,11 @@
       {
         "url": "/fiche-service-public/hospitalisation-du-nouveau-ne-quelles-consequences-sur-le-conge-de-maternite",
         "title": "Hospitalisation du nouveau-né : quelles conséquences sur le congé de maternité ?",
+        "relevance": 3
+      },
+      {
+        "url": "/fiche-service-public/deces-de-la-mere-pendant-le-conge-maternite-quelles-consequences-sur-les-ij",
+        "title": "Décès de la mère pendant le congé maternité : quelles conséquences sur les IJ ?",
         "relevance": 3
       },
       {
@@ -4363,13 +4363,13 @@
     "theme": "7fc1cb74-c476-4544-ad33-1ff87ababa43",
     "refs": [
       {
-        "url": "/fiche-service-public/conge-parental-deducation-a-temps-partiel-dans-le-secteur-prive",
-        "title": "Congé parental d'éducation à temps partiel dans le secteur privé",
+        "url": "/fiche-service-public/conge-parental-deducation-a-temps-plein-dans-le-secteur-prive",
+        "title": "Congé parental d'éducation à temps plein dans le secteur privé",
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/conge-parental-deducation-a-temps-plein-dans-le-secteur-prive",
-        "title": "Congé parental d'éducation à temps plein dans le secteur privé",
+        "url": "/fiche-service-public/conge-parental-deducation-a-temps-partiel-dans-le-secteur-prive",
+        "title": "Congé parental d'éducation à temps partiel dans le secteur privé",
         "relevance": 5
       },
       {
@@ -4438,13 +4438,13 @@
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/l1225-53",
-        "title": "Article L1225-53",
+        "url": "/code-du-travail/l1225-51",
+        "title": "Article L1225-51",
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/l1225-51",
-        "title": "Article L1225-51",
+        "url": "/code-du-travail/l1225-53",
+        "title": "Article L1225-53",
         "relevance": 4
       },
       {
@@ -5184,13 +5184,13 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l3141-3",
-        "title": "Article L3141-3",
+        "url": "/code-du-travail/l3141-1",
+        "title": "Article L3141-1",
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l3141-1",
-        "title": "Article L3141-1",
+        "url": "/code-du-travail/l3141-3",
+        "title": "Article L3141-3",
         "relevance": 5
       },
       {
@@ -5885,6 +5885,11 @@
         "relevance": 5
       },
       {
+        "url": "/code-du-travail/l5134-19-1",
+        "title": "Article L5134-19-1",
+        "relevance": 5
+      },
+      {
         "url": "/code-du-travail/l5134-19-3",
         "title": "Article L5134-19-3",
         "relevance": 5
@@ -5895,13 +5900,13 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l5134-19-1",
-        "title": "Article L5134-19-1",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-service-public/quest-ce-que-le-parcours-emploi-competences-pec",
         "title": "Qu'est-ce que le parcours emploi compétences (PEC) ?",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-ministere-travail/le-contrat-unique-dinsertion-contrat-initiative-emploi-cui-cie#Qui-est-concerne-par-le-CUI-CIE",
+        "title": "CUI - CIE : qui est concerné par le cui-cie ?",
         "relevance": 4
       },
       {
@@ -5922,11 +5927,6 @@
       {
         "url": "/fiche-ministere-travail/le-contrat-unique-dinsertion-cui-dispositions-generales#Quels-sont-les-employeurs-concernes",
         "title": "CUI : dispositions générales : quels sont les employeurs concernés ?",
-        "relevance": 4
-      },
-      {
-        "url": "/fiche-ministere-travail/le-contrat-unique-dinsertion-contrat-initiative-emploi-cui-cie#Qui-est-concerne-par-le-CUI-CIE",
-        "title": "CUI - CIE : qui est concerné par le cui-cie ?",
         "relevance": 4
       },
       {
@@ -6028,6 +6028,11 @@
         "relevance": 5
       },
       {
+        "url": "/code-du-travail/l6325-1",
+        "title": "Article L6325-1",
+        "relevance": 5
+      },
+      {
         "url": "/code-du-travail/l6325-2",
         "title": "Article L6325-2",
         "relevance": 5
@@ -6035,11 +6040,6 @@
       {
         "url": "/code-du-travail/l6325-5",
         "title": "Article L6325-5",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/l6325-1",
-        "title": "Article L6325-1",
         "relevance": 5
       },
       {
@@ -7163,13 +7163,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/solde-de-tout-compte",
-        "title": "Solde de tout compte",
+        "url": "/fiche-service-public/fin-de-contrat-documents-a-remettre-au-salarie",
+        "title": "Fin de contrat : documents à remettre au salarié",
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/fin-de-contrat-documents-a-remettre-au-salarie",
-        "title": "Fin de contrat : documents à remettre au salarié",
+        "url": "/fiche-service-public/solde-de-tout-compte",
+        "title": "Solde de tout compte",
         "relevance": 5
       },
       {
@@ -7193,16 +7193,6 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/rupture-du-contrat-de-travail-a-duree-indeterminee-cdi",
-        "title": "Rupture du contrat de travail à durée indéterminée (CDI)",
-        "relevance": 4
-      },
-      {
-        "url": "/fiche-service-public/demission-du-salarie-a-domicile-employe-par-un-particulier",
-        "title": "Démission du salarié à domicile employé par un particulier",
-        "relevance": 4
-      },
-      {
         "url": "/fiche-service-public/certificat-de-travail",
         "title": "Certificat de travail",
         "relevance": 4
@@ -7213,18 +7203,28 @@
         "relevance": 4
       },
       {
+        "url": "/fiche-service-public/demission-du-salarie-a-domicile-employe-par-un-particulier",
+        "title": "Démission du salarié à domicile employé par un particulier",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-service-public/rupture-du-contrat-de-travail-a-duree-indeterminee-cdi",
+        "title": "Rupture du contrat de travail à durée indéterminée (CDI)",
+        "relevance": 4
+      },
+      {
         "url": "/fiche-ministere-travail/la-demission#Quelle-est-la-situation-du-salarie-a-la-fin-du-contrat",
         "title": "La démission : quelle est la situation du salarié à la fin du contrat ?",
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/r1234-11",
-        "title": "Article R1234-11",
+        "url": "/code-du-travail/l5134-70-2",
+        "title": "Article L5134-70-2",
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/l5134-70-2",
-        "title": "Article L5134-70-2",
+        "url": "/code-du-travail/r1234-11",
+        "title": "Article R1234-11",
         "relevance": 4
       },
       {
@@ -7351,13 +7351,13 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1221-12-1",
-        "title": "Article L1221-12-1",
+        "url": "/code-du-travail/l1221-10",
+        "title": "Article L1221-10",
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1221-10",
-        "title": "Article L1221-10",
+        "url": "/code-du-travail/l1221-12-1",
+        "title": "Article L1221-12-1",
         "relevance": 5
       },
       {
@@ -7971,7 +7971,7 @@
       },
       {
         "url": "https://travail-emploi.gouv.fr/droit-du-travail/l-epargne-salariale/article/les-avantages-sociaux-et-fiscaux-de-l-epargne-salariale",
-        "title": "Status 429: Too Many Requests",
+        "title": "Avantages sociaux et fiscaux de l&#039;épargne salariale en clair",
         "relevance": 5
       },
       {
@@ -8177,13 +8177,13 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1243-8",
-        "title": "Article L1243-8",
+        "url": "/code-du-travail/l1243-5",
+        "title": "Article L1243-5",
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1243-5",
-        "title": "Article L1243-5",
+        "url": "/code-du-travail/l1243-8",
+        "title": "Article L1243-8",
         "relevance": 5
       },
       {
@@ -8595,8 +8595,8 @@
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/l1152-1",
-        "title": "Article L1152-1",
+        "url": "/code-du-travail/l1153-1",
+        "title": "Article L1153-1",
         "relevance": 3
       },
       {
@@ -8620,8 +8620,8 @@
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/l1153-1",
-        "title": "Article L1153-1",
+        "url": "/code-du-travail/l1152-1",
+        "title": "Article L1152-1",
         "relevance": 3
       }
     ],
@@ -8942,13 +8942,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/inaptitude-dun-salarie-en-arret-maladie",
-        "title": "Inaptitude d'un salarié en arrêt maladie",
+        "url": "/fiche-service-public/maladie-professionnelle-inaptitude-du-salarie",
+        "title": "Maladie professionnelle : inaptitude du salarié",
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/maladie-professionnelle-inaptitude-du-salarie",
-        "title": "Maladie professionnelle : inaptitude du salarié",
+        "url": "/fiche-service-public/inaptitude-dun-salarie-en-arret-maladie",
+        "title": "Inaptitude d'un salarié en arrêt maladie",
         "relevance": 5
       },
       {
@@ -8982,8 +8982,8 @@
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/l1226-10",
-        "title": "Article L1226-10",
+        "url": "/code-du-travail/r4624-42",
+        "title": "Article R4624-42",
         "relevance": 3
       },
       {
@@ -8992,8 +8992,8 @@
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/r4624-42",
-        "title": "Article R4624-42",
+        "url": "/code-du-travail/l1226-10",
+        "title": "Article L1226-10",
         "relevance": 3
       }
     ],
@@ -9671,13 +9671,13 @@
         "relevance": 5
       },
       {
-        "url": "https://travail-emploi.gouv.fr/droit-du-travail/l-epargne-salariale/article/l-interessement-et-la-participation",
-        "title": "L&#039;intéressement et la participation : de quoi parle-t-on ?",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2141",
+        "title": "Participation | service-public.fr",
         "relevance": 5
       },
       {
-        "url": "https://www.service-public.fr/particuliers/vosdroits/F2141",
-        "title": "Participation | service-public.fr",
+        "url": "https://travail-emploi.gouv.fr/droit-du-travail/l-epargne-salariale/article/l-interessement-et-la-participation",
+        "title": "L&#039;intéressement et la participation : de quoi parle-t-on ?",
         "relevance": 5
       },
       {
@@ -9696,8 +9696,28 @@
         "relevance": 3
       },
       {
+        "url": "/code-du-travail/d3346-2",
+        "title": "Article D3346-2",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/l3322-3",
+        "title": "Article L3322-3",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/l3346-1",
+        "title": "Article L3346-1",
+        "relevance": 3
+      },
+      {
         "url": "/code-du-travail/r3341-5",
         "title": "Article R3341-5",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/d3346-7",
+        "title": "Article D3346-7",
         "relevance": 3
       },
       {
@@ -9708,26 +9728,6 @@
       {
         "url": "/code-du-travail/l3344-3",
         "title": "Article L3344-3",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/l3346-1",
-        "title": "Article L3346-1",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/l3322-3",
-        "title": "Article L3322-3",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/d3346-2",
-        "title": "Article D3346-2",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/d3346-7",
-        "title": "Article D3346-7",
         "relevance": 3
       }
     ],
@@ -9932,13 +9932,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/les-stages-etudiants-en-milieu-professionnel#Quel-est-le-statut-du-stagiaire-dans-l-entreprise-d-accueil-nbsp",
-        "title": "Stage : quel est le statut du stagiaire dans l’entreprise d’accueil ?",
+        "url": "/fiche-ministere-travail/les-stages-etudiants-en-milieu-professionnel#Le-stagiaire-recoit-il-une-somme-d-argent",
+        "title": "Stage : le stagiaire reçoit-il une somme d’argent ?",
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/les-stages-etudiants-en-milieu-professionnel#Le-stagiaire-recoit-il-une-somme-d-argent",
-        "title": "Stage : le stagiaire reçoit-il une somme d’argent ?",
+        "url": "/fiche-ministere-travail/les-stages-etudiants-en-milieu-professionnel#Quel-est-le-statut-du-stagiaire-dans-l-entreprise-d-accueil-nbsp",
+        "title": "Stage : quel est le statut du stagiaire dans l’entreprise d’accueil ?",
         "relevance": 5
       },
       {
@@ -9957,13 +9957,13 @@
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/r6341-40",
-        "title": "Article R6341-40",
+        "url": "/code-du-travail/r6341-51",
+        "title": "Article R6341-51",
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/r6341-51",
-        "title": "Article R6341-51",
+        "url": "/code-du-travail/r6341-40",
+        "title": "Article R6341-40",
         "relevance": 4
       },
       {
@@ -10996,13 +10996,13 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/abandon-de-poste-quelles-sont-les-regles-dans-le-secteur-prive",
-        "title": "Abandon de poste : quelles sont les règles dans le secteur privé ?",
+        "url": "/fiche-service-public/preavis-de-licenciement",
+        "title": "Préavis de licenciement",
         "relevance": 3
       },
       {
-        "url": "/fiche-service-public/preavis-de-licenciement",
-        "title": "Préavis de licenciement",
+        "url": "/fiche-service-public/abandon-de-poste-quelles-sont-les-regles-dans-le-secteur-prive",
+        "title": "Abandon de poste : quelles sont les règles dans le secteur privé ?",
         "relevance": 3
       },
       {
@@ -11016,13 +11016,13 @@
         "relevance": 2
       },
       {
-        "url": "/code-du-travail/r5134-69",
-        "title": "Article R5134-69",
+        "url": "/code-du-travail/r5134-46",
+        "title": "Article R5134-46",
         "relevance": 2
       },
       {
-        "url": "/code-du-travail/r5134-46",
-        "title": "Article R5134-46",
+        "url": "/code-du-travail/r5134-69",
+        "title": "Article R5134-69",
         "relevance": 2
       },
       {
@@ -11128,8 +11128,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/poussieres#Les-moyens-de-prevention",
-        "title": "Poussières : les moyens de prévention",
+        "url": "/fiche-ministere-travail/linterdiction-de-fumer-et-de-vapoter-dans-les-lieux-de-travail#Quelle-sont-les-sanctions",
+        "title": "L’interdiction de fumer dans les lieux de travail : quelle sont les sanctions ?",
         "relevance": 4
       },
       {
@@ -11138,8 +11138,8 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/principes-generaux-de-ventilation#Ce-qu-il-faut-savoir-avant-l-installation-d-une-ventilation-nbsp",
-        "title": "Principes généraux de ventilation : ce qu’il faut savoir avant l’installation d’une ventilation :",
+        "url": "/fiche-ministere-travail/espaces-confines#Quels-sont-les-risques",
+        "title": "Espaces confinés : quels sont les risques ?",
         "relevance": 4
       },
       {
@@ -11148,23 +11148,23 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/linterdiction-de-fumer-et-de-vapoter-dans-les-lieux-de-travail#Quelle-sont-les-sanctions",
-        "title": "L’interdiction de fumer dans les lieux de travail : quelle sont les sanctions ?",
+        "url": "/fiche-ministere-travail/principes-generaux-de-ventilation#Ce-qu-il-faut-savoir-avant-l-installation-d-une-ventilation-nbsp",
+        "title": "Principes généraux de ventilation : ce qu’il faut savoir avant l’installation d’une ventilation :",
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/espaces-confines#Quels-sont-les-risques",
-        "title": "Espaces confinés : quels sont les risques ?",
+        "url": "/fiche-ministere-travail/poussieres#Les-moyens-de-prevention",
+        "title": "Poussières : les moyens de prévention",
         "relevance": 4
-      },
-      {
-        "url": "/fiche-service-public/videosurveillance-de-la-voie-publique-et-des-lieux-ouverts-au-public",
-        "title": "Vidéosurveillance de la voie publique et des lieux ouverts au public",
-        "relevance": 3
       },
       {
         "url": "/fiche-service-public/le-local-vestiaire-est-il-obligatoire-dans-lentreprise",
         "title": "Le local vestiaire est-il obligatoire dans l'entreprise ?",
+        "relevance": 3
+      },
+      {
+        "url": "/fiche-service-public/videosurveillance-de-la-voie-publique-et-des-lieux-ouverts-au-public",
+        "title": "Vidéosurveillance de la voie publique et des lieux ouverts au public",
         "relevance": 3
       },
       {
@@ -11173,13 +11173,13 @@
         "relevance": 3
       },
       {
-        "url": "/fiche-service-public/modification-du-lieu-de-travail-du-salarie-quelles-sont-les-consequences",
-        "title": "Modification du lieu de travail du salarié : quelles sont les conséquences ?",
+        "url": "/fiche-service-public/lemployeur-doit-il-amenager-un-espace-pour-la-pause-dejeuner",
+        "title": "L'employeur doit-il aménager un espace pour la pause déjeuner ?",
         "relevance": 2
       },
       {
-        "url": "/fiche-service-public/lemployeur-doit-il-amenager-un-espace-pour-la-pause-dejeuner",
-        "title": "L'employeur doit-il aménager un espace pour la pause déjeuner ?",
+        "url": "/fiche-service-public/modification-du-lieu-de-travail-du-salarie-quelles-sont-les-consequences",
+        "title": "Modification du lieu de travail du salarié : quelles sont les conséquences ?",
         "relevance": 2
       },
       {
@@ -12606,7 +12606,7 @@
     "refs": [
       {
         "url": "https://travail-emploi.gouv.fr/ministere/documentation-et-publications-officielles/guides/article/guide-de-l-epargne-salariale",
-        "title": "Status 429: Too Many Requests",
+        "title": "Guide de l'épargne salariale - Ministère du Travail",
         "relevance": 5
       },
       {
@@ -12758,18 +12758,13 @@
         "relevance": 5
       },
       {
-        "url": "/outils/preavis-licenciement",
-        "title": "Simulateur de durée de préavis de licenciement",
-        "relevance": 4
-      },
-      {
         "url": "/outils/preavis-demission",
         "title": "Simulateur de durée de préavis de démission",
         "relevance": 4
       },
       {
-        "url": "/contributions/quelle-est-la-duree-du-preavis-en-cas-de-demission",
-        "title": " Quelle est la durée du préavis en cas de démission ?",
+        "url": "/outils/preavis-licenciement",
+        "title": "Simulateur de durée de préavis de licenciement",
         "relevance": 4
       },
       {
@@ -12778,13 +12773,8 @@
         "relevance": 4
       },
       {
-        "url": "/contributions/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
-        "title": " Quelle est la durée de préavis en cas de mise à la retraite ?",
-        "relevance": 4
-      },
-      {
-        "url": "/contributions/quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite",
-        "title": " Quelle est la durée de préavis en cas de départ à la retraite ?",
+        "url": "/contributions/quelle-est-la-duree-du-preavis-en-cas-de-demission",
+        "title": " Quelle est la durée du préavis en cas de démission ?",
         "relevance": 4
       },
       {
@@ -12793,8 +12783,18 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/arret-maladie-pendant-le-preavis-quelles-consequences",
-        "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
+        "url": "/contributions/quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite",
+        "title": " Quelle est la durée de préavis en cas de départ à la retraite ?",
+        "relevance": 4
+      },
+      {
+        "url": "/contributions/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
+        "title": " Quelle est la durée de préavis en cas de mise à la retraite ?",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-service-public/indemnite-compensatrice-de-preavis",
+        "title": "Indemnité compensatrice de préavis",
         "relevance": 3
       },
       {
@@ -12803,13 +12803,13 @@
         "relevance": 3
       },
       {
-        "url": "/fiche-service-public/indemnite-compensatrice-de-preavis",
-        "title": "Indemnité compensatrice de préavis",
+        "url": "/fiche-service-public/le-salarie-peut-il-prendre-des-conges-payes-pendant-son-preavis",
+        "title": "Le salarié peut-il prendre des congés payés pendant son préavis ?",
         "relevance": 3
       },
       {
-        "url": "/fiche-service-public/le-salarie-peut-il-prendre-des-conges-payes-pendant-son-preavis",
-        "title": "Le salarié peut-il prendre des congés payés pendant son préavis ?",
+        "url": "/fiche-service-public/arret-maladie-pendant-le-preavis-quelles-consequences",
+        "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
         "relevance": 3
       },
       {
@@ -13226,18 +13226,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/quels-sont-les-recours-possibles-apres-un-jugement-du-conseil-de-prudhommes",
-        "title": "Quels sont les recours possibles après un jugement du conseil de prud'hommes ?",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-service-public/conseil-de-prudhommes-cph-deroulement-dune-affaire",
         "title": "Conseil de prud'hommes (CPH) : déroulement d'une affaire",
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/le-conseil-de-prudhommes#Comment-se-deroule-une-procedure",
-        "title": "Le conseil de prud’hommes : comment se déroule une procédure ?",
+        "url": "/fiche-service-public/quels-sont-les-recours-possibles-apres-un-jugement-du-conseil-de-prudhommes",
+        "title": "Quels sont les recours possibles après un jugement du conseil de prud'hommes ?",
         "relevance": 5
       },
       {
@@ -13246,13 +13241,23 @@
         "relevance": 5
       },
       {
+        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-1-Pour-quels-litiges",
+        "title": "Le recours devant les \"Prud’hommes\" : pour quels litiges ?",
+        "relevance": 5
+      },
+      {
         "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-3-Comment-les-saisir-Dans-quel-delai",
         "title": "Le recours devant les \"Prud’hommes\" : comment les saisir ? dans quel délai ?",
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-1-Pour-quels-litiges",
-        "title": "Le recours devant les \"Prud’hommes\" : pour quels litiges ?",
+        "url": "/fiche-ministere-travail/le-conseil-de-prudhommes#Comment-se-deroule-une-procedure",
+        "title": "Le conseil de prud’hommes : comment se déroule une procédure ?",
+        "relevance": 5
+      },
+      {
+        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-5-Comment-se-deroule-la-procedure",
+        "title": "Le recours devant les \"Prud’hommes\" : comment se déroule la procédure ?",
         "relevance": 5
       },
       {
@@ -13266,23 +13271,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-5-Comment-se-deroule-la-procedure",
-        "title": "Le recours devant les \"Prud’hommes\" : comment se déroule la procédure ?",
-        "relevance": 5
-      },
-      {
-        "url": "/fiche-service-public/prudhommes-quest-ce-que-lindemnite-forfaitaire-de-conciliation",
-        "title": "Prud'hommes : qu'est-ce que l'indemnité forfaitaire de conciliation ?",
-        "relevance": 4
-      },
-      {
         "url": "/fiche-service-public/attestation-destinee-a-pole-emploi",
         "title": "Attestation destinée à Pôle emploi",
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-4-Que-faire-en-cas-d-urgence",
-        "title": "Le recours devant les \"Prud’hommes\" : que faire en cas d’urgence ?",
+        "url": "/fiche-service-public/prudhommes-quest-ce-que-lindemnite-forfaitaire-de-conciliation",
+        "title": "Prud'hommes : qu'est-ce que l'indemnité forfaitaire de conciliation ?",
         "relevance": 4
       },
       {
@@ -13291,13 +13286,18 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/quest-ce-quun-defenseur-syndical",
-        "title": "Qu'est-ce qu'un défenseur syndical ?",
-        "relevance": 3
+        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-4-Que-faire-en-cas-d-urgence",
+        "title": "Le recours devant les \"Prud’hommes\" : que faire en cas d’urgence ?",
+        "relevance": 4
       },
       {
         "url": "/fiche-service-public/comment-se-faire-rembourser-la-remuneration-dun-salarie-conseiller-prudhomal",
         "title": "Comment se faire rembourser la rémunération d'un salarié conseiller prud'homal ?",
+        "relevance": 3
+      },
+      {
+        "url": "/fiche-service-public/quest-ce-quun-defenseur-syndical",
+        "title": "Qu'est-ce qu'un défenseur syndical ?",
         "relevance": 3
       },
       {
@@ -13631,18 +13631,13 @@
     "theme": "bd17aa4e-066e-4197-8028-3dc2e05110d0",
     "refs": [
       {
-        "url": "/fiche-service-public/medecine-du-travail",
-        "title": "Médecine du travail",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-service-public/dans-quels-cas-recourir-a-linspecteur-du-travail",
         "title": "Dans quels cas recourir à l'inspecteur du travail ?",
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/le-harcelement-moral#Qui-organise-la-prevention-en-matiere-de-harcelement-moral",
-        "title": "Le harcèlement moral : qui organise la prévention en matière de harcèlement moral ?",
+        "url": "/fiche-service-public/medecine-du-travail",
+        "title": "Médecine du travail",
         "relevance": 5
       },
       {
@@ -13651,8 +13646,18 @@
         "relevance": 5
       },
       {
+        "url": "/fiche-ministere-travail/le-harcelement-moral#Qui-organise-la-prevention-en-matiere-de-harcelement-moral",
+        "title": "Le harcèlement moral : qui organise la prévention en matière de harcèlement moral ?",
+        "relevance": 5
+      },
+      {
         "url": "/fiche-service-public/harcelement-moral-au-travail",
         "title": "Harcèlement moral au travail",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-ministere-travail/le-harcelement-moral#Quelle-est-l-etendue-de-la-protection-des-victimes-et-des-temoins-du-nbsp",
+        "title": "Le harcèlement moral : quelle est l’étendue de la protection des victimes et des témoins du harcèlement moral ?",
         "relevance": 4
       },
       {
@@ -13663,11 +13668,6 @@
       {
         "url": "/fiche-ministere-travail/le-harcelement-moral#Quelles-sanctions-a-l-encontre-de-l-auteur-de-harcelement-moral-nbsp",
         "title": "Le harcèlement moral : quelles sanctions à l’encontre de l’auteur de harcèlement moral ?",
-        "relevance": 4
-      },
-      {
-        "url": "/fiche-ministere-travail/le-harcelement-moral#Quelle-est-l-etendue-de-la-protection-des-victimes-et-des-temoins-du-nbsp",
-        "title": "Le harcèlement moral : quelle est l’étendue de la protection des victimes et des témoins du harcèlement moral ?",
         "relevance": 4
       },
       {
@@ -13691,13 +13691,13 @@
         "relevance": 3
       },
       {
-        "url": "/fiche-ministere-travail/la-protection-contre-les-discriminations#Qui-peut-intervenir-en-cas-de-discrimination",
-        "title": "La protection contre les discriminations : qui peut intervenir en cas de discrimination ?",
+        "url": "/fiche-ministere-travail/la-procedure-en-cas-de-licenciement-pour-motif-personnel#Quelles-sont-les-sanctions-encourues",
+        "title": "La procédure en cas de licenciement pour motif personnel : quelles sont les sanctions encourues ?",
         "relevance": 2
       },
       {
-        "url": "/fiche-ministere-travail/la-procedure-en-cas-de-licenciement-pour-motif-personnel#Quelles-sont-les-sanctions-encourues",
-        "title": "La procédure en cas de licenciement pour motif personnel : quelles sont les sanctions encourues ?",
+        "url": "/fiche-ministere-travail/la-protection-contre-les-discriminations#Qui-peut-intervenir-en-cas-de-discrimination",
+        "title": "La protection contre les discriminations : qui peut intervenir en cas de discrimination ?",
         "relevance": 2
       },
       {
@@ -14477,7 +14477,7 @@
       },
       {
         "url": "http://www.inrs.fr/risques/chutes-hauteur/ce-qu-il-faut-retenir.html",
-        "title": "http://www.inrs.fr/risques/chutes-hauteur/ce-qu-il-faut-retenir.html",
+        "title": "Risques liés aux chutes de hauteur. Ce qu’il faut retenir - Risques - INRS",
         "relevance": 5
       },
       {
@@ -14491,13 +14491,8 @@
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/r4323-73",
-        "title": "R4323-73",
-        "relevance": 4
-      },
-      {
-        "url": "/code-du-travail/r4323-71",
-        "title": "R4323-71",
+        "url": "/code-du-travail/r4323-69",
+        "title": "R4323-69",
         "relevance": 4
       },
       {
@@ -14516,8 +14511,13 @@
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/r4323-69",
-        "title": "R4323-69",
+        "url": "/code-du-travail/r4323-71",
+        "title": "R4323-71",
+        "relevance": 4
+      },
+      {
+        "url": "/code-du-travail/r4323-73",
+        "title": "R4323-73",
         "relevance": 4
       },
       {
@@ -14587,7 +14587,7 @@
       },
       {
         "url": "http://www.net-particulier.fr/",
-        "title": "Accueil | Net-Particulier ",
+        "title": "http://www.net-particulier.fr/",
         "relevance": 4
       },
       {
@@ -14621,8 +14621,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/quest-ce-quun-cdd-dinsertion-cddi",
-        "title": "Qu'est-ce qu'un CDD d'insertion (CDDI) ?",
+        "url": "/fiche-service-public/rupture-anticipee-dun-cdd-par-lemployeur",
+        "title": "Rupture anticipée d'un CDD par l'employeur",
         "relevance": 5
       },
       {
@@ -14631,8 +14631,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/rupture-anticipee-dun-cdd-par-lemployeur",
-        "title": "Rupture anticipée d'un CDD par l'employeur",
+        "url": "/fiche-service-public/quest-ce-quun-cdd-dinsertion-cddi",
+        "title": "Qu'est-ce qu'un CDD d'insertion (CDDI) ?",
         "relevance": 5
       },
       {
@@ -14641,13 +14641,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/quest-ce-quun-cdd-a-objet-defini",
-        "title": "Qu'est-ce qu'un CDD à objet défini ?",
+        "url": "/fiche-service-public/contrat-a-duree-determinee-pour-les-seniors-cdd-senior",
+        "title": "Contrat à durée déterminée pour les seniors (CDD senior)",
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/contrat-a-duree-determinee-pour-les-seniors-cdd-senior",
-        "title": "Contrat à durée déterminée pour les seniors (CDD senior)",
+        "url": "/fiche-service-public/quest-ce-quun-cdd-a-objet-defini",
+        "title": "Qu'est-ce qu'un CDD à objet défini ?",
         "relevance": 4
       },
       {
@@ -14656,13 +14656,13 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-a-objet-defini#Quelle-est-sa-duree",
-        "title": "Le contrat à durée déterminée à objet défini : quelle est sa durée ?",
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-cdd#Dans-quels-cas-le-contrat-a-duree-determinee-peut-il-etre-requalifie-en-nbsp",
+        "title": "CDD : dans quels cas le contrat à durée déterminée peut-il être requalifié en contrat à durée indéterminée ?",
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-cdd#Dans-quels-cas-le-contrat-a-duree-determinee-peut-il-etre-requalifie-en-nbsp",
-        "title": "CDD : dans quels cas le contrat à durée déterminée peut-il être requalifié en contrat à durée indéterminée ?",
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-a-objet-defini#Quelle-est-sa-duree",
+        "title": "Le contrat à durée déterminée à objet défini : quelle est sa durée ?",
         "relevance": 4
       },
       {
@@ -14802,6 +14802,11 @@
         "relevance": 5
       },
       {
+        "url": "/fiche-service-public/rupture-du-contrat-de-travail-a-duree-indeterminee-cdi",
+        "title": "Rupture du contrat de travail à durée indéterminée (CDI)",
+        "relevance": 5
+      },
+      {
         "url": "/fiche-service-public/rupture-conventionnelle-dun-cdi",
         "title": "Rupture conventionnelle d'un CDI",
         "relevance": 5
@@ -14814,11 +14819,6 @@
       {
         "url": "/fiche-service-public/rupture-anticipee-dun-cdd-par-lemployeur",
         "title": "Rupture anticipée d'un CDD par l'employeur",
-        "relevance": 5
-      },
-      {
-        "url": "/fiche-service-public/rupture-du-contrat-de-travail-a-duree-indeterminee-cdi",
-        "title": "Rupture du contrat de travail à durée indéterminée (CDI)",
         "relevance": 5
       },
       {
@@ -14955,23 +14955,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/rupture-conventionnelle-dun-cdi",
-        "title": "Rupture conventionnelle d'un CDI",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-service-public/rupture-conventionnelle",
         "title": "Rupture conventionnelle",
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-collective#L-accord-de-rupture-conventionnelle-collective-peut-il-etre-conteste-nbsp",
-        "title": "La rupture conventionnelle collective : l’accord de rupture conventionnelle collective peut-il être contesté ?",
-        "relevance": 5
-      },
-      {
-        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-collective#Comment-est-mise-en-place-la-rupture-conventionnelle-collective-nbsp",
-        "title": "La rupture conventionnelle collective : comment est mise en place la rupture conventionnelle collective ?",
+        "url": "/fiche-service-public/rupture-conventionnelle-dun-cdi",
+        "title": "Rupture conventionnelle d'un CDI",
         "relevance": 5
       },
       {
@@ -14990,8 +14980,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee#Quel-est-le-contenu-de-la-convention",
-        "title": "La rupture conventionnelle du contrat de travail à durée indéterminée : quel est le contenu de la convention ?",
+        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-collective#L-accord-de-rupture-conventionnelle-collective-peut-il-etre-conteste-nbsp",
+        "title": "La rupture conventionnelle collective : l’accord de rupture conventionnelle collective peut-il être contesté ?",
         "relevance": 5
       },
       {
@@ -15005,13 +14995,23 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1237-19-1",
-        "title": "Article L1237-19-1",
+        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee#Quel-est-le-contenu-de-la-convention",
+        "title": "La rupture conventionnelle du contrat de travail à durée indéterminée : quel est le contenu de la convention ?",
+        "relevance": 5
+      },
+      {
+        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-collective#Comment-est-mise-en-place-la-rupture-conventionnelle-collective-nbsp",
+        "title": "La rupture conventionnelle collective : comment est mise en place la rupture conventionnelle collective ?",
         "relevance": 5
       },
       {
         "url": "/code-du-travail/l1237-11",
         "title": "Article L1237-11",
+        "relevance": 5
+      },
+      {
+        "url": "/code-du-travail/l1237-19-1",
+        "title": "Article L1237-19-1",
         "relevance": 5
       },
       {
@@ -15025,8 +15025,18 @@
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/l1237-19-8",
-        "title": "Article L1237-19-8",
+        "url": "/code-du-travail/l1237-13",
+        "title": "Article L1237-13",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/l1237-19-7",
+        "title": "Article L1237-19-7",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/l1237-19-5",
+        "title": "Article L1237-19-5",
         "relevance": 3
       },
       {
@@ -15035,8 +15045,8 @@
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/l1237-19-5",
-        "title": "Article L1237-19-5",
+        "url": "/code-du-travail/l1237-19-8",
+        "title": "Article L1237-19-8",
         "relevance": 3
       },
       {
@@ -15050,18 +15060,8 @@
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/l1237-19-7",
-        "title": "Article L1237-19-7",
-        "relevance": 3
-      },
-      {
         "url": "/code-du-travail/l1237-19-12",
         "title": "Article L1237-19-12",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/l1237-13",
-        "title": "Article L1237-13",
         "relevance": 3
       },
       {
@@ -15118,28 +15118,8 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l1237-19-10",
-        "title": "Article L1237-19-10",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/l1237-19-2",
-        "title": "Article L1237-19-2",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/l1237-19-8",
-        "title": "Article L1237-19-8",
-        "relevance": 5
-      },
-      {
         "url": "/code-du-travail/l1237-19-7",
         "title": "Article L1237-19-7",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/l1237-19-1",
-        "title": "Article L1237-19-1",
         "relevance": 5
       },
       {
@@ -15148,8 +15128,28 @@
         "relevance": 5
       },
       {
+        "url": "/code-du-travail/l1237-19-2",
+        "title": "Article L1237-19-2",
+        "relevance": 5
+      },
+      {
         "url": "/code-du-travail/l1237-19",
         "title": "Article L1237-19",
+        "relevance": 5
+      },
+      {
+        "url": "/code-du-travail/l1237-19-8",
+        "title": "Article L1237-19-8",
+        "relevance": 5
+      },
+      {
+        "url": "/code-du-travail/l1237-19-1",
+        "title": "Article L1237-19-1",
+        "relevance": 5
+      },
+      {
+        "url": "/code-du-travail/l1237-19-10",
+        "title": "Article L1237-19-10",
         "relevance": 5
       },
       {
@@ -15790,13 +15790,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/quels-sont-les-documents-remis-au-salarie-a-la-fin-de-son-contrat",
-        "title": "Quels sont les documents remis au salarié à la fin de son contrat ?",
+        "url": "/fiche-service-public/comment-calculer-lindemnite-de-conges-payes-du-salarie",
+        "title": "Comment calculer l'indemnité de congés payés du salarié ?",
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/comment-calculer-lindemnite-de-conges-payes-du-salarie",
-        "title": "Comment calculer l'indemnité de congés payés du salarié ?",
+        "url": "/fiche-service-public/quels-sont-les-documents-remis-au-salarie-a-la-fin-de-son-contrat",
+        "title": "Quels sont les documents remis au salarié à la fin de son contrat ?",
         "relevance": 4
       },
       {
@@ -15820,6 +15820,11 @@
         "relevance": 3
       },
       {
+        "url": "/code-du-travail/d1234-7",
+        "title": "Article D1234-7",
+        "relevance": 3
+      },
+      {
         "url": "/code-du-travail/d1234-8",
         "title": "Article D1234-8",
         "relevance": 3
@@ -15832,11 +15837,6 @@
       {
         "url": "/code-du-travail/l3141-25",
         "title": "Article L3141-25",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/d1234-7",
-        "title": "Article D1234-7",
         "relevance": 3
       }
     ],
@@ -16546,8 +16546,13 @@
         "relevance": 4
       },
       {
-        "url": "/code-du-travail/l8271-6-4",
-        "title": "Article L8271-6-4",
+        "url": "/code-du-travail/l8271-1",
+        "title": "Article L8271-1",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/l8221-1",
+        "title": "Article L8221-1",
         "relevance": 3
       },
       {
@@ -16556,8 +16561,8 @@
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/l8271-1",
-        "title": "Article L8271-1",
+        "url": "/code-du-travail/r8211-5",
+        "title": "Article R8211-5",
         "relevance": 3
       },
       {
@@ -16581,13 +16586,8 @@
         "relevance": 3
       },
       {
-        "url": "/code-du-travail/l8221-1",
-        "title": "Article L8221-1",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/r8211-5",
-        "title": "Article R8211-5",
+        "url": "/code-du-travail/l8271-6-4",
+        "title": "Article L8271-6-4",
         "relevance": 3
       }
     ],
@@ -16842,23 +16842,23 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae#Question-5-La-VAE-quel-financement-pour-la-VAE",
-        "title": "La VAE : quel financement pour la VAE ?",
-        "relevance": 4
-      },
-      {
-        "url": "/fiche-ministere-travail/la-validation-des-acquis-de-lexperience-vae#Qui-contacter",
-        "title": "VAE : qui contacter ?",
-        "relevance": 4
-      },
-      {
         "url": "/fiche-ministere-travail/la-validation-des-acquis-de-lexperience-vae#Comment-monter-un-dossier-de-demande-de-VAE",
         "title": "Comment monter un dossier de demande de VAE ?",
         "relevance": 4
       },
       {
+        "url": "/fiche-ministere-travail/5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae#Question-5-La-VAE-quel-financement-pour-la-VAE",
+        "title": "La VAE : quel financement pour la VAE ?",
+        "relevance": 4
+      },
+      {
         "url": "/fiche-ministere-travail/la-validation-des-acquis-de-lexperience-vae#Comment-est-evaluee-une-demande-de-VAE",
         "title": "Comment est évaluée une demande de VAE ?",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-ministere-travail/la-validation-des-acquis-de-lexperience-vae#Qui-contacter",
+        "title": "VAE : qui contacter ?",
         "relevance": 4
       },
       {
@@ -16918,13 +16918,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/reforme-de-la-medecine-du-travail-et-des-services-de-sante-au-travail-questions-les-plus-frequentes#II-Visites-d-information-et-de-prevention",
-        "title": "Réforme de la médecine du travail et des services de santé au travail : ii. visites d’information et de prévention",
+        "url": "/fiche-ministere-travail/le-suivi-de-letat-de-sante-des-salaries#Comment-s-effectue-le-suivi-periodique-des-salaries",
+        "title": "Le suivi de l’état de santé des salariés : comment s’effectue le suivi périodique des salariés ?",
         "relevance": 5
       },
       {
-        "url": "/fiche-ministere-travail/le-suivi-de-letat-de-sante-des-salaries#Comment-s-effectue-le-suivi-periodique-des-salaries",
-        "title": "Le suivi de l’état de santé des salariés : comment s’effectue le suivi périodique des salariés ?",
+        "url": "/fiche-ministere-travail/reforme-de-la-medecine-du-travail-et-des-services-de-sante-au-travail-questions-les-plus-frequentes#II-Visites-d-information-et-de-prevention",
+        "title": "Réforme de la médecine du travail et des services de santé au travail : ii. visites d’information et de prévention",
         "relevance": 5
       },
       {
@@ -16943,23 +16943,13 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/accident-du-travail-reprise-du-travail-du-salarie",
-        "title": "Accident du travail : reprise du travail du salarié",
-        "relevance": 4
-      },
-      {
         "url": "/fiche-service-public/un-salarie-peut-il-revenir-travailler-avant-la-fin-de-son-arret-maladie",
         "title": "Un salarié peut-il revenir travailler avant la fin de son arrêt maladie ?",
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/le-travail-de-nuit#De-quel-suivi-de-son-etat-de-sante-le-travailleur-de-nuit-beneficie-t-il-nbsp",
-        "title": "Le travail de nuit : de quel suivi de son état de santé le travailleur de nuit bénéficie-t-il ?",
-        "relevance": 4
-      },
-      {
-        "url": "/fiche-ministere-travail/reforme-de-la-medecine-du-travail-et-des-services-de-sante-au-travail-questions-les-plus-frequentes#IV-Autres-visites-et-examens",
-        "title": "Réforme de la médecine du travail et des services de santé au travail : iv. autres visites et examens",
+        "url": "/fiche-service-public/accident-du-travail-reprise-du-travail-du-salarie",
+        "title": "Accident du travail : reprise du travail du salarié",
         "relevance": 4
       },
       {
@@ -16968,8 +16958,18 @@
         "relevance": 4
       },
       {
+        "url": "/fiche-ministere-travail/le-travail-de-nuit#De-quel-suivi-de-son-etat-de-sante-le-travailleur-de-nuit-beneficie-t-il-nbsp",
+        "title": "Le travail de nuit : de quel suivi de son état de santé le travailleur de nuit bénéficie-t-il ?",
+        "relevance": 4
+      },
+      {
         "url": "/fiche-ministere-travail/le-suivi-de-letat-de-sante-des-salaries#Quel-suivi-pour-les-salaries-affectes-sur-des-postes-a-risque-nbsp",
         "title": "Le suivi de l’état de santé des salariés : quel suivi pour les salariés affectés sur des postes à risque ?",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-ministere-travail/reforme-de-la-medecine-du-travail-et-des-services-de-sante-au-travail-questions-les-plus-frequentes#IV-Autres-visites-et-examens",
+        "title": "Réforme de la médecine du travail et des services de santé au travail : iv. autres visites et examens",
         "relevance": 4
       },
       {
@@ -16978,8 +16978,18 @@
         "relevance": 3
       },
       {
+        "url": "/code-du-travail/l4625-1-1",
+        "title": "L4625-1-1",
+        "relevance": 3
+      },
+      {
         "url": "/code-du-travail/l4624-1",
         "title": "L4624-1",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/r4624-29",
+        "title": "R4624-29",
         "relevance": 3
       },
       {
@@ -16995,16 +17005,6 @@
       {
         "url": "/code-du-travail/r4624-32",
         "title": "R4624-32",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/l4625-1-1",
-        "title": "L4625-1-1",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/r4624-29",
-        "title": "R4624-29",
         "relevance": 3
       }
     ],

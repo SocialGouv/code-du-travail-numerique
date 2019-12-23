@@ -80,14 +80,14 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
             desc="Retrouvez tous nos contenus organisés par thèmes"
             href="/themes"
           >
-            {themes.map(({ slug, title }) => (
+            {themes.map(({ icon, slug, title }) => (
               <Link
                 key={slug}
                 href="/themes/[slug]"
                 as={`/themes/${slug}`}
                 passHref
               >
-                <Tile title={title} />
+                <Tile title={title} icon={icons[icon]} />
               </Link>
             ))}
           </CardList>

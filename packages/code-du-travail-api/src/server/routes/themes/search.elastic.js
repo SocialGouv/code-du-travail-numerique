@@ -1,6 +1,6 @@
 function getRootThemesQuery() {
   return {
-    _source: ["title", "slug", "position"],
+    _source: ["icon", "children", "title", "slug", "position"],
     sort: [{ position: { order: "asc" } }],
     query: {
       bool: {

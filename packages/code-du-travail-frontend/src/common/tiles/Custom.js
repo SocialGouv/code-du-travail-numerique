@@ -7,12 +7,14 @@ import { Button, theme, Tile } from "@socialgouv/react-ui/";
 export const CustomTile = React.forwardRef(
   ({ action, children, ...props }, ref) => (
     <Tile custom {...props} ref={ref}>
-      {children}
-      <StyledDiv hasContentAbove={Boolean(children)}>
-        <Button variant="link" as="div">
-          {action}
-        </Button>
-      </StyledDiv>
+      <TileChildren>
+        {children}
+        <StyledDiv hasContentAbove={Boolean(children)}>
+          <Button variant="link" as="div">
+            {action}
+          </Button>
+        </StyledDiv>
+      </TileChildren>
     </Tile>
   )
 );
@@ -30,6 +32,13 @@ CustomTile.defaultProps = {
 };
 
 const { spacings } = theme;
+
+const TileChildren = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+`;
 
 const StyledDiv = styled.div`
   margin-top: ${({ hasContentAbove }) =>

@@ -1653,7 +1653,7 @@ exports[`<Answer /> should renders related content 1`] = `
   line-height: 1.25;
 }
 
-.c27 {
+.c28 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -1670,7 +1670,7 @@ exports[`<Answer /> should renders related content 1`] = `
   text-align: left;
 }
 
-.c35 {
+.c37 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1683,14 +1683,14 @@ exports[`<Answer /> should renders related content 1`] = `
   text-decoration: none;
 }
 
-.c37 {
+.c39 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c36 {
+.c38 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -1704,7 +1704,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transition: transform 250ms linear;
 }
 
-.c34:hover .c36 {
+.c36:hover .c38 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -1802,7 +1802,7 @@ exports[`<Answer /> should renders related content 1`] = `
   cursor: not-allowed;
 }
 
-.c31 {
+.c33 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1842,14 +1842,14 @@ exports[`<Answer /> should renders related content 1`] = `
   overflow: visible;
 }
 
-.c31:focus,
-.c31:hover,
-.c31:active {
+.c33:focus,
+.c33:hover,
+.c33:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c32 {
+.c34 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -1858,13 +1858,13 @@ exports[`<Answer /> should renders related content 1`] = `
   transition: transform 250ms linear;
 }
 
-.c15:hover .c32 {
+.c15:hover .c34 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
 }
 
-.c33 {
+.c35 {
   width: 2.6rem;
   height: 1.4rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -1872,7 +1872,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transition: transform 250ms linear;
 }
 
-.c15:hover .c33 {
+.c15:hover .c35 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -1884,24 +1884,16 @@ exports[`<Answer /> should renders related content 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: auto;
+  max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
   color: #3e486e;
@@ -1933,7 +1925,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transform: translateY(-2px);
 }
 
-.c25 {
+.c26 {
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto 1.6rem;
@@ -1942,11 +1934,17 @@ exports[`<Answer /> should renders related content 1`] = `
   border-radius: 50%;
 }
 
-.c26 {
+.c25 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c27 {
   padding-right: 1rem;
 }
 
-.c28 {
+.c29 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1956,7 +1954,10 @@ exports[`<Answer /> should renders related content 1`] = `
   margin: 0;
 }
 
-.c29 {
+.c30 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-top: 1rem;
 }
 
@@ -1991,7 +1992,22 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-left: 1.6rem;
 }
 
-.c30 {
+.c31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.c32 {
   margin-top: 1rem;
 }
 
@@ -2132,7 +2148,7 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c33 {
     font-size: 1.4rem;
   }
 }
@@ -2145,7 +2161,7 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c29 {
     font-size: 1.6rem;
   }
 }
@@ -2357,9 +2373,11 @@ exports[`<Answer /> should renders related content 1`] = `
               </svg>
             </div>
           </div>
-          <div>
+          <div
+            class="c25"
+          >
             <div
-              class="c25"
+              class="c26"
             >
               <svg
                 fill="none"
@@ -2378,40 +2396,44 @@ exports[`<Answer /> should renders related content 1`] = `
               </svg>
             </div>
             <div
-              class="c26"
+              class="c27"
             >
               <span
-                class="c27"
+                class="c28"
               >
                 Modèles de documents
               </span>
               <h3
-                class="c28"
+                class="c29"
               >
                 related letter title 1
               </h3>
             </div>
           </div>
           <div
-            class="c29"
+            class="c30"
           >
             <div
-              class="c30"
+              class="c31"
             >
               <div
-                class="c15 c31"
+                class="c32"
               >
-                Consulter
-                <svg
-                  class="c32"
-                  fill="none"
-                  viewBox="0 0 28 15"
+                <div
+                  class="c15 c33"
                 >
-                  <path
-                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  Consulter
+                  <svg
+                    class="c34"
+                    fill="none"
+                    viewBox="0 0 28 15"
+                  >
+                    <path
+                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -2449,42 +2471,48 @@ exports[`<Answer /> should renders related content 1`] = `
               </svg>
             </div>
           </div>
-          <div>
+          <div
+            class="c25"
+          >
             <div
-              class="c26"
+              class="c27"
             >
               <span
-                class="c27"
+                class="c28"
               >
                 Outils
               </span>
               <h3
-                class="c28"
+                class="c29"
               >
                 related tool title 1
               </h3>
             </div>
           </div>
           <div
-            class="c29"
+            class="c30"
           >
             <div
-              class="c30"
+              class="c31"
             >
               <div
-                class="c15 c31"
+                class="c32"
               >
-                
-                <svg
-                  class="c33"
-                  fill="none"
-                  viewBox="0 0 28 15"
+                <div
+                  class="c15 c33"
                 >
-                  <path
-                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  
+                  <svg
+                    class="c35"
+                    fill="none"
+                    viewBox="0 0 28 15"
+                  >
+                    <path
+                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -2524,38 +2552,44 @@ exports[`<Answer /> should renders related content 1`] = `
               </svg>
             </div>
           </div>
-          <div>
+          <div
+            class="c25"
+          >
             <div
-              class="c26"
+              class="c27"
             >
               
               <h3
-                class="c28"
+                class="c29"
               >
                 related external title 1
               </h3>
             </div>
           </div>
           <div
-            class="c29"
+            class="c30"
           >
             <div
-              class="c30"
+              class="c31"
             >
               <div
-                class="c15 c31"
+                class="c32"
               >
-                
-                <svg
-                  class="c33"
-                  fill="none"
-                  viewBox="0 0 28 15"
+                <div
+                  class="c15 c33"
                 >
-                  <path
-                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  
+                  <svg
+                    class="c35"
+                    fill="none"
+                    viewBox="0 0 28 15"
+                  >
+                    <path
+                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -2568,11 +2602,11 @@ exports[`<Answer /> should renders related content 1`] = `
         class="c20"
       >
         <a
-          class="c34 c35"
+          class="c36 c37"
           href="/fiche-service-public/LINK_1"
         >
           <svg
-            class="c36"
+            class="c38"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -2582,7 +2616,7 @@ exports[`<Answer /> should renders related content 1`] = `
             />
           </svg>
           <span
-            class="c37"
+            class="c39"
           >
             related sheet sp title 1
           </span>
@@ -2592,11 +2626,11 @@ exports[`<Answer /> should renders related content 1`] = `
         class="c20"
       >
         <a
-          class="c34 c35"
+          class="c36 c37"
           href="/fiche-ministere-travail/LINK_2"
         >
           <svg
-            class="c36"
+            class="c38"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -2606,7 +2640,7 @@ exports[`<Answer /> should renders related content 1`] = `
             />
           </svg>
           <span
-            class="c37"
+            class="c39"
           >
             related sheet mt title 1
           </span>
@@ -2616,11 +2650,11 @@ exports[`<Answer /> should renders related content 1`] = `
         class="c20"
       >
         <a
-          class="c34 c35"
+          class="c36 c37"
           href="/external/LINK_3"
         >
           <svg
-            class="c36"
+            class="c38"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -2630,7 +2664,7 @@ exports[`<Answer /> should renders related content 1`] = `
             />
           </svg>
           <span
-            class="c37"
+            class="c39"
           >
             related external title 1
           </span>
