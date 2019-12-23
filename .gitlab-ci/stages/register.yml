@@ -1,4 +1,20 @@
 #
+Test PR:
+  stage: "Prepare"
+  only:
+    refs:
+      - external_pull_requests
+  script: echo "Prepare Pull requests"
+
+Test PR Only:
+  stage: "Prepare"
+  only:
+    refs:
+      - external_pull_requests
+  except:
+    refs:
+      - branches
+  script: echo "Prepare Pull requests Only"
 
 .prepare_stage: &prepare_stage
   extends: .base_register_stage

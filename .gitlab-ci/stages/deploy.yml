@@ -125,9 +125,7 @@ Deploy @cdtn/frontend (incubateur):
 
 .deploy-data: &deploy_data
   <<: *deploy_stage
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
+  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/kubectl:0.20.0
   variables:
     <<: *deploy_stage_variables
     CONTEXT: data
@@ -140,8 +138,7 @@ Deploy @cdtn/frontend (incubateur):
   script:
     - kubectl delete job ${CONTEXT} || true
     #
-    - envsubst < ./.k8s/data.job.yml > ./job.yml
-    - kubectl apply -f ./job.yml || true
+    - envsubst < ./.k8s/data.job.yml | kubectl apply -
 
 #
 
