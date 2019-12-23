@@ -1,9 +1,21 @@
 #
-Test PR:
+Test PR + branches:
   stage: "Prepare"
   only:
     - external_pull_requests
   script: echo "Prepare Pull requests"
+
+Test PR Only:
+  stage: "Prepare"
+  only:
+    - external_pull_requests
+  except:
+    - branches
+  script: echo "Prepare Pull requests only"
+
+
+
+
 
 Test PR Only:
   stage: "Prepare"
