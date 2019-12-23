@@ -131,11 +131,8 @@ Deploy @cdtn/frontend (incubateur):
     CONTEXT: data
     ES_PORT: ${ELASTICSEARCH_PORT}
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
-  before_script:
-    - source ./.gitlab-ci/env.sh
-    - /apps/create-kubeconfig.sh
-    - if [ -n "${PRODUCTION+x}" ]; then SUFFIX=".prod"; else SUFFIX=".dev"; fi
   script:
+    - source ./.gitlab-ci/env.sh
     - kubectl delete job ${CONTEXT} || true
     #
     - envsubst < ./.k8s/data.job.yml | kubectl apply -
