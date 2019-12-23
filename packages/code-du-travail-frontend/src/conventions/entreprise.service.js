@@ -1,17 +1,16 @@
 import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
 import memoizee from "memoizee";
 import debounce from "debounce-promise";
 
-export const SIRET2IDCC_URL =
-  process.env.API_SIRET2IDCC_URL ||
-  "https://siret2idcc.incubateur.social.gouv.fr/api/v2";
-
-export const API_ENTREPRISE = "https://entreprise.data.gouv.fr/api/sirene/v1";
+const {
+  publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL }
+} = getConfig();
 
 // api siret2idcc call
 const apiSiret2idcc = memoizee(
   sirets =>
-    fetch(`${SIRET2IDCC_URL}/${sirets}`)
+    fetch(`${API_SIRET2IDCC_URL}/${sirets}`)
       .then(r => r.json())
       .then(data => (data.error && []) || data)
       .catch(() => []),
@@ -22,7 +21,7 @@ const apiSiret2idcc = memoizee(
 const apiEntrepriseFullText = memoizee(
   query =>
     fetch(
-      `${API_ENTREPRISE}/full_text/${encodeURIComponent(query)}?per_page=50`
+      `${API_ENTREPRISE_URL}/full_text/${encodeURIComponent(query)}?per_page=50`
     )
       .then(r => r.json())
       .then(formatFullTextResults)
@@ -33,7 +32,7 @@ const apiEntrepriseFullText = memoizee(
 // api entreprise siret call
 const apiEntrepriseSiret = memoizee(
   siret =>
-    fetch(`${API_ENTREPRISE}/siret/${encodeURIComponent(siret)}`)
+    fetch(`${API_ENTREPRISE_URL}/siret/${encodeURIComponent(siret)}`)
       .then(r => r.json())
       .then(async data => {
         if (data.etablissement) {

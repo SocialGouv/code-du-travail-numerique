@@ -1,4 +1,4 @@
-import { formatIdcc } from "@cdt/data/lib";
+import { formatIdcc, parseIdcc } from "@cdt/data/lib";
 
 import getQueryType from "./getQueryType";
 import { searchConvention } from "../convention.service";
@@ -6,7 +6,6 @@ import {
   searchEntrepriseByName,
   searchEntrepriseBySiret
 } from "../entreprise.service";
-const cleanIdcc = str => (str && str.replace(/^0+/, "").trim()) || "";
 
 // build a result list based on query type
 export const loadResults = async query => {
@@ -45,19 +44,18 @@ export const loadResults = async query => {
     // search local idcc list
   }
   if (type === "idcc") {
-    const matches = await searchConvention(cleanIdcc(query));
-
+    const matches = await searchConvention(parseIdcc(query));
     // only show 1 result when perfect
     const perfectMatch =
       matches &&
       matches.length &&
-      matches.find(match => cleanIdcc(match.num) === cleanIdcc(query));
+      matches.find(match => parseIdcc(match.num) === parseIdcc(query));
     if (perfectMatch) {
       return [
         {
           type: "convention",
           id: query,
-          label: `IDCC ${perfectMatch.num}`,
+          label: `IDCC ${formatIdcc(perfectMatch.num)}`,
           conventions: [perfectMatch]
         }
       ];

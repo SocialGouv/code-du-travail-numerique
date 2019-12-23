@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { formatIdcc } from "@cdt/data/lib";
 
 import styled from "styled-components";
 import Link from "next/link";
@@ -12,24 +11,24 @@ import SearchCC from "./SearchCC";
 
 // following data/populate.js slug rules
 const getConventionSlug = convention =>
-  slugify(`${formatIdcc(convention.num)}-${convention.title}`.substring(0, 80));
+  slugify(`${convention.num}-${convention.shortTitle}`.substring(0, 80));
 
 // link to a Convention
-const Convention = ({ num, title, onClick }) => {
+const Convention = ({ num, shortTitle, onClick }) => {
   return (
     <Box>
       {onClick ? (
-        <ConventionLink onClick={onClick}>{title}</ConventionLink>
+        <ConventionLink onClick={onClick}>{shortTitle}</ConventionLink>
       ) : (
         <Link
           href="/convention-collective/[slug]"
           as={`/convention-collective/${getConventionSlug({
             num,
-            title
+            shortTitle
           })}`}
           passHref
         >
-          <ConventionLink>{title}</ConventionLink>
+          <ConventionLink>{shortTitle}</ConventionLink>
         </Link>
       )}
     </Box>
@@ -48,32 +47,34 @@ const TagSiret = ({ siret }) => (
   </a>
 );
 
-const SearchResult = ({ label, siret, conventions, selectConvention }) => (
-  <tr>
-    <td>
-      <Flex>
-        <ResultLabel>{label}</ResultLabel>
-        {siret && <TagSiret siret={siret} />}
-      </Flex>
-      <ConventionsContainer>
-        {conventions && conventions.length ? (
-          conventions.map(convention => (
-            <Convention
-              onClick={
-                selectConvention &&
-                (() => selectConvention({ convention, label }))
-              }
-              key={convention.id}
-              {...convention}
-            />
-          ))
-        ) : (
-          <div>Aucune convention collective connue pour cette entreprise</div>
-        )}
-      </ConventionsContainer>
-    </td>
-  </tr>
-);
+const SearchResult = ({ label, siret, conventions, selectConvention }) => {
+  return (
+    <tr>
+      <td>
+        <Flex>
+          <ResultLabel>{label}</ResultLabel>
+          {siret && <TagSiret siret={siret} />}
+        </Flex>
+        <ConventionsContainer>
+          {conventions && conventions.length ? (
+            conventions.map(convention => (
+              <Convention
+                onClick={
+                  selectConvention &&
+                  (() => selectConvention({ convention, label }))
+                }
+                key={convention.id}
+                {...convention}
+              />
+            ))
+          ) : (
+            <div>Aucune convention collective connue pour cette entreprise</div>
+          )}
+        </ConventionsContainer>
+      </td>
+    </tr>
+  );
+};
 
 // demo app
 // userland UI
@@ -179,7 +180,7 @@ const Search = ({
   );
 };
 
-const { colors, fonts, spacings } = theme;
+const { colors, fonts, spacings, breakpoints } = theme;
 
 const FixedTable = styled(Table)`
   width: 100%;
@@ -214,19 +215,30 @@ const ConventionsContainer = styled.div`
 
 const Flex = styled.div`
   display: flex;
-  align-items: baseline;
+  flex-direction: column-reverse;
+  align-items: flex-end;
   justify-content: space-between;
+  @media screen and (min-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    align-items: baseline;
+  }
 `;
 
 const ResultLabel = styled.div`
   flex: 1 1 calc(100% - 200px);
+  align-self: flex-start;
+  margin-top: ${spacings.small};
   margin-right: ${spacings.small};
   overflow: hidden;
   color: ${colors.paragraph};
   font-weight: bold;
   font-size: ${fonts.sizes.headings.small};
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  @media screen and (min-width: ${breakpoints.tablet}) {
+    align-self: baseline;
+    margin-top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 `;
 
 export default Search;

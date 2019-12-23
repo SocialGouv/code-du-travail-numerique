@@ -1,9 +1,12 @@
+import getConfig from "next/config";
 import {
   searchEntrepriseBySiret,
-  searchEntrepriseByName,
-  API_ENTREPRISE,
-  SIRET2IDCC_URL
+  searchEntrepriseByName
 } from "../entreprise.service";
+const {
+  publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL }
+} = getConfig();
+
 import {
   fulltextPayload,
   siretPayload,
@@ -16,13 +19,13 @@ import { fetchResponse } from "../../../test/mockFetch";
 jest.mock("isomorphic-unfetch");
 
 fetch.mockImplementation(url => {
-  if (url.startsWith(`${API_ENTREPRISE}/full_text`)) {
+  if (url.startsWith(`${API_ENTREPRISE_URL}/full_text`)) {
     return Promise.resolve(fetchResponse(fulltextPayload));
-  } else if (url.startsWith(`${API_ENTREPRISE}/siret`)) {
+  } else if (url.startsWith(`${API_ENTREPRISE_URL}/siret`)) {
     return Promise.resolve(fetchResponse(siretPayload));
-  } else if (url.startsWith(`${SIRET2IDCC_URL}/80258570300027`)) {
+  } else if (url.startsWith(`${API_SIRET2IDCC_URL}/80258570300027`)) {
     return Promise.resolve(fetchResponse(siretIdccPayload));
-  } else if (url.startsWith(`${SIRET2IDCC_URL}/80258570300035`)) {
+  } else if (url.startsWith(`${API_SIRET2IDCC_URL}/80258570300035`)) {
     return Promise.resolve(fetchResponse([]));
   } else {
     Promise.resolve(fetchResponse());
@@ -36,12 +39,12 @@ describe("api entreprise", () => {
     const query = "Corso balard";
     const results = await searchEntrepriseByName(query);
     const apiEntrepriseMatcher = new RegExp(
-      `${API_ENTREPRISE}/full_text/${encodeURIComponent(query)}`
+      `${API_ENTREPRISE_URL}/full_text/${encodeURIComponent(query)}`
     );
     expect(fetch).toHaveBeenCalledTimes(2);
     expect(fetch.mock.calls[0][0]).toMatch(apiEntrepriseMatcher);
     expect(fetch.mock.calls[1][0]).toMatch(
-      new RegExp(`${SIRET2IDCC_URL}/80258570300035,80258570300027`)
+      new RegExp(`${API_SIRET2IDCC_URL}/80258570300035,80258570300027`)
     );
     expect(results).toMatchSnapshot();
   });
@@ -49,7 +52,7 @@ describe("api entreprise", () => {
     const query = "80258570300035";
     const results = await searchEntrepriseBySiret(query);
     const apiMatcher = new RegExp(
-      `${API_ENTREPRISE}/siret/${encodeURIComponent(query)}`
+      `${API_ENTREPRISE_URL}/siret/${encodeURIComponent(query)}`
     );
 
     expect(fetch).toHaveBeenCalledTimes(2);

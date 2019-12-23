@@ -4,8 +4,9 @@ exports[`convention service can search IDCCs 1`] = `
 Array [
   Object {
     "id": "KALICONT000005635886",
-    "num": "843",
-    "slug": "843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-1976",
+    "num": 843,
+    "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
+    "slug": "843-boulangerie-patisserie-entreprises-artisanales",
     "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
   },
 ]

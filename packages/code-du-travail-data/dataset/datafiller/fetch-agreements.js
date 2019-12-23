@@ -1,6 +1,5 @@
 import fetch from "node-fetch";
 import kaliData from "@socialgouv/kali-data/data/index.json";
-import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
 import parents from "unist-util-parents";
 
@@ -28,7 +27,7 @@ async function fetchAgreements() {
 
     return {
       ...getCCNInfo(agreement),
-      ...getCCNDetail(agreementTree),
+      nbTextes: getNbText(agreementTree),
       articlesByTheme: blocksData
         ? getArticleByBlock(blocksData.groups, agreementTree)
         : [],
@@ -47,22 +46,21 @@ if (require.main === module) {
  * @param {Object} agreement
  */
 function getCCNInfo({ id, num, date_publi, mtime, title, shortTitle, url }) {
-  const idcc = `0000${num}`.slice(-4);
   return {
     id,
-    slug: slugify(`${idcc}-${title}`.substring(0, 80)),
+    slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
     date_publi,
     mtime,
     title,
     shortTitle,
     url,
-    idcc
+    num
   };
 }
 /**
  * Get CCn detailed informations about articles and texts
  */
-function getCCNDetail(agreementTree) {
+function getNbText(agreementTree) {
   const texteDeBase = find(agreementTree, node =>
     node.data.title.startsWith("Texte de base")
   );
@@ -74,14 +72,6 @@ function getCCNDetail(agreementTree) {
     agreementTree,
     node => node.data.title === "Textes Salaires"
   );
-  const articles = selectAll("article", agreementTree);
-
-  const nbArticleVigueurEtendu = articles.filter(
-    ({ data }) => data.etat === "VIGUEUR_ETEN"
-  );
-  const nbArticleVigueurNonEtendu = articles.filter(
-    ({ data }) => data.etat === "VIGUEUR_NON_ETEN"
-  );
 
   const nbTextes =
     texteDeBase.children.length + textesAttaches
@@ -89,13 +79,7 @@ function getCCNDetail(agreementTree) {
       : 0 + texteSalaires
       ? texteSalaires.children.length
       : 0;
-  return {
-    nbTextes,
-    nbArticles: {
-      vigueurEtendu: nbArticleVigueurEtendu.length,
-      vigueurNonEtendu: nbArticleVigueurNonEtendu.length
-    }
-  };
+  return nbTextes;
 }
 /**
  * Return contribution answer for a given idcc

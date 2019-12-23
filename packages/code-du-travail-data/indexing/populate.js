@@ -3,7 +3,7 @@ import { selectAll } from "unist-util-select";
 import { logger } from "./logger";
 import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
-import { parseIdcc, formatIdcc } from "../lib";
+import { parseIdcc } from "../lib";
 import { getCourriers } from "../dataset/courrier-type";
 import { getFichesSP } from "../dataset/fiches_service_public";
 
@@ -60,14 +60,14 @@ async function getDuplicateSlugs(allDocuments) {
 async function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
-    ({ id, num, title }) => {
-      const idcc = formatIdcc(num);
+    ({ id, num, title, shortTitle }) => {
       return {
         source: SOURCES.CCN,
         id,
         idcc: parseIdcc(num),
         title,
-        slug: slugify(`${idcc}-${title}`.substring(0, 80)),
+        shortTitle,
+        slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
         text: `IDCC ${num} ${title}`,
         url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
       };

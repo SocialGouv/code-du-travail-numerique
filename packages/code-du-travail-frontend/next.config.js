@@ -23,7 +23,10 @@ module.exports = withSourceMaps(
     publicRuntimeConfig: {
       API_SIRET2IDCC_URL:
         process.env.API_SIRET2IDCC_URL ||
-        "https://siret2idcc.num.social.gouv.fr",
+        "https://siret2idcc.fabrique.social.gouv.fr/api/v2",
+      API_ENTREPRISE_URL:
+        process.env.API_ENTREPRISE_URL ||
+        "https://entreprise.data.gouv.fr/api/sirene/v1",
       API_URL: process.env.API_URL || "http://127.0.0.1:1337/api/v1",
       FRONTEND_PORT: process.env.FRONTEND_PORT,
       NODE_ENV: process.env.NODE_ENV,

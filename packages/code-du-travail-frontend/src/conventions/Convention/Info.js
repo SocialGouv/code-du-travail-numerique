@@ -2,21 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import { format, parseISO } from "date-fns";
 import { Accordion, Table } from "@socialgouv/react-ui";
-import { pluralize } from "../../lib/pluralize";
-const Info = ({
-  convention: { idcc, title, date_publi, url, nbTextes, nbArticles }
-}) => (
+import { formatIdcc } from "@cdt/data/lib";
+
+const Info = ({ convention: { num, title, date_publi, url, nbTextes } }) => (
   <Accordion
     items={[
       {
         title: "Plus d’informations sur cette convention collective.",
-        body: Details({ idcc, title, date_publi, url, nbTextes, nbArticles })
+        body: Details({ num, title, date_publi, url, nbTextes })
       }
     ]}
   />
 );
 
-function Details({ idcc, title, date_publi, url, nbTextes, nbArticles }) {
+function Details({ num, title, date_publi, url, nbTextes }) {
   return (
     <>
       <Table>
@@ -27,7 +26,7 @@ function Details({ idcc, title, date_publi, url, nbTextes, nbArticles }) {
           </tr>
           <tr>
             <th>IDCC</th>
-            <td>{idcc}</td>
+            <td>{formatIdcc(num)}</td>
           </tr>
           {date_publi && (
             <tr>
@@ -39,37 +38,10 @@ function Details({ idcc, title, date_publi, url, nbTextes, nbArticles }) {
             <th>Nombre de textes</th>
             <td>{nbTextes}</td>
           </tr>
-          <tr>
-            <th>Nombre d’articles</th>
-            <td>
-              {nbArticles.vigueurEtendu + nbArticles.vigueurNonEtendu}
-              {nbArticles.vigueurEtendu + nbArticles.vigueurNonEtendu > 0
-                ? "("
-                : ""}
-              {nbArticles.vigueurEtendu > 1
-                ? `${pluralize(
-                    { 1: "#{} étendu", other: "#{} etendus" },
-                    nbArticles.vigueurEtendu
-                  )}`
-                : null}
-              {nbArticles.vigueurEtendu > 0 && nbArticles.vigueurNonEtendu > 0
-                ? ", "
-                : null}
-              {nbArticles.vigueurNonEtendu > 1
-                ? `${pluralize(
-                    { 1: "#{} non étendu", other: "#{} non étendus" },
-                    nbArticles.vigueurNonEtendu
-                  )}`
-                : null}
-              {nbArticles.vigueurEtendu + nbArticles.vigueurNonEtendu > 0
-                ? ")"
-                : ""}
-            </td>
-          </tr>
         </tbody>
       </Table>
       <p>
-        <a target="_blank" rel="noopener noreferrer" href={url}>
+        <a target="_blank" rel="noopener noreferrer nofollow" href={url}>
           Voir la convention sur Legifrance
         </a>
       </p>

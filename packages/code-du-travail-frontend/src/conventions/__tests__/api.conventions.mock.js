@@ -3,12 +3,15 @@ export const idccPayload = {
     hits: [
       {
         _source: {
+          source: "conventions_collectives",
           id: "KALICONT000005635886",
-          idcc: "843",
-          slug:
-            "843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-1976",
+          idcc: 843,
           title:
             "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
+          shortTitle: "Boulangerie-pâtisserie (entreprises artisanales)",
+          slug: "843-boulangerie-patisserie-entreprises-artisanales",
+          text:
+            "IDCC 843 Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886"
         }
@@ -17,19 +20,22 @@ export const idccPayload = {
   }
 };
 export const convention = {
+  source: "conventions_collectives",
   id: "KALICONT000005635691",
+  idcc: 1747,
   title:
     "Convention collective nationale des activités industrielles de boulangerie et pâtisserie du 13 juillet 1993. Mise à jour par avenant n°10 du 11 octobre 2011.",
-  slug:
-    "1747-convention-collective-nationale-des-activites-industrielles-de-boulangerie",
+  shortTitle: "Activités industrielles de boulangerie et pâtisserie",
+  slug: "1747-activites-industrielles-de-boulangerie-et-patisserie",
+  text:
+    "IDCC 1747 Convention collective nationale des activités industrielles de boulangerie et pâtisserie du 13 juillet 1993. Mise à jour par avenant n°10 du 11 octobre 2011.",
   url:
     "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635691"
 };
 
 export const agreement = {
   id: "KALICONT000005635221",
-  slug:
-    "1596-nouvelle-convention-collective-nationale-des-ouvriers-employes-par-les-entr",
+  slug: "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",
   date_publi: "2018-07-01T00:00:00.000Z",
   mtime: 1562614614,
   title:
@@ -37,12 +43,8 @@ export const agreement = {
   shortTitle: "Bâtiment Ouvriers (entreprises occupant jusqu'à 10 salariés)",
   url:
     "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-  idcc: "1596",
+  num: 1596,
   nbTextes: 36,
-  nbArticles: {
-    vigueurEtendu: 350,
-    vigueurNonEtendu: 179
-  },
   articlesByTheme: [
     {
       bloc: "1",
@@ -239,7 +241,7 @@ export const agreement = {
     {
       question: "Jours fériés et ponts dans le secteur privé",
       answer:
-        "<p>Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.</p>\n<p>Toutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui :</p>\n<ul>\n<li>Ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé ;</li>\n<li>N'ont pas accompli, à la fois, le dernier jour du travail précédant le jour férié et le premier jour du travail qui suit, sauf autorisation d'absence préalablement accordée. Toutefois, il n'est pas tenu compte d'une absence pour maladie se terminant la dernière journée de travail précédant le jour férié, ou d'une absence pour maladie commençant la première journée de travail suivant ledit jour férié.</li>\n</ul>\n<p>Le chômage des jours fériés ne peut pas donner lieu à récupération.</p>\n",
+        "<p>Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.</p>\n<p>Toutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé.</p>\n<p>Le chômage des jours fériés ne peut pas donner lieu à récupération.</p>\n",
       theme: "Congés et repos",
       references: [
         {
@@ -397,7 +399,7 @@ export const agreement = {
     {
       question: "Les congés pour événements familiaux",
       answer:
-        "<p>Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :</p>\n<ul>\n<li>Mariage du salarié : 4 jours ;</li>\n<li>Mariage d'un de ses enfants : 1 jour ;</li>\n<li>Obsèques de son conjoint : 3 jours ;</li>\n<li>Obsèques d'un de ses enfants : 3 jours ;</li>\n<li>Obsèques de son père, de sa mère : 3 jours ;</li>\n<li>Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour ;</li>\n<li>Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité.</li>\n</ul>\n<p>Ces absences s'ajoutent aux congés payés.</p>\n",
+        "<p>Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :</p>\n<ul>\n<li>Mariage du salarié : 4 jours ;</li>\n<li>Mariage d'un de ses enfants : 1 jour ;</li>\n<li>Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité ;</li>\n<li>Obsèques de son conjoint : 3 jours ;</li>\n<li>Obsèques d'un de ses enfants : 3 jours ;</li>\n<li>Obsèques de son père, de sa mère : 3 jours ;</li>\n<li>Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour.</li>\n</ul>\n<p>Ces absences s'ajoutent aux congés payés.</p>\n",
       theme: "Congés et repos",
       references: [
         {
@@ -464,7 +466,7 @@ export const agreement = {
       question:
         "Quelles sont les primes prévues par la convention collective ?",
       answer:
-        "<p>La convention collective prévoit une prime de vacances.</p>\n<p>Elle est versée, en plus de l'indemnité de congé, à l'ouvrier ayant au moins 1675 heures de travail au cours de l'année de référence dans une ou plusieurs entreprises du bâtiment ou des travaux publics. </p>\n<p>Les ouvriers qui n'auront pas atteint, en raison d'arrêt maladie, ce total de 1675 heures au cours de l'année de référence, bénéficient également de la prime de vacances.</p>\n<p>Le taux de la prime de vacances est égal à 30 % de l'indemnité de congé payés correspondant aux 24 jours ouvrables.</p>\n<p>La prime de vacances est versée à l'ouvrier en même temps que son indemnité de congé. Elle ne se cumule pas avec les versements qui auraient le même objet.</p>\n",
+        "<p>La convention collective prévoit une <strong>prime de vacances</strong>.</p>\n<p>Elle est versée, en plus de l'indemnité de congé, à l'ouvrier ayant au moins 1675 heures de travail au cours de l'année de référence dans une ou plusieurs entreprises du bâtiment ou des travaux publics. </p>\n<p>Les ouvriers qui n'auront pas atteint, en raison d'arrêt maladie, ce total de 1675 heures au cours de l'année de référence, bénéficient également de la prime de vacances.</p>\n<p>Le taux de la prime de vacances est égal à 30 % de l'indemnité de congé payés correspondant aux 24 jours ouvrables.</p>\n<p>La prime de vacances est versée à l'ouvrier en même temps que son indemnité de congé. Elle ne se cumule pas avec les versements qui auraient le même objet.</p>\n",
       theme: "Salaire et Rémunération",
       references: [
         {
