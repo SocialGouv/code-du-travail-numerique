@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Alert, Button, Heading, theme, Title } from "@socialgouv/react-ui";
+import { formatIdcc } from "@cdt/data/lib";
 
 import SearchConvention from "../../src/conventions/Search/Form";
 import rehypeToReact from "./rehypeToReact";
@@ -61,8 +62,7 @@ const AnswersConventions = ({ answers }) => {
   const [ccInfo, setCcInfo] = useLocalStorage("convention", {});
   const { convention = {} } = ccInfo;
   const answer =
-    convention &&
-    answers.find(a => parseInt(a.idcc, 10) === parseInt(convention.num, 10));
+    convention && answers.find(a => parseInt(a.idcc, 10) === convention.num);
   // ensure we have valid data in ccInfo
   const isCcDetected =
     ccInfo && convention.id && convention.num && convention.title;
@@ -89,7 +89,10 @@ const AnswersConventions = ({ answers }) => {
             >
               {convention.title}
               {convention.num && (
-                <React.Fragment> (IDCC {convention.num})</React.Fragment>
+                <React.Fragment>
+                  {" "}
+                  (IDCC {formatIdcc(convention.num)})
+                </React.Fragment>
               )}
             </a>
           </Heading>
@@ -108,7 +111,7 @@ const AnswersConventions = ({ answers }) => {
             </React.Fragment>
           )}
           <br />
-          <Button variant="primary" onClick={() => setCcInfo(null)}>
+          <Button variant="primary" onClick={() => setCcInfo({})}>
             Changer de convention collective
           </Button>
         </React.Fragment>

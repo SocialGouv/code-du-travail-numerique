@@ -33,7 +33,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: "456",
+          idcc: 456,
           markdown: "hello **123**"
         }
       ]
@@ -47,7 +47,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: "456",
+          idcc: 456,
           markdown: "hello **123**"
         }
       ]
@@ -61,7 +61,7 @@ describe("<Contribution />", () => {
       JSON.stringify({
         convention: {
           title: "preselected convention",
-          num: "0044",
+          num: 44,
           id: 123
         }
       })
@@ -71,7 +71,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: "0044",
+          idcc: 44,
           markdown: "hello **123**"
         }
       ]
@@ -87,7 +87,7 @@ describe("<Contribution />", () => {
       JSON.stringify({
         convention: {
           title: "preselected convention",
-          num: "0000",
+          num: 9999,
           id: 123
         }
       })
@@ -97,7 +97,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: "0044",
+          idcc: 44,
           markdown: "hello **123**"
         }
       ]
@@ -113,7 +113,7 @@ describe("<Contribution />", () => {
       JSON.stringify({
         convention: {
           title: "preselected convention",
-          num: "0044",
+          num: 44,
           id: 123
         }
       })
@@ -123,7 +123,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: "0044",
+          idcc: 44,
           markdown: "hello **123**",
           references: [
             {
