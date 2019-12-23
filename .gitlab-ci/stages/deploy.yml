@@ -55,17 +55,7 @@ Create namespace:
 #
 
 .dev_stage: &dev_stage
-  environment:
-    name: fabrique-dev
-  only:
-    refs:
-      - external_pull_requests
-      - tags
-  except:
-    refs:
-      - branches
-    variables:
-      - $PRODUCTION
+  environment: fabrique-dev
 
 #
 #
