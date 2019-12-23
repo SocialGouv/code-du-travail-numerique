@@ -149,7 +149,7 @@ exports[`<Home /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c46 {
+.c47 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -189,14 +189,14 @@ exports[`<Home /> should render 1`] = `
   overflow: visible;
 }
 
-.c46:focus,
-.c46:hover,
-.c46:active {
+.c47:focus,
+.c47:hover,
+.c47:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c52 {
+.c53 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -233,16 +233,16 @@ exports[`<Home /> should render 1`] = `
   opacity: 1;
 }
 
-.c52:link,
-.c52:visited {
+.c53:link,
+.c53:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c52:not([disabled]):hover,
-.c52:not([disabled]):active,
-.c52:not([disabled]):focus {
+.c53:not([disabled]):hover,
+.c53:not([disabled]):active,
+.c53:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -251,13 +251,13 @@ exports[`<Home /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c52[disabled] {
+.c53[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c47 {
+.c48 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -266,7 +266,7 @@ exports[`<Home /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c25:hover .c47 {
+.c25:hover .c48 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -346,24 +346,16 @@ exports[`<Home /> should render 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: auto;
+  max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
   color: #3e486e;
@@ -395,7 +387,7 @@ exports[`<Home /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c40 {
+.c41 {
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto 1.6rem;
@@ -404,11 +396,17 @@ exports[`<Home /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c41 {
-  padding-right: 1rem;
+.c40 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c42 {
+  padding-right: 1rem;
+}
+
+.c43 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -418,7 +416,10 @@ exports[`<Home /> should render 1`] = `
   margin: 0;
 }
 
-.c43 {
+.c44 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-top: 1rem;
 }
 
@@ -634,12 +635,12 @@ exports[`<Home /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c48 {
+.c49 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c49 {
+.c50 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -647,7 +648,7 @@ exports[`<Home /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c49:before {
+.c50:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -659,7 +660,7 @@ exports[`<Home /> should render 1`] = `
   content: "";
 }
 
-.c50 {
+.c51 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -667,7 +668,7 @@ exports[`<Home /> should render 1`] = `
   text-align: center;
 }
 
-.c51 {
+.c52 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -676,27 +677,27 @@ exports[`<Home /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c51 > *:first-child {
+.c52 > *:first-child {
   margin-top: 0;
 }
 
-.c51 > *:last-child {
+.c52 > *:last-child {
   margin-bottom: 0;
 }
 
-.c53 {
+.c54 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c54 {
+.c55 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c55 {
+.c56 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -710,25 +711,25 @@ exports[`<Home /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c55 > *:first-child {
+.c56 > *:first-child {
   margin-top: 0;
 }
 
-.c55 > *:last-child {
+.c56 > *:last-child {
   margin-bottom: 0;
 }
 
-.c57 + .c56 {
+.c58 + .c57 {
   padding-left: 1.6rem;
 }
 
-.c59 {
+.c60 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c58 {
+.c59 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -738,11 +739,11 @@ exports[`<Home /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c60 {
+.c61 {
   margin: 0.4rem 0;
 }
 
-.c61 {
+.c62 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -839,7 +840,7 @@ exports[`<Home /> should render 1`] = `
   margin: 0;
 }
 
-.c44 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -854,7 +855,7 @@ exports[`<Home /> should render 1`] = `
   height: 100%;
 }
 
-.c45 {
+.c46 {
   margin-top: 1.6rem;
 }
 
@@ -890,13 +891,13 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c47 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c53 {
     font-size: 1.4rem;
   }
 }
@@ -927,7 +928,7 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c43 {
     font-size: 1.6rem;
   }
 }
@@ -1036,27 +1037,27 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media print {
-  .c49 {
+  .c50 {
     display: none;
   }
 }
 
 @media print {
-  .c51 {
+  .c52 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c55 {
+  .c56 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c55 {
+  .c56 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1064,25 +1065,25 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c57 + .c56 {
+  .c58 + .c57 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c59 {
+  .c60 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c59 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c59 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1435,9 +1436,11 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div>
+              <div
+                class="c40"
+              >
                 <div
-                  class="c40"
+                  class="c41"
                 >
                   <svg
                     fill="none"
@@ -1462,32 +1465,32 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c41"
+                  class="c42"
                 >
                   
                   <h3
-                    class="c42"
+                    class="c43"
                   >
                     Recherchez votre convention collective
                   </h3>
                 </div>
               </div>
               <div
-                class="c43"
+                class="c44"
               >
                 <div
-                  class="c44"
+                  class="c45"
                 >
                   Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC
                   <div
-                    class="c45"
+                    class="c46"
                   >
                     <div
-                      class="c25 c46"
+                      class="c25 c47"
                     >
                       Consulter
                       <svg
-                        class="c47"
+                        class="c48"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -1534,9 +1537,11 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div>
+              <div
+                class="c40"
+              >
                 <div
-                  class="c40"
+                  class="c41"
                 >
                   <svg
                     fill="none"
@@ -1563,32 +1568,32 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c41"
+                  class="c42"
                 >
                   
                   <h3
-                    class="c42"
+                    class="c43"
                   >
                     Préavis de démission
                   </h3>
                 </div>
               </div>
               <div
-                class="c43"
+                class="c44"
               >
                 <div
-                  class="c44"
+                  class="c45"
                 >
                   Calculez la durée de préavis de démission
                   <div
-                    class="c45"
+                    class="c46"
                   >
                     <div
-                      class="c25 c46"
+                      class="c25 c47"
                     >
                       Calculer
                       <svg
-                        class="c47"
+                        class="c48"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -1635,9 +1640,11 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div>
+              <div
+                class="c40"
+              >
                 <div
-                  class="c40"
+                  class="c41"
                 >
                   <svg
                     fill="none"
@@ -1662,32 +1669,32 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c41"
+                  class="c42"
                 >
                   
                   <h3
-                    class="c42"
+                    class="c43"
                   >
                     Salaire brut/net
                   </h3>
                 </div>
               </div>
               <div
-                class="c43"
+                class="c44"
               >
                 <div
-                  class="c44"
+                  class="c45"
                 >
                   Estimez le salaire : brut, net, heures supplémentaires, coût total employeur
                   <div
-                    class="c45"
+                    class="c46"
                   >
                     <div
-                      class="c25 c46"
+                      class="c25 c47"
                     >
                       Estimer
                       <svg
-                        class="c47"
+                        class="c48"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -1734,9 +1741,11 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div>
+              <div
+                class="c40"
+              >
                 <div
-                  class="c40"
+                  class="c41"
                 >
                   <svg
                     fill="none"
@@ -1755,32 +1764,32 @@ exports[`<Home /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c41"
+                  class="c42"
                 >
                   
                   <h3
-                    class="c42"
+                    class="c43"
                   >
                     Modèles de documents
                   </h3>
                 </div>
               </div>
               <div
-                class="c43"
+                class="c44"
               >
                 <div
-                  class="c44"
+                  class="c45"
                 >
                   Téléchargez et utilisez des modèles de lettres et de documents personnalisables
                   <div
-                    class="c45"
+                    class="c46"
                   >
                     <div
-                      class="c25 c46"
+                      class="c25 c47"
                     >
                       Découvrir
                       <svg
-                        class="c47"
+                        class="c48"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -1800,13 +1809,13 @@ exports[`<Home /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c48"
+    class="c49"
   >
     <footer
-      class="c49"
+      class="c50"
     >
       <div
-        class="c50"
+        class="c51"
       >
         <div
           class="c29"
@@ -1824,16 +1833,16 @@ exports[`<Home /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c51"
+            class="c52"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c25 c52"
+            class="c25 c53"
           >
             Contacter nos services en région
             <svg
-              class="c53"
+              class="c54"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1846,68 +1855,68 @@ exports[`<Home /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c54"
+        class="c55"
       >
         <nav>
           <div
-            class="c55"
+            class="c56"
           >
             <div
-              class="c56 c57"
+              class="c57 c58"
             >
               <h3
-                class="c58"
+                class="c59"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c59"
+                class="c60"
               >
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -1916,21 +1925,21 @@ exports[`<Home /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c56 c57"
+              class="c57 c58"
             >
               <h3
-                class="c58"
+                class="c59"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c59"
+                class="c60"
               >
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1939,10 +1948,10 @@ exports[`<Home /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1953,21 +1962,21 @@ exports[`<Home /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c56 c57"
+              class="c57 c58"
             >
               <h3
-                class="c58"
+                class="c59"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c59"
+                class="c60"
               >
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1976,10 +1985,10 @@ exports[`<Home /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1988,10 +1997,10 @@ exports[`<Home /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c60"
+                  class="c61"
                 >
                   <a
-                    class="c61"
+                    class="c62"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
