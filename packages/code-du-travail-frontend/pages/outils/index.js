@@ -18,6 +18,9 @@ import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import { CustomTile } from "../../src/common/tiles/Custom";
 
+const monCompteFormation = externalTools.find(
+  tools => tools.title === "Mon compte formation"
+);
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
@@ -55,22 +58,18 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
               numéro IDCC.
             </CustomTile>
           </Link>
-          {externalTools.map(
-            ({ action, description, icon, url, slug, title }) => (
-              <CustomTile
-                key={slug}
-                action={action}
-                title={title}
-                icon={icons[icon]}
-                href={url}
-                rel="noopener nofollow"
-                target="_blank"
-                className="no-after"
-              >
-                {description}
-              </CustomTile>
-            )
-          )}
+          <CustomTile
+            key={monCompteFormation.slug}
+            action={monCompteFormation.action}
+            title={monCompteFormation.title}
+            icon={icons[monCompteFormation.icon]}
+            href={monCompteFormation.url}
+            rel="noopener nofollow"
+            target="_blank"
+            className="no-after"
+          >
+            {monCompteFormation.description}
+          </CustomTile>
         </CardList>
         {modeles.length > 0 && (
           <CardList leftStripped title="Nos modèles de documents">

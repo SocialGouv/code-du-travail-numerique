@@ -69,7 +69,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c49 {
+.c48 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -92,7 +92,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c48 {
+.c47 {
   margin: 0 auto 1rem;
   margin-bottom: 1.6rem;
   text-align: center;
@@ -190,7 +190,7 @@ exports[`<Outils /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c42 {
+.c41 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -230,14 +230,14 @@ exports[`<Outils /> should render 1`] = `
   overflow: visible;
 }
 
-.c42:focus,
-.c42:hover,
-.c42:active {
+.c41:focus,
+.c41:hover,
+.c41:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c51 {
+.c50 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -274,16 +274,16 @@ exports[`<Outils /> should render 1`] = `
   opacity: 1;
 }
 
-.c51:link,
-.c51:visited {
+.c50:link,
+.c50:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c51:not([disabled]):hover,
-.c51:not([disabled]):active,
-.c51:not([disabled]):focus {
+.c50:not([disabled]):hover,
+.c50:not([disabled]):active,
+.c50:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -292,13 +292,13 @@ exports[`<Outils /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c51[disabled] {
+.c50[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c43 {
+.c42 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -307,13 +307,13 @@ exports[`<Outils /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c18:hover .c43 {
+.c18:hover .c42 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
 }
 
-.c44 {
+.c43 {
   width: 2.6rem;
   height: 1.4rem;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -321,7 +321,7 @@ exports[`<Outils /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c18:hover .c44 {
+.c18:hover .c43 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -389,16 +389,24 @@ exports[`<Outils /> should render 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 100%;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
   margin: 0;
   padding: 3.2rem 2rem;
   color: #3e486e;
@@ -430,7 +438,7 @@ exports[`<Outils /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c36 {
+.c35 {
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto 1.6rem;
@@ -439,17 +447,11 @@ exports[`<Outils /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c35 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.c37 {
+.c36 {
   padding-right: 1rem;
 }
 
-.c38 {
+.c37 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -459,10 +461,7 @@ exports[`<Outils /> should render 1`] = `
   margin: 0;
 }
 
-.c39 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+.c38 {
   margin-top: 1rem;
 }
 
@@ -740,12 +739,12 @@ exports[`<Outils /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c45 {
+.c44 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c46 {
+.c45 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -753,7 +752,7 @@ exports[`<Outils /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c46:before {
+.c45:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -765,7 +764,7 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c47 {
+.c46 {
   padding: 2rem 0;
   color: #3e486e;
   position: relative;
@@ -773,7 +772,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c50 {
+.c49 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -782,27 +781,27 @@ exports[`<Outils /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c50 > *:first-child {
+.c49 > *:first-child {
   margin-top: 0;
 }
 
-.c50 > *:last-child {
+.c49 > *:last-child {
   margin-bottom: 0;
 }
 
-.c52 {
+.c51 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c53 {
+.c52 {
   padding: 2rem 0;
   color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c54 {
+.c53 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -816,25 +815,25 @@ exports[`<Outils /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c54 > *:first-child {
+.c53 > *:first-child {
   margin-top: 0;
 }
 
-.c54 > *:last-child {
+.c53 > *:last-child {
   margin-bottom: 0;
 }
 
-.c56 + .c55 {
+.c55 + .c54 {
   padding-left: 1.6rem;
 }
 
-.c58 {
+.c57 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c57 {
+.c56 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -844,11 +843,11 @@ exports[`<Outils /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c59 {
+.c58 {
   margin: 0.4rem 0;
 }
 
-.c60 {
+.c59 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -877,7 +876,7 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c40 {
+.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -892,7 +891,7 @@ exports[`<Outils /> should render 1`] = `
   height: 100%;
 }
 
-.c41 {
+.c40 {
   margin-top: 1.6rem;
 }
 
@@ -922,7 +921,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c48 {
     font-size: 2.2rem;
   }
 }
@@ -934,7 +933,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c47 {
     margin-bottom: 1rem;
   }
 }
@@ -946,13 +945,13 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c41 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c50 {
     font-size: 1.4rem;
   }
 }
@@ -983,7 +982,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c37 {
     font-size: 1.6rem;
   }
 }
@@ -1133,27 +1132,27 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c46 {
+  .c45 {
     display: none;
   }
 }
 
 @media print {
-  .c50 {
+  .c49 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c54 {
+  .c53 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c53 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1161,25 +1160,25 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c56 + .c55 {
+  .c55 + .c54 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c57 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c56 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c56 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1455,11 +1454,9 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c35"
-              >
+              <div>
                 <div
-                  class="c36"
+                  class="c35"
                 >
                   <svg
                     fill="none"
@@ -1502,32 +1499,32 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c37"
+                  class="c36"
                 >
                   
                   <h3
-                    class="c38"
+                    class="c37"
                   >
                     Indemnité de licenciement
                   </h3>
                 </div>
               </div>
               <div
-                class="c39"
+                class="c38"
               >
                 <div
-                  class="c40"
+                  class="c39"
                 >
                   Estimez le montant de l’indemnité de licenciement
                   <div
-                    class="c41"
+                    class="c40"
                   >
                     <div
-                      class="c18 c42"
+                      class="c18 c41"
                     >
                       Estimer
                       <svg
-                        class="c43"
+                        class="c42"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -1574,11 +1571,9 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c35"
-              >
+              <div>
                 <div
-                  class="c36"
+                  class="c35"
                 >
                   <svg
                     fill="none"
@@ -1605,32 +1600,32 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c37"
+                  class="c36"
                 >
                   
                   <h3
-                    class="c38"
+                    class="c37"
                   >
                     Préavis de démission
                   </h3>
                 </div>
               </div>
               <div
-                class="c39"
+                class="c38"
               >
                 <div
-                  class="c40"
+                  class="c39"
                 >
                   Calculez la durée de préavis de démission
                   <div
-                    class="c41"
+                    class="c40"
                   >
                     <div
-                      class="c18 c42"
+                      class="c18 c41"
                     >
                       Calculer
                       <svg
-                        class="c43"
+                        class="c42"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -1677,11 +1672,9 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c35"
-              >
+              <div>
                 <div
-                  class="c36"
+                  class="c35"
                 >
                   <svg
                     fill="none"
@@ -1706,32 +1699,32 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c37"
+                  class="c36"
                 >
                   
                   <h3
-                    class="c38"
+                    class="c37"
                   >
                     Salaire brut/net
                   </h3>
                 </div>
               </div>
               <div
-                class="c39"
+                class="c38"
               >
                 <div
-                  class="c40"
+                  class="c39"
                 >
                   Estimez le salaire : brut, net, heures supplémentaires, coût total employeur
                   <div
-                    class="c41"
+                    class="c40"
                   >
                     <div
-                      class="c18 c42"
+                      class="c18 c41"
                     >
                       Estimer
                       <svg
-                        class="c43"
+                        class="c42"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -1778,11 +1771,9 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c35"
-              >
+              <div>
                 <div
-                  class="c36"
+                  class="c35"
                 >
                   <svg
                     fill="none"
@@ -1829,32 +1820,32 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c37"
+                  class="c36"
                 >
                   
                   <h3
-                    class="c38"
+                    class="c37"
                   >
                     Indemnité de précarité
                   </h3>
                 </div>
               </div>
               <div
-                class="c39"
+                class="c38"
               >
                 <div
-                  class="c40"
+                  class="c39"
                 >
                   Estimez le montant de l’indemnité de fin de CDD ou intérim
                   <div
-                    class="c41"
+                    class="c40"
                   >
                     <div
-                      class="c18 c42"
+                      class="c18 c41"
                     >
                       Estimer
                       <svg
-                        class="c43"
+                        class="c42"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -1901,11 +1892,9 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c35"
-              >
+              <div>
                 <div
-                  class="c36"
+                  class="c35"
                 >
                   <svg
                     fill="none"
@@ -1946,32 +1935,32 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c37"
+                  class="c36"
                 >
                   
                   <h3
-                    class="c38"
+                    class="c37"
                   >
                     Préavis de licenciement
                   </h3>
                 </div>
               </div>
               <div
-                class="c39"
+                class="c38"
               >
                 <div
-                  class="c40"
+                  class="c39"
                 >
                   Calculez la durée de préavis de licenciement
                   <div
-                    class="c41"
+                    class="c40"
                   >
                     <div
-                      class="c18 c42"
+                      class="c18 c41"
                     >
                       Calculer
                       <svg
-                        class="c43"
+                        class="c42"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -2018,11 +2007,9 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c35"
-              >
+              <div>
                 <div
-                  class="c36"
+                  class="c35"
                 >
                   <svg
                     fill="none"
@@ -2047,539 +2034,32 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c37"
+                  class="c36"
                 >
                   
                   <h3
-                    class="c38"
+                    class="c37"
                   >
                     Recherchez votre convention collective
                   </h3>
                 </div>
               </div>
               <div
-                class="c39"
+                class="c38"
               >
                 <div
-                  class="c40"
+                  class="c39"
                 >
                   Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.
                   <div
-                    class="c41"
+                    class="c40"
                   >
                     <div
-                      class="c18 c42"
+                      class="c18 c41"
                     >
                       Consulter
                       <svg
-                        class="c43"
-                        fill="none"
-                        viewBox="0 0 28 15"
-                      >
-                        <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32 no-after"
-              href="https://www.teleaccords.travail-emploi.gouv.fr/PortailTeleprocedures"
-              rel="noopener nofollow"
-              target="_blank"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      d="M43.847 0H13.448A6.455 6.455 0 007 6.448v39.104A6.455 6.455 0 0013.448 52h30.4c.638 0 1.155-.517 1.155-1.156L45 50.772c.001-.024.003-.048.003-.073V1.156C45.003.517 44.486 0 43.847 0zM12 50c-1.72-.502-3-2.568-3-4.448V11c.5 1 1.59 1.708 3 1.908V50zm1.448-39C11.167 11 9 8.73 9 6.448 9 4.168 11.167 2 13.448 2H40.5C39 2 37 4.5 37 6.5s2.5 4.5 4 4.5H13.448zM35 13.014v6.663l-1.31-1.045a1.155 1.155 0 00-1.381 0l-1.344 1.043V13l4.035.014zm8 36.972L14 50V13.014h15v8.979a1.157 1.157 0 001.847.926L33 21l2.154 1.892A1.156 1.156 0 0037 21.965V13h6v36.986zm0-39.58c-1 0-4.5-1.01-4.5-3.958C38.5 3.5 42 2.5 43 2.463v7.943z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      d="M20 32a1 1 0 011-1h15a1 1 0 110 2H21a1 1 0 01-1-1zm-2 5a1 1 0 011-1h19a1 1 0 110 2H19a1 1 0 01-1-1z"
-                      fill="#FF7067"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
-                    class="c38"
-                  >
-                    TéléAccords
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Le service de dépôt des accords collectifs d’entreprise
-                  <div
-                    class="c41"
-                  >
-                    <div
-                      class="c18 c42"
-                    >
-                      
-                      <svg
-                        class="c44"
-                        fill="none"
-                        viewBox="0 0 28 15"
-                      >
-                        <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32 no-after"
-              href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=20"
-              rel="noopener nofollow"
-              target="_blank"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      d="M41.953 2H9.047A3.05 3.05 0 006 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016v41.906c0 .56-.456 1.016-1.016 1.016H9.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 009.047 50h32.906A3.05 3.05 0 0045 46.953V5.047A3.05 3.05 0 0041.953 2z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      d="M7.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297zm13.063 18.297a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.255-1.255a1.016 1.016 0 00-1.437 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437zm.06-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M12.016 10h10c.56 0 1.015.455 1.015 1.016v9.968c0 .561-.454 1.016-1.015 1.016h-10A1.016 1.016 0 0111 20.984v-9.968c0-.561.455-1.016 1.016-1.016zM21 19.969h-7.969V12.03H21v7.938z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      d="M29.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm8.96 10H26.024C25.46 29 25 29.448 25 30s.459 1 1.024 1h11.952C38.54 31 39 30.552 39 30s-.459-1-1.024-1zm0 9H26.024C25.46 38 25 38.448 25 39s.459 1 1.024 1h11.952C38.54 40 39 39.552 39 39s-.459-1-1.024-1zm.149-23h-9.11a1.016 1.016 0 000 2.031h9.11a1.016 1.016 0 000-2.031z"
-                      fill="#FF7067"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
-                    class="c38"
-                  >
-                    TéléRC
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Le service de saisie d'une demande d'homologation de rupture conventionnelle
-                  <div
-                    class="c41"
-                  >
-                    <div
-                      class="c18 c42"
-                    >
-                      
-                      <svg
-                        class="c44"
-                        fill="none"
-                        viewBox="0 0 28 15"
-                      >
-                        <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32 no-after"
-              href="https://www.sipsi.travail.gouv.fr/auth/login"
-              rel="noopener nofollow"
-              target="_blank"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      d="M43.566 34.192a.752.752 0 00-.47-.191.615.615 0 00-.454.173.592.592 0 00-.177.444v3.68H29v4.939h13.467v3.682c0 .163.067.32.185.436a.635.635 0 00.445.181.625.625 0 00.45-.183l6.277-6.143a.645.645 0 000-.885l-6.258-6.133z"
-                      fill="#FF7067"
-                    />
-                    <path
-                      d="M29.112 4c-.312-.015-.495.131-.698.361-.201.228-.215.563-.214.871L28.195 27 17.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.257 1.257 0 00-.157.62V27L4.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.258 1.258 0 00-.157.62l.151 30.652c0 .327.127.64.352.871.225.231.53.361.848.361h35.427c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872V46H39v2H5V20l11.157 9.602a1.177 1.177 0 001.204-.003c.183-.109.334-.266.439-.455a1.26 1.26 0 00.156-.62L18 20.5l10.2 9.102a1.177 1.177 0 001.205-.003c.182-.109.334-.266.438-.455a1.25 1.25 0 00.157-.62V6h9v29h1.978V5.232c0-.327-.127-.64-.352-.871a1.185 1.185 0 00-.848-.36H29.112z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      d="M35 37v-2.809c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.6a1.173 1.173 0 00-.113 0 1.19 1.19 0 00-.776.398 1.251 1.251 0 00-.311.833v8.624c0 .327.127.64.352.871.224.231.53.361.848.361H27V42h-1v-7h7v2h2z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.287 32.96a1.189 1.189 0 00-.776.398 1.25 1.25 0 00-.311.833v8.624c0 .327.126.64.351.871.226.231.53.361.849.361h8.4c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872v-8.624c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.4a1.173 1.173 0 00-.113 0zM11 35h7v7h-7v-7z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
-                    class="c38"
-                  >
-                    SIPSI
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Détachement de travailleurs en France
-                  <div
-                    class="c41"
-                  >
-                    <div
-                      class="c18 c42"
-                    >
-                      
-                      <svg
-                        class="c44"
-                        fill="none"
-                        viewBox="0 0 28 15"
-                      >
-                        <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32 no-after"
-              href="https://www.elections-professionnelles.travail.gouv.fr/web/guest"
-              rel="noopener nofollow"
-              target="_blank"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M26.567 3.89L32.544 8H42a1 1 0 011 1v6.188l6.566 4.514a1 1 0 01.434.824V47a1 1 0 01-1 1H3a1 1 0 01-1-1V20.526a1 1 0 01.433-.824L9 15.188V9a1 1 0 011-1h9.455l5.979-4.11a1 1 0 011.133 0zM22.985 8h6.03L26 5.927 22.985 8zM9 17.615l-5 3.437v.323l5 3.438v-7.198zm2 8.573l10.537 7.244 2.873-1.796a3 3 0 013.18 0l2.873 1.796L41 26.188V10H11v16.188zm32-1.375l5-3.438v-.323l-5-3.437v7.198zm5-1.01L32.313 34.586 48 44.392v-20.59zM4 44.391l15.687-9.805L4 23.802v20.59zm21.47-11.06L5.2 46h41.6L26.53 33.332a1 1 0 00-1.06 0z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      d="M16 17c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H17.053C16.47 18 16 17.552 16 17zm1.053 5C16.47 22 16 22.448 16 23s.471 1 1.053 1h17.894C35.53 24 36 23.552 36 23s-.471-1-1.053-1H17.053z"
-                      fill="#FF7067"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
-                    class="c38"
-                  >
-                    Élections professionnelles
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Le site dédié aux élections professionnelles et à la représentativité syndicale
-                  <div
-                    class="c41"
-                  >
-                    <div
-                      class="c18 c42"
-                    >
-                      
-                      <svg
-                        class="c44"
-                        fill="none"
-                        viewBox="0 0 28 15"
-                      >
-                        <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32 no-after"
-              href="https://index-egapro.travail.gouv.fr"
-              rel="noopener nofollow"
-              target="_blank"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      d="M11 2h30a3 3 0 013 3v42a3 3 0 01-3 3H11a3 3 0 01-3-3V24s0-1 1-1 1 1 1 1v23a1 1 0 001 1h30a1 1 0 001-1V5a1 1 0 00-1-1H11a1 1 0 00-1 1v10s0 1-1 1-1-1-1-1V5a3 3 0 013-3z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      d="M9 20a1 1 0 100-2 1 1 0 000 2z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M14 12a1 1 0 011-1h22a1 1 0 011 1v6a1 1 0 01-1 1H15a1 1 0 01-1-1v-6zm2 5v-4h20v4H16z"
-                      fill="#FF7067"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      d="M15 26a1 1 0 100 2h3a1 1 0 100-2h-3zm10 0a1 1 0 100 2h3a1 1 0 100-2h-3zm8 1a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm-18 6a1 1 0 100 2h3a1 1 0 100-2h-3zm9 1a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm10-1a1 1 0 100 2h3a1 1 0 100-2h-3zm-20 8a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm11-1a1 1 0 100 2h3a1 1 0 100-2h-3zm8 1a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1z"
-                      fill="#FF7067"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
-                    class="c38"
-                  >
-                    Index Egapro
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  L’outil de calcul de votre index égalité professionnelle Femmes- Hommes
-                  <div
-                    class="c41"
-                  >
-                    <div
-                      class="c18 c42"
-                    >
-                      
-                      <svg
-                        class="c44"
+                        class="c42"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -2628,11 +2108,9 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
               </div>
-              <div
-                class="c35"
-              >
+              <div>
                 <div
-                  class="c36"
+                  class="c35"
                 >
                   <svg
                     fill="none"
@@ -2659,32 +2137,32 @@ exports[`<Outils /> should render 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="c37"
+                  class="c36"
                 >
                   
                   <h3
-                    class="c38"
+                    class="c37"
                   >
                     Mon compte formation
                   </h3>
                 </div>
               </div>
               <div
-                class="c39"
+                class="c38"
               >
                 <div
-                  class="c40"
+                  class="c39"
                 >
                   Consulter et utiliser ses droits pour la formation
                   <div
-                    class="c41"
+                    class="c40"
                   >
                     <div
-                      class="c18 c42"
+                      class="c18 c41"
                     >
                       
                       <svg
-                        class="c44"
+                        class="c43"
                         fill="none"
                         viewBox="0 0 28 15"
                       >
@@ -2704,22 +2182,22 @@ exports[`<Outils /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c45"
+    class="c44"
   >
     <footer
-      class="c46"
+      class="c45"
     >
       <div
-        class="c47"
+        class="c46"
       >
         <div
           class="c23"
         >
           <header
-            class="c48"
+            class="c47"
           >
             <h3
-              class="c49"
+              class="c48"
             >
               <div
                 class="c26"
@@ -2728,16 +2206,16 @@ exports[`<Outils /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c50"
+            class="c49"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c18 c51"
+            class="c18 c50"
           >
             Contacter nos services en région
             <svg
-              class="c52"
+              class="c51"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -2750,68 +2228,68 @@ exports[`<Outils /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c53"
+        class="c52"
       >
         <nav>
           <div
-            class="c54"
+            class="c53"
           >
             <div
-              class="c55 c56"
+              class="c54 c55"
             >
               <h3
-                class="c57"
+                class="c56"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c58"
+                class="c57"
               >
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -2820,21 +2298,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c55 c56"
+              class="c54 c55"
             >
               <h3
-                class="c57"
+                class="c56"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c58"
+                class="c57"
               >
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2843,10 +2321,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2857,21 +2335,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c55 c56"
+              class="c54 c55"
             >
               <h3
-                class="c57"
+                class="c56"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c58"
+                class="c57"
               >
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2880,10 +2358,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2892,10 +2370,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c59"
+                  class="c58"
                 >
                   <a
-                    class="c60"
+                    class="c59"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
