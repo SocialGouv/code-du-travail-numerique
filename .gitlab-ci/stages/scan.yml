@@ -6,11 +6,9 @@ Snyk docker scan:
   services:
     - docker:$DOCKER_VERSION-dind
   only:
-    refs:
-      - external_pull_requests
+    - external_pull_requests
   except:
-    refs:
-      - branches
+    - branches
     variables:
       - $PRODUCTION
   dependencies: []

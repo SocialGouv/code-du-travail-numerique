@@ -6,6 +6,11 @@ Deploy:
     - when: manual
   allow_failure: false
   script: echo "Register & Deploy"
+  only:
+    - external_pull_requests
+    - tags
+  except:
+    - branches
 
 #
 #
@@ -17,11 +22,9 @@ Release:
   dependencies: []
   when: manual
   only:
-    refs:
-      - external_pull_requests
+    - external_pull_requests
   except:
-    refs:
-      - branches
+    - branches
   before_script:
     - apk add --no-cache git=~2
     - git checkout ${CI_COMMIT_REF_NAME}
