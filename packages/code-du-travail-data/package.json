@@ -28,7 +28,7 @@
   "dependencies": {
     "@cdt/sources": "^3.10.0",
     "@elastic/elasticsearch": "^7.5.0",
-    "@socialgouv/fiches-vdd": "^1.0.63",
+    "@socialgouv/fiches-vdd": "^1.0.66",
     "@socialgouv/kali-data": "^1.2.100",
     "@socialgouv/legi-data": "^1.1.11",
     "esm": "^3.2.25",
@@ -39,13 +39,13 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
     "@socialgouv/eslint-config-recommended": "^0.11.1",
     "@zeit/ncc": "^0.20.5",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1"
   },
