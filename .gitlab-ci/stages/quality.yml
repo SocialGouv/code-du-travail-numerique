@@ -3,6 +3,8 @@
 .quality_stage: &quality_stage
   stage: "Code Quality"
   dependencies: []
+  only:
+    - external_pull_requests
   except:
     variables:
       # Don't run test when deploy on production an existing image

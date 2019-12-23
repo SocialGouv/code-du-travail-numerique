@@ -13,21 +13,11 @@ Test PR Only:
     - branches
   script: echo "Prepare Pull requests only"
 
-
-
-
-
-Test PR Only:
-  stage: "Prepare"
-  only:
-    - external_pull_requests
-  except:
-    - branches
-  script: echo "Prepare Pull requests Only"
-
 .prepare_stage: &prepare_stage
   extends: .base_register_stage
   stage: "Prepare"
+  only:
+    - external_pull_requests
   except:
     variables:
       - $PRODUCTION
@@ -38,6 +28,8 @@ Test PR Only:
 .register_stage: &register_stage
   extends: .base_register_stage
   stage: "Registration"
+  only:
+    - external_pull_requests
   except:
     variables:
       - $PRODUCTION
