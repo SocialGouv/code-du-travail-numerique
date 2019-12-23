@@ -6,11 +6,6 @@ Deploy:
     - when: manual
   allow_failure: false
   script: echo "Register & Deploy"
-  only:
-    - external_pull_requests
-    - tags
-  except:
-    - branches
 
 #
 #
