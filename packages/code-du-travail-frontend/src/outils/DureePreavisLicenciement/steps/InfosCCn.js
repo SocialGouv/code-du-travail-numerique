@@ -15,7 +15,7 @@ StepInfoCCn.validate = values => {
   const errors = {};
   const { ccn, cdt, disabledWorker } = values;
   const initialCDTSituations = getSituationsFor(data.situations, {
-    idcc: "0"
+    idcc: 0
   });
   const [situation] = filterSituations(initialCDTSituations, {
     ...cdt

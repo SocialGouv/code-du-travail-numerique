@@ -26,7 +26,7 @@ describe("<StepInfoCCn />", () => {
   it("should render cdd infos step", () => {
     localStorage.setItem(
       "convention",
-      JSON.stringify({ convention: { num: "3109" }, label: "ccn des 5 mondes" })
+      JSON.stringify({ convention: { num: 3109 }, label: "ccn des 5 mondes" })
     );
     const { container } = renderForm({
       cdt: { ancienneté: "31| 6 mois à moins de 2 ans" }

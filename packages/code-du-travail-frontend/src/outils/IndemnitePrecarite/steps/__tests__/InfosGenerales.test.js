@@ -36,7 +36,7 @@ describe("<StepInfosGenerales />", () => {
 
   it("should render with CDD and not handled ccn", () => {
     const { container } = renderForm({
-      ccn: { convention: { num: "16" } },
+      ccn: { convention: { num: 16 } },
       contractType: CONTRACT_TYPE.CDD
     });
     expect(container).toMatchSnapshot();

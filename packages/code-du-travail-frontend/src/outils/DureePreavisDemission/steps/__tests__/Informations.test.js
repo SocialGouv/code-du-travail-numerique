@@ -8,13 +8,13 @@ describe("<StepInformations />", () => {
   });
   it("should render catégorie", () => {
     const { container } = renderForm(StepInformations, {
-      ccn: { convention: { num: "292" } }
+      ccn: { convention: { num: 292 } }
     });
     expect(container).toMatchSnapshot();
   });
   it("should render coefficient", () => {
     const { container } = renderForm(StepInformations, {
-      ccn: { convention: { num: "292" } },
+      ccn: { convention: { num: 292 } },
       criteria: { "catégorie socio-professionnelle": "42| Collaborateurs" }
     });
     expect(container).toMatchSnapshot();

@@ -23,7 +23,7 @@ const criteriaOrder = questions.map(({ name }) => name);
 function StepInformations({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
-  const idcc = ccn ? ccn.convention.num : "0";
+  const idcc = ccn ? ccn.convention.num : 0;
 
   const initialSituations = getSituationsFor(allSituations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
