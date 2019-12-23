@@ -14,6 +14,7 @@ Array [
         "title": "title4",
       },
     ],
+    "icon": "Indemnity",
     "position": 1,
     "refs": Array [
       Object {
@@ -63,6 +64,7 @@ Array [
         "title": "title3",
       },
     ],
+    "icon": undefined,
     "position": 2,
     "refs": Array [
       Object {
@@ -99,6 +101,7 @@ Array [
       },
     ],
     "children": Array [],
+    "icon": undefined,
     "position": 3,
     "refs": Array [
       Object {
@@ -131,6 +134,7 @@ Array [
       },
     ],
     "children": Array [],
+    "icon": undefined,
     "position": 4,
     "refs": Array [
       Object {
