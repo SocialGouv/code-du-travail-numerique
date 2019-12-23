@@ -12,4 +12,4 @@ const dump = async () => {
   console.log(JSON.stringify(documents, 0, 2));
 };
 
-dump();
+dump().catch(error => console.error(error));

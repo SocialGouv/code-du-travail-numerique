@@ -20,7 +20,7 @@ const options = {
   ]
 };
 
-const convertFile2Html = ({ filename, title, questions, ...rest }) => {
+const convertFile2Html = ({ filename, title, description, ...rest }) => {
   return mammoth
     .convertToHtml(
       {
@@ -33,7 +33,8 @@ const convertFile2Html = ({ filename, title, questions, ...rest }) => {
       source: SOURCES.LETTERS,
       slug: slugify(title),
       title,
-      text: questions.join("\n"),
+      text: description,
+      description,
       ...rest,
       html:
         basic_styles +
