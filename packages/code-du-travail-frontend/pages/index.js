@@ -22,7 +22,17 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const additionalTools = [
+const selectedTools = [
+  {
+    title: "Recherchez votre convention collective",
+    action: "Consulter",
+    description:
+      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC",
+    href: `/${getRouteBySource(SOURCES.CCN)}/recherche`,
+    icon: "Nego"
+  },
+  tools.find(tool => tool.slug === "preavis-demission"),
+  tools.find(tool => tool.slug === "simulateur-embauche"),
   {
     title: "Modèles de documents",
     action: "Découvrir",
@@ -49,10 +59,8 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
           desc="Trouvez des réponses personnalisées selon votre situation"
           href="/outils"
         >
-          {additionalTools
-            .concat(tools)
-            .slice(0, 4)
-            .map(({ action, description, href, icon, slug, title }) => {
+          {selectedTools.map(
+            ({ action, description, href, icon, slug, title }) => {
               const linkProps = {
                 href,
                 passHref: true
@@ -68,7 +76,8 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
                   </CustomTile>
                 </Link>
               );
-            })}
+            }
+          )}
         </CardList>
       </Container>
     </Section>
