@@ -131,7 +131,6 @@ Deploy @cdtn/frontend (incubateur):
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
   before_script:
     - source ./.gitlab-ci/env.sh
-    - /apps/create-kubeconfig.sh
     - if [ -n "${PRODUCTION+x}" ]; then SUFFIX=".prod"; else SUFFIX=".dev"; fi
   script:
     - kubectl delete job ${CONTEXT} || true
