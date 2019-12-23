@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@cdt/sources": "^3.10.0",
-    "@socialgouv/fiches-vdd": "^1.0.63",
+    "@socialgouv/fiches-vdd": "^1.0.66",
     "@socialgouv/kali-data": "^1.2.100",
     "@socialgouv/legi-data": "^1.1.11",
     "lodash.uniqby": "^4.7.0",
