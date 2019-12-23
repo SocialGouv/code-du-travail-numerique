@@ -125,7 +125,7 @@ Deploy @cdtn/frontend (incubateur):
     - source ./.gitlab-ci/env.sh
     - kubectl delete job ${CONTEXT} || true
     #
-    - envsubst < ./.k8s/data.job.yml | kubectl apply -
+    - cat ./.k8s/data.job.yml | envsubst | kubectl apply -f -
 
 #
 
