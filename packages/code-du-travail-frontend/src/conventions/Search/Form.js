@@ -111,7 +111,7 @@ const Search = ({
         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
         value={query}
         type="search"
-        // name="q"
+        name="q"
         onChange={onInputChange}
       />
       <SearchCC
