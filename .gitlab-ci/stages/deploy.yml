@@ -123,8 +123,9 @@ Deploy @cdtn/frontend (incubateur):
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
   script:
     - source ./.gitlab-ci/env.sh
-    - kubectl delete job ${CONTEXT} || true
+    - kubectl config set-context --current --namespace=${K8S_NAMESPACE}
     #
+    - kubectl delete job ${CONTEXT} || true
     - cat ./.k8s/data.job.yml | envsubst | kubectl apply -f -
 
 #
