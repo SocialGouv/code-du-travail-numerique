@@ -23,7 +23,7 @@ const CookieConsent = () => {
         <A
           title="Mentions legales"
           rel="noopener noreferrer"
-          href="http://master.code-du-travail-numerique.dev.factory.social.gouv.fr/mentions-legales"
+          href="/mentions-legales"
         >
           En savoir plus
         </A>

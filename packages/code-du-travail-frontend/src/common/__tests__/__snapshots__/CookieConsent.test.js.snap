@@ -135,7 +135,7 @@ exports[`<CookieConsent /> should render 1`] = `
         Nous utilisons des cookies pour établir des mesures anonymisées de fréquentation et d’utilisation du site.
         <a
           class="c3"
-          href="http://master.code-du-travail-numerique.dev.factory.social.gouv.fr/mentions-legales"
+          href="/mentions-legales"
           rel="noopener noreferrer"
           title="Mentions legales"
         >
