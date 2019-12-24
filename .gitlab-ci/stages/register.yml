@@ -1,35 +1,8 @@
 #
-Test PR + branches:
-  stage: "Prepare"
-  only:
-    - external_pull_requests
-  script: echo "Prepare Pull requests"
-
-Test PR Only:
-  stage: "Prepare"
-  only:
-    - external_pull_requests
-  except:
-    - branches
-  script: echo "Prepare Pull requests only"
-
-.prepare_stage: &prepare_stage
-  extends: .base_register_stage
-  stage: "Prepare"
-  only:
-    - external_pull_requests
-  except:
-    variables:
-      - $PRODUCTION
-      # Don't register a base image for release commit
-      # that only bump version / udpate changelog
-      - $CI_COMMIT_MESSAGE =~ /chore(release):/
 
 .register_stage: &register_stage
   extends: .base_register_stage
   stage: "Registration"
-  only:
-    - external_pull_requests
   except:
     variables:
       - $PRODUCTION
@@ -40,13 +13,15 @@ Test PR Only:
 #
 
 Register socialgouv/cdtn base image:
-  <<: *prepare_stage
+  <<: *register_stage
+  stage: "Prepare"
   variables:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
 
 Register elasticsearch image:
-  <<: *prepare_stage
+  <<: *register_stage
+  stage: "Prepare"
   variables:
     CONTEXT: ./docker/elasticsearch
     DOCKER_BUILD_ARGS: ""

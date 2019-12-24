@@ -16,8 +16,6 @@ include:
 Create namespace:
   extends: .base_create_namespace_stage
   stage: "Post Registration"
-  only:
-    - external_pull_requests
   before_script:
     - source ./.gitlab-ci/env.sh
   after_script:
@@ -59,8 +57,6 @@ Create namespace:
 .dev_stage: &dev_stage
   environment:
     name: fabrique-dev
-  only:
-    - external_pull_requests
   except:
     variables:
       - $PRODUCTION
