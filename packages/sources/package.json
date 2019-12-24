@@ -3,8 +3,5 @@
   "private": true,
   "version": "3.10.0",
   "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "jest-cli": "^24.9.0"
-  }
+  "license": "MIT"
 }
