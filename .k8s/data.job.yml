@@ -32,9 +32,6 @@ spec:
                 secretKeyRef:
                   name: elasticsearch-cloud-data
                   key: password
-            - name: ES_INDEX_PREFIX
-              value: "cdtn-prod"
-              # value: "cdtn-${BRANCH_HASH}"
           resources:
             requests:
               cpu: 5m

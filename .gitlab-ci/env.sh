@@ -16,6 +16,7 @@ export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
 
 
 export K8S_NAMESPACE="${PROJECT}-feature-${BRANCH_HASH}"
+export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
 
 #
 
@@ -32,6 +33,7 @@ fi
 
 if [[ -n "${PRODUCTION+x}" ]]; then
   export BRANCH_HASH=prod;
+  export ES_INDEX_PREFIX="cdtn-prod"
   export DOMAIN="code.travail.fabrique.social.gouv.fr";
 else
   export DOMAIN="${BRANCH_HASH}-code-travail.dev.fabrique.social.gouv.fr";
