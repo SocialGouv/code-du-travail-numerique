@@ -32,8 +32,8 @@ if [[ -n "${COMMIT_TAG}" ]]; then
   # For versions we replace the version number v2.3.1 to v2-3-1
   export BRANCH_HASH=$( printf "${COMMIT_TAG}" | sed "s/\./-/g" );
   export IMAGE_TAG=$(printf "${COMMIT_TAG}" | sed "s/^v//")
-  export ES_INDEX_PREFIX="cdtn-${BRANCH_HASH}"
-  export K8S_NAMESPACE="cdtn-${BRANCH_HASH}"
+  export ES_INDEX_PREFIX="cdtn-preprod"
+  export K8S_NAMESPACE="cdtn-preprod"
 fi
 
 
@@ -41,6 +41,7 @@ fi
 if [[ -n "${PRODUCTION+x}" ]]; then
   export BRANCH_HASH=prod;
   export ES_INDEX_PREFIX="cdtn-prod"
+  export K8S_NAMESPACE="cdtn"
   export DOMAIN="code.travail.fabrique.social.gouv.fr";
 else
   export DOMAIN="${BRANCH_HASH}-code-travail.dev.fabrique.social.gouv.fr";
