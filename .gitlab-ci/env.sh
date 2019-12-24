@@ -14,12 +14,17 @@ export VERSION=${VERSION:=$CI_COMMIT_REF_NAME}
 BRANCH_NAME_HASHED=$( printf "${BRANCH_NAME}" | sha1sum | cut -c1-${HASH_SIZE} )
 export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
 
+
+export K8S_NAMESPACE="${PROJECT}-feature-${BRANCH_HASH}"
+export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
+
 #
 
 #
 # For master branch we keep branch name as branch hash
 if [[ "${BRANCH_NAME}" = "master" ]]; then
   export BRANCH_HASH=master;
+  export ES_INDEX_PREFIX="cdtn-${BRANCH_HASH}"
 fi
 
 if [[ -n "${COMMIT_TAG}" ]]; then
@@ -29,38 +34,32 @@ fi
 
 if [[ -n "${PRODUCTION+x}" ]]; then
   export BRANCH_HASH=prod;
-  export DOMAIN="code-du-travail-numerique.incubateur.social.gouv.fr";
+  export ES_INDEX_PREFIX="cdtn-prod"
+  export DOMAIN="code.travail.fabrique.social.gouv.fr";
 else
-  export DOMAIN="${BRANCH_HASH}.code-du-travail-numerique.dev.factory.social.gouv.fr";
+  export DOMAIN="${BRANCH_HASH}-code-travail.dev.fabrique.social.gouv.fr";
 fi
 
 
 #
 
-export API_HOST="api.${DOMAIN}";
-export CERTIFICATE_NAME="${K8S_NAMESPACE}-certificate-${BRANCH_HASH}";
-export ELASTICSEARCH_HOST="${K8S_NAMESPACE}-elasticsearch-${BRANCH_HASH}";
-export ELASTICSEARCH_URL="http://${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}";
+export API_HOST="api-${DOMAIN}";
 export FRONTEND_HOST="${DOMAIN}";
-export NLP_HOST="nlp.${DOMAIN}";
-export NLP_API_HOST="${K8S_NAMESPACE}-nlp-${BRANCH_HASH}";
-export NLP_API_URL="http://${NLP_API_HOST}:${NLP_PORT}"
+export NLP_HOST="nlp-nodejs";
+export NLP_URL="http://${NLP_HOST}";
 
 #
 
-if [[ -n "${COMMIT_TAG}" ]]; then
-  export API_URL="https://${API_HOST}"
-  export FRONTEND_URL="https://${FRONTEND_HOST}"
-  export NLP_URL="https://${NLP_HOST}"
-else
-  export API_URL="http://${API_HOST}"
-  export FRONTEND_URL="http://${FRONTEND_HOST}"
-  export NLP_URL="http://${NLP_HOST}"
+if [[ -n "${PRODUCTION+x}" ]]; then
+  export API_HOST="api.${DOMAIN}";
 fi
+
+export API_URL="https://${API_HOST}"
+export FRONTEND_URL="https://${FRONTEND_HOST}"
 
 printenv | grep -E \
-  "BRANCH_HASH|BRANCH_NAME|BRANCH_HASH_DOT|COMMIT|COMMIT_TAG|DOMAIN|CLUSTER_NAME|HASH_SIZE|JOB_ID" \
+  "BRANCH_HASH|BRANCH_NAME|BRANCH_HASH_DOT|COMMIT|COMMIT_TAG|DOMAIN|CLUSTER_NAME|HASH_SIZE|JOB_ID|K8S_NAMESPACE" \
   | sort
 printenv | grep -E \
-  "API_HOST|API_URL|ELASTICSEARCH_HOST|FRONTEND_HOST|FRONTEND_URL|NLP_HOST|NLP_URL" \
+  "API_HOST|API_URL|FRONTEND_HOST|FRONTEND_URL|NLP_HOST|NLP_URL" \
   | sort

@@ -1,4 +1,3 @@
-require("dotenv").config();
 const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
 const cors = require("@koa/cors");
@@ -32,6 +31,7 @@ app.use(async (ctx, next) => {
   try {
     await next();
   } catch (error) {
+    logger.error(error);
     const { statusCode = 500, message } = error;
     ctx.throw(statusCode, message);
     ctx.app.emit("error", error);
@@ -63,13 +63,7 @@ app.use(suggestRoute.routes());
 app.use(docsRoutes);
 
 if (process.env.NODE_ENV !== "production") {
-  const Router = require("koa-router");
-  const nlpRoutes = new Router({ prefix: "/nlp" });
   console.log("-- DEV MODE ---");
-  nlpRoutes.get("/suggest", async ctx => {
-    ctx.body = [];
-  });
-  app.use(nlpRoutes.routes());
 }
 
 // centralize error logging

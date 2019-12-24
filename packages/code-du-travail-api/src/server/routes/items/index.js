@@ -1,12 +1,14 @@
 const Router = require("koa-router");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getItemBySlugBody = require("./searchBySourceSlug.elastic");
+const getDocumentByUrlBody = require("./searchByUrl.elastic");
 const { getRelatedItems } = require("./getRelatedItems");
 
-const index =
-  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 
@@ -22,12 +24,11 @@ const router = new Router({ prefix: API_BASE_URL });
  */
 router.get("/items/:source/:slug", async ctx => {
   const { source, slug } = ctx.params;
-
   const body = getItemBySlugBody({ source, slug });
   const response = await elasticsearchClient.search({ index, body });
 
   if (response.body.hits.total.value === 0) {
-    ctx.throw(404, `there is no items that match ${slug} in ${source}`);
+    ctx.throw(404, `there is no documents that match ${slug} in ${source}`);
   }
 
   const item = response.body.hits.hits[0];
@@ -79,22 +80,14 @@ router.get("/items/:id", async ctx => {
  */
 router.get("/items", async ctx => {
   const { url } = ctx.query;
-  const response = await elasticsearchClient.search({
-    _source: ["raw", "intro", "sections"],
-    body: {
-      query: {
-        bool: {
-          filter: {
-            term: {
-              url
-            }
-          }
-        }
-      }
-    }
-  });
+  const body = getDocumentByUrlBody({ url });
+  const response = await elasticsearchClient.search({ index, body });
 
-  const item = response.body.hits.hits[0];
+  if (response.body.hits.total.value === 0) {
+    ctx.throw(404, `there is no document that match ${url}`);
+  }
+
+  const [item] = response.body.hits.hits;
   ctx.body = { ...item };
 });
 

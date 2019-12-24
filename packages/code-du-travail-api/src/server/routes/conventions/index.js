@@ -1,11 +1,12 @@
 const Router = require("koa-router");
-const API_BASE_URL = require("../v1.prefix");
-const getAgreementBody = require("./getAgreementBySlug.elastic");
+const { AGREEMENTS } = require("@cdt/data/indexing/esIndexName");
 
+const getAgreementBody = require("./getAgreementBySlug.elastic");
+const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 
-const index =
-  process.env.ELASTICSEARCH_CONVENTION_INDEX || "conventions_collectives";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const index = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 

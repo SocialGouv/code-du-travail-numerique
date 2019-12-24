@@ -1,89 +1,59 @@
 #
 
-.notify_stage: &notify_stage
-  image: python:$PYTHON_VERSION
-  variables:
-    DEPLOY_ID_FILE: github_deploy_id
-  before_script:
-    - apk add --no-cache curl=7.64.0-r3
-    - source .gitlab-ci/env.sh
-  dependencies: []
-
+include:
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_notify_github_stage.yml
+    ref: v4.0.1
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_delete_useless_k8s_ns_stage.yml
+    ref: v4.0.1
 #
 
-Notify Starting Deployment:
-  <<: *notify_stage
-  stage: "Registration"
-  script:
-    - sh ./.k8s/scripts/get-deploy-id.sh
-    - echo "GitHub deployment id '$(cat github_deploy_id)'"
-  artifacts:
-    paths:
-      - github_deploy_id
-
-#
-
-Notify Fail:
-  <<: *notify_stage
-  stage: "Notify Finished Deployment"
-  when: on_failure
-  dependencies:
-    - Notify Starting Deployment
-  script:
-    - echo "Notify Failure to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
-    - export URL="http://${FRONTEND_HOST}"
-    - sh ./.k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) failure
-
-#
-
-Notify Success:
-  <<: *notify_stage
-  stage: "Notify Finished Deployment"
-  when: on_success
-  dependencies:
-    - Notify Starting Deployment
-  script:
-    - echo "Notify Success to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
-    - export URL="http://${FRONTEND_HOST}"
-    - sh ./.k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) success
-
-#
-#
-#
-
-Release:
-  stage: "Notify Finished Deployment"
-  image: node:12.14-alpine3.10
+.notify_dev: &notify_dev
   only:
-    - master
-  when: manual
-  before_script:
-    - apk add --no-cache git=~2
-    - git checkout ${CI_COMMIT_REF_NAME}
-    - git config user.name "${CI_GIT_AUTHOR_NAME}"
-    - git config user.email "${CI_GIT_AUTHOR_EMAIL}"
-    - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${CI_PROJECT_PATH}.git
-    - yarn --frozen-lockfile
-  script:
-    - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:="--force-publish --yes"}
+    - external_pull_request
 
-#
-#
-#
-
-Production:
-  <<: *notify_stage
-  stage: "Notify Finished Deployment"
-  when: manual
+.notify_prod: &notify_prod
   only:
-    - tags
-  except:
-    variables:
-      - $PRODUCTION
-  script:
-    - echo "Put ${CI_COMMIT_REF_NAME}@${CI_COMMIT_SHORT_SHA} in production"
-    - curl --request POST
-      --form ref="${CI_COMMIT_REF_NAME}"
-      --form token="${CI_DEPLOY_TRIGGER}"
-      --form variables[PRODUCTION]="true"
-      https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
+    - $PRODUCTION
+
+Notify Starting Dev Deployment:
+  extends: .base_notify_pending_stage
+  stage: Deploy
+  <<: *notify_dev
+
+Notify Starting Prod Deployment:
+  extends: .base_notify_pending_stage
+  stage: Deploy
+  <<: *notify_prod
+
+Notify Fail Dev:
+  extends: .base_notify_fail_stage
+  stage: Notify Finished Deployment
+  <<: *notify_dev
+  dependencies:
+    - Notify Starting Dev Deployment
+
+Notify Fail Prod:
+  extends: .base_notify_fail_stage
+  stage: Notify Finished Deployment
+  <<: *notify_prod
+  dependencies:
+    - Notify Starting Prod Deployment
+
+Notify Success Dev:
+  extends: .base_notify_success_stage
+  stage: Notify Finished Deployment
+  <<: *notify_dev
+  dependencies:
+    - Notify Starting Dev Deployment
+
+Notify Success Prod:
+  extends: .base_notify_success_stage
+  stage: Notify Finished Deployment
+  <<: *notify_prod
+  dependencies:
+    - Notify Starting Prod Deployment
+
+Delete useless k8s namespaces:
+  extends: .base_delete_useless_k8s_ns_stage
