@@ -32,6 +32,8 @@ spec:
                 secretKeyRef:
                   name: elasticsearch-cloud-data
                   key: password
+            - name: ES_INDEX_PREFIX
+              value: "${ES_INDEX_PREFIX}"
           resources:
             requests:
               cpu: 5m

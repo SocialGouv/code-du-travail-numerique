@@ -50,6 +50,8 @@ deployment:
         secretKeyRef:
           name: elastic-apm
           key: token
+    - name: ES_INDEX_PREFIX
+      value: "${ES_INDEX_PREFIX}"
     - name: ELASTIC_APM_SERVICE_NAME
       value: "cdtn-api"
     - name: ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME
