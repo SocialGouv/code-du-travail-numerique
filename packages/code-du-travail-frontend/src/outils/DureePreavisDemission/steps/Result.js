@@ -15,7 +15,7 @@ import {
 function StepResult({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
-  const idcc = ccn ? ccn.convention.num : "0";
+  const idcc = ccn ? ccn.convention.num : 0;
 
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);

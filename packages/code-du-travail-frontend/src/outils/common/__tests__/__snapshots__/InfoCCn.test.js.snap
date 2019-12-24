@@ -167,6 +167,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
     >
       <input
         class="c5"
+        name="q"
         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
         role="search"
         type="search"

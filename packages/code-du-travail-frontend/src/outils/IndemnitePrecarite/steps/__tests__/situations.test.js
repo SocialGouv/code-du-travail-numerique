@@ -4,11 +4,11 @@ import { isNotYetProcessed, validateSituation } from "../situation";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
-  { idcc: "10", criteria: { cddType: "1| foo", hasCdiProposal: "baz" } },
-  { idcc: "10", criteria: { cddType: "1| foo", hasCdiRenewal: "bar" } },
-  { idcc: "10", criteria: { cddType: "2| baz" } },
+  { idcc: 10, criteria: { cddType: "1| foo", hasCdiProposal: "baz" } },
+  { idcc: 10, criteria: { cddType: "1| foo", hasCdiRenewal: "bar" } },
+  { idcc: 10, criteria: { cddType: "2| baz" } },
   {
-    idcc: "20",
+    idcc: 20,
     criteria: {
       cddType: "3| bar"
     },
@@ -17,7 +17,7 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
     hasConventionalProvision: true
   },
   {
-    idcc: "20",
+    idcc: 20,
     criteria: {
       cddType: "4| baz"
     },
@@ -25,7 +25,7 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
     hasConventionalProvision: true
   },
   {
-    idcc: "30",
+    idcc: 30,
     criteria: {},
     hasConventionalProvision: null
   }
@@ -34,13 +34,13 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
 describe("situations", () => {
   describe("validateSituation", () => {
     it("should return correct error message", () => {
-      const situations = getSituationsFor(data, { idcc: "20" });
+      const situations = getSituationsFor(data, { idcc: 20 });
       expect(validateSituation(situations, { cddType: "3| bar" })).toEqual({
         criteria: { cddType: "nope" }
       });
     });
     it("should not touch error message if multiple situations match", () => {
-      const situations = getSituationsFor(data, { idcc: "20" });
+      const situations = getSituationsFor(data, { idcc: 20 });
       expect(
         validateSituation(situations, {}, { criteria: { cddType: "yoyo" } })
       ).toEqual({
@@ -48,7 +48,7 @@ describe("situations", () => {
       });
     });
     it("should override previous error message", () => {
-      const situations = getSituationsFor(data, { idcc: "20" });
+      const situations = getSituationsFor(data, { idcc: 20 });
       expect(
         validateSituation(
           situations,

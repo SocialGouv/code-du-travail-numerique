@@ -50,6 +50,8 @@ function transformRow(row) {
         data[key] = data[key] === "oui";
       }
     }
+    // @lionelb: force idcc to match kali-data number format
+    data.idcc = parseInt(data.idcc, 10);
     for (const [index, key] of Object.entries(criteriaIndex)) {
       if (row[index]) {
         data.criteria[key] = row[index].value.trim() || null;

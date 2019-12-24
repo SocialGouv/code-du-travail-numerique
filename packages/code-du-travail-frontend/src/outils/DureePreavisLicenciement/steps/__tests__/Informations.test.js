@@ -8,13 +8,13 @@ describe("<StepInformations />", () => {
   });
   it("should render catégorie", () => {
     const { container } = renderForm(StepInformations, {
-      ccn: { convention: { num: "44" } }
+      ccn: { convention: { num: 44 } }
     });
     expect(container).toMatchSnapshot();
   });
   it("should render groupe", () => {
     const { container } = renderForm(StepInformations, {
-      ccn: { convention: { num: "44" } },
+      ccn: { convention: { num: 44 } },
       criteria: { "catégorie socio-professionnelle": "23| Agents de maîtrise" }
     });
     expect(container).toMatchSnapshot();

@@ -205,8 +205,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           target="_blank"
         >
           preselected convention
-           (IDCC 
-          0000
+           
+          (IDCC 
+          9999
           )
         </a>
       </h6>
@@ -418,7 +419,8 @@ exports[`<Contribution /> should render answer references 1`] = `
           target="_blank"
         >
           preselected convention
-           (IDCC 
+           
+          (IDCC 
           0044
           )
         </a>
@@ -673,7 +675,8 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           target="_blank"
         >
           preselected convention
-           (IDCC 
+           
+          (IDCC 
           0044
           )
         </a>
@@ -920,6 +923,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         >
           <input
             class="c7"
+            name="q"
             placeholder="Nom d'entreprise, SIRET, nom de convention collective"
             role="search"
             type="search"
@@ -1132,6 +1136,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         >
           <input
             class="c7"
+            name="q"
             placeholder="Nom d'entreprise, SIRET, nom de convention collective"
             role="search"
             type="search"

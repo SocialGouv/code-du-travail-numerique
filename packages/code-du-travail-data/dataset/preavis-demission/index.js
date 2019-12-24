@@ -70,7 +70,6 @@ async function getData() {
   });
 
   const [headersRow] = Object.values(cells).slice(0, 1);
-  console.log();
   const headers = getHeaders(headersRow);
   const createRowWithHeaders = headers => row => transformRow(headers, row);
   const rowTransformer = createRowWithHeaders(headers);
@@ -89,6 +88,8 @@ function transformRow(headers, row) {
   for (const [key, index] of Object.entries(csvColumns)) {
     data[key] = (row[index] && row[index].value) || null;
   }
+  // @lionelb: force idcc to match kali-data number format
+  data.idcc = parseInt(data.idcc, 10);
 
   for (const index of criteriaIndex) {
     if (row[index]) {
