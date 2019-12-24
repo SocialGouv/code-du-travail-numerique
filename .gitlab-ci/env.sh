@@ -14,23 +14,29 @@ export VERSION=${VERSION:=$CI_COMMIT_REF_NAME}
 BRANCH_NAME_HASHED=$( printf "${BRANCH_NAME}" | sha1sum | cut -c1-${HASH_SIZE} )
 export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
 
+#
 
 export K8S_NAMESPACE="${PROJECT}-feature-${BRANCH_HASH}"
 export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
-
-#
 
 #
 # For master branch we keep branch name as branch hash
 if [[ "${BRANCH_NAME}" = "master" ]]; then
   export BRANCH_HASH=master;
   export ES_INDEX_PREFIX="cdtn-${BRANCH_HASH}"
+  export K8S_NAMESPACE="cdtn-${BRANCH_HASH}"
+
 fi
 
 if [[ -n "${COMMIT_TAG}" ]]; then
   # For versions we replace the version number v2.3.1 to v2-3-1
   export BRANCH_HASH=$( printf "${COMMIT_TAG}" | sed "s/\./-/g" );
+  export IMAGE_TAG=$(printf "${COMMIT_TAG}" | sed "s/^v//")
+  export ES_INDEX_PREFIX="cdtn-${BRANCH_HASH}"
+  export K8S_NAMESPACE="cdtn-${BRANCH_HASH}"
 fi
+
+
 
 if [[ -n "${PRODUCTION+x}" ]]; then
   export BRANCH_HASH=prod;
