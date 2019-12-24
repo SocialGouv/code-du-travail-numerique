@@ -22,7 +22,7 @@ function Salaires({ name, visible = true, onChange }) {
               <Row key={index}>
                 <UID>
                   {uid => (
-                    <>
+                    <Wrapper>
                       <MontantLabel htmlFor={uid}>Montant :</MontantLabel>
                       <CurrencyField name={`${name}.salaire`} id={uid}>
                         <DelButton
@@ -32,7 +32,7 @@ function Salaires({ name, visible = true, onChange }) {
                           Supprimer
                         </DelButton>
                       </CurrencyField>
-                    </>
+                    </Wrapper>
                   )}
                 </UID>
               </Row>
@@ -60,6 +60,8 @@ export { Salaires };
 const { spacings } = theme;
 
 const MontantLabel = styled.label`
+  display: inline-block;
+  flex: 1 1 auto;
   margin-right: ${spacings.small};
 `;
 
@@ -69,8 +71,16 @@ const Row = styled.div`
   justify-content: flex-start;
   margin-bottom: ${spacings.tiny};
 `;
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  width: 100%;
+`;
+
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin-right: ${spacings.medium};
+  margin-left: ${spacings.medium};
 `;
 
 const AddButton = styled(Button).attrs(() => ({ type: "button" }))`

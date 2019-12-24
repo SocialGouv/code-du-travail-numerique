@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React, { useState, useReducer, useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Form } from "react-final-form";
@@ -19,6 +19,12 @@ function Wizard({
 }) {
   const [stepIndex, setStepIndex] = useState(initialStepIndex);
   const [steps, dispatch] = useReducer(stepReducer, initialSteps);
+
+  useEffect(() => {
+    if (window) {
+      window.scrollTo(0, 0);
+    }
+  });
 
   const prevStep = () => {
     setStepIndex(Math.max(0, stepIndex - 1));

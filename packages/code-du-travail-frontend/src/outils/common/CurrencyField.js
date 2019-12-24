@@ -1,13 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import { Field } from "react-final-form";
-import { theme } from "@socialgouv/react-ui";
+import styled from "styled-components";
+import { icons, Input } from "@socialgouv/react-ui";
 import { UID } from "react-uid";
 
 import { isNumber } from "./validators";
 import { InlineError } from "./ErrorField";
 import { Question } from "./Question";
-import { Input } from "../common/stepStyles";
 
 function CurrencyField({
   name,
@@ -31,20 +30,21 @@ function CurrencyField({
                   {label}
                 </Question>
               )}
-              <CurrencyWrapper>
-                <NumberInput
+              <StyledWrapperInput>
+                <Input
                   id={`currency-${id}`}
                   {...inputProps}
                   {...input}
                   type="number"
                   invalid={touched && invalid}
+                  icon={icons.Euro}
                 />
-                <Currency aria-hidden="true">€</Currency>
-              </CurrencyWrapper>
+
+                {error && touched && invalid ? (
+                  <InlineError>{error}</InlineError>
+                ) : null}
+              </StyledWrapperInput>
               {children}
-              {error && touched && invalid ? (
-                <InlineError>{error}</InlineError>
-              ) : null}
             </>
           )}
         </UID>
@@ -53,24 +53,10 @@ function CurrencyField({
   );
 }
 
+const StyledWrapperInput = styled.div`
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 40rem;
+`;
+
 export { CurrencyField };
-
-const { colors, spacings } = theme;
-const NumberInput = styled(Input)`
-  padding-right: ${spacings.base};
-  text-align: right;
-`;
-
-const CurrencyWrapper = styled.div`
-  position: relative;
-  display: inline-block;
-  margin-right: ${spacings.base};
-`;
-
-const Currency = styled.span`
-  position: absolute;
-  top: 50%;
-  right: 0.25rem;
-  color: ${colors.altText};
-  transform: translateY(-50%);
-`;

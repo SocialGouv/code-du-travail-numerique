@@ -5,8 +5,8 @@ import styled from "styled-components";
 import { ArrowDown } from "../icons";
 import { animations, box, fonts, spacings } from "../theme";
 
-export const Select = ({ children, disabled, ...props }) => (
-  <StyledWrapper>
+export const Select = ({ children, disabled, className, ...props }) => (
+  <StyledWrapper className={className}>
     <StyledSelect disabled={disabled} {...props}>
       {children}
     </StyledSelect>
@@ -18,6 +18,7 @@ export const Select = ({ children, disabled, ...props }) => (
 
 Select.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   disabled: PropTypes.bool
 };
 
@@ -29,7 +30,7 @@ const INPUT_HEIGHT = "5.4rem";
 
 const StyledWrapper = styled.div`
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex: 1 1 auto;
   align-items: center;
   justify-content: flex-start;

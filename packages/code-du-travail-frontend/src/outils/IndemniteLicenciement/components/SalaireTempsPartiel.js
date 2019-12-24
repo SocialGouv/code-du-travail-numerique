@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
-import { Button, theme } from "@socialgouv/react-ui";
-import { Input } from "../../common/stepStyles";
+import { Button, icons, Input, Select, theme } from "@socialgouv/react-ui";
 import { Error } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
 import { isNumber } from "../../common/validators";
@@ -52,7 +51,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                   }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
-                      <NumberInput
+                      <Input
                         {...input}
                         type="number"
                         invalid={touched && invalid}
@@ -64,7 +63,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                   )}
                 />
               </CellDuration>
-              <div>
+              <CellRemuneration>
                 <Field
                   name={`${name}.salary`}
                   validate={isNumber}
@@ -76,28 +75,22 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                   }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
-                      <CurrencyWrapper>
-                        <NumberInput
-                          {...input}
-                          type="number"
-                          invalid={touched && invalid}
-                        />
-                        <Currency aria-hidden="true">€</Currency>
-                      </CurrencyWrapper>
-
-                      <DelButton
-                        variant="flat"
-                        onClick={() => fields.remove(index)}
-                      >
-                        Supprimer
-                      </DelButton>
+                      <Input
+                        {...input}
+                        type="number"
+                        invalid={touched && invalid}
+                        icon={icons.Euro}
+                      />
                       {error && touched && invalid ? (
                         <Error>{error}</Error>
                       ) : null}
                     </>
                   )}
                 />
-              </div>
+              </CellRemuneration>
+              <DelButton variant="flat" onClick={() => fields.remove(index)}>
+                Supprimer
+              </DelButton>
             </Row>
           ))}
           {visible && (
@@ -125,7 +118,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
 }
 export { SalaireTempsPartiel };
 
-const { colors, spacings } = theme;
+const { spacings } = theme;
 
 const AddButton = styled(Button)`
   margin: ${spacings.medium} 0;
@@ -138,37 +131,20 @@ const Row = styled.div`
 `;
 
 const CellType = styled.div`
-  flex-basis: 15rem;
+  flex-basis: 20rem;
   margin-right: ${spacings.medium};
 `;
 const CellDuration = styled.div`
-  flex-basis: 8rem;
+  flex-basis: 15rem;
   margin-right: ${spacings.medium};
+`;
+const CellRemuneration = styled.div`
+  flex-basis: 20rem;
 `;
 const CellHeader = styled.div`
   font-weight: 700;
 `;
 
-const Select = styled.select`
-  width: 100%;
-`;
-const NumberInput = styled(Input)`
-  padding-right: ${spacings.base};
-  text-align: right;
-`;
-
-const CurrencyWrapper = styled.div`
-  position: relative;
-  display: inline-block;
-`;
-
-const Currency = styled.span`
-  position: absolute;
-  top: 50%;
-  right: 0.25rem;
-  color: ${colors.altText};
-  transform: translateY(-50%);
-`;
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
   margin-left: ${spacings.medium};
 `;

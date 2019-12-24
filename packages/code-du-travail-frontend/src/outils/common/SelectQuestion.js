@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { theme } from "@socialgouv/react-ui";
+import { Select, theme } from "@socialgouv/react-ui";
 import { OnChange } from "react-final-form-listeners";
 
 import { Question } from "./Question";
@@ -25,7 +25,7 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
           <Wrapper>
             <Question htmlFor={uid}>{label}</Question>
             {subLabel && <SubLabel>{subLabel}</SubLabel>}
-            <Select {...input} id={uid}>
+            <StyledSelect {...input} id={uid}>
               <option disabled value="">
                 ...
               </option>
@@ -43,7 +43,7 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
                   </option>
                 );
               })}
-            </Select>
+            </StyledSelect>
             {error && dirty && <Error>{error}</Error>}
             {onChange && (
               <OnChange name={name}>{values => onChange(values)}</OnChange>
@@ -77,12 +77,11 @@ const SubLabel = styled.label`
   }
 `;
 
-const Select = styled.select`
-  flex: 1 1 70%;
-  min-width: 400px;
-  max-width: 100%;
-  margin-top: ${spacings.small};
-  margin-right: ${spacings.medium};
+const StyledSelect = styled(Select)`
+  width: 40rem;
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+  }
 `;
 
 const Wrapper = styled.div`

@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
-import { Button, theme } from "@socialgouv/react-ui";
-import { Input } from "../../common/stepStyles";
+import { Button, Input, Select, theme } from "@socialgouv/react-ui";
 import { Error } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 import { Question } from "../../common/Question";
@@ -40,7 +39,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
           {fields.map((name, index) => (
             <Row key={name}>
               <MotifCell>
-                <Field name={`${name}.type`} component="select">
+                <Field name={`${name}.type`} component={Select}>
                   {motifs.map(({ label }) => (
                     <option key={label}>{label}</option>
                   ))}
@@ -121,7 +120,7 @@ const Row = styled.div`
   margin-bottom: ${spacings.tiny};
 `;
 const MotifCell = styled.div`
-  flex: 0 1 25rem;
+  flex: 0 1 35rem;
   margin-right: ${spacings.medium};
 `;
 const DurationCell = styled.div`
