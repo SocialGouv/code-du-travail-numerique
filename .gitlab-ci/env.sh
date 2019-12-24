@@ -42,6 +42,7 @@ if [[ -n "${PRODUCTION+x}" ]]; then
   export BRANCH_HASH=prod;
   export ES_INDEX_PREFIX="cdtn-prod"
   export DOMAIN="code.travail.fabrique.social.gouv.fr";
+  export K8S_NAMESPACE="cdtn"
 else
   export DOMAIN="${BRANCH_HASH}-code-travail.dev.fabrique.social.gouv.fr";
 fi
