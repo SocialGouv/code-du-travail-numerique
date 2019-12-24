@@ -1,6 +1,6 @@
 image:
   repository: ${CI_REGISTRY_IMAGE}/api
-  tag: master
+  tag: ${IMAGE_TAG}
 
 fullnameOverride: "api-nodejs"
 

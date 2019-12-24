@@ -1,6 +1,5 @@
 image:
   repository: ${CI_REGISTRY_IMAGE}/nlp
-  tag: master
 
 deployment:
   port: ${PORT}

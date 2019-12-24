@@ -31,6 +31,7 @@ app.use(async (ctx, next) => {
   try {
     await next();
   } catch (error) {
+    logger.error(error);
     const { statusCode = 500, message } = error;
     ctx.throw(statusCode, message);
     ctx.app.emit("error", error);

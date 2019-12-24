@@ -1,11 +1,10 @@
 image:
   repository: ${CI_REGISTRY_IMAGE}/frontend
-  tag: master
+  tag: ${IMAGE_TAG}
 
 fullnameOverride: "frontend-nodejs"
 
 deployment:
-
   port: 3000
 
   resources:
@@ -108,7 +107,6 @@ deployment:
           [[ $(( retry )) -lt 1 ]] && exit 128;
 
           echo Ready;
-
 
 ingress:
   enabled: true
