@@ -7,9 +7,6 @@ Release:
   image: node:12.14-alpine3.10
   dependencies: []
   when: manual
-  only:
-    refs:
-      - external_pull_requests
   before_script:
     - apk add --no-cache git=~2
     - git checkout ${CI_COMMIT_REF_NAME}

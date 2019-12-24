@@ -9,51 +9,21 @@ include:
     ref: v4.0.1
 #
 
-.notify_dev: &notify_dev
-  only:
-    - external_pull_request
-
-.notify_prod: &notify_prod
-  only:
-    - $PRODUCTION
-
-Notify Starting Dev Deployment:
+Notify Starting Deployment:
   extends: .base_notify_pending_stage
   stage: Deploy
-  <<: *notify_dev
 
-Notify Starting Prod Deployment:
-  extends: .base_notify_pending_stage
-  stage: Deploy
-  <<: *notify_prod
-
-Notify Fail Dev:
+Notify Fail:
   extends: .base_notify_fail_stage
   stage: Notify Finished Deployment
-  <<: *notify_dev
   dependencies:
-    - Notify Starting Dev Deployment
+    - Notify Starting Deployment
 
-Notify Fail Prod:
-  extends: .base_notify_fail_stage
-  stage: Notify Finished Deployment
-  <<: *notify_prod
-  dependencies:
-    - Notify Starting Prod Deployment
-
-Notify Success Dev:
+Notify Success:
   extends: .base_notify_success_stage
   stage: Notify Finished Deployment
-  <<: *notify_dev
   dependencies:
-    - Notify Starting Dev Deployment
-
-Notify Success Prod:
-  extends: .base_notify_success_stage
-  stage: Notify Finished Deployment
-  <<: *notify_prod
-  dependencies:
-    - Notify Starting Prod Deployment
+    - Notify Starting Deployment
 
 Delete useless k8s namespaces:
   extends: .base_delete_useless_k8s_ns_stage
