@@ -24,6 +24,7 @@ export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
 # For master branch we keep branch name as branch hash
 if [[ "${BRANCH_NAME}" = "master" ]]; then
   export BRANCH_HASH=master;
+  export ES_INDEX_PREFIX="cdtn-${BRANCH_HASH}"
 fi
 
 if [[ -n "${COMMIT_TAG}" ]]; then
