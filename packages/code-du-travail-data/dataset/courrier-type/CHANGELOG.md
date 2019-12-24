@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.10.1-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.10.0...v3.10.1-alpha.0) (2019-12-24)
+
+
+### Features
+
+* MAJ modèles de docs ([#2020](https://github.com/SocialGouv/code-du-travail-numerique/issues/2020)) ([cea11c1](https://github.com/SocialGouv/code-du-travail-numerique/commit/cea11c17bd60d159b58519ffd6be3ed0870313ed)), closes [#2014](https://github.com/SocialGouv/code-du-travail-numerique/issues/2014) [#2019](https://github.com/SocialGouv/code-du-travail-numerique/issues/2019) [#1837](https://github.com/SocialGouv/code-du-travail-numerique/issues/1837) [#2014](https://github.com/SocialGouv/code-du-travail-numerique/issues/2014)
+
+
+
+
+
 # [3.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.9.0...v3.10.0) (2019-12-20)
 
 
