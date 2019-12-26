@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { Accordion, Button, theme } from "@socialgouv/react-ui";
+import { Accordion, theme, Alert } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import { slugify } from "@cdt/data/slugify";
 
@@ -49,15 +49,17 @@ function accordionize(items) {
 
 function AccordionContent({ answer, slug, references }) {
   return (
-    <>
+    <React.Fragment>
+      <Alert>
+        Pour savoir si la mesure prévue par la convention collective
+        s&apos;applique à votre situation, reportez-vous{" "}
+        <Link href={getContributionUrl(slug)} passHref>
+          <a>à la réponse complète à cette question</a>
+        </Link>
+      </Alert>
       <Html>{answer}</Html>
       {references && <AnswerReferences articles={references} />}
-      <Link href={getContributionUrl({ slug })} passHref>
-        <Button varaint="secondary" as="a">
-          Voir la fiche complète
-        </Button>
-      </Link>
-    </>
+    </React.Fragment>
   );
 }
 

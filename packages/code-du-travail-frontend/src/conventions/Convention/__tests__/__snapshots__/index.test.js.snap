@@ -99,6 +99,23 @@ exports[`<Convention /> renders 1`] = `
   display: none;
 }
 
+.c18 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+}
+
+.c18 > *:first-child {
+  margin-top: 0;
+}
+
+.c18 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -156,67 +173,6 @@ exports[`<Convention /> renders 1`] = `
 
 .c9[disabled] {
   color: rgba(62,72,110,0.4);
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c18 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
-  opacity: 1;
-}
-
-.c18:link,
-.c18:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c18:not([disabled]):hover,
-.c18:not([disabled]):active,
-.c18:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c18[disabled] {
-  color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -287,12 +243,6 @@ exports[`<Convention /> renders 1`] = `
 
 @media (max-width:600px) {
   .c9 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
     font-size: 1.4rem;
   }
 }
@@ -598,6 +548,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   En cas de licenciement, la durée du préavis est égale à :
@@ -654,12 +615,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 10.13
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -713,6 +668,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   En cas de démission, la durée du préavis est égale à :
@@ -746,12 +712,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 10.11
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -805,6 +765,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   En cas de départ à la retraite du salarié, la durée du préavis est égale à 2 mois.
@@ -831,12 +802,6 @@ exports[`<Convention /> renders 1`] = `
                   Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -890,6 +855,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   En cas de mise à la retraite du salarié, la durée du préavis est égale à 2 mois.
@@ -916,12 +892,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -975,6 +945,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   Si l'employeur ou le salarié ne respecte pas le préavis de licenciement ou de démission, l'autre partie peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant à courir.
@@ -992,12 +973,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 10.12
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -1051,6 +1026,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   Pendant le préavis, l'ouvrier licencié ou démissionnaire est autorisé, s'il en fait la demande, à s'absenter pour rechercher un nouvel emploi, pendant :
@@ -1109,12 +1095,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 10.2
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
         </div>
@@ -1226,6 +1206,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.
@@ -1253,12 +1244,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 5-11
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/jours-feries-et-ponts-dans-le-secteur-prive"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -1312,6 +1297,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.
@@ -1386,12 +1382,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 6.21
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -1445,6 +1435,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-les-conges-pour-evenements-familiaux"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :
@@ -1508,12 +1509,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article  5-12
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/les-conges-pour-evenements-familiaux"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
         </div>
@@ -1625,6 +1620,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   La durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008.
@@ -1650,12 +1656,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 2-4
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -1709,6 +1709,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-comment-determiner-lanciennete-du-salarie"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   L'ancienneté du salarié tient compte de :
@@ -1786,12 +1797,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 11-2
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/comment-determiner-lanciennete-du-salarie"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -1845,6 +1850,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant :
@@ -1933,12 +1949,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 2-3
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -1992,6 +2002,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant les conditions du poste. Ce document doit être accepté et signé par l'employeur et le salarié.
@@ -2009,12 +2030,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 2-3
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -2068,6 +2083,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   La convention collective ne prévoit pas le recours au contrat d'usage.
@@ -2087,12 +2113,6 @@ exports[`<Convention /> renders 1`] = `
               <p>
                 Sources 
               </p>
-              <a
-                class="c18"
-                href="/contribution/embauche-en-contrat-dextra-cdd-dusage"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -2146,6 +2166,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   Le salarié doit s'engager dans le contrat de travail à ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail.
@@ -2163,12 +2194,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 2-3
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelles-sont-les-conditions-de-cumul-demplois"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
         </div>
@@ -2280,6 +2305,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.
@@ -2290,12 +2326,6 @@ exports[`<Convention /> renders 1`] = `
               <p>
                 Sources 
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -2349,6 +2379,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   La convention collective prévoit une 
@@ -2390,12 +2431,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 5-25
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quelles-sont-les-primes-prevues-par-la-convention-collective"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -2449,6 +2484,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   La convention collective ne prévoit pas de prime d'ancienneté.
@@ -2492,12 +2538,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 5-24
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
         </div>
@@ -2609,6 +2649,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   Le salarié a droit à un maintien de salaire pendant l'arrêt maladie dans les conditions suivantes.
@@ -2911,12 +2962,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 6-15
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
           <div
@@ -2970,6 +3015,17 @@ exports[`<Convention /> renders 1`] = `
               hidden=""
               id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
             >
+              <div
+                class="c18"
+              >
+                Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                 
+                <a
+                  href="/contribution/undefined"
+                >
+                  à la réponse complète à cette question
+                </a>
+              </div>
               <div>
                 <p>
                   En cas d'accident du travail ou de maladie professionnelle, le code du travail s'applique. 
@@ -3018,12 +3074,6 @@ exports[`<Convention /> renders 1`] = `
                   IDCC 1596 - Article 6-11
                 </a>
               </p>
-              <a
-                class="c18"
-                href="/contribution/en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-              >
-                Voir la fiche complète
-              </a>
             </div>
           </div>
         </div>
