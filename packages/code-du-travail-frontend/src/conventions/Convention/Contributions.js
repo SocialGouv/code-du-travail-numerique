@@ -5,14 +5,16 @@ import { Accordion, Button, theme } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import { slugify } from "@cdt/data/slugify";
 
-import { Title, Heading } from "./index";
+import { Title } from "./index";
 import Html from "../../common/Html";
 import { jsxJoin } from "../../lib/jsxJoin";
 
 function getContributionUrl({ slug }) {
   return `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`;
 }
+
 function Contributions({ contributions }) {
+  // group questions by theme
   const contributionsByTheme = contributions.reduce((state, answer) => {
     if (!state[answer.theme]) {
       state[answer.theme] = [answer];
@@ -22,16 +24,18 @@ function Contributions({ contributions }) {
     return state;
   }, {});
 
+  // show themes contents in Accordions
+  const themes = Object.keys(contributionsByTheme).map(theme => ({
+    id: theme,
+    title: <AccordionHeader>{theme}</AccordionHeader>,
+    body: <Accordion items={accordionize(contributionsByTheme[theme])} />
+  }));
+
   return (
-    <>
+    <React.Fragment>
       <Title>Questions fréquentes sur cette convention collective</Title>
-      {Object.entries(contributionsByTheme).map(([theme, items]) => (
-        <div key={theme}>
-          <Heading>{theme}</Heading>
-          <Accordion items={accordionize(items)} />
-        </div>
-      ))}
-    </>
+      <Accordion items={themes} />
+    </React.Fragment>
   );
 }
 
