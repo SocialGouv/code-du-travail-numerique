@@ -14,8 +14,11 @@ import { Contributions } from "./Contributions";
 
 const Convention = ({ convention }) => {
   return (
-    <>
+    <React.Fragment>
       <Info convention={convention} />
+      {convention.answers.length > 0 && (
+        <Contributions contributions={convention.answers} />
+      )}
       {convention.articlesByTheme.length > 0 && (
         <Articles
           blocs={convention.articlesByTheme}
@@ -23,10 +26,7 @@ const Convention = ({ convention }) => {
         />
       )}
       <TextSearch containerId={convention.id} />
-      {convention.answers.length > 0 && (
-        <Contributions contributions={convention.answers} />
-      )}
-    </>
+    </React.Fragment>
   );
 };
 const { spacings } = theme;

@@ -14,7 +14,7 @@ exports[`<Convention /> renders 1`] = `
   transform: translateY(-50%);
 }
 
-.c15 {
+.c17 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -39,7 +39,7 @@ exports[`<Convention /> renders 1`] = `
   text-align: left;
 }
 
-.c14 {
+.c16 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -51,7 +51,7 @@ exports[`<Convention /> renders 1`] = `
   text-align: center;
 }
 
-.c21 {
+.c23 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -67,17 +67,17 @@ exports[`<Convention /> renders 1`] = `
   text-align: left;
 }
 
-.c13 {
+.c15 {
   margin: 0 auto 1rem;
   margin-bottom: 1.6rem;
   text-align: center;
 }
 
-.c8 + .c7 {
+.c7 + .c6 {
   border-top: 1px solid #bbcadf;
 }
 
-.c10 {
+.c9 {
   position: relative;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
@@ -92,14 +92,14 @@ exports[`<Convention /> renders 1`] = `
   color: #7994d4;
 }
 
-[aria-expanded="true"] .c10,
-[aria-selected="true"] .c10 {
+[aria-expanded="true"] .c9,
+[aria-selected="true"] .c9 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,17 +116,38 @@ exports[`<Convention /> renders 1`] = `
   cursor: pointer;
 }
 
-.c9:hover,
-.c9:focus,
-.c9:focus-within,
-.c9[aria-expanded="true"] {
+.c8:hover,
+.c8:focus,
+.c8:focus-within,
+.c8[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c12 {
+.c11 {
   padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
+}
+
+.c11 > *:first-child {
+  margin-top: 0;
+}
+
+.c11 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c11.accordion__body--hidden {
+  display: none;
+}
+
+.c12 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
 }
 
 .c12 > *:first-child {
@@ -137,28 +158,7 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 0;
 }
 
-.c12.accordion__body--hidden {
-  display: none;
-}
-
-.c23 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
-  color: #3e486e;
-  background-color: #f2f5fa;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-}
-
-.c23 > *:first-child {
-  margin-top: 0;
-}
-
-.c23 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c26 {
+.c27 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -195,16 +195,16 @@ exports[`<Convention /> renders 1`] = `
   opacity: 1;
 }
 
-.c26:link,
-.c26:visited {
+.c27:link,
+.c27:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c26:not([disabled]):hover,
-.c26:not([disabled]):active,
-.c26:not([disabled]):focus {
+.c27:not([disabled]):hover,
+.c27:not([disabled]):active,
+.c27:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -213,13 +213,13 @@ exports[`<Convention /> renders 1`] = `
   border-color: transparent;
 }
 
-.c26[disabled] {
+.c27[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c16 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -246,7 +246,7 @@ exports[`<Convention /> renders 1`] = `
   list-style-type: none;
 }
 
-.c17 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -263,7 +263,7 @@ exports[`<Convention /> renders 1`] = `
   padding: 0;
 }
 
-.c18 {
+.c20 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -300,9 +300,9 @@ exports[`<Convention /> renders 1`] = `
   appearance: none;
 }
 
-.c18:hover,
-.c18:active,
-.c18:focus {
+.c20:hover,
+.c20:active,
+.c20:focus {
   color: #3e486e;
   box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   -webkit-transform: translateY(-2px);
@@ -310,17 +310,17 @@ exports[`<Convention /> renders 1`] = `
   transform: translateY(-2px);
 }
 
-.c19 {
+.c21 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c20 {
+.c22 {
   padding-right: 1rem;
 }
 
-.c22 {
+.c24 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -340,16 +340,16 @@ exports[`<Convention /> renders 1`] = `
   margin-right: 10px;
 }
 
-.c11 {
+.c14 {
   margin: 1.6rem 0;
 }
 
-.c6 {
+.c13 {
   display: inline-block;
   margin-bottom: 2rem;
 }
 
-.c24 {
+.c25 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -357,13 +357,13 @@ exports[`<Convention /> renders 1`] = `
   display: flex;
 }
 
-.c25 {
+.c26 {
   -webkit-flex: 1 1 40%;
   -ms-flex: 1 1 40%;
   flex: 1 1 40%;
 }
 
-.c27 {
+.c28 {
   position: absolute;
   top: 0;
   right: 0;
@@ -372,12 +372,12 @@ exports[`<Convention /> renders 1`] = `
   color: #7994d4;
 }
 
-.c28 {
+.c29 {
   width: 3rem;
   height: 3rem;
 }
 
-.c29 {
+.c10 {
   margin: 1.6rem 0;
 }
 
@@ -399,56 +399,56 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c16 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c15 {
     margin-bottom: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c27 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:1180px) {
-  .c17 {
+  .c19 {
     width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
 @media (max-width:980px) {
-  .c17 {
+  .c19 {
     width: calc( 100% / 1 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c19 {
     width: calc( 100% - 1 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c20 {
     padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c24 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     padding-right: 5.5rem;
   }
 }
@@ -511,1001 +511,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class="c5"
       />
-      Domaines traités par la convention collective
-    </h2>
-  </header>
-  <label
-    class="c6"
-    for="article-bloc"
-  >
-    Recherchez, lorsqu'elles existent, les dispositions conventionnelles dans :
-    <br />
-    <br />
-    <li>
-      les 13 domaines où la loi reconnaît la primauté à la convention collective de branche ;
-    </li>
-    <li>
-      les 4 domaines où la branche elle-même peut reconnaitre sa primauté, sauf si l'accord d'entreprise a des garanties au moins équivalentes (représentées avec une * ci-dessous).
-    </li>
-    <br />
-    Si votre question concerne un autre domaine, vous pouvez utiliser la recherche par mot-clés dans la section suivante.
-  </label>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div
-      class="c7 c8"
-      data-accordion-component="AccordionItem"
-    >
-      <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
-      >
-        <div
-          aria-controls="accordion__panel-bloc-1"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c9"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-bloc-1"
-          role="button"
-          tabindex="0"
-        >
-          <svg
-            class="c10"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <strong
-            class="c11"
-          >
-            Salaires minima hiérarchiques
-          </strong>
-        </div>
-      </div>
-      <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-bloc-1"
-        class="c12"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-bloc-1"
-      >
-        <header
-          class="c13"
-        >
-          <h2
-            class="c14"
-          >
-            <div
-              class="c15"
-            />
-            
-          </h2>
-          
-        </header>
-        <ul
-          class="c16"
-        >
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Salaires minimaux
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 1-4
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Salaire mensuel
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 4-1
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Déduction des heures non travaillées
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 4-2
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Barèmes de salaires minimaux
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 12-8
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div
-      class="c7 c8"
-      data-accordion-component="AccordionItem"
-    >
-      <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
-      >
-        <div
-          aria-controls="accordion__panel-bloc-2"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c9"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-bloc-2"
-          role="button"
-          tabindex="0"
-        >
-          <svg
-            class="c10"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <strong
-            class="c11"
-          >
-            Classifications
-          </strong>
-        </div>
-      </div>
-      <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-bloc-2"
-        class="c12"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-bloc-2"
-      >
-        <header
-          class="c13"
-        >
-          <h2
-            class="c14"
-          >
-            <div
-              class="c15"
-            />
-            
-          </h2>
-          
-        </header>
-        <ul
-          class="c16"
-        >
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Préambule
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 12-1
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Définitions générales des critères et des niveaux
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 12-2
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Coefficients hiérarchiques
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 12-3
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Prise en compte des diplômes professionnels bâtiment
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 12-4
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Polyvalence
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 12-5
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Evolution de carrière
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 12-6
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Suivi de l'application dans l'entreprise
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 12-7
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div
-      class="c7 c8"
-      data-accordion-component="AccordionItem"
-    >
-      <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
-      >
-        <div
-          aria-controls="accordion__panel-bloc-6"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c9"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-bloc-6"
-          role="button"
-          tabindex="0"
-        >
-          <svg
-            class="c10"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <strong
-            class="c11"
-          >
-            Durée du travail, répartition et aménagement des horaires
-          </strong>
-        </div>
-      </div>
-      <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-bloc-6"
-        class="c12"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-bloc-6"
-      >
-        <header
-          class="c13"
-        >
-          <h2
-            class="c14"
-          >
-            <div
-              class="c15"
-            />
-            
-          </h2>
-          
-        </header>
-        <ul
-          class="c16"
-        >
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Contingent d'heures supplémentaires non soumis à autorisation
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-13
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Heures supplémentaires exceptionnelles
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-14
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Plafonds
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-15
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Définition de la durée du travail
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-16
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Majoration pour heures supplémentaires.
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-17
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Equivalences et dérogations permanentes
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-18
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Semaine de travail en 5 jours
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-21
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Exceptions à la semaine de travail en 5 jours
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-22
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Horaires individualisés
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-24
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Horaires à temps partiel
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-25
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Récupération des heures perdues pour intempéries
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-28
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c17"
-          >
-            <a
-              class="c18"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <span
-                    class="c21"
-                  >
-                    Cas des chefs d'équipe
-                  </span>
-                  <h3
-                    class="c22"
-                  >
-                    Article 3-29
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <form
-    action="https://beta.legifrance.gouv.fr/search/kali#kali"
-    target="_blank"
-  >
-    <header
-      class="c2 c3"
-    >
-      <h2
-        class="c4"
-      >
-        <div
-          class="c5"
-        />
-        Recherche par mots-clés
-      </h2>
-    </header>
-    <p>
-      <label
-        for="search-agreement"
-      >
-        Effectuez une recherche dans le texte de la convention collective sur Légifrance :
-      </label>
-    </p>
-    <div
-      class="c23"
-    >
-      Pour savoir si ce qui est prévu par la convention collective de branche est bien applicable à votre situation particulière vous devez vous reporter à la fiche traitant du même sujet et pour lequel l'accord d'entreprise peut comporter d'autres règles.
-    </div>
-    <div
-      class="c24"
-    >
-      <input
-        class="c25"
-        id="search-agreement"
-        placeholder="congé exceptionnel, prime"
-        type="search"
-      />
-       
-      <input
-        name="query"
-        type="hidden"
-        value=""
-      />
-      <input
-        name="cidKaliCont"
-        type="hidden"
-        value="KALICONT000005635221"
-      />
-      <input
-        name="searchField"
-        type="hidden"
-        value="ALL"
-      />
-      <input
-        name="searchType"
-        type="hidden"
-        value="ALL"
-      />
-      <input
-        name="tab_selection"
-        type="hidden"
-        value="kali"
-      />
-      <input
-        name="page"
-        type="hidden"
-        value="1"
-      />
-      <button
-        class="c26 c27"
-        type="submit"
-      >
-        <svg
-          class="c28"
-          fill="none"
-          viewBox="0 0 32 32"
-        >
-          <path
-            d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
-            fill="currentColor"
-          />
-        </svg>
-      </button>
-    </div>
-  </form>
-  <header
-    class="c2 c3"
-  >
-    <h2
-      class="c4"
-    >
-      <div
-        class="c5"
-      />
       Questions fréquentes sur cette convention collective
     </h2>
   </header>
@@ -1514,7 +519,7 @@ exports[`<Convention /> renders 1`] = `
     data-accordion-component="Accordion"
   >
     <div
-      class="c7 c8"
+      class="c6 c7"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -1527,14 +532,14 @@ exports[`<Convention /> renders 1`] = `
           aria-controls="accordion__panel-Départ de l'entreprise"
           aria-disabled="false"
           aria-expanded="false"
-          class="c9"
+          class="c8"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-Départ de l'entreprise"
           role="button"
           tabindex="0"
         >
           <svg
-            class="c10"
+            class="c9"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -1550,7 +555,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c29"
+            class="c10"
           >
             Départ de l'entreprise
           </strong>
@@ -1559,7 +564,7 @@ exports[`<Convention /> renders 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-Départ de l'entreprise"
-        class="c12"
+        class="c11"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-Départ de l'entreprise"
@@ -1569,7 +574,7 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="Accordion"
         >
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1582,14 +587,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -1605,7 +610,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                    Quelle est la durée de préavis en cas de licenciement ?
                 </strong>
@@ -1614,13 +619,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -1689,7 +694,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1702,14 +707,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -1725,7 +730,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                    Quelle est la durée du préavis en cas de démission ?
                 </strong>
@@ -1734,13 +739,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -1786,7 +791,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1799,14 +804,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -1822,7 +827,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                    Quelle est la durée de préavis en cas de départ à la retraite ?
                 </strong>
@@ -1831,13 +836,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -1876,7 +881,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1889,14 +894,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -1912,7 +917,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                    Quelle est la durée de préavis en cas de mise à la retraite ?
                 </strong>
@@ -1921,13 +926,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -1966,7 +971,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -1979,14 +984,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -2002,7 +1007,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
                 </strong>
@@ -2011,13 +1016,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2047,7 +1052,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -2060,14 +1065,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -2083,7 +1088,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
                 </strong>
@@ -2092,13 +1097,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2172,7 +1177,7 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
     <div
-      class="c7 c8"
+      class="c6 c7"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -2185,14 +1190,14 @@ exports[`<Convention /> renders 1`] = `
           aria-controls="accordion__panel-Congés et repos"
           aria-disabled="false"
           aria-expanded="false"
-          class="c9"
+          class="c8"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-Congés et repos"
           role="button"
           tabindex="0"
         >
           <svg
-            class="c10"
+            class="c9"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -2208,7 +1213,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c29"
+            class="c10"
           >
             Congés et repos
           </strong>
@@ -2217,7 +1222,7 @@ exports[`<Convention /> renders 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-Congés et repos"
-        class="c12"
+        class="c11"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-Congés et repos"
@@ -2227,7 +1232,7 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="Accordion"
         >
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -2240,14 +1245,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -2263,7 +1268,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Jours fériés et ponts dans le secteur privé
                 </strong>
@@ -2272,13 +1277,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2318,7 +1323,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -2331,14 +1336,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -2354,7 +1359,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
                 </strong>
@@ -2363,13 +1368,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2456,7 +1461,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -2469,14 +1474,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-les-conges-pour-evenements-familiaux"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-les-conges-pour-evenements-familiaux"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -2492,7 +1497,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Les congés pour événements familiaux
                 </strong>
@@ -2501,13 +1506,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-les-conges-pour-evenements-familiaux"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-les-conges-pour-evenements-familiaux"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2586,7 +1591,7 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
     <div
-      class="c7 c8"
+      class="c6 c7"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -2599,14 +1604,14 @@ exports[`<Convention /> renders 1`] = `
           aria-controls="accordion__panel-Embauche et contrat de travail"
           aria-disabled="false"
           aria-expanded="false"
-          class="c9"
+          class="c8"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-Embauche et contrat de travail"
           role="button"
           tabindex="0"
         >
           <svg
-            class="c10"
+            class="c9"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -2622,7 +1627,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c29"
+            class="c10"
           >
             Embauche et contrat de travail
           </strong>
@@ -2631,7 +1636,7 @@ exports[`<Convention /> renders 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-Embauche et contrat de travail"
-        class="c12"
+        class="c11"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-Embauche et contrat de travail"
@@ -2641,7 +1646,7 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="Accordion"
         >
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -2654,14 +1659,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -2677,7 +1682,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
                 </strong>
@@ -2686,13 +1691,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2730,7 +1735,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -2743,14 +1748,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-comment-determiner-lanciennete-du-salarie"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-comment-determiner-lanciennete-du-salarie"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -2766,7 +1771,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Comment déterminer l'ancienneté du salarié ?
                 </strong>
@@ -2775,13 +1780,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-comment-determiner-lanciennete-du-salarie"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-comment-determiner-lanciennete-du-salarie"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2871,7 +1876,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -2884,14 +1889,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -2907,7 +1912,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                    Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
                 </strong>
@@ -2916,13 +1921,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3023,7 +2028,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -3036,14 +2041,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -3059,7 +2064,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
                 </strong>
@@ -3068,13 +2073,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3104,7 +2109,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -3117,14 +2122,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -3140,7 +2145,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                    Embauche en contrat d'extra (CDD d'usage)
                 </strong>
@@ -3149,13 +2154,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3187,7 +2192,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -3200,14 +2205,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -3223,7 +2228,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Quelles sont les conditions de cumul d'emplois ?
                 </strong>
@@ -3232,13 +2237,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3271,7 +2276,7 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
     <div
-      class="c7 c8"
+      class="c6 c7"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -3284,14 +2289,14 @@ exports[`<Convention /> renders 1`] = `
           aria-controls="accordion__panel-Salaire et Rémunération"
           aria-disabled="false"
           aria-expanded="false"
-          class="c9"
+          class="c8"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-Salaire et Rémunération"
           role="button"
           tabindex="0"
         >
           <svg
-            class="c10"
+            class="c9"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -3307,7 +2312,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c29"
+            class="c10"
           >
             Salaire et Rémunération
           </strong>
@@ -3316,7 +2321,7 @@ exports[`<Convention /> renders 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-Salaire et Rémunération"
-        class="c12"
+        class="c11"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-Salaire et Rémunération"
@@ -3326,7 +2331,7 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="Accordion"
         >
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -3339,14 +2344,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -3362,7 +2367,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
                 </strong>
@@ -3371,13 +2376,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3400,7 +2405,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -3413,14 +2418,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -3436,7 +2441,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Quelles sont les primes prévues par la convention collective ?
                 </strong>
@@ -3445,13 +2450,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3505,7 +2510,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -3518,14 +2523,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -3541,7 +2546,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
                 </strong>
@@ -3550,13 +2555,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3615,7 +2620,7 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
     <div
-      class="c7 c8"
+      class="c6 c7"
       data-accordion-component="AccordionItem"
     >
       <div
@@ -3628,14 +2633,14 @@ exports[`<Convention /> renders 1`] = `
           aria-controls="accordion__panel-Santé, sécurité et conditions de travail"
           aria-disabled="false"
           aria-expanded="false"
-          class="c9"
+          class="c8"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-Santé, sécurité et conditions de travail"
           role="button"
           tabindex="0"
         >
           <svg
-            class="c10"
+            class="c9"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -3651,7 +2656,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c29"
+            class="c10"
           >
             Santé, sécurité et conditions de travail
           </strong>
@@ -3660,7 +2665,7 @@ exports[`<Convention /> renders 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-Santé, sécurité et conditions de travail"
-        class="c12"
+        class="c11"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-Santé, sécurité et conditions de travail"
@@ -3670,7 +2675,7 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="Accordion"
         >
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -3683,14 +2688,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -3706,7 +2711,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
                 </strong>
@@ -3715,13 +2720,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -4036,7 +3041,7 @@ exports[`<Convention /> renders 1`] = `
             </div>
           </div>
           <div
-            class="c7 c8"
+            class="c6 c7"
             data-accordion-component="AccordionItem"
           >
             <div
@@ -4049,14 +3054,14 @@ exports[`<Convention /> renders 1`] = `
                 aria-controls="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                 aria-disabled="false"
                 aria-expanded="false"
-                class="c9"
+                class="c8"
                 data-accordion-component="AccordionItemButton"
                 id="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="c10"
+                  class="c9"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -4072,7 +3077,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c29"
+                  class="c10"
                 >
                   En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
                 </strong>
@@ -4081,13 +3086,13 @@ exports[`<Convention /> renders 1`] = `
             <div
               aria-hidden="true"
               aria-labelledby="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-              class="c12"
+              class="c11"
               data-accordion-component="AccordionItemPanel"
               hidden=""
               id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
             >
               <div
-                class="c23"
+                class="c12"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -4151,5 +3156,1000 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
   </div>
+  <header
+    class="c2 c3"
+  >
+    <h2
+      class="c4"
+    >
+      <div
+        class="c5"
+      />
+      Domaines traités par la convention collective
+    </h2>
+  </header>
+  <label
+    class="c13"
+    for="article-bloc"
+  >
+    Recherchez, lorsqu'elles existent, les dispositions conventionnelles dans :
+    <br />
+    <br />
+    <li>
+      les 13 domaines où la loi reconnaît la primauté à la convention collective de branche ;
+    </li>
+    <li>
+      les 4 domaines où la branche elle-même peut reconnaitre sa primauté, sauf si l'accord d'entreprise a des garanties au moins équivalentes (représentées avec une * ci-dessous).
+    </li>
+    <br />
+    Si votre question concerne un autre domaine, vous pouvez utiliser la recherche par mot-clés dans la section suivante.
+  </label>
+  <div
+    class="accordion"
+    data-accordion-component="Accordion"
+  >
+    <div
+      class="c6 c7"
+      data-accordion-component="AccordionItem"
+    >
+      <div
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
+      >
+        <div
+          aria-controls="accordion__panel-bloc-1"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c8"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-bloc-1"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            class="c9"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <strong
+            class="c14"
+          >
+            Salaires minima hiérarchiques
+          </strong>
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__heading-bloc-1"
+        class="c11"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-bloc-1"
+      >
+        <header
+          class="c15"
+        >
+          <h2
+            class="c16"
+          >
+            <div
+              class="c17"
+            />
+            
+          </h2>
+          
+        </header>
+        <ul
+          class="c18"
+        >
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Salaires minimaux
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 1-4
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Salaire mensuel
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 4-1
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Déduction des heures non travaillées
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 4-2
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Barèmes de salaires minimaux
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-8
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c6 c7"
+      data-accordion-component="AccordionItem"
+    >
+      <div
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
+      >
+        <div
+          aria-controls="accordion__panel-bloc-2"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c8"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-bloc-2"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            class="c9"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <strong
+            class="c14"
+          >
+            Classifications
+          </strong>
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__heading-bloc-2"
+        class="c11"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-bloc-2"
+      >
+        <header
+          class="c15"
+        >
+          <h2
+            class="c16"
+          >
+            <div
+              class="c17"
+            />
+            
+          </h2>
+          
+        </header>
+        <ul
+          class="c18"
+        >
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Préambule
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-1
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Définitions générales des critères et des niveaux
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-2
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Coefficients hiérarchiques
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-3
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Prise en compte des diplômes professionnels bâtiment
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-4
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Polyvalence
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-5
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Evolution de carrière
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-6
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Suivi de l'application dans l'entreprise
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-7
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c6 c7"
+      data-accordion-component="AccordionItem"
+    >
+      <div
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
+      >
+        <div
+          aria-controls="accordion__panel-bloc-6"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c8"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-bloc-6"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            class="c9"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <strong
+            class="c14"
+          >
+            Durée du travail, répartition et aménagement des horaires
+          </strong>
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__heading-bloc-6"
+        class="c11"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-bloc-6"
+      >
+        <header
+          class="c15"
+        >
+          <h2
+            class="c16"
+          >
+            <div
+              class="c17"
+            />
+            
+          </h2>
+          
+        </header>
+        <ul
+          class="c18"
+        >
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Contingent d'heures supplémentaires non soumis à autorisation
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-13
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Heures supplémentaires exceptionnelles
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-14
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Plafonds
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-15
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Définition de la durée du travail
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-16
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Majoration pour heures supplémentaires.
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-17
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Equivalences et dérogations permanentes
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-18
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Semaine de travail en 5 jours
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-21
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Exceptions à la semaine de travail en 5 jours
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-22
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Horaires individualisés
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-24
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Horaires à temps partiel
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-25
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Récupération des heures perdues pour intempéries
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-28
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Cas des chefs d'équipe
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 3-29
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <form
+    action="https://beta.legifrance.gouv.fr/search/kali#kali"
+    target="_blank"
+  >
+    <header
+      class="c2 c3"
+    >
+      <h2
+        class="c4"
+      >
+        <div
+          class="c5"
+        />
+        Recherche par mots-clés
+      </h2>
+    </header>
+    <p>
+      <label
+        for="search-agreement"
+      >
+        Effectuez une recherche dans le texte de la convention collective sur Légifrance :
+      </label>
+    </p>
+    <div
+      class="c12"
+    >
+      Pour savoir si ce qui est prévu par la convention collective de branche est bien applicable à votre situation particulière vous devez vous reporter à la fiche traitant du même sujet et pour lequel l'accord d'entreprise peut comporter d'autres règles.
+    </div>
+    <div
+      class="c25"
+    >
+      <input
+        class="c26"
+        id="search-agreement"
+        placeholder="congé exceptionnel, prime"
+        type="search"
+      />
+       
+      <input
+        name="query"
+        type="hidden"
+        value=""
+      />
+      <input
+        name="cidKaliCont"
+        type="hidden"
+        value="KALICONT000005635221"
+      />
+      <input
+        name="searchField"
+        type="hidden"
+        value="ALL"
+      />
+      <input
+        name="searchType"
+        type="hidden"
+        value="ALL"
+      />
+      <input
+        name="tab_selection"
+        type="hidden"
+        value="kali"
+      />
+      <input
+        name="page"
+        type="hidden"
+        value="1"
+      />
+      <button
+        class="c27 c28"
+        type="submit"
+      >
+        <svg
+          class="c29"
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+  </form>
 </div>
 `;
