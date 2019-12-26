@@ -49,14 +49,16 @@ const ContentMT = props => {
           <Intro>{intro}</Intro>
         </IntroWrapper>
       )}
-      <Accordion
-        items={sections.map(section => ({
-          id: section.anchor,
-          title: section.title,
-          as: "h3",
-          body: <TabContent>{section.html}</TabContent>
-        }))}
-      />
+      {sections && (
+        <Accordion
+          items={sections.map(section => ({
+            id: section.anchor,
+            title: section.title,
+            as: "h3",
+            body: <TabContent>{section.html}</TabContent>
+          }))}
+        />
+      )}
     </>
   );
 };
