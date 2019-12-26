@@ -141,7 +141,7 @@ exports[`<Convention /> renders 1`] = `
   display: none;
 }
 
-.c29 {
+.c23 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -150,15 +150,15 @@ exports[`<Convention /> renders 1`] = `
   border-radius: 0.6rem;
 }
 
-.c29 > *:first-child {
+.c23 > *:first-child {
   margin-top: 0;
 }
 
-.c29 > *:last-child {
+.c23 > *:last-child {
   margin-bottom: 0;
 }
 
-.c25 {
+.c26 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -195,16 +195,16 @@ exports[`<Convention /> renders 1`] = `
   opacity: 1;
 }
 
-.c25:link,
-.c25:visited {
+.c26:link,
+.c26:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c25:not([disabled]):hover,
-.c25:not([disabled]):active,
-.c25:not([disabled]):focus {
+.c26:not([disabled]):hover,
+.c26:not([disabled]):active,
+.c26:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -213,7 +213,7 @@ exports[`<Convention /> renders 1`] = `
   border-color: transparent;
 }
 
-.c25[disabled] {
+.c26[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -349,7 +349,7 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 2rem;
 }
 
-.c23 {
+.c24 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -357,13 +357,13 @@ exports[`<Convention /> renders 1`] = `
   display: flex;
 }
 
-.c24 {
+.c25 {
   -webkit-flex: 1 1 40%;
   -ms-flex: 1 1 40%;
   flex: 1 1 40%;
 }
 
-.c26 {
+.c27 {
   position: absolute;
   top: 0;
   right: 0;
@@ -372,12 +372,12 @@ exports[`<Convention /> renders 1`] = `
   color: #7994d4;
 }
 
-.c27 {
+.c28 {
   width: 3rem;
   height: 3rem;
 }
 
-.c28 {
+.c29 {
   margin: 1.6rem 0;
 }
 
@@ -411,7 +411,7 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     font-size: 1.4rem;
   }
 }
@@ -448,7 +448,7 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c25 {
     padding-right: 5.5rem;
   }
 }
@@ -1425,21 +1425,26 @@ exports[`<Convention /> renders 1`] = `
         <div
           class="c5"
         />
-        Recherche
+        Recherche par mots-clés
       </h2>
     </header>
     <p>
       <label
         for="search-agreement"
       >
-        Effectuez une recherche dans le texte de la convention collective sur legifrance :
+        Effectuez une recherche dans le texte de la convention collective sur Légifrance :
       </label>
     </p>
     <div
       class="c23"
     >
+      Pour savoir si ce qui est prévu par la convention collective de branche est bien applicable à votre situation particulière vous devez vous reporter à la fiche traitant du même sujet et pour lequel l'accord d'entreprise peut comporter d'autres règles.
+    </div>
+    <div
+      class="c24"
+    >
       <input
-        class="c24"
+        class="c25"
         id="search-agreement"
         placeholder="congé exceptionnel, prime"
         type="search"
@@ -1476,11 +1481,11 @@ exports[`<Convention /> renders 1`] = `
         value="1"
       />
       <button
-        class="c25 c26"
+        class="c26 c27"
         type="submit"
       >
         <svg
-          class="c27"
+          class="c28"
           fill="none"
           viewBox="0 0 32 32"
         >
@@ -1545,7 +1550,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c28"
+            class="c29"
           >
             Départ de l'entreprise
           </strong>
@@ -1600,7 +1605,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                    Quelle est la durée de préavis en cas de licenciement ?
                 </strong>
@@ -1615,7 +1620,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -1720,7 +1725,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                    Quelle est la durée du préavis en cas de démission ?
                 </strong>
@@ -1735,7 +1740,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -1817,7 +1822,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                    Quelle est la durée de préavis en cas de départ à la retraite ?
                 </strong>
@@ -1832,7 +1837,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -1907,7 +1912,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                    Quelle est la durée de préavis en cas de mise à la retraite ?
                 </strong>
@@ -1922,7 +1927,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -1997,7 +2002,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
                 </strong>
@@ -2012,7 +2017,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2078,7 +2083,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
                 </strong>
@@ -2093,7 +2098,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2203,7 +2208,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c28"
+            class="c29"
           >
             Congés et repos
           </strong>
@@ -2258,7 +2263,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Jours fériés et ponts dans le secteur privé
                 </strong>
@@ -2273,7 +2278,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2349,7 +2354,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
                 </strong>
@@ -2364,7 +2369,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2487,7 +2492,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Les congés pour événements familiaux
                 </strong>
@@ -2502,7 +2507,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-les-conges-pour-evenements-familiaux"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2617,7 +2622,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c28"
+            class="c29"
           >
             Embauche et contrat de travail
           </strong>
@@ -2672,7 +2677,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
                 </strong>
@@ -2687,7 +2692,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2761,7 +2766,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Comment déterminer l'ancienneté du salarié ?
                 </strong>
@@ -2776,7 +2781,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-comment-determiner-lanciennete-du-salarie"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -2902,7 +2907,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                    Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
                 </strong>
@@ -2917,7 +2922,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3054,7 +3059,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
                 </strong>
@@ -3069,7 +3074,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3135,7 +3140,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                    Embauche en contrat d'extra (CDD d'usage)
                 </strong>
@@ -3150,7 +3155,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3218,7 +3223,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Quelles sont les conditions de cumul d'emplois ?
                 </strong>
@@ -3233,7 +3238,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3302,7 +3307,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c28"
+            class="c29"
           >
             Salaire et Rémunération
           </strong>
@@ -3357,7 +3362,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
                 </strong>
@@ -3372,7 +3377,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3431,7 +3436,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Quelles sont les primes prévues par la convention collective ?
                 </strong>
@@ -3446,7 +3451,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3536,7 +3541,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
                 </strong>
@@ -3551,7 +3556,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -3646,7 +3651,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <strong
-            class="c28"
+            class="c29"
           >
             Santé, sécurité et conditions de travail
           </strong>
@@ -3701,7 +3706,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
                 </strong>
@@ -3716,7 +3721,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
@@ -4067,7 +4072,7 @@ exports[`<Convention /> renders 1`] = `
                   />
                 </svg>
                 <strong
-                  class="c28"
+                  class="c29"
                 >
                   En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
                 </strong>
@@ -4082,7 +4087,7 @@ exports[`<Convention /> renders 1`] = `
               id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
             >
               <div
-                class="c29"
+                class="c23"
               >
                 Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
                  
