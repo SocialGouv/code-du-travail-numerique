@@ -36,9 +36,10 @@ describe("<Anciennete />", () => {
     });
     const dateSortie = getByLabelText(/date de sortie/i);
     fireEvent.change(dateSortie, { target: { value: "2018-03-01" } });
-
     expect(
-      container.querySelector("input[name=dateSortie] + *").textContent.trim()
+      container
+        .querySelector("input[name=dateSortie]")
+        .parentElement.nextSibling.textContent.trim()
     ).toMatch("La date de sortie doit se situer après le 02 April 2018");
   });
 
@@ -50,8 +51,8 @@ describe("<Anciennete />", () => {
     fireEvent.change(dateNotif, { target: { value: "2018-04-02" } });
     expect(
       container
-        .querySelector("input[name=dateNotification] + *")
-        .textContent.trim()
+        .querySelector("input[name=dateNotification]")
+        .parentElement.nextSibling.textContent.trim()
     ).toMatch("La date de notification doit se situer après la date d’entrée");
   });
 
@@ -63,8 +64,8 @@ describe("<Anciennete />", () => {
     fireEvent.change(dateNotif, { target: { value: "2018-05-02" } });
     expect(
       container
-        .querySelector("input[name=dateNotification] + *")
-        .textContent.trim()
+        .querySelector("input[name=dateNotification]")
+        .parentElement.nextSibling.textContent.trim()
     ).toMatch("La date de notification doit se situer avant la date de sortie");
   });
 

@@ -6,12 +6,53 @@ exports[`<StepCTT /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c4 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
   padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c4:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c4:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c4:checked:before {
+  display: block;
 }
 
 .c2 {
@@ -72,27 +113,29 @@ exports[`<StepCTT /> should render 1`] = `
     >
       <label
         class="c3"
+        for="cttFormation-yes"
       >
         <input
+          class="c4"
+          id="cttFormation-yes"
           name="cttFormation"
           type="radio"
           value="true"
         />
-        <span>
-          Oui
-        </span>
+        Oui
       </label>
       <label
         class="c3"
+        for="cttFormation-no"
       >
         <input
+          class="c4"
+          id="cttFormation-no"
           name="cttFormation"
           type="radio"
           value="false"
         />
-        <span>
-          Non
-        </span>
+        Non
       </label>
     </div>
     <p
@@ -112,27 +155,29 @@ exports[`<StepCTT /> should render 1`] = `
     >
       <label
         class="c3"
+        for="ruptureContratFauteGrave-yes"
       >
         <input
+          class="c4"
+          id="ruptureContratFauteGrave-yes"
           name="ruptureContratFauteGrave"
           type="radio"
           value="true"
         />
-        <span>
-          Oui
-        </span>
+        Oui
       </label>
       <label
         class="c3"
+        for="ruptureContratFauteGrave-no"
       >
         <input
+          class="c4"
+          id="ruptureContratFauteGrave-no"
           name="ruptureContratFauteGrave"
           type="radio"
           value="false"
         />
-        <span>
-          Non
-        </span>
+        Non
       </label>
     </div>
     <p
@@ -152,27 +197,29 @@ exports[`<StepCTT /> should render 1`] = `
     >
       <label
         class="c3"
+        for="propositionCDIFinContrat-yes"
       >
         <input
+          class="c4"
+          id="propositionCDIFinContrat-yes"
           name="propositionCDIFinContrat"
           type="radio"
           value="true"
         />
-        <span>
-          Oui
-        </span>
+        Oui
       </label>
       <label
         class="c3"
+        for="propositionCDIFinContrat-no"
       >
         <input
+          class="c4"
+          id="propositionCDIFinContrat-no"
           name="propositionCDIFinContrat"
           type="radio"
           value="false"
         />
-        <span>
-          Non
-        </span>
+        Non
       </label>
     </div>
     <p
@@ -192,27 +239,29 @@ exports[`<StepCTT /> should render 1`] = `
     >
       <label
         class="c3"
+        for="refusSouplesse-yes"
       >
         <input
+          class="c4"
+          id="refusSouplesse-yes"
           name="refusSouplesse"
           type="radio"
           value="true"
         />
-        <span>
-          Oui
-        </span>
+        Oui
       </label>
       <label
         class="c3"
+        for="refusSouplesse-no"
       >
         <input
+          class="c4"
+          id="refusSouplesse-no"
           name="refusSouplesse"
           type="radio"
           value="false"
         />
-        <span>
-          Non
-        </span>
+        Non
       </label>
     </div>
     <button

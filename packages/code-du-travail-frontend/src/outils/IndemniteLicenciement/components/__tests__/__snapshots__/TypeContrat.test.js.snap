@@ -6,12 +6,53 @@ exports[`<TypeContrat /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c4 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
   padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c4:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c4:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c4:checked:before {
+  display: block;
 }
 
 .c2 {
@@ -70,27 +111,29 @@ exports[`<TypeContrat /> should render 1`] = `
   >
     <label
       class="c3"
+      for="contrat-cdd"
     >
       <input
+        class="c4"
+        id="contrat-cdd"
         name="contrat"
         type="radio"
         value="cdd"
       />
-      <span>
-        Contrat à durée determiné (CDD) ou contrat d’intérim
-      </span>
+      Contrat à durée determiné (CDD) ou contrat d’intérim
     </label>
     <label
       class="c3"
+      for="contrat-cdi"
     >
       <input
+        class="c4"
+        id="contrat-cdi"
         name="contrat"
         type="radio"
         value="cdi"
       />
-      <span>
-        Contrat à durée indeterminé (CDI)
-      </span>
+      Contrat à durée indeterminé (CDI)
     </label>
   </div>
 </div>

@@ -1,36 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TypeRemuneration /> should render 1`] = `
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
-  padding: 0;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c3 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
+  padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c3:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c3:checked:before {
+  display: block;
 }
 
 .c0 {
@@ -65,41 +87,39 @@ exports[`<TypeRemuneration /> should render 1`] = `
       *
     </span>
   </p>
-  <div
+  <label
     class="c2"
+    for="typeRemuneration-amount"
   >
-    <label
+    <input
       class="c3"
-    >
-      <input
-        name="typeRemuneration"
-        type="radio"
-        value="total"
-      />
-      <span>
-        En indiquant le 
-        <strong>
-          montant total
-        </strong>
-         des rémunérations.
-      </span>
-    </label>
-    <label
+      id="typeRemuneration-amount"
+      name="typeRemuneration"
+      type="radio"
+      value="total"
+    />
+    En indiquant le 
+    <strong>
+       montant total 
+    </strong>
+    des rémunérations.
+  </label>
+  <label
+    class="c2"
+    for="typeRemuneration-pay"
+  >
+    <input
       class="c3"
-    >
-      <input
-        name="typeRemuneration"
-        type="radio"
-        value="mensuel"
-      />
-      <span>
-        En indiquant le 
-        <strong>
-          salaire mensuel
-        </strong>
-         pour chaque mois.
-      </span>
-    </label>
-  </div>
+      id="typeRemuneration-pay"
+      name="typeRemuneration"
+      type="radio"
+      value="mensuel"
+    />
+    En indiquant le 
+    <strong>
+       salaire mensuel 
+    </strong>
+    pour chaque mois.
+  </label>
 </div>
 `;

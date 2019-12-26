@@ -95,6 +95,75 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   text-align: left;
 }
 
+.c6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c9 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: #f66663;
+  pointer-events: none;
+}
+
+.c8 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem 0;
+  padding-right: 5rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  vertical-align: middle;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  cursor: pointer;
+  -webkit-transition: border-color 250ms ease;
+  transition: border-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8::-ms-expand {
+  background-color: transparent;
+  border: 0 transparent;
+}
+
+.c8 *::-ms-backdrop,
+.c8 {
+  padding-right: 1.6rem;
+}
+
+.c8:invalid {
+  border-color: #eb5757;
+}
+
+.c8:disabled {
+  background-color: #e4e8ef;
+}
+
 .c5 {
   display: block;
   margin-top: 2rem;
@@ -103,14 +172,8 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   cursor: pointer;
 }
 
-.c6 {
-  -webkit-flex: 1 1 70%;
-  -ms-flex: 1 1 70%;
-  flex: 1 1 70%;
-  min-width: 400px;
-  max-width: 100%;
-  margin-top: 1rem;
-  margin-right: 2rem;
+.c7 {
+  width: 40rem;
 }
 
 .c4 {
@@ -140,6 +203,12 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c7 {
+    width: 100%;
+  }
+}
+
 <div>
   <header
     class="c0 c1"
@@ -162,28 +231,60 @@ exports[`<StepInformations /> should render catégorie 1`] = `
     >
       Quelle est la catégorie professionnelle du salarié ?
     </label>
-    <select
-      class="c6"
-      id="input-criteria.catégorie socio-professionnelle"
-      name="criteria.catégorie socio-professionnelle"
+    <div
+      class="c6 c7"
     >
-      <option
-        disabled=""
-        value=""
+      <select
+        class="c8"
+        id="input-criteria.catégorie socio-professionnelle"
+        name="criteria.catégorie socio-professionnelle"
       >
-        ...
-      </option>
-      <option
-        value="42| Collaborateurs"
+        <option
+          disabled=""
+          value=""
+        >
+          ...
+        </option>
+        <option
+          value="42| Collaborateurs"
+        >
+          Collaborateurs
+        </option>
+        <option
+          value="48| Cadres"
+        >
+          Cadres
+        </option>
+      </select>
+      <div
+        aria-hidden="true"
+        class="c9"
       >
-        Collaborateurs
-      </option>
-      <option
-        value="48| Cadres"
-      >
-        Cadres
-      </option>
-    </select>
+        <svg
+          fill="none"
+          viewBox="0 0 16 16"
+        >
+          <g
+            clip-path="url(#arrow-down_svg__clip0)"
+          >
+            <path
+              d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+              fill="currentColor"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="arrow-down_svg__clip0"
+            >
+              <path
+                d="M0 0h16v16H0z"
+                fill="currentColor"
+              />
+            </clippath>
+          </defs>
+        </svg>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -219,6 +320,75 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   text-align: left;
 }
 
+.c6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.c9 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: #f66663;
+  pointer-events: none;
+}
+
+.c8 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem 0;
+  padding-right: 5rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  vertical-align: middle;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  cursor: pointer;
+  -webkit-transition: border-color 250ms ease;
+  transition: border-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8::-ms-expand {
+  background-color: transparent;
+  border: 0 transparent;
+}
+
+.c8 *::-ms-backdrop,
+.c8 {
+  padding-right: 1.6rem;
+}
+
+.c8:invalid {
+  border-color: #eb5757;
+}
+
+.c8:disabled {
+  background-color: #e4e8ef;
+}
+
 .c5 {
   display: block;
   margin-top: 2rem;
@@ -227,14 +397,8 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   cursor: pointer;
 }
 
-.c6 {
-  -webkit-flex: 1 1 70%;
-  -ms-flex: 1 1 70%;
-  flex: 1 1 70%;
-  min-width: 400px;
-  max-width: 100%;
-  margin-top: 1rem;
-  margin-right: 2rem;
+.c7 {
+  width: 40rem;
 }
 
 .c4 {
@@ -264,6 +428,12 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c7 {
+    width: 100%;
+  }
+}
+
 <div>
   <header
     class="c0 c1"
@@ -286,28 +456,60 @@ exports[`<StepInformations /> should render coefficient 1`] = `
     >
       Quelle est la catégorie professionnelle du salarié ?
     </label>
-    <select
-      class="c6"
-      id="input-criteria.catégorie socio-professionnelle"
-      name="criteria.catégorie socio-professionnelle"
+    <div
+      class="c6 c7"
     >
-      <option
-        disabled=""
-        value=""
+      <select
+        class="c8"
+        id="input-criteria.catégorie socio-professionnelle"
+        name="criteria.catégorie socio-professionnelle"
       >
-        ...
-      </option>
-      <option
-        value="42| Collaborateurs"
+        <option
+          disabled=""
+          value=""
+        >
+          ...
+        </option>
+        <option
+          value="42| Collaborateurs"
+        >
+          Collaborateurs
+        </option>
+        <option
+          value="48| Cadres"
+        >
+          Cadres
+        </option>
+      </select>
+      <div
+        aria-hidden="true"
+        class="c9"
       >
-        Collaborateurs
-      </option>
-      <option
-        value="48| Cadres"
-      >
-        Cadres
-      </option>
-    </select>
+        <svg
+          fill="none"
+          viewBox="0 0 16 16"
+        >
+          <g
+            clip-path="url(#arrow-down_svg__clip0)"
+          >
+            <path
+              d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+              fill="currentColor"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="arrow-down_svg__clip0"
+            >
+              <path
+                d="M0 0h16v16H0z"
+                fill="currentColor"
+              />
+            </clippath>
+          </defs>
+        </svg>
+      </div>
+    </div>
   </div>
   <div
     class="c4"
@@ -318,28 +520,60 @@ exports[`<StepInformations /> should render coefficient 1`] = `
     >
       Quel est le coefficient hiérarchique du salarié ?
     </label>
-    <select
-      class="c6"
-      id="input-criteria.coefficient"
-      name="criteria.coefficient"
+    <div
+      class="c6 c7"
     >
-      <option
-        disabled=""
-        value=""
+      <select
+        class="c8"
+        id="input-criteria.coefficient"
+        name="criteria.coefficient"
       >
-        ...
-      </option>
-      <option
-        value="24| 700 à 750"
+        <option
+          disabled=""
+          value=""
+        >
+          ...
+        </option>
+        <option
+          value="24| 700 à 750"
+        >
+          700 à 750
+        </option>
+        <option
+          value="28| 800 à 830 inclus"
+        >
+          800 à 830 inclus
+        </option>
+      </select>
+      <div
+        aria-hidden="true"
+        class="c9"
       >
-        700 à 750
-      </option>
-      <option
-        value="28| 800 à 830 inclus"
-      >
-        800 à 830 inclus
-      </option>
-    </select>
+        <svg
+          fill="none"
+          viewBox="0 0 16 16"
+        >
+          <g
+            clip-path="url(#arrow-down_svg__clip0)"
+          >
+            <path
+              d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+              fill="currentColor"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="arrow-down_svg__clip0"
+            >
+              <path
+                d="M0 0h16v16H0z"
+                fill="currentColor"
+              />
+            </clippath>
+          </defs>
+        </svg>
+      </div>
+    </div>
   </div>
 </div>
 `;
