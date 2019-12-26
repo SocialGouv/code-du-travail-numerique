@@ -1,48 +1,38 @@
-import React, { useState, useCallback } from "react";
-import { CardList, Tile, theme } from "@socialgouv/react-ui";
+import React from "react";
+import { Accordion, CardList, Tile, theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
 import { Title } from "./index";
-import { blocs } from "./blocs.data";
-
-function getBlocLabel(id) {
-  return blocs[id];
-}
+import { blocs as blocsLabels } from "./blocs.data";
 
 function getArticleUrl({ id, containerId }) {
   return `https://beta.legifrance.gouv.fr/conv_coll/id/${id}/?idConteneur=${containerId}`;
 }
 
+const sortByInt = (a, b) => {
+  if (parseInt(a, 10) < parseInt(b, 10)) {
+    return -1;
+  } else if (parseInt(a, 10) > parseInt(b, 10)) {
+    return 1;
+  }
+  return 0;
+};
+
 function Articles({ blocs, containerId }) {
-  const options = [...new Set(blocs.map(({ bloc }) => bloc))];
-  const [theme, setTheme] = useState();
-  const bloc = blocs.find(({ bloc }) => bloc === theme);
+  const getArticles = id => {
+    const bloc = blocs.find(({ bloc }) => bloc === id);
+    return (bloc && bloc.articles) || [];
+  };
 
-  const onChangeTheme = useCallback(event => {
-    setTheme(event.target.value);
-  }, []);
-
-  return (
-    <>
-      <Title>Articles par themes</Title>
-      <Label htmlFor="article-bloc">
-        Sélectionnez un thème parmi ceux traités dans la convention collective
-        pour consulter les articles qui y sont rattachés&nbsp;:
-      </Label>
-      {/* eslint-disable-next-line jsx-a11y/no-onchange */}
-      <select id="article-bloc" onChange={onChangeTheme} defaultValue="none">
-        <option disabled value="none">
-          ...
-        </option>
-        {options.map(value => (
-          <option key={value} value={value}>
-            {getBlocLabel(value)}
-          </option>
-        ))}
-      </select>
-      {bloc && (
+  const articlesByTheme = blocs
+    .map(({ bloc }) => bloc)
+    .sort(sortByInt)
+    .map(bloc => ({
+      id: `bloc-${bloc}`,
+      title: <AccordionHeader>{blocsLabels[bloc]}</AccordionHeader>,
+      body: (
         <CardList title="" columns={3}>
-          {bloc.articles.map(({ title, id, section }) => (
+          {getArticles(bloc).map(({ title, id, section }) => (
             <Tile
               key={id}
               wide
@@ -54,14 +44,42 @@ function Articles({ blocs, containerId }) {
             />
           ))}
         </CardList>
-      )}
-    </>
+      )
+    }));
+
+  return (
+    <React.Fragment>
+      <Title>Domaines traités par la convention collective</Title>
+      <Label htmlFor="article-bloc">
+        Recherchez, lorsqu&apos;elles existent, les dispositions
+        conventionnelles dans&nbsp;:
+        <br />
+        <br />
+        <li>
+          les 13 domaines où la loi reconnaît la primauté à la convention
+          collective de branche ;
+        </li>
+        <li>
+          les 4 domaines où la branche elle-même peut reconnaitre sa primauté,
+          sauf si l&apos;accord d&apos;entreprise a des garanties au moins
+          équivalentes (représentées avec une * ci-dessous).
+        </li>
+        <br />
+        Si votre question concerne un autre domaine, vous pouvez utiliser la
+        recherche par mot-clés dans la section suivante.
+      </Label>
+      <Accordion items={articlesByTheme} />
+    </React.Fragment>
   );
 }
 
 export { Articles };
 
 const { spacings } = theme;
+
+const AccordionHeader = styled.strong`
+  margin: ${spacings.base} 0;
+`;
 
 const Label = styled.label`
   display: inline-block;
