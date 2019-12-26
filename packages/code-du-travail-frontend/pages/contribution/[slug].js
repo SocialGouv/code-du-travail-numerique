@@ -4,6 +4,7 @@ import fetch from "isomorphic-unfetch";
 
 import Answer from "../../src/common/Answer";
 import Contribution from "../../src/contributions/Contribution";
+import extractMdxContentUrl from "../../src/contributions/extractMdxContentUrl";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
@@ -23,23 +24,17 @@ class PageContribution extends React.Component {
     const data = await response.json();
 
     // Check Content tag exist on markdown
-    const contentRegExp = new RegExp("<s*Content[^](.*?)s*/>", "g");
     const markdown =
       ((((data || {})._source || {}).answers || {}).generic || {}).markdown ||
       "";
 
-    const contentTag = markdown.match(contentRegExp);
-
-    if (contentTag && contentTag.length > 0) {
-      // Extract URL from Content tag, only one for now
-      const contentUrl = contentTag[0].match(
-        /\bhttps?:\/\/(www\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)/gi
-      )[0];
-
+    const contentUrl = extractMdxContentUrl(markdown);
+    if (contentUrl) {
       const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
       const content = await fetchContent.json();
       return { data, content };
     }
+
     return { data };
   }
 
