@@ -79,7 +79,7 @@ ingress:
   tls:
     - hosts:
         - ${API_HOST}
-      secretName: wildcard-crt
+      secretName: api-crt
 
 autoscaling:
   enabled: true
