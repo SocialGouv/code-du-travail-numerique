@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-beta.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.10.0...v4.0.0-beta.0) (2019-12-27)
+
+
+### Bug Fixes
+
+* **cc:** some CC cosmetics for [#2035](https://github.com/SocialGouv/code-du-travail-numerique/issues/2035) ([#2073](https://github.com/SocialGouv/code-du-travail-numerique/issues/2073)) ([26ae21e](https://github.com/SocialGouv/code-du-travail-numerique/commit/26ae21e808c2704b8cc3fd3eed619e7822df9149))
+* **deps:** update socialgouv ([#2030](https://github.com/SocialGouv/code-du-travail-numerique/issues/2030)) ([dade95c](https://github.com/SocialGouv/code-du-travail-numerique/commit/dade95c85b5ebdd6ef2c24276d2daebfd422bd06))
+
+
+### Features
+
+* **frontend:** add icons to theme ([#2043](https://github.com/SocialGouv/code-du-travail-numerique/issues/2043)) ([284d33d](https://github.com/SocialGouv/code-du-travail-numerique/commit/284d33d5082f2c8cda6eaa924311109ea102ad96))
+* use ccn shortitle as slug  ([#2038](https://github.com/SocialGouv/code-du-travail-numerique/issues/2038)) ([714709f](https://github.com/SocialGouv/code-du-travail-numerique/commit/714709fc11a5204fce5fba3e030f9719b77db451)), closes [#1830](https://github.com/SocialGouv/code-du-travail-numerique/issues/1830)
+
+
+
+
+
 # [3.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.9.0...v3.10.0) (2019-12-20)
 
 **Note:** Version bump only for package @cdt/data...datafiller
