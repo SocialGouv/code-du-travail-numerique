@@ -15,7 +15,7 @@ const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/ccns/records?_sort=title`;
-
+const createSorter = prop => ({ [prop]: a }, { [prop]: b }) => a - b;
 async function fetchAgreements() {
   const ccnBlockRecords = await fetch(RECORDS_URL, { params: { _limit: 1000 } })
     .then(res => res.json())
@@ -87,7 +87,7 @@ function getNbText(agreementTree) {
  */
 function getContributionAnswers(agreementNum) {
   return contributions
-    .map(({ value, answers }) => {
+    .map(({ value, index, answers }) => {
       const [answer] = answers.conventions.filter(
         ({ idcc }) => parseInt(idcc) === parseInt(agreementNum)
       );
@@ -98,7 +98,8 @@ function getContributionAnswers(agreementNum) {
         const themeFinder = ({ url }) => slugMatcher.test(url);
         const theme = themes.find(theme => theme.refs.some(themeFinder));
         return {
-          question: value,
+          index,
+          question: value.trim(),
           answer: compiler.processSync(answer.markdown).contents,
           theme: theme.breadcrumbs ? theme.breadcrumbs[0].title : theme.title,
           references: answer.references.map(
@@ -116,6 +117,7 @@ function getContributionAnswers(agreementNum) {
         };
       }
     })
+    .sort(createSorter("index"))
     .filter(Boolean);
 }
 /**
@@ -124,9 +126,9 @@ function getContributionAnswers(agreementNum) {
  */
 function getArticleByBlock(groups, agreementTree) {
   const treeWithParents = parents(agreementTree);
-
   return groups
     .filter(({ selection }) => selection.length > 0)
+    .sort(createSorter("id"))
     .map(({ id, selection }) => ({
       bloc: id,
       articles: selection.map(articleId => {
