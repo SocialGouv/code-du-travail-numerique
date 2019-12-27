@@ -7,7 +7,7 @@ import { formatIdcc } from "@cdt/data/lib";
 
 const Detail = ({ label, children }) => (
   <StyledDetail>
-    <DetailLabel>{label}</DetailLabel>
+    <DetailLabel>{label} :</DetailLabel>
     {children}
   </StyledDetail>
 );

@@ -64,9 +64,6 @@ function Articles({ blocs, containerId }) {
           sauf si l&apos;accord d&apos;entreprise a des garanties au moins
           équivalentes (représentées avec une * ci-dessous).
         </li>
-        <br />
-        Si votre question concerne un autre domaine, vous pouvez utiliser la
-        recherche par mot-clés dans la section suivante.
       </Label>
       <Accordion items={articlesByTheme} />
     </React.Fragment>

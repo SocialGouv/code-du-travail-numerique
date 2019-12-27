@@ -25,6 +25,10 @@ const Convention = ({ convention }) => {
           containerId={convention.id}
         />
       )}
+      <p>
+        Si votre question concerne un autre domaine, vous pouvez utiliser la
+        recherche par mot-clés dans la section suivante.
+      </p>
       <TextSearch containerId={convention.id} />
     </React.Fragment>
   );
