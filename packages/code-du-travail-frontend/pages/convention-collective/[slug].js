@@ -2,7 +2,6 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { format, parseISO } from "date-fns";
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Convention from "../../src/conventions/Convention";
@@ -29,7 +28,7 @@ class ConventionCollective extends React.Component {
       );
     }
     const { pageUrl, ogImage, convention } = this.props;
-    const { url, shortTitle, title, date_publi } = convention;
+    const { shortTitle, title } = convention;
     return (
       <Layout>
         <Metas
@@ -41,8 +40,6 @@ class ConventionCollective extends React.Component {
         <Answer
           title={shortTitle}
           emptyMessage="Cette convention collective n'a pas été trouvée"
-          date={format(parseISO(date_publi), "dd/MM/yyyy")}
-          source={{ name: "Légifrance", url }}
           wide
         >
           <Convention convention={convention} />

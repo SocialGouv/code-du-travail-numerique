@@ -7,7 +7,6 @@ import {
   theme
 } from "@socialgouv/react-ui";
 
-import { Explainer } from "./Explainer";
 import { Info } from "./Info";
 import { Articles } from "./Articles";
 import { TextSearch } from "./TextSearch";
@@ -15,20 +14,23 @@ import { Contributions } from "./Contributions";
 
 const Convention = ({ convention }) => {
   return (
-    <>
-      <Explainer />
+    <React.Fragment>
       <Info convention={convention} />
+      {convention.answers.length > 0 && (
+        <Contributions contributions={convention.answers} />
+      )}
       {convention.articlesByTheme.length > 0 && (
         <Articles
           blocs={convention.articlesByTheme}
           containerId={convention.id}
         />
       )}
+      <p>
+        Si votre question concerne un autre domaine, vous pouvez utiliser la
+        recherche par mot-clés dans la section suivante.
+      </p>
       <TextSearch containerId={convention.id} />
-      {convention.answers.length > 0 && (
-        <Contributions contributions={convention.answers} />
-      )}
-    </>
+    </React.Fragment>
   );
 };
 const { spacings } = theme;

@@ -1,18 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { Accordion, Button, theme } from "@socialgouv/react-ui";
+import { Accordion, theme, Alert } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import { slugify } from "@cdt/data/slugify";
 
-import { Title, Heading } from "./index";
+import { Title } from "./index";
 import Html from "../../common/Html";
 import { jsxJoin } from "../../lib/jsxJoin";
 
 function getContributionUrl({ slug }) {
   return `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`;
 }
+
 function Contributions({ contributions }) {
+  // group questions by theme
   const contributionsByTheme = contributions.reduce((state, answer) => {
     if (!state[answer.theme]) {
       state[answer.theme] = [answer];
@@ -22,16 +24,18 @@ function Contributions({ contributions }) {
     return state;
   }, {});
 
+  // show themes contents in Accordions
+  const themes = Object.keys(contributionsByTheme).map(theme => ({
+    id: theme,
+    title: <AccordionHeader>{theme}</AccordionHeader>,
+    body: <Accordion items={accordionize(contributionsByTheme[theme])} />
+  }));
+
   return (
-    <>
+    <React.Fragment>
       <Title>Questions fréquentes sur cette convention collective</Title>
-      {Object.entries(contributionsByTheme).map(([theme, items]) => (
-        <div key={theme}>
-          <Heading>{theme}</Heading>
-          <Accordion items={accordionize(items)} />
-        </div>
-      ))}
-    </>
+      <Accordion items={themes} />
+    </React.Fragment>
   );
 }
 
@@ -45,15 +49,17 @@ function accordionize(items) {
 
 function AccordionContent({ answer, slug, references }) {
   return (
-    <>
+    <React.Fragment>
+      <Alert>
+        Pour savoir si la mesure prévue par la convention collective
+        s&apos;applique à votre situation, reportez-vous{" "}
+        <Link href={getContributionUrl(slug)} passHref>
+          <a>à la réponse complète à cette question</a>
+        </Link>
+      </Alert>
       <Html>{answer}</Html>
       {references && <AnswerReferences articles={references} />}
-      <Link href={getContributionUrl({ slug })} passHref>
-        <Button varaint="secondary" as="a">
-          Voir la fiche complète
-        </Button>
-      </Link>
-    </>
+    </React.Fragment>
   );
 }
 

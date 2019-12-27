@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from "react";
 import styled from "styled-components";
-import { Button, icons, theme } from "@socialgouv/react-ui";
+import { Alert, Button, icons, theme } from "@socialgouv/react-ui";
 
 import { Title } from "./index";
 
@@ -36,13 +36,19 @@ export function TextSearch({ containerId }) {
       target="_blank"
       action="https://beta.legifrance.gouv.fr/search/kali#kali"
     >
-      <Title>Recherche</Title>
+      <Title>Recherche par mots-clés</Title>
       <p>
         <label htmlFor="search-agreement">
           Effectuez une recherche dans le texte de la convention collective sur
-          legifrance&nbsp;:
+          Légifrance&nbsp;:
         </label>
       </p>
+      <Alert>
+        Pour savoir si ce qui est prévu par la convention collective de branche
+        est bien applicable à votre situation particulière vous devez vous
+        reporter à la fiche traitant du même sujet et pour lequel l&apos;accord
+        d&apos;entreprise peut comporter d&apos;autres règles.
+      </Alert>
       <Box>
         <Input
           onChange={formatQuery}
