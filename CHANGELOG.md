@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.10.0...v4.0.0-alpha.0) (2019-12-27)
+
+
+### Bug Fixes
+
+* fix CPF action  ([#2071](https://github.com/SocialGouv/code-du-travail-numerique/issues/2071)) ([eec192b](https://github.com/SocialGouv/code-du-travail-numerique/commit/eec192b1533cfd80dbc396db2bada5ede3e07e86))
+* update contributions data ([#2068](https://github.com/SocialGouv/code-du-travail-numerique/issues/2068)) ([d29d4ab](https://github.com/SocialGouv/code-du-travail-numerique/commit/d29d4abe339d7ecc9a086b3e48f8727b717ae161))
+* **CookieConsent:** fix mentions legales link ([#2060](https://github.com/SocialGouv/code-du-travail-numerique/issues/2060)) ([813cb64](https://github.com/SocialGouv/code-du-travail-numerique/commit/813cb643943fdd38a90d9df99ab48675025c93d5))
+* **deps:** update socialgouv ([#2030](https://github.com/SocialGouv/code-du-travail-numerique/issues/2030)) ([dade95c](https://github.com/SocialGouv/code-du-travail-numerique/commit/dade95c85b5ebdd6ef2c24276d2daebfd422bd06))
+* **idcc:** support new kali-data  number format for idcc ([#2049](https://github.com/SocialGouv/code-du-travail-numerique/issues/2049)) ([12a8c2b](https://github.com/SocialGouv/code-du-travail-numerique/commit/12a8c2b61f8816354f8f53e26e099508459a0897)), closes [#2041](https://github.com/SocialGouv/code-du-travail-numerique/issues/2041)
+
+
+### Code Refactoring
+
+* use elastic cloud ([#1753](https://github.com/SocialGouv/code-du-travail-numerique/issues/1753)) ([3291662](https://github.com/SocialGouv/code-du-travail-numerique/commit/32916621914475874ffc538691c17188fcd83001)), closes [#1741](https://github.com/SocialGouv/code-du-travail-numerique/issues/1741) [#1987](https://github.com/SocialGouv/code-du-travail-numerique/issues/1987)
+
+
+### Features
+
+* MAJ modèles de docs ([#2020](https://github.com/SocialGouv/code-du-travail-numerique/issues/2020)) ([cea11c1](https://github.com/SocialGouv/code-du-travail-numerique/commit/cea11c17bd60d159b58519ffd6be3ed0870313ed)), closes [#2014](https://github.com/SocialGouv/code-du-travail-numerique/issues/2014) [#2019](https://github.com/SocialGouv/code-du-travail-numerique/issues/2019) [#1837](https://github.com/SocialGouv/code-du-travail-numerique/issues/1837) [#2014](https://github.com/SocialGouv/code-du-travail-numerique/issues/2014)
+* **frontend:** add icons to theme ([#2043](https://github.com/SocialGouv/code-du-travail-numerique/issues/2043)) ([284d33d](https://github.com/SocialGouv/code-du-travail-numerique/commit/284d33d5082f2c8cda6eaa924311109ea102ad96))
+* **frontend:** improve ui ([#2031](https://github.com/SocialGouv/code-du-travail-numerique/issues/2031)) ([687e9dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/687e9ddc83ba965a207dd9d35eb47f015f233fdc))
+* **frontend:** remove externals tools ([#2039](https://github.com/SocialGouv/code-du-travail-numerique/issues/2039)) ([a9dca3e](https://github.com/SocialGouv/code-du-travail-numerique/commit/a9dca3e310cadba4133b9f0b37a975272913fbc0)), closes [#2034](https://github.com/SocialGouv/code-du-travail-numerique/issues/2034)
+* **home:** change selectedTools ([#2040](https://github.com/SocialGouv/code-du-travail-numerique/issues/2040)) ([829e7fa](https://github.com/SocialGouv/code-du-travail-numerique/commit/829e7faea1f551909fb3c347e2eb9919900403c0))
+* use ccn shortitle as slug  ([#2038](https://github.com/SocialGouv/code-du-travail-numerique/issues/2038)) ([714709f](https://github.com/SocialGouv/code-du-travail-numerique/commit/714709fc11a5204fce5fba3e030f9719b77db451)), closes [#1830](https://github.com/SocialGouv/code-du-travail-numerique/issues/1830)
+
+
+### BREAKING CHANGES
+
+* refactor: use elastic cloud
+    - We are now using an external elastic cloud service
+    - We are deploying to azure to `master-code-travail.dev.fabrique.social.gouv.fr`
+    - We are using shared https://github.com/SocialGouv/gitlab-ci-yml
+
+
+
+
+
 # [3.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.9.0...v3.10.0) (2019-12-20)
 
 
