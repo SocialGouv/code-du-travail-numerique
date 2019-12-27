@@ -3386,279 +3386,6 @@ exports[`<Convention /> renders 1`] = `
         role="heading"
       >
         <div
-          aria-controls="accordion__panel-bloc-2"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c8"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-bloc-2"
-          role="button"
-          tabindex="0"
-        >
-          <svg
-            class="c9"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <strong
-            class="c14"
-          >
-            Classifications
-          </strong>
-        </div>
-      </div>
-      <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-bloc-2"
-        class="c11"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-bloc-2"
-      >
-        <header
-          class="c15"
-        >
-          <h2
-            class="c16"
-          >
-            <div
-              class="c17"
-            />
-            
-          </h2>
-          
-        </header>
-        <ul
-          class="c18"
-        >
-          <li
-            class="c19"
-          >
-            <a
-              class="c20"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <span
-                    class="c23"
-                  >
-                    Préambule
-                  </span>
-                  <h3
-                    class="c24"
-                  >
-                    Article 12-1
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c19"
-          >
-            <a
-              class="c20"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <span
-                    class="c23"
-                  >
-                    Définitions générales des critères et des niveaux
-                  </span>
-                  <h3
-                    class="c24"
-                  >
-                    Article 12-2
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c19"
-          >
-            <a
-              class="c20"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <span
-                    class="c23"
-                  >
-                    Coefficients hiérarchiques
-                  </span>
-                  <h3
-                    class="c24"
-                  >
-                    Article 12-3
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c19"
-          >
-            <a
-              class="c20"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <span
-                    class="c23"
-                  >
-                    Prise en compte des diplômes professionnels bâtiment
-                  </span>
-                  <h3
-                    class="c24"
-                  >
-                    Article 12-4
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c19"
-          >
-            <a
-              class="c20"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <span
-                    class="c23"
-                  >
-                    Polyvalence
-                  </span>
-                  <h3
-                    class="c24"
-                  >
-                    Article 12-5
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c19"
-          >
-            <a
-              class="c20"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <span
-                    class="c23"
-                  >
-                    Evolution de carrière
-                  </span>
-                  <h3
-                    class="c24"
-                  >
-                    Article 12-6
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c19"
-          >
-            <a
-              class="c20"
-              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
-              rel="nofollow noopener"
-              target="_blank"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <span
-                    class="c23"
-                  >
-                    Suivi de l'application dans l'entreprise
-                  </span>
-                  <h3
-                    class="c24"
-                  >
-                    Article 12-7
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div
-      class="c6 c7"
-      data-accordion-component="AccordionItem"
-    >
-      <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
-      >
-        <div
           aria-controls="accordion__panel-bloc-6"
           aria-disabled="false"
           aria-expanded="false"
@@ -4058,6 +3785,279 @@ exports[`<Convention /> renders 1`] = `
                     class="c24"
                   >
                     Article 3-29
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c6 c7"
+      data-accordion-component="AccordionItem"
+    >
+      <div
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
+      >
+        <div
+          aria-controls="accordion__panel-bloc-2"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c8"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-bloc-2"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            class="c9"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <strong
+            class="c14"
+          >
+            Classifications
+          </strong>
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__heading-bloc-2"
+        class="c11"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-bloc-2"
+      >
+        <header
+          class="c15"
+        >
+          <h2
+            class="c16"
+          >
+            <div
+              class="c17"
+            />
+            
+          </h2>
+          
+        </header>
+        <ul
+          class="c18"
+        >
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Préambule
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-1
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Définitions générales des critères et des niveaux
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-2
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Coefficients hiérarchiques
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-3
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Prise en compte des diplômes professionnels bâtiment
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-4
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Polyvalence
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-5
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Evolution de carrière
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-6
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c19"
+          >
+            <a
+              class="c20"
+              href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
+              rel="nofollow noopener"
+              target="_blank"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c22"
+                >
+                  <span
+                    class="c23"
+                  >
+                    Suivi de l'application dans l'entreprise
+                  </span>
+                  <h3
+                    class="c24"
+                  >
+                    Article 12-7
                   </h3>
                 </div>
               </div>
