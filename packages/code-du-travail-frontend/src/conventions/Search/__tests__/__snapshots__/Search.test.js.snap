@@ -692,7 +692,7 @@ exports[`<Search /> should show no results when no result 1`] = `
       class="c4"
     >
       <div>
-        Aucun résultat pour votre recherche.
+        La convention collective n'a pas été trouvée.
       </div>
     </div>
   </div>
