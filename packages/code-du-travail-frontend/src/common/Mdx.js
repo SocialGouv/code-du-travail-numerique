@@ -6,6 +6,11 @@ import rehype2react from "rehype-react";
 import raw from "rehype-raw";
 
 const Mdx = ({ markdown, components = {} }) => {
+  // @lionelb: we wrapped the <Content /> tag with a div to avoid have it wrapped with a paragraph
+  const wrappedMarkdown = markdown.replace(
+    /(<Content [^>]+><\/Content>)/,
+    "<div>$1</div>"
+  );
   return unified()
     .use(markdownParser)
     .use(remark2rehype, { allowDangerousHTML: true })
@@ -14,7 +19,7 @@ const Mdx = ({ markdown, components = {} }) => {
       createElement,
       components
     })
-    .processSync(markdown).contents;
+    .processSync(wrappedMarkdown).contents;
 };
 
 export default Mdx;
