@@ -65,12 +65,12 @@ class Modeles extends React.Component {
 }
 
 const ModeleCourrier = ({ modele, ...props }) => {
-  const { filename, title, editor } = modele;
+  const { filename, title, author } = modele;
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   return (
     <Tile wide {...props} title={title}>
-      <Label>Source</Label>: <Label>{editor}</Label>
-      {extension && editor ? " - " : null}
+      <Label>Source</Label>: <Label>{author}</Label>
+      {extension && author ? " - " : null}
       <Value>{extension}</Value>
     </Tile>
   );
