@@ -28,7 +28,7 @@ class ConventionCollective extends React.Component {
       );
     }
     const { pageUrl, ogImage, convention } = this.props;
-    const { url, shortTitle, title, date_publi } = convention;
+    const { shortTitle, title } = convention;
     return (
       <Layout>
         <Metas
