@@ -461,6 +461,7 @@ exports[`<Convention /> renders 1`] = `
       class="c1"
     >
       Nom complet
+       :
     </div>
     Nouvelle convention collective nationale des ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 (c'est-à-dire occupant jusqu'à 10 salariés) du 7 mars 2018 (Avenant du 7 mars 2018) 
   </div>
@@ -471,6 +472,7 @@ exports[`<Convention /> renders 1`] = `
       class="c1"
     >
       IDCC
+       :
     </div>
     1596
   </div>
@@ -481,6 +483,7 @@ exports[`<Convention /> renders 1`] = `
       class="c1"
     >
       Date d’entrée en vigueur
+       :
     </div>
     01/07/2018
   </div>
@@ -3181,8 +3184,6 @@ exports[`<Convention /> renders 1`] = `
     <li>
       les 4 domaines où la branche elle-même peut reconnaitre sa primauté, sauf si l'accord d'entreprise a des garanties au moins équivalentes (représentées avec une * ci-dessous).
     </li>
-    <br />
-    Si votre question concerne un autre domaine, vous pouvez utiliser la recherche par mot-clés dans la section suivante.
   </label>
   <div
     class="accordion"
@@ -4066,6 +4067,9 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
   </div>
+  <p>
+    Si votre question concerne un autre domaine, vous pouvez utiliser la recherche par mot-clés dans la section suivante.
+  </p>
   <form
     action="https://beta.legifrance.gouv.fr/search/kali#kali"
     target="_blank"
