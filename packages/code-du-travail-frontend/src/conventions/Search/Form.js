@@ -130,7 +130,7 @@ const Search = ({
                   </div>
                 )}
                 {status === "error" && (
-                  <div>La convention collective n&apos;a pas été trouvée.</div>
+                  <div>La convention collective n‘a pas été trouvée.</div>
                 )}
                 {status === "success" && results && results.length !== 0 && (
                   <FixedTable>
