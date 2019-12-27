@@ -9,6 +9,11 @@ Release:
   when: manual
   variables:
     LERNA_ARGS: --force-publish --yes --conventional-prerelease
+  except:
+    refs:
+      - tags
+    variables:
+      - $PRODUCTION
   before_script:
     - apk add --no-cache git=~2
     - git checkout ${CI_COMMIT_REF_NAME}
