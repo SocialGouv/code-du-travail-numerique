@@ -7,6 +7,13 @@ Release:
   image: node:12.14-alpine3.10
   dependencies: []
   when: manual
+  variables:
+    LERNA_ARGS: --force-publish --yes --conventional-prerelease
+  except:
+    refs:
+      - tags
+    variables:
+      - $PRODUCTION
   before_script:
     - apk add --no-cache git=~2
     - git checkout ${CI_COMMIT_REF_NAME}
@@ -32,6 +39,9 @@ Production:
   except:
     variables:
       - $PRODUCTION
+      # Don't register a base image for release commit
+      # that only bump version / udpate changelog
+      - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
   script:
     - curl --request POST
       --form ref="${CI_COMMIT_REF_NAME}"
