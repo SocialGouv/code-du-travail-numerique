@@ -14,14 +14,18 @@ const SearchCC = ({ query, render }) => {
       if (query) {
         setStatus("loading");
         setResults([]);
-        const results = await loadResults(query);
-        if (shouldUpdate) {
-          setResults(results);
-          if (results && results.length) {
-            setStatus("success");
-          } else {
-            setStatus("error");
+        try {
+          const results = await loadResults(query);
+          if (shouldUpdate) {
+            setResults(results);
+            if (results && results.length) {
+              setStatus("success");
+            } else {
+              setStatus("error");
+            }
           }
+        } catch (e) {
+          setStatus("error");
         }
       } else {
         setResults([]);
