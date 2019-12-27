@@ -2203,7 +2203,7 @@ exports[`<Outils /> should render 1`] = `
               <div
                 class="c26"
               />
-              Besoin de plus d’information ?
+              Besoin de plus d’informations ?
             </h3>
           </header>
           <div

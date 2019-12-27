@@ -37,7 +37,7 @@ class ServiceRenseignement extends React.Component {
 
     return (
       <>
-        <Heading as="h4">Contact téléphonique</Heading>
+        <Heading as="h4">Contact téléphonique&nbsp;:</Heading>
         <NumberInsert href="tel:+0033806000126">
           <Number>0 806 000 126</Number>
           <Pricing>
@@ -45,7 +45,9 @@ class ServiceRenseignement extends React.Component {
           </Pricing>
         </NumberInsert>
 
-        <Heading as="h4">Coordonnées du service de votre département</Heading>
+        <Heading as="h4">
+          Coordonnées du service de votre département&nbsp;:
+        </Heading>
         <p>
           <UID name={id => `id_${id}`}>
             {id => (
