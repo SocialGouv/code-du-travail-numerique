@@ -156,7 +156,7 @@ async function parseFiche(url) {
 
 async function parseFiches(urls) {
   const inputs = urls.map(url => limit(() => parseFiche(url)));
-  const results = await Promise.all(inputs);
+  const results = (await Promise.all(inputs)).filter(fiche => !!fiche.sections);
   fs.writeFileSync(
     "./fiches-mt.json",
     JSON.stringify(
