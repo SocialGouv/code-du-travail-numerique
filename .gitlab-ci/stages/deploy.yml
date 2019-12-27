@@ -47,8 +47,6 @@ Create namespace:
   environment:
     name: prod
   only:
-    refs:
-      - triggers
     variables:
       - $PRODUCTION
 
@@ -60,7 +58,9 @@ Create namespace:
   except:
     variables:
       - $PRODUCTION
-
+      # Don't register a base image for release commit
+      # that only bump version / udpate changelog
+      - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
 #
 #
 #

@@ -8,7 +8,7 @@
       - $PRODUCTION
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
-      - $CI_COMMIT_MESSAGE =~ /chore(release):/
+      - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
 
 #
 
