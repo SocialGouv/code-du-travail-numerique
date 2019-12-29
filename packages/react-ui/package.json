@@ -44,7 +44,7 @@
     "@storybook/addon-viewport": "^5.2.8",
     "@storybook/components": "^5.2.8",
     "@storybook/react": "^5.2.8",
-    "@svgr/cli": "^4.3.3",
+    "@svgr/cli": "^5.0.1",
     "@svgr/core": "^4.3.3",
     "@testing-library/react": "^9.4.0",
     "babel-jest": "^24.9.0",
