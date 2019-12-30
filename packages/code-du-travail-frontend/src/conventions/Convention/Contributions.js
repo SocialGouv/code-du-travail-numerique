@@ -50,6 +50,8 @@ function accordionize(items) {
 function AccordionContent({ answer, slug, references }) {
   return (
     <React.Fragment>
+      <Html>{answer}</Html>
+      {references && <AnswerReferences articles={references} />}
       <Alert>
         Pour savoir si la mesure prévue par la convention collective
         s&apos;applique à votre situation, reportez-vous{" "}
@@ -57,8 +59,6 @@ function AccordionContent({ answer, slug, references }) {
           <a>à la réponse complète à cette question</a>
         </Link>
       </Alert>
-      <Html>{answer}</Html>
-      {references && <AnswerReferences articles={references} />}
     </React.Fragment>
   );
 }
