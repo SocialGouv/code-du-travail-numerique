@@ -12,8 +12,7 @@
     "dev": "nodemon ./src/server/index.js",
     "update-mock-data": "ES_INDEX_PREFIX=cdtn node -r esm tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test node -r esm tests/create_indexes.js",
-    "test": "ES_INDEX_PREFIX=cdtn_test jest",
-    "elastic": "node scripts/elastic.js"
+    "test": "ES_INDEX_PREFIX=cdtn_test jest"
   },
   "repository": {
     "type": "git",
