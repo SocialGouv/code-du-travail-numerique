@@ -148,6 +148,55 @@ const Footer = () => (
           </Links>
         </nav>
       </NavSection>
+      <GovernmentSection>
+        <StyledGovLink
+          href={"https://travail-emploi.gouv.fr"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          travail-emploi.gouv.fr
+        </StyledGovLink>
+        <Separator>|</Separator>
+        <StyledGovLink
+          href={"https://www.service-public.fr"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          service-public.fr
+        </StyledGovLink>
+        <Separator>|</Separator>
+        <StyledGovLink
+          href={"https://www.legifrance.gouv.fr"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          legifrance.gouv.fr
+        </StyledGovLink>
+        <Separator>|</Separator>
+        <StyledGovLink
+          href={"https://www.data.gouv.fr"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          data.gouv.fr
+        </StyledGovLink>
+        <Separator>|</Separator>
+        <StyledGovLink
+          href={"https://www.gouvernement.fr"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          gouvernement.fr
+        </StyledGovLink>
+        <Separator>|</Separator>
+        <StyledGovLink
+          href={"https://www.cnil.fr/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          cnil.fr
+        </StyledGovLink>
+      </GovernmentSection>
     </StyledFooter>
   </OverflowWrapper>
 );
@@ -240,4 +289,23 @@ const StyledListItem = styled.li`
 const StyledLink = styled.a`
   font-weight: normal;
   text-decoration: none;
+`;
+
+const GovernmentSection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.bgTertiary};
+`;
+
+const StyledGovLink = styled(StyledLink)`
+  margin: 0 ${spacings.small} ${spacings.small} ${spacings.small};
+`;
+
+const Separator = styled.span`
+  margin-bottom: ${spacings.small};
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
 `;
