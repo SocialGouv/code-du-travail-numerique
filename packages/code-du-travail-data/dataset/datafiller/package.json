@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@cdt/sources": "^3.10.0",
-    "@socialgouv/kali-data": "^1.2.100",
+    "@socialgouv/kali-data": "^1.2.101",
     "debug": "^4.1.1",
     "node-fetch": "^2.6.0",
     "p-limit": "^2.2.1",

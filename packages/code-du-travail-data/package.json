@@ -28,8 +28,8 @@
   "dependencies": {
     "@cdt/sources": "^3.10.0",
     "@elastic/elasticsearch": "^7.5.0",
-    "@socialgouv/fiches-vdd": "^1.0.66",
-    "@socialgouv/kali-data": "^1.2.100",
+    "@socialgouv/fiches-vdd": "^1.0.72",
+    "@socialgouv/kali-data": "^1.2.101",
     "@socialgouv/legi-data": "^1.1.11",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
