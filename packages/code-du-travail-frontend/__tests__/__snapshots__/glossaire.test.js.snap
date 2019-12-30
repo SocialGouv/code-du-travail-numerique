@@ -2491,6 +2491,13 @@ exports[`<Glossaire /> should render 1`] = `
             >
               <li>
                 <a
+                  href="/glossaire/idcc"
+                >
+                  IDCC
+                </a>
+              </li>
+              <li>
+                <a
                   href="/glossaire/indemnites"
                 >
                   Indemnités
