@@ -53,7 +53,7 @@ function AccordionContent({ answer, slug, references }) {
       <Alert>
         Pour savoir si la mesure prévue par la convention collective
         s&apos;applique à votre situation, reportez-vous{" "}
-        <Link href={getContributionUrl(slug)} passHref>
+        <Link href={getContributionUrl({ slug })} passHref>
           <a>à la réponse complète à cette question</a>
         </Link>
       </Alert>
