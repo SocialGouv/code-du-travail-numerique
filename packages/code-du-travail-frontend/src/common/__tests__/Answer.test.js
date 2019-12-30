@@ -85,7 +85,9 @@ describe("<Answer />", () => {
           source: SOURCES.EXTERNALS,
           slug: `${SLUG_LINK_BASE}3`,
           url: "url.extrenal/tool",
-          title: "related external title 1"
+          title: "related external title 1",
+          action: "extern action",
+          icon: "Contract"
         },
         {
           source: SOURCES.SHEET_SP,
@@ -95,12 +97,16 @@ describe("<Answer />", () => {
         {
           source: SOURCES.TOOLS,
           slug: `${SLUG_TOOL_BASE}1`,
-          title: "related tool title 1"
+          title: "related tool title 1",
+          action: "tools action",
+          icon: "Depart"
         },
         {
           source: SOURCES.TOOLS,
           slug: `${SLUG_TOOL_BASE}2`,
-          title: "related tool title 2"
+          title: "related tool title 2",
+          action: "tools action 2",
+          icon: "Depart"
         },
         {
           source: SOURCES.LETTERS,

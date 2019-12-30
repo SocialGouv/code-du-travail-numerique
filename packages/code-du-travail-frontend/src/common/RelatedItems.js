@@ -10,10 +10,9 @@ export const RelatedItems = ({ items = [] }) => {
   const tool = items.find(({ source }) => source === SOURCES.TOOLS);
   const letter = items.find(({ source }) => source === SOURCES.LETTERS);
   const external = items.find(({ source }) => source === SOURCES.EXTERNALS);
-  const relatedItems = items.filter(item =>
-    [SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].some(
-      source => source !== item.source
-    )
+  const relatedItems = items.filter(
+    item =>
+      ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(item.source)
   );
 
   return (
