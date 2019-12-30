@@ -17,6 +17,7 @@ exports[`<FicheSP /> should render 1`] = `
 
 .c24 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -556,8 +557,6 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 .c34 {
-  padding: 2rem 0;
-  color: #3e486e;
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
@@ -586,8 +585,6 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 .c40 {
-  padding: 2rem 0;
-  color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
@@ -1176,7 +1173,7 @@ exports[`<FicheSP /> should render 1`] = `
       class="c33"
     >
       <div
-        class="c34"
+        class="c24 c34"
       >
         <div
           class="c25"
@@ -1216,7 +1213,7 @@ exports[`<FicheSP /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c40"
+        class="c24 c40"
       >
         <nav>
           <div

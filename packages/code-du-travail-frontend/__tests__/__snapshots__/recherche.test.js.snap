@@ -32,6 +32,7 @@ exports[`<Recherche /> should render 1`] = `
 
 .c23 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -479,8 +480,6 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 .c29 {
-  padding: 2rem 0;
-  color: #3e486e;
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
@@ -509,8 +508,6 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 .c34 {
-  padding: 2rem 0;
-  color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
@@ -1048,7 +1045,7 @@ exports[`<Recherche /> should render 1`] = `
       class="c28"
     >
       <div
-        class="c29"
+        class="c23 c29"
       >
         <div
           class="c24"
@@ -1088,7 +1085,7 @@ exports[`<Recherche /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c34"
+        class="c23 c34"
       >
         <nav>
           <div

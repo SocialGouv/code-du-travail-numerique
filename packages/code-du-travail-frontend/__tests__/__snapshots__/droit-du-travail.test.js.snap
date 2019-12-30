@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DroitDuTravail /> should render 1`] = `
-.c22 {
+.c23 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c22 > *:first-child {
+.c23 > *:first-child {
   margin-top: 0;
 }
 
-.c22 > *:last-child {
+.c23 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -30,26 +30,27 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c30 {
+.c21 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
-.c28 {
+.c29 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
 }
 
-.c28 > *:first-child {
+.c29 > *:first-child {
   margin-top: 0;
 }
 
-.c28 > *:last-child {
+.c29 > *:last-child {
   margin-bottom: 0;
 }
 
-.c25 {
+.c26 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -62,7 +63,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c24 {
+.c25 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -94,7 +95,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c23 {
+.c24 {
   margin: 0 auto 1rem;
   margin-bottom: 4rem;
   text-align: center;
@@ -679,8 +680,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c54 {
-  padding: 2rem 0;
-  color: #3e486e;
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
@@ -709,8 +708,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c58 {
-  padding: 2rem 0;
-  color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
@@ -898,13 +895,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 1rem 0;
 }
 
-.c21 {
-  padding: 2rem 0;
-  color: #3e486e;
+.c22 {
   padding: 4rem 0;
 }
 
-.c26 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -916,7 +911,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 3.2rem;
 }
 
-.c27 {
+.c28 {
   position: relative;
   left: 4%;
   -webkit-flex-basis: 80%;
@@ -927,7 +922,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c29 {
+.c30 {
   position: relative;
   right: 4%;
   bottom: 2rem;
@@ -942,7 +937,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media print {
-  .c22 {
+  .c23 {
     max-width: 100%;
     padding: 0;
   }
@@ -956,20 +951,20 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c29 {
     padding: 1.6rem 2rem;
   }
 }
 
 @media print {
-  .c28 {
+  .c29 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c25 {
     font-size: 2.8rem;
   }
 }
@@ -987,7 +982,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     margin-bottom: 2.4rem;
   }
 }
@@ -1245,7 +1240,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c26 {
+  .c27 {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1254,7 +1249,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c27 {
+  .c28 {
     left: 0;
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1265,7 +1260,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c29 {
+  .c30 {
     right: 0;
     bottom: 0;
     -webkit-flex-basis: 100%;
@@ -1481,31 +1476,31 @@ exports[`<DroitDuTravail /> should render 1`] = `
     id="main"
   >
     <div
-      class="c21"
+      class="c21 c22"
     >
       <div
-        class="c22"
+        class="c23"
       >
         <header
-          class="c23"
+          class="c24"
         >
           <h1
-            class="c24"
+            class="c25"
           >
             <div
-              class="c25"
+              class="c26"
             />
             Le droit du travail, c’est quoi ?
           </h1>
         </header>
         <div
-          class="c26"
+          class="c27"
         >
           <div
-            class="c27"
+            class="c28"
           >
             <div
-              class="c28"
+              class="c29"
             >
               <strong>
                 Le droit du travail est l’ensemble des règles juridiques applicables aux relations entre employeurs privés et salariés, à l’occasion du travail.
@@ -1519,10 +1514,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c29"
+            class="c30"
           >
             <div
-              class="c28"
+              class="c29"
             >
               <h2>
                 Ce n’est pas…
@@ -1536,10 +1531,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c30"
+      class="c21"
     >
       <div
-        class="c22"
+        class="c23"
       >
         <header
           class="c31"
@@ -1548,7 +1543,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             class="c32"
           >
             <div
-              class="c25"
+              class="c26"
             />
             Quels sont les textes à l’origine du droit du travail ?
           </h2>
@@ -2270,10 +2265,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c30"
+      class="c21"
     >
       <div
-        class="c22"
+        class="c23"
       >
         <header
           class="c31"
@@ -2282,7 +2277,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             class="c32"
           >
             <div
-              class="c25"
+              class="c26"
             />
             Existe-t-il une hiérarchie entre les textes ?
           </h2>
@@ -2298,7 +2293,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </p>
         </div>
         <div
-          class="c30"
+          class="c21"
         >
           <div
             class="c33"
@@ -3108,10 +3103,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
       class="c53"
     >
       <div
-        class="c54"
+        class="c21 c54"
       >
         <div
-          class="c22"
+          class="c23"
         >
           <header
             class="c31"
@@ -3120,7 +3115,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c32"
             >
               <div
-                class="c25"
+                class="c26"
               />
               Besoin de plus d’informations ?
             </h3>
@@ -3148,7 +3143,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c58"
+        class="c21 c58"
       >
         <nav>
           <div

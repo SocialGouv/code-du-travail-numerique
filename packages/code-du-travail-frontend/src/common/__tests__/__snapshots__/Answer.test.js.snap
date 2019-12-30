@@ -17,6 +17,7 @@ exports[`<Answer /> should renders 1`] = `
 
 .c10 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -454,6 +455,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c19 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -1123,6 +1125,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 .c10 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -1572,6 +1575,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c11 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -2692,6 +2696,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 .c11 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -3169,6 +3174,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 .c11 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -3632,6 +3638,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 
 .c11 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -4086,6 +4093,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 .c11 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 

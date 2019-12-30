@@ -34,6 +34,7 @@ exports[`<SearchResults/> should render results 1`] = `
 
 .c19 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 

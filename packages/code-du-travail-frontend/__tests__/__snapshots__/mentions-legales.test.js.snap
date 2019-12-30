@@ -32,6 +32,7 @@ exports[`<MentionLegales /> should render 1`] = `
 
 .c20 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -646,8 +647,6 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 .c41 {
-  padding: 2rem 0;
-  color: #3e486e;
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
@@ -676,8 +675,6 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 .c48 {
-  padding: 2rem 0;
-  color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
@@ -1610,7 +1607,7 @@ exports[`<MentionLegales /> should render 1`] = `
       class="c40"
     >
       <div
-        class="c41"
+        class="c20 c41"
       >
         <div
           class="c42"
@@ -1650,7 +1647,7 @@ exports[`<MentionLegales /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c48"
+        class="c20 c48"
       >
         <nav>
           <div
