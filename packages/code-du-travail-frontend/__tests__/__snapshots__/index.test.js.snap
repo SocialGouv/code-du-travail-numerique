@@ -1829,7 +1829,7 @@ exports[`<Home /> should render 1`] = `
               <div
                 class="c32"
               />
-              Besoin de plus d’information ?
+              Besoin de plus d’informations ?
             </h3>
           </header>
           <div

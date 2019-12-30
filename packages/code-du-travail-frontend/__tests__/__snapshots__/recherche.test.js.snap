@@ -1062,7 +1062,7 @@ exports[`<Recherche /> should render 1`] = `
               <div
                 class="c13"
               />
-              Besoin de plus d’information ?
+              Besoin de plus d’informations ?
             </h3>
           </header>
           <div

@@ -135,7 +135,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   <h4
     class="c0"
   >
-    Contact téléphonique
+    Contact téléphonique :
   </h4>
   <a
     class="c1"
@@ -158,7 +158,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   <h4
     class="c0"
   >
-    Coordonnées du service de votre département
+    Coordonnées du service de votre département :
   </h4>
   <p>
     <label
