@@ -32,6 +32,7 @@ exports[`<About /> should render 1`] = `
 
 .c20 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -557,8 +558,6 @@ exports[`<About /> should render 1`] = `
 }
 
 .c34 {
-  padding: 2rem 0;
-  color: #3e486e;
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
@@ -587,8 +586,6 @@ exports[`<About /> should render 1`] = `
 }
 
 .c41 {
-  padding: 2rem 0;
-  color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
@@ -1334,7 +1331,7 @@ exports[`<About /> should render 1`] = `
       class="c33"
     >
       <div
-        class="c34"
+        class="c20 c34"
       >
         <div
           class="c35"
@@ -1374,7 +1371,7 @@ exports[`<About /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c41"
+        class="c20 c41"
       >
         <nav>
           <div

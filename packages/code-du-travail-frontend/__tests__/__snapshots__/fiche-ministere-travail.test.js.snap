@@ -17,6 +17,7 @@ exports[`<FicheMT /> should render 1`] = `
 
 .c29 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -594,8 +595,6 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 .c38 {
-  padding: 2rem 0;
-  color: #3e486e;
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
@@ -624,8 +623,6 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 .c44 {
-  padding: 2rem 0;
-  color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
@@ -1266,7 +1263,7 @@ exports[`<FicheMT /> should render 1`] = `
       class="c37"
     >
       <div
-        class="c38"
+        class="c29 c38"
       >
         <div
           class="c22"
@@ -1306,7 +1303,7 @@ exports[`<FicheMT /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c44"
+        class="c29 c44"
       >
         <nav>
           <div

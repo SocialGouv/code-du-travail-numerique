@@ -17,6 +17,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c29 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -705,8 +706,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 .c46 {
-  padding: 2rem 0;
-  color: #3e486e;
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
@@ -735,8 +734,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 .c52 {
-  padding: 2rem 0;
-  color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
@@ -1448,7 +1445,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
       class="c45"
     >
       <div
-        class="c46"
+        class="c29 c46"
       >
         <div
           class="c22"
@@ -1488,7 +1485,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c52"
+        class="c29 c52"
       >
         <nav>
           <div

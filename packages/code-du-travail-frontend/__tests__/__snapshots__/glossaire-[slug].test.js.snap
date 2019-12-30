@@ -32,6 +32,7 @@ exports[`<Term /> should render 1`] = `
 
 .c20 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -581,8 +582,6 @@ exports[`<Term /> should render 1`] = `
 }
 
 .c31 {
-  padding: 2rem 0;
-  color: #3e486e;
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
@@ -611,8 +610,6 @@ exports[`<Term /> should render 1`] = `
 }
 
 .c38 {
-  padding: 2rem 0;
-  color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
@@ -1197,7 +1194,7 @@ exports[`<Term /> should render 1`] = `
       class="c30"
     >
       <div
-        class="c31"
+        class="c20 c31"
       >
         <div
           class="c32"
@@ -1237,7 +1234,7 @@ exports[`<Term /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c38"
+        class="c20 c38"
       >
         <nav>
           <div

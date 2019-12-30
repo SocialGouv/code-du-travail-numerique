@@ -17,6 +17,7 @@ exports[`<Theme /> should render 1`] = `
 
 .c20 {
   padding: 2rem 0;
+  background-color: transparent;
   color: #3e486e;
 }
 
@@ -466,8 +467,6 @@ exports[`<Theme /> should render 1`] = `
 }
 
 .c27 {
-  padding: 2rem 0;
-  color: #3e486e;
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
@@ -496,8 +495,6 @@ exports[`<Theme /> should render 1`] = `
 }
 
 .c33 {
-  padding: 2rem 0;
-  color: #3e486e;
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
@@ -1024,7 +1021,7 @@ exports[`<Theme /> should render 1`] = `
       class="c26"
     >
       <div
-        class="c27"
+        class="c20 c27"
       >
         <div
           class="c21"
@@ -1064,7 +1061,7 @@ exports[`<Theme /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c33"
+        class="c20 c33"
       >
         <nav>
           <div
