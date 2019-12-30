@@ -60,7 +60,7 @@ Tile.defaultProps = {
 const StyledTile = styled.a`
   position: relative;
   display: inline-flex;
-  flex: 1 1 auto;
+  flex: 1 1; /* adding auto here breaks IE11 on card list, beware */
   flex-direction: column;
   flex-wrap: wrap;
   ${({ wide }) => (wide ? "width: 100%" : "max-width: 100%")};

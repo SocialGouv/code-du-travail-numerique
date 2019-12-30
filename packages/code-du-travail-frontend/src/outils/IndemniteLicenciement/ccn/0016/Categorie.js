@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
+import { Select } from "@socialgouv/react-ui";
 
 import { required } from "../../../common/validators";
 import { Label, SectionTitle } from "../../../common/stepStyles";
@@ -24,14 +25,14 @@ function Categorie({ name }) {
         {({ input }) => (
           <>
             <Label htmlFor={`input-${name}`}>Sélectionnez une catégorie</Label>
-            <select {...input} id={`input-${name}`}>
+            <Select {...input} id={`input-${name}`}>
               <option disabled value="" />
               {Object.entries(Categories).map(([value, label]) => (
                 <option key={value} value={value}>
                   {label}
                 </option>
               ))}
-            </select>
+            </Select>
           </>
         )}
       </Field>
