@@ -9,8 +9,6 @@ from tensorflow_text import SentencepieceTokenizer
 
 stops_path = "../data/stops.txt"
 
-cache_path = "~/Downloads"
-
 logger = logging.getLogger("gunicorn.errror")
 
 

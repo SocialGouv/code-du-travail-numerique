@@ -12,10 +12,14 @@ include:
 Notify Starting Deployment:
   extends: .base_notify_pending_stage
   stage: Deploy
+  except:
+    - /^renovate/*
 
 Notify Fail:
   extends: .base_notify_fail_stage
   stage: Notify Finished Deployment
+  except:
+    - /^renovate/*
   dependencies:
     - Notify Starting Deployment
   before_script:
@@ -25,6 +29,8 @@ Notify Fail:
 Notify Success:
   extends: .base_notify_success_stage
   stage: Notify Finished Deployment
+  except:
+    - /^renovate/*
   dependencies:
     - Notify Starting Deployment
   before_script:

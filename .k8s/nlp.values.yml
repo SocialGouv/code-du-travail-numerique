@@ -22,8 +22,6 @@ deployment:
       value: "api"
     - name: NLP_PORT
       value: "${PORT}"
-    - name: SUGGEST_DATA_URL
-      value: "${SUGGEST_DATA_URL}"
     - name: PORT
       value: "${PORT}"
     - name: VERSION

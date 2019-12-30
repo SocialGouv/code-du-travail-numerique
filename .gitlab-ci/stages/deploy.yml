@@ -16,6 +16,8 @@ include:
 Create namespace:
   extends: .base_create_namespace_stage
   stage: "Post Registration"
+  except:
+    - /^renovate/*
   before_script:
     - source ./.gitlab-ci/env.sh
   after_script:
@@ -36,6 +38,8 @@ Create namespace:
 
 .deploy_stage: &deploy_stage
   stage: "Deploy"
+  except:
+    - /^renovate/*
   dependencies: []
   services:
     - docker:dind
@@ -43,7 +47,7 @@ Create namespace:
     IMAGE_TAG: ${CI_COMMIT_SHA}
     REGISTRY: ${CI_REGISTRY_IMAGE}
 
-.incubateur_stage: &incubateur_stage
+.prod_stage: &prod_stage
   environment:
     name: prod
   only:
@@ -83,9 +87,9 @@ Deploy @cdtn/api (dev):
   <<: *deploy_api_stage
   <<: *dev_stage
 
-Deploy @cdtn/api (incubateur):
+Deploy @cdtn/api (prod):
   <<: *deploy_api_stage
-  <<: *incubateur_stage
+  <<: *prod_stage
 
 #
 #
@@ -109,9 +113,9 @@ Deploy @cdtn/frontend (dev):
   <<: *deploy_frontend_stage
   <<: *dev_stage
 
-Deploy @cdtn/frontend (incubateur):
+Deploy @cdtn/frontend (prod):
   <<: *deploy_frontend_stage
-  <<: *incubateur_stage
+  <<: *prod_stage
 
 #
 #
@@ -138,9 +142,9 @@ Create Elasticsearch Index (dev):
   <<: *deploy_data
   <<: *dev_stage
 
-Create Elasticsearch Index (incubateur):
+Create Elasticsearch Index (prod):
   <<: *deploy_data
-  <<: *incubateur_stage
+  <<: *prod_stage
 
 #
 #
@@ -164,6 +168,6 @@ Deploy @cdtn/nlp (dev):
   <<: *deploy_nlp_stage
   <<: *dev_stage
 
-Deploy @cdtn/nlp (incubateur):
+Deploy @cdtn/nlp (prod):
   <<: *deploy_nlp_stage
-  <<: *incubateur_stage
+  <<: *prod_stage
