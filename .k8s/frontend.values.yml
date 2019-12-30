@@ -120,7 +120,7 @@ ingress:
   tls:
     - hosts:
         - "${FRONTEND_HOST}"
-      secretName: wildcard-crt
+      secretName: frontend-crt
 
 autoscaling:
   enabled: true
