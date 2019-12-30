@@ -223,7 +223,7 @@ exports[`<Footer /> should render 1`] = `
   text-decoration: none;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,14 +242,14 @@ exports[`<Footer /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c19 {
+.c20 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c20 {
+.c21 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -336,7 +336,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c20 {
+  .c21 {
     display: none;
   }
 }
@@ -548,10 +548,10 @@ exports[`<Footer /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c18"
+        class="c19"
       >
         <a
-          class="c19"
+          class="c20"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -560,12 +560,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c20"
+          class="c21"
         >
           |
         </span>
         <a
-          class="c19"
+          class="c20"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -574,12 +574,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c20"
+          class="c21"
         >
           |
         </span>
         <a
-          class="c19"
+          class="c20"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -588,12 +588,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c20"
+          class="c21"
         >
           |
         </span>
         <a
-          class="c19"
+          class="c20"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -602,12 +602,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c20"
+          class="c21"
         >
           |
         </span>
         <a
-          class="c19"
+          class="c20"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -616,12 +616,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c20"
+          class="c21"
         >
           |
         </span>
         <a
-          class="c19"
+          class="c20"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"
