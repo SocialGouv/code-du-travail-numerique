@@ -1,3 +1,5 @@
+fullnameOverride: ${NLP_HOST}
+
 image:
   repository: ${CI_REGISTRY_IMAGE}/nlp
 
