@@ -1,4 +1,5 @@
 const parseReference = require("./parseReference");
+
 const getChild = (element, name) =>
   element.children.find(el => el.name === name);
 
