@@ -1,13 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import * as Sentry from "@sentry/browser";
 import Link from "next/link";
 import {
+  Button,
   CardList,
   Container,
   icons,
   Section,
+  theme,
   Tile
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
@@ -53,7 +56,7 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
     />
     <SearchHero />
     <Section>
-      <Container>
+      <CenteredContainer>
         <CardList
           title="Boîte à outils"
           desc="Trouvez des réponses personnalisées selon votre situation"
@@ -79,11 +82,16 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
             }
           )}
         </CardList>
-      </Container>
+        <Link href="/outils" passHref>
+          <Button variant="primary" as="a">
+            Voir tous les outils <StyledArrowRight />
+          </Button>
+        </Link>
+      </CenteredContainer>
     </Section>
     {themes.length > 0 && (
-      <Section>
-        <Container>
+      <Section large decorated variant="light">
+        <CenteredContainer>
           <CardList
             title="Thèmes"
             desc="Retrouvez tous nos contenus organisés par thèmes"
@@ -100,7 +108,12 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
               </Link>
             ))}
           </CardList>
-        </Container>
+          <Link href="/themes" passHref>
+            <Button variant="primary" as="a">
+              Voir tous les thèmes <StyledArrowRight />
+            </Button>
+          </Link>
+        </CenteredContainer>
       </Section>
     )}
   </Layout>
@@ -121,3 +134,15 @@ Home.getInitialProps = async () => {
 };
 
 export default Home;
+
+const { spacings } = theme;
+
+const CenteredContainer = styled(Container)`
+  text-align: center;
+`;
+
+const StyledArrowRight = styled(icons.DirectionRight)`
+  width: 2.8rem;
+  height: 1.5rem;
+  margin-left: ${spacings.base};
+`;

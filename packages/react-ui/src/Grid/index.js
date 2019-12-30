@@ -1,9 +1,26 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { OverflowWrapper } from "../OverflowWrapper";
 import { breakpoints, spacings } from "../theme";
 
 const GridContext = React.createContext({ columns: 4 });
+
+export const Grid = ({ columns, ...props }) => {
+  return (
+    <OverflowWrapper mobileOnly>
+      <GridContext.Provider value={columns}>
+        <List {...props} />
+      </GridContext.Provider>
+    </OverflowWrapper>
+  );
+};
+Grid.propTypes = {
+  columns: PropTypes.number
+};
+Grid.defaultProps = {
+  columns: 4
+};
 
 export const List = styled.ul`
   display: flex; /* Flex layout so items have equal height. */
@@ -19,21 +36,12 @@ export const List = styled.ul`
   margin-left: calc(-1 * ${spacings.small});
   padding: 0;
   list-style-type: none;
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-wrap: nowrap;
+    margin-right: 0;
+    margin-left: 0;
+  }
 `;
-
-export const Grid = ({ columns, ...props }) => {
-  return (
-    <GridContext.Provider value={columns}>
-      <List {...props} />
-    </GridContext.Provider>
-  );
-};
-Grid.propTypes = {
-  columns: PropTypes.number
-};
-Grid.defaultProps = {
-  columns: 4
-};
 
 export const GridCell = props => {
   const columns = useContext(GridContext);
@@ -58,8 +66,17 @@ export const ListItem = styled.li`
     );
   }
   @media (max-width: ${breakpoints.mobile}) {
-    width: calc(
-      100% - ${props => Math.max(props.columns - 2, 0)} * ${spacings.small}
-    );
+    flex-shrink: 0;
+    width: ${({ columns }) => (Math.max(columns - 2, 0) < 2 ? "80%" : "60%")};
+    min-width: 23rem;
+    &:first-of-type {
+      margin-left: ${spacings.medium};
+    }
+    &:last-of-type:after {
+      width: ${spacings.medium};
+      height: 100%;
+      background-color: transparent;
+      content: "";
+    }
   }
 `;

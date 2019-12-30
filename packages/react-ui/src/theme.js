@@ -49,7 +49,7 @@ export const blackAndWhiteColors = Object.entries(colors).reduce(
     blackAndWhiteColors[colorName] = maximiseContrast(colorValue);
     return blackAndWhiteColors;
   },
-  {}
+  { noColors: true }
 );
 
 /* Rem with a 10px base */

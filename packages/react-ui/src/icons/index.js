@@ -16,6 +16,8 @@ export { default as Rules } from "./components/bicolor/Resignation";
 export { default as Salary } from "./components/bicolor/Salary";
 export { default as Termination } from "./components/bicolor/Termination";
 export { default as Time } from "./components/bicolor/Time";
+export { default as WorkersHero } from "./components/bicolor/WorkersHero";
+export { default as WorkersTheme } from "./components/bicolor/WorkersTheme";
 
 // Monochrome icons
 export { default as ArrowDown } from "./components/monochrome/ArrowDown";
@@ -34,3 +36,4 @@ export { default as Help } from "./components/monochrome/Help";
 export { default as Home } from "./components/monochrome/Home";
 export { default as More } from "./components/monochrome/More";
 export { default as Search } from "./components/monochrome/Search";
+export { default as Shade } from "./components/monochrome/Shade";

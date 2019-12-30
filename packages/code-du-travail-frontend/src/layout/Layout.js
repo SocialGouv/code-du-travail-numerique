@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { theme } from "@socialgouv/react-ui";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -20,13 +21,15 @@ const Layout = ({ children, currentPage }) => {
 
 export { Layout };
 
+const { breakpoints } = theme;
+
 const BackgroundLayer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   width: 100%;
-  height: ${({ currentPage }) => (currentPage === "home" ? "58rem" : "40rem")};
+  height: ${({ currentPage }) => (currentPage === "home" ? "62rem" : "40rem")};
   overflow: hidden;
   background: ${({ currentPage, theme }) =>
     currentPage === "home"
@@ -38,9 +41,27 @@ const BackgroundLayer = styled.div`
     left: -50%;
     z-index: -1;
     width: 200%;
-    height: 400px;
+    height: 40rem;
     background-color: ${({ theme }) => theme.white};
     border-radius: 100%;
     content: "";
+  }
+  @media (max-width: ${breakpoints.tablet}) {
+    ${({ currentPage }) => {
+      if (currentPage === "home") {
+        return css`
+          height: 104rem;
+        `;
+      }
+    }}
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    ${({ currentPage }) => {
+      if (currentPage === "home") {
+        return css`
+          height: 86rem;
+        `;
+      }
+    }}
   }
 `;

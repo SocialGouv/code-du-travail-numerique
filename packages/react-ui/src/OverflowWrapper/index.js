@@ -3,7 +3,14 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { transparentize } from "polished";
 
-export const OverflowWrapper = ({ children, shadowColor, ...props }) => {
+import { breakpoints } from "../theme";
+
+export const OverflowWrapper = ({
+  children,
+  mobileOnly = false,
+  shadowColor,
+  ...props
+}) => {
   const scrollableElement = useRef(null);
   const [isAtFarLeft, setIsAtFarLeft] = useState(true);
   const [isAtFarRight, setIsAtFarRight] = useState(true);
@@ -53,10 +60,11 @@ export const OverflowWrapper = ({ children, shadowColor, ...props }) => {
     <StyledDiv
       hasShadowLeft={!isAtFarLeft}
       hasShadowRight={!isAtFarRight}
+      mobileOnly={mobileOnly}
       shadowColor={shadowColor}
       {...props}
     >
-      <StyledOverflowWrapper ref={scrollableElement}>
+      <StyledOverflowWrapper mobileOnly={mobileOnly} ref={scrollableElement}>
         {children}
       </StyledOverflowWrapper>
     </StyledDiv>
@@ -64,20 +72,25 @@ export const OverflowWrapper = ({ children, shadowColor, ...props }) => {
 };
 
 OverflowWrapper.propTypes = {
-  shadowColor: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  mobileOnly: PropTypes.bool,
+  shadowColor: PropTypes.string
 };
 
 const StyledDiv = styled.div`
   position: relative;
-  overflow: hidden;
+  overflow: ${({ mobileOnly }) => (mobileOnly ? "visible" : "hidden")};
+  @media (max-width: ${breakpoints.mobile}) {
+    overflow-x: hidden;
+  }
 
   &:before,
   &:after {
     position: absolute;
     top: 0;
     bottom: 0;
-    display: block;
+    z-index: 1;
+    display: ${({ mobileOnly }) => (mobileOnly ? "none" : "block")};
     width: 4rem;
     opacity: 0;
     transition: opacity 0.3s linear;
@@ -90,6 +103,9 @@ const StyledDiv = styled.div`
         ${transparentize(1, shadowColor || theme.white)} 80%
       );
     `}
+    @media (max-width: ${breakpoints.mobile}) {
+      display: block;
+    }
   }
   &:before {
     left: -2rem;
@@ -110,5 +126,8 @@ const StyledDiv = styled.div`
 `;
 
 const StyledOverflowWrapper = styled.div`
-  overflow-x: auto;
+  overflow-x: ${({ mobileOnly }) => (mobileOnly ? "visible" : "auto")};
+  @media (max-width: ${breakpoints.mobile}) {
+    overflow-x: auto;
+  }
 `;
