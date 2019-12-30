@@ -126,17 +126,17 @@
     "filename": "tableau_recap_des_heures_supplementaires.docx"
   },
   {
-    "titre": "Rupture d’un commun accord d’un contrat d’apprentissage",
-    "description": "Le contrat d'apprentissage peut être rompu par l'apprenti ou par l'employeur jusqu'à la fin des 45 premiers jours de pratique en entreprise. Passé ce délai, la rupture du contrat n'est possible que dans certains cas ou certaines modalités. Toutefois, la rupture d'un commun accord entre le salarié et l'employeur est possible. Ce que prévoit le modèle ci-après.", 
-    "date_redaction": "20/12/2019",
-    "source": "Ministère du Travail",
+    "title": "Rupture d’un commun accord d’un contrat d’apprentissage",
+    "description": "Le contrat d'apprentissage peut être rompu par l'apprenti ou par l'employeur jusqu'à la fin des 45 premiers jours de pratique en entreprise. Passé ce délai, la rupture du contrat n'est possible que dans certains cas ou certaines modalités. Toutefois, la rupture d'un commun accord entre le salarié et l'employeur est possible. Ce que prévoit le modèle ci-après.",
+    "date": "20/12/2019",
+    "author": "Ministère du Travail",
     "filename": "rupture_amiable_du_contrat_d_apprentissage.docx"
   },
   {
-    "titre": "Rupture d’un commun accord d’un contrat de travail à durée déterminée",
+    "title": "Rupture d’un commun accord d’un contrat de travail à durée déterminée",
     "description": "La rupture anticipée du  du contrat de travail à durée déterminée par le salarié ou l'employeur, en dehors de la période d'essai est limitée à un certain nombre de cas (ex: embauche en CDI). Pour autant une rupture d'un commun accord entre les parties est possible. Le document suivant présente un tel modèle d'accord. ",
-     "date_redaction": "20/12/2019",
-    "source": "Ministère du Travail",
+    "date": "20/12/2019",
+    "author": "Ministère du Travail",
     "filename": "rupture_commun_accord_du_cdd.docx"
-  },
+  }
 ]
