@@ -16,6 +16,7 @@
     "start": "start-storybook",
     "svg": "svgo --config=src/icons/mono.config.yaml -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.yaml -f src/icons/src/bicolor && npx @svgr/cli --icon --no-dimensions -d src/icons/components src/icons/src",
     "build-storybook": "build-storybook -c .storybook -o .out",
+    "watch": "yarn build --watch",
     "test": "jest"
   },
   "peerDependencies": {
