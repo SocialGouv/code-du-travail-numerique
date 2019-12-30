@@ -13,6 +13,18 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
+// match basic article references
+const RE_ARTICLE_NUM = /<a[^>]+>(([LRD])[\s-.]*([\d-]+))\s*<\/a>/gim;
+
+// fix single articles reference
+const fixHtml = html =>
+  (html &&
+    html.replace(RE_ARTICLE_NUM, (all, text, prefix, num) => {
+      const slug = prefix.trim().toLowerCase() + num.trim().toLowerCase();
+      return `<a href="/code-du-travail/${slug}">${text}</a>`;
+    })) ||
+  "";
+
 const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`);
 
@@ -38,6 +50,7 @@ class Fiche extends React.Component {
       ogImage
     } = this.props;
 
+    const fixedHtml = fixHtml(html);
     return (
       <Layout>
         <Metas
@@ -56,7 +69,7 @@ class Fiche extends React.Component {
             })
           }
           emptyMessage="Article introuvable"
-          html={html}
+          html={fixedHtml}
           source={{ name: "Code du travail", url }}
         />
       </Layout>
