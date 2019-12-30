@@ -1280,12 +1280,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   transform: translateX(5px);
 }
 
-.c14:hover .c19 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
-}
-
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1674,7 +1668,7 @@ exports[`<Answer /> should renders related content 1`] = `
   text-align: left;
 }
 
-.c37 {
+.c36 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1687,14 +1681,14 @@ exports[`<Answer /> should renders related content 1`] = `
   text-decoration: none;
 }
 
-.c39 {
+.c38 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c38 {
+.c37 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -1708,7 +1702,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transition: transform 250ms linear;
 }
 
-.c36:hover .c38 {
+.c35:hover .c37 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -1863,20 +1857,6 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c15:hover .c34 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
-}
-
-.c35 {
-  width: 2.6rem;
-  height: 1.4rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c15:hover .c35 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -2479,6 +2459,33 @@ exports[`<Answer /> should renders related content 1`] = `
             class="c25"
           >
             <div
+              class="c26"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 52 52"
+              >
+                <path
+                  d="M43.566 34.192a.752.752 0 00-.47-.191.615.615 0 00-.454.173.592.592 0 00-.177.444v3.68H29v4.939h13.467v3.682c0 .163.067.32.185.436a.635.635 0 00.445.181.625.625 0 00.45-.183l6.277-6.143a.645.645 0 000-.885l-6.258-6.133z"
+                  fill="#FF7067"
+                />
+                <path
+                  d="M29.112 4c-.312-.015-.495.131-.698.361-.201.228-.215.563-.214.871L28.195 27 17.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.257 1.257 0 00-.157.62V27L4.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.258 1.258 0 00-.157.62l.151 30.652c0 .327.127.64.352.871.225.231.53.361.848.361h35.427c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872V46H39v2H5V20l11.157 9.602a1.177 1.177 0 001.204-.003c.183-.109.334-.266.439-.455a1.26 1.26 0 00.156-.62L18 20.5l10.2 9.102a1.177 1.177 0 001.205-.003c.182-.109.334-.266.438-.455a1.25 1.25 0 00.157-.62V6h9v29h1.978V5.232c0-.327-.127-.64-.352-.871a1.185 1.185 0 00-.848-.36H29.112z"
+                  fill="#4E6896"
+                />
+                <path
+                  d="M35 37v-2.809c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.6a1.173 1.173 0 00-.113 0 1.19 1.19 0 00-.776.398 1.251 1.251 0 00-.311.833v8.624c0 .327.127.64.352.871.224.231.53.361.848.361H27V42h-1v-7h7v2h2z"
+                  fill="#4E6896"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M10.287 32.96a1.189 1.189 0 00-.776.398 1.25 1.25 0 00-.311.833v8.624c0 .327.126.64.351.871.226.231.53.361.849.361h8.4c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872v-8.624c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.4a1.173 1.173 0 00-.113 0zM11 35h7v7h-7v-7z"
+                  fill="#4E6896"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
               class="c27"
             >
               <span
@@ -2505,9 +2512,9 @@ exports[`<Answer /> should renders related content 1`] = `
                 <div
                   class="c15 c33"
                 >
-                  
+                  tools action
                   <svg
-                    class="c35"
+                    class="c34"
                     fill="none"
                     viewBox="0 0 28 15"
                   >
@@ -2560,6 +2567,33 @@ exports[`<Answer /> should renders related content 1`] = `
             class="c25"
           >
             <div
+              class="c26"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 52 52"
+              >
+                <path
+                  d="M41.953 2H9.047A3.05 3.05 0 006 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016v41.906c0 .56-.456 1.016-1.016 1.016H9.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 009.047 50h32.906A3.05 3.05 0 0045 46.953V5.047A3.05 3.05 0 0041.953 2z"
+                  fill="#4E6896"
+                />
+                <path
+                  d="M7.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297zm13.063 18.297a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.255-1.255a1.016 1.016 0 00-1.437 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437zm.06-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
+                  fill="#4E6896"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M12.016 10h10c.56 0 1.015.455 1.015 1.016v9.968c0 .561-.454 1.016-1.015 1.016h-10A1.016 1.016 0 0111 20.984v-9.968c0-.561.455-1.016 1.016-1.016zM21 19.969h-7.969V12.03H21v7.938z"
+                  fill="#4E6896"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M29.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm8.96 10H26.024C25.46 29 25 29.448 25 30s.459 1 1.024 1h11.952C38.54 31 39 30.552 39 30s-.459-1-1.024-1zm0 9H26.024C25.46 38 25 38.448 25 39s.459 1 1.024 1h11.952C38.54 40 39 39.552 39 39s-.459-1-1.024-1zm.149-23h-9.11a1.016 1.016 0 000 2.031h9.11a1.016 1.016 0 000-2.031z"
+                  fill="#FF7067"
+                />
+              </svg>
+            </div>
+            <div
               class="c27"
             >
               
@@ -2582,9 +2616,9 @@ exports[`<Answer /> should renders related content 1`] = `
                 <div
                   class="c15 c33"
                 >
-                  
+                  extern action
                   <svg
-                    class="c35"
+                    class="c34"
                     fill="none"
                     viewBox="0 0 28 15"
                   >
@@ -2606,11 +2640,11 @@ exports[`<Answer /> should renders related content 1`] = `
         class="c20"
       >
         <a
-          class="c36 c37"
+          class="c35 c36"
           href="/fiche-service-public/LINK_1"
         >
           <svg
-            class="c38"
+            class="c37"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -2620,7 +2654,7 @@ exports[`<Answer /> should renders related content 1`] = `
             />
           </svg>
           <span
-            class="c39"
+            class="c38"
           >
             related sheet sp title 1
           </span>
@@ -2630,11 +2664,11 @@ exports[`<Answer /> should renders related content 1`] = `
         class="c20"
       >
         <a
-          class="c36 c37"
+          class="c35 c36"
           href="/fiche-ministere-travail/LINK_2"
         >
           <svg
-            class="c38"
+            class="c37"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -2644,7 +2678,7 @@ exports[`<Answer /> should renders related content 1`] = `
             />
           </svg>
           <span
-            class="c39"
+            class="c38"
           >
             related sheet mt title 1
           </span>
@@ -2654,11 +2688,11 @@ exports[`<Answer /> should renders related content 1`] = `
         class="c20"
       >
         <a
-          class="c36 c37"
-          href="/external/LINK_3"
+          class="c35 c36"
+          href="/fiche-service-public/LINK_4"
         >
           <svg
-            class="c38"
+            class="c37"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -2668,9 +2702,9 @@ exports[`<Answer /> should renders related content 1`] = `
             />
           </svg>
           <span
-            class="c39"
+            class="c38"
           >
-            related external title 1
+            related sheet sp title 2
           </span>
         </a>
       </li>
