@@ -1392,6 +1392,16 @@
     ]
   },
   {
+    "title": "IDCC",
+    "slug": "idcc",
+    "abbrs": [],
+    "variants": [],
+    "definition": "<p>« Identifiant Des Conventions Collectives ». Numéro de 1 à 4 chiffres sous lequel une convention collective est enregistrée.Un IDCC est automatiquement attribué à toute nouvelle convention collective. Il permet de repérer sans confusion possible une convention puisqu’un numéro correspond à une seule convention. </p>",
+    "refs": [
+      {}
+    ]
+  },
+  {
     "title": "Indemnités",
     "slug": "indemnites",
     "abbrs": [],
