@@ -18,5 +18,20 @@ export const base = () => (
     <Section>A basic section</Section>
     <Section variant="light">A light section</Section>
     <Section variant="dark">A dark section</Section>
+    <Section>
+      <Section decorated variant="light">
+        A decorated ligh section
+      </Section>
+    </Section>
+    <Section>
+      <Section decorated variant="dark">
+        A decorated dark section
+      </Section>
+    </Section>
+    <Section>
+      <Section large decorated variant="dark">
+        A large decorated dark section
+      </Section>
+    </Section>
   </>
 );

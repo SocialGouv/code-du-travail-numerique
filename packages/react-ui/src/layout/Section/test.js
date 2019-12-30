@@ -12,4 +12,20 @@ describe("<Section />", () => {
       expect(container).toMatchSnapshot();
     }
   );
+  it("renders with correct decoration", () => {
+    const { container } = render(
+      <Section decorated variant="dark">
+        A decorated dark section
+      </Section>
+    );
+    expect(container).toMatchSnapshot();
+  });
+  it("renders large decorated section", () => {
+    const { container } = render(
+      <Section large decorated variant="dark">
+        A decorated dark section
+      </Section>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -1,34 +1,91 @@
+import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { spacings } from "../../theme";
+import { breakpoints, spacings } from "../../theme";
 
-export const Section = styled.div`
-  padding: ${spacings.medium} 0;
-  color: ${({ theme }) => theme.paragraph};
-  ${props => {
-    if (props.variant === "white") {
+const BORDER_RADIUS = "10rem";
+
+const assignBackgroundColor = ({ variant, theme }) => {
+  let backgroundColor = "transparent";
+  if (variant === "white") {
+    backgroundColor = theme.white;
+  }
+  if (variant === "light") {
+    backgroundColor = theme.bgSecondary;
+  }
+  if (variant === "dark") {
+    backgroundColor = theme.bgTertiary;
+  }
+  return css`
+    background-color: ${backgroundColor};
+  `;
+};
+
+export const Section = ({ children, decorated, large, variant, ...props }) => {
+  if (decorated) {
+    return (
+      <StyledSection large={large} decorated>
+        <Decoration variant={variant} />
+        <Content {...props}>{children}</Content>
+      </StyledSection>
+    );
+  }
+  return (
+    <StyledSection variant={variant} {...props}>
+      {children}
+    </StyledSection>
+  );
+};
+
+const StyledSection = styled.div`
+  ${({ decorated, large }) => {
+    if (!decorated) {
       return css`
-        background-color: ${props.theme.white};
+        padding: ${spacings.medium} 0;
+        ${assignBackgroundColor};
       `;
     }
-    if (props.variant === "light") {
+    if (decorated) {
       return css`
-        background-color: ${props.theme.bgSecondary};
-      `;
-    }
-    if (props.variant === "dark") {
-      return css`
-        background-color: ${props.theme.bgTertiary};
+        position: relative;
+        margin: ${large ? "8rem" : "5rem"} 0;
+        padding: ${large ? "7rem" : spacings.large} 0
+          ${large ? "6rem" : spacings.larger};
+        min-height: ${BORDER_RADIUS};
       `;
     }
   }}
+  color: ${({ theme }) => theme.paragraph};
+`;
+
+const Decoration = styled.div`
+  position: absolute;
+  top: 0;
+  right: 35%;
+  bottom: 0;
+  left: 0;
+  ${assignBackgroundColor};
+  border-radius: 0 ${BORDER_RADIUS} ${BORDER_RADIUS} 0;
+  content: "";
+  @media (max-width: ${breakpoints.mobile}) {
+    right: ${spacings.medium};
+  }
+`;
+
+const Content = styled.div`
+  position: relative;
+  z-index: 0;
 `;
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
+  decorated: PropTypes.bool,
+  large: PropTypes.bool,
   variant: PropTypes.oneOf(["default", "white", "light", "dark"])
 };
 
 Section.defaultProps = {
+  decorated: false,
+  large: false,
   variant: "default"
 };
