@@ -7,7 +7,7 @@ app.use(router.routes());
 
 it("returns an agreement document", async () => {
   const response = await request(app.callback()).get(
-    "/api/v1/conventions/1596-nouvelle-convention-collective-nationale-des-ouvriers-employes-par-les-entr"
+    "/api/v1/conventions/1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries"
   );
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();

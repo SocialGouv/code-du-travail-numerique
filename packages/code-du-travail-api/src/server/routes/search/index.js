@@ -168,7 +168,7 @@ router.get("/search", async ctx => {
     semanticHits.forEach(item => (item._source.algo = "semantic"));
     themes = removeDuplicate(
       themes
-        .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
+        .concat(merge(semanticHits, fulltextHits, THEMES_RESULTS_NUMBER * 2))
         .slice(0, THEMES_RESULTS_NUMBER)
     );
   }

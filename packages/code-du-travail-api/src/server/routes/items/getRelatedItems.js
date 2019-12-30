@@ -21,22 +21,19 @@ async function getRelatedItems({ queryVector, settings, slug }) {
     SOURCES.CONTRIBUTIONS,
     SOURCES.EXTERNALS
   ];
-
-  const requestBodies = [
-    { index },
-    {
-      ...getRelatedItemsBody({
-        settings,
-        sources
-      })
-    }
-  ];
+  const relatedItemBody = getRelatedItemsBody({ settings, sources });
+  const requestBodies = [{ index }, relatedItemBody];
   if (queryVector) {
-    requestBodies.push(
-      { index },
+    const semBody = getSemBody({
+      query_vector: queryVector,
       // we +1 the size to remove the document source that should match perfectly for the given vector
-      { ...getSemBody({ query_vector: queryVector, size: size + 1, sources }) }
-    );
+      size: size + 1,
+      sources
+    });
+    // we use relatedItem query _source to have the same prop returned
+    // for both request
+    semBody._source = relatedItemBody._source;
+    requestBodies.push({ index }, semBody);
   }
   const {
     body: {

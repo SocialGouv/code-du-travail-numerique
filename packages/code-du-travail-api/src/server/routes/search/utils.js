@@ -16,34 +16,29 @@ const merge = (res1, res2, max_result) => {
 };
 
 // Remove Duplicates
+const predicateFn = ({ _source: { source, slug } }) => `${source}/${slug}`;
 
-const removeDuplicate = arr =>
-  Object.values(
-    arr.reduce(
-      (values, current) => ({
-        ...values,
-        [current._source.source + "/" + current._source.slug]: current
-      }),
-      {}
-    )
-  );
+const removeDuplicate = (arr, predicate = predicateFn) =>
+  arr.flatMap((a, index) => {
+    if (arr.find((item, i) => predicate(item) === predicate(a) && i < index)) {
+      return [];
+    } else {
+      return a;
+    }
+  });
 
-const mergeDuplicate = arr => {
-  return Object.values(
-    arr.reduce((acc, current) => {
-      const unique = current._source.source + "/" + current._source.slug;
-      // case we've already seen the same result from a different algo
-      if (
-        acc[unique] != undefined &&
-        acc[unique]._source.algo != current._source.algo
-      ) {
-        acc[unique]._source.algo = "both";
-      } else {
-        acc[unique] = current;
-      }
-      return acc;
-    }, {})
-  );
+const mergeDuplicate = (arr, predicate = predicateFn) => {
+  return arr.flatMap((a, index) => {
+    const prevItem = arr.find(
+      (item, i) => predicate(item) === predicate(a) && i < index
+    );
+    if (prevItem) {
+      prevItem._source.algo = "both";
+      return [];
+    } else {
+      return a;
+    }
+  });
 };
 
 const mergePipe = (a, b, max_result) => {
