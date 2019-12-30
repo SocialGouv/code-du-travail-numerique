@@ -1471,7 +1471,7 @@ exports[`<Home /> should render 1`] = `
                   <h3
                     class="c43"
                   >
-                    Recherchez votre convention collective
+                    Convention collective
                   </h3>
                 </div>
               </div>
@@ -1584,7 +1584,7 @@ exports[`<Home /> should render 1`] = `
                 <div
                   class="c45"
                 >
-                  Calculez la durée de préavis de démission
+                  Calculez la durée de préavis à respecter en cas de démission
                   <div
                     class="c46"
                   >

@@ -1504,7 +1504,7 @@ exports[`<Outils /> should render 1`] = `
                 <div
                   class="c40"
                 >
-                  Estimez le montant de l’indemnité de licenciement
+                  Estimez simplement le montant de l’indemnité de licenciement
                   <div
                     class="c41"
                   >
@@ -1607,7 +1607,7 @@ exports[`<Outils /> should render 1`] = `
                 <div
                   class="c40"
                 >
-                  Calculez la durée de préavis de démission
+                  Calculez la durée de préavis à respecter en cas de démission
                   <div
                     class="c41"
                   >
@@ -1948,7 +1948,7 @@ exports[`<Outils /> should render 1`] = `
                 <div
                   class="c40"
                 >
-                  Calculez la durée de préavis de licenciement
+                  Calculez la durée de préavis à respecter en cas de licenciement
                   <div
                     class="c41"
                   >
@@ -2154,7 +2154,7 @@ exports[`<Outils /> should render 1`] = `
                 <div
                   class="c40"
                 >
-                  Consulter et utiliser ses droits pour la formation
+                  Consultez en ligne vos droits à la formation, cherchez et réservez une formation
                   <div
                     class="c41"
                   >
