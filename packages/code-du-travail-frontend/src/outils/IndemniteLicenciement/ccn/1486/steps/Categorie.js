@@ -1,6 +1,7 @@
 import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
+import { Select } from "@socialgouv/react-ui";
 
 import { SectionTitle, Label } from "../../../../common/stepStyles";
 import { required } from "../../../../common/validators";
@@ -29,7 +30,7 @@ export const Categorie = ({ dispatch }) => (
           <Label htmlFor="categorie">
             Sélectionnez une catégorie professionnelle
           </Label>
-          <select {...input} id="categorie">
+          <Select {...input} id="categorie">
             <option disabled value="">
               Sélectionner
             </option>
@@ -38,7 +39,7 @@ export const Categorie = ({ dispatch }) => (
                 {label}
               </option>
             ))}
-          </select>
+          </Select>
         </>
       )}
     </Field>

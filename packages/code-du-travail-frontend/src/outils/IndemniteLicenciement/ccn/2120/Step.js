@@ -1,7 +1,7 @@
 import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
-import { theme } from "@socialgouv/react-ui";
+import { Select, theme } from "@socialgouv/react-ui";
 
 import { SectionTitle, Label } from "../../../common/stepStyles";
 
@@ -36,7 +36,7 @@ function Step() {
               <Label htmlFor="input-motif">
                 Quel est le motif du licenciement&nbsp;?
               </Label>
-              <Select id="input-motif" {...input}>
+              <StyledSelect id="input-motif" {...input}>
                 <option value="" disabled>
                   motifs...
                 </option>
@@ -45,7 +45,7 @@ function Step() {
                     {label}
                   </option>
                 ))}
-              </Select>
+              </StyledSelect>
             </FormGroup>
           );
         }}
@@ -59,7 +59,7 @@ function Step() {
                 Quelle est la catégorie professionnelle du salarié&nbsp;?
               </Label>
 
-              <Select id="input-categorie" {...input}>
+              <StyledSelect id="input-categorie" {...input}>
                 <option value="" disabled>
                   catégories...
                 </option>
@@ -68,7 +68,7 @@ function Step() {
                     {label}
                   </option>
                 ))}
-              </Select>
+              </StyledSelect>
             </FormGroup>
           );
         }}
@@ -80,7 +80,7 @@ function Step() {
 export { Step };
 
 const { spacings } = theme;
-const Select = styled.select`
+const StyledSelect = styled(Select)`
   max-width: 32rem;
 `;
 

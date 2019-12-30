@@ -4,8 +4,7 @@ import { Field } from "react-final-form";
 import styled from "styled-components";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
-import { Button, theme } from "@socialgouv/react-ui";
-import { Input } from "../../common/stepStyles";
+import { Button, icons, Input, theme } from "@socialgouv/react-ui";
 import { InlineError } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 
@@ -32,15 +31,17 @@ function Primes({ name, visible = true, onChange }) {
                   invalid: true
                 }}
                 render={({ input, meta: { touched, error, invalid } }) => (
-                  <>
-                    <CurrencyWrapper>
-                      <NumberInput {...input} invalid={touched && invalid} />
-                      <Currency aria-hidden="true">€</Currency>
-                    </CurrencyWrapper>
+                  <div>
+                    <Input
+                      {...input}
+                      type="number"
+                      invalid={touched && invalid}
+                      icon={icons.Euro}
+                    />
                     {error && touched && invalid ? (
                       <InlineError>{error}</InlineError>
                     ) : null}
-                  </>
+                  </div>
                 )}
               />
               <DelButton variant="flat" onClick={() => fields.remove(index)}>
@@ -69,33 +70,15 @@ Primes.propTypes = {
 };
 export { Primes };
 
-const { colors, spacings } = theme;
+const { spacings } = theme;
 
 const Row = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: ${spacings.tiny};
 `;
 
-const NumberInput = styled(Input)`
-  padding-right: ${spacings.base};
-  text-align: right;
-`;
-
-const CurrencyWrapper = styled.div`
-  position: relative;
-  display: inline-block;
-  margin-right: ${spacings.medium};
-`;
-
-const Currency = styled.span`
-  position: absolute;
-  top: 50%;
-  right: 0.25rem;
-  color: ${colors.altText};
-  transform: translateY(-50%);
-`;
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
   margin-left: ${spacings.medium};
 `;

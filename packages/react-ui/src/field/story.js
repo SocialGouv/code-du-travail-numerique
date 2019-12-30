@@ -1,4 +1,6 @@
 import React from "react";
+import styled from "styled-components";
+
 import { Section } from "../layout/Section";
 import { Input } from "./Input";
 import { InputDate } from "./InputDate";
@@ -13,6 +15,14 @@ export default {
   component: Select,
   title: "Field|Components"
 };
+
+const StyledInput = styled(Input)`
+  width: 40rem;
+`;
+
+const StyledSelect = styled(Select)`
+  width: 100%;
+`;
 
 export const base = () => (
   <>
@@ -132,7 +142,7 @@ export const input = () => (
     </Section>
     <Section>
       <Label htmlFor="input">Input avec picto currency</Label>
-      <Input id="input" name="input" type="number" icon={Euro} />
+      <StyledInput id="input" name="input" type="number" icon={Euro} />
     </Section>
     <Section>
       <Label htmlFor="input">Input avec texte</Label>
@@ -200,12 +210,12 @@ export const select = () => (
   <>
     <Section>
       <Label htmlFor="select">Select</Label>
-      <Select id="select">
+      <StyledSelect id="select">
         <option>...</option>
         <option>Option 1</option>
         <option>Option 2</option>
         <option>Option 3</option>
-      </Select>
+      </StyledSelect>
     </Section>
     <Section>
       <Label htmlFor="select_disabled">Select disabled</Label>

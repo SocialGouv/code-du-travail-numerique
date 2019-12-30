@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { InputRadio } from "@socialgouv/react-ui";
 
 import { Field } from "react-final-form";
-import { Label, RadioContainer } from "../../common/stepStyles";
 import { required } from "../../common/validators";
 import { Question } from "../../common/Question";
 import { ErrorField } from "../../common/ErrorField";
@@ -18,29 +18,37 @@ function TypeContrat({ name }) {
       <Question as="p" required>
         Quel est le type du contrat de travail&nbsp;?
       </Question>
-      <RadioContainer>
-        <Label>
-          <Field
-            component="input"
-            type="radio"
-            name={name}
-            value={CONTRACT_TYPE.CDD}
-            validate={required}
+      <Field
+        type="radio"
+        name={name}
+        value={CONTRACT_TYPE.CDD}
+        id={CONTRACT_TYPE.CDD}
+        validate={required}
+      >
+        {props => (
+          <InputRadio
+            id={`${name}-cdd`}
+            label="Contrat à durée déterminée (CDD)"
+            {...props.input}
           />
-          <span>Contrat à durée déterminée (CDD)</span>
-        </Label>
-        <Label>
-          <Field
-            component="input"
-            type="radio"
-            name={name}
-            value={CONTRACT_TYPE.CTT}
-            validate={required}
+        )}
+      </Field>
+      <Field
+        type="radio"
+        name={name}
+        value={CONTRACT_TYPE.CTT}
+        id={CONTRACT_TYPE.CTT}
+        validate={required}
+      >
+        {props => (
+          <InputRadio
+            id={`${name}-ci`}
+            label="Contrat de travail temporaire (Contrat d’intérim)"
+            {...props.input}
           />
-          <span>Contrat de travail temporaire (Contrat d’intérim)</span>
-        </Label>
-        <ErrorField name={name} />
-      </RadioContainer>
+        )}
+      </Field>
+      <ErrorField name={name} />
     </>
   );
 }

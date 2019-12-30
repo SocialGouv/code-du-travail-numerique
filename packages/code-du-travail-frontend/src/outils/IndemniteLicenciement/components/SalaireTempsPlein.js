@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
-import { Table as UITable, theme } from "@socialgouv/react-ui";
+import { icons, Input, Table as UITable, theme } from "@socialgouv/react-ui";
 
-import { Input } from "../../common/stepStyles";
 import { InlineError } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 
@@ -64,15 +63,13 @@ function SalaireTempsPlein({ name }) {
                         meta: { touched, error, invalid }
                       }) => (
                         <>
-                          <CurrencyWrapper>
-                            <NumberInput
-                              {...input}
-                              type="number"
-                              id={`salary${index}`}
-                              invalid={touched && invalid}
-                            />
-                            <Currency aria-hidden="true">€</Currency>
-                          </CurrencyWrapper>
+                          <Input
+                            {...input}
+                            type="number"
+                            id={`salary${index}`}
+                            invalid={touched && invalid}
+                            icon={icons.Euro}
+                          />
                           {error && touched && invalid ? (
                             <InlineError>{error}</InlineError>
                           ) : null}
@@ -96,7 +93,7 @@ SalaireTempsPlein.propTypes = {
 
 export { SalaireTempsPlein };
 
-const { colors, spacings } = theme;
+const { breakpoints } = theme;
 
 const Table = styled(UITable)`
   width: 70%;
@@ -104,22 +101,10 @@ const Table = styled(UITable)`
     width: 70%;
     text-align: left;
   }
-`;
-const NumberInput = styled(Input)`
-  padding-right: ${spacings.base};
-  text-align: right;
-`;
-
-const CurrencyWrapper = styled.div`
-  position: relative;
-  display: inline-block;
-  margin-right: ${spacings.medium};
-`;
-
-const Currency = styled.span`
-  position: absolute;
-  top: 50%;
-  right: 0.25rem;
-  color: ${colors.altText};
-  transform: translateY(-50%);
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+    & tr > td:nth-child(2) {
+      width: 60%;
+    }
+  }
 `;

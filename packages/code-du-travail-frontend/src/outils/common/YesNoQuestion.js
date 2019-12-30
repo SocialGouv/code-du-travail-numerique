@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
-import { Label, RadioContainer } from "./stepStyles";
+import { InputRadio } from "@socialgouv/react-ui";
+import { RadioContainer } from "./stepStyles";
 import { Question } from "./Question";
 import { requiredBoolean } from "./validators";
 import { ErrorField } from "./ErrorField";
@@ -19,30 +20,30 @@ function YesNoQuestion({
       <Question as="p" required={required}>
         {label}
       </Question>
-
       <RadioContainer {...otherProps}>
-        <Label>
-          <Field
-            parse={value => value === "true"}
-            component="input"
-            type="radio"
-            name={name}
-            value={true}
-            validate={requiredBoolean}
-          />
-          <span>Oui</span>
-        </Label>
-        <Label>
-          <Field
-            parse={value => value === "true"}
-            component="input"
-            type="radio"
-            name={name}
-            value={false}
-            validate={requiredBoolean}
-          />
-          <span>Non</span>
-        </Label>
+        <Field
+          type="radio"
+          parse={value => value === "true"}
+          name={name}
+          label="Oui"
+          value={true}
+          validate={requiredBoolean}
+        >
+          {props => (
+            <InputRadio id={`${name}-yes`} label="Oui" {...props.input} />
+          )}
+        </Field>
+        <Field
+          type="radio"
+          parse={value => value === "true"}
+          name={name}
+          value={false}
+          validate={requiredBoolean}
+        >
+          {props => (
+            <InputRadio id={`${name}-no`} label="Non" {...props.input} />
+          )}
+        </Field>
         <ErrorField name={name} />
       </RadioContainer>
       {onChange && (

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Spinner from "react-svg-spinner";
 
 import slugify from "@cdt/data/slugify";
-import { Table, Container, Heading, Input, theme } from "@socialgouv/react-ui";
+import { Container, Input, Table, Heading, theme } from "@socialgouv/react-ui";
 
 import SearchCC from "./SearchCC";
 

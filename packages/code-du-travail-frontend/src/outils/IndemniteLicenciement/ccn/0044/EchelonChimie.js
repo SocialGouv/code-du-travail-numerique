@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
+import { Select } from "@socialgouv/react-ui";
 
 import { coefficients } from "./coefficients";
 import { required } from "../../../common/validators";
@@ -42,10 +43,10 @@ function EchelonChimie({ name }) {
         {({ input }) => (
           <>
             <Label htmlFor="echelon">Sélectionnez un échelon</Label>
-            <Select {...input} id="echelon">
+            <StyledSelect {...input} id="echelon">
               <option disabled value="" />
               {options}
-            </Select>
+            </StyledSelect>
           </>
         )}
       </Field>
@@ -81,6 +82,6 @@ EchelonChimie.propTypes = {
 };
 export { EchelonChimie };
 
-const Select = styled.select`
+const StyledSelect = styled(Select)`
   width: 100%;
 `;

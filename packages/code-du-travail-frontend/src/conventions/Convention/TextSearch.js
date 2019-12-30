@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from "react";
 import styled from "styled-components";
-import { Alert, Button, icons, theme } from "@socialgouv/react-ui";
+import { Alert, Button, icons, Input, theme } from "@socialgouv/react-ui";
 
 import { Title } from "./index";
 
@@ -50,7 +50,7 @@ export function TextSearch({ containerId }) {
         d&apos;entreprise peut comporter d&apos;autres règles.
       </Alert>
       <Box>
-        <Input
+        <StyledInput
           onChange={formatQuery}
           id="search-agreement"
           type="search"
@@ -79,7 +79,7 @@ const Box = styled.div`
   display: flex;
 `;
 
-const Input = styled.input`
+const StyledInput = styled(Input)`
   flex: 1 1 40%;
   @media ${mobileMediaQuery} {
     padding-right: 5.5rem;

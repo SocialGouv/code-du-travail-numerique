@@ -1,7 +1,7 @@
 import React from "react";
 import { UID } from "react-uid";
 import styled from "styled-components";
-import { Heading, theme } from "@socialgouv/react-ui";
+import { Heading, Input, theme } from "@socialgouv/react-ui";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
 
@@ -55,7 +55,7 @@ class ServiceRenseignement extends React.Component {
                 <label htmlFor={id}>
                   Saisissez votre numéro de département&nbsp;:
                 </label>
-                <Input
+                <StyledInput
                   id={id}
                   ref={this.inputRef}
                   type="text"
@@ -166,7 +166,7 @@ const Pricing = styled.em`
   }
 `;
 
-const Input = styled.input`
+const StyledInput = styled(Input)`
   width: 100%;
   margin-top: ${spacings.small};
 `;

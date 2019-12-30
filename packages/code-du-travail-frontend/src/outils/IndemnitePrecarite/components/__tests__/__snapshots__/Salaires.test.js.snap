@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaires /> should add a salaire 1`] = `
-.c6 {
+.c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -38,16 +38,16 @@ exports[`<Salaires /> should add a salaire 1`] = `
   opacity: 1;
 }
 
-.c6:link,
-.c6:visited {
+.c8:link,
+.c8:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):active,
-.c6:not([disabled]):focus {
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -56,13 +56,13 @@ exports[`<Salaires /> should add a salaire 1`] = `
   border-color: #dee5ef;
 }
 
-.c6[disabled] {
+.c8[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c8 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -102,14 +102,14 @@ exports[`<Salaires /> should add a salaire 1`] = `
   overflow: visible;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c10:focus,
+.c10:hover,
+.c10:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10 {
+.c12 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -118,45 +118,123 @@ exports[`<Salaires /> should add a salaire 1`] = `
   transition: transform 250ms linear;
 }
 
-.c5:hover .c10 {
+.c7:hover .c12 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
 }
 
-.c3 {
-  width: 10em;
-  text-align: right;
-  border-color: #bbcadf;
-  padding-right: 1.6rem;
-  text-align: right;
+.c4 {
+  position: relative;
 }
 
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
+.c5 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 5rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: right;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c2 {
-  position: relative;
-  display: inline-block;
-  margin-right: 1.6rem;
+.c5::-webkit-calendar-picker-indicator {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: -2rem;
+  color: rgba(0,0,0,0);
+  background-color: #9298af;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c4 {
+.c5:invalid {
+  border-color: #eb5757;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c5::-moz-placeholder {
+  color: #9298af;
+}
+
+.c5:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c5::placeholder {
+  color: #9298af;
+}
+
+.c5:focus {
+  border-color: #7994d4;
+}
+
+.c5:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c5:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c5:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c5:focus::placeholder {
+  color: transparent;
+}
+
+.c6 {
   position: absolute;
-  top: 50%;
-  right: 0.25rem;
-  color: #4d73b8;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 1rem;
+  right: 1rem;
+  width: 100%;
+  max-width: 3.2rem;
+  height: 100%;
+  max-height: 3.2rem;
+  color: #9298af;
 }
 
-.c1 {
+.c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.c2 {
+  display: inline-block;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-right: 1rem;
 }
 
@@ -176,23 +254,46 @@ exports[`<Salaires /> should add a salaire 1`] = `
   margin-bottom: 0.4rem;
 }
 
-.c7 {
-  margin-right: 2rem;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .c9 {
-  margin: 2rem 0;
+  margin-left: 2rem;
 }
 
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.4rem;
-  }
+.c11 {
+  margin: 2rem 0;
 }
 
 @media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 0 1rem;
+    padding-right: 5rem;
   }
 }
 
@@ -203,43 +304,58 @@ exports[`<Salaires /> should add a salaire 1`] = `
   <div
     class="c0"
   >
-    <label
-      class="c1"
-      for="5"
-    >
-      Montant :
-    </label>
     <div
-      class="c2"
+      class="c1"
     >
-      <input
-        class="c3"
-        id="5"
-        name="salaires[0].salaire"
-        type="number"
-        value=""
-      />
-      <span
-        aria-hidden="true"
-        class="c4"
+      <label
+        class="c2"
+        for="5"
       >
-        €
-      </span>
+        Montant :
+      </label>
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <input
+            class="c5"
+            id="5"
+            name="salaires[0].salaire"
+            type="number"
+            value=""
+          />
+          <div
+            class="c6"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 32 32"
+            >
+              <path
+                d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <button
+        class="c7 c8 c9"
+        type="button"
+      >
+        Supprimer
+      </button>
     </div>
-    <button
-      class="c5 c6 c7"
-      type="button"
-    >
-      Supprimer
-    </button>
   </div>
   <button
-    class="c5 c8 c9"
+    class="c7 c10 c11"
     type="button"
   >
     Ajouter un salaire
     <svg
-      class="c10"
+      class="c12"
       fill="none"
       viewBox="0 0 28 15"
     >
@@ -349,7 +465,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 `;
 
 exports[`<Salaires /> should render 1`] = `
-.c6 {
+.c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -386,16 +502,16 @@ exports[`<Salaires /> should render 1`] = `
   opacity: 1;
 }
 
-.c6:link,
-.c6:visited {
+.c8:link,
+.c8:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):active,
-.c6:not([disabled]):focus {
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -404,13 +520,13 @@ exports[`<Salaires /> should render 1`] = `
   border-color: #dee5ef;
 }
 
-.c6[disabled] {
+.c8[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c8 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -450,14 +566,14 @@ exports[`<Salaires /> should render 1`] = `
   overflow: visible;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c10:focus,
+.c10:hover,
+.c10:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10 {
+.c12 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -466,45 +582,123 @@ exports[`<Salaires /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c5:hover .c10 {
+.c7:hover .c12 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
 }
 
-.c3 {
-  width: 10em;
-  text-align: right;
-  border-color: #bbcadf;
-  padding-right: 1.6rem;
-  text-align: right;
+.c4 {
+  position: relative;
 }
 
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
+.c5 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 5rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: right;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c2 {
-  position: relative;
-  display: inline-block;
-  margin-right: 1.6rem;
+.c5::-webkit-calendar-picker-indicator {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: -2rem;
+  color: rgba(0,0,0,0);
+  background-color: #9298af;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c4 {
+.c5:invalid {
+  border-color: #eb5757;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c5::-moz-placeholder {
+  color: #9298af;
+}
+
+.c5:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c5::placeholder {
+  color: #9298af;
+}
+
+.c5:focus {
+  border-color: #7994d4;
+}
+
+.c5:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c5:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c5:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c5:focus::placeholder {
+  color: transparent;
+}
+
+.c6 {
   position: absolute;
-  top: 50%;
-  right: 0.25rem;
-  color: #4d73b8;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 1rem;
+  right: 1rem;
+  width: 100%;
+  max-width: 3.2rem;
+  height: 100%;
+  max-height: 3.2rem;
+  color: #9298af;
 }
 
-.c1 {
+.c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.c2 {
+  display: inline-block;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-right: 1rem;
 }
 
@@ -524,23 +718,46 @@ exports[`<Salaires /> should render 1`] = `
   margin-bottom: 0.4rem;
 }
 
-.c7 {
-  margin-right: 2rem;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .c9 {
-  margin: 2rem 0;
+  margin-left: 2rem;
 }
 
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.4rem;
-  }
+.c11 {
+  margin: 2rem 0;
 }
 
 @media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 0 1rem;
+    padding-right: 5rem;
   }
 }
 
@@ -551,43 +768,58 @@ exports[`<Salaires /> should render 1`] = `
   <div
     class="c0"
   >
-    <label
-      class="c1"
-      for="1"
-    >
-      Montant :
-    </label>
     <div
-      class="c2"
+      class="c1"
     >
-      <input
-        class="c3"
-        id="1"
-        name="salaires[0].salaire"
-        type="number"
-        value="3000"
-      />
-      <span
-        aria-hidden="true"
-        class="c4"
+      <label
+        class="c2"
+        for="1"
       >
-        €
-      </span>
+        Montant :
+      </label>
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <input
+            class="c5"
+            id="1"
+            name="salaires[0].salaire"
+            type="number"
+            value="3000"
+          />
+          <div
+            class="c6"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 32 32"
+            >
+              <path
+                d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <button
+        class="c7 c8 c9"
+        type="button"
+      >
+        Supprimer
+      </button>
     </div>
-    <button
-      class="c5 c6 c7"
-      type="button"
-    >
-      Supprimer
-    </button>
   </div>
   <button
-    class="c5 c8 c9"
+    class="c7 c10 c11"
     type="button"
   >
     Ajouter un salaire
     <svg
-      class="c10"
+      class="c12"
       fill="none"
       viewBox="0 0 28 15"
     >

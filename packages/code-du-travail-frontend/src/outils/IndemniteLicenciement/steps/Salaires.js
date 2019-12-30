@@ -2,10 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { theme } from "@socialgouv/react-ui";
+import { icons, Input } from "@socialgouv/react-ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Input } from "../../common/stepStyles";
 import { Error } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 import { parse } from "../../common/date";
@@ -92,14 +91,12 @@ function StepSalaires({ form }) {
                                 brut&nbsp;?
                               </Question>
 
-                              <CurrencyWrapper>
-                                <NumberInput
-                                  {...input}
-                                  type="number"
-                                  invalid={touched && invalid}
-                                />
-                                <Currency aria-hidden="true">€</Currency>
-                              </CurrencyWrapper>
+                              <StyledInput
+                                {...input}
+                                type="number"
+                                invalid={touched && invalid}
+                                icon={icons.Euro}
+                              />
                               <span>
                                 Prendre en compte les primes et avantages en
                                 nature.
@@ -123,6 +120,10 @@ function StepSalaires({ form }) {
     </>
   );
 }
+
+const StyledInput = styled(Input)`
+  width: 40rem;
+`;
 
 function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
   const dEntree = parse(dateEntree);
@@ -155,24 +156,3 @@ StepSalaires.propTypes = {
 };
 
 export { StepSalaires, getSalairesPeriods };
-
-const { colors, spacings } = theme;
-
-const NumberInput = styled(Input)`
-  padding-right: ${spacings.base};
-  text-align: right;
-`;
-
-const CurrencyWrapper = styled.div`
-  position: relative;
-  display: inline-block;
-  margin-right: ${spacings.medium};
-`;
-
-const Currency = styled.span`
-  position: absolute;
-  top: 50%;
-  right: 0.25rem;
-  color: ${colors.altText};
-  transform: translateY(-50%);
-`;

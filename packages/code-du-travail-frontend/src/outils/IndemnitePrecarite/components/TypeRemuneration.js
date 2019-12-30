@@ -1,9 +1,9 @@
 import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
-import { ErrorField } from "../../common/ErrorField";
+import { InputRadio } from "@socialgouv/react-ui";
 
-import { Label, RadioContainer } from "../../common/stepStyles";
+import { ErrorField } from "../../common/ErrorField";
 import { required } from "../../common/validators";
 import { Question } from "../../common/Question";
 
@@ -14,33 +14,46 @@ function TypeRemuneration({ name, onChange }) {
         Comment souhaitez-vous indiquer la rémunération perçue pendant le
         contrat de travail&nbsp;?
       </Question>
-      <RadioContainer>
-        <Label>
-          <Field
-            component="input"
-            type="radio"
-            name={name}
-            value="total"
-            validate={required}
+
+      <Field
+        type="radio"
+        name={name}
+        value="total"
+        id="total"
+        validate={required}
+      >
+        {props => (
+          <InputRadio
+            id={`${name}-amount`}
+            label={[
+              "En indiquant le ",
+              <strong key="montant">&nbsp;montant total&nbsp;</strong>,
+              "des rémunérations."
+            ]}
+            {...props.input}
           />
-          <span>
-            En indiquant le <strong>montant total</strong> des rémunérations.
-          </span>
-        </Label>
-        <Label>
-          <Field
-            component="input"
-            type="radio"
-            name={name}
-            value="mensuel"
-            validate={required}
+        )}
+      </Field>
+      <Field
+        type="radio"
+        name={name}
+        value="mensuel"
+        id="mensuel"
+        validate={required}
+      >
+        {props => (
+          <InputRadio
+            id={`${name}-pay`}
+            label={[
+              "En indiquant le ",
+              <strong key="salaire">&nbsp;salaire mensuel&nbsp;</strong>,
+              "pour chaque mois."
+            ]}
+            {...props.input}
           />
-          <span>
-            En indiquant le <strong>salaire mensuel</strong> pour chaque mois.
-          </span>
-        </Label>
-        <ErrorField name={name} />
-      </RadioContainer>
+        )}
+      </Field>
+      <ErrorField name={name} />
       {onChange && (
         <OnChange name={name}>{values => onChange(values)}</OnChange>
       )}

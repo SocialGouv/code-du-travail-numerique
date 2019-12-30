@@ -86,12 +86,53 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c11 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
   padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c11:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c11:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c11:checked:before {
+  display: block;
 }
 
 .c9 {
@@ -212,27 +253,29 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   >
     <label
       class="c10"
+      for="hasBrancheContrat-yes"
     >
       <input
+        class="c11"
+        id="hasBrancheContrat-yes"
         name="hasBrancheContrat"
         type="radio"
         value="true"
       />
-      <span>
-        Oui
-      </span>
+      Oui
     </label>
     <label
       class="c10"
+      for="hasBrancheContrat-no"
     >
       <input
+        class="c11"
+        id="hasBrancheContrat-no"
         name="hasBrancheContrat"
         type="radio"
         value="false"
       />
-      <span>
-        Non
-      </span>
+      Non
     </label>
   </div>
 </div>

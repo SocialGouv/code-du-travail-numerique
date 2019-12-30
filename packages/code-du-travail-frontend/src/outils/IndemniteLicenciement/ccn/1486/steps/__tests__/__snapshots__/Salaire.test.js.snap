@@ -40,12 +40,53 @@ exports[`<Salaire /> renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c7 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
   padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c7:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c7:checked:before {
+  display: block;
 }
 
 .c5 {
@@ -149,27 +190,29 @@ exports[`<Salaire /> renders 1`] = `
   >
     <label
       class="c6"
+      for="hasBrancheNewSalaire-yes"
     >
       <input
+        class="c7"
+        id="hasBrancheNewSalaire-yes"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
       />
-      <span>
-        Oui
-      </span>
+      Oui
     </label>
     <label
       class="c6"
+      for="hasBrancheNewSalaire-no"
     >
       <input
+        class="c7"
+        id="hasBrancheNewSalaire-no"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
       />
-      <span>
-        Non
-      </span>
+      Non
     </label>
   </div>
 </div>
@@ -215,12 +258,53 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c7 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
   padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c7:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c7:checked:before {
+  display: block;
 }
 
 .c5 {
@@ -324,28 +408,30 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   >
     <label
       class="c6"
+      for="hasBrancheNewSalaire-yes"
     >
       <input
         checked=""
+        class="c7"
+        id="hasBrancheNewSalaire-yes"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
       />
-      <span>
-        Oui
-      </span>
+      Oui
     </label>
     <label
       class="c6"
+      for="hasBrancheNewSalaire-no"
     >
       <input
+        class="c7"
+        id="hasBrancheNewSalaire-no"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
       />
-      <span>
-        Non
-      </span>
+      Non
     </label>
   </div>
   <p
@@ -364,40 +450,42 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   >
     <label
       class="c6"
+      for="hasBrancheNewRegularSalaire-yes"
     >
       <input
+        class="c7"
+        id="hasBrancheNewRegularSalaire-yes"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="true"
       />
-      <span>
-        Oui
-      </span>
+      Oui
     </label>
     <label
       class="c6"
+      for="hasBrancheNewRegularSalaire-no"
     >
       <input
+        class="c7"
+        id="hasBrancheNewRegularSalaire-no"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="false"
       />
-      <span>
-        Non
-      </span>
+      Non
     </label>
   </div>
 </div>
 `;
 
 exports[`<Salaire /> renders a table of fields of type number 1`] = `
-.c7 {
+.c8 {
   position: relative;
   overflow: hidden;
 }
 
-.c7:before,
-.c7:after {
+.c8:before,
+.c8:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -411,19 +499,19 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c7:before {
+.c8:before {
   left: -2rem;
 }
 
-.c7:after {
+.c8:after {
   right: -2rem;
 }
 
-.c8 {
+.c9 {
   overflow-x: auto;
 }
 
-.c9 {
+.c10 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -432,32 +520,32 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   border-spacing: 0;
 }
 
-.c9 caption {
+.c10 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c9 td,
-.c9 th {
+.c10 td,
+.c10 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c9 th {
+.c10 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c9 thead,
-.c9 tfoot {
+.c10 thead,
+.c10 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c9 tfoot {
+.c10 tfoot {
   vertical-align: top;
 }
 
@@ -500,12 +588,53 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c7 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
   padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c7:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c7:checked:before {
+  display: block;
 }
 
 .c5 {
@@ -545,12 +674,12 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   margin-top: 2rem;
 }
 
-.c10 tr > td:nth-child(2) {
+.c11 tr > td:nth-child(2) {
   width: 70%;
   text-align: left;
 }
 
-.c12 {
+.c13 {
   width: 10em;
   text-align: right;
   border-color: #bbcadf;
@@ -558,21 +687,21 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   text-align: right;
 }
 
-.c12::-webkit-outer-spin-button,
-.c12::-webkit-inner-spin-button {
+.c13::-webkit-outer-spin-button,
+.c13::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11 {
+.c12 {
   position: relative;
   display: inline-block;
   margin-right: 2rem;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
@@ -646,28 +775,30 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   >
     <label
       class="c6"
+      for="hasBrancheNewSalaire-yes"
     >
       <input
         checked=""
+        class="c7"
+        id="hasBrancheNewSalaire-yes"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
       />
-      <span>
-        Oui
-      </span>
+      Oui
     </label>
     <label
       class="c6"
+      for="hasBrancheNewSalaire-no"
     >
       <input
+        class="c7"
+        id="hasBrancheNewSalaire-no"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
       />
-      <span>
-        Non
-      </span>
+      Non
     </label>
   </div>
   <p
@@ -686,38 +817,40 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   >
     <label
       class="c6"
+      for="hasBrancheNewRegularSalaire-yes"
     >
       <input
+        class="c7"
+        id="hasBrancheNewRegularSalaire-yes"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="true"
       />
-      <span>
-        Oui
-      </span>
+      Oui
     </label>
     <label
       class="c6"
+      for="hasBrancheNewRegularSalaire-no"
     >
       <input
         checked=""
+        class="c7"
+        id="hasBrancheNewRegularSalaire-no"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="false"
       />
-      <span>
-        Non
-      </span>
+      Non
     </label>
   </div>
   <div
-    class="c7"
+    class="c8"
   >
     <div
-      class="c8"
+      class="c9"
     >
       <table
-        class="c9 c10"
+        class="c10 c11"
       >
         <thead>
           <tr>
@@ -740,10 +873,10 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
             </td>
             <td>
               <div
-                class="c11"
+                class="c12"
               >
                 <input
-                  class="c12"
+                  class="c13"
                   id="salaire0"
                   name="brancheNewIrregularSalaire[0].salary"
                   type="number"
@@ -751,7 +884,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
                 />
                 <span
                   aria-hidden="true"
-                  class="c13"
+                  class="c14"
                 >
                   €
                 </span>
@@ -768,10 +901,10 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
             </td>
             <td>
               <div
-                class="c11"
+                class="c12"
               >
                 <input
-                  class="c12"
+                  class="c13"
                   id="salaire1"
                   name="brancheNewIrregularSalaire[1].salary"
                   type="number"
@@ -779,7 +912,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
                 />
                 <span
                   aria-hidden="true"
-                  class="c13"
+                  class="c14"
                 >
                   €
                 </span>
@@ -833,12 +966,53 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 2em;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c7 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
   padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c7:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c7:checked:before {
+  display: block;
 }
 
 .c5 {
@@ -878,7 +1052,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   margin-top: 2rem;
 }
 
-.c8 {
+.c9 {
   width: 10em;
   text-align: right;
   border-color: #bbcadf;
@@ -886,21 +1060,21 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   text-align: right;
 }
 
-.c8::-webkit-outer-spin-button,
-.c8::-webkit-inner-spin-button {
+.c9::-webkit-outer-spin-button,
+.c9::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7 {
+.c8 {
   position: relative;
   display: inline-block;
   margin-right: 2rem;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   top: 50%;
   right: 0.25rem;
@@ -974,28 +1148,30 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   >
     <label
       class="c6"
+      for="hasBrancheNewSalaire-yes"
     >
       <input
         checked=""
+        class="c7"
+        id="hasBrancheNewSalaire-yes"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
       />
-      <span>
-        Oui
-      </span>
+      Oui
     </label>
     <label
       class="c6"
+      for="hasBrancheNewSalaire-no"
     >
       <input
+        class="c7"
+        id="hasBrancheNewSalaire-no"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
       />
-      <span>
-        Non
-      </span>
+      Non
     </label>
   </div>
   <p
@@ -1014,45 +1190,47 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   >
     <label
       class="c6"
+      for="hasBrancheNewRegularSalaire-yes"
     >
       <input
         checked=""
+        class="c7"
+        id="hasBrancheNewRegularSalaire-yes"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="true"
       />
-      <span>
-        Oui
-      </span>
+      Oui
     </label>
     <label
       class="c6"
+      for="hasBrancheNewRegularSalaire-no"
     >
       <input
+        class="c7"
+        id="hasBrancheNewRegularSalaire-no"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="false"
       />
-      <span>
-        Non
-      </span>
+      Non
     </label>
   </div>
   <p>
     Salaire mensuel ajusté (primes et temps partiel inclus)
   </p>
   <div
-    class="c7"
+    class="c8"
   >
     <input
-      class="c8"
+      class="c9"
       name="brancheNewRegularSalaire"
       type="number"
       value=""
     />
     <span
       aria-hidden="true"
-      class="c9"
+      class="c10"
     >
       €
     </span>

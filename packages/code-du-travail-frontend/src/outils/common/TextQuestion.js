@@ -1,12 +1,11 @@
 import React from "react";
 import { Field } from "react-final-form";
 import { UID } from "react-uid";
-import { theme } from "@socialgouv/react-ui";
+import { Input, InputDate, theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
 import { InlineError } from "./ErrorField";
 import { Question } from "./Question";
-import { Input } from "./stepStyles";
 import { required } from "./validators";
 
 function TextQuestion({
@@ -17,6 +16,7 @@ function TextQuestion({
   validateOnChange = false,
   ...props
 }) {
+  const InputComponent = inputType === "date" ? InputDate : Input;
   return (
     <UID>
       {id => (
@@ -43,11 +43,10 @@ function TextQuestion({
                 meta: { error, invalid, dirty, touched, submitFailed }
               }) => (
                 <>
-                  <Input
+                  <InputComponent
                     {...input}
                     {...props}
                     id={id}
-                    type={inputType}
                     invalid={touched && invalid}
                   />
                   {invalid &&
