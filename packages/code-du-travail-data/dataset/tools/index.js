@@ -12,7 +12,7 @@ module.exports = [
       "indemnité de licenciement en cas d'alternance temps plein temps partiel",
       "calculez le montant d'une indemnité de licenciement en fonction de votre situation"
     ],
-    description: "Estimez le montant de l’indemnité de licenciement",
+    description: "Estimez simplement le montant de l’indemnité de licenciement",
     action: "Estimer",
     date: "18/10/2018"
   },
@@ -28,7 +28,7 @@ module.exports = [
       "calculer la durée de son préavis",
       "calcul durée préavis démission"
     ],
-    description: "Calculez la durée de préavis de démission",
+    description: "Calculez la durée de préavis à respecter en cas de démission",
     action: "Calculer",
     date: "24/07/2019"
   },
@@ -90,7 +90,7 @@ module.exports = [
       "calculer la durée de son préavis de licenciement",
       "calcul durée préavis licenciement"
     ],
-    description: "Calculez la durée de préavis de licenciement",
+    description: "Calculez la durée de préavis à respecter en cas de licenciement",
     action: "Calculer",
     date: "08/11/2019"
   }

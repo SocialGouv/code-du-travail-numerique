@@ -24,7 +24,7 @@ const {
 
 const selectedTools = [
   {
-    title: "Recherchez votre convention collective",
+    title: "Convention collective",
     action: "Consulter",
     description:
       "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC",
