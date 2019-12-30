@@ -13,7 +13,6 @@ data_path = os.path.join(
     "data"
 )
 
-queries_path = os.path.join(data_path, 'data.txt')
 stops_path = os.path.join(data_path, 'stops.txt')
 
 
