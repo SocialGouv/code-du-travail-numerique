@@ -10,14 +10,15 @@ const references = [
     id: "xxx"
   },
   {
-    title: "Article yyy du code du travail",
+    title: "Article yyy du JO",
     type: TYPE_REFERENCE.journalOfficiel,
     id: "yyy"
   },
   {
-    title: "Article zzz du code du travail",
+    title: "Article zzz de la CC",
     type: TYPE_REFERENCE.conventionCollective,
-    id: "zzz"
+    id: "zzz",
+    slug: "ma-convention-collective"
   }
 ];
 

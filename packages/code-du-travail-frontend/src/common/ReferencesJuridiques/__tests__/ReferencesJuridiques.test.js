@@ -15,20 +15,21 @@ const references = [
     id: "l1244-4"
   },
   {
-    title: "Article L3121-44 du code du travail",
+    title: "Article L3121-44 du JO",
     type: TYPE_REFERENCE.journalOfficiel,
     id: "l3121-44"
   },
   // the two below are not linked to any bloc
   {
-    title: "Article xxx du code du travail",
+    title: "Article xxx du JPO",
     type: TYPE_REFERENCE.journalOfficiel,
     id: "xxx"
   },
   {
-    title: "Article yyy du code du travail",
+    title: "Article yyy de la CC",
     type: TYPE_REFERENCE.conventionCollective,
-    id: "yyy"
+    id: "yyy",
+    slug: "ma-convention"
   }
 ];
 
