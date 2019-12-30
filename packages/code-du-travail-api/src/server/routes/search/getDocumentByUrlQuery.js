@@ -15,10 +15,7 @@ const getDocumentByUrlQuery = (
     size: 1,
     query: {
       bool: {
-        filter: [
-          { term: { slug } },
-          { term: { source: getSourceByRoute(source) } }
-        ]
+        filter: [{ term: { slug } }, { term: { source: esSource } }]
       }
     }
   };
