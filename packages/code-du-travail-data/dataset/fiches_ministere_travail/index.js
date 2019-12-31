@@ -115,7 +115,7 @@ function parseDom(dom, url) {
           text: "",
           title: el.textContent.trim()
         };
-        while (nextEl && nextEl.tagName !== sectionTag) {
+        while (nextEl && nextEl.tagName.toLowerCase() !== sectionTag) {
           section.text += nextEl.textContent.trim();
           section.html += nextEl.outerHTML;
           nextEl = nextEl.nextElementSibling;
@@ -135,55 +135,67 @@ function parseDom(dom, url) {
   };
 }
 
-const limit = pLimit(15);
-let count = 0;
-const spinner = ora(`fetching 0/${urls.length}`).start();
+const fetchAndParse = urls => {
+  const limit = pLimit(15);
+  let count = 0;
+  const spinner = ora(`fetching 0/${urls.length}`).start();
 
-async function parseFiche(url) {
-  try {
-    const dom = await JSDOM.fromURL(url);
-    spinner.text = `fetching ${count++}/${urls.length}`;
-    return parseDom(dom, url);
-  } catch (error) {
-    if (error.statusCode) {
-      spinner.fail(error.options.uri).start();
-    } else {
-      spinner.fail(`${url} - ${error}`).start();
+  async function parseFiche(url) {
+    try {
+      const dom = await JSDOM.fromURL(url);
+      spinner.text = `fetching ${count++}/${urls.length}`;
+      return parseDom(dom, url);
+    } catch (error) {
+      if (error.statusCode) {
+        spinner.fail(error.options.uri).start();
+      } else {
+        spinner.fail(`${url} - ${error}`).start();
+      }
+      return error;
     }
-    return error;
   }
-}
 
-async function parseFiches(urls) {
-  const inputs = urls.map(url => limit(() => parseFiche(url)));
-  const results = (await Promise.all(inputs)).filter(fiche => !!fiche.sections);
-  fs.writeFileSync(
-    "./fiches-mt.json",
-    JSON.stringify(
-      results.map(fiche => ({
-        ...fiche,
-        sections: fiche.sections.map(
-          // description and text are not needed in the file
-          // eslint-disable-next-line no-unused-vars
-          ({ description, text, ...section }) => section
-        )
-      })),
-      null,
-      2
-    )
-  );
-  const fiches = results
-    .map(splitArticle)
-    .reduce((accumulator, documents) => accumulator.concat(documents), []);
-  fs.writeFileSync(
-    "./fiches-mt-split.json",
-    JSON.stringify(fiches.filter(Boolean), null, 2)
-  );
-  spinner.stop().clear();
-}
+  async function parseFiches(urls) {
+    const inputs = urls.map(url => limit(() => parseFiche(url)));
+    const results = (await Promise.all(inputs)).filter(
+      fiche => !!fiche.sections
+    );
+    fs.writeFileSync(
+      "./fiches-mt.json",
+      JSON.stringify(
+        results.map(fiche => ({
+          ...fiche,
+          sections: fiche.sections.map(
+            // description and text are not needed in the file
+            // eslint-disable-next-line no-unused-vars
+            ({ description, text, ...section }) => section
+          )
+        })),
+        null,
+        2
+      )
+    );
+
+    const fiches = results
+      .map(splitArticle)
+      .reduce((accumulator, documents) => accumulator.concat(documents), []);
+    fs.writeFileSync(
+      "./fiches-mt-split.json",
+      JSON.stringify(fiches.filter(Boolean), null, 2)
+    );
+
+    spinner.stop().clear();
+  }
+
+  return parseFiches(urls);
+};
+
+module.exports = {
+  parseDom
+};
 
 if (module === require.main) {
-  parseFiches(urls).catch(error => {
+  fetchAndParse(urls).catch(error => {
     console.error(error);
   });
 }

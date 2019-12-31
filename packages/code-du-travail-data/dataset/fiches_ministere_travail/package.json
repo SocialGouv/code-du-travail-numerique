@@ -18,6 +18,10 @@
   },
   "scripts": {
     "start": "node index",
-    "updateTheme": "node updateTheme && node report"
+    "updateTheme": "node updateTheme && node report",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest-cli": "^24.9.0"
   }
 }
