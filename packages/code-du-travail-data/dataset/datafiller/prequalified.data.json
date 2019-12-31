@@ -511,11 +511,6 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/indemnisation-chomage-des-intermittents-du-spectacle",
-        "title": "Indemnisation chômage des intermittents du spectacle",
-        "relevance": 4
-      },
-      {
         "url": "/fiche-service-public/peut-on-percevoir-lallocation-chomage-en-cas-de-demission",
         "title": "Peut-on percevoir l'allocation chômage en cas de démission ?",
         "relevance": 4
@@ -1113,8 +1108,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/inaptitude-dun-salarie-en-arret-maladie",
-        "title": "Inaptitude d'un salarié en arrêt maladie",
+        "url": "/fiche-service-public/inaptitude-au-travail-dun-salarie-apres-un-arret-maladie",
+        "title": "Inaptitude au travail d'un salarié après un arrêt maladie",
         "relevance": 4
       },
       {
@@ -1123,13 +1118,13 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/accident-du-travail-inaptitude-du-salarie",
-        "title": "Accident du travail : inaptitude du salarié",
+        "url": "/fiche-service-public/inaptitude-au-travail-du-salarie-suite-a-un-accident-du-travail",
+        "title": "Inaptitude au travail du salarié suite à un accident du travail",
         "relevance": 3
       },
       {
-        "url": "/fiche-service-public/maladie-professionnelle-inaptitude-du-salarie",
-        "title": "Maladie professionnelle : inaptitude du salarié",
+        "url": "/fiche-service-public/inaptitude-au-travail-du-salarie-suite-a-une-maladie-professionnelle",
+        "title": "Inaptitude au travail du salarié suite à une maladie professionnelle",
         "relevance": 3
       },
       {
@@ -1260,8 +1255,8 @@
     "theme": "49ee16e2-8362-47f7-af31-a754b6100996",
     "refs": [
       {
-        "url": "/fiche-service-public/invalidite-ou-arret-de-travail-pour-maladie-demarches-de-lemployeur",
-        "title": "Invalidité ou arrêt de travail pour maladie : démarches de l'employeur",
+        "url": "/fiche-service-public/un-salarie-peut-il-travailler-pendant-un-arret-maladie",
+        "title": "Un salarié peut-il travailler pendant un arrêt maladie ?",
         "relevance": 5
       },
       {
@@ -1315,8 +1310,8 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/un-arret-de-travail-prolonge-t-il-un-contrat-a-duree-determinee-cdd",
-        "title": "Un arrêt de travail prolonge-t-il un contrat à durée déterminée (CDD) ?",
+        "url": "/fiche-service-public/un-arret-de-travail-prolonge-t-il-un-cdd",
+        "title": "Un arrêt de travail prolonge-t-il un CDD ?",
         "relevance": 3
       },
       {
@@ -1443,8 +1438,8 @@
         "relevance": 3
       },
       {
-        "url": "/modeles-de-courriers/modele-convocation-a-entretien-prealable",
-        "title": "Modèle : convocation à entretien préalable",
+        "url": "/modeles-de-courriers/convocation-a-un-entretien-prealable",
+        "title": "Convocation à un entretien préalable",
         "relevance": 2
       },
       {
@@ -1599,8 +1594,8 @@
     "theme": "3d36d959-fb8f-4ff6-a759-276164b6da5b",
     "refs": [
       {
-        "url": "/fiche-service-public/modification-du-contrat-de-travail",
-        "title": "Modification du contrat de travail",
+        "url": "/fiche-service-public/modification-du-contrat-de-travail-dun-salarie",
+        "title": "Modification du contrat de travail d'un salarié",
         "relevance": 5
       },
       {
@@ -1813,8 +1808,8 @@
         "relevance": 2
       },
       {
-        "url": "/fiche-service-public/contrat-a-duree-determinee-cdd",
-        "title": "Contrat à durée déterminée (CDD)",
+        "url": "/fiche-service-public/conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
+        "title": "Conclusion du contrat de travail à durée déterminée (CDD)",
         "relevance": 2
       }
     ],
@@ -7756,8 +7751,8 @@
     "theme": "fc69c570-5520-478e-9302-3e226e1cc718",
     "refs": [
       {
-        "url": "/fiche-service-public/elections-professionnelles-les-obligations-de-lemployeur",
-        "title": "Élections professionnelles : les obligations de l'employeur",
+        "url": "/fiche-service-public/elections-professionnelles-obligations-de-lemployeur",
+        "title": "Élections professionnelles : obligations de l'employeur",
         "relevance": 5
       },
       {
@@ -9658,13 +9653,13 @@
         "relevance": 5
       },
       {
-        "url": "https://www.service-public.fr/particuliers/vosdroits/F2141",
-        "title": "Participation | service-public.fr",
+        "url": "/fiche-ministere-travail/epargne-salariale-principes-generaux#Interessement-participation-de-quoi-s-agit-il",
+        "title": "Epargne salariale : intéressement, participation : de quoi s’agit-il ?",
         "relevance": 5
       },
       {
-        "url": "https://travail-emploi.gouv.fr/droit-du-travail/l-epargne-salariale/article/l-interessement-et-la-participation",
-        "title": "L&#039;intéressement et la participation : de quoi parle-t-on ?",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2141",
+        "title": "Participation | service-public.fr",
         "relevance": 5
       },
       {
@@ -9680,6 +9675,11 @@
       {
         "url": "/fiche-service-public/a-t-on-droit-a-la-participation-et-a-linteressement-pendant-le-conge-parental",
         "title": "A-t-on droit à la participation et à l'intéressement pendant le congé parental ?",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/d3346-7",
+        "title": "Article D3346-7",
         "relevance": 3
       },
       {
@@ -9700,11 +9700,6 @@
       {
         "url": "/code-du-travail/r3341-5",
         "title": "Article R3341-5",
-        "relevance": 3
-      },
-      {
-        "url": "/code-du-travail/d3346-7",
-        "title": "Article D3346-7",
         "relevance": 3
       },
       {
@@ -12619,24 +12614,44 @@
     "theme": "8c3bcd88-bf80-4826-a502-a366f6632217",
     "refs": [
       {
-        "url": "https://travail-emploi.gouv.fr/ministere/documentation-et-publications-officielles/guides/article/guide-de-l-epargne-salariale",
-        "title": "Guide de l'épargne salariale - Ministère du Travail",
+        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Le-cadre-de-mise-en-place",
+        "title": "Les plans d’épargne salariale : le cadre de mise en place",
         "relevance": 5
       },
       {
-        "url": "https://travail-emploi.gouv.fr/droit-du-travail/l-epargne-salariale/article/les-plans-d-epargne-salariale",
-        "title": "PEE, PERCO : les plans d&#039;épargne salariale en détails",
+        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Salaries-quels-droits",
+        "title": "Les plans d’épargne salariale : salariés : quels droits ?",
         "relevance": 5
       },
       {
-        "url": "https://travail-emploi.gouv.fr/droit-du-travail/l-epargne-salariale/article/epargne-salariale-principes-generaux",
-        "title": "Intéressement et participation : de quoi parle-t-on ?",
-        "relevance": 5
+        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Plans-d-epargne-salariale-quels-beneficiaires",
+        "title": "Les plans d’épargne salariale : plans d’épargne salariale : quels bénéficiaires ?",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#Comment-mettre-en-place-un-plan-d-epargne-salariale",
+        "title": "Les plans d’épargne salariale : comment mettre en place un plan d’épargne salariale ?",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-ministere-travail/les-plans-depargne-salariale#PEE-Perco-PE-I-Perco-I-De-quoi-s-agit-il-et-comment-sont-ils-nbsp",
+        "title": "Les plans d’épargne salariale : pee, perco, pe-i, perco-i… de quoi s’agit-il et comment sont-ils alimentés ?",
+        "relevance": 4
       },
       {
         "url": "/fiche-service-public/plan-depargne-entreprise-pee",
         "title": "Plan d'épargne entreprise (PEE)",
-        "relevance": 4
+        "relevance": 3
+      },
+      {
+        "url": "/fiche-ministere-travail/les-avantages-sociaux-et-fiscaux-de-lepargne-salariale#Quel-regime-fiscal-et-social-pour-l-entreprise",
+        "title": "Les avantages sociaux et fiscaux de l’épargne salariale : quel régime fiscal et social pour l’entreprise ?",
+        "relevance": 3
+      },
+      {
+        "url": "/fiche-ministere-travail/les-avantages-sociaux-et-fiscaux-de-lepargne-salariale#Quel-regime-fiscal-et-social-pour-les-salaries",
+        "title": "Les avantages sociaux et fiscaux de l’épargne salariale : quel régime fiscal et social pour les salariés ?",
+        "relevance": 3
       }
     ],
     "variants": [
@@ -12645,7 +12660,16 @@
       "déblocage anticipé de l'épargne salariale",
       "transférer les sommes d'un plan d'épargne salariale à un autre",
       "PEI",
-      "PEG"
+      "PEG",
+      "epargne salariale",
+      "C'est quoi un Plan Epargne salariale ?",
+      "Est-ce que l'épargne salariale est imposable ?",
+      "Comment débloquer son épargne salariale ?",
+      "deblocage epargne salariale imposable",
+      "modele lettre deblocage epargne salariale disponible",
+      "deblocage exceptionnel epargne salariale 2019",
+      "lettre deblocage epargne salariale fin de contrat",
+      "deblocage pee impot"
     ]
   },
   {
@@ -13434,11 +13458,6 @@
     "theme": "8b057be7-aa97-481c-b154-27e4cf26569e",
     "refs": [
       {
-        "url": "https://www.service-public.fr/particuliers/vosdroits/F13093",
-        "title": "Qu'est-ce que l'invalidité au sens de la sécurité sociale ? | service-public.fr",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-ministere-travail/emploi-et-handicap-la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth#Comment-etre-reconnu-travailleur-handicape",
         "title": "RQTH: comment être reconnu travailleur handicapé ?",
         "relevance": 4
@@ -13853,8 +13872,8 @@
     "theme": "3d36d959-fb8f-4ff6-a759-276164b6da5b",
     "refs": [
       {
-        "url": "/fiche-service-public/modification-du-contrat-de-travail",
-        "title": "Modification du contrat de travail",
+        "url": "/fiche-service-public/modification-du-contrat-de-travail-dun-salarie",
+        "title": "Modification du contrat de travail d'un salarié",
         "relevance": 5
       },
       {
@@ -14065,8 +14084,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/contrat-de-travail-temporaire-interimaire",
-        "title": "Contrat de travail temporaire (intérimaire)",
+        "url": "/fiche-service-public/contrat-de-travail-temporaire-interim",
+        "title": "Contrat de travail temporaire (intérim)",
         "relevance": 4
       },
       {
@@ -14490,11 +14509,6 @@
         "relevance": 5
       },
       {
-        "url": "http://www.inrs.fr/risques/chutes-hauteur/ce-qu-il-faut-retenir.html",
-        "title": "Risques liés aux chutes de hauteur. Ce qu’il faut retenir - Risques - INRS",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-ministere-travail/chutes-de-hauteur#Donnees-generales",
         "title": "Chutes de hauteur : données générales",
         "relevance": 4
@@ -14600,11 +14614,6 @@
         "relevance": 5
       },
       {
-        "url": "http://www.net-particulier.fr/",
-        "title": "Accueil | Net-Particulier ",
-        "relevance": 4
-      },
-      {
         "url": "http://www.pajemploi.urssaf.fr/",
         "title": "Accueil|Pajemploi",
         "relevance": 4
@@ -14626,17 +14635,12 @@
     "refs": [
       {
         "url": "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-a-duree-determinee",
-        "title": "Rupture d’un commun accord d’un contrat à durée déterminé",
+        "title": "Rupture d’un commun accord d’un contrat à durée déterminée",
         "relevance": 5
       },
       {
         "url": "/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd",
         "title": "Fin d'un contrat à durée déterminée (CDD)",
-        "relevance": 5
-      },
-      {
-        "url": "/fiche-service-public/rupture-anticipee-dun-cdd-par-lemployeur",
-        "title": "Rupture anticipée d'un CDD par l'employeur",
         "relevance": 5
       },
       {
@@ -14660,8 +14664,8 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/quest-ce-quun-cdd-a-objet-defini",
-        "title": "Qu'est-ce qu'un CDD à objet défini ?",
+        "url": "/fiche-service-public/quest-ce-quun-cdd-a-objet-defini-ou-cdd-de-mission",
+        "title": "Qu'est-ce qu'un CDD à objet défini (ou CDD de mission) ?",
         "relevance": 4
       },
       {
@@ -14680,18 +14684,13 @@
         "relevance": 4
       },
       {
-        "url": "/fiche-service-public/quelle-peut-etre-la-duree-maximale-dun-cdd",
-        "title": "Quelle peut être la durée maximale d'un CDD ?",
-        "relevance": 3
-      },
-      {
         "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-cdd#L-embauche-sous-contrat-a-duree-determinee",
         "title": "CDD : l’embauche sous contrat à durée déterminée",
         "relevance": 3
       },
       {
-        "url": "/fiche-service-public/un-arret-de-travail-prolonge-t-il-un-contrat-a-duree-determinee-cdd",
-        "title": "Un arrêt de travail prolonge-t-il un contrat à durée déterminée (CDD) ?",
+        "url": "/fiche-service-public/un-arret-de-travail-prolonge-t-il-un-cdd",
+        "title": "Un arrêt de travail prolonge-t-il un CDD ?",
         "relevance": 2
       },
       {
@@ -14705,13 +14704,13 @@
         "relevance": 2
       },
       {
-        "url": "/fiche-service-public/renouvellement-dun-contrat-de-travail-a-duree-determinee-cdd",
-        "title": "Renouvellement d'un contrat de travail à durée déterminée (CDD)",
+        "url": "/fiche-service-public/conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
+        "title": "Conclusion du contrat de travail à durée déterminée (CDD)",
         "relevance": 1
       },
       {
-        "url": "/fiche-service-public/contrat-a-duree-determinee-cdd",
-        "title": "Contrat à durée déterminée (CDD)",
+        "url": "/fiche-service-public/renouvellement-dun-contrat-de-travail-a-duree-determinee-cdd",
+        "title": "Renouvellement d'un contrat de travail à durée déterminée (CDD)",
         "relevance": 1
       },
       {
@@ -14783,13 +14782,8 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/rupture-conventionnelle-dun-cdi",
-        "title": "Rupture conventionnelle d'un CDI",
-        "relevance": 4
-      },
-      {
-        "url": "/fiche-service-public/contrat-a-duree-indeterminee-cdi",
-        "title": "Contrat à durée indéterminée (CDI)",
+        "url": "/fiche-service-public/conclusion-dun-contrat-de-travail-a-duree-indeterminee-cdi",
+        "title": "Conclusion d'un contrat de travail à durée indéterminée (CDI)",
         "relevance": 3
       },
       {
@@ -14821,18 +14815,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/rupture-conventionnelle-dun-cdi",
-        "title": "Rupture conventionnelle d'un CDI",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-service-public/rupture-du-contrat-de-travail-pour-cas-de-force-majeure",
         "title": "Rupture du contrat de travail pour cas de force majeure",
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/rupture-anticipee-dun-cdd-par-lemployeur",
-        "title": "Rupture anticipée d'un CDD par l'employeur",
+        "url": "/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd",
+        "title": "Fin d'un contrat à durée déterminée (CDD)",
         "relevance": 5
       },
       {
@@ -14971,11 +14960,6 @@
       {
         "url": "/fiche-service-public/rupture-conventionnelle",
         "title": "Rupture conventionnelle",
-        "relevance": 5
-      },
-      {
-        "url": "/fiche-service-public/rupture-conventionnelle-dun-cdi",
-        "title": "Rupture conventionnelle d'un CDI",
         "relevance": 5
       },
       {
@@ -15487,11 +15471,6 @@
       {
         "url": "/fiche-service-public/rupture-conventionnelle",
         "title": "Rupture conventionnelle",
-        "relevance": 5
-      },
-      {
-        "url": "/fiche-service-public/rupture-conventionnelle-dun-cdi",
-        "title": "Rupture conventionnelle d'un CDI",
         "relevance": 5
       },
       {
@@ -16173,13 +16152,8 @@
     "theme": "cf8ad41e-b8e7-448f-ae81-cbaf4c654a0e",
     "refs": [
       {
-        "url": "/fiche-service-public/salarie-comment-obtenir-et-utiliser-des-titres-restaurant",
-        "title": "Salarié : comment obtenir et utiliser des titres-restaurant ?",
-        "relevance": 5
-      },
-      {
-        "url": "/fiche-service-public/contribution-de-lemployeur-aux-titres-restaurant",
-        "title": "Contribution de l'employeur aux titres-restaurant",
+        "url": "/fiche-service-public/comment-obtenir-et-utiliser-des-titres-restaurant",
+        "title": "Comment obtenir et utiliser des titres-restaurant ?",
         "relevance": 5
       },
       {
@@ -16850,11 +16824,6 @@
         "relevance": 5
       },
       {
-        "url": "http://www.vae.gouv.fr/",
-        "title": "Le portail de la validation des acquis de l'expérience",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-ministere-travail/la-validation-des-acquis-de-lexperience-vae#Comment-monter-un-dossier-de-demande-de-VAE",
         "title": "Comment monter un dossier de demande de VAE ?",
         "relevance": 4
@@ -16984,11 +16953,6 @@
         "url": "/fiche-ministere-travail/reforme-de-la-medecine-du-travail-et-des-services-de-sante-au-travail-questions-les-plus-frequentes#IV-Autres-visites-et-examens",
         "title": "Réforme de la médecine du travail et des services de santé au travail : iv. autres visites et examens",
         "relevance": 4
-      },
-      {
-        "url": "/fiche-service-public/invalidite-ou-arret-de-travail-pour-maladie-demarches-de-lemployeur",
-        "title": "Invalidité ou arrêt de travail pour maladie : démarches de l'employeur",
-        "relevance": 3
       },
       {
         "url": "/code-du-travail/l4625-1-1",
