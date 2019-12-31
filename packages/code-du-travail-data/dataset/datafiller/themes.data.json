@@ -717,9 +717,6 @@
         "title": "Comment le CDI peut-il prendre fin ?"
       },
       {
-        "url": "/fiche-service-public/rupture-du-contrat-de-travail-a-duree-indeterminee-cdi"
-      },
-      {
         "url": "/fiche-ministere-travail/le-contrat-de-travail-a-duree-indeterminee-cdi#Dans-quels-cas-un-CDI-doit-il-etre-conclu",
         "title": "Dans quels cas un CDI doit-il être conclu ?"
       },
@@ -734,14 +731,6 @@
       {
         "url": "/fiche-ministere-travail/le-contrat-a-duree-indeterminee-de-chantier-ou-doperation#CDI-de-chantier-ou-d-operation-comment-est-il-rompu",
         "title": "Le contrat à durée indéterminée de chantier ou d’opération : cdi de chantier ou d’opération : comment est-il rompu ?"
-      },
-      {
-        "url": "/contribution/quelles-sont-les-conditions-de-la-clause-de-non-concurrence",
-        "title": "Quelles sont les conditions de la clause de non-concurrence ?"
-      },
-      {
-        "url": "/contribution/lentreprise-peut-elle-embaucher-dans-le-cadre-dun-cdi-de-chantier-ou-doperation",
-        "title": "L'entreprise peut-elle embaucher dans le cadre d'un CDI de chantier ou d’opération ? "
       },
       {
         "url": "/fiche-service-public/quest-ce-que-le-contrat-de-chantier-ou-doperation",
@@ -1900,9 +1889,6 @@
         "url": "/fiche-service-public/contrat-de-professionnalisation-qui-peut-etre-tuteur"
       },
       {
-        "url": "https://travail-emploi.gouv.fr/demarches-ressources-documentaires/formulaires-et-teledeclarations/jeunes-actifs-et-actifs-en-formation/article/formulaires-contrat-de-professionnalisation"
-      },
-      {
         "url": "/fiche-ministere-travail/contrat-de-professionnalisation#Quelles-sont-les-modalites-de-rupture-du-contrat-de-professionnalisation-et-nbsp",
         "title": "Contrat de professionnalisation : quelles sont les modalités de rupture du contrat de professionnalisation et quelles sont les démarches à effectuer ?"
       },
@@ -1970,33 +1956,23 @@
     "position": 12,
     "refs": [
       {
-        "url": "/contribution/combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele",
-        "title": "Combien de fois le contrat de travail peut-il être renouvelé ?"
-      },
-      {
         "url": "/contribution/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
         "title": "Est-il obligatoire d'avoir un contrat de travail écrit et signé ?"
+      },
+      {
+        "url": "/contributions/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
+        "title": "Est-il obligatoire d'avoir un contrat de travail écrit et signé ?"
       },
       {
         "url": "/contribution/quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement",
         "title": " Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?"
       },
       {
-        "url": "/contribution/comment-determiner-lanciennete-du-salarie",
-        "title": "Comment déterminer l'ancienneté du salarié ?"
-      },
-      {
-        "url": "/contribution/embauche-en-contrat-dextra-cdd-dusage",
-        "title": " Embauche en contrat d'extra (CDD d'usage)"
-      },
-      {
-        "url": "/fiche-service-public/le-contrat-de-travail-est-il-obligatoirement-ecrit"
-      },
-      {
         "url": "/fiche-service-public/quest-ce-quune-clause-de-non-concurrence"
       },
       {
-        "url": "/fiche-service-public/un-employeur-peut-il-sopposer-a-ce-quun-salarie-soit-jure-dassises"
+        "url": "/contributions/quelles-sont-les-conditions-de-la-clause-de-non-concurrence",
+        "title": "Quelles sont les conditions de la clause de non-concurrence ?"
       },
       {
         "url": "/fiche-service-public/quest-ce-quune-clause-de-mobilite"
@@ -2015,39 +1991,32 @@
         "url": "/fiche-service-public/portage-salarial"
       },
       {
-        "url": "/fiche-service-public/prestations-sociales-pour-les-commercants-et-les-artisans-independants"
+        "url": "/contribution/comment-determiner-lanciennete-du-salarie",
+        "title": "Comment déterminer l'ancienneté du salarié ?"
       },
       {
         "url": "/fiche-service-public/quest-ce-quun-contrat-de-travail-a-duree-indeterminee-cdi-interimaire",
         "title": "Qu'est-ce qu'un contrat de travail à durée indéterminée (CDI) intérimaire ?"
       },
       {
-        "url": "/fiche-service-public/adhesion-dune-association-a-un-groupement-demployeurs",
-        "title": "Adhésion d'une association à un groupement d'employeurs"
-      },
-      {
         "url": "/fiche-service-public/quelles-sont-les-obligations-du-salarie-dont-le-contrat-de-travail-est-suspendu",
         "title": "Quelles sont les obligations du salarié dont le contrat de travail est suspendu ?"
+      },
+      {
+        "url": "/fiche-service-public/le-contrat-de-travail-est-il-obligatoirement-ecrit",
+        "title": "Le contrat de travail est-il obligatoirement écrit ?"
       },
       {
         "url": "/fiche-service-public/quels-sont-les-droits-du-salarie-dont-le-contrat-de-travail-est-suspendu",
         "title": "Quels sont les droits du salarié dont le contrat de travail est suspendu ?"
       },
       {
-        "url": "/fiche-ministere-travail/la-medaille-dhonneur-du-travail",
-        "title": "La médaille d’honneur du travail"
+        "url": "/contributions/comment-determiner-lanciennete-du-salarie",
+        "title": "Comment déterminer l'ancienneté du salarié ?"
       },
       {
-        "url": "/fiche-ministere-travail/la-medaille-dhonneur-du-travail#Quels-salaries",
-        "title": "La médaille d’honneur du travail : quels salariés ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-medaille-dhonneur-du-travail#Quelles-caracteristiques",
-        "title": "La médaille d’honneur du travail : quelles caractéristiques ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-medaille-dhonneur-du-travail#Quelle-procedure",
-        "title": "La médaille d’honneur du travail : quelle procédure ?"
+        "url": "/contributions/en-cas-de-perte-de-marche-par-lemployeur-quelles-sont-les-conditions-dun-transfert-des-contrats-de-travail",
+        "title": "En cas de perte de marché par l’employeur, quelles sont les conditions d'un transfert des contrats de travail ? "
       },
       {
         "url": "/fiche-ministere-travail/interim-et-cdd",
@@ -2066,24 +2035,31 @@
         "title": "Interim et CDD : règles particulières à l’emploi d’intérimaires"
       },
       {
-        "url": "/contributions/quelles-sont-les-conditions-de-la-clause-de-non-concurrence",
-        "title": "Quelles sont les conditions de la clause de non-concurrence ?"
-      },
-      {
         "url": "/contributions/combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele",
         "title": "Combien de fois le contrat de travail peut-il être renouvelé ?"
       },
       {
-        "url": "/contributions/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
-        "title": "Est-il obligatoire d'avoir un contrat de travail écrit et signé ?"
+        "url": "/fiche-service-public/un-employeur-peut-il-sopposer-a-ce-quun-salarie-soit-jure-dassises"
       },
       {
-        "url": "/contributions/comment-determiner-lanciennete-du-salarie",
-        "title": "Comment déterminer l'ancienneté du salarié ?"
+        "url": "/fiche-service-public/adhesion-dune-association-a-un-groupement-demployeurs",
+        "title": "Adhésion d'une association à un groupement d'employeurs"
       },
       {
-        "url": "/contributions/en-cas-de-perte-de-marche-par-lemployeur-quelles-sont-les-conditions-dun-transfert-des-contrats-de-travail",
-        "title": "En cas de perte de marché par l’employeur, quelles sont les conditions d'un transfert des contrats de travail ? "
+        "url": "/fiche-ministere-travail/la-medaille-dhonneur-du-travail",
+        "title": "La médaille d’honneur du travail"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-medaille-dhonneur-du-travail#Quelle-procedure",
+        "title": "La médaille d’honneur du travail : quelle procédure ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-medaille-dhonneur-du-travail#Quels-salaries",
+        "title": "La médaille d’honneur du travail : quels salariés ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-medaille-dhonneur-du-travail#Quelles-caracteristiques",
+        "title": "La médaille d’honneur du travail : quelles caractéristiques ?"
       }
     ],
     "slug": "12-contrat-de-travail",
@@ -2652,10 +2628,6 @@
         "title": "Arrêt maladie pendant le préavis : quelles conséquences ?"
       },
       {
-        "url": "/modeles-de-courriers/modele-lettre-de-reclamation-des-documents-de-fin-de-contrat",
-        "title": "Lettre de réclamation des documents de fin de contrat"
-      },
-      {
         "url": "/fiche-service-public/le-salarie-beneficie-t-il-dheures-de-recherche-demploi-pendant-son-preavis"
       },
       {
@@ -2668,16 +2640,8 @@
         "url": "/fiche-service-public/indemnite-compensatrice-de-conges-payes"
       },
       {
-        "url": "/fiche-service-public/faute-grave-ou-lourde-commise-pendant-un-preavis-quelles-consequences",
-        "title": "Faute grave ou lourde commise pendant un préavis : quelles conséquences ?"
-      },
-      {
         "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
         "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?"
-      },
-      {
-        "url": "/contributions/quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
-        "title": " Quelle est la durée de préavis en cas de licenciement ?"
       },
       {
         "url": "/contributions/arret-maladie-pendant-le-preavis-quelles-consequences",
@@ -3536,10 +3500,6 @@
       {
         "url": "/fiche-service-public/a-quoi-correspond-le-code-ape",
         "title": "À quoi correspond le code APE ?"
-      },
-      {
-        "url": "/fiche-service-public/affiliation-et-cotisations-sociales-des-artistes-auteurs",
-        "title": "Affiliation et cotisations sociales des artistes-auteurs"
       }
     ],
     "slug": "1-embauche-et-contrat-de-travail",
@@ -3767,10 +3727,6 @@
       {
         "url": "/fiche-ministere-travail/la-garantie-en-cas-de-sauvegarde-de-redressement-ou-de-liquidation-judiciaire#Quel-est-le-role-du-representant-des-salaries",
         "title": "La garantie en cas de sauvegarde, de redressement ou de liquidation judiciaire : quel est le rôle du représentant des salariés ?"
-      },
-      {
-        "url": "/fiche-service-public/licenciement-dans-une-entreprise-en-difficulte-quelles-sont-les-regles",
-        "title": "Licenciement dans une entreprise en difficulté : quelles sont les règles ?"
       }
     ],
     "slug": "53-entreprises-en-difficulte",
@@ -4057,10 +4013,6 @@
         "title": "Simulateur d'indemnité de précarité"
       },
       {
-        "url": "/fiche-service-public/un-arret-de-travail-prolonge-t-il-un-cdd",
-        "title": "Un arrêt de travail prolonge-t-il un CDD ?"
-      },
-      {
         "url": "/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd",
         "title": "Fin d'un contrat à durée déterminée (CDD)"
       },
@@ -4069,8 +4021,8 @@
         "title": "Dans le cadre d’un CDD, quel est le montant de l’indemnité de fin de contrat ? "
       },
       {
-        "url": "/contributions/embauche-en-contrat-dextra-cdd-dusage",
-        "title": " Embauche en contrat d'extra (CDD d'usage)"
+        "url": "/contributions/faut-il-respecter-un-delai-de-carence-entre-deux-contrats-de-mission-interim",
+        "title": "Faut-il respecter un délai de carence entre deux contrats de mission (intérim) ? "
       }
     ],
     "slug": "82-fin-dun-cdd-ctt",
@@ -4765,9 +4717,6 @@
         "title": "Le contrat de travail temporaire : quels sont les droits collectifs et individuels du salarié intérimaire ?"
       },
       {
-        "url": "/fiche-service-public/dans-quel-secteur-peut-on-recourir-au-cdd-dusage-ou-a-linterim"
-      },
-      {
         "url": "/fiche-ministere-travail/le-contrat-de-travail-temporaire#Dans-quels-cas-l-employeur-encourt-il-des-sanctions-penales-nbsp",
         "title": "Le contrat de travail temporaire : dans quels cas l’employeur encourt-il des sanctions pénales ?"
       },
@@ -4778,14 +4727,6 @@
       {
         "url": "/contribution/quelle-est-la-duree-maximale-du-contrat-de-mission-interim",
         "title": " Quelle est la durée maximale du contrat de mission (intérim) ? "
-      },
-      {
-        "url": "/contributions/faut-il-respecter-un-delai-de-carence-entre-deux-contrats-de-mission-interim",
-        "title": "Faut-il respecter un délai de carence entre deux contrats de mission (intérim) ? "
-      },
-      {
-        "url": "/contributions/quelle-est-la-duree-maximale-du-contrat-de-mission-interim",
-        "title": " Quelle est la durée maximale du contrat de mission (intérim) ? "
       }
     ],
     "slug": "123-interim",
@@ -6370,6 +6311,10 @@
     "position": 128,
     "refs": [
       {
+        "url": "/fiche-service-public/modification-du-contrat-de-travail-dun-salarie",
+        "title": "Modification du contrat de travail d'un salarié"
+      },
+      {
         "url": "/fiche-ministere-travail/la-modification-du-contrat-de-travail#L-employeur-peut-il-modifier-le-contrat-de-travail",
         "title": "La modification du contrat de travail : l’employeur peut-il modifier le contrat de travail ?"
       },
@@ -6437,10 +6382,6 @@
       {
         "url": "/fiche-service-public/peut-on-modifier-le-contrat-de-travail-dun-salarie-protege",
         "title": "Peut-on modifier le contrat de travail d'un salarié protégé ?"
-      },
-      {
-        "url": "/fiche-service-public/modification-du-contrat-de-travail-dun-salarie",
-        "title": "Modification du contrat de travail d'un salarié"
       }
     ],
     "slug": "128-modification-du-contrat-de-travail",
@@ -9088,10 +9029,6 @@
         "url": "/fiche-service-public/comment-un-assistant-maternel-doit-il-declarer-ses-revenus"
       },
       {
-        "url": "/modeles-de-courriers/modele-lettre-de-reclamation-des-heures-supplementaires",
-        "title": "Modèle : lettre de réclamation des heures supplémentaires"
-      },
-      {
         "url": "/outils/simulateur-embauche",
         "title": "Simulateur d'embauche"
       },
@@ -9166,10 +9103,6 @@
       },
       {
         "url": "/fiche-service-public/remuneration-du-dirigeant-dune-association"
-      },
-      {
-        "url": "/contributions/en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi",
-        "title": "En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?"
       }
     ],
     "slug": "2-salaire-et-remuneration",
@@ -9711,22 +9644,6 @@
       },
       {
         "url": "/fiche-service-public/un-salarie-peut-il-etre-oblige-de-travailler-en-soiree"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-travail-de-nuit#Comment-est-mis-en-place-le-travail-de-nuit",
-        "title": "Le travail de nuit : comment est mis en place le travail de nuit ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-travail-de-nuit#Quelles-sont-les-durees-maximales-du-travail-de-nuit",
-        "title": "Le travail de nuit : quelles sont les durées maximales du travail de nuit ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-travail-de-nuit#Quelles-sont-les-contreparties-et-les-garanties-accordees-aux-travailleurs-nbsp",
-        "title": "Le travail de nuit : quelles sont les contreparties et les garanties accordées aux travailleurs de nuit ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-travail-de-nuit#De-quel-suivi-de-son-etat-de-sante-le-travailleur-de-nuit-beneficie-t-il-nbsp",
-        "title": "Le travail de nuit : de quel suivi de son état de santé le travailleur de nuit bénéficie-t-il ?"
       },
       {
         "url": "/fiche-ministere-travail/le-travail-en-soiree#Quels-sont-les-etablissements-concernes-par-le-travail-en-soiree-nbsp",
