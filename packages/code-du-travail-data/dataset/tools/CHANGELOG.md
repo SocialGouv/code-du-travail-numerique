@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.0...v4.0.0-gamma.1) (2019-12-31)
+
+**Note:** Version bump only for package @cdt/data...tools
+
+
+
+
+
 # [4.0.0-gamma.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-alpha.1...v4.0.0-gamma.0) (2019-12-31)
 
 **Note:** Version bump only for package @cdt/data...tools
