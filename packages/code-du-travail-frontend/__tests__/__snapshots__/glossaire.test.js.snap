@@ -661,6 +661,10 @@ exports[`<Glossaire /> should render 1`] = `
 
 .c51 {
   margin-bottom: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c0 {
@@ -3846,6 +3850,7 @@ exports[`<Glossaire /> should render 1`] = `
           travail-emploi.gouv.fr
         </a>
         <span
+          aria-hidden="true"
           class="c51"
         >
           |
@@ -3859,6 +3864,7 @@ exports[`<Glossaire /> should render 1`] = `
           service-public.fr
         </a>
         <span
+          aria-hidden="true"
           class="c51"
         >
           |
@@ -3872,6 +3878,7 @@ exports[`<Glossaire /> should render 1`] = `
           legifrance.gouv.fr
         </a>
         <span
+          aria-hidden="true"
           class="c51"
         >
           |
@@ -3885,6 +3892,7 @@ exports[`<Glossaire /> should render 1`] = `
           data.gouv.fr
         </a>
         <span
+          aria-hidden="true"
           class="c51"
         >
           |
@@ -3898,6 +3906,7 @@ exports[`<Glossaire /> should render 1`] = `
           gouvernement.fr
         </a>
         <span
+          aria-hidden="true"
           class="c51"
         >
           |

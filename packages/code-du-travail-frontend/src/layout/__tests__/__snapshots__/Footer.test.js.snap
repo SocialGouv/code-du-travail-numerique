@@ -251,6 +251,10 @@ exports[`<Footer /> should render 1`] = `
 
 .c20 {
   margin-bottom: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media print {
@@ -555,6 +559,7 @@ exports[`<Footer /> should render 1`] = `
           travail-emploi.gouv.fr
         </a>
         <span
+          aria-hidden="true"
           class="c20"
         >
           |
@@ -568,6 +573,7 @@ exports[`<Footer /> should render 1`] = `
           service-public.fr
         </a>
         <span
+          aria-hidden="true"
           class="c20"
         >
           |
@@ -581,6 +587,7 @@ exports[`<Footer /> should render 1`] = `
           legifrance.gouv.fr
         </a>
         <span
+          aria-hidden="true"
           class="c20"
         >
           |
@@ -594,6 +601,7 @@ exports[`<Footer /> should render 1`] = `
           data.gouv.fr
         </a>
         <span
+          aria-hidden="true"
           class="c20"
         >
           |
@@ -607,6 +615,7 @@ exports[`<Footer /> should render 1`] = `
           gouvernement.fr
         </a>
         <span
+          aria-hidden="true"
           class="c20"
         >
           |
