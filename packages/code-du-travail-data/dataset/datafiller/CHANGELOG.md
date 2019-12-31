@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0-alpha.1 (2019-12-31)
+
+
+### Bug Fixes
+
+* **cc:** some CC cosmetics for [#2035](https://github.com/SocialGouv/code-du-travail-numerique/issues/2035) ([#2073](https://github.com/SocialGouv/code-du-travail-numerique/issues/2073)) ([26ae21e](https://github.com/SocialGouv/code-du-travail-numerique/commit/26ae21e808c2704b8cc3fd3eed619e7822df9149))
+* **data:** update Contribs and DF ([#2113](https://github.com/SocialGouv/code-du-travail-numerique/issues/2113)) ([3f596f6](https://github.com/SocialGouv/code-du-travail-numerique/commit/3f596f6a7ed94e09c59654e5766ee07e78cc4202))
+* **data:** update datafiller, contributions ([#2119](https://github.com/SocialGouv/code-du-travail-numerique/issues/2119)) ([d6e58bf](https://github.com/SocialGouv/code-du-travail-numerique/commit/d6e58bfead80fb4e67abaf62fd11f29d161f1364))
+* **deps:** update all non-major dependencies ([#2066](https://github.com/SocialGouv/code-du-travail-numerique/issues/2066)) ([26d3429](https://github.com/SocialGouv/code-du-travail-numerique/commit/26d34292bd69727f57c5305b969c1cf7eb3b2564))
+* update df data ([#2090](https://github.com/SocialGouv/code-du-travail-numerique/issues/2090)) ([9db0fdc](https://github.com/SocialGouv/code-du-travail-numerique/commit/9db0fdcc21c4dcef9bdad999eb68e2d5b647c724))
+
+
+### Features
+
+* **frontend:** add icons to theme ([#2043](https://github.com/SocialGouv/code-du-travail-numerique/issues/2043)) ([284d33d](https://github.com/SocialGouv/code-du-travail-numerique/commit/284d33d5082f2c8cda6eaa924311109ea102ad96))
+* use ccn shortitle as slug  ([#2038](https://github.com/SocialGouv/code-du-travail-numerique/issues/2038)) ([714709f](https://github.com/SocialGouv/code-du-travail-numerique/commit/714709fc11a5204fce5fba3e030f9719b77db451)), closes [#1830](https://github.com/SocialGouv/code-du-travail-numerique/issues/1830)
+
+
+
+
+
 # 4.0.0-alpha.0 (2019-12-31)
 
 

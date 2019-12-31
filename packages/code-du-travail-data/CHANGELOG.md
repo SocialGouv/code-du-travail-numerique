@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0-alpha.1 (2019-12-31)
+
+
+### Bug Fixes
+
+* **cc:** some CC cosmetics for [#2035](https://github.com/SocialGouv/code-du-travail-numerique/issues/2035) ([#2073](https://github.com/SocialGouv/code-du-travail-numerique/issues/2073)) ([26ae21e](https://github.com/SocialGouv/code-du-travail-numerique/commit/26ae21e808c2704b8cc3fd3eed619e7822df9149))
+* **data:** update Contribs and DF ([#2113](https://github.com/SocialGouv/code-du-travail-numerique/issues/2113)) ([3f596f6](https://github.com/SocialGouv/code-du-travail-numerique/commit/3f596f6a7ed94e09c59654e5766ee07e78cc4202))
+* **data:** update datafiller, contributions ([#2119](https://github.com/SocialGouv/code-du-travail-numerique/issues/2119)) ([d6e58bf](https://github.com/SocialGouv/code-du-travail-numerique/commit/d6e58bfead80fb4e67abaf62fd11f29d161f1364))
+* **deps:** update all non-major dependencies ([#2066](https://github.com/SocialGouv/code-du-travail-numerique/issues/2066)) ([26d3429](https://github.com/SocialGouv/code-du-travail-numerique/commit/26d34292bd69727f57c5305b969c1cf7eb3b2564))
+* **fiches-SP:** fix CC and cdt refs ([#2099](https://github.com/SocialGouv/code-du-travail-numerique/issues/2099)) ([d589d07](https://github.com/SocialGouv/code-du-travail-numerique/commit/d589d07bcb2a83edf42a8910ab8737831c7333c3))
+* fix CPF action  ([#2071](https://github.com/SocialGouv/code-du-travail-numerique/issues/2071)) ([eec192b](https://github.com/SocialGouv/code-du-travail-numerique/commit/eec192b1533cfd80dbc396db2bada5ede3e07e86))
+* update contributions data ([#2068](https://github.com/SocialGouv/code-du-travail-numerique/issues/2068)) ([d29d4ab](https://github.com/SocialGouv/code-du-travail-numerique/commit/d29d4abe339d7ecc9a086b3e48f8727b717ae161))
+* update df data ([#2090](https://github.com/SocialGouv/code-du-travail-numerique/issues/2090)) ([9db0fdc](https://github.com/SocialGouv/code-du-travail-numerique/commit/9db0fdcc21c4dcef9bdad999eb68e2d5b647c724))
+* update document descriptions ([#2085](https://github.com/SocialGouv/code-du-travail-numerique/issues/2085)) ([1905908](https://github.com/SocialGouv/code-du-travail-numerique/commit/1905908f0ee58af6d6bfc7ea561f6eaaa44dd6ae))
+* update fiches-MT data ([#2079](https://github.com/SocialGouv/code-du-travail-numerique/issues/2079)) ([6e2b883](https://github.com/SocialGouv/code-du-travail-numerique/commit/6e2b883a7effce0bb13ee5fd5573188434dcb06f))
+* **idcc:** support new kali-data  number format for idcc ([#2049](https://github.com/SocialGouv/code-du-travail-numerique/issues/2049)) ([12a8c2b](https://github.com/SocialGouv/code-du-travail-numerique/commit/12a8c2b61f8816354f8f53e26e099508459a0897)), closes [#2041](https://github.com/SocialGouv/code-du-travail-numerique/issues/2041)
+
+
+### Code Refactoring
+
+* use elastic cloud ([#1753](https://github.com/SocialGouv/code-du-travail-numerique/issues/1753)) ([3291662](https://github.com/SocialGouv/code-du-travail-numerique/commit/32916621914475874ffc538691c17188fcd83001)), closes [#1741](https://github.com/SocialGouv/code-du-travail-numerique/issues/1741) [#1987](https://github.com/SocialGouv/code-du-travail-numerique/issues/1987)
+
+
+### Features
+
+* MAJ modèles de docs ([#2020](https://github.com/SocialGouv/code-du-travail-numerique/issues/2020)) ([cea11c1](https://github.com/SocialGouv/code-du-travail-numerique/commit/cea11c17bd60d159b58519ffd6be3ed0870313ed)), closes [#2014](https://github.com/SocialGouv/code-du-travail-numerique/issues/2014) [#2019](https://github.com/SocialGouv/code-du-travail-numerique/issues/2019) [#1837](https://github.com/SocialGouv/code-du-travail-numerique/issues/1837) [#2014](https://github.com/SocialGouv/code-du-travail-numerique/issues/2014)
+* **frontend:** add icons to theme ([#2043](https://github.com/SocialGouv/code-du-travail-numerique/issues/2043)) ([284d33d](https://github.com/SocialGouv/code-du-travail-numerique/commit/284d33d5082f2c8cda6eaa924311109ea102ad96))
+* use ccn shortitle as slug  ([#2038](https://github.com/SocialGouv/code-du-travail-numerique/issues/2038)) ([714709f](https://github.com/SocialGouv/code-du-travail-numerique/commit/714709fc11a5204fce5fba3e030f9719b77db451)), closes [#1830](https://github.com/SocialGouv/code-du-travail-numerique/issues/1830)
+
+
+### BREAKING CHANGES
+
+* refactor: use elastic cloud
+    - We are now using an external elastic cloud service
+    - We are deploying to azure to `master-code-travail.dev.fabrique.social.gouv.fr`
+    - We are using shared https://github.com/SocialGouv/gitlab-ci-yml
+
+
+
+
+
 # 4.0.0-alpha.0 (2019-12-31)
 
 

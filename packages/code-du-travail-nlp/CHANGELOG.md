@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0-alpha.1 (2019-12-31)
+
+
+### Bug Fixes
+
+* **ci:** dont deploy renovate PRs, some cleanup ([#2089](https://github.com/SocialGouv/code-du-travail-numerique/issues/2089)) ([bef1e0f](https://github.com/SocialGouv/code-du-travail-numerique/commit/bef1e0faa2ab39ceea827798e8ab31975bf8c44d))
+
+
+
+
+
 # 4.0.0-alpha.0 (2019-12-31)
 
 
