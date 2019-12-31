@@ -115,7 +115,7 @@ function parseDom(dom, url) {
           text: "",
           title: el.textContent.trim()
         };
-        while (nextEl && nextEl.tagName !== sectionTag) {
+        while (nextEl && nextEl.tagName.toLowerCase() !== sectionTag) {
           section.text += nextEl.textContent.trim();
           section.html += nextEl.outerHTML;
           nextEl = nextEl.nextElementSibling;
