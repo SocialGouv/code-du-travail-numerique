@@ -42,7 +42,7 @@ class Modeles extends React.Component {
         <Section>
           <Container narrow>
             <PageTitle>
-              Consulter et télécharger nos modèles de documents
+              Consultez et téléchargez nos modèles de documents
             </PageTitle>
             <StyledList>
               {data.hits.hits.map(({ _id, _source }) => (
