@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-alpha.1...v4.0.0-gamma.0) (2019-12-31)
+
+
+### Bug Fixes
+
+* **ingress:** add prod appGW hosts ([#2126](https://github.com/SocialGouv/code-du-travail-numerique/issues/2126)) ([db8b716](https://github.com/SocialGouv/code-du-travail-numerique/commit/db8b71616752d3db1b904f0f54ddf1b22faae310))
+* fix frontend probes delays ([#2127](https://github.com/SocialGouv/code-du-travail-numerique/issues/2127)) ([0d59c1b](https://github.com/SocialGouv/code-du-travail-numerique/commit/0d59c1b5ddffc1de4b24a29099fa840f84391af7))
+
+
+
+
+
 # 4.0.0-alpha.1 (2019-12-31)
 
 
