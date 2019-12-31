@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0-alpha.0 (2019-12-31)
+
+
+### Bug Fixes
+
+* fix CPF action  ([#2071](https://github.com/SocialGouv/code-du-travail-numerique/issues/2071)) ([eec192b](https://github.com/SocialGouv/code-du-travail-numerique/commit/eec192b1533cfd80dbc396db2bada5ede3e07e86))
+
+
+
+
+
 # [3.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.9.0...v3.10.0) (2019-12-20)
 
 

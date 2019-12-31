@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0-alpha.0 (2019-12-31)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2066](https://github.com/SocialGouv/code-du-travail-numerique/issues/2066)) ([26d3429](https://github.com/SocialGouv/code-du-travail-numerique/commit/26d34292bd69727f57c5305b969c1cf7eb3b2564))
+
+
+### Features
+
+* **frontend:** add icons to theme ([#2043](https://github.com/SocialGouv/code-du-travail-numerique/issues/2043)) ([284d33d](https://github.com/SocialGouv/code-du-travail-numerique/commit/284d33d5082f2c8cda6eaa924311109ea102ad96))
+* **ui:** add new section ([#2048](https://github.com/SocialGouv/code-du-travail-numerique/issues/2048)) ([d5456dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/d5456dd0ffe95f819480bcedd6bdc06b7ea64ae9))
+
+
+
+
+
 # [3.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.9.0...v3.10.0) (2019-12-20)
 
 
