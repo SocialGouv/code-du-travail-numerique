@@ -818,6 +818,10 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c62 {
   margin-bottom: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c0 {
@@ -1691,6 +1695,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           travail-emploi.gouv.fr
         </a>
         <span
+          aria-hidden="true"
           class="c62"
         >
           |
@@ -1704,6 +1709,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           service-public.fr
         </a>
         <span
+          aria-hidden="true"
           class="c62"
         >
           |
@@ -1717,6 +1723,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           legifrance.gouv.fr
         </a>
         <span
+          aria-hidden="true"
           class="c62"
         >
           |
@@ -1730,6 +1737,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           data.gouv.fr
         </a>
         <span
+          aria-hidden="true"
           class="c62"
         >
           |
@@ -1743,6 +1751,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           gouvernement.fr
         </a>
         <span
+          aria-hidden="true"
           class="c62"
         >
           |
