@@ -3492,11 +3492,6 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/rupture-conventionnelle-dun-cdi",
-        "title": "Rupture conventionnelle d'un CDI",
-        "relevance": 4
-      },
-      {
         "url": "/code-du-travail/l1237-12",
         "title": "Article L1237-12",
         "relevance": 4
@@ -3663,11 +3658,6 @@
         "url": "/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd",
         "title": "Fin d'un contrat à durée déterminée (CDD)",
         "relevance": 3
-      },
-      {
-        "url": "/fiche-service-public/contrat-a-duree-determinee-cdd",
-        "title": "Contrat à durée déterminée (CDD)",
-        "relevance": 1
       }
     ],
     "variants": [
@@ -3710,7 +3700,7 @@
       },
       {
         "url": "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-dapprentissage",
-        "title": "Modèle : Rupture d’un commun accord d’un contrat d’apprentissage",
+        "title": "Rupture d’un commun accord d’un contrat d’apprentissage",
         "relevance": 4
       },
       {
@@ -3786,11 +3776,6 @@
       {
         "url": "/fiche-service-public/rupture-conventionnelle",
         "title": "Rupture conventionnelle",
-        "relevance": 5
-      },
-      {
-        "url": "/fiche-service-public/rupture-conventionnelle-dun-cdi",
-        "title": "Rupture conventionnelle d'un CDI",
         "relevance": 5
       },
       {
