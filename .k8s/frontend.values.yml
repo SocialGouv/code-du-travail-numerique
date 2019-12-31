@@ -120,6 +120,7 @@ ingress:
   tls:
     - hosts:
         - "${FRONTEND_HOST}"
+        - code.travail.gouv.fr
       secretName: frontend-crt
 
 autoscaling:
