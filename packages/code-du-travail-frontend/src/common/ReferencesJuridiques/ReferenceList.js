@@ -34,7 +34,7 @@ const getLink = reference => {
     case TYPE_REFERENCE.codeDuTravail:
       return <CodeDuTravailLink title={reference.title} slug={reference.id} />;
     case TYPE_REFERENCE.conventionCollective:
-      return <ConventionLink title={reference.title} slug={reference.id} />;
+      return <ConventionLink title={reference.title} slug={reference.slug} />;
     case TYPE_REFERENCE.journalOfficiel:
       return <OtherLink title={reference.title} url={reference.url} />;
   }

@@ -343,7 +343,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     <span
                       class="c15"
                     >
-                      Autre: Article L3121-44 du code du travail
+                      Autre: Article L3121-44 du JO
                     </span>
                   </a>
                 </li>
@@ -366,14 +366,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     <span
                       class="c15"
                     >
-                      Autre: Article xxx du code du travail
+                      Autre: Article xxx du JPO
                     </span>
                   </a>
                 </li>
                 <li>
                   <a
                     class="c11 c12 c13"
-                    href="/convention-collective/yyy"
+                    href="/convention-collective/ma-convention"
                   >
                     <svg
                       class="c14"
@@ -388,7 +388,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     <span
                       class="c15"
                     >
-                      Convention collective: Article yyy du code du travail
+                      Convention collective: Article yyy de la CC
                     </span>
                   </a>
                 </li>

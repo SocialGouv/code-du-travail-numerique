@@ -4,6 +4,8 @@ const queryString = require("query-string");
 const cdt = require("@socialgouv/legi-data/data/LEGITEXT000006072050.json");
 const conventions = require("@socialgouv/kali-data/data/index.json");
 
+const slugify = require("../../slugify");
+
 const isConventionCollective = qs => qs.idConvention;
 const isCodeDuTravail = qs => qs.cidTexte === "LEGITEXT000006072050";
 const isJournalOfficiel = qs => (qs.cidText || "").includes("JORFTEXT");
@@ -77,9 +79,10 @@ const parseReference = reference => {
       }
       break;
     case "convention-collective": {
-      const { id, slug, title } = conventions.find(
+      const { id, title, num, shortTitle } = conventions.find(
         convention => convention.id === qs.idConvention
       );
+      const slug = slugify(`${num}-${shortTitle}`.substring(0, 80)); // as in populate.js
       return [createCCRef(id, slug, title)];
     }
     case "journal-officiel":

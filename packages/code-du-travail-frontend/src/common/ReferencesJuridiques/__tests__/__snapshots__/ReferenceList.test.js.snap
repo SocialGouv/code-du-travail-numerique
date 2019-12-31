@@ -96,14 +96,14 @@ exports[`<ReferenceList /> should render 1`] = `
         <span
           class="c5"
         >
-          Autre: Article yyy du code du travail
+          Autre: Article yyy du JO
         </span>
       </a>
     </li>
     <li>
       <a
         class="c1 c2 c3"
-        href="/convention-collective/zzz"
+        href="/convention-collective/ma-convention-collective"
       >
         <svg
           class="c4"
@@ -118,7 +118,7 @@ exports[`<ReferenceList /> should render 1`] = `
         <span
           class="c5"
         >
-          Convention collective: Article zzz du code du travail
+          Convention collective: Article zzz de la CC
         </span>
       </a>
     </li>
