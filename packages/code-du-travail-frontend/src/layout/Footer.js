@@ -156,7 +156,7 @@ const Footer = () => (
         >
           travail-emploi.gouv.fr
         </StyledGovLink>
-        <Separator>|</Separator>
+        <Separator aria-hidden>|</Separator>
         <StyledGovLink
           href={"https://www.service-public.fr"}
           target="_blank"
@@ -164,7 +164,7 @@ const Footer = () => (
         >
           service-public.fr
         </StyledGovLink>
-        <Separator>|</Separator>
+        <Separator aria-hidden>|</Separator>
         <StyledGovLink
           href={"https://www.legifrance.gouv.fr"}
           target="_blank"
@@ -172,7 +172,7 @@ const Footer = () => (
         >
           legifrance.gouv.fr
         </StyledGovLink>
-        <Separator>|</Separator>
+        <Separator aria-hidden>|</Separator>
         <StyledGovLink
           href={"https://www.data.gouv.fr"}
           target="_blank"
@@ -180,7 +180,7 @@ const Footer = () => (
         >
           data.gouv.fr
         </StyledGovLink>
-        <Separator>|</Separator>
+        <Separator aria-hidden>|</Separator>
         <StyledGovLink
           href={"https://www.gouvernement.fr"}
           target="_blank"
@@ -188,7 +188,7 @@ const Footer = () => (
         >
           gouvernement.fr
         </StyledGovLink>
-        <Separator>|</Separator>
+        <Separator aria-hidden>|</Separator>
         <StyledGovLink
           href={"https://www.cnil.fr/"}
           target="_blank"
@@ -305,6 +305,7 @@ const StyledGovLink = styled(StyledLink)`
 
 const Separator = styled.span`
   margin-bottom: ${spacings.small};
+  user-select: none;
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
