@@ -871,7 +871,7 @@ exports[`<Outils /> should render 1`] = `
   text-decoration: none;
 }
 
-.c60 {
+.c62 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -890,14 +890,14 @@ exports[`<Outils /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c61 {
+.c63 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c62 {
+.c64 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1281,7 +1281,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c62 {
+  .c64 {
     display: none;
   }
 }
@@ -1553,30 +1553,6 @@ exports[`<Outils /> should render 1`] = `
                           fill="currentColor"
                           fill-rule="evenodd"
                         />
-<<<<<<< HEAD
-                      </clippath>
-                    </defs>
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
-                    class="c38"
-                  >
-                    Indemnité de licenciement
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Estimez simplement le montant de l’indemnité de licenciement
-=======
                         <path
                           clip-rule="evenodd"
                           d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
@@ -1586,7 +1562,6 @@ exports[`<Outils /> should render 1`] = `
                       </svg>
                     </div>
                   </div>
->>>>>>> test(chore): update snapshots
                   <div
                     class="c37"
                   >
@@ -1650,7 +1625,7 @@ exports[`<Outils /> should render 1`] = `
                     <div
                       class="c42"
                     >
-                      Estimez le montant de l’indemnité de licenciement
+                      Estimez simplement le montant de l’indemnité de licenciement
                       <div
                         class="c43"
                       >
@@ -1681,76 +1656,6 @@ exports[`<Outils /> should render 1`] = `
                   class="c34"
                   href="/outils/preavis-demission"
                 >
-<<<<<<< HEAD
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      d="M42.953 2H10.047A3.05 3.05 0 007 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016V27H46V5.047A3.05 3.05 0 0042.953 2zM46 43h-2.031v3.953c0 .56-.456 1.016-1.016 1.016H10.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 0010.047 50h32.906A3.05 3.05 0 0046 46.953V43zM8.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      d="M19.689 36.297a1.016 1.016 0 011.436 1.437l-3.418 3.418a1.016 1.016 0 01-1.436 0l-1.974-1.974a1.015 1.015 0 111.437-1.436l1.255 1.255 2.7-2.7zm1.496-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M23.016 10h-10c-.561 0-1.016.455-1.016 1.016v9.968c0 .561.455 1.016 1.016 1.016h10c.56 0 1.015-.455 1.015-1.016v-9.968c0-.561-.454-1.016-1.015-1.016zm-8.985 9.969H22V12.03h-7.969v7.938z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      d="M30.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0-4h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm12.079 13a.752.752 0 01.47.192l6.259 6.133a.645.645 0 010 .885l-6.277 6.143a.614.614 0 01-.45.183.636.636 0 01-.445-.18.611.611 0 01-.185-.437v-3.682H28v-4.94h13.465v-3.68a.583.583 0 01.177-.443.606.606 0 01.453-.174z"
-                      fill="#FF7067"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
-                    class="c38"
-                  >
-                    Préavis de démission
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Calculez la durée de préavis à respecter en cas de démission
-=======
->>>>>>> test(chore): update snapshots
                   <div
                     class="c35"
                   >
@@ -1823,7 +1728,7 @@ exports[`<Outils /> should render 1`] = `
                     <div
                       class="c42"
                     >
-                      Calculez la durée de préavis de démission
+                      Calculez la durée de préavis à respecter en cas de démission
                       <div
                         class="c43"
                       >
@@ -2164,7 +2069,7 @@ exports[`<Outils /> should render 1`] = `
                     <div
                       class="c42"
                     >
-                      Calculez la durée de préavis de licenciement
+                      Calculez la durée de préavis à respecter en cas de licenciement
                       <div
                         class="c43"
                       >
@@ -2195,10 +2100,6 @@ exports[`<Outils /> should render 1`] = `
                   class="c34"
                   href="/convention-collective/recherche"
                 >
-<<<<<<< HEAD
-                  Calculez la durée de préavis à respecter en cas de licenciement
-=======
->>>>>>> test(chore): update snapshots
                   <div
                     class="c35"
                   >
@@ -2327,95 +2228,6 @@ exports[`<Outils /> should render 1`] = `
                       </svg>
                     </div>
                   </div>
-<<<<<<< HEAD
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32 no-after"
-              href="https://www.moncompteformation.gouv.fr"
-              rel="noopener nofollow"
-              target="_blank"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M12.968 1.29V5.8a5.945 5.945 0 00-1.71-.252 5.991 5.991 0 00-5.984 5.983c0 1.913.905 3.613 2.305 4.71C3.769 17.443 1 21.008 1 25.209v5.984a3.423 3.423 0 003.42 3.42h.854V46.58A3.423 3.423 0 008.694 50a3.397 3.397 0 002.564-1.182 3.396 3.396 0 002.565 1.181 3.423 3.423 0 003.419-3.42V25.436c0-.37.048-.732.138-1.081h32.33V1.29H12.968zM6.984 11.531a4.28 4.28 0 014.274-4.274 4.28 4.28 0 014.274 4.274 4.279 4.279 0 01-4.274 4.275 4.279 4.279 0 01-4.274-4.275zm5.099 12.499l-.825.825-.825-.825.543-6.515h.564l.543 6.515zm3.45 1.405V46.58c0 .943-.768 1.71-1.71 1.71-.943 0-1.71-.767-1.71-1.71V31.193h-1.71V46.58c0 .943-.767 1.71-1.71 1.71-.942 0-1.71-.767-1.71-1.71V23.5H5.275v9.403H4.42c-.943 0-1.71-.767-1.71-1.71v-5.984c0-3.85 2.846-7.04 6.544-7.598l-.59 7.067 2.595 2.594 2.595-2.594-.598-7.163h2.535a5.975 5.975 0 003.136-.888l9.12-5.331a1.146 1.146 0 011.744.975c0 .506-.053.988-.522 1.294L18.265 20.41a5.96 5.96 0 00-2.733 5.024zM28.646 9.417c-.529 0-1.047.146-1.496.423l-9.12 5.331a4.263 4.263 0 01-2.24.635h-.353a5.964 5.964 0 001.804-4.275 5.976 5.976 0 00-2.565-4.903V3H48v19.644H18.285c.261-.302.563-.574.909-.798 0 0 10.916-6.79 11.002-6.846.965-.625 1.304-1.636 1.304-2.73a2.857 2.857 0 00-2.854-2.853z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M48.138 32.53a5.522 5.522 0 01-2.4 4.548c3.255 1.262 5.572 4.41 5.572 8.094v3.95H18v-3.95c0-3.684 2.317-6.832 5.572-8.094a5.522 5.522 0 01-2.4-4.547c0-3.05 2.491-5.531 5.552-5.531 3.06 0 5.552 2.482 5.552 5.53a5.522 5.522 0 01-2.4 4.548 8.746 8.746 0 014.779 4.495 8.748 8.748 0 014.778-4.495 5.522 5.522 0 01-2.399-4.547c0-3.05 2.491-5.531 5.552-5.531 3.06 0 5.552 2.482 5.552 5.53zm-5.552-3.95c-2.187 0-3.965 1.772-3.965 3.95 0 2.179 1.778 3.951 3.965 3.951s3.965-1.772 3.965-3.95c0-2.179-1.779-3.95-3.965-3.95zm-15.862 0c-2.186 0-3.965 1.772-3.965 3.95 0 2.179 1.779 3.951 3.965 3.951 2.187 0 3.965-1.772 3.965-3.95 0-2.179-1.778-3.95-3.965-3.95zm-7.138 16.592v2.37h14.276v-2.37c0-3.92-3.202-7.11-7.138-7.11s-7.138 3.19-7.138 7.11zm15.862 0v2.37h14.276v-2.37c0-3.92-3.202-7.11-7.138-7.11s-7.138 3.19-7.138 7.11z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M27.5 16.678c1.219 1.777 3.262 2.989 5.5 2.989a6.636 6.636 0 004.216-1.508l-4.883-4.883V6.367a6.68 6.68 0 00-5.211 3.49l-1.853 1.083C26.179 7.524 29.3 5 32.999 5c4.412 0 8 3.589 8 8s-3.588 8-8 8c-2.57 0-5.063-1.507-6.564-3.659l1.065-.663zm10.658.538l-3.549-3.55h5.023a6.634 6.634 0 01-1.474 3.55zm-4.492-4.883V6.367a6.678 6.678 0 015.967 5.966h-5.967z"
-                      fill="#FF7067"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
-                    class="c38"
-                  >
-                    Mon compte formation
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Consultez en ligne vos droits à la formation, cherchez et réservez une formation
-=======
->>>>>>> test(chore): update snapshots
                   <div
                     class="c37"
                   >
@@ -2463,7 +2275,7 @@ exports[`<Outils /> should render 1`] = `
                     <div
                       class="c42"
                     >
-                      Consulter et utiliser ses droits pour la formation
+                      Consultez en ligne vos droits à la formation, cherchez et réservez une formation
                       <div
                         class="c43"
                       >
@@ -2699,10 +2511,10 @@ exports[`<Outils /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c60"
+        class="c62"
       >
         <a
-          class="c61"
+          class="c63"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2711,12 +2523,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c64"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c63"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2725,12 +2537,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c64"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c63"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2739,12 +2551,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c64"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c63"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2753,12 +2565,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c64"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c63"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2767,12 +2579,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c64"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c63"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"

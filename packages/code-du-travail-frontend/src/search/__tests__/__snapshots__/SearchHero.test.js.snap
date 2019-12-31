@@ -317,21 +317,16 @@ exports[`<SearchHero /> should render 1`] = `
   .c18 {
     position: relative;
     top: -10px;
-    right: unset;
-    width: unset;
-    height: unset;
-    overflow: unset;
+    right: auto;
+    width: auto;
+    height: auto;
+    overflow: auto;
   }
 }
 
 @media (max-width:600px) {
   .c18 {
-    position: relative;
     top: -5px;
-    right: unset;
-    width: unset;
-    height: unset;
-    overflow: unset;
   }
 }
 
@@ -387,7 +382,7 @@ exports[`<SearchHero /> should render 1`] = `
 @media (max-width:980px) {
   .c6 {
     padding: 0;
-    background-color: unset;
+    background-color: transparent;
     border: none;
   }
 }

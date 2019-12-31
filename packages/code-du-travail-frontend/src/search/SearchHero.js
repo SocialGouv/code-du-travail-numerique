@@ -40,14 +40,14 @@ const { box, breakpoints, spacings, fonts } = theme;
 const { Config: ConfigIcon } = icons;
 
 const SearchSection = styled(Section)`
-  height: ${({ theme }) => (theme.noColors ? "unset" : "50rem")};
+  height: ${({ theme }) => (theme.noColors ? "auto" : "50rem")};
   padding-bottom: 12rem;
   @media (max-width: ${breakpoints.tablet}) {
-    height: ${({ theme }) => (theme.noColors ? "unset" : "90rem")};
+    height: ${({ theme }) => (theme.noColors ? "auto" : "90rem")};
     padding-bottom: 5rem;
   }
   @media (max-width: ${breakpoints.mobile}) {
-    height: ${({ theme }) => (theme.noColors ? "unset" : "80rem")};
+    height: ${({ theme }) => (theme.noColors ? "auto" : "80rem")};
   }
   @media print {
     display: none;
@@ -67,18 +67,13 @@ const StyledWorkersWrapper = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     position: relative;
     top: -10px;
-    right: unset;
-    width: unset;
-    height: unset;
-    overflow: unset;
+    right: auto;
+    width: auto;
+    height: auto;
+    overflow: auto;
   }
   @media (max-width: ${breakpoints.mobile}) {
-    position: relative;
     top: -5px;
-    right: unset;
-    width: unset;
-    height: unset;
-    overflow: unset;
   }
 `;
 
@@ -132,7 +127,7 @@ const P = styled.p`
   }
   @media (max-width: ${breakpoints.tablet}) {
     padding: 0;
-    background-color: unset;
+    background-color: transparent;
     border: none;
   }
 `;
