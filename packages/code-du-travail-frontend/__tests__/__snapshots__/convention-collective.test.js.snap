@@ -16,7 +16,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 .c4 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }

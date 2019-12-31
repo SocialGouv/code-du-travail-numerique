@@ -33,7 +33,7 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 .c19 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -65,7 +65,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateY(-50%);
 }
 
-.c26 {
+.c28 {
   position: absolute;
   background-color: #7994d4;
   border-radius: none;
@@ -200,6 +200,39 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 .c22 {
+  position: relative;
+  overflow: visible;
+}
+
+.c22:before,
+.c22:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c22:before {
+  left: -2rem;
+}
+
+.c22:after {
+  right: -2rem;
+}
+
+.c23 {
+  overflow-x: visible;
+}
+
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -226,7 +259,7 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c23 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -243,7 +276,7 @@ exports[`<SearchResults/> should render results 1`] = `
   padding: 0;
 }
 
-.c24 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -313,7 +346,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateY(-2px);
 }
 
-.c25 {
+.c27 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -350,9 +383,9 @@ exports[`<SearchResults/> should render results 1`] = `
   appearance: none;
 }
 
-.c25:hover,
-.c25:active,
-.c25:focus {
+.c27:hover,
+.c27:active,
+.c27:focus {
   color: #3e486e;
   box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
   -webkit-transform: translateY(-2px);
@@ -455,39 +488,98 @@ exports[`<SearchResults/> should render results 1`] = `
   }
 }
 
-@media (max-width:1180px) {
+@media (max-width:600px) {
+  .c22 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c22:before,
+  .c22:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
   .c23 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c24 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c25 {
     width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
 @media (max-width:980px) {
-  .c23 {
+  .c25 {
     width: calc( 100% / 1 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
-    width: calc( 100% - 1 * 1rem );
+  .c25 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 80%;
+    min-width: 23rem;
+  }
+
+  .c25:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c25:last-of-type:after {
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
 @media (max-width:1180px) {
-  .c24 {
+  .c26 {
     width: calc( 100% / 3 - 2 * 1rem );
   }
 }
 
 @media (max-width:980px) {
-  .c24 {
+  .c26 {
     width: calc( 100% / 2 - 2 * 1rem );
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
-    width: calc( 100% - 2 * 1rem );
+  .c26 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c26:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c26:last-of-type:after {
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
@@ -499,7 +591,7 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c27 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
@@ -848,38 +940,46 @@ exports[`<SearchResults/> should render results 1`] = `
           </h2>
           
         </header>
-        <ul
+        <div
           class="c22"
         >
-          <li
+          <div
             class="c23"
           >
-            <a
-              class="c6"
-              href="/code-du-travail/L1243-1?q=search test"
+            <ul
+              class="c24"
             >
-              <div
-                class="c7"
+              <li
+                class="c25"
               >
-                <div
-                  class="c8"
+                <a
+                  class="c6"
+                  href="/code-du-travail/L1243-1?q=search test"
                 >
-                  
-                  <h3
-                    class="c9"
+                  <div
+                    class="c7"
                   >
-                    L1243-1
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c10"
-              >
-                la description
-              </div>
-            </a>
-          </li>
-        </ul>
+                    <div
+                      class="c8"
+                    >
+                      
+                      <h3
+                        class="c9"
+                      >
+                        L1243-1
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="c10"
+                  >
+                    la description
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -905,36 +1005,44 @@ exports[`<SearchResults/> should render results 1`] = `
           </h2>
           
         </header>
-        <ul
+        <div
           class="c22"
         >
-          <li
-            class="c24"
+          <div
+            class="c23"
           >
-            <a
-              class="c25"
-              href="/themes/1-contrat?q=search test"
+            <ul
+              class="c24"
             >
-              <div
-                class="c7"
+              <li
+                class="c26"
               >
-                <div
-                  class="c26"
-                />
-                <div
-                  class="c8"
+                <a
+                  class="c27"
+                  href="/themes/1-contrat?q=search test"
                 >
-                  
-                  <h3
-                    class="c9"
+                  <div
+                    class="c7"
                   >
-                    Contrat
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
+                    <div
+                      class="c28"
+                    />
+                    <div
+                      class="c8"
+                    >
+                      
+                      <h3
+                        class="c9"
+                      >
+                        Contrat
+                      </h3>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -11,6 +11,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -81,6 +82,25 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   height: 1.2rem;
   margin-right: 1rem;
   color: #7994d4;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c1:before,
+  .c1:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    overflow-x: auto;
+  }
 }
 
 @media print {

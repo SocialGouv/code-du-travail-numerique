@@ -16,7 +16,7 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 .c0 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -204,7 +204,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 .c0 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -384,7 +384,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 .c0 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }

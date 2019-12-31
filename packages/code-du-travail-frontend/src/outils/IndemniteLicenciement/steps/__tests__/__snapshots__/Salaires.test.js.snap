@@ -11,6 +11,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -263,6 +264,25 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 .c8 tr > td:nth-child(2) {
   width: 70%;
   text-align: left;
+}
+
+@media (max-width:600px) {
+  .c5 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c5:before,
+  .c5:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    overflow-x: auto;
+  }
 }
 
 @media (max-width:600px) {

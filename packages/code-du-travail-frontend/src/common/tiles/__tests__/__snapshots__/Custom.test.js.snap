@@ -142,6 +142,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 .c4 {
+  display: block;
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto 1.6rem;

@@ -16,7 +16,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c29 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -730,7 +730,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   left: -50%;
   z-index: -1;
   width: 200%;
-  height: 400px;
+  height: 40rem;
   background-color: #fff;
   border-radius: 100%;
   content: "";
@@ -1604,7 +1604,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c29 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -2318,7 +2318,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   left: -50%;
   z-index: -1;
   width: 200%;
-  height: 400px;
+  height: 40rem;
   background-color: #fff;
   border-radius: 100%;
   content: "";

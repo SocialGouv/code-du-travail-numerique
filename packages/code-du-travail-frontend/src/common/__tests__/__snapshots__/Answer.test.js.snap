@@ -16,7 +16,7 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c10 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -454,7 +454,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c19 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -625,6 +625,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -861,6 +862,25 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 @media (max-width:600px) {
   .c23 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c1:before,
+  .c1:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    overflow-x: auto;
   }
 }
 
@@ -1124,7 +1144,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c10 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -1568,7 +1588,7 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c11 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -1910,6 +1930,7 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c26 {
+  display: block;
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto 1.6rem;
@@ -2729,7 +2750,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c11 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -3207,7 +3228,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c11 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -3671,7 +3692,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 .c11 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -4126,7 +4147,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c11 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }

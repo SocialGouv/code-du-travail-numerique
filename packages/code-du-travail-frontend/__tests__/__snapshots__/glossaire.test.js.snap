@@ -31,7 +31,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 .c20 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -684,7 +684,7 @@ exports[`<Glossaire /> should render 1`] = `
   left: -50%;
   z-index: -1;
   width: 200%;
-  height: 400px;
+  height: 40rem;
   background-color: #fff;
   border-radius: 100%;
   content: "";

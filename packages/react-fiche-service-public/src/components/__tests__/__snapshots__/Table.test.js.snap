@@ -11,6 +11,7 @@ exports[`<Table /> should render with th, td, colspan etc. 1`] = `
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -69,6 +70,25 @@ exports[`<Table /> should render with th, td, colspan etc. 1`] = `
 
 .c2 tfoot {
   vertical-align: top;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c0:before,
+  .c0:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    overflow-x: auto;
+  }
 }
 
 <div>

@@ -11,6 +11,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -108,6 +109,25 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
   height: 2rem;
   margin-right: 1rem;
   color: #7994d4;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c1:before,
+  .c1:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    overflow-x: auto;
+  }
 }
 
 @media print {
@@ -232,6 +252,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -329,6 +350,25 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
   height: 2rem;
   margin-right: 1rem;
   color: #7994d4;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c1:before,
+  .c1:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    overflow-x: auto;
+  }
 }
 
 @media print {
