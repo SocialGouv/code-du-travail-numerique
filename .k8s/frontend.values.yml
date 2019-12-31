@@ -17,10 +17,18 @@ deployment:
 
   livenessProbe:
     path: /health
-    periodSeconds: 25
+    failureThreshold: 2
+    initialDelaySeconds: 5
+    periodSeconds: 4
+    successThreshold: 1
+    timeoutSeconds: 10
   readinessProbe:
     path: /health
-    periodSeconds: 25
+    failureThreshold: 2
+    initialDelaySeconds: 5
+    periodSeconds: 4
+    successThreshold: 1
+    timeoutSeconds: 10
 
   env:
     - name: API_URL
