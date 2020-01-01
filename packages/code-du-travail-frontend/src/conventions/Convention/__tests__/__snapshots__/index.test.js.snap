@@ -456,8 +456,8 @@ exports[`<Convention /> renders 1`] = `
 
 .c1 {
   display: inline-block;
-  font-weight: bold;
   margin-right: 10px;
+  font-weight: bold;
 }
 
 .c14 {
