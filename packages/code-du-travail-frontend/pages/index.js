@@ -56,7 +56,7 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
     />
     <SearchHero />
     <Section>
-      <CenteredContainer>
+      <Container>
         <CardList
           title="Boîte à outils"
           desc="Trouvez des réponses personnalisées selon votre situation"
@@ -82,16 +82,18 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
             }
           )}
         </CardList>
-        <Link href="/outils" passHref>
-          <Button variant="primary" as="a">
-            Voir tous les outils <StyledArrowRight />
-          </Button>
-        </Link>
-      </CenteredContainer>
+        <ButtonWrapper>
+          <Link href="/outils" passHref>
+            <Button variant="primary" as="a">
+              Voir tous les outils <StyledArrowRight />
+            </Button>
+          </Link>
+        </ButtonWrapper>
+      </Container>
     </Section>
     {themes.length > 0 && (
       <Section large decorated variant="light">
-        <CenteredContainer>
+        <Container>
           <CardList
             title="Thèmes"
             desc="Retrouvez tous nos contenus organisés par thèmes"
@@ -108,12 +110,14 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
               </Link>
             ))}
           </CardList>
-          <Link href="/themes" passHref>
-            <Button variant="primary" as="a">
-              Voir tous les thèmes <StyledArrowRight />
-            </Button>
-          </Link>
-        </CenteredContainer>
+          <ButtonWrapper>
+            <Link href="/themes" passHref>
+              <Button variant="primary" as="a">
+                Voir tous les thèmes <StyledArrowRight />
+              </Button>
+            </Link>
+          </ButtonWrapper>
+        </Container>
       </Section>
     )}
   </Layout>
@@ -137,7 +141,7 @@ export default Home;
 
 const { spacings } = theme;
 
-const CenteredContainer = styled(Container)`
+const ButtonWrapper = styled.div`
   text-align: center;
 `;
 

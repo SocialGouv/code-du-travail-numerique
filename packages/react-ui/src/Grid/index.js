@@ -8,11 +8,11 @@ const GridContext = React.createContext({ columns: 4 });
 
 export const Grid = ({ columns, ...props }) => {
   return (
-    <OverflowWrapper mobileOnly>
+    <StyledOverflowWrapper mobileOnly>
       <GridContext.Provider value={columns}>
         <List {...props} />
       </GridContext.Provider>
-    </OverflowWrapper>
+    </StyledOverflowWrapper>
   );
 };
 Grid.propTypes = {
@@ -21,6 +21,12 @@ Grid.propTypes = {
 Grid.defaultProps = {
   columns: 4
 };
+
+export const StyledOverflowWrapper = styled(OverflowWrapper)`
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-bottom: ${spacings.base};
+  }
+`;
 
 export const List = styled.ul`
   display: flex; /* Flex layout so items have equal height. */
@@ -32,13 +38,15 @@ export const List = styled.ul`
     create a gutter at the edges of the container. */
   margin-top: ${spacings.medium};
   margin-right: calc(-1 * ${spacings.small});
-  margin-bottom: ${spacings.large};
+  margin-bottom: ${spacings.larger};
   margin-left: calc(-1 * ${spacings.small});
   padding: 0;
   list-style-type: none;
   @media (max-width: ${breakpoints.mobile}) {
     flex-wrap: nowrap;
+    margin-top: ${spacings.small};
     margin-right: 0;
+    margin-bottom: ${spacings.medium};
     margin-left: 0;
   }
 `;
@@ -48,21 +56,25 @@ export const GridCell = props => {
   return <ListItem {...props} columns={columns} />;
 };
 
+// The "-1" in width calculation fixes a redenring issue on IE11 causing tile
+// supposed to stay on the same line to go to the next line
 export const ListItem = styled.li`
   display: flex;
   flex-grow: 0;
   flex-shrink: 1;
-  width: calc(100% / ${props => props.columns} - 2 * ${spacings.small});
+  width: calc(100% / ${props => props.columns} - 2 * ${spacings.small} - 1px);
   margin: ${spacings.small};
   padding: 0;
   @media (max-width: ${breakpoints.desktop}) {
     width: calc(
-      100% / ${props => Math.max(props.columns - 1, 0)} - 2 * ${spacings.small}
+      100% / ${props => Math.max(props.columns - 1, 0)} - 2 * ${spacings.small} -
+        1px
     );
   }
   @media (max-width: ${breakpoints.tablet}) {
     width: calc(
-      100% / ${props => Math.max(props.columns - 2, 0)} - 2 * ${spacings.small}
+      100% / ${props => Math.max(props.columns - 2, 0)} - 2 * ${spacings.small} -
+        1px
     );
   }
   @media (max-width: ${breakpoints.mobile}) {
@@ -73,6 +85,7 @@ export const ListItem = styled.li`
       margin-left: ${spacings.medium};
     }
     &:last-of-type:after {
+      display: block;
       width: ${spacings.medium};
       height: 100%;
       background-color: transparent;

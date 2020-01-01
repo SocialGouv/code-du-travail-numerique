@@ -50,10 +50,12 @@ export const StyledButton = styled.button`
     let backgroundColor = theme[variant];
     let borderColor = theme[variant];
     let color = theme[variant + "Text"];
-    let boxShadow = `0px 10px 30px ${rgba(
+    const largeShadow = "0px 10px 20px";
+    const smallShadow = "0px 5px 7px";
+    let boxShadow = `${largeShadow} ${rgba(
       theme.secondary,
       0.26
-    )}, 0px 4px 5px ${rgba(theme.secondary, 0.35)}`;
+    )}, ${smallShadow} ${rgba(theme.secondary, 0.35)}`;
     let opacity = "1";
 
     let padding = "0 4.4rem";
@@ -83,10 +85,10 @@ export const StyledButton = styled.button`
     }
 
     if (variant === "primary") {
-      boxShadow = `0px 10px 30px ${rgba(
+      boxShadow = `${largeShadow} ${rgba(
         theme.primary,
         0.26
-      )}, 0px 4px 5px ${rgba(theme.primary, 0.35)}`;
+      )}, ${smallShadow} ${rgba(theme.primary, 0.35)}`;
     }
 
     return css`

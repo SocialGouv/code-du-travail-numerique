@@ -91,8 +91,7 @@ export const breakpoints = {
   intMobile: 600
 };
 
-const largeShadow = "0 1rem 5rem";
-const smallShadow = "0 1rem 1.5rem";
+const shadow = "0 1rem 2rem";
 
 export const box = {
   border(color) {
@@ -101,16 +100,10 @@ export const box = {
   borderRadius: "0.6rem",
   shadow: {
     default(color) {
-      return `${largeShadow} ${rgba(color, 0.12)}, ${smallShadow} ${rgba(
-        color,
-        0.1
-      )}`;
+      return `${shadow} ${rgba(color, 0.2)}`;
     },
     large(color) {
-      return `${largeShadow} ${rgba(color, 0.2)}, ${smallShadow} ${rgba(
-        color,
-        0.25
-      )}`;
+      return `${shadow} ${rgba(color, 0.4)}`;
     }
   }
 };

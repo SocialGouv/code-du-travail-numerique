@@ -29,12 +29,9 @@ const BackgroundLayer = styled.div`
   left: 0;
   z-index: -1;
   width: 100%;
-  height: ${({ currentPage }) => (currentPage === "home" ? "62rem" : "40rem")};
+  height: 40rem;
   overflow: hidden;
-  background: ${({ currentPage, theme }) =>
-    currentPage === "home"
-      ? `linear-gradient(${theme.heroGradientStart}, ${theme.bgSecondary})`
-      : theme.bgSecondary};
+  background: ${({ theme }) => theme.bgSecondary};
   &:after {
     position: absolute;
     bottom: -373px;
@@ -46,22 +43,19 @@ const BackgroundLayer = styled.div`
     border-radius: 100%;
     content: "";
   }
-  @media (max-width: ${breakpoints.tablet}) {
-    ${({ currentPage }) => {
-      if (currentPage === "home") {
-        return css`
-          height: 104rem;
-        `;
+  ${({ currentPage, theme }) =>
+    currentPage === "home" &&
+    css`
+      height: 60rem;
+      background: linear-gradient(
+        ${theme.heroGradientStart},
+        ${theme.bgSecondary}
+      );
+      @media (max-width: ${breakpoints.desktop}) {
+        height: 68rem;
       }
-    }}
-  }
-  @media (max-width: ${breakpoints.mobile}) {
-    ${({ currentPage }) => {
-      if (currentPage === "home") {
-        return css`
-          height: 86rem;
-        `;
+      @media (max-width: ${breakpoints.mobile}) {
+        height: 83rem;
       }
-    }}
-  }
+    `}
 `;
