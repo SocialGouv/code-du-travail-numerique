@@ -7,7 +7,7 @@ exports[`<SearchHero /> should render 1`] = `
   color: #3e486e;
 }
 
-.c16 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -40,20 +40,20 @@ exports[`<SearchHero /> should render 1`] = `
   color: #fff;
   background: #f66663;
   border-color: #f66663;
-  box-shadow: 0px 10px 30px rgba(246,102,99,0.26),0px 4px 5px rgba(246,102,99,0.35);
+  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
   opacity: 1;
 }
 
-.c16:link,
-.c16:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c16:not([disabled]):hover,
-.c16:not([disabled]):active,
-.c16:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -62,13 +62,13 @@ exports[`<SearchHero /> should render 1`] = `
   border-color: #f99593;
 }
 
-.c16[disabled] {
+.c17[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c13:not(:focus):not(:active) {
+.c14:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -80,7 +80,7 @@ exports[`<SearchHero /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,15 +91,15 @@ exports[`<SearchHero /> should render 1`] = `
   text-align: left;
 }
 
-.c15 ul {
+.c16 ul {
   z-index: 1;
 }
 
-.c15 li[role="option"]:nth-child(2n + 1) {
+.c16 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
-.c10 {
+.c11 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -109,7 +109,7 @@ exports[`<SearchHero /> should render 1`] = `
   padding: 0;
 }
 
-.c11 {
+.c12 {
   width: 3rem;
   height: 3rem;
   position: absolute;
@@ -119,7 +119,7 @@ exports[`<SearchHero /> should render 1`] = `
   color: #9298af;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -137,73 +137,53 @@ exports[`<SearchHero /> should render 1`] = `
   background: #fff;
   border: 1px solid transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: #9298af;
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c14::placeholder {
+.c15::placeholder {
   color: #9298af;
 }
 
-.c17 {
+.c18 {
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
 }
 
 .c1 {
-  height: 50rem;
-  padding-bottom: 12rem;
-}
-
-.c18 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 55%;
-  height: 53rem;
-  overflow: hidden;
-}
-
-.c19 {
-  display: block;
-  -webkit-flex: 0 1 100%;
-  -ms-flex: 0 1 100%;
-  flex: 0 1 100%;
-  max-height: 100%;
-  overflow: visible;
-  -webkit-transform: translateX(10%);
-  -ms-transform: translateX(10%);
-  transform: translateX(10%);
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 12rem;
 }
 
 .c2 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 100%;
   padding-left: 12rem;
 }
 
@@ -237,7 +217,7 @@ exports[`<SearchHero /> should render 1`] = `
   font-size: 4.6rem;
 }
 
-.c7 {
+.c8 {
   display: inline;
   width: 3rem;
   height: 3rem;
@@ -245,7 +225,42 @@ exports[`<SearchHero /> should render 1`] = `
   vertical-align: bottom;
 }
 
-.c8 {
+.c19 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 55%;
+  height: 100%;
+  max-height: 55rem;
+  overflow: hidden;
+}
+
+.c20 {
+  display: block;
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
+  max-height: 100%;
+  overflow: visible;
+  -webkit-transform: translateX(10%);
+  -ms-transform: translateX(10%);
+  transform: translateX(10%);
+}
+
+.c9 {
   display: block;
   margin-bottom: 0.8rem;
   color: #3e486e;
@@ -253,19 +268,19 @@ exports[`<SearchHero /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c9 {
-  width: 77rem;
+.c10 {
+  max-width: 77rem;
   margin: 0;
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -274,79 +289,36 @@ exports[`<SearchHero /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c15 {
     height: 5.4rem;
     padding: 1rem 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c18 {
     position: static;
     margin-top: 1rem;
     margin-left: 0;
   }
 }
 
-@media (max-width:980px) {
-  .c1 {
-    height: 90rem;
-    padding-bottom: 5rem;
-  }
-}
-
 @media (max-width:600px) {
   .c1 {
-    height: 80rem;
+    height: 75rem;
+    padding-bottom: 5rem;
   }
 }
 
 @media print {
   .c1 {
     display: none;
-  }
-}
-
-@media (max-width:980px) {
-  .c18 {
-    position: relative;
-    top: -10px;
-    right: auto;
-    width: auto;
-    height: auto;
-    overflow: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    top: -5px;
-  }
-}
-
-@media (max-width:980px) {
-  .c19 {
-    max-width: 70%;
-    max-height: 50rem;
-    -webkit-transform: translateX(-5%);
-    -ms-transform: translateX(-5%);
-    transform: translateX(-5%);
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    max-width: 90%;
-    max-height: 30rem;
-    -webkit-transform: translateX(-5%);
-    -ms-transform: translateX(-5%);
-    transform: translateX(-5%);
   }
 }
 
@@ -363,27 +335,28 @@ exports[`<SearchHero /> should render 1`] = `
   }
 }
 
+@media (max-width:1180px) {
+  .c3 {
+    max-width: 50rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    max-width: 100%;
+  }
+}
+
 @media (max-width:600px) {
   .c4 {
+    width: 100%;
     font-size: 1.8rem;
   }
 }
 
 @media (max-width:1180px) {
-  .c6 {
-    display: inline-block;
-    padding: 1rem;
-    background-color: #fff;
-    border: 1px solid #bbcadf;
-    border-radius: 0.6rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c6 {
-    padding: 0;
-    background-color: transparent;
-    border: none;
+  .c7 {
+    display: none;
   }
 }
 
@@ -394,7 +367,30 @@ exports[`<SearchHero /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c9 {
+  .c19 {
+    top: 6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c19 {
+    position: relative;
+    top: -5px;
+    right: auto;
+    width: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    -webkit-transform: translateX(-5%);
+    -ms-transform: translateX(-5%);
+    transform: translateX(-5%);
+  }
+}
+
+@media (max-width:980px) {
+  .c10 {
     width: 100%;
   }
 }
@@ -424,10 +420,12 @@ exports[`<SearchHero /> should render 1`] = `
           class="c6"
         >
           Obtenez des réponses aux questions que vous vous posez sur le droit du travail.
-          <br />
-          Les réponses personnalisables selon votre situation sont identifiées par ce symbole :
-          <svg
+          <br
             class="c7"
+          />
+           Les réponses personnalisables selon votre situation sont identifiées par ce symbole :
+          <svg
+            class="c8"
             fill="none"
             viewBox="0 0 32 32"
           >
@@ -447,20 +445,20 @@ exports[`<SearchHero /> should render 1`] = `
         </p>
       </header>
       <label
-        class="c8"
+        class="c9"
         for="searchbar"
       >
          Recherchez par mots-clés
       </label>
       <div
-        class="c9"
+        class="c10"
       >
         <form
           action="/recherche"
-          class="c10"
+          class="c11"
         >
           <svg
-            class="c11"
+            class="c12"
             fill="none"
             viewBox="0 0 32 32"
           >
@@ -470,11 +468,11 @@ exports[`<SearchHero /> should render 1`] = `
             />
           </svg>
           <label
-            class="c12"
+            class="c13"
             for="searchbar"
           >
             <span
-              class="c13"
+              class="c14"
             >
               Rechercher
             </span>
@@ -489,7 +487,7 @@ exports[`<SearchHero /> should render 1`] = `
                 aria-autocomplete="list"
                 aria-controls="react-autowhatever-cdtn-documents-suggester"
                 autocomplete="off"
-                class="c14"
+                class="c15"
                 id="searchbar"
                 name="q"
                 placeholder="congés payés, durée de préavis"
@@ -497,14 +495,14 @@ exports[`<SearchHero /> should render 1`] = `
                 value=""
               />
               <div
-                class="c15"
+                class="c16"
                 id="react-autowhatever-cdtn-documents-suggester"
                 role="listbox"
               />
             </div>
           </label>
           <button
-            class="c16 c17"
+            class="c17 c18"
             type="submit"
           >
             Rechercher
@@ -513,10 +511,10 @@ exports[`<SearchHero /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c18"
+      class="c19"
     >
       <svg
-        class="c19"
+        class="c20"
         fill="none"
         viewBox="0 0 616 514"
       >

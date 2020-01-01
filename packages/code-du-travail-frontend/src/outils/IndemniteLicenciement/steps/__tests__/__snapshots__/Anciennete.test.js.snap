@@ -51,7 +51,7 @@ exports[`<Anciennete /> should render 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

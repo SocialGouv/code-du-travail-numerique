@@ -30,11 +30,11 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   right: -2rem;
 }
 
-.c4 {
+.c5 {
   overflow-x: visible;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,13 +55,13 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -73,7 +73,7 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 3 - 2 * 1rem);
+  width: calc(100% / 3 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -109,904 +109,6 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   text-align: center;
 }
 
-.c7 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 100%;
-  margin: 0;
-  padding: 3.2rem 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
-  cursor: pointer;
-  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
-  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
-  transition: box-shadow 250ms linear, transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c7:hover,
-.c7:active,
-.c7:focus {
-  color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.c8 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.c9 {
-  padding-right: 1rem;
-}
-
-.c10 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c3 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c3:before,
-  .c3:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c6 {
-    width: calc( 100% / 2 - 2 * 1rem );
-  }
-}
-
-@media (max-width:980px) {
-  .c6 {
-    width: calc( 100% / 1 - 2 * 1rem );
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 80%;
-    min-width: 23rem;
-  }
-
-  .c6:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c6:last-of-type:after {
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.6rem;
-  }
-}
-
-<div>
-  <header
-    class="c0"
-  >
-    <h2
-      class="c1"
-    >
-      <div
-        class="c2"
-      />
-      Hello
-    </h2>
-    
-  </header>
-  <div
-    class="c3"
-  >
-    <div
-      class="c4"
-    >
-      <ul
-        class="c5"
-      >
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 1
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 2
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 3
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 4
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 5
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 6
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 7
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<CardList /> should render a collection with a title 1`] = `
-.c3 {
-  position: relative;
-  overflow: visible;
-}
-
-.c3:before,
-.c3:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: none;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c3:before {
-  left: -2rem;
-}
-
-.c3:after {
-  right: -2rem;
-}
-
-.c4 {
-  overflow-x: visible;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-top: 2rem;
-  margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
-  margin-left: calc(-1 * 1rem);
-  padding: 0;
-  list-style-type: none;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
-  margin: 1rem;
-  padding: 0;
-}
-
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c7 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 100%;
-  margin: 0;
-  padding: 3.2rem 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
-  cursor: pointer;
-  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
-  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
-  transition: box-shadow 250ms linear, transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c7:hover,
-.c7:active,
-.c7:focus {
-  color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.c8 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.c9 {
-  padding-right: 1rem;
-}
-
-.c10 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c3 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c3:before,
-  .c3:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c6 {
-    width: calc( 100% / 3 - 2 * 1rem );
-  }
-}
-
-@media (max-width:980px) {
-  .c6 {
-    width: calc( 100% / 2 - 2 * 1rem );
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 60%;
-    min-width: 23rem;
-  }
-
-  .c6:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c6:last-of-type:after {
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.6rem;
-  }
-}
-
-<div>
-  <header
-    class="c0"
-  >
-    <h2
-      class="c1"
-    >
-      <div
-        class="c2"
-      />
-      Hello
-    </h2>
-    
-  </header>
-  <div
-    class="c3"
-  >
-    <div
-      class="c4"
-    >
-      <ul
-        class="c5"
-      >
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 1
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 2
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 3
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 4
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 5
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 6
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li
-          class="c6"
-        >
-          <button
-            class="c7"
-          >
-            <div
-              class="c8"
-            >
-              <div
-                class="c9"
-              >
-                
-                <h3
-                  class="c10"
-                >
-                  Title 7
-                </h3>
-              </div>
-            </div>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<CardList /> should render a collection with a title and description 1`] = `
-.c4 {
-  position: relative;
-  overflow: visible;
-}
-
-.c4:before,
-.c4:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: none;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c4:before {
-  left: -2rem;
-}
-
-.c4:after {
-  right: -2rem;
-}
-
-.c5 {
-  overflow-x: visible;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-top: 2rem;
-  margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
-  margin-left: calc(-1 * 1rem);
-  padding: 0;
-  list-style-type: none;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
-  margin: 1rem;
-  padding: 0;
-}
-
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c3 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
 .c8 {
   position: relative;
   display: -webkit-inline-box;
@@ -1034,7 +136,7 @@ exports[`<CardList /> should render a collection with a title and description 1`
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -1048,7 +150,7 @@ exports[`<CardList /> should render a collection with a title and description 1`
 .c8:active,
 .c8:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
@@ -1075,14 +177,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c3 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c4:before,
-  .c4:after {
+  .c3:before,
+  .c3:after {
     display: block;
   }
 }
@@ -1094,24 +196,32 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 @media (max-width:600px) {
+  .c4 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c6 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    margin-top: 1rem;
     margin-right: 0;
+    margin-bottom: 2rem;
     margin-left: 0;
   }
 }
 
 @media (max-width:1180px) {
   .c7 {
-    width: calc( 100% / 3 - 2 * 1rem );
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
   .c7 {
-    width: calc( 100% / 2 - 2 * 1rem );
+    width: calc( 100% / 1 - 2 * 1rem - 1px );
   }
 }
 
@@ -1120,7 +230,7 @@ exports[`<CardList /> should render a collection with a title and description 1`
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    width: 60%;
+    width: 80%;
     min-width: 23rem;
   }
 
@@ -1129,6 +239,7 @@ exports[`<CardList /> should render a collection with a title and description 1`
   }
 
   .c7:last-of-type:after {
+    display: block;
     width: 2rem;
     height: 100%;
     background-color: transparent;
@@ -1145,12 +256,6 @@ exports[`<CardList /> should render a collection with a title and description 1`
 @media (max-width:600px) {
   .c0 {
     margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding-left: 0;
   }
 }
 
@@ -1179,14 +284,10 @@ exports[`<CardList /> should render a collection with a title and description 1`
       />
       Hello
     </h2>
-    <p
-      class="c3"
-    >
-      Hello Tiles
-    </p>
+    
   </header>
   <div
-    class="c4"
+    class="c3 c4"
   >
     <div
       class="c5"
@@ -1354,14 +455,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
 </div>
 `;
 
-exports[`<CardList /> should render a collection with a title with a link and a desc 1`] = `
-.c5 {
+exports[`<CardList /> should render a collection with a title 1`] = `
+.c3 {
   position: relative;
   overflow: visible;
 }
 
-.c5:before,
-.c5:after {
+.c3:before,
+.c3:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1376,19 +477,19 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c5:before {
+.c3:before {
   left: -2rem;
 }
 
-.c5:after {
+.c3:after {
   right: -2rem;
 }
 
-.c6 {
+.c5 {
   overflow-x: visible;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1409,13 +510,13 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1427,7 +528,7 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -1463,22 +564,465 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   text-align: center;
 }
 
+.c8 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0;
+  padding: 3.2rem 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
+  transition: box-shadow 250ms linear, transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8:hover,
+.c8:active,
+.c8:focus {
+  color: #3e486e;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.c9 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c10 {
+  padding-right: 1rem;
+}
+
+.c11 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c3:before,
+  .c3:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c7 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c7:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c7:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <h2
+      class="c1"
+    >
+      <div
+        class="c2"
+      />
+      Hello
+    </h2>
+    
+  </header>
+  <div
+    class="c3 c4"
+  >
+    <div
+      class="c5"
+    >
+      <ul
+        class="c6"
+      >
+        <li
+          class="c7"
+        >
+          <button
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 1
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
+        >
+          <button
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 2
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
+        >
+          <button
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 3
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
+        >
+          <button
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 4
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
+        >
+          <button
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 5
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
+        >
+          <button
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 6
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
+        >
+          <button
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 7
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<CardList /> should render a collection with a title and description 1`] = `
 .c4 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding-left: 0;
+  position: relative;
+  overflow: visible;
+}
+
+.c4:before,
+.c4:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c4:before {
+  left: -2rem;
+}
+
+.c4:after {
+  right: -2rem;
+}
+
+.c6 {
+  overflow-x: visible;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 4rem;
+  margin-left: calc(-1 * 1rem);
+  padding: 0;
+  list-style-type: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 4 - 2 * 1rem - 1px);
+  margin: 1rem;
+  padding: 0;
+}
+
+.c2 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
 }
 
 .c3 {
-  color: #2f3b6c;
-  font-weight: normal;
-  font-family: "Merriweather",serif;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3:hover {
-  color: #2f3b6c;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .c9 {
@@ -1508,7 +1052,7 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -1522,7 +1066,7 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 .c9:active,
 .c9:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
@@ -1549,14 +1093,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c5:before,
-  .c5:after {
+  .c4:before,
+  .c4:after {
     display: block;
   }
 }
@@ -1568,24 +1112,32 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 }
 
 @media (max-width:600px) {
+  .c5 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c7 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    margin-top: 1rem;
     margin-right: 0;
+    margin-bottom: 2rem;
     margin-left: 0;
   }
 }
 
 @media (max-width:1180px) {
   .c8 {
-    width: calc( 100% / 3 - 2 * 1rem );
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
   .c8 {
-    width: calc( 100% / 2 - 2 * 1rem );
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
@@ -1603,6 +1155,7 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   }
 
   .c8:last-of-type:after {
+    display: block;
     width: 2rem;
     height: 100%;
     background-color: transparent;
@@ -1623,7 +1176,7 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c3 {
     padding-left: 0;
   }
 }
@@ -1651,21 +1204,16 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       <div
         class="c2"
       />
-      <a
-        class="c3"
-        href="https://code.travail.gouv.fr"
-      >
-        CDTN
-      </a>
+      Hello
     </h2>
     <p
-      class="c4"
+      class="c3"
     >
-      le code du travail numérique
+      Hello Tiles
     </p>
   </header>
   <div
-    class="c5"
+    class="c4 c5"
   >
     <div
       class="c6"
@@ -1833,14 +1381,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 </div>
 `;
 
-exports[`<CardList /> should render a single title 1`] = `
-.c3 {
+exports[`<CardList /> should render a collection with a title with a link and a desc 1`] = `
+.c5 {
   position: relative;
   overflow: visible;
 }
 
-.c3:before,
-.c3:after {
+.c5:before,
+.c5:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1855,19 +1403,19 @@ exports[`<CardList /> should render a single title 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c3:before {
+.c5:before {
   left: -2rem;
 }
 
-.c3:after {
+.c5:after {
   right: -2rem;
 }
 
-.c4 {
+.c7 {
   overflow-x: visible;
 }
 
-.c5 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1888,13 +1436,13 @@ exports[`<CardList /> should render a single title 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c6 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1906,7 +1454,7 @@ exports[`<CardList /> should render a single title 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -1942,7 +1490,25 @@ exports[`<CardList /> should render a single title 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c4 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.c3 {
+  color: #2f3b6c;
+  font-weight: normal;
+  font-family: "Merriweather",serif;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  color: #2f3b6c;
+}
+
+.c10 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1969,7 +1535,7 @@ exports[`<CardList /> should render a single title 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -1979,27 +1545,27 @@ exports[`<CardList /> should render a single title 1`] = `
   appearance: none;
 }
 
-.c7:hover,
-.c7:active,
-.c7:focus {
+.c10:hover,
+.c10:active,
+.c10:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c8 {
+.c11 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c9 {
+.c12 {
   padding-right: 1rem;
 }
 
-.c10 {
+.c13 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -2009,56 +1575,57 @@ exports[`<CardList /> should render a single title 1`] = `
   margin: 0;
 }
 
-.c11 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  margin-top: 1rem;
-}
-
 @media (max-width:600px) {
-  .c3 {
+  .c5 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c3:before,
-  .c3:after {
+  .c5:before,
+  .c5:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c7 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    margin-top: 1rem;
     margin-right: 0;
+    margin-bottom: 2rem;
     margin-left: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c6 {
-    width: calc( 100% / 3 - 2 * 1rem );
+  .c9 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c6 {
-    width: calc( 100% / 2 - 2 * 1rem );
+  .c9 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c9 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -2066,11 +1633,12 @@ exports[`<CardList /> should render a single title 1`] = `
     min-width: 23rem;
   }
 
-  .c6:first-of-type {
+  .c9:first-of-type {
     margin-left: 2rem;
   }
 
-  .c6:last-of-type:after {
+  .c9:last-of-type:after {
+    display: block;
     width: 2rem;
     height: 100%;
     background-color: transparent;
@@ -2091,14 +1659,491 @@ exports[`<CardList /> should render a single title 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c4 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c13 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <h2
+      class="c1"
+    >
+      <div
+        class="c2"
+      />
+      <a
+        class="c3"
+        href="https://code.travail.gouv.fr"
+      >
+        CDTN
+      </a>
+    </h2>
+    <p
+      class="c4"
+    >
+      le code du travail numérique
+    </p>
+  </header>
+  <div
+    class="c5 c6"
+  >
+    <div
+      class="c7"
+    >
+      <ul
+        class="c8"
+      >
+        <li
+          class="c9"
+        >
+          <button
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 1
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
+        >
+          <button
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 2
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
+        >
+          <button
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 3
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
+        >
+          <button
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 4
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
+        >
+          <button
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 5
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
+        >
+          <button
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 6
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
+        >
+          <button
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 7
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<CardList /> should render a single title 1`] = `
+.c3 {
+  position: relative;
+  overflow: visible;
+}
+
+.c3:before,
+.c3:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c3:before {
+  left: -2rem;
+}
+
+.c3:after {
+  right: -2rem;
+}
+
+.c5 {
+  overflow-x: visible;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 4rem;
+  margin-left: calc(-1 * 1rem);
+  padding: 0;
+  list-style-type: none;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 4 - 2 * 1rem - 1px);
+  margin: 1rem;
+  padding: 0;
+}
+
+.c2 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c8 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0;
+  padding: 3.2rem 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
+  transition: box-shadow 250ms linear, transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8:hover,
+.c8:active,
+.c8:focus {
+  color: #3e486e;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.c9 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c10 {
+  padding-right: 1rem;
+}
+
+.c11 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.c12 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-top: 1rem;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c3:before,
+  .c3:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c7 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c7:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c7:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    padding: 2rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
     font-size: 1.6rem;
   }
 }
@@ -2118,37 +2163,37 @@ exports[`<CardList /> should render a single title 1`] = `
     
   </header>
   <div
-    class="c3"
+    class="c3 c4"
   >
     <div
-      class="c4"
+      class="c5"
     >
       <ul
-        class="c5"
+        class="c6"
       >
         <li
-          class="c6"
+          class="c7"
         >
           <a
-            class="c7"
+            class="c8"
             href="#"
           >
             <div
-              class="c8"
+              class="c9"
             >
               <div
-                class="c9"
+                class="c10"
               >
                 
                 <h3
-                  class="c10"
+                  class="c11"
                 >
                   ok
                 </h3>
               </div>
             </div>
             <div
-              class="c11"
+              class="c12"
             >
               coucou
             </div>

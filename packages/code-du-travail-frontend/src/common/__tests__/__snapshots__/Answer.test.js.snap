@@ -39,7 +39,7 @@ exports[`<Answer /> should renders 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 
@@ -138,7 +138,7 @@ exports[`<Answer /> should renders 1`] = `
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -477,7 +477,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 
@@ -587,7 +587,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -1167,7 +1167,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 
@@ -1266,7 +1266,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -1611,7 +1611,7 @@ exports[`<Answer /> should renders related content 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 
@@ -1792,7 +1792,7 @@ exports[`<Answer /> should renders related content 1`] = `
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -1909,7 +1909,7 @@ exports[`<Answer /> should renders related content 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -1923,7 +1923,7 @@ exports[`<Answer /> should renders related content 1`] = `
 .c21:active,
 .c21:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
@@ -2773,7 +2773,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 
@@ -2872,7 +2872,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -3251,7 +3251,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 
@@ -3350,7 +3350,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -3715,7 +3715,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 
@@ -3814,7 +3814,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -4170,7 +4170,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 
@@ -4269,7 +4269,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 

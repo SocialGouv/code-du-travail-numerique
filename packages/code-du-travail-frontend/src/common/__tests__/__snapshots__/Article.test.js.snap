@@ -33,7 +33,7 @@ exports[`<Article /> should render 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 

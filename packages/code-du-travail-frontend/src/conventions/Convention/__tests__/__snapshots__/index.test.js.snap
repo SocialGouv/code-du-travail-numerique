@@ -51,7 +51,7 @@ exports[`<Convention /> renders 1`] = `
   text-align: center;
 }
 
-.c25 {
+.c26 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -158,7 +158,7 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 0;
 }
 
-.c31 {
+.c32 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -195,16 +195,16 @@ exports[`<Convention /> renders 1`] = `
   opacity: 1;
 }
 
-.c31:link,
-.c31:visited {
+.c32:link,
+.c32:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c31:not([disabled]):hover,
-.c31:not([disabled]):active,
-.c31:not([disabled]):focus {
+.c32:not([disabled]):hover,
+.c32:not([disabled]):active,
+.c32:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -213,7 +213,7 @@ exports[`<Convention /> renders 1`] = `
   border-color: transparent;
 }
 
-.c31[disabled] {
+.c32[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -248,11 +248,11 @@ exports[`<Convention /> renders 1`] = `
   right: -2rem;
 }
 
-.c19 {
+.c20 {
   overflow-x: visible;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -273,13 +273,13 @@ exports[`<Convention /> renders 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -291,12 +291,12 @@ exports[`<Convention /> renders 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 3 - 2 * 1rem);
+  width: calc(100% / 3 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
 
-.c22 {
+.c23 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -323,7 +323,7 @@ exports[`<Convention /> renders 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -333,27 +333,27 @@ exports[`<Convention /> renders 1`] = `
   appearance: none;
 }
 
-.c22:hover,
-.c22:active,
-.c22:focus {
+.c23:hover,
+.c23:active,
+.c23:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c23 {
+.c24 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c24 {
+.c25 {
   padding-right: 1rem;
 }
 
-.c26 {
+.c27 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -363,11 +363,11 @@ exports[`<Convention /> renders 1`] = `
   margin: 0;
 }
 
-.c28 {
+.c29 {
   position: relative;
 }
 
-.c30 {
+.c31 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -383,21 +383,21 @@ exports[`<Convention /> renders 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c30::-webkit-outer-spin-button,
-.c30::-webkit-inner-spin-button {
+.c31::-webkit-outer-spin-button,
+.c31::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c30::-webkit-calendar-picker-indicator {
+.c31::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -410,43 +410,43 @@ exports[`<Convention /> renders 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c30:invalid {
+.c31:invalid {
   border-color: #eb5757;
 }
 
-.c30::-webkit-input-placeholder {
+.c31::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c30::-moz-placeholder {
+.c31::-moz-placeholder {
   color: #9298af;
 }
 
-.c30:-ms-input-placeholder {
+.c31:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c30::placeholder {
+.c31::placeholder {
   color: #9298af;
 }
 
-.c30:focus {
+.c31:focus {
   border-color: #7994d4;
 }
 
-.c30:focus::-webkit-input-placeholder {
+.c31:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c30:focus::-moz-placeholder {
+.c31:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c30:focus:-ms-input-placeholder {
+.c31:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c30:focus::placeholder {
+.c31:focus::placeholder {
   color: transparent;
 }
 
@@ -469,7 +469,7 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 2rem;
 }
 
-.c27 {
+.c28 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -477,13 +477,13 @@ exports[`<Convention /> renders 1`] = `
   display: flex;
 }
 
-.c29 {
+.c30 {
   -webkit-flex: 1 1 40%;
   -ms-flex: 1 1 40%;
   flex: 1 1 40%;
 }
 
-.c32 {
+.c33 {
   position: absolute;
   top: 0;
   right: 0;
@@ -492,7 +492,7 @@ exports[`<Convention /> renders 1`] = `
   color: #7994d4;
 }
 
-.c33 {
+.c34 {
   width: 3rem;
   height: 3rem;
 }
@@ -531,7 +531,7 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c32 {
     font-size: 1.4rem;
   }
 }
@@ -550,35 +550,43 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c20 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c21 {
-    width: calc( 100% / 2 - 2 * 1rem );
-  }
-}
-
-@media (max-width:980px) {
-  .c21 {
-    width: calc( 100% / 1 - 2 * 1rem );
+  .c19 {
+    margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
   .c21 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c22 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c22 {
+    width: calc( 100% / 1 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -586,11 +594,12 @@ exports[`<Convention /> renders 1`] = `
     min-width: 23rem;
   }
 
-  .c21:first-of-type {
+  .c22:first-of-type {
     margin-left: 2rem;
   }
 
-  .c21:last-of-type:after {
+  .c22:last-of-type:after {
+    display: block;
     width: 2rem;
     height: 100%;
     background-color: transparent;
@@ -599,27 +608,27 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c23 {
     padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c27 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c31 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c30 {
     padding-right: 5.5rem;
   }
 }
@@ -3425,36 +3434,36 @@ exports[`<Convention /> renders 1`] = `
           
         </header>
         <div
-          class="c18"
+          class="c18 c19"
         >
           <div
-            class="c19"
+            class="c20"
           >
             <ul
-              class="c20"
+              class="c21"
             >
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Salaires minimaux
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 1-4
                       </h3>
@@ -3463,27 +3472,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Salaire mensuel
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 4-1
                       </h3>
@@ -3492,27 +3501,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Déduction des heures non travaillées
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 4-2
                       </h3>
@@ -3521,27 +3530,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Barèmes de salaires minimaux
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 12-8
                       </h3>
@@ -3619,36 +3628,36 @@ exports[`<Convention /> renders 1`] = `
           
         </header>
         <div
-          class="c18"
+          class="c18 c19"
         >
           <div
-            class="c19"
+            class="c20"
           >
             <ul
-              class="c20"
+              class="c21"
             >
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Contingent d'heures supplémentaires non soumis à autorisation
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-13
                       </h3>
@@ -3657,27 +3666,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Heures supplémentaires exceptionnelles
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-14
                       </h3>
@@ -3686,27 +3695,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Plafonds
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-15
                       </h3>
@@ -3715,27 +3724,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Définition de la durée du travail
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-16
                       </h3>
@@ -3744,27 +3753,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Majoration pour heures supplémentaires.
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-17
                       </h3>
@@ -3773,27 +3782,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Equivalences et dérogations permanentes
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-18
                       </h3>
@@ -3802,27 +3811,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Semaine de travail en 5 jours
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-21
                       </h3>
@@ -3831,27 +3840,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Exceptions à la semaine de travail en 5 jours
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-22
                       </h3>
@@ -3860,27 +3869,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Horaires individualisés
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-24
                       </h3>
@@ -3889,27 +3898,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Horaires à temps partiel
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-25
                       </h3>
@@ -3918,27 +3927,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Récupération des heures perdues pour intempéries
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-28
                       </h3>
@@ -3947,27 +3956,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Cas des chefs d'équipe
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 3-29
                       </h3>
@@ -4045,36 +4054,36 @@ exports[`<Convention /> renders 1`] = `
           
         </header>
         <div
-          class="c18"
+          class="c18 c19"
         >
           <div
-            class="c19"
+            class="c20"
           >
             <ul
-              class="c20"
+              class="c21"
             >
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Préambule
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 12-1
                       </h3>
@@ -4083,27 +4092,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Définitions générales des critères et des niveaux
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 12-2
                       </h3>
@@ -4112,27 +4121,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Coefficients hiérarchiques
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 12-3
                       </h3>
@@ -4141,27 +4150,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Prise en compte des diplômes professionnels bâtiment
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 12-4
                       </h3>
@@ -4170,27 +4179,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Polyvalence
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 12-5
                       </h3>
@@ -4199,27 +4208,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Evolution de carrière
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 12-6
                       </h3>
@@ -4228,27 +4237,27 @@ exports[`<Convention /> renders 1`] = `
                 </a>
               </li>
               <li
-                class="c21"
+                class="c22"
               >
                 <a
-                  class="c22"
+                  class="c23"
                   href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
                   rel="nofollow noopener"
                   target="_blank"
                 >
                   <div
-                    class="c23"
+                    class="c24"
                   >
                     <div
-                      class="c24"
+                      class="c25"
                     >
                       <span
-                        class="c25"
+                        class="c26"
                       >
                         Suivi de l'application dans l'entreprise
                       </span>
                       <h3
-                        class="c26"
+                        class="c27"
                       >
                         Article 12-7
                       </h3>
@@ -4294,13 +4303,13 @@ exports[`<Convention /> renders 1`] = `
       Pour savoir si ce qui est prévu par la convention collective de branche est bien applicable à votre situation particulière vous devez vous reporter à la fiche traitant du même sujet et pour lequel l'accord d'entreprise peut comporter d'autres règles.
     </div>
     <div
-      class="c27"
+      class="c28"
     >
       <div
-        class="c28 c29"
+        class="c29 c30"
       >
         <input
-          class="c30"
+          class="c31"
           id="search-agreement"
           placeholder="congé exceptionnel, prime"
           type="search"
@@ -4338,11 +4347,11 @@ exports[`<Convention /> renders 1`] = `
         value="1"
       />
       <button
-        class="c31 c32"
+        class="c32 c33"
         type="submit"
       >
         <svg
-          class="c33"
+          class="c34"
           fill="none"
           viewBox="0 0 32 32"
         >

@@ -65,7 +65,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateY(-50%);
 }
 
-.c28 {
+.c29 {
   position: absolute;
   background-color: #7994d4;
   border-radius: none;
@@ -228,11 +228,11 @@ exports[`<SearchResults/> should render results 1`] = `
   right: -2rem;
 }
 
-.c23 {
+.c24 {
   overflow-x: visible;
 }
 
-.c24 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -253,27 +253,10 @@ exports[`<SearchResults/> should render results 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
-}
-
-.c25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  width: calc(100% / 3 - 2 * 1rem);
-  margin: 1rem;
-  padding: 0;
 }
 
 .c26 {
@@ -288,7 +271,24 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 3 - 2 * 1rem - 1px);
+  margin: 1rem;
+  padding: 0;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -326,7 +326,7 @@ exports[`<SearchResults/> should render results 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -340,13 +340,13 @@ exports[`<SearchResults/> should render results 1`] = `
 .c6:active,
 .c6:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c27 {
+.c28 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -373,7 +373,7 @@ exports[`<SearchResults/> should render results 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -383,11 +383,11 @@ exports[`<SearchResults/> should render results 1`] = `
   appearance: none;
 }
 
-.c27:hover,
-.c27:active,
-.c27:focus {
+.c28:hover,
+.c28:active,
+.c28:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
@@ -502,72 +502,47 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c23 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c25 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    margin-top: 1rem;
     margin-right: 0;
+    margin-bottom: 2rem;
     margin-left: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c25 {
-    width: calc( 100% / 2 - 2 * 1rem );
+  .c26 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c25 {
-    width: calc( 100% / 1 - 2 * 1rem );
+  .c26 {
+    width: calc( 100% / 1 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 80%;
-    min-width: 23rem;
-  }
-
-  .c25:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c25:last-of-type:after {
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
-  }
-}
-
-@media (max-width:1180px) {
-  .c26 {
-    width: calc( 100% / 3 - 2 * 1rem );
-  }
-}
-
-@media (max-width:980px) {
-  .c26 {
-    width: calc( 100% / 2 - 2 * 1rem );
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 60%;
     min-width: 23rem;
   }
 
@@ -576,6 +551,41 @@ exports[`<SearchResults/> should render results 1`] = `
   }
 
   .c26:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
+  }
+}
+
+@media (max-width:1180px) {
+  .c27 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c27 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c27 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c27:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c27:last-of-type:after {
+    display: block;
     width: 2rem;
     height: 100%;
     background-color: transparent;
@@ -591,7 +601,7 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
@@ -941,16 +951,16 @@ exports[`<SearchResults/> should render results 1`] = `
           
         </header>
         <div
-          class="c22"
+          class="c22 c23"
         >
           <div
-            class="c23"
+            class="c24"
           >
             <ul
-              class="c24"
+              class="c25"
             >
               <li
-                class="c25"
+                class="c26"
               >
                 <a
                   class="c6"
@@ -1006,26 +1016,26 @@ exports[`<SearchResults/> should render results 1`] = `
           
         </header>
         <div
-          class="c22"
+          class="c22 c23"
         >
           <div
-            class="c23"
+            class="c24"
           >
             <ul
-              class="c24"
+              class="c25"
             >
               <li
-                class="c26"
+                class="c27"
               >
                 <a
-                  class="c27"
+                  class="c28"
                   href="/themes/1-contrat?q=search test"
                 >
                   <div
                     class="c7"
                   >
                     <div
-                      class="c28"
+                      class="c29"
                     />
                     <div
                       class="c8"
