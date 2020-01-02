@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "ncc build ./src/server/index.js -o dist",
+    "build": "ncc build ./src/server/index.js -o dist --source-map",
     "lint": "eslint src/**/*.js",
     "prepush": "yarn lint",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
