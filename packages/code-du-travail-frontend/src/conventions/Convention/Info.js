@@ -42,8 +42,8 @@ const StyledDetail = styled.div`
 
 const DetailLabel = styled.div`
   display: inline-block;
-  font-weight: bold;
   margin-right: 10px;
+  font-weight: bold;
 `;
 
 Info.propTypes = {

@@ -16,7 +16,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 .c22 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -70,7 +70,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c48 {
+.c51 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -93,13 +93,13 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c47 {
+.c50 {
   margin: 0 auto 1rem;
   margin-bottom: 1.6rem;
   text-align: center;
 }
 
-.c33 {
+.c36 {
   position: absolute;
   top: 0;
   right: 0;
@@ -110,7 +110,7 @@ exports[`<Outils /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c33:before {
+.c36:before {
   position: absolute;
   display: block;
   width: 0;
@@ -121,7 +121,7 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c34 {
+.c37 {
   position: absolute;
   top: 0;
   right: 0;
@@ -191,7 +191,7 @@ exports[`<Outils /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c42 {
+.c45 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -231,14 +231,14 @@ exports[`<Outils /> should render 1`] = `
   overflow: visible;
 }
 
-.c42:focus,
-.c42:hover,
-.c42:active {
+.c45:focus,
+.c45:hover,
+.c45:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c50 {
+.c53 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -271,20 +271,20 @@ exports[`<Outils /> should render 1`] = `
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
-.c50:link,
-.c50:visited {
+.c53:link,
+.c53:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c50:not([disabled]):hover,
-.c50:not([disabled]):active,
-.c50:not([disabled]):focus {
+.c53:not([disabled]):hover,
+.c53:not([disabled]):active,
+.c53:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -293,13 +293,13 @@ exports[`<Outils /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c50[disabled] {
+.c53[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c43 {
+.c46 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -308,13 +308,46 @@ exports[`<Outils /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c18:hover .c43 {
+.c18:hover .c46 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
 }
 
 .c30 {
+  position: relative;
+  overflow: visible;
+}
+
+.c30:before,
+.c30:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c30:before {
+  left: -2rem;
+}
+
+.c30:after {
+  right: -2rem;
+}
+
+.c32 {
+  overflow-x: visible;
+}
+
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -335,13 +368,13 @@ exports[`<Outils /> should render 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c31 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -353,7 +386,7 @@ exports[`<Outils /> should render 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -370,7 +403,7 @@ exports[`<Outils /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c32 {
+.c35 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -397,7 +430,7 @@ exports[`<Outils /> should render 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -407,17 +440,18 @@ exports[`<Outils /> should render 1`] = `
   appearance: none;
 }
 
-.c32:hover,
-.c32:active,
-.c32:focus {
+.c35:hover,
+.c35:active,
+.c35:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c36 {
+.c39 {
+  display: block;
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto 1.6rem;
@@ -426,17 +460,17 @@ exports[`<Outils /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c35 {
+.c38 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c37 {
+.c40 {
   padding-right: 1rem;
 }
 
-.c38 {
+.c41 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -446,7 +480,7 @@ exports[`<Outils /> should render 1`] = `
   margin: 0;
 }
 
-.c39 {
+.c42 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -505,7 +539,7 @@ exports[`<Outils /> should render 1`] = `
   background: #fff;
   border: 1px solid transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -632,7 +666,7 @@ exports[`<Outils /> should render 1`] = `
   position: sticky;
   top: 0;
   z-index: 2;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   height: 9rem;
   margin-bottom: 6rem;
   overflow: visible;
@@ -727,12 +761,12 @@ exports[`<Outils /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c44 {
+.c47 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c45 {
+.c48 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -740,7 +774,7 @@ exports[`<Outils /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c45:before {
+.c48:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -752,13 +786,13 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c46 {
+.c49 {
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
 }
 
-.c49 {
+.c52 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -767,25 +801,25 @@ exports[`<Outils /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c49 > *:first-child {
+.c52 > *:first-child {
   margin-top: 0;
 }
 
-.c49 > *:last-child {
+.c52 > *:last-child {
   margin-bottom: 0;
 }
 
-.c51 {
+.c54 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c52 {
+.c55 {
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c53 {
+.c56 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -799,25 +833,25 @@ exports[`<Outils /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c53 > *:first-child {
+.c56 > *:first-child {
   margin-top: 0;
 }
 
-.c53 > *:last-child {
+.c56 > *:last-child {
   margin-bottom: 0;
 }
 
-.c55 + .c54 {
+.c58 + .c57 {
   padding-left: 1.6rem;
 }
 
-.c57 {
+.c60 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c56 {
+.c59 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -827,17 +861,17 @@ exports[`<Outils /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c58 {
+.c61 {
   margin: 0.4rem 0;
 }
 
-.c59 {
+.c62 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c60 {
+.c63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -856,14 +890,14 @@ exports[`<Outils /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c61 {
+.c64 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c62 {
+.c65 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -888,13 +922,13 @@ exports[`<Outils /> should render 1`] = `
   left: -50%;
   z-index: -1;
   width: 200%;
-  height: 400px;
+  height: 40rem;
   background-color: #fff;
   border-radius: 100%;
   content: "";
 }
 
-.c40 {
+.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -909,7 +943,7 @@ exports[`<Outils /> should render 1`] = `
   height: 100%;
 }
 
-.c41 {
+.c44 {
   margin-top: 1.6rem;
 }
 
@@ -939,7 +973,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c51 {
     font-size: 2.2rem;
   }
 }
@@ -951,7 +985,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c50 {
     margin-bottom: 1rem;
   }
 }
@@ -963,44 +997,97 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c45 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c53 {
     font-size: 1.4rem;
   }
 }
 
-@media (max-width:1180px) {
-  .c31 {
-    width: calc( 100% / 3 - 2 * 1rem );
-  }
-}
-
-@media (max-width:980px) {
-  .c31 {
-    width: calc( 100% / 2 - 2 * 1rem );
+@media (max-width:600px) {
+  .c30 {
+    overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
-    width: calc( 100% - 2 * 1rem );
+  .c30:before,
+  .c30:after {
+    display: block;
   }
 }
 
 @media (max-width:600px) {
   .c32 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c31 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c33 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c34 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c34 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c34:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c34:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
+  }
+}
+
+@media (max-width:600px) {
+  .c35 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c41 {
     font-size: 1.6rem;
   }
 }
@@ -1150,27 +1237,27 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c45 {
+  .c48 {
     display: none;
   }
 }
 
 @media print {
-  .c49 {
+  .c52 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c53 {
+  .c56 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c56 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1178,32 +1265,32 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c55 + .c54 {
+  .c58 + .c57 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c60 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c59 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c59 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c62 {
+  .c65 {
     display: none;
   }
 }
@@ -1443,799 +1530,807 @@ exports[`<Outils /> should render 1`] = `
           </h2>
           
         </header>
-        <ul
-          class="c30"
+        <div
+          class="c30 c31"
         >
-          <li
-            class="c31"
+          <div
+            class="c32"
           >
-            <a
-              class="c32"
-              href="/outils/indemnite-licenciement"
+            <ul
+              class="c33"
             >
-              <div
-                class="c33"
+              <li
+                class="c34"
               >
-                <div
-                  class="c34"
+                <a
+                  class="c35"
+                  href="/outils/indemnite-licenciement"
                 >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <g
-                      clip-path="url(#indemnity_svg__clip0)"
-                    >
-                      <path
-                        d="M41 2H11a3 3 0 00-3 3v10s0 1 1 1 1-1 1-1V5a1 1 0 011-1h30a1 1 0 011 1v27h2V5a3 3 0 00-3-3zM30 48v2H10.733a3 3 0 01-3-3V24s0-1 1-1 1 1 1 1v23a1 1 0 001 1H30zM9 20a1 1 0 100-2 1 1 0 000 2z"
-                        fill="#4E6896"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M47.935 40.394a3.677 3.677 0 011.192 2.712c0 1.073-.46 2.04-1.192 2.713a3.68 3.68 0 01-2.478 6.394h-10.33c-1.5 0-2.688-1.938-2.688-1.938a3.677 3.677 0 01.753-4.456A3.677 3.677 0 0132 43.106c0-1.072.46-2.039 1.192-2.712A3.68 3.68 0 0135.67 34h9.787a3.68 3.68 0 012.478 6.394zM35.67 50.275h9.787a1.743 1.743 0 000-3.487H35.67a1.743 1.743 0 000 3.487zm0-5.425h9.787a1.743 1.743 0 000-3.488H35.67a1.743 1.743 0 000 3.488zm0-5.425h9.787a1.743 1.743 0 000-3.487H35.67a1.743 1.743 0 000 3.487z"
-                        fill="#4E6896"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M14 12a1 1 0 011-1h22a1 1 0 011 1v6a1 1 0 01-1 1H15a1 1 0 01-1-1v-6zm2 5v-4h20v4H16z"
-                        fill="#FF7067"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M15 26a1 1 0 100 2h3a1 1 0 100-2h-3zm10 0a1 1 0 100 2h3a1 1 0 100-2h-3zm8 1a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm-18 6a1 1 0 100 2h3a1 1 0 100-2h-3zm9 1a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm-10 7a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm11-1a1 1 0 100 2h3a1 1 0 100-2h-3z"
-                        fill="#FF7067"
-                      />
-                    </g>
-                    <defs>
-                      <clippath
-                        id="indemnity_svg__clip0"
-                      >
-                        <path
-                          d="M0 0h52v52H0z"
-                          fill="#fff"
-                        />
-                      </clippath>
-                    </defs>
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
-                    class="c38"
-                  >
-                    Indemnité de licenciement
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Estimez simplement le montant de l’indemnité de licenciement
                   <div
-                    class="c41"
+                    class="c36"
                   >
                     <div
-                      class="c18 c42"
+                      class="c37"
                     >
-                      Estimer
                       <svg
-                        class="c43"
                         fill="none"
-                        viewBox="0 0 28 15"
+                        viewBox="0 0 32 32"
                       >
                         <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          clip-rule="evenodd"
+                          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                           fill="currentColor"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
                         />
                       </svg>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32"
-              href="/outils/preavis-demission"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      d="M42.953 2H10.047A3.05 3.05 0 007 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016V27H46V5.047A3.05 3.05 0 0042.953 2zM46 43h-2.031v3.953c0 .56-.456 1.016-1.016 1.016H10.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 0010.047 50h32.906A3.05 3.05 0 0046 46.953V43zM8.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      d="M19.689 36.297a1.016 1.016 0 011.436 1.437l-3.418 3.418a1.016 1.016 0 01-1.436 0l-1.974-1.974a1.015 1.015 0 111.437-1.436l1.255 1.255 2.7-2.7zm1.496-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M23.016 10h-10c-.561 0-1.016.455-1.016 1.016v9.968c0 .561.455 1.016 1.016 1.016h10c.56 0 1.015-.455 1.015-1.016v-9.968c0-.561-.454-1.016-1.015-1.016zm-8.985 9.969H22V12.03h-7.969v7.938z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      d="M30.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0-4h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm12.079 13a.752.752 0 01.47.192l6.259 6.133a.645.645 0 010 .885l-6.277 6.143a.614.614 0 01-.45.183.636.636 0 01-.445-.18.611.611 0 01-.185-.437v-3.682H28v-4.94h13.465v-3.68a.583.583 0 01.177-.443.606.606 0 01.453-.174z"
-                      fill="#FF7067"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
+                  <div
                     class="c38"
                   >
-                    Préavis de démission
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Calculez la durée de préavis à respecter en cas de démission
+                    <div
+                      class="c39"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 52 52"
+                      >
+                        <g
+                          clip-path="url(#indemnity_svg__clip0)"
+                        >
+                          <path
+                            d="M41 2H11a3 3 0 00-3 3v10s0 1 1 1 1-1 1-1V5a1 1 0 011-1h30a1 1 0 011 1v27h2V5a3 3 0 00-3-3zM30 48v2H10.733a3 3 0 01-3-3V24s0-1 1-1 1 1 1 1v23a1 1 0 001 1H30zM9 20a1 1 0 100-2 1 1 0 000 2z"
+                            fill="#4E6896"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M47.935 40.394a3.677 3.677 0 011.192 2.712c0 1.073-.46 2.04-1.192 2.713a3.68 3.68 0 01-2.478 6.394h-10.33c-1.5 0-2.688-1.938-2.688-1.938a3.677 3.677 0 01.753-4.456A3.677 3.677 0 0132 43.106c0-1.072.46-2.039 1.192-2.712A3.68 3.68 0 0135.67 34h9.787a3.68 3.68 0 012.478 6.394zM35.67 50.275h9.787a1.743 1.743 0 000-3.487H35.67a1.743 1.743 0 000 3.487zm0-5.425h9.787a1.743 1.743 0 000-3.488H35.67a1.743 1.743 0 000 3.488zm0-5.425h9.787a1.743 1.743 0 000-3.487H35.67a1.743 1.743 0 000 3.487z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M14 12a1 1 0 011-1h22a1 1 0 011 1v6a1 1 0 01-1 1H15a1 1 0 01-1-1v-6zm2 5v-4h20v4H16z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            d="M15 26a1 1 0 100 2h3a1 1 0 100-2h-3zm10 0a1 1 0 100 2h3a1 1 0 100-2h-3zm8 1a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm-18 6a1 1 0 100 2h3a1 1 0 100-2h-3zm9 1a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm-10 7a1 1 0 011-1h3a1 1 0 110 2h-3a1 1 0 01-1-1zm11-1a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                            fill="#FF7067"
+                          />
+                        </g>
+                        <defs>
+                          <clippath
+                            id="indemnity_svg__clip0"
+                          >
+                            <path
+                              d="M0 0h52v52H0z"
+                              fill="#fff"
+                            />
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div
+                      class="c40"
+                    >
+                      
+                      <h3
+                        class="c41"
+                      >
+                        Indemnité de licenciement
+                      </h3>
+                    </div>
+                  </div>
                   <div
-                    class="c41"
+                    class="c42"
                   >
                     <div
-                      class="c18 c42"
+                      class="c43"
                     >
-                      Calculer
+                      Estimez simplement le montant de l’indemnité de licenciement
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c18 c45"
+                        >
+                          Estimer
+                          <svg
+                            class="c46"
+                            fill="none"
+                            viewBox="0 0 28 15"
+                          >
+                            <path
+                              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c34"
+              >
+                <a
+                  class="c35"
+                  href="/outils/preavis-demission"
+                >
+                  <div
+                    class="c36"
+                  >
+                    <div
+                      class="c37"
+                    >
                       <svg
-                        class="c43"
                         fill="none"
-                        viewBox="0 0 28 15"
+                        viewBox="0 0 32 32"
                       >
                         <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          clip-rule="evenodd"
+                          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                           fill="currentColor"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
                         />
                       </svg>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32"
-              href="/outils/simulateur-embauche"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M17.709 34.456A7.002 7.002 0 0015 21a7 7 0 00-2.715 13.454H9.967l-.417.029C4.557 34.933 1 39.152 1 44.275v4.757c0 .535.432.969.966.969H46.33a3.68 3.68 0 002.478-6.394A3.677 3.677 0 0050 40.894c0-1.072-.46-2.039-1.192-2.712a3.68 3.68 0 00-2.478-6.394h-9.787a3.68 3.68 0 00-2.478 6.394 3.677 3.677 0 00-1.192 2.712c0 1.073.46 2.04 1.192 2.713a3.677 3.677 0 00-.754 4.456H29v-3.788c0-5.123-3.618-9.343-8.61-9.792l-.417-.03c.073.003-.9.004-2.264.003zM20 28a5 5 0 11-10 0 5 5 0 0110 0zm-2.37 8L15 39l-2.5-3h5.13zM27 48.063H3v-2.788l.057-1.938c.427-3.6 3.294-6.844 6.882-7.278l4.378 4.949a.962.962 0 001.366 0l4.316-4.949c3.894.472 7.001 4.185 7.001 8.216v3.788zm19.33 0h-9.787a1.743 1.743 0 010-3.487h9.787a1.743 1.743 0 010 3.487zm0-5.425h-9.787a1.743 1.743 0 010-3.487h9.787a1.743 1.743 0 010 3.487zm0-5.425h-9.787a1.743 1.743 0 010-3.487h9.787a1.743 1.743 0 010 3.487z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M38.311 11.64l3.401-7.964a.937.937 0 00-.387-1.176l-1.668-.988a3.66 3.66 0 00-4.158.308l-.258.21a1.76 1.76 0 01-2.211-.001l-.01-.008a3.66 3.66 0 00-4.606.004 1.759 1.759 0 01-2.213.002l-.262-.213a3.663 3.663 0 00-4.144-.317l-1.713 1.004a.941.941 0 00-.39 1.18l3.422 7.952c-2.475.89-5.036 3.337-6.421 5.573A.938.938 0 0017 18.5a.947.947 0 001.3-.307c1.19-1.92 3.461-4.113 5.604-4.846H37.5a9.724 9.724 0 016.612 9.218v2.495c0 .519.422.94.944.94a.942.942 0 00.944-.94v-2.495c0-4.918-3.074-9.26-7.689-10.926zm-1.978-.174H25.098l-3.342-7.764.997-.584a1.76 1.76 0 011.991.152l.262.213a3.66 3.66 0 004.605-.004 1.759 1.759 0 012.214-.001l.01.008a3.66 3.66 0 004.6 0l.258-.21a1.76 1.76 0 011.998-.147l.96.567-3.318 7.77z"
-                      fill="#FF7067"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      d="M45 30a1 1 0 100-2 1 1 0 000 2zm-6.504-9.417c-.551 0-1.002.164-1.354.492-.348.328-.58.824-.697 1.489H39s.567-.032.567.435c0 .467-.567.467-.567.467h-2.643l-.012.264v.322l.012.228h2.303s.566 0 .566.448c0 .449-.566.449-.566.449h-2.203c.25 1.218.96 1.828 2.132 1.828.3 0 .505.008.686 0 .397-.017.805.241.805.639 0 .216-.123.423-.331.483-.317.09-.59.062-1.23.062-.941 0-1.707-.258-2.297-.774-.586-.516-.968-1.262-1.148-2.238h-.89s-.404 0-.404-.448c0-.449.403-.449.403-.449h.797l-.012-.216v-.217l.012-.381h-.797s-.503 0-.503-.467.503-.435.503-.435h.88c.148-.981.52-1.75 1.118-2.31.598-.558 1.37-.837 2.315-.837.566 0 1.036.075 1.486.247.299.113.41.463.28.754-.143.317-.519.445-.847.33a2.69 2.69 0 00-.92-.165z"
-                      fill="#FF7067"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
+                  <div
                     class="c38"
                   >
-                    Salaire brut/net
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Estimez le salaire : brut, net, heures supplémentaires, coût total employeur
-                  <div
-                    class="c41"
-                  >
                     <div
-                      class="c18 c42"
+                      class="c39"
                     >
-                      Estimer
                       <svg
-                        class="c43"
                         fill="none"
-                        viewBox="0 0 28 15"
+                        viewBox="0 0 52 52"
                       >
                         <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          d="M42.953 2H10.047A3.05 3.05 0 007 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016V27H46V5.047A3.05 3.05 0 0042.953 2zM46 43h-2.031v3.953c0 .56-.456 1.016-1.016 1.016H10.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 0010.047 50h32.906A3.05 3.05 0 0046 46.953V43zM8.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297z"
+                          fill="#4E6896"
+                        />
+                        <path
+                          d="M19.689 36.297a1.016 1.016 0 011.436 1.437l-3.418 3.418a1.016 1.016 0 01-1.436 0l-1.974-1.974a1.015 1.015 0 111.437-1.436l1.255 1.255 2.7-2.7zm1.496-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
+                          fill="#4E6896"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M23.016 10h-10c-.561 0-1.016.455-1.016 1.016v9.968c0 .561.455 1.016 1.016 1.016h10c.56 0 1.015-.455 1.015-1.016v-9.968c0-.561-.454-1.016-1.015-1.016zm-8.985 9.969H22V12.03h-7.969v7.938z"
+                          fill="#4E6896"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M30.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0-4h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm12.079 13a.752.752 0 01.47.192l6.259 6.133a.645.645 0 010 .885l-6.277 6.143a.614.614 0 01-.45.183.636.636 0 01-.445-.18.611.611 0 01-.185-.437v-3.682H28v-4.94h13.465v-3.68a.583.583 0 01.177-.443.606.606 0 01.453-.174z"
+                          fill="#FF7067"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="c40"
+                    >
+                      
+                      <h3
+                        class="c41"
+                      >
+                        Préavis de démission
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="c42"
+                  >
+                    <div
+                      class="c43"
+                    >
+                      Calculez la durée de préavis à respecter en cas de démission
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c18 c45"
+                        >
+                          Calculer
+                          <svg
+                            class="c46"
+                            fill="none"
+                            viewBox="0 0 28 15"
+                          >
+                            <path
+                              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c34"
+              >
+                <a
+                  class="c35"
+                  href="/outils/simulateur-embauche"
+                >
+                  <div
+                    class="c36"
+                  >
+                    <div
+                      class="c37"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 32 32"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                           fill="currentColor"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
                         />
                       </svg>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32"
-              href="/outils/indemnite-precarite"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <g
-                      clip-path="url(#precarity_svg__clip0)"
-                    >
-                      <path
-                        d="M34.71 5.86a21.916 21.916 0 0112.832 15.971 1.016 1.016 0 01-1.995.384 19.886 19.886 0 00-11.644-14.49 1.016 1.016 0 11.807-1.865zm-4.021-1.295l.026.006a1.016 1.016 0 11-.442 1.982l-.012-.002a1.016 1.016 0 11.428-1.986zM6.453 29.785a19.853 19.853 0 0011.873 14.589 1.015 1.015 0 11-.783 1.874 22.062 22.062 0 01-8.521-6.355 21.938 21.938 0 01-4.564-9.724 1.016 1.016 0 011.995-.384zm15.225 15.651l.063.014a1.016 1.016 0 01-.432 1.985l-.071-.016a1.016 1.016 0 11.44-1.983zm.153-40.978a1.015 1.015 0 11.384 1.995A19.854 19.854 0 006.55 21.741a1.016 1.016 0 01-1.985-.432 21.848 21.848 0 016.105-11.002 21.836 21.836 0 0111.161-5.849z"
-                        fill="#FF7067"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M27.016 22.7v-8.65a1.016 1.016 0 00-2.031 0v8.65a3.469 3.469 0 00-2.286 2.285h-3.774a1.016 1.016 0 000 2.031h3.774A3.46 3.46 0 0026 29.453 3.457 3.457 0 0029.453 26a3.46 3.46 0 00-2.437-3.3zm-1.037 1.878a1.513 1.513 0 00.042 0A1.423 1.423 0 0126 27.422 1.423 1.423 0 0124.578 26v-.02a1.423 1.423 0 011.401-1.402z"
-                        fill="#FF7067"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M25 5.078a1.016 1.016 0 012.031 0v2.276a1.016 1.016 0 11-2.031 0V5.078zm-.031 38.844a1.016 1.016 0 012.031 0v3a1.016 1.016 0 01-2.031 0v-3zM44.18 25h2.742a1.016 1.016 0 010 2.031H44.18a1.016 1.016 0 010-2.031zm-39.102-.031h2.945a1.016 1.016 0 010 2.031H5.078a1.016 1.016 0 010-2.031z"
-                        fill="#FF7067"
-                      />
-                      <path
-                        d="M44.385 7.615C39.474 2.705 32.945 0 26 0 19.055 0 12.526 2.704 7.615 7.615 2.705 12.526 0 19.055 0 26c0 6.945 2.705 13.474 7.615 18.385C12.526 49.295 19.055 52 26 52c.373 0 .718.003 1.042.005 2.03.016 3.235.025 5.401-.66L31.5 49.5c-1.751.53-2.678.512-4.205.484-.386-.007-.81-.015-1.295-.015C12.784 49.969 2.031 39.216 2.031 26 2.031 12.784 12.784 2.031 26 2.031c13.216 0 23.969 10.753 23.969 23.969 0 .287 0 .56.002.82.01 2.443.015 3.852-.884 6.228L50.5 35c1.414-3.238 1.5-5.36 1.5-9 0-6.945-2.705-13.474-7.615-18.385z"
-                        fill="#4E6896"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M48.808 40.18a3.677 3.677 0 011.191 2.713 3.68 3.68 0 01-1.191 2.713A3.68 3.68 0 0146.33 52H36c-1.5 0-2.69-1.938-2.69-1.938a3.677 3.677 0 01.753-4.456 3.677 3.677 0 01-1.19-2.713c0-1.072.459-2.039 1.191-2.712a3.68 3.68 0 012.478-6.394h9.787a3.68 3.68 0 012.479 6.394zm-12.266 9.882h9.787a1.743 1.743 0 000-3.487h-9.787a1.743 1.743 0 000 3.487zm0-5.425h9.787a1.743 1.743 0 000-3.487h-9.787a1.743 1.743 0 000 3.487zm0-5.425h9.787a1.743 1.743 0 000-3.487h-9.787a1.743 1.743 0 000 3.487z"
-                        fill="#4E6896"
-                        fill-rule="evenodd"
-                      />
-                    </g>
-                    <defs>
-                      <clippath
-                        id="precarity_svg__clip0"
-                      >
-                        <path
-                          d="M0 0h52v52H0z"
-                          fill="#fff"
-                        />
-                      </clippath>
-                    </defs>
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
+                  <div
                     class="c38"
                   >
-                    Indemnité de précarité
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Estimez le montant de l’indemnité de fin de CDD ou intérim
-                  <div
-                    class="c41"
-                  >
                     <div
-                      class="c18 c42"
+                      class="c39"
                     >
-                      Estimer
                       <svg
-                        class="c43"
                         fill="none"
-                        viewBox="0 0 28 15"
+                        viewBox="0 0 52 52"
                       >
                         <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          clip-rule="evenodd"
+                          d="M17.709 34.456A7.002 7.002 0 0015 21a7 7 0 00-2.715 13.454H9.967l-.417.029C4.557 34.933 1 39.152 1 44.275v4.757c0 .535.432.969.966.969H46.33a3.68 3.68 0 002.478-6.394A3.677 3.677 0 0050 40.894c0-1.072-.46-2.039-1.192-2.712a3.68 3.68 0 00-2.478-6.394h-9.787a3.68 3.68 0 00-2.478 6.394 3.677 3.677 0 00-1.192 2.712c0 1.073.46 2.04 1.192 2.713a3.677 3.677 0 00-.754 4.456H29v-3.788c0-5.123-3.618-9.343-8.61-9.792l-.417-.03c.073.003-.9.004-2.264.003zM20 28a5 5 0 11-10 0 5 5 0 0110 0zm-2.37 8L15 39l-2.5-3h5.13zM27 48.063H3v-2.788l.057-1.938c.427-3.6 3.294-6.844 6.882-7.278l4.378 4.949a.962.962 0 001.366 0l4.316-4.949c3.894.472 7.001 4.185 7.001 8.216v3.788zm19.33 0h-9.787a1.743 1.743 0 010-3.487h9.787a1.743 1.743 0 010 3.487zm0-5.425h-9.787a1.743 1.743 0 010-3.487h9.787a1.743 1.743 0 010 3.487zm0-5.425h-9.787a1.743 1.743 0 010-3.487h9.787a1.743 1.743 0 010 3.487z"
+                          fill="#4E6896"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M38.311 11.64l3.401-7.964a.937.937 0 00-.387-1.176l-1.668-.988a3.66 3.66 0 00-4.158.308l-.258.21a1.76 1.76 0 01-2.211-.001l-.01-.008a3.66 3.66 0 00-4.606.004 1.759 1.759 0 01-2.213.002l-.262-.213a3.663 3.663 0 00-4.144-.317l-1.713 1.004a.941.941 0 00-.39 1.18l3.422 7.952c-2.475.89-5.036 3.337-6.421 5.573A.938.938 0 0017 18.5a.947.947 0 001.3-.307c1.19-1.92 3.461-4.113 5.604-4.846H37.5a9.724 9.724 0 016.612 9.218v2.495c0 .519.422.94.944.94a.942.942 0 00.944-.94v-2.495c0-4.918-3.074-9.26-7.689-10.926zm-1.978-.174H25.098l-3.342-7.764.997-.584a1.76 1.76 0 011.991.152l.262.213a3.66 3.66 0 004.605-.004 1.759 1.759 0 012.214-.001l.01.008a3.66 3.66 0 004.6 0l.258-.21a1.76 1.76 0 011.998-.147l.96.567-3.318 7.77z"
+                          fill="#FF7067"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M45 30a1 1 0 100-2 1 1 0 000 2zm-6.504-9.417c-.551 0-1.002.164-1.354.492-.348.328-.58.824-.697 1.489H39s.567-.032.567.435c0 .467-.567.467-.567.467h-2.643l-.012.264v.322l.012.228h2.303s.566 0 .566.448c0 .449-.566.449-.566.449h-2.203c.25 1.218.96 1.828 2.132 1.828.3 0 .505.008.686 0 .397-.017.805.241.805.639 0 .216-.123.423-.331.483-.317.09-.59.062-1.23.062-.941 0-1.707-.258-2.297-.774-.586-.516-.968-1.262-1.148-2.238h-.89s-.404 0-.404-.448c0-.449.403-.449.403-.449h.797l-.012-.216v-.217l.012-.381h-.797s-.503 0-.503-.467.503-.435.503-.435h.88c.148-.981.52-1.75 1.118-2.31.598-.558 1.37-.837 2.315-.837.566 0 1.036.075 1.486.247.299.113.41.463.28.754-.143.317-.519.445-.847.33a2.69 2.69 0 00-.92-.165z"
+                          fill="#FF7067"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="c40"
+                    >
+                      
+                      <h3
+                        class="c41"
+                      >
+                        Salaire brut/net
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="c42"
+                  >
+                    <div
+                      class="c43"
+                    >
+                      Estimez le salaire : brut, net, heures supplémentaires, coût total employeur
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c18 c45"
+                        >
+                          Estimer
+                          <svg
+                            class="c46"
+                            fill="none"
+                            viewBox="0 0 28 15"
+                          >
+                            <path
+                              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c34"
+              >
+                <a
+                  class="c35"
+                  href="/outils/indemnite-precarite"
+                >
+                  <div
+                    class="c36"
+                  >
+                    <div
+                      class="c37"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 32 32"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                           fill="currentColor"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
                         />
                       </svg>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32"
-              href="/outils/preavis-licenciement"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <g
-                      clip-path="url(#termination_svg__clip0)"
-                    >
-                      <path
-                        d="M25 5.078a1.016 1.016 0 012.031 0v2.276a1.016 1.016 0 11-2.031 0V5.078zm-3.169-.62a1.015 1.015 0 11.384 1.995A19.854 19.854 0 006.55 21.741a1.016 1.016 0 01-1.985-.432 21.848 21.848 0 016.105-11.002 21.836 21.836 0 0111.161-5.849zm8.884.112l-.026-.005a1.015 1.015 0 10-.428 1.986l.012.002a1.016 1.016 0 00.442-1.982zm16.827 17.261A21.916 21.916 0 0034.71 5.861a1.016 1.016 0 00-.807 1.863 19.886 19.886 0 0111.644 14.491 1.016 1.016 0 001.995-.384zM6.453 29.785a19.853 19.853 0 0011.873 14.589 1.015 1.015 0 11-.783 1.874 22.062 22.062 0 01-8.521-6.355 21.938 21.938 0 01-4.564-9.724 1.016 1.016 0 011.995-.384zM21.741 45.45l-.063-.014a1.016 1.016 0 00-.44 1.983l.07.016a1.016 1.016 0 10.432-1.985z"
-                        fill="#FF7067"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M27.016 14.05v8.65a3.46 3.46 0 012.437 3.3A3.457 3.457 0 0126 29.453a3.46 3.46 0 01-3.3-2.437h-3.775a1.016 1.016 0 010-2.031h3.774a3.469 3.469 0 012.286-2.286v-8.65a1.016 1.016 0 012.031 0zM26 24.578h-.02a1.423 1.423 0 00-1.402 1.401v.042A1.423 1.423 0 0027.422 26c0-.777-.626-1.41-1.4-1.422H26z"
-                        fill="#FF7067"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M25.985 42.907c-.561 0-1.016.454-1.016 1.015v3a1.016 1.016 0 002.031 0v-3c0-.56-.455-1.015-1.015-1.015zM44.18 25h2.742a1.016 1.016 0 010 2.031H44.18a1.016 1.016 0 010-2.031zm-36.157-.031H5.078a1.016 1.016 0 000 2.031h2.945a1.016 1.016 0 000-2.031zM45.095 34a.752.752 0 01.47.192l6.259 6.133a.645.645 0 010 .885l-6.277 6.143a.614.614 0 01-.45.183.637.637 0 01-.445-.18.611.611 0 01-.185-.437v-3.682H31v-4.94h13.465v-3.68a.583.583 0 01.177-.443.606.606 0 01.453-.173z"
-                        fill="#FF7067"
-                      />
-                      <path
-                        d="M26 0c6.945 0 13.474 2.704 18.385 7.615C49.295 12.526 52 19.055 52 26c0 3.64-.086 5.762-1.5 9l-1.413-1.952c.994-2.63.882-4.075.882-7.048C49.969 12.784 39.216 2.031 26 2.031 12.784 2.031 2.031 12.784 2.031 26c0 13.216 10.753 23.969 23.969 23.969 2.407 0 3.306.194 5.5-.469l.943 1.845C29.931 52.14 28.71 52 26 52c-6.945 0-13.474-2.704-18.385-7.615C2.705 39.474 0 32.945 0 26c0-6.945 2.705-13.474 7.615-18.385C12.526 2.705 19.055 0 26 0z"
-                        fill="#4E6896"
-                      />
-                    </g>
-                    <defs>
-                      <clippath
-                        id="termination_svg__clip0"
-                      >
-                        <path
-                          d="M0 0h52v52H0z"
-                          fill="#fff"
-                        />
-                      </clippath>
-                    </defs>
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
+                  <div
                     class="c38"
                   >
-                    Préavis de licenciement
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Calculez la durée de préavis à respecter en cas de licenciement
+                    <div
+                      class="c39"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 52 52"
+                      >
+                        <g
+                          clip-path="url(#precarity_svg__clip0)"
+                        >
+                          <path
+                            d="M34.71 5.86a21.916 21.916 0 0112.832 15.971 1.016 1.016 0 01-1.995.384 19.886 19.886 0 00-11.644-14.49 1.016 1.016 0 11.807-1.865zm-4.021-1.295l.026.006a1.016 1.016 0 11-.442 1.982l-.012-.002a1.016 1.016 0 11.428-1.986zM6.453 29.785a19.853 19.853 0 0011.873 14.589 1.015 1.015 0 11-.783 1.874 22.062 22.062 0 01-8.521-6.355 21.938 21.938 0 01-4.564-9.724 1.016 1.016 0 011.995-.384zm15.225 15.651l.063.014a1.016 1.016 0 01-.432 1.985l-.071-.016a1.016 1.016 0 11.44-1.983zm.153-40.978a1.015 1.015 0 11.384 1.995A19.854 19.854 0 006.55 21.741a1.016 1.016 0 01-1.985-.432 21.848 21.848 0 016.105-11.002 21.836 21.836 0 0111.161-5.849z"
+                            fill="#FF7067"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M27.016 22.7v-8.65a1.016 1.016 0 00-2.031 0v8.65a3.469 3.469 0 00-2.286 2.285h-3.774a1.016 1.016 0 000 2.031h3.774A3.46 3.46 0 0026 29.453 3.457 3.457 0 0029.453 26a3.46 3.46 0 00-2.437-3.3zm-1.037 1.878a1.513 1.513 0 00.042 0A1.423 1.423 0 0126 27.422 1.423 1.423 0 0124.578 26v-.02a1.423 1.423 0 011.401-1.402z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            d="M25 5.078a1.016 1.016 0 012.031 0v2.276a1.016 1.016 0 11-2.031 0V5.078zm-.031 38.844a1.016 1.016 0 012.031 0v3a1.016 1.016 0 01-2.031 0v-3zM44.18 25h2.742a1.016 1.016 0 010 2.031H44.18a1.016 1.016 0 010-2.031zm-39.102-.031h2.945a1.016 1.016 0 010 2.031H5.078a1.016 1.016 0 010-2.031z"
+                            fill="#FF7067"
+                          />
+                          <path
+                            d="M44.385 7.615C39.474 2.705 32.945 0 26 0 19.055 0 12.526 2.704 7.615 7.615 2.705 12.526 0 19.055 0 26c0 6.945 2.705 13.474 7.615 18.385C12.526 49.295 19.055 52 26 52c.373 0 .718.003 1.042.005 2.03.016 3.235.025 5.401-.66L31.5 49.5c-1.751.53-2.678.512-4.205.484-.386-.007-.81-.015-1.295-.015C12.784 49.969 2.031 39.216 2.031 26 2.031 12.784 12.784 2.031 26 2.031c13.216 0 23.969 10.753 23.969 23.969 0 .287 0 .56.002.82.01 2.443.015 3.852-.884 6.228L50.5 35c1.414-3.238 1.5-5.36 1.5-9 0-6.945-2.705-13.474-7.615-18.385z"
+                            fill="#4E6896"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M48.808 40.18a3.677 3.677 0 011.191 2.713 3.68 3.68 0 01-1.191 2.713A3.68 3.68 0 0146.33 52H36c-1.5 0-2.69-1.938-2.69-1.938a3.677 3.677 0 01.753-4.456 3.677 3.677 0 01-1.19-2.713c0-1.072.459-2.039 1.191-2.712a3.68 3.68 0 012.478-6.394h9.787a3.68 3.68 0 012.479 6.394zm-12.266 9.882h9.787a1.743 1.743 0 000-3.487h-9.787a1.743 1.743 0 000 3.487zm0-5.425h9.787a1.743 1.743 0 000-3.487h-9.787a1.743 1.743 0 000 3.487zm0-5.425h9.787a1.743 1.743 0 000-3.487h-9.787a1.743 1.743 0 000 3.487z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                        <defs>
+                          <clippath
+                            id="precarity_svg__clip0"
+                          >
+                            <path
+                              d="M0 0h52v52H0z"
+                              fill="#fff"
+                            />
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div
+                      class="c40"
+                    >
+                      
+                      <h3
+                        class="c41"
+                      >
+                        Indemnité de précarité
+                      </h3>
+                    </div>
+                  </div>
                   <div
-                    class="c41"
+                    class="c42"
                   >
                     <div
-                      class="c18 c42"
+                      class="c43"
                     >
-                      Calculer
+                      Estimez le montant de l’indemnité de fin de CDD ou intérim
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c18 c45"
+                        >
+                          Estimer
+                          <svg
+                            class="c46"
+                            fill="none"
+                            viewBox="0 0 28 15"
+                          >
+                            <path
+                              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c34"
+              >
+                <a
+                  class="c35"
+                  href="/outils/preavis-licenciement"
+                >
+                  <div
+                    class="c36"
+                  >
+                    <div
+                      class="c37"
+                    >
                       <svg
-                        class="c43"
                         fill="none"
-                        viewBox="0 0 28 15"
+                        viewBox="0 0 32 32"
                       >
                         <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          clip-rule="evenodd"
+                          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                           fill="currentColor"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
                         />
                       </svg>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32"
-              href="/convention-collective/recherche"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M43.038 33.675c3.329 0 6.037-2.618 6.037-5.837 0-3.22-2.708-5.838-6.037-5.838C39.708 22 37 24.619 37 27.838s2.709 5.837 6.038 5.837zm0-9.658c2.179 0 3.952 1.714 3.952 3.82 0 2.108-1.773 3.822-3.952 3.822-2.18 0-3.952-1.714-3.952-3.821s1.773-3.821 3.952-3.821zm2.464 10.984L42.26 35c-1.454 0-2.837.59-3.793 1.618l-2.677 2.88a2.188 2.188 0 01-1.391.668v-1.46c0-2.04-1.771-3.7-3.949-3.7h-.638c-.36 0-.382 0-3.61 2.603l-3.342-2.41a1.061 1.061 0 00-.689-.196c-.124.003-.556.002-.58.002h-.001c-2.172 0-3.939 1.66-3.939 3.702v1.464a2.191 2.191 0 01-1.44-.674l-2.677-2.879C12.577 35.59 11.194 35 9.74 35l-3.243.001C4.569 35.001 3 36.473 3 38.283v8.756c0 .53.458.96 1.022.96.564 0 1.022-.43 1.022-.96v-8.756c0-.75.652-1.36 1.453-1.36l3.243-.002c.864 0 1.686.35 2.254.962l2.677 2.878c.796.857 1.948 1.35 3.159 1.35h2.514c.43 0 .78.328.78.731 0 .404-.35.733-.78.733H16.03c-.288 0-.565-.1-.778-.282l-3.003-2.546a1.07 1.07 0 00-1.444.07.92.92 0 00.074 1.357l.89.755v4.11c0 .53.458.96 1.022.96.564 0 1.022-.43 1.022-.96v-2.377l.069.059c.329.278.714.478 1.125.61v1.708c0 .53.458.961 1.023.961.564 0 1.022-.43 1.022-.96v-1.544h3.292c.043 0 .086-.003.129-.005l.039-.003.042.003c.028.002.056.005.086.005h10.77c.03 0 .06-.002.09-.004l.039-.002.047.003a.82.82 0 00.07.003h3.293v1.543c0 .53.458.961 1.022.961.564 0 1.022-.43 1.022-.96v-1.71a3.26 3.26 0 001.126-.61l.068-.057v2.376c0 .53.458.961 1.022.961.564 0 1.022-.43 1.022-.96v-4.111l.89-.755a.92.92 0 00.074-1.357 1.07 1.07 0 00-1.444-.07l-3.003 2.547a1.2 1.2 0 01-.778.281h-4.314c-.43 0-.78-.329-.78-.732 0-.404.35-.732.78-.732h2.515c1.21 0 2.362-.492 3.158-1.349l2.677-2.879a3.078 3.078 0 012.253-.961h3.243c.801 0 1.454.611 1.454 1.361v8.756c0 .53.457.961 1.022.961.564 0 1.022-.43 1.022-.96v-8.757C49 36.473 47.43 35 45.502 35zm-16.67 7.841c0 .254.04.5.112.732h-5.889c.072-.233.112-.478.112-.732 0-1.463-1.267-2.653-2.824-2.653h-.648v-1.482c0-.982.85-1.78 1.894-1.78.098 0 .2 0 .303-.003l3.723 2.684c.383.276.92.262 1.288-.033l3.285-2.649h.262c1.05 0 1.904.8 1.904 1.78v1.483h-.697c-1.558 0-2.825 1.19-2.825 2.653zM15.077 28.191c0 3.22-2.709 5.838-6.037 5.838-3.33 0-6.038-2.619-6.038-5.838s2.708-5.837 6.038-5.837c3.329 0 6.037 2.618 6.037 5.837zm-2.085 0c0-2.107-1.773-3.82-3.952-3.82-2.18 0-3.952 1.713-3.952 3.82 0 2.107 1.773 3.821 3.952 3.821 2.179 0 3.952-1.714 3.952-3.82z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      d="M19.759 15.476a1.06 1.06 0 01-.738-.296l-2.978-2.88a.985.985 0 010-1.425 1.068 1.068 0 011.474 0l2.108 2.037 3.066-4.15a1.065 1.065 0 011.455-.234.987.987 0 01.242 1.406l-3.781 5.119a1.052 1.052 0 01-.848.422z"
-                      fill="#FF7067"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M14.102 22.39a1.06 1.06 0 001.132.12l5.508-2.695h1.843c4.508 0 8.176-3.546 8.176-7.91C30.761 7.546 27.093 4 22.585 4h-4.85C13.228 4 9.56 7.546 9.56 11.91c0 3.171 1.91 5.957 4.84 7.217l-.64 2.211a.988.988 0 00.342 1.051zm-2.457-10.485c0-3.247 2.732-5.888 6.09-5.888h4.85c3.358 0 6.09 2.64 6.09 5.893 0 3.247-2.732 5.889-6.09 5.889h-2.09l-.018.001a1.032 1.032 0 00-.127.012l-.01.002a.951.951 0 00-.088.014.947.947 0 00-.086.026l-.005.002a1.058 1.058 0 00-.109.04l-.014.006-.015.006-3.617 1.768.258-.89a.333.333 0 00.01-.055.609.609 0 01.005-.03l.006-.03a.627.627 0 00.013-.075.557.557 0 000-.094v-.028c0-.025 0-.05-.004-.076-.002-.023-.008-.046-.014-.069l-.005-.024-.006-.027a.6.6 0 00-.017-.07.702.702 0 00-.027-.063l-.011-.025a.871.871 0 01-.013-.03c-.009-.02-.017-.04-.028-.06-.012-.02-.026-.039-.04-.058l-.015-.021-.015-.023c-.014-.02-.027-.039-.042-.057-.016-.019-.035-.036-.053-.053l-.019-.017-.018-.018a.637.637 0 00-.053-.05c-.019-.014-.039-.026-.059-.039a1.702 1.702 0 01-.051-.033.973.973 0 00-.06-.037.662.662 0 00-.073-.03l-.027-.01-.031-.013a.389.389 0 00-.054-.021c-2.542-.749-4.318-3.068-4.318-5.645zm14.843 22.124c3.329 0 6.038-2.619 6.038-5.838s-2.709-5.837-6.038-5.837c-3.33 0-6.038 2.618-6.038 5.837 0 3.22 2.71 5.838 6.038 5.838zm0-9.659c2.179 0 3.952 1.714 3.952 3.821s-1.773 3.821-3.952 3.821c-2.18 0-3.952-1.714-3.952-3.82 0-2.108 1.773-3.822 3.952-3.822z"
-                      fill="#FF7067"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
+                  <div
                     class="c38"
                   >
-                    Recherchez votre convention collective
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.
+                    <div
+                      class="c39"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 52 52"
+                      >
+                        <g
+                          clip-path="url(#termination_svg__clip0)"
+                        >
+                          <path
+                            d="M25 5.078a1.016 1.016 0 012.031 0v2.276a1.016 1.016 0 11-2.031 0V5.078zm-3.169-.62a1.015 1.015 0 11.384 1.995A19.854 19.854 0 006.55 21.741a1.016 1.016 0 01-1.985-.432 21.848 21.848 0 016.105-11.002 21.836 21.836 0 0111.161-5.849zm8.884.112l-.026-.005a1.015 1.015 0 10-.428 1.986l.012.002a1.016 1.016 0 00.442-1.982zm16.827 17.261A21.916 21.916 0 0034.71 5.861a1.016 1.016 0 00-.807 1.863 19.886 19.886 0 0111.644 14.491 1.016 1.016 0 001.995-.384zM6.453 29.785a19.853 19.853 0 0011.873 14.589 1.015 1.015 0 11-.783 1.874 22.062 22.062 0 01-8.521-6.355 21.938 21.938 0 01-4.564-9.724 1.016 1.016 0 011.995-.384zM21.741 45.45l-.063-.014a1.016 1.016 0 00-.44 1.983l.07.016a1.016 1.016 0 10.432-1.985z"
+                            fill="#FF7067"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M27.016 14.05v8.65a3.46 3.46 0 012.437 3.3A3.457 3.457 0 0126 29.453a3.46 3.46 0 01-3.3-2.437h-3.775a1.016 1.016 0 010-2.031h3.774a3.469 3.469 0 012.286-2.286v-8.65a1.016 1.016 0 012.031 0zM26 24.578h-.02a1.423 1.423 0 00-1.402 1.401v.042A1.423 1.423 0 0027.422 26c0-.777-.626-1.41-1.4-1.422H26z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            d="M25.985 42.907c-.561 0-1.016.454-1.016 1.015v3a1.016 1.016 0 002.031 0v-3c0-.56-.455-1.015-1.015-1.015zM44.18 25h2.742a1.016 1.016 0 010 2.031H44.18a1.016 1.016 0 010-2.031zm-36.157-.031H5.078a1.016 1.016 0 000 2.031h2.945a1.016 1.016 0 000-2.031zM45.095 34a.752.752 0 01.47.192l6.259 6.133a.645.645 0 010 .885l-6.277 6.143a.614.614 0 01-.45.183.637.637 0 01-.445-.18.611.611 0 01-.185-.437v-3.682H31v-4.94h13.465v-3.68a.583.583 0 01.177-.443.606.606 0 01.453-.173z"
+                            fill="#FF7067"
+                          />
+                          <path
+                            d="M26 0c6.945 0 13.474 2.704 18.385 7.615C49.295 12.526 52 19.055 52 26c0 3.64-.086 5.762-1.5 9l-1.413-1.952c.994-2.63.882-4.075.882-7.048C49.969 12.784 39.216 2.031 26 2.031 12.784 2.031 2.031 12.784 2.031 26c0 13.216 10.753 23.969 23.969 23.969 2.407 0 3.306.194 5.5-.469l.943 1.845C29.931 52.14 28.71 52 26 52c-6.945 0-13.474-2.704-18.385-7.615C2.705 39.474 0 32.945 0 26c0-6.945 2.705-13.474 7.615-18.385C12.526 2.705 19.055 0 26 0z"
+                            fill="#4E6896"
+                          />
+                        </g>
+                        <defs>
+                          <clippath
+                            id="termination_svg__clip0"
+                          >
+                            <path
+                              d="M0 0h52v52H0z"
+                              fill="#fff"
+                            />
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div
+                      class="c40"
+                    >
+                      
+                      <h3
+                        class="c41"
+                      >
+                        Préavis de licenciement
+                      </h3>
+                    </div>
+                  </div>
                   <div
-                    class="c41"
+                    class="c42"
                   >
                     <div
-                      class="c18 c42"
+                      class="c43"
                     >
-                      Consulter
+                      Calculez la durée de préavis à respecter en cas de licenciement
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c18 c45"
+                        >
+                          Calculer
+                          <svg
+                            class="c46"
+                            fill="none"
+                            viewBox="0 0 28 15"
+                          >
+                            <path
+                              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c34"
+              >
+                <a
+                  class="c35"
+                  href="/convention-collective/recherche"
+                >
+                  <div
+                    class="c36"
+                  >
+                    <div
+                      class="c37"
+                    >
                       <svg
-                        class="c43"
                         fill="none"
-                        viewBox="0 0 28 15"
+                        viewBox="0 0 32 32"
                       >
                         <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          clip-rule="evenodd"
+                          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                           fill="currentColor"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
                         />
                       </svg>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c31"
-          >
-            <a
-              class="c32 no-after"
-              href="https://www.moncompteformation.gouv.fr"
-              rel="noopener nofollow"
-              target="_blank"
-            >
-              <div
-                class="c33"
-              >
-                <div
-                  class="c34"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c35"
-              >
-                <div
-                  class="c36"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M12.968 1.29V5.8a5.945 5.945 0 00-1.71-.252 5.991 5.991 0 00-5.984 5.983c0 1.913.905 3.613 2.305 4.71C3.769 17.443 1 21.008 1 25.209v5.984a3.423 3.423 0 003.42 3.42h.854V46.58A3.423 3.423 0 008.694 50a3.397 3.397 0 002.564-1.182 3.396 3.396 0 002.565 1.181 3.423 3.423 0 003.419-3.42V25.436c0-.37.048-.732.138-1.081h32.33V1.29H12.968zM6.984 11.531a4.28 4.28 0 014.274-4.274 4.28 4.28 0 014.274 4.274 4.279 4.279 0 01-4.274 4.275 4.279 4.279 0 01-4.274-4.275zm5.099 12.499l-.825.825-.825-.825.543-6.515h.564l.543 6.515zm3.45 1.405V46.58c0 .943-.768 1.71-1.71 1.71-.943 0-1.71-.767-1.71-1.71V31.193h-1.71V46.58c0 .943-.767 1.71-1.71 1.71-.942 0-1.71-.767-1.71-1.71V23.5H5.275v9.403H4.42c-.943 0-1.71-.767-1.71-1.71v-5.984c0-3.85 2.846-7.04 6.544-7.598l-.59 7.067 2.595 2.594 2.595-2.594-.598-7.163h2.535a5.975 5.975 0 003.136-.888l9.12-5.331a1.146 1.146 0 011.744.975c0 .506-.053.988-.522 1.294L18.265 20.41a5.96 5.96 0 00-2.733 5.024zM28.646 9.417c-.529 0-1.047.146-1.496.423l-9.12 5.331a4.263 4.263 0 01-2.24.635h-.353a5.964 5.964 0 001.804-4.275 5.976 5.976 0 00-2.565-4.903V3H48v19.644H18.285c.261-.302.563-.574.909-.798 0 0 10.916-6.79 11.002-6.846.965-.625 1.304-1.636 1.304-2.73a2.857 2.857 0 00-2.854-2.853z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M48.138 32.53a5.522 5.522 0 01-2.4 4.548c3.255 1.262 5.572 4.41 5.572 8.094v3.95H18v-3.95c0-3.684 2.317-6.832 5.572-8.094a5.522 5.522 0 01-2.4-4.547c0-3.05 2.491-5.531 5.552-5.531 3.06 0 5.552 2.482 5.552 5.53a5.522 5.522 0 01-2.4 4.548 8.746 8.746 0 014.779 4.495 8.748 8.748 0 014.778-4.495 5.522 5.522 0 01-2.399-4.547c0-3.05 2.491-5.531 5.552-5.531 3.06 0 5.552 2.482 5.552 5.53zm-5.552-3.95c-2.187 0-3.965 1.772-3.965 3.95 0 2.179 1.778 3.951 3.965 3.951s3.965-1.772 3.965-3.95c0-2.179-1.779-3.95-3.965-3.95zm-15.862 0c-2.186 0-3.965 1.772-3.965 3.95 0 2.179 1.779 3.951 3.965 3.951 2.187 0 3.965-1.772 3.965-3.95 0-2.179-1.778-3.95-3.965-3.95zm-7.138 16.592v2.37h14.276v-2.37c0-3.92-3.202-7.11-7.138-7.11s-7.138 3.19-7.138 7.11zm15.862 0v2.37h14.276v-2.37c0-3.92-3.202-7.11-7.138-7.11s-7.138 3.19-7.138 7.11z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M27.5 16.678c1.219 1.777 3.262 2.989 5.5 2.989a6.636 6.636 0 004.216-1.508l-4.883-4.883V6.367a6.68 6.68 0 00-5.211 3.49l-1.853 1.083C26.179 7.524 29.3 5 32.999 5c4.412 0 8 3.589 8 8s-3.588 8-8 8c-2.57 0-5.063-1.507-6.564-3.659l1.065-.663zm10.658.538l-3.549-3.55h5.023a6.634 6.634 0 01-1.474 3.55zm-4.492-4.883V6.367a6.678 6.678 0 015.967 5.966h-5.967z"
-                      fill="#FF7067"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c37"
-                >
-                  
-                  <h3
+                  <div
                     class="c38"
                   >
-                    Mon compte formation
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c39"
-              >
-                <div
-                  class="c40"
-                >
-                  Consultez en ligne vos droits à la formation, cherchez et réservez une formation
-                  <div
-                    class="c41"
-                  >
                     <div
-                      class="c18 c42"
+                      class="c39"
                     >
-                      Consulter
                       <svg
-                        class="c43"
                         fill="none"
-                        viewBox="0 0 28 15"
+                        viewBox="0 0 52 52"
                       >
                         <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          clip-rule="evenodd"
+                          d="M43.038 33.675c3.329 0 6.037-2.618 6.037-5.837 0-3.22-2.708-5.838-6.037-5.838C39.708 22 37 24.619 37 27.838s2.709 5.837 6.038 5.837zm0-9.658c2.179 0 3.952 1.714 3.952 3.82 0 2.108-1.773 3.822-3.952 3.822-2.18 0-3.952-1.714-3.952-3.821s1.773-3.821 3.952-3.821zm2.464 10.984L42.26 35c-1.454 0-2.837.59-3.793 1.618l-2.677 2.88a2.188 2.188 0 01-1.391.668v-1.46c0-2.04-1.771-3.7-3.949-3.7h-.638c-.36 0-.382 0-3.61 2.603l-3.342-2.41a1.061 1.061 0 00-.689-.196c-.124.003-.556.002-.58.002h-.001c-2.172 0-3.939 1.66-3.939 3.702v1.464a2.191 2.191 0 01-1.44-.674l-2.677-2.879C12.577 35.59 11.194 35 9.74 35l-3.243.001C4.569 35.001 3 36.473 3 38.283v8.756c0 .53.458.96 1.022.96.564 0 1.022-.43 1.022-.96v-8.756c0-.75.652-1.36 1.453-1.36l3.243-.002c.864 0 1.686.35 2.254.962l2.677 2.878c.796.857 1.948 1.35 3.159 1.35h2.514c.43 0 .78.328.78.731 0 .404-.35.733-.78.733H16.03c-.288 0-.565-.1-.778-.282l-3.003-2.546a1.07 1.07 0 00-1.444.07.92.92 0 00.074 1.357l.89.755v4.11c0 .53.458.96 1.022.96.564 0 1.022-.43 1.022-.96v-2.377l.069.059c.329.278.714.478 1.125.61v1.708c0 .53.458.961 1.023.961.564 0 1.022-.43 1.022-.96v-1.544h3.292c.043 0 .086-.003.129-.005l.039-.003.042.003c.028.002.056.005.086.005h10.77c.03 0 .06-.002.09-.004l.039-.002.047.003a.82.82 0 00.07.003h3.293v1.543c0 .53.458.961 1.022.961.564 0 1.022-.43 1.022-.96v-1.71a3.26 3.26 0 001.126-.61l.068-.057v2.376c0 .53.458.961 1.022.961.564 0 1.022-.43 1.022-.96v-4.111l.89-.755a.92.92 0 00.074-1.357 1.07 1.07 0 00-1.444-.07l-3.003 2.547a1.2 1.2 0 01-.778.281h-4.314c-.43 0-.78-.329-.78-.732 0-.404.35-.732.78-.732h2.515c1.21 0 2.362-.492 3.158-1.349l2.677-2.879a3.078 3.078 0 012.253-.961h3.243c.801 0 1.454.611 1.454 1.361v8.756c0 .53.457.961 1.022.961.564 0 1.022-.43 1.022-.96v-8.757C49 36.473 47.43 35 45.502 35zm-16.67 7.841c0 .254.04.5.112.732h-5.889c.072-.233.112-.478.112-.732 0-1.463-1.267-2.653-2.824-2.653h-.648v-1.482c0-.982.85-1.78 1.894-1.78.098 0 .2 0 .303-.003l3.723 2.684c.383.276.92.262 1.288-.033l3.285-2.649h.262c1.05 0 1.904.8 1.904 1.78v1.483h-.697c-1.558 0-2.825 1.19-2.825 2.653zM15.077 28.191c0 3.22-2.709 5.838-6.037 5.838-3.33 0-6.038-2.619-6.038-5.838s2.708-5.837 6.038-5.837c3.329 0 6.037 2.618 6.037 5.837zm-2.085 0c0-2.107-1.773-3.82-3.952-3.82-2.18 0-3.952 1.713-3.952 3.82 0 2.107 1.773 3.821 3.952 3.821 2.179 0 3.952-1.714 3.952-3.82z"
+                          fill="#4E6896"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M19.759 15.476a1.06 1.06 0 01-.738-.296l-2.978-2.88a.985.985 0 010-1.425 1.068 1.068 0 011.474 0l2.108 2.037 3.066-4.15a1.065 1.065 0 011.455-.234.987.987 0 01.242 1.406l-3.781 5.119a1.052 1.052 0 01-.848.422z"
+                          fill="#FF7067"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M14.102 22.39a1.06 1.06 0 001.132.12l5.508-2.695h1.843c4.508 0 8.176-3.546 8.176-7.91C30.761 7.546 27.093 4 22.585 4h-4.85C13.228 4 9.56 7.546 9.56 11.91c0 3.171 1.91 5.957 4.84 7.217l-.64 2.211a.988.988 0 00.342 1.051zm-2.457-10.485c0-3.247 2.732-5.888 6.09-5.888h4.85c3.358 0 6.09 2.64 6.09 5.893 0 3.247-2.732 5.889-6.09 5.889h-2.09l-.018.001a1.032 1.032 0 00-.127.012l-.01.002a.951.951 0 00-.088.014.947.947 0 00-.086.026l-.005.002a1.058 1.058 0 00-.109.04l-.014.006-.015.006-3.617 1.768.258-.89a.333.333 0 00.01-.055.609.609 0 01.005-.03l.006-.03a.627.627 0 00.013-.075.557.557 0 000-.094v-.028c0-.025 0-.05-.004-.076-.002-.023-.008-.046-.014-.069l-.005-.024-.006-.027a.6.6 0 00-.017-.07.702.702 0 00-.027-.063l-.011-.025a.871.871 0 01-.013-.03c-.009-.02-.017-.04-.028-.06-.012-.02-.026-.039-.04-.058l-.015-.021-.015-.023c-.014-.02-.027-.039-.042-.057-.016-.019-.035-.036-.053-.053l-.019-.017-.018-.018a.637.637 0 00-.053-.05c-.019-.014-.039-.026-.059-.039a1.702 1.702 0 01-.051-.033.973.973 0 00-.06-.037.662.662 0 00-.073-.03l-.027-.01-.031-.013a.389.389 0 00-.054-.021c-2.542-.749-4.318-3.068-4.318-5.645zm14.843 22.124c3.329 0 6.038-2.619 6.038-5.838s-2.709-5.837-6.038-5.837c-3.33 0-6.038 2.618-6.038 5.837 0 3.22 2.71 5.838 6.038 5.838zm0-9.659c2.179 0 3.952 1.714 3.952 3.821s-1.773 3.821-3.952 3.821c-2.18 0-3.952-1.714-3.952-3.82 0-2.108 1.773-3.822 3.952-3.822z"
+                          fill="#FF7067"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="c40"
+                    >
+                      
+                      <h3
+                        class="c41"
+                      >
+                        Recherchez votre convention collective
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="c42"
+                  >
+                    <div
+                      class="c43"
+                    >
+                      Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c18 c45"
+                        >
+                          Consulter
+                          <svg
+                            class="c46"
+                            fill="none"
+                            viewBox="0 0 28 15"
+                          >
+                            <path
+                              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c34"
+              >
+                <a
+                  class="c35 no-after"
+                  href="https://www.moncompteformation.gouv.fr"
+                  rel="noopener nofollow"
+                  target="_blank"
+                >
+                  <div
+                    class="c36"
+                  >
+                    <div
+                      class="c37"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 32 32"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                           fill="currentColor"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
                         />
                       </svg>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
+                  <div
+                    class="c38"
+                  >
+                    <div
+                      class="c39"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 52 52"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M12.968 1.29V5.8a5.945 5.945 0 00-1.71-.252 5.991 5.991 0 00-5.984 5.983c0 1.913.905 3.613 2.305 4.71C3.769 17.443 1 21.008 1 25.209v5.984a3.423 3.423 0 003.42 3.42h.854V46.58A3.423 3.423 0 008.694 50a3.397 3.397 0 002.564-1.182 3.396 3.396 0 002.565 1.181 3.423 3.423 0 003.419-3.42V25.436c0-.37.048-.732.138-1.081h32.33V1.29H12.968zM6.984 11.531a4.28 4.28 0 014.274-4.274 4.28 4.28 0 014.274 4.274 4.279 4.279 0 01-4.274 4.275 4.279 4.279 0 01-4.274-4.275zm5.099 12.499l-.825.825-.825-.825.543-6.515h.564l.543 6.515zm3.45 1.405V46.58c0 .943-.768 1.71-1.71 1.71-.943 0-1.71-.767-1.71-1.71V31.193h-1.71V46.58c0 .943-.767 1.71-1.71 1.71-.942 0-1.71-.767-1.71-1.71V23.5H5.275v9.403H4.42c-.943 0-1.71-.767-1.71-1.71v-5.984c0-3.85 2.846-7.04 6.544-7.598l-.59 7.067 2.595 2.594 2.595-2.594-.598-7.163h2.535a5.975 5.975 0 003.136-.888l9.12-5.331a1.146 1.146 0 011.744.975c0 .506-.053.988-.522 1.294L18.265 20.41a5.96 5.96 0 00-2.733 5.024zM28.646 9.417c-.529 0-1.047.146-1.496.423l-9.12 5.331a4.263 4.263 0 01-2.24.635h-.353a5.964 5.964 0 001.804-4.275 5.976 5.976 0 00-2.565-4.903V3H48v19.644H18.285c.261-.302.563-.574.909-.798 0 0 10.916-6.79 11.002-6.846.965-.625 1.304-1.636 1.304-2.73a2.857 2.857 0 00-2.854-2.853z"
+                          fill="#4E6896"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M48.138 32.53a5.522 5.522 0 01-2.4 4.548c3.255 1.262 5.572 4.41 5.572 8.094v3.95H18v-3.95c0-3.684 2.317-6.832 5.572-8.094a5.522 5.522 0 01-2.4-4.547c0-3.05 2.491-5.531 5.552-5.531 3.06 0 5.552 2.482 5.552 5.53a5.522 5.522 0 01-2.4 4.548 8.746 8.746 0 014.779 4.495 8.748 8.748 0 014.778-4.495 5.522 5.522 0 01-2.399-4.547c0-3.05 2.491-5.531 5.552-5.531 3.06 0 5.552 2.482 5.552 5.53zm-5.552-3.95c-2.187 0-3.965 1.772-3.965 3.95 0 2.179 1.778 3.951 3.965 3.951s3.965-1.772 3.965-3.95c0-2.179-1.779-3.95-3.965-3.95zm-15.862 0c-2.186 0-3.965 1.772-3.965 3.95 0 2.179 1.779 3.951 3.965 3.951 2.187 0 3.965-1.772 3.965-3.95 0-2.179-1.778-3.95-3.965-3.95zm-7.138 16.592v2.37h14.276v-2.37c0-3.92-3.202-7.11-7.138-7.11s-7.138 3.19-7.138 7.11zm15.862 0v2.37h14.276v-2.37c0-3.92-3.202-7.11-7.138-7.11s-7.138 3.19-7.138 7.11z"
+                          fill="#4E6896"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M27.5 16.678c1.219 1.777 3.262 2.989 5.5 2.989a6.636 6.636 0 004.216-1.508l-4.883-4.883V6.367a6.68 6.68 0 00-5.211 3.49l-1.853 1.083C26.179 7.524 29.3 5 32.999 5c4.412 0 8 3.589 8 8s-3.588 8-8 8c-2.57 0-5.063-1.507-6.564-3.659l1.065-.663zm10.658.538l-3.549-3.55h5.023a6.634 6.634 0 01-1.474 3.55zm-4.492-4.883V6.367a6.678 6.678 0 015.967 5.966h-5.967z"
+                          fill="#FF7067"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="c40"
+                    >
+                      
+                      <h3
+                        class="c41"
+                      >
+                        Mon compte formation
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="c42"
+                  >
+                    <div
+                      class="c43"
+                    >
+                      Consultez en ligne vos droits à la formation, cherchez et réservez une formation
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c18 c45"
+                        >
+                          Consulter
+                          <svg
+                            class="c46"
+                            fill="none"
+                            viewBox="0 0 28 15"
+                          >
+                            <path
+                              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </main>
   <div
-    class="c44"
+    class="c47"
   >
     <footer
-      class="c45"
+      class="c48"
     >
       <div
-        class="c22 c46"
+        class="c22 c49"
       >
         <div
           class="c23"
         >
           <header
-            class="c47"
+            class="c50"
           >
             <h3
-              class="c48"
+              class="c51"
             >
               <div
                 class="c26"
@@ -2244,16 +2339,16 @@ exports[`<Outils /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c49"
+            class="c52"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c18 c50"
+            class="c18 c53"
           >
             Contacter nos services en région
             <svg
-              class="c51"
+              class="c54"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -2266,68 +2361,68 @@ exports[`<Outils /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c22 c52"
+        class="c22 c55"
       >
         <nav>
           <div
-            class="c53"
+            class="c56"
           >
             <div
-              class="c54 c55"
+              class="c57 c58"
             >
               <h3
-                class="c56"
+                class="c59"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c57"
+                class="c60"
               >
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -2336,21 +2431,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c54 c55"
+              class="c57 c58"
             >
               <h3
-                class="c56"
+                class="c59"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c57"
+                class="c60"
               >
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2359,10 +2454,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2373,21 +2468,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c54 c55"
+              class="c57 c58"
             >
               <h3
-                class="c56"
+                class="c59"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c57"
+                class="c60"
               >
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2396,10 +2491,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2408,10 +2503,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c61"
                 >
                   <a
-                    class="c59"
+                    class="c62"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2425,10 +2520,10 @@ exports[`<Outils /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c60"
+        class="c63"
       >
         <a
-          class="c61"
+          class="c64"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2437,12 +2532,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c65"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c64"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2451,12 +2546,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c65"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c64"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2465,12 +2560,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c65"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c64"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2479,12 +2574,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c65"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c64"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2493,12 +2588,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c65"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c64"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"

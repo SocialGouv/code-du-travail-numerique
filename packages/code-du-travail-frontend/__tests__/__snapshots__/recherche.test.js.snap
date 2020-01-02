@@ -31,7 +31,7 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 .c23 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -192,7 +192,7 @@ exports[`<Recherche /> should render 1`] = `
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -284,7 +284,7 @@ exports[`<Recherche /> should render 1`] = `
   background: #fff;
   border: 1px solid transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -375,7 +375,7 @@ exports[`<Recherche /> should render 1`] = `
   position: sticky;
   top: 0;
   z-index: 2;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   height: 9rem;
   margin-bottom: 6rem;
   overflow: visible;
@@ -615,7 +615,7 @@ exports[`<Recherche /> should render 1`] = `
   left: -50%;
   z-index: -1;
   width: 200%;
-  height: 400px;
+  height: 40rem;
   background-color: #fff;
   border-radius: 100%;
   content: "";

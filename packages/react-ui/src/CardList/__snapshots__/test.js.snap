@@ -2,6 +2,39 @@
 
 exports[`<CardList /> should render a collection on 3column 1`] = `
 .c3 {
+  position: relative;
+  overflow: visible;
+}
+
+.c3:before,
+.c3:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c3:before {
+  left: -2rem;
+}
+
+.c3:after {
+  right: -2rem;
+}
+
+.c5 {
+  overflow-x: visible;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,13 +55,13 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c4 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,7 +73,7 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 3 - 2 * 1rem);
+  width: calc(100% / 3 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -76,7 +109,7 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   text-align: center;
 }
 
-.c5 {
+.c8 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -103,7 +136,7 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -113,27 +146,27 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   appearance: none;
 }
 
-.c5:hover,
-.c5:active,
-.c5:focus {
+.c8:hover,
+.c8:active,
+.c8:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c6 {
+.c9 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c7 {
+.c10 {
   padding-right: 1rem;
 }
 
-.c8 {
+.c11 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -143,21 +176,74 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   margin: 0;
 }
 
-@media (max-width:1180px) {
-  .c4 {
-    width: calc( 100% / 2 - 2 * 1rem );
+@media (max-width:600px) {
+  .c3 {
+    overflow-x: hidden;
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    width: calc( 100% / 1 - 2 * 1rem );
+@media (max-width:600px) {
+  .c3:before,
+  .c3:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
   .c4 {
-    width: calc( 100% - 1 * 1rem );
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c7 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
+    width: calc( 100% / 1 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 80%;
+    min-width: 23rem;
+  }
+
+  .c7:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c7:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
@@ -174,14 +260,14 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c8 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c11 {
     font-size: 1.6rem;
   }
 }
@@ -200,169 +286,210 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
     </h2>
     
   </header>
-  <ul
-    class="c3"
+  <div
+    class="c3 c4"
   >
-    <li
-      class="c4"
+    <div
+      class="c5"
     >
-      <button
-        class="c5"
+      <ul
+        class="c6"
       >
-        <div
-          class="c6"
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 1
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 1
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 2
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 2
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 3
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 3
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 4
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 4
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 5
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 5
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 6
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 6
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 7
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-  </ul>
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 7
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`<CardList /> should render a collection with a title 1`] = `
 .c3 {
+  position: relative;
+  overflow: visible;
+}
+
+.c3:before,
+.c3:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c3:before {
+  left: -2rem;
+}
+
+.c3:after {
+  right: -2rem;
+}
+
+.c5 {
+  overflow-x: visible;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -383,13 +510,13 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c4 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -401,7 +528,7 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -437,7 +564,7 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   text-align: center;
 }
 
-.c5 {
+.c8 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -464,7 +591,7 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -474,27 +601,27 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   appearance: none;
 }
 
-.c5:hover,
-.c5:active,
-.c5:focus {
+.c8:hover,
+.c8:active,
+.c8:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c6 {
+.c9 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c7 {
+.c10 {
   padding-right: 1rem;
 }
 
-.c8 {
+.c11 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -504,21 +631,74 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   margin: 0;
 }
 
-@media (max-width:1180px) {
-  .c4 {
-    width: calc( 100% / 3 - 2 * 1rem );
+@media (max-width:600px) {
+  .c3 {
+    overflow-x: hidden;
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    width: calc( 100% / 2 - 2 * 1rem );
+@media (max-width:600px) {
+  .c3:before,
+  .c3:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
   .c4 {
-    width: calc( 100% - 2 * 1rem );
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c7 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c7:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c7:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
@@ -535,14 +715,14 @@ exports[`<CardList /> should render a collection with a title 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c8 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c11 {
     font-size: 1.6rem;
   }
 }
@@ -561,169 +741,210 @@ exports[`<CardList /> should render a collection with a title 1`] = `
     </h2>
     
   </header>
-  <ul
-    class="c3"
+  <div
+    class="c3 c4"
   >
-    <li
-      class="c4"
+    <div
+      class="c5"
     >
-      <button
-        class="c5"
+      <ul
+        class="c6"
       >
-        <div
-          class="c6"
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 1
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 1
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 2
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 2
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 3
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 3
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 4
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 4
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 5
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 5
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 6
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c4"
-    >
-      <button
-        class="c5"
-      >
-        <div
-          class="c6"
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 6
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <button
+            class="c8"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              Title 7
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-  </ul>
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  Title 7
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`<CardList /> should render a collection with a title and description 1`] = `
 .c4 {
+  position: relative;
+  overflow: visible;
+}
+
+.c4:before,
+.c4:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c4:before {
+  left: -2rem;
+}
+
+.c4:after {
+  right: -2rem;
+}
+
+.c6 {
+  overflow-x: visible;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -744,13 +965,13 @@ exports[`<CardList /> should render a collection with a title and description 1`
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c5 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -762,7 +983,7 @@ exports[`<CardList /> should render a collection with a title and description 1`
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -804,7 +1025,7 @@ exports[`<CardList /> should render a collection with a title and description 1`
   padding-left: 0;
 }
 
-.c6 {
+.c9 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -831,7 +1052,7 @@ exports[`<CardList /> should render a collection with a title and description 1`
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -841,27 +1062,27 @@ exports[`<CardList /> should render a collection with a title and description 1`
   appearance: none;
 }
 
-.c6:hover,
-.c6:active,
-.c6:focus {
+.c9:hover,
+.c9:active,
+.c9:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c7 {
+.c10 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c8 {
+.c11 {
   padding-right: 1rem;
 }
 
-.c9 {
+.c12 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -871,21 +1092,74 @@ exports[`<CardList /> should render a collection with a title and description 1`
   margin: 0;
 }
 
-@media (max-width:1180px) {
-  .c5 {
-    width: calc( 100% / 3 - 2 * 1rem );
+@media (max-width:600px) {
+  .c4 {
+    overflow-x: hidden;
   }
 }
 
-@media (max-width:980px) {
-  .c5 {
-    width: calc( 100% / 2 - 2 * 1rem );
+@media (max-width:600px) {
+  .c4:before,
+  .c4:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
   .c5 {
-    width: calc( 100% - 2 * 1rem );
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c8 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c8 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c8:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c8:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
@@ -908,14 +1182,14 @@ exports[`<CardList /> should render a collection with a title and description 1`
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c9 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c12 {
     font-size: 1.6rem;
   }
 }
@@ -938,169 +1212,210 @@ exports[`<CardList /> should render a collection with a title and description 1`
       Hello Tiles
     </p>
   </header>
-  <ul
-    class="c4"
+  <div
+    class="c4 c5"
   >
-    <li
-      class="c5"
+    <div
+      class="c6"
     >
-      <button
-        class="c6"
+      <ul
+        class="c7"
       >
-        <div
-          class="c7"
+        <li
+          class="c8"
         >
-          <div
-            class="c8"
+          <button
+            class="c9"
           >
-            
-            <h3
-              class="c9"
+            <div
+              class="c10"
             >
-              Title 1
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c5"
-    >
-      <button
-        class="c6"
-      >
-        <div
-          class="c7"
+              <div
+                class="c11"
+              >
+                
+                <h3
+                  class="c12"
+                >
+                  Title 1
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c8"
         >
-          <div
-            class="c8"
+          <button
+            class="c9"
           >
-            
-            <h3
-              class="c9"
+            <div
+              class="c10"
             >
-              Title 2
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c5"
-    >
-      <button
-        class="c6"
-      >
-        <div
-          class="c7"
+              <div
+                class="c11"
+              >
+                
+                <h3
+                  class="c12"
+                >
+                  Title 2
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c8"
         >
-          <div
-            class="c8"
+          <button
+            class="c9"
           >
-            
-            <h3
-              class="c9"
+            <div
+              class="c10"
             >
-              Title 3
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c5"
-    >
-      <button
-        class="c6"
-      >
-        <div
-          class="c7"
+              <div
+                class="c11"
+              >
+                
+                <h3
+                  class="c12"
+                >
+                  Title 3
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c8"
         >
-          <div
-            class="c8"
+          <button
+            class="c9"
           >
-            
-            <h3
-              class="c9"
+            <div
+              class="c10"
             >
-              Title 4
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c5"
-    >
-      <button
-        class="c6"
-      >
-        <div
-          class="c7"
+              <div
+                class="c11"
+              >
+                
+                <h3
+                  class="c12"
+                >
+                  Title 4
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c8"
         >
-          <div
-            class="c8"
+          <button
+            class="c9"
           >
-            
-            <h3
-              class="c9"
+            <div
+              class="c10"
             >
-              Title 5
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c5"
-    >
-      <button
-        class="c6"
-      >
-        <div
-          class="c7"
+              <div
+                class="c11"
+              >
+                
+                <h3
+                  class="c12"
+                >
+                  Title 5
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c8"
         >
-          <div
-            class="c8"
+          <button
+            class="c9"
           >
-            
-            <h3
-              class="c9"
+            <div
+              class="c10"
             >
-              Title 6
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c5"
-    >
-      <button
-        class="c6"
-      >
-        <div
-          class="c7"
+              <div
+                class="c11"
+              >
+                
+                <h3
+                  class="c12"
+                >
+                  Title 6
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c8"
         >
-          <div
-            class="c8"
+          <button
+            class="c9"
           >
-            
-            <h3
-              class="c9"
+            <div
+              class="c10"
             >
-              Title 7
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-  </ul>
+              <div
+                class="c11"
+              >
+                
+                <h3
+                  class="c12"
+                >
+                  Title 7
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`<CardList /> should render a collection with a title with a link and a desc 1`] = `
 .c5 {
+  position: relative;
+  overflow: visible;
+}
+
+.c5:before,
+.c5:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c5:before {
+  left: -2rem;
+}
+
+.c5:after {
+  right: -2rem;
+}
+
+.c7 {
+  overflow-x: visible;
+}
+
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1121,13 +1436,13 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c6 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1139,7 +1454,7 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -1193,7 +1508,7 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   color: #2f3b6c;
 }
 
-.c7 {
+.c10 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1220,7 +1535,7 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -1230,27 +1545,27 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   appearance: none;
 }
 
-.c7:hover,
-.c7:active,
-.c7:focus {
+.c10:hover,
+.c10:active,
+.c10:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c8 {
+.c11 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c9 {
+.c12 {
   padding-right: 1rem;
 }
 
-.c10 {
+.c13 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1260,21 +1575,74 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   margin: 0;
 }
 
-@media (max-width:1180px) {
-  .c6 {
-    width: calc( 100% / 3 - 2 * 1rem );
+@media (max-width:600px) {
+  .c5 {
+    overflow-x: hidden;
   }
 }
 
-@media (max-width:980px) {
-  .c6 {
-    width: calc( 100% / 2 - 2 * 1rem );
+@media (max-width:600px) {
+  .c5:before,
+  .c5:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
   .c6 {
-    width: calc( 100% - 2 * 1rem );
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c9 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c9 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c9:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c9:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
@@ -1297,14 +1665,14 @@ exports[`<CardList /> should render a collection with a title with a link and a 
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c10 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c13 {
     font-size: 1.6rem;
   }
 }
@@ -1332,169 +1700,210 @@ exports[`<CardList /> should render a collection with a title with a link and a 
       le code du travail numérique
     </p>
   </header>
-  <ul
-    class="c5"
+  <div
+    class="c5 c6"
   >
-    <li
-      class="c6"
+    <div
+      class="c7"
     >
-      <button
-        class="c7"
+      <ul
+        class="c8"
       >
-        <div
-          class="c8"
+        <li
+          class="c9"
         >
-          <div
-            class="c9"
+          <button
+            class="c10"
           >
-            
-            <h3
-              class="c10"
+            <div
+              class="c11"
             >
-              Title 1
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c6"
-    >
-      <button
-        class="c7"
-      >
-        <div
-          class="c8"
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 1
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
         >
-          <div
-            class="c9"
+          <button
+            class="c10"
           >
-            
-            <h3
-              class="c10"
+            <div
+              class="c11"
             >
-              Title 2
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c6"
-    >
-      <button
-        class="c7"
-      >
-        <div
-          class="c8"
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 2
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
         >
-          <div
-            class="c9"
+          <button
+            class="c10"
           >
-            
-            <h3
-              class="c10"
+            <div
+              class="c11"
             >
-              Title 3
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c6"
-    >
-      <button
-        class="c7"
-      >
-        <div
-          class="c8"
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 3
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
         >
-          <div
-            class="c9"
+          <button
+            class="c10"
           >
-            
-            <h3
-              class="c10"
+            <div
+              class="c11"
             >
-              Title 4
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c6"
-    >
-      <button
-        class="c7"
-      >
-        <div
-          class="c8"
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 4
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
         >
-          <div
-            class="c9"
+          <button
+            class="c10"
           >
-            
-            <h3
-              class="c10"
+            <div
+              class="c11"
             >
-              Title 5
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c6"
-    >
-      <button
-        class="c7"
-      >
-        <div
-          class="c8"
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 5
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
         >
-          <div
-            class="c9"
+          <button
+            class="c10"
           >
-            
-            <h3
-              class="c10"
+            <div
+              class="c11"
             >
-              Title 6
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-    <li
-      class="c6"
-    >
-      <button
-        class="c7"
-      >
-        <div
-          class="c8"
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 6
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li
+          class="c9"
         >
-          <div
-            class="c9"
+          <button
+            class="c10"
           >
-            
-            <h3
-              class="c10"
+            <div
+              class="c11"
             >
-              Title 7
-            </h3>
-          </div>
-        </div>
-      </button>
-    </li>
-  </ul>
+              <div
+                class="c12"
+              >
+                
+                <h3
+                  class="c13"
+                >
+                  Title 7
+                </h3>
+              </div>
+            </div>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`<CardList /> should render a single title 1`] = `
 .c3 {
+  position: relative;
+  overflow: visible;
+}
+
+.c3:before,
+.c3:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c3:before {
+  left: -2rem;
+}
+
+.c3:after {
+  right: -2rem;
+}
+
+.c5 {
+  overflow-x: visible;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1515,13 +1924,13 @@ exports[`<CardList /> should render a single title 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c4 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1533,7 +1942,7 @@ exports[`<CardList /> should render a single title 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -1569,7 +1978,7 @@ exports[`<CardList /> should render a single title 1`] = `
   text-align: center;
 }
 
-.c5 {
+.c8 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1596,7 +2005,7 @@ exports[`<CardList /> should render a single title 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -1606,27 +2015,27 @@ exports[`<CardList /> should render a single title 1`] = `
   appearance: none;
 }
 
-.c5:hover,
-.c5:active,
-.c5:focus {
+.c8:hover,
+.c8:active,
+.c8:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c6 {
+.c9 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c7 {
+.c10 {
   padding-right: 1rem;
 }
 
-.c8 {
+.c11 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1636,28 +2045,81 @@ exports[`<CardList /> should render a single title 1`] = `
   margin: 0;
 }
 
-.c9 {
+.c12 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-@media (max-width:1180px) {
-  .c4 {
-    width: calc( 100% / 3 - 2 * 1rem );
+@media (max-width:600px) {
+  .c3 {
+    overflow-x: hidden;
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    width: calc( 100% / 2 - 2 * 1rem );
+@media (max-width:600px) {
+  .c3:before,
+  .c3:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
   .c4 {
-    width: calc( 100% - 2 * 1rem );
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c7 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c7:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c7:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
@@ -1674,14 +2136,14 @@ exports[`<CardList /> should render a single title 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c8 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c11 {
     font-size: 1.6rem;
   }
 }
@@ -1700,37 +2162,45 @@ exports[`<CardList /> should render a single title 1`] = `
     </h2>
     
   </header>
-  <ul
-    class="c3"
+  <div
+    class="c3 c4"
   >
-    <li
-      class="c4"
+    <div
+      class="c5"
     >
-      <a
-        class="c5"
-        href="#"
+      <ul
+        class="c6"
       >
-        <div
-          class="c6"
+        <li
+          class="c7"
         >
-          <div
-            class="c7"
+          <a
+            class="c8"
+            href="#"
           >
-            
-            <h3
-              class="c8"
+            <div
+              class="c9"
             >
-              ok
-            </h3>
-          </div>
-        </div>
-        <div
-          class="c9"
-        >
-          coucou
-        </div>
-      </a>
-    </li>
-  </ul>
+              <div
+                class="c10"
+              >
+                
+                <h3
+                  class="c11"
+                >
+                  ok
+                </h3>
+              </div>
+            </div>
+            <div
+              class="c12"
+            >
+              coucou
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;

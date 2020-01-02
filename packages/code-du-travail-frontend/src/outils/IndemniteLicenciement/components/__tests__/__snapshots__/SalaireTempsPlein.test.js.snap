@@ -11,6 +11,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -91,7 +92,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -176,6 +177,25 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 .c3 tr > td:nth-child(2) {
   width: 70%;
   text-align: left;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c0:before,
+  .c0:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    overflow-x: auto;
+  }
 }
 
 @media (max-width:600px) {
@@ -307,6 +327,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -387,7 +408,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -472,6 +493,25 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 .c3 tr > td:nth-child(2) {
   width: 70%;
   text-align: left;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c0:before,
+  .c0:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    overflow-x: auto;
+  }
 }
 
 @media (max-width:600px) {

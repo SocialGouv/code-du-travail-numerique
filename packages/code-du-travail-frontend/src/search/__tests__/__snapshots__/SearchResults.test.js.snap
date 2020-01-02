@@ -33,7 +33,7 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 .c19 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -65,7 +65,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateY(-50%);
 }
 
-.c26 {
+.c29 {
   position: absolute;
   background-color: #7994d4;
   border-radius: none;
@@ -200,6 +200,39 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 .c22 {
+  position: relative;
+  overflow: visible;
+}
+
+.c22:before,
+.c22:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c22:before {
+  left: -2rem;
+}
+
+.c22:after {
+  right: -2rem;
+}
+
+.c24 {
+  overflow-x: visible;
+}
+
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -220,13 +253,13 @@ exports[`<SearchResults/> should render results 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c23 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -238,12 +271,12 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 3 - 2 * 1rem);
+  width: calc(100% / 3 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
 
-.c24 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -255,7 +288,7 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
@@ -293,7 +326,7 @@ exports[`<SearchResults/> should render results 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -307,13 +340,13 @@ exports[`<SearchResults/> should render results 1`] = `
 .c6:active,
 .c6:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-.c25 {
+.c28 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -340,7 +373,7 @@ exports[`<SearchResults/> should render results 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
   -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
@@ -350,11 +383,11 @@ exports[`<SearchResults/> should render results 1`] = `
   appearance: none;
 }
 
-.c25:hover,
-.c25:active,
-.c25:focus {
+.c28:hover,
+.c28:active,
+.c28:focus {
   color: #3e486e;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
@@ -455,39 +488,108 @@ exports[`<SearchResults/> should render results 1`] = `
   }
 }
 
-@media (max-width:1180px) {
-  .c23 {
-    width: calc( 100% / 2 - 2 * 1rem );
-  }
-}
-
-@media (max-width:980px) {
-  .c23 {
-    width: calc( 100% / 1 - 2 * 1rem );
+@media (max-width:600px) {
+  .c22 {
+    overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
-    width: calc( 100% - 1 * 1rem );
-  }
-}
-
-@media (max-width:1180px) {
-  .c24 {
-    width: calc( 100% / 3 - 2 * 1rem );
-  }
-}
-
-@media (max-width:980px) {
-  .c24 {
-    width: calc( 100% / 2 - 2 * 1rem );
+  .c22:before,
+  .c22:after {
+    display: block;
   }
 }
 
 @media (max-width:600px) {
   .c24 {
-    width: calc( 100% - 2 * 1rem );
+    overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c25 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c26 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c26 {
+    width: calc( 100% / 1 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 80%;
+    min-width: 23rem;
+  }
+
+  .c26:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c26:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
+  }
+}
+
+@media (max-width:1180px) {
+  .c27 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c27 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c27 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c27:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c27:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
@@ -499,7 +601,7 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c28 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
@@ -848,38 +950,46 @@ exports[`<SearchResults/> should render results 1`] = `
           </h2>
           
         </header>
-        <ul
-          class="c22"
+        <div
+          class="c22 c23"
         >
-          <li
-            class="c23"
+          <div
+            class="c24"
           >
-            <a
-              class="c6"
-              href="/code-du-travail/L1243-1?q=search test"
+            <ul
+              class="c25"
             >
-              <div
-                class="c7"
+              <li
+                class="c26"
               >
-                <div
-                  class="c8"
+                <a
+                  class="c6"
+                  href="/code-du-travail/L1243-1?q=search test"
                 >
-                  
-                  <h3
-                    class="c9"
+                  <div
+                    class="c7"
                   >
-                    L1243-1
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c10"
-              >
-                la description
-              </div>
-            </a>
-          </li>
-        </ul>
+                    <div
+                      class="c8"
+                    >
+                      
+                      <h3
+                        class="c9"
+                      >
+                        L1243-1
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="c10"
+                  >
+                    la description
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -905,36 +1015,44 @@ exports[`<SearchResults/> should render results 1`] = `
           </h2>
           
         </header>
-        <ul
-          class="c22"
+        <div
+          class="c22 c23"
         >
-          <li
+          <div
             class="c24"
           >
-            <a
+            <ul
               class="c25"
-              href="/themes/1-contrat?q=search test"
             >
-              <div
-                class="c7"
+              <li
+                class="c27"
               >
-                <div
-                  class="c26"
-                />
-                <div
-                  class="c8"
+                <a
+                  class="c28"
+                  href="/themes/1-contrat?q=search test"
                 >
-                  
-                  <h3
-                    class="c9"
+                  <div
+                    class="c7"
                   >
-                    Contrat
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
+                    <div
+                      class="c29"
+                    />
+                    <div
+                      class="c8"
+                    >
+                      
+                      <h3
+                        class="c9"
+                      >
+                        Contrat
+                      </h3>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

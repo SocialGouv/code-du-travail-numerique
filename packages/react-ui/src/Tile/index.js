@@ -99,6 +99,7 @@ const StyledTile = styled.a`
 `;
 
 const IconWrapper = styled.div`
+  display: ${({ theme }) => (theme.noColors ? "none" : "block")};
   width: 7.2rem;
   height: 7.2rem;
   margin: 0 auto ${spacings.base};

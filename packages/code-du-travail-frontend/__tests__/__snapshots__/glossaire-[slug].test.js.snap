@@ -31,7 +31,7 @@ exports[`<Term /> should render 1`] = `
 }
 
 .c20 {
-  padding: 2rem 0;
+  padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
@@ -54,7 +54,7 @@ exports[`<Term /> should render 1`] = `
   height: 30rem;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   content: "";
 }
 
@@ -208,7 +208,7 @@ exports[`<Term /> should render 1`] = `
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
-  box-shadow: 0px 10px 30px rgba(121,148,212,0.26),0px 4px 5px rgba(121,148,212,0.35);
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
 }
 
@@ -236,18 +236,6 @@ exports[`<Term /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c14:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
 .c26 {
   position: relative;
   overflow: hidden;
@@ -258,6 +246,7 @@ exports[`<Term /> should render 1`] = `
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -278,6 +267,18 @@ exports[`<Term /> should render 1`] = `
 
 .c27 {
   overflow-x: auto;
+}
+
+.c14:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
 }
 
 .c28 {
@@ -370,7 +371,7 @@ exports[`<Term /> should render 1`] = `
   background: #fff;
   border: 1px solid transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -461,7 +462,7 @@ exports[`<Term /> should render 1`] = `
   position: sticky;
   top: 0;
   z-index: 2;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.12),0 1rem 1.5rem rgba(121,148,212,0.1);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   height: 9rem;
   margin-bottom: 6rem;
   overflow: visible;
@@ -717,7 +718,7 @@ exports[`<Term /> should render 1`] = `
   left: -50%;
   z-index: -1;
   width: 200%;
-  height: 400px;
+  height: 40rem;
   background-color: #fff;
   border-radius: 100%;
   content: "";
@@ -783,6 +784,25 @@ exports[`<Term /> should render 1`] = `
 @media (max-width:600px) {
   .c36 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c26:before,
+  .c26:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c27 {
+    overflow-x: auto;
   }
 }
 

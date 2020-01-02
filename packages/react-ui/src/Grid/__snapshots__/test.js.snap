@@ -2,6 +2,39 @@
 
 exports[`<Grid /> should render 1`] = `
 .c0 {
+  position: relative;
+  overflow: visible;
+}
+
+.c0:before,
+.c0:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c0:before {
+  left: -2rem;
+}
+
+.c0:after {
+  right: -2rem;
+}
+
+.c2 {
+  overflow-x: visible;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,13 +55,13 @@ exports[`<Grid /> should render 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c1 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,59 +73,153 @@ exports[`<Grid /> should render 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem);
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
 
-@media (max-width:1180px) {
-  .c1 {
-    width: calc( 100% / 3 - 2 * 1rem );
+@media (max-width:600px) {
+  .c0 {
+    overflow-x: hidden;
   }
 }
 
-@media (max-width:980px) {
-  .c1 {
-    width: calc( 100% / 2 - 2 * 1rem );
+@media (max-width:600px) {
+  .c0:before,
+  .c0:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
   .c1 {
-    width: calc( 100% - 2 * 1rem );
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c4 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c4 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c4:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c4:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
 <div>
-  <ul
-    class="c0"
+  <div
+    class="c0 c1"
   >
-    <li
-      class="c1"
+    <div
+      class="c2"
     >
-      <strong>
-        titre 1
-      </strong>
-      <p>
-        contenu 1
-      </p>
-    </li>
-    <li
-      class="c1"
-    >
-      <strong>
-        titre 2
-      </strong>
-      <p>
-        contenu 2
-      </p>
-    </li>
-  </ul>
+      <ul
+        class="c3"
+      >
+        <li
+          class="c4"
+        >
+          <strong>
+            titre 1
+          </strong>
+          <p>
+            contenu 1
+          </p>
+        </li>
+        <li
+          class="c4"
+        >
+          <strong>
+            titre 2
+          </strong>
+          <p>
+            contenu 2
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`<Grid /> should render 5columns 1`] = `
 .c0 {
+  position: relative;
+  overflow: visible;
+}
+
+.c0:before,
+.c0:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c0:before {
+  left: -2rem;
+}
+
+.c0:after {
+  right: -2rem;
+}
+
+.c2 {
+  overflow-x: visible;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,13 +240,13 @@ exports[`<Grid /> should render 5columns 1`] = `
   justify-content: flex-start;
   margin-top: 2rem;
   margin-right: calc(-1 * 1rem);
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
   padding: 0;
   list-style-type: none;
 }
 
-.c1 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -131,53 +258,114 @@ exports[`<Grid /> should render 5columns 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 5 - 2 * 1rem);
+  width: calc(100% / 5 - 2 * 1rem - 1px);
   margin: 1rem;
   padding: 0;
 }
 
-@media (max-width:1180px) {
-  .c1 {
-    width: calc( 100% / 4 - 2 * 1rem );
+@media (max-width:600px) {
+  .c0 {
+    overflow-x: hidden;
   }
 }
 
-@media (max-width:980px) {
-  .c1 {
-    width: calc( 100% / 3 - 2 * 1rem );
+@media (max-width:600px) {
+  .c0:before,
+  .c0:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
   .c1 {
-    width: calc( 100% - 3 * 1rem );
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c4 {
+    width: calc( 100% / 4 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c4 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c4:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c4:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
   }
 }
 
 <div>
-  <ul
-    class="c0"
+  <div
+    class="c0 c1"
   >
-    <li
-      class="c1"
+    <div
+      class="c2"
     >
-      <strong>
-        titre 1
-      </strong>
-      <p>
-        contenu 1
-      </p>
-    </li>
-    <li
-      class="c1"
-    >
-      <strong>
-        titre 2
-      </strong>
-      <p>
-        contenu 2
-      </p>
-    </li>
-  </ul>
+      <ul
+        class="c3"
+      >
+        <li
+          class="c4"
+        >
+          <strong>
+            titre 1
+          </strong>
+          <p>
+            contenu 1
+          </p>
+        </li>
+        <li
+          class="c4"
+        >
+          <strong>
+            titre 2
+          </strong>
+          <p>
+            contenu 2
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;

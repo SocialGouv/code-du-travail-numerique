@@ -11,6 +11,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: block;
   width: 4rem;
   opacity: 0;
@@ -91,7 +92,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -263,6 +264,25 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 .c8 tr > td:nth-child(2) {
   width: 70%;
   text-align: left;
+}
+
+@media (max-width:600px) {
+  .c5 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c5:before,
+  .c5:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    overflow-x: auto;
+  }
 }
 
 @media (max-width:600px) {
@@ -844,7 +864,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1309,7 +1329,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1392,7 +1412,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   border: 1px solid transparent;
   border-color: transparent;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1566,7 +1586,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 5rem rgba(121,148,212,0.2),0 1rem 1.5rem rgba(121,148,212,0.25);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   cursor: pointer;
   -webkit-transition: border-color 250ms ease;
   transition: border-color 250ms ease;

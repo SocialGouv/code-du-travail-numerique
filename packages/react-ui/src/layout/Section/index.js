@@ -21,34 +21,30 @@ const assignBackgroundColor = ({ variant, theme }) => {
   `;
 };
 
-export const Section = ({ children, decorated, large, variant, ...props }) => {
+export const Section = ({ decorated, large, variant, ...props }) => {
   if (decorated) {
     return (
       <StyledSection large={large} decorated>
         <Decoration variant={variant} />
-        <Content {...props}>{children}</Content>
+        <Content {...props} />
       </StyledSection>
     );
   }
-  return (
-    <StyledSection variant={variant} {...props}>
-      {children}
-    </StyledSection>
-  );
+  return <StyledSection variant={variant} {...props} />;
 };
 
 const StyledSection = styled.div`
-  ${({ decorated, large }) => {
-    if (!decorated) {
+  ${({ decorated, large, theme }) => {
+    if (!decorated || theme.noColors) {
       return css`
-        padding: ${spacings.medium} 0;
+        padding: ${spacings.large} 0;
         ${assignBackgroundColor};
       `;
     }
     if (decorated) {
       return css`
         position: relative;
-        margin: ${large ? "8rem" : "5rem"} 0;
+        margin: ${large ? "6rem" : "5rem"} 0;
         padding: ${large ? "7rem" : spacings.large} 0
           ${large ? "6rem" : spacings.larger};
         min-height: ${BORDER_RADIUS};
@@ -64,6 +60,7 @@ const Decoration = styled.div`
   right: 35%;
   bottom: 0;
   left: 0;
+  display: ${({ theme }) => (theme.noColors ? "none" : "block")};
   ${assignBackgroundColor};
   border-radius: 0 ${BORDER_RADIUS} ${BORDER_RADIUS} 0;
   content: "";
