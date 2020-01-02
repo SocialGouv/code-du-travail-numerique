@@ -4,9 +4,10 @@ import Link from "next/link";
 import getConfig from "next/config";
 import {
   Button,
-  CardList,
   Container,
+  Grid,
   icons,
+  PageTitle,
   Section,
   theme,
   Tile
@@ -49,10 +50,10 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
     />
     <Section>
       <Container>
-        <CardList
-          title="Contenus par thème"
-          desc="Découvrez l’intégralité de nos contenus organisés par grands thèmes"
-        >
+        <PageTitle subtitle="Découvrez l’intégralité de nos contenus organisés par grands thèmes">
+          Contenus par thème
+        </PageTitle>
+        <Grid>
           {children &&
             children.map(({ children, icon, slug, title }) => (
               <Link
@@ -71,7 +72,7 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
                 </Tile>
               </Link>
             ))}
-        </CardList>
+        </Grid>
       </Container>
     </Section>
   </Layout>

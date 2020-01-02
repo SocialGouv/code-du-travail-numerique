@@ -46,7 +46,7 @@ const StyledSection = styled.div`
         position: relative;
         margin: ${large ? "6rem" : "5rem"} 0;
         padding: ${large ? "7rem" : spacings.large} 0
-          ${large ? "6rem" : spacings.larger};
+          ${large ? "6rem" : "0.1rem"}; /* TODO find a proper way to deal with margins here */
         min-height: ${BORDER_RADIUS};
       `;
     }

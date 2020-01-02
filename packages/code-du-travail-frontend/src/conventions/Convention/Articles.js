@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordion, CardList, Tile, theme } from "@socialgouv/react-ui";
+import { Accordion, Grid, Tile, theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
 import { Title } from "./index";
@@ -14,7 +14,7 @@ function Articles({ blocs, containerId }) {
     id: `bloc-${bloc}`,
     title: <AccordionHeader>{blocsLabels[bloc]}</AccordionHeader>,
     body: (
-      <CardList title="" columns={3}>
+      <Grid columns={3}>
         {articles.map(({ title, id, section }) => (
           <Tile
             key={id}
@@ -26,7 +26,7 @@ function Articles({ blocs, containerId }) {
             subtitle={section}
           />
         ))}
-      </CardList>
+      </Grid>
     )
   }));
 

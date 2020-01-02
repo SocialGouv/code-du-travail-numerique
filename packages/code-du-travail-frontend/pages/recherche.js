@@ -68,24 +68,22 @@ class SearchPage extends React.Component {
             <SearchResults items={items} isSearch query={query} />
             <Section>
               <Container>
-                <Wrapper>
-                  <p>
-                    <ConventionModal key="convention-modal">
-                      {openModal => (
-                        <Button variant="secondary" onClick={openModal}>
-                          Chercher une convention collective
-                        </Button>
-                      )}
-                    </ConventionModal>
-                  </p>
-                  <p>
-                    <Link href="/themes" passHref>
-                      <Button as="a" variant="secondary">
-                        Consulter les themes
+                <p>
+                  <ConventionModal key="convention-modal">
+                    {openModal => (
+                      <Button variant="secondary" onClick={openModal}>
+                        Chercher une convention collective
                       </Button>
-                    </Link>
-                  </p>
-                </Wrapper>
+                    )}
+                  </ConventionModal>
+                </p>
+                <p>
+                  <Link href="/themes" passHref>
+                    <Button as="a" variant="secondary">
+                      Consulter les themes
+                    </Button>
+                  </Link>
+                </p>
               </Container>
             </Section>
           </>

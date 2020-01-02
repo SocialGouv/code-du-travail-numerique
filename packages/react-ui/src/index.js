@@ -13,7 +13,6 @@ export { ArrowLink } from "./ArrowLink";
 export { Badge } from "./Badge";
 export { Alert } from "./Alert";
 export { Button } from "./Button";
-export { CardList } from "./CardList";
 export { GlobalStyles } from "./GlobalStyles";
 export { Grid, RootGrid, GridCell } from "./Grid";
 export { FlatList } from "./FlatList";

@@ -2,43 +2,31 @@ import React from "react";
 import Link from "next/link";
 import { reportSelectionToMatomo } from "../utils";
 import { getRouteBySource } from "@cdt/sources";
-import {
-  CardList,
-  Container,
-  Section,
-  Tile,
-  Wrapper
-} from "@socialgouv/react-ui";
+import { Grid, Tile, Title } from "@socialgouv/react-ui";
 
 export const Themes = ({ items, query }) => (
-  <Section>
-    <Container>
-      <Wrapper>
-        <CardList
-          leftStripped
-          title="Les thèmes suivants peuvent vous intéresser"
+  <>
+    <Title>Les thèmes suivants peuvent vous intéresser</Title>
+    <Grid>
+      {items.map(({ slug, title, source, url, algo }) => (
+        <Link
+          key={slug}
+          href={{
+            pathname: `${getRouteBySource(source)}/[slug]`,
+            query: query ? { q: query } : null
+          }}
+          as={`/${getRouteBySource(source)}/${slug}${
+            query ? `?q=${query}` : ""
+          }`}
+          passHref
         >
-          {items.map(({ slug, title, source, url, algo }) => (
-            <Link
-              key={slug}
-              href={{
-                pathname: `${getRouteBySource(source)}/[slug]`,
-                query: query ? { q: query } : null
-              }}
-              as={`/${getRouteBySource(source)}/${slug}${
-                query ? `?q=${query}` : ""
-              }`}
-              passHref
-            >
-              <Tile
-                onClick={() => reportSelectionToMatomo(source, slug, url, algo)}
-                title={title}
-                striped
-              />
-            </Link>
-          ))}
-        </CardList>
-      </Wrapper>
-    </Container>
-  </Section>
+          <Tile
+            onClick={() => reportSelectionToMatomo(source, slug, url, algo)}
+            title={title}
+            striped
+          />
+        </Link>
+      ))}
+    </Grid>
+  </>
 );

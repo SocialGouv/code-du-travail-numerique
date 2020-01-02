@@ -5,9 +5,10 @@ import Link from "next/link";
 import * as Sentry from "@sentry/browser";
 import {
   Container,
-  CardList,
+  Grid,
   icons,
   PageTitle,
+  Title,
   Section
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
@@ -35,7 +36,8 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
     <Section>
       <Container>
         <PageTitle>Retrouvez tous nos outils</PageTitle>
-        <CardList leftStripped title="Nos outils de calcul">
+        <Title>Nos outils de calcul</Title>
+        <Grid>
           {tools.map(({ action, description, icon, slug, title }) => (
             <Link
               href={`/${getRouteBySource(SOURCES.TOOLS)}/[slug]`}
@@ -70,24 +72,27 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
           >
             {monCompteFormation.description}
           </CustomTile>
-        </CardList>
+        </Grid>
         {modeles.length > 0 && (
-          <CardList leftStripped title="Nos modèles de documents">
-            {modeles.map(({ title, slug }) => (
-              <Link
-                href="/modeles-de-courriers/[slug]"
-                as={`/modeles-de-courriers/${slug}`}
-                passHref
-                key={slug}
-              >
-                <CustomTile
-                  title={title}
-                  action="Consulter"
-                  icon={icons.Document}
-                />
-              </Link>
-            ))}
-          </CardList>
+          <>
+            <Title>Nos modèles de documents</Title>
+            <Grid>
+              {modeles.map(({ title, slug }) => (
+                <Link
+                  href="/modeles-de-courriers/[slug]"
+                  as={`/modeles-de-courriers/${slug}`}
+                  passHref
+                  key={slug}
+                >
+                  <CustomTile
+                    title={title}
+                    action="Consulter"
+                    icon={icons.Document}
+                  />
+                </Link>
+              ))}
+            </Grid>
+          </>
         )}
       </Container>
     </Section>
