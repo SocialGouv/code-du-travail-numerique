@@ -124,7 +124,7 @@ exports[`<Section /> renders with correct decoration 1`] = `
 .c0 {
   position: relative;
   margin: 5rem 0;
-  padding: 3.2rem 0 4rem;
+  padding: 3.2rem 0 0.1rem;
   min-height: 10rem;
   color: #3e486e;
 }

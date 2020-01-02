@@ -4,7 +4,6 @@ import Head from "next/head";
 import {
   Container,
   Grid,
-  GridCell,
   Heading,
   PageTitle,
   Section,
@@ -28,22 +27,22 @@ const About = () => (
         <PageTitle>Statistiques du code du travail numérique</PageTitle>
         <Wrapper variant="main">
           <Grid>
-            <StyledGridCell>
+            <GridTile>
               <Heading>Contenus référencés</Heading>
               <Num>14369</Num>
-            </StyledGridCell>
-            <StyledGridCell>
+            </GridTile>
+            <GridTile>
               <Heading>Visites</Heading>
               <Num>2992</Num>
-            </StyledGridCell>
-            <StyledGridCell>
+            </GridTile>
+            <GridTile>
               <Heading>Recherches</Heading>
               <Num>15368</Num>
-            </StyledGridCell>
-            <StyledGridCell>
+            </GridTile>
+            <GridTile>
               <Heading>Consultations</Heading>
               <Num>30736</Num>
-            </StyledGridCell>
+            </GridTile>
           </Grid>
           <p>Statistiques d’usage depuis le 1er Janvier 2019</p>
         </Wrapper>
@@ -54,7 +53,7 @@ const About = () => (
 
 const { fonts } = theme;
 
-const StyledGridCell = styled(GridCell)`
+const GridTile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

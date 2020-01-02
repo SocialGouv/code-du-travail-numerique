@@ -18,38 +18,43 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-bottom: 0;
 }
 
-.c20 {
+.c22 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c20 > *:first-child {
+.c22 > *:first-child {
   margin-top: 0;
 }
 
-.c20 > *:last-child {
+.c22 > *:last-child {
   margin-bottom: 0;
 }
 
 .c19 {
-  padding: 3.2rem 0;
-  background-color: transparent;
+  position: relative;
+  margin: 5rem 0;
+  padding: 3.2rem 0 0.1rem;
+  min-height: 10rem;
   color: #3e486e;
+}
+
+.c20 {
+  position: absolute;
+  top: 0;
+  right: 35%;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: #f2f5fa;
+  border-radius: 0 10rem 10rem 0;
+  content: "";
 }
 
 .c21 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-}
-
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
+  position: relative;
+  z-index: 0;
 }
 
 .c3 {
@@ -65,7 +70,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateY(-50%);
 }
 
-.c29 {
+.c30 {
   position: absolute;
   background-color: #7994d4;
   border-radius: none;
@@ -199,13 +204,13 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateX(5px);
 }
 
-.c22 {
+.c23 {
   position: relative;
   overflow: visible;
 }
 
-.c22:before,
-.c22:after {
+.c23:before,
+.c23:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -220,19 +225,19 @@ exports[`<SearchResults/> should render results 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c22:before {
+.c23:before {
   left: -2rem;
 }
 
-.c22:after {
+.c23:after {
   right: -2rem;
 }
 
-.c24 {
+.c25 {
   overflow-x: visible;
 }
 
-.c25 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -259,7 +264,7 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c26 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -276,7 +281,7 @@ exports[`<SearchResults/> should render results 1`] = `
   padding: 0;
 }
 
-.c27 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -346,7 +351,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateY(-2px);
 }
 
-.c28 {
+.c29 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -383,9 +388,9 @@ exports[`<SearchResults/> should render results 1`] = `
   appearance: none;
 }
 
-.c28:hover,
-.c28:active,
-.c28:focus {
+.c29:hover,
+.c29:active,
+.c29:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -451,22 +456,15 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media print {
-  .c20 {
+  .c22 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
-    padding: 1.6rem 2rem;
-  }
-}
-
-@media print {
-  .c21 {
-    padding: 0 5pt;
-    border: none;
+  .c20 {
+    right: 2rem;
   }
 }
 
@@ -489,32 +487,32 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c23 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c22:before,
-  .c22:after {
+  .c23:before,
+  .c23:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c25 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -526,57 +524,23 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c26 {
+  .c27 {
     width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c26 {
+  .c27 {
     width: calc( 100% / 1 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c27 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 80%;
-    min-width: 23rem;
-  }
-
-  .c26:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c26:last-of-type:after {
-    display: block;
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
-  }
-}
-
-@media (max-width:1180px) {
-  .c27 {
-    width: calc( 100% / 3 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:980px) {
-  .c27 {
-    width: calc( 100% / 2 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 60%;
     min-width: 23rem;
   }
 
@@ -593,6 +557,40 @@ exports[`<SearchResults/> should render results 1`] = `
   }
 }
 
+@media (max-width:1180px) {
+  .c28 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c28 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 60%;
+    min-width: 23rem;
+  }
+
+  .c28:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c28:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
+  }
+}
+
 @media (max-width:600px) {
   .c6 {
     padding: 1.6rem 1.6rem;
@@ -601,7 +599,7 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c29 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
@@ -933,9 +931,12 @@ exports[`<SearchResults/> should render results 1`] = `
   >
     <div
       class="c20"
+    />
+    <div
+      class="c21"
     >
       <div
-        class="c21"
+        class="c22"
       >
         <header
           class="c1"
@@ -948,19 +949,18 @@ exports[`<SearchResults/> should render results 1`] = `
             />
             Que dit le code du travail ?
           </h2>
-          
         </header>
         <div
-          class="c22 c23"
+          class="c23 c24"
         >
           <div
-            class="c24"
+            class="c25"
           >
             <ul
-              class="c25"
+              class="c26"
             >
               <li
-                class="c26"
+                class="c27"
               >
                 <a
                   class="c6"
@@ -990,18 +990,6 @@ exports[`<SearchResults/> should render results 1`] = `
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="c19"
-  >
-    <div
-      class="c20"
-    >
-      <div
-        class="c21"
-      >
         <header
           class="c1"
         >
@@ -1013,29 +1001,28 @@ exports[`<SearchResults/> should render results 1`] = `
             />
             Les thèmes suivants peuvent vous intéresser
           </h2>
-          
         </header>
         <div
-          class="c22 c23"
+          class="c23 c24"
         >
           <div
-            class="c24"
+            class="c25"
           >
             <ul
-              class="c25"
+              class="c26"
             >
               <li
-                class="c27"
+                class="c28"
               >
                 <a
-                  class="c28"
+                  class="c29"
                   href="/themes/1-contrat?q=search test"
                 >
                   <div
                     class="c7"
                   >
                     <div
-                      class="c29"
+                      class="c30"
                     />
                     <div
                       class="c8"

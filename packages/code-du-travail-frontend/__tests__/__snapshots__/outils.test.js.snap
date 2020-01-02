@@ -1528,7 +1528,6 @@ exports[`<Outils /> should render 1`] = `
             />
             Nos outils de calcul
           </h2>
-          
         </header>
         <div
           class="c30 c31"

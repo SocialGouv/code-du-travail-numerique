@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Grid, GridCell } from "../Grid";
+import { Grid } from "../Grid";
 import { ListTitle } from "./ListTitle";
 
 export function CardList({
@@ -17,15 +17,7 @@ export function CardList({
       <ListTitle leftStripped={leftStripped} subtitle={desc} href={href}>
         {title}
       </ListTitle>
-      <Grid columns={columns}>
-        {Array.isArray(children) ? (
-          React.Children.map(children, element => (
-            <GridCell key={element.key}>{element}</GridCell>
-          ))
-        ) : (
-          <GridCell>{children}</GridCell>
-        )}
-      </Grid>
+      <Grid columns={columns}>{children}</Grid>
     </>
   );
 }

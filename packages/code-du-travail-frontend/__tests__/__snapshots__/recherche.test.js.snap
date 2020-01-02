@@ -36,20 +36,6 @@ exports[`<Recherche /> should render 1`] = `
   color: #3e486e;
 }
 
-.c25 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-}
-
-.c25 > *:first-child {
-  margin-top: 0;
-}
-
-.c25 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c13 {
   position: absolute;
   background-color: #7994d4;
@@ -74,7 +60,7 @@ exports[`<Recherche /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c31 {
+.c30 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -92,7 +78,7 @@ exports[`<Recherche /> should render 1`] = `
   text-align: center;
 }
 
-.c30 {
+.c29 {
   margin: 0 auto 1rem;
   margin-bottom: 1.6rem;
   text-align: center;
@@ -159,7 +145,7 @@ exports[`<Recherche /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c26 {
+.c25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -196,16 +182,16 @@ exports[`<Recherche /> should render 1`] = `
   opacity: 1;
 }
 
-.c26:link,
-.c26:visited {
+.c25:link,
+.c25:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c26:not([disabled]):hover,
-.c26:not([disabled]):active,
-.c26:not([disabled]):focus {
+.c25:not([disabled]):hover,
+.c25:not([disabled]):active,
+.c25:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -214,7 +200,7 @@ exports[`<Recherche /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c26[disabled] {
+.c25[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -454,12 +440,12 @@ exports[`<Recherche /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c27 {
+.c26 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c28 {
+.c27 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -467,7 +453,7 @@ exports[`<Recherche /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c28:before {
+.c27:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -479,13 +465,13 @@ exports[`<Recherche /> should render 1`] = `
   content: "";
 }
 
-.c29 {
+.c28 {
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
 }
 
-.c32 {
+.c31 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -494,25 +480,25 @@ exports[`<Recherche /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c32 > *:first-child {
+.c31 > *:first-child {
   margin-top: 0;
 }
 
-.c32 > *:last-child {
+.c31 > *:last-child {
   margin-bottom: 0;
 }
 
-.c33 {
+.c32 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c34 {
+.c33 {
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c35 {
+.c34 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -526,25 +512,25 @@ exports[`<Recherche /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c35 > *:first-child {
+.c34 > *:first-child {
   margin-top: 0;
 }
 
-.c35 > *:last-child {
+.c34 > *:last-child {
   margin-bottom: 0;
 }
 
-.c37 + .c36 {
+.c36 + .c35 {
   padding-left: 1.6rem;
 }
 
-.c39 {
+.c38 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c38 {
+.c37 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -554,17 +540,17 @@ exports[`<Recherche /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c40 {
+.c39 {
   margin: 0.4rem 0;
 }
 
-.c41 {
+.c40 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c42 {
+.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -583,14 +569,14 @@ exports[`<Recherche /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c43 {
+.c42 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c44 {
+.c43 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -640,26 +626,13 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 {
-    padding: 1.6rem 2rem;
-  }
-}
-
-@media print {
-  .c25 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
   .c12 {
     font-size: 2.8rem;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c30 {
     font-size: 2.2rem;
   }
 }
@@ -671,7 +644,7 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c29 {
     margin-bottom: 1rem;
   }
 }
@@ -683,7 +656,7 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c25 {
     font-size: 1.4rem;
   }
 }
@@ -785,27 +758,27 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media print {
-  .c28 {
+  .c27 {
     display: none;
   }
 }
 
 @media print {
-  .c32 {
+  .c31 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c35 {
+  .c34 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c34 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -813,32 +786,32 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c37 + .c36 {
+  .c36 + .c35 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c38 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c37 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c37 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c44 {
+  .c43 {
     display: none;
   }
 }
@@ -1056,45 +1029,41 @@ exports[`<Recherche /> should render 1`] = `
       <div
         class="c24"
       >
-        <div
-          class="c25"
-        >
-          <p>
-            <button
-              class="c26"
-            >
-              Chercher une convention collective
-            </button>
-          </p>
-          <p>
-            <a
-              class="c26"
-              href="/themes"
-            >
-              Consulter les themes
-            </a>
-          </p>
-        </div>
+        <p>
+          <button
+            class="c25"
+          >
+            Chercher une convention collective
+          </button>
+        </p>
+        <p>
+          <a
+            class="c25"
+            href="/themes"
+          >
+            Consulter les themes
+          </a>
+        </p>
       </div>
     </div>
   </main>
   <div
-    class="c27"
+    class="c26"
   >
     <footer
-      class="c28"
+      class="c27"
     >
       <div
-        class="c23 c29"
+        class="c23 c28"
       >
         <div
           class="c24"
         >
           <header
-            class="c30"
+            class="c29"
           >
             <h3
-              class="c31"
+              class="c30"
             >
               <div
                 class="c13"
@@ -1103,16 +1072,16 @@ exports[`<Recherche /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c32"
+            class="c31"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c26"
+            class="c25"
           >
             Contacter nos services en région
             <svg
-              class="c33"
+              class="c32"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1125,68 +1094,68 @@ exports[`<Recherche /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c23 c34"
+        class="c23 c33"
       >
         <nav>
           <div
-            class="c35"
+            class="c34"
           >
             <div
-              class="c36 c37"
+              class="c35 c36"
             >
               <h3
-                class="c38"
+                class="c37"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c39"
+                class="c38"
               >
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -1195,21 +1164,21 @@ exports[`<Recherche /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c36 c37"
+              class="c35 c36"
             >
               <h3
-                class="c38"
+                class="c37"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c39"
+                class="c38"
               >
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1218,10 +1187,10 @@ exports[`<Recherche /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1232,21 +1201,21 @@ exports[`<Recherche /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c36 c37"
+              class="c35 c36"
             >
               <h3
-                class="c38"
+                class="c37"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c39"
+                class="c38"
               >
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1255,10 +1224,10 @@ exports[`<Recherche /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1267,10 +1236,10 @@ exports[`<Recherche /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c40"
+                  class="c39"
                 >
                   <a
-                    class="c41"
+                    class="c40"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1284,10 +1253,10 @@ exports[`<Recherche /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c42"
+        class="c41"
       >
         <a
-          class="c43"
+          class="c42"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1296,12 +1265,12 @@ exports[`<Recherche /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c44"
+          class="c43"
         >
           |
         </span>
         <a
-          class="c43"
+          class="c42"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1310,12 +1279,12 @@ exports[`<Recherche /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c44"
+          class="c43"
         >
           |
         </span>
         <a
-          class="c43"
+          class="c42"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1324,12 +1293,12 @@ exports[`<Recherche /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c44"
+          class="c43"
         >
           |
         </span>
         <a
-          class="c43"
+          class="c42"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1338,12 +1307,12 @@ exports[`<Recherche /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c44"
+          class="c43"
         >
           |
         </span>
         <a
-          class="c43"
+          class="c42"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1352,12 +1321,12 @@ exports[`<Recherche /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c44"
+          class="c43"
         >
           |
         </span>
         <a
-          class="c43"
+          class="c42"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"
