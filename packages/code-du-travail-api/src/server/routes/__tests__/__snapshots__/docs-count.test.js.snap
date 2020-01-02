@@ -10,19 +10,11 @@ Object {
       },
       Object {
         "doc_count": 2,
-        "key": "conventions_collectives",
-      },
-      Object {
-        "doc_count": 2,
-        "key": "fiches_ministere_travail",
+        "key": "external",
       },
       Object {
         "doc_count": 2,
         "key": "fiches_service_public",
-      },
-      Object {
-        "doc_count": 2,
-        "key": "modeles_de_courriers",
       },
       Object {
         "doc_count": 2,

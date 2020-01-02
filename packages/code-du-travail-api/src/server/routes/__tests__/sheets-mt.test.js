@@ -13,6 +13,14 @@ test("return theme data for slug 5-questions-reponses-sur-la-sante-au-travail", 
   expect(response.body).toMatchSnapshot();
 });
 
+test("return correct fiche and related external tool", async () => {
+  const response = await request(app.callback()).get(
+    `/api/v1/sheets-mt/index-de-legalite-professionnelle-calcul-et-questions-reponses`
+  );
+  expect(response.status).toBe(200);
+  expect(response.body).toMatchSnapshot();
+});
+
 test("returns 404 when slug match no themes", async () => {
   const response = await request(app.callback()).get(
     `/api/sheets-mt/no-pasa-nada`

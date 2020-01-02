@@ -52,7 +52,8 @@ const ficheMTSlugs = [
   "5-questions-reponses-sur-la-sante-au-travail",
   "5-questions-reponses-sur-le-recours-devant-les-prudhommes",
   "5-questions-reponses-sur-le-compte-personnel-dactivite",
-  "5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae"
+  "5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae",
+  "index-de-legalite-professionnelle-calcul-et-questions-reponses"
 ];
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -144,6 +145,6 @@ if (module === require.main) {
     console.error("›››" + error)
   );
   // updateThemes(themesSlugs).catch(error => console.error("›››" + error));
-  // updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
+  updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
   // updateAgreements(agreementSlugs).catch(error => console.error("›››" + error));
 }

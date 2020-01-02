@@ -63,6 +63,7 @@ const StyledTile = styled.a`
   flex: 1 1; /* adding auto here breaks IE11 on card list, beware */
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: stretch;
   ${({ wide }) => (wide ? "width: 100%" : "max-width: 100%")};
   margin: 0;
   padding: ${({ wide }) =>
