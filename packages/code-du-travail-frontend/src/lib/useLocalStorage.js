@@ -10,7 +10,7 @@ import { useEffect, useState, useCallback } from "react";
 export function useLocalStorage(key, defaultValue, useStorageListener = false) {
   const initialValue = () => {
     try {
-      const data = window.localStorage.getItem(key);
+      const data = window.localStorage && window.localStorage.getItem(key);
       return data !== null ? JSON.parse(data) : defaultValue;
     } catch (error) {
       return defaultValue;
@@ -33,7 +33,8 @@ export function useLocalStorage(key, defaultValue, useStorageListener = false) {
   );
 
   useEffect(() => {
-    window.localStorage.setItem(key, JSON.stringify(value));
+    window.localStorage &&
+      window.localStorage.setItem(key, JSON.stringify(value));
     if (useStorageListener) {
       window.addEventListener("storage", onStorage);
       return () => {
