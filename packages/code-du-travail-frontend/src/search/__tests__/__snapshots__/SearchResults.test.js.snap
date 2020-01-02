@@ -314,6 +314,10 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   width: 100%;
   margin: 0;
   padding: 2rem 2rem;
@@ -361,6 +365,10 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;

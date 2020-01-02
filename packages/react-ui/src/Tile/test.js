@@ -7,10 +7,11 @@ import { Tile } from ".";
 describe("<Tile />", () => {
   it("renders a tile with text inside", () => {
     const { container } = render(
-      <Tile title="Hello !">There is text inside</Tile>
+      <Tile href="#" title="Hello !">
+        There is text inside
+      </Tile>
     );
     expect(container).toMatchSnapshot();
-    expect(container.getElementsByTagName("button").length).toBe(1);
   });
   it("renders a tile with a custom badge", () => {
     const { container } = render(
@@ -19,7 +20,6 @@ describe("<Tile />", () => {
       </Tile>
     );
     expect(container).toMatchSnapshot();
-    expect(container.getElementsByTagName("button").length).toBe(1);
   });
   it("renders a tile with an icon", () => {
     const { container } = render(
@@ -28,7 +28,6 @@ describe("<Tile />", () => {
       </Tile>
     );
     expect(container).toMatchSnapshot();
-    expect(container.getElementsByTagName("button").length).toBe(1);
   });
   it("renders a tile with a stripe", () => {
     const { container } = render(
@@ -39,6 +38,14 @@ describe("<Tile />", () => {
     expect(container).toMatchSnapshot();
   });
   it("renders a wide tile with a subtitle", () => {
+    const { container } = render(
+      <Tile wide href="#" subtitle="This is a theme" title="Hello !">
+        There is text inside
+      </Tile>
+    );
+    expect(container).toMatchSnapshot();
+  });
+  it("renders a wide button with a subtitle", () => {
     const { container } = render(
       <Tile wide subtitle="This is a theme" title="Hello !">
         There is text inside

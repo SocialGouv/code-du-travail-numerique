@@ -1,6 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tile /> renders a tile with a custom badge 1`] = `
+.c1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 0 0.6rem 0 0;
+}
+
+.c1:before {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent #f66663 transparent transparent;
+  border-style: solid;
+  border-width: 0 5rem 5rem 0;
+  content: "";
+}
+
+.c2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+}
+
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -16,6 +47,10 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -48,17 +83,17 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
   transform: translateY(-2px);
 }
 
-.c1 {
+.c3 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c2 {
+.c4 {
   padding-right: 1rem;
 }
 
-.c3 {
+.c5 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -68,7 +103,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
   margin: 0;
 }
 
-.c4 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -83,14 +118,15 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c5 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <button
+  <a
     class="c0"
+    href="#"
   >
     <div
       class="c1"
@@ -98,20 +134,45 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
       <div
         class="c2"
       >
+        <svg
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="c3"
+    >
+      <div
+        class="c4"
+      >
         
         <h3
-          class="c3"
+          class="c5"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c4"
+      class="c6"
     >
       There is text inside
     </div>
-  </button>
+  </a>
 </div>
 `;
 
@@ -144,6 +205,10 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -217,8 +282,9 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 }
 
 <div>
-  <button
+  <a
     class="c0"
+    href="#"
   >
     <div
       class="c1"
@@ -242,7 +308,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
     >
       There is text inside
     </div>
-  </button>
+  </a>
 </div>
 `;
 
@@ -262,6 +328,10 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -345,8 +415,9 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 }
 
 <div>
-  <button
+  <a
     class="c0"
+    href="#"
   >
     <div
       class="c1"
@@ -394,7 +465,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
     >
       There is text inside
     </div>
-  </button>
+  </a>
 </div>
 `;
 
@@ -414,6 +485,10 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -487,8 +562,9 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 }
 
 <div>
-  <button
+  <a
     class="c0"
+    href="#"
   >
     <div
       class="c1"
@@ -509,11 +585,11 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
     >
       There is text inside
     </div>
-  </button>
+  </a>
 </div>
 `;
 
-exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
+exports[`<Tile /> renders a wide button with a subtitle 1`] = `
 .c3 {
   display: block;
   margin: 0 0 1rem 0;
@@ -540,13 +616,17 @@ exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 100%;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
   margin: 0;
-  padding: 3.2rem 2rem;
+  padding: 2rem 2rem;
   color: #3e486e;
   font-weight: normal;
   font-size: 1.6rem;
-  text-align: center;
+  text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
@@ -601,7 +681,7 @@ exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 2rem 1.6rem;
+    padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
   }
 }
@@ -640,5 +720,140 @@ exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
       There is text inside
     </div>
   </button>
+</div>
+`;
+
+exports[`<Tile /> renders a wide tile with a subtitle 1`] = `
+.c3 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
+  transition: box-shadow 250ms linear, transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c0:hover,
+.c0:active,
+.c0:focus {
+  color: #3e486e;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c2 {
+  padding-right: 1rem;
+}
+
+.c4 {
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.c5 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-top: 1rem;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 1.6rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <a
+    class="c0"
+    href="#"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <span
+          class="c3"
+        >
+          This is a theme
+        </span>
+        <h3
+          class="c4"
+        >
+          Hello !
+        </h3>
+      </div>
+    </div>
+    <div
+      class="c5"
+    >
+      There is text inside
+    </div>
+  </a>
 </div>
 `;

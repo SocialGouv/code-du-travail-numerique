@@ -124,6 +124,10 @@ exports[`<CardList /> should render a collection on 3column 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -579,6 +583,10 @@ exports[`<CardList /> should render a collection with a title 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -1040,6 +1048,10 @@ exports[`<CardList /> should render a collection with a title and description 1`
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -1523,6 +1535,10 @@ exports[`<CardList /> should render a collection with a title with a link and a 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -1993,6 +2009,10 @@ exports[`<CardList /> should render a single title 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
