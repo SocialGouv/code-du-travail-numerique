@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.1...v4.0.0-gamma.2) (2020-01-02)
+
+
+### Bug Fixes
+
+* **fiches-MT:** fix sections data ([#2142](https://github.com/SocialGouv/code-du-travail-numerique/issues/2142)) ([a66e86c](https://github.com/SocialGouv/code-du-travail-numerique/commit/a66e86c592d80da149ef182cf3bd143b96d57992))
+* fix fiches MT sections ([#2136](https://github.com/SocialGouv/code-du-travail-numerique/issues/2136)) ([cbe2754](https://github.com/SocialGouv/code-du-travail-numerique/commit/cbe2754bc0a9c014d09723847c61098b3cb54dc9)), closes [#2135](https://github.com/SocialGouv/code-du-travail-numerique/issues/2135)
+* update data ([#2137](https://github.com/SocialGouv/code-du-travail-numerique/issues/2137)) ([172d6de](https://github.com/SocialGouv/code-du-travail-numerique/commit/172d6dece33f6a99fc18290583bdb902c0a5bd09))
+
+
+
+
+
 # [4.0.0-gamma.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.0...v4.0.0-gamma.1) (2019-12-31)
 
 **Note:** Version bump only for package @cdt/data

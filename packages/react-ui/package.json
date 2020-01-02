@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/react-ui",
-  "version": "4.0.0-gamma.1",
+  "version": "4.0.0-gamma.2",
   "description": "Composants ReactJS",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

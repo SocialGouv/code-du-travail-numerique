@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.1...v4.0.0-gamma.2) (2020-01-02)
+
+
+### Features
+
+* **frontend:** impl some of the home design ([#2138](https://github.com/SocialGouv/code-du-travail-numerique/issues/2138)) ([32170d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/32170d86692d4274da8ee4231a742d38dd5f3172))
+
+
+
+
+
 # [4.0.0-gamma.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.0...v4.0.0-gamma.1) (2019-12-31)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public

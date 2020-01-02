@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.1...v4.0.0-gamma.2) (2020-01-02)
+
+
+### Bug Fixes
+
+* fix typo in PIWIK_URL secret ([#2146](https://github.com/SocialGouv/code-du-travail-numerique/issues/2146)) ([a633d30](https://github.com/SocialGouv/code-du-travail-numerique/commit/a633d306f2b1e6a8a7bcb84894d151cf52dbae46))
+* **fiches-MT:** fix sections data ([#2142](https://github.com/SocialGouv/code-du-travail-numerique/issues/2142)) ([a66e86c](https://github.com/SocialGouv/code-du-travail-numerique/commit/a66e86c592d80da149ef182cf3bd143b96d57992))
+* **frontend:** chrome mobile issue ([#2139](https://github.com/SocialGouv/code-du-travail-numerique/issues/2139)) ([75f5acf](https://github.com/SocialGouv/code-du-travail-numerique/commit/75f5acf27d9ac39d7b379b5357072ff5f00e62ac))
+* fix fiches MT sections ([#2136](https://github.com/SocialGouv/code-du-travail-numerique/issues/2136)) ([cbe2754](https://github.com/SocialGouv/code-du-travail-numerique/commit/cbe2754bc0a9c014d09723847c61098b3cb54dc9)), closes [#2135](https://github.com/SocialGouv/code-du-travail-numerique/issues/2135)
+* update data ([#2137](https://github.com/SocialGouv/code-du-travail-numerique/issues/2137)) ([172d6de](https://github.com/SocialGouv/code-du-travail-numerique/commit/172d6dece33f6a99fc18290583bdb902c0a5bd09))
+
+
+### Features
+
+* **frontend:** impl some of the home design ([#2138](https://github.com/SocialGouv/code-du-travail-numerique/issues/2138)) ([32170d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/32170d86692d4274da8ee4231a742d38dd5f3172))
+
+
+
+
+
 # [4.0.0-gamma.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.0...v4.0.0-gamma.1) (2019-12-31)
 
 

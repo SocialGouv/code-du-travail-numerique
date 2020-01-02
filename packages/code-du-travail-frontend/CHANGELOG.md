@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.1...v4.0.0-gamma.2) (2020-01-02)
+
+
+### Bug Fixes
+
+* **frontend:** chrome mobile issue ([#2139](https://github.com/SocialGouv/code-du-travail-numerique/issues/2139)) ([75f5acf](https://github.com/SocialGouv/code-du-travail-numerique/commit/75f5acf27d9ac39d7b379b5357072ff5f00e62ac))
+
+
+### Features
+
+* **frontend:** impl some of the home design ([#2138](https://github.com/SocialGouv/code-du-travail-numerique/issues/2138)) ([32170d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/32170d86692d4274da8ee4231a742d38dd5f3172))
+
+
+
+
+
 # [4.0.0-gamma.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.0...v4.0.0-gamma.1) (2019-12-31)
 
 
