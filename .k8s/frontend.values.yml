@@ -55,7 +55,7 @@ deployment:
       valueFrom:
         secretKeyRef:
           name: cdtn-secret
-          key: PIWIK_SITE_ID
+          key: PIWIK_URL
     - name: PORT
       value: "3000"
     - name: PROD_HOSTNAME
