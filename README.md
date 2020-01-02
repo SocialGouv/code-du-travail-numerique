@@ -14,8 +14,8 @@
 
 ## Contribuer
 
-- Pour remonter un problème à l'équipe, envoyez un email à [codedutravail@travail.gouv.fr](mailto:codedutravail@travail.gouv.fr).
-- Pour remonter un bug technique, [créez une issue](https://github.com/SocialGouv/code-du-travail-numerique/issues/new/choose).
+- Pour remonter un problème à l'équipe, envoyez un email à [codedutravailnumerique@travail.gouv.fr](mailto:codedutravailnumerique@travail.gouv.fr).
+- Pour remonter un bug technique, [ouvrez un ticket](https://github.com/SocialGouv/code-du-travail-numerique/issues/new/choose).
 
 ## Développement
 
