@@ -91,6 +91,9 @@ const StyledContainer = styled(Container)`
   align-items: flex-start;
   justify-content: space-around;
   padding: 0;
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: 0;
+  }
 `;
 
 const StyledContent = styled.div`

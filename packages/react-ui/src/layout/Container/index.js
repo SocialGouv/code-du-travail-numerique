@@ -1,22 +1,16 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { spacings } from "../../theme";
+import { breakpoints, spacings } from "../../theme";
 
 export const Container = styled.div`
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 ${spacings.medium};
-  ${props => {
-    if (props.narrow) {
-      const maxWidth = "74rem"; //740px
-      if (props.noPadding) {
-        return css`
-          max-width: ${maxWidth};
-          padding: 0;
-        `;
-      }
+  ${({ narrow, noPadding }) => {
+    if (narrow) {
       return css`
-        max-width: ${maxWidth};
+        ${noPadding && "padding: 0;"}
+        max-width: 74rem;
       `;
     }
   }}
@@ -25,6 +19,10 @@ export const Container = styled.div`
   }
   & > *:last-child {
     margin-bottom: 0;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: ${({ narrow, noPadding }) =>
+      narrow && noPadding ? "0" : `0 ${spacings.small}`};
   }
   @media print {
     max-width: 100%;

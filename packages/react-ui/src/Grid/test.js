@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { Grid, GridCell } from ".";
+import { Grid } from ".";
 
 describe("<Grid />", () => {
   test("should render", () => {

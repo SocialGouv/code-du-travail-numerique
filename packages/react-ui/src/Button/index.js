@@ -121,6 +121,14 @@ export const StyledButton = styled.button`
         box-shadow: none;
         cursor: not-allowed;
       }
+      @media (max-width: ${breakpoints.mobile}) {
+        ${({ narrow, small, variant }) => {
+          if (variant !== "link" && !small && !narrow) {
+            return css`
+              padding: 0 3 rem;
+            `;
+          }
+        }}
     `;
   }}
 `;

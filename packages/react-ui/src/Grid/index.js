@@ -19,11 +19,7 @@ export const Grid = ({ children, ...props }) => (
 
 Grid.propTypes = {
   children: PropTypes.node.isRequired,
-  columns: PropTypes.number,
-  desc: PropTypes.string,
-  href: PropTypes.string,
-  leftStripped: PropTypes.bool,
-  title: PropTypes.string.isRequired
+  columns: PropTypes.number
 };
 
 Grid.defaultProps = {

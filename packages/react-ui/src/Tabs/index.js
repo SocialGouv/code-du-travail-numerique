@@ -47,7 +47,7 @@ Tabs.defaultProps = {
 };
 
 const StyledTabs = styled(RootTabs)`
-  margin-bottom: ${spacings.large};
+  margin-bottom: ${spacings.small};
 `;
 
 const StyledTabList = styled(TabList)`

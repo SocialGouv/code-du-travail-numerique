@@ -9,8 +9,7 @@ import {
   Container,
   PageTitle,
   Section,
-  theme,
-  Wrapper
+  theme
 } from "@socialgouv/react-ui";
 
 import { ConventionModal } from "../src/conventions/Search/Modal";
