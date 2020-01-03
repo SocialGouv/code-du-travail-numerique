@@ -1,0 +1,145 @@
+#
+
+Install api:
+  extends: .base_yarn_workspace_install
+  variables:
+    CONTEXT: code-du-travail-api
+  cache:
+    key: "install-api-$CI_COMMIT_REF_SLUG"
+    paths:
+      - $CI_PROJECT_DIR/.yarn
+      - node_modules
+      - packages/code-du-travail-api/node_modules
+  before_script:
+    - apk add jq=~1
+    - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
+    #
+    - find packages -maxdepth 1 -type d
+      -not -name ${CONTEXT}
+      -not -name code-du-travail-data
+      -not -name sources | tail -n +2 | xargs rm -rf
+    - find packages/code-du-travail-data/dataset -maxdepth 1 -type d
+      -not -name courrier-type
+      -not -name datafiller | tail -n +2 | xargs rm -rf
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - node_modules
+      - packages/${CONTEXT}/node_modules
+
+#
+
+Build @cdt/api:
+  extends: .quality_stage
+  dependencies:
+    - Install api
+  needs:
+    - Install api
+  image: alpine:3.11
+  script:
+    - >-
+      mkdir -p packages/code-du-travail-api/node_modules/@cdt &&
+      mv ./packages/code-du-travail-data/dataset/courrier-type \
+        packages/code-du-travail-api/node_modules/@cdt/data...courrier-type
+    - >-
+      mkdir -p packages/code-du-travail-api/node_modules/@cdt/data/indexing &&
+      mv ./packages/code-du-travail-data/indexing/esIndexName.js \
+        packages/code-du-travail-api/node_modules/@cdt/data/indexing/esIndexName.js
+    - >-
+      mkdir -p packages/code-du-travail-api/node_modules/@cdt/data...datafiller &&
+      mv ./packages/code-du-travail-data/dataset/datafiller/prequalified.data.json \
+        packages/code-du-travail-api/node_modules/@cdt/data...datafiller/prequalified.data.json
+    - >-
+      mkdir -p packages/code-du-travail-api/node_modules/@cdt &&
+      mv ./packages/sources \
+        packages/code-du-travail-api/node_modules/@cdt/sources
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - packages/code-du-travail-api/node_modules
+
+#
+
+Lint @cdtn/api:
+  extends: .quality_stage
+  dependencies:
+    - Install api
+  needs:
+    - Install api
+  image: node:12-alpine
+  script:
+    - yarn workspace @cdt/api lint
+
+#
+
+Test @cdtn/api:
+  extends: .quality_stage
+  dependencies:
+    - Install api
+  needs:
+    - Install api
+  services:
+    - $CI_REGISTRY_IMAGE/elasticsearch:master
+  variables:
+    ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
+  image: node:12-alpine
+  script:
+    # NOTE(douglasduteil): the elasticsearch health check must be last
+    # As we block the job waiting for elasticsearch to be up.
+    - |-
+      retry=60;
+      while
+        ! wget -q --spider "$ELASTICSEARCH_URL/_cat/health?h=status" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
+      wget --spider "$ELASTICSEARCH_URL/_cat/health?h=status"
+    #
+    - yarn workspace @cdt/api test --coverage
+
+#
+
+Register api image:
+  extends:
+    - .base_register_stage
+    - .register_stage
+  dependencies:
+    - Install api
+    - Build @cdt/api
+  needs:
+    - Install api
+    - Build @cdt/api
+  before_script:
+    - apk add jq=~1
+
+    # Remove workspace dependencies to allow --production installation
+    - >-
+      jq 'del(.devDependencies) | del( .dependencies[ "@cdt/data...courrier-type", "@cdt/data...datafiller", "@cdt/sources" ])' packages/code-du-travail-api/package.json > package.json.tmp
+    - mv package.json.tmp packages/code-du-travail-api/package.json
+    #
+    - cp yarn.lock packages/code-du-travail-api/yarn.lock
+  variables:
+    CONTEXT: packages/code-du-travail-api
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/api
+
+#
+
+.deploy_api_stage:
+  extends:
+    - .base_deploy_hpa_chart_stage
+    - .deploy_stage
+    - .dev_stage
+  dependencies:
+    - Build @cdt/api
+  variables:
+    CONTEXT: api
+    PORT: 8000
+    VALUES_FILE: ./.k8s/api.values.yml
+  before_script:
+    - source ./.gitlab-ci/env.sh
+    - HOST=${API_HOST}
+    - export ES_INDEX_PREFIX="cdtn-master"
+
+Deploy @cdtn/api (dev):
+  extends:
+    - .deploy_api_stage
+    - .dev_stage

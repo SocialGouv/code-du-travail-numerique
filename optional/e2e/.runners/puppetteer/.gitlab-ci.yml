@@ -1,14 +1,8 @@
 
-Launch e2e tests:
-  stage: Prepare
+Trigger e2e tests:
+  extends: .prepare_stage
   image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.12.0
   when: manual
-  except:
-    variables:
-      # Don't run when deploying in production an existing image
-      - $PRODUCTION
-      # Don't run when running e2e tests
-      - $E2E_TEST
   script:
     - curl
         --request POST

@@ -1,0 +1,21 @@
+#
+
+Install sources:
+  extends: .base_yarn_workspace_install
+  cache:
+    key: "install-sources-$CI_COMMIT_REF_SLUG"
+    paths:
+      - $CI_PROJECT_DIR/.yarn
+      - node_modules
+      - packages/sources/node_modules
+  variables:
+    CONTEXT: sources
+  before_script:
+    - apk add jq=~1
+    - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
+    - find packages -maxdepth 1 -type d -not -name sources | tail -n +2 | xargs rm -rf
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - node_modules
+      - packages/sources/node_modules

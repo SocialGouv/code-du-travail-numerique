@@ -1,16 +1,21 @@
-ARG TAG_BASE_IMAGE=master
-ARG REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
-ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
-
-# hadolint ignore=DL3006
-FROM ${BASE_IMAGE}
+FROM node:12.14-alpine3.10
 
 WORKDIR /app
 
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+COPY package.json yarn.lock /app/
+RUN yarn --production --frozen-lockfile --no-cache
+
 USER node
 
-ENV DUMP_PATH "../../code-du-travail-data/dist/dump.data.json"
+# COPY ./node_modules/@cdt /node_modules/@cdt
+COPY ./node_modules/@socialgouv /app/node_modules/@socialgouv
 
-RUN yarn workspace @cdt/frontend generate-sitemap
+COPY ./next.config.js /app
+COPY ./public /app/public
+COPY ./server /app/server
+COPY ./.next /app/.next
 
-ENTRYPOINT ["yarn", "workspace", "@cdt/frontend", "start"]
+ENTRYPOINT ["yarn", "start"]

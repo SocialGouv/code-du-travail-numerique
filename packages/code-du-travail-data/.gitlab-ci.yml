@@ -1,0 +1,87 @@
+#
+
+Install data:
+  extends: .base_yarn_workspace_install
+  variables:
+    CONTEXT: code-du-travail-data
+  cache:
+    key: "install-data-$CI_COMMIT_REF_SLUG"
+    paths:
+      - $CI_PROJECT_DIR/.yarn
+      - node_modules
+      - packages/code-du-travail-data/node_modules
+  before_script:
+    - apk add jq=~1
+    - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
+    #
+    - find packages -maxdepth 1 -type d
+      -not -name ${CONTEXT}
+      -not -name sources | tail -n +2 | xargs rm -rf
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - node_modules
+      - packages/${CONTEXT}/node_modules
+
+#
+
+Build @cdt/data:
+  extends: .quality_stage
+  dependencies:
+    - Install data
+  needs:
+    - Install data
+  image: node:12-alpine
+  script:
+    - yarn workspace @cdt/data build
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - packages/code-du-travail-data/dist
+
+#
+
+Lint @cdtn/data:
+  extends: .quality_stage
+  dependencies:
+    - Install data
+  needs:
+    - Install data
+  image: node:12-alpine
+  script:
+    - yarn workspace @cdt/data lint
+
+Test @cdtn/data:
+  extends: .quality_stage
+  dependencies:
+    - Install data
+  needs:
+    - Install data
+  image: node:12-alpine
+  script:
+    - yarn workspace @cdt/data test
+    - yarn workspace @cdt/data check-slugs
+    - yarn workspace @cdt/data...datafiller test
+
+#
+
+Register data image:
+  extends:
+    - .base_register_stage
+    - .register_stage
+  stage: "Registration"
+  dependencies:
+    - Build @cdt/data
+    - Build @cdt/nlp
+  needs:
+    - Build @cdt/data
+    - Build @cdt/nlp
+    - Install data
+  before_script:
+    - >-
+      mkdir -p ${CONTEXT}/node_modules/@cdt/nlp/data &&
+      mv ./packages/code-du-travail-nlp/data/dump.tf.json \
+        ${CONTEXT}/node_modules/@cdt/nlp/data/dump.tf.json
+  variables:
+    CONTEXT: packages/code-du-travail-data
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/data

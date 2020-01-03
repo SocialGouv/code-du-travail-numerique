@@ -47,12 +47,11 @@ else
   export DOMAIN="${BRANCH_HASH}-code-travail.dev.fabrique.social.gouv.fr";
 fi
 
-
 #
 
 export API_HOST="api-${DOMAIN}";
 export FRONTEND_HOST="${DOMAIN}";
-export NLP_HOST="nlp-python";
+export NLP_HOST="nlp-python.cdtn-master.svc.cluster.local";
 export NLP_URL="http://${NLP_HOST}:${NLP_PORT}";
 
 #

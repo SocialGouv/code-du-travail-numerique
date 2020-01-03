@@ -1,0 +1,70 @@
+#
+
+Build @cdt/nlp:
+  extends: .quality_stage
+  stage: "Build"
+  dependencies:
+    - Build @cdt/data
+  needs:
+    - Build @cdt/data
+    - Install data
+  variables:
+    PYTHONPATH: "${CI_PROJECT_DIR}/packages/code-du-travail-nlp"
+    PIP_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/pip"
+  cache:
+    key: "install-nlp-$CI_COMMIT_REF_SLUG"
+    paths:
+      - .cache/pip
+  image: python:3.7-slim-buster
+  script:
+    # Copy the `@cdt/data` artefact to the nlp data directory
+    - cp ./packages/code-du-travail-data/dist/dump.data.json
+        ./packages/code-du-travail-nlp/data/dump.json
+    #
+    - cd packages/code-du-travail-nlp
+    - pip install --user -r requirements.txt
+    - python ./scripts/dump.py
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - packages/code-du-travail-nlp/data/dump.tf.json
+
+#
+
+Register nlp image:
+  extends:
+    - .base_register_stage
+    - .register_stage
+  variables:
+    CONTEXT: packages/code-du-travail-nlp
+    DOCKER_BUILD_ARGS: >-
+      --build-arg SUGGEST_DATA_URL=$SUGGEST_DATA_URL
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
+
+#
+
+.deploy_nlp_stage:
+  extends:
+    - .base_deploy_nodejs_chart_stage
+    - .deploy_stage
+    - .dev_stage
+  variables:
+    IMAGE_TAG: master
+    PORT: ${NLP_PORT}
+    CONTEXT: nlp
+    VALUES_FILE: ./.k8s/nlp.values.yml
+  before_script:
+    - source ./.gitlab-ci/env.sh
+    - HOST=${NLP_HOST}
+
+#
+
+Deploy @cdtn/nlp (dev):
+  extends:
+    - .deploy_nlp_stage
+    - .dev_stage
+
+# Deploy @cdtn/nlp (prod):
+#   extends:
+#     - .deploy_nlp_stage
+#     - .dev_stage

@@ -4,18 +4,38 @@ include:
     file: /base_register_stage.yml
     ref: v5.0.0
   - project: SocialGouv/gitlab-ci-yml
+    file: /base_create_namespace_stage.yml
+    ref: v5.0.0
+  - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_helm_image_stage.yml
     ref: v5.0.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_kubectl_image_stage.yml
     ref: v5.0.0
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_deploy_hpa_chart_stage.yml
+    ref: v5.0.0
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_deploy_nodejs_chart_stage.yml
+    ref: v5.0.0
+  #
+  - https://raw.githubusercontent.com/SocialGouv/emjpm/master/.gitlab-ci/extends.yml
   #
   - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/quality.yml
-  - /.gitlab-ci/stages/register.yml
+  #
+  - /packages/code-du-travail-api/.gitlab-ci.yml
+  - /packages/code-du-travail-data/.gitlab-ci.yml
+  - /packages/code-du-travail-frontend/.gitlab-ci.yml
+  - /packages/code-du-travail-nlp/.gitlab-ci.yml
+  - /packages/react-fiche-service-public/.gitlab-ci.yml
+  - /packages/react-ui/.gitlab-ci.yml
+  - /packages/sources/.gitlab-ci.yml
+  #
+  # - /.gitlab-ci/stages/quality.yml
+  # - /.gitlab-ci/stages/register.yml
   - /.gitlab-ci/stages/manual.yml
-  - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/deploy.yml
+  # - /.gitlab-ci/stages/scan.yml
+  # - /.gitlab-ci/stages/deploy.yml
   - /.gitlab-ci/stages/notify.yml
 
   - /optional/e2e/.runners/puppetteer/.gitlab-ci.yml
@@ -23,9 +43,86 @@ include:
 stages:
   - "Prepare"
   - "Code Quality"
+  - "Build"
   - "Manual Deploy"
   - "Registration"
   - "Post Registration"
   - "Deploy"
   - "Notify Finished Deployment"
   - E2E test
+
+.base_stage:
+  except:
+    variables:
+      # Don't run when tagging a commit
+      - $RELEASE
+      # Don't run when deploying in production an existing image
+      - $PRODUCTION
+      # Don't run when running e2e tests
+      - $E2E_TEST
+
+.prepare_stage:
+  extends: .base_stage
+  stage: "Prepare"
+  dependencies: []
+
+.quality_stage:
+  extends: .base_stage
+  stage: "Code Quality"
+  dependencies: []
+
+.register_stage:
+  extends: .base_stage
+  stage: "Registration"
+  dependencies: []
+
+.deploy_stage:
+  extends: .base_stage
+  stage: "Deploy"
+  variables:
+    IMAGE_TAG: ${CI_COMMIT_SHA}
+    REGISTRY: ${CI_REGISTRY_IMAGE}
+  dependencies: []
+
+#
+
+.dev_stage:
+  extends: .base_stage
+  environment:
+    name: fabrique-dev
+
+#
+
+Lint Dockerfiles:
+  extends: .quality_stage
+  image: hadolint/hadolint:latest-debian
+  script:
+    - |-
+      for i in $(find . -name Dockerfile); do
+        echo ""
+        echo "[+] hadolint ${i}"
+        hadolint ${i}
+      done
+
+#
+
+Create namespace:
+  extends:
+    - .base_create_namespace_stage
+    - .base_stage
+  stage: "Registration"
+  before_script:
+    - source ./.gitlab-ci/env.sh
+  after_script:
+    - source ./.gitlab-ci/env.sh
+    #
+    # Create cdtn secrets
+    - envsubst < ./.k8s/secrets.yml | kubectl apply -n ${K8S_NAMESPACE} -f - || true
+    #
+    # Copy elasticsearch-creds
+    - kubectl get secret elasticsearch-cloud-data --namespace=cdtn-secret --export -o yaml |
+      kubectl apply --namespace=${K8S_NAMESPACE} -f -
+    - kubectl get secret elasticsearch-cloud-api --namespace=cdtn-secret --export -o yaml |
+      kubectl apply --namespace=${K8S_NAMESPACE} -f -
+    - kubectl get secret elastic-apm --namespace=cdtn-secret --export -o yaml |
+      kubectl apply --namespace=${K8S_NAMESPACE} -f -

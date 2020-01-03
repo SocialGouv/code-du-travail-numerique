@@ -8,7 +8,7 @@
     "build": "ncc build ./src/server/index.js -o dist --source-map",
     "lint": "eslint src/**/*.js",
     "prepush": "yarn lint",
-    "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
+    "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./src/server/index.js",
     "dev": "nodemon ./src/server/index.js",
     "update-mock-data": "ES_INDEX_PREFIX=cdtn node -r esm tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test node -r esm tests/create_indexes.js",

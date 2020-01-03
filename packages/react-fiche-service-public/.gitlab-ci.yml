@@ -1,0 +1,73 @@
+#
+
+Install react-fiche-service-public:
+  extends: .base_yarn_workspace_install
+  variables:
+    CONTEXT: react-fiche-service-public
+  cache:
+    key: "install-react-fiche-service-public-$CI_COMMIT_REF_SLUG"
+    paths:
+      - $CI_PROJECT_DIR/.yarn
+      - node_modules
+      - packages/react-fiche-service-public/node_modules
+  before_script:
+    - apk add jq=~1
+    - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
+    #
+    - find packages -maxdepth 1 -type d
+      -not -name react-ui
+      -not -name react-fiche-service-public | tail -n +2 | xargs rm -rf
+    #
+    - jq 'del(.devDependencies)' packages/react-ui/package.json > package.json.tmp
+    - mv package.json.tmp packages/react-ui/package.json
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - node_modules
+      - packages/react-fiche-service-public/node_modules
+
+#
+
+Lint @socialgouv/react-fiche-service-public:
+  extends: .quality_stage
+  stage: "Build"
+  dependencies:
+    - Build @socialgouv/react-ui
+    - Install react-fiche-service-public
+  needs:
+    - Build @socialgouv/react-ui
+    - Install react-fiche-service-public
+  image: node:12-alpine
+  script:
+    - yarn workspace @socialgouv/react-fiche-service-public lint
+
+#
+
+Test @socialgouv/react-fiche-service-public:
+  extends: .quality_stage
+  stage: "Build"
+  dependencies:
+    - Build @socialgouv/react-ui
+    - Install react-fiche-service-public
+  needs:
+    - Build @socialgouv/react-ui
+    - Install react-fiche-service-public
+  image: node:12-alpine
+  script:
+    - yarn workspace @socialgouv/react-fiche-service-public test --coverage
+
+#
+
+Build @socialgouv/react-fiche-service-public:
+  extends: .quality_stage
+  dependencies:
+    - Install react-fiche-service-public
+  needs:
+    - Install react-fiche-service-public
+  image: node:12-alpine
+  script:
+    - yarn workspace @socialgouv/react-fiche-service-public build
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - packages/react-fiche-service-public/lib

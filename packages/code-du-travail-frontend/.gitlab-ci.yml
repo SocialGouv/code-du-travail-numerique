@@ -1,0 +1,188 @@
+#
+
+Install frontend:
+  extends: .base_yarn_workspace_install
+  variables:
+    CONTEXT: code-du-travail-frontend
+  cache:
+    key: "install-frontend-$CI_COMMIT_REF_SLUG"
+    paths:
+      - $CI_PROJECT_DIR/.yarn
+      - node_modules
+      - packages/code-du-travail-frontend/node_modules
+  before_script:
+    - apk add jq=~1
+    - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
+    #
+    - find packages -maxdepth 1 -type d
+      -not -name ${CONTEXT}
+      -not -name code-du-travail-data
+      -not -name react-ui
+      -not -name react-fiche-service-public
+      -not -name sources | tail -n +2 | xargs rm -rf
+    #
+    - jq 'del(.devDependencies)' packages/react-ui/package.json > package.json.tmp
+    - mv package.json.tmp packages/react-ui/package.json
+    #
+    - jq 'del(.devDependencies)' packages/sources/package.json > package.json.tmp
+    - mv package.json.tmp packages/sources/package.json
+    #
+    - jq 'del(.devDependencies)' packages/react-fiche-service-public/package.json > package.json.tmp
+    - mv package.json.tmp packages/react-fiche-service-public/package.json
+    #
+    - find packages/code-du-travail-data/dataset -maxdepth 1 -type d
+      -not -name datafiller
+      -not -name preavis-demission
+      -not -name preavis-licenciement
+      -not -name prime-precarite
+      -not -name tools | tail -n +2 | xargs rm -rf
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - node_modules
+      - packages/${CONTEXT}/node_modules
+
+#
+
+Lint @cdtn/frontend:
+  extends: .quality_stage
+  stage: "Build"
+  dependencies:
+    - Build @socialgouv/react-fiche-service-public
+    - Build @socialgouv/react-ui
+  needs:
+    - Build @socialgouv/react-fiche-service-public
+    - Build @socialgouv/react-ui
+    - Install frontend
+  image: node:12-alpine
+  variables:
+    CONTEXT: code-du-travail-frontend
+  before_script:
+    - source .gitlab-ci/f1_scripts.sh
+    #
+    - checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-node_modules.tar.gz" ||
+      (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-node_modules.tar.gz)
+  script:
+    - yarn workspace @cdt/frontend lint
+
+#
+
+Test @cdtn/frontend:
+  extends: .quality_stage
+  stage: "Build"
+  dependencies:
+    - Build @socialgouv/react-fiche-service-public
+    - Build @socialgouv/react-ui
+  needs:
+    - Build @socialgouv/react-fiche-service-public
+    - Build @socialgouv/react-ui
+    - Install frontend
+  image: node:12-alpine
+  variables:
+    CONTEXT: code-du-travail-frontend
+  before_script:
+    - source .gitlab-ci/f1_scripts.sh
+    #
+    - checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-node_modules.tar.gz" ||
+      (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-node_modules.tar.gz)
+  script:
+    - yarn workspace @cdt/frontend test --coverage
+
+Test @cdtn/frontend SDR data:
+  extends: .quality_stage
+  image: alpine:3.11
+  allow_failure: true
+  before_script:
+    - apk add --no-cache jq=~1
+  script:
+    - |-
+      jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider
+
+#
+
+Build @cdt/frontend:
+  extends: .quality_stage
+  stage: "Build"
+  dependencies:
+    - Build @socialgouv/react-fiche-service-public
+    - Build @socialgouv/react-ui
+    - Build @cdt/data
+    - Install frontend
+  needs:
+    - Build @socialgouv/react-fiche-service-public
+    - Build @socialgouv/react-ui
+    - Build @cdt/data
+    - Install frontend
+  variables:
+    CONTEXT: frontend
+    CWD: packages/code-du-travail-frontend
+    DUMP_PATH: ../../code-du-travail-data/dist/dump.data.json
+  image: node:12-alpine
+  script:
+    - yarn workspace @cdt/frontend build
+    - yarn workspace @cdt/frontend generate-sitemap
+  after_script:
+    - >-
+      mkdir -p ${CWD}/node_modules/@socialgouv &&
+      mv ./packages/react-ui ${CWD}/node_modules/@socialgouv/react-ui
+    - >-
+      mkdir -p ${CWD}/node_modules/@socialgouv &&
+      mv ./packages/react-fiche-service-public ${CWD}/node_modules/@socialgouv/react-fiche-service-public
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - ${CWD}/.next
+      - ${CWD}/node_modules
+
+#
+
+Register frontend image:
+  extends:
+    - .base_register_stage
+    - .register_stage
+  dependencies:
+    - Build @cdt/frontend
+  needs:
+    - Build @cdt/frontend
+    - Build @socialgouv/react-fiche-service-public
+    - Build @socialgouv/react-ui
+    - Install frontend
+  before_script:
+    - apk add jq=~1
+
+    # NOTE(douglasduteil): remove `.next/cache` folder
+    # We do not need the cache folder when building the production image
+    - rm -rf packages/code-du-travail-frontend/.next/cache
+
+    # Remove workspace dependencies to allow --production installation
+    - >-
+      jq 'del( .dependencies[ "@cdt/data", "@cdt/data...datafiller", "@cdt/data...preavis-demission", "@cdt/data...preavis-licenciement", "@cdt/data...prime-precarite", "@cdt/data...tools", "@cdt/sources", "@socialgouv/react-fiche-service-public", "@socialgouv/react-ui" ])' packages/code-du-travail-frontend/package.json > package.json.tmp
+    - mv package.json.tmp packages/code-du-travail-frontend/package.json
+
+    - cp yarn.lock packages/code-du-travail-frontend/yarn.lock
+    #
+    - ls -al packages/code-du-travail-frontend/node_modules
+    - ls -al packages/code-du-travail-frontend/node_modules/@socialgouv
+  variables:
+    CONTEXT: packages/code-du-travail-frontend
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
+
+#
+
+.deploy_frontend_stage:
+  extends:
+    - .base_deploy_hpa_chart_stage
+    - .deploy_stage
+    - .dev_stage
+  variables:
+    PORT: ${FRONTEND_PORT}
+    CONTEXT: frontend
+    VALUES_FILE: ./.k8s/frontend.values.yml
+  before_script:
+    - source ./.gitlab-ci/env.sh
+    - HOST=${FRONTEND_HOST}
+
+Deploy @cdtn/frontend (dev):
+  extends:
+    - .deploy_frontend_stage
+    - .dev_stage

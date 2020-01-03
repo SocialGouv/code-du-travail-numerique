@@ -8,3 +8,9 @@ packages/code-du-travail-data/dump.json
 packages/code-du-travail-data/dataset/suggestions.txt
 package-lock.json
 yarn-error.log
+
+# TO REMOVE
+.env.api
+optional/
+package.json.tmp
+packages/code-du-travail-api/yarn.lock

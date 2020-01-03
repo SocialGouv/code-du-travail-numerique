@@ -3,55 +3,85 @@
 #
 
 Release:
-  stage: "Deploy"
-  image: node:12.14-alpine3.10
+  stage: Prepare
   dependencies: []
-  when: manual
+  image: node:12.14-alpine3.10
   variables:
     LERNA_ARGS: --force-publish --yes --conventional-prerelease
-  except:
-    refs:
-      # Don't tag tags
-      - tags
+    #
+    GIT_AUTHOR_EMAIL: 45039513+SocialGroovyBot@users.noreply.github.com
+    GIT_AUTHOR_NAME: Social Groovy Bot
+    GIT_COMMITTER_EMAIL: $GIT_AUTHOR_EMAIL
+    GIT_COMMITTER_NAME: $GIT_AUTHOR_NAME
+    GIT_DEPTH: 4242
+  only:
     variables:
-      # Don't run when deploying in production an existing image
-      - $PRODUCTION
-      # Don't run when running e2e tests
-      - $E2E_TEST
+      - $RELEASE
+  cache:
+    key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
+    paths:
+      - node_modules
+      - $CI_PROJECT_DIR/.yarn
   before_script:
-    - apk add --no-cache git=~2
-    - git checkout ${CI_COMMIT_REF_NAME}
-    - git config user.name "${CI_GIT_AUTHOR_NAME}"
-    - git config user.email "${CI_GIT_AUTHOR_EMAIL}"
-    - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${CI_PROJECT_PATH}.git
-    - yarn --frozen-lockfile
+    - apk add --no-cache git=~2 jq=~1
+
+    # HACK(douglasduteil): remove all packages dependencies
+    # To make the installation blazing fast, we remove all packages dependencies
+    # Only the root package.json dependencies will be installed
+    - find packages -maxdepth 1 -type d | tail -n +2 | xargs -I {} sh -c
+      "{ rm {}/package.json; jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json; } < {}/package.json"
+    - find packages/code-du-travail-data/dataset -maxdepth 1 -type d -not -name thesaurus | tail -n +2 | xargs -I {} sh -c
+      "{ rm {}/package.json; jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json; } < {}/package.json"
   script:
-    - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:="--force-publish --yes"}
+    # Set git to a branch
+    - git checkout ${CI_COMMIT_REF_NAME}
+    # Use github as origin
+    - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${CI_PROJECT_PATH}.git
+
+    # Use local yarn cache
+    - yarn config set cache-folder $CI_PROJECT_DIR/.yarn
+    # Should only install workspace dependencies
+    - yarn --frozen-lockfile
+
+    # HACK(douglasduteil): remove all packages dependencies
+    # Restore the package files before bumping versions.
+    # As Lerna will commit, we need to restore the files as they were
+    - git checkout -- .
+
+    # Run lerna version
+    - echo "yarn lerna version ${LERNA_ARGS}"
+    - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS}
 
 #
 #
 #
 
-Production:
-  stage: "Deploy"
+Trigger production:
+  extends: .prepare_stage
   image: curlimages/curl:7.67.0
-  dependencies: []
   when: manual
   only:
     refs:
       - tags
-  except:
-    variables:
-      # Don't run when deploying in production an existing image
-      - $PRODUCTION
-      # Don't run when running e2e tests
-      - $E2E_TEST
-      # Don't register a base image for release commit
-      # that only bump version / udpate changelog
-      - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
   script:
     - curl --request POST
       --form ref="${CI_COMMIT_REF_NAME}"
       --form token="${CI_JOB_TOKEN}"
       --form variables[PRODUCTION]="true"
+      ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+
+Trigger release:
+  extends: .prepare_stage
+  image: curlimages/curl:7.67.0
+  when: manual
+  variables:
+    GIT_STRATEGY: none
+  only:
+    refs:
+      - branches
+  script:
+    - curl --request POST
+      --form ref="${CI_COMMIT_REF_NAME}"
+      --form token="${CI_JOB_TOKEN}"
+      --form variables[RELEASE]="true"
       ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline

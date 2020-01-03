@@ -1,0 +1,61 @@
+#
+
+Install react-ui:
+  extends: .base_yarn_workspace_install
+  variables:
+    CONTEXT: react-ui
+  cache:
+    key: "install-react-ui-$CI_COMMIT_REF_SLUG"
+    paths:
+      - $CI_PROJECT_DIR/.yarn
+      - node_modules
+      - packages/react-ui/node_modules
+  before_script:
+    - apk add jq=~1
+    - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
+    - find packages -maxdepth 1 -type d -not -name react-ui | tail -n +2 | xargs rm -rf
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - node_modules
+      - packages/react-ui/node_modules
+
+#
+
+Lint socialgouv/react-ui:
+  extends: .quality_stage
+  dependencies:
+    - Install react-ui
+  needs:
+    - Install react-ui
+  image: node:12-alpine
+  script:
+    - yarn workspace @socialgouv/react-ui lint
+
+#
+
+Test @socialgouv/react-ui:
+  extends: .quality_stage
+  dependencies:
+    - Install react-ui
+  needs:
+    - Install react-ui
+  image: node:12-alpine
+  script:
+    - yarn workspace @socialgouv/react-ui test --coverage
+
+#
+
+Build @socialgouv/react-ui:
+  extends: .quality_stage
+  dependencies:
+    - Install react-ui
+  needs:
+    - Install react-ui
+  image: node:12-alpine
+  script:
+    - yarn workspace @socialgouv/react-ui build
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - packages/react-ui/lib

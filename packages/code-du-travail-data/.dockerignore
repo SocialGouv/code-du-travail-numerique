@@ -1,6 +1,4 @@
-**/dist
 **/build
-**/node_modules
 **/.docz
 **/coverage
 **/fiches_service_public/data*

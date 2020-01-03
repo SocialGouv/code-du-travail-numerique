@@ -10,22 +10,16 @@ include:
 
 #
 
-.notify_stage: &notify_stage
-  except:
-    variables:
-      # Don't run when running e2e tests
-      - $E2E_TEST
-
-#
-
 Notify Starting Deployment:
-  <<: *notify_stage
-  extends: .base_notify_pending_stage
+  extends:
+    - .base_notify_pending_stage
+    - .prepare_stage
   stage: Deploy
 
 Notify Fail:
-  <<: *notify_stage
-  extends: .base_notify_fail_stage
+  extends:
+    - .base_notify_fail_stage
+    - .prepare_stage
   stage: Notify Finished Deployment
   dependencies:
     - Notify Starting Deployment
@@ -34,8 +28,9 @@ Notify Fail:
     - HOST=${FRONTEND_URL}
 
 Notify Success:
-  <<: *notify_stage
-  extends: .base_notify_success_stage
+  extends:
+    - .base_notify_success_stage
+    - .prepare_stage
   stage: Notify Finished Deployment
   dependencies:
     - Notify Starting Deployment
@@ -44,5 +39,6 @@ Notify Success:
     - HOST=${FRONTEND_URL}
 
 Delete useless k8s namespaces:
-  <<: *notify_stage
-  extends: .base_delete_useless_k8s_ns_stage
+  extends:
+    - .base_delete_useless_k8s_ns_stage
+    - .prepare_stage

@@ -11,30 +11,6 @@ include:
     file: /base_deploy_hpa_chart_stage.yml
     ref: v4.6.0
 
-#
-
-Create namespace:
-  extends: .base_create_namespace_stage
-  stage: "Post Registration"
-  except:
-    variables:
-      # Don't run when running e2e tests
-      - $E2E_TEST
-  before_script:
-    - source ./.gitlab-ci/env.sh
-  after_script:
-    - source ./.gitlab-ci/env.sh
-    #
-    # Create cdtn secrets
-    - envsubst < ./.k8s/secrets.yml | kubectl apply -n ${K8S_NAMESPACE} -f - || true
-    #
-    # Copy elasticsearch-creds
-    - kubectl get secret elasticsearch-cloud-data --namespace=cdtn-secret --export -o yaml |
-      kubectl apply --namespace=${K8S_NAMESPACE} -f -
-    - kubectl get secret elasticsearch-cloud-api --namespace=cdtn-secret --export -o yaml |
-      kubectl apply --namespace=${K8S_NAMESPACE} -f -
-    - kubectl get secret elastic-apm --namespace=cdtn-secret --export -o yaml |
-      kubectl apply --namespace=${K8S_NAMESPACE} -f -
 
 #
 
