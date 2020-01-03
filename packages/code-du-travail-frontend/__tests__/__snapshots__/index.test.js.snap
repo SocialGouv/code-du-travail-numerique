@@ -2625,7 +2625,7 @@ exports[`<Home /> should render 1`] = `
                       <h3
                         class="c47"
                       >
-                        Salaire brut/net
+                        Simulateur d’embauche
                       </h3>
                     </div>
                   </div>

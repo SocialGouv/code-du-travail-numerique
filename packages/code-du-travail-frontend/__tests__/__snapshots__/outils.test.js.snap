@@ -1861,7 +1861,7 @@ exports[`<Outils /> should render 1`] = `
                       <h3
                         class="c41"
                       >
-                        Salaire brut/net
+                        Simulateur d’embauche
                       </h3>
                     </div>
                   </div>
@@ -2202,7 +2202,7 @@ exports[`<Outils /> should render 1`] = `
                       <h3
                         class="c41"
                       >
-                        Recherchez votre convention collective
+                        Convention collective
                       </h3>
                     </div>
                   </div>
