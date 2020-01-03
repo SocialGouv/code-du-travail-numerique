@@ -28,7 +28,7 @@ class AccordionWrapper extends React.PureComponent {
         const title = getText(
           accordionItem.children.find(child => child.name === "Titre")
         );
-        const as = `h${headingLevel > 3 ? 6 : headingLevel + 1}`;
+        const as = `h${headingLevel > 3 ? 6 : headingLevel + 2}`;
         const body = (
           <ElementBuilder
             data={accordionItem.children.filter(

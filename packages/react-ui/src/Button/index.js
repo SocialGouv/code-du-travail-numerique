@@ -125,10 +125,11 @@ export const StyledButton = styled.button`
         ${({ narrow, small, variant }) => {
           if (variant !== "link" && !small && !narrow) {
             return css`
-              padding: 0 3 rem;
+              padding: 0 3rem;
             `;
           }
         }}
+      }
     `;
   }}
 `;
