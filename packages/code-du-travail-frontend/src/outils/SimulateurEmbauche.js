@@ -37,7 +37,7 @@ class SimulateurEmbauche extends React.PureComponent {
     const { simulator } = this.state;
     return (
       <>
-        <Title>Simulateur d’embauche</Title>
+        <Title>Salaire brut/net</Title>
         {simulator === "loading" && (
           <p>
             <Spinner /> Chargement de l’outil
