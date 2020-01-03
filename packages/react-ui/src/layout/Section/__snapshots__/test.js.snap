@@ -99,6 +99,13 @@ exports[`<Section /> renders large decorated section 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    margin: 3.2rem 0 4rem;
+    padding: 3.2rem 0 4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c1 {
     right: 2rem;
   }

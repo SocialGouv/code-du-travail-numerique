@@ -48,6 +48,10 @@ const StyledSection = styled.div`
         padding: ${large ? "7rem" : spacings.large} 0
           ${large ? "6rem" : spacings.medium};
         min-height: ${BORDER_RADIUS};
+        @media (max-width: ${breakpoints.mobile}) {
+          ${large && `margin: ${spacings.large} 0 ${spacings.larger};`}
+          ${large && `padding: ${spacings.large} 0 ${spacings.larger};`}
+        }
       `;
     }
   }}
