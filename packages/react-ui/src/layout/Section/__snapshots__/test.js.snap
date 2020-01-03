@@ -76,7 +76,7 @@ exports[`<Section /> renders large decorated section 1`] = `
 .c0 {
   position: relative;
   margin: 6rem 0;
-  padding: 7rem 0 6rem;
+  padding: 6rem 0 6rem;
   min-height: 10rem;
   color: #3e486e;
 }
@@ -107,7 +107,7 @@ exports[`<Section /> renders large decorated section 1`] = `
 
 @media (max-width:600px) {
   .c1 {
-    right: 2rem;
+    right: 1rem;
   }
 }
 
@@ -155,7 +155,7 @@ exports[`<Section /> renders with correct decoration 1`] = `
 
 @media (max-width:600px) {
   .c1 {
-    right: 2rem;
+    right: 1rem;
   }
 }
 

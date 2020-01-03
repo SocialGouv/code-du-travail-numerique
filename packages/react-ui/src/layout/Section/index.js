@@ -45,7 +45,7 @@ const StyledSection = styled.div`
       return css`
         position: relative;
         margin: ${large ? "6rem" : "5rem"} 0;
-        padding: ${large ? "7rem" : spacings.large} 0
+        padding: ${large ? "6rem" : spacings.large} 0
           ${large ? "6rem" : spacings.medium};
         min-height: ${BORDER_RADIUS};
         @media (max-width: ${breakpoints.mobile}) {
@@ -69,7 +69,7 @@ const Decoration = styled.div`
   border-radius: 0 ${BORDER_RADIUS} ${BORDER_RADIUS} 0;
   content: "";
   @media (max-width: ${breakpoints.mobile}) {
-    right: ${spacings.medium};
+    right: ${spacings.small};
   }
 `;
 
