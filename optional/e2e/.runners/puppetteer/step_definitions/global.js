@@ -16,12 +16,20 @@ Quand("je pause le test", () => {
   pause();
 });
 
+Quand("je recherche {string}", searchText => {
+  I.fillField("q", searchText);
+});
+
+Quand("je clique sur {string}", text => {
+  I.click(text);
+});
+
 //
 
-Quand("je vois {string}", text => {
+Alors("je vois {string}", text => {
   I.see(text);
 });
 
-Alors("je clique sur {string}", text => {
-  I.click(text);
+Alors("j'attends de voir les résultats de recherches", () => {
+  I.waitForElement("[aria-label^='Résultats de recherche']", 1.5);
 });

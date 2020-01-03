@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
-import { ScreenReaderOnly, theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/react-ui";
 
 const { colors } = theme;
 
@@ -73,6 +73,7 @@ export class DocumentSuggester extends React.Component {
       id: inputId,
       name: "q",
       placeholder,
+      title: ariaLabel,
       "aria-label": ariaLabel,
       type: "search",
       className,
@@ -81,23 +82,19 @@ export class DocumentSuggester extends React.Component {
       onKeyPress: this.onKeyPress
     };
     return (
-      <Label htmlFor={inputId}>
-        <ScreenReaderOnly type={"inline"}>Rechercher</ScreenReaderOnly>
-        <Autosuggest
-          id="cdtn-documents-suggester"
-          ref={this.focusInput}
-          theme={suggesterTheme}
-          suggestions={suggestions}
-          alwaysRenderSuggestions={false}
-          onSuggestionSelected={this.onSuggestionSelected}
-          onSuggestionsFetchRequested={onSearch}
-          onSuggestionsClearRequested={onClear}
-          getSuggestionValue={getSuggestionValue}
-          renderSuggestion={suggestion => renderSuggestion(suggestion, query)}
-          renderSuggestionsContainer={renderSuggestionsContainer}
-          inputProps={inputProps}
-        />
-      </Label>
+      <Autosuggest
+        ref={this.focusInput}
+        theme={suggesterTheme}
+        suggestions={suggestions}
+        alwaysRenderSuggestions={false}
+        onSuggestionSelected={this.onSuggestionSelected}
+        onSuggestionsFetchRequested={onSearch}
+        onSuggestionsClearRequested={onClear}
+        getSuggestionValue={getSuggestionValue}
+        renderSuggestion={suggestion => renderSuggestion(suggestion, query)}
+        renderSuggestionsContainer={renderSuggestionsContainer}
+        inputProps={inputProps}
+      />
     );
   }
 }

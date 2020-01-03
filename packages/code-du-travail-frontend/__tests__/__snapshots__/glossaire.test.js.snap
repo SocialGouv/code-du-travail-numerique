@@ -1,42 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Glossaire /> should render 1`] = `
-.c21 {
+.c19 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
 }
 
-.c21 > *:first-child {
+.c19 > *:first-child {
   margin-top: 0;
 }
 
-.c21 > *:last-child {
+.c19 > *:last-child {
   margin-bottom: 0;
 }
 
-.c35 {
+.c33 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c35 > *:first-child {
+.c33 > *:first-child {
   margin-top: 0;
 }
 
-.c35 > *:last-child {
+.c33 > *:last-child {
   margin-bottom: 0;
 }
 
-.c20 {
+.c18 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c26 {
+.c24 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -45,7 +45,7 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: #fff;
 }
 
-.c26:before {
+.c24:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,15 +58,15 @@ exports[`<Glossaire /> should render 1`] = `
   content: "";
 }
 
-.c26 > *:first-child {
+.c24 > *:first-child {
   margin-top: 0;
 }
 
-.c26 > *:last-child {
+.c24 > *:last-child {
   margin-bottom: 0;
 }
 
-.c24 {
+.c22 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -79,7 +79,7 @@ exports[`<Glossaire /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c30 {
+.c28 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -92,7 +92,7 @@ exports[`<Glossaire /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c23 {
+.c21 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -103,7 +103,7 @@ exports[`<Glossaire /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c29 {
+.c27 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -115,7 +115,7 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: left;
 }
 
-.c37 {
+.c35 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -127,31 +127,31 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: center;
 }
 
-.c22 {
+.c20 {
   margin: 0 auto 1rem;
   margin-bottom: 4rem;
   text-align: center;
 }
 
-.c28 {
+.c26 {
   margin: 0 auto 1rem;
   margin-left: -4rem;
   text-align: left;
 }
 
-.c36 {
+.c34 {
   margin: 0 auto 1rem;
   margin-bottom: 1.6rem;
   text-align: center;
 }
 
-.c25 {
+.c23 {
   margin-top: 1rem;
   margin-bottom: 0;
   padding-left: 0;
 }
 
-.c17 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -188,16 +188,16 @@ exports[`<Glossaire /> should render 1`] = `
   opacity: 1;
 }
 
-.c17:link,
-.c17:visited {
+.c15:link,
+.c15:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c17:not([disabled]):hover,
-.c17:not([disabled]):active,
-.c17:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -206,13 +206,13 @@ exports[`<Glossaire /> should render 1`] = `
   border-color: transparent;
 }
 
-.c17[disabled] {
+.c15[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c39 {
+.c37 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -249,16 +249,16 @@ exports[`<Glossaire /> should render 1`] = `
   opacity: 1;
 }
 
-.c39:link,
-.c39:visited {
+.c37:link,
+.c37:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c39:not([disabled]):hover,
-.c39:not([disabled]):active,
-.c39:not([disabled]):focus {
+.c37:not([disabled]):hover,
+.c37:not([disabled]):active,
+.c37:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -267,40 +267,17 @@ exports[`<Glossaire /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c39[disabled] {
+.c37[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c14:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  text-align: left;
-}
-
-.c16 ul {
+.c14 ul {
   z-index: 1;
 }
 
-.c16 li[role="option"]:nth-child(2n + 1) {
+.c14 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
@@ -314,12 +291,12 @@ exports[`<Glossaire /> should render 1`] = `
   padding: 0;
 }
 
-.c19 {
+.c17 {
   width: 3rem;
   height: 3rem;
 }
 
-.c15 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -343,23 +320,23 @@ exports[`<Glossaire /> should render 1`] = `
   appearance: none;
 }
 
-.c15::-webkit-input-placeholder {
+.c13::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c15::-moz-placeholder {
+.c13::-moz-placeholder {
   color: #9298af;
 }
 
-.c15:-ms-input-placeholder {
+.c13:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c15::placeholder {
+.c13::placeholder {
   color: #9298af;
 }
 
-.c18 {
+.c16 {
   position: absolute;
   top: 0;
   right: 0;
@@ -523,12 +500,12 @@ exports[`<Glossaire /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c32 {
+.c30 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c33 {
+.c31 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -536,7 +513,7 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c33:before {
+.c31:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -548,13 +525,13 @@ exports[`<Glossaire /> should render 1`] = `
   content: "";
 }
 
-.c34 {
+.c32 {
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
 }
 
-.c38 {
+.c36 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -563,25 +540,25 @@ exports[`<Glossaire /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c38 > *:first-child {
+.c36 > *:first-child {
   margin-top: 0;
 }
 
-.c38 > *:last-child {
+.c36 > *:last-child {
   margin-bottom: 0;
 }
 
-.c40 {
+.c38 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c41 {
+.c39 {
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c42 {
+.c40 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -595,25 +572,25 @@ exports[`<Glossaire /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c42 > *:first-child {
+.c40 > *:first-child {
   margin-top: 0;
 }
 
-.c42 > *:last-child {
+.c40 > *:last-child {
   margin-bottom: 0;
 }
 
-.c44 + .c43 {
+.c42 + .c41 {
   padding-left: 1.6rem;
 }
 
-.c46 {
+.c44 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c45 {
+.c43 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -623,17 +600,17 @@ exports[`<Glossaire /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c47 {
+.c45 {
   margin: 0.4rem 0;
 }
 
-.c48 {
+.c46 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c49 {
+.c47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -652,14 +629,14 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c50 {
+.c48 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c51 {
+.c49 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -690,13 +667,13 @@ exports[`<Glossaire /> should render 1`] = `
   content: "";
 }
 
-.c27 {
+.c25 {
   display: inline-block;
   padding: 0.4rem;
   font-size: 1.8rem;
 }
 
-.c31 {
+.c29 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -704,106 +681,106 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c19 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c19 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c33 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c35 {
+  .c33 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c24 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c26 {
+  .c24 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c21 {
     font-size: 2.8rem;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c27 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c27 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c35 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c20 {
     margin-bottom: 2.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c26 {
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c34 {
     margin-bottom: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c23 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c15 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c37 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c37 {
     padding: 0 3rem;
   }
 }
@@ -818,7 +795,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c13 {
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
@@ -934,39 +911,39 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media print {
-  .c33 {
+  .c31 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c36 {
     padding: 0;
   }
 }
 
 @media print {
-  .c38 {
+  .c36 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c40 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c42 {
+  .c40 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c40 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -974,38 +951,38 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c44 + .c43 {
+  .c42 + .c41 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c44 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c43 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c43 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c51 {
+  .c49 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c25 {
     font-size: 1.6rem;
   }
 }
@@ -1158,46 +1135,38 @@ exports[`<Glossaire /> should render 1`] = `
             action="/recherche"
             class="c12"
           >
-            <label
-              class="c13"
-              for="main-search-input"
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="react-autowhatever-1"
+              role="combobox"
+              style="flex: 1 1 auto;"
             >
-              <span
-                class="c14"
-              >
-                Rechercher
-              </span>
+              <input
+                aria-autocomplete="list"
+                aria-controls="react-autowhatever-1"
+                aria-label="recherchez par mots-clés"
+                autocomplete="off"
+                class="c13"
+                id="main-search-input"
+                name="q"
+                placeholder="Rechercher"
+                title="recherchez par mots-clés"
+                type="search"
+                value=""
+              />
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="react-autowhatever-cdtn-documents-suggester"
-                role="combobox"
-                style="flex: 1 1 auto;"
-              >
-                <input
-                  aria-autocomplete="list"
-                  aria-controls="react-autowhatever-cdtn-documents-suggester"
-                  autocomplete="off"
-                  class="c15"
-                  id="main-search-input"
-                  name="q"
-                  placeholder="Rechercher"
-                  type="search"
-                  value=""
-                />
-                <div
-                  class="c16"
-                  id="react-autowhatever-cdtn-documents-suggester"
-                  role="listbox"
-                />
-              </div>
-            </label>
+                class="c14"
+                id="react-autowhatever-1"
+                role="listbox"
+              />
+            </div>
             <button
-              class="c17 c18"
+              class="c15 c16"
               type="submit"
             >
               <svg
-                class="c19"
+                class="c17"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -1216,34 +1185,34 @@ exports[`<Glossaire /> should render 1`] = `
     id="main"
   >
     <div
-      class="c20"
+      class="c18"
     >
       <div
-        class="c21"
+        class="c19"
       >
         <header
-          class="c22"
+          class="c20"
         >
           <h1
-            class="c23"
+            class="c21"
           >
             <div
-              class="c24"
+              class="c22"
             />
             Glossaire
           </h1>
           <p
-            class="c25"
+            class="c23"
           >
             Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.
           </p>
         </header>
         <div
-          class="c26"
+          class="c24"
         >
           <ul>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-A"
@@ -1252,7 +1221,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-B"
@@ -1261,7 +1230,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-C"
@@ -1270,7 +1239,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-D"
@@ -1279,7 +1248,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-E"
@@ -1288,7 +1257,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-F"
@@ -1297,7 +1266,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-G"
@@ -1306,7 +1275,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-H"
@@ -1315,7 +1284,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-I"
@@ -1324,7 +1293,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-J"
@@ -1333,14 +1302,14 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <span>
                 K
               </span>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-L"
@@ -1349,7 +1318,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-M"
@@ -1358,7 +1327,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-N"
@@ -1367,7 +1336,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-O"
@@ -1376,7 +1345,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-P"
@@ -1385,7 +1354,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-Q"
@@ -1394,7 +1363,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-R"
@@ -1403,7 +1372,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-S"
@@ -1412,7 +1381,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-T"
@@ -1421,7 +1390,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-U"
@@ -1430,7 +1399,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-V"
@@ -1439,28 +1408,28 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <span>
                 W
               </span>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <span>
                 X
               </span>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <span>
                 Y
               </span>
             </li>
             <li
-              class="c27"
+              class="c25"
             >
               <a
                 href="#ancre-Z"
@@ -1471,20 +1440,20 @@ exports[`<Glossaire /> should render 1`] = `
           </ul>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-A"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 A
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -1805,20 +1774,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-B"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 B
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -1859,20 +1828,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-C"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 C
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2095,20 +2064,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-D"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 D
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2268,20 +2237,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-E"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 E
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2364,20 +2333,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-F"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 F
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2446,20 +2415,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-G"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 G
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2493,20 +2462,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-H"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 H
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2547,20 +2516,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-I"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 I
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2615,20 +2584,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-J"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 J
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2711,20 +2680,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-L"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 L
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2800,20 +2769,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-M"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 M
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2910,20 +2879,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-N"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 N
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2943,20 +2912,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-O"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 O
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -2990,20 +2959,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-P"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 P
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -3149,20 +3118,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-Q"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 Q
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -3175,20 +3144,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-R"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 R
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -3313,20 +3282,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-S"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 S
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -3437,20 +3406,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-T"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 T
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -3526,20 +3495,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-U"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 U
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -3573,20 +3542,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-V"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 V
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -3620,20 +3589,20 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
           <div>
             <header
-              class="c28"
+              class="c26"
               id="ancre-Z"
             >
               <h2
-                class="c29"
+                class="c27"
               >
                 <div
-                  class="c30"
+                  class="c28"
                 />
                 Z
               </h2>
             </header>
             <ul
-              class="c31"
+              class="c29"
             >
               <li>
                 <a
@@ -3670,40 +3639,40 @@ exports[`<Glossaire /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c32"
+    class="c30"
   >
     <footer
-      class="c33"
+      class="c31"
     >
       <div
-        class="c20 c34"
+        class="c18 c32"
       >
         <div
-          class="c35"
+          class="c33"
         >
           <header
-            class="c36"
+            class="c34"
           >
             <h3
-              class="c37"
+              class="c35"
             >
               <div
-                class="c24"
+                class="c22"
               />
               Besoin de plus d’informations ?
             </h3>
           </header>
           <div
-            class="c38"
+            class="c36"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c39"
+            class="c37"
           >
             Contacter nos services en région
             <svg
-              class="c40"
+              class="c38"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -3716,68 +3685,68 @@ exports[`<Glossaire /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c20 c41"
+        class="c18 c39"
       >
         <nav>
           <div
-            class="c42"
+            class="c40"
           >
             <div
-              class="c43 c44"
+              class="c41 c42"
             >
               <h3
-                class="c45"
+                class="c43"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c46"
+                class="c44"
               >
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -3786,21 +3755,21 @@ exports[`<Glossaire /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c43 c44"
+              class="c41 c42"
             >
               <h3
-                class="c45"
+                class="c43"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c46"
+                class="c44"
               >
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3809,10 +3778,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3823,21 +3792,21 @@ exports[`<Glossaire /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c43 c44"
+              class="c41 c42"
             >
               <h3
-                class="c45"
+                class="c43"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c46"
+                class="c44"
               >
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3846,10 +3815,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3858,10 +3827,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c47"
+                  class="c45"
                 >
                   <a
-                    class="c48"
+                    class="c46"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3875,10 +3844,10 @@ exports[`<Glossaire /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c49"
+        class="c47"
       >
         <a
-          class="c50"
+          class="c48"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3887,12 +3856,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c51"
+          class="c49"
         >
           |
         </span>
         <a
-          class="c50"
+          class="c48"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3901,12 +3870,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c51"
+          class="c49"
         >
           |
         </span>
         <a
-          class="c50"
+          class="c48"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3915,12 +3884,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c51"
+          class="c49"
         >
           |
         </span>
         <a
-          class="c50"
+          class="c48"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3929,12 +3898,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c51"
+          class="c49"
         >
           |
         </span>
         <a
-          class="c50"
+          class="c48"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3943,12 +3912,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c51"
+          class="c49"
         >
           |
         </span>
         <a
-          class="c50"
+          class="c48"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"

@@ -78,6 +78,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
         onSelect={onSelect}
         onClear={onClear}
         suggestions={suggestions}
+        ariaLabel="recherchez par mots-clés"
       />
       {hasButton ? (
         <SubmitButton variant="primary" type="submit">

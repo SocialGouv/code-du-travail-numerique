@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-# In this directory 
+# In this directory
 $ yarn
 ```
 
@@ -51,5 +51,13 @@ Fonctionnalité: Mon test
 ```
 
 `Quand je pause le test` means that the browser will pause there
+
+## Practices
+
+We follow the following rules to write idiomatics tests
+
+- Initial Situation use "Soit" or "Given"
+- Actions use "Quand" or ("When"
+- Assertions use "Alors" or "Then"
 
 [Check Codecept documentation](https://codecept.io/advanced/#debug)

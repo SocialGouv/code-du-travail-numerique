@@ -1,6 +1,212 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchBar /> should render 1`] = `
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c3:link,
+.c3:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c3[disabled] {
+  color: rgba(62,72,110,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c2 ul {
+  z-index: 1;
+}
+
+.c2 li[role="option"]:nth-child(2n + 1) {
+  background: #f2f5fa;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.c5 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 5.4rem;
+  margin: 0;
+  padding: 1rem 5.5rem 1rem 1.6rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c1::-moz-placeholder {
+  color: #9298af;
+}
+
+.c1:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c1::placeholder {
+  color: #9298af;
+}
+
+.c4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 5.4rem;
+  color: #7994d4;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    height: 5.4rem;
+    padding: 1rem 5.5rem 1rem 1.6rem;
+  }
+}
+
+<div>
+  <form
+    action="/recherche"
+    class="c0"
+  >
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-owns="react-autowhatever-1"
+      role="combobox"
+      style="flex: 1 1 auto;"
+    >
+      <input
+        aria-autocomplete="list"
+        aria-controls="react-autowhatever-1"
+        aria-label="recherchez par mots-clés"
+        autocomplete="off"
+        class="c1"
+        id="main-search-input"
+        name="q"
+        placeholder="Rechercher"
+        title="recherchez par mots-clés"
+        type="search"
+        value=""
+      />
+      <div
+        class="c2"
+        id="react-autowhatever-1"
+        role="listbox"
+      />
+    </div>
+    <button
+      class="c3 c4"
+      type="submit"
+    >
+      <svg
+        class="c5"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </form>
+</div>
+`;
+
+exports[`<SearchBar /> should render suggestions 1`] = `
 .c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -62,34 +268,19 @@ exports[`<SearchBar /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c2:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
+.c4 {
+  display: inline-block;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  text-align: left;
+.c3 p {
+  margin: 0;
 }
 
-.c4 ul {
+.c2 ul {
   z-index: 1;
 }
 
-.c4 li[role="option"]:nth-child(2n + 1) {
+.c2 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
@@ -108,7 +299,7 @@ exports[`<SearchBar /> should render 1`] = `
   height: 3rem;
 }
 
-.c3 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,19 +323,19 @@ exports[`<SearchBar /> should render 1`] = `
   appearance: none;
 }
 
-.c3::-webkit-input-placeholder {
+.c1::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c3::-moz-placeholder {
+.c1::-moz-placeholder {
   color: #9298af;
 }
 
-.c3:-ms-input-placeholder {
+.c1:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c3::placeholder {
+.c1::placeholder {
   color: #9298af;
 }
 
@@ -173,7 +364,7 @@ exports[`<SearchBar /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c1 {
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
@@ -184,365 +375,112 @@ exports[`<SearchBar /> should render 1`] = `
     action="/recherche"
     class="c0"
   >
-    <label
-      class="c1"
-      for="main-search-input"
+    <div
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      aria-owns="react-autowhatever-1"
+      role="combobox"
+      style="flex: 1 1 auto;"
     >
-      <span
-        class="c2"
-      >
-        Rechercher
-      </span>
+      <input
+        aria-autocomplete="list"
+        aria-controls="react-autowhatever-1"
+        aria-label="recherchez par mots-clés"
+        autocomplete="off"
+        class="c1"
+        id="main-search-input"
+        name="q"
+        placeholder="Rechercher"
+        title="recherchez par mots-clés"
+        type="search"
+        value="yolo"
+      />
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-owns="react-autowhatever-cdtn-documents-suggester"
-        role="combobox"
-        style="flex: 1 1 auto;"
+        class="c2"
+        id="react-autowhatever-1"
+        role="listbox"
       >
-        <input
-          aria-autocomplete="list"
-          aria-controls="react-autowhatever-cdtn-documents-suggester"
-          autocomplete="off"
-          class="c3"
-          id="main-search-input"
-          name="q"
-          placeholder="Rechercher"
-          type="search"
-          value=""
-        />
-        <div
-          class="c4"
-          id="react-autowhatever-cdtn-documents-suggester"
+        <ul
           role="listbox"
-        />
+          style="margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; border: 1px solid silver; border-radius: 3px; background: white; position: absolute; left: 0px; right: 0px; box-shadow: 0 10px 10px -10px #b7bcdf;"
+        >
+          <li
+            aria-selected="false"
+            data-suggestion-index="0"
+            id="react-autowhatever-1--item-0"
+            role="option"
+            style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          >
+            <div
+              class="c3"
+            >
+              <div
+                class="c4"
+              >
+                foo
+              </div>
+            </div>
+          </li>
+          <li
+            aria-selected="false"
+            data-suggestion-index="1"
+            id="react-autowhatever-1--item-1"
+            role="option"
+            style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          >
+            <div
+              class="c3"
+            >
+              <div
+                class="c4"
+              >
+                foobar
+              </div>
+            </div>
+          </li>
+          <li
+            aria-selected="false"
+            data-suggestion-index="2"
+            id="react-autowhatever-1--item-2"
+            role="option"
+            style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          >
+            <div
+              class="c3"
+            >
+              <div
+                class="c4"
+              >
+                foo bar ?
+              </div>
+            </div>
+          </li>
+          <li
+            aria-selected="false"
+            data-suggestion-index="3"
+            id="react-autowhatever-1--item-3"
+            role="option"
+            style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          >
+            <div
+              class="c3"
+            >
+              <div
+                class="c4"
+              >
+                foo bazzz
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </label>
+    </div>
     <button
       class="c5 c6"
       type="submit"
     >
       <svg
         class="c7"
-        fill="none"
-        viewBox="0 0 32 32"
-      >
-        <path
-          d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
-          fill="currentColor"
-        />
-      </svg>
-    </button>
-  </form>
-</div>
-`;
-
-exports[`<SearchBar /> should render suggestions 1`] = `
-.c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c7:link,
-.c7:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c7[disabled] {
-  color: rgba(62,72,110,0.4);
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c2:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
-.c6 {
-  display: inline-block;
-}
-
-.c5 p {
-  margin: 0;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  text-align: left;
-}
-
-.c4 ul {
-  z-index: 1;
-}
-
-.c4 li[role="option"]:nth-child(2n + 1) {
-  background: #f2f5fa;
-}
-
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.c9 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 5.4rem;
-  margin: 0;
-  padding: 1rem 5.5rem 1rem 1.6rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c8 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3rem;
-  height: 5.4rem;
-  color: #7994d4;
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    height: 5.4rem;
-    padding: 1rem 5.5rem 1rem 1.6rem;
-  }
-}
-
-<div>
-  <form
-    action="/recherche"
-    class="c0"
-  >
-    <label
-      class="c1"
-      for="main-search-input"
-    >
-      <span
-        class="c2"
-      >
-        Rechercher
-      </span>
-      <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
-        aria-owns="react-autowhatever-cdtn-documents-suggester"
-        role="combobox"
-        style="flex: 1 1 auto;"
-      >
-        <input
-          aria-autocomplete="list"
-          aria-controls="react-autowhatever-cdtn-documents-suggester"
-          autocomplete="off"
-          class="c3"
-          id="main-search-input"
-          name="q"
-          placeholder="Rechercher"
-          type="search"
-          value="yolo"
-        />
-        <div
-          class="c4"
-          id="react-autowhatever-cdtn-documents-suggester"
-          role="listbox"
-        >
-          <ul
-            role="listbox"
-            style="margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; border: 1px solid silver; border-radius: 3px; background: white; position: absolute; left: 0px; right: 0px; box-shadow: 0 10px 10px -10px #b7bcdf;"
-          >
-            <li
-              aria-selected="false"
-              data-suggestion-index="0"
-              id="react-autowhatever-cdtn-documents-suggester--item-0"
-              role="option"
-              style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
-            >
-              <div
-                class="c5"
-              >
-                <div
-                  class="c6"
-                >
-                  foo
-                </div>
-              </div>
-            </li>
-            <li
-              aria-selected="false"
-              data-suggestion-index="1"
-              id="react-autowhatever-cdtn-documents-suggester--item-1"
-              role="option"
-              style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
-            >
-              <div
-                class="c5"
-              >
-                <div
-                  class="c6"
-                >
-                  foobar
-                </div>
-              </div>
-            </li>
-            <li
-              aria-selected="false"
-              data-suggestion-index="2"
-              id="react-autowhatever-cdtn-documents-suggester--item-2"
-              role="option"
-              style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
-            >
-              <div
-                class="c5"
-              >
-                <div
-                  class="c6"
-                >
-                  foo bar ?
-                </div>
-              </div>
-            </li>
-            <li
-              aria-selected="false"
-              data-suggestion-index="3"
-              id="react-autowhatever-cdtn-documents-suggester--item-3"
-              role="option"
-              style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
-            >
-              <div
-                class="c5"
-              >
-                <div
-                  class="c6"
-                >
-                  foo bazzz
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </label>
-    <button
-      class="c7 c8"
-      type="submit"
-    >
-      <svg
-        class="c9"
         fill="none"
         viewBox="0 0 32 32"
       >
