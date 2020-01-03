@@ -1261,6 +1261,7 @@ exports[`<About /> should render 1`] = `
              
             <a
               href="/droit-du-travail"
+              title="Qu'est ce que le droit du travail ?"
             >
               page d’introduction au droit du travail.
             </a>

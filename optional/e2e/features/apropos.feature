@@ -4,7 +4,7 @@
 Fonctionnalité: À propos
   Pour pouvoir en savoir plus sur le site Code du travail numérique
   En tant que visiteur
-  Je veux être pourvoir consulter la page "À propos"
+  Je veux pouvoir consulter la page "À propos"
 
   Scénario:
     Soit un navigateur web sur le site

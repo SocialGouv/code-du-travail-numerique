@@ -64,11 +64,10 @@ const About = ({ ogImage, pageUrl }) => (
             employeurs de droit privé relevant du code du travail. Les
             fonctionnaires et les indépendants ne sont par exemple pas
             concernés. Plus d’informations à ce sujet dans notre{" "}
-            <Link
-              href="/droit-du-travail"
-              title="Qu'est ce que le droit du travail ?"
-            >
-              <a>page d’introduction au droit du travail.</a>
+            <Link href="/droit-du-travail">
+              <a title="Qu'est ce que le droit du travail ?">
+                page d’introduction au droit du travail.
+              </a>
             </Link>
           </p>
           <Heading>Que peut-on trouver sur le site&nbsp;?</Heading>

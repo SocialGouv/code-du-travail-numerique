@@ -10,8 +10,7 @@ Scénario:
   Soit un navigateur web sur le site
   Alors je vois "Bienvenue sur"
   Alors je vois "le Code du travail numérique"
-  Alors je vois "Vous cherchez une information sur le droit du travail ? Vous avez besoin d’accompagnement ?"
-  Alors je vois "Nous vous proposons des réponses personnalisées selon votre situation"
+  Alors je vois "Obtenez des réponses aux questions que vous vous posez sur le droit du travail."
   Alors je vois "Rechercher"
 
   Alors je vois "Boîte à outils"

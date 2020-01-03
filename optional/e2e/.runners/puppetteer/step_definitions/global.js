@@ -24,6 +24,10 @@ Quand("je clique sur {string}", text => {
   I.click(text);
 });
 
+Quand("j'attends {string} secondes", duration => {
+  I.wait(parseInt(duration, 10));
+});
+
 //
 
 Alors("je vois {string}", text => {
@@ -31,5 +35,5 @@ Alors("je vois {string}", text => {
 });
 
 Alors("j'attends de voir les résultats de recherches", () => {
-  I.waitForElement("[aria-label^='Résultats de recherche']", 1.5);
+  I.waitForElement("[aria-label^='Résultats de recherche']", 5);
 });
