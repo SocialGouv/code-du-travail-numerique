@@ -30,7 +30,7 @@ E2E Test @optional/e2e.runner.puppetteer:
     expire_in: 1 week
     when: always
     paths:
-      - optional/e2e/puppetteer/output
+      - optional/e2e/.runners/puppetteer/output
   only:
     variables:
       - $E2E_TEST
