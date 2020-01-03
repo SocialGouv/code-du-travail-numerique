@@ -116,11 +116,6 @@ const renderSuggestion = (suggestion, query) => {
     </SuggestionContainer>
   );
 };
-const Label = styled.label`
-  display: flex;
-  flex: 1 1 auto;
-  text-align: left;
-`;
 
 const SuggestionsContainer = styled.div`
   ul {
