@@ -184,7 +184,6 @@ const P = styled.p`
     return "0";
   }};
   @media (max-width: ${breakpoints.mobile}) {
-    padding-left: ${({ leftStripped }) =>
-      leftStripped ? spacings.large : "0"};
+    padding-left: ${({ leftStripped }) => (leftStripped ? spacings.base : "0")};
   }
 `;

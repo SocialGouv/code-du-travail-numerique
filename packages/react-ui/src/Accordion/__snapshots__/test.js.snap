@@ -86,6 +86,12 @@ exports[`<Accordion /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c5 {
+    padding: 1rem 0;
+  }
+}
+
 <div>
   <div
     class="accordion"
@@ -216,6 +222,12 @@ exports[`<Accordion /> should render with custom component as title 1`] = `
 
 .c4.accordion__body--hidden {
   display: none;
+}
+
+@media (max-width:600px) {
+  .c4 {
+    padding: 1rem 0;
+  }
 }
 
 <div>

@@ -162,22 +162,26 @@ exports[`<Grid /> should render 1`] = `
         <li
           class="c4"
         >
-          <strong>
-            titre 1
-          </strong>
-          <p>
-            contenu 1
-          </p>
+          <div>
+            <strong>
+              titre 1
+            </strong>
+            <p>
+              contenu 1
+            </p>
+          </div>
         </li>
         <li
           class="c4"
         >
-          <strong>
-            titre 2
-          </strong>
-          <p>
-            contenu 2
-          </p>
+          <div>
+            <strong>
+              titre 2
+            </strong>
+            <p>
+              contenu 2
+            </p>
+          </div>
         </li>
       </ul>
     </div>
@@ -347,22 +351,26 @@ exports[`<Grid /> should render 5columns 1`] = `
         <li
           class="c4"
         >
-          <strong>
-            titre 1
-          </strong>
-          <p>
-            contenu 1
-          </p>
+          <div>
+            <strong>
+              titre 1
+            </strong>
+            <p>
+              contenu 1
+            </p>
+          </div>
         </li>
         <li
           class="c4"
         >
-          <strong>
-            titre 2
-          </strong>
-          <p>
-            contenu 2
-          </p>
+          <div>
+            <strong>
+              titre 2
+            </strong>
+            <p>
+              contenu 2
+            </p>
+          </div>
         </li>
       </ul>
     </div>

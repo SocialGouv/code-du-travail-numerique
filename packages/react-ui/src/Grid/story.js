@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, GridCell } from ".";
+import { Grid } from ".";
 import { Tile } from "../Tile";
 export default {
   component: Grid,
@@ -10,28 +10,24 @@ export const base = () => (
   <>
     <Grid>
       {Array.from({ length: 10 }).map((val, index) => (
-        <GridCell key={index}>
-          <Tile>
-            <strong>Tile {index}</strong>
-            <p>
-              du droit pour ceux qu’il concerne. L’objectif du code du travail
-              numérique est d’améliorer la lisibilité
-            </p>
-          </Tile>
-        </GridCell>
+        <Tile key={index}>
+          <strong>Tile {index}</strong>
+          <p>
+            L’objectif du code du travail numérique est d’améliorer la
+            connaissance du droit du travail
+          </p>
+        </Tile>
       ))}
     </Grid>
     <Grid columns={3}>
       {Array.from({ length: 10 }).map((val, index) => (
-        <GridCell key={index}>
-          <Tile>
-            <strong>Tile {index}</strong>
-            <p>
-              du droit pour ceux qu’il concerne. L’objectif du code du travail
-              numérique est d’améliorer la lisibilité
-            </p>
-          </Tile>
-        </GridCell>
+        <Tile key={index}>
+          <strong>Tile {index}</strong>
+          <p>
+            du droit pour ceux qu’il concerne. L’objectif du code du travail
+            numérique est d’améliorer la lisibilité
+          </p>
+        </Tile>
       ))}
     </Grid>
   </>

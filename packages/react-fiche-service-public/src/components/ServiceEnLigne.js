@@ -45,6 +45,9 @@ const Wrapper = styled.div`
   padding: ${spacings.large};
   background-color: ${colors.bgTertiary};
   border-radius: ${box.borderRadius};
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: ${spacings.small} ${spacings.medium};
+  }
 `;
 
 const Type = styled.div`

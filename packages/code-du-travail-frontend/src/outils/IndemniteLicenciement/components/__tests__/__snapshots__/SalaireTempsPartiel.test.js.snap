@@ -433,6 +433,12 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 }
 
 @media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }
@@ -1033,6 +1039,12 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 @media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }
@@ -1629,6 +1641,12 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 @media (max-width:600px) {
   .c14 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
   }
 }
 

@@ -119,6 +119,12 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
   font-style: italic;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c2 {
     max-width: 100%;

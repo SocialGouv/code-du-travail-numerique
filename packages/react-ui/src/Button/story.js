@@ -1,6 +1,7 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
+
 import { Close, More, Search } from "../icons";
 import { Section } from "../layout/Section";
 import { spacings } from "../theme";

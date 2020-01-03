@@ -1,95 +1,27 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { OverflowWrapper } from "../OverflowWrapper";
-import { breakpoints, spacings } from "../theme";
 
-const GridContext = React.createContext({ columns: 4 });
+import { Grid as RootGrid } from "./Grid";
+import { GridCell } from "./GridCell";
 
-export const Grid = ({ columns, ...props }) => {
-  return (
-    <StyledOverflowWrapper mobileOnly>
-      <GridContext.Provider value={columns}>
-        <List {...props} />
-      </GridContext.Provider>
-    </StyledOverflowWrapper>
-  );
-};
+export { RootGrid, GridCell };
+export const Grid = ({ children, ...props }) => (
+  <RootGrid {...props}>
+    {Array.isArray(children) ? (
+      React.Children.map(children, element => (
+        <GridCell key={element.key}>{element}</GridCell>
+      ))
+    ) : (
+      <GridCell>{children}</GridCell>
+    )}
+  </RootGrid>
+);
+
 Grid.propTypes = {
+  children: PropTypes.node.isRequired,
   columns: PropTypes.number
 };
+
 Grid.defaultProps = {
   columns: 4
 };
-
-export const StyledOverflowWrapper = styled(OverflowWrapper)`
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-bottom: ${spacings.base};
-  }
-`;
-
-export const List = styled.ul`
-  display: flex; /* Flex layout so items have equal height. */
-  flex-wrap: wrap;
-  align-content: stretch;
-  align-items: stretch;
-  justify-content: flex-start;
-  /* Use negative margins on sides to create gutters that do not also
-    create a gutter at the edges of the container. */
-  margin-top: ${spacings.medium};
-  margin-right: calc(-1 * ${spacings.small});
-  margin-bottom: ${spacings.larger};
-  margin-left: calc(-1 * ${spacings.small});
-  padding: 0;
-  list-style-type: none;
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-wrap: nowrap;
-    margin-top: ${spacings.small};
-    margin-right: 0;
-    margin-bottom: ${spacings.medium};
-    margin-left: 0;
-  }
-`;
-
-export const GridCell = props => {
-  const columns = useContext(GridContext);
-  return <ListItem {...props} columns={columns} />;
-};
-
-// The "-1" in width calculation fixes a redenring issue on IE11 causing tile
-// supposed to stay on the same line to go to the next line
-export const ListItem = styled.li`
-  display: flex;
-  flex-grow: 0;
-  flex-shrink: 1;
-  width: calc(100% / ${props => props.columns} - 2 * ${spacings.small} - 1px);
-  margin: ${spacings.small};
-  padding: 0;
-  @media (max-width: ${breakpoints.desktop}) {
-    width: calc(
-      100% / ${props => Math.max(props.columns - 1, 0)} - 2 * ${spacings.small} -
-        1px
-    );
-  }
-  @media (max-width: ${breakpoints.tablet}) {
-    width: calc(
-      100% / ${props => Math.max(props.columns - 2, 0)} - 2 * ${spacings.small} -
-        1px
-    );
-  }
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-shrink: 0;
-    width: ${({ columns }) => (Math.max(columns - 2, 0) < 2 ? "80%" : "60%")};
-    min-width: 23rem;
-    &:first-of-type {
-      margin-left: ${spacings.medium};
-    }
-    &:last-of-type:after {
-      display: block;
-      width: ${spacings.medium};
-      height: 100%;
-      background-color: transparent;
-      content: "";
-    }
-  }
-`;

@@ -82,6 +82,12 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   margin: 1.6rem 0;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c0 {
     max-width: 100%;

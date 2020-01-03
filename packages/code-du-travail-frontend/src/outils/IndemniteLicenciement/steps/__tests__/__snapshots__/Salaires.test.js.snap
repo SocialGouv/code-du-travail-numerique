@@ -1705,6 +1705,12 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 }
 
 @media (max-width:600px) {
+  .c19 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     font-size: 1.4rem;
   }

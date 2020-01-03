@@ -8,7 +8,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel
 } from "react-accessible-accordion";
-import { box, spacings } from "../theme";
+import { box, breakpoints, spacings } from "../theme";
 import { Heading } from "../Titles";
 import { VerticalArrow } from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
@@ -90,5 +90,8 @@ const StyledAccordionItemPanel = styled(AccordionItemPanel)`
   /* This might not work anymore */
   &.accordion__body--hidden {
     display: none;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: ${spacings.small} 0;
   }
 `;

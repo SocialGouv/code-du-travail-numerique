@@ -280,6 +280,12 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c9 {
     font-size: 1.4rem;
   }

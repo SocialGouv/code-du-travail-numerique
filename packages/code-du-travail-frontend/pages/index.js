@@ -6,12 +6,13 @@ import * as Sentry from "@sentry/browser";
 import Link from "next/link";
 import {
   Button,
-  CardList,
   Container,
+  Grid,
   icons,
   Section,
   theme,
-  Tile
+  Tile,
+  Title
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import tools from "@cdt/data...tools";
@@ -57,11 +58,13 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
     <SearchHero />
     <Section>
       <Container>
-        <CardList
-          title="Boîte à outils"
-          desc="Trouvez des réponses personnalisées selon votre situation"
-          href="/outils"
+        <Title
+          topStripped
+          subtitle="Trouvez des réponses personnalisées selon votre situation"
         >
+          Boîte à outils
+        </Title>
+        <Grid>
           {selectedTools.map(
             ({ action, description, href, icon, slug, title }) => {
               const linkProps = {
@@ -81,7 +84,7 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
               );
             }
           )}
-        </CardList>
+        </Grid>
         <ButtonWrapper>
           <Link href="/outils" passHref>
             <Button variant="primary" as="a">
@@ -94,11 +97,10 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
     {themes.length > 0 && (
       <Section large decorated variant="light">
         <Container>
-          <CardList
-            title="Thèmes"
-            desc="Retrouvez tous nos contenus organisés par thèmes"
-            href="/themes"
-          >
+          <Title subtitle="Retrouvez tous nos contenus organisés par thèmes">
+            Thèmes
+          </Title>
+          <Grid>
             {themes.map(({ icon, slug, title }) => (
               <Link
                 key={slug}
@@ -109,7 +111,7 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
                 <Tile title={title} icon={icons[icon]} />
               </Link>
             ))}
-          </CardList>
+          </Grid>
           <ButtonWrapper>
             <Link href="/themes" passHref>
               <Button variant="primary" as="a">

@@ -189,6 +189,12 @@ exports[`<ConventionCollective /> should render 1`] = `
   width: 80%;
 }
 
+@media (max-width:600px) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c5 {
     max-width: 100%;
@@ -198,7 +204,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 
 @media (max-width:600px) {
   .c6 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -221,6 +227,18 @@ exports[`<ConventionCollective /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c9 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c2 {
     max-width: 100%;
@@ -234,9 +252,21 @@ exports[`<ConventionCollective /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c0 {
     max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
     padding: 0;
   }
 }

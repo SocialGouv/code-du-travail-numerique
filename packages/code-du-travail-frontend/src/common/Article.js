@@ -74,4 +74,7 @@ const Source = styled.span`
 
 const Content = styled.div`
   margin: ${spacings.large} 0 0 0;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-top: ${spacings.base};
+  }
 `;

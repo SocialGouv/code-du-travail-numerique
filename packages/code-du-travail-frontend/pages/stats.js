@@ -3,8 +3,7 @@ import styled from "styled-components";
 import Head from "next/head";
 import {
   Container,
-  Grid,
-  GridCell,
+  FlatList,
   Heading,
   PageTitle,
   Section,
@@ -27,24 +26,24 @@ const About = () => (
       <Container>
         <PageTitle>Statistiques du code du travail numérique</PageTitle>
         <Wrapper variant="main">
-          <Grid>
-            <StyledGridCell>
+          <StyledFlatList>
+            <Li>
               <Heading>Contenus référencés</Heading>
               <Num>14369</Num>
-            </StyledGridCell>
-            <StyledGridCell>
+            </Li>
+            <Li>
               <Heading>Visites</Heading>
               <Num>2992</Num>
-            </StyledGridCell>
-            <StyledGridCell>
+            </Li>
+            <Li>
               <Heading>Recherches</Heading>
               <Num>15368</Num>
-            </StyledGridCell>
-            <StyledGridCell>
+            </Li>
+            <Li>
               <Heading>Consultations</Heading>
               <Num>30736</Num>
-            </StyledGridCell>
-          </Grid>
+            </Li>
+          </StyledFlatList>
           <p>Statistiques d’usage depuis le 1er Janvier 2019</p>
         </Wrapper>
       </Container>
@@ -52,12 +51,26 @@ const About = () => (
   </Layout>
 );
 
-const { fonts } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
-const StyledGridCell = styled(GridCell)`
+const StyledFlatList = styled(FlatList)`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    margin-bottom: ${spacings.large};
+  }
+`;
+
+const Li = styled.li`
+  flex: 1 0 auto;
+  margin: ${spacings.medium};
+  text-align: center;
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-top: ${spacings.large};
+  }
 `;
 
 const Num = styled.div`

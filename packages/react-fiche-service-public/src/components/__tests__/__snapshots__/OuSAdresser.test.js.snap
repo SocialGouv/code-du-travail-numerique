@@ -13,6 +13,12 @@ exports[`<OuSAdresser /> should render a complex case 1`] = `
   margin-bottom: 0.4rem;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 1rem 2rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -44,6 +50,12 @@ exports[`<OuSAdresser /> should render a simple case 1`] = `
 .c1 {
   display: block;
   margin-bottom: 0.4rem;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 1rem 2rem;
+  }
 }
 
 <div>

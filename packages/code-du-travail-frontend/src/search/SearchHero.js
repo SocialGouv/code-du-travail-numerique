@@ -59,6 +59,9 @@ const StyledContainer = styled(Container)`
   @media (max-width: ${breakpoints.tablet}) {
     padding-left: ${spacings.medium};
   }
+  @media (max-width: ${breakpoints.mobile}) {
+    padding-left: ${spacings.small};
+  }
 `;
 
 const Header = styled.header`

@@ -252,8 +252,14 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 @media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -760,14 +766,26 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
 }
 
 @media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
+  .c17 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -1222,8 +1240,14 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 @media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -1679,8 +1703,14 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 @media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -2190,14 +2220,26 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 }
 
 @media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
+  .c17 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -2652,8 +2694,14 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 @media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 

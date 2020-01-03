@@ -175,6 +175,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   padding: 1.6rem 0;
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c1 {
     max-width: 100%;
@@ -184,7 +190,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -204,6 +210,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 @media (max-width:600px) {
   .c8 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    padding: 1rem 0;
   }
 }
 

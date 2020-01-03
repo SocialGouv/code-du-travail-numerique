@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useRouter } from "next/router";
+import { Container, Section } from "@socialgouv/react-ui";
+
 import { Results } from "./Results";
 import { Law } from "./Law";
 import { Themes } from "./Themes";
@@ -33,8 +35,14 @@ const SearchResults = ({
       {documents.length > 0 && (
         <Results isSearch={isSearch} items={documents} query={query} />
       )}
-      {articles.length > 0 && <Law items={articles} query={query} />}
-      {themes.length > 0 && <Themes items={themes} query={query} />}
+      {(articles.length > 0 || themes.length > 0) && (
+        <Section decorated variant="light">
+          <Container>
+            {articles.length > 0 && <Law items={articles} query={query} />}
+            {themes.length > 0 && <Themes items={themes} query={query} />}
+          </Container>
+        </Section>
+      )}
     </>
   );
 };

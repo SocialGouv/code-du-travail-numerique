@@ -459,8 +459,8 @@ exports[`<Layout /> should render 1`] = `
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: 74rem;
   padding: 0;
+  max-width: 74rem;
   margin-bottom: 2rem;
 }
 
@@ -591,6 +591,12 @@ exports[`<Layout /> should render 1`] = `
   content: "";
 }
 
+@media (max-width:600px) {
+  .c24 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c24 {
     max-width: 100%;
@@ -619,6 +625,12 @@ exports[`<Layout /> should render 1`] = `
 @media (max-width:600px) {
   .c29 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
+    padding: 0 3rem;
   }
 }
 
@@ -681,6 +693,12 @@ exports[`<Layout /> should render 1`] = `
   .c1 {
     position: relative;
     box-shadow: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
   }
 }
 
@@ -747,10 +765,22 @@ exports[`<Layout /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c28 {
+    padding: 0;
+  }
+}
+
 @media print {
   .c28 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c32 {
+    padding: 0 1rem;
   }
 }
 

@@ -1,19 +1,19 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { Grid, GridCell } from ".";
+import { Grid } from ".";
 
 describe("<Grid />", () => {
   test("should render", () => {
     const { container } = render(
       <Grid>
-        <GridCell>
+        <div>
           <strong>titre 1</strong>
           <p>contenu 1</p>
-        </GridCell>
-        <GridCell>
+        </div>
+        <div>
           <strong>titre 2</strong>
           <p>contenu 2</p>
-        </GridCell>
+        </div>
       </Grid>
     );
     expect(container).toMatchSnapshot();
@@ -21,14 +21,14 @@ describe("<Grid />", () => {
   test("should render 5columns", () => {
     const { container } = render(
       <Grid columns={5}>
-        <GridCell>
+        <div>
           <strong>titre 1</strong>
           <p>contenu 1</p>
-        </GridCell>
-        <GridCell>
+        </div>
+        <div>
           <strong>titre 2</strong>
           <p>contenu 2</p>
-        </GridCell>
+        </div>
       </Grid>
     );
     expect(container).toMatchSnapshot();

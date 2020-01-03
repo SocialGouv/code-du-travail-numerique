@@ -48,6 +48,9 @@ Tabs.defaultProps = {
 
 const StyledTabs = styled(RootTabs)`
   margin-bottom: ${spacings.large};
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-bottom: ${spacings.medium};
+  }
 `;
 
 const StyledTabList = styled(TabList)`
@@ -99,12 +102,21 @@ const StyledTab = styled(Tab)`
 const StyledTabPanel = styled(TabPanel)`
   color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
   &.react-tabs__tab-panel--selected {
     padding: ${spacings.xmedium};
     border: 1px solid ${({ theme }) => theme.border};
     border-radius: ${box.borderRadius};
     @media (max-width: ${breakpoints.tablet}) {
       margin-top: ${spacings.tiny};
+    }
+    @media (max-width: ${breakpoints.mobile}) {
+      padding: ${spacings.small};
     }
   }
 `;

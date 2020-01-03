@@ -149,8 +149,20 @@ exports[`<PrevNextBar /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    padding: 0 3rem;
   }
 }
 
@@ -340,8 +352,20 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    padding: 0 3rem;
   }
 }
 
@@ -532,8 +556,20 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    padding: 0 3rem;
   }
 }
 
@@ -658,6 +694,12 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
 @media (max-width:600px) {
   .c1 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding: 0 3rem;
   }
 }
 

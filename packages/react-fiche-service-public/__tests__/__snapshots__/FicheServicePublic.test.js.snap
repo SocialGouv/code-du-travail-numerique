@@ -243,6 +243,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
   background-color: #fff;
 }
 
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c5.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
@@ -342,8 +350,26 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c16 {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c20 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    margin-bottom: 2rem;
   }
 }
 
@@ -375,6 +401,18 @@ exports[`<FicheServicePublic /> should render 1`] = `
 @media (max-width:980px) {
   .c5.react-tabs__tab-panel--selected {
     margin-top: 0.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5.react-tabs__tab-panel--selected {
+    padding: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    padding: 1rem 2rem;
   }
 }
 
@@ -505,11 +543,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     points="9 18 15 12 9 6"
                   />
                 </svg>
-                <h2
+                <h3
                   class="c15"
                 >
                   De quoi s'agit-il ?
-                </h2>
+                </h3>
               </div>
             </div>
             <div
@@ -570,11 +608,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     points="9 18 15 12 9 6"
                   />
                 </svg>
-                <h2
+                <h3
                   class="c15"
                 >
                   Conditions
-                </h2>
+                </h3>
               </div>
             </div>
             <div
@@ -678,11 +716,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     points="9 18 15 12 9 6"
                   />
                 </svg>
-                <h2
+                <h3
                   class="c15"
                 >
                   Volonté de démissionner
-                </h2>
+                </h3>
               </div>
             </div>
             <div
@@ -770,11 +808,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     points="9 18 15 12 9 6"
                   />
                 </svg>
-                <h2
+                <h3
                   class="c15"
                 >
                   Procédure
-                </h2>
+                </h3>
               </div>
             </div>
             <div
@@ -864,11 +902,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     points="9 18 15 12 9 6"
                   />
                 </svg>
-                <h2
+                <h3
                   class="c15"
                 >
                   Préavis
-                </h2>
+                </h3>
               </div>
             </div>
             <div
@@ -1323,11 +1361,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     points="9 18 15 12 9 6"
                   />
                 </svg>
-                <h2
+                <h3
                   class="c15"
                 >
                   Indemnisation
-                </h2>
+                </h3>
               </div>
             </div>
             <div
@@ -1436,11 +1474,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     points="9 18 15 12 9 6"
                   />
                 </svg>
-                <h2
+                <h3
                   class="c15"
                 >
                   Documents remis au salarié
-                </h2>
+                </h3>
               </div>
             </div>
             <div
