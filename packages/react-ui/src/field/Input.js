@@ -30,8 +30,9 @@ const iconDateSvg = `<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox
 
 const INPUT_HEIGHT = "5.4rem";
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.span`
   position: relative;
+  display: inline-block;
 `;
 
 const StyledInput = styled.input`

@@ -67,6 +67,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 
 .c16 {
   position: relative;
+  display: inline-block;
 }
 
 .c17 {
@@ -449,7 +450,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   <div
     class="c15"
   >
-    <div
+    <span
       class="c16"
     >
       <input
@@ -472,7 +473,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
           />
         </svg>
       </div>
-    </div>
+    </span>
   </div>
   <p
     class="c7"

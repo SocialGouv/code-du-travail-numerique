@@ -523,6 +523,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 
 .c15 {
   position: relative;
+  display: inline-block;
 }
 
 .c16 {
@@ -1112,7 +1113,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   <div
     class="c14"
   >
-    <div
+    <span
       class="c15"
     >
       <input
@@ -1121,7 +1122,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
         name="age"
         value=""
       />
-    </div>
+    </span>
   </div>
 </div>
 `;

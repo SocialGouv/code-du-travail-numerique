@@ -33,6 +33,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
 
 .c13 {
   position: relative;
+  display: inline-block;
 }
 
 .c14 {
@@ -422,7 +423,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   <div
     class="c12"
   >
-    <div
+    <span
       class="c13"
     >
       <input
@@ -431,7 +432,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
         name="age"
         value=""
       />
-    </div>
+    </span>
   </div>
 </div>
 `;
@@ -469,6 +470,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 
 .c11 {
   position: relative;
+  display: inline-block;
 }
 
 .c12 {
@@ -873,7 +875,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   <div
     class="c10"
   >
-    <div
+    <span
       class="c11"
     >
       <input
@@ -882,7 +884,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
         name="age"
         value="62"
       />
-    </div>
+    </span>
   </div>
   <p
     class="c13"
@@ -961,6 +963,7 @@ exports[`<Step /> should render 1`] = `
 
 .c11 {
   position: relative;
+  display: inline-block;
 }
 
 .c12 {
@@ -1278,7 +1281,7 @@ exports[`<Step /> should render 1`] = `
   <div
     class="c10"
   >
-    <div
+    <span
       class="c11"
     >
       <input
@@ -1287,7 +1290,7 @@ exports[`<Step /> should render 1`] = `
         name="age"
         value=""
       />
-    </div>
+    </span>
   </div>
 </div>
 `;

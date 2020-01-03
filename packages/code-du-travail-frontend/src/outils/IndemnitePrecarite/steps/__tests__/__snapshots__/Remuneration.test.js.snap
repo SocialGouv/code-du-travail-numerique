@@ -126,6 +126,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 
 .c8 {
   position: relative;
+  display: inline-block;
 }
 
 .c9 {
@@ -447,7 +448,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       <div
         class="c7"
       >
-        <div
+        <span
           class="c8"
         >
           <input
@@ -470,7 +471,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
               />
             </svg>
           </div>
-        </div>
+        </span>
       </div>
       <button
         class="c11 c12 c13"
@@ -495,7 +496,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       <div
         class="c7"
       >
-        <div
+        <span
           class="c8"
         >
           <input
@@ -518,7 +519,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
               />
             </svg>
           </div>
-        </div>
+        </span>
       </div>
       <button
         class="c11 c12 c13"
@@ -555,6 +556,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 exports[`<StepRemuneration /> should render one input 1`] = `
 .c6 {
   position: relative;
+  display: inline-block;
 }
 
 .c7 {
@@ -821,7 +823,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   <div
     class="c5"
   >
-    <div
+    <span
       class="c6"
     >
       <input
@@ -844,7 +846,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
           />
         </svg>
       </div>
-    </div>
+    </span>
   </div>
   <p
     class="c9"

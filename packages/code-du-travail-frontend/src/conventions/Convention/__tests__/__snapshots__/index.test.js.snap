@@ -338,6 +338,7 @@ exports[`<Convention /> renders 1`] = `
 
 .c26 {
   position: relative;
+  display: inline-block;
 }
 
 .c28 {
@@ -4233,7 +4234,7 @@ exports[`<Convention /> renders 1`] = `
     <div
       class="c25"
     >
-      <div
+      <span
         class="c26 c27"
       >
         <input
@@ -4244,7 +4245,7 @@ exports[`<Convention /> renders 1`] = `
           placeholder="congé exceptionnel, prime"
           type="search"
         />
-      </div>
+      </span>
        
       <input
         name="query"

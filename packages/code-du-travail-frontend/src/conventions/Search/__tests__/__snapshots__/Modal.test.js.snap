@@ -139,6 +139,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 
 .c4 {
   position: relative;
+  display: inline-block;
 }
 
 .c5 {
@@ -332,7 +333,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               <p>
                 Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
               </p>
-              <div
+              <span
                 class="c4"
               >
                 <input
@@ -343,7 +344,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                   type="search"
                   value=""
                 />
-              </div>
+              </span>
               
             </div>
             <button

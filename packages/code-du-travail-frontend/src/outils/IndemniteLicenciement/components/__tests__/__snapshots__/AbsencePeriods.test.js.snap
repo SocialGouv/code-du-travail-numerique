@@ -126,6 +126,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 
 .c8 {
   position: relative;
+  display: inline-block;
 }
 
 .c9 {
@@ -460,7 +461,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
     <div
       class="c4"
     >
-      <div
+      <span
         class="c8"
       >
         <input
@@ -469,7 +470,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
           type="number"
           value=""
         />
-      </div>
+      </span>
     </div>
     <button
       class="c10 c11 c12"
@@ -783,6 +784,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
 
 .c8 {
   position: relative;
+  display: inline-block;
 }
 
 .c9 {
@@ -1117,7 +1119,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
     <div
       class="c4"
     >
-      <div
+      <span
         class="c8"
       >
         <input
@@ -1126,7 +1128,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
           type="number"
           value="3"
         />
-      </div>
+      </span>
     </div>
     <button
       class="c10 c11 c12"
