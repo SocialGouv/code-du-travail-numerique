@@ -54,6 +54,8 @@ export function TextSearch({ containerId }) {
           onChange={formatQuery}
           id="search-agreement"
           type="search"
+          autoComplete="off"
+          name="rawQuery"
           placeholder="congé exceptionnel, prime"
         />{" "}
         <input type="hidden" name="query" value={query} />
