@@ -53,7 +53,7 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
           <Link href={`/${getRouteBySource(SOURCES.CCN)}/recherche`} passHref>
             <CustomTile
               action="Consulter"
-              title="Recherchez votre convention collective"
+              title="Convention collective"
               icon={icons.Nego}
             >
               Recherchez une convention collective par Entreprise, SIRET, Nom ou

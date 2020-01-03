@@ -34,7 +34,7 @@ module.exports = [
   },
   {
     icon: "Salary",
-    title: "Salaire brut/net",
+    title: "Simulateur d’embauche",
     slug: "simulateur-embauche",
     questions: [
       "Comment calculer mon salaire",
@@ -90,7 +90,8 @@ module.exports = [
       "calculer la durée de son préavis de licenciement",
       "calcul durée préavis licenciement"
     ],
-    description: "Calculez la durée de préavis à respecter en cas de licenciement",
+    description:
+      "Calculez la durée de préavis à respecter en cas de licenciement",
     action: "Calculer",
     date: "08/11/2019"
   }
