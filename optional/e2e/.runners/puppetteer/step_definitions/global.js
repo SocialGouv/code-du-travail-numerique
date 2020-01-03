@@ -1,4 +1,4 @@
-const { Soit, Quand, Alors } = require('./_fr');
+const { Soit, Quand, Alors } = require("./_fr");
 
 //
 
@@ -18,7 +18,7 @@ Quand("je pause le test", () => {
 
 //
 
-Alors("je vois {string}", text => {
+Quand("je vois {string}", text => {
   I.see(text);
 });
 

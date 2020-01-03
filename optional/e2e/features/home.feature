@@ -4,21 +4,21 @@
 Fonctionnalité: Page d'acceuil
   Pour pouvoir trouver une information sur le droit du travai
   En tant que visiteur
-  Je veux être pourvoir consulter la page d'acceuil
+  Je veux être pouvoir consulter la page d'acceuil
 
 Scénario:
   Soit un navigateur web sur le site
-  Quand je vois "Bienvenue sur"
-  Quand je vois "le Code du travail numérique"
-  Quand je vois "Vous cherchez une information sur le droit du travail ? Vous avez besoin d’accompagnement ?"
-  Quand je vois "Nous vous proposons des réponses personnalisées selon votre situation"
-  Quand je vois "Rechercher"
+  Alors je vois "Bienvenue sur"
+  Alors je vois "le Code du travail numérique"
+  Alors je vois "Vous cherchez une information sur le droit du travail ? Vous avez besoin d’accompagnement ?"
+  Alors je vois "Nous vous proposons des réponses personnalisées selon votre situation"
+  Alors je vois "Rechercher"
 
-  Quand je vois "Boîte à outils"
-  Quand je vois "Convention collective"
-  Quand je vois "Préavis de démission"
-  Quand je vois "Salaire brut/net"
-  Quand je vois "Modèles de documents"
+  Alors je vois "Boîte à outils"
+  Alors je vois "Convention collective"
+  Alors je vois "Préavis de démission"
+  Alors je vois "Salaire brut/net"
+  Alors je vois "Modèles de documents"
 
-  Quand je vois "Besoin de plus d’information"
-  Quand je vois "Contacter nos services en région"
+  Alors je vois "Besoin de plus d’information"
+  Alors je vois "Contacter nos services en région"
