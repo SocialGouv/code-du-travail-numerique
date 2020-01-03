@@ -31,5 +31,5 @@ export const ConventionModal = ({ children: renderProp }) => {
 };
 
 ConventionModal.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.func.isRequired
 };
