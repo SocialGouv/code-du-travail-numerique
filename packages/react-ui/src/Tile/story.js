@@ -1,4 +1,5 @@
 import React from "react";
+import { action } from "@storybook/addon-actions";
 
 import { Section } from "../layout/Section";
 import { Holidays, Time, Salary } from "../icons";
@@ -44,7 +45,19 @@ export const base = () => (
       </Tile>
     </Section>
     <Section>
-      <Tile title="Button tile, no href prop, should have an onClick" />
+      <Tile
+        title="Button tile, no href prop, should have an onClick"
+        onClick={action("button tile clicked")}
+      />
+    </Section>
+    <Section>
+      <Tile
+        title="Button tile"
+        icon={Holidays}
+        onClick={action("button tile with icon clicked")}
+      >
+        It should look good ! And everything should be centered
+      </Tile>
     </Section>
   </div>
 );
@@ -89,7 +102,11 @@ export const wide = () => (
       </Tile>
     </Section>
     <Section>
-      <Tile wide title="Button tile, no href prop, should have an onClick" />
+      <Tile
+        onClick={action("wide button tile clicked")}
+        wide
+        title="Button tile, no href prop, should have an onClick"
+      />
     </Section>
   </div>
 );
