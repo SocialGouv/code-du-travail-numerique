@@ -5,8 +5,10 @@
   dependencies: []
   except:
     variables:
-      # Don't run test when deploy on production an existing image
+      # Don't run when deploying in production an existing image
       - $PRODUCTION
+      # Don't run when running e2e tests
+      - $E2E_TEST
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/

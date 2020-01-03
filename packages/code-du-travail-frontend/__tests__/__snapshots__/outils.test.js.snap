@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Outils /> should render 1`] = `
-.c23 {
+.c21 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c23 > *:first-child {
+.c21 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c21 > *:last-child {
   margin-bottom: 0;
 }
 
-.c22 {
+.c20 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c26 {
+.c24 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -34,7 +34,7 @@ exports[`<Outils /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c29 {
+.c27 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -47,7 +47,7 @@ exports[`<Outils /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c25 {
+.c23 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -58,7 +58,7 @@ exports[`<Outils /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c28 {
+.c26 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -70,7 +70,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c51 {
+.c49 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -82,24 +82,24 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c24 {
+.c22 {
   margin: 0 auto 1rem;
   margin-bottom: 4rem;
   text-align: center;
 }
 
-.c27 {
+.c25 {
   margin: 0 auto 1rem;
   text-align: left;
 }
 
-.c50 {
+.c48 {
   margin: 0 auto 1rem;
   margin-bottom: 1.6rem;
   text-align: center;
 }
 
-.c36 {
+.c34 {
   position: absolute;
   top: 0;
   right: 0;
@@ -110,7 +110,7 @@ exports[`<Outils /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c36:before {
+.c34:before {
   position: absolute;
   display: block;
   width: 0;
@@ -121,7 +121,7 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c37 {
+.c35 {
   position: absolute;
   top: 0;
   right: 0;
@@ -130,7 +130,7 @@ exports[`<Outils /> should render 1`] = `
   height: 3rem;
 }
 
-.c19 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -167,16 +167,16 @@ exports[`<Outils /> should render 1`] = `
   opacity: 1;
 }
 
-.c19:link,
-.c19:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -185,13 +185,13 @@ exports[`<Outils /> should render 1`] = `
   border-color: transparent;
 }
 
-.c19[disabled] {
+.c17[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c45 {
+.c43 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -231,14 +231,14 @@ exports[`<Outils /> should render 1`] = `
   overflow: visible;
 }
 
-.c45:focus,
-.c45:hover,
-.c45:active {
+.c43:focus,
+.c43:hover,
+.c43:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c53 {
+.c51 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -275,16 +275,16 @@ exports[`<Outils /> should render 1`] = `
   opacity: 1;
 }
 
-.c53:link,
-.c53:visited {
+.c51:link,
+.c51:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c53:not([disabled]):hover,
-.c53:not([disabled]):active,
-.c53:not([disabled]):focus {
+.c51:not([disabled]):hover,
+.c51:not([disabled]):active,
+.c51:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -293,13 +293,13 @@ exports[`<Outils /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c53[disabled] {
+.c51[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c46 {
+.c44 {
   width: 2.6rem;
   height: 1.4rem;
   margin-left: 1rem;
@@ -308,19 +308,19 @@ exports[`<Outils /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c18:hover .c46 {
+.c16:hover .c44 {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
 }
 
-.c30 {
+.c28 {
   position: relative;
   overflow: visible;
 }
 
-.c30:before,
-.c30:after {
+.c28:before,
+.c28:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -335,19 +335,19 @@ exports[`<Outils /> should render 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c30:before {
+.c28:before {
   left: -2rem;
 }
 
-.c30:after {
+.c28:after {
   right: -2rem;
 }
 
-.c32 {
+.c30 {
   overflow-x: visible;
 }
 
-.c33 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -374,7 +374,7 @@ exports[`<Outils /> should render 1`] = `
   list-style-type: none;
 }
 
-.c34 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -391,19 +391,7 @@ exports[`<Outils /> should render 1`] = `
   padding: 0;
 }
 
-.c15:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
-.c35 {
+.c33 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -444,9 +432,9 @@ exports[`<Outils /> should render 1`] = `
   appearance: none;
 }
 
-.c35:hover,
-.c35:active,
-.c35:focus {
+.c33:hover,
+.c33:active,
+.c33:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -454,7 +442,7 @@ exports[`<Outils /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c39 {
+.c37 {
   display: block;
   width: 7.2rem;
   height: 7.2rem;
@@ -464,17 +452,17 @@ exports[`<Outils /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c38 {
+.c36 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c40 {
+.c38 {
   padding-right: 1rem;
 }
 
-.c41 {
+.c39 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -484,29 +472,18 @@ exports[`<Outils /> should render 1`] = `
   margin: 0;
 }
 
-.c42 {
+.c40 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  text-align: left;
-}
-
-.c17 ul {
+.c15 ul {
   z-index: 1;
 }
 
-.c17 li[role="option"]:nth-child(2n + 1) {
+.c15 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
@@ -520,12 +497,12 @@ exports[`<Outils /> should render 1`] = `
   padding: 0;
 }
 
-.c21 {
+.c19 {
   width: 3rem;
   height: 3rem;
 }
 
-.c16 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -549,23 +526,23 @@ exports[`<Outils /> should render 1`] = `
   appearance: none;
 }
 
-.c16::-webkit-input-placeholder {
+.c14::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c16::-moz-placeholder {
+.c14::-moz-placeholder {
   color: #9298af;
 }
 
-.c16:-ms-input-placeholder {
+.c14:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c16::placeholder {
+.c14::placeholder {
   color: #9298af;
 }
 
-.c20 {
+.c18 {
   position: absolute;
   top: 0;
   right: 0;
@@ -765,12 +742,12 @@ exports[`<Outils /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c47 {
+.c45 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c48 {
+.c46 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -778,7 +755,7 @@ exports[`<Outils /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c48:before {
+.c46:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -790,13 +767,13 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c49 {
+.c47 {
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
 }
 
-.c52 {
+.c50 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -805,25 +782,25 @@ exports[`<Outils /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c52 > *:first-child {
+.c50 > *:first-child {
   margin-top: 0;
 }
 
-.c52 > *:last-child {
+.c50 > *:last-child {
   margin-bottom: 0;
 }
 
-.c54 {
+.c52 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c55 {
+.c53 {
   padding: 4rem 0;
   background-color: #e4e8ef;
 }
 
-.c56 {
+.c54 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -837,25 +814,25 @@ exports[`<Outils /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c56 > *:first-child {
+.c54 > *:first-child {
   margin-top: 0;
 }
 
-.c56 > *:last-child {
+.c54 > *:last-child {
   margin-bottom: 0;
 }
 
-.c58 + .c57 {
+.c56 + .c55 {
   padding-left: 1.6rem;
 }
 
-.c60 {
+.c58 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c59 {
+.c57 {
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -865,17 +842,17 @@ exports[`<Outils /> should render 1`] = `
   font-size: 1.6rem;
 }
 
-.c61 {
+.c59 {
   margin: 0.4rem 0;
 }
 
-.c62 {
+.c60 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c63 {
+.c61 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -894,14 +871,14 @@ exports[`<Outils /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c64 {
+.c62 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c65 {
+.c63 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -932,7 +909,7 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c43 {
+.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -947,110 +924,110 @@ exports[`<Outils /> should render 1`] = `
   height: 100%;
 }
 
-.c44 {
+.c42 {
   margin-top: 1.6rem;
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c21 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c21 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c23 {
     font-size: 2.8rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c26 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c26 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c49 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c22 {
     margin-bottom: 2.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c48 {
     margin-bottom: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c43 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c51 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c51 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c28 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c30:before,
-  .c30:after {
+  .c28:before,
+  .c28:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c30 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c29 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c31 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -1062,19 +1039,19 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c34 {
+  .c32 {
     width: calc( 100% / 3 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c34 {
+  .c32 {
     width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c32 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -1082,11 +1059,11 @@ exports[`<Outils /> should render 1`] = `
     min-width: 23rem;
   }
 
-  .c34:first-of-type {
+  .c32:first-of-type {
     margin-left: 2rem;
   }
 
-  .c34:last-of-type:after {
+  .c32:last-of-type:after {
     display: block;
     width: 2rem;
     height: 100%;
@@ -1096,14 +1073,14 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c33 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c39 {
     font-size: 1.6rem;
   }
 }
@@ -1118,7 +1095,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c14 {
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
@@ -1259,39 +1236,39 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c48 {
+  .c46 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c50 {
     padding: 0;
   }
 }
 
 @media print {
-  .c52 {
+  .c50 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c54 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c56 {
+  .c54 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c54 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1299,32 +1276,32 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c58 + .c57 {
+  .c56 + .c55 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c58 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c59 {
+  .c57 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c59 {
+  .c57 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c65 {
+  .c63 {
     display: none;
   }
 }
@@ -1476,46 +1453,38 @@ exports[`<Outils /> should render 1`] = `
             action="/recherche"
             class="c13"
           >
-            <label
-              class="c14"
-              for="main-search-input"
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="react-autowhatever-1"
+              role="combobox"
+              style="flex: 1 1 auto;"
             >
-              <span
-                class="c15"
-              >
-                Rechercher
-              </span>
+              <input
+                aria-autocomplete="list"
+                aria-controls="react-autowhatever-1"
+                aria-label="recherchez par mots-clés"
+                autocomplete="off"
+                class="c14"
+                id="main-search-input"
+                name="q"
+                placeholder="Rechercher"
+                title="recherchez par mots-clés"
+                type="search"
+                value=""
+              />
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="react-autowhatever-cdtn-documents-suggester"
-                role="combobox"
-                style="flex: 1 1 auto;"
-              >
-                <input
-                  aria-autocomplete="list"
-                  aria-controls="react-autowhatever-cdtn-documents-suggester"
-                  autocomplete="off"
-                  class="c16"
-                  id="main-search-input"
-                  name="q"
-                  placeholder="Rechercher"
-                  type="search"
-                  value=""
-                />
-                <div
-                  class="c17"
-                  id="react-autowhatever-cdtn-documents-suggester"
-                  role="listbox"
-                />
-              </div>
-            </label>
+                class="c15"
+                id="react-autowhatever-1"
+                role="listbox"
+              />
+            </div>
             <button
-              class="c18 c19 c20"
+              class="c16 c17 c18"
               type="submit"
             >
               <svg
-                class="c21"
+                class="c19"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -1534,56 +1503,56 @@ exports[`<Outils /> should render 1`] = `
     id="main"
   >
     <div
-      class="c22"
+      class="c20"
     >
       <div
-        class="c23"
+        class="c21"
       >
         <header
-          class="c24"
+          class="c22"
         >
           <h1
-            class="c25"
+            class="c23"
           >
             <div
-              class="c26"
+              class="c24"
             />
             Retrouvez tous nos outils
           </h1>
         </header>
         <header
-          class="c27"
+          class="c25"
         >
           <h2
-            class="c28"
+            class="c26"
           >
             <div
-              class="c29"
+              class="c27"
             />
             Nos outils de calcul
           </h2>
         </header>
         <div
-          class="c30 c31"
+          class="c28 c29"
         >
           <div
-            class="c32"
+            class="c30"
           >
             <ul
-              class="c33"
+              class="c31"
             >
               <li
-                class="c34"
+                class="c32"
               >
                 <a
-                  class="c35"
+                  class="c33"
                   href="/outils/indemnite-licenciement"
                 >
                   <div
-                    class="c36"
+                    class="c34"
                   >
                     <div
-                      class="c37"
+                      class="c35"
                     >
                       <svg
                         fill="none"
@@ -1605,10 +1574,10 @@ exports[`<Outils /> should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c38"
+                    class="c36"
                   >
                     <div
-                      class="c39"
+                      class="c37"
                     >
                       <svg
                         fill="none"
@@ -1651,32 +1620,32 @@ exports[`<Outils /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c40"
+                      class="c38"
                     >
                       
                       <h3
-                        class="c41"
+                        class="c39"
                       >
                         Indemnité de licenciement
                       </h3>
                     </div>
                   </div>
                   <div
-                    class="c42"
+                    class="c40"
                   >
                     <div
-                      class="c43"
+                      class="c41"
                     >
                       Estimez simplement le montant de l’indemnité de licenciement
                       <div
-                        class="c44"
+                        class="c42"
                       >
                         <div
-                          class="c18 c45"
+                          class="c16 c43"
                         >
                           Estimer
                           <svg
-                            class="c46"
+                            class="c44"
                             fill="none"
                             viewBox="0 0 28 15"
                           >
@@ -1692,17 +1661,17 @@ exports[`<Outils /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="c34"
+                class="c32"
               >
                 <a
-                  class="c35"
+                  class="c33"
                   href="/outils/preavis-demission"
                 >
                   <div
-                    class="c36"
+                    class="c34"
                   >
                     <div
-                      class="c37"
+                      class="c35"
                     >
                       <svg
                         fill="none"
@@ -1724,10 +1693,10 @@ exports[`<Outils /> should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c38"
+                    class="c36"
                   >
                     <div
-                      class="c39"
+                      class="c37"
                     >
                       <svg
                         fill="none"
@@ -1754,32 +1723,32 @@ exports[`<Outils /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c40"
+                      class="c38"
                     >
                       
                       <h3
-                        class="c41"
+                        class="c39"
                       >
                         Préavis de démission
                       </h3>
                     </div>
                   </div>
                   <div
-                    class="c42"
+                    class="c40"
                   >
                     <div
-                      class="c43"
+                      class="c41"
                     >
                       Calculez la durée de préavis à respecter en cas de démission
                       <div
-                        class="c44"
+                        class="c42"
                       >
                         <div
-                          class="c18 c45"
+                          class="c16 c43"
                         >
                           Calculer
                           <svg
-                            class="c46"
+                            class="c44"
                             fill="none"
                             viewBox="0 0 28 15"
                           >
@@ -1795,17 +1764,17 @@ exports[`<Outils /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="c34"
+                class="c32"
               >
                 <a
-                  class="c35"
+                  class="c33"
                   href="/outils/simulateur-embauche"
                 >
                   <div
-                    class="c36"
+                    class="c34"
                   >
                     <div
-                      class="c37"
+                      class="c35"
                     >
                       <svg
                         fill="none"
@@ -1827,10 +1796,10 @@ exports[`<Outils /> should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c38"
+                    class="c36"
                   >
                     <div
-                      class="c39"
+                      class="c37"
                     >
                       <svg
                         fill="none"
@@ -1855,32 +1824,32 @@ exports[`<Outils /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c40"
+                      class="c38"
                     >
                       
                       <h3
-                        class="c41"
+                        class="c39"
                       >
                         Salaire brut/net
                       </h3>
                     </div>
                   </div>
                   <div
-                    class="c42"
+                    class="c40"
                   >
                     <div
-                      class="c43"
+                      class="c41"
                     >
                       Estimez le salaire : brut, net, heures supplémentaires, coût total employeur
                       <div
-                        class="c44"
+                        class="c42"
                       >
                         <div
-                          class="c18 c45"
+                          class="c16 c43"
                         >
                           Estimer
                           <svg
-                            class="c46"
+                            class="c44"
                             fill="none"
                             viewBox="0 0 28 15"
                           >
@@ -1896,17 +1865,17 @@ exports[`<Outils /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="c34"
+                class="c32"
               >
                 <a
-                  class="c35"
+                  class="c33"
                   href="/outils/indemnite-precarite"
                 >
                   <div
-                    class="c36"
+                    class="c34"
                   >
                     <div
-                      class="c37"
+                      class="c35"
                     >
                       <svg
                         fill="none"
@@ -1928,10 +1897,10 @@ exports[`<Outils /> should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c38"
+                    class="c36"
                   >
                     <div
-                      class="c39"
+                      class="c37"
                     >
                       <svg
                         fill="none"
@@ -1978,32 +1947,32 @@ exports[`<Outils /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c40"
+                      class="c38"
                     >
                       
                       <h3
-                        class="c41"
+                        class="c39"
                       >
                         Indemnité de précarité
                       </h3>
                     </div>
                   </div>
                   <div
-                    class="c42"
+                    class="c40"
                   >
                     <div
-                      class="c43"
+                      class="c41"
                     >
                       Estimez le montant de l’indemnité de fin de CDD ou intérim
                       <div
-                        class="c44"
+                        class="c42"
                       >
                         <div
-                          class="c18 c45"
+                          class="c16 c43"
                         >
                           Estimer
                           <svg
-                            class="c46"
+                            class="c44"
                             fill="none"
                             viewBox="0 0 28 15"
                           >
@@ -2019,17 +1988,17 @@ exports[`<Outils /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="c34"
+                class="c32"
               >
                 <a
-                  class="c35"
+                  class="c33"
                   href="/outils/preavis-licenciement"
                 >
                   <div
-                    class="c36"
+                    class="c34"
                   >
                     <div
-                      class="c37"
+                      class="c35"
                     >
                       <svg
                         fill="none"
@@ -2051,10 +2020,10 @@ exports[`<Outils /> should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c38"
+                    class="c36"
                   >
                     <div
-                      class="c39"
+                      class="c37"
                     >
                       <svg
                         fill="none"
@@ -2095,32 +2064,32 @@ exports[`<Outils /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c40"
+                      class="c38"
                     >
                       
                       <h3
-                        class="c41"
+                        class="c39"
                       >
                         Préavis de licenciement
                       </h3>
                     </div>
                   </div>
                   <div
-                    class="c42"
+                    class="c40"
                   >
                     <div
-                      class="c43"
+                      class="c41"
                     >
                       Calculez la durée de préavis à respecter en cas de licenciement
                       <div
-                        class="c44"
+                        class="c42"
                       >
                         <div
-                          class="c18 c45"
+                          class="c16 c43"
                         >
                           Calculer
                           <svg
-                            class="c46"
+                            class="c44"
                             fill="none"
                             viewBox="0 0 28 15"
                           >
@@ -2136,17 +2105,17 @@ exports[`<Outils /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="c34"
+                class="c32"
               >
                 <a
-                  class="c35"
+                  class="c33"
                   href="/convention-collective/recherche"
                 >
                   <div
-                    class="c36"
+                    class="c34"
                   >
                     <div
-                      class="c37"
+                      class="c35"
                     >
                       <svg
                         fill="none"
@@ -2168,10 +2137,10 @@ exports[`<Outils /> should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c38"
+                    class="c36"
                   >
                     <div
-                      class="c39"
+                      class="c37"
                     >
                       <svg
                         fill="none"
@@ -2196,32 +2165,32 @@ exports[`<Outils /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c40"
+                      class="c38"
                     >
                       
                       <h3
-                        class="c41"
+                        class="c39"
                       >
                         Convention collective
                       </h3>
                     </div>
                   </div>
                   <div
-                    class="c42"
+                    class="c40"
                   >
                     <div
-                      class="c43"
+                      class="c41"
                     >
                       Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.
                       <div
-                        class="c44"
+                        class="c42"
                       >
                         <div
-                          class="c18 c45"
+                          class="c16 c43"
                         >
                           Consulter
                           <svg
-                            class="c46"
+                            class="c44"
                             fill="none"
                             viewBox="0 0 28 15"
                           >
@@ -2237,19 +2206,19 @@ exports[`<Outils /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="c34"
+                class="c32"
               >
                 <a
-                  class="c35 no-after"
+                  class="c33 no-after"
                   href="https://www.moncompteformation.gouv.fr"
                   rel="noopener nofollow"
                   target="_blank"
                 >
                   <div
-                    class="c36"
+                    class="c34"
                   >
                     <div
-                      class="c37"
+                      class="c35"
                     >
                       <svg
                         fill="none"
@@ -2271,10 +2240,10 @@ exports[`<Outils /> should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c38"
+                    class="c36"
                   >
                     <div
-                      class="c39"
+                      class="c37"
                     >
                       <svg
                         fill="none"
@@ -2301,32 +2270,32 @@ exports[`<Outils /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c40"
+                      class="c38"
                     >
                       
                       <h3
-                        class="c41"
+                        class="c39"
                       >
                         Mon compte formation
                       </h3>
                     </div>
                   </div>
                   <div
-                    class="c42"
+                    class="c40"
                   >
                     <div
-                      class="c43"
+                      class="c41"
                     >
                       Consultez en ligne vos droits à la formation, cherchez et réservez une formation
                       <div
-                        class="c44"
+                        class="c42"
                       >
                         <div
-                          class="c18 c45"
+                          class="c16 c43"
                         >
                           Consulter
                           <svg
-                            class="c46"
+                            class="c44"
                             fill="none"
                             viewBox="0 0 28 15"
                           >
@@ -2348,40 +2317,40 @@ exports[`<Outils /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c47"
+    class="c45"
   >
     <footer
-      class="c48"
+      class="c46"
     >
       <div
-        class="c22 c49"
+        class="c20 c47"
       >
         <div
-          class="c23"
+          class="c21"
         >
           <header
-            class="c50"
+            class="c48"
           >
             <h3
-              class="c51"
+              class="c49"
             >
               <div
-                class="c26"
+                class="c24"
               />
               Besoin de plus d’informations ?
             </h3>
           </header>
           <div
-            class="c52"
+            class="c50"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c18 c53"
+            class="c16 c51"
           >
             Contacter nos services en région
             <svg
-              class="c54"
+              class="c52"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -2394,68 +2363,68 @@ exports[`<Outils /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c22 c55"
+        class="c20 c53"
       >
         <nav>
           <div
-            class="c56"
+            class="c54"
           >
             <div
-              class="c57 c58"
+              class="c55 c56"
             >
               <h3
-                class="c59"
+                class="c57"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c60"
+                class="c58"
               >
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -2464,21 +2433,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c57 c58"
+              class="c55 c56"
             >
               <h3
-                class="c59"
+                class="c57"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c60"
+                class="c58"
               >
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2487,10 +2456,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2501,21 +2470,21 @@ exports[`<Outils /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c57 c58"
+              class="c55 c56"
             >
               <h3
-                class="c59"
+                class="c57"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c60"
+                class="c58"
               >
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2524,10 +2493,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2536,10 +2505,10 @@ exports[`<Outils /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c61"
+                  class="c59"
                 >
                   <a
-                    class="c62"
+                    class="c60"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2553,10 +2522,10 @@ exports[`<Outils /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c63"
+        class="c61"
       >
         <a
-          class="c64"
+          class="c62"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2565,12 +2534,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c65"
+          class="c63"
         >
           |
         </span>
         <a
-          class="c64"
+          class="c62"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2579,12 +2548,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c65"
+          class="c63"
         >
           |
         </span>
         <a
-          class="c64"
+          class="c62"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2593,12 +2562,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c65"
+          class="c63"
         >
           |
         </span>
         <a
-          class="c64"
+          class="c62"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2607,12 +2576,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c65"
+          class="c63"
         >
           |
         </span>
         <a
-          class="c64"
+          class="c62"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2621,12 +2590,12 @@ exports[`<Outils /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c65"
+          class="c63"
         >
           |
         </span>
         <a
-          class="c64"
+          class="c62"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"

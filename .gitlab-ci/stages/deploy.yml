@@ -17,7 +17,9 @@ Create namespace:
   extends: .base_create_namespace_stage
   stage: "Post Registration"
   except:
-    - /^renovate/*
+    variables:
+      # Don't run when running e2e tests
+      - $E2E_TEST
   before_script:
     - source ./.gitlab-ci/env.sh
   after_script:
@@ -39,7 +41,9 @@ Create namespace:
 .deploy_stage: &deploy_stage
   stage: "Deploy"
   except:
-    - /^renovate/*
+    variables:
+      # Don't run when running e2e tests
+      - $E2E_TEST
   dependencies: []
   services:
     - docker:dind
@@ -61,7 +65,10 @@ Create namespace:
     name: fabrique-dev
   except:
     variables:
+      # Don't run when deploying in production an existing image
       - $PRODUCTION
+      # Don't run when running e2e tests
+      - $E2E_TEST
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/

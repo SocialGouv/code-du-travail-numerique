@@ -20,6 +20,8 @@ import { Layout } from "../src/layout/Layout";
 
 import Metas from "../src/common/Metas";
 
+const SEARCH_ID = "search-input";
+
 class SearchPage extends React.Component {
   static async getInitialProps({ query: { q: query } }) {
     const items = await fetchSearchResults(query);
@@ -46,9 +48,11 @@ class SearchPage extends React.Component {
           image={ogImage}
         />
         <Container narrow>
-          <PageTitle>Recherche</PageTitle>
+          <label htmlFor={SEARCH_ID}>
+            <PageTitle>Recherche</PageTitle>
+          </label>
           <SearchBarWrapper>
-            <SearchBar />
+            <SearchBar inputId={SEARCH_ID} />
           </SearchBarWrapper>
         </Container>
         {query &&

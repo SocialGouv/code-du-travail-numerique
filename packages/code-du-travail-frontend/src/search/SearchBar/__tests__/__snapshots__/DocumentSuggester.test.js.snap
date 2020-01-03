@@ -1,232 +1,166 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DocumentSuggester /> should render 1`] = `
-.c1:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  text-align: left;
-}
-
-.c2 ul {
+.c0 ul {
   z-index: 1;
 }
 
-.c2 li[role="option"]:nth-child(2n + 1) {
+.c0 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
 <div>
-  <label
-    class="c0"
-    for="main-search-input"
+  <div
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-owns="react-autowhatever-1"
+    role="combobox"
+    style="flex: 1 1 auto;"
   >
-    <span
-      class="c1"
-    >
-      Rechercher
-    </span>
+    <input
+      aria-autocomplete="list"
+      aria-controls="react-autowhatever-1"
+      autocomplete="off"
+      id="main-search-input"
+      name="q"
+      placeholder="document suggester placeholder"
+      type="search"
+      value="foo"
+    />
     <div
-      aria-expanded="false"
-      aria-haspopup="listbox"
-      aria-owns="react-autowhatever-cdtn-documents-suggester"
-      role="combobox"
-      style="flex: 1 1 auto;"
-    >
-      <input
-        aria-autocomplete="list"
-        aria-controls="react-autowhatever-cdtn-documents-suggester"
-        autocomplete="off"
-        id="main-search-input"
-        name="q"
-        placeholder="document suggester placeholder"
-        type="search"
-        value="foo"
-      />
-      <div
-        class="c2"
-        id="react-autowhatever-cdtn-documents-suggester"
-        role="listbox"
-      />
-    </div>
-  </label>
+      class="c0"
+      id="react-autowhatever-1"
+      role="listbox"
+    />
+  </div>
 </div>
 `;
 
 exports[`<DocumentSuggester /> should render suggestions 1`] = `
-.c1:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
-.c4 {
+.c2 {
   display: inline-block;
 }
 
-.c3 p {
+.c1 p {
   margin: 0;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  text-align: left;
-}
-
-.c2 ul {
+.c0 ul {
   z-index: 1;
 }
 
-.c2 li[role="option"]:nth-child(2n + 1) {
+.c0 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
 <div>
-  <label
-    class="c0"
-    for="main-search-input"
+  <div
+    aria-expanded="true"
+    aria-haspopup="listbox"
+    aria-owns="react-autowhatever-1"
+    role="combobox"
+    style="flex: 1 1 auto;"
   >
-    <span
-      class="c1"
-    >
-      Rechercher
-    </span>
+    <input
+      aria-autocomplete="list"
+      aria-controls="react-autowhatever-1"
+      autocomplete="off"
+      id="main-search-input"
+      name="q"
+      placeholder="search foo"
+      type="search"
+      value="foo"
+    />
     <div
-      aria-expanded="true"
-      aria-haspopup="listbox"
-      aria-owns="react-autowhatever-cdtn-documents-suggester"
-      role="combobox"
-      style="flex: 1 1 auto;"
+      class="c0"
+      id="react-autowhatever-1"
+      role="listbox"
     >
-      <input
-        aria-autocomplete="list"
-        aria-controls="react-autowhatever-cdtn-documents-suggester"
-        autocomplete="off"
-        id="main-search-input"
-        name="q"
-        placeholder="search foo"
-        type="search"
-        value="foo"
-      />
-      <div
-        class="c2"
-        id="react-autowhatever-cdtn-documents-suggester"
+      <ul
         role="listbox"
+        style="margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; border: 1px solid silver; border-radius: 3px; background: white; position: absolute; left: 0px; right: 0px; box-shadow: 0 10px 10px -10px #b7bcdf;"
       >
-        <ul
-          role="listbox"
-          style="margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; border: 1px solid silver; border-radius: 3px; background: white; position: absolute; left: 0px; right: 0px; box-shadow: 0 10px 10px -10px #b7bcdf;"
+        <li
+          aria-selected="false"
+          data-suggestion-index="0"
+          id="react-autowhatever-1--item-0"
+          role="option"
+          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
         >
-          <li
-            aria-selected="false"
-            data-suggestion-index="0"
-            id="react-autowhatever-cdtn-documents-suggester--item-0"
-            role="option"
-            style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          <div
+            class="c1"
           >
             <div
-              class="c3"
+              class="c2"
             >
-              <div
-                class="c4"
-              >
-                <b>
-                  foo
-                </b>
-              </div>
+              <b>
+                foo
+              </b>
             </div>
-          </li>
-          <li
-            aria-selected="false"
-            data-suggestion-index="1"
-            id="react-autowhatever-cdtn-documents-suggester--item-1"
-            role="option"
-            style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          </div>
+        </li>
+        <li
+          aria-selected="false"
+          data-suggestion-index="1"
+          id="react-autowhatever-1--item-1"
+          role="option"
+          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+        >
+          <div
+            class="c1"
           >
             <div
-              class="c3"
+              class="c2"
             >
-              <div
-                class="c4"
-              >
-                <b>
-                  foo
-                </b>
-                bar
-              </div>
+              <b>
+                foo
+              </b>
+              bar
             </div>
-          </li>
-          <li
-            aria-selected="false"
-            data-suggestion-index="2"
-            id="react-autowhatever-cdtn-documents-suggester--item-2"
-            role="option"
-            style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          </div>
+        </li>
+        <li
+          aria-selected="false"
+          data-suggestion-index="2"
+          id="react-autowhatever-1--item-2"
+          role="option"
+          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+        >
+          <div
+            class="c1"
           >
             <div
-              class="c3"
+              class="c2"
             >
-              <div
-                class="c4"
-              >
-                <b>
-                  foo
-                </b>
-                 bar ?
-              </div>
+              <b>
+                foo
+              </b>
+               bar ?
             </div>
-          </li>
-          <li
-            aria-selected="false"
-            data-suggestion-index="3"
-            id="react-autowhatever-cdtn-documents-suggester--item-3"
-            role="option"
-            style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          </div>
+        </li>
+        <li
+          aria-selected="false"
+          data-suggestion-index="3"
+          id="react-autowhatever-1--item-3"
+          role="option"
+          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+        >
+          <div
+            class="c1"
           >
             <div
-              class="c3"
+              class="c2"
             >
-              <div
-                class="c4"
-              >
-                <b>
-                  foo
-                </b>
-                 bazzz
-              </div>
+              <b>
+                foo
+              </b>
+               bazzz
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </li>
+      </ul>
     </div>
-  </label>
+  </div>
 </div>
 `;

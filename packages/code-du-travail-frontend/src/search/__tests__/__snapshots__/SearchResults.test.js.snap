@@ -633,7 +633,9 @@ exports[`<SearchResults/> should render results 1`] = `
 
 <div>
   <div
+    aria-label="Résultats de recherche"
     class="c0"
+    role="region"
   >
     <header
       class="c1"

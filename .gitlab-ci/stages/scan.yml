@@ -7,7 +7,10 @@ Snyk docker scan:
     - docker:$DOCKER_VERSION-dind
   except:
     variables:
+      # Don't run when deploying in production an existing image
       - $PRODUCTION
+      # Don't run when running e2e tests
+      - $E2E_TEST
   dependencies: []
   when: manual
   needs:

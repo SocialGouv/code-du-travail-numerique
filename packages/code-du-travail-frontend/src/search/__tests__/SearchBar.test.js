@@ -30,7 +30,7 @@ describe("<SearchBar />", () => {
     const { container, getAllByRole, getByLabelText } = render(<SearchBar />, {
       query: { q }
     });
-    const input = getByLabelText(/rechercher/i);
+    const input = getByLabelText(/recherchez/i);
     fireEvent.change(input, { target: { value: "yolo" } });
     input.focus();
     await waitForElement(() => getAllByRole("option"));
@@ -39,7 +39,7 @@ describe("<SearchBar />", () => {
 
   it("should update input value when suggestion are hightlighted", async () => {
     const { getByLabelText, getAllByRole } = render(<SearchBar />);
-    const input = getByLabelText(/rechercher/i);
+    const input = getByLabelText(/recherchez/i);
     fireEvent.change(input, { target: { value: "yolo" } });
     input.focus();
     await waitForElement(() => getAllByRole("option"));
@@ -51,7 +51,7 @@ describe("<SearchBar />", () => {
   it("should track suggestions and selectedSuggestion", async () => {
     const { getByText, getByLabelText, getAllByRole } = render(<SearchBar />);
 
-    const input = getByLabelText(/rechercher/i);
+    const input = getByLabelText(/recherchez/i);
     await act(async () => {
       fireEvent.change(input, { target: { value: "yolo" } });
       input.focus();

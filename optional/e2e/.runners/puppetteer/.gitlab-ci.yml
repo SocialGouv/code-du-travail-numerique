@@ -1,0 +1,51 @@
+
+Launch e2e tests:
+  stage: Prepare
+  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.12.0
+  when: manual
+  except:
+    variables:
+      # Don't run when deploying in production an existing image
+      - $PRODUCTION
+      # Don't run when running e2e tests
+      - $E2E_TEST
+  script:
+    - curl
+        --request POST
+        --form "token=${CI_JOB_TOKEN}"
+        --form "ref=${CI_COMMIT_REF_NAME}"
+        --form "variables[E2E_TEST]=true"
+        ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+
+#
+#
+#
+
+E2E Test @optional/e2e.runner.puppetteer:
+  stage: Code Quality
+  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/puppetteer:0.18.0
+  variables:
+    CODECEPT_BASEURL: "https://master-code-travail.dev.fabrique.social.gouv.fr"
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - optional/e2e/.runners/puppetteer/output
+  only:
+    variables:
+      - $E2E_TEST
+  cache:
+    key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
+    paths:
+      - optional/e2e/.runners/puppetteer/node_modules
+      - $CI_PROJECT_DIR/.yarn
+  before_script:
+    - cd ./optional/e2e/.runners/puppetteer
+  script:
+    - yarn config set cache-folder $CI_PROJECT_DIR/.yarn
+    - yarn --frozen-lockfile
+    #
+    - echo "${CODECEPT_BASEURL}"
+    #
+    - yarn test
+
