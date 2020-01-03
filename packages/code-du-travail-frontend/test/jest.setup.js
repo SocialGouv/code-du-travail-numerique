@@ -18,3 +18,5 @@ jest.mock("next/config", () => () => ({
 require("@reach/utils").checkStyles = jest.fn();
 
 document.body.scrollIntoView = jest.fn();
+
+window.scrollTo = jest.fn();
