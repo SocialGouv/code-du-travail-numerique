@@ -117,6 +117,16 @@ Deploy @cdtn/frontend (prod):
   <<: *deploy_frontend_stage
   <<: *prod_stage
 
+Deploy @cdtn/frontend extra ingress(prod):
+  <<: *deploy_stage
+  <<: *prod_stage
+  extends: .base_docker_kubectl_image_stage
+  script:
+    - kubectl config set-context --current --namespace=${K8S_NAMESPACE}
+    - cat ./.k8s/ingress-prod.yml | envsubst | kubectl apply -f -
+  before_script:
+    - source ./.gitlab-ci/env.sh
+
 #
 #
 #
