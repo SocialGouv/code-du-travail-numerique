@@ -1,13 +1,13 @@
 {
   "name": "@cdt/data...fiches_service_public",
-  "version": "4.0.0-gamma.2",
+  "version": "4.0.0-gamma.3",
   "private": true,
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "@cdt/sources": "^4.0.0-gamma.2",
+    "@cdt/sources": "^4.0.0-gamma.3",
     "@socialgouv/fiches-vdd": "^1.0.76",
     "@socialgouv/kali-data": "^1.2.101",
     "@socialgouv/legi-data": "^1.1.11",

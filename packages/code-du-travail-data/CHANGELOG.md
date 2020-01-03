@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.2...v4.0.0-gamma.3) (2020-01-03)
+
+
+### Bug Fixes
+
+* typo modele ([#2154](https://github.com/SocialGouv/code-du-travail-numerique/issues/2154)) ([15f17e1](https://github.com/SocialGouv/code-du-travail-numerique/commit/15f17e1191ce95f1b5b658dffa6378be84742c05))
+* Update fiches-MT ([#2161](https://github.com/SocialGouv/code-du-travail-numerique/issues/2161)) ([c6574f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/c6574f1a63bc72df5d591c563f40ecc5a52fd6b5))
+
+
+
+
+
 # [4.0.0-gamma.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.1...v4.0.0-gamma.2) (2020-01-02)
 
 
