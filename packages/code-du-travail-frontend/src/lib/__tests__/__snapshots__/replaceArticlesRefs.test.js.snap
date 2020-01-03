@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`replaceArticlesRefs Should NOT replace L2213-2 in text 1`] = `"Some content with linke to L2213-2"`;
+
+exports[`replaceArticlesRefs Should replace L2213-2 link in HTML 1`] = `"Some content with links to <a href=\\"/code-du-travail/l2213-2\\">Article L2213-2</a>."`;
+
+exports[`replaceArticlesRefs Should replace l'Article L2213-2 links in HTML 1`] = `"Some content with links to <a href=\\"/code-du-travail/l2213-2\\">l'Article L2213-2</a>."`;
+
+exports[`replaceArticlesRefs Should replace l'article L. 1242-2 link in HTML 1`] = `"Some content with links to <a href=\\"/code-du-travail/l1242-2\\">l'article L. 1242-2</a>."`;
+
+exports[`replaceArticlesRefs Should replace multiple articles links in HTML 1`] = `"Some content with links to <a href=\\"/code-du-travail/l2213-2\\">Article L2213-2</a> and <a href=\\"/code-du-travail/l2312-1\\">L.2312-1</a>"`;

@@ -8,22 +8,11 @@ import getConfig from "next/config";
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
+import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
-
-// match basic article references
-const RE_ARTICLE_NUM = /<a[^>]+>(([LRD])[\s-.]*([\d-]+))\s*<\/a>/gim;
-
-// fix single articles reference
-const fixHtml = html =>
-  (html &&
-    html.replace(RE_ARTICLE_NUM, (all, text, prefix, num) => {
-      const slug = prefix.trim().toLowerCase() + num.trim().toLowerCase();
-      return `<a href="/code-du-travail/${slug}">${text}</a>`;
-    })) ||
-  "";
 
 const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`);
@@ -50,7 +39,7 @@ class Fiche extends React.Component {
       ogImage
     } = this.props;
 
-    const fixedHtml = fixHtml(html);
+    const fixedHtml = replaceArticlesRefs(html);
     return (
       <Layout>
         <Metas
