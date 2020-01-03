@@ -103,6 +103,12 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c3 {
     max-width: 100%;

@@ -35,7 +35,7 @@ exports[`<SearchResults/> should render results 1`] = `
 .c19 {
   position: relative;
   margin: 5rem 0;
-  padding: 3.2rem 0 0.1rem;
+  padding: 3.2rem 0 2rem;
   min-height: 10rem;
   color: #3e486e;
 }
@@ -319,6 +319,10 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   width: 100%;
   margin: 0;
   padding: 2rem 2rem;
@@ -366,6 +370,10 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -448,10 +456,22 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-bottom: 2rem;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c0 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    padding: 0 1rem;
   }
 }
 

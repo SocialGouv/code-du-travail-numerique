@@ -132,6 +132,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c9 {
+    padding: 1rem 0;
+  }
+}
+
 <div>
   <header
     class="c0"
@@ -188,11 +194,11 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <h1
+          <h2
             class="c8"
           >
             titre 1
-          </h1>
+          </h2>
         </div>
       </div>
       <div
@@ -247,11 +253,11 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <h1
+          <h2
             class="c8"
           >
             titre 2
-          </h1>
+          </h2>
         </div>
       </div>
       <div
@@ -318,11 +324,11 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <h1
+          <h2
             class="c8"
           >
             titre 3
-          </h1>
+          </h2>
         </div>
       </div>
       <div
@@ -450,6 +456,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c7 {
+    padding: 1rem 0;
+  }
+}
+
 <div>
   <h5
     class="c0"
@@ -499,11 +511,11 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <h4
+          <h5
             class="c6"
           >
             titre 1
-          </h4>
+          </h5>
         </div>
       </div>
       <div
@@ -558,11 +570,11 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <h4
+          <h5
             class="c6"
           >
             titre 2
-          </h4>
+          </h5>
         </div>
       </div>
       <div
@@ -622,11 +634,11 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <h4
+          <h5
             class="c6"
           >
             titre 3
-          </h4>
+          </h5>
         </div>
       </div>
       <div

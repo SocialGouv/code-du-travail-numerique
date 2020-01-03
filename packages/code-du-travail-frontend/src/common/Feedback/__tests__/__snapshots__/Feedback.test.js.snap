@@ -121,6 +121,12 @@ exports[`<Feedback/> should render 1`] = `
   margin-left: 1.6rem;
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c1 {
     max-width: 100%;
@@ -130,7 +136,7 @@ exports[`<Feedback/> should render 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -150,6 +156,12 @@ exports[`<Feedback/> should render 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 0 3rem;
   }
 }
 
@@ -295,6 +307,12 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transform: translateX(5px);
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c1 {
     max-width: 100%;
@@ -304,7 +322,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -413,6 +431,12 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   line-height: 1.25;
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c1 {
     max-width: 100%;
@@ -422,7 +446,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 

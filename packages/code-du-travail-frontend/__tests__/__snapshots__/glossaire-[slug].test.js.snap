@@ -592,8 +592,8 @@ exports[`<Term /> should render 1`] = `
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: 74rem;
   padding: 0;
+  max-width: 74rem;
   margin-bottom: 2rem;
 }
 
@@ -724,10 +724,22 @@ exports[`<Term /> should render 1`] = `
   content: "";
 }
 
+@media (max-width:600px) {
+  .c21 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c21 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c32 {
+    padding: 0 1rem;
   }
 }
 
@@ -740,7 +752,7 @@ exports[`<Term /> should render 1`] = `
 
 @media (max-width:600px) {
   .c25 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -784,6 +796,12 @@ exports[`<Term /> should render 1`] = `
 @media (max-width:600px) {
   .c36 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
+    padding: 0 3rem;
   }
 }
 
@@ -868,6 +886,12 @@ exports[`<Term /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c2 {
     max-width: 100%;
@@ -931,10 +955,22 @@ exports[`<Term /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c35 {
+    padding: 0;
+  }
+}
+
 @media print {
   .c35 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c39 {
+    padding: 0 1rem;
   }
 }
 

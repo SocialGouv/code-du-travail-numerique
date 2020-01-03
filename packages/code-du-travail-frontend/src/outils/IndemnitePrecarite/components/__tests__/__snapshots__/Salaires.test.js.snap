@@ -285,6 +285,12 @@ exports[`<Salaires /> should add a salaire 1`] = `
 }
 
 @media (max-width:600px) {
+  .c8 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c10 {
     font-size: 1.4rem;
   }
@@ -745,6 +751,12 @@ exports[`<Salaires /> should render 1`] = `
 @media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    padding: 0 3rem;
   }
 }
 

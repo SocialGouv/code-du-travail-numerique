@@ -604,8 +604,8 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: 74rem;
   padding: 0;
+  max-width: 74rem;
   margin-bottom: 2rem;
 }
 
@@ -736,6 +736,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   content: "";
 }
 
+@media (max-width:600px) {
+  .c22 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c22 {
     max-width: 100%;
@@ -745,7 +751,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 @media (max-width:600px) {
   .c23 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -758,7 +764,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 @media (max-width:600px) {
   .c30 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -818,6 +824,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c33 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c27 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -829,9 +841,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c28 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c20 {
     max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
     padding: 0;
   }
 }
@@ -904,6 +934,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c2 {
     max-width: 100%;
@@ -967,10 +1003,22 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c42 {
+    padding: 0;
+  }
+}
+
 @media print {
   .c42 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c45 {
+    padding: 0 1rem;
   }
 }
 
@@ -2192,8 +2240,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: 74rem;
   padding: 0;
+  max-width: 74rem;
   margin-bottom: 2rem;
 }
 
@@ -2324,6 +2372,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   content: "";
 }
 
+@media (max-width:600px) {
+  .c22 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c22 {
     max-width: 100%;
@@ -2333,7 +2387,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 @media (max-width:600px) {
   .c23 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -2346,7 +2400,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 @media (max-width:600px) {
   .c30 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -2406,6 +2460,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c33 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c27 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -2417,9 +2477,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c28 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c20 {
     max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
     padding: 0;
   }
 }
@@ -2492,6 +2570,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c2 {
     max-width: 100%;
@@ -2555,10 +2639,22 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c42 {
+    padding: 0;
+  }
+}
+
 @media print {
   .c42 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c45 {
+    padding: 0 1rem;
   }
 }
 

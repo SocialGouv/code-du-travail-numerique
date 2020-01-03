@@ -558,8 +558,8 @@ exports[`<Glossaire /> should render 1`] = `
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: 74rem;
   padding: 0;
+  max-width: 74rem;
   margin-bottom: 2rem;
 }
 
@@ -703,10 +703,22 @@ exports[`<Glossaire /> should render 1`] = `
   margin: 1rem 0;
 }
 
+@media (max-width:600px) {
+  .c21 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c21 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c35 {
+    padding: 0 1rem;
   }
 }
 
@@ -719,7 +731,7 @@ exports[`<Glossaire /> should render 1`] = `
 
 @media (max-width:600px) {
   .c26 {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 1rem;
   }
 }
 
@@ -791,6 +803,12 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c39 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c12 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -849,6 +867,12 @@ exports[`<Glossaire /> should render 1`] = `
   .c1 {
     position: relative;
     box-shadow: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
   }
 }
 
@@ -915,10 +939,22 @@ exports[`<Glossaire /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c38 {
+    padding: 0;
+  }
+}
+
 @media print {
   .c38 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c42 {
+    padding: 0 1rem;
   }
 }
 

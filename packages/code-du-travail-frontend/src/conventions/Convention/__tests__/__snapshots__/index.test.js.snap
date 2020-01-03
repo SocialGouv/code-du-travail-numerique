@@ -280,6 +280,10 @@ exports[`<Convention /> renders 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   width: 100%;
   margin: 0;
   padding: 2rem 2rem;
@@ -484,6 +488,12 @@ exports[`<Convention /> renders 1`] = `
 @media (max-width:600px) {
   .c4 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    padding: 1rem 0;
   }
 }
 

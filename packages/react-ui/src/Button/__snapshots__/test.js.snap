@@ -191,6 +191,12 @@ exports[`<Button /> it renders a Button flat 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c1 {
     font-size: 1.4rem;
   }
@@ -542,6 +548,12 @@ exports[`<Button /> it renders a Button naked 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c1 {
     font-size: 1.4rem;
   }
@@ -771,6 +783,12 @@ exports[`<Button /> it renders a Button primary 1`] = `
 @media (max-width:600px) {
   .c1 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding: 0 3rem;
   }
 }
 
@@ -1008,6 +1026,12 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     font-size: 1.4rem;
   }
@@ -1112,6 +1136,12 @@ exports[`<Button /> renders 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 3rem;
+  }
+}
+
 <div>
   <button
     class="c0"
@@ -1186,6 +1216,12 @@ exports[`<Button /> renders as a link 1`] = `
 @media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 3rem;
   }
 }
 
@@ -1264,6 +1300,12 @@ exports[`<Button /> renders as div 1`] = `
 @media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 3rem;
   }
 }
 

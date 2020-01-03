@@ -334,6 +334,12 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 }
 
 @media (max-width:600px) {
+  .c11 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c13 {
     font-size: 1.4rem;
   }
@@ -981,6 +987,12 @@ exports[`<AbsencePeriods /> should render 1`] = `
 @media (max-width:600px) {
   .c11 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    padding: 0 3rem;
   }
 }
 

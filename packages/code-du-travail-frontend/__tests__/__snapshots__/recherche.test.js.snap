@@ -475,8 +475,8 @@ exports[`<Recherche /> should render 1`] = `
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: 74rem;
   padding: 0;
+  max-width: 74rem;
   margin-bottom: 2rem;
 }
 
@@ -611,10 +611,22 @@ exports[`<Recherche /> should render 1`] = `
   margin-bottom: 3.2rem !important;
 }
 
+@media (max-width:600px) {
+  .c10 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c10 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c24 {
+    padding: 0 1rem;
   }
 }
 
@@ -658,6 +670,12 @@ exports[`<Recherche /> should render 1`] = `
 @media (max-width:600px) {
   .c25 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c25 {
+    padding: 0 3rem;
   }
 }
 
@@ -723,6 +741,12 @@ exports[`<Recherche /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c2 {
     max-width: 100%;
@@ -763,10 +787,22 @@ exports[`<Recherche /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c31 {
+    padding: 0;
+  }
+}
+
 @media print {
   .c31 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    padding: 0 1rem;
   }
 }
 

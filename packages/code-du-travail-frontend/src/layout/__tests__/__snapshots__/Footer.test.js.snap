@@ -148,8 +148,8 @@ exports[`<Footer /> should render 1`] = `
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: 74rem;
   padding: 0;
+  max-width: 74rem;
   margin-bottom: 2rem;
 }
 
@@ -257,6 +257,12 @@ exports[`<Footer /> should render 1`] = `
   user-select: none;
 }
 
+@media (max-width:600px) {
+  .c4 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c4 {
     max-width: 100%;
@@ -282,9 +288,21 @@ exports[`<Footer /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c9 {
+    padding: 0 3rem;
+  }
+}
+
 @media print {
   .c1 {
     display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    padding: 0;
   }
 }
 
@@ -292,6 +310,12 @@ exports[`<Footer /> should render 1`] = `
   .c8 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    padding: 0 1rem;
   }
 }
 

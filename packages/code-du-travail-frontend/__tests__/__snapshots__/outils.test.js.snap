@@ -418,6 +418,10 @@ exports[`<Outils /> should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   max-width: 100%;
   margin: 0;
   padding: 3.2rem 2rem;
@@ -796,8 +800,8 @@ exports[`<Outils /> should render 1`] = `
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: 74rem;
   padding: 0;
+  max-width: 74rem;
   margin-bottom: 2rem;
 }
 
@@ -947,6 +951,12 @@ exports[`<Outils /> should render 1`] = `
   margin-top: 1.6rem;
 }
 
+@media (max-width:600px) {
+  .c23 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c23 {
     max-width: 100%;
@@ -1005,6 +1015,12 @@ exports[`<Outils /> should render 1`] = `
 @media (max-width:600px) {
   .c53 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c53 {
+    padding: 0 3rem;
   }
 }
 
@@ -1179,6 +1195,12 @@ exports[`<Outils /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
 @media print {
   .c2 {
     max-width: 100%;
@@ -1242,10 +1264,22 @@ exports[`<Outils /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c52 {
+    padding: 0;
+  }
+}
+
 @media print {
   .c52 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c56 {
+    padding: 0 1rem;
   }
 }
 
