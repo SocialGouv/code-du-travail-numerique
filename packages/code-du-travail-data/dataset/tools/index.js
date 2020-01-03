@@ -34,7 +34,7 @@ module.exports = [
   },
   {
     icon: "Salary",
-    title: "Simulateur d’embauche",
+    title: "Salaire brut/net",
     slug: "simulateur-embauche",
     questions: [
       "Comment calculer mon salaire",
