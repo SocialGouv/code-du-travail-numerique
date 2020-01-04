@@ -44,9 +44,11 @@ async function getRelatedItems({ queryVector, settings, slug }) {
   const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
   const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
 
+  const [rootSlug] = slug.split("#");
+
   return utils
     .mergePipe(semanticHits, fullTextHits, MAX_RESULTS)
-    .filter(({ _source }) => !_source.slug.includes(slug))
+    .filter(({ _source }) => !_source.slug.startsWith(rootSlug))
     .map(({ _source }) => _source);
 }
 
