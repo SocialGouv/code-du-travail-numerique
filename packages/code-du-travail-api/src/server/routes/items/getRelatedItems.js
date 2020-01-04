@@ -2,16 +2,20 @@ const { SOURCES } = require("@cdt/sources");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
+const fetchWithTimeout = require("../../utils/fetchWithTimeout");
 const getSemBody = require("../search/search.sem");
 const utils = require("../search/utils");
 const getRelatedItemsBody = require("./relatedItems.elastic");
+const { logger } = require("../../utils/logger");
 
 const MAX_RESULTS = 5;
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
-async function getRelatedItems({ queryVector, settings, slug }) {
+const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
+
+async function getRelatedItems({ title, settings, slug }) {
   const size = MAX_RESULTS;
   const sources = [
     SOURCES.TOOLS,
@@ -23,18 +27,25 @@ async function getRelatedItems({ queryVector, settings, slug }) {
   ];
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index }, relatedItemBody];
-  if (queryVector) {
-    const semBody = getSemBody({
-      query_vector: queryVector,
-      // we +1 the size to remove the document source that should match perfectly for the given vector
-      size: size + 1,
-      sources
+  const query_vector = await fetchWithTimeout(
+    `${NLP_URL}/api/search?q=${encodeURIComponent(title)}`
+  )
+    .then(response => (response = response.json()))
+    .catch(error => {
+      logger.error(error);
+      return [];
     });
-    // we use relatedItem query _source to have the same prop returned
-    // for both request
-    semBody._source = relatedItemBody._source;
-    requestBodies.push({ index }, semBody);
-  }
+  const semBody = getSemBody({
+    query_vector,
+    // we +1 the size to remove the document source that should match perfectly for the given vector
+    size: size + 1,
+    sources
+  });
+  // we use relatedItem query _source to have the same prop returned
+  // for both request
+  semBody._source = relatedItemBody._source;
+  requestBodies.push({ index }, semBody);
+
   const {
     body: {
       responses: [esResponse = [], semResponse = []]
