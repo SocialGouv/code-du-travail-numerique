@@ -36,7 +36,7 @@
   },
   {
     "title": "Lettre de réclamation des documents de fin de contrat",
-    "description": "À la rupture du contrat de travail, dans tous les cas de rupture, l'employeur doit délivrer au salarié des documents (ex : certificat de travail). Ce modèle permet au salarié de réclamer ces documents à l'employeur qui n'aurait pas satisfait à cette obligation.",
+    "description": "À la rupture du contrat de travail, l'employeur doit délivrer au salarié des documents (ex : certificat de travail). Ce modèle permet au salarié de réclamer ces documents à l'employeur qui n'aurait pas satisfait à cette obligation.",
     "date": "16/12/2019",
     "author": "Ministère du Travail",
     "filename": "reclamation_des_documents_de_fin_de_contrat.docx"
@@ -57,14 +57,14 @@
   },
   {
     "title": "Réponse à un signalement de harcèlement sexuel",
-    "description": "Le modèle ci-après propose une réponse au salarié ayant signalé des faits de harcèlement sexuel en tant que victime ou témoin.",
+    "description": "Ce modèle propose une réponse au salarié ayant signalé des faits de harcèlement sexuel en tant que victime ou témoin.",
     "date": "10/12/2019",
     "author": "Ministère du Travail",
     "filename": "reponse_a_signalement_harcelement_sexuel.docx"
   },
   {
     "title": "Rupture du contrat en période d’essai à l'initiative du salarié",
-    "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par le salarié. Le salarié devra informer l'employeur et respecter un délai de prévenance avant de quitter ses fonctions. Le modèle ci-dessous permet au salarié d'avertir l'employeur de son intention de mettre fin à la période d'essai.",
+    "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par le salarié. Le salarié devra informer l'employeur et respecter un délai de prévenance avant de quitter ses fonctions. Ce modèle permet au salarié d'avertir l'employeur de son intention de mettre fin à la période d'essai.",
     "date": "16/12/2019",
     "author": "Ministère du Travail",
     "filename": "rupture_periode_d-essai_salarie.docx"
@@ -85,14 +85,14 @@
   },
   {
     "title": "Signalement de harcèlement sexuel",
-    "description": "Le présent modèle permet à un salarié victime ou témoin de harcèlement sexuel d'alerter l'employeur.",
+    "description": "Ce modèle permet à un salarié victime ou témoin de harcèlement sexuel d'alerter l'employeur.",
     "date": "10/12/2019",
     "author": "Ministère du Travail",
     "filename": "signalement_harcelement_sexuel.docx"
   },
   {
     "title": "Réclamation de congés payés",
-    "description": "Le salarié doit pouvoir prendre l’ensemble de ses congés payés. Ce modèle de courrier permet de demander à l'employeur la prise des congés payés.",
+    "description": "Le salarié doit pouvoir prendre l’ensemble de ses congés payés. Ce modèle permet de demander à l'employeur la prise des congés payés.",
     "date": "16/12/2019",
     "author": "Ministère du Travail",
     "filename": "reclamation_de_cp.docx"
@@ -106,7 +106,7 @@
   },
   {
     "title": "Demande de paiement de salaire",
-    "description": "Tout salarié doit percevoir son salaire au moins une fois par mois. Le modèle ci-après permet au salarié de demander le paiement de son salaire du en cas de non-paiement. Le salarié doit également garder une copie de ce courrier.",
+    "description": "Tout salarié doit percevoir son salaire au moins une fois par mois. Ce modèle permet au salarié de demander le paiement de son salaire dû en cas de non-paiement. Le salarié doit également garder une copie de ce courrier.",
     "date": "01/01/2020",
     "author": "Ministère du Travail",
     "filename": "demande_paiement_salaire.docx"
@@ -120,21 +120,21 @@
   },
   {
     "title": "Relevé d’heures supplémentaires",
-    "description": "Les heures supplémentaires sont décomptées à la semaine et font l'objet de contreparties. Le document ci-après permet de présenter le décompte des heures supplémentaires et les contreparties dues.",
+    "description": "Les heures supplémentaires sont décomptées à la semaine et font l'objet de contreparties. Ce document permet de présenter le décompte des heures supplémentaires et les contreparties dues.",
     "date": "16/12/2019",
     "author": "Ministère du Travail",
     "filename": "tableau_recap_des_heures_supplementaires.docx"
   },
   {
     "title": "Rupture d’un commun accord d’un contrat d’apprentissage",
-    "description": "Le contrat d'apprentissage peut être rompu par l'apprenti ou par l'employeur jusqu'à la fin des 45 premiers jours de pratique en entreprise. Passé ce délai, la rupture du contrat n'est possible que dans certains cas ou certaines modalités. Toutefois, la rupture d'un commun accord entre le salarié et l'employeur est possible. Ce que prévoit le modèle ci-après.",
+    "description": "Le contrat d'apprentissage peut être rompu par l'apprenti ou par l'employeur jusqu'à la fin des 45 premiers jours de pratique en entreprise. Passé ce délai, la rupture du contrat est possible si le salarié et l'employeur trouvent un accord.",
     "date": "20/12/2019",
     "author": "Ministère du Travail",
     "filename": "rupture_amiable_du_contrat_d_apprentissage.docx"
   },
   {
     "title": "Rupture d’un commun accord d’un contrat de travail à durée déterminée",
-    "description": "La rupture anticipée du contrat de travail à durée déterminée par le salarié ou l'employeur, en dehors de la période d'essai est limitée à un certain nombre de cas (ex: embauche en CDI). Pour autant une rupture d'un commun accord entre les parties est possible. Le document suivant présente un tel modèle d'accord. ",
+    "description": "La rupture anticipée du contrat de travail à durée déterminée par le salarié ou l'employeur, en dehors de la période d'essai, est limitée à un certain nombre de cas (ex : embauche en CDI). Une rupture d'un commun accord entre le salarié et l'employeur est cependant possible.",
     "date": "20/12/2019",
     "author": "Ministère du Travail",
     "filename": "rupture_commun_accord_du_cdd.docx"
