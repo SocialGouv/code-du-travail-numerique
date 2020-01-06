@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.3...v4.0.0-gamma.4) (2020-01-06)
+
+
+### Bug Fixes
+
+* **api:** preserve order when merging semantic and fulltext results ([#2107](https://github.com/SocialGouv/code-du-travail-numerique/issues/2107)) ([246b40f](https://github.com/SocialGouv/code-du-travail-numerique/commit/246b40f6159cb70482ef84c211d4be4d1b034d17)), closes [#2095](https://github.com/SocialGouv/code-du-travail-numerique/issues/2095) [#2152](https://github.com/SocialGouv/code-du-travail-numerique/issues/2152)
+* Last updates descriptions modèle ([#2169](https://github.com/SocialGouv/code-du-travail-numerique/issues/2169)) ([d974600](https://github.com/SocialGouv/code-du-travail-numerique/commit/d9746005b8cfdd4b025662172d4ee88167cb9772))
+* **frontend:** react-burger-menu is a real dependency ([#2172](https://github.com/SocialGouv/code-du-travail-numerique/issues/2172)) ([3333d40](https://github.com/SocialGouv/code-du-travail-numerique/commit/3333d402dbdbc19e91cbc95ed02d10f6ed823d51))
+* fix articles links in CDT for [#1928](https://github.com/SocialGouv/code-du-travail-numerique/issues/1928) ([#2167](https://github.com/SocialGouv/code-du-travail-numerique/issues/2167)) ([decb14a](https://github.com/SocialGouv/code-du-travail-numerique/commit/decb14aa4be91b22cc3996ef9f00f768671617a7))
+
+
+### Features
+
+* **e2e:** add search-ccn ([#2176](https://github.com/SocialGouv/code-du-travail-numerique/issues/2176)) ([fe1f424](https://github.com/SocialGouv/code-du-travail-numerique/commit/fe1f424fcef2bfda216f32367147c3d78e000301))
+* **frontend:** home stair tiles ([#2180](https://github.com/SocialGouv/code-du-travail-numerique/issues/2180)) ([d1ab489](https://github.com/SocialGouv/code-du-travail-numerique/commit/d1ab489ced6c6409b729ba01367c6ab185e3c836))
+* **frontend:** inline idcc in convention search ([#2178](https://github.com/SocialGouv/code-du-travail-numerique/issues/2178)) ([5a2d30b](https://github.com/SocialGouv/code-du-travail-numerique/commit/5a2d30bf448054566086b0f7faef1ba373db2bc4)), closes [#2118](https://github.com/SocialGouv/code-du-travail-numerique/issues/2118)
+* **ui:** refactor grid ([#2158](https://github.com/SocialGouv/code-du-travail-numerique/issues/2158)) ([f9daa7b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9daa7bbfceaf8d4e870e187d56d07a7aa33fa87))
+
+
+
+
+
 # [4.0.0-gamma.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.2...v4.0.0-gamma.3) (2020-01-03)
 
 

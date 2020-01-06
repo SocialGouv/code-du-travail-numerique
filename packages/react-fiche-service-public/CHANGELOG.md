@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.3...v4.0.0-gamma.4) (2020-01-06)
+
+
+### Features
+
+* **ui:** refactor grid ([#2158](https://github.com/SocialGouv/code-du-travail-numerique/issues/2158)) ([f9daa7b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9daa7bbfceaf8d4e870e187d56d07a7aa33fa87))
+
+
+
+
+
 # [4.0.0-gamma.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.2...v4.0.0-gamma.3) (2020-01-03)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public

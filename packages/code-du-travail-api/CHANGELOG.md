@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-gamma.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.3...v4.0.0-gamma.4) (2020-01-06)
+
+
+### Bug Fixes
+
+* **api:** preserve order when merging semantic and fulltext results ([#2107](https://github.com/SocialGouv/code-du-travail-numerique/issues/2107)) ([246b40f](https://github.com/SocialGouv/code-du-travail-numerique/commit/246b40f6159cb70482ef84c211d4be4d1b034d17)), closes [#2095](https://github.com/SocialGouv/code-du-travail-numerique/issues/2095) [#2152](https://github.com/SocialGouv/code-du-travail-numerique/issues/2152)
+
+
+
+
+
 # [4.0.0-gamma.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.2...v4.0.0-gamma.3) (2020-01-03)
 
 **Note:** Version bump only for package @cdt/api
