@@ -9,10 +9,9 @@ import {
   Container,
   Grid,
   icons,
+  PageTitle,
   Section,
-  theme,
-  Tile,
-  Title
+  theme
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import tools from "@cdt/data...tools";
@@ -21,6 +20,7 @@ import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
 import SearchHero from "../src/search/SearchHero";
 import { CustomTile } from "../src/common/tiles/Custom";
+import { Themes } from "../src/home/Themes";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -58,12 +58,12 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
     <SearchHero />
     <Section>
       <Container>
-        <Title
-          topStripped
+        <PageTitle
+          as="h2"
           subtitle="Trouvez des réponses personnalisées selon votre situation"
         >
           Boîte à outils
-        </Title>
+        </PageTitle>
         <Grid>
           {selectedTools.map(
             ({ action, description, href, icon, slug, title }) => {
@@ -94,34 +94,7 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
         </ButtonWrapper>
       </Container>
     </Section>
-    {themes.length > 0 && (
-      <Section large decorated variant="light">
-        <Container>
-          <Title subtitle="Retrouvez tous nos contenus organisés par thèmes">
-            Thèmes
-          </Title>
-          <Grid>
-            {themes.map(({ icon, slug, title }) => (
-              <Link
-                key={slug}
-                href="/themes/[slug]"
-                as={`/themes/${slug}`}
-                passHref
-              >
-                <Tile title={title} icon={icons[icon]} />
-              </Link>
-            ))}
-          </Grid>
-          <ButtonWrapper>
-            <Link href="/themes" passHref>
-              <Button variant="primary" as="a">
-                Voir tous les thèmes <StyledArrowRight />
-              </Button>
-            </Link>
-          </ButtonWrapper>
-        </Container>
-      </Section>
-    )}
+    {themes.length > 0 && <Themes themes={themes} />}
   </Layout>
 );
 

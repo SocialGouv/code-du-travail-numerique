@@ -25,7 +25,7 @@ const SubThemes = ({ children = [] }) => {
   return (
     <div>
       {children.slice(0, 3).map(({ title }, index) => (
-        <>
+        <React.Fragment key={title}>
           {title}
           {index < 2 ? (
             index < children.length - 1 && (
@@ -34,7 +34,7 @@ const SubThemes = ({ children = [] }) => {
           ) : (
             <PrimaryColored>&nbsp;&hellip;</PrimaryColored>
           )}
-        </>
+        </React.Fragment>
       ))}
     </div>
   );
