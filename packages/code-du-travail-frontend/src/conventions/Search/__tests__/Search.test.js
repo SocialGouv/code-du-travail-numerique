@@ -178,8 +178,7 @@ describe("<Search />", () => {
         slug: "slug-convention-2",
         title: "titre convention 2",
         shortTitle: "smaller convention 2"
-      },
-      label: "IDCC 4567"
+      }
     });
   });
 

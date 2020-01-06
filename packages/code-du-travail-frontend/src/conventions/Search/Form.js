@@ -6,6 +6,7 @@ import Spinner from "react-svg-spinner";
 
 import slugify from "@cdt/data/slugify";
 import { Container, Input, Table, Heading, theme } from "@socialgouv/react-ui";
+import { formatIdcc } from "@cdt/data/lib";
 
 import SearchCC from "./SearchCC";
 
@@ -18,18 +19,24 @@ const Convention = ({ num, shortTitle, onClick }) => {
   return (
     <Box>
       {onClick ? (
-        <ConventionLink onClick={onClick}>{shortTitle}</ConventionLink>
+        <span>
+          <ConventionLink onClick={onClick}>{shortTitle}</ConventionLink> (IDCC{" "}
+          {formatIdcc(num)})
+        </span>
       ) : (
-        <Link
-          href="/convention-collective/[slug]"
-          as={`/convention-collective/${getConventionSlug({
-            num,
-            shortTitle
-          })}`}
-          passHref
-        >
-          <ConventionLink>{shortTitle}</ConventionLink>
-        </Link>
+        <>
+          <Link
+            href="/convention-collective/[slug]"
+            as={`/convention-collective/${getConventionSlug({
+              num,
+              shortTitle
+            })}`}
+            passHref
+          >
+            <ConventionLink>{shortTitle}</ConventionLink>
+          </Link>
+          <span> (IDCC {formatIdcc(num)})</span>
+        </>
       )}
     </Box>
   );
@@ -106,7 +113,7 @@ const Search = ({
         Renseignez le nom de votre entreprise, son SIRET ou le nom de votre
         convention collective.
       </p>
-      <Input
+      <BlockInput
         role="search"
         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
         value={query}
@@ -182,7 +189,9 @@ const Search = ({
 };
 
 const { colors, fonts, spacings, breakpoints } = theme;
-
+const BlockInput = styled(Input)`
+  display: block;
+`;
 const FixedTable = styled(Table)`
   width: 100%;
   table-layout: fixed;
