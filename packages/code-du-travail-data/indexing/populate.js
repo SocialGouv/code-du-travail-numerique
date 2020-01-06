@@ -94,10 +94,11 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Fiche MT(split) ===");
   yield require("../dataset/fiches_ministere_travail/fiches-mt-split.json").map(
-    ({ anchor, description, html, slug, text, title }) => ({
+    ({ anchor, description, html, slug, text, title, breadcrumbs }) => ({
       source: SOURCES.SHEET_MT,
       anchor,
       description,
+      breadcrumbs,
       html,
       slug,
       text,
