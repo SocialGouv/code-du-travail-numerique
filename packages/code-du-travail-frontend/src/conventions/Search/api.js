@@ -1,4 +1,4 @@
-import { formatIdcc, parseIdcc } from "@cdt/data/lib";
+import { parseIdcc } from "@cdt/data/lib";
 
 import getQueryType from "./getQueryType";
 import { searchConvention } from "../convention.service";
@@ -17,7 +17,6 @@ export const loadResults = async query => {
       ccns.map(ccn => ({
         type: "convention",
         id: ccn.id,
-        label: `IDCC ${formatIdcc(ccn.num)}`,
         conventions: [ccn]
       }))
     );
@@ -55,7 +54,6 @@ export const loadResults = async query => {
         {
           type: "convention",
           id: query,
-          label: `IDCC ${formatIdcc(perfectMatch.num)}`,
           conventions: [perfectMatch]
         }
       ];
@@ -66,7 +64,6 @@ export const loadResults = async query => {
       return matches.slice(0, 5).map(match => ({
         type: "convention",
         id: match.num,
-        label: `IDCC ${formatIdcc(match.num)}`,
         conventions: [match]
       }));
     }
