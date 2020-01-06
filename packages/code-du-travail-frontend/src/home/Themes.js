@@ -23,15 +23,10 @@ export const Themes = ({ themes = [] }) => {
       </GridCell>
     );
   });
-  enrichedThemes.splice(
-    2,
-    0,
-    <DesktopOnlyGridCell key="icon">
-      <StyledThemeIcon />
-    </DesktopOnlyGridCell>
-  );
-  enrichedThemes.unshift(<DesktopOnlyGridCell key="ghost cell" />);
-  enrichedThemes.unshift(
+
+  const [t1, t2, ...otherThemes] = enrichedThemes;
+
+  const titleCell = (
     <DesktopOnlyGridCell key="title cell">
       <ShiftedPageTitleWrapper>
         <PageTitle
@@ -44,6 +39,15 @@ export const Themes = ({ themes = [] }) => {
       </ShiftedPageTitleWrapper>
     </DesktopOnlyGridCell>
   );
+
+  const ghostCell = <DesktopOnlyGridCell key="ghost cell" />;
+
+  const illustrationCell = (
+    <DesktopOnlyGridCell key="icon">
+      <StyledThemeIcon />
+    </DesktopOnlyGridCell>
+  );
+
   return (
     <Section large decorated variant="light">
       <RelativeContainer>
@@ -58,7 +62,9 @@ export const Themes = ({ themes = [] }) => {
             Thèmes
           </PageTitle>
         </MobileTitleWrapper>
-        <RootGrid>{enrichedThemes}</RootGrid>
+        <RootGrid>
+          {[titleCell, ghostCell, t1, t2, illustrationCell].concat(otherThemes)}
+        </RootGrid>
         <Link href="/themes" passHref>
           <Button variant="primary" as="a">
             Voir tous les thèmes <StyledArrowRight />
