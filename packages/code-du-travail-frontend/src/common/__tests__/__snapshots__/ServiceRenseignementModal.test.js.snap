@@ -176,6 +176,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 
 .c7 {
   position: relative;
+  display: inline-block;
 }
 
 .c9 {
@@ -506,17 +507,19 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               >
                 Saisissez votre numéro de département :
               </label>
-              <div
+              <span
                 class="c7 c8"
               >
                 <input
+                  autocomplete="off"
                   class="c9"
                   id="id_1"
                   maxlength="3"
+                  name="search-service"
                   placeholder="ex. 31, 35, 75"
                   type="text"
                 />
-              </div>
+              </span>
             </p>
             <small
               class="c10"

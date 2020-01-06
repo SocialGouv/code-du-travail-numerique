@@ -126,6 +126,7 @@ exports[`<Primes /> should add a prime 1`] = `
 
 .c1 {
   position: relative;
+  display: inline-block;
 }
 
 .c2 {
@@ -279,7 +280,7 @@ exports[`<Primes /> should add a prime 1`] = `
     class="c0"
   >
     <div>
-      <div
+      <span
         class="c1"
       >
         <input
@@ -301,7 +302,7 @@ exports[`<Primes /> should add a prime 1`] = `
             />
           </svg>
         </div>
-      </div>
+      </span>
     </div>
     <button
       class="c4 c5 c6"
@@ -551,6 +552,7 @@ exports[`<Primes /> should render 1`] = `
 
 .c1 {
   position: relative;
+  display: inline-block;
 }
 
 .c2 {
@@ -704,7 +706,7 @@ exports[`<Primes /> should render 1`] = `
     class="c0"
   >
     <div>
-      <div
+      <span
         class="c1"
       >
         <input
@@ -726,7 +728,7 @@ exports[`<Primes /> should render 1`] = `
             />
           </svg>
         </div>
-      </div>
+      </span>
     </div>
     <button
       class="c4 c5 c6"

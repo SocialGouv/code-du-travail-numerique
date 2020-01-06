@@ -765,6 +765,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
 
 .c6 {
   position: relative;
+  display: inline-block;
 }
 
 .c7 {
@@ -940,7 +941,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         <p>
           Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
         </p>
-        <div
+        <span
           class="c6"
         >
           <input
@@ -951,7 +952,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
             type="search"
             value=""
           />
-        </div>
+        </span>
         
       </div>
     </div>
@@ -1006,6 +1007,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c6 {
   position: relative;
+  display: inline-block;
 }
 
 .c7 {
@@ -1157,7 +1159,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         <p>
           Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
         </p>
-        <div
+        <span
           class="c6"
         >
           <input
@@ -1168,7 +1170,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
             type="search"
             value=""
           />
-        </div>
+        </span>
         
       </div>
     </div>

@@ -74,6 +74,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 
 .c9 {
   position: relative;
+  display: inline-block;
 }
 
 .c10 {
@@ -425,7 +426,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -448,7 +449,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -460,7 +461,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -483,7 +484,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -495,7 +496,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -518,7 +519,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -530,7 +531,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -553,7 +554,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -565,7 +566,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -588,7 +589,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -600,7 +601,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -623,7 +624,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -635,7 +636,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -658,7 +659,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -670,7 +671,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -693,7 +694,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -705,7 +706,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -728,7 +729,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -740,7 +741,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -763,7 +764,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -775,7 +776,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -798,7 +799,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -810,7 +811,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c9"
               >
                 <input
@@ -833,7 +834,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
         </tbody>
@@ -846,6 +847,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 exports[`<StepSalaires /> should render same salaire 1`] = `
 .c6 {
   position: relative;
+  display: inline-block;
 }
 
 .c8 {
@@ -1156,7 +1158,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
       *
     </span>
   </label>
-  <div
+  <span
     class="c6 c7"
   >
     <input
@@ -1178,7 +1180,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
         />
       </svg>
     </div>
-  </div>
+  </span>
   <span>
     Prendre en compte les primes et avantages en nature.
   </span>
@@ -1311,6 +1313,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 
 .c13 {
   position: relative;
+  display: inline-block;
 }
 
 .c16 {
@@ -1862,7 +1865,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     <div
       class="c9"
     >
-      <div
+      <span
         class="c13"
       >
         <input
@@ -1871,12 +1874,12 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
           type="number"
           value="24"
         />
-      </div>
+      </span>
     </div>
     <div
       class="c15"
     >
-      <div
+      <span
         class="c13"
       >
         <input
@@ -1898,7 +1901,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
             />
           </svg>
         </div>
-      </div>
+      </span>
     </div>
     <button
       class="c18 c19 c20"
@@ -1960,7 +1963,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     <div
       class="c9"
     >
-      <div
+      <span
         class="c13"
       >
         <input
@@ -1969,12 +1972,12 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
           type="number"
           value="12"
         />
-      </div>
+      </span>
     </div>
     <div
       class="c15"
     >
-      <div
+      <span
         class="c13"
       >
         <input
@@ -1996,7 +1999,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
             />
           </svg>
         </div>
-      </div>
+      </span>
     </div>
     <button
       class="c18 c19 c20"

@@ -20,8 +20,6 @@ class ServiceRenseignement extends React.Component {
     departmentData: null
   };
 
-  inputRef = React.createRef();
-
   onDepartmentInput = e => {
     const departmentNum = (e.target.value || "").toLowerCase();
     const departmentData = servicesDeRenseignement[departmentNum];
@@ -57,8 +55,9 @@ class ServiceRenseignement extends React.Component {
                 </label>
                 <StyledInput
                   id={id}
-                  ref={this.inputRef}
                   type="text"
+                  name="search-service"
+                  autoComplete="off"
                   maxLength="3"
                   placeholder="ex. 31, 35, 75"
                   onChange={this.onDepartmentInput}

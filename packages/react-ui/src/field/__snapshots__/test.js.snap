@@ -3,6 +3,7 @@
 exports[`<Input /> should render input field 1`] = `
 .c0 {
   position: relative;
+  display: inline-block;
 }
 
 .c1 {
@@ -96,14 +97,14 @@ exports[`<Input /> should render input field 1`] = `
 }
 
 <div>
-  <div
+  <span
     class="c0"
   >
     <input
       class="c1"
       name="input"
     />
-  </div>
+  </span>
 </div>
 `;
 
@@ -177,6 +178,7 @@ exports[`<InputCheckbox /> should render checkbox field 1`] = `
 exports[`<InputDate /> should render input date field 1`] = `
 .c0 {
   position: relative;
+  display: inline-block;
 }
 
 .c2 {
@@ -274,7 +276,7 @@ exports[`<InputDate /> should render input date field 1`] = `
 }
 
 <div>
-  <div
+  <span
     class="c0 c1"
   >
     <input
@@ -283,7 +285,7 @@ exports[`<InputDate /> should render input date field 1`] = `
       placeholder="JJ/MM/AAAA"
       type="date"
     />
-  </div>
+  </span>
 </div>
 `;
 

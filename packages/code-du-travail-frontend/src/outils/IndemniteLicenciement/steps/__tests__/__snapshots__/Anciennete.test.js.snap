@@ -33,6 +33,7 @@ exports[`<Anciennete /> should render 1`] = `
 
 .c7 {
   position: relative;
+  display: inline-block;
 }
 
 .c9 {
@@ -294,7 +295,7 @@ exports[`<Anciennete /> should render 1`] = `
     <div
       class="c6"
     >
-      <div
+      <span
         class="c7 c8"
       >
         <input
@@ -305,7 +306,7 @@ exports[`<Anciennete /> should render 1`] = `
           type="date"
           value=""
         />
-      </div>
+      </span>
     </div>
     <label
       class="c4"
@@ -322,7 +323,7 @@ exports[`<Anciennete /> should render 1`] = `
     <div
       class="c6"
     >
-      <div
+      <span
         class="c7 c8"
       >
         <input
@@ -333,7 +334,7 @@ exports[`<Anciennete /> should render 1`] = `
           type="date"
           value=""
         />
-      </div>
+      </span>
     </div>
     <label
       class="c4"
@@ -350,7 +351,7 @@ exports[`<Anciennete /> should render 1`] = `
     <div
       class="c6"
     >
-      <div
+      <span
         class="c7 c8"
       >
         <input
@@ -361,7 +362,7 @@ exports[`<Anciennete /> should render 1`] = `
           type="date"
           value=""
         />
-      </div>
+      </span>
     </div>
     <header
       class="c0 c1"

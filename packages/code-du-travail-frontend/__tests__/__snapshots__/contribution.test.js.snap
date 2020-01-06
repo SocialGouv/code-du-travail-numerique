@@ -1264,6 +1264,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <div
                   class="c24"
                 />
+                Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
               </h1>
             </header>
             <div
@@ -2869,6 +2870,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <div
                   class="c24"
                 />
+                Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
               </h1>
             </header>
             <div

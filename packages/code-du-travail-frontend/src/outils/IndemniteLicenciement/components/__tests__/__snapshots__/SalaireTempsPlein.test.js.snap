@@ -74,6 +74,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 
 .c4 {
   position: relative;
+  display: inline-block;
 }
 
 .c5 {
@@ -248,7 +249,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c4"
               >
                 <input
@@ -271,7 +272,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -283,7 +284,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c4"
               >
                 <input
@@ -306,7 +307,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
         </tbody>
@@ -390,6 +391,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 
 .c4 {
   position: relative;
+  display: inline-block;
 }
 
 .c5 {
@@ -564,7 +566,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c4"
               >
                 <input
@@ -587,7 +589,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
           <tr>
@@ -599,7 +601,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
               </label>
             </td>
             <td>
-              <div
+              <span
                 class="c4"
               >
                 <input
@@ -622,7 +624,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
+              </span>
             </td>
           </tr>
         </tbody>

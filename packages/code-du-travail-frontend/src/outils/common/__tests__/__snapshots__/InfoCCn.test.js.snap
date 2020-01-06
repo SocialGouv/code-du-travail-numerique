@@ -17,6 +17,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
 
 .c4 {
   position: relative;
+  display: inline-block;
 }
 
 .c5 {
@@ -166,7 +167,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
     <p>
       Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
     </p>
-    <div
+    <span
       class="c4"
     >
       <input
@@ -177,7 +178,7 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
         type="search"
         value=""
       />
-    </div>
+    </span>
     
   </div>
 </div>

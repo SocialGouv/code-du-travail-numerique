@@ -12,6 +12,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 
 .c4 {
   position: relative;
+  display: inline-block;
 }
 
 .c6 {
@@ -260,17 +261,19 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     >
       Saisissez votre numéro de département :
     </label>
-    <div
+    <span
       class="c4 c5"
     >
       <input
+        autocomplete="off"
         class="c6"
         id="id_1"
         maxlength="3"
+        name="search-service"
         placeholder="ex. 31, 35, 75"
         type="text"
       />
-    </div>
+    </span>
   </p>
   <p>
     <a
