@@ -1,10 +1,10 @@
 const Router = require("koa-router");
-const fetch = require("node-fetch");
 const { SOURCES } = require("@cdt/sources");
 const { DOCUMENTS, THEMES } = require("@cdt/data/indexing/esIndexName");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
+const fetchWithTimeout = require("../../utils/fetchWithTimeout");
 const getSavedResult = require("./search.getSavedResult");
 const getSearchBody = require("./search.elastic");
 const getSemBody = require("./search.sem");
@@ -31,17 +31,6 @@ const DOCUMENTS_ES = "documents_es";
 const THEMES_ES = "themes_es";
 const THEMES_SEM = "themes_sem";
 const CDT_ES = "cdt_es";
-
-const fetchWithTimeout = (url, options, timeout = 500) =>
-  Promise.race([
-    fetch(url, options),
-    new Promise((_, reject) =>
-      setTimeout(() => {
-        logger.error(`fetch timeout for ${url}`);
-        reject(new Error("Timeout"));
-      }, timeout)
-    )
-  ]);
 
 /**
  * Return documents matching the given query.
@@ -168,7 +157,7 @@ router.get("/search", async ctx => {
     semanticHits.forEach(item => (item._source.algo = "semantic"));
     themes = removeDuplicate(
       themes
-        .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
+        .concat(merge(semanticHits, fulltextHits, THEMES_RESULTS_NUMBER * 2))
         .slice(0, THEMES_RESULTS_NUMBER)
     );
   }

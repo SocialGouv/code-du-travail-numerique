@@ -35,12 +35,12 @@ router.get("/items/:source/:slug", async ctx => {
 
   const {
     _id,
-    _source: { title_vector: queryVector }
+    _source: { title }
   } = item;
 
   const relatedItems = await getRelatedItems({
     slug,
-    queryVector,
+    title,
     settings: [{ _id }]
   });
   ctx.body = {

@@ -74,6 +74,7 @@ Object {
           "title": "Documents à remettre au salarié",
         },
       ],
+      "icon": "Depart",
       "position": 8,
       "slug": "8-depart-de-lentreprise",
       "title": "Départ de l'entreprise",

@@ -1,6 +1,12 @@
 [
   {
-    "title": "Démission",
+    "breadcrumbs": [
+      {
+        "title": "Départ de l'entreprise",
+        "slug": "8-depart-de-lentreprise"
+      }
+    ],
+    "children": [],
     "position": 81,
     "refs": [
       {
@@ -22,11 +28,11 @@
         "title": "La démission : faut-il respecter un préavis ?"
       },
       {
-        "url": "/contributions/quelle-est-la-duree-du-preavis-en-cas-de-demission",
+        "url": "/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission",
         "title": " Quelle est la durée du préavis en cas de démission ?"
       },
       {
-        "url": "/contributions/le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
+        "url": "/contribution/le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
         "title": "Le préavis de démission doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?"
       },
       {
@@ -78,63 +84,21 @@
         "title": "Le droit aux allocations chômage du salarié démissionnaire : quelles sont les démissions considérées comme légitimes ?"
       },
       {
-        "url": "/fiche-ministere-travail/le-droit-aux-allocations-chomage-du-salarie-demissionnaire#Que-se-passe-t-il-dans-les-autres-cas",
+        "url": "/fiche-ministere-travail/le-droit-aux-allocations-chomage-du-salarie-demissionnaire",
         "title": "Le droit aux allocations chômage du salarié démissionnaire : que se passe-t-il dans les autres cas ?"
       },
       {
         "url": "https://demission-reconversion.gouv.fr/"
       }
     ],
-    "source": "themes",
     "slug": "81-demission",
-    "breadcrumbs": [
-      {
-        "title": "Départ de l'entreprise",
-        "slug": "8-depart-de-lentreprise"
-      }
-    ],
-    "children": [],
+    "source": "themes",
+    "title": "Démission",
     "variants": [
       "Démission"
     ]
   },
   {
-    "title": "Départ de l'entreprise",
-    "position": 8,
-    "refs": [
-      {
-        "url": "/fiche-service-public/le-salarie-beneficie-t-il-dheures-de-recherche-demploi-pendant-son-preavis"
-      },
-      {
-        "url": "/fiche-service-public/peut-on-travailler-pour-un-nouvel-employeur-avant-la-fin-du-preavis"
-      },
-      {
-        "url": "/fiche-service-public/peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail"
-      },
-      {
-        "url": "/fiche-service-public/quelles-sont-les-consequences-dune-faute-grave-commise-pendant-un-preavis"
-      },
-      {
-        "url": "/fiche-service-public/indemnite-compensatrice-de-preavis"
-      },
-      {
-        "url": "/fiche-service-public/indemnite-compensatrice-de-conges-payes"
-      },
-      {
-        "url": "/contributions/arret-maladie-pendant-le-preavis-quelles-consequences",
-        "title": "Arrêt maladie pendant le préavis : quelles conséquences ?"
-      },
-      {
-        "url": "/contributions/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
-        "title": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?"
-      },
-      {
-        "url": "/contributions/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
-        "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?"
-      }
-    ],
-    "source": "themes",
-    "slug": "8-depart-de-lentreprise",
     "breadcrumbs": null,
     "children": [
       {
@@ -166,6 +130,57 @@
         "slug": "87-documents-a-remettre-au-salarie"
       }
     ],
+    "icon": "Depart",
+    "position": 8,
+    "refs": [
+      {
+        "url": "/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
+        "title": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?"
+      },
+      {
+        "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
+        "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?"
+      },
+      {
+        "url": "/contribution/arret-maladie-pendant-le-preavis-quelles-consequences",
+        "title": "Arrêt maladie pendant le préavis : quelles conséquences ?"
+      },
+      {
+        "url": "/modeles-de-courriers/modele-lettre-de-reclamation-des-documents-de-fin-de-contrat",
+        "title": "Lettre de réclamation des documents de fin de contrat"
+      },
+      {
+        "url": "/fiche-service-public/le-salarie-beneficie-t-il-dheures-de-recherche-demploi-pendant-son-preavis"
+      },
+      {
+        "url": "/fiche-service-public/peut-on-travailler-pour-un-nouvel-employeur-avant-la-fin-du-preavis",
+        "title": "Peut-on travailler pour un nouvel employeur avant la fin du préavis ?"
+      },
+      {
+        "url": "/fiche-service-public/peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail"
+      },
+      {
+        "url": "/fiche-service-public/quelles-sont-les-consequences-dune-faute-grave-commise-pendant-un-preavis",
+        "title": "Quelles sont les conséquences d'une faute grave commise pendant un préavis ?"
+      },
+      {
+        "url": "/fiche-service-public/indemnite-compensatrice-de-preavis"
+      },
+      {
+        "url": "/fiche-service-public/indemnite-compensatrice-de-conges-payes"
+      },
+      {
+        "url": "/fiche-service-public/faute-grave-ou-lourde-commise-pendant-un-preavis-quelles-consequences",
+        "title": "Faute grave ou lourde commise pendant un préavis : quelles conséquences ?"
+      },
+      {
+        "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
+        "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?"
+      }
+    ],
+    "slug": "8-depart-de-lentreprise",
+    "source": "themes",
+    "title": "Départ de l'entreprise",
     "variants": [
       "Départ de l'entreprise"
     ]

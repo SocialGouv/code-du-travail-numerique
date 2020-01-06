@@ -28,16 +28,16 @@ const documentsSlugs = [
   "/themes/1-embauche-et-contrat-de-travail",
   "/fiche-service-public/demission-dun-salarie",
   "/fiche-service-public/demission-dune-assistante-maternelle",
-  "/fiche-ministere-travail/la-demission-comment-presenter-une-demission",
-  "/fiche-ministere-travail/demission-labsence-prolongee-du-salarie-est-elle-une-demission",
+  "/fiche-ministere-travail/la-demission#Comment-presenter-une-demission",
+  "/fiche-ministere-travail/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
   "/code-du-travail/r1225-18",
   "/code-du-travail/l1237-1",
   "/outils/preavis-demission",
   "/outils/indemnite-licenciement",
-  "/modeles-de-courriers/modele-rupture-dun-commun-accord-dun-contrat-a-duree-determinee",
-  "/modeles-de-courriers/modele-rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-  "/convention-collective/1747-convention-collective-nationale-des-activites-industrielles-de-boulangerie",
-  "/convention-collective/0843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-197",
+  "/modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
+  "/modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur",
+  "/convention-collective/1747-activites-industrielles-de-boulangerie-et-patisserie",
+  "/convention-collective/843-boulangerie-patisserie-entreprises-artisanales",
   "/external/mon-compte-formation",
   "/external/index-egapro"
 ];
@@ -45,7 +45,7 @@ const documentsSlugs = [
 const themesSlugs = ["8-depart-de-lentreprise", "81-demission"];
 
 const agreementSlugs = [
-  "1596-nouvelle-convention-collective-nationale-des-ouvriers-employes-par-les-entr"
+  "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries"
 ];
 
 const ficheMTSlugs = [
@@ -143,7 +143,7 @@ if (module === require.main) {
   updateDocumentsData(documentsSlugs).catch(error =>
     console.error("›››" + error)
   );
-  // updateThemes(themesSlugs).catch(error => console.error("›››" + error));
-  // updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
-  // updateAgreements(agreementSlugs).catch(error => console.error("›››" + error));
+  updateThemes(themesSlugs).catch(error => console.error("›››" + error));
+  updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
+  updateAgreements(agreementSlugs).catch(error => console.error("›››" + error));
 }

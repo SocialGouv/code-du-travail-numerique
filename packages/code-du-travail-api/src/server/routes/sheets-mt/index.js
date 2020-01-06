@@ -35,7 +35,7 @@ router.get("/sheets-mt/:slug", async ctx => {
 
   const relatedItems = await getRelatedItems({
     slug,
-    queryVector: undefined,
+    title: sheetMT._source.title,
     settings: sheetMT._source.title
   });
 

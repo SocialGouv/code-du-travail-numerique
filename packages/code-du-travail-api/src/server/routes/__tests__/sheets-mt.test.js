@@ -5,7 +5,7 @@ const router = require("../sheets-mt");
 const app = new Koa();
 app.use(router.routes());
 
-test("return theme data for slug 5-questions-reponses-sur-la-sante-au-travail", async () => {
+test("return content data for slug 5-questions-reponses-sur-la-sante-au-travail", async () => {
   const response = await request(app.callback()).get(
     `/api/v1/sheets-mt/5-questions-reponses-sur-la-sante-au-travail`
   );
