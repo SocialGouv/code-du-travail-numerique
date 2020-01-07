@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.4...v4.0.0) (2020-01-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency husky to v4 ([#2186](https://github.com/SocialGouv/code-du-travail-numerique/issues/2186)) ([a6853a1](https://github.com/SocialGouv/code-du-travail-numerique/commit/a6853a1c9cd9b0f790d0e35f1c696acd0b99d062))
+
+
+
+
+
 # [4.0.0-gamma.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.3...v4.0.0-gamma.4) (2020-01-06)
 
 
