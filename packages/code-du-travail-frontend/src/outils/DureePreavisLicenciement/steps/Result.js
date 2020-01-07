@@ -32,7 +32,8 @@ function StepResult({ form }) {
   } = situationCDT;
 
   // Situation CC
-  const initialCCSituations = getSituationsFor(allSituations, { idcc });
+  const initialCCSituations =
+    idcc > 0 ? getSituationsFor(allSituations, { idcc }) : [];
   const possibleCCSituations = filterSituations(initialCCSituations, criteria);
 
   const [situationCC] = possibleCCSituations;
@@ -40,17 +41,20 @@ function StepResult({ form }) {
     criteria: { ancienneté: seniorityCC, ...situationCCCriteria },
     duration: durationCC
   } = situationCC || { criteria: {} };
+
   const refs = [
     {
       ref: "Article L.1234-1 du code du travail",
       refUrl:
         "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-    },
-    { ref: situationCC.ref, refUrl: situationCC.refUrl }
+    }
   ];
-
+  if (situationCC) {
+    refs.push({ ref: situationCC.ref, refUrl: situationCC.refUrl });
+  }
   let disclaimer =
     "Une durée de préavis de licenciement ou une condition d'ancienneté plus favorable au salarié peut être prévue dans un accord d'entreprise, le contrat de travail ou les usages.";
+
   if (durationCDT === 0) {
     if (durationCC === 0) {
       disclaimer =
@@ -79,11 +83,13 @@ function StepResult({ form }) {
       </p>
       <Toast>{disclaimer}</Toast>
       <SectionTitle>Détails</SectionTitle>
-      <p>
-        Il s’agit de la durée la plus longue entre la durée légale prévue par le
-        Code du travail et la durée conventionnelle prévue par la convention
-        collective:
-      </p>
+      {idcc > 0 && (
+        <p>
+          Il s’agit de la durée la plus longue entre la durée légale prévue par
+          le Code du travail et la durée conventionnelle prévue par la
+          convention collective:
+        </p>
+      )}
       <ul>
         <li>
           Durée légale: <strong>{situationCDT.answer}</strong>
@@ -110,7 +116,7 @@ function StepResult({ form }) {
             ...(seniorityCC && {
               "Ancienneté selon la convention collective": seniorityCC
             }),
-            "Convention collective": ccn.convention.title
+            ...(ccn && { "Convention collective": ccn.convention.title })
           })}
           <SectionTitle>Source</SectionTitle>
           {situationCC.ref && situationCC.refUrl && getRef(refs)}

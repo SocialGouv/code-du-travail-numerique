@@ -19,11 +19,22 @@ function StepResult({ form }) {
 
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
+
   const refLegal = {
     ref: " Article L.1237-1 du code du travail",
     refUrl:
       "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
   };
+  // No ccn selected
+  if (idcc === 0) {
+    return (
+      <>
+        <SectionTitle>Pas de CC</SectionTitle>
+        {getRef([refLegal])}
+      </>
+    );
+  }
+  // CCn Selected
   switch (possibleSituations.length) {
     case 1: {
       const [situation] = possibleSituations;
@@ -57,7 +68,22 @@ function StepResult({ form }) {
       );
     }
     default:
-      return <>La situation du salarié ne permet de répondre précisement.</>;
+      return (
+        <>
+          <SectionTitle>CC non traitée</SectionTitle>
+          <p>
+            Le code du travail ne prévoyant pas de durée précise du préavis de
+            démission, nous vous invitons à consulter le contenu de la
+            convention collective. Par ailleurs, un accord collectif
+            d’entreprise peut prévoir une durée de préavis de démission
+            différente, qu’elle soit inférieure ou supérieure. Dans ce cas la
+            durée de préavis de démission prévu par l’accord au niveau de
+            l’entreprise s’applique. Référence :
+          </p>
+
+          {getRef([refLegal])}
+        </>
+      );
   }
 }
 

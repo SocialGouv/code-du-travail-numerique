@@ -17,7 +17,7 @@ export const stepPrime = {
   name: "primes"
 };
 
-export const initialSteps = [
+const initialSteps = [
   {
     component: StepIntro,
     name: "introduction",
@@ -41,10 +41,19 @@ export const initialSteps = [
   }
 ];
 
-export function stepReducer(steps, { type, payload }) {
+export const initialState = {
+  stepIndex: 0,
+  steps: initialSteps
+};
+
+export function stepReducer(state, { type, payload }) {
+  const { stepIndex, steps } = state;
   switch (type) {
     case "reset": {
       return [...initialSteps];
+    }
+    case "setStepIndex": {
+      return { stepIndex: payload, steps };
     }
     case "add_step": {
       const previousStepIndex = steps.findIndex(
@@ -52,21 +61,30 @@ export function stepReducer(steps, { type, payload }) {
       );
       const newSteps = steps.filter(step => step.name !== payload.step.name);
       newSteps.splice(previousStepIndex + 1, 0, payload.step);
-      return newSteps;
+      return { stepIndex, steps: newSteps };
     }
     case "remove_step": {
-      return steps.filter(step => step.name !== payload);
+      return {
+        stepIndex,
+        steps: steps.filter(step => step.name !== payload)
+      };
     }
     case "add_branche": {
-      return steps
-        .filter(step => !/branche_/.test(step.name))
-        .concat(...payload);
+      return {
+        stepIndex: stepIndex,
+        steps: steps
+          .filter(step => !/branche_/.test(step.name))
+          .concat(...payload)
+      };
     }
     case "remove_branche": {
-      return steps.filter(step => !/branche_/.test(step.name));
+      return {
+        stepIndex,
+        steps: steps.filter(step => !/branche_/.test(step.name))
+      };
     }
     default:
       console.warn("action unknow", { type, payload });
-      return steps;
+      return state;
   }
 }

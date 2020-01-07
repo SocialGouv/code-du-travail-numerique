@@ -54,7 +54,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                 <Button variant="link" type="button" onClick={clearCCInfo}>
                   Changer de convention collective
                 </Button>
-                {error && <StyledToast>{error}</StyledToast>}
+                {error && <ErrorToast>{error}</ErrorToast>}
               </>
             );
           }
@@ -80,8 +80,6 @@ function StepInfoCCn({ form, isOptionnal = true }) {
   );
 }
 
-export { StepInfoCCn };
-
 export const StepInfoCCnMandatory = props => (
   <StepInfoCCn {...props} isOptionnal={false} />
 );
@@ -99,7 +97,7 @@ const { spacings } = theme;
 const P = styled.p`
   font-style: italic;
 `;
-const StyledToast = styled(Toast)`
+export const ErrorToast = styled(Toast)`
   width: 100%;
   margin-top: ${spacings.medium};
 `;

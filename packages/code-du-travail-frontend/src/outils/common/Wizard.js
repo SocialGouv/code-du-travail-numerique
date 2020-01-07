@@ -1,24 +1,25 @@
-import React, { useState, useReducer, useEffect } from "react";
+import React, { useReducer, useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
 import { icons, theme } from "@socialgouv/react-ui";
-
 import { StepList, STEP_LIST_WIDTH } from "./StepList";
 import { PrevNextBar } from "./PrevNextBar";
 
 function Wizard({
-  initialSteps,
-  initialStepIndex = 0,
+  initialState,
   initialValues = {},
   title,
   icon,
   Rules = null,
   stepReducer = step => step
 }) {
-  const [stepIndex, setStepIndex] = useState(initialStepIndex);
-  const [steps, dispatch] = useReducer(stepReducer, initialSteps);
+  const [state, dispatch] = useReducer(stepReducer, initialState);
+  const { stepIndex, steps } = state;
+
+  const setStepIndex = index =>
+    dispatch({ type: "setStepIndex", payload: index });
 
   useEffect(() => {
     if (window) {
@@ -26,11 +27,23 @@ function Wizard({
     }
   });
 
-  const prevStep = () => {
-    setStepIndex(Math.max(0, stepIndex - 1));
+  const prevStep = values => {
+    let nextStepIndex = stepIndex;
+    let skipFn = () => true;
+    while (skipFn(values)) {
+      nextStepIndex = Math.max(0, nextStepIndex - 1);
+      skipFn = steps[nextStepIndex].skip || (() => false);
+    }
+    setStepIndex(nextStepIndex);
   };
-  const nextStep = () => {
-    setStepIndex(Math.min(stepIndex + 1, steps.length - 1));
+  const nextStep = values => {
+    let nextStepIndex = stepIndex;
+    let skipFn = () => true;
+    while (skipFn(values)) {
+      nextStepIndex = Math.min(nextStepIndex + 1, steps.length - 1);
+      skipFn = steps[nextStepIndex].skip || (() => false);
+    }
+    setStepIndex(nextStepIndex);
   };
 
   const previousVisible = stepIndex > 0;
@@ -51,7 +64,7 @@ function Wizard({
       setStepIndex(0);
       setTimeout(() => form.reset());
     } else {
-      nextStep();
+      nextStep(form.getState().values);
     }
   };
   const stepItems = steps.map(({ name, label }) => ({
@@ -65,7 +78,6 @@ function Wizard({
     .filter(Boolean);
 
   const Step = steps[stepIndex].component;
-
   const Icon = icons[icon];
 
   return (
@@ -99,7 +111,7 @@ function Wizard({
               </StepWrapper>
               <PrevNextBar
                 hasError={invalid && submitFailed}
-                onPrev={prevStep}
+                onPrev={() => prevStep(form.getState().values)}
                 nextVisible={nextVisible}
                 printVisible={printVisible}
                 previousVisible={previousVisible}
@@ -115,14 +127,16 @@ function Wizard({
 Wizard.propTypes = {
   stepReducer: PropTypes.func,
   icon: PropTypes.string,
-  initialSteps: PropTypes.arrayOf(
-    PropTypes.shape({
-      component: PropTypes.func.isRequired,
-      name: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired
-    })
-  ).isRequired,
-  initialStepIndex: PropTypes.number,
+  initialState: PropTypes.shape({
+    stepIndex: PropTypes.number,
+    steps: PropTypes.arrayOf(
+      PropTypes.shape({
+        component: PropTypes.func.isRequired,
+        name: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired
+      })
+    )
+  }).isRequired,
   initialValues: PropTypes.object,
   Rules: PropTypes.func,
   title: PropTypes.string.isRequired

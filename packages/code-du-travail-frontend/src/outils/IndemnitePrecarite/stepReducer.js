@@ -1,9 +1,8 @@
 import { StepIntro } from "./steps/Introduction";
+import { StepInfosGenerales } from "./steps/InfosGenerales";
 import { StepInfoCCn } from "./steps/InfosCCn";
-import { StepResult } from "./steps/Result";
-import { StepInformations } from "./steps/Informations";
-import { isNotYetProcessed } from "../common/situations.utils";
-import data from "@cdt/data...preavis-demission/data.json";
+import { StepRemuneration } from "./steps/Remuneration";
+import { StepIndemnite } from "./steps/Indemnite";
 
 export const initialState = {
   stepIndex: 0,
@@ -19,17 +18,19 @@ export const initialState = {
       label: "Convention collective"
     },
     {
-      component: StepInformations,
-      name: "infos",
-      label: "Informations",
-      skip: values =>
-        !values.ccn ||
-        (values.ccn && isNotYetProcessed(data.situations, values.ccn))
+      component: StepInfosGenerales,
+      name: "info_generales",
+      label: "Informations générales"
     },
     {
-      component: StepResult,
-      name: "results",
-      label: "Durée du préavis"
+      component: StepRemuneration,
+      name: "remuneration",
+      label: "Rémunération"
+    },
+    {
+      component: StepIndemnite,
+      name: "indemnite",
+      label: "Indemnité"
     }
   ]
 };
