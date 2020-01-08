@@ -17,12 +17,18 @@ deployment:
 
   livenessProbe:
     path: /api/v1/version
-    failureThreshold: 6
-    timeoutSeconds: 11
-    periodSeconds: 16
-
+    failureThreshold: 2
+    initialDelaySeconds: 60
+    periodSeconds: 2
+    successThreshold: 1
+    timeoutSeconds: 4
   readinessProbe:
     path: /api/v1/version
+    failureThreshold: 2
+    initialDelaySeconds: 60
+    periodSeconds: 2
+    successThreshold: 1
+    timeoutSeconds: 4
 
   env:
     - name: ELASTICSEARCH_URL

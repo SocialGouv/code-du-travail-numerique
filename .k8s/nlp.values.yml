@@ -14,10 +14,20 @@ deployment:
       cpu: 0.5
       memory: 2.5Gi
 
+  livenessProbe:
+    path: /
+    failureThreshold: 2
+    initialDelaySeconds: 40
+    periodSeconds: 2
+    successThreshold: 1
+    timeoutSeconds: 3
   readinessProbe:
     path: /api/ready
+    failureThreshold: 2
     initialDelaySeconds: 30
-    periodSeconds: 10
+    periodSeconds: 2
+    successThreshold: 1
+    timeoutSeconds: 3
 
   env:
     - name: FLASK_APP
