@@ -11,10 +11,10 @@ import { useLocalStorage } from "../lib/useLocalStorage";
 const getConventionUrl = id =>
   `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`;
 
-const RefLink = ({ value, url }) => (
+const RefLink = ({ title, url }) => (
   <LineRef>
     <a href={url} target="_blank" rel="noopener noreferrer">
-      {value}
+      {title}
     </a>
   </LineRef>
 );
@@ -37,7 +37,7 @@ const References = ({ references }) => {
               {agreementRefs.map(ref => (
                 <RefLink
                   key={ref.id}
-                  value={ref.value}
+                  title={ref.title}
                   url={getConventionUrl(ref.agreement.id)}
                 />
               ))}
@@ -47,7 +47,7 @@ const References = ({ references }) => {
             <React.Fragment>
               <Heading as="h4">Autres sources</Heading>
               {othersRefs.map(ref => (
-                <RefLink key={ref.id} value={ref.value} url={ref.url} />
+                <RefLink key={ref.id} title={ref.title} url={ref.url} />
               ))}
             </React.Fragment>
           )}

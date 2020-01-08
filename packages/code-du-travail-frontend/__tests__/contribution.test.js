@@ -32,7 +32,7 @@ const data = {
             {
               id: "1d46ea4d-cc4e-4f9c-a8d2-e379e261ccce",
               category: "agreement",
-              value: "Article 13",
+              title: "Article 13",
               url: null,
               created_at: "2019-08-05T13:26:01.095555+00:00",
               updated_at: "2019-08-05T13:26:01.095555+00:00",
@@ -57,7 +57,7 @@ const data = {
             {
               id: "290746f9-7474-41e7-8360-ef48061eff9d",
               category: null,
-              value: "Cass. Soc., 26 septembre 2012, n°11-11697",
+              title: "Cass. Soc., 26 septembre 2012, n°11-11697",
               url:
                 "https://www.legifrance.gouv.fr/affichJuriJudi.do?oldAction=rechJuriJudi&idTexte=JURITEXT000026442060&fastReqId=167357055&fastPos=1",
               created_at: "2019-09-18T13:14:43.564732+00:00",

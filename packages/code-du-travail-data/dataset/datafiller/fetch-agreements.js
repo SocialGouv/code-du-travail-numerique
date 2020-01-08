@@ -24,13 +24,13 @@ async function fetchAgreements() {
   return kaliData.map(agreement => {
     const agreementTree = require(`@socialgouv/kali-data/data/${agreement.id}.json`);
     const blocksData = ccnBlockRecords.find(data => data.cid === agreement.id);
-
     return {
       ...getCCNInfo(agreement),
       nbTextes: getNbText(agreementTree),
-      articlesByTheme: blocksData
-        ? getArticleByBlock(blocksData.groups, agreementTree)
-        : [],
+      articlesByTheme:
+        blocksData && blocksData.groups
+          ? getArticleByBlock(blocksData.groups, agreementTree)
+          : [],
       answers: getContributionAnswers(agreement.num)
     };
   });
@@ -87,27 +87,26 @@ function getNbText(agreementTree) {
  */
 function getContributionAnswers(agreementNum) {
   return contributions
-    .map(({ value, index, answers }) => {
+    .map(({ title, slug, index, answers }) => {
       const [answer] = answers.conventions.filter(
         ({ idcc }) => parseInt(idcc) === parseInt(agreementNum)
       );
       const unhandledRegexp = /La convention collective ne prévoit rien sur ce point/i;
       if (answer && !unhandledRegexp.test(answer.markdown)) {
-        const slug = slugify(value);
         const slugMatcher = new RegExp(slug);
         const themeFinder = ({ url }) => slugMatcher.test(url);
         const theme = themes.find(theme => theme.refs.some(themeFinder));
         return {
           index,
-          question: value.trim(),
+          question: title.trim(),
           answer: compiler.processSync(answer.markdown).contents,
           theme: theme.breadcrumbs ? theme.breadcrumbs[0].title : theme.title,
           references: answer.references.map(
-            ({ value, url, category, agreement }) => ({
-              value: `${
+            ({ title, url, category, agreement }) => ({
+              title: `${
                 category === "agreement"
-                  ? `IDCC ${agreement.num} - ${value}`
-                  : value
+                  ? `IDCC ${agreement.num} - ${title}`
+                  : title
               }`,
               url: url || (agreement && agreement.url),
               category: category

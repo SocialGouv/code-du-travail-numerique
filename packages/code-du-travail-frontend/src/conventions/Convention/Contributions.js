@@ -69,7 +69,7 @@ function AnswerReferences({ articles }) {
       case "agreement": {
         return (
           <a target="_blank" rel="noopener nofollow noreferrer" href={ref.url}>
-            {ref.value}
+            {ref.title}
           </a>
         );
       }
@@ -79,9 +79,9 @@ function AnswerReferences({ articles }) {
             href={{
               pathname: `${getRouteBySource(SOURCES.CDT)}/[slug]`
             }}
-            as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.value)}`}
+            as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
           >
-            <a>{ref.value} du Code du travail </a>
+            <a>{ref.title} du Code du travail </a>
           </Link>
         );
       }
@@ -90,10 +90,10 @@ function AnswerReferences({ articles }) {
           <a
             target="_blank"
             rel="noopener nofollow noreferrer"
-            title={ref.value}
+            title={ref.title}
             href={ref.url}
           >
-            {ref.value}
+            {ref.title}
           </a>
         );
       }
