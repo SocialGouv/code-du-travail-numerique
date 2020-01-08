@@ -306,7 +306,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 <li>
                   <a
                     class="c11 c12 c13"
-                    href="/code-du-travail/l1244-4"
+                    href="/code-du-travail/r1244-4"
                   >
                     <svg
                       class="c14"

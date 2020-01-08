@@ -4,8 +4,14 @@ import { ArrowLink, FlatList, theme } from "@socialgouv/react-ui";
 import Link from "next/link";
 import TYPE_REFERENCE from "./typeReference";
 
+const sanitizeCdtSlug = slug => slug.replace(/[^LRD\d-]+/gi, "").toLowerCase();
+
 const CodeDuTravailLink = ({ title, slug }) => (
-  <Link href="/code-du-travail/[slug]" as={`/code-du-travail/${slug}`} passHref>
+  <Link
+    href="/code-du-travail/[slug]"
+    as={`/code-du-travail/${sanitizeCdtSlug(slug)}`}
+    passHref
+  >
     <StyledArrowLink arrowPosition="left">{title}</StyledArrowLink>
   </Link>
 );
