@@ -454,7 +454,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 </div>
 `;
 
-exports[`<Wizard /> should handle initialStepIndex 1`] = `
+exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 .c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

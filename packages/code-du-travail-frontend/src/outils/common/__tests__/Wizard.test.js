@@ -25,23 +25,41 @@ const steps = [
   }
 ];
 
+const initialState = { stepIndex: 0, steps };
+
 const AdditionalStep = () => <Field name="firstName" component="input" />;
 const additionalStep = {
   label: "Name",
   name: "additional_step",
   component: AdditionalStep
 };
+const skipableStep = {
+  name: "skippable",
+  label: "Skippable Step",
+  skip: () => true,
+  component: function Skipable() {
+    return <p>skipable component</p>;
+  }
+};
 
 describe("<Wizard />", () => {
   it("should render a step", () => {
     const { container } = render(
-      <Wizard title="test" stepReducer={stepReducer} initialSteps={steps} />
+      <Wizard
+        title="test"
+        stepReducer={stepReducer}
+        initialState={initialState}
+      />
     );
     expect(container).toMatchSnapshot();
   });
   it("should navigate to the second step when click on Suivant", () => {
     const { container, getByText } = render(
-      <Wizard title="test" stepReducer={stepReducer} initialSteps={steps} />
+      <Wizard
+        title="test"
+        stepReducer={stepReducer}
+        initialState={initialState}
+      />
     );
     const button = getByText(/suivant/i);
     button.click();
@@ -49,42 +67,39 @@ describe("<Wizard />", () => {
   });
   it("should call Step.validate when click on Suivant", () => {
     const { getByText } = render(
-      <Wizard title="test" stepReducer={stepReducer} initialSteps={steps} />
+      <Wizard
+        title="test"
+        stepReducer={stepReducer}
+        initialState={initialState}
+      />
     );
     const button = getByText(/suivant/i);
     button.click();
     expect(FirstStep.validate).toHaveBeenCalled();
   });
-  it("should handle initialStepIndex", () => {
+  it("should handle initialState.stepIndex", () => {
+    const state = { stepIndex: 1, steps: steps };
     const { container } = render(
-      <Wizard
-        title="test"
-        stepReducer={stepReducer}
-        initialSteps={steps}
-        initialStepIndex={1}
-      />
+      <Wizard title="test" stepReducer={stepReducer} initialState={state} />
     );
     expect(container).toMatchSnapshot();
   });
   it("should call navigate the previous step when click on précédent", () => {
+    const state = { stepIndex: 1, steps: steps };
     const { container, getByText } = render(
-      <Wizard
-        title="test"
-        stepReducer={stepReducer}
-        initialSteps={steps}
-        initialStepIndex={1}
-      />
+      <Wizard title="test" stepReducer={stepReducer} initialState={state} />
     );
     const button = getByText(/précédent/i);
     button.click();
     expect(container).toMatchSnapshot();
   });
   it("should handle initialValues", () => {
+    const state = { stepIndex: 0, steps: steps.concat(additionalStep) };
     const { container } = render(
       <Wizard
         title="test"
         stepReducer={stepReducer}
-        initialSteps={[...steps, additionalStep]}
+        initialState={state}
         initialValues={{ firstName: "lionel" }}
       />
     );
@@ -96,10 +111,40 @@ describe("<Wizard />", () => {
       <Wizard
         title="test"
         stepReducer={stepReducer}
-        initialSteps={steps}
+        initialState={initialState}
         Rules={() => <Rule key="key" />}
       />
     );
     expect(container).toMatchSnapshot();
+  });
+
+  it("should skip step forward", () => {
+    const [step1, step2] = steps;
+    const state = {
+      stepIndex: 0,
+      steps: [step1, skipableStep, step2]
+    };
+
+    const { getByText } = render(
+      <Wizard title="test" stepReducer={stepReducer} initialState={state} />
+    );
+    const button = getByText(/suivant/i);
+    button.click();
+    expect(getByText("Deuxieme Etape")).toBeTruthy();
+  });
+  it("should skip step backward", () => {
+    const [step1, step2] = steps;
+
+    const state = {
+      stepIndex: 2,
+      steps: [step1, skipableStep, step2]
+    };
+
+    const { getByText } = render(
+      <Wizard title="test" stepReducer={stepReducer} initialState={state} />
+    );
+    const button = getByText(/précédent/i);
+    button.click();
+    expect(getByText("Premiere Etape")).toBeTruthy();
   });
 });

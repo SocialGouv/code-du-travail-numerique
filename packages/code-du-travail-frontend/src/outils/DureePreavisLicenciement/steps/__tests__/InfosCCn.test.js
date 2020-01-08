@@ -23,7 +23,7 @@ function renderForm(data) {
 }
 
 describe("<StepInfoCCn />", () => {
-  it("should render cdd infos step", () => {
+  it("should render CC infos step", () => {
     localStorage.setItem(
       "convention",
       JSON.stringify({ convention: { num: 3109 }, label: "ccn des 5 mondes" })

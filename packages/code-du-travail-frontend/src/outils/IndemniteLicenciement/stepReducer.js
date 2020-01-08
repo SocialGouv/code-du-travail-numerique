@@ -50,7 +50,7 @@ export function stepReducer(state, { type, payload }) {
   const { stepIndex, steps } = state;
   switch (type) {
     case "reset": {
-      return [...initialSteps];
+      return { ...initialState };
     }
     case "setStepIndex": {
       return { stepIndex: payload, steps };

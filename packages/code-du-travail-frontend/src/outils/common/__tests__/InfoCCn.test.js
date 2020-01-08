@@ -1,23 +1,47 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { StepInfoCCn } from "../InfosCCn";
+import { StepInfoCCnMandatory, StepInfoCCnOptionnal } from "../InfosCCn";
 import { Form } from "react-final-form";
 
-function renderForm(data) {
+function renderForm(data, Step, submit) {
   return render(
     <Form
-      validate={StepInfoCCn.validate}
+      validate={StepInfoCCnMandatory.validate}
       initialValues={{ ...data }}
-      onSubmit={jest.fn()}
+      onSubmit={submit}
     >
-      {({ form }) => <StepInfoCCn form={form} />}
+      {({ form, handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
+          <Step form={form} />
+          <button>Submit</button>
+        </form>
+      )}
     </Form>
   );
 }
 
-describe("<StepInfoCCn />", () => {
-  it("should render cdd infos step", () => {
-    const { container } = renderForm();
+describe("<StepInfoCCnOptionnal />", () => {
+  it("should render optionnal step", () => {
+    const submitFn = jest.fn();
+    const { container, getByText } = renderForm(
+      {},
+      StepInfoCCnOptionnal,
+      submitFn
+    );
     expect(container).toMatchSnapshot();
+    getByText("Submit").click();
+    expect(submitFn).toHaveBeenCalled();
+  });
+  it("should render mandatory step", () => {
+    const submitFn = jest.fn();
+    const { container, getByText } = renderForm(
+      {},
+      StepInfoCCnMandatory,
+      submitFn
+    );
+    expect(container).toMatchSnapshot();
+    getByText("Submit").click();
+    expect(getByText(/ce champ est requis/i)).toBeDefined();
+    expect(submitFn).not.toHaveBeenCalled();
   });
 });

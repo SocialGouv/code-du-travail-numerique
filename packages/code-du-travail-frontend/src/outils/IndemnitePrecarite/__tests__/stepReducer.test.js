@@ -5,8 +5,9 @@ describe("initialSteps", () => {
     expect(initialState.steps.map(({ name }) => ({ name }))).toEqual([
       { name: "intro" },
       { name: "info_cc" },
-      { name: "infos" },
-      { name: "results" }
+      { name: "info_generales" },
+      { name: "remuneration" },
+      { name: "indemnite" }
     ]);
   });
   it("handles reset action", () => {
