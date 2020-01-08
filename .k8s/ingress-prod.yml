@@ -24,3 +24,29 @@ spec:
     - hosts:
         - code.travail.gouv.fr
       secretName: frontend-crt
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    appgw.ingress.kubernetes.io/ssl-redirect: "true"
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: azure/application-gateway
+    kubernetes.io/tls-acme: "true"
+  labels:
+    app.kubernetes.io/instance: frontend
+  name: frontend-nodejs-code-www
+  namespace: cdtn
+spec:
+  rules:
+    - host: www.code.travail.gouv.fr
+      http:
+        paths:
+          - backend:
+              serviceName: frontend-nodejs
+              servicePort: http
+            path: /
+  tls:
+    - hosts:
+        - www.code.travail.gouv.fr
+      secretName: frontend-crt-www
