@@ -52,7 +52,16 @@ export class DocumentSuggester extends React.Component {
        */
       const { form } = event.target;
       if (form && form.dispatchEvent) {
-        form.dispatchEvent(new Event("submit"));
+        let eventSubmit;
+        if (typeof Event === "function") {
+          eventSubmit = new Event("submit");
+        } else {
+          // Fixed IE11 issue
+          eventSubmit = document.createEvent("Event");
+          eventSubmit.initEvent("submit", false, false);
+        }
+
+        form.dispatchEvent(eventSubmit);
       }
     }
   };
