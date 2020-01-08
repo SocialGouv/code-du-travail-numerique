@@ -24,7 +24,7 @@ Fiches MT update:
        curl -i -X POST \
          --header 'content-type: application/json' \
          -d @- https://${GITHUB_TOKEN}@api.github.com/repos/${CI_PROJECT_PATH}/issues/${PR_ID}/comments
-    - "git commit -am 'fix: update fiches-MT data'"
+    - "git commit -am 'feat(data): update fiches-MT'"
     - git push origin HEAD:${CI_COMMIT_REF_NAME}
 
     # Stop processing further
