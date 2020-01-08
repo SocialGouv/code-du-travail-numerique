@@ -78,7 +78,7 @@ export const Themes = ({ themes = [] }) => {
 const { breakpoints, spacings } = theme;
 
 const DesktopOnlyGridCell = styled(GridCell)`
-  display: flex;
+  display: ${({ theme }) => (theme.noColors ? "none" : "flex")};
   align-items: center;
   justify-content: center;
   max-height: 18rem;
@@ -104,6 +104,7 @@ const DesktopBackground = styled.div`
   position: absolute;
   top: 13rem;
   left: 3rem;
+  display: ${({ theme }) => (theme.noColors ? "none" : "block")};
   width: 81rem;
   height: 52rem;
   @media (max-width: ${breakpoints.desktop}) {
