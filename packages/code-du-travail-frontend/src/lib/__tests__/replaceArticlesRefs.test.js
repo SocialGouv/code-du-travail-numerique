@@ -1,24 +1,22 @@
 import { replaceArticlesRefs } from "../replaceArticlesRefs";
 
+const cases = [
+  "L2213-2",
+  "L. 1242-2",
+  "l'Article L2213-2",
+  "article R. * 3231-2.",
+  "article R-3231-2"
+];
+
 describe("replaceArticlesRefs", () => {
-  test("Should NOT replace L2213-2 in text", () => {
-    const html = `Some content with linke to L2213-2`;
+  test("Should NOT replace raw L2213-2 in text", () => {
+    const html = `Some content with link to L2213-2`;
     expect(replaceArticlesRefs(html)).toMatchSnapshot();
   });
-  test("Should replace L2213-2 link in HTML", () => {
-    const html = `Some content with links to <a href="#1">Article L2213-2</a>.`;
-    expect(replaceArticlesRefs(html)).toMatchSnapshot();
-  });
-  test("Should replace l'article L. 1242-2 link in HTML", () => {
-    const html = `Some content with links to <a href="#1">l'article L. 1242-2</a>.`;
-    expect(replaceArticlesRefs(html)).toMatchSnapshot();
-  });
-  test("Should replace l'Article L2213-2 links in HTML", () => {
-    const html = `Some content with links to <a href="#1">l'Article L2213-2</a>.`;
-    expect(replaceArticlesRefs(html)).toMatchSnapshot();
-  });
-  test("Should replace multiple articles links in HTML", () => {
-    const html = `Some content with links to <a href="#1">Article L2213-2</a> and <a href="#2">L.2312-1</a>`;
-    expect(replaceArticlesRefs(html)).toMatchSnapshot();
+  cases.forEach(t => {
+    test(`Should replace ${t} links in HTML`, () => {
+      const html = `Some content and a link to <a href="#whatever">${t}</a> and some other one <a href="#whatelse">${t}</a> and other stuff.`;
+      expect(replaceArticlesRefs(html)).toMatchSnapshot();
+    });
   });
 });
