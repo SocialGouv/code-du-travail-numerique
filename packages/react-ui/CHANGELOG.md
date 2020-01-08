@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0...v4.1.0-alpha.0) (2020-01-08)
+
+
+### Features
+
+* **frontend:** add bundle analyzer ([#2091](https://github.com/SocialGouv/code-du-travail-numerique/issues/2091)) ([c17f7fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/c17f7fdc987411bc740b2c5975a9550011175b32))
+
+
+
+
+
 # [4.0.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.4...v4.0.0) (2020-01-07)
 
 **Note:** Version bump only for package @socialgouv/react-ui

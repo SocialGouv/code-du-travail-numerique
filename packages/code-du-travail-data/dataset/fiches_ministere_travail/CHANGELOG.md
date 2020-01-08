@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0...v4.1.0-alpha.0) (2020-01-08)
+
+
+### Features
+
+* **CI:** automate fiches-MT fetch ([#2171](https://github.com/SocialGouv/code-du-travail-numerique/issues/2171)) ([8371c29](https://github.com/SocialGouv/code-du-travail-numerique/commit/8371c29415ebf5e2496b441af9646f5f5e7dcbb1)), closes [#2163](https://github.com/SocialGouv/code-du-travail-numerique/issues/2163) [#2188](https://github.com/SocialGouv/code-du-travail-numerique/issues/2188)
+
+
+
+
+
 # [4.0.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.4...v4.0.0) (2020-01-07)
 
 **Note:** Version bump only for package @cdt/data...fiches_ministere_travail

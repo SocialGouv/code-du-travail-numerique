@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0...v4.1.0-alpha.0) (2020-01-08)
+
+
+### Bug Fixes
+
+* **frontend:** home theme icon displayed on black and white mode ([#2193](https://github.com/SocialGouv/code-du-travail-numerique/issues/2193)) ([97aecdc](https://github.com/SocialGouv/code-du-travail-numerique/commit/97aecdc83069e0bdb2943af55869f1845d22a936))
+
+
+### Features
+
+* **CI:** automate fiches-MT fetch ([#2171](https://github.com/SocialGouv/code-du-travail-numerique/issues/2171)) ([8371c29](https://github.com/SocialGouv/code-du-travail-numerique/commit/8371c29415ebf5e2496b441af9646f5f5e7dcbb1)), closes [#2163](https://github.com/SocialGouv/code-du-travail-numerique/issues/2163) [#2188](https://github.com/SocialGouv/code-du-travail-numerique/issues/2188)
+* **frontend:** add bundle analyzer ([#2091](https://github.com/SocialGouv/code-du-travail-numerique/issues/2091)) ([c17f7fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/c17f7fdc987411bc740b2c5975a9550011175b32))
+
+
+
+
+
 # [4.0.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0-gamma.4...v4.0.0) (2020-01-07)
 
 
