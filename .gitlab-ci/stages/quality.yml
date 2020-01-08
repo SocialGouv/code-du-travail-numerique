@@ -2,7 +2,6 @@
 
 .quality_stage: &quality_stage
   stage: "Code Quality"
-  dependencies: []
   except:
     variables:
       # Don't run when deploying in production an existing image
