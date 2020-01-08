@@ -51,6 +51,8 @@ const excludeDossierId = [
   "N379"
 ];
 const excludeFicheId = [
+  "F1234",
+  "F3059",
   "F10027",
   "F12416",
   "F13375",
