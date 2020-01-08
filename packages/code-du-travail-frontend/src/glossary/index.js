@@ -52,7 +52,7 @@ export default function useGlossary(children, html) {
   useEffect(() => {
     const nodes = Array.from(
       document.querySelectorAll(
-        "[data-main-content] p, [data-main-content] li:not([role=tab])"
+        "[data-main-content] p:not([data-no-glossary]), [data-main-content] li:not([role=tab]) "
       )
     ).reduce((state, node) => {
       const internalRefMap = new Map();
