@@ -128,12 +128,12 @@ describe("<Contribution />", () => {
           references: [
             {
               id: 42,
-              value: "reference externe 1",
+              title: "reference externe 1",
               url: "http://path/to/ref"
             },
             {
               id: 422,
-              value: "reference CC 1",
+              title: "reference CC 1",
               agreement: {
                 id: 123,
                 url: "http://path/to/agreement"

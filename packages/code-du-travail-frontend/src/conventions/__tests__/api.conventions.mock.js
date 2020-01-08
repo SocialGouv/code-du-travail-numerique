@@ -209,13 +209,13 @@ export const agreement = {
       theme: "Départ de l'entreprise",
       references: [
         {
-          value: "IDCC 1596 - Article 10.11",
+          title: "IDCC 1596 - Article 10.11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
         },
         {
-          value: "IDCC 1596 - Article 10.13",
+          title: "IDCC 1596 - Article 10.13",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -230,7 +230,7 @@ export const agreement = {
       theme: "Départ de l'entreprise",
       references: [
         {
-          value: "IDCC 1596 - Article 10.11",
+          title: "IDCC 1596 - Article 10.11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -245,7 +245,7 @@ export const agreement = {
       theme: "Congés et repos",
       references: [
         {
-          value: "IDCC 1596 - Article 5-11",
+          title: "IDCC 1596 - Article 5-11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -261,14 +261,14 @@ export const agreement = {
       theme: "Départ de l'entreprise",
       references: [
         {
-          value:
+          title:
             "IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
         },
         {
-          value:
+          title:
             "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120",
@@ -285,7 +285,7 @@ export const agreement = {
       theme: "Embauche et contrat de travail",
       references: [
         {
-          value: "IDCC 1596 - Article 2-4",
+          title: "IDCC 1596 - Article 2-4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -302,13 +302,13 @@ export const agreement = {
       theme: "Congés et repos",
       references: [
         {
-          value: "IDCC 1596 - Article 6.121",
+          title: "IDCC 1596 - Article 6.121",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
         },
         {
-          value: "IDCC 1596 - Article 6.21",
+          title: "IDCC 1596 - Article 6.21",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -324,13 +324,13 @@ export const agreement = {
       theme: "Embauche et contrat de travail",
       references: [
         {
-          value: "IDCC 1596 - Article 10.4",
+          title: "IDCC 1596 - Article 10.4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
         },
         {
-          value: "IDCC 1596 - Article 11-2",
+          title: "IDCC 1596 - Article 11-2",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -346,7 +346,7 @@ export const agreement = {
       theme: "Embauche et contrat de travail",
       references: [
         {
-          value: "IDCC 1596 - Article 2-3",
+          title: "IDCC 1596 - Article 2-3",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -363,14 +363,14 @@ export const agreement = {
       theme: "Départ de l'entreprise",
       references: [
         {
-          value:
+          title:
             "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120",
           category: null
         },
         {
-          value:
+          title:
             "IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -387,7 +387,7 @@ export const agreement = {
       theme: "Départ de l'entreprise",
       references: [
         {
-          value: "IDCC 1596 - Article 10.12",
+          title: "IDCC 1596 - Article 10.12",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -403,7 +403,7 @@ export const agreement = {
       theme: "Congés et repos",
       references: [
         {
-          value: "IDCC 1596 - Article  5-12",
+          title: "IDCC 1596 - Article  5-12",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -429,31 +429,31 @@ export const agreement = {
       theme: "Santé, sécurité et conditions de travail",
       references: [
         {
-          value: "IDCC 1596 - Article 6-11",
+          title: "IDCC 1596 - Article 6-11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
         },
         {
-          value: "IDCC 1596 - Article 6-12",
+          title: "IDCC 1596 - Article 6-12",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
         },
         {
-          value: "IDCC 1596 - Article 6-13",
+          title: "IDCC 1596 - Article 6-13",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
         },
         {
-          value: "IDCC 1596 - Article 6-14",
+          title: "IDCC 1596 - Article 6-14",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
         },
         {
-          value: "IDCC 1596 - Article 6-15",
+          title: "IDCC 1596 - Article 6-15",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -470,7 +470,7 @@ export const agreement = {
       theme: "Salaire et Rémunération",
       references: [
         {
-          value: "IDCC 1596 - Article 5-25",
+          title: "IDCC 1596 - Article 5-25",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -486,7 +486,7 @@ export const agreement = {
       theme: "Embauche et contrat de travail",
       references: [
         {
-          value: "IDCC 1596 - Article 2-3",
+          title: "IDCC 1596 - Article 2-3",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -502,7 +502,7 @@ export const agreement = {
       theme: "Départ de l'entreprise",
       references: [
         {
-          value: "IDCC 1596 - Article 10.2",
+          title: "IDCC 1596 - Article 10.2",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -526,7 +526,7 @@ export const agreement = {
       theme: "Embauche et contrat de travail",
       references: [
         {
-          value: "IDCC 1596 - Article 2-3",
+          title: "IDCC 1596 - Article 2-3",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -542,7 +542,7 @@ export const agreement = {
       theme: "Salaire et Rémunération",
       references: [
         {
-          value: "IDCC 1596 - Article 5-24",
+          title: "IDCC 1596 - Article 5-24",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
@@ -559,7 +559,7 @@ export const agreement = {
       theme: "Santé, sécurité et conditions de travail",
       references: [
         {
-          value: "IDCC 1596 - Article 6-11",
+          title: "IDCC 1596 - Article 6-11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
           category: "agreement"
