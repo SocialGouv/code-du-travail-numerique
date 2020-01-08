@@ -23,7 +23,7 @@ spec:
   tls:
     - hosts:
         - code.travail.gouv.fr
-      secretName: frontend-crt
+      secretName: frontend-crt-code
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
