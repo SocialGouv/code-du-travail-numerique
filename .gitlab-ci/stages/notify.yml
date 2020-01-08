@@ -7,23 +7,26 @@ include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_delete_useless_k8s_ns_stage.yml
     ref: v4.3.0
+
+#
+
+.notify_stage: &notify_stage
+  except:
+    variables:
+      # Don't run when running e2e tests
+      - $E2E_TEST
+
 #
 
 Notify Starting Deployment:
+  <<: *notify_stage
   extends: .base_notify_pending_stage
   stage: Deploy
-  except:
-    variables:
-      # Don't run when running e2e tests
-      - $E2E_TEST
 
 Notify Fail:
+  <<: *notify_stage
   extends: .base_notify_fail_stage
   stage: Notify Finished Deployment
-  except:
-    variables:
-      # Don't run when running e2e tests
-      - $E2E_TEST
   dependencies:
     - Notify Starting Deployment
   before_script:
@@ -31,12 +34,9 @@ Notify Fail:
     - HOST=${FRONTEND_URL}
 
 Notify Success:
+  <<: *notify_stage
   extends: .base_notify_success_stage
   stage: Notify Finished Deployment
-  except:
-    variables:
-      # Don't run when running e2e tests
-      - $E2E_TEST
   dependencies:
     - Notify Starting Deployment
   before_script:
@@ -44,4 +44,5 @@ Notify Success:
     - HOST=${FRONTEND_URL}
 
 Delete useless k8s namespaces:
+  <<: *notify_stage
   extends: .base_delete_useless_k8s_ns_stage
