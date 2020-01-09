@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Section } from "../layout/Section";
-import { Title } from "../Titles";
+import { Title } from "../Titles/Title";
 import { Button } from "../Button";
 import { Modal, ModalContentWrapper } from ".";
 

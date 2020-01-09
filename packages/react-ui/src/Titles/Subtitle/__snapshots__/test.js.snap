@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Subtitle /> renders a subtitle  1`] = `
+.c0 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+<div>
+  <span
+    class="c0"
+  >
+    Lorem Ipsum
+  </span>
+</div>
+`;

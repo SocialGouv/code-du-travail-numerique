@@ -92,65 +92,14 @@ exports[`<MentionLegales /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c21 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c26 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c42 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c35 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c20 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c25 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c41 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
 }
 
 .c30 + .c29 {
@@ -158,12 +107,6 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 .c33 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
   margin: 2rem 0;
   padding: 0;
 }
@@ -369,6 +312,58 @@ exports[`<MentionLegales /> should render 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c20 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c25 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c41 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c21 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c26 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c42 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c14 ul {
@@ -689,12 +684,6 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 .c50 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
   font-size: 1.6rem;
 }
 
@@ -816,49 +805,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c21 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c42 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c35 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-bottom: 2.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c41 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
     font-size: 1.6rem;
   }
 }
@@ -884,6 +831,42 @@ exports[`<MentionLegales /> should render 1`] = `
 @media (max-width:600px) {
   .c44 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c41 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c21 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c42 {
+    font-size: 2.2rem;
   }
 }
 
@@ -1061,12 +1044,6 @@ exports[`<MentionLegales /> should render 1`] = `
 @media (max-width:600px) {
   .c51 {
     text-align: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c50 {
-    font-size: 1.6rem;
   }
 }
 
@@ -1708,7 +1685,7 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c48 c49"
             >
               <h3
-                class="c50"
+                class="c35 c50"
               >
                 Code du travail numérique
               </h3>
@@ -1771,7 +1748,7 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c48 c49"
             >
               <h3
-                class="c50"
+                class="c35 c50"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
@@ -1808,7 +1785,7 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c48 c49"
             >
               <h3
-                class="c50"
+                class="c35 c50"
               >
                 En collaboration avec
               </h3>

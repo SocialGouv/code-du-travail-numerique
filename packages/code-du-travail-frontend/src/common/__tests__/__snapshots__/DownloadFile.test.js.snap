@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DownloadFile /> should render with courrier icon 1`] = `
+.c3 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -62,43 +72,37 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
   padding-right: 1rem;
 }
 
-.c3 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c4 {
   margin: 0;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-.c5 {
+.c6 {
   font-size: 1.2rem;
 }
 
-.c6 {
+.c7 {
   color: #4d73b8;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
 
 @media (max-width:600px) {
-  .c0 {
-    padding: 1.6rem 1.6rem;
-    font-size: 1.4rem;
+  .c3 {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
+  .c0 {
+    padding: 1.6rem 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -115,22 +119,22 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
       >
         
         <h3
-          class="c3"
+          class="c3 c4"
         >
           FooFile
         </h3>
       </div>
     </div>
     <div
-      class="c4"
+      class="c5"
     >
       <span
-        class="c5"
+        class="c6"
       >
         Courrier
       </span>
       <span
-        class="c6"
+        class="c7"
       >
          - 
         url

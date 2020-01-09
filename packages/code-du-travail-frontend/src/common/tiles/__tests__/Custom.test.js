@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { CustomTile } from "../Custom";
+import { CallToActionTile } from "../CallToAction";
 import { icons } from "@socialgouv/react-ui/";
 
 const tileProps = {
@@ -12,9 +12,9 @@ const tileProps = {
 describe("<Article />", () => {
   test("should render", () => {
     const { container } = render(
-      <CustomTile {...tileProps}>
+      <CallToActionTile {...tileProps}>
         Cette tuile vous fera dire bonjour !
-      </CustomTile>
+      </CallToActionTile>
     );
     expect(container).toMatchSnapshot();
   });

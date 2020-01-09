@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { Button, theme, Tile } from "@socialgouv/react-ui/";
 
-export const CustomTile = React.forwardRef(
+export const CallToActionTile = React.forwardRef(
   ({ action, children, ...props }, ref) => (
     <Tile custom {...props} ref={ref}>
       <TileChildren>
@@ -19,14 +19,14 @@ export const CustomTile = React.forwardRef(
   )
 );
 
-CustomTile.displayName = "CustomTile";
+CallToActionTile.displayName = "CallToActionTile";
 
-CustomTile.propTypes = {
+CallToActionTile.propTypes = {
   action: PropTypes.string,
   children: PropTypes.node
 };
 
-CustomTile.defaultProps = {
+CallToActionTile.defaultProps = {
   action: "",
   children: null
 };

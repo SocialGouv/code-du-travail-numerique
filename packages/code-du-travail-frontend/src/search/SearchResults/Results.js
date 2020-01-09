@@ -12,7 +12,7 @@ import {
 } from "@socialgouv/react-ui";
 
 import { summarize, reportSelectionToMatomo } from "../utils";
-import { CustomTile } from "../../common/tiles/Custom";
+import { CallToActionTile } from "../../common/tiles/CallToAction";
 
 export const ListLink = ({
   item: {
@@ -45,12 +45,11 @@ export const ListLink = ({
 
   if (source === SOURCES.EXTERNALS) {
     return (
-      <CustomTile
+      <Tile
         href={url}
         target="_blank"
         rel="noreferer noopener"
         className="no-after"
-        action="Consulter"
         {...tileCommonProps}
       />
     );
@@ -63,14 +62,15 @@ export const ListLink = ({
   }
 
   let ResultTile = Tile;
-  if (
-    source === SOURCES.TOOLS ||
-    source === SOURCES.CONTRIBUTIONS ||
-    source === SOURCES.LETTERS
-  ) {
-    ResultTile = CustomTile;
-    tileCommonProps.subtitle = getLabelBySource(source);
+  if (source === SOURCES.TOOLS || source === SOURCES.LETTERS) {
+    ResultTile = CallToActionTile;
     tileCommonProps.action = action || "Consulter";
+    tileCommonProps.custom = true;
+    tileCommonProps.subtitle = getLabelBySource(source);
+  }
+  if (source === SOURCES.CONTRIBUTIONS) {
+    tileCommonProps.custom = true;
+    tileCommonProps.subtitle = getLabelBySource(source);
   }
 
   return (

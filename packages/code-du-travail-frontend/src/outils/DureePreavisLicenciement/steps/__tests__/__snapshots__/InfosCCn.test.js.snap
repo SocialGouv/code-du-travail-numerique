@@ -51,16 +51,16 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
 .c3 {
   width: 2.6rem;
   height: 1.4rem;
-  margin-left: 1rem;
+  margin: 0 0.4rem 0 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
 }
 
 .c1:hover .c3 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 .c4 {

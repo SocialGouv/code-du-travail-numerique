@@ -21,31 +21,32 @@ exports[`<Feedback/> should render 1`] = `
   color: #3e486e;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
+.c5 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .c3 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
 }
 
-.c5 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -75,50 +76,94 @@ exports[`<Feedback/> should render 1`] = `
   appearance: none;
   height: 5.2rem;
   padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
   opacity: 1;
 }
 
-.c5:link,
-.c5:visited {
+.c7:link,
+.c7:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):active,
-.c5:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
+  background: #fff;
+  border-color: #dee5ef;
 }
 
-.c5[disabled] {
-  color: rgba(255,255,255,0.4);
+.c7[disabled] {
+  color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c4 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
 }
 
-.c7 + .c6 {
-  margin-left: 1.6rem;
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.c9 + .c8 {
+  margin-left: 4rem;
 }
 
 @media (max-width:600px) {
@@ -135,6 +180,31 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c3 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -147,21 +217,46 @@ exports[`<Feedback/> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
+@media (max-width:1180px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    max-width: 60rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:1180px) {
+  .c4 {
+    margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
-    font-size: 1.4rem;
+  .c4 {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
-@media (max-width:600px) {
-  .c5 {
-    padding: 0 3rem;
+@media (max-width:1180px) {
+  .c6 {
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width:1180px) {
+  .c9 + .c8 {
+    margin-left: 0;
   }
 }
 
@@ -176,20 +271,23 @@ exports[`<Feedback/> should render 1`] = `
         class="c2"
       >
         <h3
-          class="c3"
+          class="c3 c4"
         >
-          Avez-vous trouvé la réponse à votre question ?
+          <div
+            class="c5"
+          />
+          Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c4"
+          class="c6"
         >
           <button
-            class="c5 c6 c7"
+            class="c7 c8 c9"
           >
             Non
           </button>
           <button
-            class="c5 c6 c7"
+            class="c7 c8 c9"
           >
             Oui
           </button>
@@ -221,31 +319,32 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   color: #3e486e;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
+.c5 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .c3 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
 }
 
-.c5 {
+.c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -285,26 +384,72 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   overflow: visible;
 }
 
-.c5:focus,
-.c5:hover,
-.c5:active {
+.c8:focus,
+.c8:hover,
+.c8:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c6 {
+.c9 {
   width: 2.6rem;
   height: 1.4rem;
-  margin-left: 1rem;
+  margin: 0 0.4rem 0 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
 }
 
-.c4:hover .c6 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
+.c7:hover .c9 {
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.c6 {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
 }
 
 @media (max-width:600px) {
@@ -321,6 +466,25 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
+  .c3 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -333,15 +497,37 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
+@media (max-width:1180px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    max-width: 60rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:1180px) {
+  .c4 {
+    margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
-    font-size: 1.4rem;
+  .c4 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c6 {
+    margin-top: 0;
   }
 }
 
@@ -356,19 +542,24 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         class="c2"
       >
         <h3
-          class="c3"
+          class="c3 c4"
         >
-          Avez-vous trouvé la réponse à votre question ?
+          <div
+            class="c5"
+          />
+          Avez-vous trouvé la réponse à votre question ?
         </h3>
-        <p>
+        <p
+          class="c6"
+        >
           Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
            
           <button
-            class="c4 c5"
+            class="c7 c8"
           >
             services du ministère du Travail en région
             <svg
-              class="c6"
+              class="c9"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -407,11 +598,52 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   color: #3e486e;
 }
 
+.c5 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c3 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c2 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  background-color: #f2f5fa;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
 }
 
 .c2 > *:first-child {
@@ -422,13 +654,19 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c4 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.c6 {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
 }
 
 @media (max-width:600px) {
@@ -445,6 +683,19 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:600px) {
+  .c3 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -457,9 +708,37 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   }
 }
 
+@media (max-width:1180px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    max-width: 60rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:1180px) {
+  .c4 {
+    margin-bottom: 1.6rem;
+  }
+}
+
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
+  .c4 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c6 {
+    margin-top: 0;
   }
 }
 
@@ -474,11 +753,16 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
         class="c2"
       >
         <h3
-          class="c3"
+          class="c3 c4"
         >
-          Avez-vous trouvé la réponse à votre question ?
+          <div
+            class="c5"
+          />
+          Avez-vous trouvé la réponse à votre question ?
         </h3>
-        <p>
+        <p
+          class="c6"
+        >
           Merci pour votre réponse.
         </p>
       </div>

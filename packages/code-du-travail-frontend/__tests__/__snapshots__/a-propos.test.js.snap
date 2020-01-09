@@ -92,72 +92,14 @@ exports[`<About /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c21 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c27 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-  text-align: left;
-}
-
-.c35 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c29 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c20 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c25 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c34 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c23 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding-left: 0;
 }
 
 .c15 {
@@ -280,6 +222,65 @@ exports[`<About /> should render 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c20 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c25 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c34 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c23 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.c21 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c27 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
+  text-align: left;
+}
+
+.c35 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c14 ul {
@@ -600,12 +601,6 @@ exports[`<About /> should render 1`] = `
 }
 
 .c43 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
   font-size: 1.6rem;
 }
 
@@ -721,6 +716,54 @@ exports[`<About /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c29 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c37 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c37 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c25 {
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     font-size: 2.8rem;
   }
@@ -741,54 +784,6 @@ exports[`<About /> should render 1`] = `
 @media (max-width:600px) {
   .c35 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-bottom: 2.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c34 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    padding-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c37 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c37 {
-    padding: 0 3rem;
   }
 }
 
@@ -966,12 +961,6 @@ exports[`<About /> should render 1`] = `
 @media (max-width:600px) {
   .c44 {
     text-align: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c43 {
-    font-size: 1.6rem;
   }
 }
 
@@ -1427,7 +1416,7 @@ exports[`<About /> should render 1`] = `
               class="c41 c42"
             >
               <h3
-                class="c43"
+                class="c29 c43"
               >
                 Code du travail numérique
               </h3>
@@ -1490,7 +1479,7 @@ exports[`<About /> should render 1`] = `
               class="c41 c42"
             >
               <h3
-                class="c43"
+                class="c29 c43"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
@@ -1527,7 +1516,7 @@ exports[`<About /> should render 1`] = `
               class="c41 c42"
             >
               <h3
-                class="c43"
+                class="c29 c43"
               >
                 En collaboration avec
               </h3>

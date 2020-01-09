@@ -32,6 +32,16 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
   height: 3rem;
 }
 
+.c5 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -93,17 +103,11 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
   padding-right: 1rem;
 }
 
-.c5 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c6 {
   margin: 0;
 }
 
-.c6 {
+.c7 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -111,15 +115,15 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 }
 
 @media (max-width:600px) {
-  .c0 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
+  .c5 {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
+  .c0 {
+    padding: 2rem 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -161,14 +165,14 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
       >
         
         <h3
-          class="c5"
+          class="c5 c6"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c6"
+      class="c7"
     >
       There is text inside
     </div>
@@ -188,6 +192,16 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+.c4 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c0 {
@@ -251,17 +265,11 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
   padding-right: 1rem;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c5 {
   margin: 0;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -269,15 +277,15 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 }
 
 @media (max-width:600px) {
-  .c0 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
+  .c4 {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
+  .c0 {
+    padding: 2rem 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -297,14 +305,14 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
       >
         
         <h3
-          class="c4"
+          class="c4 c5"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c5"
+      class="c6"
     >
       There is text inside
     </div>
@@ -313,6 +321,16 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 `;
 
 exports[`<Tile /> renders a tile with an icon 1`] = `
+.c4 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -384,17 +402,11 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
   padding-right: 1rem;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c5 {
   margin: 0;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -402,15 +414,15 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 }
 
 @media (max-width:600px) {
-  .c0 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
+  .c4 {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
+  .c0 {
+    padding: 2rem 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -454,14 +466,14 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
       >
         
         <h3
-          class="c4"
+          class="c4 c5"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c5"
+      class="c6"
     >
       There is text inside
     </div>
@@ -470,6 +482,16 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 `;
 
 exports[`<Tile /> renders a tile with text inside 1`] = `
+.c3 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -531,17 +553,11 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
   padding-right: 1rem;
 }
 
-.c3 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c4 {
   margin: 0;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -549,15 +565,15 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 }
 
 @media (max-width:600px) {
-  .c0 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
+  .c3 {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
+  .c0 {
+    padding: 2rem 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -574,14 +590,14 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
       >
         
         <h3
-          class="c3"
+          class="c3 c4"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c4"
+      class="c5"
     >
       There is text inside
     </div>
@@ -590,6 +606,16 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 `;
 
 exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
+.c4 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c3 {
   display: block;
   margin: 0 0 1rem 0;
@@ -662,17 +688,11 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
   padding-right: 1rem;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c5 {
   margin: 0;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -680,15 +700,15 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
 }
 
 @media (max-width:600px) {
-  .c0 {
-    padding: 1.6rem 1.6rem;
-    font-size: 1.4rem;
+  .c4 {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
+  .c0 {
+    padding: 1.6rem 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -708,14 +728,14 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
           This is a theme
         </span>
         <h3
-          class="c4"
+          class="c4 c5"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c5"
+      class="c6"
     >
       There is text inside
     </div>

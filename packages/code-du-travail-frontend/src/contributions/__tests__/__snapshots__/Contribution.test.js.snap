@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
-.c3 {
+.c2 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -14,30 +14,14 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   transform: translateY(-50%);
 }
 
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c4 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c1 {
-  margin: 0 auto 1rem;
-  text-align: left;
 }
 
 .c6 {
@@ -99,6 +83,27 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c3 {
+  margin-top: 3.2rem;
 }
 
 .c5 {
@@ -119,23 +124,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   margin-bottom: 0;
 }
 
-.c0 {
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
 @media (max-width:600px) {
   .c4 {
     font-size: 1.6rem;
@@ -154,18 +142,28 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   }
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
 <div>
-  <section
-    class="c0"
-  >
+  <section>
     <header
-      class="c1"
+      class="c0"
     >
       <h2
-        class="c2"
+        class="c1"
       >
         <div
-          class="c3"
+          class="c2"
         />
         Que dit le code du travail ?
       </h2>
@@ -179,23 +177,21 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       </p>
     </div>
   </section>
-  <section
-    class="c0"
-  >
+  <section>
     <header
-      class="c1"
+      class="c0 c3"
     >
       <h2
-        class="c2"
+        class="c1"
       >
         <div
-          class="c3"
+          class="c2"
         />
         Que dit votre convention collective ?
       </h2>
     </header>
     <div>
-      <h6
+      <h4
         class="c4"
       >
         <span
@@ -211,12 +207,11 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           target="_blank"
         >
           preselected convention
-           
-          (IDCC 
+           (IDCC 
           9999
           )
         </a>
-      </h6>
+      </h4>
       <div
         class="c5"
       >
@@ -234,7 +229,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 `;
 
 exports[`<Contribution /> should render answer references 1`] = `
-.c3 {
+.c2 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -247,7 +242,94 @@ exports[`<Contribution /> should render answer references 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
+.c4 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
+  opacity: 1;
+}
+
+.c8:link,
+.c8:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #f99593;
+  border-color: #f99593;
+}
+
+.c8[disabled] {
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c6 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -259,18 +341,185 @@ exports[`<Contribution /> should render answer references 1`] = `
   text-align: left;
 }
 
+.c7 {
+  margin: 5px 0;
+  list-style-type: none;
+}
+
+.c5 {
+  margin-bottom: 2rem;
+}
+
+.c3 {
+  margin-top: 3.2rem;
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+<div>
+  <section>
+    <header
+      class="c0"
+    >
+      <h2
+        class="c1"
+      >
+        <div
+          class="c2"
+        />
+        Que dit le code du travail ?
+      </h2>
+    </header>
+    <div>
+      <p>
+        hello 
+        <strong>
+          generic
+        </strong>
+      </p>
+    </div>
+  </section>
+  <section>
+    <header
+      class="c0 c3"
+    >
+      <h2
+        class="c1"
+      >
+        <div
+          class="c2"
+        />
+        Que dit votre convention collective ?
+      </h2>
+    </header>
+    <div>
+      <h4
+        class="c4"
+      >
+        <span
+          aria-label="Icone convention collective"
+          role="img"
+        >
+          📖
+        </span>
+         
+        <a
+          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          preselected convention
+           (IDCC 
+          0044
+          )
+        </a>
+      </h4>
+      <div
+        class="c5"
+      >
+        <div>
+          <p>
+            hello 
+            <strong>
+              123
+            </strong>
+          </p>
+        </div>
+      </div>
+      <h3
+        class="c4"
+      >
+        Références
+      </h3>
+      <span
+        class="c6"
+      >
+        Convention collective
+      </span>
+      <li
+        class="c7"
+      >
+        <a
+          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+      </li>
+      <span
+        class="c6"
+      >
+        Autres sources
+      </span>
+      <li
+        class="c7"
+      >
+        <a
+          href="http://path/to/ref"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+      </li>
+      <br />
+      <button
+        class="c8"
+      >
+        Changer de convention collective
+      </button>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Contribution /> should render preselected convention 1`] = `
+.c2 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c4 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c1 {
-  margin: 0 auto 1rem;
-  text-align: left;
 }
 
 .c6 {
@@ -334,187 +583,12 @@ exports[`<Contribution /> should render answer references 1`] = `
   cursor: not-allowed;
 }
 
-.c5 {
-  margin: 5px 0;
-  list-style-type: none;
-}
-
 .c0 {
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
+  margin: 0 auto 1rem;
+  text-align: left;
 }
 
-@media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    padding: 0 3rem;
-  }
-}
-
-<div>
-  <section
-    class="c0"
-  >
-    <header
-      class="c1"
-    >
-      <h2
-        class="c2"
-      >
-        <div
-          class="c3"
-        />
-        Que dit le code du travail ?
-      </h2>
-    </header>
-    <div>
-      <p>
-        hello 
-        <strong>
-          generic
-        </strong>
-      </p>
-    </div>
-  </section>
-  <section
-    class="c0"
-  >
-    <header
-      class="c1"
-    >
-      <h2
-        class="c2"
-      >
-        <div
-          class="c3"
-        />
-        Que dit votre convention collective ?
-      </h2>
-    </header>
-    <div>
-      <h6
-        class="c4"
-      >
-        <span
-          aria-label="Icone convention collective"
-          role="img"
-        >
-          📖
-        </span>
-         
-        <a
-          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          preselected convention
-           
-          (IDCC 
-          0044
-          )
-        </a>
-      </h6>
-      <div>
-        <p>
-          hello 
-          <strong>
-            123
-          </strong>
-        </p>
-      </div>
-      <header
-        class="c1"
-      >
-        <h3
-          class="c2"
-        >
-          <div
-            class="c3"
-          />
-          Références
-        </h3>
-      </header>
-      <h4
-        class="c4"
-      >
-        Convention collective
-      </h4>
-      <li
-        class="c5"
-      >
-        <a
-          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          reference CC 1
-        </a>
-      </li>
-      <h4
-        class="c4"
-      >
-        Autres sources
-      </h4>
-      <li
-        class="c5"
-      >
-        <a
-          href="http://path/to/ref"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          reference externe 1
-        </a>
-      </li>
-      <br />
-      <button
-        class="c6"
-      >
-        Changer de convention collective
-      </button>
-    </div>
-  </section>
-</div>
-`;
-
-exports[`<Contribution /> should render preselected convention 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c2 {
+.c1 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -526,96 +600,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   text-align: left;
 }
 
-.c4 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c1 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
 .c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
-  opacity: 1;
-}
-
-.c5:link,
-.c5:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c5:not([disabled]):hover,
-.c5:not([disabled]):active,
-.c5:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
-}
-
-.c5[disabled] {
-  color: rgba(255,255,255,0.4);
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c0 {
   margin-bottom: 2rem;
-  padding: 1rem 2rem;
 }
 
-@media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
+.c3 {
+  margin-top: 3.2rem;
 }
 
 @media (max-width:600px) {
@@ -625,29 +615,39 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     padding: 0 3rem;
   }
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
 <div>
-  <section
-    class="c0"
-  >
+  <section>
     <header
-      class="c1"
+      class="c0"
     >
       <h2
-        class="c2"
+        class="c1"
       >
         <div
-          class="c3"
+          class="c2"
         />
         Que dit le code du travail ?
       </h2>
@@ -661,23 +661,21 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       </p>
     </div>
   </section>
-  <section
-    class="c0"
-  >
+  <section>
     <header
-      class="c1"
+      class="c0 c3"
     >
       <h2
-        class="c2"
+        class="c1"
       >
         <div
-          class="c3"
+          class="c2"
         />
         Que dit votre convention collective ?
       </h2>
     </header>
     <div>
-      <h6
+      <h4
         class="c4"
       >
         <span
@@ -693,23 +691,26 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           target="_blank"
         >
           preselected convention
-           
-          (IDCC 
+           (IDCC 
           0044
           )
         </a>
-      </h6>
-      <div>
-        <p>
-          hello 
-          <strong>
-            123
-          </strong>
-        </p>
+      </h4>
+      <div
+        class="c5"
+      >
+        <div>
+          <p>
+            hello 
+            <strong>
+              123
+            </strong>
+          </p>
+        </div>
       </div>
       <br />
       <button
-        class="c5"
+        class="c6"
       >
         Changer de convention collective
       </button>
@@ -733,7 +734,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c2 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -746,29 +747,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c1 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c6 {
+.c5 {
   position: relative;
   display: inline-block;
 }
 
-.c8 {
+.c7 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -790,15 +774,15 @@ exports[`<Contribution /> should render with both answers 1`] = `
   appearance: none;
 }
 
-.c8::-webkit-outer-spin-button,
-.c8::-webkit-inner-spin-button {
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c8::-webkit-calendar-picker-indicator {
+.c7::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -811,58 +795,69 @@ exports[`<Contribution /> should render with both answers 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c8:invalid {
+.c7:invalid {
   border-color: #eb5757;
 }
 
-.c8::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c8::-moz-placeholder {
+.c7::-moz-placeholder {
   color: #9298af;
 }
 
-.c8:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c8::placeholder {
+.c7::placeholder {
   color: #9298af;
 }
 
-.c8:focus {
+.c7:focus {
   border-color: #7994d4;
 }
 
-.c8:focus::-webkit-input-placeholder {
+.c7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c8:focus::-moz-placeholder {
+.c7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c8:focus:-ms-input-placeholder {
+.c7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c8:focus::placeholder {
+.c7:focus::placeholder {
   color: transparent;
-}
-
-.c7 {
-  display: block;
 }
 
 .c0 {
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
+  margin: 0 auto 1rem;
+  text-align: left;
 }
 
-.c5 {
-  margin: 2rem 0;
-  padding: 1rem;
+.c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c6 {
+  display: block;
+}
+
+.c3 {
+  margin-top: 3.2rem;
 }
 
 @media (max-width:600px) {
@@ -879,36 +874,34 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
+  .c7 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
 <div>
-  <section
-    class="c0"
-  >
+  <section>
     <header
-      class="c1"
+      class="c0"
     >
       <h2
-        class="c2"
+        class="c1"
       >
         <div
-          class="c3"
+          class="c2"
         />
         Que dit le code du travail ?
       </h2>
@@ -922,34 +915,32 @@ exports[`<Contribution /> should render with both answers 1`] = `
       </p>
     </div>
   </section>
-  <section
-    class="c0"
-  >
+  <section>
     <header
-      class="c1"
+      class="c0 c3"
     >
       <h2
-        class="c2"
+        class="c1"
       >
         <div
-          class="c3"
+          class="c2"
         />
         Que dit votre convention collective ?
       </h2>
     </header>
     <div>
       <div
-        class="c4 c5"
+        class="c4"
       >
         
         <p>
           Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
         </p>
         <span
-          class="c6 c7"
+          class="c5 c6"
         >
           <input
-            class="c8"
+            class="c7"
             name="q"
             placeholder="Nom d'entreprise, SIRET, nom de convention collective"
             role="search"
@@ -992,29 +983,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c1 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c6 {
+.c5 {
   position: relative;
   display: inline-block;
 }
 
-.c8 {
+.c7 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -1036,15 +1010,15 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   appearance: none;
 }
 
-.c8::-webkit-outer-spin-button,
-.c8::-webkit-inner-spin-button {
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c8::-webkit-calendar-picker-indicator {
+.c7::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -1057,58 +1031,69 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c8:invalid {
+.c7:invalid {
   border-color: #eb5757;
 }
 
-.c8::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c8::-moz-placeholder {
+.c7::-moz-placeholder {
   color: #9298af;
 }
 
-.c8:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c8::placeholder {
+.c7::placeholder {
   color: #9298af;
 }
 
-.c8:focus {
+.c7:focus {
   border-color: #7994d4;
 }
 
-.c8:focus::-webkit-input-placeholder {
+.c7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c8:focus::-moz-placeholder {
+.c7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c8:focus:-ms-input-placeholder {
+.c7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c8:focus::placeholder {
+.c7:focus::placeholder {
   color: transparent;
-}
-
-.c7 {
-  display: block;
 }
 
 .c0 {
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
+  margin: 0 auto 1rem;
+  text-align: left;
 }
 
-.c5 {
-  margin: 2rem 0;
-  padding: 1rem;
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c6 {
+  display: block;
+}
+
+.c1 {
+  margin-top: 0;
 }
 
 @media (max-width:600px) {
@@ -1125,6 +1110,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    padding: 0 1rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
   }
@@ -1136,19 +1128,10 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c8 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
 <div>
-  <section
-    class="c0"
-  >
+  <section>
     <header
-      class="c1"
+      class="c0 c1"
     >
       <h2
         class="c2"
@@ -1161,17 +1144,17 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     </header>
     <div>
       <div
-        class="c4 c5"
+        class="c4"
       >
         
         <p>
           Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
         </p>
         <span
-          class="c6 c7"
+          class="c5 c6"
         >
           <input
-            class="c8"
+            class="c7"
             name="q"
             placeholder="Nom d'entreprise, SIRET, nom de convention collective"
             role="search"
@@ -1187,7 +1170,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 `;
 
 exports[`<Contribution /> should render with generic answer 1`] = `
-.c3 {
+.c2 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -1200,7 +1183,12 @@ exports[`<Contribution /> should render with generic answer 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -1212,40 +1200,28 @@ exports[`<Contribution /> should render with generic answer 1`] = `
   text-align: left;
 }
 
-.c1 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c0 {
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
-}
-
 @media (max-width:600px) {
-  .c2 {
+  .c1 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c1 {
     font-size: 2.2rem;
   }
 }
 
 <div>
-  <section
-    class="c0"
-  >
+  <section>
     <header
-      class="c1"
+      class="c0"
     >
       <h2
-        class="c2"
+        class="c1"
       >
         <div
-          class="c3"
+          class="c2"
         />
         Que dit le code du travail ?
       </h2>
@@ -1263,7 +1239,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 `;
 
 exports[`<Contribution /> should render with generic answer and content 1`] = `
-.c3 {
+.c2 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -1276,7 +1252,12 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -1288,40 +1269,28 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   text-align: left;
 }
 
-.c1 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c0 {
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
-}
-
 @media (max-width:600px) {
-  .c2 {
+  .c1 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c1 {
     font-size: 2.2rem;
   }
 }
 
 <div>
-  <section
-    class="c0"
-  >
+  <section>
     <header
-      class="c1"
+      class="c0"
     >
       <h2
-        class="c2"
+        class="c1"
       >
         <div
-          class="c3"
+          class="c2"
         />
         Que dit le code du travail ?
       </h2>

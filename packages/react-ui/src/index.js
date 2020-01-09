@@ -18,7 +18,6 @@ export { Grid, RootGrid, GridCell } from "./Grid";
 export { FlatList } from "./FlatList";
 export { Modal, ModalContentWrapper } from "./Modal";
 export { OverflowWrapper } from "./OverflowWrapper";
-export { Heading, PageTitle, Subtitle, Title } from "./Titles";
 export { ScreenReaderOnly } from "./ScreenReaderOnly";
 export { Stripe } from "./Stripe";
 export { Table } from "./Table";
@@ -35,5 +34,10 @@ export { InputRadio } from "./field/Radio";
 export { Label } from "./field/Label";
 export { Select } from "./field/Select";
 export { Textarea } from "./field/Textarea";
+
+export { Heading } from "./Titles/Heading";
+export { PageTitle } from "./Titles/PageTitle";
+export { Subtitle } from "./Titles/Subtitle";
+export { Title } from "./Titles/Title";
 
 export { keyframes, theme, icons };

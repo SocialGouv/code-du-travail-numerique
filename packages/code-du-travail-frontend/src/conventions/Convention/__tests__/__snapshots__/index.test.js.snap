@@ -14,32 +14,14 @@ exports[`<Convention /> renders 1`] = `
   transform: translateY(-50%);
 }
 
-.c4 {
+.c24 {
   position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c23 {
-  display: block;
   margin: 0 0 1rem 0;
-  color: #4d73b8;
+  color: #2f3b6c;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.c2 {
-  margin: 0 auto 1rem;
-  text-align: left;
 }
 
 .c7 + .c6 {
@@ -127,7 +109,7 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 0;
 }
 
-.c29 {
+.c30 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -164,16 +146,16 @@ exports[`<Convention /> renders 1`] = `
   opacity: 1;
 }
 
-.c29:link,
-.c29:visited {
+.c30:link,
+.c30:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c29:not([disabled]):hover,
-.c29:not([disabled]):active,
-.c29:not([disabled]):focus {
+.c30:not([disabled]):hover,
+.c30:not([disabled]):active,
+.c30:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -182,7 +164,7 @@ exports[`<Convention /> renders 1`] = `
   border-color: transparent;
 }
 
-.c29[disabled] {
+.c30[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -265,6 +247,17 @@ exports[`<Convention /> renders 1`] = `
   padding: 0;
 }
 
+.c23 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
 .c20 {
   position: relative;
   display: -webkit-inline-box;
@@ -326,22 +319,16 @@ exports[`<Convention /> renders 1`] = `
   padding-right: 1rem;
 }
 
-.c24 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c25 {
   margin: 0;
 }
 
-.c26 {
+.c27 {
   position: relative;
   display: inline-block;
 }
 
-.c28 {
+.c29 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -363,15 +350,15 @@ exports[`<Convention /> renders 1`] = `
   appearance: none;
 }
 
-.c28::-webkit-outer-spin-button,
-.c28::-webkit-inner-spin-button {
+.c29::-webkit-outer-spin-button,
+.c29::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c28::-webkit-calendar-picker-indicator {
+.c29::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -384,44 +371,61 @@ exports[`<Convention /> renders 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c28:invalid {
+.c29:invalid {
   border-color: #eb5757;
 }
 
-.c28::-webkit-input-placeholder {
+.c29::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c28::-moz-placeholder {
+.c29::-moz-placeholder {
   color: #9298af;
 }
 
-.c28:-ms-input-placeholder {
+.c29:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c28::placeholder {
+.c29::placeholder {
   color: #9298af;
 }
 
-.c28:focus {
+.c29:focus {
   border-color: #7994d4;
 }
 
-.c28:focus::-webkit-input-placeholder {
+.c29:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c28:focus::-moz-placeholder {
+.c29:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c28:focus:-ms-input-placeholder {
+.c29:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c28:focus::placeholder {
+.c29:focus::placeholder {
   color: transparent;
+}
+
+.c2 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c4 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
 .c0 {
@@ -443,7 +447,7 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 2rem;
 }
 
-.c25 {
+.c26 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -451,13 +455,13 @@ exports[`<Convention /> renders 1`] = `
   display: flex;
 }
 
-.c27 {
+.c28 {
   -webkit-flex: 1 1 40%;
   -ms-flex: 1 1 40%;
   flex: 1 1 40%;
 }
 
-.c30 {
+.c31 {
   position: absolute;
   top: 0;
   right: 0;
@@ -466,7 +470,7 @@ exports[`<Convention /> renders 1`] = `
   color: #7994d4;
 }
 
-.c31 {
+.c32 {
   width: 3rem;
   height: 3rem;
 }
@@ -481,14 +485,8 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 2.2rem;
+  .c24 {
+    font-size: 1.6rem;
   }
 }
 
@@ -499,7 +497,7 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c30 {
     font-size: 1.4rem;
   }
 }
@@ -583,20 +581,26 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c24 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
+  .c29 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c4 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
     padding-right: 5.5rem;
   }
 }
@@ -3422,7 +3426,7 @@ exports[`<Convention /> renders 1`] = `
                         Salaires minimaux
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 1-4
                       </h3>
@@ -3451,7 +3455,7 @@ exports[`<Convention /> renders 1`] = `
                         Salaire mensuel
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 4-1
                       </h3>
@@ -3480,7 +3484,7 @@ exports[`<Convention /> renders 1`] = `
                         Déduction des heures non travaillées
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 4-2
                       </h3>
@@ -3509,7 +3513,7 @@ exports[`<Convention /> renders 1`] = `
                         Barèmes de salaires minimaux
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 12-8
                       </h3>
@@ -3603,7 +3607,7 @@ exports[`<Convention /> renders 1`] = `
                         Contingent d'heures supplémentaires non soumis à autorisation
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-13
                       </h3>
@@ -3632,7 +3636,7 @@ exports[`<Convention /> renders 1`] = `
                         Heures supplémentaires exceptionnelles
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-14
                       </h3>
@@ -3661,7 +3665,7 @@ exports[`<Convention /> renders 1`] = `
                         Plafonds
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-15
                       </h3>
@@ -3690,7 +3694,7 @@ exports[`<Convention /> renders 1`] = `
                         Définition de la durée du travail
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-16
                       </h3>
@@ -3719,7 +3723,7 @@ exports[`<Convention /> renders 1`] = `
                         Majoration pour heures supplémentaires.
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-17
                       </h3>
@@ -3748,7 +3752,7 @@ exports[`<Convention /> renders 1`] = `
                         Equivalences et dérogations permanentes
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-18
                       </h3>
@@ -3777,7 +3781,7 @@ exports[`<Convention /> renders 1`] = `
                         Semaine de travail en 5 jours
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-21
                       </h3>
@@ -3806,7 +3810,7 @@ exports[`<Convention /> renders 1`] = `
                         Exceptions à la semaine de travail en 5 jours
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-22
                       </h3>
@@ -3835,7 +3839,7 @@ exports[`<Convention /> renders 1`] = `
                         Horaires individualisés
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-24
                       </h3>
@@ -3864,7 +3868,7 @@ exports[`<Convention /> renders 1`] = `
                         Horaires à temps partiel
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-25
                       </h3>
@@ -3893,7 +3897,7 @@ exports[`<Convention /> renders 1`] = `
                         Récupération des heures perdues pour intempéries
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-28
                       </h3>
@@ -3922,7 +3926,7 @@ exports[`<Convention /> renders 1`] = `
                         Cas des chefs d'équipe
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 3-29
                       </h3>
@@ -4016,7 +4020,7 @@ exports[`<Convention /> renders 1`] = `
                         Préambule
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 12-1
                       </h3>
@@ -4045,7 +4049,7 @@ exports[`<Convention /> renders 1`] = `
                         Définitions générales des critères et des niveaux
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 12-2
                       </h3>
@@ -4074,7 +4078,7 @@ exports[`<Convention /> renders 1`] = `
                         Coefficients hiérarchiques
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 12-3
                       </h3>
@@ -4103,7 +4107,7 @@ exports[`<Convention /> renders 1`] = `
                         Prise en compte des diplômes professionnels bâtiment
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 12-4
                       </h3>
@@ -4132,7 +4136,7 @@ exports[`<Convention /> renders 1`] = `
                         Polyvalence
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 12-5
                       </h3>
@@ -4161,7 +4165,7 @@ exports[`<Convention /> renders 1`] = `
                         Evolution de carrière
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 12-6
                       </h3>
@@ -4190,7 +4194,7 @@ exports[`<Convention /> renders 1`] = `
                         Suivi de l'application dans l'entreprise
                       </span>
                       <h3
-                        class="c24"
+                        class="c24 c25"
                       >
                         Article 12-7
                       </h3>
@@ -4236,14 +4240,14 @@ exports[`<Convention /> renders 1`] = `
       Pour savoir si ce qui est prévu par la convention collective de branche est bien applicable à votre situation particulière vous devez vous reporter à la fiche traitant du même sujet et pour lequel l'accord d'entreprise peut comporter d'autres règles.
     </div>
     <div
-      class="c25"
+      class="c26"
     >
       <span
-        class="c26 c27"
+        class="c27 c28"
       >
         <input
           autocomplete="off"
-          class="c28"
+          class="c29"
           id="search-agreement"
           name="rawQuery"
           placeholder="congé exceptionnel, prime"
@@ -4282,11 +4286,11 @@ exports[`<Convention /> renders 1`] = `
         value="1"
       />
       <button
-        class="c29 c30"
+        class="c30 c31"
         type="submit"
       >
         <svg
-          class="c31"
+          class="c32"
           fill="none"
           viewBox="0 0 32 32"
         >

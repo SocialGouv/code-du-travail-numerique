@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { ArrowLink, icons, theme } from "@socialgouv/react-ui";
+import { ArrowLink, Tile, icons, theme } from "@socialgouv/react-ui";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 
-import { CustomTile } from "./tiles/Custom";
+import { CallToActionTile } from "./tiles/CallToAction";
 
 export const RelatedItems = ({ items = [] }) => {
   const tool = items.find(({ source }) => source === SOURCES.TOOLS);
@@ -24,8 +24,9 @@ export const RelatedItems = ({ items = [] }) => {
             as={`/${getRouteBySource(letter.source)}/${letter.slug}`}
             passHref
           >
-            <StyledCustomTile
+            <StyledCallToActionTile
               action="Consulter"
+              custom
               icon={icons.Document}
               title={letter.title}
               subtitle={getLabelBySource(letter.source)}
@@ -40,29 +41,30 @@ export const RelatedItems = ({ items = [] }) => {
             as={`/${getRouteBySource(tool.source)}/${tool.slug}`}
             passHref
           >
-            <StyledCustomTile
-              action={tool.action}
+            <StyledCallToActionTile
+              action={tool.action || "Consulter"}
+              custom
               icon={icons[tool.icon]}
               title={tool.title}
               subtitle={getLabelBySource(tool.source)}
             >
               {tool.description}
-            </StyledCustomTile>
+            </StyledCallToActionTile>
           </Link>
         </StyledListItem>
       )}
       {external && (
         <StyledListItem>
-          <StyledCustomTile
+          <StyledTile
             href={external.url}
             rel="noopener nofollow"
             target="_blank"
-            action={external.action}
             icon={icons[external.icon]}
             title={external.title}
+            subtitle={external.subtitle}
           >
             {external.description}
-          </StyledCustomTile>
+          </StyledTile>
         </StyledListItem>
       )}
       {relatedItems.length > 0 && (
@@ -103,7 +105,11 @@ const StyledList = styled.ul`
   }
 `;
 
-const StyledCustomTile = styled(CustomTile)`
+const StyledTile = styled(Tile)`
+  max-width: 28rem;
+`;
+
+const StyledCallToActionTile = styled(CallToActionTile)`
   max-width: 28rem;
 `;
 

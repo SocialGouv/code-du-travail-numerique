@@ -17,7 +17,7 @@ import externalTools from "@cdt/data...tools/externals.json";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
-import { CustomTile } from "../../src/common/tiles/Custom";
+import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 
 const monCompteFormation = externalTools.find(
   tools => tools.title === "Mon compte formation"
@@ -45,24 +45,31 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
               passHref
               key={slug}
             >
-              <CustomTile action={action} title={title} icon={icons[icon]}>
+              <CallToActionTile
+                action={action}
+                custom
+                title={title}
+                icon={icons[icon]}
+              >
                 {description}
-              </CustomTile>
+              </CallToActionTile>
             </Link>
           ))}
           <Link href={`/${getRouteBySource(SOURCES.CCN)}/recherche`} passHref>
-            <CustomTile
+            <CallToActionTile
               action="Consulter"
+              custom
               title="Convention collective"
               icon={icons.Nego}
             >
               Recherchez une convention collective par Entreprise, SIRET, Nom ou
               numéro IDCC.
-            </CustomTile>
+            </CallToActionTile>
           </Link>
-          <CustomTile
+          <CallToActionTile
             key={monCompteFormation.slug}
             action={monCompteFormation.action}
+            custom
             title={monCompteFormation.title}
             icon={icons[monCompteFormation.icon]}
             href={monCompteFormation.url}
@@ -71,7 +78,7 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
             className="no-after"
           >
             {monCompteFormation.description}
-          </CustomTile>
+          </CallToActionTile>
         </Grid>
         {modeles.length > 0 && (
           <>
@@ -84,9 +91,10 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
                   passHref
                   key={slug}
                 >
-                  <CustomTile
-                    title={title}
+                  <CallToActionTile
                     action="Consulter"
+                    custom
+                    title={title}
                     icon={icons.Document}
                   />
                 </Link>

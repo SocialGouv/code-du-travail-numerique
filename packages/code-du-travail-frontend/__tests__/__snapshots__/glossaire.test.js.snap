@@ -92,63 +92,14 @@ exports[`<Glossaire /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c21 {
+.c43 {
   position: relative;
-  margin: 0;
+  margin: 0 0 1rem 0;
   color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c27 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-  text-align: left;
-}
-
-.c35 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
-.c20 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c26 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c34 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c23 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding-left: 0;
 }
 
 .c15 {
@@ -271,6 +222,65 @@ exports[`<Glossaire /> should render 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c20 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c26 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c34 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c23 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.c21 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c27 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
+  text-align: left;
+}
+
+.c35 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c14 ul {
@@ -584,33 +594,27 @@ exports[`<Glossaire /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c44 {
+.c45 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c43 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c44 {
   font-size: 1.6rem;
 }
 
-.c45 {
+.c46 {
   margin: 0.4rem 0;
 }
 
-.c46 {
+.c47 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c47 {
+.c48 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -629,14 +633,14 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c48 {
+.c49 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c49 {
+.c50 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -720,6 +724,54 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c43 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c37 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c37 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     font-size: 2.8rem;
   }
@@ -740,48 +792,6 @@ exports[`<Glossaire /> should render 1`] = `
 @media (max-width:600px) {
   .c35 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-bottom: 2.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c34 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    padding-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c37 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c37 {
-    padding: 0 3rem;
   }
 }
 
@@ -957,26 +967,20 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c45 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c43 {
+  .c44 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c49 {
+  .c50 {
     display: none;
   }
 }
@@ -3695,58 +3699,58 @@ exports[`<Glossaire /> should render 1`] = `
               class="c41 c42"
             >
               <h3
-                class="c43"
+                class="c43 c44"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c44"
+                class="c45"
               >
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -3758,18 +3762,18 @@ exports[`<Glossaire /> should render 1`] = `
               class="c41 c42"
             >
               <h3
-                class="c43"
+                class="c43 c44"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c44"
+                class="c45"
               >
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3778,10 +3782,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3795,18 +3799,18 @@ exports[`<Glossaire /> should render 1`] = `
               class="c41 c42"
             >
               <h3
-                class="c43"
+                class="c43 c44"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c44"
+                class="c45"
               >
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3815,10 +3819,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3827,10 +3831,10 @@ exports[`<Glossaire /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3844,10 +3848,10 @@ exports[`<Glossaire /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c47"
+        class="c48"
       >
         <a
-          class="c48"
+          class="c49"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3856,12 +3860,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3870,12 +3874,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3884,12 +3888,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3898,12 +3902,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -3912,12 +3916,12 @@ exports[`<Glossaire /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"

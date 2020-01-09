@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should render 1`] = `
-.c1 + .c0 {
-  border-top: 1px solid #bbcadf;
-}
-
 .c4 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
+}
+
+.c1 + .c0 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c5 {
   margin: 2rem 0;
   padding: 0;
 }
@@ -62,21 +66,21 @@ exports[`<Accordion /> should render 1`] = `
   color: #3e486e;
 }
 
-.c5 {
+.c6 {
   padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c5 > *:first-child {
+.c6 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c6 > *:last-child {
   margin-bottom: 0;
 }
 
-.c5.accordion__body--hidden {
+.c6.accordion__body--hidden {
   display: none;
 }
 
@@ -87,7 +91,7 @@ exports[`<Accordion /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     padding: 1rem 0;
   }
 }
@@ -134,7 +138,7 @@ exports[`<Accordion /> should render 1`] = `
             />
           </svg>
           <h3
-            class="c4"
+            class="c4 c5"
           >
             This is the title
           </h3>
@@ -143,7 +147,7 @@ exports[`<Accordion /> should render 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-0"
-        class="c5"
+        class="c6"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-0"

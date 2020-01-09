@@ -58,6 +58,12 @@ exports[`<Article /> should render 1`] = `
   transform: translateY(-50%);
 }
 
+.c2 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
 .c3 {
   position: relative;
   margin: 0;
@@ -67,12 +73,6 @@ exports[`<Article /> should render 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 4rem;
-}
-
-.c2 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
 }
 
 .c5 {
@@ -114,6 +114,12 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c2 {
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
   .c3 {
     padding-left: 1.6rem;
   }
@@ -122,12 +128,6 @@ exports[`<Article /> should render 1`] = `
 @media (max-width:600px) {
   .c3 {
     font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    margin-left: 0;
   }
 }
 

@@ -63,48 +63,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c23 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c30 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c47 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c22 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c29 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
 }
 
 .c36 + .c35 {
@@ -112,12 +78,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c39 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
   margin: 2rem 0;
   padding: 0;
 }
@@ -358,16 +318,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
 .c49 {
   width: 2.6rem;
   height: 1.4rem;
-  margin-left: 1rem;
+  margin: 0 0.4rem 0 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
 }
 
 .c15:hover .c49 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 .c41 {
@@ -402,6 +362,41 @@ exports[`<DroitDuTravail /> should render 1`] = `
   align-self: center;
   padding: 1rem 1.6rem;
   text-align: left;
+}
+
+.c22 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c29 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c23 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c30 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c14 ul {
@@ -722,12 +717,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c60 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
   font-size: 1.6rem;
 }
 
@@ -987,37 +976,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c47 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c22 {
-    margin-bottom: 2.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c39 {
     font-size: 1.6rem;
   }
 }
@@ -1049,6 +1008,30 @@ exports[`<DroitDuTravail /> should render 1`] = `
 @media (max-width:600px) {
   .c54 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    font-size: 2.2rem;
   }
 }
 
@@ -1226,12 +1209,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 @media (max-width:600px) {
   .c61 {
     text-align: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c60 {
-    font-size: 1.6rem;
   }
 }
 
@@ -3210,7 +3187,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c58 c59"
             >
               <h3
-                class="c60"
+                class="c47 c60"
               >
                 Code du travail numérique
               </h3>
@@ -3273,7 +3250,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c58 c59"
             >
               <h3
-                class="c60"
+                class="c47 c60"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
@@ -3310,7 +3287,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c58 c59"
             >
               <h3
-                class="c60"
+                class="c47 c60"
               >
                 En collaboration avec
               </h3>

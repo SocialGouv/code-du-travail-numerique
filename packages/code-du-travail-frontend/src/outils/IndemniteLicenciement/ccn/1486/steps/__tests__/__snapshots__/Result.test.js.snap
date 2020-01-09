@@ -14,23 +14,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
 .c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -62,6 +45,23 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   -ms-flex-item-align: center;
   align-self: center;
   padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
   text-align: left;
 }
 
@@ -480,6 +480,11 @@ exports[`<Result /> renders legal indemnite 1`] = `
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c2 {
   position: relative;
   margin: 0;
@@ -489,11 +494,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
   text-align: left;
 }
 

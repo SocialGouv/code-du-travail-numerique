@@ -14,23 +14,6 @@ exports[`<StepInformations /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
 .c7 {
   position: relative;
   display: -webkit-inline-box;
@@ -98,6 +81,23 @@ exports[`<StepInformations /> should render 1`] = `
 
 .c9:disabled {
   background-color: #e4e8ef;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
 .c5 {
@@ -262,23 +262,6 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
 .c6 {
   position: relative;
   display: -webkit-inline-box;
@@ -346,6 +329,23 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 
 .c8:disabled {
   background-color: #e4e8ef;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
 .c5 {
@@ -502,23 +502,6 @@ exports[`<StepInformations /> should render groupe 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
 .c6 {
   position: relative;
   display: -webkit-inline-box;
@@ -586,6 +569,23 @@ exports[`<StepInformations /> should render groupe 1`] = `
 
 .c8:disabled {
   background-color: #e4e8ef;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
 .c5 {

@@ -14,23 +14,6 @@ exports[`<Step /> should ask detail about categories 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
 .c13 {
   position: relative;
   display: inline-block;
@@ -188,6 +171,23 @@ exports[`<Step /> should ask detail about categories 1`] = `
   background-color: #e4e8ef;
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c9 {
   width: 10em;
   text-align: right;
@@ -257,6 +257,13 @@ exports[`<Step /> should ask detail about categories 1`] = `
 }
 
 @media (max-width:600px) {
+  .c14 {
+    padding: 0 1rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
   }
@@ -265,13 +272,6 @@ exports[`<Step /> should ask detail about categories 1`] = `
 @media (max-width:600px) {
   .c2 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    padding: 0 1rem;
-    padding-right: 2rem;
   }
 }
 
@@ -449,23 +449,6 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
 }
 
 .c11 {
@@ -679,6 +662,23 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   background-color: #e4e8ef;
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -751,6 +751,13 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 }
 
 @media (max-width:600px) {
+  .c12 {
+    padding: 0 1rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
   }
@@ -759,13 +766,6 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 @media (max-width:600px) {
   .c2 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    padding: 0 1rem;
-    padding-right: 2rem;
   }
 }
 
@@ -944,23 +944,6 @@ exports[`<Step /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
 .c11 {
   position: relative;
   display: inline-block;
@@ -1118,6 +1101,23 @@ exports[`<Step /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1163,6 +1163,13 @@ exports[`<Step /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c12 {
+    padding: 0 1rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
   }
@@ -1171,13 +1178,6 @@ exports[`<Step /> should render 1`] = `
 @media (max-width:600px) {
   .c2 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    padding: 0 1rem;
-    padding-right: 2rem;
   }
 }
 
