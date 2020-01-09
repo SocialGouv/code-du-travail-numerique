@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
@@ -11,8 +11,16 @@ import { Info } from "./Info";
 import { Articles } from "./Articles";
 import { TextSearch } from "./TextSearch";
 import { Contributions } from "./Contributions";
+import { useLocalStorage } from "../../lib/useLocalStorage";
 
 const Convention = ({ convention }) => {
+  const [, setCcInfo] = useLocalStorage("convention", {});
+
+  useEffect(() => {
+    const { slug, id, num, title, shortTitle } = convention;
+    setCcInfo({ convention: { id, slug, title, shortTitle, num } });
+  }, [convention, setCcInfo]);
+
   return (
     <React.Fragment>
       <Info convention={convention} />
