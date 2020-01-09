@@ -73,41 +73,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c22 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c29 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c23 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c30 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c36 + .c35 {
   border-top: 1px solid #bbcadf;
 }
@@ -397,6 +362,41 @@ exports[`<DroitDuTravail /> should render 1`] = `
   align-self: center;
   padding: 1rem 1.6rem;
   text-align: left;
+}
+
+.c22 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c29 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c23 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c30 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c14 ul {
@@ -982,30 +982,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
-    margin-bottom: 2.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c40 {
     padding: 1rem 0;
   }
@@ -1032,6 +1008,30 @@ exports[`<DroitDuTravail /> should render 1`] = `
 @media (max-width:600px) {
   .c54 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    font-size: 2.2rem;
   }
 }
 

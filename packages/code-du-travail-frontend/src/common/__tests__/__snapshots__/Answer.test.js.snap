@@ -89,23 +89,6 @@ exports[`<Answer /> should renders 1`] = `
   padding-left: 2.4rem;
 }
 
-.c4 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c5 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
 .c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -165,6 +148,23 @@ exports[`<Answer /> should renders 1`] = `
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c4 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c5 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
 }
 
 .c7 {
@@ -328,6 +328,18 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
+  .c16 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: -1rem;
   }
@@ -342,18 +354,6 @@ exports[`<Answer /> should renders 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    padding: 0 3rem;
   }
 }
 
@@ -655,34 +655,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   padding-left: 2.4rem;
 }
 
-.c13 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c14 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c12 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
 .c25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -775,6 +747,34 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c2 {
   overflow-x: auto;
+}
+
+.c12 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.c13 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c14 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
 }
 
 .c16 {
@@ -1015,24 +1015,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
   .c25 {
     font-size: 1.4rem;
   }
@@ -1060,6 +1042,24 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 @media (max-width:600px) {
   .c2 {
     overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    font-size: 2.8rem;
   }
 }
 
@@ -1479,23 +1479,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   padding-left: 2.4rem;
 }
 
-.c4 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c5 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
 .c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1561,6 +1544,23 @@ exports[`<Answer /> should renders back to results link 1`] = `
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
+}
+
+.c4 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c5 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
 }
 
 .c7 {
@@ -1724,6 +1724,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
+  .c17 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: -1rem;
   }
@@ -1738,18 +1750,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding: 0 3rem;
   }
 }
 
@@ -2061,34 +2061,6 @@ exports[`<Answer /> should renders related content 1`] = `
   line-height: 1.25;
 }
 
-.c4 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c5 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c30 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
 .c40 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2283,6 +2255,17 @@ exports[`<Answer /> should renders related content 1`] = `
   transform: translateX(4px);
 }
 
+.c30 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
 .c23 {
   position: relative;
   display: -webkit-inline-box;
@@ -2363,6 +2346,23 @@ exports[`<Answer /> should renders related content 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
+}
+
+.c4 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c5 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
 }
 
 .c10 {
@@ -2582,24 +2582,6 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
   .c18 {
     font-size: 1.4rem;
   }
@@ -2621,6 +2603,24 @@ exports[`<Answer /> should renders related content 1`] = `
   .c23 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 2.8rem;
   }
 }
 
@@ -3301,23 +3301,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding-left: 2.4rem;
 }
 
-.c4 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c5 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
 .c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3377,6 +3360,23 @@ exports[`<Answer /> should renders tooltip 1`] = `
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c4 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c5 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
 }
 
 .c10 {
@@ -3544,6 +3544,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
+  .c17 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: -1rem;
   }
@@ -3558,18 +3570,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding: 0 3rem;
   }
 }
 
@@ -3907,23 +3907,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding-left: 2.4rem;
 }
 
-.c4 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c5 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
 .c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3983,6 +3966,23 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c4 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c5 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
 }
 
 .c10 {
@@ -4150,6 +4150,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
+  .c17 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: -1rem;
   }
@@ -4164,18 +4176,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 @media (max-width:600px) {
   .c5 {
     font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding: 0 3rem;
   }
 }
 
@@ -4499,23 +4499,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding-left: 2.4rem;
 }
 
-.c4 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c5 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
 .c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4575,6 +4558,23 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c4 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c5 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
 }
 
 .c10 {
@@ -4742,6 +4742,18 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:600px) {
+  .c17 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: -1rem;
   }
@@ -4756,18 +4768,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding: 0 3rem;
   }
 }
 
@@ -5082,23 +5082,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding-left: 2.4rem;
 }
 
-.c4 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c5 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
 .c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5158,6 +5141,23 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c4 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c5 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
 }
 
 .c10 {
@@ -5325,6 +5325,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
+  .c17 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     margin-left: -1rem;
   }
@@ -5339,18 +5351,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 @media (max-width:600px) {
   .c5 {
     font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding: 0 3rem;
   }
 }
 

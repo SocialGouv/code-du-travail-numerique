@@ -14,23 +14,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   transform: translateY(-50%);
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -218,6 +201,23 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   display: block;
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c13 {
   width: 10em;
   text-align: right;
@@ -304,6 +304,13 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 }
 
 @media (max-width:600px) {
+  .c17 {
+    padding: 0 1rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
   }
@@ -312,13 +319,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 @media (max-width:600px) {
   .c2 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding: 0 1rem;
-    padding-right: 5rem;
   }
 }
 
@@ -528,23 +528,6 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   transform: translateY(-50%);
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -631,6 +614,23 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
 
 .c11:checked:before {
   display: block;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
 }
 
 .c9 {

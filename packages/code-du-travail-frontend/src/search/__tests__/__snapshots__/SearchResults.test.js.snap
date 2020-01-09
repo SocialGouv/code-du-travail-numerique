@@ -93,34 +93,6 @@ exports[`<SearchResults/> should render results 1`] = `
   line-height: 1.25;
 }
 
-.c1 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c14 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c12 {
   position: absolute;
   top: 0;
@@ -314,6 +286,17 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
+.c14 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
 .c6 {
   position: relative;
   display: -webkit-inline-box;
@@ -437,6 +420,23 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-top: 1rem;
 }
 
+.c1 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c15 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -495,18 +495,6 @@ exports[`<SearchResults/> should render results 1`] = `
 @media (max-width:600px) {
   .c9 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
   }
 }
 
@@ -632,6 +620,18 @@ exports[`<SearchResults/> should render results 1`] = `
   .c30 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.2rem;
   }
 }
 

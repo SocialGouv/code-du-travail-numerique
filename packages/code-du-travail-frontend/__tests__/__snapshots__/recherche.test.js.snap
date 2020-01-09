@@ -59,41 +59,6 @@ exports[`<Recherche /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c11 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c27 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c12 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c28 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -214,6 +179,41 @@ exports[`<Recherche /> should render 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c11 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c27 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c12 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c28 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c17 ul {
@@ -625,6 +625,24 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c18 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c11 {
     margin-bottom: 2.4rem;
   }
@@ -645,24 +663,6 @@ exports[`<Recherche /> should render 1`] = `
 @media (max-width:600px) {
   .c28 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    padding: 0 3rem;
   }
 }
 

@@ -44,47 +44,6 @@ exports[`<Home /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c30 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c57 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c33 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.c31 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c58 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c40 {
   position: absolute;
   top: 0;
@@ -457,6 +416,47 @@ exports[`<Home /> should render 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
+}
+
+.c30 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c57 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c33 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.c31 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c58 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c23 ul {
@@ -980,36 +980,6 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c30 {
-    margin-bottom: 2.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c57 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    padding-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c31 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c58 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c25 {
     font-size: 1.4rem;
   }
@@ -1114,6 +1084,36 @@ exports[`<Home /> should render 1`] = `
   .c39 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c57 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c33 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c31 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c58 {
+    font-size: 2.2rem;
   }
 }
 

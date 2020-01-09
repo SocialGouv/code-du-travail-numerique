@@ -24,23 +24,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   line-height: 1.25;
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -102,6 +85,23 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   cursor: not-allowed;
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c3 {
   margin-top: 3.2rem;
 }
@@ -131,18 +131,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
-  .c1 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c6 {
     font-size: 1.4rem;
   }
@@ -151,6 +139,18 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 @media (max-width:600px) {
   .c6 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
   }
 }
 
@@ -252,34 +252,6 @@ exports[`<Contribution /> should render answer references 1`] = `
   line-height: 1.25;
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c6 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -341,6 +313,34 @@ exports[`<Contribution /> should render answer references 1`] = `
   cursor: not-allowed;
 }
 
+.c6 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c7 {
   margin: 5px 0;
   list-style-type: none;
@@ -361,18 +361,6 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
   }
@@ -381,6 +369,18 @@ exports[`<Contribution /> should render answer references 1`] = `
 @media (max-width:600px) {
   .c8 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
   }
 }
 
@@ -522,23 +522,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   line-height: 1.25;
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -600,6 +583,23 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   cursor: not-allowed;
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c5 {
   margin-bottom: 2rem;
 }
@@ -615,18 +615,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c6 {
     font-size: 1.4rem;
   }
@@ -635,6 +623,18 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 @media (max-width:600px) {
   .c6 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
   }
 }
 
@@ -747,23 +747,6 @@ exports[`<Contribution /> should render with both answers 1`] = `
   transform: translateY(-50%);
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c5 {
   position: relative;
   display: inline-block;
@@ -852,6 +835,23 @@ exports[`<Contribution /> should render with both answers 1`] = `
   color: transparent;
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c6 {
   display: block;
 }
@@ -874,6 +874,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    padding: 0 1rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c1 {
     padding-left: 1.6rem;
   }
@@ -882,13 +889,6 @@ exports[`<Contribution /> should render with both answers 1`] = `
 @media (max-width:600px) {
   .c1 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    padding: 0 1rem;
-    padding-right: 2rem;
   }
 }
 
@@ -983,23 +983,6 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   transform: translateY(-50%);
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c5 {
   position: relative;
   display: inline-block;
@@ -1088,6 +1071,23 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   color: transparent;
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c2 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c6 {
   display: block;
 }
@@ -1110,6 +1110,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    padding: 0 1rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
   }
@@ -1118,13 +1125,6 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 @media (max-width:600px) {
   .c2 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    padding: 0 1rem;
-    padding-right: 2rem;
   }
 }
 

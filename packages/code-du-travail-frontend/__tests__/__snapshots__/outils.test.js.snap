@@ -57,58 +57,6 @@ exports[`<Outils /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c22 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c25 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c49 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c23 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c26 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c50 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c34 {
   position: absolute;
   top: 0;
@@ -481,6 +429,58 @@ exports[`<Outils /> should render 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
+}
+
+.c22 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c25 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c49 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c23 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c26 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c50 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c15 ul {
@@ -946,42 +946,6 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
-    margin-bottom: 2.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c49 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c50 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c17 {
     font-size: 1.4rem;
   }
@@ -1080,6 +1044,42 @@ exports[`<Outils /> should render 1`] = `
   .c33 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c49 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c50 {
+    font-size: 2.2rem;
   }
 }
 

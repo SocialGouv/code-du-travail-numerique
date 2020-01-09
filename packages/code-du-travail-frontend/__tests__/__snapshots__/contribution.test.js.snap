@@ -112,41 +112,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   line-height: 1.25;
 }
 
-.c22 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c39 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c23 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c40 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -328,6 +293,41 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c22 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c39 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c23 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
+}
+
+.c40 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c25 {
@@ -869,36 +869,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c39 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c40 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c15 {
     font-size: 1.4rem;
   }
@@ -925,6 +895,36 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 @media (max-width:600px) {
   .c43 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c39 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c40 {
+    font-size: 2.2rem;
   }
 }
 
@@ -1893,41 +1893,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   line-height: 1.25;
 }
 
-.c22 {
-  margin: 0 auto 1rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c39 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c23 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c40 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2109,6 +2074,41 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c22 {
+  margin: 0 auto 1rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c39 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c23 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
+}
+
+.c40 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c25 {
@@ -2650,36 +2650,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c39 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c40 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c15 {
     font-size: 1.4rem;
   }
@@ -2706,6 +2676,36 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c43 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c39 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c40 {
+    font-size: 2.2rem;
   }
 }
 

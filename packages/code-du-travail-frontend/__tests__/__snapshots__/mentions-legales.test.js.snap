@@ -102,58 +102,6 @@ exports[`<MentionLegales /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c20 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c25 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c41 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c21 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c26 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c42 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c30 + .c29 {
   border-top: 1px solid #bbcadf;
 }
@@ -364,6 +312,58 @@ exports[`<MentionLegales /> should render 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c20 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c25 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c41 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c21 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c26 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c42 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c14 ul {
@@ -811,6 +811,30 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c34 {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c44 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c44 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c20 {
     margin-bottom: 2.4rem;
   }
@@ -843,30 +867,6 @@ exports[`<MentionLegales /> should render 1`] = `
 @media (max-width:600px) {
   .c42 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c34 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c44 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c44 {
-    padding: 0 3rem;
   }
 }
 

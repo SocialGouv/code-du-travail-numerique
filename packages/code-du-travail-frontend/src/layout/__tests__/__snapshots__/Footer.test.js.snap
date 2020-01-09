@@ -44,24 +44,6 @@ exports[`<Footer /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c5 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
-.c6 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
 .c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -121,6 +103,24 @@ exports[`<Footer /> should render 1`] = `
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c5 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.c6 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+  text-align: center;
 }
 
 .c0 {
@@ -281,18 +281,6 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
   .c9 {
     font-size: 1.4rem;
   }
@@ -301,6 +289,18 @@ exports[`<Footer /> should render 1`] = `
 @media (max-width:600px) {
   .c9 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    font-size: 2.2rem;
   }
 }
 

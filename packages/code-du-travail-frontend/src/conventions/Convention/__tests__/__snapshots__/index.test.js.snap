@@ -24,34 +24,6 @@ exports[`<Convention /> renders 1`] = `
   line-height: 1.25;
 }
 
-.c2 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c23 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.c4 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c7 + .c6 {
   border-top: 1px solid #bbcadf;
 }
@@ -275,6 +247,17 @@ exports[`<Convention /> renders 1`] = `
   padding: 0;
 }
 
+.c23 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
 .c20 {
   position: relative;
   display: -webkit-inline-box;
@@ -428,6 +411,23 @@ exports[`<Convention /> renders 1`] = `
   color: transparent;
 }
 
+.c2 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.c4 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c0 {
   margin-bottom: 2rem;
 }
@@ -487,18 +487,6 @@ exports[`<Convention /> renders 1`] = `
 @media (max-width:600px) {
   .c24 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 2.2rem;
   }
 }
 
@@ -596,6 +584,18 @@ exports[`<Convention /> renders 1`] = `
   .c29 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 2.2rem;
   }
 }
 
