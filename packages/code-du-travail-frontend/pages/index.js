@@ -19,7 +19,7 @@ import tools from "@cdt/data...tools";
 import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
 import SearchHero from "../src/search/SearchHero";
-import { CustomTile } from "../src/common/tiles/Custom";
+import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Themes } from "../src/home/Themes";
 
 const {
@@ -77,9 +77,14 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
               }
               return (
                 <Link {...linkProps} key={slug || href}>
-                  <CustomTile action={action} icon={icons[icon]} title={title}>
+                  <CallToActionTile
+                    action={action}
+                    custom
+                    icon={icons[icon]}
+                    title={title}
+                  >
                     {description}
-                  </CustomTile>
+                  </CallToActionTile>
                 </Link>
               );
             }

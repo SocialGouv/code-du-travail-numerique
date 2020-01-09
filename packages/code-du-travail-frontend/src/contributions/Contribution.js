@@ -1,6 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Alert, Button, Heading, theme, Title } from "@socialgouv/react-ui";
+import {
+  Alert,
+  Button,
+  Heading,
+  Subtitle,
+  theme,
+  Title
+} from "@socialgouv/react-ui";
 import { formatIdcc } from "@cdt/data/lib";
 
 import SearchConvention from "../../src/conventions/Search/Form";
@@ -26,34 +33,32 @@ const References = ({ references }) => {
     (references && references.filter(ref => !ref.agreement)) || [];
 
   return (
-    <React.Fragment>
-      {references && references.length !== 0 && (
-        <React.Fragment>
-          <Title as="h3">Références</Title>
-          {/* group CCs references */}
-          {agreementRefs.length !== 0 && (
-            <React.Fragment>
-              <Heading as="h4">Convention collective</Heading>
-              {agreementRefs.map(ref => (
-                <RefLink
-                  key={ref.id}
-                  title={ref.title}
-                  url={getConventionUrl(ref.agreement.id)}
-                />
-              ))}
-            </React.Fragment>
-          )}
-          {othersRefs.length !== 0 && (
-            <React.Fragment>
-              <Heading as="h4">Autres sources</Heading>
-              {othersRefs.map(ref => (
-                <RefLink key={ref.id} title={ref.title} url={ref.url} />
-              ))}
-            </React.Fragment>
-          )}
-        </React.Fragment>
-      )}
-    </React.Fragment>
+    (references && references.length !== 0 && (
+      <>
+        <Heading>Références</Heading>
+        {agreementRefs.length !== 0 && (
+          <>
+            <Subtitle>Convention collective</Subtitle>
+            {agreementRefs.map(ref => (
+              <RefLink
+                key={ref.id}
+                value={ref.title}
+                url={getConventionUrl(ref.agreement.id)}
+              />
+            ))}
+          </>
+        )}
+        {othersRefs.length !== 0 && (
+          <>
+            <Subtitle>Autres sources</Subtitle>
+            {othersRefs.map(ref => (
+              <RefLink key={ref.id} value={ref.title} url={ref.url} />
+            ))}
+          </>
+        )}
+      </>
+    )) ||
+    null
   );
 };
 
@@ -69,7 +74,7 @@ const AnswersConventions = ({ answers }) => {
   return (
     <div>
       {!isCcDetected && (
-        <StyledSearchConvention
+        <SearchConvention
           title=""
           onSelectConvention={({ convention, label }) =>
             setCcInfo({ convention, label })
@@ -77,8 +82,8 @@ const AnswersConventions = ({ answers }) => {
         />
       )}
       {isCcDetected && (
-        <React.Fragment>
-          <Heading as="h6">
+        <>
+          <Heading as="h4">
             <span role="img" aria-label="Icone convention collective">
               📖
             </span>{" "}
@@ -88,57 +93,55 @@ const AnswersConventions = ({ answers }) => {
               rel="noopener noreferrer"
             >
               {convention.title}
-              {convention.num && (
-                <React.Fragment>
-                  {" "}
-                  (IDCC {formatIdcc(convention.num)})
-                </React.Fragment>
-              )}
+              {convention.num && <> (IDCC {formatIdcc(convention.num)})</>}
             </a>
           </Heading>
           {(answer && (
-            <React.Fragment>
-              <Mdx markdown={answer.markdown} components={rehypeToReact} />
+            <>
+              <MdxWrapper>
+                <Mdx markdown={answer.markdown} components={rehypeToReact} />
+              </MdxWrapper>
 
               <References references={answer.references} />
-            </React.Fragment>
+            </>
           )) || (
-            <React.Fragment>
+            <>
               <NoConventionAlert variant="secondary">
                 Désolé nous n&apos;avons pas de réponse pour cette convention
                 collective
               </NoConventionAlert>
-            </React.Fragment>
+            </>
           )}
           <br />
           <Button variant="primary" onClick={() => setCcInfo({})}>
             Changer de convention collective
           </Button>
-        </React.Fragment>
+        </>
       )}
     </div>
   );
 };
 
 const Contribution = ({ answers, content }) => (
-  <React.Fragment>
+  <>
     {answers.generic && (
-      <SectionAnswer>
+      <section>
         <Title leftStripped>Que dit le code du travail ?</Title>
         <Mdx
           markdown={answers.generic.markdown}
           components={rehypeToReact(content)}
         />
-      </SectionAnswer>
+      </section>
     )}
-    {(answers.conventions && answers.conventions.length && (
-      <SectionAnswer>
-        <Title>Que dit votre convention collective ?</Title>
+    {answers.conventions && answers.conventions.length && (
+      <section>
+        <StyledTitle marginTop={Boolean(answers.generic)}>
+          Que dit votre convention collective ?
+        </StyledTitle>
         <AnswersConventions answers={answers.conventions} />
-      </SectionAnswer>
-    )) ||
-      null}
-  </React.Fragment>
+      </section>
+    )}
+  </>
 );
 
 const { spacings } = theme;
@@ -148,18 +151,16 @@ const LineRef = styled.li`
   list-style-type: none;
 `;
 
+const MdxWrapper = styled.div`
+  margin-bottom: ${spacings.medium};
+`;
+
+const StyledTitle = styled(Title)`
+  margin-top: ${({ marginTop }) => (marginTop ? spacings.large : "0")};
+`;
+
 const NoConventionAlert = styled(Alert)`
   margin: 40px 0;
-`;
-
-const SectionAnswer = styled.section`
-  margin-bottom: ${spacings.medium};
-  padding: ${spacings.small} ${spacings.medium};
-`;
-
-const StyledSearchConvention = styled(SearchConvention)`
-  margin: ${spacings.medium} 0;
-  padding: ${spacings.small};
 `;
 
 export default Contribution;

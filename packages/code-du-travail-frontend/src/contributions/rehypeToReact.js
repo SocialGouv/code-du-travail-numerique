@@ -24,7 +24,7 @@ const Tab = props => (
 );
 
 const Hdn = props => (
-  <Alert variant="info">
+  <Alert>
     <Heading>Texte applicable</Heading>
     <div {...props} />
   </Alert>

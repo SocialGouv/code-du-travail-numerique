@@ -31,24 +31,31 @@ function Feedback({
   return (
     <Section>
       <Container>
-        <Wrapper variant="dark">
-          <Heading>Avez-vous trouvé la réponse à votre question ?</Heading>
+        <StyledWrapper variant="light">
+          <StyledHeading stripped shift={theme.spacings.xmedium}>
+            Avez-vous trouvé la réponse à votre question&nbsp;?
+          </StyledHeading>
           {isSatisfied === null && (
-            <P>
+            <YesNo>
               <StyledButton
-                variant="secondary"
+                variant="flat"
                 onClick={() => onSetSatisfaction(false)}
               >
                 Non
               </StyledButton>
-              <StyledButton onClick={() => onSetSatisfaction(true)}>
+              <StyledButton
+                variant="flat"
+                onClick={() => onSetSatisfaction(true)}
+              >
                 Oui
               </StyledButton>
-            </P>
+            </YesNo>
           )}
-          {isSatisfied === true && <p>Merci pour votre réponse.</p>}
+          {isSatisfied === true && (
+            <FullWidthParagraph>Merci pour votre réponse.</FullWidthParagraph>
+          )}
           {isSatisfied === false && (
-            <p>
+            <FullWidthParagraph>
               Pour obtenir une réponse à votre question de droit du travail,
               nous vous invitons à joindre les{" "}
               <ServiceRenseignementModal>
@@ -59,9 +66,9 @@ function Feedback({
                 )}
               </ServiceRenseignementModal>
               .
-            </p>
+            </FullWidthParagraph>
           )}
-        </Wrapper>
+        </StyledWrapper>
       </Container>
     </Section>
   );
@@ -69,15 +76,58 @@ function Feedback({
 
 export { Feedback };
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
-const P = styled.p`
+const StyledWrapper = styled(Wrapper)`
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: stretch;
+  @media (max-width: ${breakpoints.desktop}) {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 60rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+`;
+
+const StyledHeading = styled(Heading)`
+  flex: 0 1 auto;
+  margin-bottom: 0;
+  padding-top: ${spacings.small};
+  padding-bottom: ${spacings.small};
+  @media (max-width: ${breakpoints.desktop}) {
+    margin-bottom: ${spacings.base};
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+`;
+
+const YesNo = styled.p`
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  margin: 0;
+  @media (max-width: ${breakpoints.desktop}) {
+    justify-content: space-around;
+  }
 `;
 
 const StyledButton = styled(Button)`
   & + & {
-    margin-left: ${spacings.base};
+    margin-left: ${spacings.larger};
+    @media (max-width: ${breakpoints.desktop}) {
+      margin-left: 0;
+    }
+  }
+`;
+
+const FullWidthParagraph = styled.p`
+  flex: 1 0 100%;
+  @media (max-width: ${breakpoints.desktop}) {
+    margin-top: 0;
   }
 `;
