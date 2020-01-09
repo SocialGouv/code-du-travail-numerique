@@ -5,10 +5,10 @@
   "license": "MIT",
   "dependencies": {
     "@cdt/sources": "^4.1.0-alpha.0",
-    "@socialgouv/kali-data": "^1.2.101",
+    "@socialgouv/kali-data": "^1.2.103",
     "debug": "^4.1.1",
     "node-fetch": "^2.6.0",
-    "p-limit": "^2.2.1",
+    "p-limit": "^2.2.2",
     "remark": "^11.0.2",
     "remark-html": "^10.0.0",
     "unist-util-find": "^1.0.1",
