@@ -2,17 +2,18 @@ const { promisify } = require("util");
 const GoogleSpreadsheets = require("google-spreadsheets");
 
 const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
-const SPREADSHEET_DATA_TAB = 5;
-const SPREADSHEET_QUESTIONS_TAB = 7;
+const SPREADSHEET_QUESTIONS_TAB = 1;
+const SPREADSHEET_DATA_TAB = 2;
 
 const getCells = promisify(GoogleSpreadsheets.cells);
 
 const csvColumns = {
   type: 1,
   idcc: 2,
-  answer: 23,
-  ref: 26,
-  refUrl: 27
+  answer: 24,
+  duration: 26,
+  ref: 27,
+  refUrl: 28
 };
 
 const criteriaIndex = [

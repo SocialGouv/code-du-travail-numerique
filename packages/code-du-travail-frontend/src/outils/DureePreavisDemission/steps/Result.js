@@ -12,6 +12,16 @@ import {
   getRef
 } from "../../common/situations.utils";
 
+function HdnToast() {
+  return (
+    <Toast>
+      L’existence et la durée du préavis de démission peut être prévue par une
+      convention collective, un accord d’entreprise ou à défaut, par un usage
+      dans l’entreprise.
+    </Toast>
+  );
+}
+
 function StepResult({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
@@ -40,24 +50,9 @@ function StepResult({ form }) {
         <Highlight>{result}</Highlight>
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
-          sauf, cas particuliers. Nous vous invitons donc à consulter le contenu
-          de la convention collective.
+          sauf, cas particuliers.
         </p>
-        <Toast>
-          <p>
-            Un accord collectif d’entreprise peut également prévoir une durée de
-            préavis de démission différente de celle de la convention
-            collective, qu’elle soit inférieure ou supérieure. Dans ce cas, la
-            durée de préavis de démission prévu par l’accord d’entreprise doit
-            s’appliquer.
-          </p>
-          <p>
-            Dans tous les cas, le contrat de travail peut toujours prévoir une
-            durée de préavis de démission plus courte que la convention
-            collective, l’accord collectif ou un usage. Il faudra alors
-            l’appliquer en priorité.
-          </p>
-        </Toast>
+        <HdnToast />
         <SectionTitle>Source</SectionTitle>
         {getRef([refLegal])}
       </>
@@ -77,10 +72,13 @@ function StepResult({ form }) {
       <p>
         <Highlight>{situation.answer}</Highlight>.
       </p>
-      <Toast>
-        Une durée de préavis de démission plus favorable au salarié peut aussi
-        être prévue dans une convention ou un accord au niveau de l’entreprise
-      </Toast>
+      {parseInt(situation.duration, 10) === 0 && (
+        <p>
+          Le code du travail ne prévoit pas de durée de préavis de démission
+          sauf, cas particuliers.
+        </p>
+      )}
+      <HdnToast />
       <SectionTitle>Détails</SectionTitle>
       <p>Éléments saisis&nbsp;:</p>
       {recapSituation({
