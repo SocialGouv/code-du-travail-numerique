@@ -9,7 +9,7 @@ import {
   AccordionItemPanel
 } from "react-accessible-accordion";
 import { box, breakpoints, spacings } from "../theme";
-import { Heading } from "../Titles";
+import { Heading } from "../Titles/Heading";
 import { VerticalArrow } from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
 

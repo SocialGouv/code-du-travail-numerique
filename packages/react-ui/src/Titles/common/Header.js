@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { breakpoints, spacings } from "../../theme";
 
@@ -29,3 +30,15 @@ export const Header = styled.header`
     `;
   }};
 `;
+
+Header.propTypes = {
+  leftStripped: PropTypes.bool,
+  pageTitle: PropTypes.bool,
+  shift: PropTypes.string
+};
+
+Header.defaultProps = {
+  leftStripped: false,
+  pageTitle: false,
+  shift: ""
+};

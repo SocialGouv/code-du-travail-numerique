@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { breakpoints, spacings } from "../../theme";
 
@@ -14,3 +15,13 @@ export const TitleParagraph = styled.p`
     padding-left: ${({ leftStripped }) => (leftStripped ? spacings.base : "0")};
   }
 `;
+
+TitleParagraph.propTypes = {
+  leftStripped: PropTypes.bool,
+  shift: PropTypes.string
+};
+
+TitleParagraph.defaultProps = {
+  leftStripped: false,
+  shift: ""
+};

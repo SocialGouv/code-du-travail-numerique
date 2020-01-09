@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { Stripe } from "../Stripe";
-import { breakpoints, fonts, spacings } from "../theme";
 
-import { Header } from "./common/Header";
-import { TitleParagraph } from "./common/TitleParagraph";
+import { Stripe } from "../../Stripe";
+import { breakpoints, fonts, spacings } from "../../theme";
+import { Header } from "../common/Header";
+import { TitleParagraph } from "../common/TitleParagraph";
 
 export const Title = ({
   as,

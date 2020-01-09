@@ -26,39 +26,38 @@ const RefLink = ({ title, url }) => (
   </LineRef>
 );
 
-const References = ({ references }) => {
-  const agreementRefs =
-    (references && references.filter(ref => !!ref.agreement)) || [];
-  const othersRefs =
-    (references && references.filter(ref => !ref.agreement)) || [];
+const References = ({ references = [] }) => {
+  const agreementRefs = references.filter(ref => Boolean(ref.agreement));
+  const othersRefs = references.filter(ref => !ref.agreement);
+
+  if (references.length === 0) {
+    return null;
+  }
 
   return (
-    (references && references.length !== 0 && (
-      <>
-        <Heading>Références</Heading>
-        {agreementRefs.length !== 0 && (
-          <>
-            <Subtitle>Convention collective</Subtitle>
-            {agreementRefs.map(ref => (
-              <RefLink
-                key={ref.id}
-                value={ref.title}
-                url={getConventionUrl(ref.agreement.id)}
-              />
-            ))}
-          </>
-        )}
-        {othersRefs.length !== 0 && (
-          <>
-            <Subtitle>Autres sources</Subtitle>
-            {othersRefs.map(ref => (
-              <RefLink key={ref.id} value={ref.title} url={ref.url} />
-            ))}
-          </>
-        )}
-      </>
-    )) ||
-    null
+    <>
+      <Heading>Références</Heading>
+      {agreementRefs.length !== 0 && (
+        <>
+          <Subtitle>Convention collective</Subtitle>
+          {agreementRefs.map(ref => (
+            <RefLink
+              key={ref.id}
+              value={ref.title}
+              url={getConventionUrl(ref.agreement.id)}
+            />
+          ))}
+        </>
+      )}
+      {othersRefs.length !== 0 && (
+        <>
+          <Subtitle>Autres sources</Subtitle>
+          {othersRefs.map(ref => (
+            <RefLink key={ref.id} value={ref.title} url={ref.url} />
+          ))}
+        </>
+      )}
+    </>
   );
 };
 

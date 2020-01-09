@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { Stripe } from "../Stripe";
-import { breakpoints, fonts, spacings } from "../theme";
+import { Stripe } from "../../Stripe";
+import { breakpoints, fonts, spacings } from "../../theme";
 
 export const Heading = ({ children, stripped = false, ...props }) => (
   <StyledHeading stripped={stripped} {...props}>

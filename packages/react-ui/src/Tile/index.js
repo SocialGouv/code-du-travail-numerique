@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Badge } from "../Badge";
 import { Stripe } from "../Stripe";
-import { Subtitle, Heading } from "../Titles";
+import { Heading } from "../Titles/Heading";
+import { Subtitle } from "../Titles/Subtitle";
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
 
 export const Tile = React.forwardRef(

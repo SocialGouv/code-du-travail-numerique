@@ -1,5 +1,5 @@
 import React from "react";
-import { PageTitle } from "../Titles";
+import { PageTitle } from "../Titles/PageTitle";
 import { Container } from "./Container";
 import { Section } from "./Section";
 import { Wrapper } from "./Wrapper";

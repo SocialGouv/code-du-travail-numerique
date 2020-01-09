@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Section } from "../layout/Section";
-import { Heading, PageTitle, Title } from "../Titles";
+import { Heading } from "../Titles/Heading";
+import { PageTitle } from "../Titles/PageTitle";
+import { Title } from "../Titles/Title";
 import * as icons from ".";
 
 export default {
