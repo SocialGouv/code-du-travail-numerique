@@ -17,12 +17,10 @@ include:
   - /.gitlab-ci/stages/scan.yml
   - /.gitlab-ci/stages/deploy.yml
   - /.gitlab-ci/stages/notify.yml
-  - /.gitlab-ci/stages/update-fiches-mt.yml
 
   - /optional/e2e/.runners/puppetteer/.gitlab-ci.yml
 
 stages:
-  - "FichesMT"
   - "Prepare"
   - "Code Quality"
   - "Manual Deploy"
