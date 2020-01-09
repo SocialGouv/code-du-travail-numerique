@@ -18,7 +18,9 @@
   },
   "scripts": {
     "start": "node index",
-    "updateTheme": "node updateTheme && node report",
+    "updateTheme": "node updateTheme",
+    "postupdateTheme": "node report",
+    "report": "node report",
     "test": "jest"
   },
   "devDependencies": {
