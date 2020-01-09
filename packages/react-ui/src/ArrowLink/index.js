@@ -41,7 +41,7 @@ const StyledChildren = styled.span`
 `;
 
 // eslint-disable-next-line no-unused-vars
-const StyledArrowRight = styled(({ arrowPosition, ...props }) => (
+export const StyledArrowRight = styled(({ arrowPosition, ...props }) => (
   <DirectionRight {...props} />
 ))`
   flex: 0 0 2.8rem;

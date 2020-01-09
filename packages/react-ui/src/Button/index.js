@@ -140,11 +140,12 @@ const StyledArrowRight = styled(({ hasText, ...props }) => (
 ))`
   width: 2.6rem;
   height: 1.4rem;
-  margin-left: ${({ hasText }) => (hasText ? spacings.small : "")};
+  margin: ${({ hasText }) =>
+    hasText ? `0 ${spacings.tiny} 0 ${spacings.small}` : "0"};
   transition: transform ${animations.transitionTiming} linear;
   /* stylelint-disable-next-line */
   ${StyledButton}:hover & {
-    transform: translateX(5px);
+    transform: translateX(4px);
   }
 `;
 

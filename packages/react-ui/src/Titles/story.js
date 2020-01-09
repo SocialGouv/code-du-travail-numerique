@@ -59,6 +59,12 @@ export const base = () => (
       <Heading as="h4">This is a heading (h4)</Heading>
     </Section>
     <Section>
+      <Heading stripped>This is a stripped heading (h3)</Heading>
+      <Heading stripped shift="2rem" as="h4">
+        This is a stripped shifted heading (h4)
+      </Heading>
+    </Section>
+    <Section>
       <Subtitle>This is a subtitle</Subtitle>
     </Section>
   </>

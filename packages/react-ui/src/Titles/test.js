@@ -31,6 +31,14 @@ describe("<Heading />", () => {
     const { container } = render(<Heading>Lorem Ipsum</Heading>);
     expect(container).toMatchSnapshot();
   });
+  it("renders a stripped shifted H4 heading ", () => {
+    const { container } = render(
+      <Heading stripped shift="2rem" as="h4">
+        Lorem Ipsum
+      </Heading>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 describe("<Subtitle />", () => {
   it("renders a subtitle ", () => {
