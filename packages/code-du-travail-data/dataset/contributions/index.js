@@ -2,6 +2,7 @@ const fetch = require("node-fetch");
 const kaliData = require("@socialgouv/kali-data/data/index.json");
 const remark = require("remark");
 const strip = require("strip-markdown");
+const slugify = require("../../slugify");
 
 const mdStriper = remark().use(strip);
 
@@ -58,14 +59,15 @@ const fetchContributions = async () => {
   const getReferences = answerId =>
     references
       .filter(r => r.answer_id === answerId)
-      .map(reference => {
-        if (reference.category === "agreement") {
+      .map(({ category, value: title, url }) => {
+        if (category === "agreement") {
           return {
-            ...reference,
+            category,
+            title,
             agreement: getConventionKali(answerId)
           };
         }
-        return reference;
+        return { title, url };
       })
       .sort(sortByKey("value"));
 
@@ -76,7 +78,8 @@ const fetchContributions = async () => {
         markdown: ccAnswer.value,
         idcc: getAgreementIdcc(ccAnswer.agreement_id),
         references: getReferences(ccAnswer.id)
-      }));
+      }))
+      .sort((a, b) => parseInt(a.idcc, 10) - parseInt(b.idcc, 10));
 
   const getGenericAnswer = questionId => {
     const genericAnswer = answers.find(
@@ -99,14 +102,18 @@ const fetchContributions = async () => {
   };
 
   const allAnswers = questions
-    .map(question => ({
-      ...question,
+    .map(({ id, index, value: title }) => ({
+      id,
+      index,
+      title,
+      slug: slugify(title),
       answers: {
-        generic: getGenericAnswer(question.id),
-        conventions: getConventionsAnswers(question.id)
+        generic: getGenericAnswer(id),
+        conventions: getConventionsAnswers(id)
       }
     }))
-    .filter(q => q.answers.generic);
+    .filter(q => q.answers.generic)
+    .sort((a, b) => a.index - b.index);
 
   return allAnswers;
 };

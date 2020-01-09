@@ -150,13 +150,13 @@ async function* cdtnDocumentsGen() {
   // Temporary removed from ES
   logger.info("=== Contributions ===");
   yield require("../dataset/contributions/contributions.data.json").map(
-    ({ value, answers }) => {
+    ({ title, slug, answers }) => {
       return {
         source: SOURCES.CONTRIBUTIONS,
-        title: value,
-        slug: slugify(value),
-        description: (answers.generic && answers.generic.text) || value,
-        text: (answers.generic && answers.generic.text) || value,
+        title,
+        slug,
+        description: (answers.generic && answers.generic.text) || title,
+        text: (answers.generic && answers.generic.text) || title,
         answers
       };
     }
