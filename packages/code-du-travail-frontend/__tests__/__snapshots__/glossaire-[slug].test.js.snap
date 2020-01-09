@@ -79,6 +79,28 @@ exports[`<Term /> should render 1`] = `
   transform: translateX(-50%);
 }
 
+.c40 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c20 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.c31 {
+  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
 .c21 {
   position: relative;
   margin: 0;
@@ -99,18 +121,6 @@ exports[`<Term /> should render 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-top: 1.6rem;
-  text-align: center;
-}
-
-.c20 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.c31 {
-  margin: 0 auto 1rem;
-  margin-bottom: 1.6rem;
   text-align: center;
 }
 
@@ -618,33 +628,27 @@ exports[`<Term /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c41 {
+.c42 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c40 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c41 {
   font-size: 1.6rem;
 }
 
-.c42 {
+.c43 {
   margin: 0.4rem 0;
 }
 
-.c43 {
+.c44 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c44 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -663,14 +667,14 @@ exports[`<Term /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c45 {
+.c46 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c46 {
+.c47 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -741,14 +745,8 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c21 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c32 {
-    font-size: 2.2rem;
+  .c40 {
+    font-size: 1.6rem;
   }
 }
 
@@ -761,6 +759,18 @@ exports[`<Term /> should render 1`] = `
 @media (max-width:600px) {
   .c31 {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c21 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c32 {
+    font-size: 2.2rem;
   }
 }
 
@@ -973,26 +983,20 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c42 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c40 {
+  .c41 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c46 {
+  .c47 {
     display: none;
   }
 }
@@ -1309,58 +1313,58 @@ exports[`<Term /> should render 1`] = `
               class="c38 c39"
             >
               <h3
-                class="c40"
+                class="c40 c41"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c41"
+                class="c42"
               >
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
@@ -1372,18 +1376,18 @@ exports[`<Term /> should render 1`] = `
               class="c38 c39"
             >
               <h3
-                class="c40"
+                class="c40 c41"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c41"
+                class="c42"
               >
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1392,10 +1396,10 @@ exports[`<Term /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1409,18 +1413,18 @@ exports[`<Term /> should render 1`] = `
               class="c38 c39"
             >
               <h3
-                class="c40"
+                class="c40 c41"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c41"
+                class="c42"
               >
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1429,10 +1433,10 @@ exports[`<Term /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1441,10 +1445,10 @@ exports[`<Term /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c42"
+                  class="c43"
                 >
                   <a
-                    class="c43"
+                    class="c44"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1458,10 +1462,10 @@ exports[`<Term /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c44"
+        class="c45"
       >
         <a
-          class="c45"
+          class="c46"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1470,12 +1474,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c46"
+          class="c47"
         >
           |
         </span>
         <a
-          class="c45"
+          class="c46"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1484,12 +1488,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c46"
+          class="c47"
         >
           |
         </span>
         <a
-          class="c45"
+          class="c46"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1498,12 +1502,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c46"
+          class="c47"
         >
           |
         </span>
         <a
-          class="c45"
+          class="c46"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1512,12 +1516,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c46"
+          class="c47"
         >
           |
         </span>
         <a
-          class="c45"
+          class="c46"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1526,12 +1530,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c46"
+          class="c47"
         >
           |
         </span>
         <a
-          class="c45"
+          class="c46"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"

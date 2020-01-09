@@ -14,6 +14,11 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c2 {
   position: relative;
   margin: 0;
@@ -23,11 +28,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
   text-align: left;
 }
 
@@ -528,6 +528,11 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c2 {
   position: relative;
   margin: 0;
@@ -537,11 +542,6 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
   text-align: left;
 }
 

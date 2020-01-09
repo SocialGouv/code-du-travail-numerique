@@ -14,6 +14,11 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   transform: translateY(-50%);
 }
 
+.c5 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c6 {
   position: relative;
   margin: 0;
@@ -23,11 +28,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c5 {
-  margin: 0 auto 1rem;
   text-align: left;
 }
 
@@ -244,6 +244,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 
 exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 .c5 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -445,6 +446,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 
 exports[`<Tabulator /> should render 1`] = `
 .c5 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;

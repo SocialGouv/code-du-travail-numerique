@@ -14,6 +14,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c1 {
   position: relative;
   margin: 0;
@@ -23,11 +28,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
   text-align: left;
 }
 
@@ -504,6 +504,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c1 {
   position: relative;
   margin: 0;
@@ -513,11 +518,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
   text-align: left;
 }
 
@@ -1141,6 +1141,11 @@ exports[`<Step /> should render 1`] = `
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c1 {
   position: relative;
   margin: 0;
@@ -1150,11 +1155,6 @@ exports[`<Step /> should render 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
   text-align: left;
 }
 

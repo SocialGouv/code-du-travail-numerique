@@ -14,19 +14,8 @@ exports[`<FicheServicePublic /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c8 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
 .c22 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -40,17 +29,23 @@ exports[`<FicheServicePublic /> should render 1`] = `
   text-align: left;
 }
 
+.c8 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
 .c12 + .c11 {
   border-top: 1px solid #bbcadf;
 }
 
 .c15 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
   margin: 2rem 0;
   padding: 0;
 }
@@ -326,6 +321,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c22 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     padding-left: 1.6rem;
   }
@@ -334,18 +335,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
 @media (max-width:600px) {
   .c8 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c22 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
-    font-size: 1.6rem;
   }
 }
 

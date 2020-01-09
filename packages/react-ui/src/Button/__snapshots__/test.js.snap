@@ -284,16 +284,16 @@ exports[`<Button /> it renders a Button link 1`] = `
 .c2 {
   width: 2.6rem;
   height: 1.4rem;
-  margin-left: 1rem;
+  margin: 0 0.4rem 0 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
 }
 
 .c0:hover .c2 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 @media (max-width:600px) {
@@ -775,9 +775,9 @@ exports[`<Button /> it renders a Button primary 1`] = `
 }
 
 .c0:hover .c4 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 @media (max-width:600px) {
@@ -1014,9 +1014,9 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 }
 
 .c0:hover .c4 {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 @media (max-width:600px) {

@@ -2,6 +2,7 @@
 
 exports[`<Heading /> renders a H3 heading  1`] = `
 .c0 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -25,6 +26,57 @@ exports[`<Heading /> renders a H3 heading  1`] = `
 </div>
 `;
 
+exports[`<Heading /> renders a stripped shifted H4 heading  1`] = `
+.c1 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c0 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2rem;
+  padding-left: 2rem;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <h4
+    class="c0"
+  >
+    <div
+      class="c1"
+    />
+    Lorem Ipsum
+  </h4>
+</div>
+`;
+
 exports[`<PageTitle /> renders a H1 page title  1`] = `
 .c2 {
   position: absolute;
@@ -39,6 +91,12 @@ exports[`<PageTitle /> renders a H1 page title  1`] = `
   transform: translateX(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
 .c1 {
   position: relative;
   margin: 0;
@@ -50,21 +108,15 @@ exports[`<PageTitle /> renders a H1 page title  1`] = `
   padding-top: 1.6rem;
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  margin-bottom: 4rem;
-  text-align: center;
+@media (max-width:600px) {
+  .c0 {
+    margin-bottom: 2.4rem;
+  }
 }
 
 @media (max-width:600px) {
   .c1 {
     font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 2.4rem;
   }
 }
 
@@ -98,6 +150,11 @@ exports[`<PageTitle /> renders a leftStripped shifted H1 page title  1`] = `
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c1 {
   position: relative;
   margin: 0;
@@ -107,11 +164,6 @@ exports[`<PageTitle /> renders a leftStripped shifted H1 page title  1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
 }
 
 @media (max-width:600px) {
@@ -177,6 +229,11 @@ exports[`<Title /> renders a H2 title  1`] = `
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c1 {
   position: relative;
   margin: 0;
@@ -186,11 +243,6 @@ exports[`<Title /> renders a H2 title  1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
   text-align: left;
 }
 
@@ -236,6 +288,12 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  margin-left: -10rem;
+  text-align: left;
+}
+
 .c1 {
   position: relative;
   margin: 0;
@@ -248,10 +306,10 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
   text-align: left;
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  margin-left: -10rem;
-  text-align: left;
+@media (max-width:600px) {
+  .c0 {
+    margin-left: -1rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -263,12 +321,6 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
 @media (max-width:600px) {
   .c1 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-left: 0;
   }
 }
 

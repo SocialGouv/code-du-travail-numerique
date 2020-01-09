@@ -30,6 +30,11 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   transform: translateY(-50%);
 }
 
+.c0 {
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
 .c2 {
   position: relative;
   margin: 0;
@@ -39,11 +44,6 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c0 {
-  margin: 0 auto 1rem;
   text-align: left;
 }
 

@@ -38,6 +38,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 .c3 {
+  position: relative;
   margin: 0 0 1rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -51,12 +52,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 .c8 {
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
   margin: 2rem 0;
   padding: 0;
 }
@@ -208,12 +203,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c9 {
     padding: 1rem 0;
   }
@@ -275,7 +264,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   />
                 </svg>
                 <h3
-                  class="c8"
+                  class="c3 c8"
                 >
                   Voir références juridiques concernées
                 </h3>
