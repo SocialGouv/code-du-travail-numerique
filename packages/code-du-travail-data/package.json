@@ -28,8 +28,8 @@
   "dependencies": {
     "@cdt/sources": "^4.1.0-alpha.0",
     "@elastic/elasticsearch": "^7.5.0",
-    "@socialgouv/fiches-vdd": "^1.0.76",
-    "@socialgouv/kali-data": "^1.2.101",
+    "@socialgouv/fiches-vdd": "^1.0.83",
+    "@socialgouv/kali-data": "^1.2.103",
     "@socialgouv/legi-data": "^1.1.11",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
@@ -41,8 +41,8 @@
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
-    "@socialgouv/eslint-config-recommended": "^0.11.1",
-    "@zeit/ncc": "^0.20.5",
+    "@socialgouv/eslint-config-recommended": "^0.13.0",
+    "@zeit/ncc": "^0.21.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "eslint": "^6.8.0",
