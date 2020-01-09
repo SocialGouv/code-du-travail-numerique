@@ -1,14 +1,10 @@
 import React from "react";
-import getConfig from "next/config";
-import fetch from "isomorphic-unfetch";
 import Link from "next/link";
-import * as Sentry from "@sentry/browser";
 import {
   Container,
   Grid,
   icons,
   PageTitle,
-  Title,
   Section
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
@@ -18,14 +14,13 @@ import externalTools from "@cdt/data...tools/externals.json";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
+import { CCTile, DocumentsTile } from "../index";
 
 const monCompteFormation = externalTools.find(
   tools => tools.title === "Mon compte formation"
 );
-const {
-  publicRuntimeConfig: { API_URL }
-} = getConfig();
-const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
+
+const Outils = ({ pageUrl, ogImage }) => (
   <Layout currentPage="tools">
     <Metas
       url={pageUrl}
@@ -36,8 +31,8 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
     <Section>
       <Container>
         <PageTitle>Retrouvez tous nos outils</PageTitle>
-        <Title>Nos outils de calcul</Title>
         <Grid>
+          {DocumentsTile}
           {tools.map(({ action, description, icon, slug, title }) => (
             <Link
               href={`/${getRouteBySource(SOURCES.TOOLS)}/[slug]`}
@@ -55,17 +50,7 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
               </CallToActionTile>
             </Link>
           ))}
-          <Link href={`/${getRouteBySource(SOURCES.CCN)}/recherche`} passHref>
-            <CallToActionTile
-              action="Consulter"
-              custom
-              title="Convention collective"
-              icon={icons.Nego}
-            >
-              Recherchez une convention collective par Entreprise, SIRET, Nom ou
-              numéro IDCC.
-            </CallToActionTile>
-          </Link>
+          {CCTile}
           <CallToActionTile
             key={monCompteFormation.slug}
             action={monCompteFormation.action}
@@ -80,49 +65,9 @@ const Outils = ({ pageUrl, ogImage, modeles = [] }) => (
             {monCompteFormation.description}
           </CallToActionTile>
         </Grid>
-        {modeles.length > 0 && (
-          <>
-            <Title>Nos modèles de documents</Title>
-            <Grid>
-              {modeles.map(({ title, slug }) => (
-                <Link
-                  href="/modeles-de-courriers/[slug]"
-                  as={`/modeles-de-courriers/${slug}`}
-                  passHref
-                  key={slug}
-                >
-                  <CallToActionTile
-                    action="Consulter"
-                    custom
-                    title={title}
-                    icon={icons.Document}
-                  />
-                </Link>
-              ))}
-            </Grid>
-          </>
-        )}
       </Container>
     </Section>
   </Layout>
 );
-
-Outils.getInitialProps = async () => {
-  try {
-    const response = await fetch(`${API_URL}/modeles`);
-    if (response.ok) {
-      const {
-        hits: { hits }
-      } = await response.json();
-      const modeles = hits.map(({ _source }) => _source);
-      return { modeles };
-    }
-  } catch (e) {
-    console.error(e);
-    Sentry.captureException(e);
-  }
-
-  return { modeles: [] };
-};
 
 export default Outils;
