@@ -2,13 +2,9 @@ const fiches = require("./fiches-mt.json");
 
 const hasNoTheme = fiche =>
   !fiche.breadcrumbs || fiche.breadcrumbs.length === 0;
+const printFicheLink = fiche => console.log(`- [${fiche.title}](${fiche.url})`);
 
 const themeLessFiches = fiches.filter(hasNoTheme);
-console.log(`
-### Fiches travail.gouv.fr sans thème : ${themeLessFiches.length}/${
-  fiches.length
-}
+console.log(`### ${themeLessFiches.length}/${fiches.length} fiches sans theme`);
 
-${themeLessFiches.map(fiche => ` - [${fiche.title}](${fiche.url})`).join("\n")}
-
-`);
+themeLessFiches.forEach(printFicheLink);
