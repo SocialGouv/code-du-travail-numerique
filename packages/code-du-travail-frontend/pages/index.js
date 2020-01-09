@@ -26,25 +26,37 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
+export const CCTile = (
+  <Link href={`/${getRouteBySource(SOURCES.CCN)}/recherche`} passHref>
+    <CallToActionTile
+      action="Consulter"
+      custom
+      icon={icons.Nego}
+      title="Convention collective"
+    >
+      Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro
+      IDCC
+    </CallToActionTile>
+  </Link>
+);
+
+export const DocumentsTile = (
+  <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
+    <CallToActionTile
+      action="Découvrir"
+      custom
+      icon={icons.Document}
+      title="Modèles de documents"
+    >
+      Téléchargez et utilisez des modèles de lettres et de documents
+      personnalisables
+    </CallToActionTile>
+  </Link>
+);
+
 const selectedTools = [
-  {
-    title: "Convention collective",
-    action: "Consulter",
-    description:
-      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC",
-    href: `/${getRouteBySource(SOURCES.CCN)}/recherche`,
-    icon: "Nego"
-  },
   tools.find(tool => tool.slug === "preavis-demission"),
-  tools.find(tool => tool.slug === "simulateur-embauche"),
-  {
-    title: "Modèles de documents",
-    action: "Découvrir",
-    description:
-      "Téléchargez et utilisez des modèles de lettres et de documents personnalisables",
-    href: "/modeles-de-courriers",
-    icon: "Document"
-  }
+  tools.find(tool => tool.slug === "simulateur-embauche")
 ];
 
 const Home = ({ pageUrl, ogImage, themes = [] }) => (
@@ -65,6 +77,7 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
           Boîte à outils
         </PageTitle>
         <Grid>
+          {CCTile}
           {selectedTools.map(
             ({ action, description, href, icon, slug, title }) => {
               const linkProps = {
@@ -89,6 +102,7 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
               );
             }
           )}
+          {DocumentsTile}
         </Grid>
         <ButtonWrapper>
           <Link href="/outils" passHref>
