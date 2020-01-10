@@ -125,7 +125,7 @@ const About = ({ ogImage, pageUrl }) => (
             </a>
             .
           </p>
-          <StyledTitle shift={theme.spacings.larger}>Notre méthode</StyledTitle>
+          <Heading>Nos méthodes</Heading>
           <p>
             Le service est développé en lien étroit avec les utilisateurs
             (employeurs et salariés) et les praticiens du droit du travail
