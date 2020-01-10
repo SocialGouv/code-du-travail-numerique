@@ -1328,18 +1328,11 @@ exports[`<About /> should render 1`] = `
             </a>
             .
           </p>
-          <header
-            class="c25 c26"
+          <h3
+            class="c29"
           >
-            <h2
-              class="c27"
-            >
-              <div
-                class="c28"
-              />
-              Notre méthode
-            </h2>
-          </header>
+            Nos méthodes
+          </h3>
           <p>
             Le service est développé en lien étroit avec les utilisateurs (employeurs et salariés) et les praticiens du droit du travail (services du ministère du Travail en région, conseillers du salarié, maisons d’accès au droit, professeurs en droit du travail...).
           </p>
