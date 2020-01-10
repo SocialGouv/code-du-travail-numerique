@@ -860,6 +860,16 @@
     "refs": []
   },
   {
+    "title": "CSE",
+    "slug": "cse",
+    "abbrs": [],
+    "variants": [],
+    "definition": "<p>Comité Social et Economique.Instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l'entreprise qui étaient les délégués du personnel, le comité d'entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l'effectif atteint 11 salariés pendant 12 mois consécutifs. Ses attributions évoluent en fonction des effectifs de l'entreprise. </p>",
+    "refs": [
+      {}
+    ]
+  },
+  {
     "title": "De gré à gré",
     "slug": "de-gre-a-gre",
     "abbrs": [],
