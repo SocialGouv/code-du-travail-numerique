@@ -15,8 +15,8 @@ exports[`<PageTitle /> renders a H1 page title  1`] = `
 }
 
 .c0 {
-  margin: 0 auto 1rem;
   margin-bottom: 4rem;
+  margin-left: auto;
   text-align: center;
 }
 
@@ -34,12 +34,13 @@ exports[`<PageTitle /> renders a H1 page title  1`] = `
 @media (max-width:600px) {
   .c0 {
     margin-bottom: 2.4rem;
+    margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
   .c1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -74,7 +75,8 @@ exports[`<PageTitle /> renders a leftStripped shifted H1 page title  1`] = `
 }
 
 .c0 {
-  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
+  margin-left: auto;
   text-align: left;
 }
 
@@ -90,6 +92,13 @@ exports[`<PageTitle /> renders a leftStripped shifted H1 page title  1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    margin-bottom: 2.4rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:600px) {
   .c1 {
     padding-left: 1.6rem;
   }
@@ -97,7 +106,7 @@ exports[`<PageTitle /> renders a leftStripped shifted H1 page title  1`] = `
 
 @media (max-width:600px) {
   .c1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 }
 

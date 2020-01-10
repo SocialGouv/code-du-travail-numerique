@@ -45,7 +45,7 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
+.c5 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -59,12 +59,12 @@ exports[`<Article /> should render 1`] = `
 }
 
 .c2 {
-  margin: 0 auto 1rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
 
-.c3 {
+.c4 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -75,7 +75,7 @@ exports[`<Article /> should render 1`] = `
   padding-left: 4rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,7 +83,11 @@ exports[`<Article /> should render 1`] = `
   font-size: 1.4rem;
 }
 
-.c6 {
+.c3 {
+  margin-bottom: 0;
+}
+
+.c7 {
   margin: 3.2rem 0 0 0;
 }
 
@@ -115,24 +119,25 @@ exports[`<Article /> should render 1`] = `
 
 @media (max-width:600px) {
   .c2 {
+    margin-bottom: 2.4rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 2.8rem;
+  .c4 {
+    font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -144,7 +149,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     margin-top: 1.6rem;
   }
 }
@@ -158,19 +163,19 @@ exports[`<Article /> should render 1`] = `
       data-main-content="true"
     >
       <header
-        class="c2"
+        class="c2 c3"
       >
         <h1
-          class="c3"
+          class="c4"
         >
           <div
-            class="c4"
+            class="c5"
           />
           Contrat de travail et formalités d'embauche de l'assistante maternelle
         </h1>
       </header>
       <div
-        class="c5"
+        class="c6"
       >
         <span>
           Mis à jour le : 
@@ -178,7 +183,7 @@ exports[`<Article /> should render 1`] = `
         </span>
       </div>
       <div
-        class="c6"
+        class="c7"
       >
         this is an Article
       </div>

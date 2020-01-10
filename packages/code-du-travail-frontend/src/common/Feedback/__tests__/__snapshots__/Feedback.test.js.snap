@@ -377,6 +377,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
+  vertical-align: baseline;
   text-align: left;
   background: none;
   border: none;
@@ -552,7 +553,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         <p
           class="c6"
         >
-          Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
+          Merci pour votre réponse. Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
            
           <button
             class="c7 c8"

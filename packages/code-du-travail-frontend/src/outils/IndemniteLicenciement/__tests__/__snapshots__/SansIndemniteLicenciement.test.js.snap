@@ -29,7 +29,8 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 }
 
 .c1 {
-  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  margin-left: auto;
   text-align: left;
 }
 
@@ -48,6 +49,10 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 .c4 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c5 {
@@ -96,6 +101,13 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c1 {
+    margin-bottom: 1rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding-left: 1.6rem;
   }
@@ -132,18 +144,11 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
     <p>
       Pour cette branche, le calcul de l’indemnité de licenciement se base sur l’indemnité légale de licenciement.
     </p>
-    <header
-      class="c1 c4"
+    <h2
+      class="c4"
     >
-      <h2
-        class="c2"
-      >
-        <div
-          class="c3"
-        />
-        Indemnité légale
-      </h2>
-    </header>
+      Indemnité légale
+    </h2>
     <p>
       Le code du travail prévoit un montant minimum de
        

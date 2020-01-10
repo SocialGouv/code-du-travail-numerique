@@ -97,7 +97,7 @@ exports[`<Convention /> renders 1`] = `
   padding: 1rem 2rem;
   color: #3e486e;
   background-color: #f2f5fa;
-  border: 1px solid transparent;
+  border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
 }
 
@@ -412,7 +412,8 @@ exports[`<Convention /> renders 1`] = `
 }
 
 .c2 {
-  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  margin-left: auto;
   text-align: left;
 }
 
@@ -584,6 +585,13 @@ exports[`<Convention /> renders 1`] = `
   .c29 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    margin-bottom: 1rem;
+    margin-left: auto;
   }
 }
 

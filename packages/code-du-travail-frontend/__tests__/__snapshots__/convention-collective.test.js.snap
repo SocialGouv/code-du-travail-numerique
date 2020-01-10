@@ -51,7 +51,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding: 1rem 2rem;
   color: #3e486e;
   background-color: #f2f5fa;
-  border: 1px solid transparent;
+  border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
 }
 

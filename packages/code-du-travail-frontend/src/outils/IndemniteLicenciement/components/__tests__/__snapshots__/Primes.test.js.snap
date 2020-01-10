@@ -95,6 +95,7 @@ exports[`<Primes /> should add a prime 1`] = `
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
+  vertical-align: baseline;
   text-align: left;
   background: none;
   border: none;
@@ -364,6 +365,7 @@ exports[`<Primes /> should delete a primes 1`] = `
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
+  vertical-align: baseline;
   text-align: left;
   background: none;
   border: none;
@@ -521,6 +523,7 @@ exports[`<Primes /> should render 1`] = `
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
+  vertical-align: baseline;
   text-align: left;
   background: none;
   border: none;

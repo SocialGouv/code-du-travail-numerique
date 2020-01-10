@@ -1,20 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Categorie /> should render 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c5 {
+.c2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -34,7 +21,7 @@ exports[`<Categorie /> should render 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c4 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -44,7 +31,7 @@ exports[`<Categorie /> should render 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c3 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -65,42 +52,25 @@ exports[`<Categorie /> should render 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c3::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c3 *::-ms-backdrop,
+.c3 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c3:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c3:disabled {
   background-color: #e4e8ef;
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,50 +83,35 @@ exports[`<Categorie /> should render 1`] = `
   padding: 0;
 }
 
-.c1 {
+.c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 <div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Quelle est la catégorie du salarié ?
-    </h2>
-  </header>
+    Quelle est la catégorie du salarié ?
+  </h2>
   <p>
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c4"
+    class="c1"
     for="input-cat"
   >
     Sélectionnez une catégorie
   </label>
   <div
-    class="c5"
+    class="c2"
   >
     <select
-      class="c6"
+      class="c3"
       id="input-cat"
       name="cat"
     >
@@ -182,7 +137,7 @@ exports[`<Categorie /> should render 1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="c7"
+      class="c4"
     >
       <svg
         fill="none"

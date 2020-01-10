@@ -95,6 +95,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
+  vertical-align: baseline;
   text-align: left;
   background: none;
   border: none;
@@ -702,6 +703,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
+  vertical-align: baseline;
   text-align: left;
   background: none;
   border: none;
@@ -1309,6 +1311,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
+  vertical-align: baseline;
   text-align: left;
   background: none;
   border: none;

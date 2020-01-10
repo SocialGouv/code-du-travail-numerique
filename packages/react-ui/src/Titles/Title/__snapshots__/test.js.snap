@@ -15,7 +15,8 @@ exports[`<Title /> renders a H2 title  1`] = `
 }
 
 .c0 {
-  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  margin-left: auto;
   text-align: left;
 }
 
@@ -29,6 +30,13 @@ exports[`<Title /> renders a H2 title  1`] = `
   line-height: 1.25;
   padding-left: 3.2rem;
   text-align: left;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    margin-bottom: 1rem;
+    margin-left: auto;
+  }
 }
 
 @media (max-width:600px) {
@@ -74,7 +82,7 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
 }
 
 .c0 {
-  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
   margin-left: -10rem;
   text-align: left;
 }
@@ -93,6 +101,7 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
 
 @media (max-width:600px) {
   .c0 {
+    margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }

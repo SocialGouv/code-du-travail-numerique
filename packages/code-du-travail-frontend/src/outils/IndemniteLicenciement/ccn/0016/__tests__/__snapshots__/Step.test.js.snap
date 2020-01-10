@@ -1,25 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Step /> should ask detail about categories 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c13 {
+.c10 {
   position: relative;
   display: inline-block;
 }
 
-.c14 {
+.c11 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -41,15 +28,15 @@ exports[`<Step /> should ask detail about categories 1`] = `
   appearance: none;
 }
 
-.c14::-webkit-outer-spin-button,
-.c14::-webkit-inner-spin-button {
+.c11::-webkit-outer-spin-button,
+.c11::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c14::-webkit-calendar-picker-indicator {
+.c11::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -62,47 +49,47 @@ exports[`<Step /> should ask detail about categories 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c14:invalid {
+.c11:invalid {
   border-color: #eb5757;
 }
 
-.c14::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c14::-moz-placeholder {
+.c11::-moz-placeholder {
   color: #9298af;
 }
 
-.c14:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c14::placeholder {
+.c11::placeholder {
   color: #9298af;
 }
 
-.c14:focus {
+.c11:focus {
   border-color: #7994d4;
 }
 
-.c14:focus::-webkit-input-placeholder {
+.c11:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c14:focus::-moz-placeholder {
+.c11:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c14:focus:-ms-input-placeholder {
+.c11:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c14:focus::placeholder {
+.c11:focus::placeholder {
   color: transparent;
 }
 
-.c5 {
+.c2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -122,7 +109,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c4 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -132,7 +119,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c3 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -153,56 +140,39 @@ exports[`<Step /> should ask detail about categories 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c3::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c3 *::-ms-backdrop,
+.c3 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c3:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c3:disabled {
   background-color: #e4e8ef;
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c9 {
+.c6 {
   width: 10em;
   text-align: right;
   border-color: #bbcadf;
 }
 
-.c9::-webkit-outer-spin-button,
-.c9::-webkit-inner-spin-button {
+.c6::-webkit-outer-spin-button,
+.c6::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -215,12 +185,16 @@ exports[`<Step /> should ask detail about categories 1`] = `
   padding: 0;
 }
 
-.c1 {
+.c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
-.c8 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -230,7 +204,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   flex-direction: column;
 }
 
-.c10 {
+.c7 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -238,13 +212,13 @@ exports[`<Step /> should ask detail about categories 1`] = `
   cursor: pointer;
 }
 
-.c11 {
+.c8 {
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
 }
 
-.c12 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -257,57 +231,38 @@ exports[`<Step /> should ask detail about categories 1`] = `
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c11 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Quelle est la catégorie du salarié ?
-    </h2>
-  </header>
+    Quelle est la catégorie du salarié ?
+  </h2>
   <p>
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c4"
+    class="c1"
     for="input-categorie"
   >
     Sélectionnez une catégorie
   </label>
   <div
-    class="c5"
+    class="c2"
   >
     <select
-      class="c6"
+      class="c3"
       id="input-categorie"
       name="categorie"
     >
@@ -333,7 +288,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="c7"
+      class="c4"
     >
       <svg
         fill="none"
@@ -360,27 +315,20 @@ exports[`<Step /> should ask detail about categories 1`] = `
       </svg>
     </div>
   </div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Quelles sont les périodes éventuelles passées au statut de Technicien, Agent de maîtrise (TAM) ou Employé ?
-    </h2>
-  </header>
+    Quelles sont les périodes éventuelles passées au statut de Technicien, Agent de maîtrise (TAM) ou Employé ?
+  </h2>
   <label
-    class="c8"
+    class="c5"
   >
     <p>
       Période passée en tant que TAM ou employé
     </p>
     <div>
       <input
-        class="c9"
+        class="c6"
         min="0"
         name="tamDuration"
         type="number"
@@ -391,14 +339,14 @@ exports[`<Step /> should ask detail about categories 1`] = `
     </div>
   </label>
   <label
-    class="c8"
+    class="c5"
   >
     <p>
       Période passée en tant que cadre
     </p>
     <div>
       <input
-        class="c9"
+        class="c6"
         min="0"
         name="cadreDuration"
         type="number"
@@ -409,25 +357,25 @@ exports[`<Step /> should ask detail about categories 1`] = `
     </div>
   </label>
   <label
-    class="c10"
+    class="c7"
     for="2"
   >
     Quel est l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
-      class="c11"
+      class="c8"
     >
       *
     </span>
   </label>
   <div
-    class="c12"
+    class="c9"
   >
     <span
-      class="c13"
+      class="c10"
     >
       <input
-        class="c14"
+        class="c11"
         id="2"
         name="age"
         value=""
@@ -438,25 +386,12 @@ exports[`<Step /> should ask detail about categories 1`] = `
 `;
 
 exports[`<Step /> should ask detail about retirement  1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c11 {
+.c8 {
   position: relative;
   display: inline-block;
 }
 
-.c12 {
+.c9 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -478,15 +413,15 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   appearance: none;
 }
 
-.c12::-webkit-outer-spin-button,
-.c12::-webkit-inner-spin-button {
+.c9::-webkit-outer-spin-button,
+.c9::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c12::-webkit-calendar-picker-indicator {
+.c9::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -499,47 +434,47 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c12:invalid {
+.c9:invalid {
   border-color: #eb5757;
 }
 
-.c12::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c12::-moz-placeholder {
+.c9::-moz-placeholder {
   color: #9298af;
 }
 
-.c12:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c12::placeholder {
+.c9::placeholder {
   color: #9298af;
 }
 
-.c12:focus {
+.c9:focus {
   border-color: #7994d4;
 }
 
-.c12:focus::-webkit-input-placeholder {
+.c9:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c12:focus::-moz-placeholder {
+.c9:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c12:focus:-ms-input-placeholder {
+.c9:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c12:focus::placeholder {
+.c9:focus::placeholder {
   color: transparent;
 }
 
-.c15 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -548,7 +483,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   cursor: pointer;
 }
 
-.c16 {
+.c13 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -569,7 +504,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   appearance: none;
 }
 
-.c16:before {
+.c13:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -584,16 +519,16 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   content: "";
 }
 
-.c16:checked {
+.c13:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c16:checked:before {
+.c13:checked:before {
   display: block;
 }
 
-.c5 {
+.c2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -613,7 +548,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   text-align: center;
 }
 
-.c7 {
+.c4 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -623,7 +558,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c3 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -644,42 +579,25 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c3::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c3 *::-ms-backdrop,
+.c3 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c3:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c3:disabled {
   background-color: #e4e8ef;
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -692,7 +610,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   padding: 0;
 }
 
-.c14 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -711,12 +629,16 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   margin-bottom: 2rem;
 }
 
-.c1 {
+.c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
-.c8 {
+.c5 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -724,7 +646,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   cursor: pointer;
 }
 
-.c13 {
+.c10 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -732,13 +654,13 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   cursor: default;
 }
 
-.c9 {
+.c6 {
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
 }
 
-.c10 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -751,63 +673,44 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c9 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
+  .c5 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c10 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Quelle est la catégorie du salarié ?
-    </h2>
-  </header>
+    Quelle est la catégorie du salarié ?
+  </h2>
   <p>
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c4"
+    class="c1"
     for="input-categorie"
   >
     Sélectionnez une catégorie
   </label>
   <div
-    class="c5"
+    class="c2"
   >
     <select
-      class="c6"
+      class="c3"
       id="input-categorie"
       name="categorie"
     >
@@ -833,7 +736,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="c7"
+      class="c4"
     >
       <svg
         fill="none"
@@ -861,25 +764,25 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     </div>
   </div>
   <label
-    class="c8"
+    class="c5"
     for="3"
   >
     Quel est l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
-      class="c9"
+      class="c6"
     >
       *
     </span>
   </label>
   <div
-    class="c10"
+    class="c7"
   >
     <span
-      class="c11"
+      class="c8"
     >
       <input
-        class="c12"
+        class="c9"
         id="3"
         name="age"
         value="62"
@@ -887,25 +790,25 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     </span>
   </div>
   <p
-    class="c13"
+    class="c10"
   >
     Le salarié pourrait-il bénéficier de la retraite ?
     <span
       aria-label="champs obligatoire"
-      class="c9"
+      class="c6"
     >
       *
     </span>
   </p>
   <div
-    class="c14"
+    class="c11"
   >
     <label
-      class="c15"
+      class="c12"
       for="hasRetirementAge-yes"
     >
       <input
-        class="c16"
+        class="c13"
         id="hasRetirementAge-yes"
         name="hasRetirementAge"
         type="radio"
@@ -914,11 +817,11 @@ exports[`<Step /> should ask detail about retirement  1`] = `
       Oui
     </label>
     <label
-      class="c15"
+      class="c12"
       for="hasRetirementAge-no"
     >
       <input
-        class="c16"
+        class="c13"
         id="hasRetirementAge-no"
         name="hasRetirementAge"
         type="radio"
@@ -931,25 +834,12 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 `;
 
 exports[`<Step /> should render 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c11 {
+.c8 {
   position: relative;
   display: inline-block;
 }
 
-.c12 {
+.c9 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -971,15 +861,15 @@ exports[`<Step /> should render 1`] = `
   appearance: none;
 }
 
-.c12::-webkit-outer-spin-button,
-.c12::-webkit-inner-spin-button {
+.c9::-webkit-outer-spin-button,
+.c9::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c12::-webkit-calendar-picker-indicator {
+.c9::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -992,47 +882,47 @@ exports[`<Step /> should render 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c12:invalid {
+.c9:invalid {
   border-color: #eb5757;
 }
 
-.c12::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c12::-moz-placeholder {
+.c9::-moz-placeholder {
   color: #9298af;
 }
 
-.c12:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c12::placeholder {
+.c9::placeholder {
   color: #9298af;
 }
 
-.c12:focus {
+.c9:focus {
   border-color: #7994d4;
 }
 
-.c12:focus::-webkit-input-placeholder {
+.c9:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c12:focus::-moz-placeholder {
+.c9:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c12:focus:-ms-input-placeholder {
+.c9:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c12:focus::placeholder {
+.c9:focus::placeholder {
   color: transparent;
 }
 
-.c5 {
+.c2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1052,7 +942,7 @@ exports[`<Step /> should render 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c4 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -1062,7 +952,7 @@ exports[`<Step /> should render 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c3 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -1083,42 +973,25 @@ exports[`<Step /> should render 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c3::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c3 *::-ms-backdrop,
+.c3 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c3:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c3:disabled {
   background-color: #e4e8ef;
 }
 
-.c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1131,12 +1004,16 @@ exports[`<Step /> should render 1`] = `
   padding: 0;
 }
 
-.c1 {
+.c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
-.c8 {
+.c5 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -1144,13 +1021,13 @@ exports[`<Step /> should render 1`] = `
   cursor: pointer;
 }
 
-.c9 {
+.c6 {
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
 }
 
-.c10 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1163,57 +1040,38 @@ exports[`<Step /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c9 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
+  .c5 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Quelle est la catégorie du salarié ?
-    </h2>
-  </header>
+    Quelle est la catégorie du salarié ?
+  </h2>
   <p>
     Cette information se trouve sur le bulletin de salaire.
   </p>
   <label
-    class="c4"
+    class="c1"
     for="input-categorie"
   >
     Sélectionnez une catégorie
   </label>
   <div
-    class="c5"
+    class="c2"
   >
     <select
-      class="c6"
+      class="c3"
       id="input-categorie"
       name="categorie"
     >
@@ -1239,7 +1097,7 @@ exports[`<Step /> should render 1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="c7"
+      class="c4"
     >
       <svg
         fill="none"
@@ -1267,25 +1125,25 @@ exports[`<Step /> should render 1`] = `
     </div>
   </div>
   <label
-    class="c8"
+    class="c5"
     for="1"
   >
     Quel est l'âge du salarié à la date du licenciement ?
     <span
       aria-label="champs obligatoire"
-      class="c9"
+      class="c6"
     >
       *
     </span>
   </label>
   <div
-    class="c10"
+    class="c7"
   >
     <span
-      class="c11"
+      class="c8"
     >
       <input
-        class="c12"
+        class="c9"
         id="1"
         name="age"
         value=""

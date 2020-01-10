@@ -167,8 +167,8 @@ exports[`<Layout /> should render 1`] = `
 }
 
 .c23 {
-  margin: 0 auto 1rem;
   margin-bottom: 1.6rem;
+  margin-left: auto;
   text-align: center;
 }
 
@@ -612,6 +612,7 @@ exports[`<Layout /> should render 1`] = `
 @media (max-width:600px) {
   .c23 {
     margin-bottom: 1rem;
+    margin-left: auto;
   }
 }
 
