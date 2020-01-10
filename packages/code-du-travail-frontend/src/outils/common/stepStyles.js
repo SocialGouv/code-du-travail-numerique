@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme, Title } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/react-ui";
 
 const { breakpoints, fonts, colors, spacings } = theme;
 
@@ -35,9 +35,13 @@ export const Header = styled.div`
   align-items: center;
 `;
 
-export const SectionTitle = styled(Title)`
+export const SectionTitle = styled.h2`
   margin-top: ${spacings.large};
   margin-bottom: ${spacings.medium};
+  color: ${({ theme }) => theme.altText};
+  font-weight: 600;
+  font-size: ${fonts.sizes.headings.small};
+  font-family: "Open Sans", sans-serif;
 `;
 
 export const Highlight = styled.strong`
