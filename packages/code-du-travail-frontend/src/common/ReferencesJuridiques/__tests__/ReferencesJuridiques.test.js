@@ -12,7 +12,7 @@ const references = [
   {
     title: "Article L1244-4 du code du travail",
     type: TYPE_REFERENCE.codeDuTravail,
-    id: "l1244-4"
+    id: "r*1244-4"
   },
   {
     title: "Article L3121-44 du JO",

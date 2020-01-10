@@ -1,7 +1,7 @@
 // assume we only have code-du-travail articles
 
 // match basic article references
-const RE_ARTICLE_NUM = /<a[^>]+>(((l' *)?article )?([LRD])[\s-.]*([\d-]+))\s*<\/a>/gim;
+const RE_ARTICLE_NUM = /<a[^>]+>(((l' *)?article )?([LRD])[\s-.*]*([\d-]+))[\s.]*<\/a>/gim;
 //(?:article )?
 
 // fix single articles reference
