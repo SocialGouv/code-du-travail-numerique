@@ -13,12 +13,14 @@ export const Title = ({
   topStripped = false,
   shift = "",
   subtitle,
+  variant,
   ...props
 }) => (
   <Header leftStripped={!topStripped} shift={shift} {...props}>
     <StyledTitle leftStripped={!topStripped} as={as} shift={shift}>
       <Stripe
-        rounded
+        rounded={variant !== "primary"}
+        variant={variant}
         {...(!topStripped && { position: "left", length: "100%" })}
       />
       {children}
@@ -36,7 +38,12 @@ Title.propTypes = {
   children: PropTypes.node,
   shift: PropTypes.string,
   subtitle: PropTypes.string,
-  topStripped: PropTypes.bool
+  topStripped: PropTypes.bool,
+  variant: PropTypes.string
+};
+
+Title.defaultProps = {
+  variant: "secondary"
 };
 
 const StyledTitle = styled.h2`

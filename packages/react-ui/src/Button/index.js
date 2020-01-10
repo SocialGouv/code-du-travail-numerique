@@ -33,6 +33,7 @@ export const StyledButton = styled.button`
         font-weight: 600;
         font-size: ${fonts.sizes.default};
         line-height: ${fonts.lineHeight};
+        vertical-align: baseline;
         text-align: left;
         background: none;
         border: none;

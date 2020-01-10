@@ -3,29 +3,14 @@ import styled, { css } from "styled-components";
 import { breakpoints, spacings } from "../../theme";
 
 export const Header = styled.header`
-  margin: 0 auto ${spacings.small};
-  ${({ leftStripped, shift }) => {
-    if (leftStripped) {
-      if (shift) {
-        return css`
-          margin-left: -${shift};
-          text-align: left;
-          @media (max-width: ${breakpoints.mobile}) {
-            margin-left: -${spacings.small};
-          }
-        `;
-      }
-      return css`
-        text-align: left;
-      `;
-    }
+  ${({ leftStripped, pageTitle, shift }) => {
     return css`
-      margin-bottom: ${({ pageTitle }) =>
-        pageTitle ? spacings.larger : spacings.base};
-      text-align: center;
+      margin-bottom: ${pageTitle ? spacings.larger : spacings.base};
+      margin-left: ${shift ? `-${shift}}` : "auto"};
+      text-align: ${leftStripped ? "left" : "center"};
       @media (max-width: ${breakpoints.mobile}) {
-        margin-bottom: ${({ pageTitle }) =>
-          pageTitle ? spacings.xmedium : spacings.small};
+        margin-bottom: ${pageTitle ? spacings.xmedium : spacings.small};
+        margin-left: ${shift ? `-${spacings.small}}` : "auto"};
       }
     `;
   }};

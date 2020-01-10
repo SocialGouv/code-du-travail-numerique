@@ -12,6 +12,12 @@ export default {
 export const base = () => (
   <>
     <Section>
+      <PageTitle>This is a basic page title</PageTitle>
+    </Section>
+    <Section>
+      <PageTitle variant="primary">This is a primary page title</PageTitle>
+    </Section>
+    <Section>
       <PageTitle subtitle="With a basic subtitle">
         This is a page title
       </PageTitle>

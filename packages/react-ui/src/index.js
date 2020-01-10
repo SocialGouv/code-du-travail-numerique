@@ -16,6 +16,7 @@ export { Button } from "./Button";
 export { GlobalStyles } from "./GlobalStyles";
 export { Grid, RootGrid, GridCell } from "./Grid";
 export { FlatList } from "./FlatList";
+export { IconStripe } from "./IconStripe";
 export { Modal, ModalContentWrapper } from "./Modal";
 export { OverflowWrapper } from "./OverflowWrapper";
 export { ScreenReaderOnly } from "./ScreenReaderOnly";
