@@ -464,15 +464,9 @@ exports[`<Contribution /> should render answer references 1`] = `
       >
         Convention collective
       </span>
-      <li
-        class="c7"
-      >
-        <a
-          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
-          rel="noopener noreferrer"
-          target="_blank"
-        />
-      </li>
+      <div>
+        reference CC 1
+      </div>
       <span
         class="c6"
       >
@@ -485,7 +479,9 @@ exports[`<Contribution /> should render answer references 1`] = `
           href="http://path/to/ref"
           rel="noopener noreferrer"
           target="_blank"
-        />
+        >
+          reference externe 1
+        </a>
       </li>
       <br />
       <button

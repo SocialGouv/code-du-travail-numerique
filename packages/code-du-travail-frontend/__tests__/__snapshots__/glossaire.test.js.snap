@@ -2064,6 +2064,13 @@ exports[`<Glossaire /> should render 1`] = `
                   Crédit d'heures de délégation
                 </a>
               </li>
+              <li>
+                <a
+                  href="/glossaire/cse"
+                >
+                  CSE
+                </a>
+              </li>
             </ul>
           </div>
           <div>
