@@ -82,11 +82,7 @@ function getNbText(agreementTree) {
 function getContributionAnswers(agreementNum) {
   const transformRef = ({ title, url, category, agreement }) => {
     return {
-      title: `${
-        category === "agreement" && agreement
-          ? `${title} (IDCC ${formatIdcc(agreement.num)})`
-          : title
-      }`,
+      title,
       url: url || (agreement && agreement.url),
       category: category
     };

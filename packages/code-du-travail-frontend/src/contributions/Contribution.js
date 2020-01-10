@@ -45,15 +45,15 @@ const References = ({ references = [] }) => {
       {agreementRefs.length !== 0 && (
         <>
           <Subtitle>Convention collective</Subtitle>
-          {agreementRefs.map(ref =>
-            ref.url ? (
+          {agreementRefs.map(({ agreement }) =>
+            agreement.url ? (
               <RefLink
-                key={ref.id}
-                title={ref.title}
-                url={getConventionUrl(ref.agreement.id)}
+                key={agreement.id}
+                title={agreement.title}
+                url={agreement.url}
               />
             ) : (
-              <div>{ref.title}</div>
+              <div key={agreement.id}>{agreement.title}</div>
             )
           )}
         </>
@@ -61,31 +61,28 @@ const References = ({ references = [] }) => {
       {laborCodeRef.length !== 0 && (
         <>
           <Subtitle>Code du travail</Subtitle>
-          {laborCodeRef.map(ref =>
-            ref.url ? (
-              <RefLink
-                key={ref.id}
-                title={ref.title}
-                url={getConventionUrl(ref.agreement.id)}
-              />
-            ) : (
-              <Link
-                href={{
-                  pathname: `/${getRouteBySource(SOURCES.CDT)}/[slug]`
-                }}
-                as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
-              >
-                <a>{ref.title}</a>
-              </Link>
-            )
-          )}
+          {laborCodeRef.map(ref => (
+            <Link
+              key={ref.title}
+              href={{
+                pathname: `/${getRouteBySource(SOURCES.CDT)}/[slug]`
+              }}
+              as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
+            >
+              <a>{ref.title}</a>
+            </Link>
+          ))}
         </>
       )}
       {othersRefs.length !== 0 && (
         <>
           <Subtitle>Autres sources</Subtitle>
-          {othersRefs.map(ref => (
-            <RefLink key={ref.id} title={ref.title} url={ref.url} />
+          {othersRefs.map((ref, id) => (
+            <RefLink
+              key={`external-ref-${id}`}
+              title={ref.title}
+              url={ref.url}
+            />
           ))}
         </>
       )}
@@ -118,14 +115,19 @@ const AnswersConventions = ({ answers }) => {
             <span role="img" aria-label="Icone convention collective">
               📖
             </span>{" "}
-            <a
-              href={getConventionUrl(convention.id)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {convention.title}
-              {convention.num && <> (IDCC {formatIdcc(convention.num)})</>}
-            </a>
+            {convention.url ? (
+              <a
+                href={convention.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {convention.title} (IDCC {formatIdcc(convention.num)})
+              </a>
+            ) : (
+              <>
+                {convention.title} (IDCC {formatIdcc(convention.num)})
+              </>
+            )}
           </Heading>
           {(answer && (
             <>

@@ -464,9 +464,15 @@ exports[`<Contribution /> should render answer references 1`] = `
       >
         Convention collective
       </span>
-      <div>
-        reference CC 1
-      </div>
+      <li
+        class="c7"
+      >
+        <a
+          href="http://path/to/agreement"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+      </li>
       <span
         class="c6"
       >
