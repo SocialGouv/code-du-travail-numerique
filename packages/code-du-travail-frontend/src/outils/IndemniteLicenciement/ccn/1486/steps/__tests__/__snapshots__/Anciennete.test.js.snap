@@ -151,6 +151,12 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   margin-top: 2rem;
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c4 {
     font-size: 1.6rem;

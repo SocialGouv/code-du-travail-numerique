@@ -388,6 +388,12 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   }
 }
 
+@media print {
+  .c18 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c7 {
     margin-bottom: 1rem;
@@ -1074,6 +1080,12 @@ exports[`<Contribution /> should render answer references 1`] = `
     -ms-flex: 0 0 3.4rem;
     flex: 0 0 3.4rem;
     margin-right: 1rem;
+  }
+}
+
+@media print {
+  .c18 {
+    display: none;
   }
 }
 
@@ -1773,6 +1785,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     -ms-flex: 0 0 3.4rem;
     flex: 0 0 3.4rem;
     margin-right: 1rem;
+  }
+}
+
+@media print {
+  .c18 {
+    display: none;
   }
 }
 

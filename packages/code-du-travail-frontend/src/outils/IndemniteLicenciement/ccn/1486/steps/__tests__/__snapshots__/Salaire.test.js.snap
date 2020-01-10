@@ -126,6 +126,12 @@ exports[`<Salaire /> renders 1`] = `
   margin-top: 2rem;
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c3 {
     font-size: 1.6rem;
@@ -342,6 +348,12 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 
 .c1 {
   margin-top: 2rem;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
 }
 
 @media (max-width:600px) {
@@ -731,6 +743,12 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c3 {
     font-size: 1.6rem;
@@ -1102,6 +1120,12 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
 }
 
 @media (max-width:600px) {

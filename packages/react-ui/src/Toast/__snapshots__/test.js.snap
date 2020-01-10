@@ -35,6 +35,12 @@ exports[`<Toast /> Should render a wide toast 1`] = `
   text-align: left;
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -84,6 +90,12 @@ exports[`<Toast /> render default toast 1`] = `
   text-align: left;
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -131,6 +143,12 @@ exports[`<Toast /> render primary toast 1`] = `
   align-self: center;
   padding: 1rem 1.6rem;
   text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
 }
 
 <div>
@@ -183,6 +201,12 @@ exports[`<Toast /> render secondary toast 1`] = `
   text-align: left;
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -231,6 +255,12 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   align-self: center;
   padding: 1rem 1.6rem;
   text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
 }
 
 <div>
@@ -283,6 +313,12 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   text-align: left;
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -333,6 +369,12 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   text-align: left;
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -381,6 +423,12 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   align-self: center;
   padding: 1rem 1.6rem;
   text-align: left;
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
 }
 
 <div>

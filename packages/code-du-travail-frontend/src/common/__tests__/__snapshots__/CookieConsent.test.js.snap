@@ -121,6 +121,12 @@ exports[`<CookieConsent /> should render 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 <div>
   <div
     class="c0"
