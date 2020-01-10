@@ -476,7 +476,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
         Pour en savoir plus sur l’indemnité de licenciement et son mode de calcul, consultez
          
         <a
-          href="/fiche-service-public/indemnite-de-licenciement"
+          href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi"
         >
           cet article
         </a>
