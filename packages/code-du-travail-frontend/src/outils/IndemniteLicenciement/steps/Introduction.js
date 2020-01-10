@@ -24,7 +24,7 @@ const StepIntro = () => (
       consultez{" "}
       <Link
         href="/fiche-service-public/[slug]"
-        as={`/fiche-service-public/indemnite-de-licenciement`}
+        as={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
       >
         <a>cet article</a>
       </Link>
