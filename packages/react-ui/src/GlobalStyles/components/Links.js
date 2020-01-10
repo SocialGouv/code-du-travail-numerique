@@ -14,11 +14,7 @@ export default createGlobalStyle`
 } linear;
     @media print {
       text-decoration: none;
-      &:after {
-        content: " (" attr(href) ") ";
-      }
     }
-
   }
 
   a:focus,

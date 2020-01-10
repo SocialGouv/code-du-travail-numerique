@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled, { css } from "styled-components";
@@ -10,10 +10,20 @@ import { BurgerNav } from "./BurgerNav";
 
 const { Search: SearchIcon } = icons;
 
+const printDate = () => {
+  const currentDate = new Date(Date.now()).toLocaleString("fr-FR");
+  return `le ${currentDate.slice(0, 10)} ${currentDate.slice(11, 18)}`;
+};
+
 const Header = ({ currentPage = "" }) => {
+  const [currentDate, setDate] = useState();
+  useEffect(() => {
+    setDate(printDate());
+  }, []);
   const router = useRouter();
   return (
     <StyledHeader currentPage={currentPage}>
+      <StyledPrintDate id="printDate">{currentDate}</StyledPrintDate>
       <StyledContainer>
         <Link href="/" passHref>
           <LogoLink title="Code du travail numérique - retour à l'accueil">
@@ -77,6 +87,14 @@ const StyledHeader = styled.header`
   @media print {
     position: relative;
     box-shadow: none;
+  }
+`;
+
+const StyledPrintDate = styled.div`
+  display: none;
+  text-align: right;
+  @media print {
+    display: block;
   }
 `;
 
