@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { ArrowLink, FlatList, theme } from "@socialgouv/react-ui";
 import Link from "next/link";
+import { ArrowLink, FlatList, theme } from "@socialgouv/react-ui";
+import { SOURCES, getRouteBySource } from "@cdt/sources";
 import TYPE_REFERENCE from "./typeReference";
-
 const sanitizeCdtSlug = slug => slug.replace(/[^LRD\d-]+/gi, "").toLowerCase();
 
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link
-    href="/code-du-travail/[slug]"
-    as={`/code-du-travail/${sanitizeCdtSlug(slug)}`}
+    href={`/${getRouteBySource(SOURCES.CDT)}/[slug]`}
+    as={`/${getRouteBySource(SOURCES.CDT)}/${sanitizeCdtSlug(slug)}`}
     passHref
   >
     <StyledArrowLink arrowPosition="left">{title}</StyledArrowLink>
@@ -18,8 +18,8 @@ const CodeDuTravailLink = ({ title, slug }) => (
 
 const ConventionLink = ({ title, slug }) => (
   <Link
-    href="/convention-collective/[slug]"
-    as={`/convention-collective/${slug}`}
+    href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
+    as={`/${getRouteBySource(SOURCES.CCN)}/${slug}`}
     passHref
   >
     <StyledArrowLink arrowPosition="left">{`Convention collective: ${title}`}</StyledArrowLink>
