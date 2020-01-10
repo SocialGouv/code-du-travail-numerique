@@ -425,18 +425,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-<<<<<<< HEAD
 .c46 {
-  margin: 0 auto 1rem;
-=======
-.c25 {
-  margin-bottom: 1.6rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c49 {
->>>>>>> test(front): update snaps
   margin-bottom: 1.6rem;
   margin-left: auto;
   text-align: center;
@@ -1032,13 +1021,6 @@ exports[`<Outils /> should render 1`] = `
 @media (max-width:600px) {
   .c22 {
     margin-bottom: 2.4rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    margin-bottom: 1rem;
     margin-left: auto;
   }
 }
