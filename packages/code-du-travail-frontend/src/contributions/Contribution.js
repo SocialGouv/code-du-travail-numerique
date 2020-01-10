@@ -18,9 +18,6 @@ import rehypeToReact from "./rehypeToReact";
 import Mdx from "../../src/common/Mdx";
 import { useLocalStorage } from "../lib/useLocalStorage";
 
-const getConventionUrl = id =>
-  `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`;
-
 const RefLink = ({ title, url }) => (
   <LineRef>
     <a href={url} target="_blank" rel="noopener noreferrer">
