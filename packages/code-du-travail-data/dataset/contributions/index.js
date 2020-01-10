@@ -67,9 +67,9 @@ const fetchContributions = async () => {
             agreement: getConventionKali(answerId)
           };
         }
-        return { title, url };
+        return { title, url, category };
       })
-      .sort(sortByKey("value"));
+      .sort(sortByKey("title"));
 
   const getConventionsAnswers = questionId =>
     answers

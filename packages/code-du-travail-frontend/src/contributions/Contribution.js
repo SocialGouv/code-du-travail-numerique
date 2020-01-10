@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 import {
   Alert,
   Button,
@@ -8,15 +9,14 @@ import {
   theme,
   Title
 } from "@socialgouv/react-ui";
+import { SOURCES, getRouteBySource } from "@cdt/sources";
+import slugify from "@cdt/data/slugify";
 import { formatIdcc } from "@cdt/data/lib";
 
 import SearchConvention from "../../src/conventions/Search/Form";
 import rehypeToReact from "./rehypeToReact";
 import Mdx from "../../src/common/Mdx";
 import { useLocalStorage } from "../lib/useLocalStorage";
-
-const getConventionUrl = id =>
-  `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`;
 
 const RefLink = ({ title, url }) => (
   <LineRef>
@@ -28,8 +28,10 @@ const RefLink = ({ title, url }) => (
 
 const References = ({ references = [] }) => {
   const agreementRefs = references.filter(ref => Boolean(ref.agreement));
-  const othersRefs = references.filter(ref => !ref.agreement);
-
+  const laborCodeRef = references.filter(ref => ref.category === "labor_code");
+  const othersRefs = references.filter(
+    ref => !ref.agreement && ref.category !== "labor_code"
+  );
   if (references.length === 0) {
     return null;
   }
@@ -40,20 +42,44 @@ const References = ({ references = [] }) => {
       {agreementRefs.length !== 0 && (
         <>
           <Subtitle>Convention collective</Subtitle>
-          {agreementRefs.map(ref => (
-            <RefLink
-              key={ref.id}
-              value={ref.title}
-              url={getConventionUrl(ref.agreement.id)}
-            />
+          {agreementRefs.map(({ agreement }) =>
+            agreement.url ? (
+              <RefLink
+                key={agreement.id}
+                title={agreement.title}
+                url={agreement.url}
+              />
+            ) : (
+              <div key={agreement.id}>{agreement.title}</div>
+            )
+          )}
+        </>
+      )}
+      {laborCodeRef.length !== 0 && (
+        <>
+          <Subtitle>Code du travail</Subtitle>
+          {laborCodeRef.map(ref => (
+            <Link
+              key={ref.title}
+              href={{
+                pathname: `/${getRouteBySource(SOURCES.CDT)}/[slug]`
+              }}
+              as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
+            >
+              <a>{ref.title}</a>
+            </Link>
           ))}
         </>
       )}
       {othersRefs.length !== 0 && (
         <>
           <Subtitle>Autres sources</Subtitle>
-          {othersRefs.map(ref => (
-            <RefLink key={ref.id} value={ref.title} url={ref.url} />
+          {othersRefs.map((ref, id) => (
+            <RefLink
+              key={`external-ref-${id}`}
+              title={ref.title}
+              url={ref.url}
+            />
           ))}
         </>
       )}
@@ -86,14 +112,19 @@ const AnswersConventions = ({ answers }) => {
             <span role="img" aria-label="Icone convention collective">
               📖
             </span>{" "}
-            <a
-              href={getConventionUrl(convention.id)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {convention.title}
-              {convention.num && <> (IDCC {formatIdcc(convention.num)})</>}
-            </a>
+            {convention.url ? (
+              <a
+                href={convention.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {convention.title} (IDCC {formatIdcc(convention.num)})
+              </a>
+            ) : (
+              <>
+                {convention.title} (IDCC {formatIdcc(convention.num)})
+              </>
+            )}
           </Heading>
           {(answer && (
             <>

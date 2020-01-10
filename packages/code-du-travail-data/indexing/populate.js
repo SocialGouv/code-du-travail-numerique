@@ -60,7 +60,7 @@ async function getDuplicateSlugs(allDocuments) {
 async function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
-    ({ id, num, title, shortTitle }) => {
+    ({ id, num, title, shortTitle, url }) => {
       return {
         source: SOURCES.CCN,
         id,
@@ -69,7 +69,7 @@ async function* cdtnDocumentsGen() {
         shortTitle,
         slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
         text: `IDCC ${num} ${title}`,
-        url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
+        url
       };
     }
   );

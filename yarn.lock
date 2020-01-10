@@ -2438,6 +2438,14 @@
     "@socialgouv/dila-api-client" "^1.1.0"
     p-map "^3.0.0"
 
+"@socialgouv/kali-data@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.3.0.tgz#2d1f38edac7249b1448528ba37a4d984dfd816cd"
+  integrity sha512-aPxlYwAoVxVPbev8QW71yakzbZCHfbQUugqj9fCsInvPNQwEgg+ZwicCe8sGaNO4QlCbxVwG/g/Bja1zHGgXiA==
+  dependencies:
+    "@socialgouv/dila-api-client" "^1.1.0"
+    p-map "^3.0.0"
+
 "@socialgouv/legi-data@^1.1.11":
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.1.11.tgz#50e498a2ebdfefa3fbf4afa04d2f71d891441062"

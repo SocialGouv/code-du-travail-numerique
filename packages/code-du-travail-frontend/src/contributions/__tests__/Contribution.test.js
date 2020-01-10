@@ -62,7 +62,8 @@ describe("<Contribution />", () => {
         convention: {
           title: "preselected convention",
           num: 44,
-          id: 123
+          id: 123,
+          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
         }
       })
     );
@@ -88,7 +89,8 @@ describe("<Contribution />", () => {
         convention: {
           title: "preselected convention",
           num: 9999,
-          id: 123
+          id: 123,
+          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
         }
       })
     );
@@ -114,7 +116,8 @@ describe("<Contribution />", () => {
         convention: {
           title: "preselected convention",
           num: 44,
-          id: 123
+          id: 123,
+          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
         }
       })
     );

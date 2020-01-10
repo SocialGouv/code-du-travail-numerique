@@ -4208,9 +4208,6 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
   </div>
-  <p>
-    Si votre question concerne un autre domaine, vous pouvez utiliser la recherche par mot-clés dans la section suivante.
-  </p>
   <form
     action="https://beta.legifrance.gouv.fr/search/kali#kali"
     target="_blank"

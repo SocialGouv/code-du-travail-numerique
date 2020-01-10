@@ -468,7 +468,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         class="c7"
       >
         <a
-          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
+          href="http://path/to/agreement"
           rel="noopener noreferrer"
           target="_blank"
         />
@@ -485,7 +485,9 @@ exports[`<Contribution /> should render answer references 1`] = `
           href="http://path/to/ref"
           rel="noopener noreferrer"
           target="_blank"
-        />
+        >
+          reference externe 1
+        </a>
       </li>
       <br />
       <button

@@ -8,6 +8,7 @@ import themes from "./themes.data.json";
 import remark from "remark";
 import html from "remark-html";
 import slugify from "../../slugify";
+import { formatIdcc } from "../../lib";
 
 const compiler = remark().use(html, { sanitize: true });
 
@@ -21,19 +22,23 @@ async function fetchAgreements() {
     .then(res => res.json())
     .then(json => json.data);
 
-  return kaliData.map(agreement => {
-    const agreementTree = require(`@socialgouv/kali-data/data/${agreement.id}.json`);
-    const blocksData = ccnBlockRecords.find(data => data.cid === agreement.id);
-    return {
-      ...getCCNInfo(agreement),
-      nbTextes: getNbText(agreementTree),
-      articlesByTheme:
-        blocksData && blocksData.groups
-          ? getArticleByBlock(blocksData.groups, agreementTree)
-          : [],
-      answers: getContributionAnswers(agreement.num)
-    };
-  });
+  return kaliData
+    .sort((a, b) => parseInt(a.num, 10) - parseInt(b.num, 10))
+    .map(agreement => {
+      const agreementTree = require(`@socialgouv/kali-data/data/${agreement.id}.json`);
+      const blocksData = ccnBlockRecords.find(
+        data => data.cid === agreement.id
+      );
+      return {
+        ...getCCNInfo(agreement),
+        nbTextes: getNbText(agreementTree),
+        articlesByTheme:
+          blocksData && blocksData.groups
+            ? getArticleByBlock(blocksData.groups, agreementTree)
+            : [],
+        answers: getContributionAnswers(agreement.num)
+      };
+    });
 }
 
 if (require.main === module) {
@@ -64,28 +69,24 @@ function getNbText(agreementTree) {
   const texteDeBase = find(agreementTree, node =>
     node.data.title.startsWith("Texte de base")
   );
-  const textesAttaches = find(
-    agreementTree,
-    node => node.data.title === "Textes Attachés"
-  );
-  const texteSalaires = find(
-    agreementTree,
-    node => node.data.title === "Textes Salaires"
-  );
+  if (!texteDeBase) {
+    return;
+  }
 
-  const nbTextes =
-    texteDeBase.children.length + textesAttaches
-      ? textesAttaches.children.length
-      : 0 + texteSalaires
-      ? texteSalaires.children.length
-      : 0;
-  return nbTextes;
+  return texteDeBase.children.length;
 }
 /**
  * Return contribution answer for a given idcc
  * param {agreementNum} string
  */
 function getContributionAnswers(agreementNum) {
+  const transformRef = ({ title, url, category, agreement }) => {
+    return {
+      title,
+      url: url || (agreement && agreement.url),
+      category: category
+    };
+  };
   return contributions
     .map(({ title, slug, index, answers }) => {
       const [answer] = answers.conventions.filter(
@@ -96,22 +97,19 @@ function getContributionAnswers(agreementNum) {
         const slugMatcher = new RegExp(slug);
         const themeFinder = ({ url }) => slugMatcher.test(url);
         const theme = themes.find(theme => theme.refs.some(themeFinder));
+        let rootTheme = null;
+        if (theme) {
+          rootTheme = theme.breadcrumbs
+            ? theme.breadcrumbs[0].title
+            : theme.title;
+        }
+
         return {
           index,
           question: title.trim(),
           answer: compiler.processSync(answer.markdown).contents,
-          theme: theme.breadcrumbs ? theme.breadcrumbs[0].title : theme.title,
-          references: answer.references.map(
-            ({ title, url, category, agreement }) => ({
-              title: `${
-                category === "agreement"
-                  ? `IDCC ${agreement.num} - ${title}`
-                  : title
-              }`,
-              url: url || (agreement && agreement.url),
-              category: category
-            })
-          ),
+          theme: rootTheme,
+          references: answer.references.map(transformRef),
           slug
         };
       }
