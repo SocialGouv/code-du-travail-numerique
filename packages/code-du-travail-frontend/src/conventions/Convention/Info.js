@@ -22,11 +22,13 @@ const Info = ({ convention: { num, title, date_publi, url } }) => (
         {format(parseISO(date_publi), "dd/MM/yyyy")}
       </Detail>
     )}
-    <p data-no-glossary>
-      <a target="_blank" rel="noopener noreferrer nofollow" href={url}>
-        Voir la convention sur Légifrance
-      </a>
-    </p>
+    {url && (
+      <p data-no-glossary>
+        <a target="_blank" rel="noopener noreferrer nofollow" href={url}>
+          Voir la convention sur Légifrance
+        </a>
+      </p>
+    )}
     <p data-no-glossary>
       <Link href="/glossaire/convention-collective" passHref>
         <a target="_blank" rel="noopener noreferrer nofollow">

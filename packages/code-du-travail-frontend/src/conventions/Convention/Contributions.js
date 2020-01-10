@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { Accordion, theme, Alert } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
-import { slugify } from "@cdt/data/slugify";
+import slugify from "@cdt/data/slugify";
 
 import { Title } from "./index";
 import Html from "../../common/Html";
@@ -67,10 +67,12 @@ function AnswerReferences({ articles }) {
   const refs = articles.map(ref => {
     switch (ref.category) {
       case "agreement": {
-        return (
+        return ref.url ? (
           <a target="_blank" rel="noopener nofollow noreferrer" href={ref.url}>
             {ref.title}
           </a>
+        ) : (
+          <div>{ref.title}</div>
         );
       }
       case "labor_code": {
@@ -81,12 +83,12 @@ function AnswerReferences({ articles }) {
             }}
             as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
           >
-            <a>{ref.title} du Code du travail </a>
+            <a>{ref.title} du Code du travail</a>
           </Link>
         );
       }
       default: {
-        return (
+        return ref.url ? (
           <a
             target="_blank"
             rel="noopener nofollow noreferrer"
@@ -95,6 +97,8 @@ function AnswerReferences({ articles }) {
           >
             {ref.title}
           </a>
+        ) : (
+          <div>{ref.title}</div>
         );
       }
     }
