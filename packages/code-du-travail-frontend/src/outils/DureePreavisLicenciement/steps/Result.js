@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "next/link";
 import { Toast } from "@socialgouv/react-ui";
 import data from "@cdt/data...preavis-licenciement/data.json";
-
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 
 import {
@@ -11,10 +12,12 @@ import {
   recapSituation,
   getRef
 } from "../../common/situations.utils";
+import { Feedback } from "../../../common/Feedback";
+import { useRouter } from "next/router";
 
 const { situations: allSituations } = data;
 
-function DisclaimerToast({ durationCC, durationCDT }) {
+function DisclaimerToast({ durationCC, durationCDT, ccn }) {
   if (durationCC === undefined) {
     if (parseInt(durationCDT, 10) === 0) {
       return (
@@ -22,6 +25,18 @@ function DisclaimerToast({ durationCC, durationCDT }) {
           L’existence et la durée du préavis de licenciement peuvent être
           prévues dans la convention collective, un accord d’entreprise ou à
           défaut par un usage dans l’entreprise.
+          {ccn && (
+            <>
+              <br />
+              Vous pouvez faire une recherche par mots-clés dans{" "}
+              <Link
+                href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
+                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.convention.slug}`}
+              >
+                <a>votre convention collective</a>
+              </Link>
+            </>
+          )}
         </Toast>
       );
     } else {
@@ -31,6 +46,18 @@ function DisclaimerToast({ durationCC, durationCDT }) {
           plus favorable au salarié peut être prévue par une convention
           collective, un accord de branche, un accord d’entreprise ou le contrat
           de travail ou les usages
+          {ccn && (
+            <>
+              <br />
+              Vous pouvez faire une recherche par mots-clés dans{" "}
+              <Link
+                href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
+                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.convention.slug}`}
+              >
+                <a>votre convention collective</a>
+              </Link>
+            </>
+          )}
         </Toast>
       );
     }
@@ -103,6 +130,7 @@ function DurationResult({ duration, durationCC, durationCDT }) {
 }
 
 function StepResult({ form }) {
+  const router = useRouter();
   const { values } = form.getState();
   const { ccn, cdt, seriousMisconduct, disabledWorker, criteria = {} } = values;
   const idcc = ccn ? ccn.convention.num : 0;
@@ -151,7 +179,11 @@ function StepResult({ form }) {
         durationCC={durationCC}
         durationCDT={durationCDT}
       />
-      <DisclaimerToast durationCC={durationCC} durationCDT={durationCDT} />
+      <DisclaimerToast
+        durationCC={durationCC}
+        durationCDT={durationCDT}
+        ccn={ccn}
+      />
       <SectionTitle>Détails</SectionTitle>
       {idcc > 0 && (
         <p>
@@ -206,6 +238,7 @@ function StepResult({ form }) {
           {situationCC.ref && situationCC.refUrl && getRef(refs)}
         </>
       )}
+      <Feedback url={router.asPath} />
     </>
   );
 }

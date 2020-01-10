@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import { Toast } from "@socialgouv/react-ui";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import data from "@cdt/data...preavis-demission/data.json";
 
 import { SectionTitle, Highlight } from "../../common/stepStyles";
@@ -11,18 +14,32 @@ import {
   recapSituation,
   getRef
 } from "../../common/situations.utils";
+import { Feedback } from "../../../common/Feedback";
 
-function HdnToast() {
+function HdnToast({ ccn }) {
   return (
     <Toast>
       L’existence et la durée du préavis de démission peut être prévue par une
       convention collective, un accord d’entreprise ou à défaut, par un usage
       dans l’entreprise.
+      {ccn && (
+        <>
+          <br />
+          Vous pouvez faire une recherche par mots-clés dans{" "}
+          <Link
+            href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
+            as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.convention.slug}`}
+          >
+            <a>votre convention collective</a>
+          </Link>
+        </>
+      )}
     </Toast>
   );
 }
 
 function StepResult({ form }) {
+  const router = useRouter();
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.convention.num : 0;
@@ -52,16 +69,16 @@ function StepResult({ form }) {
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
-        <HdnToast />
+        <HdnToast ccn={ccn} />
         <SectionTitle>Source</SectionTitle>
         {getRef([refLegal])}
+        <Feedback url={router.asPath} />
       </>
     );
   }
   // CCn Selected
   const [situation] = possibleSituations;
   const { title: ccLabel } = ccn.convention;
-
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
@@ -87,6 +104,7 @@ function StepResult({ form }) {
       })}
       <SectionTitle>Source</SectionTitle>
       {getRef([refLegal, situation])}
+      <Feedback url={router.asPath} />
     </>
   );
 }
