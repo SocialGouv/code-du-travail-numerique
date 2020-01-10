@@ -27,7 +27,7 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
       router.push({
         pathname: "/recherche",
         query: {
-          q: query
+          q: encodeURIComponent(query)
         }
       });
     }
