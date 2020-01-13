@@ -14,38 +14,73 @@ exports[`<StepIndemnite /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c11 {
+.c13 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: auto;
-  min-height: 48px;
-  color: #3e486e;
-  background-color: #fff;
-  border-color: #7994d4;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 0.6rem;
-  box-shadow: none;
-  -webkit-animation: none;
-  animation: none;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: center;
 }
 
-.c12 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem 1.6rem;
-  text-align: left;
+.c15 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: #f66663;
+  pointer-events: none;
+}
+
+.c14 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem 0;
+  padding-right: 5rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  vertical-align: middle;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  cursor: pointer;
+  -webkit-transition: border-color 250ms ease;
+  transition: border-color 250ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c14::-ms-expand {
+  background-color: transparent;
+  border: 0 transparent;
+}
+
+.c14 *::-ms-backdrop,
+.c14 {
+  padding-right: 1.6rem;
+}
+
+.c14:invalid {
+  border-color: #eb5757;
+}
+
+.c14:disabled {
+  background-color: #e4e8ef;
 }
 
 .c0 {
@@ -63,6 +98,19 @@ exports[`<StepIndemnite /> should render 1`] = `
   line-height: 1.25;
   padding-left: 3.2rem;
   text-align: left;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 2em;
+  padding: 0;
 }
 
 .c1 {
@@ -100,6 +148,21 @@ exports[`<StepIndemnite /> should render 1`] = `
 
 .c10 {
   margin: 1.6rem 0;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 100%;
 }
 
 @media (max-width:600px) {
@@ -220,15 +283,146 @@ exports[`<StepIndemnite /> should render 1`] = `
       Article R1234-1 à R1234-4 du code du travail
     </a>
   </p>
-  <div
+  <header
+    class="c0 c1"
+  >
+    <h2
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+    </h2>
+  </header>
+  <p>
+    Selon la convention collective applicable, le montant minimum de l’indemnité de licenciement peut être supérieur au montant de l’indemnité légale.
+  </p>
+  <label
     class="c11"
   >
-    <div
+    <label
       class="c12"
-      role="alert"
+      for="ccn"
     >
-      Un accord d’entreprise, le contrat de travail ou un usage peuvent prévoir un montant plus favorable pour le salarié. Dans ce cas, le montant dû est le montant le plus favorable pour le salarié.
+      Sélectionnez la convention collective pour en savoir plus :
+    </label>
+    <br />
+    <br />
+    <div
+      class="c13"
+    >
+      <select
+        class="c14"
+        id="ccn"
+        name="branche"
+      >
+        <option
+          disabled=""
+          value=""
+        >
+          Sélectionner
+        </option>
+        <option
+          value="0016"
+        >
+          Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+        </option>
+        <option
+          value="0044"
+        >
+          Convention collective nationale des industries chimiques et connexes
+        </option>
+        <option
+          value="1518"
+        >
+          Convention collective nationale de l’Animation
+        </option>
+        <option
+          value="0843"
+        >
+          Convention collective nationale de la Boulangerie-pâtisserie artisanale
+        </option>
+        <option
+          value="1351"
+        >
+          Convention collective nationale de la Prévention et sécurité
+        </option>
+        <option
+          value="1486"
+        >
+          Convention collective nationale des bureaux d’études techniques, des cabinets d’ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987
+        </option>
+        <option
+          value="1534"
+        >
+          Convention collective nationale Viandes industries commerces en gros
+        </option>
+        <option
+          value="0992"
+        >
+          Convention collective nationale Boucherie boucherie-charcuterie triperie
+        </option>
+        <option
+          value="2120"
+        >
+          Convention collective nationale des banques
+        </option>
+        <option
+          value="2344"
+        >
+          Convention collective nationale de la Sidérurgie
+        </option>
+        <option
+          value="0029"
+        >
+          Etablissements privés d’hospitalisation (FEHAP)
+        </option>
+        <option
+          value="1596"
+        >
+          Ouvriers du bâtiment (entreprises jusqu’à 10 salariés)
+        </option>
+        <option
+          value="1597"
+        >
+          Ouvriers du bâtiment (entreprises de plus 10 salariés)
+        </option>
+        <option
+          value="3043"
+        >
+          Propreté : entreprises et services associés
+        </option>
+      </select>
+      <div
+        aria-hidden="true"
+        class="c15"
+      >
+        <svg
+          fill="none"
+          viewBox="0 0 16 16"
+        >
+          <g
+            clip-path="url(#arrow-down_svg__clip0)"
+          >
+            <path
+              d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+              fill="currentColor"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="arrow-down_svg__clip0"
+            >
+              <path
+                d="M0 0h16v16H0z"
+                fill="currentColor"
+              />
+            </clippath>
+          </defs>
+        </svg>
+      </div>
     </div>
-  </div>
+    
+  </label>
 </div>
 `;
