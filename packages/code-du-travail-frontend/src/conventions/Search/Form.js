@@ -142,9 +142,9 @@ const Search = ({
                     <tbody>
                       {resultsConventions.length !== 0 && (
                         <React.Fragment>
-                          <TitleResults>
-                            <StyledTd>Conventions collectives</StyledTd>
-                          </TitleResults>
+                          <tr>
+                            <StyledTh>Conventions collectives</StyledTh>
+                          </tr>
                           {resultsConventions.map(result => (
                             <SearchResult
                               key={result.id}
@@ -159,9 +159,9 @@ const Search = ({
                       )}
                       {resultsEntreprises.length !== 0 && (
                         <React.Fragment>
-                          <TitleResults>
-                            <StyledTd>Entreprises</StyledTd>
-                          </TitleResults>
+                          <tr>
+                            <StyledTh>Entreprises</StyledTh>
+                          </tr>
                           {resultsEntreprises.map(result => (
                             <SearchResult
                               key={result.id}
@@ -193,25 +193,30 @@ const BlockInput = styled(Input)`
 const FixedTable = styled(Table)`
   width: 100%;
   overflow: hidden;
-  border: none;
+  table-layout: fixed;
+  background: ${colors.border};
+  border: ${({ theme }) => box.border(theme.border)};
   border-radius: ${box.borderRadius};
+  & td {
+    border: none;
+  }
 `;
 
-const TitleResults = styled.tr`
+const StyledTh = styled.td`
   font-weight: bold;
-  background: ${colors.bgTertiary};
+  background: ${({ theme }) => theme.bgTertiary};
 `;
-
+const StyledTd = styled.td`
+  background: ${({ theme }) => theme.bgPrimary};
+`;
 const StyledTr = styled.tr`
+  ${StyledTh} {
+    border-bottom: ${({ theme }) => box.border(theme.bgPrimary)};
+  }
   & + & {
     border-top: ${({ theme }) => box.border(theme.border)};
   }
 `;
-
-const StyledTd = styled.td`
-  border: none !important;
-`;
-
 const ResultsContainer = styled.div`
   margin-top: ${spacings.medium};
 `;
