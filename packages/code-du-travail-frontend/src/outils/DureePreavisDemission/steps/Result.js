@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import { Toast } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
@@ -14,12 +13,11 @@ import {
   recapSituation,
   getRef
 } from "../../common/situations.utils";
-import { Feedback } from "../../../common/Feedback";
 
 function HdnToast({ ccn }) {
   return (
     <Toast>
-      L’existence et la durée du préavis de démission peut être prévue par une
+      L’existence ou la durée du préavis de démission peut être prévue par une
       convention collective, un accord d’entreprise ou à défaut, par un usage
       dans l’entreprise.
       {ccn && (
@@ -39,7 +37,6 @@ function HdnToast({ ccn }) {
 }
 
 function StepResult({ form }) {
-  const router = useRouter();
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.convention.num : 0;
@@ -56,7 +53,7 @@ function StepResult({ form }) {
   // No ccn selected or UunhandledCC
   if (idcc === 0 || possibleSituations.length === 0) {
     let result =
-      "Aucun résultat : la convention collective n'a pas encore été traitée par nos services";
+      "Aucun résultat : la convention collective n'a pas encore été traitée par nos services.";
     if (idcc === 0) {
       result =
         "Aucun résultat : la convention collective n'a pas été renseignée.";
@@ -72,7 +69,6 @@ function StepResult({ form }) {
         <HdnToast ccn={ccn} />
         <SectionTitle>Source</SectionTitle>
         {getRef([refLegal])}
-        <Feedback url={router.asPath} />
       </>
     );
   }
@@ -104,7 +100,6 @@ function StepResult({ form }) {
       })}
       <SectionTitle>Source</SectionTitle>
       {getRef([refLegal, situation])}
-      <Feedback url={router.asPath} />
     </>
   );
 }

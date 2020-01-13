@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
@@ -14,10 +13,8 @@ import {
   getSituationsFor
 } from "../../common/situations.utils";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
-import { Feedback } from "../../../common/Feedback";
 
 function StepIndemnite({ form }) {
-  const router = useRouter();
   const state = form.getState();
   const {
     contractType,
@@ -114,7 +111,6 @@ function StepIndemnite({ form }) {
           </Link>
         )}
       </p>
-      <Feedback url={router.asPath} />
     </>
   );
 }

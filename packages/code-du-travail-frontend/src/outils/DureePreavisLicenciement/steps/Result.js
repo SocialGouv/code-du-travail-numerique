@@ -12,8 +12,6 @@ import {
   recapSituation,
   getRef
 } from "../../common/situations.utils";
-import { Feedback } from "../../../common/Feedback";
-import { useRouter } from "next/router";
 
 const { situations: allSituations } = data;
 
@@ -45,7 +43,7 @@ function DisclaimerToast({ durationCC, durationCDT, ccn }) {
           Une durée de préavis de licenciement ou une condition d’ancienneté
           plus favorable au salarié peut être prévue par une convention
           collective, un accord de branche, un accord d’entreprise ou le contrat
-          de travail ou les usages
+          de travail ou les usages.
           {ccn && (
             <>
               <br />
@@ -123,14 +121,13 @@ function DurationResult({ duration, durationCC, durationCDT }) {
         licenciement est estimée à&nbsp;:
       </p>
       <p>
-        <Highlight> {duration}</Highlight>
+        <Highlight>{duration}</Highlight>
       </p>
     </>
   );
 }
 
 function StepResult({ form }) {
-  const router = useRouter();
   const { values } = form.getState();
   const { ccn, cdt, seriousMisconduct, disabledWorker, criteria = {} } = values;
   const idcc = ccn ? ccn.convention.num : 0;
@@ -198,7 +195,7 @@ function StepResult({ form }) {
           {parseInt(durationCDT, 10) > 0 ? (
             <strong>{situationCDT.answer}</strong>
           ) : (
-            "Aucun préavis"
+            "Aucun préavis."
           )}
         </li>
         <li>
@@ -207,7 +204,7 @@ function StepResult({ form }) {
             parseInt(durationCC, 10) > 0 ? (
               <strong>{situationCC.answer}</strong>
             ) : (
-              "Aucun préavis"
+              "Aucun préavis."
             )
           ) : idcc === 0 ? (
             "La convention collective n'a pas été renseignée."
@@ -238,7 +235,6 @@ function StepResult({ form }) {
           {situationCC.ref && situationCC.refUrl && getRef(refs)}
         </>
       )}
-      <Feedback url={router.asPath} />
     </>
   );
 }
