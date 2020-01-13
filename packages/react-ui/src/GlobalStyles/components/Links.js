@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { animations } from "../../theme";
+import { animations, breakpoints } from "../../theme";
 
 export default createGlobalStyle`
   a {
@@ -38,6 +38,18 @@ export default createGlobalStyle`
     @media print {
       margin-left: 0;
       content: " (" attr(href) ") ";
+    }
+  }
+  :target::before {
+    display: block;
+    height: 11rem; /* Fixed header's height */
+    margin-top: -11rem; /* Fixed header's negative height */
+    visibility: hidden;
+    content: "";
+    pointer-events: none;
+    @media (max-width: ${breakpoints.mobile}) {
+      height: 6rem;
+      margin-top: -6rem;
     }
   }
 `;

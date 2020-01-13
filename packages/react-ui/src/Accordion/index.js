@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {
   Accordion as RootAccordion,
   AccordionItem,
@@ -15,21 +15,26 @@ import { fadeIn } from "../keyframes";
 
 export const Accordion = ({ items, ...props }) => (
   <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
-    {items.map(({ body, id, title, as }, index) => (
-      <StyledAccordionItem uuid={id} key={index}>
-        <AccordionItemHeading>
-          <StyledAccordionItemButton>
-            <StyledVerticalArrow />
-            {typeof title === "string" ? (
-              <StyledHeading as={as}>{title}</StyledHeading>
-            ) : (
-              <>{title}</>
-            )}
-          </StyledAccordionItemButton>
-        </AccordionItemHeading>
-        <StyledAccordionItemPanel>{body}</StyledAccordionItemPanel>
-      </StyledAccordionItem>
-    ))}
+    {items.map(({ body, id, title, as }, index) => {
+      return (
+        <div id={id} key={`${id}-${index}`}>
+          {typeof id !== props.preExpanded && <PushBelowHeader />}
+          <StyledAccordionItem uuid={id} index={index}>
+            <AccordionItemHeading>
+              <StyledAccordionItemButton>
+                <StyledVerticalArrow />
+                {typeof title === "string" ? (
+                  <StyledHeading as={as}>{title}</StyledHeading>
+                ) : (
+                  <>{title}</>
+                )}
+              </StyledAccordionItemButton>
+            </AccordionItemHeading>
+            <StyledAccordionItemPanel>{body}</StyledAccordionItemPanel>
+          </StyledAccordionItem>
+        </div>
+      );
+    })}
   </RootAccordion>
 );
 
@@ -49,8 +54,22 @@ Accordion.defaultProps = {
 };
 
 const StyledAccordionItem = styled(AccordionItem)`
-  & + & {
-    border-top: ${({ theme }) => box.border(theme.border)};
+  ${({ index, theme }) =>
+    index > 0 &&
+    css`
+      border-top: ${box.border(theme.border)};
+    `}
+`;
+
+// This prevents preOpened item to be hidden behind header
+const PushBelowHeader = styled.div`
+  margin-top: -11rem; /* Fixed header's negative height */
+  padding-top: 11rem; /* Fixed header's height */
+  visibility: hidden;
+  pointer-events: none;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-top: -6rem;
+    padding-top: 6rem;
   }
 `;
 

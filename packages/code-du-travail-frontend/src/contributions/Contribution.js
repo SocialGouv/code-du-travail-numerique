@@ -145,7 +145,7 @@ const Contribution = ({ answers, content }) => {
             <StyledTitle
               shift={spacings.xmedium}
               variant="primary"
-              marginTop={Boolean(answers.generic)}
+              hasMarginTop={Boolean(answers.generic)}
               id="customisation"
             >
               Que dit votre convention collective&nbsp;?
@@ -238,7 +238,7 @@ const StyledDiv = styled.div`
 `;
 
 const StyledTitle = styled(Title)`
-  margin-top: ${({ marginTop }) => (marginTop ? spacings.large : "0")};
+  margin-top: ${({ hasMarginTop }) => (hasMarginTop ? spacings.large : "0")};
 `;
 
 const ButtonWrapper = styled.div`
