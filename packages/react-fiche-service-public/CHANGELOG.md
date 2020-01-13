@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.0...v4.1.0-alpha.1) (2020-01-13)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2109](https://github.com/SocialGouv/code-du-travail-numerique/issues/2109)) ([dc5638b](https://github.com/SocialGouv/code-du-travail-numerique/commit/dc5638b5f4a9fb8556fbcf878e9d1ee4ca2e826f))
+* **react-fiche-service-public:** react and prop-types are real devDependencies ([#2181](https://github.com/SocialGouv/code-du-travail-numerique/issues/2181)) ([f752a1e](https://github.com/SocialGouv/code-du-travail-numerique/commit/f752a1e98ce63bfb096d852c8090c8de63aad406))
+
+
+### Features
+
+* **frontend:** implementing UI ([#2218](https://github.com/SocialGouv/code-du-travail-numerique/issues/2218)) ([1606408](https://github.com/SocialGouv/code-du-travail-numerique/commit/1606408b989046fd33c16f9cee51f785a1faa228))
+* **frontend:** keep implementing new ui ([#2209](https://github.com/SocialGouv/code-du-travail-numerique/issues/2209)) ([b5e697d](https://github.com/SocialGouv/code-du-travail-numerique/commit/b5e697d1d884ecba2a15f0494decd56733b8b2e1))
+
+
+
+
+
 # [4.1.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0...v4.1.0-alpha.0) (2020-01-08)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public

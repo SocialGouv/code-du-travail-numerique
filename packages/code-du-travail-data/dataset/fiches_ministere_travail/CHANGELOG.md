@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.0...v4.1.0-alpha.1) (2020-01-13)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2109](https://github.com/SocialGouv/code-du-travail-numerique/issues/2109)) ([dc5638b](https://github.com/SocialGouv/code-du-travail-numerique/commit/dc5638b5f4a9fb8556fbcf878e9d1ee4ca2e826f))
+
+
+### Features
+
+* **data:** add fiche prime-pouvoir-achat ([#2207](https://github.com/SocialGouv/code-du-travail-numerique/issues/2207)) ([148c390](https://github.com/SocialGouv/code-du-travail-numerique/commit/148c390734f5b9bbbc61c2ed6fd1f151b42b5a05))
+
+
+### Reverts
+
+* Revert "feat(CI): automate fiches-MT fetch (#2171)" (#2206) ([63366b2](https://github.com/SocialGouv/code-du-travail-numerique/commit/63366b2f44ac3068a75686631545e9c3d735c4dc)), closes [#2171](https://github.com/SocialGouv/code-du-travail-numerique/issues/2171) [#2206](https://github.com/SocialGouv/code-du-travail-numerique/issues/2206)
+
+
+
+
+
 # [4.1.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0...v4.1.0-alpha.0) (2020-01-08)
 
 

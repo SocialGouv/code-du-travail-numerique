@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.0...v4.1.0-alpha.1) (2020-01-13)
+
+
+### Features
+
+* **wizzard:** allow to skip steps ([#2191](https://github.com/SocialGouv/code-du-travail-numerique/issues/2191)) ([2e574e0](https://github.com/SocialGouv/code-du-travail-numerique/commit/2e574e0e1b7b1c437253e99b7c1fd6ab3693a8cd))
+
+
+
+
+
 # [4.1.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0...v4.1.0-alpha.0) (2020-01-08)
 
 **Note:** Version bump only for package @cdt/data...preavis-licenciement

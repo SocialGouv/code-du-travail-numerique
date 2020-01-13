@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.0...v4.1.0-alpha.1) (2020-01-13)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2109](https://github.com/SocialGouv/code-du-travail-numerique/issues/2109)) ([dc5638b](https://github.com/SocialGouv/code-du-travail-numerique/commit/dc5638b5f4a9fb8556fbcf878e9d1ee4ca2e826f))
+
+
+
+
+
 # [4.1.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0...v4.1.0-alpha.0) (2020-01-08)
 
 **Note:** Version bump only for package @cdt/nlp

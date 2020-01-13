@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.0...v4.1.0-alpha.1) (2020-01-13)
+
+
+### Bug Fixes
+
+* **data:** udpate courrier docx ([#2204](https://github.com/SocialGouv/code-du-travail-numerique/issues/2204)) ([ebfcc6e](https://github.com/SocialGouv/code-du-travail-numerique/commit/ebfcc6eb3c9f799c2da37d7ac117a49f667cd77b))
+
+
+
+
+
 # [4.1.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.0.0...v4.1.0-alpha.0) (2020-01-08)
 
 **Note:** Version bump only for package @cdt/data...courrier-type

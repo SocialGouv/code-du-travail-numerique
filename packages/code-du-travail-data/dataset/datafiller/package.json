@@ -1,10 +1,10 @@
 {
   "name": "@cdt/data...datafiller",
-  "version": "4.1.0-alpha.0",
+  "version": "4.1.0-alpha.1",
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@cdt/sources": "^4.1.0-alpha.0",
+    "@cdt/sources": "^4.1.0-alpha.1",
     "@socialgouv/kali-data": "^1.2.103",
     "debug": "^4.1.1",
     "node-fetch": "^2.6.0",
