@@ -20,6 +20,7 @@ const LegalPage = ({ pageUrl, ogImage }) => {
 
   accordionItems.push({
     title: "Modalités d’utilisation",
+    id: "modalite",
     as: "h2",
     body: (
       <>
@@ -61,6 +62,7 @@ const LegalPage = ({ pageUrl, ogImage }) => {
           <br />
           75015 PARIS
         </Address>
+        <Anchor id="cookies" />
         <Heading>Utilisation de témoins de connexion (« cookies »)</Heading>
         <p>
           Nous collectons également des données par l’intermédiaire de
@@ -106,6 +108,7 @@ const LegalPage = ({ pageUrl, ogImage }) => {
 
   accordionItems.push({
     title: "Accessibilité",
+    id: "accessibilite",
     as: "h2",
     body: (
       <>
@@ -139,6 +142,7 @@ const LegalPage = ({ pageUrl, ogImage }) => {
 
   accordionItems.push({
     title: "Sécurité",
+    id: "securite",
     as: "h2",
     body: (
       <>
@@ -209,7 +213,10 @@ const LegalPage = ({ pageUrl, ogImage }) => {
                 .
               </p>
             </Alert>
-            <Accordion items={accordionItems} />
+            <Accordion
+              items={accordionItems}
+              preExpanded={["modalite", "securite", "accessibilite"]}
+            />
           </Wrapper>
         </Container>
       </Section>
@@ -219,13 +226,21 @@ const LegalPage = ({ pageUrl, ogImage }) => {
 
 export default LegalPage;
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const Address = styled.address`
   display: block;
   margin: ${spacings.medium} 0;
 `;
-
+const Anchor = styled.a`
+  position: relative;
+  top: -9rem;
+  display: block;
+  visibility: hidden;
+  @media (max-width: ${breakpoints.mobile}) {
+    height: -5rem;
+  }
+`;
 const StyledList = styled.ul`
   margin: ${spacings.medium} 0;
   padding-left: ${spacings.medium};
