@@ -15,9 +15,9 @@ const Article = ({ subtitle, title, source, date, children }) => {
     <Container>
       <Wrapper variant="main" data-main-content>
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
-        <PageTitle leftStripped shift={theme.spacings.larger}>
+        <StyledPageTitle leftStripped shift={theme.spacings.larger}>
           {title}
-        </PageTitle>
+        </StyledPageTitle>
         <Meta>
           {source && source.url && (
             <Source>
@@ -70,6 +70,10 @@ const Meta = styled.div`
 
 const Source = styled.span`
   margin-right: ${spacings.small};
+`;
+
+const StyledPageTitle = styled(PageTitle)`
+  margin-bottom: 0;
 `;
 
 const Content = styled.div`

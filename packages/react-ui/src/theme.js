@@ -75,6 +75,7 @@ export const fonts = {
     headings: {
       small: "1.8rem",
       xmedium: "2.2rem",
+      mobileMedium: "2.6rem",
       medium: "2.8rem",
       large: "3.2rem"
     },

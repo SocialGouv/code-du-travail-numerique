@@ -88,7 +88,8 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 }
 
 .c0 {
-  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  margin-left: auto;
   text-align: left;
 }
 
@@ -111,6 +112,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 @media (max-width:600px) {
   .c9 {
     padding: 1rem 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    margin-bottom: 1rem;
+    margin-left: auto;
   }
 }
 

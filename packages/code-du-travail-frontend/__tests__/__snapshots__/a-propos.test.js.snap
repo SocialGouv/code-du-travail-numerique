@@ -225,20 +225,20 @@ exports[`<About /> should render 1`] = `
 }
 
 .c20 {
-  margin: 0 auto 1rem;
   margin-bottom: 4rem;
+  margin-left: auto;
   text-align: center;
 }
 
 .c25 {
-  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
   margin-left: -4rem;
   text-align: left;
 }
 
 .c34 {
-  margin: 0 auto 1rem;
   margin-bottom: 1.6rem;
+  margin-left: auto;
   text-align: center;
 }
 
@@ -742,11 +742,13 @@ exports[`<About /> should render 1`] = `
 @media (max-width:600px) {
   .c20 {
     margin-bottom: 2.4rem;
+    margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
   .c25 {
+    margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
@@ -754,6 +756,7 @@ exports[`<About /> should render 1`] = `
 @media (max-width:600px) {
   .c34 {
     margin-bottom: 1rem;
+    margin-left: auto;
   }
 }
 
@@ -765,7 +768,7 @@ exports[`<About /> should render 1`] = `
 
 @media (max-width:600px) {
   .c21 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 }
 

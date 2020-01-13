@@ -12,6 +12,12 @@ export default {
 export const base = () => (
   <>
     <Section>
+      <Title>This is a basic title (h2)</Title>
+    </Section>
+    <Section>
+      <Title variant="primary">This is a basic primary title (h2)</Title>
+    </Section>
+    <Section>
       <Title subtitle="With a subtitle which can be very very long but this is quite an excuse I made up. Because I do loooove to talk. Yup.">
         This is a title (h2)
       </Title>

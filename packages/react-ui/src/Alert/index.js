@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { box, spacings } from "../theme";
 
 export const Alert = styled.div`
@@ -7,14 +7,9 @@ export const Alert = styled.div`
   padding: ${spacings.small} ${spacings.medium};
   color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.bgSecondary};
-  border: 1px solid transparent;
-  ${props => {
-    if (props.variant === "primary") {
-      return css`
-        border-color: ${({ theme }) => theme.primary};
-      `;
-    }
-  }}
+  border: 1px solid
+    ${({ theme, variant }) =>
+      variant === "primary" ? theme.primary : theme.bgSecondary};
   border-radius: ${box.borderRadius};
   & > *:first-child {
     margin-top: 0;

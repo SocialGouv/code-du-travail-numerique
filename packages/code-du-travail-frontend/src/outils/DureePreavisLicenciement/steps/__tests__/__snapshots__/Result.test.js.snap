@@ -1,20 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render show result with collective or compagny agreement disclaimer 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c5 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -36,7 +23,7 @@ exports[`<StepResult /> should render show result with collective or compagny ag
   animation: none;
 }
 
-.c6 {
+.c3 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -49,28 +36,15 @@ exports[`<StepResult /> should render show result with collective or compagny ag
 }
 
 .c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c1 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-}
-
-.c4 {
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
@@ -78,68 +52,42 @@ exports[`<StepResult /> should render show result with collective or compagny ag
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Durée du préavis
-    </h2>
-  </header>
+    Durée du préavis
+  </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
   </p>
   <p>
     <strong
-      class="c4"
+      class="c1"
     >
       1 mois
     </strong>
   </p>
   <div
-    class="c5"
+    class="c2"
   >
     <div
-      class="c6"
+      class="c3"
       role="alert"
     >
       Une durée de préavis de licenciement ou une condition d'ancienneté plus favorable au salarié peut être prévue dans un accord d'entreprise, le contrat de travail ou les usages.
     </div>
   </div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Détails
-    </h2>
-  </header>
+    Détails
+  </h2>
   <p>
     Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
   </p>
@@ -206,18 +154,11 @@ exports[`<StepResult /> should render show result with collective or compagny ag
       </strong>
     </li>
   </ul>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Source
-    </h2>
-  </header>
+    Source
+  </h2>
   <p>
     <a
       href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
@@ -241,20 +182,7 @@ exports[`<StepResult /> should render show result with collective or compagny ag
 `;
 
 exports[`<StepResult /> should render show result with company agreement disclaimer 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c5 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -276,7 +204,7 @@ exports[`<StepResult /> should render show result with company agreement disclai
   animation: none;
 }
 
-.c6 {
+.c3 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -289,28 +217,15 @@ exports[`<StepResult /> should render show result with company agreement disclai
 }
 
 .c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c1 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-}
-
-.c4 {
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
@@ -318,68 +233,42 @@ exports[`<StepResult /> should render show result with company agreement disclai
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Durée du préavis
-    </h2>
-  </header>
+    Durée du préavis
+  </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
   </p>
   <p>
     <strong
-      class="c4"
+      class="c1"
     >
       2 mois
     </strong>
   </p>
   <div
-    class="c5"
+    class="c2"
   >
     <div
-      class="c6"
+      class="c3"
       role="alert"
     >
       Une durée de préavis de licenciement ou une condition d'ancienneté plus favorable au salarié peut être prévue dans un accord d'entreprise, le contrat de travail ou les usages.
     </div>
   </div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Détails
-    </h2>
-  </header>
+    Détails
+  </h2>
   <p>
     Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
   </p>
@@ -446,18 +335,11 @@ exports[`<StepResult /> should render show result with company agreement disclai
       </strong>
     </li>
   </ul>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Source
-    </h2>
-  </header>
+    Source
+  </h2>
   <p>
     <a
       href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
@@ -481,20 +363,7 @@ exports[`<StepResult /> should render show result with company agreement disclai
 `;
 
 exports[`<StepResult /> should render with CDT no CC 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c5 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -516,7 +385,7 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
   animation: none;
 }
 
-.c6 {
+.c3 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -529,28 +398,15 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
 }
 
 .c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c1 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-}
-
-.c4 {
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
@@ -558,68 +414,42 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Durée du préavis
-    </h2>
-  </header>
+    Durée du préavis
+  </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
   </p>
   <p>
     <strong
-      class="c4"
+      class="c1"
     >
       2 mois
     </strong>
   </p>
   <div
-    class="c5"
+    class="c2"
   >
     <div
-      class="c6"
+      class="c3"
       role="alert"
     >
       Une durée de préavis de licenciement ou une condition d'ancienneté plus favorable au salarié peut être prévue dans un accord d'entreprise, le contrat de travail ou les usages.
     </div>
   </div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Détails
-    </h2>
-  </header>
+    Détails
+  </h2>
   <p>
     Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
   </p>
@@ -686,18 +516,11 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
       </strong>
     </li>
   </ul>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Source
-    </h2>
-  </header>
+    Source
+  </h2>
   <p>
     <a
       href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"

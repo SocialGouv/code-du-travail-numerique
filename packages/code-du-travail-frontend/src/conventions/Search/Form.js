@@ -5,7 +5,7 @@ import Link from "next/link";
 import Spinner from "react-svg-spinner";
 
 import slugify from "@cdt/data/slugify";
-import { Container, Input, Table, Heading, theme } from "@socialgouv/react-ui";
+import { Input, Table, Heading, theme } from "@socialgouv/react-ui";
 import { formatIdcc } from "@cdt/data/lib";
 
 import SearchCC from "./SearchCC";
@@ -56,8 +56,8 @@ const TagSiret = ({ siret }) => (
 
 const SearchResult = ({ label, siret, conventions, selectConvention }) => {
   return (
-    <tr>
-      <td>
+    <StyledTr>
+      <StyledTd>
         <Flex>
           <ResultLabel>{label}</ResultLabel>
           {siret && <TagSiret siret={siret} />}
@@ -78,8 +78,8 @@ const SearchResult = ({ label, siret, conventions, selectConvention }) => {
             <div>Aucune convention collective connue pour cette entreprise</div>
           )}
         </ConventionsContainer>
-      </td>
-    </tr>
+      </StyledTd>
+    </StyledTr>
   );
 };
 
@@ -88,8 +88,6 @@ const SearchResult = ({ label, siret, conventions, selectConvention }) => {
 const Search = ({
   title = "Recherche de convention collective",
   resetOnClick = true,
-  style,
-  className,
   onSelectConvention
 }) => {
   const [query, setQuery] = useState("");
@@ -107,7 +105,7 @@ const Search = ({
   };
 
   return (
-    <Container style={style} className={className}>
+    <>
       {title && <Heading>{title}</Heading>}
       <p>
         Renseignez le nom de votre entreprise, son SIRET ou le nom de votre
@@ -145,7 +143,7 @@ const Search = ({
                       {resultsConventions.length !== 0 && (
                         <React.Fragment>
                           <TitleResults>
-                            <td>Conventions collectives</td>
+                            <StyledTd>Conventions collectives</StyledTd>
                           </TitleResults>
                           {resultsConventions.map(result => (
                             <SearchResult
@@ -162,7 +160,7 @@ const Search = ({
                       {resultsEntreprises.length !== 0 && (
                         <React.Fragment>
                           <TitleResults>
-                            <td>Entreprises</td>
+                            <StyledTd>Entreprises</StyledTd>
                           </TitleResults>
                           {resultsEntreprises.map(result => (
                             <SearchResult
@@ -184,22 +182,34 @@ const Search = ({
           );
         }}
       />
-    </Container>
+    </>
   );
 };
 
-const { colors, fonts, spacings, breakpoints } = theme;
+const { box, colors, fonts, spacings, breakpoints } = theme;
 const BlockInput = styled(Input)`
   display: block;
 `;
 const FixedTable = styled(Table)`
   width: 100%;
-  table-layout: fixed;
+  overflow: hidden;
+  border: none;
+  border-radius: ${box.borderRadius};
 `;
 
 const TitleResults = styled.tr`
   font-weight: bold;
   background: ${colors.bgTertiary};
+`;
+
+const StyledTr = styled.tr`
+  & + & {
+    border-top: ${({ theme }) => box.border(theme.border)};
+  }
+`;
+
+const StyledTd = styled.td`
+  border: none !important;
 `;
 
 const ResultsContainer = styled.div`

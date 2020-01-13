@@ -73,6 +73,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   color: #3e486e;
   border-radius: 0.6rem;
   background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
   position: absolute;
   top: 0;
   bottom: 0;

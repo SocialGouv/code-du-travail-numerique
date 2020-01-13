@@ -22,7 +22,9 @@ export const Wrapper = styled.div`
     }
     if (props.variant === "dark") {
       return css`
-        background-color: ${props.theme.bgSecondary};
+        background-color: ${({ theme }) => theme.bgSecondary};
+        border: ${({ theme }) =>
+          box.border(theme.noColors ? theme.border : theme.bgSecondary)};
       `;
     }
     if (props.variant === "main") {

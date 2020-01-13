@@ -157,6 +157,7 @@ exports[`<SearchResults/> should render results 1`] = `
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.625;
+  vertical-align: baseline;
   text-align: left;
   background: none;
   border: none;
@@ -421,7 +422,8 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 .c1 {
-  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  margin-left: auto;
   text-align: left;
 }
 
@@ -620,6 +622,13 @@ exports[`<SearchResults/> should render results 1`] = `
   .c30 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    margin-bottom: 1rem;
+    margin-left: auto;
   }
 }
 

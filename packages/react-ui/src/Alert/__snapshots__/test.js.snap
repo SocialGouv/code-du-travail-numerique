@@ -6,8 +6,7 @@ exports[`<Alert /> it should render a primary alert 1`] = `
   padding: 1rem 2rem;
   color: #3e486e;
   background-color: #f2f5fa;
-  border: 1px solid transparent;
-  border-color: #f66663;
+  border: 1px solid #f66663;
   border-radius: 0.6rem;
 }
 
@@ -36,7 +35,7 @@ exports[`<Alert /> it should render a secondary alert 1`] = `
   padding: 1rem 2rem;
   color: #3e486e;
   background-color: #f2f5fa;
-  border: 1px solid transparent;
+  border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
 }
 
@@ -65,7 +64,7 @@ exports[`<Alert /> should render 1`] = `
   padding: 1rem 2rem;
   color: #3e486e;
   background-color: #f2f5fa;
-  border: 1px solid transparent;
+  border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
 }
 

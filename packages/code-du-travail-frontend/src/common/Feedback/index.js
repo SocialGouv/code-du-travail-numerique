@@ -32,7 +32,11 @@ function Feedback({
     <Section>
       <Container>
         <StyledWrapper variant="light">
-          <StyledHeading stripped shift={theme.spacings.xmedium}>
+          <StyledHeading
+            variant="primary"
+            stripped
+            shift={theme.spacings.xmedium}
+          >
             Avez-vous trouvé la réponse à votre question&nbsp;?
           </StyledHeading>
           {isSatisfied === null && (
@@ -56,8 +60,8 @@ function Feedback({
           )}
           {isSatisfied === false && (
             <FullWidthParagraph>
-              Pour obtenir une réponse à votre question de droit du travail,
-              nous vous invitons à joindre les{" "}
+              Merci pour votre réponse. Pour obtenir une réponse à votre
+              question de droit du travail, nous vous invitons à joindre les{" "}
               <ServiceRenseignementModal>
                 {openModal => (
                   <Button variant="link" onClick={openModal}>

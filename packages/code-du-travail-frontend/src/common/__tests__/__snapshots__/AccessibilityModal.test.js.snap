@@ -239,8 +239,8 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
 }
 
 .c3 {
-  margin: 0 auto 1rem;
   margin-bottom: 1.6rem;
+  margin-left: auto;
   text-align: center;
 }
 
@@ -311,6 +311,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
 @media (max-width:600px) {
   .c3 {
     margin-bottom: 1rem;
+    margin-left: auto;
   }
 }
 

@@ -2,16 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import {
-  Alert,
+  Badge,
   Button,
   Heading,
+  icons,
+  IconStripe,
+  Section,
   Subtitle,
   theme,
-  Title
+  Title,
+  Toast,
+  Wrapper
 } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import slugify from "@cdt/data/slugify";
-import { formatIdcc } from "@cdt/data/lib";
 
 import SearchConvention from "../../src/conventions/Search/Form";
 import rehypeToReact from "./rehypeToReact";
@@ -87,94 +91,117 @@ const References = ({ references = [] }) => {
   );
 };
 
-// search CC + display filtered answer
-const AnswersConventions = ({ answers }) => {
-  const [ccInfo, setCcInfo] = useLocalStorage("convention", {});
-  const { convention = {} } = ccInfo;
-  const answer =
-    convention && answers.find(a => parseInt(a.idcc, 10) === convention.num);
+const Contribution = ({ answers, content }) => {
+  const hasConventionAnswers =
+    answers.conventions && answers.conventions.length > 0;
+  const [{ convention = {} }, setCcInfo] = useLocalStorage("convention", {});
+  const conventionAnswer =
+    answers.conventions &&
+    answers.conventions.find(
+      answer => parseInt(answer.idcc, 10) === convention.num
+    );
   // ensure we have valid data in ccInfo
-  const isCcDetected =
-    ccInfo && convention.id && convention.num && convention.title;
+  const isCcDetected = convention.id && convention.num && convention.title;
   return (
-    <div>
-      {!isCcDetected && (
-        <SearchConvention
-          title=""
-          onSelectConvention={({ convention, label }) =>
-            setCcInfo({ convention, label })
-          }
-        />
-      )}
-      {isCcDetected && (
+    <>
+      {hasConventionAnswers && (
         <>
-          <Heading as="h4">
-            <span role="img" aria-label="Icone convention collective">
-              📖
-            </span>{" "}
-            {convention.url ? (
-              <a
-                href={convention.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {convention.title} (IDCC {formatIdcc(convention.num)})
-              </a>
-            ) : (
-              <>
-                {convention.title} (IDCC {formatIdcc(convention.num)})
-              </>
-            )}
-          </Heading>
-          {(answer && (
-            <>
-              <MdxWrapper>
-                <Mdx markdown={answer.markdown} components={rehypeToReact} />
-              </MdxWrapper>
-
-              <References references={answer.references} />
-            </>
-          )) || (
-            <>
-              <NoConventionAlert variant="secondary">
-                Désolé nous n&apos;avons pas de réponse pour cette convention
-                collective
-              </NoConventionAlert>
-            </>
-          )}
-          <br />
-          <Button variant="primary" onClick={() => setCcInfo({})}>
-            Changer de convention collective
-          </Button>
+          <Badge />
+          <CustomWrapper variant="dark">
+            <IconStripe icon={icons.Custom}>
+              <CustomTitle>Page personnalisable</CustomTitle>
+              {isCcDetected ? (
+                <>
+                  Cette page a été personnalisée avec l’ajout des{" "}
+                  <a href="#customisation">
+                    informations de la convention collective :{" "}
+                    {convention.shortTitle}
+                  </a>
+                </>
+              ) : (
+                <>
+                  Le contenu de cette page peut être personnalisé en fonction de
+                  votre situation.{" "}
+                  <a href="#customisation">Voir en bas de page</a> pour
+                  renseigner votre covention collective.
+                </>
+              )}
+            </IconStripe>
+          </CustomWrapper>
         </>
       )}
-    </div>
+      {answers.generic && (
+        <section>
+          <Title leftStripped>Que dit le code du travail&nbsp;?</Title>
+          <Mdx
+            markdown={answers.generic.markdown}
+            components={rehypeToReact(content)}
+          />
+        </section>
+      )}
+      {hasConventionAnswers && (
+        <StyledSection>
+          <Wrapper variant="dark">
+            <StyledTitle
+              shift={spacings.xmedium}
+              variant="primary"
+              marginTop={Boolean(answers.generic)}
+              id="customisation"
+            >
+              Que dit votre convention collective&nbsp;?
+            </StyledTitle>
+            {!isCcDetected && (
+              <SearchConvention
+                title=""
+                onSelectConvention={({ convention, label }) =>
+                  setCcInfo({ convention, label })
+                }
+              />
+            )}
+            {isCcDetected && (
+              <>
+                <StyledDiv>
+                  Ce contenu est personnalisé avec les informations de la
+                  convention collective:
+                </StyledDiv>
+                <Toast variant="primary" onRemove={() => setCcInfo({})}>
+                  {convention.shortTitle}
+                </Toast>
+                {(conventionAnswer && (
+                  <>
+                    <MdxWrapper>
+                      <Mdx
+                        markdown={conventionAnswer.markdown}
+                        components={rehypeToReact}
+                      />
+                    </MdxWrapper>
+
+                    <References references={conventionAnswer.references} />
+                  </>
+                )) || (
+                  <>
+                    <Section>
+                      Désolé, nous n’avons pas de réponse pour cette convention
+                      collective.
+                    </Section>
+                  </>
+                )}
+                <ButtonWrapper>
+                  <Button variant="primary" onClick={() => setCcInfo({})}>
+                    Changer de convention collective
+                    <StyledCloseIcon />
+                  </Button>
+                </ButtonWrapper>
+              </>
+            )}
+          </Wrapper>
+        </StyledSection>
+      )}
+    </>
   );
 };
 
-const Contribution = ({ answers, content }) => (
-  <>
-    {answers.generic && (
-      <section>
-        <Title leftStripped>Que dit le code du travail ?</Title>
-        <Mdx
-          markdown={answers.generic.markdown}
-          components={rehypeToReact(content)}
-        />
-      </section>
-    )}
-    {answers.conventions && answers.conventions.length && (
-      <section>
-        <StyledTitle marginTop={Boolean(answers.generic)}>
-          Que dit votre convention collective ?
-        </StyledTitle>
-        <AnswersConventions answers={answers.conventions} />
-      </section>
-    )}
-  </>
-);
-
-const { spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
 const LineRef = styled.li`
   margin: 5px 0;
@@ -185,12 +212,43 @@ const MdxWrapper = styled.div`
   margin-bottom: ${spacings.medium};
 `;
 
+const StyledSection = styled(Section)`
+  padding-bottom: 0;
+`;
+
+const CustomWrapper = styled(Wrapper)`
+  margin-bottom: ${spacings.large};
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-bottom: ${spacings.medium};
+  }
+`;
+
+const CustomTitle = styled.div`
+  color: ${({ theme }) => theme.primary};
+  font-weight: 600;
+  font-size: ${fonts.sizes.headings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
+`;
+
+const StyledDiv = styled.div`
+  margin-bottom: ${spacings.tiny};
+  color: ${({ theme }) => theme.primary};
+`;
+
 const StyledTitle = styled(Title)`
   margin-top: ${({ marginTop }) => (marginTop ? spacings.large : "0")};
 `;
 
-const NoConventionAlert = styled(Alert)`
-  margin: 40px 0;
+const ButtonWrapper = styled.div`
+  margin-bottom: ${spacings.base};
+  text-align: center;
+`;
+
+const StyledCloseIcon = styled(icons.Close)`
+  width: 2.8rem;
+  margin-left: ${spacings.base};
 `;
 
 export default Contribution;

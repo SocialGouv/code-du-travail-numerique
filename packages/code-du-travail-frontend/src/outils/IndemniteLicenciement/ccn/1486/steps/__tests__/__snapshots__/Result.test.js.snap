@@ -1,20 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c17 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -36,7 +23,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   animation: none;
 }
 
-.c19 {
+.c16 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -49,39 +36,26 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 }
 
 .c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c1 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-}
-
-.c4 {
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: nowrap;
 }
 
-.c11 {
+.c8 {
   margin-bottom: 1.6rem;
 }
 
-.c7 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -92,46 +66,46 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   align-items: stretch;
 }
 
-.c16 {
+.c13 {
   width: calc(50% * 1);
   background-color: #7994d4;
   border-radius: 0.6rem;
 }
 
-.c8 {
+.c5 {
   width: calc(50% * 0.9100320789890648);
   background-color: #7994d4;
   border-radius: 0.6rem;
 }
 
-.c9 {
+.c6 {
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
 }
 
-.c10 {
+.c7 {
   margin-top: 2rem;
 }
 
-.c12 {
+.c9 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c13 {
+.c10 {
   list-style-type: disc;
 }
 
-.c14 {
+.c11 {
   font-size: 1.4rem;
 }
 
-.c15 {
+.c12 {
   margin: 1.6rem 0;
 }
 
-.c5 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -141,36 +115,24 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   flex-direction: column;
 }
 
-.c6 {
+.c3 {
   margin: 0.4rem;
   font-weight: 700;
   font-size: 1.6rem;
 }
 
-.c18 {
+.c15 {
   margin: 2rem 0;
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:980px) {
-  .c7 {
+  .c4 {
     -webkit-flex-flow: wrap;
     -ms-flex-flow: wrap;
     flex-flow: wrap;
@@ -178,129 +140,115 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 }
 
 @media (max-width:980px) {
-  .c16 {
+  .c13 {
     width: calc(100% * 1);
   }
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c5 {
     width: calc(100% * 0.9100320789890648);
   }
 }
 
 @media (max-width:980px) {
-  .c9 {
+  .c6 {
     width: 100%;
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Indemnité de licenciement
-    </h2>
-  </header>
+    Indemnité de licenciement
+  </h2>
   <p>
     À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
      
     <strong
-      class="c4"
+      class="c1"
     >
       17,444.44
        € brut
     </strong>
   </p>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Détails
-    </h2>
-  </header>
+    Détails
+  </h2>
   <p>
     Il s’agit du montant le plus important entre l’indemnité légale et l’indemnité conventionnelle.
   </p>
   <div
-    class="c5"
+    class="c2"
   >
     <div>
       <div
-        class="c6"
+        class="c3"
       >
         Votre indemnite légale
       </div>
       <div
-        class="c7"
+        class="c4"
       >
         <div
-          class="c8"
+          class="c5"
         />
         <span
-          class="c9"
+          class="c6"
         >
           15,875.00
            € brut
         </span>
       </div>
       <details
-        class="c10"
+        class="c7"
       >
         <summary
-          class="c11"
+          class="c8"
         >
           Voir le détail du calcul
         </summary>
         <strong
-          class="c12"
+          class="c9"
         >
           Éléments saisis :
         </strong>
         <ul
-          class="c13"
+          class="c10"
         >
           <li
-            class="c14"
+            class="c11"
           >
             Salaire de réference (Sref)
              : 
             4500
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Licenciement pour inaptitude
              : 
             non
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Ancienneté totale (A)
              : 
             13.08
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Ancienneté au delà de 10ans (A2)
              : 
@@ -308,12 +256,12 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           </li>
         </ul>
         <strong
-          class="c12"
+          class="c9"
         >
           Formule :
         </strong>
         <div
-          class="c15"
+          class="c12"
         >
           <div
             id="react-mathjax-preview"
@@ -348,55 +296,55 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
     </div>
     <div>
       <div
-        class="c6"
+        class="c3"
       >
         Votre indemnite conventionnelle
       </div>
       <div
-        class="c7"
+        class="c4"
       >
         <div
-          class="c16"
+          class="c13"
         />
         <span
-          class="c9"
+          class="c6"
         >
           17,444.44
            € brut
         </span>
       </div>
       <details
-        class="c10"
+        class="c7"
       >
         <summary
-          class="c11"
+          class="c8"
         >
           Voir le détail du calcul
         </summary>
         <strong
-          class="c12"
+          class="c9"
         >
           Éléments saisis :
         </strong>
         <ul
-          class="c13"
+          class="c10"
         >
           <li
-            class="c14"
+            class="c11"
           >
             Salaire de référence (Sref)
              : 
             4000
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Coefficient d'indemnité conventionnel (C)
              : 
             0.33
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Ancienneté conventionnelle (A)
              : 
@@ -404,12 +352,12 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           </li>
         </ul>
         <strong
-          class="c12"
+          class="c9"
         >
           Formule :
         </strong>
         <div
-          class="c15"
+          class="c12"
         >
           <div
             id="react-mathjax-preview"
@@ -425,10 +373,10 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
     </div>
   </div>
   <div
-    class="c17 c18"
+    class="c14 c15"
   >
     <div
-      class="c19"
+      class="c16"
       role="alert"
     >
       Si un emploi équivalent a été trouvé
@@ -449,7 +397,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
       Alors l’indemnité de licenciement conventionnelle est réduite d’un tiers et passe donc à
        
       <strong
-        class="c4"
+        class="c1"
       >
         11629.62
          €
@@ -467,53 +415,27 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 `;
 
 exports[`<Result /> renders legal indemnite 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .c0 {
-  margin: 0 auto 1rem;
-  text-align: left;
-}
-
-.c2 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c1 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-}
-
-.c4 {
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: nowrap;
 }
 
-.c11 {
+.c8 {
   margin-bottom: 1.6rem;
 }
 
-.c7 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -524,46 +446,46 @@ exports[`<Result /> renders legal indemnite 1`] = `
   align-items: stretch;
 }
 
-.c8 {
+.c5 {
   width: calc(50% * 1);
   background-color: #7994d4;
   border-radius: 0.6rem;
 }
 
-.c16 {
+.c13 {
   width: calc(50% * 0.5494311811023621);
   background-color: #7994d4;
   border-radius: 0.6rem;
 }
 
-.c9 {
+.c6 {
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
 }
 
-.c10 {
+.c7 {
   margin-top: 2rem;
 }
 
-.c12 {
+.c9 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c13 {
+.c10 {
   list-style-type: disc;
 }
 
-.c14 {
+.c11 {
   font-size: 1.4rem;
 }
 
-.c15 {
+.c12 {
   margin: 1.6rem 0;
 }
 
-.c5 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -573,32 +495,20 @@ exports[`<Result /> renders legal indemnite 1`] = `
   flex-direction: column;
 }
 
-.c6 {
+.c3 {
   margin: 0.4rem;
   font-weight: 700;
   font-size: 1.6rem;
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:980px) {
-  .c7 {
+  .c4 {
     -webkit-flex-flow: wrap;
     -ms-flex-flow: wrap;
     flex-flow: wrap;
@@ -606,129 +516,115 @@ exports[`<Result /> renders legal indemnite 1`] = `
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c5 {
     width: calc(100% * 1);
   }
 }
 
 @media (max-width:980px) {
-  .c16 {
+  .c13 {
     width: calc(100% * 0.5494311811023621);
   }
 }
 
 @media (max-width:980px) {
-  .c9 {
+  .c6 {
     width: 100%;
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Indemnité de licenciement
-    </h2>
-  </header>
+    Indemnité de licenciement
+  </h2>
   <p>
     À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
      
     <strong
-      class="c4"
+      class="c1"
     >
       15,875.00
        € brut
     </strong>
   </p>
-  <header
-    class="c0 c1"
+  <h2
+    class="c0"
   >
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      />
-      Détails
-    </h2>
-  </header>
+    Détails
+  </h2>
   <p>
     Il s’agit du montant le plus important entre l’indemnité légale et l’indemnité conventionnelle.
   </p>
   <div
-    class="c5"
+    class="c2"
   >
     <div>
       <div
-        class="c6"
+        class="c3"
       >
         Votre indemnite légale
       </div>
       <div
-        class="c7"
+        class="c4"
       >
         <div
-          class="c8"
+          class="c5"
         />
         <span
-          class="c9"
+          class="c6"
         >
           15,875.00
            € brut
         </span>
       </div>
       <details
-        class="c10"
+        class="c7"
       >
         <summary
-          class="c11"
+          class="c8"
         >
           Voir le détail du calcul
         </summary>
         <strong
-          class="c12"
+          class="c9"
         >
           Éléments saisis :
         </strong>
         <ul
-          class="c13"
+          class="c10"
         >
           <li
-            class="c14"
+            class="c11"
           >
             Salaire de réference (Sref)
              : 
             4500
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Licenciement pour inaptitude
              : 
             non
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Ancienneté totale (A)
              : 
             13.08
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Ancienneté au delà de 10ans (A2)
              : 
@@ -736,12 +632,12 @@ exports[`<Result /> renders legal indemnite 1`] = `
           </li>
         </ul>
         <strong
-          class="c12"
+          class="c9"
         >
           Formule :
         </strong>
         <div
-          class="c15"
+          class="c12"
         >
           <div
             id="react-mathjax-preview"
@@ -776,55 +672,55 @@ exports[`<Result /> renders legal indemnite 1`] = `
     </div>
     <div>
       <div
-        class="c6"
+        class="c3"
       >
         Votre indemnite conventionnelle
       </div>
       <div
-        class="c7"
+        class="c4"
       >
         <div
-          class="c16"
+          class="c13"
         />
         <span
-          class="c9"
+          class="c6"
         >
           8,722.22
            € brut
         </span>
       </div>
       <details
-        class="c10"
+        class="c7"
       >
         <summary
-          class="c11"
+          class="c8"
         >
           Voir le détail du calcul
         </summary>
         <strong
-          class="c12"
+          class="c9"
         >
           Éléments saisis :
         </strong>
         <ul
-          class="c13"
+          class="c10"
         >
           <li
-            class="c14"
+            class="c11"
           >
             Salaire de référence (Sref)
              : 
             2000
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Coefficient d'indemnité conventionnel (C)
              : 
             0.33
           </li>
           <li
-            class="c14"
+            class="c11"
           >
             Ancienneté conventionnelle (A)
              : 
@@ -832,12 +728,12 @@ exports[`<Result /> renders legal indemnite 1`] = `
           </li>
         </ul>
         <strong
-          class="c12"
+          class="c9"
         >
           Formule :
         </strong>
         <div
-          class="c15"
+          class="c12"
         >
           <div
             id="react-mathjax-preview"

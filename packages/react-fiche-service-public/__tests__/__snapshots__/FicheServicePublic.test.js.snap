@@ -236,7 +236,8 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 .c7 {
-  margin: 0 auto 1rem;
+  margin-bottom: 1.6rem;
+  margin-left: auto;
   text-align: left;
 }
 
@@ -384,6 +385,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
 @media (max-width:600px) {
   .c5.react-tabs__tab-panel--selected {
     padding: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    margin-bottom: 1rem;
+    margin-left: auto;
   }
 }
 

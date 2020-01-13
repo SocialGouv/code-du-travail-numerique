@@ -29,8 +29,8 @@ exports[`<Heading /> renders a H3 heading  1`] = `
 exports[`<Heading /> renders a stripped shifted H4 heading  1`] = `
 .c1 {
   position: absolute;
-  background-color: #f66663;
-  border-radius: none;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
   top: 50%;
   left: 0;
   width: 0.4rem;

@@ -4,9 +4,16 @@ import styled, { css } from "styled-components";
 import { Stripe } from "../../Stripe";
 import { breakpoints, fonts, spacings } from "../../theme";
 
-export const Heading = ({ children, stripped = false, ...props }) => (
+export const Heading = ({ children, stripped = false, variant, ...props }) => (
   <StyledHeading stripped={stripped} {...props}>
-    {stripped && <Stripe variant="primary" position="left" length="100%" />}
+    {stripped && (
+      <Stripe
+        rounded={variant !== "primary"}
+        variant={variant}
+        position="left"
+        length="100%"
+      />
+    )}
     {children}
   </StyledHeading>
 );
@@ -15,7 +22,12 @@ Heading.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
   shift: PropTypes.string,
-  stripped: PropTypes.bool
+  stripped: PropTypes.bool,
+  variant: PropTypes.string
+};
+
+Heading.defaultProps = {
+  variant: "secondary"
 };
 
 const StyledHeading = styled.h3`
