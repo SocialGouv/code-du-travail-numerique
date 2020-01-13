@@ -7,8 +7,6 @@ import { GlobalStyles } from "@socialgouv/react-ui";
 
 import ErrorPage from "./_error";
 
-import CookieConsent from "../src/common/CookieConsent";
-
 import { initPiwik } from "../src/piwik";
 import { initializeSentry } from "../src/sentry";
 
@@ -79,7 +77,6 @@ export default class MyApp extends App {
         <>
           <GlobalStyles />
           <Component {...pageProps} />
-          <CookieConsent />
         </>
       </ThemeProvider>
     );

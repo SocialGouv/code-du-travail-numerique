@@ -1688,7 +1688,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 >
                   <a
                     class="c55"
-                    href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
+                    href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -3499,7 +3499,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 >
                   <a
                     class="c55"
-                    href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
+                    href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
