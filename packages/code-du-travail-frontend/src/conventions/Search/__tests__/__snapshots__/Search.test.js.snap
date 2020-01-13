@@ -177,41 +177,51 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 .c8 {
   width: 100%;
   overflow: hidden;
-  border: none;
+  table-layout: fixed;
+  background: #bbcadf;
+  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-.c9 {
+.c8 td {
+  border: none;
+}
+
+.c10 {
   font-weight: bold;
   background: #e4e8ef;
+}
+
+.c13 {
+  background: #fff;
+}
+
+.c12 .c9 {
+  border-bottom: 1px solid #fff;
 }
 
 .c12 + .c11 {
   border-top: 1px solid #bbcadf;
 }
 
-.c10 {
-  border: none !important;
-}
-
 .c4 {
   margin-top: 2rem;
 }
 
-.c17 {
+.c18 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c16 {
+.c17 {
   margin: 1rem 0;
 }
 
-.c15 {
+.c16 {
   margin-top: 1rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +239,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   justify-content: space-between;
 }
 
-.c14 {
+.c15 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -277,7 +287,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 }
 
 @media screen and (min-width:980px) {
-  .c13 {
+  .c14 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -289,7 +299,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 }
 
 @media screen and (min-width:980px) {
-  .c14 {
+  .c15 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -333,11 +343,9 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
           class="c7 c8"
         >
           <tbody>
-            <tr
-              class="c9"
-            >
+            <tr>
               <td
-                class="c10"
+                class="c9 c10"
               >
                 Conventions collectives
               </td>
@@ -346,24 +354,24 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
               class="c11 c12"
             >
               <td
-                class="c10"
+                class="c13"
               >
                 <div
-                  class="c13"
+                  class="c14"
                 >
                   <div
-                    class="c14"
+                    class="c15"
                   />
                 </div>
                 <div
-                  class="c15"
+                  class="c16"
                 >
                   <div
-                    class="c16"
+                    class="c17"
                   >
                     <span>
                       <a
-                        class="c17"
+                        class="c18"
                       >
                         small title 1
                       </a>
@@ -1049,41 +1057,51 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 .c8 {
   width: 100%;
   overflow: hidden;
-  border: none;
+  table-layout: fixed;
+  background: #bbcadf;
+  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-.c9 {
+.c8 td {
+  border: none;
+}
+
+.c10 {
   font-weight: bold;
   background: #e4e8ef;
+}
+
+.c13 {
+  background: #fff;
+}
+
+.c12 .c9 {
+  border-bottom: 1px solid #fff;
 }
 
 .c12 + .c11 {
   border-top: 1px solid #bbcadf;
 }
 
-.c10 {
-  border: none !important;
-}
-
 .c4 {
   margin-top: 2rem;
 }
 
-.c17 {
+.c18 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c16 {
+.c17 {
   margin: 1rem 0;
 }
 
-.c15 {
+.c16 {
   margin-top: 1rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1101,7 +1119,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   justify-content: space-between;
 }
 
-.c14 {
+.c15 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -1149,7 +1167,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media screen and (min-width:980px) {
-  .c13 {
+  .c14 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1161,7 +1179,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media screen and (min-width:980px) {
-  .c14 {
+  .c15 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -1205,11 +1223,9 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
           class="c7 c8"
         >
           <tbody>
-            <tr
-              class="c9"
-            >
+            <tr>
               <td
-                class="c10"
+                class="c9 c10"
               >
                 Conventions collectives
               </td>
@@ -1218,23 +1234,23 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
               class="c11 c12"
             >
               <td
-                class="c10"
+                class="c13"
               >
                 <div
-                  class="c13"
+                  class="c14"
                 >
                   <div
-                    class="c14"
+                    class="c15"
                   />
                 </div>
                 <div
-                  class="c15"
+                  class="c16"
                 >
                   <div
-                    class="c16"
+                    class="c17"
                   >
                     <a
-                      class="c17"
+                      class="c18"
                       href="/convention-collective/275-small-titre"
                     >
                       small titre
@@ -1252,23 +1268,23 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
               class="c11 c12"
             >
               <td
-                class="c10"
+                class="c13"
               >
                 <div
-                  class="c13"
+                  class="c14"
                 >
                   <div
-                    class="c14"
+                    class="c15"
                   />
                 </div>
                 <div
-                  class="c15"
+                  class="c16"
                 >
                   <div
-                    class="c16"
+                    class="c17"
                   >
                     <a
-                      class="c17"
+                      class="c18"
                       href="/convention-collective/276-smaller-convention-2"
                     >
                       smaller convention 2
@@ -1467,41 +1483,51 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 .c8 {
   width: 100%;
   overflow: hidden;
-  border: none;
+  table-layout: fixed;
+  background: #bbcadf;
+  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-.c9 {
+.c8 td {
+  border: none;
+}
+
+.c10 {
   font-weight: bold;
   background: #e4e8ef;
+}
+
+.c13 {
+  background: #fff;
+}
+
+.c12 .c9 {
+  border-bottom: 1px solid #fff;
 }
 
 .c12 + .c11 {
   border-top: 1px solid #bbcadf;
 }
 
-.c10 {
-  border: none !important;
-}
-
 .c4 {
   margin-top: 2rem;
 }
 
-.c17 {
+.c18 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c16 {
+.c17 {
   margin: 1rem 0;
 }
 
-.c15 {
+.c16 {
   margin-top: 1rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1519,7 +1545,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   justify-content: space-between;
 }
 
-.c14 {
+.c15 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -1567,7 +1593,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 }
 
 @media screen and (min-width:980px) {
-  .c13 {
+  .c14 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1579,7 +1605,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 }
 
 @media screen and (min-width:980px) {
-  .c14 {
+  .c15 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -1623,11 +1649,9 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
           class="c7 c8"
         >
           <tbody>
-            <tr
-              class="c9"
-            >
+            <tr>
               <td
-                class="c10"
+                class="c9 c10"
               >
                 Conventions collectives
               </td>
@@ -1636,23 +1660,23 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
               class="c11 c12"
             >
               <td
-                class="c10"
+                class="c13"
               >
                 <div
-                  class="c13"
+                  class="c14"
                 >
                   <div
-                    class="c14"
+                    class="c15"
                   />
                 </div>
                 <div
-                  class="c15"
+                  class="c16"
                 >
                   <div
-                    class="c16"
+                    class="c17"
                   >
                     <a
-                      class="c17"
+                      class="c18"
                       href="/convention-collective/4567-smaller-convention-2"
                     >
                       smaller convention 2
@@ -1851,41 +1875,51 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 .c8 {
   width: 100%;
   overflow: hidden;
-  border: none;
+  table-layout: fixed;
+  background: #bbcadf;
+  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-.c9 {
+.c8 td {
+  border: none;
+}
+
+.c10 {
   font-weight: bold;
   background: #e4e8ef;
+}
+
+.c13 {
+  background: #fff;
+}
+
+.c12 .c9 {
+  border-bottom: 1px solid #fff;
 }
 
 .c12 + .c11 {
   border-top: 1px solid #bbcadf;
 }
 
-.c10 {
-  border: none !important;
-}
-
 .c4 {
   margin-top: 2rem;
 }
 
-.c17 {
+.c18 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c16 {
+.c17 {
   margin: 1rem 0;
 }
 
-.c15 {
+.c16 {
   margin-top: 1rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1903,7 +1937,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   justify-content: space-between;
 }
 
-.c14 {
+.c15 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -1951,7 +1985,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 }
 
 @media screen and (min-width:980px) {
-  .c13 {
+  .c14 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1963,7 +1997,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 }
 
 @media screen and (min-width:980px) {
-  .c14 {
+  .c15 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -2007,11 +2041,9 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
           class="c7 c8"
         >
           <tbody>
-            <tr
-              class="c9"
-            >
+            <tr>
               <td
-                class="c10"
+                class="c9 c10"
               >
                 Entreprises
               </td>
@@ -2020,13 +2052,13 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
               class="c11 c12"
             >
               <td
-                class="c10"
+                class="c13"
               >
                 <div
-                  class="c13"
+                  class="c14"
                 >
                   <div
-                    class="c14"
+                    class="c15"
                   >
                     Entreprise 1 93100 Commune test
                   </div>
@@ -2041,14 +2073,14 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
                   </a>
                 </div>
                 <div
-                  class="c15"
+                  class="c16"
                 >
                   <div
-                    class="c16"
+                    class="c17"
                   >
                     <span>
                       <a
-                        class="c17"
+                        class="c18"
                       />
                        (IDCC
                        
@@ -2244,41 +2276,51 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 .c8 {
   width: 100%;
   overflow: hidden;
-  border: none;
+  table-layout: fixed;
+  background: #bbcadf;
+  border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-.c9 {
+.c8 td {
+  border: none;
+}
+
+.c10 {
   font-weight: bold;
   background: #e4e8ef;
+}
+
+.c13 {
+  background: #fff;
+}
+
+.c12 .c9 {
+  border-bottom: 1px solid #fff;
 }
 
 .c12 + .c11 {
   border-top: 1px solid #bbcadf;
 }
 
-.c10 {
-  border: none !important;
-}
-
 .c4 {
   margin-top: 2rem;
 }
 
-.c17 {
+.c18 {
   color: #4d73b8;
   cursor: pointer;
 }
 
-.c16 {
+.c17 {
   margin: 1rem 0;
 }
 
-.c15 {
+.c16 {
   margin-top: 1rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2296,7 +2338,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   justify-content: space-between;
 }
 
-.c14 {
+.c15 {
   -webkit-flex: 1 1 calc(100% - 200px);
   -ms-flex: 1 1 calc(100% - 200px);
   flex: 1 1 calc(100% - 200px);
@@ -2344,7 +2386,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 }
 
 @media screen and (min-width:980px) {
-  .c13 {
+  .c14 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -2356,7 +2398,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 }
 
 @media screen and (min-width:980px) {
-  .c14 {
+  .c15 {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
@@ -2400,11 +2442,9 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
           class="c7 c8"
         >
           <tbody>
-            <tr
-              class="c9"
-            >
+            <tr>
               <td
-                class="c10"
+                class="c9 c10"
               >
                 Conventions collectives
               </td>
@@ -2413,24 +2453,24 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
               class="c11 c12"
             >
               <td
-                class="c10"
+                class="c13"
               >
                 <div
-                  class="c13"
+                  class="c14"
                 >
                   <div
-                    class="c14"
+                    class="c15"
                   />
                 </div>
                 <div
-                  class="c15"
+                  class="c16"
                 >
                   <div
-                    class="c16"
+                    class="c17"
                   >
                     <span>
                       <a
-                        class="c17"
+                        class="c18"
                       >
                         titre convention 1
                       </a>
@@ -2443,11 +2483,9 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
                 </div>
               </td>
             </tr>
-            <tr
-              class="c9"
-            >
+            <tr>
               <td
-                class="c10"
+                class="c9 c10"
               >
                 Entreprises
               </td>
@@ -2456,13 +2494,13 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
               class="c11 c12"
             >
               <td
-                class="c10"
+                class="c13"
               >
                 <div
-                  class="c13"
+                  class="c14"
                 >
                   <div
-                    class="c14"
+                    class="c15"
                   >
                     Entreprise 1 93100 Commune test
                   </div>
@@ -2477,14 +2515,14 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
                   </a>
                 </div>
                 <div
-                  class="c15"
+                  class="c16"
                 >
                   <div
-                    class="c16"
+                    class="c17"
                   >
                     <span>
                       <a
-                        class="c17"
+                        class="c18"
                       >
                         Short Convention 1
                       </a>

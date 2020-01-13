@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "next/link";
 import { Toast } from "@socialgouv/react-ui";
 import data from "@cdt/data...preavis-licenciement/data.json";
-
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 
 import {
@@ -13,6 +14,118 @@ import {
 } from "../../common/situations.utils";
 
 const { situations: allSituations } = data;
+
+function DisclaimerToast({ durationCC, durationCDT, ccn }) {
+  if (durationCC === undefined) {
+    if (parseInt(durationCDT, 10) === 0) {
+      return (
+        <Toast>
+          L’existence et la durée du préavis de licenciement peuvent être
+          prévues dans la convention collective, un accord d’entreprise ou à
+          défaut par un usage dans l’entreprise.
+          {ccn && (
+            <>
+              <br />
+              Vous pouvez faire une recherche par mots-clés dans{" "}
+              <Link
+                href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
+                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.convention.slug}`}
+              >
+                <a>votre convention collective</a>
+              </Link>
+            </>
+          )}
+        </Toast>
+      );
+    } else {
+      return (
+        <Toast>
+          Une durée de préavis de licenciement ou une condition d’ancienneté
+          plus favorable au salarié peut être prévue par une convention
+          collective, un accord de branche, un accord d’entreprise ou le contrat
+          de travail ou les usages.
+          {ccn && (
+            <>
+              <br />
+              Vous pouvez faire une recherche par mots-clés dans{" "}
+              <Link
+                href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
+                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.convention.slug}`}
+              >
+                <a>votre convention collective</a>
+              </Link>
+            </>
+          )}
+        </Toast>
+      );
+    }
+  } else {
+    if (parseInt(durationCDT, 10) > 0) {
+      return (
+        <Toast>
+          Une durée de préavis de licenciement ou une condition d’ancienneté
+          plus favorable au salarié que ce que prévoit le code du travail peut
+          être prévue par la loi pour certains cas particuliers, par un accord
+          d’entreprise, le contrat de travail ou les usages.
+        </Toast>
+      );
+    } else if (parseInt(durationCC, 10) > 0) {
+      return (
+        <Toast>
+          L’existence ou la durée du préavis de licenciement peut aussi être
+          prévue dans un accord d’entreprise ou à défaut par un usage dans
+          l’entreprise.
+        </Toast>
+      );
+    } else {
+      // both cc and legal === 0
+      return (
+        <Toast>
+          L’existence ou la durée du préavis de licenciement peut être prévue,
+          par la loi pour certains cas particuliers, par un accord d’entreprise
+          ou à défaut par un usage dans l’entreprise.
+        </Toast>
+      );
+    }
+  }
+}
+
+function DurationResult({ duration, durationCC, durationCDT }) {
+  if (parseInt(durationCDT, 10) === 0) {
+    if (durationCC === undefined) {
+      return (
+        <>
+          <Highlight>{duration}</Highlight>
+          <p>
+            Le code du travail ne prévoit pas de durée de préavis de
+            licenciement sauf, cas particuliers.
+          </p>
+        </>
+      );
+    } else if (parseInt(durationCC, 10) === 0) {
+      return (
+        <>
+          <Highlight>{duration}</Highlight>
+          <p>
+            Le code du travail et la convention collective ne prévoient pas de
+            préavis.
+          </p>
+        </>
+      );
+    }
+  }
+  return (
+    <>
+      <p>
+        À partir des éléments que vous avez saisis, la durée du préavis de
+        licenciement est estimée à&nbsp;:
+      </p>
+      <p>
+        <Highlight>{duration}</Highlight>
+      </p>
+    </>
+  );
+}
 
 function StepResult({ form }) {
   const { values } = form.getState();
@@ -32,7 +145,8 @@ function StepResult({ form }) {
   } = situationCDT;
 
   // Situation CC
-  const initialCCSituations = getSituationsFor(allSituations, { idcc });
+  const initialCCSituations =
+    idcc > 0 ? getSituationsFor(allSituations, { idcc }) : [];
   const possibleCCSituations = filterSituations(initialCCSituations, criteria);
 
   const [situationCC] = possibleCCSituations;
@@ -40,59 +154,64 @@ function StepResult({ form }) {
     criteria: { ancienneté: seniorityCC, ...situationCCCriteria },
     duration: durationCC
   } = situationCC || { criteria: {} };
+
   const refs = [
     {
       ref: "Article L.1234-1 du code du travail",
       refUrl:
         "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-    },
-    { ref: situationCC.ref, refUrl: situationCC.refUrl }
-  ];
-
-  let disclaimer =
-    "Une durée de préavis de licenciement ou une condition d'ancienneté plus favorable au salarié peut être prévue dans un accord d'entreprise, le contrat de travail ou les usages.";
-  if (durationCDT === 0) {
-    if (durationCC === 0) {
-      disclaimer =
-        "La durée de préavis de licenciement peut aussi être prévue dans une convention ou un accord au niveau de l'entreprise, ou à défaut par les usages pratiqués dans la profession.";
-    } else {
-      disclaimer =
-        "La durée de préavis de licenciement peut aussi être prévue dans une convention ou un accord au niveau de l'entreprise.";
     }
+  ];
+  if (situationCC) {
+    refs.push({ ref: situationCC.ref, refUrl: situationCC.refUrl });
   }
+
+  const duration = getResult({ durationCDT, durationCC, disabledWorker });
 
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
-      <p>
-        À partir des éléments que vous avez saisis, la durée du préavis de
-        licenciement est estimée à&nbsp;:
-      </p>
-      <p>
-        <Highlight>
-          {getResult({
-            durationCDT,
-            durationCC,
-            disabledWorker
-          })}
-        </Highlight>
-      </p>
-      <Toast>{disclaimer}</Toast>
+      <DurationResult
+        duration={duration}
+        durationCC={durationCC}
+        durationCDT={durationCDT}
+      />
+      <DisclaimerToast
+        durationCC={durationCC}
+        durationCDT={durationCDT}
+        ccn={ccn}
+      />
       <SectionTitle>Détails</SectionTitle>
-      <p>
-        Il s’agit de la durée la plus longue entre la durée légale prévue par le
-        Code du travail et la durée conventionnelle prévue par la convention
-        collective:
-      </p>
+      {idcc > 0 && (
+        <p>
+          Il s’agit de la durée la plus longue entre la durée légale prévue par
+          le Code du travail et la durée conventionnelle prévue par la
+          convention collective:
+        </p>
+      )}
       <ul>
         <li>
-          Durée légale: <strong>{situationCDT.answer}</strong>
+          Durée légale:{" "}
+          {parseInt(durationCDT, 10) > 0 ? (
+            <strong>{situationCDT.answer}</strong>
+          ) : (
+            "Aucun préavis."
+          )}
         </li>
-        {situationCC && (
-          <li>
-            Durée conventionnelle: <strong>{situationCC.answer}</strong>
-          </li>
-        )}
+        <li>
+          Durée conventionnelle:{" "}
+          {situationCC ? (
+            parseInt(durationCC, 10) > 0 ? (
+              <strong>{situationCC.answer}</strong>
+            ) : (
+              "Aucun préavis."
+            )
+          ) : idcc === 0 ? (
+            "La convention collective n'a pas été renseignée."
+          ) : (
+            "La convention collective n'a pas été traitée par nos services."
+          )}
+        </li>
       </ul>
       <p>Éléments saisis&nbsp;:</p>
       {recapSituation({
@@ -110,7 +229,7 @@ function StepResult({ form }) {
             ...(seniorityCC && {
               "Ancienneté selon la convention collective": seniorityCC
             }),
-            "Convention collective": ccn.convention.title
+            ...(ccn && { "Convention collective": ccn.convention.title })
           })}
           <SectionTitle>Source</SectionTitle>
           {situationCC.ref && situationCC.refUrl && getRef(refs)}
@@ -134,6 +253,9 @@ export function getResult({
   disabledWorker = true
 }) {
   const durationMax = Math.max(durationCDT, durationCC);
+  if (durationMax === 0) {
+    return "Aucun préavis";
+  }
   const durationHandicappedMax = 90;
   let durationHandicapped = 1;
   if (durationMax < durationHandicappedMax) {
@@ -143,6 +265,7 @@ export function getResult({
   const result = disabledWorker
     ? durationMax * durationHandicapped
     : durationMax;
+
   const resultFormat =
     result >= 30
       ? `${result / 30} mois`

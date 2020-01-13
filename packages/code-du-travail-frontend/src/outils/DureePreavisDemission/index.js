@@ -1,14 +1,14 @@
 import React from "react";
 
 import { Wizard } from "../common/Wizard";
-import { initialSteps, stepReducer } from "./stepReducer";
+import { initialState, stepReducer } from "./stepReducer";
 
 function DureePreavisDemission({ icon, title }) {
   return (
     <Wizard
       icon={icon}
       title={title}
-      initialSteps={initialSteps}
+      initialState={initialState}
       stepReducer={stepReducer}
     />
   );

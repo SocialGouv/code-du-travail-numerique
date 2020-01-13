@@ -1,50 +1,74 @@
 import { StepResult } from "../Result";
 import { renderForm } from "../../../../../test/renderForm";
 
-const ccn1527 = {
+const ccn16 = {
   convention: {
-    id: "KALICONT000005635413",
-    slug:
-      "1527-convention-collective-nationale-de-limmobilier-administrateurs-de-biens",
+    id: "KALICONT000005635624",
+    slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
     title:
-      "Convention collective nationale de l'immobilier, administrateurs de biens, sociétés immobilières, agents immobiliers, etc. (anciennement cabinets d'administrateurs de biens et des sociétés immobilières), du 9 septembre 1988. Etendue par arrêté du 24 février 1989 JORF 3 mars 1989. Mise à jour par avenant  n° 47 du 23 novembre 2010, JORF 18 juillet 2012 ",
-    num: 1527
-  },
-  label: "IDCC 1517"
+      "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+    shortTitle: "Transports routiers et activités auxiliaires du transport",
+    num: 16
+  }
 };
 
 describe("<StepResult />", () => {
-  it("should render show result with company agreement disclaimer", () => {
-    const { container } = renderForm(StepResult, {
-      seriousMisconduct: false,
-      disabledWorker: false,
-      cdt: {
-        ancienneté: "41| plus de 2 ans"
-      },
-      ccn: ccn1527,
-      criteria: {
-        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        ancienneté: "40| 2 ans ou plus"
-      }
-    });
-    expect(container).toMatchSnapshot();
-  });
-  it("should render show result with collective or compagny agreement disclaimer", () => {
+  it("should render with O duration", () => {
     const { container } = renderForm(StepResult, {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
         ancienneté: "13| moins de 6 mois"
       },
-      ccn: ccn1527,
       criteria: {
-        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        ancienneté: "36| moins de 2 ans"
+        "catégorie socio-professionnelle": "16| Employés",
+        ancienneté: "3| moins de 1 mois"
+      },
+      ccn: ccn16
+    });
+    expect(container).toMatchSnapshot();
+  });
+  it("should render with only CC duration", () => {
+    const { container } = renderForm(StepResult, {
+      seriousMisconduct: false,
+      disabledWorker: false,
+      cdt: {
+        ancienneté: "13| moins de 6 mois"
+      },
+      criteria: {
+        "catégorie socio-professionnelle": "16| Employés",
+        ancienneté: "28| 1 mois à moins de 2 ans"
+      },
+      ccn: ccn16
+    });
+    expect(container).toMatchSnapshot();
+  });
+  it("should render with both CC duration and CDT duration", () => {
+    const { container } = renderForm(StepResult, {
+      seriousMisconduct: false,
+      disabledWorker: false,
+      cdt: {
+        ancienneté: "31| 6 mois à moins de 2 ans"
+      },
+      criteria: {
+        "catégorie socio-professionnelle": "16| Employés",
+        ancienneté: "28| 1 mois à moins de 2 ans"
+      },
+      ccn: ccn16
+    });
+    expect(container).toMatchSnapshot();
+  });
+  it("should render with when no CC", () => {
+    const { container } = renderForm(StepResult, {
+      seriousMisconduct: false,
+      disabledWorker: false,
+      cdt: {
+        ancienneté: "41| plus de 2 ans"
       }
     });
     expect(container).toMatchSnapshot();
   });
-  it("should render with CDT no CC", () => {
+  it("should render with when unhandled CC", () => {
     const { container } = renderForm(StepResult, {
       seriousMisconduct: false,
       disabledWorker: false,
@@ -53,14 +77,13 @@ describe("<StepResult />", () => {
       },
       ccn: {
         convention: {
-          id: "KALICONT000005635413",
-          slug:
-            "1527-convention-collective-nationale-de-limmobilier-administrateurs-de-biens",
+          id: "KALICONT000005635662",
+          slug: "1561-cordonnerie-multiservice",
           title:
-            "Convention collective nationale de l'immobilier, administrateurs de biens, sociétés immobilières, agents immobiliers, etc. (anciennement cabinets d'administrateurs de biens et des sociétés immobilières), du 9 septembre 1988. Etendue par arrêté du 24 février 1989 JORF 3 mars 1989. Mise à jour par avenant  n° 47 du 23 novembre 2010, JORF 18 juillet 2012 ",
-          num: 1527
-        },
-        label: "IDCC 1517"
+            "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
+          shortTitle: "Cordonnerie multiservice",
+          num: 1561
+        }
       }
     });
     expect(container).toMatchSnapshot();

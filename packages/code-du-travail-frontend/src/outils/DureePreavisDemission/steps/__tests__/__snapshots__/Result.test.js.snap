@@ -81,7 +81,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       class="c3"
       role="alert"
     >
-      Une durée de préavis de démission plus favorable au salarié peut aussi être prévue dans une convention ou un accord au niveau de l’entreprise
+      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
     </div>
   </div>
   <h2
@@ -143,7 +143,207 @@ exports[`<StepResult /> should render CC answer 1`] = `
 `;
 
 exports[`<StepResult /> should render with no cc 1`] = `
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #3e486e;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
-  La situation du salarié ne permet de répondre précisement.
+  <h2
+    class="c0"
+  >
+    Durée du préavis
+  </h2>
+  <strong
+    class="c1"
+  >
+    Aucun résultat : la convention collective n'a pas été renseignée.
+  </strong>
+  <p>
+    Le code du travail ne prévoit pas de durée de préavis de démission sauf, cas particuliers.
+  </p>
+  <div
+    class="c2"
+  >
+    <div
+      class="c3"
+      role="alert"
+    >
+      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+    </div>
+  </div>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <p>
+    <a
+      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Consultez l’ article l.1237-1 du code du travail"
+    >
+       Article L.1237-1 du code du travail
+    </a>
+  </p>
+</div>
+`;
+
+exports[`<StepResult /> should render with unhandled cc 1`] = `
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #3e486e;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Durée du préavis
+  </h2>
+  <strong
+    class="c1"
+  >
+    Aucun résultat : la convention collective n'a pas encore été traitée par nos services.
+  </strong>
+  <p>
+    Le code du travail ne prévoit pas de durée de préavis de démission sauf, cas particuliers.
+  </p>
+  <div
+    class="c2"
+  >
+    <div
+      class="c3"
+      role="alert"
+    >
+      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+      <br />
+      Vous pouvez faire une recherche par mots-clés dans
+       
+      <a
+        href="/convention-collective/1561-cordonnerie-multiservice"
+      >
+        votre convention collective
+      </a>
+    </div>
+  </div>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <p>
+    <a
+      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Consultez l’ article l.1237-1 du code du travail"
+    >
+       Article L.1237-1 du code du travail
+    </a>
+  </p>
 </div>
 `;

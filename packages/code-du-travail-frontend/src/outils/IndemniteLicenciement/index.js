@@ -6,7 +6,7 @@ import {
   stepPrime,
   stepSalaires,
   stepReducer,
-  initialSteps
+  initialState
 } from "./stepReducer";
 import { Wizard } from "../common/Wizard";
 
@@ -47,7 +47,7 @@ function CalculateurIndemnite({ icon, title }) {
       icon={icon}
       title={title}
       stepReducer={stepReducer}
-      initialSteps={initialSteps}
+      initialState={initialState}
       Rules={Rules}
     />
   );

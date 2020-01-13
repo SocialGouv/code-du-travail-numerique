@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
+exports[`<StepInfoCCn /> should render CC infos step 1`] = `
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -64,58 +64,12 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
   transform: translateX(4px);
 }
 
-.c4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: auto;
-  min-height: 48px;
-  color: #3e486e;
-  background-color: #fff;
-  border-color: #7994d4;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 0.6rem;
-  box-shadow: none;
-  -webkit-animation: none;
-  animation: none;
-}
-
-.c6 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem 1.6rem;
-  text-align: left;
-}
-
 .c0 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   cursor: pointer;
-}
-
-.c5 {
-  width: 100%;
-  margin-top: 2rem;
-}
-
-.c7 {
-  color: #3e486e;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: nowrap;
 }
 
 @media (max-width:600px) {
@@ -126,12 +80,6 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
     font-size: 1.6rem;
   }
 }
@@ -162,28 +110,6 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
       />
     </svg>
   </button>
-  <div
-    class="c4 c5"
-  >
-    <div
-      class="c6"
-      role="alert"
-    >
-      <p>
-        Nous n’avons pas encore traité cette convention collective.
-        <br />
-        Le code du travail prévoit une durée du préavis de licenciement de
-         
-        <strong
-          class="c7"
-        >
-          2 mois
-        </strong>
-        <br />
-        Une durée plus favorable au salarié peut être prévue dans la convention collective, un accord d’entreprise, le contrat de travail ou un usage dans l’entreprise.
-      </p>
-    </div>
-  </div>
   <button
     data-testid="submit-test"
     type="submit"

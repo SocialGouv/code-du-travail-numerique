@@ -1,6 +1,183 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<StepResult /> should render show result with collective or compagny agreement disclaimer 1`] = `
+exports[`<StepResult /> should render with O duration 1`] = `
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #3e486e;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Durée du préavis
+  </h2>
+  <strong
+    class="c1"
+  >
+    Aucun préavis
+  </strong>
+  <p>
+    Le code du travail et la convention collective ne prévoient pas de préavis.
+  </p>
+  <div
+    class="c2"
+  >
+    <div
+      class="c3"
+      role="alert"
+    >
+      L’existence ou la durée du préavis de licenciement peut être prévue, par la loi pour certains cas particuliers, par un accord d’entreprise ou à défaut par un usage dans l’entreprise.
+    </div>
+  </div>
+  <h2
+    class="c0"
+  >
+    Détails
+  </h2>
+  <p>
+    Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
+  </p>
+  <ul>
+    <li>
+      Durée légale:
+       
+      Aucun préavis.
+    </li>
+    <li>
+      Durée conventionnelle:
+       
+      Aucun préavis.
+    </li>
+  </ul>
+  <p>
+    Éléments saisis :
+  </p>
+  <ul>
+    <li>
+      Licenciement pour faute grave
+       : 
+      <strong>
+        Non
+      </strong>
+    </li>
+    <li>
+      Reconnu en tant que travailleur handicapé
+       : 
+      <strong>
+        Non
+      </strong>
+    </li>
+    <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        moins de 6 mois
+      </strong>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      Catégorie socio-professionnelle
+       : 
+      <strong>
+        Employés
+      </strong>
+    </li>
+    <li>
+      Ancienneté selon la convention collective
+       : 
+      <strong>
+        moins de 1 mois
+      </strong>
+    </li>
+    <li>
+      Convention collective
+       : 
+      <strong>
+        Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+      </strong>
+    </li>
+  </ul>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <p>
+    <a
+      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Consultez l’article l.1234-1 du code du travail"
+    >
+      Article L.1234-1 du code du travail
+    </a>
+    , 
+    <a
+      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Consultez l’annexe ii, article 13"
+    >
+      Annexe II, article 13
+    </a>
+  </p>
+</div>
+`;
+
+exports[`<StepResult /> should render with both CC duration and CDT duration 1`] = `
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -80,7 +257,7 @@ exports[`<StepResult /> should render show result with collective or compagny ag
       class="c3"
       role="alert"
     >
-      Une durée de préavis de licenciement ou une condition d'ancienneté plus favorable au salarié peut être prévue dans un accord d'entreprise, le contrat de travail ou les usages.
+      Une durée de préavis de licenciement ou une condition d’ancienneté plus favorable au salarié que ce que prévoit le code du travail peut être prévue par la loi pour certains cas particuliers, par un accord d’entreprise, le contrat de travail ou les usages.
     </div>
   </div>
   <h2
@@ -93,13 +270,196 @@ exports[`<StepResult /> should render show result with collective or compagny ag
   </p>
   <ul>
     <li>
-      Durée légale: 
+      Durée légale:
+       
       <strong>
-        Pas de préavis
+        1 mois
       </strong>
     </li>
     <li>
-      Durée conventionnelle: 
+      Durée conventionnelle:
+       
+      <strong>
+        1 mois
+      </strong>
+    </li>
+  </ul>
+  <p>
+    Éléments saisis :
+  </p>
+  <ul>
+    <li>
+      Licenciement pour faute grave
+       : 
+      <strong>
+        Non
+      </strong>
+    </li>
+    <li>
+      Reconnu en tant que travailleur handicapé
+       : 
+      <strong>
+        Non
+      </strong>
+    </li>
+    <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        6 mois à moins de 2 ans
+      </strong>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      Catégorie socio-professionnelle
+       : 
+      <strong>
+        Employés
+      </strong>
+    </li>
+    <li>
+      Ancienneté selon la convention collective
+       : 
+      <strong>
+        1 mois à moins de 2 ans
+      </strong>
+    </li>
+    <li>
+      Convention collective
+       : 
+      <strong>
+        Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+      </strong>
+    </li>
+  </ul>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <p>
+    <a
+      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Consultez l’article l.1234-1 du code du travail"
+    >
+      Article L.1234-1 du code du travail
+    </a>
+    , 
+    <a
+      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Consultez l’annexe ii, article 13"
+    >
+      Annexe II, article 13
+    </a>
+  </p>
+</div>
+`;
+
+exports[`<StepResult /> should render with only CC duration 1`] = `
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #7994d4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
+  text-align: left;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #3e486e;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Durée du préavis
+  </h2>
+  <p>
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
+  </p>
+  <p>
+    <strong
+      class="c1"
+    >
+      1 mois
+    </strong>
+  </p>
+  <div
+    class="c2"
+  >
+    <div
+      class="c3"
+      role="alert"
+    >
+      L’existence ou la durée du préavis de licenciement peut aussi être prévue dans un accord d’entreprise ou à défaut par un usage dans l’entreprise.
+    </div>
+  </div>
+  <h2
+    class="c0"
+  >
+    Détails
+  </h2>
+  <p>
+    Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
+  </p>
+  <ul>
+    <li>
+      Durée légale:
+       
+      Aucun préavis.
+    </li>
+    <li>
+      Durée conventionnelle:
+       
       <strong>
         1 mois
       </strong>
@@ -136,21 +496,21 @@ exports[`<StepResult /> should render show result with collective or compagny ag
       Catégorie socio-professionnelle
        : 
       <strong>
-        Ouvriers, Employés
+        Employés
       </strong>
     </li>
     <li>
       Ancienneté selon la convention collective
        : 
       <strong>
-        moins de 2 ans
+        1 mois à moins de 2 ans
       </strong>
     </li>
     <li>
       Convention collective
        : 
       <strong>
-        Convention collective nationale de l'immobilier, administrateurs de biens, sociétés immobilières, agents immobiliers, etc. (anciennement cabinets d'administrateurs de biens et des sociétés immobilières), du 9 septembre 1988. Etendue par arrêté du 24 février 1989 JORF 3 mars 1989. Mise à jour par avenant  n° 47 du 23 novembre 2010, JORF 18 juillet 2012
+        Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
       </strong>
     </li>
   </ul>
@@ -170,18 +530,18 @@ exports[`<StepResult /> should render show result with collective or compagny ag
     </a>
     , 
     <a
-      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
+      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
       rel="noopener noreferrer"
       target="_blank"
-      title="Consultez l’article 32"
+      title="Consultez l’annexe ii, article 13"
     >
-      Article 32
+      Annexe II, article 13
     </a>
   </p>
 </div>
 `;
 
-exports[`<StepResult /> should render show result with company agreement disclaimer 1`] = `
+exports[`<StepResult /> should render with when no CC 1`] = `
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -261,7 +621,7 @@ exports[`<StepResult /> should render show result with company agreement disclai
       class="c3"
       role="alert"
     >
-      Une durée de préavis de licenciement ou une condition d'ancienneté plus favorable au salarié peut être prévue dans un accord d'entreprise, le contrat de travail ou les usages.
+      Une durée de préavis de licenciement ou une condition d’ancienneté plus favorable au salarié peut être prévue par une convention collective, un accord de branche, un accord d’entreprise ou le contrat de travail ou les usages.
     </div>
   </div>
   <h2
@@ -269,21 +629,18 @@ exports[`<StepResult /> should render show result with company agreement disclai
   >
     Détails
   </h2>
-  <p>
-    Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
-  </p>
   <ul>
     <li>
-      Durée légale: 
+      Durée légale:
+       
       <strong>
         2 mois
       </strong>
     </li>
     <li>
-      Durée conventionnelle: 
-      <strong>
-        2 mois
-      </strong>
+      Durée conventionnelle:
+       
+      La convention collective n'a pas été renseignée.
     </li>
   </ul>
   <p>
@@ -312,57 +669,10 @@ exports[`<StepResult /> should render show result with company agreement disclai
       </strong>
     </li>
   </ul>
-  <ul>
-    <li>
-      Catégorie socio-professionnelle
-       : 
-      <strong>
-        Ouvriers, Employés
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon la convention collective
-       : 
-      <strong>
-        2 ans ou plus
-      </strong>
-    </li>
-    <li>
-      Convention collective
-       : 
-      <strong>
-        Convention collective nationale de l'immobilier, administrateurs de biens, sociétés immobilières, agents immobiliers, etc. (anciennement cabinets d'administrateurs de biens et des sociétés immobilières), du 9 septembre 1988. Etendue par arrêté du 24 février 1989 JORF 3 mars 1989. Mise à jour par avenant  n° 47 du 23 novembre 2010, JORF 18 juillet 2012
-      </strong>
-    </li>
-  </ul>
-  <h2
-    class="c0"
-  >
-    Source
-  </h2>
-  <p>
-    <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’article l.1234-1 du code du travail"
-    >
-      Article L.1234-1 du code du travail
-    </a>
-    , 
-    <a
-      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’article 32"
-    >
-      Article 32
-    </a>
-  </p>
 </div>
 `;
 
-exports[`<StepResult /> should render with CDT no CC 1`] = `
+exports[`<StepResult /> should render with when unhandled CC 1`] = `
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -442,7 +752,15 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
       class="c3"
       role="alert"
     >
-      Une durée de préavis de licenciement ou une condition d'ancienneté plus favorable au salarié peut être prévue dans un accord d'entreprise, le contrat de travail ou les usages.
+      Une durée de préavis de licenciement ou une condition d’ancienneté plus favorable au salarié peut être prévue par une convention collective, un accord de branche, un accord d’entreprise ou le contrat de travail ou les usages.
+      <br />
+      Vous pouvez faire une recherche par mots-clés dans
+       
+      <a
+        href="/convention-collective/1561-cordonnerie-multiservice"
+      >
+        votre convention collective
+      </a>
     </div>
   </div>
   <h2
@@ -455,16 +773,16 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
   </p>
   <ul>
     <li>
-      Durée légale: 
+      Durée légale:
+       
       <strong>
         2 mois
       </strong>
     </li>
     <li>
-      Durée conventionnelle: 
-      <strong>
-        1 mois
-      </strong>
+      Durée conventionnelle:
+       
+      La convention collective n'a pas été traitée par nos services.
     </li>
   </ul>
   <p>
@@ -493,52 +811,5 @@ exports[`<StepResult /> should render with CDT no CC 1`] = `
       </strong>
     </li>
   </ul>
-  <ul>
-    <li>
-      Catégorie socio-professionnelle
-       : 
-      <strong>
-        Ouvriers, Employés
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon la convention collective
-       : 
-      <strong>
-        moins de 2 ans
-      </strong>
-    </li>
-    <li>
-      Convention collective
-       : 
-      <strong>
-        Convention collective nationale de l'immobilier, administrateurs de biens, sociétés immobilières, agents immobiliers, etc. (anciennement cabinets d'administrateurs de biens et des sociétés immobilières), du 9 septembre 1988. Etendue par arrêté du 24 février 1989 JORF 3 mars 1989. Mise à jour par avenant  n° 47 du 23 novembre 2010, JORF 18 juillet 2012
-      </strong>
-    </li>
-  </ul>
-  <h2
-    class="c0"
-  >
-    Source
-  </h2>
-  <p>
-    <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’article l.1234-1 du code du travail"
-    >
-      Article L.1234-1 du code du travail
-    </a>
-    , 
-    <a
-      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’article 32"
-    >
-      Article 32
-    </a>
-  </p>
 </div>
 `;
