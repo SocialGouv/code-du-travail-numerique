@@ -277,6 +277,12 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   margin-top: 2rem;
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c14 {
     padding: 0 1rem;
@@ -602,6 +608,12 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
 
 .c2 {
   margin-top: 2rem;
+}
+
+@media print {
+  .c1 {
+    display: none;
+  }
 }
 
 @media (max-width:600px) {

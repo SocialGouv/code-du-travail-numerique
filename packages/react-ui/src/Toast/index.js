@@ -94,6 +94,9 @@ const StyledToast = styled.div`
       `;
     }
   }};
+  @media print {
+    display: none;
+  }
 `;
 
 const Content = styled.div`

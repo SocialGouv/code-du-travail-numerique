@@ -76,6 +76,12 @@ exports[`<StepIndemnite /> should render 1`] = `
   margin: 1.6rem 0;
 }
 
+@media print {
+  .c8 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;

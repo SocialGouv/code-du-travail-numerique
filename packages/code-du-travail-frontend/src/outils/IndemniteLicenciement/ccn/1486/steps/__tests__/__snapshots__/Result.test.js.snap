@@ -125,6 +125,12 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   margin: 2rem 0;
 }
 
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;

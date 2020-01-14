@@ -12,6 +12,13 @@ jest.mock("next/config", () => () => ({
 }));
 
 /**
+ * Mocking Date.now with default date
+ */
+jest.spyOn(Date, "now").mockImplementation(() => {
+  return 1231231231230;
+});
+
+/**
  * this removes the reach-ui warning that check modal css import
  */
 // eslint-disable-next-line import/no-extraneous-dependencies

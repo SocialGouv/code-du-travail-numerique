@@ -51,6 +51,12 @@ exports[`<StepResult /> should render with O duration 1`] = `
   white-space: nowrap;
 }
 
+@media print {
+  .c2 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
@@ -164,7 +170,8 @@ exports[`<StepResult /> should render with O duration 1`] = `
     >
       Article L.1234-1 du code du travail
     </a>
-    , 
+  </p>
+  <p>
     <a
       href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
       rel="noopener noreferrer"
@@ -226,6 +233,12 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   font-weight: 700;
   font-size: 1.8rem;
   white-space: nowrap;
+}
+
+@media print {
+  .c2 {
+    display: none;
+  }
 }
 
 @media (max-width:600px) {
@@ -347,7 +360,8 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     >
       Article L.1234-1 du code du travail
     </a>
-    , 
+  </p>
+  <p>
     <a
       href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
       rel="noopener noreferrer"
@@ -409,6 +423,12 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   font-weight: 700;
   font-size: 1.8rem;
   white-space: nowrap;
+}
+
+@media print {
+  .c2 {
+    display: none;
+  }
 }
 
 @media (max-width:600px) {
@@ -528,7 +548,8 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     >
       Article L.1234-1 du code du travail
     </a>
-    , 
+  </p>
+  <p>
     <a
       href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
       rel="noopener noreferrer"
@@ -590,6 +611,12 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   font-weight: 700;
   font-size: 1.8rem;
   white-space: nowrap;
+}
+
+@media print {
+  .c2 {
+    display: none;
+  }
 }
 
 @media (max-width:600px) {
@@ -721,6 +748,12 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   font-weight: 700;
   font-size: 1.8rem;
   white-space: nowrap;
+}
+
+@media print {
+  .c2 {
+    display: none;
+  }
 }
 
 @media (max-width:600px) {
