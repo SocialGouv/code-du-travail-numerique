@@ -1307,7 +1307,7 @@ exports[`<About /> should render 1`] = `
             Le Code du travail numérique est un service public initié par
              
             <a
-              href="https://travail.gouv.fr"
+              href="https://travail-emploi.gouv.fr/"
               title="le site du ministère du travail"
             >
               le ministère du Travail
@@ -1524,7 +1524,7 @@ exports[`<About /> should render 1`] = `
                 >
                   <a
                     class="c46"
-                    href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                    href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
