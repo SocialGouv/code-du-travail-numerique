@@ -15,7 +15,8 @@ exports[`<PageTitle /> renders a H1 page title  1`] = `
 }
 
 .c0 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: auto;
   text-align: center;
 }
@@ -75,7 +76,8 @@ exports[`<PageTitle /> renders a leftStripped shifted H1 page title  1`] = `
 }
 
 .c0 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: auto;
   text-align: left;
 }

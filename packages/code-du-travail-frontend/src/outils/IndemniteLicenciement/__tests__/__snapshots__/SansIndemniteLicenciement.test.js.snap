@@ -7,14 +7,6 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c3 {
   position: absolute;
   background-color: #7994d4;
@@ -29,7 +21,8 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 }
 
 .c1 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }

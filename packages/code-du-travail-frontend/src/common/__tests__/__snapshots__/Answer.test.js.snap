@@ -7,14 +7,6 @@ exports[`<Answer /> should renders 1`] = `
   padding: 0 2rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c11 {
   padding: 3.2rem 0;
   background-color: transparent;
@@ -49,44 +41,6 @@ exports[`<Answer /> should renders 1`] = `
 
 .c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c15 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c13 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c17 {
@@ -150,8 +104,47 @@ exports[`<Answer /> should renders 1`] = `
   cursor: not-allowed;
 }
 
+.c7 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c15 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c13 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c4 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -264,14 +257,6 @@ exports[`<Answer /> should renders 1`] = `
   padding: 0;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   width: 80%;
 }
@@ -320,6 +305,18 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
+  .c17 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c13 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -329,18 +326,6 @@ exports[`<Answer /> should renders 1`] = `
 @media (max-width:600px) {
   .c13 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding: 0 3rem;
   }
 }
 
@@ -579,14 +564,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   padding: 0 2rem;
 }
 
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c20 {
   padding: 3.2rem 0;
   background-color: transparent;
@@ -621,44 +598,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c11 > *:last-child {
   margin-bottom: 0;
-}
-
-.c16 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c24 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c22 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c26 {
@@ -755,6 +694,44 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   overflow-x: auto;
 }
 
+.c16 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c24 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c22 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c12 {
   display: block;
   margin: 0 0 1rem 0;
@@ -767,7 +744,8 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c13 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -876,14 +854,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   align-items: center;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -957,14 +927,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   padding: 0;
 }
 
-.c8 > *:first-child {
-  margin-top: 0;
-}
-
-.c8 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c9 {
   width: 80%;
 }
@@ -1013,19 +975,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c22 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c26 {
     font-size: 1.4rem;
   }
@@ -1053,6 +1002,19 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 @media (max-width:600px) {
   .c2 {
     overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c22 {
+    font-size: 1.6rem;
   }
 }
 
@@ -1409,14 +1371,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   padding: 0 2rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c11 {
   padding: 3.2rem 0;
   background-color: transparent;
@@ -1451,44 +1405,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 .c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c15 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c13 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c18 {
@@ -1558,8 +1474,47 @@ exports[`<Answer /> should renders back to results link 1`] = `
   transform: translateX(4px);
 }
 
+.c7 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c15 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c13 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c4 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -1672,14 +1627,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   padding: 0;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   width: 80%;
 }
@@ -1728,6 +1675,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
+  .c18 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c13 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -1737,18 +1696,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
 @media (max-width:600px) {
   .c13 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    padding: 0 3rem;
   }
 }
 
@@ -1987,14 +1934,6 @@ exports[`<Answer /> should renders related content 1`] = `
   padding: 0 2rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c12 {
   padding: 3.2rem 0;
   background-color: transparent;
@@ -2029,54 +1968,6 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c14 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c32 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
 }
 
 .c41 {
@@ -2274,6 +2165,54 @@ exports[`<Answer /> should renders related content 1`] = `
   transform: translateX(4px);
 }
 
+.c7 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c14 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
+.c32 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c31 {
   display: block;
   margin: 0 0 1rem 0;
@@ -2368,7 +2307,8 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c4 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -2531,14 +2471,6 @@ exports[`<Answer /> should renders related content 1`] = `
   padding: 0;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   width: 70%;
 }
@@ -2587,6 +2519,24 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c19 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c19 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c37 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -2602,24 +2552,6 @@ exports[`<Answer /> should renders related content 1`] = `
 @media (max-width:600px) {
   .c32 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c37 {
-    font-size: 1.4rem;
   }
 }
 
@@ -3244,14 +3176,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding: 0 2rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c12 {
   padding: 3.2rem 0;
   background-color: transparent;
@@ -3286,44 +3210,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 .c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c14 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c18 {
@@ -3387,8 +3273,47 @@ exports[`<Answer /> should renders tooltip 1`] = `
   cursor: not-allowed;
 }
 
+.c7 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c14 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c4 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -3505,14 +3430,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding: 0;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   width: 80%;
 }
@@ -3561,6 +3478,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
+  .c18 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -3570,18 +3499,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
 @media (max-width:600px) {
   .c14 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    padding: 0 3rem;
   }
 }
 
@@ -3856,14 +3773,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding: 0 2rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c12 {
   padding: 3.2rem 0;
   background-color: transparent;
@@ -3898,44 +3807,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 .c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c14 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c18 {
@@ -3999,8 +3870,47 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   cursor: not-allowed;
 }
 
+.c7 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c14 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c4 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -4117,14 +4027,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding: 0;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   width: 80%;
 }
@@ -4173,6 +4075,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
+  .c18 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -4182,18 +4096,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 @media (max-width:600px) {
   .c14 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    padding: 0 3rem;
   }
 }
 
@@ -4454,14 +4356,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding: 0 2rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c12 {
   padding: 3.2rem 0;
   background-color: transparent;
@@ -4496,44 +4390,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 
 .c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c14 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c18 {
@@ -4597,8 +4453,47 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   cursor: not-allowed;
 }
 
+.c7 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c14 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c4 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -4715,14 +4610,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding: 0;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   width: 80%;
 }
@@ -4771,6 +4658,18 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:600px) {
+  .c18 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -4780,18 +4679,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 @media (max-width:600px) {
   .c14 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    padding: 0 3rem;
   }
 }
 
@@ -5043,14 +4930,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding: 0 2rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c12 {
   padding: 3.2rem 0;
   background-color: transparent;
@@ -5085,44 +4964,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 .c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c14 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c18 {
@@ -5186,8 +5027,47 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   cursor: not-allowed;
 }
 
+.c7 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c14 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c4 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -5304,14 +5184,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding: 0;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   width: 80%;
 }
@@ -5360,6 +5232,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
+  .c18 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -5369,18 +5253,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 @media (max-width:600px) {
   .c14 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    padding: 0 3rem;
   }
 }
 

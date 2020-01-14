@@ -3,7 +3,7 @@
 exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 .c0 {
   position: relative;
-  margin: 0 0 1rem 0;
+  margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;

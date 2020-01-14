@@ -52,14 +52,6 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   align-items: center;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;

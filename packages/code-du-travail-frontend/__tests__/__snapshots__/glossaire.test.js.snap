@@ -8,26 +8,10 @@ exports[`<Glossaire /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c20 > *:first-child {
-  margin-top: 0;
-}
-
-.c20 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c34 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-.c34 > *:first-child {
-  margin-top: 0;
-}
-
-.c34 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c19 {
@@ -64,42 +48,6 @@ exports[`<Glossaire /> should render 1`] = `
 
 .c25 > *:last-child {
   margin-bottom: 0;
-}
-
-.c23 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c29 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c44 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
 }
 
 .c16 {
@@ -224,20 +172,59 @@ exports[`<Glossaire /> should render 1`] = `
   cursor: not-allowed;
 }
 
+.c23 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c29 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c44 {
+  position: relative;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c21 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: auto;
   text-align: center;
 }
 
 .c27 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
 
 .c35 {
-  margin-bottom: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
@@ -447,14 +434,6 @@ exports[`<Glossaire /> should render 1`] = `
   height: 9rem;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -553,14 +532,6 @@ exports[`<Glossaire /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c37 > *:first-child {
-  margin-top: 0;
-}
-
-.c37 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c39 {
   width: 1.5em;
   margin-left: 1.6rem;
@@ -583,14 +554,6 @@ exports[`<Glossaire /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.c41 > *:first-child {
-  margin-top: 0;
-}
-
-.c41 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c43 + .c42 {
@@ -727,12 +690,6 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c44 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }
@@ -747,6 +704,12 @@ exports[`<Glossaire /> should render 1`] = `
 @media (max-width:600px) {
   .c38 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c44 {
+    font-size: 1.6rem;
   }
 }
 

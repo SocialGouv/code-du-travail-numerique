@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
-.c3 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c13:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
 }
 
 .c0 {
@@ -133,18 +135,6 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   cursor: not-allowed;
 }
 
-.c13:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
 .c1 {
   position: fixed;
   top: 0;
@@ -173,6 +163,16 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.c3 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c7 {
@@ -346,12 +346,6 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
   }
@@ -394,6 +388,12 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     position: fixed;
     top: 1rem;
     right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
   }
 }
 

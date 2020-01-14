@@ -7,43 +7,10 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
-}
-
-.c9 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c7 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c3 {
@@ -124,6 +91,31 @@ exports[`<ConventionCollective /> should render 1`] = `
   cursor: not-allowed;
 }
 
+.c9 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c7 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c6 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -192,14 +184,6 @@ exports[`<ConventionCollective /> should render 1`] = `
   text-align: center;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c0 {
   max-width: 124rem;
   margin: 0 auto;
@@ -222,14 +206,6 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding: 0;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   width: 80%;
 }
@@ -248,6 +224,18 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c11 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c7 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -257,18 +245,6 @@ exports[`<ConventionCollective /> should render 1`] = `
 @media (max-width:600px) {
   .c7 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    padding: 0 3rem;
   }
 }
 

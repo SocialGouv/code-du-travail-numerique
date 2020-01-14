@@ -23,32 +23,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   margin-bottom: 0;
 }
 
-.c9 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .c0 {
   position: absolute;
   top: 0;
@@ -227,6 +201,32 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   flex: 1 1 auto;
 }
 
+.c9 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -267,13 +267,15 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 .c7 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c13 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -339,7 +341,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 .c22 {
-  margin-bottom: 1.6rem;
+  margin: 1.6rem 0 !important;
   text-align: center;
 }
 
@@ -685,42 +687,6 @@ exports[`<Contribution /> should render answer references 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c23 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c0 {
   position: absolute;
   top: 0;
@@ -813,7 +779,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   cursor: not-allowed;
 }
 
-.c27 {
+.c26 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -850,16 +816,16 @@ exports[`<Contribution /> should render answer references 1`] = `
   opacity: 1;
 }
 
-.c27:link,
-.c27:visited {
+.c26:link,
+.c26:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c27:not([disabled]):hover,
-.c27:not([disabled]):active,
-.c27:not([disabled]):focus {
+.c26:not([disabled]):hover,
+.c26:not([disabled]):active,
+.c26:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -868,7 +834,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   border-color: #f99593;
 }
 
-.c27[disabled] {
+.c26[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -897,6 +863,42 @@ exports[`<Contribution /> should render answer references 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+.c9 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c23 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c24 {
@@ -950,13 +952,15 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 .c7 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c13 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -983,11 +987,6 @@ exports[`<Contribution /> should render answer references 1`] = `
   line-height: 1.25;
   padding-left: 2.4rem;
   text-align: left;
-}
-
-.c25 {
-  margin: 5px 0;
-  list-style-type: none;
 }
 
 .c22 {
@@ -1030,12 +1029,12 @@ exports[`<Contribution /> should render answer references 1`] = `
   margin-top: 3.2rem;
 }
 
-.c26 {
-  margin-bottom: 1.6rem;
+.c25 {
+  margin: 1.6rem 0 !important;
   text-align: center;
 }
 
-.c28 {
+.c27 {
   width: 2.8rem;
   margin-left: 1.6rem;
 }
@@ -1054,25 +1053,19 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c20 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c26 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c26 {
     padding: 0 3rem;
   }
 }
@@ -1083,6 +1076,12 @@ exports[`<Contribution /> should render answer references 1`] = `
     -ms-flex: 0 0 3.4rem;
     flex: 0 0 3.4rem;
     margin-right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 1.6rem;
   }
 }
 
@@ -1351,40 +1350,40 @@ exports[`<Contribution /> should render answer references 1`] = `
       >
         Convention collective
       </span>
-      <li
-        class="c25"
-      >
-        <a
-          href="http://path/to/agreement"
-          rel="noopener noreferrer"
-          target="_blank"
-        />
-      </li>
+      <ul>
+        <li>
+          <a
+            href="http://path/to/agreement"
+            rel="noopener noreferrer"
+            target="_blank"
+          />
+        </li>
+      </ul>
       <span
         class="c24"
       >
         Autres sources
       </span>
-      <li
+      <ul>
+        <li>
+          <a
+            href="http://path/to/ref"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            reference externe 1
+          </a>
+        </li>
+      </ul>
+      <div
         class="c25"
       >
-        <a
-          href="http://path/to/ref"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          reference externe 1
-        </a>
-      </li>
-      <div
-        class="c26"
-      >
         <button
-          class="c27"
+          class="c26"
         >
           Changer de convention collective
           <svg
-            class="c28"
+            class="c27"
             fill="none"
             viewBox="0 0 32 32"
           >
@@ -1423,32 +1422,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 
 .c12 > *:last-child {
   margin-bottom: 0;
-}
-
-.c9 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c0 {
@@ -1629,6 +1602,32 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   flex: 1 1 auto;
 }
 
+.c9 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1669,13 +1668,15 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 .c7 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c13 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -1745,7 +1746,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 .c23 {
-  margin-bottom: 1.6rem;
+  margin: 1.6rem 0 !important;
   text-align: center;
 }
 
@@ -2098,32 +2099,6 @@ exports[`<Contribution /> should render with both answers 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .c0 {
   position: absolute;
   top: 0;
@@ -2178,6 +2153,32 @@ exports[`<Contribution /> should render with both answers 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+.c9 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .c17 {
@@ -2269,13 +2270,15 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 .c7 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c13 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -2603,19 +2606,6 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   margin-bottom: 0;
 }
 
-.c13 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .c0 {
   position: absolute;
   top: 0;
@@ -2670,6 +2660,19 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+.c13 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .c14 {
@@ -2761,7 +2764,8 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 .c10 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -3028,7 +3032,8 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 }
 
 .c0 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
@@ -3105,7 +3110,8 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
 }
 
 .c0 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }

@@ -7,41 +7,10 @@ exports[`<Layout /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c23 > *:first-child {
-  margin-top: 0;
-}
-
-.c23 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c21 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
-}
-
-.c26 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c34 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
 }
 
 .c16 {
@@ -166,8 +135,32 @@ exports[`<Layout /> should render 1`] = `
   cursor: not-allowed;
 }
 
+.c26 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c34 {
+  position: relative;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c24 {
-  margin-bottom: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
@@ -348,14 +341,6 @@ exports[`<Layout /> should render 1`] = `
   height: 9rem;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -454,14 +439,6 @@ exports[`<Layout /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c29 {
   width: 1.5em;
   margin-left: 1.6rem;
@@ -484,14 +461,6 @@ exports[`<Layout /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.c31 > *:first-child {
-  margin-top: 0;
-}
-
-.c31 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c33 + .c32 {
@@ -589,12 +558,6 @@ exports[`<Layout /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c34 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }
@@ -609,6 +572,12 @@ exports[`<Layout /> should render 1`] = `
 @media (max-width:600px) {
   .c28 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    font-size: 1.6rem;
   }
 }
 

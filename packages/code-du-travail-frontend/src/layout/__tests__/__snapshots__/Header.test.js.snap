@@ -226,14 +226,6 @@ exports[`<Header /> should render 1`] = `
   height: 9rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;

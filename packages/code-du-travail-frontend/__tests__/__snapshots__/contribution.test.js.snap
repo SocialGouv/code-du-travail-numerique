@@ -7,6 +7,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 0 2rem;
 }
 
+<<<<<<< HEAD
 .c29 > *:first-child {
   margin-top: 0;
 }
@@ -16,6 +17,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c38 {
+=======
+.c29 {
+>>>>>>> test(front): update snaps
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -51,6 +55,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 0;
 }
 
+<<<<<<< HEAD
 .c35 {
   position: absolute;
   background-color: #7994d4;
@@ -112,6 +117,8 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   line-height: 1.25;
 }
 
+=======
+>>>>>>> test(front): update snaps
 .c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -295,6 +302,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
+<<<<<<< HEAD
 .c20 {
   position: relative;
   overflow: hidden;
@@ -341,12 +349,84 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c32 {
   margin-bottom: 4rem;
+=======
+.c26 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c33 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c43 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c31 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
+.c51 {
+  position: relative;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c23 {
+  margin-top: 0;
+  margin-bottom: 2.4rem;
+>>>>>>> test(front): update snaps
   margin-left: -4rem;
   text-align: left;
 }
 
+<<<<<<< HEAD
 .c50 {
   margin-bottom: 1.6rem;
+=======
+.c41 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+>>>>>>> test(front): update snaps
   margin-left: auto;
   text-align: center;
 }
@@ -548,6 +628,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 0;
 }
 
+<<<<<<< HEAD
 .c27 > *:first-child {
   margin-top: 0;
 }
@@ -557,6 +638,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c28 {
+=======
+.c20 {
+>>>>>>> test(front): update snaps
   width: 80%;
 }
 
@@ -724,14 +808,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   height: 9rem;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -830,6 +906,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 2rem;
 }
 
+<<<<<<< HEAD
 .c53 > *:first-child {
   margin-top: 0;
 }
@@ -839,6 +916,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c55 {
+=======
+.c46 {
+>>>>>>> test(front): update snaps
   width: 1.5em;
   margin-left: 1.6rem;
 }
@@ -862,6 +942,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .c57 > *:first-child {
   margin-top: 0;
 }
@@ -871,6 +952,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c59 + .c58 {
+=======
+.c50 + .c49 {
+>>>>>>> test(front): update snaps
   padding-left: 1.6rem;
 }
 
@@ -978,51 +1062,87 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
   .c40 {
     margin-left: -1rem;
     padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c40 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c60 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
+=======
   .c16 {
     font-size: 1.4rem;
+>>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+<<<<<<< HEAD
+  .c40 {
+    font-size: 1.6rem;
+=======
+  .c35 {
+    font-size: 1.4rem;
+>>>>>>> test(front): update snaps
+  }
+}
+
+@media (max-width:600px) {
+<<<<<<< HEAD
+  .c60 {
+    font-size: 1.6rem;
+=======
+  .c35 {
+    padding: 0 3rem;
+>>>>>>> test(front): update snaps
+  }
+}
+
+@media (max-width:600px) {
+  .c45 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
+  .c44 {
+    font-size: 1.4rem;
+=======
+  .c45 {
+    padding: 0 3rem;
+>>>>>>> test(front): update snaps
+  }
+}
+
+@media (max-width:600px) {
+<<<<<<< HEAD
   .c44 {
     padding: 0 3rem;
+=======
+  .c31 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+>>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
   .c54 {
     font-size: 1.4rem;
+=======
+  .c31 {
+    font-size: 1.6rem;
+>>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
   .c54 {
     padding: 0 3rem;
+=======
+  .c51 {
+    font-size: 1.6rem;
+>>>>>>> test(front): update snaps
   }
 }
 
@@ -2076,6 +2196,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 0 2rem;
 }
 
+<<<<<<< HEAD
 .c29 > *:first-child {
   margin-top: 0;
 }
@@ -2085,6 +2206,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c38 {
+=======
+.c29 {
+>>>>>>> test(front): update snaps
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -2120,6 +2244,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 0;
 }
 
+<<<<<<< HEAD
 .c35 {
   position: absolute;
   background-color: #7994d4;
@@ -2181,6 +2306,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   line-height: 1.25;
 }
 
+=======
+>>>>>>> test(front): update snaps
 .c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2364,6 +2491,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
+<<<<<<< HEAD
 .c20 {
   position: relative;
   overflow: hidden;
@@ -2410,12 +2538,84 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c32 {
   margin-bottom: 4rem;
+=======
+.c26 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c33 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c43 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c31 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
+.c51 {
+  position: relative;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c23 {
+  margin-top: 0;
+  margin-bottom: 2.4rem;
+>>>>>>> test(front): update snaps
   margin-left: -4rem;
   text-align: left;
 }
 
+<<<<<<< HEAD
 .c50 {
   margin-bottom: 1.6rem;
+=======
+.c41 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+>>>>>>> test(front): update snaps
   margin-left: auto;
   text-align: center;
 }
@@ -2617,6 +2817,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 0;
 }
 
+<<<<<<< HEAD
 .c27 > *:first-child {
   margin-top: 0;
 }
@@ -2626,6 +2827,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c28 {
+=======
+.c20 {
+>>>>>>> test(front): update snaps
   width: 80%;
 }
 
@@ -2793,14 +2997,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   height: 9rem;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2899,6 +3095,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 2rem;
 }
 
+<<<<<<< HEAD
 .c53 > *:first-child {
   margin-top: 0;
 }
@@ -2908,6 +3105,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c55 {
+=======
+.c46 {
+>>>>>>> test(front): update snaps
   width: 1.5em;
   margin-left: 1.6rem;
 }
@@ -2931,6 +3131,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .c57 > *:first-child {
   margin-top: 0;
 }
@@ -2940,6 +3141,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c59 + .c58 {
+=======
+.c50 + .c49 {
+>>>>>>> test(front): update snaps
   padding-left: 1.6rem;
 }
 
@@ -3047,51 +3251,87 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
   .c40 {
     margin-left: -1rem;
     padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c40 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c60 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
+=======
   .c16 {
     font-size: 1.4rem;
+>>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+<<<<<<< HEAD
+  .c40 {
+    font-size: 1.6rem;
+=======
+  .c35 {
+    font-size: 1.4rem;
+>>>>>>> test(front): update snaps
+  }
+}
+
+@media (max-width:600px) {
+<<<<<<< HEAD
+  .c60 {
+    font-size: 1.6rem;
+=======
+  .c35 {
+    padding: 0 3rem;
+>>>>>>> test(front): update snaps
+  }
+}
+
+@media (max-width:600px) {
+  .c45 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
+  .c44 {
+    font-size: 1.4rem;
+=======
+  .c45 {
+    padding: 0 3rem;
+>>>>>>> test(front): update snaps
+  }
+}
+
+@media (max-width:600px) {
+<<<<<<< HEAD
   .c44 {
     padding: 0 3rem;
+=======
+  .c31 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+>>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
   .c54 {
     font-size: 1.4rem;
+=======
+  .c31 {
+    font-size: 1.6rem;
+>>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
+<<<<<<< HEAD
   .c54 {
     padding: 0 3rem;
+=======
+  .c51 {
+    font-size: 1.6rem;
+>>>>>>> test(front): update snaps
   }
 }
 

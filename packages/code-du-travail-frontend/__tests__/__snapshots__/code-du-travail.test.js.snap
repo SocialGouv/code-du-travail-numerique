@@ -7,66 +7,10 @@ exports[`<CodeDuTravail /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c24 > *:first-child {
-  margin-top: 0;
-}
-
-.c24 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c23 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
-}
-
-.c28 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c38 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c26 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c46 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
 }
 
 .c22 {
@@ -269,8 +213,57 @@ exports[`<CodeDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
+.c28 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c38 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c26 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
+.c46 {
+  position: relative;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c36 {
-  margin-bottom: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
@@ -355,14 +348,6 @@ exports[`<CodeDuTravail /> should render 1`] = `
   text-align: center;
 }
 
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c19 {
   max-width: 124rem;
   margin: 0 auto;
@@ -383,14 +368,6 @@ exports[`<CodeDuTravail /> should render 1`] = `
   -ms-flex-pack: space-around;
   justify-content: space-around;
   padding: 0;
-}
-
-.c19 > *:first-child {
-  margin-top: 0;
-}
-
-.c19 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c20 {
@@ -561,14 +538,6 @@ exports[`<CodeDuTravail /> should render 1`] = `
   height: 9rem;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -667,14 +636,6 @@ exports[`<CodeDuTravail /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c39 > *:first-child {
-  margin-top: 0;
-}
-
-.c39 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c41 {
   width: 1.5em;
   margin-left: 1.6rem;
@@ -697,14 +658,6 @@ exports[`<CodeDuTravail /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.c43 > *:first-child {
-  margin-top: 0;
-}
-
-.c43 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c45 + .c44 {
@@ -802,25 +755,6 @@ exports[`<CodeDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c26 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c46 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }
@@ -847,6 +781,25 @@ exports[`<CodeDuTravail /> should render 1`] = `
 @media (max-width:600px) {
   .c40 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c46 {
+    font-size: 1.6rem;
   }
 }
 

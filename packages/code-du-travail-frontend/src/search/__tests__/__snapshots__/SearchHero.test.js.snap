@@ -164,14 +164,6 @@ exports[`<SearchHero /> should render 1`] = `
   padding-left: 12rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c3 {
   margin-top: 0;
   color: #3e486e;

@@ -95,9 +95,8 @@ exports[`<StepResult /> should render CC answer 1`] = `
   >
     Détails
   </h2>
-  <p>
-    Éléments saisis :
-  </p>
+  Éléments saisis :
+  <br />
   <ul>
     <li>
       Convention collective
@@ -126,26 +125,28 @@ exports[`<StepResult /> should render CC answer 1`] = `
   >
     Source
   </h2>
-  <p>
-    <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’ article l.1237-1 du code du travail"
-    >
-       Article L.1237-1 du code du travail
-    </a>
-  </p>
-  <p>
-    <a
-      href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’article 15"
-    >
-      Article 15
-    </a>
-  </p>
+  <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’ article l.1237-1 du code du travail"
+      >
+         Article L.1237-1 du code du travail
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article 15"
+      >
+        Article 15
+      </a>
+    </li>
+  </ul>
 </div>
 `;
 
@@ -241,16 +242,18 @@ exports[`<StepResult /> should render with no cc 1`] = `
   >
     Source
   </h2>
-  <p>
-    <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’ article l.1237-1 du code du travail"
-    >
-       Article L.1237-1 du code du travail
-    </a>
-  </p>
+  <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’ article l.1237-1 du code du travail"
+      >
+         Article L.1237-1 du code du travail
+      </a>
+    </li>
+  </ul>
 </div>
 `;
 
@@ -354,15 +357,17 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   >
     Source
   </h2>
-  <p>
-    <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’ article l.1237-1 du code du travail"
-    >
-       Article L.1237-1 du code du travail
-    </a>
-  </p>
+  <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’ article l.1237-1 du code du travail"
+      >
+         Article L.1237-1 du code du travail
+      </a>
+    </li>
+  </ul>
 </div>
 `;

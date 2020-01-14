@@ -7,14 +7,6 @@ exports[`<Article /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -59,7 +51,8 @@ exports[`<Article /> should render 1`] = `
 }
 
 .c2 {
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
   margin-left: -4rem;
   text-align: left;
 }
