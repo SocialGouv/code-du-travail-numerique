@@ -18,7 +18,6 @@ const SearchResults = ({
   // const router = useRouter();
 
   useEffect(() => {
-    // only log candidates in case of actual search
     const toLogCandidate = ({ url, source, slug, algo }) => {
       const trackedUrl = formatUrlMatomo(source, slug, url);
       return {
@@ -31,6 +30,7 @@ const SearchResults = ({
       themes: themes.map(toLogCandidate),
       articles: articles.map(toLogCandidate)
     });
+    // disctintion between actual search and theme search when loggin
     if (isSearch) {
       matopush(["trackEvent", "candidateResults", query, results]);
     } else {
