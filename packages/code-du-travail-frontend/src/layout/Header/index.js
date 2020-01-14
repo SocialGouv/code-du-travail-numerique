@@ -60,7 +60,7 @@ const Header = ({ currentPage = "" }) => {
   );
 };
 
-const { box, breakpoints, fonts, spacings } = theme;
+const { box, breakpoints, spacings } = theme;
 
 const HEADER_HEIGHT = "9rem";
 const HEADER_HEIGHT_MOBILE = "5rem";
