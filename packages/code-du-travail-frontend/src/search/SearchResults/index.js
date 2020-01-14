@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { Container, Section } from "@socialgouv/react-ui";
 
 import { Results } from "./Results";
@@ -14,8 +14,11 @@ const SearchResults = ({
   isSearch,
   query
 }) => {
-  const router = useRouter();
+  // todo can we remove this ?
+  // const router = useRouter();
+
   useEffect(() => {
+    // only log candidates in case of actual search
     const toLogCandidate = ({ url, source, slug, algo }) => {
       const trackedUrl = formatUrlMatomo(source, slug, url);
       return {
@@ -28,8 +31,13 @@ const SearchResults = ({
       themes: themes.map(toLogCandidate),
       articles: articles.map(toLogCandidate)
     });
-    matopush(["trackEvent", "candidateResults", router.query.q, results]);
+    if (isSearch) {
+      matopush(["trackEvent", "candidateResults", query, results]);
+    } else {
+      matopush(["trackEvent", "themeResults", query, results]);
+    }
   });
+
   return (
     <>
       {documents.length > 0 && (
