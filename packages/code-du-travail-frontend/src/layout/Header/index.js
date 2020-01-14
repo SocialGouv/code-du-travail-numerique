@@ -27,11 +27,14 @@ const Header = ({ currentPage = "" }) => {
       <StyledContainer>
         <Link href="/" passHref>
           <LogoLink title="Code du travail numérique - retour à l'accueil">
-            <Logo
+            <Marianne
               src={"/static/assets/img/marianne.svg"}
               alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail"
             />
-            {currentPage !== "home" && <Span>Code du travail numérique</Span>}
+            <Logo
+              src={"/static/assets/img/logo.svg"}
+              alt="code du travail numérique"
+            />
           </LogoLink>
         </Link>
         <RightSide>
@@ -113,27 +116,34 @@ const LogoLink = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
-`;
-
-const Logo = styled.img`
-  position: relative;
-  top: ${spacings.base};
-  width: 10rem;
   @media (max-width: ${breakpoints.mobile}) {
-    top: ${spacings.xsmall};
-    max-width: 5rem;
-    margin-right: ${spacings.xsmall};
+    /**
+     * hack(lionelb)
+     * the width will be 50% + half the logo
+     * so logo is center using space-between
+     */
+    flex: 0 0 calc(50% + 4.635rem);
+    justify-content: space-between;
   }
 `;
 
-const Span = styled.span`
-  margin-left: ${spacings.base};
-  font-size: ${fonts.sizes.headings.small};
-  font-family: "Merriweather", serif;
-  line-height: ${fonts.lineHeightTitle};
+const Marianne = styled.img`
+  position: relative;
+  top: ${spacings.base};
+  width: 9rem;
+  /* height inside header, use 7em and no top */
+  margin-right: ${spacings.large};
   @media (max-width: ${breakpoints.mobile}) {
-    max-width: 13rem;
-    font-size: ${fonts.sizes.small};
+    top: ${spacings.xsmall};
+    max-width: 5rem;
+    /* height inside header, use 4em and no top */
+  }
+`;
+const Logo = styled.img`
+  position: relative;
+  width: 17rem;
+  @media (max-width: ${breakpoints.mobile}) {
+    max-width: 9.25rem;
   }
 `;
 

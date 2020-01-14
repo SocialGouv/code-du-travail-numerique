@@ -585,14 +585,13 @@ exports[`<CodeDuTravail /> should render 1`] = `
 .c5 {
   position: relative;
   top: 1.6rem;
-  width: 10rem;
+  width: 9rem;
+  margin-right: 3.2rem;
 }
 
 .c6 {
-  margin-left: 1.6rem;
-  font-size: 1.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
+  position: relative;
+  width: 17rem;
 }
 
 .c7 {
@@ -1053,17 +1052,27 @@ exports[`<CodeDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c4 {
+    -webkit-flex: 0 0 calc(50% + 4.635rem);
+    -ms-flex: 0 0 calc(50% + 4.635rem);
+    flex: 0 0 calc(50% + 4.635rem);
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:600px) {
   .c5 {
     top: 0.8rem;
     max-width: 5rem;
-    margin-right: 0.8rem;
   }
 }
 
 @media (max-width:600px) {
   .c6 {
-    max-width: 13rem;
-    font-size: 1.4rem;
+    max-width: 9.25rem;
   }
 }
 
@@ -1172,7 +1181,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
       class="c2"
       id="printDate"
     >
-      le 1/6/2009,  :40:31 
+      le 2009-1-6 9 40:31
     </div>
     <div
       class="c3"
@@ -1187,11 +1196,11 @@ exports[`<CodeDuTravail /> should render 1`] = `
           class="c5"
           src="/static/assets/img/marianne.svg"
         />
-        <span
+        <img
+          alt="code du travail numérique"
           class="c6"
-        >
-          Code du travail numérique
-        </span>
+          src="/static/assets/img/logo.svg"
+        />
       </a>
       <div
         class="c7"
