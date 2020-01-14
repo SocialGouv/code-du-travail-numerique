@@ -92,7 +92,7 @@ describe("<SearchResults/>", () => {
 
   it("should track event candidateResults", () => {
     Router.router.query.q = "démission";
-    render(<SearchResults items={items} query="search test" />);
+    render(<SearchResults isSearch={true} items={items} query="search test" />);
 
     const trackParams = matopush.mock.calls[0];
     expect(trackParams[0]).toEqual(
