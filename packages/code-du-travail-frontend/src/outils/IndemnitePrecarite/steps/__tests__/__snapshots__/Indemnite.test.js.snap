@@ -9,6 +9,7 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
 }
 
 .c1 {
+  display: block;
   margin-bottom: 1.6rem;
 }
 
@@ -131,6 +132,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 }
 
 .c1 {
+  display: block;
   margin-bottom: 1.6rem;
 }
 

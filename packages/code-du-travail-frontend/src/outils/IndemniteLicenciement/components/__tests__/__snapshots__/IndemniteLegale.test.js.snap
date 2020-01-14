@@ -18,6 +18,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
 }
 
 .c3 {
+  display: block;
   margin-bottom: 1.6rem;
 }
 

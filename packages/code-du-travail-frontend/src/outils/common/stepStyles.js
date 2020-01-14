@@ -60,5 +60,6 @@ export const SmallText = styled.span`
 `;
 
 export const Summary = styled.summary`
+  display: block;
   margin-bottom: ${spacings.base};
 `;

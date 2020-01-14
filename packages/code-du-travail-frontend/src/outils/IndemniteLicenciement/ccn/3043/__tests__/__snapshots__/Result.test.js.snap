@@ -18,6 +18,7 @@ exports[`<Result /> should render 1`] = `
 }
 
 .c8 {
+  display: block;
   margin-bottom: 1.6rem;
 }
 
