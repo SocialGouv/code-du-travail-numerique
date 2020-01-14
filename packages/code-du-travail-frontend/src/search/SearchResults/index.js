@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-// import { useRouter } from "next/router";
 import { Container, Section } from "@socialgouv/react-ui";
 
 import { Results } from "./Results";
@@ -14,9 +13,6 @@ const SearchResults = ({
   isSearch,
   query
 }) => {
-  // todo can we remove this ?
-  // const router = useRouter();
-
   useEffect(() => {
     const toLogCandidate = ({ url, source, slug, algo }) => {
       const trackedUrl = formatUrlMatomo(source, slug, url);
@@ -30,7 +26,7 @@ const SearchResults = ({
       themes: themes.map(toLogCandidate),
       articles: articles.map(toLogCandidate)
     });
-    // disctintion between actual search and theme search when loggin
+    // distinction between actual search and theme search when logging
     const eventType = isSearch ? "candidateResults" : "themeResults";
     matopush(["trackEvent", eventType, query, results]);
   });
