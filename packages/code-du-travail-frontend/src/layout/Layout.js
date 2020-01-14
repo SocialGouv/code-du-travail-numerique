@@ -7,22 +7,26 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { ErrorBoundary } from "../common/ErrorBoundary";
 
-const Layout = ({ title, children, currentPage }) => {
+const Layout = ({ children, currentPage }) => {
   const mainRef = React.createRef();
 
   const router = useRouter();
   const [ariaTitle, setAriaTitle] = useState();
   useEffect(() => {
+    console.log("Layout render", document.title);
+  }, []);
+  useEffect(() => {
     const routeChangeComplete = () => {
+      console.log("routeChange", document.title);
       mainRef.current.focus();
-      setAriaTitle(ariaTitle);
+      setAriaTitle(document.title);
     };
 
     router.events.on("routeChangeComplete", routeChangeComplete);
     return () => {
       router.events.off("routeChangeComplete", routeChangeComplete);
     };
-  }, [router.events, setAriaTitle, ariaTitle, mainRef]);
+  }, [router, setAriaTitle, mainRef]);
 
   return (
     <>
