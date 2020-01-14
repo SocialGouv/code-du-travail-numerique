@@ -2,6 +2,7 @@
 
 exports[`<FormulaDetails /> should render 1`] = `
 .c1 {
+  display: block;
   margin-bottom: 1.6rem;
 }
 

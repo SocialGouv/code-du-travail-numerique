@@ -52,6 +52,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 }
 
 .c8 {
+  display: block;
   margin-bottom: 1.6rem;
 }
 
@@ -438,6 +439,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
 }
 
 .c8 {
+  display: block;
   margin-bottom: 1.6rem;
 }
 

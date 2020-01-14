@@ -62,6 +62,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 }
 
 .c8 {
+  display: block;
   margin-bottom: 1.6rem;
 }
 
@@ -381,6 +382,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 }
 
 .c8 {
+  display: block;
   margin-bottom: 1.6rem;
 }
 
