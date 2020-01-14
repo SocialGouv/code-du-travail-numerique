@@ -28,7 +28,7 @@ export default createGlobalStyle`
     }
   }
 
-  h2, h3, h4 {
+  h2, h3 {
     font-weight: normal;
     font-size: ${fonts.sizes.headings.medium};
     font-family: 'Merriweather', serif;
@@ -36,7 +36,7 @@ export default createGlobalStyle`
       font-size: ${fonts.sizes.headings.small};
     }
   }
-  h5, h6 {
+  h4, h5, h6 {
     font-weight: 600;
     font-size: ${fonts.sizes.headings.small};
     font-family: "Open Sans", sans-serif;

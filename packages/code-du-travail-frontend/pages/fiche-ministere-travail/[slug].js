@@ -47,10 +47,10 @@ class Fiche extends React.Component {
     const untitledSection = sections.find(section => !section.anchor);
     const titledSections = sections
       .filter(section => section.anchor)
-      .map(({ anchor, html, tag, title }) => ({
+      .map(({ anchor, html, title }) => ({
         id: anchor,
-        as: tag,
-        title: title,
+        as: "h2",
+        title,
         body: <TabContent>{html}</TabContent>
       }));
     return (

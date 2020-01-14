@@ -41,6 +41,8 @@ export default createGlobalStyle`
     }
   }
   :target::before {
+    position: relative;
+    z-index: -1;
     display: block;
     height: 11rem; /* Fixed header's height */
     margin-top: -11rem; /* Fixed header's negative height */

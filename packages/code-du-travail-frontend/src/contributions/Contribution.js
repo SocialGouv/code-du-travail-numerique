@@ -242,7 +242,7 @@ const StyledTitle = styled(Title)`
 `;
 
 const ButtonWrapper = styled.div`
-  margin-bottom: ${spacings.base};
+  margin: ${spacings.base} 0;
   text-align: center;
 `;
 

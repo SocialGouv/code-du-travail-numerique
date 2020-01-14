@@ -18,7 +18,10 @@ export const Accordion = ({ items, ...props }) => (
     {items.map(({ body, id, title, as }, index) => {
       return (
         <div id={id} key={`${id}-${index}`}>
-          {typeof id !== props.preExpanded && <PushBelowHeader />}
+          {typeof id !== "undefined" &&
+            props.preExpanded.find(element => element === id) && (
+              <PushBelowHeader />
+            )}
           <StyledAccordionItem uuid={id} index={index}>
             <AccordionItemHeading>
               <StyledAccordionItemButton>
@@ -54,6 +57,8 @@ Accordion.defaultProps = {
 };
 
 const StyledAccordionItem = styled(AccordionItem)`
+  position: relative;
+  z-index: 1;
   ${({ index, theme }) =>
     index > 0 &&
     css`
