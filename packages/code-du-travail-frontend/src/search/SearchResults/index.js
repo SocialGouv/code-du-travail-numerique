@@ -31,11 +31,8 @@ const SearchResults = ({
       articles: articles.map(toLogCandidate)
     });
     // disctintion between actual search and theme search when loggin
-    if (isSearch) {
-      matopush(["trackEvent", "candidateResults", query, results]);
-    } else {
-      matopush(["trackEvent", "themeResults", query, results]);
-    }
+    const eventType = isSearch ? "candidateResults" : "themeResults";
+    matopush(["trackEvent", eventType, query, results]);
   });
 
   return (
