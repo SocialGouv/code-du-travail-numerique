@@ -108,7 +108,7 @@ const About = ({ ogImage, pageUrl }) => (
             Le Code du travail numérique est un service public initié par{" "}
             <a
               title="le site du ministère du travail"
-              href="https://travail.gouv.fr"
+              href="https://travail-emploi.gouv.fr/"
             >
               le ministère du Travail
             </a>

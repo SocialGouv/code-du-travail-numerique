@@ -117,7 +117,7 @@ const Footer = () => (
                 <StyledListItem>
                   <StyledLink
                     href={
-                      "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                      "https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     }
                     target="_blank"
                     rel="noopener noreferrer"
