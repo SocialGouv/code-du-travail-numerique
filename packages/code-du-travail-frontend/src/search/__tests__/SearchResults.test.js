@@ -1,5 +1,4 @@
 import React from "react";
-import Router from "next/router";
 import { SearchResults } from "../SearchResults";
 import { render } from "@testing-library/react";
 import { matopush } from "../../piwik";
