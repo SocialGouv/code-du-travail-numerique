@@ -1,5 +1,5 @@
 import React from "react";
-import { Title } from "@socialgouv/react-ui";
+import { Title, Alert, Section } from "@socialgouv/react-ui";
 import Spinner from "react-svg-spinner";
 
 class SimulateurEmbauche extends React.PureComponent {
@@ -14,7 +14,10 @@ class SimulateurEmbauche extends React.PureComponent {
 
   onLoad = () => {
     this.setState({ simulator: "success" });
-    if (!this.simRef.current.querySelector("#simulateurEmbauche")) {
+    if (
+      !this.simRef.current ||
+      !this.simRef.current.querySelector("#simulateurEmbauche")
+    ) {
       this.setState({ simulator: "error", error: "empty child" });
     }
   };
@@ -38,6 +41,11 @@ class SimulateurEmbauche extends React.PureComponent {
     return (
       <>
         <Title>Salaire brut/net</Title>
+        <Alert>
+          Pour information, l’estimation du salaire net après impôt est basée
+          sur la situation d’une personne célibataire sans enfants ni
+          patrimoine.
+        </Alert>
         {simulator === "loading" && (
           <p>
             <Spinner /> Chargement de l’outil
@@ -54,7 +62,9 @@ class SimulateurEmbauche extends React.PureComponent {
             </a>
           </p>
         ) : (
-          <div ref={this.simRef} />
+          <Section>
+            <div ref={this.simRef} />
+          </Section>
         )}
       </>
     );
