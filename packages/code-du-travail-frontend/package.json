@@ -79,6 +79,7 @@
     "eslint": "^6.8.0",
     "esm": "^3.2.25",
     "ignore-loader": "^0.1.2",
+    "intl": "^1.2.5",
     "jest": "^24.9.0",
     "jest-styled-components": "^6.3.4",
     "prettier": "^1.19.1",

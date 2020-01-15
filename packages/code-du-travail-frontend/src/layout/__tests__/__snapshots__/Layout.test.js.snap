@@ -841,7 +841,7 @@ exports[`<Layout /> should render 1`] = `
       class="c2"
       id="printDate"
     >
-      le 2009-1-6 9 40:31
+      le 06/01/2009 à 08:40
     </div>
     <div
       class="c3"

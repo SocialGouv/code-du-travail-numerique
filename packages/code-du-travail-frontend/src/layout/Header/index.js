@@ -12,7 +12,7 @@ const { Search: SearchIcon } = icons;
 
 const printDate = () => {
   const currentDate = new Date(Date.now()).toLocaleString("fr-FR");
-  return `le ${currentDate.slice(0, 10)} ${currentDate.slice(11, 18)}`;
+  return `le ${currentDate.slice(0, 10)} à ${currentDate.slice(11, 18)}`;
 };
 
 const Header = ({ currentPage = "" }) => {
