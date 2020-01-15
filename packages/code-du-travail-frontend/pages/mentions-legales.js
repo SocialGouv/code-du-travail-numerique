@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 import {
   Accordion,
   Alert,
+  Button,
   Container,
   Heading,
   PageTitle,
@@ -17,7 +18,11 @@ import Metas from "../src/common/Metas";
 
 const LegalPage = ({ pageUrl, ogImage }) => {
   const accordionItems = [];
-
+  const openTarteAuCitron = useCallback(() => {
+    if (window && window.tarteaucitron) {
+      window.tarteaucitron.userInterface.openPanel();
+    }
+  }, []);
   accordionItems.push({
     title: "Modalités d’utilisation",
     id: "modalite",
@@ -83,6 +88,9 @@ const LegalPage = ({ pageUrl, ogImage }) => {
             Le cookie ne permet pas de suivre la navigation de l’internaute sur
             d’autres sites.
           </li>
+          <p>
+            <Button onClick={openTarteAuCitron}>Modifier les réglages</Button>
+          </p>
         </StyledList>
         <p>
           La mesure d’audience (nombre de visites, pages consultées) est
