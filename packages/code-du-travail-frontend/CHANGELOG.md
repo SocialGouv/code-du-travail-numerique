@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.1...v4.1.0-alpha.2) (2020-01-15)
+
+
+### Bug Fixes
+
+* **frontend:** fix travail-emploi.gouv url ([#2240](https://github.com/SocialGouv/code-du-travail-numerique/issues/2240)) ([e1bcf84](https://github.com/SocialGouv/code-du-travail-numerique/commit/e1bcf841430ccc1e586a0f64ff137bc4552d1997))
+* **tools:** add disclaimer on salaire net / brut ([#2250](https://github.com/SocialGouv/code-du-travail-numerique/issues/2250)) ([c44ae76](https://github.com/SocialGouv/code-du-travail-numerique/commit/c44ae76bf8f6b14a85b4d04c6ef63a054134084c))
+
+
+### Features
+
+* **header:** add new logo ([#2247](https://github.com/SocialGouv/code-du-travail-numerique/issues/2247)) ([cf42568](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf42568979ca49eb8447c072e925610da32a0287))
+
+
+
+
+
 # [4.1.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.0...v4.1.0-alpha.1) (2020-01-13)
 
 

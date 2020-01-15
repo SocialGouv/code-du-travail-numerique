@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.1...v4.1.0-alpha.2) (2020-01-15)
+
+
+### Bug Fixes
+
+* update data : contribs, DF, fiches-MT ([#2251](https://github.com/SocialGouv/code-du-travail-numerique/issues/2251)) ([5472ce2](https://github.com/SocialGouv/code-du-travail-numerique/commit/5472ce288d682117f272ceda8257ba6083d64978))
+* **deps:** update dependency jsdom to v16 ([#2238](https://github.com/SocialGouv/code-du-travail-numerique/issues/2238)) ([0af3113](https://github.com/SocialGouv/code-du-travail-numerique/commit/0af31135817260e39a11fdf09dd4831bd5875bf1))
+* **frontend:** fix travail-emploi.gouv url ([#2240](https://github.com/SocialGouv/code-du-travail-numerique/issues/2240)) ([e1bcf84](https://github.com/SocialGouv/code-du-travail-numerique/commit/e1bcf841430ccc1e586a0f64ff137bc4552d1997))
+* **mail:** update docx template ([#2229](https://github.com/SocialGouv/code-du-travail-numerique/issues/2229)) ([5ee70bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/5ee70bbf82e7bb069b2caae1efad80e385ee97df))
+* **modeles:** fix month in filename ([#2225](https://github.com/SocialGouv/code-du-travail-numerique/issues/2225)) ([7b9f12b](https://github.com/SocialGouv/code-du-travail-numerique/commit/7b9f12b942bd3c75e1738e639dd78bcff3bfc39f))
+* **tools:** add disclaimer on salaire net / brut ([#2250](https://github.com/SocialGouv/code-du-travail-numerique/issues/2250)) ([c44ae76](https://github.com/SocialGouv/code-du-travail-numerique/commit/c44ae76bf8f6b14a85b4d04c6ef63a054134084c))
+* update rancher project id ([#2232](https://github.com/SocialGouv/code-du-travail-numerique/issues/2232)) ([f9e3edb](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9e3edb5eb841f22a9c6d49925fbd6add494e607))
+
+
+### Features
+
+* **header:** add new logo ([#2247](https://github.com/SocialGouv/code-du-travail-numerique/issues/2247)) ([cf42568](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf42568979ca49eb8447c072e925610da32a0287))
+
+
+
+
+
 # [4.1.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.0...v4.1.0-alpha.1) (2020-01-13)
 
 

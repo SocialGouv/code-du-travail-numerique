@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.1...v4.1.0-alpha.2) (2020-01-15)
+
+
+### Bug Fixes
+
+* update data : contribs, DF, fiches-MT ([#2251](https://github.com/SocialGouv/code-du-travail-numerique/issues/2251)) ([5472ce2](https://github.com/SocialGouv/code-du-travail-numerique/commit/5472ce288d682117f272ceda8257ba6083d64978))
+* **deps:** update dependency jsdom to v16 ([#2238](https://github.com/SocialGouv/code-du-travail-numerique/issues/2238)) ([0af3113](https://github.com/SocialGouv/code-du-travail-numerique/commit/0af31135817260e39a11fdf09dd4831bd5875bf1))
+
+
+
+
+
 # [4.1.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.0...v4.1.0-alpha.1) (2020-01-13)
 
 
