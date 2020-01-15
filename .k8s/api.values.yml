@@ -73,6 +73,10 @@ deployment:
     - name: VERSION
       value: "${VERSION}"
 
+service:
+  port: ${PORT}
+  targetPort: ${PORT}
+
 ingress:
   enabled: true
   annotations:
@@ -81,7 +85,9 @@ ingress:
   hosts:
     - host: ${API_HOST}
       paths:
-        - /
+        - path: /
+          servicePort: ${PORT}
+
   tls:
     - hosts:
         - ${API_HOST}

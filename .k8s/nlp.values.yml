@@ -38,3 +38,13 @@ deployment:
       value: "${PORT}"
     - name: VERSION
       value: "${VERSION}"
+
+service:
+  port: ${PORT}
+  targetPort: ${PORT}
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUAverageUtilizationPercentage: 80

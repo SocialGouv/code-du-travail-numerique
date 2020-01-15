@@ -5,7 +5,7 @@ image:
 fullnameOverride: "frontend-nodejs"
 
 deployment:
-  port: 3000
+  port: ${PORT}
 
   resources:
     limits:
@@ -116,6 +116,10 @@ deployment:
 
           echo Ready;
 
+service:
+  port: ${PORT}
+  targetPort: ${PORT}
+
 ingress:
   enabled: true
   annotations:
@@ -124,7 +128,8 @@ ingress:
   hosts:
     - host: ${FRONTEND_HOST}
       paths:
-        - /
+        - path: /
+          servicePort: ${PORT}
   tls:
     - hosts:
         - "${FRONTEND_HOST}"

@@ -53,7 +53,7 @@ fi
 export API_HOST="api-${DOMAIN}";
 export FRONTEND_HOST="${DOMAIN}";
 export NLP_HOST="nlp-python";
-export NLP_URL="http://${NLP_HOST}";
+export NLP_URL="http://${NLP_HOST}:${NLP_PORT}";
 
 #
 
