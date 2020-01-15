@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, Toast, Section } from "@socialgouv/react-ui";
+import { Title, Alert, Section } from "@socialgouv/react-ui";
 import Spinner from "react-svg-spinner";
 
 class SimulateurEmbauche extends React.PureComponent {
@@ -41,11 +41,11 @@ class SimulateurEmbauche extends React.PureComponent {
     return (
       <>
         <Title>Salaire brut/net</Title>
-        <Toast>
+        <Alert>
           Pour information, l’estimation du salaire net après impôt est basée
           sur la situation d’une personne célibataire sans enfants ni
           patrimoine.
-        </Toast>
+        </Alert>
         {simulator === "loading" && (
           <p>
             <Spinner /> Chargement de l’outil
