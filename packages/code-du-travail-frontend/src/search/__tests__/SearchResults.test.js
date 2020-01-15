@@ -1,5 +1,4 @@
 import React from "react";
-import Router from "next/router";
 import { SearchResults } from "../SearchResults";
 import { render } from "@testing-library/react";
 import { matopush } from "../../piwik";
@@ -91,12 +90,9 @@ describe("<SearchResults/>", () => {
   });
 
   it("should track event candidateResults", () => {
-    Router.router.query.q = "démission";
-    render(<SearchResults items={items} query="search test" />);
+    render(<SearchResults isSearch items={items} query="search test" />);
 
     const trackParams = matopush.mock.calls[0];
-    expect(trackParams[0]).toEqual(
-      expect.arrayContaining(["trackEvent", "candidateResults", "démission"])
-    );
+    expect(trackParams[0]).toMatchSnapshot();
   });
 });
