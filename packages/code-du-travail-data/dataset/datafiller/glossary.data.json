@@ -372,9 +372,7 @@
     "abbrs": [],
     "variants": [],
     "definition": "<p>Décision de justice prise par  la Cour de cassation. </p>",
-    "refs": [
-      {}
-    ]
+    "refs": []
   },
   {
     "title": "arrêt de travail",
@@ -650,9 +648,7 @@
     ],
     "variants": [],
     "definition": "<p>Autorité administrative indépendante en charge de veiller à la protection des données personnelles, de la vie privée et des libertés individuelles ou publiques. </p>",
-    "refs": [
-      {}
-    ]
+    "refs": []
   },
   {
     "title": "Commission santé, sécurité et conditions de travail",
@@ -865,9 +861,7 @@
     "abbrs": [],
     "variants": [],
     "definition": "<p>Comité Social et Economique.Instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l'entreprise qui étaient les délégués du personnel, le comité d'entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l'effectif atteint 11 salariés pendant 12 mois consécutifs. Ses attributions évoluent en fonction des effectifs de l'entreprise. </p>",
-    "refs": [
-      {}
-    ]
+    "refs": []
   },
   {
     "title": "De gré à gré",
@@ -1136,9 +1130,7 @@
     "abbrs": [],
     "variants": [],
     "definition": "<p>Lorsqu'un salarié a plusieurs employeurs. </p>",
-    "refs": [
-      {}
-    ]
+    "refs": []
   },
   {
     "title": "Emprisonnement",
@@ -2622,11 +2614,7 @@
       "vacants"
     ],
     "definition": "<p>Libre, disponible et inoccupé.</p>",
-    "refs": [
-      {
-        "url": "valeur limite d'exposition"
-      }
-    ]
+    "refs": []
   },
   {
     "title": "valeur limite d'exposition",
@@ -2639,9 +2627,7 @@
       "Valeurs limites d'exposition professionnelle"
     ],
     "definition": "<p>Niveau d'exposition d'un travailleur à un risque professionnel qui ne doit pas être dépassé.</p>",
-    "refs": [
-      {}
-    ]
+    "refs": []
   },
   {
     "title": "Vigueur",

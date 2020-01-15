@@ -1501,10 +1501,6 @@
         "title": "Si le salarié est malade pendant ses congés, quelles en sont les conséquences ?"
       },
       {
-        "url": "/modeles-de-courriers/modele-reclamation-de-conges-payes",
-        "title": "Modèle : réclamation de congés payés"
-      },
-      {
         "url": "/modeles-de-courriers/reclamation-de-conges-payes",
         "title": "Réclamation de congés payés"
       },
@@ -1653,31 +1649,7 @@
         "url": "/fiche-service-public/aide-unique-a-lembauche-pour-un-contrat-dapprentissage"
       },
       {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-lentree-en-apprentissage#Question-1-L-apprentissage-jusqu-a-quel-age",
-        "title": "L’entrée en apprentissage : l’apprentissage : jusqu’à quel âge ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-lentree-en-apprentissage#Question-2-Comment-trouver-un-employeur",
-        "title": "L’entrée en apprentissage : comment trouver un employeur ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-lentree-en-apprentissage#Question-3-Quels-sont-les-points-clefs-de-votre-contrat",
-        "title": "L’entrée en apprentissage : quels sont les points clefs de votre contrat ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-lentree-en-apprentissage#Question-4-Quel-sera-votre-salaire",
-        "title": "L’entrée en apprentissage : quel sera votre salaire ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-lentree-en-apprentissage#Question-5-Existe-t-il-une-periode-d-essai",
-        "title": "L’entrée en apprentissage : existe-t-il une période d’essai ?"
-      },
-      {
         "url": "/fiche-service-public/peut-on-entrer-en-apprentissage-apres-la-classe-de-troisieme"
-      },
-      {
-        "url": "/fiche-service-public/comment-se-deroule-lapprentissage-dans-une-administration",
-        "title": "Comment se déroule l'apprentissage dans une administration ?"
       },
       {
         "url": "/fiche-service-public/mediateur-de-lapprentissage-comment-y-recourir"
@@ -1785,10 +1757,6 @@
       {
         "url": "/fiche-ministere-travail/apprentissage-questions-reponses-sur-la-remuneration-des-apprentis",
         "title": "Apprentissage | Questions-réponses sur la rémunération des apprentis"
-      },
-      {
-        "url": "/fiche-ministere-travail/apprentissage-modalites-de-financement-des-cfa-et-des-contrats-dapprentissage",
-        "title": "Apprentissage | Modalités de financement des CFA et des contrats d’apprentissage : apprentissage | modalités de financement des cfa et des contrats d’apprentissage"
       },
       {
         "url": "/fiche-ministere-travail/etre-apprenti",
@@ -2072,33 +2040,14 @@
         "url": "/fiche-service-public/emploi-davenir"
       },
       {
-        "url": "/fiche-service-public/garantie-jeunes"
+        "url": "/fiche-service-public/garantie-jeunes-accompagnement-pour-trouver-un-travail",
+        "title": "Garantie jeunes (accompagnement pour trouver un travail)"
       },
       {
         "url": "/fiche-service-public/quest-ce-quun-emploi-franc"
       },
       {
         "url": "/fiche-service-public/un-ancien-contrat-aide-reste-t-il-valable-contrat-insertion-emploi-jeune"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-la-garantie-jeunes#t1-Qui-est-concerne",
-        "title": "La Garantie jeunes : qui est concerné ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-la-garantie-jeunes#t2-C-est-quoi",
-        "title": "La Garantie jeunes : c’est quoi ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-la-garantie-jeunes#t3-Comment-ca-marche",
-        "title": "La Garantie jeunes : comment ça marche ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-la-garantie-jeunes#t4-Un-accompagnement-de-quelle-duree",
-        "title": "La Garantie jeunes : un accompagnement de quelle durée ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-la-garantie-jeunes#t5-Qui-fait-quoi",
-        "title": "La Garantie jeunes : qui fait quoi ?"
       },
       {
         "url": "/fiche-ministere-travail/les-emplois-davenir#Qui-sont-les-beneficiaires",
@@ -2698,8 +2647,8 @@
         "title": "SIPSI"
       },
       {
-        "url": "/fiche-service-public/salarie-detache-a-letranger-ou-expatrie-quelles-effets-sur-la-retraite",
-        "title": "Salarié détaché à l'étranger ou expatrié : quelles effets sur la retraite ?"
+        "url": "/fiche-service-public/salarie-detache-a-letranger-ou-expatrie-quels-effets-sur-la-retraite",
+        "title": "Salarié détaché à l'étranger ou expatrié : quels effets sur la retraite ?"
       },
       {
         "url": "/fiche-ministere-travail/cadre-general",
@@ -5587,22 +5536,6 @@
         "url": "/outils/indemnite-licenciement"
       },
       {
-        "url": "/modeles-de-courriers/convocation-a-un-entretien-prealable",
-        "title": "Convocation à un entretien préalable"
-      },
-      {
-        "url": "/outils/preavis-licenciement",
-        "title": "Simulateur de durée de préavis de licenciement"
-      },
-      {
-        "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
-        "title": " Quelle est la durée de préavis en cas de licenciement ?"
-      },
-      {
-        "url": "/contribution/le-preavis-de-licenciement-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
-        "title": "Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?"
-      },
-      {
         "url": "/fiche-service-public/licenciement-quest-ce-quun-conseiller-du-salarie"
       },
       {
@@ -5619,6 +5552,18 @@
       },
       {
         "url": "/fiche-service-public/licenciement-abusif-a-quelle-indemnisation-peut-pretendre-le-salarie"
+      },
+      {
+        "url": "/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel",
+        "title": "Convocation à un entretien préalable au licenciement pour motif personnel"
+      },
+      {
+        "url": "/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-economique-de-moins-de-10-salaries-pendant-30-jours",
+        "title": "Convocation à un entretien préalable au licenciement économique de moins de 10 salariés pendant 30 jours"
+      },
+      {
+        "url": "/outils/preavis-licenciement",
+        "title": "Simulateur de durée de préavis de licenciement"
       },
       {
         "url": "/fiche-ministere-travail/la-protection-en-cas-de-licenciement#Quels-sont-les-salaries-proteges",
@@ -5663,6 +5608,14 @@
       {
         "url": "/fiche-ministere-travail/le-conseiller-du-salarie#De-quels-moyens-le-conseiller-du-salarie-dispose-t-il",
         "title": "Le conseiller du salarié : de quels moyens le conseiller du salarié dispose-t-il ?"
+      },
+      {
+        "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
+        "title": " Quelle est la durée de préavis en cas de licenciement ?"
+      },
+      {
+        "url": "/contribution/le-preavis-de-licenciement-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
+        "title": "Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?"
       }
     ],
     "slug": "84-licenciement",
@@ -7069,6 +7022,34 @@
       {
         "url": "/fiche-service-public/impot-sur-le-revenu-avantages-en-nature",
         "title": "Impôt sur le revenu - Avantages en nature"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-prime-exceptionnelle-de-pouvoir-dachat",
+        "title": "La prime exceptionnelle de pouvoir d’achat"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-prime-exceptionnelle-de-pouvoir-dachat#Quelles-sont-les-conditions-des-exonerations-sociales-et-fiscales-nbsp",
+        "title": "La prime exceptionnelle de pouvoir d’achat : quelles sont les conditions des exonérations sociales et fiscales ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-prime-exceptionnelle-de-pouvoir-dachat#Quels-sont-les-employeurs-concernes",
+        "title": "La prime exceptionnelle de pouvoir d’achat : quels sont les employeurs concernés ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-prime-exceptionnelle-de-pouvoir-dachat#Quels-sont-les-salaries-concernes",
+        "title": "La prime exceptionnelle de pouvoir d’achat : quels sont les salariés concernés ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-prime-exceptionnelle-de-pouvoir-dachat#Qui-decide-du-versement-de-la-prime-et-de-son-montant",
+        "title": "La prime exceptionnelle de pouvoir d’achat : qui décide du versement de la prime et de son montant ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-prime-exceptionnelle-de-pouvoir-dachat#Quelles-sont-les-modalites-de-versement-de-la-prime",
+        "title": "La prime exceptionnelle de pouvoir d’achat : quelles sont les modalités de versement de la prime ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-prime-exceptionnelle-de-pouvoir-dachat#En-quoi-consiste-l-exoneration-sociale-et-fiscale",
+        "title": "La prime exceptionnelle de pouvoir d’achat : en quoi consiste l’exonération sociale et fiscale ?"
       }
     ],
     "slug": "22-primes-et-avantages",
@@ -7794,6 +7775,10 @@
         "url": "/fiche-service-public/retraite-dans-le-prive-droit-a-linformation-sur-la-retraite-du-salarie"
       },
       {
+        "url": "/fiche-service-public/salarie-detache-a-letranger-ou-expatrie-quels-effets-sur-la-retraite",
+        "title": "Salarié détaché à l'étranger ou expatrié : quels effets sur la retraite ?"
+      },
+      {
         "url": "/fiche-service-public/a-partir-de-quel-age-peut-on-partir-en-retraite-dans-le-secteur-prive"
       },
       {
@@ -7867,7 +7852,7 @@
       },
       {
         "url": "/contribution/a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
-        "title": "À quelles indemnités peut prétendre un salarié qui part à la retraite ?"
+        "title": "À quelles indemnités peut prétendre un salarié qui part à la retraite ?"
       },
       {
         "url": "/fiche-service-public/retraite-dans-le-prive-retraite-complementaire-agirc-arrco",
@@ -8983,9 +8968,6 @@
         "url": "/fiche-service-public/particulier-employeur-comment-payer-son-salarie-avec-un-cesu-prefinance"
       },
       {
-        "url": "/fiche-service-public/peut-on-utiliser-la-pch-ou-lapa-pour-remunerer-un-aidant-familial"
-      },
-      {
         "url": "/fiche-service-public/salaire-dune-assistante-maternelle-employee-par-un-particulier-employeur"
       },
       {
@@ -9117,9 +9099,6 @@
         "title": "La rémunération pendant la formation : quelle est la situation des demandeurs d’emploi en stages agréés par l’état ou la région ?"
       },
       {
-        "url": "/fiche-service-public/comment-un-assistant-maternel-doit-il-declarer-ses-revenus"
-      },
-      {
         "url": "/outils/simulateur-embauche",
         "title": "Simulateur d'embauche"
       },
@@ -9187,8 +9166,8 @@
     "position": 2,
     "refs": [
       {
-        "url": "/modeles-de-courriers/modele-demande-de-paiement-de-salaire",
-        "title": "Modèle : Demande de paiement de salaire"
+        "url": "/modeles-de-courriers/demande-de-paiement-de-salaire",
+        "title": "Demande de paiement de salaire"
       },
       {
         "url": "/fiche-service-public/un-salarie-doit-il-rembourser-du-materiel-de-lentreprise-casse-ou-perdu"
@@ -9419,27 +9398,7 @@
         "title": "Stages : obligations de l'employeur"
       },
       {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-stages-en-entreprise#Question-1-Que-doit-prevoir-votre-convention-de-stage",
-        "title": "Les stages en entreprise : que doit prévoir votre convention de stage ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-stages-en-entreprise#Question-2-Allez-vous-percevoir-une-remuneration",
-        "title": "Les stages en entreprise : allez-vous percevoir une rémunération ?"
-      },
-      {
         "url": "/fiche-service-public/stagiaire-aide-familial-etranger-et-jeune-au-pair"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-stages-en-entreprise#Question-3-Avez-vous-droit-a-des-jours-de-conge",
-        "title": "Les stages en entreprise : avez-vous droit à des jours de congé ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-stages-en-entreprise#Question-4-Quelles-taches-peut-on-vous-confier",
-        "title": "Les stages en entreprise : quelles tâches peut-on vous confier ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-stages-en-entreprise#Question-5-A-quels-horaires-etes-vous-tenu",
-        "title": "Les stages en entreprise : a quels horaires êtes-vous tenu ?"
       },
       {
         "url": "/fiche-service-public/embauche-a-la-fin-dun-stage-quelles-consequences-sur-lanciennete"
