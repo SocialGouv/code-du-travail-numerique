@@ -371,8 +371,7 @@ exports[`<Layout /> should render 1`] = `
 
 .c5 {
   position: relative;
-  top: 1.6rem;
-  width: 9rem;
+  width: 7rem;
   margin-right: 3.2rem;
 }
 
@@ -727,8 +726,7 @@ exports[`<Layout /> should render 1`] = `
 
 @media (max-width:600px) {
   .c5 {
-    top: 0.8rem;
-    max-width: 5rem;
+    max-width: 4rem;
   }
 }
 
