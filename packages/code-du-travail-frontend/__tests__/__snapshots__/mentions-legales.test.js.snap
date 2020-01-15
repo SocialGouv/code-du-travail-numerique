@@ -16,17 +16,17 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c42 {
+.c43 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c42 > *:first-child {
+.c43 > *:first-child {
   margin-top: 0;
 }
 
-.c42 > *:last-child {
+.c43 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -253,7 +253,7 @@ exports[`<MentionLegales /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c46 {
+.c39 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -290,16 +290,16 @@ exports[`<MentionLegales /> should render 1`] = `
   opacity: 1;
 }
 
-.c46:link,
-.c46:visited {
+.c39:link,
+.c39:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c46:not([disabled]):hover,
-.c46:not([disabled]):active,
-.c46:not([disabled]):focus {
+.c39:not([disabled]):hover,
+.c39:not([disabled]):active,
+.c39:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -308,7 +308,7 @@ exports[`<MentionLegales /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c46[disabled] {
+.c39[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -326,7 +326,7 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: left;
 }
 
-.c43 {
+.c44 {
   margin-bottom: 1.6rem;
   margin-left: auto;
   text-align: center;
@@ -355,7 +355,7 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: left;
 }
 
-.c44 {
+.c45 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -597,12 +597,12 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c39 {
+.c40 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c40 {
+.c41 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -610,7 +610,7 @@ exports[`<MentionLegales /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c40:before {
+.c41:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -622,13 +622,13 @@ exports[`<MentionLegales /> should render 1`] = `
   content: "";
 }
 
-.c41 {
+.c42 {
   position: relative;
   padding-bottom: 4rem;
   text-align: center;
 }
 
-.c45 {
+.c46 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -637,11 +637,11 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c45 > *:first-child {
+.c46 > *:first-child {
   margin-top: 0;
 }
 
-.c45 > *:last-child {
+.c46 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -790,13 +790,13 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c43 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c42 {
+  .c43 {
     max-width: 100%;
     padding: 0;
   }
@@ -834,13 +834,13 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c39 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c39 {
     padding: 0 3rem;
   }
 }
@@ -860,7 +860,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c44 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -885,7 +885,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c45 {
     font-size: 2.2rem;
   }
 }
@@ -1031,19 +1031,19 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media print {
-  .c40 {
+  .c41 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c46 {
     padding: 0;
   }
 }
 
 @media print {
-  .c45 {
+  .c46 {
     max-width: 100%;
     padding: 0;
   }
@@ -1524,6 +1524,13 @@ exports[`<MentionLegales /> should render 1`] = `
                   <li>
                     Le cookie ne permet pas de suivre la navigation de l’internaute sur d’autres sites.
                   </li>
+                  <p>
+                    <button
+                      class="c39"
+                    >
+                      Modifier les réglages
+                    </button>
+                  </p>
                 </ul>
                 <p>
                   La mesure d’audience (nombre de visites, pages consultées) est réalisée par un outil libre intitulé Matomo spécifiquement paramétré, respectant les conditions d’exemption du consentement de l’internaute définies par la recommandation « Cookies » de la Commission nationale informatique et libertés (CNIL).
@@ -1677,22 +1684,22 @@ exports[`<MentionLegales /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c39"
+    class="c40"
   >
     <footer
-      class="c40"
+      class="c41"
     >
       <div
-        class="c19 c41"
+        class="c19 c42"
       >
         <div
-          class="c42"
+          class="c43"
         >
           <header
-            class="c43"
+            class="c44"
           >
             <h3
-              class="c44"
+              class="c45"
             >
               <div
                 class="c23"
@@ -1701,12 +1708,12 @@ exports[`<MentionLegales /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c45"
+            class="c46"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c46"
+            class="c39"
           >
             Contacter nos services en région
             <svg
