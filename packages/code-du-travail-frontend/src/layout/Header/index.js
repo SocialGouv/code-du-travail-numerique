@@ -129,14 +129,18 @@ const LogoLink = styled.a`
 
 const Marianne = styled.img`
   position: relative;
-  top: ${spacings.base};
-  width: 9rem;
-  /* height inside header, use 7em and no top */
+  /* overflowing ministry logo settings */
+  /* top: ${spacings.base}; */
+  /* width: 9rem; */
+  /* contained ministry logo settings */
+  width: 7rem;
   margin-right: ${spacings.large};
   @media (max-width: ${breakpoints.mobile}) {
-    top: ${spacings.xsmall};
-    max-width: 5rem;
-    /* height inside header, use 4em and no top */
+    /* overflowing ministry logo settings */
+    /* top: ${spacings.xsmall}; */
+    /* max-width: 5rem; */
+    /* contained ministry logo settings */
+    max-width: 4rem;
   }
 `;
 const Logo = styled.img`
