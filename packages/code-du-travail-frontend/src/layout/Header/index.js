@@ -12,7 +12,7 @@ const { Search: SearchIcon } = icons;
 
 const printDate = () => {
   const currentDate = new Date(Date.now()).toLocaleString("fr-FR");
-  return `le ${currentDate.slice(0, 10)} ${currentDate.slice(11, 18)}`;
+  return `le ${currentDate.slice(0, 10)} à ${currentDate.slice(11, 18)}`;
 };
 
 const Header = ({ currentPage = "" }) => {
@@ -27,11 +27,14 @@ const Header = ({ currentPage = "" }) => {
       <StyledContainer>
         <Link href="/" passHref>
           <LogoLink title="Code du travail numérique - retour à l'accueil">
-            <Logo
+            <Marianne
               src={"/static/assets/img/marianne.svg"}
               alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail"
             />
-            {currentPage !== "home" && <Span>Code du travail numérique</Span>}
+            <Logo
+              src={"/static/assets/img/logo.svg"}
+              alt="code du travail numérique"
+            />
           </LogoLink>
         </Link>
         <RightSide>
@@ -57,7 +60,7 @@ const Header = ({ currentPage = "" }) => {
   );
 };
 
-const { box, breakpoints, fonts, spacings } = theme;
+const { box, breakpoints, spacings } = theme;
 
 const HEADER_HEIGHT = "9rem";
 const HEADER_HEIGHT_MOBILE = "5rem";
@@ -113,27 +116,30 @@ const LogoLink = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
-`;
-
-const Logo = styled.img`
-  position: relative;
-  top: ${spacings.base};
-  width: 10rem;
   @media (max-width: ${breakpoints.mobile}) {
-    top: ${spacings.xsmall};
-    max-width: 5rem;
-    margin-right: ${spacings.xsmall};
+    /**
+     * hack(lionelb)
+     * the width will be 50% + half the logo
+     * so logo is center using space-between
+     */
+    flex: 0 0 calc(50% + 4.635rem);
+    justify-content: space-between;
   }
 `;
 
-const Span = styled.span`
-  margin-left: ${spacings.base};
-  font-size: ${fonts.sizes.headings.small};
-  font-family: "Merriweather", serif;
-  line-height: ${fonts.lineHeightTitle};
+const Marianne = styled.img`
+  position: relative;
+  width: 7rem;
+  margin-right: ${spacings.large};
   @media (max-width: ${breakpoints.mobile}) {
-    max-width: 13rem;
-    font-size: ${fonts.sizes.small};
+    max-width: 4rem;
+  }
+`;
+const Logo = styled.img`
+  position: relative;
+  width: 17rem;
+  @media (max-width: ${breakpoints.mobile}) {
+    max-width: 9.25rem;
   }
 `;
 
