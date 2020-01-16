@@ -527,7 +527,7 @@ var tarteaucitron = {
     },
     "addService": function (serviceId) {
         "use strict";
-        var html = '',
+         var html = '',
             s = tarteaucitron.services,
             service = s[serviceId],
             cookie = tarteaucitron.cookie.read(),
@@ -540,9 +540,9 @@ var tarteaucitron = {
             isAllowed = (cookie.indexOf(service.key + '=true') >= 0) ? true : false,
             isResponded = (cookie.indexOf(service.key + '=false') >= 0 || cookie.indexOf(service.key + '=true') >= 0) ? true : false,
             isDNTRequested = (navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1" || window.doNotTrack === "1") ? true : false;
-
         if (tarteaucitron.added[service.key] !== true) {
             tarteaucitron.added[service.key] = true;
+            console.log("added", service.key, {isDNTRequested, isResponded, isAllowed, isDenied, isWaiting, isAutostart})
 
             html += '<li id="' + service.key + 'Line" class="tarteaucitronLine">';
             html += '   <div class="tarteaucitronName">';
@@ -601,6 +601,7 @@ var tarteaucitron = {
             if (!isAllowed) {
                 tarteaucitron.cookie.create(service.key, true);
             }
+            console.log("---- ALLOWED")
             if (tarteaucitron.launch[service.key] !== true) {
                 tarteaucitron.launch[service.key] = true;
                 service.js();
@@ -633,6 +634,7 @@ var tarteaucitron = {
         tarteaucitron.cookie.checkCount(service.key);
     },
     "sendEvent" : function(event_key) {
+        console.log("send event", event_key)
         if(event_key !== undefined) {
             //ie compatibility
             var send_event_item;

@@ -26,5 +26,8 @@ tarteaucitron.init({
   readmoreLink:
     "/mentions-legales#cookies" /* Change the default readmore link */
 });
-tarteaucitron.user.multiplegtagUa = ["DC-3048978"];
-(tarteaucitron.job = tarteaucitron.job || []).push("multiplegtag");
+tarteaucitron.user.gtagUa = "DC-3048978";
+tarteaucitron.user.gtagMore = function() {
+  /* add here your optionnal gtag() */
+};
+(tarteaucitron.job = tarteaucitron.job || []).push("gtag");

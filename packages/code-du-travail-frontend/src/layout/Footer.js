@@ -27,9 +27,21 @@ const Footer = () => {
 
   const [cookieConsent, setCookieConsent] = useState(false);
   useEffect(() => {
-    const consent = /tarteaucitron=!multiplegtag=true/.test(document.cookie);
+    const consent = /tarteaucitron=!gtag=true/.test(document.cookie);
     setCookieConsent(consent);
   }, [path]);
+
+  const tagLoaded = () => {
+    console.log("tag loaded");
+    setCookieConsent(true);
+  };
+
+  useEffect(() => {
+    document.addEventListener("gtag_loaded", tagLoaded);
+    return () => {
+      document.removeEventListener("gtag_loaded", tagLoaded);
+    };
+  }, []);
 
   return (
     <OverflowWrapper>
