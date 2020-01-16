@@ -49,7 +49,7 @@ export default class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <script src="https://polyfill.incubateur.social.gouv.fr/v3/polyfill.min.js?features=es6%2Ces2016%2Ces2017" />
+          <script src="/static/polyfill.min.js" />
         </Head>
         <body>
           <noscript>
