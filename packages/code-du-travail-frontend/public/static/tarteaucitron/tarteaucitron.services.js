@@ -36,7 +36,6 @@ tarteaucitron.services.gtag = {
         };
         gtag("js", new Date());
         gtag("config", tarteaucitron.user.gtagUa);
-
         if (typeof tarteaucitron.user.gtagMore === "function") {
           tarteaucitron.user.gtagMore();
         }
