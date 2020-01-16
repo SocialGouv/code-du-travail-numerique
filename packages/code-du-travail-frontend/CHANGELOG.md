@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.2...v4.1.0) (2020-01-16)
+
+
+### Features
+
+* **frontend:** use local polyfill ([#2253](https://github.com/SocialGouv/code-du-travail-numerique/issues/2253)) ([0215336](https://github.com/SocialGouv/code-du-travail-numerique/commit/0215336e23e21c7c097d06e6de919294a8f8c795))
+
+
+
+
+
 # [4.1.0-alpha.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.1...v4.1.0-alpha.2) (2020-01-15)
 
 
