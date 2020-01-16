@@ -31,18 +31,6 @@ const Footer = () => {
     setCookieConsent(consent);
   }, [path]);
 
-  const tagLoaded = () => {
-    console.log("tag loaded");
-    setCookieConsent(true);
-  };
-
-  useEffect(() => {
-    document.addEventListener("gtag_loaded", tagLoaded);
-    return () => {
-      document.removeEventListener("gtag_loaded", tagLoaded);
-    };
-  }, []);
-
   return (
     <OverflowWrapper>
       <StyledFooter>
