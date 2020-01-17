@@ -16,8 +16,6 @@ function StepIndemnite({ form }) {
       <Toast>
         Une convention collective, un accord d’entreprise, le contrat de travail
         ou un usage peuvent prévoir un montant plus favorable pour le salarié.
-        Dans ce cas, le montant dû est le montant le plus favorable pour le
-        salarié.
       </Toast>
     </>
   );
