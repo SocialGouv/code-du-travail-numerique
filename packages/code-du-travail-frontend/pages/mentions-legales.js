@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 import {
   Accordion,
   Alert,
+  Button,
   Container,
   Heading,
   PageTitle,
@@ -17,9 +18,14 @@ import Metas from "../src/common/Metas";
 
 const LegalPage = ({ pageUrl, ogImage }) => {
   const accordionItems = [];
-
+  const openTarteAuCitron = useCallback(() => {
+    if (window && window.tarteaucitron) {
+      window.tarteaucitron.userInterface.openPanel();
+    }
+  }, []);
   accordionItems.push({
     title: "Modalités d’utilisation",
+    id: "modalite",
     as: "h2",
     body: (
       <>
@@ -61,6 +67,7 @@ const LegalPage = ({ pageUrl, ogImage }) => {
           <br />
           75015 PARIS
         </Address>
+        <Anchor id="cookies" />
         <Heading>Utilisation de témoins de connexion (« cookies »)</Heading>
         <p>
           Nous collectons également des données par l’intermédiaire de
@@ -81,6 +88,9 @@ const LegalPage = ({ pageUrl, ogImage }) => {
             Le cookie ne permet pas de suivre la navigation de l’internaute sur
             d’autres sites.
           </li>
+          <p>
+            <Button onClick={openTarteAuCitron}>Modifier les réglages</Button>
+          </p>
         </StyledList>
         <p>
           La mesure d’audience (nombre de visites, pages consultées) est
@@ -106,6 +116,7 @@ const LegalPage = ({ pageUrl, ogImage }) => {
 
   accordionItems.push({
     title: "Accessibilité",
+    id: "accessibilite",
     as: "h2",
     body: (
       <>
@@ -139,6 +150,7 @@ const LegalPage = ({ pageUrl, ogImage }) => {
 
   accordionItems.push({
     title: "Sécurité",
+    id: "securite",
     as: "h2",
     body: (
       <>
@@ -209,7 +221,10 @@ const LegalPage = ({ pageUrl, ogImage }) => {
                 .
               </p>
             </Alert>
-            <Accordion items={accordionItems} />
+            <Accordion
+              items={accordionItems}
+              preExpanded={["modalite", "securite", "accessibilite"]}
+            />
           </Wrapper>
         </Container>
       </Section>
@@ -219,13 +234,21 @@ const LegalPage = ({ pageUrl, ogImage }) => {
 
 export default LegalPage;
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const Address = styled.address`
   display: block;
   margin: ${spacings.medium} 0;
 `;
-
+const Anchor = styled.a`
+  position: relative;
+  top: -9rem;
+  display: block;
+  visibility: hidden;
+  @media (max-width: ${breakpoints.mobile}) {
+    height: -5rem;
+  }
+`;
 const StyledList = styled.ul`
   margin: ${spacings.medium} 0;
   padding-left: ${spacings.medium};

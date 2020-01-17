@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import getConfig from "next/config";
 import Link from "next/link";
 import styled from "styled-components";
@@ -14,192 +14,212 @@ import {
 } from "@socialgouv/react-ui";
 
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
+import { useRouter } from "next/router";
 
 const { DirectionRight: DirectionRightIcon } = icons;
 const { publicRuntimeConfig } = getConfig();
 
 const GITHUB_REPO = "https://github.com/SocialGouv/code-du-travail-numerique";
 
-const Footer = () => (
-  <OverflowWrapper>
-    <StyledFooter>
-      <ServiceSection>
-        <Container>
-          <Title as="h3" topStripped>
-            Besoin de plus d’informations&nbsp;?
-          </Title>
-          <StyledContainer narrow noPadding>
-            Les services du ministère du Travail en région informent,
-            conseillent et orientent les salariés et les employeurs du secteur
-            privé sur leurs questions en droit du travail.
-          </StyledContainer>
-          <ServiceRenseignementModal>
-            {openModal => (
-              <Button onClick={openModal}>
-                Contacter nos services en région
-                <StyledDirectionRightIcon />
-              </Button>
+const Footer = () => {
+  const router = useRouter();
+  const path = router.asPath;
+
+  const [cookieConsent, setCookieConsent] = useState(false);
+  useEffect(() => {
+    const consent = /tarteaucitron=!gtag=true/.test(document.cookie);
+    setCookieConsent(consent);
+  }, [path]);
+
+  return (
+    <OverflowWrapper>
+      <StyledFooter>
+        <ServiceSection>
+          <Container>
+            <Title as="h3" topStripped>
+              Besoin de plus d’informations&nbsp;?
+            </Title>
+            {cookieConsent && (
+              <img
+                src={`https://ad.doubleclick.net/ddm/activity/src=3048978;type=emplo253;cat=lpcodet;u1=${path};dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1;num=1?`}
+                width="1"
+                height="1"
+                alt=""
+              />
             )}
-          </ServiceRenseignementModal>
-        </Container>
-      </ServiceSection>
-      <NavSection>
-        <nav>
-          <Links>
-            <Category>
-              <StyledHeading>Code du travail numérique</StyledHeading>
-              <StyledList>
-                <StyledListItem>
-                  <Link passHref href="/droit-du-travail">
-                    <StyledLink>Le droit du travail</StyledLink>
-                  </Link>
-                </StyledListItem>
-                <StyledListItem>
-                  <Link passHref href="/glossaire">
-                    <StyledLink>Glossaire</StyledLink>
-                  </Link>
-                </StyledListItem>
-                <StyledListItem>
-                  <Link passHref href="/a-propos">
-                    <StyledLink>À propos</StyledLink>
-                  </Link>
-                </StyledListItem>
-                <StyledListItem>
-                  <Link passHref href="/mentions-legales">
-                    <StyledLink>Mentions légales</StyledLink>
-                  </Link>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink href="mailto:codedutravailnumerique@travail.gouv.fr">
-                    Contact
-                  </StyledLink>
-                </StyledListItem>
-              </StyledList>
-            </Category>
-            <Category>
-              <StyledHeading>Aidez-nous à améliorer cet outil</StyledHeading>
-              <StyledList>
-                <StyledListItem>
-                  <StyledLink
-                    href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Contribuer sur Github
-                  </StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  {(() => {
-                    const packageVersion =
-                      publicRuntimeConfig.PACKAGE_VERSION || "";
-                    const isTag = packageVersion[0] === "v";
-                    const path = isTag
-                      ? "releases/tag"
-                      : packageVersion === "master"
-                      ? "commits"
-                      : "compare";
-                    return (
-                      <StyledLink
-                        href={`${GITHUB_REPO}/${path}/${packageVersion}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Journal des modifications
-                      </StyledLink>
-                    );
-                  })()}
-                </StyledListItem>
-              </StyledList>
-            </Category>
-            <Category>
-              <StyledHeading>En collaboration avec</StyledHeading>
-              <StyledList>
-                <StyledListItem>
-                  <StyledLink
-                    href={
-                      "https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    La Direction Générale du Travail
-                  </StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink
-                    href={"https://incubateur.social.gouv.fr/"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    L’incubateur des ministères sociaux
-                  </StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink
-                    href={"https://beta.gouv.fr/"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    beta.gouv.fr
-                  </StyledLink>
-                </StyledListItem>
-              </StyledList>
-            </Category>
-          </Links>
-        </nav>
-      </NavSection>
-      <GovernmentSection>
-        <StyledGovLink
-          href={"https://travail-emploi.gouv.fr"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          travail-emploi.gouv.fr
-        </StyledGovLink>
-        <Separator aria-hidden>|</Separator>
-        <StyledGovLink
-          href={"https://www.service-public.fr"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          service-public.fr
-        </StyledGovLink>
-        <Separator aria-hidden>|</Separator>
-        <StyledGovLink
-          href={"https://www.legifrance.gouv.fr"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          legifrance.gouv.fr
-        </StyledGovLink>
-        <Separator aria-hidden>|</Separator>
-        <StyledGovLink
-          href={"https://www.data.gouv.fr"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          data.gouv.fr
-        </StyledGovLink>
-        <Separator aria-hidden>|</Separator>
-        <StyledGovLink
-          href={"https://www.gouvernement.fr"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          gouvernement.fr
-        </StyledGovLink>
-        <Separator aria-hidden>|</Separator>
-        <StyledGovLink
-          href={"https://www.cnil.fr/"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          cnil.fr
-        </StyledGovLink>
-      </GovernmentSection>
-    </StyledFooter>
-  </OverflowWrapper>
-);
+            <StyledContainer narrow noPadding>
+              Les services du ministère du Travail en région informent,
+              conseillent et orientent les salariés et les employeurs du secteur
+              privé sur leurs questions en droit du travail.
+            </StyledContainer>
+            <ServiceRenseignementModal>
+              {openModal => (
+                <Button onClick={openModal}>
+                  Contacter nos services en région
+                  <StyledDirectionRightIcon />
+                </Button>
+              )}
+            </ServiceRenseignementModal>
+          </Container>
+        </ServiceSection>
+        <NavSection>
+          <nav>
+            <Links>
+              <Category>
+                <StyledHeading>Code du travail numérique</StyledHeading>
+                <StyledList>
+                  <StyledListItem>
+                    <Link passHref href="/droit-du-travail">
+                      <StyledLink>Le droit du travail</StyledLink>
+                    </Link>
+                  </StyledListItem>
+                  <StyledListItem>
+                    <Link passHref href="/glossaire">
+                      <StyledLink>Glossaire</StyledLink>
+                    </Link>
+                  </StyledListItem>
+                  <StyledListItem>
+                    <Link passHref href="/a-propos">
+                      <StyledLink>À propos</StyledLink>
+                    </Link>
+                  </StyledListItem>
+                  <StyledListItem>
+                    <Link passHref href="/mentions-legales">
+                      <StyledLink>Mentions légales</StyledLink>
+                    </Link>
+                  </StyledListItem>
+                  <StyledListItem>
+                    <StyledLink href="mailto:codedutravailnumerique@travail.gouv.fr">
+                      Contact
+                    </StyledLink>
+                  </StyledListItem>
+                </StyledList>
+              </Category>
+              <Category>
+                <StyledHeading>Aidez-nous à améliorer cet outil</StyledHeading>
+                <StyledList>
+                  <StyledListItem>
+                    <StyledLink
+                      href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Contribuer sur Github
+                    </StyledLink>
+                  </StyledListItem>
+                  <StyledListItem>
+                    {(() => {
+                      const packageVersion =
+                        publicRuntimeConfig.PACKAGE_VERSION || "";
+                      const isTag = packageVersion[0] === "v";
+                      const path = isTag
+                        ? "releases/tag"
+                        : packageVersion === "master"
+                        ? "commits"
+                        : "compare";
+                      return (
+                        <StyledLink
+                          href={`${GITHUB_REPO}/${path}/${packageVersion}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Journal des modifications
+                        </StyledLink>
+                      );
+                    })()}
+                  </StyledListItem>
+                </StyledList>
+              </Category>
+              <Category>
+                <StyledHeading>En collaboration avec</StyledHeading>
+                <StyledList>
+                  <StyledListItem>
+                    <StyledLink
+                      href={
+                        "https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      La Direction Générale du Travail
+                    </StyledLink>
+                  </StyledListItem>
+                  <StyledListItem>
+                    <StyledLink
+                      href={"https://incubateur.social.gouv.fr/"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      L’incubateur des ministères sociaux
+                    </StyledLink>
+                  </StyledListItem>
+                  <StyledListItem>
+                    <StyledLink
+                      href={"https://beta.gouv.fr/"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      beta.gouv.fr
+                    </StyledLink>
+                  </StyledListItem>
+                </StyledList>
+              </Category>
+            </Links>
+          </nav>
+        </NavSection>
+        <GovernmentSection>
+          <StyledGovLink
+            href={"https://travail-emploi.gouv.fr"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            travail-emploi.gouv.fr
+          </StyledGovLink>
+          <Separator aria-hidden>|</Separator>
+          <StyledGovLink
+            href={"https://www.service-public.fr"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            service-public.fr
+          </StyledGovLink>
+          <Separator aria-hidden>|</Separator>
+          <StyledGovLink
+            href={"https://www.legifrance.gouv.fr"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            legifrance.gouv.fr
+          </StyledGovLink>
+          <Separator aria-hidden>|</Separator>
+          <StyledGovLink
+            href={"https://www.data.gouv.fr"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            data.gouv.fr
+          </StyledGovLink>
+          <Separator aria-hidden>|</Separator>
+          <StyledGovLink
+            href={"https://www.gouvernement.fr"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            gouvernement.fr
+          </StyledGovLink>
+          <Separator aria-hidden>|</Separator>
+          <StyledGovLink
+            href={"https://www.cnil.fr/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            cnil.fr
+          </StyledGovLink>
+        </GovernmentSection>
+      </StyledFooter>
+    </OverflowWrapper>
+  );
+};
 
 export default Footer;
 
