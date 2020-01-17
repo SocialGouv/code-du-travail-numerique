@@ -28,11 +28,9 @@ tarteaucitron.init({
 });
 tarteaucitron.user.gtagUa = "DC-3048978";
 tarteaucitron.user.gtagMore = function() {
-  console.log("gtag more");
-  /* add here your optionnal gtag() */
   gtag("event", "conversion", {
     allow_custom_scripts: true,
-    u1: "[URL]",
+    u1: location.pathname,
     send_to: "DC-3048978/emplo253/lpcodet+unique"
   });
 };
