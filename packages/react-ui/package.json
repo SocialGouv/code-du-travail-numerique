@@ -23,7 +23,7 @@
     "prop-types": "15.x",
     "react": "16.x",
     "react-dom": "16.x",
-    "styled-components": "4.x"
+    "styled-components": "5.x"
   },
   "dependencies": {
     "@reach/dialog": "0.7.1",
@@ -64,7 +64,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-replace": "^2.2.0",
-    "styled-components": "^4.4.1",
+    "styled-components": "^5.0.0",
     "stylelint": "^13.0.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^3.0.0",
