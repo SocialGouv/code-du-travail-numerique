@@ -32,8 +32,8 @@ function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
       <Section>
         <Container>
           <Wrapper variant="main">
-            <Badge />
             <Tool icon={icon} title={title} />
+            <Badge />
           </Wrapper>
         </Container>
       </Section>

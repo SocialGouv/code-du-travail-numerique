@@ -15,8 +15,7 @@ const Tab = props => (
   <StyledAccordion
     items={[
       {
-        title: props.title,
-        as: "h3",
+        title: <h3>props.title</h3>,
         body: props.children
       }
     ]}
@@ -53,8 +52,7 @@ const ContentMT = props => {
         <Accordion
           items={sections.map(section => ({
             id: section.anchor,
-            title: section.title,
-            as: "h3",
+            title: <h3>section.title</h3>,
             body: <TabContent>{section.html}</TabContent>
           }))}
         />
@@ -77,14 +75,9 @@ const rehypeToReact = content => {
   };
 };
 
-const { box, spacings } = theme;
+const { spacings } = theme;
 
 const StyledAccordion = styled(Accordion)`
-  *[data-accordion-component="AccordionItem"] {
-    &:nth-of-type(1) {
-      border-bottom: ${({ theme }) => box.border(theme.border)};
-    }
-  }
   *[data-accordion-component="AccordionItemButton"] {
     padding-left: ${spacings.small};
   }

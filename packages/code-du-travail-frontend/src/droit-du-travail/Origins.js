@@ -367,31 +367,28 @@ const accordionItemsRight = [
 
 const Origins = () => (
   <Section>
-    <Container>
-      <Title topStripped>
-        Quels sont les textes à l’origine du droit du travail&nbsp;?
-      </Title>
-      <Container narrow>
-        <p>
-          Le droit du travail est construit par de nombreux textes juridiques
-          dont les sources sont diverses&nbsp;: sources internationales, sources
-          européennes et sources nationales. Vous trouverez les textes
-          participant à la construction du droit du travail en France
-          ci-dessous.
-        </p>
-      </Container>
-      <FlexWrapper>
-        <OriginAccordion items={accordionItemsLeft} />
-        <OriginAccordion items={accordionItemsRight} />
-      </FlexWrapper>
-      <Container narrow>
-        <Toast>
-          La jurisprudence de la Cour Européenne des droits de l’Homme, de la
-          Cour de justice de l’Union européenne, du Conseil Constitutionnel, du
-          Conseil d’Etat et de la Cour de cassation influence également le droit
-          du travail en France.
-        </Toast>
-      </Container>
+    <Title topStripped>
+      Quels sont les textes à l’origine du droit du travail&nbsp;?
+    </Title>
+    <Container narrow noPadding>
+      <p>
+        Le droit du travail est construit par de nombreux textes juridiques dont
+        les sources sont diverses&nbsp;: sources internationales, sources
+        européennes et sources nationales. Vous trouverez les textes participant
+        à la construction du droit du travail en France ci-dessous.
+      </p>
+    </Container>
+    <FlexWrapper>
+      <OriginAccordion items={accordionItemsLeft} />
+      <OriginAccordion items={accordionItemsRight} />
+    </FlexWrapper>
+    <Container narrow noPadding>
+      <Toast>
+        La jurisprudence de la Cour Européenne des droits de l’Homme, de la Cour
+        de justice de l’Union européenne, du Conseil Constitutionnel, du Conseil
+        d’Etat et de la Cour de cassation influence également le droit du
+        travail en France.
+      </Toast>
     </Container>
   </Section>
 );

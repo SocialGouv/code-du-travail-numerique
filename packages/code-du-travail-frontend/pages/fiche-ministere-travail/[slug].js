@@ -49,8 +49,7 @@ class Fiche extends React.Component {
       .filter(section => section.anchor)
       .map(({ anchor, html, title }) => ({
         id: anchor,
-        as: "h2",
-        title,
+        title: <h2>{title}</h2>,
         body: <TabContent>{html}</TabContent>
       }));
     return (

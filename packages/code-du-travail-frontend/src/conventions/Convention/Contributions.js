@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import Link from "next/link";
-import { Accordion, theme, Alert } from "@socialgouv/react-ui";
+import { Accordion, Alert } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import slugify from "@cdt/data/slugify";
 
@@ -27,8 +26,16 @@ function Contributions({ contributions }) {
   // show themes contents in Accordions
   const themes = Object.keys(contributionsByTheme).map(theme => ({
     id: theme,
-    title: <AccordionHeader>{theme}</AccordionHeader>,
-    body: <Accordion items={accordionize(contributionsByTheme[theme])} />
+    title: theme,
+    body: (
+      <Accordion
+        items={contributionsByTheme[theme].map(item => ({
+          id: item.slug,
+          title: item.question,
+          body: AccordionContent(item)
+        }))}
+      />
+    )
   }));
 
   return (
@@ -37,14 +44,6 @@ function Contributions({ contributions }) {
       <Accordion items={themes} />
     </React.Fragment>
   );
-}
-
-function accordionize(items) {
-  return items.map(item => ({
-    id: item.slug,
-    title: <AccordionHeader>{item.question}</AccordionHeader>,
-    body: AccordionContent({ ...item })
-  }));
 }
 
 function AccordionContent({ answer, slug, references }) {
@@ -105,10 +104,5 @@ function AnswerReferences({ articles }) {
   });
   return <p>Sources {jsxJoin(refs)}</p>;
 }
-
-const { spacings } = theme;
-const AccordionHeader = styled.strong`
-  margin: ${spacings.base} 0;
-`;
 
 export { Contributions };

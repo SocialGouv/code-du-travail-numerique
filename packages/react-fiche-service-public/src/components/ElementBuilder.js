@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { theme } from "@socialgouv/react-ui";
+import { theme, Wrapper } from "@socialgouv/react-ui";
 
 import { getText, ignoreParagraph } from "../utils";
 import Accordion from "./Accordion";
@@ -14,7 +14,7 @@ import Table from "./Table";
 import Tabulator from "./Tabulator";
 import Title from "./Title";
 
-const { box, colors, spacings } = theme;
+const { spacings } = theme;
 
 const parseChildren = (children, headingLevel) => (
   <ElementBuilder data={children} headingLevel={headingLevel} />
@@ -78,7 +78,11 @@ export function ElementBuilder({ data, headingLevel }) {
     case "ASavoir":
     case "Attention":
     case "Rappel":
-      return <ANoter>{parseChildren(data.children, headingLevel)}</ANoter>;
+      return (
+        <ANoter variant="dark">
+          {parseChildren(data.children, headingLevel + 1)}
+        </ANoter>
+      );
     case "Chapitre":
     case "SousChapitre":
       return parseChildren(data.children, headingLevel);
@@ -110,17 +114,8 @@ ElementBuilder.defaultProps = {
   headingLevel: 0
 };
 
-const ANoter = styled.div`
+const ANoter = styled(Wrapper)`
   margin-bottom: ${spacings.base};
-  padding: ${spacings.base};
-  background-color: ${colors.bgSecondary};
-  border-radius: ${box.borderRadius};
-  & > *:first-child {
-    margin-top: 0;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
-  }
 `;
 
 const Introduction = styled.p`

@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ScreenReaderOnly, Tabs } from "@socialgouv/react-ui";
+import { Tabs } from "@socialgouv/react-ui";
 
 import { ElementBuilder } from "./ElementBuilder";
-import { ignoreParagraph } from "../utils";
 
 class Tabulator extends React.PureComponent {
   static propTypes = {
@@ -22,20 +21,8 @@ class Tabulator extends React.PureComponent {
       const title = tab.children.find(el => el.name === "Titre");
       const content = tab.children.filter(el => el.name !== "Titre");
       return {
-        tab: (
-          <ElementBuilder
-            data={ignoreParagraph(title)}
-            headingLevel={headingLevel}
-          />
-        ),
-        panel: (
-          <>
-            <ScreenReaderOnly>
-              <ElementBuilder data={title} headingLevel={headingLevel} />
-            </ScreenReaderOnly>
-            <ElementBuilder data={content} headingLevel={headingLevel + 1} />
-          </>
-        )
+        tab: <ElementBuilder data={title} headingLevel={headingLevel} />,
+        panel: <ElementBuilder data={content} headingLevel={headingLevel + 1} />
       };
     });
     return <Tabs data={tabsData} />;

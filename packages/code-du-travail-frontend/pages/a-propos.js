@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import styled from "styled-components";
 import {
   Container,
   PageTitle,
@@ -27,9 +26,9 @@ const About = ({ ogImage, pageUrl }) => (
           À propos du Code du travail numérique
         </PageTitle>
         <Wrapper variant="main">
-          <StyledTitle shift={theme.spacings.larger}>
+          <Title shift={theme.spacings.larger}>
             Qu’est-ce que le Code du travail numérique&nbsp;?
-          </StyledTitle>
+          </Title>
           <p>
             Le Code du travail numérique est un service public en ligne et
             gratuit vous permettant d’obtenir des réponses personnalisées sur le
@@ -92,9 +91,7 @@ const About = ({ ogImage, pageUrl }) => (
             </li>
             <li>des modèles de courrier.</li>
           </ul>
-          <StyledTitle shift={theme.spacings.larger}>
-            Qui sommes-nous&nbsp;?
-          </StyledTitle>
+          <Title shift={theme.spacings.larger}>Qui sommes-nous&nbsp;?</Title>
           <Heading>Notre équipe</Heading>
           <p>
             Nous sommes une équipe pluridisciplinaire d’une dizaine de personnes
@@ -151,10 +148,3 @@ const About = ({ ogImage, pageUrl }) => (
   </Layout>
 );
 export default About;
-
-const { spacings } = theme;
-
-const StyledTitle = styled(Title)`
-  margin-top: ${spacings.larger};
-  margin-bottom: ${spacings.large};
-`;

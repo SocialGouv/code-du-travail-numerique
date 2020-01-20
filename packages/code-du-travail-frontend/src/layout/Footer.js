@@ -36,17 +36,9 @@ const Footer = () => {
       <StyledFooter>
         <ServiceSection>
           <Container>
-            <Title as="h3" topStripped>
+            <Title as="h3" isFirst topStripped>
               Besoin de plus d’informations&nbsp;?
             </Title>
-            {cookieConsent && (
-              <img
-                src={`https://ad.doubleclick.net/ddm/activity/src=3048978;type=emplo253;cat=lpcodet;u1=${path};dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1;num=1?`}
-                width="1"
-                height="1"
-                alt=""
-              />
-            )}
             <StyledContainer narrow noPadding>
               Les services du ministère du Travail en région informent,
               conseillent et orientent les salariés et les employeurs du secteur
@@ -66,7 +58,7 @@ const Footer = () => {
           <nav>
             <Links>
               <Category>
-                <StyledHeading>Code du travail numérique</StyledHeading>
+                <StyledHeading isFirst>Code du travail numérique</StyledHeading>
                 <StyledList>
                   <StyledListItem>
                     <Link passHref href="/droit-du-travail">
@@ -96,7 +88,9 @@ const Footer = () => {
                 </StyledList>
               </Category>
               <Category>
-                <StyledHeading>Aidez-nous à améliorer cet outil</StyledHeading>
+                <StyledHeading isFirst>
+                  Aidez-nous à améliorer cet outil
+                </StyledHeading>
                 <StyledList>
                   <StyledListItem>
                     <StyledLink
@@ -131,7 +125,7 @@ const Footer = () => {
                 </StyledList>
               </Category>
               <Category>
-                <StyledHeading>En collaboration avec</StyledHeading>
+                <StyledHeading isFirst>En collaboration avec</StyledHeading>
                 <StyledList>
                   <StyledListItem>
                     <StyledLink
@@ -216,6 +210,15 @@ const Footer = () => {
             cnil.fr
           </StyledGovLink>
         </GovernmentSection>
+        {cookieConsent && (
+          <img
+            style={{ position: "absolute" }}
+            src={`https://ad.doubleclick.net/ddm/activity/src=3048978;type=emplo253;cat=lpcodet;u1=${path};dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1;num=1?`}
+            width="1"
+            height="1"
+            alt=""
+          />
+        )}
       </StyledFooter>
     </OverflowWrapper>
   );

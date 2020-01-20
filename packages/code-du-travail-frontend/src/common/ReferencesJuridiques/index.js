@@ -17,7 +17,7 @@ class ReferencesJuridiques extends React.PureComponent {
 
     const items = [
       {
-        title: "Voir références juridiques concernées",
+        title: <h3>Voir les références juridiques concernées</h3>,
         body: <ReferenceList references={references} />
       }
     ];

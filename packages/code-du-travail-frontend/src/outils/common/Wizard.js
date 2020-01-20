@@ -106,9 +106,7 @@ function Wizard({
                 {title}
               </ToolTitle>
               <StepList activeIndex={stepIndex} items={stepItems} />
-              <StepWrapper>
-                <Step form={form} dispatch={dispatch} />
-              </StepWrapper>
+              <Step form={form} dispatch={dispatch} />
               <PrevNextBar
                 hasError={invalid && submitFailed}
                 onPrev={() => prevStep(form.getState().values)}
@@ -159,15 +157,10 @@ const StyledForm = styled.form`
   }
 `;
 
-const StepWrapper = styled.div`
-  margin: ${spacings.base} 0;
-  @media (max-width: ${breakpoints.tablet}) {
-    margin: ${spacings.small} 0 0 0;
-  }
-`;
 const ToolTitle = styled.h1`
   display: flex;
   align-items: center;
+  margin-bottom: ${spacings.small};
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.tablet}) {
