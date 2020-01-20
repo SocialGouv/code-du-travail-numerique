@@ -20,6 +20,7 @@ export const Heading = ({ children, stripped = false, variant, ...props }) => (
 
 Heading.propTypes = {
   as: PropTypes.string,
+  isFirst: PropTypes.bool,
   children: PropTypes.node,
   shift: PropTypes.string,
   stripped: PropTypes.bool,
@@ -27,12 +28,14 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
+  isFirst: false,
   variant: "secondary"
 };
 
 const StyledHeading = styled.h3`
   position: relative;
-  margin: 0 0 ${spacings.small} 0;
+  margin: ${({ isFirst }) => (isFirst ? 0 : spacings.large)} 0
+    ${spacings.medium} 0;
   color: ${({ theme }) => theme.title};
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};

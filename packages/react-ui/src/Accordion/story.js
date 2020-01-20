@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Section } from "../layout/Section";
+import { Title } from "../Titles/Title";
 import { Accordion } from ".";
 
 export default {
@@ -19,9 +20,13 @@ export const base = () => (
       <Accordion
         items={[
           {
-            title:
-              "This is the heading of a single item accordion with a crazy long title so we know if the accordion arrow icon get compressed or if it keeps its width",
-            as: "h5",
+            title: (
+              <h5>
+                This is an h5 heading of a single item accordion with a crazy
+                long title so we know if the accordion arrow icon get compressed
+                or if it keeps its width
+              </h5>
+            ),
             body: "this is the single body"
           }
         ]}
@@ -31,12 +36,13 @@ export const base = () => (
       <Accordion
         items={[
           {
-            title: "This the first heading of a multiple accordion",
-            as: "h3",
+            title: <h3>This the first h3 heading of a multiple accordion</h3>,
             body: "this is the first body"
           },
           {
-            title: "This is the second heading of a multiple accordion",
+            title: (
+              <h3>This is the second h3 heading of a multiple accordion</h3>
+            ),
             body: "this is the second body"
           }
         ]}
@@ -48,30 +54,11 @@ export const base = () => (
         items={[
           {
             id: "id",
-            title: "This is a pre expanded accordion",
-            as: "h2",
+            title: <Title>This is a pre expanded Title accordion</Title>,
             body: "this is the body"
           },
           {
-            title: "This bloc could be extended too if needed",
-            as: "h2",
-            body: "this is the body"
-          }
-        ]}
-      />
-    </Section>
-    <h2> Using custom component as title</h2>
-    <Section>
-      <Accordion
-        items={[
-          {
-            title: <CustomTitle>This is a jsx title</CustomTitle>,
-            as: "h2",
-            body: "this is the body"
-          },
-          {
-            title: <em>Another jsx title</em>,
-            as: "h2",
+            title: <Title>This bloc could be extended too if needed</Title>,
             body: "this is the body"
           }
         ]}

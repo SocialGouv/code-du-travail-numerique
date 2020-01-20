@@ -3,9 +3,10 @@ import styled, { css } from "styled-components";
 import { breakpoints, spacings } from "../../theme";
 
 export const Header = styled.header`
-  ${({ leftStripped, pageTitle, shift }) => {
+  ${({ isFirst, leftStripped, pageTitle, shift }) => {
     return css`
-      margin-bottom: ${pageTitle ? spacings.larger : spacings.base};
+      margin-top: ${pageTitle || isFirst ? "0" : spacings.large};
+      margin-bottom: ${pageTitle ? spacings.xmedium : spacings.medium};
       margin-left: ${shift ? `-${shift}}` : "auto"};
       text-align: ${leftStripped ? "left" : "center"};
       @media (max-width: ${breakpoints.mobile}) {
@@ -17,12 +18,14 @@ export const Header = styled.header`
 `;
 
 Header.propTypes = {
+  isFirst: PropTypes.bool,
   leftStripped: PropTypes.bool,
   pageTitle: PropTypes.bool,
   shift: PropTypes.string
 };
 
 Header.defaultProps = {
+  isFirst: false,
   leftStripped: false,
   pageTitle: false,
   shift: ""

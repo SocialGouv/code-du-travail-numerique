@@ -1,17 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Tab, Tabs as RootTabs, TabList, TabPanel } from "react-tabs";
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
+import { ScreenReaderOnly } from "../ScreenReaderOnly";
 
 export const Tabs = props => {
   const { data, defaultIndex, onSelect, selectedIndex } = props;
-  const tabs = data.map((item, index) => (
-    <StyledTab key={index}>{item.tab}</StyledTab>
-  ));
-  const tabContents = data.map((item, index) => (
-    <StyledTabPanel key={index}>{item.panel}</StyledTabPanel>
-  ));
+  const [referencesArray, setReferencesArray] = useState(
+    data.map(React.createRef)
+  );
 
   const refinedProps = {
     onSelect,
@@ -21,11 +19,38 @@ export const Tabs = props => {
       : { defaultIndex })
   };
 
+  useEffect(() => {
+    setReferencesArray(data.map(React.createRef));
+  }, [data]);
+
+  useEffect(() => {
+    // We need to extract text content from tabs heading
+    referencesArray.forEach((item, index) => {
+      const tabElement = referencesArray[index].current;
+      if (tabElement) {
+        tabElement.innerHTML = tabElement.textContent;
+      }
+    });
+  }, [referencesArray]);
+
   return (
-    <StyledTabs {...refinedProps}>
-      <StyledTabList>{tabs}</StyledTabList>
-      {tabContents}
-    </StyledTabs>
+    <>
+      <StyledTabs {...refinedProps}>
+        <StyledTabList>
+          {data.map(({ tab }, index) => (
+            <StyledTab key={index}>
+              <div ref={referencesArray[index]}>{tab}</div>
+            </StyledTab>
+          ))}
+        </StyledTabList>
+        {data.map(({ tab, panel }, index) => (
+          <StyledTabPanel key={index}>
+            <ScreenReaderOnly>{tab}</ScreenReaderOnly>
+            <TabPanelContent>{panel}</TabPanelContent>
+          </StyledTabPanel>
+        ))}
+      </StyledTabs>
+    </>
   );
 };
 
@@ -102,12 +127,6 @@ const StyledTab = styled(Tab)`
 const StyledTabPanel = styled(TabPanel)`
   color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};
-  & > *:first-child {
-    margin-top: 0;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
-  }
   &.react-tabs__tab-panel--selected {
     padding: ${spacings.xmedium};
     border: 1px solid ${({ theme }) => theme.border};
@@ -118,5 +137,14 @@ const StyledTabPanel = styled(TabPanel)`
     @media (max-width: ${breakpoints.mobile}) {
       padding: ${spacings.small};
     }
+  }
+`;
+
+const TabPanelContent = styled.div`
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
   }
 `;
