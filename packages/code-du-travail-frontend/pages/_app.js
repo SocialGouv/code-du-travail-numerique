@@ -73,12 +73,14 @@ export default class MyApp extends App {
       );
     }
     return (
-      <ThemeProvider>
-        <>
-          <GlobalStyles />
-          <Component {...pageProps} />
-        </>
-      </ThemeProvider>
+      <React.StrictMode>
+        <ThemeProvider>
+          <>
+            <GlobalStyles />
+            <Component {...pageProps} />
+          </>
+        </ThemeProvider>
+      </React.StrictMode>
     );
   }
 }
