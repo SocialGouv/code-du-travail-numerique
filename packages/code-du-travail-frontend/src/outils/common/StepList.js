@@ -4,15 +4,10 @@ import { FlatList, theme, Wrapper } from "@socialgouv/react-ui";
 
 export const STEP_LIST_WIDTH = "28rem";
 
-export function StepList({
-  activeIndex = 0,
-  items = [],
-  anchorName,
-  anchorRef
-}) {
+export function StepList({ activeIndex = 0, items = [], anchorRef }) {
   return (
     <StyledWrapper variant="dark">
-      <Title tabindex="-1" ref={anchorRef}>
+      <Title>
         Étape<HideOnMobile>s</HideOnMobile>
         <StepProgress>
           &nbsp;{`${activeIndex + 1}/${items.length}`}
@@ -24,6 +19,9 @@ export function StepList({
             key={item.name}
             index={index}
             isActive={activeIndex === index}
+            ref={activeIndex === index ? anchorRef : undefined}
+            tabIndex={activeIndex === index ? "-1" : undefined}
+            aria-live={activeIndex === index ? "polite" : undefined}
           >
             <IndexCircle isActive={activeIndex === index}>
               {index + 1}
@@ -92,6 +90,7 @@ const StyledListItem = styled.li`
   & + & {
     margin-top: ${spacings.base};
   }
+  outline: none; /* StepListItem may receive focus in order to improve accessibility */
   @media (max-width: ${breakpoints.tablet}) {
     display: ${({ isActive }) => (isActive ? "flex" : "none")};
     & + & {

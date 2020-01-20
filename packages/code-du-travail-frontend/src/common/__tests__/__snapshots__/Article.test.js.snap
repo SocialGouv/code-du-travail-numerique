@@ -79,6 +79,7 @@ exports[`<Article /> should render 1`] = `
 
 .c3 {
   margin-bottom: 1rem;
+  outline: none;
 }
 
 .c9 {
@@ -170,6 +171,8 @@ exports[`<Article /> should render 1`] = `
     >
       <header
         class="c2 c3"
+        data-next-focus-root="true"
+        tabindex="-1"
       >
         <h1
           class="c4"

@@ -123,6 +123,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c8 + .c7 {
@@ -144,6 +145,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c10 + .c7 {
@@ -410,7 +412,9 @@ exports[`<DureePreavisDemission /> should render 1`] = `
         class="c6"
       >
         <li
+          aria-live="polite"
           class="c7 c8"
+          tabindex="-1"
         >
           <span
             class="c9"

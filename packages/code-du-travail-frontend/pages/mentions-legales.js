@@ -12,6 +12,7 @@ import {
 
 import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
+import { FocusRoot } from "../src/a11y";
 
 const LegalPage = ({ pageUrl, ogImage }) => {
   return (
@@ -25,7 +26,9 @@ const LegalPage = ({ pageUrl, ogImage }) => {
 
       <Section>
         <Container narrow>
-          <PageTitle>Mentions légales</PageTitle>
+          <FocusRoot>
+            <PageTitle>Mentions légales</PageTitle>
+          </FocusRoot>
           <Wrapper variant="main">
             <p>
               Le site est édité par l’

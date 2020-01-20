@@ -60,7 +60,7 @@ const selectedTools = [
 ];
 
 const Home = ({ pageUrl, ogImage, themes = [] }) => (
-  <Layout currentPage="home" title="Code du travail numérique">
+  <Layout currentPage="home" initialTitle="Code du travail numérique">
     <Metas
       url={pageUrl}
       title="Code du travail numérique - Ministère du Travail"

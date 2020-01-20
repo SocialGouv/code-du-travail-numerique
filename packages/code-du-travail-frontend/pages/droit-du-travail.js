@@ -16,6 +16,7 @@ import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
 import Origins from "../src/droit-du-travail/Origins";
 import Hierarchy from "../src/droit-du-travail/Hierarchy";
+import { FocusRoot } from "../src/a11y";
 
 const DroitDuTravail = ({ hash, ogImage, pageUrl }) => (
   <Layout>
@@ -27,17 +28,19 @@ const DroitDuTravail = ({ hash, ogImage, pageUrl }) => (
     />
     <Section>
       <Container>
-        <PageTitle
-          subtitle={
-            <span>
-              Retrouvez la définition du droit du travail, les textes qui en
-              sont à l’origine <DesktopOnlyLineBreak />
-              ainsi que leur articulation.
-            </span>
-          }
-        >
-          Le droit du travail
-        </PageTitle>
+        <FocusRoot>
+          <PageTitle
+            subtitle={
+              <span>
+                Retrouvez la définition du droit du travail, les textes qui en
+                sont à l’origine <DesktopOnlyLineBreak />
+                ainsi que leur articulation.
+              </span>
+            }
+          >
+            Le droit du travail
+          </PageTitle>
+        </FocusRoot>
         <Container narrow noPadding>
           <Wrapper variant="main">
             <Title shift={spacings.larger}>

@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Term /> should render 1`] = `
-.c21 {
+.c22 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
 }
 
-.c32 {
+.c33 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c20 {
+.c21 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c25 {
+.c26 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -29,7 +29,7 @@ exports[`<Term /> should render 1`] = `
   background-color: #fff;
 }
 
-.c25:before {
+.c26:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,11 +43,11 @@ exports[`<Term /> should render 1`] = `
   content: "";
 }
 
-.c25 > *:first-child {
+.c26 > *:first-child {
   margin-top: 0;
 }
 
-.c25 > *:last-child {
+.c26 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -165,7 +165,7 @@ exports[`<Term /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c36 {
+.c37 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -202,16 +202,16 @@ exports[`<Term /> should render 1`] = `
   opacity: 1;
 }
 
-.c36:link,
-.c36:visited {
+.c37:link,
+.c37:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c36:not([disabled]):hover,
-.c36:not([disabled]):active,
-.c36:not([disabled]):focus {
+.c37:not([disabled]):hover,
+.c37:not([disabled]):active,
+.c37:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -220,7 +220,7 @@ exports[`<Term /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c36[disabled] {
+.c37[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -228,13 +228,13 @@ exports[`<Term /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c26 {
+.c27 {
   position: relative;
   overflow: hidden;
 }
 
-.c26:before,
-.c26:after {
+.c27:before,
+.c27:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -249,19 +249,19 @@ exports[`<Term /> should render 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c26:before {
+.c27:before {
   left: -2rem;
 }
 
-.c26:after {
+.c27:after {
   right: -2rem;
 }
 
-.c27 {
+.c28 {
   overflow-x: auto;
 }
 
-.c24 {
+.c25 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -274,7 +274,7 @@ exports[`<Term /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c28 {
+.c29 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -283,36 +283,36 @@ exports[`<Term /> should render 1`] = `
   border-spacing: 0;
 }
 
-.c28 caption {
+.c29 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c28 td,
-.c28 th {
+.c29 td,
+.c29 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c28 th {
+.c29 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c28 thead,
-.c28 tfoot {
+.c29 thead,
+.c29 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c28 tfoot {
+.c29 tfoot {
   vertical-align: top;
 }
 
-.c42 {
+.c43 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -322,21 +322,21 @@ exports[`<Term /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c22 {
+.c23 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c33 {
+.c34 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c23 {
+.c24 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -347,7 +347,7 @@ exports[`<Term /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c34 {
+.c35 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -574,12 +574,12 @@ exports[`<Term /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c29 {
+.c30 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c30 {
+.c31 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -587,7 +587,7 @@ exports[`<Term /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c30:before {
+.c31:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -599,13 +599,13 @@ exports[`<Term /> should render 1`] = `
   content: "";
 }
 
-.c31 {
+.c32 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c35 {
+.c36 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -614,17 +614,17 @@ exports[`<Term /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c37 {
+.c38 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c38 {
+.c39 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c39 {
+.c40 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -638,32 +638,32 @@ exports[`<Term /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c41 + .c40 {
+.c42 + .c41 {
   padding-left: 1.6rem;
 }
 
-.c44 {
+.c45 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c43 {
+.c44 {
   font-size: 1.6rem;
 }
 
-.c45 {
+.c46 {
   margin: 0.4rem 0;
 }
 
-.c46 {
+.c47 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.c47 {
+.c48 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -682,7 +682,7 @@ exports[`<Term /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c48 {
+.c49 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -690,12 +690,16 @@ exports[`<Term /> should render 1`] = `
   margin: 0 1rem 1rem 1rem;
 }
 
-.c49 {
+.c50 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.c20 {
+  outline: none;
 }
 
 .c0 {
@@ -722,45 +726,45 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c22 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c22 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c33 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c32 {
+  .c33 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c25 {
+  .c26 {
     padding: 0 5pt;
     border: none;
   }
@@ -779,64 +783,64 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c37 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c37 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c27 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c26:before,
-  .c26:after {
+  .c27:before,
+  .c27:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c43 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c23 {
     margin-bottom: 3.2rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c34 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c35 {
     font-size: 2.2rem;
   }
 }
@@ -997,52 +1001,52 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media print {
-  .c30 {
+  .c31 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c32 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c36 {
     padding: 0;
   }
 }
 
 @media print {
-  .c35 {
+  .c36 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c39 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c40 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c39 {
+  .c40 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c40 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1050,26 +1054,26 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c41 + .c40 {
+  .c42 + .c41 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c45 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c44 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c49 {
+  .c50 {
     display: none;
   }
 }
@@ -1340,37 +1344,44 @@ exports[`<Term /> should render 1`] = `
     </div>
   </header>
   <main
-    id="main"
+    class="c20"
   >
     <div
-      class="c20"
+      class="c21"
     >
       <div
-        class="c21"
+        class="c22"
       >
-        <header
-          class="c22"
+        <div
+          data-next-focus-root="true"
+          role="group"
+          style="outline: none;"
+          tabindex="-1"
         >
-          <h1
+          <header
             class="c23"
           >
-            <div
+            <h1
               class="c24"
-            />
-            Accord d'entreprise
-          </h1>
-        </header>
+            >
+              <div
+                class="c25"
+              />
+              Accord d'entreprise
+            </h1>
+          </header>
+        </div>
         <div
-          class="c25"
+          class="c26"
         >
           <div
-            class="c26"
+            class="c27"
           >
             <div
-              class="c27"
+              class="c28"
             >
               <table
-                class="c28"
+                class="c29"
               >
                 <tbody>
                   <tr>
@@ -1401,40 +1412,40 @@ exports[`<Term /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c29"
+    class="c30"
   >
     <footer
-      class="c30"
+      class="c31"
     >
       <div
-        class="c20 c31"
+        class="c21 c32"
       >
         <div
-          class="c32"
+          class="c33"
         >
           <header
-            class="c33"
+            class="c34"
           >
             <h3
-              class="c34"
+              class="c35"
             >
               <div
-                class="c24"
+                class="c25"
               />
               Besoin de plus d’informations ?
             </h3>
           </header>
           <div
-            class="c35"
+            class="c36"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c36"
+            class="c37"
           >
             Contacter nos services en région
             <svg
-              class="c37"
+              class="c38"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1447,78 +1458,78 @@ exports[`<Term /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c20 c38"
+        class="c21 c39"
       >
         <nav>
           <div
-            class="c39"
+            class="c40"
           >
             <div
-              class="c40 c41"
+              class="c41 c42"
             >
               <h3
-                class="c42 c43"
+                class="c43 c44"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="sc-fznMnq c44"
+                class="sc-fznMnq c45"
               >
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="/stats"
                   >
                     Statistiques d’utilisation
@@ -1527,18 +1538,18 @@ exports[`<Term /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c40 c41"
+              class="c41 c42"
             >
               <h3
-                class="c42 c43"
+                class="c43 c44"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="sc-fznMnq c44"
+                class="sc-fznMnq c45"
               >
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <button
                     class="c9"
@@ -1547,10 +1558,10 @@ exports[`<Term /> should render 1`] = `
                   </button>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1559,10 +1570,10 @@ exports[`<Term /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1573,21 +1584,21 @@ exports[`<Term /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c40 c41"
+              class="c41 c42"
             >
               <h3
-                class="c42 c43"
+                class="c43 c44"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="sc-fznMnq c44"
+                class="sc-fznMnq c45"
               >
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1596,10 +1607,10 @@ exports[`<Term /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1608,10 +1619,10 @@ exports[`<Term /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c45"
+                  class="c46"
                 >
                   <a
-                    class="c46"
+                    class="c47"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1625,10 +1636,10 @@ exports[`<Term /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c47"
+        class="c48"
       >
         <a
-          class="c48"
+          class="c49"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1637,12 +1648,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1651,12 +1662,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1665,12 +1676,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1679,12 +1690,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1693,12 +1704,12 @@ exports[`<Term /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c49"
+          class="c50"
         >
           |
         </span>
         <a
-          class="c48"
+          class="c49"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"

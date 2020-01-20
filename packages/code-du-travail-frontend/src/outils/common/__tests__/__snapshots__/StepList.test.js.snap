@@ -60,6 +60,7 @@ exports[`<StepList /> should render 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c6 + .c5 {
@@ -81,6 +82,7 @@ exports[`<StepList /> should render 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c8 + .c5 {
@@ -251,7 +253,9 @@ exports[`<StepList /> should render 1`] = `
         Step One
       </li>
       <li
+        aria-live="polite"
         class="c5 c8"
+        tabindex="-1"
       >
         <span
           class="c9"

@@ -17,6 +17,7 @@ import {
 import { summarize } from "../../src/search/utils";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
+import { FocusRoot } from "../../src/a11y";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -66,7 +67,9 @@ function Modeles(props) {
       />
       <Section>
         <Container narrow>
-          <PageTitle subtitle={subtitle}>{title}</PageTitle>
+          <FocusRoot>
+            <PageTitle subtitle={subtitle}>{title}</PageTitle>
+          </FocusRoot>
           <LargeSelect value={selectedTheme} onChange={selectThemeHandler}>
             {themes &&
               [

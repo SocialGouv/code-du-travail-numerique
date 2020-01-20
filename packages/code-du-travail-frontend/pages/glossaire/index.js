@@ -15,6 +15,7 @@ import {
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
+import { FocusRoot } from "../../src/a11y";
 
 const subtitle =
   "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.";
@@ -22,7 +23,7 @@ const subtitle =
 function Glossaire({ pageUrl, ogImage }) {
   const termsByLetters = getGlossaryLetters(glossary);
   return (
-    <Layout title={title}>
+    <Layout>
       <Metas
         url={pageUrl}
         title="Glossaire - Code du travail numérique"
@@ -31,7 +32,9 @@ function Glossaire({ pageUrl, ogImage }) {
       />
       <Section>
         <Container narrow>
-          <PageTitle subtitle={subtitle}>Glossaire</PageTitle>
+          <FocusRoot>
+            <PageTitle subtitle={subtitle}>Glossaire</PageTitle>
+          </FocusRoot>
           <Wrapper variant="main">
             <GlossaryNavigation letters={termsByLetters} />
             <Glossary letters={termsByLetters} />

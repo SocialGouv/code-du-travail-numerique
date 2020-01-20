@@ -16,6 +16,7 @@ import fetch from "isomorphic-unfetch";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
+import { FocusRoot } from "../../src/a11y";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -50,9 +51,11 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
     />
     <Section>
       <Container>
-        <PageTitle subtitle="Découvrez l’intégralité de nos contenus organisés par grands thèmes">
-          Contenus par thème
-        </PageTitle>
+        <FocusRoot>
+          <PageTitle subtitle="Découvrez l’intégralité de nos contenus organisés par grands thèmes">
+            Contenus par thème
+          </PageTitle>
+        </FocusRoot>
         <Grid>
           {children &&
             children.map(({ children, icon, slug, title }) => (

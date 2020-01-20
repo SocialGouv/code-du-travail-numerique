@@ -15,6 +15,7 @@ import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { CCTile, DocumentsTile } from "../index";
+import { FocusRoot } from "../../src/a11y";
 
 const monCompteFormation = externalTools.find(
   tools => tools.title === "Mon compte formation"
@@ -30,7 +31,9 @@ const Outils = ({ pageUrl, ogImage }) => (
     />
     <Section>
       <Container>
-        <PageTitle>Retrouvez tous nos outils</PageTitle>
+        <FocusRoot>
+          <PageTitle>Retrouvez tous nos outils</PageTitle>
+        </FocusRoot>
         <Grid>
           {DocumentsTile}
           {tools.map(({ action, description, icon, slug, title }) => (

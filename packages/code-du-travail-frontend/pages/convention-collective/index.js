@@ -3,6 +3,7 @@ import { Container, PageTitle, Section, Wrapper } from "@socialgouv/react-ui";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import ConventionForm from "../../src/conventions/Search";
+import { FocusRoot } from "../../src/a11y";
 
 const SearchConvention = ({ ogImage, pageUrl }) => (
   <Layout currentPage="about">
@@ -14,7 +15,9 @@ const SearchConvention = ({ ogImage, pageUrl }) => (
     />
     <Section>
       <Container narrow>
-        <PageTitle>Recherchez votre convention collective</PageTitle>
+        <FocusRoot>
+          <PageTitle>Recherchez votre convention collective</PageTitle>
+        </FocusRoot>
         <Wrapper variant="main">
           <ConventionForm />
         </Wrapper>

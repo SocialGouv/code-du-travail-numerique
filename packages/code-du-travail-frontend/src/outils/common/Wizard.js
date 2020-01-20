@@ -27,8 +27,10 @@ function Wizard({
   useEffect(() => {
     const node = anchorRef.current;
     if (node) {
-      node.scrollIntoView();
       node.focus();
+    }
+    if (window) {
+      window.scrollTo(0, 0);
     }
   });
 

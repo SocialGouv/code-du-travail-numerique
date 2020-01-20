@@ -16,6 +16,7 @@ import {
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import Html from "../../src/common/Html";
+import { FocusRoot } from "../../src/a11y";
 
 function Term({ pageUrl, ogImage }) {
   const router = useRouter();
@@ -23,7 +24,7 @@ function Term({ pageUrl, ogImage }) {
   const [term] = glossary.filter(term => slug === term.slug);
 
   return (
-    <Layout title={title}>
+    <Layout>
       <Metas
         url={pageUrl}
         title={`${term.title} - Code du travail numérique`}
@@ -32,7 +33,9 @@ function Term({ pageUrl, ogImage }) {
       />
       <Section>
         <Container narrow>
-          <PageTitle>{term.title}</PageTitle>
+          <FocusRoot>
+            <PageTitle>{term.title}</PageTitle>
+          </FocusRoot>
           <Wrapper variant="main">
             <Table>
               <tbody>
