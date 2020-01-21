@@ -5,7 +5,7 @@ import fetch from "isomorphic-unfetch";
 import pDebounce from "../lib/pDebounce";
 
 const {
-  publicRuntimeConfig: { API_URL, SUGGEST_URL }
+  publicRuntimeConfig: { API_URL }
 } = getConfig();
 
 const fetchSearchResults = async (query = "", excludeSources = "") => {
@@ -21,7 +21,7 @@ const fetchSearchResults = async (query = "", excludeSources = "") => {
 };
 
 const fetchSuggestResults = async query => {
-  const url = `${SUGGEST_URL}?q=${query}`;
+  const url = `${API_URL}/suggest?q=${query}`;
   const response = await fetch(url);
 
   if (!response.ok) {
