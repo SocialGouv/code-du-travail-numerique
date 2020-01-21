@@ -13,7 +13,7 @@ Install frontend:
   before_script:
     - tar cf - packages/${CONTEXT}/package.json yarn.lock | md5sum > PACKAGE_SHA
     - >-
-      if diff PACKAGE_SHA SHA ; then
+      if [[ -d node_modules ]] && diff PACKAGE_SHA SHA ; then
         echo "No changes detected. Using cache ${PACKAGE_SHA}!"
       else
         echo "Changes detected."
@@ -23,7 +23,10 @@ Install frontend:
     #
     #
     - apk add jq=~1
-    - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
+    - "{
+        rm package.json;
+        jq 'del(.dependencies) | del(.devDependencies)' > package.json;
+      } < package.json"
     #
     - find packages -maxdepth 1 -type d
       -not -name ${CONTEXT}
@@ -32,14 +35,20 @@ Install frontend:
       -not -name react-fiche-service-public
       -not -name sources | tail -n +2 | xargs rm -rf
     #
-    - jq 'del(.devDependencies)' packages/react-ui/package.json > package.json.tmp
-    - mv package.json.tmp packages/react-ui/package.json
+    - "{
+        rm packages/react-ui/package.json;
+        jq 'del(.devDependencies)' > packages/react-ui/package.json;
+      } < packages/react-ui/package.json"
     #
-    - jq 'del(.devDependencies)' packages/sources/package.json > package.json.tmp
-    - mv package.json.tmp packages/sources/package.json
+    - "{
+        rm packages/sources/package.json;
+        jq 'del(.devDependencies)' > packages/sources/package.json;
+      } < packages/sources/package.json"
     #
-    - jq 'del(.devDependencies)' packages/react-fiche-service-public/package.json > package.json.tmp
-    - mv package.json.tmp packages/react-fiche-service-public/package.json
+    - "{
+        rm packages/react-fiche-service-public/package.json;
+        jq 'del(.devDependencies)' > packages/react-fiche-service-public/package.json;
+      } < packages/react-fiche-service-public/package.json"
     #
     - find packages/code-du-travail-data/dataset -maxdepth 1 -type d
       -not -name datafiller
