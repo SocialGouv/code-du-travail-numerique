@@ -4,16 +4,7 @@ Install data:
   extends: .base_yarn_workspace_install
   variables:
     CONTEXT: code-du-travail-data
-  cache:
-    key: "install-data-$CI_COMMIT_REF_SLUG"
-    paths:
-      - $CI_PROJECT_DIR/.yarn
-      - node_modules
-      - packages/code-du-travail-data/node_modules
   before_script:
-    - apk add jq=~1
-    - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
-    #
     - find packages -maxdepth 1 -type d
       -not -name ${CONTEXT}
       -not -name sources | tail -n +2 | xargs rm -rf
