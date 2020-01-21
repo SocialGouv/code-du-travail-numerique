@@ -5,7 +5,7 @@ Install frontend:
   variables:
     CONTEXT: code-du-travail-frontend
   cache:
-    key: "install-frontend-$CI_COMMIT_REF_SLUG"
+    key: "${CI_COMMIT_REF_SLUG}__node_modules__frontend"
     paths:
       - SHA
       - node_modules
