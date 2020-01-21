@@ -75,12 +75,13 @@ Install frontend:
 
 #
 
-Lint @cdtn/frontend:
+.Lint @cdtn/frontend:
   extends: .quality_stage
   stage: "Build"
   dependencies:
     - Build @socialgouv/react-fiche-service-public
     - Build @socialgouv/react-ui
+    - Install frontend
   needs:
     - Build @socialgouv/react-fiche-service-public
     - Build @socialgouv/react-ui
@@ -88,22 +89,18 @@ Lint @cdtn/frontend:
   image: node:12-alpine
   variables:
     CONTEXT: code-du-travail-frontend
-  before_script:
-    - source .gitlab-ci/f1_scripts.sh
-    #
-    - checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-node_modules.tar.gz" ||
-      (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-node_modules.tar.gz)
   script:
     - yarn workspace @cdt/frontend lint
 
 #
 
-Test @cdtn/frontend:
+.Test @cdtn/frontend:
   extends: .quality_stage
   stage: "Build"
   dependencies:
     - Build @socialgouv/react-fiche-service-public
     - Build @socialgouv/react-ui
+    - Install frontend
   needs:
     - Build @socialgouv/react-fiche-service-public
     - Build @socialgouv/react-ui
@@ -111,27 +108,23 @@ Test @cdtn/frontend:
   image: node:12-alpine
   variables:
     CONTEXT: code-du-travail-frontend
-  before_script:
-    - source .gitlab-ci/f1_scripts.sh
-    #
-    - checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-node_modules.tar.gz" ||
-      (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-node_modules.tar.gz)
   script:
     - yarn workspace @cdt/frontend test --coverage
 
-Test @cdtn/frontend SDR data:
+.Test @cdtn/frontend SDR data:
   extends: .quality_stage
   image: alpine:3.11
   allow_failure: true
   before_script:
     - apk add --no-cache jq=~1
   script:
-    - |-
-      jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider
+    - jq ".[].url"
+        ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json |
+        xargs -n 1 wget --spider
 
 #
 
-Build @cdt/frontend:
+.Build @cdt/frontend:
   extends: .quality_stage
   stage: "Build"
   dependencies:
@@ -167,7 +160,7 @@ Build @cdt/frontend:
 
 #
 
-Register frontend image:
+.Register frontend image:
   extends:
     - .base_register_stage
     - .register_stage
@@ -213,7 +206,7 @@ Register frontend image:
     - source ./.gitlab-ci/env.sh
     - HOST=${FRONTEND_HOST}
 
-Deploy @cdtn/frontend (dev):
+.Deploy @cdtn/frontend (dev):
   extends:
     - .deploy_frontend_stage
     - .dev_stage
