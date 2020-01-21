@@ -11,6 +11,13 @@ Install frontend:
       - node_modules
       - packages/code-du-travail-frontend/node_modules
   before_script:
+    - source .gitlab-ci/f1_scripts.sh
+    #
+    #
+    - tar cf - packages/${CONTEXT}/package.json | md5sum
+    - tar cf - yarn.lock | md5sum
+    - md5sum packages/${CONTEXT}/package.json
+    - md5sum yarn.lock
     - tar cf - packages/${CONTEXT}/package.json yarn.lock | md5sum > PACKAGE_SHA
     - >-
       if [[ -d node_modules ]] && diff PACKAGE_SHA SHA ; then
@@ -22,12 +29,13 @@ Install frontend:
     #
     #
     #
-    - apk add jq=~1
+    # Remove all monorepo dependencies
     - "{
         rm package.json;
         jq 'del(.dependencies) | del(.devDependencies)' > package.json;
       } < package.json"
     #
+    # Remove unnecessary packages
     - find packages -maxdepth 1 -type d
       -not -name ${CONTEXT}
       -not -name code-du-travail-data
@@ -35,12 +43,14 @@ Install frontend:
       -not -name react-fiche-service-public
       -not -name sources | tail -n +2 | xargs rm -rf
     #
+    # Remove dependencies of necessary packages
     - find packages -maxdepth 1 -type d
           -name react-ui
       -o  -name sources
       -o  -name react-fiche-service-public | tail -n +2 | xargs -I {} sh -c
-      "{ rm {}/package.json; jq 'del(.devDependencies)' > {}/package.json; } < {}/package.json"
+      "{ rm {}/package.json; jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json; } < {}/package.json"
     #
+    # Remove dependencies of necessary packages (part 2)
     - find packages/code-du-travail-data/dataset -maxdepth 1 -type d
       -not -name datafiller
       -not -name preavis-demission
@@ -48,6 +58,11 @@ Install frontend:
       -not -name prime-precarite
       -not -name tools | tail -n +2 | xargs rm -rf
 
+
+    - tar cf - packages/${CONTEXT}/package.json | md5sum
+    - tar cf - yarn.lock | md5sum
+    - md5sum packages/${CONTEXT}/package.json
+    - md5sum yarn.lock
   artifacts:
     expire_in: 30 mins
     paths:
