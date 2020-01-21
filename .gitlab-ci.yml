@@ -23,13 +23,13 @@ include:
   - /.gitlab-ci/variables.yml
   - /.gitlab-ci/extends.yml
   #
-  # - /packages/code-du-travail-api/.gitlab-ci.yml
-  # - /packages/code-du-travail-data/.gitlab-ci.yml
+  - /packages/code-du-travail-api/.gitlab-ci.yml
+  - /packages/code-du-travail-data/.gitlab-ci.yml
   - /packages/code-du-travail-frontend/.gitlab-ci.yml
-  # - /packages/code-du-travail-nlp/.gitlab-ci.yml
-  # - /packages/react-fiche-service-public/.gitlab-ci.yml
-  # - /packages/react-ui/.gitlab-ci.yml
-  # - /packages/sources/.gitlab-ci.yml
+  - /packages/code-du-travail-nlp/.gitlab-ci.yml
+  - /packages/react-fiche-service-public/.gitlab-ci.yml
+  - /packages/react-ui/.gitlab-ci.yml
+  - /packages/sources/.gitlab-ci.yml
   #
   # - /.gitlab-ci/stages/quality.yml
   # - /.gitlab-ci/stages/register.yml
