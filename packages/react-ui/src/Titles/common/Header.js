@@ -6,11 +6,11 @@ export const Header = styled.header`
   ${({ isFirst, leftStripped, pageTitle, shift }) => {
     return css`
       margin-top: ${pageTitle || isFirst ? "0" : spacings.large};
-      margin-bottom: ${pageTitle ? spacings.xmedium : spacings.medium};
+      margin-bottom: ${pageTitle ? spacings.larger : spacings.medium};
       margin-left: ${shift ? `-${shift}}` : "auto"};
       text-align: ${leftStripped ? "left" : "center"};
       @media (max-width: ${breakpoints.mobile}) {
-        margin-bottom: ${pageTitle ? spacings.xmedium : spacings.small};
+        margin-bottom: ${pageTitle ? spacings.large : spacings.small};
         margin-left: ${shift ? `-${spacings.small}}` : "auto"};
       }
     `;

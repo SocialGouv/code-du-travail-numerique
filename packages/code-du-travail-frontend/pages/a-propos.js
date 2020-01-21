@@ -23,7 +23,7 @@ const About = ({ ogImage, pageUrl }) => (
     <Section>
       <Container narrow>
         <PageTitle subtitle="Apprenez-en plus sur notre histoire, notre équipe et nos méthodes">
-          À propos du Code du travail numérique
+          À propos
         </PageTitle>
         <Wrapper variant="main">
           <Title shift={theme.spacings.larger}>

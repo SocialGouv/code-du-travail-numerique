@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 
 import { Tabs } from "@socialgouv/react-ui";
 
+import { getText } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
+import Title from "./Title";
 
 class Tabulator extends React.PureComponent {
   static propTypes = {
@@ -18,11 +20,18 @@ class Tabulator extends React.PureComponent {
         : previousHeadingLevel;
 
     const tabsData = data.children.map(tab => {
-      const title = tab.children.find(el => el.name === "Titre");
-      const content = tab.children.filter(el => el.name !== "Titre");
       return {
-        tab: <ElementBuilder data={title} headingLevel={headingLevel} />,
-        panel: <ElementBuilder data={content} headingLevel={headingLevel + 1} />
+        tab: (
+          <Title level={headingLevel}>
+            {getText(tab.children.find(child => child.name === "Titre"))}
+          </Title>
+        ),
+        panel: (
+          <ElementBuilder
+            data={tab.children.filter(el => el.name !== "Titre")}
+            headingLevel={headingLevel + 1}
+          />
+        )
       };
     });
     return <Tabs data={tabsData} />;

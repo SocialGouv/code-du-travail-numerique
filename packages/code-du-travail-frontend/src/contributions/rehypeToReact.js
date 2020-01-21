@@ -15,7 +15,7 @@ const Tab = props => (
   <StyledAccordion
     items={[
       {
-        title: <h3>props.title</h3>,
+        title: <h3>{props.title}</h3>,
         body: props.children
       }
     ]}
@@ -52,7 +52,7 @@ const ContentMT = props => {
         <Accordion
           items={sections.map(section => ({
             id: section.anchor,
-            title: <h3>section.title</h3>,
+            title: <h3>{section.title}</h3>,
             body: <TabContent>{section.html}</TabContent>
           }))}
         />

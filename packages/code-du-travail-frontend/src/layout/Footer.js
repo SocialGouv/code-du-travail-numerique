@@ -257,8 +257,12 @@ const StyledFooter = styled.footer`
 
 const ServiceSection = styled(Section)`
   position: relative;
-  padding-bottom: ${spacings.larger};
+  padding-bottom: 7rem;
   text-align: center;
+  @media (max-width: ${breakpoints.mobile}) {
+    padding-top: 0;
+    padding-bottom: ${spacings.larger};
+  }
 `;
 
 const StyledContainer = styled(Container)`
@@ -271,8 +275,11 @@ const StyledDirectionRightIcon = styled(DirectionRightIcon)`
 `;
 
 const NavSection = styled(Section)`
-  padding: ${spacings.larger} 0;
+  padding: 5rem 0;
   background-color: ${({ theme }) => theme.bgTertiary};
+  @media (max-width: ${breakpoints.mobile}) {
+    padding-bottom: ${spacings.larger};
+  }
 `;
 
 const Links = styled(Container)`

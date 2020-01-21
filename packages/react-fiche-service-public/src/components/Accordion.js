@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Accordion, theme } from "@socialgouv/react-ui";
 
+import { getText } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
+import Title from "./Title";
 
 const { spacings } = theme;
 
@@ -25,10 +27,11 @@ class AccordionWrapper extends React.PureComponent {
       .filter(isItemOfAccordion)
       .map(accordionItem => {
         const title = (
-          <ElementBuilder
-            data={accordionItem.children.find(child => child.name === "Titre")}
-            headingLevel={headingLevel}
-          />
+          <Title level={headingLevel}>
+            {getText(
+              accordionItem.children.find(child => child.name === "Titre")
+            )}
+          </Title>
         );
         const body = (
           <ElementBuilder

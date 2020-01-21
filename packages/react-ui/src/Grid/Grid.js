@@ -36,7 +36,7 @@ export const List = styled.ul`
   justify-content: flex-start;
   /* Use negative margins on sides to create gutters that do not also
     create a gutter at the edges of the container. */
-  margin-top: ${spacings.medium};
+  margin-top: 0;
   margin-right: calc(-1 * ${spacings.small});
   margin-bottom: ${spacings.larger};
   margin-left: calc(-1 * ${spacings.small});
@@ -44,7 +44,6 @@ export const List = styled.ul`
   list-style-type: none;
   @media (max-width: ${breakpoints.mobile}) {
     flex-wrap: nowrap;
-    margin-top: ${spacings.small};
     margin-right: 0;
     margin-bottom: ${spacings.medium};
     margin-left: 0;

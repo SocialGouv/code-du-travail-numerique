@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import {
@@ -8,33 +8,18 @@ import {
   AccordionItemButton,
   AccordionItemPanel
 } from "react-accessible-accordion";
+import { onlyText } from "react-children-utilities";
+
 import { box, breakpoints, fonts, spacings } from "../theme";
 import { VerticalArrow } from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
 
 export const Accordion = ({ items, ...props }) => {
-  const [referencesArray, setReferencesArray] = useState(
-    items.map(React.createRef)
-  );
-
-  useEffect(() => {
-    setReferencesArray(items.map(React.createRef));
-  }, [items]);
-
-  useEffect(() => {
-    // We need to extract text content from tabs heading
-    referencesArray.forEach((item, index) => {
-      const tabElement = referencesArray[index].current;
-      if (tabElement) {
-        tabElement.innerHTML = tabElement.textContent;
-      }
-    });
-  }, [referencesArray]);
-
   return (
     <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
       {items.map(({ body, id, title }, index) => {
+        console.log(title);
         return (
           <div id={id} key={`${id}-${index}`}>
             {typeof id !== "undefined" &&
@@ -45,9 +30,7 @@ export const Accordion = ({ items, ...props }) => {
               <AccordionItemHeading>
                 <StyledAccordionItemButton>
                   <StyledVerticalArrow />
-                  <ButtonWrapper>
-                    <div ref={referencesArray[index]}>{title}</div>
-                  </ButtonWrapper>
+                  <ButtonText>{onlyText(title)}</ButtonText>
                 </StyledAccordionItemButton>
               </AccordionItemHeading>
               <StyledAccordionItemPanel>
@@ -105,18 +88,6 @@ const StyledVerticalArrow = styled(VerticalArrow)`
   color: ${({ theme }) => theme.secondary};
 `;
 
-const ButtonWrapper = styled.div`
-  margin: ${spacings.medium} 0 ${spacings.medium} 0;
-  color: ${({ theme }) => theme.title};
-  font-weight: 600;
-  font-size: ${fonts.sizes.headings.small};
-  font-family: "Open Sans", sans-serif;
-  line-height: ${fonts.lineHeightTitle};
-  @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.default};
-  }
-`;
-
 const StyledAccordionItemButton = styled(AccordionItemButton)`
   display: flex;
   align-items: center;
@@ -128,6 +99,18 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
   &:focus-within,
   &[aria-expanded="true"] {
     color: ${({ theme }) => theme.paragraph};
+  }
+`;
+
+const ButtonText = styled.div`
+  margin: ${spacings.medium} 0 ${spacings.medium} 0;
+  color: ${({ theme }) => theme.title};
+  font-weight: 600;
+  font-size: ${fonts.sizes.headings.small};
+  font-family: "Open Sans", sans-serif;
+  line-height: ${fonts.lineHeightTitle};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
   }
 `;
 

@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Tab, Tabs as RootTabs, TabList, TabPanel } from "react-tabs";
+import { onlyText } from "react-children-utilities";
+
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
 
 export const Tabs = props => {
   const { data, defaultIndex, onSelect, selectedIndex } = props;
-  const [referencesArray, setReferencesArray] = useState(
-    data.map(React.createRef)
-  );
 
   const refinedProps = {
     onSelect,
@@ -19,29 +18,14 @@ export const Tabs = props => {
       : { defaultIndex })
   };
 
-  useEffect(() => {
-    setReferencesArray(data.map(React.createRef));
-  }, [data]);
-
-  useEffect(() => {
-    // We need to extract text content from tabs heading
-    referencesArray.forEach((item, index) => {
-      const tabElement = referencesArray[index].current;
-      if (tabElement) {
-        tabElement.innerHTML = tabElement.textContent;
-      }
-    });
-  }, [referencesArray]);
-
   return (
     <>
       <StyledTabs {...refinedProps}>
         <StyledTabList>
-          {data.map(({ tab }, index) => (
-            <StyledTab key={index}>
-              <div ref={referencesArray[index]}>{tab}</div>
-            </StyledTab>
-          ))}
+          {data.map(({ tab }, index) => {
+            console.log(tab);
+            return <StyledTab key={index}>{onlyText(tab)}</StyledTab>;
+          })}
         </StyledTabList>
         {data.map(({ tab, panel }, index) => (
           <StyledTabPanel key={index}>
