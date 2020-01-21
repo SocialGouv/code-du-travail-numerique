@@ -150,11 +150,12 @@ async function* cdtnDocumentsGen() {
   // Temporary removed from ES
   logger.info("=== Contributions ===");
   yield require("../dataset/contributions/contributions.data.json").map(
-    ({ title, slug, answers }) => {
+    ({ title, slug, answers, breadcrumbs }) => {
       return {
         source: SOURCES.CONTRIBUTIONS,
         title,
         slug,
+        breadcrumbs,
         description: (answers.generic && answers.generic.text) || title,
         text: (answers.generic && answers.generic.text) || title,
         answers
