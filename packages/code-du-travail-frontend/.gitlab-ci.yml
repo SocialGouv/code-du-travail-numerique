@@ -7,10 +7,21 @@ Install frontend:
   cache:
     key: "install-frontend-$CI_COMMIT_REF_SLUG"
     paths:
-      - $CI_PROJECT_DIR/.yarn
+      - SHA
       - node_modules
       - packages/code-du-travail-frontend/node_modules
   before_script:
+    - tar cf - packages/${CONTEXT}/package.json yarn.lock | md5sum > PACKAGE_SHA
+    - >-
+      if diff PACKAGE_SHA SHA ; then
+        echo "No changes detected. Using cache ${PACKAGE_SHA}!"
+      else
+        echo "Changes detected."
+        mv PACKAGE_SHA SHA
+      fi
+    #
+    #
+    #
     - apk add jq=~1
     - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
     #
@@ -36,6 +47,7 @@ Install frontend:
       -not -name preavis-licenciement
       -not -name prime-precarite
       -not -name tools | tail -n +2 | xargs rm -rf
+
   artifacts:
     expire_in: 30 mins
     paths:
