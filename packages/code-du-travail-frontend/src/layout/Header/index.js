@@ -31,10 +31,7 @@ const Header = ({ currentPage = "" }) => {
               src={"/static/assets/img/marianne.svg"}
               alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail"
             />
-            <Logo
-              src={"/static/assets/img/logo.svg"}
-              alt="code du travail numérique"
-            />
+            <Logo />
           </LogoLink>
         </Link>
         <RightSide>
@@ -63,7 +60,7 @@ const Header = ({ currentPage = "" }) => {
 const { box, breakpoints, spacings } = theme;
 
 const HEADER_HEIGHT = "9rem";
-const HEADER_HEIGHT_MOBILE = "5rem";
+const HEADER_HEIGHT_MOBILE = "6rem";
 
 const StyledHeader = styled.header`
   ${({ currentPage }) => {
@@ -84,8 +81,7 @@ const StyledHeader = styled.header`
     currentPage === "home" ? "transparent" : theme.white};
   @media (max-width: ${breakpoints.mobile}) {
     height: ${HEADER_HEIGHT_MOBILE};
-    margin-bottom: ${({ currentPage }) =>
-      currentPage === "home" ? spacings.large : spacings.medium};
+    margin-bottom: ${spacings.larger};
   }
   @media print {
     position: relative;
@@ -117,29 +113,26 @@ const LogoLink = styled.a`
   align-items: center;
   text-decoration: none;
   @media (max-width: ${breakpoints.mobile}) {
-    /**
-     * hack(lionelb)
-     * the width will be 50% + half the logo
-     * so logo is center using space-between
-     */
-    flex: 0 0 calc(50% + 4.635rem);
+    /* 6.2rem is half logo's width so it gets centered */
+    flex: 0 0 calc(50% + 6.2rem);
     justify-content: space-between;
   }
 `;
 
 const Marianne = styled.img`
-  position: relative;
   width: 7rem;
   margin-right: ${spacings.large};
   @media (max-width: ${breakpoints.mobile}) {
-    max-width: 4rem;
+    width: auto;
+    height: 5rem;
   }
 `;
-const Logo = styled.img`
-  position: relative;
+const Logo = styled(icons.Logo)`
   width: 17rem;
+  color: ${({ theme }) => theme.primary};
   @media (max-width: ${breakpoints.mobile}) {
-    max-width: 9.25rem;
+    width: auto;
+    height: 5rem;
   }
 `;
 
