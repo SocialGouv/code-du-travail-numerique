@@ -169,7 +169,7 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c5 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c9 {
@@ -770,7 +770,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c14 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c18 {
@@ -1539,7 +1539,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c5 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c9 {
@@ -2337,7 +2337,7 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c5 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c9 {
@@ -3342,7 +3342,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c5 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c9 {
@@ -3939,7 +3939,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c5 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c9 {
@@ -4522,7 +4522,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 .c5 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c9 {
@@ -5096,7 +5096,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c5 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c9 {

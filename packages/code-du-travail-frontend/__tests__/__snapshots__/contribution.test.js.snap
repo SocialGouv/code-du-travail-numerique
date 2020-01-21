@@ -7,19 +7,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 0 2rem;
 }
 
-<<<<<<< HEAD
-.c29 > *:first-child {
-  margin-top: 0;
-}
-
-.c29 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c38 {
-=======
-.c29 {
->>>>>>> test(front): update snaps
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -55,70 +43,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 0;
 }
 
-<<<<<<< HEAD
-.c35 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c42 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c52 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c40 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c60 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-=======
->>>>>>> test(front): update snaps
 .c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -302,7 +226,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
-<<<<<<< HEAD
 .c20 {
   position: relative;
   overflow: hidden;
@@ -336,21 +259,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   overflow-x: auto;
 }
 
-.c31 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.c32 {
-  margin-bottom: 4rem;
-=======
-.c26 {
+.c35 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -363,7 +272,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c33 {
+.c42 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -376,7 +285,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c43 {
+.c52 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -389,7 +298,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c31 {
+.c40 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -401,7 +310,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c51 {
+.c60 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -411,26 +320,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   line-height: 1.25;
 }
 
-.c23 {
+.c31 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.c32 {
   margin-top: 0;
-<<<<<<< HEAD
-  margin-bottom: 2.4rem;
->>>>>>> test(front): update snaps
-=======
   margin-bottom: 4rem;
->>>>>>> fix(ui): remove babel transpiling on node modules
   margin-left: -4rem;
   text-align: left;
 }
 
-<<<<<<< HEAD
 .c50 {
-  margin-bottom: 1.6rem;
-=======
-.c41 {
   margin-top: 0;
   margin-bottom: 2rem;
->>>>>>> test(front): update snaps
   margin-left: auto;
   text-align: center;
 }
@@ -467,7 +377,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c33 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c37 {
@@ -551,14 +461,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   align-items: center;
 }
 
-.c22 > *:first-child {
-  margin-top: 0;
-}
-
-.c22 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c23 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -632,19 +534,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 0;
 }
 
-<<<<<<< HEAD
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c28 {
-=======
-.c20 {
->>>>>>> test(front): update snaps
   width: 80%;
 }
 
@@ -909,30 +799,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 2rem;
 }
 
-<<<<<<< HEAD
-.c53 > *:first-child {
-  margin-top: 0;
-}
-
-.c53 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c55 {
-=======
-.c46 {
->>>>>>> test(front): update snaps
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-<<<<<<< HEAD
 .c56 {
-  padding: 4rem 0;
-=======
-.c47 {
   padding: 5rem 0;
->>>>>>> fix(ui): remove babel transpiling on node modules
   background-color: #e4e8ef;
 }
 
@@ -950,19 +823,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: space-between;
 }
 
-<<<<<<< HEAD
-.c57 > *:first-child {
-  margin-top: 0;
-}
-
-.c57 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c59 + .c58 {
-=======
-.c50 + .c49 {
->>>>>>> test(front): update snaps
   padding-left: 1.6rem;
 }
 
@@ -1070,92 +931,36 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c40 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-=======
   .c16 {
     font-size: 1.4rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c40 {
-    font-size: 1.6rem;
-=======
-  .c35 {
-    font-size: 1.4rem;
->>>>>>> test(front): update snaps
-  }
-}
-
-@media (max-width:600px) {
-<<<<<<< HEAD
-  .c60 {
-    font-size: 1.6rem;
-=======
-  .c35 {
-    padding: 0 3rem;
->>>>>>> test(front): update snaps
-  }
-}
-
-@media (max-width:600px) {
-  .c45 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-<<<<<<< HEAD
   .c44 {
     font-size: 1.4rem;
-=======
-  .c45 {
-    padding: 0 3rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c44 {
     padding: 0 3rem;
-=======
-  .c31 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c54 {
     font-size: 1.4rem;
-=======
-  .c31 {
-    font-size: 1.6rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c54 {
     padding: 0 3rem;
-=======
-  .c51 {
-    font-size: 1.6rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c20 {
     overflow-x: hidden;
   }
@@ -1175,12 +980,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c40 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c40 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c60 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c32 {
-    margin-bottom: 2.4rem;
-=======
-  .c23 {
     margin-bottom: 3.2rem;
->>>>>>> fix(ui): remove babel transpiling on node modules
     margin-left: -1rem;
   }
 }
@@ -1489,18 +1309,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c53 {
-=======
-  .c40 {
+  .c49 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
->>>>>>> fix(ui): remove babel transpiling on node modules
+  .c53 {
     padding: 0;
   }
 }
@@ -1513,17 +1329,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c57 {
-=======
-  .c47 {
+  .c56 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
->>>>>>> fix(ui): remove babel transpiling on node modules
+  .c57 {
     padding: 0 1rem;
   }
 }
@@ -2249,19 +2061,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 0 2rem;
 }
 
-<<<<<<< HEAD
-.c29 > *:first-child {
-  margin-top: 0;
-}
-
-.c29 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c38 {
-=======
-.c29 {
->>>>>>> test(front): update snaps
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -2297,70 +2097,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 0;
 }
 
-<<<<<<< HEAD
-.c35 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c42 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c52 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c40 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c60 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-=======
->>>>>>> test(front): update snaps
 .c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2544,7 +2280,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
-<<<<<<< HEAD
 .c20 {
   position: relative;
   overflow: hidden;
@@ -2578,21 +2313,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   overflow-x: auto;
 }
 
-.c31 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.c32 {
-  margin-bottom: 4rem;
-=======
-.c26 {
+.c35 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -2605,7 +2326,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c33 {
+.c42 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -2618,7 +2339,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c43 {
+.c52 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -2631,7 +2352,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c31 {
+.c40 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -2643,7 +2364,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c51 {
+.c60 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -2653,26 +2374,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   line-height: 1.25;
 }
 
-.c23 {
+.c31 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.c32 {
   margin-top: 0;
-<<<<<<< HEAD
-  margin-bottom: 2.4rem;
->>>>>>> test(front): update snaps
-=======
   margin-bottom: 4rem;
->>>>>>> fix(ui): remove babel transpiling on node modules
   margin-left: -4rem;
   text-align: left;
 }
 
-<<<<<<< HEAD
 .c50 {
-  margin-bottom: 1.6rem;
-=======
-.c41 {
   margin-top: 0;
   margin-bottom: 2rem;
->>>>>>> test(front): update snaps
   margin-left: auto;
   text-align: center;
 }
@@ -2709,7 +2431,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c33 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c37 {
@@ -2793,14 +2515,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   align-items: center;
 }
 
-.c22 > *:first-child {
-  margin-top: 0;
-}
-
-.c22 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c23 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2874,19 +2588,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 0;
 }
 
-<<<<<<< HEAD
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c28 {
-=======
-.c20 {
->>>>>>> test(front): update snaps
   width: 80%;
 }
 
@@ -3151,30 +2853,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 2rem;
 }
 
-<<<<<<< HEAD
-.c53 > *:first-child {
-  margin-top: 0;
-}
-
-.c53 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c55 {
-=======
-.c46 {
->>>>>>> test(front): update snaps
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-<<<<<<< HEAD
 .c56 {
-  padding: 4rem 0;
-=======
-.c47 {
   padding: 5rem 0;
->>>>>>> fix(ui): remove babel transpiling on node modules
   background-color: #e4e8ef;
 }
 
@@ -3192,19 +2877,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: space-between;
 }
 
-<<<<<<< HEAD
-.c57 > *:first-child {
-  margin-top: 0;
-}
-
-.c57 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c59 + .c58 {
-=======
-.c50 + .c49 {
->>>>>>> test(front): update snaps
   padding-left: 1.6rem;
 }
 
@@ -3312,92 +2985,36 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c40 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-=======
   .c16 {
     font-size: 1.4rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c40 {
-    font-size: 1.6rem;
-=======
-  .c35 {
-    font-size: 1.4rem;
->>>>>>> test(front): update snaps
-  }
-}
-
-@media (max-width:600px) {
-<<<<<<< HEAD
-  .c60 {
-    font-size: 1.6rem;
-=======
-  .c35 {
-    padding: 0 3rem;
->>>>>>> test(front): update snaps
-  }
-}
-
-@media (max-width:600px) {
-  .c45 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-<<<<<<< HEAD
   .c44 {
     font-size: 1.4rem;
-=======
-  .c45 {
-    padding: 0 3rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c44 {
     padding: 0 3rem;
-=======
-  .c31 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c54 {
     font-size: 1.4rem;
-=======
-  .c31 {
-    font-size: 1.6rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c54 {
     padding: 0 3rem;
-=======
-  .c51 {
-    font-size: 1.6rem;
->>>>>>> test(front): update snaps
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c20 {
     overflow-x: hidden;
   }
@@ -3417,12 +3034,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c40 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c40 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c60 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c32 {
-    margin-bottom: 2.4rem;
-=======
-  .c23 {
     margin-bottom: 3.2rem;
->>>>>>> fix(ui): remove babel transpiling on node modules
     margin-left: -1rem;
   }
 }
@@ -3731,18 +3363,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c53 {
-=======
-  .c40 {
+  .c49 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
->>>>>>> fix(ui): remove babel transpiling on node modules
+  .c53 {
     padding: 0;
   }
 }
@@ -3755,17 +3383,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c57 {
-=======
-  .c47 {
+  .c56 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
->>>>>>> fix(ui): remove babel transpiling on node modules
+  .c57 {
     padding: 0 1rem;
   }
 }

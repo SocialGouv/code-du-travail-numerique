@@ -452,7 +452,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 .c24 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c28 {
