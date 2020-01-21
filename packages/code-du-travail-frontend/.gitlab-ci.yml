@@ -37,18 +37,16 @@ Install frontend:
       (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-node_modules.tar.gz) ||
       true
     #
-    - tar cf - packages/${CONTEXT}/package.json yarn.lock | md5sum > PACKAGE_SHA
-    - echo "last sha $(cat SHA)"
-    - echo "current sha $(cat PACKAGE_SHA)"
-    - cmp PACKAGE_SHA SHA
+    - sha1sum yarn.lock packages/code-du-travail-frontend/package.json > PACKAGE_SHA
+    - cat PACKAGE_SHA
     - >-
       if cmp -s PACKAGE_SHA SHA ; then
-        echo "No changes detected. Using cache ${PACKAGE_SHA}!"
+        echo "No changes detected."
+        exit ${CI_JOB_SKIP_EXIT_CODE:-0}
       else
         echo "Changes detected."
         rm -rf node_modules packages/${CONTEXT}/node_modules
         mv PACKAGE_SHA SHA
-        echo "new sha $(cat SHA)"
       fi
     #
     # NOTE(dougladuteil): remove all monorepo dependencies
