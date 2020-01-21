@@ -12,6 +12,9 @@ Install frontend:
       true
     #
     - tar cf - packages/${CONTEXT}/package.json yarn.lock | md5sum > PACKAGE_SHA
+    - echo "last sha $(cat SHA)"
+    - echo "current sha $(cat PACKAGE_SHA)"
+    - cmp PACKAGE_SHA SHA
     - >-
       if cmp -s PACKAGE_SHA SHA ; then
         echo "No changes detected. Using cache ${PACKAGE_SHA}!"
