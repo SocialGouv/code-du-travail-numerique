@@ -19,7 +19,8 @@ function getSearchBody({ source, slug }) {
       "date_debut", // code-du-travail
       "date_fin", // code-du-travail
       "description", // modele de courrier
-      "filename", // filename
+      "filename", // modele de courrier
+      "filesize", // modele de courrier
       "intro",
       "html",
       "icon", // outils
