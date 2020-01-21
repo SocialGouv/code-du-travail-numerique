@@ -5,33 +5,6 @@ Install frontend:
   variables:
     CONTEXT: code-du-travail-frontend
   before_script:
-    - source .gitlab-ci/f1_scripts.sh
-    #
-    - checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-node_modules.tar.gz" ||
-      (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-node_modules.tar.gz) ||
-      true
-    #
-    - tar cf - packages/${CONTEXT}/package.json yarn.lock | md5sum > PACKAGE_SHA
-    - echo "last sha $(cat SHA)"
-    - echo "current sha $(cat PACKAGE_SHA)"
-    - cmp PACKAGE_SHA SHA
-    - >-
-      if cmp -s PACKAGE_SHA SHA ; then
-        echo "No changes detected. Using cache ${PACKAGE_SHA}!"
-      else
-        echo "Changes detected."
-        rm -rf node_modules packages/${CONTEXT}/node_modules
-        mv PACKAGE_SHA SHA
-      fi
-    #
-    #
-    #
-    # Remove all monorepo dependencies
-    - "{
-        rm package.json;
-        jq 'del(.dependencies) | del(.devDependencies)' > package.json;
-      } < package.json"
-    #
     # Remove unnecessary packages
     - find packages -maxdepth 1 -type d
       -not -name ${CONTEXT}
@@ -54,10 +27,44 @@ Install frontend:
       -not -name preavis-licenciement
       -not -name prime-precarite
       -not -name tools | tail -n +2 | xargs rm -rf
-  after_script:
+
+  script:
     - source .gitlab-ci/f1_scripts.sh
     #
-    - creating_cache ${CONTEXT}-yarn.tar.gz .yarn || true
+    - checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-node_modules.tar.gz" ||
+      (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-node_modules.tar.gz) ||
+      true
+    #
+    - tar cf - packages/${CONTEXT}/package.json yarn.lock | md5sum > PACKAGE_SHA
+    - echo "last sha $(cat SHA)"
+    - echo "current sha $(cat PACKAGE_SHA)"
+    - cmp PACKAGE_SHA SHA
+    - >-
+      if cmp -s PACKAGE_SHA SHA ; then
+        echo "No changes detected. Using cache ${PACKAGE_SHA}!"
+      else
+        echo "Changes detected."
+        rm -rf node_modules packages/${CONTEXT}/node_modules
+        mv PACKAGE_SHA SHA
+        echo "new sha $(cat SHA)"
+      fi
+    #
+    # NOTE(dougladuteil): remove all monorepo dependencies
+    # As we only install one package, we do not need the cross packages dependencies
+    # like lerna or husky...
+    - "{
+        rm package.json;
+        jq 'del(.dependencies) | del(.devDependencies)' > package.json;
+      } < package.json"
+    #
+    #
+    - checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-yarn.tar.gz" ||
+      (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-yarn.tar.gz) ||
+      true
+    #
+    - yarn config set cache-folder $CI_PROJECT_DIR/.yarn
+    - yarn --frozen-lockfile
+    #
     - creating_cache ${CONTEXT}-yarn.tar.gz .yarn || true
     - creating_cache ${CONTEXT}-node_modules.tar.gz SHA node_modules packages/${CONTEXT}/node_modules || true
   artifacts:
