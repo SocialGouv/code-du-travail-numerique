@@ -30,7 +30,7 @@
     "@elastic/elasticsearch": "^7.5.0",
     "@socialgouv/fiches-vdd": "^1.0.108",
     "@socialgouv/kali-data": "^1.3.0",
-    "@socialgouv/legi-data": "^1.1.11",
+    "@socialgouv/legi-data": "^1.1.12",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
     "query-string": "^6.10.1",
