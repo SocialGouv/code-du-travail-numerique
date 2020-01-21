@@ -24,6 +24,7 @@ Install frontend:
         echo "No changes detected. Using cache ${PACKAGE_SHA}!"
       else
         echo "Changes detected."
+        rm -rf node_modules packages/${CONTEXT}/node_modules
         mv PACKAGE_SHA SHA
       fi
     #
