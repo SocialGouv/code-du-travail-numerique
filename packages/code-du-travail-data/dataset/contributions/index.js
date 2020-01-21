@@ -3,7 +3,7 @@ const kaliData = require("@socialgouv/kali-data/data/index.json");
 const remark = require("remark");
 const strip = require("strip-markdown");
 const slugify = require("../../slugify");
-
+const allThemes = require("../datafiller/themes.data.json");
 const mdStriper = remark().use(strip);
 
 const API_URL = `https://contributions-api.codedutravail.num.social.gouv.fr`;
@@ -11,6 +11,10 @@ const API_URL = `https://contributions-api.codedutravail.num.social.gouv.fr`;
 const comparableIdcc = num => parseInt(num);
 
 const sortByKey = key => (a, b) => `${a[key]}`.localeCompare(`${b[key]}`);
+
+const themes = allThemes.filter(theme =>
+  theme.refs.some(ref => ref.url.startsWith("/contribution/"))
+);
 
 /**
  * Fetch contribution fetch contribution from the contributions api
@@ -102,16 +106,29 @@ const fetchContributions = async () => {
   };
 
   const allAnswers = questions
-    .map(({ id, index, value: title }) => ({
-      id,
-      index,
-      title,
-      slug: slugify(title),
-      answers: {
-        generic: getGenericAnswer(id),
-        conventions: getConventionsAnswers(id)
+    .map(({ id, index, value: title }) => {
+      const slug = slugify(title);
+      const theme = themes.find(theme =>
+        theme.refs.some(ref => ref.url.match(new RegExp(slug)))
+      );
+      let breadcrumbs = [];
+      if (theme) {
+        breadcrumbs = (theme.breadcrumbs || []).concat([
+          { title: theme.title, slug: theme.slug }
+        ]);
       }
-    }))
+      return {
+        id,
+        index,
+        title,
+        slug,
+        breadcrumbs,
+        answers: {
+          generic: getGenericAnswer(id),
+          conventions: getConventionsAnswers(id)
+        }
+      };
+    })
     .filter(q => q.answers.generic)
     .sort((a, b) => a.index - b.index);
 

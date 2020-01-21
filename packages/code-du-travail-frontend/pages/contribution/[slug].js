@@ -40,7 +40,10 @@ class PageContribution extends React.Component {
 
   render() {
     const {
-      data: { _source: { title, answers, description }, relatedItems } = {
+      data: {
+        _source: { breadcrumbs, title, answers, description },
+        relatedItems
+      } = {
         _source: {}
       },
       content,
@@ -63,6 +66,7 @@ class PageContribution extends React.Component {
             source={{
               name: "Réponse personnalisée selon votre convention collective"
             }}
+            breadcrumbs={breadcrumbs}
             emptyMessage="Cette question n'a pas été trouvée"
           >
             <Contribution

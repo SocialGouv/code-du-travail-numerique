@@ -67,9 +67,20 @@ const data = {
           ]
         }
       ]
-    }
+    },
+    breadcrumbs: [
+      {
+        title: "Départ de l'entreprise",
+        slug: "8-depart-de-lentreprise"
+      },
+      {
+        title: "Autres départs",
+        slug: "86-autres-departs"
+      }
+    ]
   }
 };
+
 describe("<FicheContribution />", () => {
   it("should render with external content", () => {
     const { container } = render(

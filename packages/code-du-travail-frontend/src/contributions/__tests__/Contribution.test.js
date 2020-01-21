@@ -33,7 +33,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: 456,
+          idcc: "0456",
           markdown: "hello **123**"
         }
       ]
@@ -47,7 +47,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: 456,
+          idcc: "0456",
           markdown: "hello **123**"
         }
       ]
@@ -61,6 +61,7 @@ describe("<Contribution />", () => {
       JSON.stringify({
         convention: {
           title: "preselected convention",
+          shortTitle: "short preselected convention",
           num: 44,
           id: 123,
           url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
@@ -72,7 +73,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: 44,
+          idcc: "0044",
           markdown: "hello **123**"
         }
       ]
@@ -88,6 +89,7 @@ describe("<Contribution />", () => {
       JSON.stringify({
         convention: {
           title: "preselected convention",
+          shortTitle: "short preselected convention",
           num: 9999,
           id: 123,
           url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
@@ -99,7 +101,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: 44,
+          idcc: "0044",
           markdown: "hello **123**"
         }
       ]
@@ -115,6 +117,7 @@ describe("<Contribution />", () => {
       JSON.stringify({
         convention: {
           title: "preselected convention",
+          shortTitle: "short preselected convention",
           num: 44,
           id: 123,
           url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123"
@@ -126,7 +129,7 @@ describe("<Contribution />", () => {
       conventions: [
         {
           id: 123,
-          idcc: 44,
+          idcc: "44",
           markdown: "hello **123**",
           references: [
             {
