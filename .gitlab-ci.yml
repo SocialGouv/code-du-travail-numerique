@@ -19,9 +19,9 @@ include:
     file: /base_deploy_nodejs_chart_stage.yml
     ref: v5.0.0
   #
-  - https://raw.githubusercontent.com/SocialGouv/emjpm/master/.gitlab-ci/extends.yml
   #
   - /.gitlab-ci/variables.yml
+  - /.gitlab-ci/extends.yml
   #
   # - /packages/code-du-travail-api/.gitlab-ci.yml
   # - /packages/code-du-travail-data/.gitlab-ci.yml

@@ -1,0 +1,48 @@
+
+.base_yarn_workspace_install:
+  extends: .prepare_stage
+  image: node:12-alpine
+  interruptible: true
+  script:
+    - source .gitlab-ci/f1_scripts.sh
+    #
+    - >-
+      if [[ -z ${NO_CACHE} ]]; then
+        checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-node_modules.tar.gz" || \
+        (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-node_modules.tar.gz) || \
+        true
+      fi
+    #
+    - sha1sum yarn.lock packages/${CONTEXT}/package.json > PACKAGE_SHA
+    - cat PACKAGE_SHA
+    - >-
+      if [[ -d node_modules ]] && cmp -s PACKAGE_SHA SHA ; then
+        echo "No changes detected."
+        exit ${CI_JOB_SKIP_EXIT_CODE:-0}
+      else
+        echo "Changes detected."
+        rm -rf node_modules packages/${CONTEXT}/node_modules
+        mv PACKAGE_SHA SHA
+      fi
+    #
+    # NOTE(dougladuteil): remove all monorepo dependencies
+    # As we only install one package, we do not need the cross packages dependencies
+    # like lerna or husky...
+    - "{
+        rm package.json;
+        jq 'del(.dependencies) | del(.devDependencies)' > package.json;
+      } < package.json"
+    #
+    #
+    - >-
+      if [[ -z ${NO_CACHE} ]]; then
+        checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-yarn.tar.gz" || \
+        (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-yarn.tar.gz) || \
+        true
+      fi
+    #
+    - yarn config set cache-folder $CI_PROJECT_DIR/.yarn
+    - yarn --frozen-lockfile
+    #
+    - creating_cache ${CONTEXT}-yarn.tar.gz .yarn || true
+    - creating_cache ${CONTEXT}-node_modules.tar.gz SHA node_modules packages/${CONTEXT}/node_modules || true
