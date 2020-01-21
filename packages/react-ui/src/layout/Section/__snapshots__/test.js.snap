@@ -154,6 +154,10 @@ exports[`<Section /> renders with correct decoration 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c1 {
     right: 1rem;
   }

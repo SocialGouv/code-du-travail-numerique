@@ -68,8 +68,8 @@ exports[`<Accordion /> should render 1`] = `
 
 .c6 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
+  -webkit-animation: dpvxPj 0.35s ease-in;
+  animation: dpvxPj 0.35s ease-in;
 }
 
 .c6 > *:first-child {
@@ -122,7 +122,7 @@ exports[`<Accordion /> should render 1`] = `
           tabindex="0"
         >
           <svg
-            class="c3"
+            class="sc-AykKE c3"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -212,8 +212,8 @@ exports[`<Accordion /> should render with custom component as title 1`] = `
 
 .c4 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
+  -webkit-animation: dpvxPj 0.35s ease-in;
+  animation: dpvxPj 0.35s ease-in;
 }
 
 .c4 > *:first-child {
@@ -260,7 +260,7 @@ exports[`<Accordion /> should render with custom component as title 1`] = `
           tabindex="0"
         >
           <svg
-            class="c3"
+            class="sc-AykKE c3"
             fill="none"
             height="24"
             stroke="currentColor"

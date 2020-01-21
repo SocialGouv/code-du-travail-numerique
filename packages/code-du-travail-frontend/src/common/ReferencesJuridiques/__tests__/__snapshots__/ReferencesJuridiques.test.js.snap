@@ -104,8 +104,8 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 
 .c9 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
+  -webkit-animation: dpvxPj 0.35s ease-in;
+  animation: dpvxPj 0.35s ease-in;
 }
 
 .c9 > *:first-child {
@@ -248,7 +248,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 tabindex="0"
               >
                 <svg
-                  class="c7"
+                  class="sc-AykKJ c7"
                   fill="none"
                   height="24"
                   stroke="currentColor"

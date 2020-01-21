@@ -1,3 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GlobalStyles /> should render 1`] = `<div />`;
+exports[`<GlobalStyles /> should render 1`] = `
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media print {
+
+}
+
+@media print {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media print {
+
+}
+
+<div />
+`;

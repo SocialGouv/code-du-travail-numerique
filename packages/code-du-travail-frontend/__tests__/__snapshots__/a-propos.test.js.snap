@@ -731,6 +731,10 @@ exports[`<About /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c38 {
     font-size: 1.4rem;
   }
@@ -996,6 +1000,54 @@ exports[`<About /> should render 1`] = `
   .c50 {
     display: none;
   }
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
 }
 
 <div>
@@ -1441,7 +1493,7 @@ exports[`<About /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="c45"
+                class="sc-fzXfMC c45"
               >
                 <li
                   class="c46"
@@ -1504,7 +1556,7 @@ exports[`<About /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c45"
+                class="sc-fzXfMC c45"
               >
                 <li
                   class="c46"
@@ -1541,7 +1593,7 @@ exports[`<About /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="c45"
+                class="sc-fzXfMC c45"
               >
                 <li
                   class="c46"

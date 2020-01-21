@@ -8,6 +8,10 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
   font-size: 1.4rem;
 }
 
+@media (max-width:600px) {
+
+}
+
 <div
   class="c0"
 >
@@ -29,6 +33,10 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
   color: #eb5757;
   font-weight: 600;
   font-size: 1.4rem;
+}
+
+@media (max-width:600px) {
+
 }
 
 <div

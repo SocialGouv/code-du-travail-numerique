@@ -172,7 +172,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
         class="c2"
       >
         <div
-          class="c3"
+          class="sc-AykKC c3"
         >
           <span
             class="c4"
@@ -419,7 +419,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
         class="c2"
       >
         <div
-          class="c3"
+          class="sc-AykKC c3"
         >
           <span
             class="c4"

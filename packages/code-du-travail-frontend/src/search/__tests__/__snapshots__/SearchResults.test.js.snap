@@ -489,6 +489,10 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c21 {
     right: 1rem;
   }

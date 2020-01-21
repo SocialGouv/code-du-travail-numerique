@@ -368,6 +368,10 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c23 {
     font-size: 1.4rem;
   }
@@ -1063,6 +1067,10 @@ exports[`<Contribution /> should render answer references 1`] = `
   .c20 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+
 }
 
 @media (max-width:600px) {
@@ -1771,6 +1779,10 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   .c20 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+
 }
 
 @media (max-width:600px) {

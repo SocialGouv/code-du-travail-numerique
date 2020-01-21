@@ -1491,7 +1491,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   padding-left: 2.4rem;
 }
 
-.c18 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1528,16 +1528,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
   opacity: 1;
 }
 
-.c18:link,
-.c18:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c18:not([disabled]):hover,
-.c18:not([disabled]):active,
-.c18:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1546,16 +1546,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
   border-color: #dee5ef;
 }
 
-.c18[disabled] {
+.c17[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c17:hover .c21 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
 }
 
 .c4 {
@@ -1646,7 +1640,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   margin: 0;
 }
 
-.c20 + .c19 {
+.c19 + .c18 {
   margin-left: 4rem;
 }
 
@@ -1741,13 +1735,13 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     padding: 0 3rem;
   }
 }
@@ -1840,7 +1834,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c20 + .c19 {
+  .c19 + .c18 {
     margin-left: 0;
   }
 }
@@ -1962,12 +1956,12 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="c16"
             >
               <button
-                class="c17 c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Non
               </button>
               <button
-                class="c17 c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Oui
               </button>

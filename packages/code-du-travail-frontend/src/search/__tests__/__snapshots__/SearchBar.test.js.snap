@@ -141,6 +141,10 @@ exports[`<SearchBar /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c0 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -352,6 +356,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   .c5 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+
 }
 
 @media (max-width:600px) {

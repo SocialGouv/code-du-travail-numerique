@@ -120,6 +120,10 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   }
 }
 
+@media (max-width:600px) {
+
+}
+
 @media (max-width:1180px) {
   .c1 {
     width: 60vw;
@@ -226,7 +230,19 @@ exports[`<Modal /> does not render at first and then render 2`] = `
 
 exports[`<Modal /> renders the provided wrapper 1`] = `
 <body>
-  <div
+  @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+<div
     aria-hidden="true"
   />
   .c2 {
@@ -327,6 +343,10 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   .c2 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+
 }
 
 @media (max-width:600px) {

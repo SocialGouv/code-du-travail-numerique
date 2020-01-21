@@ -82,8 +82,8 @@ exports[`<CookieConsent /> should render 1`] = `
   border-width: 2px;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-animation: iowhYu 300ms ease-out;
-  animation: iowhYu 300ms ease-out;
+  -webkit-animation: hcRHWy 300ms ease-out;
+  animation: hcRHWy 300ms ease-out;
 }
 
 .c2 {
@@ -119,6 +119,10 @@ exports[`<CookieConsent /> should render 1`] = `
   .c4 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+
 }
 
 @media print {

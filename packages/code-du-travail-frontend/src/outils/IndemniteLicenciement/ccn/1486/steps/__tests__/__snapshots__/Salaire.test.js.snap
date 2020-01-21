@@ -914,7 +914,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
                 class="c12"
               >
                 <input
-                  class="c13"
+                  class="stepStyles__Input-sc-1cym743-0 c13"
                   id="salaire0"
                   name="brancheNewIrregularSalaire[0].salary"
                   type="number"
@@ -942,7 +942,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
                 class="c12"
               >
                 <input
-                  class="c13"
+                  class="stepStyles__Input-sc-1cym743-0 c13"
                   id="salaire1"
                   name="brancheNewIrregularSalaire[1].salary"
                   type="number"
@@ -1267,7 +1267,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     class="c8"
   >
     <input
-      class="c9"
+      class="stepStyles__Input-sc-1cym743-0 c9"
       name="brancheNewRegularSalaire"
       type="number"
       value=""

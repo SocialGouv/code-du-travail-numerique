@@ -1,6 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaires /> should add a salaire 1`] = `
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #f66663;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.c10:focus,
+.c10:hover,
+.c10:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -60,54 +108,6 @@ exports[`<Salaires /> should add a salaire 1`] = `
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c10:focus,
-.c10:hover,
-.c10:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c12 {
@@ -281,6 +281,12 @@ exports[`<Salaires /> should add a salaire 1`] = `
 }
 
 @media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
   }
@@ -289,12 +295,6 @@ exports[`<Salaires /> should add a salaire 1`] = `
 @media (max-width:600px) {
   .c8 {
     padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.4rem;
   }
 }
 
@@ -445,9 +445,21 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c1 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+
 }
 
 <div>

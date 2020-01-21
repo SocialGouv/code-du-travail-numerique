@@ -203,9 +203,17 @@ exports[`<Button /> it renders a Button flat 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c2 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+
 }
 
 <div>
@@ -561,9 +569,17 @@ exports[`<Button /> it renders a Button naked 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c2 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+
 }
 
 <div>
@@ -592,7 +608,7 @@ exports[`<Button /> it renders a Button naked 1`] = `
 `;
 
 exports[`<Button /> it renders a Button primary 1`] = `
-.c1 {
+.c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -622,6 +638,67 @@ exports[`<Button /> it renders a Button primary 1`] = `
   appearance: none;
   height: 5.2rem;
   padding: 0 4.4rem;
+  color: #fff;
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
+  opacity: 1;
+}
+
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):active,
+.c0:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #f99593;
+  border-color: #f99593;
+}
+
+.c0[disabled] {
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 3rem;
   color: #fff;
   background: #f66663;
   border-color: #f66663;
@@ -681,8 +758,8 @@ exports[`<Button /> it renders a Button primary 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
+  height: 5.2rem;
+  padding: 0 1.9rem;
   color: #fff;
   background: #f66663;
   border-color: #f66663;
@@ -714,71 +791,16 @@ exports[`<Button /> it renders a Button primary 1`] = `
   cursor: not-allowed;
 }
 
-.c3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
-  opacity: 1;
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
 }
 
-.c3:link,
-.c3:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
-}
-
-.c3[disabled] {
-  color: rgba(255,255,255,0.4);
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c0:hover .c4 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 3rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -788,9 +810,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
-    padding: 0 3rem;
-  }
+
 }
 
 @media (max-width:600px) {
@@ -800,28 +820,26 @@ exports[`<Button /> it renders a Button primary 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.4rem;
-  }
+
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
   >
     this is a Button 
     primary
      
   </button>
   <button
-    class="c0 c2"
+    class="c1"
   >
     this is a small Button 
     primary
      
   </button>
   <button
-    class="c0 c3"
+    class="c2"
   >
     this is a narrow Button 
     primary
@@ -831,7 +849,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
 `;
 
 exports[`<Button /> it renders a Button secondary 1`] = `
-.c1 {
+.c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -861,6 +879,67 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   appearance: none;
   height: 5.2rem;
   padding: 0 4.4rem;
+  color: #fff;
+  background: #7994d4;
+  border-color: #7994d4;
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
+  opacity: 1;
+}
+
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):active,
+.c0:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #a0b3e0;
+  border-color: #a0b3e0;
+}
+
+.c0[disabled] {
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 3rem;
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
@@ -920,8 +999,8 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
+  height: 5.2rem;
+  padding: 0 1.9rem;
   color: #fff;
   background: #7994d4;
   border-color: #7994d4;
@@ -953,71 +1032,16 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   cursor: not-allowed;
 }
 
-.c3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
 }
 
-.c3:link,
-.c3:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c3[disabled] {
-  color: rgba(255,255,255,0.4);
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c0:hover .c4 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 3rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -1027,9 +1051,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
-    padding: 0 3rem;
-  }
+
 }
 
 @media (max-width:600px) {
@@ -1039,28 +1061,26 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.4rem;
-  }
+
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
   >
     this is a Button 
     secondary
      
   </button>
   <button
-    class="c0 c2"
+    class="c1"
   >
     this is a small Button 
     secondary
      
   </button>
   <button
-    class="c0 c3"
+    class="c2"
   >
     this is a narrow Button 
     secondary

@@ -395,7 +395,7 @@ exports[`<SearchHero /> should render 1`] = `
     class="c0 c1"
   >
     <div
-      class="c2"
+      class="sc-AykKC c2"
     >
       <header
         class="c3"
@@ -453,7 +453,7 @@ exports[`<SearchHero /> should render 1`] = `
           class="c11"
         >
           <svg
-            class="c12"
+            class="SearchBar__StyledSearchIcon-sc-14cbasn-1 c12"
             fill="none"
             viewBox="0 0 32 32"
           >

@@ -71,8 +71,8 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 
 .c9 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
+  -webkit-animation: dpvxPj 0.35s ease-in;
+  animation: dpvxPj 0.35s ease-in;
 }
 
 .c9 > *:first-child {
@@ -175,7 +175,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           tabindex="0"
         >
           <svg
-            class="c7"
+            class="sc-AykKJ c7"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -234,7 +234,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           tabindex="0"
         >
           <svg
-            class="c7"
+            class="sc-AykKJ c7"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -305,7 +305,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           tabindex="0"
         >
           <svg
-            class="c7"
+            class="sc-AykKJ c7"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -415,8 +415,8 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 
 .c7 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
+  -webkit-animation: dpvxPj 0.35s ease-in;
+  animation: dpvxPj 0.35s ease-in;
 }
 
 .c7 > *:first-child {
@@ -481,7 +481,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           tabindex="0"
         >
           <svg
-            class="c5"
+            class="sc-AykKJ c5"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -540,7 +540,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           tabindex="0"
         >
           <svg
-            class="c5"
+            class="sc-AykKJ c5"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -604,7 +604,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           tabindex="0"
         >
           <svg
-            class="c5"
+            class="sc-AykKJ c5"
             fill="none"
             height="24"
             stroke="currentColor"

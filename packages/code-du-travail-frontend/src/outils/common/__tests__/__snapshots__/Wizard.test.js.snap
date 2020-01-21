@@ -106,27 +106,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   display: none;
 }
 
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #4d73b8;
-  font-weight: 600;
-  line-height: 1;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c8 + .c7 {
-  margin-top: 1.6rem;
-}
-
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -148,29 +127,25 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   margin-top: 1.6rem;
 }
 
-.c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  margin: 0.4rem 1rem;
-  margin-left: 0;
-  color: #fff;
-  background-color: #7994d4;
-  border-radius: 49%;
+  color: #4d73b8;
+  font-weight: 600;
+  line-height: 1;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8 + .c7 {
+  margin-top: 1.6rem;
 }
 
 .c11 {
@@ -195,6 +170,31 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   margin-left: 0;
   color: #9298af;
   background-color: #e4e8ef;
+  border-radius: 49%;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0.4rem 1rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 
@@ -244,6 +244,22 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   align-items: center;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
 }
 
 @media (max-width:600px) {
@@ -316,6 +332,16 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 @media (max-width:980px) {
+  .c10 {
+    display: none;
+  }
+
+  .c10 + .c7 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width:980px) {
   .c8 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -324,16 +350,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   }
 
   .c8 + .c7 {
-    margin-top: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c10 {
-    display: none;
-  }
-
-  .c10 + .c7 {
     margin-top: 0;
   }
 }
@@ -391,7 +407,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       test
     </h1>
     <div
-      class="c2"
+      class="sc-AykKG c2"
     >
       <span
         class="c3"
@@ -621,27 +637,6 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   display: none;
 }
 
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #4d73b8;
-  font-weight: 600;
-  line-height: 1;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10 + .c7 {
-  margin-top: 1.6rem;
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -663,29 +658,25 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   margin-top: 1.6rem;
 }
 
-.c11 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  margin: 0.4rem 1rem;
-  margin-left: 0;
-  color: #fff;
-  background-color: #7994d4;
-  border-radius: 49%;
+  color: #4d73b8;
+  font-weight: 600;
+  line-height: 1;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10 + .c7 {
+  margin-top: 1.6rem;
 }
 
 .c9 {
@@ -710,6 +701,31 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   margin-left: 0;
   color: #9298af;
   background-color: #e4e8ef;
+  border-radius: 49%;
+}
+
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0.4rem 1rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #7994d4;
   border-radius: 49%;
 }
 
@@ -843,6 +859,16 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 }
 
 @media (max-width:980px) {
+  .c8 {
+    display: none;
+  }
+
+  .c8 + .c7 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width:980px) {
   .c10 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -851,16 +877,6 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   }
 
   .c10 + .c7 {
-    margin-top: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c8 {
-    display: none;
-  }
-
-  .c8 + .c7 {
     margin-top: 0;
   }
 }
@@ -918,7 +934,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       test
     </h1>
     <div
-      class="c2"
+      class="sc-AykKG c2"
     >
       <span
         class="c3"
@@ -1381,7 +1397,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       test
     </h1>
     <div
-      class="c2"
+      class="sc-AykKG c2"
     >
       <span
         class="c3"
@@ -1848,7 +1864,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
       test
     </h1>
     <div
-      class="c2"
+      class="sc-AykKG c2"
     >
       <span
         class="c3"
@@ -2219,6 +2235,14 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c14 {
     font-size: 1.4rem;
   }
@@ -2375,7 +2399,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       test
     </h1>
     <div
-      class="c2"
+      class="sc-AykKG c2"
     >
       <span
         class="c3"
@@ -2838,7 +2862,7 @@ exports[`<Wizard /> should render a step 1`] = `
       test
     </h1>
     <div
-      class="c2"
+      class="sc-AykKG c2"
     >
       <span
         class="c3"

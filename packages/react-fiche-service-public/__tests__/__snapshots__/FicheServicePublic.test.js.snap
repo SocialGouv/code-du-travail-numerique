@@ -81,8 +81,8 @@ exports[`<FicheServicePublic /> should render 1`] = `
 
 .c16 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
+  -webkit-animation: dpvxPj 0.35s ease-in;
+  animation: dpvxPj 0.35s ease-in;
 }
 
 .c16 > *:first-child {
@@ -525,7 +525,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 tabindex="0"
               >
                 <svg
-                  class="c14"
+                  class="sc-AykKJ c14"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -590,7 +590,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 tabindex="0"
               >
                 <svg
-                  class="c14"
+                  class="sc-AykKJ c14"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -698,7 +698,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 tabindex="0"
               >
                 <svg
-                  class="c14"
+                  class="sc-AykKJ c14"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -790,7 +790,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 tabindex="0"
               >
                 <svg
-                  class="c14"
+                  class="sc-AykKJ c14"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -884,7 +884,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 tabindex="0"
               >
                 <svg
-                  class="c14"
+                  class="sc-AykKJ c14"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -1147,7 +1147,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           tabindex="0"
                         >
                           <svg
-                            class="c14"
+                            class="sc-AykKJ c14"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -1209,7 +1209,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           tabindex="0"
                         >
                           <svg
-                            class="c14"
+                            class="sc-AykKJ c14"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -1343,7 +1343,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 tabindex="0"
               >
                 <svg
-                  class="c14"
+                  class="sc-AykKJ c14"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -1456,7 +1456,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 tabindex="0"
               >
                 <svg
-                  class="c14"
+                  class="sc-AykKJ c14"
                   fill="none"
                   height="24"
                   stroke="currentColor"
