@@ -13,7 +13,7 @@ Install frontend:
     #
     - tar cf - packages/${CONTEXT}/package.json yarn.lock | md5sum > PACKAGE_SHA
     - >-
-      if [[ -d node_modules ]] && diff PACKAGE_SHA SHA ; then
+      if cmp -s PACKAGE_SHA SHA ; then
         echo "No changes detected. Using cache ${PACKAGE_SHA}!"
       else
         echo "Changes detected."
