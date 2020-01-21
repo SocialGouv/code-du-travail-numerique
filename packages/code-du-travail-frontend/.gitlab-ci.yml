@@ -35,20 +35,11 @@ Install frontend:
       -not -name react-fiche-service-public
       -not -name sources | tail -n +2 | xargs rm -rf
     #
-    - "{
-        rm packages/react-ui/package.json;
-        jq 'del(.devDependencies)' > packages/react-ui/package.json;
-      } < packages/react-ui/package.json"
-    #
-    - "{
-        rm packages/sources/package.json;
-        jq 'del(.devDependencies)' > packages/sources/package.json;
-      } < packages/sources/package.json"
-    #
-    - "{
-        rm packages/react-fiche-service-public/package.json;
-        jq 'del(.devDependencies)' > packages/react-fiche-service-public/package.json;
-      } < packages/react-fiche-service-public/package.json"
+    - find packages -maxdepth 1 -type d
+          -name react-ui
+      -o  -name sources
+      -o  -name react-fiche-service-public | tail -n +2 | xargs -I {} sh -c
+      "{ rm {}/package.json; jq 'del(.devDependencies)' > {}/package.json; } < {}/package.json"
     #
     - find packages/code-du-travail-data/dataset -maxdepth 1 -type d
       -not -name datafiller
