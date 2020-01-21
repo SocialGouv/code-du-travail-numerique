@@ -139,9 +139,7 @@ exports[`<Tabs /> renders 1`] = `
         role="tab"
         tabindex="0"
       >
-        <div>
-          Tab 1
-        </div>
+        Tab 1
       </li>
       <li
         aria-controls="react-tabs-3"
@@ -151,9 +149,7 @@ exports[`<Tabs /> renders 1`] = `
         id="react-tabs-2"
         role="tab"
       >
-        <div>
-          Tab 2
-        </div>
+        Tab 2
       </li>
     </ul>
     <div

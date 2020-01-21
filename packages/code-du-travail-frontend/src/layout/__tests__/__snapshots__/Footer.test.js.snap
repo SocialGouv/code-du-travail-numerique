@@ -143,7 +143,7 @@ exports[`<Footer /> should render 1`] = `
 
 .c3 {
   position: relative;
-  padding-bottom: 4rem;
+  padding-bottom: 7rem;
   text-align: center;
 }
 
@@ -162,7 +162,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 .c11 {
-  padding: 4rem 0;
+  padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
@@ -289,6 +289,13 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c3 {
+    padding-top: 0;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     padding: 0;
   }
@@ -298,6 +305,12 @@ exports[`<Footer /> should render 1`] = `
   .c8 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    padding-bottom: 4rem;
   }
 }
 

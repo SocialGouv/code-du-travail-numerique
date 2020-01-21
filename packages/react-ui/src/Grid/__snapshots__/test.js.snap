@@ -53,7 +53,7 @@ exports[`<Grid /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 2rem;
+  margin-top: 0;
   margin-right: calc(-1 * 1rem);
   margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
@@ -108,7 +108,6 @@ exports[`<Grid /> should render 1`] = `
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    margin-top: 1rem;
     margin-right: 0;
     margin-bottom: 2rem;
     margin-left: 0;
@@ -242,7 +241,7 @@ exports[`<Grid /> should render 5columns 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 2rem;
+  margin-top: 0;
   margin-right: calc(-1 * 1rem);
   margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
@@ -297,7 +296,6 @@ exports[`<Grid /> should render 5columns 1`] = `
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    margin-top: 1rem;
     margin-right: 0;
     margin-bottom: 2rem;
     margin-left: 0;

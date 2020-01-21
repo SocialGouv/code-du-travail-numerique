@@ -22,10 +22,9 @@ export const Tabs = props => {
     <>
       <StyledTabs {...refinedProps}>
         <StyledTabList>
-          {data.map(({ tab }, index) => {
-            console.log(tab);
-            return <StyledTab key={index}>{onlyText(tab)}</StyledTab>;
-          })}
+          {data.map(({ tab }, index) => (
+            <StyledTab key={index}>{onlyText(tab)}</StyledTab>
+          ))}
         </StyledTabList>
         {data.map(({ tab, panel }, index) => (
           <StyledTabPanel key={index}>

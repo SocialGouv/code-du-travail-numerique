@@ -46,15 +46,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
   transform: rotate(90deg);
 }
 
-.c15 {
-  margin: 2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -77,6 +68,15 @@ exports[`<FicheServicePublic /> should render 1`] = `
 .c13:focus-within,
 .c13[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c15 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c16 {
@@ -488,9 +488,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           role="tab"
           tabindex="0"
         >
-          <div>
-            CDI
-          </div>
+          CDI
         </li>
         <li
           aria-controls="react-tabs-3"
@@ -500,9 +498,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           id="react-tabs-2"
           role="tab"
         >
-          <div>
-            CDD
-          </div>
+          CDD
         </li>
         <li
           aria-controls="react-tabs-5"
@@ -512,9 +508,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           id="react-tabs-4"
           role="tab"
         >
-          <div>
-            Contrat de travail temporaire (intérim)
-          </div>
+          Contrat de travail temporaire (intérim)
         </li>
       </ul>
       <div
@@ -587,9 +581,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c15"
                     >
-                      <div>
-                        De quoi s'agit-il ?
-                      </div>
+                      De quoi s'agit-il ?
                     </div>
                   </div>
                 </div>
@@ -670,9 +662,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c15"
                     >
-                      <div>
-                        Conditions
-                      </div>
+                      Conditions
                     </div>
                   </div>
                 </div>
@@ -796,9 +786,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c15"
                     >
-                      <div>
-                        Volonté de démissionner
-                      </div>
+                      Volonté de démissionner
                     </div>
                   </div>
                 </div>
@@ -906,9 +894,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c15"
                     >
-                      <div>
-                        Procédure
-                      </div>
+                      Procédure
                     </div>
                   </div>
                 </div>
@@ -1018,9 +1004,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c15"
                     >
-                      <div>
-                        Préavis
-                      </div>
+                      Préavis
                     </div>
                   </div>
                 </div>
@@ -1069,9 +1053,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           role="tab"
                           tabindex="0"
                         >
-                          <div>
-                            Cas général
-                          </div>
+                          Cas général
                         </li>
                         <li
                           aria-controls="react-tabs-9"
@@ -1081,9 +1063,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           id="react-tabs-8"
                           role="tab"
                         >
-                          <div>
-                            Journaliste
-                          </div>
+                          Journaliste
                         </li>
                         <li
                           aria-controls="react-tabs-11"
@@ -1093,9 +1073,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           id="react-tabs-10"
                           role="tab"
                         >
-                          <div>
-                            VRP
-                          </div>
+                          VRP
                         </li>
                       </ul>
                       <div
@@ -1231,9 +1209,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           role="tab"
                           tabindex="0"
                         >
-                          <div>
-                            Vous demandez une dispense de préavis
-                          </div>
+                          Vous demandez une dispense de préavis
                         </li>
                         <li
                           aria-controls="react-tabs-15"
@@ -1243,9 +1219,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           id="react-tabs-14"
                           role="tab"
                         >
-                          <div>
-                            Votre employeur vous dispense de préavis
-                          </div>
+                          Votre employeur vous dispense de préavis
                         </li>
                       </ul>
                       <div
@@ -1314,9 +1288,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     <div
                                       class="c15"
                                     >
-                                      <div>
-                                        Accord de l'employeur
-                                      </div>
+                                      Accord de l'employeur
                                     </div>
                                   </div>
                                 </div>
@@ -1394,9 +1366,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     <div
                                       class="c15"
                                     >
-                                      <div>
-                                        Refus de l'employeur
-                                      </div>
+                                      Refus de l'employeur
                                     </div>
                                   </div>
                                 </div>
@@ -1549,9 +1519,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c15"
                     >
-                      <div>
-                        Indemnisation
-                      </div>
+                      Indemnisation
                     </div>
                   </div>
                 </div>
@@ -1680,9 +1648,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c15"
                     >
-                      <div>
-                        Documents remis au salarié
-                      </div>
+                      Documents remis au salarié
                     </div>
                   </div>
                 </div>

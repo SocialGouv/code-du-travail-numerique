@@ -18,29 +18,26 @@ import { ScreenReaderOnly } from "../ScreenReaderOnly";
 export const Accordion = ({ items, ...props }) => {
   return (
     <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
-      {items.map(({ body, id, title }, index) => {
-        console.log(title);
-        return (
-          <div id={id} key={`${id}-${index}`}>
-            {typeof id !== "undefined" &&
-              props.preExpanded.find(element => element === id) && (
-                <PushBelowHeader />
-              )}
-            <StyledAccordionItem uuid={id} index={index}>
-              <AccordionItemHeading>
-                <StyledAccordionItemButton>
-                  <StyledVerticalArrow />
-                  <ButtonText>{onlyText(title)}</ButtonText>
-                </StyledAccordionItemButton>
-              </AccordionItemHeading>
-              <StyledAccordionItemPanel>
-                <ScreenReaderOnly>{title}</ScreenReaderOnly>
-                <AccordionItemPanelContent>{body}</AccordionItemPanelContent>
-              </StyledAccordionItemPanel>
-            </StyledAccordionItem>
-          </div>
-        );
-      })}
+      {items.map(({ body, id, title }, index) => (
+        <div id={id} key={`${id}-${index}`}>
+          {typeof id !== "undefined" &&
+            props.preExpanded.find(element => element === id) && (
+              <PushBelowHeader />
+            )}
+          <StyledAccordionItem uuid={id} index={index}>
+            <AccordionItemHeading>
+              <StyledAccordionItemButton>
+                <StyledVerticalArrow />
+                <ButtonText>{onlyText(title)}</ButtonText>
+              </StyledAccordionItemButton>
+            </AccordionItemHeading>
+            <StyledAccordionItemPanel>
+              <ScreenReaderOnly>{title}</ScreenReaderOnly>
+              <AccordionItemPanelContent>{body}</AccordionItemPanelContent>
+            </StyledAccordionItemPanel>
+          </StyledAccordionItem>
+        </div>
+      ))}
     </RootAccordion>
   );
 };

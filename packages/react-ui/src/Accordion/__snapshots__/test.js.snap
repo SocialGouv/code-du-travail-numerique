@@ -40,15 +40,6 @@ exports[`<Accordion /> should render 1`] = `
   transform: rotate(90deg);
 }
 
-.c3 {
-  margin: 2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -71,6 +62,15 @@ exports[`<Accordion /> should render 1`] = `
 .c1:focus-within,
 .c1[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c3 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c4 {
@@ -149,9 +149,7 @@ exports[`<Accordion /> should render 1`] = `
             <div
               class="c3"
             >
-              <div>
-                This is the title
-              </div>
+              This is the title
             </div>
           </div>
         </div>
@@ -222,15 +220,6 @@ exports[`<Accordion /> should render as h2 1`] = `
   transform: rotate(90deg);
 }
 
-.c3 {
-  margin: 2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -253,6 +242,15 @@ exports[`<Accordion /> should render as h2 1`] = `
 .c1:focus-within,
 .c1[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c3 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c4 {
@@ -331,9 +329,7 @@ exports[`<Accordion /> should render as h2 1`] = `
             <div
               class="c3"
             >
-              <div>
-                This is the title
-              </div>
+              This is the title
             </div>
           </div>
         </div>

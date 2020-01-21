@@ -94,22 +94,24 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
     <br />
     (ccn des 5 mondes)
   </p>
-  <button
-    class="c1 c2"
-    type="button"
-  >
-    Changer de convention collective
-    <svg
-      class="c3"
-      fill="none"
-      viewBox="0 0 28 15"
+  <p>
+    <button
+      class="c1 c2"
+      type="button"
     >
-      <path
-        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-        fill="currentColor"
-      />
-    </svg>
-  </button>
+      Changer de convention collective
+      <svg
+        class="c3"
+        fill="none"
+        viewBox="0 0 28 15"
+      >
+        <path
+          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </p>
   <button
     data-testid="submit-test"
     type="submit"

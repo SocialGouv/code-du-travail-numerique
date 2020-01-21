@@ -144,7 +144,7 @@ exports[`<Answer /> should renders 1`] = `
 
 .c4 {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -331,7 +331,7 @@ exports[`<Answer /> should renders 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     margin-left: -1rem;
   }
 }
@@ -745,7 +745,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c13 {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -1020,7 +1020,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 @media (max-width:600px) {
   .c13 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     margin-left: -1rem;
   }
 }
@@ -1514,7 +1514,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 .c4 {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -1701,7 +1701,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     margin-left: -1rem;
   }
 }
@@ -2308,7 +2308,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c4 {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -2564,7 +2564,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     margin-left: -1rem;
   }
 }
@@ -3313,7 +3313,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 .c4 {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -3504,7 +3504,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     margin-left: -1rem;
   }
 }
@@ -3910,7 +3910,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 .c4 {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -4101,7 +4101,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 @media (max-width:600px) {
   .c4 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     margin-left: -1rem;
   }
 }
@@ -4493,7 +4493,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 
 .c4 {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -4684,7 +4684,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     margin-left: -1rem;
   }
 }
@@ -5067,7 +5067,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 .c4 {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -5258,7 +5258,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 @media (max-width:600px) {
   .c4 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     margin-left: -1rem;
   }
 }

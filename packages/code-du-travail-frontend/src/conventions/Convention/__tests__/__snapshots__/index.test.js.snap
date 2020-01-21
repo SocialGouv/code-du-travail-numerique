@@ -46,15 +46,6 @@ exports[`<Convention /> renders 1`] = `
   transform: rotate(90deg);
 }
 
-.c9 {
-  margin: 2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -77,6 +68,15 @@ exports[`<Convention /> renders 1`] = `
 .c7:focus-within,
 .c7[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c9 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c10 {
@@ -227,7 +227,7 @@ exports[`<Convention /> renders 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 2rem;
+  margin-top: 0;
   margin-right: calc(-1 * 1rem);
   margin-bottom: 4rem;
   margin-left: calc(-1 * 1rem);
@@ -554,7 +554,6 @@ exports[`<Convention /> renders 1`] = `
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    margin-top: 1rem;
     margin-right: 0;
     margin-bottom: 2rem;
     margin-left: 0;
@@ -755,9 +754,7 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c9"
             >
-              <div>
-                Départ de l'entreprise
-              </div>
+              Départ de l'entreprise
             </div>
           </div>
         </div>
@@ -824,9 +821,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                           Quelle est la durée de préavis en cas de licenciement ?
-                        </div>
+                         Quelle est la durée de préavis en cas de licenciement ?
                       </div>
                     </div>
                   </div>
@@ -960,9 +955,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                           Quelle est la durée du préavis en cas de démission ?
-                        </div>
+                         Quelle est la durée du préavis en cas de démission ?
                       </div>
                     </div>
                   </div>
@@ -1073,9 +1066,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                           Quelle est la durée de préavis en cas de départ à la retraite ?
-                        </div>
+                         Quelle est la durée de préavis en cas de départ à la retraite ?
                       </div>
                     </div>
                   </div>
@@ -1179,9 +1170,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                           Quelle est la durée de préavis en cas de mise à la retraite ?
-                        </div>
+                         Quelle est la durée de préavis en cas de mise à la retraite ?
                       </div>
                     </div>
                   </div>
@@ -1285,9 +1274,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
-                        </div>
+                        Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
                       </div>
                     </div>
                   </div>
@@ -1382,9 +1369,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
-                        </div>
+                        Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
                       </div>
                     </div>
                   </div>
@@ -1525,9 +1510,7 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c9"
             >
-              <div>
-                Congés et repos
-              </div>
+              Congés et repos
             </div>
           </div>
         </div>
@@ -1594,9 +1577,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Jours fériés et ponts dans le secteur privé
-                        </div>
+                        Jours fériés et ponts dans le secteur privé
                       </div>
                     </div>
                   </div>
@@ -1701,9 +1682,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
-                        </div>
+                        Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
                       </div>
                     </div>
                   </div>
@@ -1855,9 +1834,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Les congés pour événements familiaux
-                        </div>
+                        Les congés pour événements familiaux
                       </div>
                     </div>
                   </div>
@@ -2003,9 +1980,7 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c9"
             >
-              <div>
-                Embauche et contrat de travail
-              </div>
+              Embauche et contrat de travail
             </div>
           </div>
         </div>
@@ -2072,9 +2047,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
-                        </div>
+                        Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
                       </div>
                     </div>
                   </div>
@@ -2177,9 +2150,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Comment déterminer l'ancienneté du salarié ?
-                        </div>
+                        Comment déterminer l'ancienneté du salarié ?
                       </div>
                     </div>
                   </div>
@@ -2334,9 +2305,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                           Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
-                        </div>
+                         Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
                       </div>
                     </div>
                   </div>
@@ -2502,9 +2471,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
-                        </div>
+                        Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
                       </div>
                     </div>
                   </div>
@@ -2599,9 +2566,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                           Embauche en contrat d'extra (CDD d'usage)
-                        </div>
+                         Embauche en contrat d'extra (CDD d'usage)
                       </div>
                     </div>
                   </div>
@@ -2698,9 +2663,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Quelles sont les conditions de cumul d'emplois ?
-                        </div>
+                        Quelles sont les conditions de cumul d'emplois ?
                       </div>
                     </div>
                   </div>
@@ -2800,9 +2763,7 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c9"
             >
-              <div>
-                Salaire et Rémunération
-              </div>
+              Salaire et Rémunération
             </div>
           </div>
         </div>
@@ -2869,9 +2830,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
-                        </div>
+                        Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
                       </div>
                     </div>
                   </div>
@@ -2959,9 +2918,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Quelles sont les primes prévues par la convention collective ?
-                        </div>
+                        Quelles sont les primes prévues par la convention collective ?
                       </div>
                     </div>
                   </div>
@@ -3080,9 +3037,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
-                        </div>
+                        Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
                       </div>
                     </div>
                   </div>
@@ -3208,9 +3163,7 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c9"
             >
-              <div>
-                Santé, sécurité et conditions de travail
-              </div>
+              Santé, sécurité et conditions de travail
             </div>
           </div>
         </div>
@@ -3277,9 +3230,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
-                        </div>
+                        En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
                       </div>
                     </div>
                   </div>
@@ -3659,9 +3610,7 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c9"
                       >
-                        <div>
-                          En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
-                        </div>
+                        En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
                       </div>
                     </div>
                   </div>
@@ -3823,9 +3772,7 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c9"
             >
-              <div>
-                Salaires minima hiérarchiques
-              </div>
+              Salaires minima hiérarchiques
             </div>
           </div>
         </div>
@@ -4020,9 +3967,7 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c9"
             >
-              <div>
-                Durée du travail, répartition et aménagement des horaires
-              </div>
+              Durée du travail, répartition et aménagement des horaires
             </div>
           </div>
         </div>
@@ -4449,9 +4394,7 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c9"
             >
-              <div>
-                Classifications
-              </div>
+              Classifications
             </div>
           </div>
         </div>

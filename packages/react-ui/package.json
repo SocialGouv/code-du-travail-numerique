@@ -86,6 +86,9 @@
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/jest.setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!react-children-utilities)"
     ]
   },
   "browserslist": [

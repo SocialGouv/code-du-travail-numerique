@@ -52,7 +52,7 @@ exports[`<Article /> should render 1`] = `
 
 .c2 {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -112,7 +112,7 @@ exports[`<Article /> should render 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     margin-left: -1rem;
   }
 }

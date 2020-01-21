@@ -206,9 +206,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
         role="tab"
         tabindex="0"
       >
-        <div>
-          CDI
-        </div>
+        CDI
       </li>
       <li
         aria-controls="react-tabs-3"
@@ -218,9 +216,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
         id="react-tabs-2"
         role="tab"
       >
-        <div>
-          CDD
-        </div>
+        CDD
       </li>
     </ul>
     <div
@@ -423,9 +419,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
         role="tab"
         tabindex="0"
       >
-        <div>
-          CDI
-        </div>
+        CDI
       </li>
       <li
         aria-controls="react-tabs-7"
@@ -435,9 +429,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
         id="react-tabs-6"
         role="tab"
       >
-        <div>
-          CDD
-        </div>
+        CDD
       </li>
     </ul>
     <div
@@ -633,9 +625,7 @@ exports[`<Tabulator /> should render 1`] = `
         role="tab"
         tabindex="0"
       >
-        <div>
-          CDI
-        </div>
+        CDI
       </li>
       <li
         aria-controls="react-tabs-11"
@@ -645,9 +635,7 @@ exports[`<Tabulator /> should render 1`] = `
         id="react-tabs-10"
         role="tab"
       >
-        <div>
-          CDD
-        </div>
+        CDD
       </li>
     </ul>
     <div

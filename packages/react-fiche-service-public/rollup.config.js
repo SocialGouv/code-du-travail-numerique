@@ -17,7 +17,7 @@ export default {
   ],
   external: ["react", "react-dom", "prop-types", "styled-components"],
   plugins: [
-    babel(),
+    babel({ exclude: /node_modules/ }),
     resolve({
       mainFields: ["module", "jsnext", "jsnext:main", "main"]
     }),

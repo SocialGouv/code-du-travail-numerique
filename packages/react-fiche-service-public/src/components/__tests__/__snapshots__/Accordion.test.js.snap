@@ -46,15 +46,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  margin: 2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -77,6 +68,15 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 .c5:focus-within,
 .c5[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c7 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c8 {
@@ -241,9 +241,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             <div
               class="c7"
             >
-              <div>
-                titre 1
-              </div>
+              titre 1
             </div>
           </div>
         </div>
@@ -325,9 +323,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             <div
               class="c7"
             >
-              <div>
-                titre 2
-              </div>
+              titre 2
             </div>
           </div>
         </div>
@@ -414,9 +410,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             <div
               class="c7"
             >
-              <div>
-                titre 3
-              </div>
+              titre 3
             </div>
           </div>
         </div>
@@ -507,15 +501,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   transform: rotate(90deg);
 }
 
-.c5 {
-  margin: 2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -538,6 +523,15 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 .c3:focus-within,
 .c3[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c5 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c6 {
@@ -644,9 +638,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             <div
               class="c5"
             >
-              <div>
-                titre 1
-              </div>
+              titre 1
             </div>
           </div>
         </div>
@@ -721,9 +713,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             <div
               class="c5"
             >
-              <div>
-                titre 2
-              </div>
+              titre 2
             </div>
           </div>
         </div>
@@ -803,9 +793,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             <div
               class="c5"
             >
-              <div>
-                titre 3
-              </div>
+              titre 3
             </div>
           </div>
         </div>

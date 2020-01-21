@@ -68,15 +68,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  margin: 2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -99,6 +90,15 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 .c5:focus-within,
 .c5[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c7 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c8 {
@@ -283,9 +283,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   <div
                     class="c7"
                   >
-                    <div>
-                      Voir les références juridiques concernées
-                    </div>
+                    Voir les références juridiques concernées
                   </div>
                 </div>
               </div>
