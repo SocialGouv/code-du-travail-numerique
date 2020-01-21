@@ -4,20 +4,13 @@ Install frontend:
   extends: .base_yarn_workspace_install
   variables:
     CONTEXT: code-du-travail-frontend
-  cache:
-    key: "${CI_COMMIT_REF_SLUG}__node_modules__frontend"
-    paths:
-      - SHA
-      - node_modules
-      - packages/code-du-travail-frontend/node_modules
   before_script:
     - source .gitlab-ci/f1_scripts.sh
     #
+    - checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-node_modules.tar.gz" ||
+      (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-node_modules.tar.gz) ||
+      true
     #
-    - tar cf - packages/${CONTEXT}/package.json | md5sum
-    - tar cf - yarn.lock | md5sum
-    - md5sum packages/${CONTEXT}/package.json
-    - md5sum yarn.lock
     - tar cf - packages/${CONTEXT}/package.json yarn.lock | md5sum > PACKAGE_SHA
     - >-
       if [[ -d node_modules ]] && diff PACKAGE_SHA SHA ; then
@@ -58,12 +51,12 @@ Install frontend:
       -not -name preavis-licenciement
       -not -name prime-precarite
       -not -name tools | tail -n +2 | xargs rm -rf
-
-
-    - tar cf - packages/${CONTEXT}/package.json | md5sum
-    - tar cf - yarn.lock | md5sum
-    - md5sum packages/${CONTEXT}/package.json
-    - md5sum yarn.lock
+  after_script:
+    - source .gitlab-ci/f1_scripts.sh
+    #
+    - creating_cache ${CONTEXT}-yarn.tar.gz .yarn || true
+    - creating_cache ${CONTEXT}-yarn.tar.gz .yarn || true
+    - creating_cache ${CONTEXT}-node_modules.tar.gz SHA node_modules packages/${CONTEXT}/node_modules || true
   artifacts:
     expire_in: 30 mins
     paths:
