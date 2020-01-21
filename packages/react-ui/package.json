@@ -53,7 +53,7 @@
     "babel-loader": "^8.0.6",
     "eslint": "^6.8.0",
     "jest": "^24.9.0",
-    "jest-styled-components": "^6.3.4",
+    "jest-styled-components": "^7.0.0",
     "npx": "^10.2.1",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
