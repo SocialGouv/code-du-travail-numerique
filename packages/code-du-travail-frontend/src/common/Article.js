@@ -73,7 +73,7 @@ const Source = styled.span`
 `;
 
 const StyledPageTitle = styled(PageTitle)`
-  margin-bottom: 0;
+  margin-bottom: ${spacings.small};
 `;
 
 const Content = styled.div`
