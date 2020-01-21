@@ -539,6 +539,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         >
           informations de la convention collective :
            
+          short preselected convention
         </a>
       </div>
     </div>
@@ -595,7 +596,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         <div
           class="c19"
           role="alert"
-        />
+        >
+          short preselected convention
+        </div>
         <button
           aria-label="Fermer"
           class="c20"
@@ -1234,6 +1237,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         >
           informations de la convention collective :
            
+          short preselected convention
         </a>
       </div>
     </div>
@@ -1290,7 +1294,9 @@ exports[`<Contribution /> should render answer references 1`] = `
         <div
           class="c19"
           role="alert"
-        />
+        >
+          short preselected convention
+        </div>
         <button
           aria-label="Fermer"
           class="c20"
@@ -1939,6 +1945,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         >
           informations de la convention collective :
            
+          short preselected convention
         </a>
       </div>
     </div>
@@ -1995,7 +2002,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         <div
           class="c19"
           role="alert"
-        />
+        >
+          short preselected convention
+        </div>
         <button
           aria-label="Fermer"
           class="c20"
