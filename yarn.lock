@@ -2219,18 +2219,18 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@reach/auto-id@^0.7.3":
+"@reach/auto-id@^0.7.0":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.7.3.tgz#4456640b223452c2e5cc527c4c74cb98d4dc45ca"
   integrity sha512-5TUE7x7/WYgUaQZ3rrAfpo9L2PeuF45SEXfezQztUZZ0Pao/MuyLlPxUG8NgnibobjsE9l/JpB1Tp06narz3ug==
 
-"@reach/dialog@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.7.3.tgz#a42ee1b74d61a09e1e61c5d00adae1a19045a0ee"
-  integrity sha512-2GegrOTPhgihHtkDp95r/GoZx5qoPokPfZxPOF0G0mgaM5YM+yfGX+Nl4h6Z/XmKWVLZRGOTEFT8eTvc913wqA==
+"@reach/dialog@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.7.1.tgz#c16bbc6130136758650bafc9dda3b3fca69bf988"
+  integrity sha512-pdYG3XaKgSWR/OJ0VzGeZ8O4AIP6XWhZOWlNDsyrzje2vzFfTMgL0t8yfhwOCTL3OoGZ+yGfrZetS5IVQrq6XQ==
   dependencies:
-    "@reach/portal" "^0.7.3"
-    "@reach/utils" "^0.7.3"
+    "@reach/portal" "^0.7.1"
+    "@reach/utils" "^0.7.1"
     prop-types "^15.7.2"
     react-focus-lock "^2.2.1"
     react-remove-scroll "^2.2.0"
@@ -2240,12 +2240,12 @@
   resolved "https://registry.yarnpkg.com/@reach/observe-rect/-/observe-rect-1.0.5.tgz#28bf3c5c35da7fef72cd124af4ac32308d0c3f15"
   integrity sha512-EQLHhquzwAh2TFtMJU0PXJRmhpOrAhzApgoI4Lwn72J7ygrMk3Ys3a3i8KDnV0TetbwAxn4XSHi4pE8sPWUYLg==
 
-"@reach/portal@^0.7.3":
+"@reach/portal@^0.7.0", "@reach/portal@^0.7.1":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.7.3.tgz#6120abf36207bab702d7528e784c9c0e60459903"
   integrity sha512-kpXoCgY4dku1fy9JdqSX/u+fbvqx5YX420wdEmBY8mnguEtbCEI9uanVMUdfN9dnKO7ZvSqs33edYVYYCVKa9A==
 
-"@reach/rect@^0.7.3":
+"@reach/rect@^0.7.0":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@reach/rect/-/rect-0.7.3.tgz#bb1e52629d0895c9a6131d39219e3dbce3a47d54"
   integrity sha512-e4hiJP/SP+ShLqu6sFyHwTQeE7hrFHC1B68muflPnepYMHx3PM+4306mhShi4gtKelzSmKx/FZHMyX7CRMA5Ag==
@@ -2264,24 +2264,24 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/tooltip@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.7.3.tgz#6bda548bc742ac462ebd7b7db98657428152280d"
-  integrity sha512-FXy7zG/Ui/LX5X84Hk5qEMkiZvpQMdTJcUMHCGozHkUKxYNlUdv73KFBHoa8gCaSyDH5tuRXZXGnN/5hW9va2Q==
+"@reach/tooltip@0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.7.0.tgz#88277bb4e08792d1f3b763ca87a450f1f46233b6"
+  integrity sha512-HrgZqYDM4G4sTMy5a18hQOSG+d0AaWRsaczKi+eDnlgciUafxaoIBSmSyM7/CmaMDa6F6JspFexY5B3gILC9LA==
   dependencies:
-    "@reach/auto-id" "^0.7.3"
-    "@reach/portal" "^0.7.3"
-    "@reach/rect" "^0.7.3"
-    "@reach/utils" "^0.7.3"
-    "@reach/visually-hidden" "^0.7.3"
+    "@reach/auto-id" "^0.7.0"
+    "@reach/portal" "^0.7.0"
+    "@reach/rect" "^0.7.0"
+    "@reach/utils" "^0.7.0"
+    "@reach/visually-hidden" "^0.7.0"
     prop-types "^15.7.2"
 
-"@reach/utils@^0.7.3":
+"@reach/utils@^0.7.0", "@reach/utils@^0.7.1":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.7.3.tgz#b387aeeb7d3e10da361fd1c07f0392935730c25d"
   integrity sha512-7TZ2PQYeDHc/D9iT8wN6OL9AGlhfk3SvFmyF6H6EiuDeOZ+oJ5xivk5KQcS1h/HVNs226bcIGqpXltcdTiUMtw==
 
-"@reach/visually-hidden@^0.7.3":
+"@reach/visually-hidden@^0.7.0":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.7.3.tgz#cb2b51ce8dcd7da980a2cb4581057298dc6e2e10"
   integrity sha512-1WNbl1OEr923R36zopBpFODhknoUzY6EtFQYp2nApf8pn2LKyrK2hgQlfl+KOKISuzXgTNoSWTGDtW6glGPA8g==
