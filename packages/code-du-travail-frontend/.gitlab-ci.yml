@@ -5,6 +5,8 @@ Install frontend:
   variables:
     CONTEXT: code-du-travail-frontend
   before_script:
+    - "[[ type jq ]] || apk add jq=~1"
+    #
     # Remove unnecessary packages
     - find packages -maxdepth 1 -type d
       -not -name ${CONTEXT}
