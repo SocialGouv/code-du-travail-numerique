@@ -37,7 +37,7 @@ Install frontend:
 
 #
 
-.Lint @cdtn/frontend:
+Lint @cdtn/frontend:
   extends: .quality_stage
   stage: "Build"
   dependencies:
