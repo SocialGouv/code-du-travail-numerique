@@ -1871,7 +1871,18 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 >
                   <a
                     class="c64"
+                    href="/stats"
+                  >
+                    Statistiques d’usage
+                  </a>
+                </li>
+                <li
+                  class="c63"
+                >
+                  <a
+                    class="c64"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
+                    title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
                   </a>
@@ -3925,7 +3936,18 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 >
                   <a
                     class="c64"
+                    href="/stats"
+                  >
+                    Statistiques d’usage
+                  </a>
+                </li>
+                <li
+                  class="c63"
+                >
+                  <a
+                    class="c64"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
+                    title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
                   </a>

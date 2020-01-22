@@ -1384,7 +1384,18 @@ exports[`<Term /> should render 1`] = `
                 >
                   <a
                     class="c45"
+                    href="/stats"
+                  >
+                    Statistiques d’usage
+                  </a>
+                </li>
+                <li
+                  class="c44"
+                >
+                  <a
+                    class="c45"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
+                    title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
                   </a>

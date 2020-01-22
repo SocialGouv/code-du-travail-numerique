@@ -1516,7 +1516,18 @@ exports[`<CodeDuTravail /> should render 1`] = `
                 >
                   <a
                     class="c50"
+                    href="/stats"
+                  >
+                    Statistiques d’usage
+                  </a>
+                </li>
+                <li
+                  class="c49"
+                >
+                  <a
+                    class="c50"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
+                    title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
                   </a>

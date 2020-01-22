@@ -5,12 +5,13 @@ import Head from "next/head";
 import getConfig from "next/config";
 import { max, startOfDay, subMonths } from "date-fns";
 import {
+  Badge,
   Container,
-  FlatList,
+  Grid,
   Heading,
+  icons,
   PageTitle,
   Section,
-  theme,
   Wrapper
 } from "@socialgouv/react-ui";
 
@@ -37,34 +38,50 @@ const Stats = ({ data }) => {
         <Container>
           <PageTitle>Statistiques du code du travail numérique</PageTitle>
           <Wrapper variant="main">
-            <StyledFlatList>
-              <Li>
+            <Grid columns={3}>
+              <Tile variant="dark">
+                <Badge icon={icons.More} variant="secondary" />
                 <Heading>Contenus référencés</Heading>
                 <Num>{data.nbDocuments}</Num>
-              </Li>
-              <Li>
+              </Tile>
+
+              <Tile variant="dark">
+                <Badge icon={icons.Home} variant="secondary" />
                 <Heading>Visites</Heading>
                 <Num>{data.nbVisits}</Num>
-              </Li>
-              <Li>
+              </Tile>
+
+              <Tile variant="dark">
+                <Badge icon={icons.Search} variant="secondary" />
                 <Heading>Recherches</Heading>
                 <Num>{data.nbSearches}</Num>
-              </Li>
-              <Li>
+              </Tile>
+
+              <Tile variant="dark">
+                <Badge icon={icons.More} variant="secondary" />
                 <Heading>Consultations</Heading>
                 <Num>{data.nbPageViews}</Num>
-              </Li>
-              <Li>
-                <Heading>Statisfaction positif</Heading>
-                <Num>{data.feedback.positive}</Num>
-              </Li>
-              <Li>
-                <Heading>Statisfaction negatif</Heading>
-                <Num>{data.feedback.negative}</Num>
-              </Li>
-            </StyledFlatList>
+              </Tile>
+
+              <Tile variant="dark">
+                <Badge icon={icons.Check} variant="secondary" />
+                <Heading>Taux de satisfaction</Heading>
+                <Num>
+                  {Math.round(
+                    (100 * data.feedback.positive) /
+                      (data.feedback.positive + data.feedback.negative)
+                  )}
+                  %
+                </Num>
+              </Tile>
+            </Grid>
             <p>
-              Statistiques d’usage depuis le {startDate.toLocaleString("fr-FR")}
+              Statistiques d’usage depuis le{" "}
+              {startDate.toLocaleString("fr-FR", {
+                year: "numeric",
+                month: "numeric",
+                day: "numeric"
+              })}
             </p>
           </Wrapper>
         </Container>
@@ -82,30 +99,20 @@ Stats.getInitialProps = async function() {
   return { data };
 };
 
-const { breakpoints, fonts, spacings } = theme;
-
-const StyledFlatList = styled(FlatList)`
+const Tile = styled(Wrapper)`
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  @media (max-width: ${breakpoints.tablet}) {
-    flex-direction: column;
-    margin-bottom: ${spacings.large};
-  }
-`;
-
-const Li = styled.li`
-  flex: 1 0 auto;
-  margin: ${spacings.medium};
-  text-align: center;
-  @media (max-width: ${breakpoints.tablet}) {
-    margin-top: ${spacings.large};
-  }
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  font-family: "Merriweather", serif;
 `;
 
 const Num = styled.div`
-  font-size: ${fonts.sizes.headings.small};
+  color: ${({ theme }) => theme.secondary};
+  font-weight: bold;
+  font-size: 5rem;
+  font-family: "Open Sans", sans-serif;
 `;
 
 export default Stats;

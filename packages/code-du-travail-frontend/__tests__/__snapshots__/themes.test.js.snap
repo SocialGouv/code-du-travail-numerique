@@ -1193,7 +1193,18 @@ exports[`<Theme /> should render 1`] = `
                 >
                   <a
                     class="c40"
+                    href="/stats"
+                  >
+                    Statistiques d’usage
+                  </a>
+                </li>
+                <li
+                  class="c39"
+                >
+                  <a
+                    class="c40"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
+                    title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
                   </a>
