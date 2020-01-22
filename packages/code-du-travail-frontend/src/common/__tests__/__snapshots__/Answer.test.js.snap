@@ -1934,7 +1934,7 @@ exports[`<Answer /> should renders related content 1`] = `
   padding: 0 2rem;
 }
 
-.c12 {
+.c11 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -1970,7 +1970,7 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-bottom: 0;
 }
 
-.c41 {
+.c40 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1983,14 +1983,14 @@ exports[`<Answer /> should renders related content 1`] = `
   text-decoration: none;
 }
 
-.c43 {
+.c42 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c42 {
+.c41 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -2004,13 +2004,13 @@ exports[`<Answer /> should renders related content 1`] = `
   transition: transform 250ms linear;
 }
 
-.c40:hover .c42 {
+.c39:hover .c41 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c26 {
+.c25 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2021,7 +2021,7 @@ exports[`<Answer /> should renders related content 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c26:before {
+.c25:before {
   position: absolute;
   display: block;
   width: 0;
@@ -2032,7 +2032,7 @@ exports[`<Answer /> should renders related content 1`] = `
   content: "";
 }
 
-.c27 {
+.c26 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2041,7 +2041,7 @@ exports[`<Answer /> should renders related content 1`] = `
   height: 3rem;
 }
 
-.c19 {
+.c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2078,16 +2078,16 @@ exports[`<Answer /> should renders related content 1`] = `
   opacity: 1;
 }
 
-.c19:link,
-.c19:visited {
+.c18:link,
+.c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c18:not([disabled]):hover,
+.c18:not([disabled]):active,
+.c18:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -2096,13 +2096,13 @@ exports[`<Answer /> should renders related content 1`] = `
   border-color: #dee5ef;
 }
 
-.c19[disabled] {
+.c18[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c37 {
+.c36 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2143,14 +2143,14 @@ exports[`<Answer /> should renders related content 1`] = `
   overflow: visible;
 }
 
-.c37:focus,
-.c37:hover,
-.c37:active {
+.c36:focus,
+.c36:hover,
+.c36:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c38 {
+.c37 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -2159,7 +2159,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transition: transform 250ms linear;
 }
 
-.c18:hover .c38 {
+.c17:hover .c37 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -2178,7 +2178,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transform: translateY(-50%);
 }
 
-.c16 {
+.c15 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -2191,7 +2191,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transform: translateY(-50%);
 }
 
-.c14 {
+.c13 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -2203,7 +2203,7 @@ exports[`<Answer /> should renders related content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c32 {
+.c31 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -2213,7 +2213,7 @@ exports[`<Answer /> should renders related content 1`] = `
   line-height: 1.25;
 }
 
-.c31 {
+.c30 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -2224,7 +2224,7 @@ exports[`<Answer /> should renders related content 1`] = `
   text-transform: uppercase;
 }
 
-.c24 {
+.c23 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2265,9 +2265,9 @@ exports[`<Answer /> should renders related content 1`] = `
   appearance: none;
 }
 
-.c24:hover,
-.c24:active,
-.c24:focus {
+.c23:hover,
+.c23:active,
+.c23:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -2275,7 +2275,7 @@ exports[`<Answer /> should renders related content 1`] = `
   transform: translateY(-2px);
 }
 
-.c29 {
+.c28 {
   display: block;
   width: 7.2rem;
   height: 7.2rem;
@@ -2285,21 +2285,21 @@ exports[`<Answer /> should renders related content 1`] = `
   border-radius: 50%;
 }
 
-.c28 {
+.c27 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c30 {
+.c29 {
   padding-right: 1rem;
 }
 
-.c33 {
+.c32 {
   margin: 0;
 }
 
-.c34 {
+.c33 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -2324,10 +2324,6 @@ exports[`<Answer /> should renders related content 1`] = `
   padding-left: 4rem;
 }
 
-.c11 {
-  border-bottom: 1px dotted #7994d4;
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2344,7 +2340,7 @@ exports[`<Answer /> should renders related content 1`] = `
   margin: 3.2rem 0 0 0;
 }
 
-.c13 {
+.c12 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -2367,15 +2363,15 @@ exports[`<Answer /> should renders related content 1`] = `
   justify-content: stretch;
 }
 
-.c13 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c13 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -2384,7 +2380,7 @@ exports[`<Answer /> should renders related content 1`] = `
   padding-bottom: 1rem;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2399,11 +2395,11 @@ exports[`<Answer /> should renders related content 1`] = `
   margin: 0;
 }
 
-.c21 + .c20 {
+.c20 + .c19 {
   margin-left: 4rem;
 }
 
-.c35 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2418,11 +2414,11 @@ exports[`<Answer /> should renders related content 1`] = `
   height: 100%;
 }
 
-.c36 {
+.c35 {
   margin-top: 1rem;
 }
 
-.c22 {
+.c21 {
   position: -webkit-sticky;
   position: sticky;
   top: 12rem;
@@ -2432,19 +2428,19 @@ exports[`<Answer /> should renders related content 1`] = `
   list-style-type: none;
 }
 
-.c22 > *:first-child {
+.c21 > *:first-child {
   margin-top: 0;
 }
 
-.c39 {
+.c38 {
   max-width: 28rem;
 }
 
-.c25 {
+.c24 {
   max-width: 28rem;
 }
 
-.c23 {
+.c22 {
   margin: 1.6rem 0;
   padding: 0;
 }
@@ -2519,44 +2515,44 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c18 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c18 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c36 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c31 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c23 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
@@ -2600,20 +2596,20 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c12 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c12 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c13 {
+  .c12 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2628,20 +2624,20 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c15 {
+  .c14 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c14 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c17 {
+  .c16 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -2650,19 +2646,19 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c21 + .c20 {
+  .c20 + .c19 {
     margin-left: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c22 {
+  .c21 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:980px) {
-  .c22 {
+  .c21 {
     display: none;
   }
 }
@@ -2751,42 +2747,7 @@ exports[`<Answer /> should renders related content 1`] = `
               <p
                 class="test-content"
               >
-                <span
-                  data-tooltip-ref="__tt__0"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    annualisation du temps de travail
-                  </span>
-                </span>
-                . 
-                <span
-                  data-tooltip-ref="__tt__1"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    Annualisation
-                  </span>
-                </span>
-                 de l'
-                <span
-                  data-tooltip-ref="__tt__2"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    annualisation
-                  </span>
-                </span>
-                .
+                annualisation du temps de travail. Annualisation de l'annualisation.
               </p>
             </div>
             <div>
@@ -2796,32 +2757,32 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="c12"
+        class="c11"
       >
         <div
           class="c2"
         >
           <div
-            class="c13"
+            class="c12"
           >
             <h3
-              class="c14 c15"
+              class="c13 c14"
             >
               <div
-                class="c16"
+                class="c15"
               />
               Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p
-              class="c17"
+              class="c16"
             >
               <button
-                class="c18 c19 c20 c21"
+                class="c17 c18 c19 c20"
               >
                 Non
               </button>
               <button
-                class="c18 c19 c20 c21"
+                class="c17 c18 c19 c20"
               >
                 Oui
               </button>
@@ -2831,20 +2792,20 @@ exports[`<Answer /> should renders related content 1`] = `
       </div>
     </div>
     <ul
-      class="c22"
+      class="c21"
     >
       <li
-        class="c23"
+        class="c22"
       >
         <a
-          class="c24 c25"
+          class="c23 c24"
           href="/modeles-de-courriers/LETTER_1"
         >
           <div
-            class="c26"
+            class="c25"
           >
             <div
-              class="c27"
+              class="c26"
             >
               <svg
                 fill="none"
@@ -2866,10 +2827,10 @@ exports[`<Answer /> should renders related content 1`] = `
             </div>
           </div>
           <div
-            class="c28"
+            class="c27"
           >
             <div
-              class="c29"
+              class="c28"
             >
               <svg
                 fill="none"
@@ -2888,35 +2849,35 @@ exports[`<Answer /> should renders related content 1`] = `
               </svg>
             </div>
             <div
-              class="c30"
+              class="c29"
             >
               <span
-                class="c31"
+                class="c30"
               >
                 Modèles de documents
               </span>
               <h3
-                class="c32 c33"
+                class="c31 c32"
               >
                 related letter title 1
               </h3>
             </div>
           </div>
           <div
-            class="c34"
+            class="c33"
           >
             <div
-              class="c35"
+              class="c34"
             >
               <div
-                class="c36"
+                class="c35"
               >
                 <div
-                  class="c18 c37"
+                  class="c17 c36"
                 >
                   Consulter
                   <svg
-                    class="c38"
+                    class="c37"
                     fill="none"
                     viewBox="0 0 28 15"
                   >
@@ -2932,17 +2893,17 @@ exports[`<Answer /> should renders related content 1`] = `
         </a>
       </li>
       <li
-        class="c23"
+        class="c22"
       >
         <a
-          class="c24 c25"
+          class="c23 c24"
           href="/outils/TOOL_1"
         >
           <div
-            class="c26"
+            class="c25"
           >
             <div
-              class="c27"
+              class="c26"
             >
               <svg
                 fill="none"
@@ -2964,10 +2925,10 @@ exports[`<Answer /> should renders related content 1`] = `
             </div>
           </div>
           <div
-            class="c28"
+            class="c27"
           >
             <div
-              class="c29"
+              class="c28"
             >
               <svg
                 fill="none"
@@ -2994,35 +2955,35 @@ exports[`<Answer /> should renders related content 1`] = `
               </svg>
             </div>
             <div
-              class="c30"
+              class="c29"
             >
               <span
-                class="c31"
+                class="c30"
               >
                 Outils
               </span>
               <h3
-                class="c32 c33"
+                class="c31 c32"
               >
                 related tool title 1
               </h3>
             </div>
           </div>
           <div
-            class="c34"
+            class="c33"
           >
             <div
-              class="c35"
+              class="c34"
             >
               <div
-                class="c36"
+                class="c35"
               >
                 <div
-                  class="c18 c37"
+                  class="c17 c36"
                 >
                   tools action
                   <svg
-                    class="c38"
+                    class="c37"
                     fill="none"
                     viewBox="0 0 28 15"
                   >
@@ -3038,19 +2999,19 @@ exports[`<Answer /> should renders related content 1`] = `
         </a>
       </li>
       <li
-        class="c23"
+        class="c22"
       >
         <a
-          class="c24 c39"
+          class="c23 c38"
           href="url.extrenal/tool"
           rel="noopener nofollow"
           target="_blank"
         >
           <div
-            class="c28"
+            class="c27"
           >
             <div
-              class="c29"
+              class="c28"
             >
               <svg
                 fill="none"
@@ -3077,11 +3038,11 @@ exports[`<Answer /> should renders related content 1`] = `
               </svg>
             </div>
             <div
-              class="c30"
+              class="c29"
             >
               
               <h3
-                class="c32 c33"
+                class="c31 c32"
               >
                 related external title 1
               </h3>
@@ -3093,14 +3054,14 @@ exports[`<Answer /> should renders related content 1`] = `
         Les articles pouvant vous intéresser :
       </span>
       <li
-        class="c23"
+        class="c22"
       >
         <a
-          class="c40 c41"
+          class="c39 c40"
           href="/fiche-service-public/LINK_1"
         >
           <svg
-            class="c42"
+            class="c41"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -3110,21 +3071,21 @@ exports[`<Answer /> should renders related content 1`] = `
             />
           </svg>
           <span
-            class="c43"
+            class="c42"
           >
             related sheet sp title 1
           </span>
         </a>
       </li>
       <li
-        class="c23"
+        class="c22"
       >
         <a
-          class="c40 c41"
+          class="c39 c40"
           href="/fiche-ministere-travail/LINK_2"
         >
           <svg
-            class="c42"
+            class="c41"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -3134,21 +3095,21 @@ exports[`<Answer /> should renders related content 1`] = `
             />
           </svg>
           <span
-            class="c43"
+            class="c42"
           >
             related sheet mt title 1
           </span>
         </a>
       </li>
       <li
-        class="c23"
+        class="c22"
       >
         <a
-          class="c40 c41"
+          class="c39 c40"
           href="/fiche-service-public/LINK_4"
         >
           <svg
-            class="c42"
+            class="c41"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -3158,7 +3119,7 @@ exports[`<Answer /> should renders related content 1`] = `
             />
           </svg>
           <span
-            class="c43"
+            class="c42"
           >
             related sheet sp title 2
           </span>
@@ -3176,7 +3137,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding: 0 2rem;
 }
 
-.c12 {
+.c11 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -3212,7 +3173,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin-bottom: 0;
 }
 
-.c18 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3249,16 +3210,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
   opacity: 1;
 }
 
-.c18:link,
-.c18:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c18:not([disabled]):hover,
-.c18:not([disabled]):active,
-.c18:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3267,7 +3228,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   border-color: #dee5ef;
 }
 
-.c18[disabled] {
+.c17[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -3286,7 +3247,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   transform: translateY(-50%);
 }
 
-.c16 {
+.c15 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -3299,7 +3260,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   transform: translateY(-50%);
 }
 
-.c14 {
+.c13 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -3329,10 +3290,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding-left: 4rem;
 }
 
-.c11 {
-  border-bottom: 1px dotted #7994d4;
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3349,7 +3306,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin: 3.2rem 0 0 0;
 }
 
-.c13 {
+.c12 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -3372,15 +3329,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
   justify-content: stretch;
 }
 
-.c13 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c13 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -3389,7 +3346,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding-bottom: 1rem;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3404,7 +3361,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin: 0;
 }
 
-.c20 + .c19 {
+.c19 + .c18 {
   margin-left: 4rem;
 }
 
@@ -3478,26 +3435,26 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     font-size: 1.6rem;
   }
 }
@@ -3540,20 +3497,20 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c12 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c12 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c13 {
+  .c12 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -3568,20 +3525,20 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c15 {
+  .c14 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c14 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c17 {
+  .c16 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -3590,7 +3547,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c20 + .c19 {
+  .c19 + .c18 {
     margin-left: 0;
   }
 }
@@ -3683,42 +3640,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 <strong>
                   html
                 </strong>
-                 contenant des tooltip sur certains mot comme 
-                <span
-                  data-tooltip-ref="__tt__2"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    rescrit
-                  </span>
-                </span>
-                . match aussi les abbréviation comme 
-                <span
-                  data-tooltip-ref="__tt__1"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    APE
-                  </span>
-                </span>
-                 mais pas ape ou ses variantes comme 
-                <span
-                  data-tooltip-ref="__tt__0"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    code ape
-                  </span>
-                </span>
+                 contenant des tooltip sur certains mot comme rescrit. match aussi les abbréviation comme APE mais pas ape ou ses variantes comme code ape
               </p>
             </div>
             <div>
@@ -3728,32 +3650,32 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="c12"
+        class="c11"
       >
         <div
           class="c2"
         >
           <div
-            class="c13"
+            class="c12"
           >
             <h3
-              class="c14 c15"
+              class="c13 c14"
             >
               <div
-                class="c16"
+                class="c15"
               />
               Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p
-              class="c17"
+              class="c16"
             >
               <button
-                class="c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Non
               </button>
               <button
-                class="c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Oui
               </button>
@@ -3773,7 +3695,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding: 0 2rem;
 }
 
-.c12 {
+.c11 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -3809,7 +3731,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin-bottom: 0;
 }
 
-.c18 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3846,16 +3768,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   opacity: 1;
 }
 
-.c18:link,
-.c18:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c18:not([disabled]):hover,
-.c18:not([disabled]):active,
-.c18:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3864,7 +3786,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   border-color: #dee5ef;
 }
 
-.c18[disabled] {
+.c17[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -3883,7 +3805,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   transform: translateY(-50%);
 }
 
-.c16 {
+.c15 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -3896,7 +3818,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   transform: translateY(-50%);
 }
 
-.c14 {
+.c13 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -3926,10 +3848,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding-left: 4rem;
 }
 
-.c11 {
-  border-bottom: 1px dotted #7994d4;
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3946,7 +3864,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin: 3.2rem 0 0 0;
 }
 
-.c13 {
+.c12 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -3969,15 +3887,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   justify-content: stretch;
 }
 
-.c13 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c13 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -3986,7 +3904,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding-bottom: 1rem;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4001,7 +3919,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin: 0;
 }
 
-.c20 + .c19 {
+.c19 + .c18 {
   margin-left: 4rem;
 }
 
@@ -4075,26 +3993,26 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     font-size: 1.6rem;
   }
 }
@@ -4137,20 +4055,20 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c12 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c12 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c13 {
+  .c12 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -4165,20 +4083,20 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:1180px) {
-  .c15 {
+  .c14 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c14 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c17 {
+  .c16 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -4187,7 +4105,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:1180px) {
-  .c20 + .c19 {
+  .c19 + .c18 {
     margin-left: 0;
   }
 }
@@ -4278,30 +4196,9 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               >
                 Contenu au format 
                 <strong>
-                  <span
-                    data-tooltip-ref="__tt__1"
-                  >
-                    <span
-                      class="c11"
-                      data-reach-tooltip-trigger=""
-                      tabindex="0"
-                    >
-                      indemnités
-                    </span>
-                  </span>
+                  indemnités
                 </strong>
-                comme 
-                <span
-                  data-tooltip-ref="__tt__0"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    code ape
-                  </span>
-                </span>
+                comme code ape
               </p>
             </div>
             <div>
@@ -4311,32 +4208,32 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="c12"
+        class="c11"
       >
         <div
           class="c2"
         >
           <div
-            class="c13"
+            class="c12"
           >
             <h3
-              class="c14 c15"
+              class="c13 c14"
             >
               <div
-                class="c16"
+                class="c15"
               />
               Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p
-              class="c17"
+              class="c16"
             >
               <button
-                class="c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Non
               </button>
               <button
-                class="c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Oui
               </button>
@@ -4356,7 +4253,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding: 0 2rem;
 }
 
-.c12 {
+.c11 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -4392,7 +4289,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   margin-bottom: 0;
 }
 
-.c18 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4429,16 +4326,16 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   opacity: 1;
 }
 
-.c18:link,
-.c18:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c18:not([disabled]):hover,
-.c18:not([disabled]):active,
-.c18:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -4447,7 +4344,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   border-color: #dee5ef;
 }
 
-.c18[disabled] {
+.c17[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -4466,7 +4363,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   transform: translateY(-50%);
 }
 
-.c16 {
+.c15 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -4479,7 +4376,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   transform: translateY(-50%);
 }
 
-.c14 {
+.c13 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -4509,10 +4406,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding-left: 4rem;
 }
 
-.c11 {
-  border-bottom: 1px dotted #7994d4;
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4529,7 +4422,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   margin: 3.2rem 0 0 0;
 }
 
-.c13 {
+.c12 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -4552,15 +4445,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   justify-content: stretch;
 }
 
-.c13 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c13 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -4569,7 +4462,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding-bottom: 1rem;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4584,7 +4477,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   margin: 0;
 }
 
-.c20 + .c19 {
+.c19 + .c18 {
   margin-left: 4rem;
 }
 
@@ -4658,26 +4551,26 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     font-size: 1.6rem;
   }
 }
@@ -4720,20 +4613,20 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c12 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c12 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c13 {
+  .c12 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -4748,20 +4641,20 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c15 {
+  .c14 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c14 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c17 {
+  .c16 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -4770,7 +4663,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c20 + .c19 {
+  .c19 + .c18 {
     margin-left: 0;
   }
 }
@@ -4863,18 +4756,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   class="spip_in"
                   href="emploi/accompagnement-des-mutations-economiques/csp"
                 >
-                  le contrat de sécurisation professionnelle 
-                  <span
-                    data-tooltip-ref="__tt__0"
-                  >
-                    <span
-                      class="c11"
-                      data-reach-tooltip-trigger=""
-                      tabindex="0"
-                    >
-                      APE
-                    </span>
-                  </span>
+                  le contrat de sécurisation professionnelle APE
                 </a>
               </p>
             </div>
@@ -4885,32 +4767,32 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         </div>
       </div>
       <div
-        class="c12"
+        class="c11"
       >
         <div
           class="c2"
         >
           <div
-            class="c13"
+            class="c12"
           >
             <h3
-              class="c14 c15"
+              class="c13 c14"
             >
               <div
-                class="c16"
+                class="c15"
               />
               Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p
-              class="c17"
+              class="c16"
             >
               <button
-                class="c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Non
               </button>
               <button
-                class="c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Oui
               </button>
@@ -4930,7 +4812,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding: 0 2rem;
 }
 
-.c12 {
+.c11 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -4966,7 +4848,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin-bottom: 0;
 }
 
-.c18 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5003,16 +4885,16 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   opacity: 1;
 }
 
-.c18:link,
-.c18:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c18:not([disabled]):hover,
-.c18:not([disabled]):active,
-.c18:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -5021,7 +4903,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   border-color: #dee5ef;
 }
 
-.c18[disabled] {
+.c17[disabled] {
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -5040,7 +4922,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   transform: translateY(-50%);
 }
 
-.c16 {
+.c15 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -5053,7 +4935,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   transform: translateY(-50%);
 }
 
-.c14 {
+.c13 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -5083,10 +4965,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding-left: 4rem;
 }
 
-.c11 {
-  border-bottom: 1px dotted #7994d4;
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5103,7 +4981,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin: 3.2rem 0 0 0;
 }
 
-.c13 {
+.c12 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -5126,15 +5004,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   justify-content: stretch;
 }
 
-.c13 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c13 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -5143,7 +5021,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding-bottom: 1rem;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5158,7 +5036,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin: 0;
 }
 
-.c20 + .c19 {
+.c19 + .c18 {
   margin-left: 4rem;
 }
 
@@ -5232,26 +5110,26 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     font-size: 1.6rem;
   }
 }
@@ -5294,20 +5172,20 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c12 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c12 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c13 {
+  .c12 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5322,20 +5200,20 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:1180px) {
-  .c15 {
+  .c14 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c14 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c17 {
+  .c16 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -5344,7 +5222,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:1180px) {
-  .c20 + .c19 {
+  .c19 + .c18 {
     margin-left: 0;
   }
 }
@@ -5433,42 +5311,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               <p
                 class="test-content"
               >
-                <span
-                  data-tooltip-ref="__tt__0"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    annualisation du temps de travail
-                  </span>
-                </span>
-                . 
-                <span
-                  data-tooltip-ref="__tt__1"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    Annualisation
-                  </span>
-                </span>
-                 de l'
-                <span
-                  data-tooltip-ref="__tt__2"
-                >
-                  <span
-                    class="c11"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    annualisation
-                  </span>
-                </span>
-                .
+                annualisation du temps de travail. Annualisation de l'annualisation.
               </p>
             </div>
             <div>
@@ -5478,32 +5321,32 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="c12"
+        class="c11"
       >
         <div
           class="c2"
         >
           <div
-            class="c13"
+            class="c12"
           >
             <h3
-              class="c14 c15"
+              class="c13 c14"
             >
               <div
-                class="c16"
+                class="c15"
               />
               Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p
-              class="c17"
+              class="c16"
             >
               <button
-                class="c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Non
               </button>
               <button
-                class="c18 c19 c20"
+                class="c17 c18 c19"
               >
                 Oui
               </button>
