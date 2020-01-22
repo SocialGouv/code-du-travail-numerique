@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.1...v4.2.0) (2020-01-22)
+
+
+### Features
+
+* **modele:** update template mail + add filesize ([#2271](https://github.com/SocialGouv/code-du-travail-numerique/issues/2271)) ([8bb30c6](https://github.com/SocialGouv/code-du-travail-numerique/commit/8bb30c699fb3f4e13fa9a28439c94c13512a6911))
+
+
+
+
+
 # [4.1.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.2...v4.1.0) (2020-01-16)
 
 **Note:** Version bump only for package @cdt/data...courrier-type

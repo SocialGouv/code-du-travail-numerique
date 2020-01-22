@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.1...v4.2.0) (2020-01-22)
+
+
+### Bug Fixes
+
+* **ccn:** remove empty article bloc ([#2280](https://github.com/SocialGouv/code-du-travail-numerique/issues/2280)) ([e0c3668](https://github.com/SocialGouv/code-du-travail-numerique/commit/e0c3668a4e913e31a2abb9bfed75af8ec7b91beb))
+
+
+
+
+
 # [4.1.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.2...v4.1.0) (2020-01-16)
 
 **Note:** Version bump only for package @cdt/data...datafiller
