@@ -3,6 +3,7 @@ const data = require("./courriers.json");
 const { SOURCES } = require("@cdt/sources");
 const slugify = require("../../slugify");
 const DOC_DIR = "docx";
+const fs = require("fs");
 
 const basic_styles = `<style>
 .courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}
@@ -32,6 +33,7 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
       filename,
       source: SOURCES.LETTERS,
       slug: slugify(title),
+      filesize: fs.statSync(`${__dirname}/${DOC_DIR}/${filename}`).size,
       title,
       text: description,
       description,
