@@ -14428,11 +14428,6 @@ react-burger-menu@^2.6.13:
     prop-types "^15.7.2"
     snapsvg-cjs "0.0.6"
 
-react-children-utilities@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/react-children-utilities/-/react-children-utilities-2.0.4.tgz#0607fbda8301790db931bbf7fcdc62f77cb46568"
-  integrity sha512-dp73U0gq1ZiQquKyb2/DomrMoZRB5ttx6vwjZeQVQbb7vXOrgmGUVzbWa4AZahd5Ro8R2SIPF7g0TAt00o0zsQ==
-
 react-clientside-effect@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/react-clientside-effect/-/react-clientside-effect-1.2.2.tgz#6212fb0e07b204e714581dd51992603d1accc837"

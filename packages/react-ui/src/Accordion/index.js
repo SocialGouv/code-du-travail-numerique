@@ -8,9 +8,9 @@ import {
   AccordionItemButton,
   AccordionItemPanel
 } from "react-accessible-accordion";
-import { onlyText } from "react-children-utilities";
 
 import { box, breakpoints, fonts, spacings } from "../theme";
+import { getTextFromComponent } from "../utils/getTextFromComponent";
 import { VerticalArrow } from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
@@ -28,7 +28,7 @@ export const Accordion = ({ items, ...props }) => {
             <AccordionItemHeading>
               <StyledAccordionItemButton>
                 <StyledVerticalArrow />
-                <ButtonText>{onlyText(title)}</ButtonText>
+                <ButtonText>{getTextFromComponent(title)}</ButtonText>
               </StyledAccordionItemButton>
             </AccordionItemHeading>
             <StyledAccordionItemPanel>

@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Tab, Tabs as RootTabs, TabList, TabPanel } from "react-tabs";
-import { onlyText } from "react-children-utilities";
 
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
+import { getTextFromComponent } from "../utils/getTextFromComponent";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
 
 export const Tabs = props => {
@@ -23,7 +23,7 @@ export const Tabs = props => {
       <StyledTabs {...refinedProps}>
         <StyledTabList>
           {data.map(({ tab }, index) => (
-            <StyledTab key={index}>{onlyText(tab)}</StyledTab>
+            <StyledTab key={index}>{getTextFromComponent(tab)}</StyledTab>
           ))}
         </StyledTabList>
         {data.map(({ tab, panel }, index) => (
