@@ -4,14 +4,10 @@ const hasChildren = element =>
   isValidElement(element) && Boolean(element.props.children);
 
 const childToString = child => {
-  if (
-    typeof child === "undefined" ||
-    child === null ||
-    typeof child === "boolean"
-  ) {
-    return "";
+  if (typeof child === "string") {
+    return child;
   }
-  return child.toString();
+  return "";
 };
 
 // Beware, this one is recursive
