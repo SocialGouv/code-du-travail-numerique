@@ -1,5 +1,6 @@
 const withSourceMaps = require("@zeit/next-source-maps");
 const withTranspileModule = require("next-transpile-modules");
+
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true"
 });
@@ -44,7 +45,7 @@ const nextConfig = {
     SUGGEST_URL:
       process.env.SUGGEST_URL || "http://127.0.0.1:1337/api/v1/suggest"
   },
-  transpileModules: ["@cdt/sources", "@cdt/data"]
+  transpileModules: ["@cdt/sources", "@cdt/data", "parse5", "is-plain-obj"]
 };
 
 module.exports = compose(
