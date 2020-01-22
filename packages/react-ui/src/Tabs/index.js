@@ -68,11 +68,12 @@ const StyledTabList = styled(TabList)`
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 ${spacings.tiny} 0 0;
   overflow: visible;
   list-style-type: none;
   @media (max-width: ${breakpoints.tablet}) {
     flex-wrap: wrap;
+    padding: 0;
   }
 `;
 

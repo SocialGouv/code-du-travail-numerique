@@ -29,7 +29,7 @@ exports[`<Tabs /> renders 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0.4rem 0 0;
   overflow: visible;
   list-style-type: none;
 }
@@ -89,6 +89,7 @@ exports[`<Tabs /> renders 1`] = `
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding: 0;
   }
 }
 
