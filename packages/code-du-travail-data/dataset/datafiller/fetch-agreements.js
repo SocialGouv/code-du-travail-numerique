@@ -128,18 +128,29 @@ function getArticleByBlock(groups, agreementTree) {
     .sort(createSorter("id"))
     .map(({ id, selection }) => ({
       bloc: id,
-      articles: selection.map(articleId => {
-        const node = find(treeWithParents, node => node.data.id === articleId);
-        return node
-          ? {
-              title: node.data.num || "non numéroté",
-              id: node.data.id,
-              cid: node.data.cid,
-              section: node.parent.data.title
-            }
-          : null;
-      })
-    }));
+      articles: selection
+        .map(articleId => {
+          const node = find(
+            treeWithParents,
+            node => node.data.id === articleId
+          );
+          if (!node) {
+            console.error(
+              `${articleId} not found in idcc ${agreementTree.data.num}`
+            );
+          }
+          return node
+            ? {
+                title: node.data.num || "non numéroté",
+                id: node.data.id,
+                cid: node.data.cid,
+                section: node.parent.data.title
+              }
+            : null;
+        })
+        .filter(Boolean)
+    }))
+    .filter(({ articles }) => articles.length > 0);
 }
 
 export { fetchAgreements };
