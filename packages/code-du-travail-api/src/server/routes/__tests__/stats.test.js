@@ -1,0 +1,47 @@
+const request = require("supertest");
+const Koa = require("koa");
+const router = require("../stats");
+const fetch = require("node-fetch");
+
+const app = new Koa();
+app.use(router.routes());
+
+// mock fetch function to return vector for démission
+jest.mock("node-fetch");
+fetch.mockImplementation(url => {
+  if (/VisitsSummary\.getVisits/.test(url)) {
+    return Promise.resolve({
+      json: () => ({ value: 20 })
+    });
+  }
+  if (/Actions\.get/.test(url)) {
+    return Promise.resolve({
+      json: () => ({ nb_pageviews: 10, nb_searches: 4 })
+    });
+  }
+  if (/Events\.getAction/.test(url)) {
+    return Promise.resolve({
+      json: () => [
+        { label: "positive", nb_events: 3 },
+        { label: "negative", nb_events: 2 }
+      ]
+    });
+  }
+});
+
+test("return stats", async () => {
+  const response = await request(app.callback()).get(`/api/v1/stats`);
+  expect(response.status).toBe(200);
+  expect(response.body).toMatchInlineSnapshot(`
+    Object {
+      "feedback": Object {
+        "negative": 2,
+        "positive": 3,
+      },
+      "nbDocuments": 16,
+      "nbPageViews": 10,
+      "nbSearches": 4,
+      "nbVisits": 20,
+    }
+  `);
+});

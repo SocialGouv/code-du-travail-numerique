@@ -1,6 +1,9 @@
 import React from "react";
+import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import Head from "next/head";
+import getConfig from "next/config";
+import { max, startOfDay, subMonths } from "date-fns";
 import {
   Container,
   FlatList,
@@ -13,43 +16,71 @@ import {
 
 import { Layout } from "../src/layout/Layout";
 
-const About = () => (
-  <Layout>
-    <Head>
-      <title>Statistiques du code du travail numérique</title>
-      <meta
-        name="description"
-        content="Statistiques du code du travail numérique"
-      />
-    </Head>
-    <Section>
-      <Container>
-        <PageTitle>Statistiques du code du travail numérique</PageTitle>
-        <Wrapper variant="main">
-          <StyledFlatList>
-            <Li>
-              <Heading>Contenus référencés</Heading>
-              <Num>14369</Num>
-            </Li>
-            <Li>
-              <Heading>Visites</Heading>
-              <Num>2992</Num>
-            </Li>
-            <Li>
-              <Heading>Recherches</Heading>
-              <Num>15368</Num>
-            </Li>
-            <Li>
-              <Heading>Consultations</Heading>
-              <Num>30736</Num>
-            </Li>
-          </StyledFlatList>
-          <p>Statistiques d’usage depuis le 1er Janvier 2019</p>
-        </Wrapper>
-      </Container>
-    </Section>
-  </Layout>
-);
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
+const Stats = ({ data }) => {
+  const launchDate = new Date(Date.UTC(2020, 0, 1));
+  const startDate = max([subMonths(startOfDay(new Date()), 6), launchDate]);
+
+  return (
+    <Layout>
+      <Head>
+        <title>Statistiques du code du travail numérique</title>
+        <meta
+          name="description"
+          content="Statistiques du code du travail numérique"
+        />
+      </Head>
+      <Section>
+        <Container>
+          <PageTitle>Statistiques du code du travail numérique</PageTitle>
+          <Wrapper variant="main">
+            <StyledFlatList>
+              <Li>
+                <Heading>Contenus référencés</Heading>
+                <Num>{data.nbDocuments}</Num>
+              </Li>
+              <Li>
+                <Heading>Visites</Heading>
+                <Num>{data.nbVisits}</Num>
+              </Li>
+              <Li>
+                <Heading>Recherches</Heading>
+                <Num>{data.nbSearches}</Num>
+              </Li>
+              <Li>
+                <Heading>Consultations</Heading>
+                <Num>{data.nbPageViews}</Num>
+              </Li>
+              <Li>
+                <Heading>Statisfaction positif</Heading>
+                <Num>{data.feedback.positive}</Num>
+              </Li>
+              <Li>
+                <Heading>Statisfaction negatif</Heading>
+                <Num>{data.feedback.negative}</Num>
+              </Li>
+            </StyledFlatList>
+            <p>
+              Statistiques d’usage depuis le {startDate.toLocaleString("fr-FR")}
+            </p>
+          </Wrapper>
+        </Container>
+      </Section>
+    </Layout>
+  );
+};
+
+Stats.getInitialProps = async function() {
+  const response = await fetch(`${API_URL}/stats`);
+  if (!response.ok) {
+    return { statusCode: response.status };
+  }
+  const data = await response.json();
+  return { data };
+};
 
 const { breakpoints, fonts, spacings } = theme;
 
@@ -77,4 +108,4 @@ const Num = styled.div`
   font-size: ${fonts.sizes.headings.small};
 `;
 
-export default About;
+export default Stats;
