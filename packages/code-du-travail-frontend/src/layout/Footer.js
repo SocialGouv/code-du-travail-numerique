@@ -82,7 +82,7 @@ const Footer = () => {
                   </StyledListItem>
                   <StyledListItem>
                     <Link passHref href="/stats">
-                      <StyledLink>Statistiques d’usage</StyledLink>
+                      <StyledLink>Statistiques d’utilisation</StyledLink>
                     </Link>
                   </StyledListItem>
                   <StyledListItem>

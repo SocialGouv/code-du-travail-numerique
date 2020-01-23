@@ -2151,7 +2151,7 @@ exports[`<FicheMT /> should render 1`] = `
                     class="c75"
                     href="/stats"
                   >
-                    Statistiques d’usage
+                    Statistiques d’utilisation
                   </a>
                 </li>
                 <li

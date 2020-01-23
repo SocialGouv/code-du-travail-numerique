@@ -26,15 +26,15 @@ const Stats = ({ data }) => {
   return (
     <Layout>
       <Head>
-        <title>Statistiques du code du travail numérique</title>
+        <title>Statistiques du Code du travail numérique</title>
         <meta
           name="description"
-          content="Statistiques du code du travail numérique"
+          content="Statistiques du Code du travail numérique"
         />
       </Head>
       <Section>
         <Container>
-          <PageTitle>Statistiques du code du travail numérique</PageTitle>
+          <PageTitle>Statistiques du Code du travail numérique</PageTitle>
           <Wrapper variant="main">
             <Grid columns={3}>
               <Tile variant="dark">

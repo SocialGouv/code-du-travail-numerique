@@ -1197,7 +1197,7 @@ exports[`<Recherche /> should render 1`] = `
                     class="c40"
                     href="/stats"
                   >
-                    Statistiques d’usage
+                    Statistiques d’utilisation
                   </a>
                 </li>
                 <li

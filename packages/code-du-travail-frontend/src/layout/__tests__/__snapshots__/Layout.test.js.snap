@@ -1151,7 +1151,7 @@ exports[`<Layout /> should render 1`] = `
                     class="c38"
                     href="/stats"
                   >
-                    Statistiques d’usage
+                    Statistiques d’utilisation
                   </a>
                 </li>
                 <li

@@ -1334,7 +1334,7 @@ exports[`<Stats /> should render 1`] = `
             <div
               class="c23"
             />
-            Statistiques du code du travail numérique
+            Statistiques du Code du travail numérique
           </h1>
         </header>
         <div
@@ -1563,7 +1563,7 @@ exports[`<Stats /> should render 1`] = `
                     class="c49"
                     href="/stats"
                   >
-                    Statistiques d’usage
+                    Statistiques d’utilisation
                   </a>
                 </li>
                 <li

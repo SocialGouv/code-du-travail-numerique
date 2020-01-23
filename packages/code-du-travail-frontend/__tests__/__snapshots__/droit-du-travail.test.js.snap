@@ -3539,7 +3539,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     class="c67"
                     href="/stats"
                   >
-                    Statistiques d’usage
+                    Statistiques d’utilisation
                   </a>
                 </li>
                 <li
