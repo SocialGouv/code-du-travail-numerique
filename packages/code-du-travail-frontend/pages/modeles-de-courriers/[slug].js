@@ -75,7 +75,6 @@ class ModeleCourrier extends React.Component {
           emptyMessage="Modèle de document introuvable"
           intro={description}
           date={date}
-          source={{ name: "Ministère du Travail" }}
           breadcrumbs={breadcrumbs}
         >
           <Badge />

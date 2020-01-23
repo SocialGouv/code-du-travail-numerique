@@ -1994,15 +1994,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="c36"
             >
               <span>
-                Source: 
-                Ministère du Travail
-              </span>
-              <span
-                aria-hidden="true"
-              >
-                 - 
-              </span>
-              <span>
                 Mis à jour le : 
                 01/01/2020
               </span>

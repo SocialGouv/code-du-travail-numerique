@@ -2040,12 +2040,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </header>
               <div
                 class="c36"
-              >
-                <span>
-                  Source: 
-                  Ministère du Travail
-                </span>
-              </div>
+              />
               <div
                 class="c37"
               >
@@ -4656,12 +4651,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </header>
               <div
                 class="c36"
-              >
-                <span>
-                  Source: 
-                  Ministère du Travail
-                </span>
-              </div>
+              />
               <div
                 class="c37"
               >

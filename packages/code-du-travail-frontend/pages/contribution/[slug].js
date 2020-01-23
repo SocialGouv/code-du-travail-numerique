@@ -63,9 +63,6 @@ class PageContribution extends React.Component {
           <Answer
             title={title}
             relatedItems={relatedItems}
-            source={{
-              name: "Ministère du Travail"
-            }}
             breadcrumbs={breadcrumbs}
             emptyMessage="Cette question n'a pas été trouvée"
           >

@@ -19,16 +19,17 @@ const Article = ({ subtitle, title, source, date, children }) => {
           {title}
         </StyledPageTitle>
         <Meta>
-          {source && source.url ? (
-            <span>
-              Source:{" "}
-              <a href={source.url} target="_blank" rel="noopener noreferrer">
-                {source.name}
-              </a>
-            </span>
-          ) : (
-            <span>Source: {source.name}</span>
-          )}
+          {source &&
+            (source.url ? (
+              <span>
+                Source:{" "}
+                <a href={source.url} target="_blank" rel="noopener noreferrer">
+                  {source.name}
+                </a>
+              </span>
+            ) : (
+              <span>Source: {source.name}</span>
+            ))}
           {source && date && <span aria-hidden="true">&nbsp;-&nbsp;</span>}
           {date && <span>Mis à jour le&nbsp;: {date}</span>}
         </Meta>
