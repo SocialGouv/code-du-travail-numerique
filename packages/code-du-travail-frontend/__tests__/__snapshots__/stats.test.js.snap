@@ -1444,7 +1444,7 @@ exports[`<Stats /> should render 1`] = `
             </div>
           </div>
           <p>
-            Statistiques d’usage depuis le
+            Statistiques d’utilisation depuis le
              
             01/01/2020 00:00
           </p>

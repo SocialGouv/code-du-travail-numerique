@@ -69,7 +69,7 @@ const Stats = ({ data }) => {
               </Tile>
             </Grid>
             <p>
-              Statistiques d’usage depuis le{" "}
+              Statistiques d’utilisation depuis le{" "}
               {startDate.toLocaleString("fr-FR", {
                 year: "numeric",
                 month: "numeric",
