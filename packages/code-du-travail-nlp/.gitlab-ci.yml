@@ -1,28 +1,51 @@
 #
 
+Install nlp:
+  extends: .prepare_stage
+  image: python:3.7-slim-buster
+  interruptible: true
+  variables:
+    CONTEXT: code-du-travail-nlp
+    PIP_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/pip"
+    PYTHONPATH: "${CI_PROJECT_DIR}/packages/code-du-travail-nlp"
+  cache:
+    key: "install-nlp-${CI_COMMIT_REF_SLUG}"
+    paths:
+      - .cache/pip
+  script:
+    - cd packages/${CONTEXT}
+    - pip install --user -r requirements.txt
+    - ls -la
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - .cache/pip
+
+#
+
 Build @cdt/nlp:
   extends: .quality_stage
   stage: "Build"
   dependencies:
     - Build @cdt/data
+    - Install nlp
   needs:
     - Build @cdt/data
     - Install data
+    - Install nlp
   variables:
     PYTHONPATH: "${CI_PROJECT_DIR}/packages/code-du-travail-nlp"
-    PIP_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/pip"
-  cache:
-    key: "install-nlp-$CI_COMMIT_REF_SLUG"
-    paths:
-      - .cache/pip
   image: python:3.7-slim-buster
   script:
+    # - find packages/code-du-travail-api/src -type f \( -exec sha1sum {} \; \) | sha1sum
+    # - sha1sum yarn.lock packages/${CONTEXT}/package.json > PACKAGE_SHA
+    # - cat PACKAGE_SHA
+    # - >-
+    #   if [[ -d node_modules ]] && cmp -s PACKAGE_SHA SHA ; then
     # Copy the `@cdt/data` artefact to the nlp data directory
     - cp ./packages/code-du-travail-data/dist/dump.data.json
         ./packages/code-du-travail-nlp/data/dump.json
     #
-    - cd packages/code-du-travail-nlp
-    - pip install --user -r requirements.txt
     - python ./scripts/dump.py
   artifacts:
     expire_in: 30 mins
