@@ -12,9 +12,8 @@ const router = new Router({ prefix: API_BASE_URL });
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
-const matomoSiteId = 4;
-const matomoUrl = "https://matomo.fabrique.social.gouv.fr";
-
+const MATOMO_SITE_ID = process.env.PIWIK_SITE_ID;
+const MATOMO_URL = process.env.PIWIK_URL;
 /**
  * Return a date range (matomo api format)
  * getDate return a 6month date range that starts from 2020-01-01
@@ -34,13 +33,12 @@ function getUrl(baseUrl, params) {
     }
     return `${key}=${value}`;
   });
-  console.log(`${baseUrl}?${qs.join("&")}`);
   return `${baseUrl}?${qs.join("&")}`;
 }
 
 // general matomo congif params
 const baseParams = {
-  idSite: matomoSiteId,
+  idSite: MATOMO_SITE_ID,
   module: "API",
   format: "JSON",
   period: "range",
@@ -61,8 +59,12 @@ const methodParams = [
 ];
 
 router.get("/stats", async ctx => {
+  if (!MATOMO_SITE_ID && !MATOMO_URL) {
+    ctx.throw(500, `There is no matomo`);
+    return;
+  }
   const promises = methodParams.map(params =>
-    fetch(getUrl(matomoUrl, { ...baseParams, ...params })).then(data =>
+    fetch(getUrl(MATOMO_URL, { ...baseParams, ...params })).then(data =>
       data.json()
     )
   );

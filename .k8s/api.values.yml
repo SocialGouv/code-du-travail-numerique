@@ -72,7 +72,16 @@ deployment:
       value: "${PORT}"
     - name: VERSION
       value: "${VERSION}"
-
+    - name: PIWIK_SITE_ID
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: PIWIK_SITE_ID
+    - name: PIWIK_URL
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: PIWIK_URL
 service:
   port: ${PORT}
   targetPort: ${PORT}

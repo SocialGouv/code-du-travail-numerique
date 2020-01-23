@@ -54,6 +54,9 @@
     "supertest": "^4.0.2"
   },
   "jest": {
+    "setupFiles": [
+      "<rootDir>/tests/process.env.mock.js"
+    ],
     "collectCoverageFrom": [
       "src/**/*.js",
       "lib/**/*.js"

@@ -40,31 +40,26 @@ const Stats = ({ data }) => {
           <Wrapper variant="main">
             <Grid columns={3}>
               <Tile variant="dark">
-                <Badge icon={icons.More} variant="secondary" />
                 <Heading>Contenus référencés</Heading>
                 <Num>{data.nbDocuments}</Num>
               </Tile>
 
               <Tile variant="dark">
-                <Badge icon={icons.Home} variant="secondary" />
                 <Heading>Visites</Heading>
                 <Num>{data.nbVisits}</Num>
               </Tile>
 
               <Tile variant="dark">
-                <Badge icon={icons.Search} variant="secondary" />
                 <Heading>Recherches</Heading>
                 <Num>{data.nbSearches}</Num>
               </Tile>
 
               <Tile variant="dark">
-                <Badge icon={icons.More} variant="secondary" />
                 <Heading>Consultations</Heading>
                 <Num>{data.nbPageViews}</Num>
               </Tile>
 
               <Tile variant="dark">
-                <Badge icon={icons.Check} variant="secondary" />
                 <Heading>Taux de satisfaction</Heading>
                 <Num>
                   {Math.round(
@@ -105,7 +100,6 @@ const Tile = styled(Wrapper)`
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
-  font-family: "Merriweather", serif;
 `;
 
 const Num = styled.div`
