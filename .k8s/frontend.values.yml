@@ -65,8 +65,6 @@ deployment:
         secretKeyRef:
           name: cdtn-secret
           key: SENTRY_PUBLIC_DSN
-    - name: SUGGEST_URL
-      value: "${API_URL}/api/v1/suggest"
     - name: VERSION
       value: "${VERSION}"
 
