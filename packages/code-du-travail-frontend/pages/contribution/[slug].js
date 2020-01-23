@@ -64,7 +64,7 @@ class PageContribution extends React.Component {
             title={title}
             relatedItems={relatedItems}
             source={{
-              name: "Réponse personnalisée selon votre convention collective"
+              name: "Ministère du Travail"
             }}
             breadcrumbs={breadcrumbs}
             emptyMessage="Cette question n'a pas été trouvée"
