@@ -81,7 +81,15 @@ const Footer = () => {
                     </Link>
                   </StyledListItem>
                   <StyledListItem>
-                    <StyledLink href="mailto:codedutravailnumerique@travail.gouv.fr">
+                    <Link passHref href="/stats">
+                      <StyledLink>Statistiques d’utilisation</StyledLink>
+                    </Link>
+                  </StyledListItem>
+                  <StyledListItem>
+                    <StyledLink
+                      title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
+                      href="mailto:codedutravailnumerique@travail.gouv.fr"
+                    >
                       Contact
                     </StyledLink>
                   </StyledListItem>

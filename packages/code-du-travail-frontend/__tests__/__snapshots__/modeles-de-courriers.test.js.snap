@@ -1810,7 +1810,18 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 >
                   <a
                     class="c64"
+                    href="/stats"
+                  >
+                    Statistiques d’utilisation
+                  </a>
+                </li>
+                <li
+                  class="c63"
+                >
+                  <a
+                    class="c64"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
+                    title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
                   </a>

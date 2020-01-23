@@ -2933,7 +2933,18 @@ exports[`<Home /> should render 1`] = `
                 >
                   <a
                     class="c72"
+                    href="/stats"
+                  >
+                    Statistiques d’utilisation
+                  </a>
+                </li>
+                <li
+                  class="c71"
+                >
+                  <a
+                    class="c72"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
+                    title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
                   </a>
