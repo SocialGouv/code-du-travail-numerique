@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.2.0...v4.2.1) (2020-01-23)
+
+
+### Bug Fixes
+
+* **ie:** add new module transpile-module for contribution ([#2282](https://github.com/SocialGouv/code-du-travail-numerique/issues/2282)) ([6571e2a](https://github.com/SocialGouv/code-du-travail-numerique/commit/6571e2a1d33c618edb5f416eab5f4822f04bc903)), closes [#2281](https://github.com/SocialGouv/code-du-travail-numerique/issues/2281)
+
+
+
+
+
 # [4.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.1...v4.2.0) (2020-01-22)
 
 
