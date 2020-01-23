@@ -5,11 +5,9 @@ import Head from "next/head";
 import getConfig from "next/config";
 import { max, startOfDay, subMonths } from "date-fns";
 import {
-  Badge,
   Container,
   Grid,
   Heading,
-  icons,
   PageTitle,
   Section,
   Wrapper

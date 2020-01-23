@@ -43,37 +43,6 @@ exports[`<Stats /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c31 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c31:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #7994d4 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c32 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
 .c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -135,7 +104,7 @@ exports[`<Stats /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c41 {
+.c39 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -172,16 +141,16 @@ exports[`<Stats /> should render 1`] = `
   opacity: 1;
 }
 
-.c41:link,
-.c41:visited {
+.c39:link,
+.c39:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c41:not([disabled]):hover,
-.c41:not([disabled]):active,
-.c41:not([disabled]):focus {
+.c39:not([disabled]):hover,
+.c39:not([disabled]):active,
+.c39:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -190,7 +159,7 @@ exports[`<Stats /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c41[disabled] {
+.c39[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -286,7 +255,7 @@ exports[`<Stats /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c33 {
+.c31 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -296,7 +265,7 @@ exports[`<Stats /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c47 {
+.c45 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -313,7 +282,7 @@ exports[`<Stats /> should render 1`] = `
   text-align: center;
 }
 
-.c38 {
+.c36 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -331,7 +300,7 @@ exports[`<Stats /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c39 {
+.c37 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -564,12 +533,12 @@ exports[`<Stats /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c35 {
+.c33 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c36 {
+.c34 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -577,7 +546,7 @@ exports[`<Stats /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c36:before {
+.c34:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -589,13 +558,13 @@ exports[`<Stats /> should render 1`] = `
   content: "";
 }
 
-.c37 {
+.c35 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c40 {
+.c38 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -604,17 +573,17 @@ exports[`<Stats /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c42 {
+.c40 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c43 {
+.c41 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c44 {
+.c42 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -628,31 +597,31 @@ exports[`<Stats /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c46 + .c45 {
+.c44 + .c43 {
   padding-left: 1.6rem;
 }
 
-.c49 {
+.c47 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c48 {
+.c46 {
   font-size: 1.6rem;
 }
 
-.c50 {
+.c48 {
   margin: 0.4rem 0;
 }
 
-.c51 {
+.c49 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c52 {
+.c50 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -671,14 +640,14 @@ exports[`<Stats /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c53 {
+.c51 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c54 {
+.c52 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -728,7 +697,6 @@ exports[`<Stats /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  font-family: "Merriweather",serif;
 }
 
 .c30 > *:first-child {
@@ -739,7 +707,7 @@ exports[`<Stats /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c34 {
+.c32 {
   color: #7994d4;
   font-weight: bold;
   font-size: 5rem;
@@ -779,13 +747,13 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c39 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c39 {
     padding: 0 3rem;
   }
 }
@@ -861,13 +829,13 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c31 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c45 {
     font-size: 1.6rem;
   }
 }
@@ -880,7 +848,7 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c36 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -893,7 +861,7 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c37 {
     font-size: 2.2rem;
   }
 }
@@ -1041,52 +1009,52 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media print {
-  .c36 {
+  .c34 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c35 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c38 {
     padding: 0;
   }
 }
 
 @media print {
-  .c40 {
+  .c38 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c41 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c42 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c44 {
+  .c42 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c42 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1094,26 +1062,26 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 + .c45 {
+  .c44 + .c43 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c47 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c46 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c54 {
+  .c52 {
     display: none;
   }
 }
@@ -1387,32 +1355,13 @@ exports[`<Stats /> should render 1`] = `
                   <div
                     class="c30"
                   >
-                    <div
-                      class="c31"
-                    >
-                      <div
-                        class="c32"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
-                            fill="currentColor"
-                            fill-rule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                    </div>
                     <h3
-                      class="c33"
+                      class="c31"
                     >
                       Contenus référencés
                     </h3>
                     <div
-                      class="c34"
+                      class="c32"
                     >
                       16
                     </div>
@@ -1424,30 +1373,13 @@ exports[`<Stats /> should render 1`] = `
                   <div
                     class="c30"
                   >
-                    <div
-                      class="c31"
-                    >
-                      <div
-                        class="c32"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M12 6.056L8.114 2.197a.166.166 0 00-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88l.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 01-.47-.459L3 6.937l-1.208.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016L13 6.937z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </div>
-                    </div>
                     <h3
-                      class="c33"
+                      class="c31"
                     >
                       Visites
                     </h3>
                     <div
-                      class="c34"
+                      class="c32"
                     >
                       20
                     </div>
@@ -1459,30 +1391,13 @@ exports[`<Stats /> should render 1`] = `
                   <div
                     class="c30"
                   >
-                    <div
-                      class="c31"
-                    >
-                      <div
-                        class="c32"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </div>
-                    </div>
                     <h3
-                      class="c33"
+                      class="c31"
                     >
                       Recherches
                     </h3>
                     <div
-                      class="c34"
+                      class="c32"
                     >
                       4
                     </div>
@@ -1494,32 +1409,13 @@ exports[`<Stats /> should render 1`] = `
                   <div
                     class="c30"
                   >
-                    <div
-                      class="c31"
-                    >
-                      <div
-                        class="c32"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
-                            fill="currentColor"
-                            fill-rule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                    </div>
                     <h3
-                      class="c33"
+                      class="c31"
                     >
                       Consultations
                     </h3>
                     <div
-                      class="c34"
+                      class="c32"
                     >
                       10
                     </div>
@@ -1531,30 +1427,13 @@ exports[`<Stats /> should render 1`] = `
                   <div
                     class="c30"
                   >
-                    <div
-                      class="c31"
-                    >
-                      <div
-                        class="c32"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.815 5.194l-5.929 6.739a.744.744 0 01-.51.232h-.022a.719.719 0 01-.51-.209L3.208 8.32a.699.699 0 010-.995.699.699 0 01.996 0l3.103 3.103 5.442-6.183a.702.702 0 01.996-.07.73.73 0 01.07 1.02z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </div>
-                    </div>
                     <h3
-                      class="c33"
+                      class="c31"
                     >
                       Taux de satisfaction
                     </h3>
                     <div
-                      class="c34"
+                      class="c32"
                     >
                       60
                       %
@@ -1574,22 +1453,22 @@ exports[`<Stats /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c35"
+    class="c33"
   >
     <footer
-      class="c36"
+      class="c34"
     >
       <div
-        class="c19 c37"
+        class="c19 c35"
       >
         <div
           class="c20"
         >
           <header
-            class="c38"
+            class="c36"
           >
             <h3
-              class="c39"
+              class="c37"
             >
               <div
                 class="c23"
@@ -1598,16 +1477,16 @@ exports[`<Stats /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c40"
+            class="c38"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c41"
+            class="c39"
           >
             Contacter nos services en région
             <svg
-              class="c42"
+              class="c40"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1620,78 +1499,78 @@ exports[`<Stats /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c19 c43"
+        class="c19 c41"
       >
         <nav>
           <div
-            class="c44"
+            class="c42"
           >
             <div
-              class="c45 c46"
+              class="c43 c44"
             >
               <h3
-                class="c47 c48"
+                class="c45 c46"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c49"
+                class="c47"
               >
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="/stats"
                   >
                     Statistiques d’usage
                   </a>
                 </li>
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                     title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
@@ -1701,21 +1580,21 @@ exports[`<Stats /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c45 c46"
+              class="c43 c44"
             >
               <h3
-                class="c47 c48"
+                class="c45 c46"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c49"
+                class="c47"
               >
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1724,10 +1603,10 @@ exports[`<Stats /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1738,21 +1617,21 @@ exports[`<Stats /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c45 c46"
+              class="c43 c44"
             >
               <h3
-                class="c47 c48"
+                class="c45 c46"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c49"
+                class="c47"
               >
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1761,10 +1640,10 @@ exports[`<Stats /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1773,10 +1652,10 @@ exports[`<Stats /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c50"
+                  class="c48"
                 >
                   <a
-                    class="c51"
+                    class="c49"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1790,10 +1669,10 @@ exports[`<Stats /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c52"
+        class="c50"
       >
         <a
-          class="c53"
+          class="c51"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1802,12 +1681,12 @@ exports[`<Stats /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c54"
+          class="c52"
         >
           |
         </span>
         <a
-          class="c53"
+          class="c51"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1816,12 +1695,12 @@ exports[`<Stats /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c54"
+          class="c52"
         >
           |
         </span>
         <a
-          class="c53"
+          class="c51"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1830,12 +1709,12 @@ exports[`<Stats /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c54"
+          class="c52"
         >
           |
         </span>
         <a
-          class="c53"
+          class="c51"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1844,12 +1723,12 @@ exports[`<Stats /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c54"
+          class="c52"
         >
           |
         </span>
         <a
-          class="c53"
+          class="c51"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1858,12 +1737,12 @@ exports[`<Stats /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c54"
+          class="c52"
         >
           |
         </span>
         <a
-          class="c53"
+          class="c51"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"
