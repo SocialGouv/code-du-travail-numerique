@@ -106,7 +106,9 @@ exports[`<Term /> should render 1`] = `
 }
 
 .c16[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -167,7 +169,9 @@ exports[`<Term /> should render 1`] = `
 }
 
 .c35[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

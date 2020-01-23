@@ -10,6 +10,7 @@ describe("<Question />", () => {
         display: block;
         margin-top: 2rem;
         margin-bottom: 1rem;
+        font-weight: 600;
         font-size: 1.8rem;
         cursor: pointer;
       }
@@ -38,6 +39,7 @@ describe("<Question />", () => {
         display: block;
         margin-top: 2rem;
         margin-bottom: 1rem;
+        font-weight: 600;
         font-size: 1.8rem;
         cursor: pointer;
       }

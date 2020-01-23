@@ -98,6 +98,7 @@ exports[`<Convention /> renders 1`] = `
 }
 
 .c13 {
+  margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -111,6 +112,10 @@ exports[`<Convention /> renders 1`] = `
 }
 
 .c13 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c13:last-child {
   margin-bottom: 0;
 }
 
@@ -170,7 +175,9 @@ exports[`<Convention /> renders 1`] = `
 }
 
 .c31[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

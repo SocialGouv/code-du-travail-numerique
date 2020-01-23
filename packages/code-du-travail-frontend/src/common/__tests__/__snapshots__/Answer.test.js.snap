@@ -99,7 +99,9 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c17[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -665,7 +667,9 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c26[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1481,7 +1485,9 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c18[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -2124,7 +2130,9 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c19[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -3304,7 +3312,9 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c18[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -3910,7 +3920,9 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c18[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -4502,7 +4514,9 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 .c18[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -5085,7 +5099,9 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c18[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

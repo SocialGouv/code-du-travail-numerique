@@ -110,7 +110,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 .c20[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -171,7 +173,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 .c23[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -774,7 +778,9 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 .c20[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -835,7 +841,9 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 .c26[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1511,7 +1519,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 .c20[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1572,7 +1582,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 .c24[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

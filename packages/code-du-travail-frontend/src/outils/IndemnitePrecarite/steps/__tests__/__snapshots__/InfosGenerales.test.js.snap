@@ -59,6 +59,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
@@ -251,6 +252,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
@@ -259,6 +261,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -566,6 +569,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
@@ -574,6 +578,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -812,6 +817,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }

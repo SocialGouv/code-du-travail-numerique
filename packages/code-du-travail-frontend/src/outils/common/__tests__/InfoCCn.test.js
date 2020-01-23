@@ -41,7 +41,7 @@ describe("<StepInfoCCnOptionnal />", () => {
     );
     expect(container).toMatchSnapshot();
     getByText("Submit").click();
-    expect(getByText(/ce champ est requis/i)).toBeDefined();
+    expect(getByText(/Vous devez répondre à cette question/i)).toBeDefined();
     expect(submitFn).not.toHaveBeenCalled();
   });
 });

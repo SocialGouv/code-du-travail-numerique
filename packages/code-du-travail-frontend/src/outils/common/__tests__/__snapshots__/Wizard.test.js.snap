@@ -57,7 +57,9 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c13[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -211,6 +213,11 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 3.2rem 0;
+}
+
+.c16 {
+  width: 3rem;
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -437,6 +444,16 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         class="c13 c14 c15"
       >
         Suivant
+        <svg
+          class="c16"
+          fill="none"
+          viewBox="0 0 28 15"
+        >
+          <path
+            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+            fill="currentColor"
+          />
+        </svg>
       </button>
     </div>
   </form>
@@ -500,7 +517,9 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 }
 
 .c13[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -533,8 +552,8 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
+  height: 4rem;
+  padding: 0 3rem;
   color: #3e486e;
   background: #fff;
   border-color: #bbcadf;
@@ -561,7 +580,9 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 }
 
 .c16[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -743,6 +764,16 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   border-bottom: 1px solid #bbcadf;
 }
 
+.c17 {
+  padding-top: 2rem;
+  border-top: 1px solid #bbcadf;
+}
+
+.c18 {
+  color: #f66663;
+  font-weight: 600;
+}
+
 @media (max-width:600px) {
   .c13 {
     font-size: 1.4rem;
@@ -758,12 +789,6 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 @media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    padding: 0 3rem;
   }
 }
 
@@ -964,6 +989,16 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
         Précédent
       </button>
     </div>
+    <p
+      class="c17"
+    >
+      <span
+        class="c18"
+      >
+        *
+      </span>
+       Champs obligatoire
+    </p>
   </form>
 </div>
 `;
@@ -1025,7 +1060,9 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 .c13[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1179,6 +1216,11 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 3.2rem 0;
+}
+
+.c16 {
+  width: 3rem;
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -1415,6 +1457,16 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         class="c13 c14 c15"
       >
         Suivant
+        <svg
+          class="c16"
+          fill="none"
+          viewBox="0 0 28 15"
+        >
+          <path
+            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+            fill="currentColor"
+          />
+        </svg>
       </button>
     </div>
   </form>
@@ -1478,7 +1530,9 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c13[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1632,6 +1686,11 @@ exports[`<Wizard /> should inject rules component 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 3.2rem 0;
+}
+
+.c16 {
+  width: 3rem;
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -1861,6 +1920,16 @@ exports[`<Wizard /> should inject rules component 1`] = `
         class="c13 c14 c15"
       >
         Suivant
+        <svg
+          class="c16"
+          fill="none"
+          viewBox="0 0 28 15"
+        >
+          <path
+            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+            fill="currentColor"
+          />
+        </svg>
       </button>
     </div>
   </form>
@@ -1924,7 +1993,9 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 }
 
 .c13[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1957,8 +2028,8 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
+  height: 4rem;
+  padding: 0 3rem;
   color: #3e486e;
   background: #fff;
   border-color: #bbcadf;
@@ -1985,7 +2056,9 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 }
 
 .c16[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -2167,6 +2240,16 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   border-bottom: 1px solid #bbcadf;
 }
 
+.c17 {
+  padding-top: 2rem;
+  border-top: 1px solid #bbcadf;
+}
+
+.c18 {
+  color: #f66663;
+  font-weight: 600;
+}
+
 @media (max-width:600px) {
   .c13 {
     font-size: 1.4rem;
@@ -2182,12 +2265,6 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 @media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    padding: 0 3rem;
   }
 }
 
@@ -2388,6 +2465,16 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
         Précédent
       </button>
     </div>
+    <p
+      class="c17"
+    >
+      <span
+        class="c18"
+      >
+        *
+      </span>
+       Champs obligatoire
+    </p>
   </form>
 </div>
 `;
@@ -2449,7 +2536,9 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c13[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -2603,6 +2692,11 @@ exports[`<Wizard /> should render a step 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 3.2rem 0;
+}
+
+.c16 {
+  width: 3rem;
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -2829,6 +2923,16 @@ exports[`<Wizard /> should render a step 1`] = `
         class="c13 c14 c15"
       >
         Suivant
+        <svg
+          class="c16"
+          fill="none"
+          viewBox="0 0 28 15"
+        >
+          <path
+            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+            fill="currentColor"
+          />
+        </svg>
       </button>
     </div>
   </form>
