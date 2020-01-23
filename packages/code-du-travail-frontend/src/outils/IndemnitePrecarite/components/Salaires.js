@@ -2,9 +2,11 @@ import React from "react";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
-import { Button, theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/react-ui";
 import { CurrencyField } from "../../common/CurrencyField";
+import { AddButton, DelButton } from "../../common/Buttons";
 import { UID } from "react-uid";
+import { Question } from "../../common/Question";
 
 function Salaires({ name, visible = true, onChange }) {
   return (
@@ -13,35 +15,29 @@ function Salaires({ name, visible = true, onChange }) {
         {({ fields }) => (
           <>
             {visible && (
-              <p>
+              <Question required>
                 Quels sont les salaires mensuels bruts perçus durant le contrat
                 de travail&nbsp;?
-              </p>
+              </Question>
             )}
             {fields.map((name, index) => (
               <Row key={index}>
                 <UID>
                   {uid => (
-                    <Wrapper>
-                      <MontantLabel htmlFor={uid}>Montant :</MontantLabel>
+                    <>
+                      <MontantLabel htmlFor={uid}>Montant&nbsp;:</MontantLabel>
                       <CurrencyField name={`${name}.salaire`} id={uid}>
-                        <DelButton
-                          variant="flat"
-                          onClick={() => fields.remove(index)}
-                        >
+                        <StyledDelButton onClick={() => fields.remove(index)}>
                           Supprimer
-                        </DelButton>
+                        </StyledDelButton>
                       </CurrencyField>
-                    </Wrapper>
+                    </>
                   )}
                 </UID>
               </Row>
             ))}
             {visible > 0 && (
-              <AddButton
-                variant="link"
-                onClick={() => fields.push({ salaire: null })}
-              >
+              <AddButton onClick={() => fields.push({ salaire: null })}>
                 Ajouter un salaire
               </AddButton>
             )}
@@ -57,32 +53,26 @@ function Salaires({ name, visible = true, onChange }) {
 
 export { Salaires };
 
-const { spacings } = theme;
+const { spacings, breakpoints } = theme;
 
 const MontantLabel = styled.label`
   display: inline-block;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   margin-right: ${spacings.small};
 `;
-
+const StyledDelButton = styled(DelButton)`
+  @media (max-width: ${breakpoints.mobile}) {
+    align-self: center;
+  }
+`;
 const Row = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: ${spacings.tiny};
-`;
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-start;
-  width: 100%;
-`;
-
-const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin-left: ${spacings.medium};
-`;
-
-const AddButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin: ${spacings.medium} 0;
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;

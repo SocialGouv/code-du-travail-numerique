@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Button, theme } from "@socialgouv/react-ui";
+import { Button, icons, theme } from "@socialgouv/react-ui";
 import printResult from "./printResult";
 
 function PrevNextBar({
@@ -22,10 +22,11 @@ function PrevNextBar({
         {nextVisible && (
           <StyledButton disabled={hasError} variant="primary">
             Suivant
+            <ArrowIcon />
           </StyledButton>
         )}
         {previousVisible && (
-          <StyledButton type="button" onClick={onPrev} variant="flat">
+          <StyledButton small type="button" onClick={onPrev} variant="flat">
             Précédent
           </StyledButton>
         )}
@@ -70,4 +71,9 @@ const Box = styled.div`
   @media print {
     display: none;
   }
+`;
+
+const ArrowIcon = styled(icons.DirectionRight)`
+  width: 3rem;
+  margin-left: ${spacings.small};
 `;

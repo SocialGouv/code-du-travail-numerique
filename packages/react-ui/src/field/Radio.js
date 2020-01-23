@@ -12,7 +12,7 @@ export const InputRadio = ({ label, name, id, size, ...props }) => (
 );
 
 InputRadio.propTypes = {
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   size: PropTypes.string.isRequired

@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
-import { icons, Input, Table as UITable, theme } from "@socialgouv/react-ui";
+import { icons, Input, theme } from "@socialgouv/react-ui";
 
 import { InlineError } from "../../common/ErrorField";
+import { Question } from "../../common/Question";
 import { isNumber } from "../../common/validators";
 
 function SalaireTempsPlein({ name }) {
@@ -14,14 +15,16 @@ function SalaireTempsPlein({ name }) {
       {({ fields }) =>
         fields.length > 0 && (
           <Table>
-            <caption>
-              Salaire mensuel brut (prendre en compte les primes et avantages en
-              nature)
-            </caption>
+            <Caption>
+              <Question required>
+                Salaire mensuel brut (Prendre en compte les primes et avantages
+                en nature)
+              </Question>
+            </Caption>
             <thead>
               <tr>
-                <th>Mois</th>
-                <th>Salaire mensuel brut</th>
+                <Th>Mois</Th>
+                <Th>Salaire mensuel brut</Th>
               </tr>
             </thead>
             <tbody>
@@ -93,12 +96,13 @@ SalaireTempsPlein.propTypes = {
 
 export { SalaireTempsPlein };
 
-const { breakpoints } = theme;
+const { fonts, spacings, breakpoints } = theme;
 
-const Table = styled(UITable)`
-  width: 70%;
+const Table = styled.table`
+  width: 100%;
+  text-align: left;
   & tr > td:nth-child(2) {
-    width: 70%;
+    width: 80%;
     text-align: left;
   }
   @media (max-width: ${breakpoints.mobile}) {
@@ -107,4 +111,13 @@ const Table = styled(UITable)`
       width: 60%;
     }
   }
+`;
+
+const Caption = styled.caption`
+  margin-bottom: ${spacings.xmedium};
+  text-align: left;
+`;
+
+const Th = styled.th`
+  font-size: ${fonts.sizes.small};
 `;

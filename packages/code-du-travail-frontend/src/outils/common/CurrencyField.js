@@ -1,7 +1,7 @@
 import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
-import { icons, Input } from "@socialgouv/react-ui";
+import { icons, Input, theme } from "@socialgouv/react-ui";
 import { UID } from "react-uid";
 
 import { isNumber } from "./validators";
@@ -57,6 +57,10 @@ const StyledWrapperInput = styled.div`
   flex: 1 1 auto;
   width: 100%;
   max-width: 40rem;
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export { CurrencyField };

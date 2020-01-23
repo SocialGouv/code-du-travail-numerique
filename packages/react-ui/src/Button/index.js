@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { DirectionRight } from "../icons";
-import { lighten, rgba, transparentize } from "polished";
+import { lighten, rgba } from "polished";
 
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
 
@@ -118,7 +118,9 @@ export const StyledButton = styled.button`
       }
       /* keep it last so it overrides other styles */
       &[disabled] {
-        color: ${transparentize(0.6, color)};
+        background-color: ${theme.bgTertiary};
+        border-color: ${theme.bgTertiary};
+        color: ${theme.placeholder};
         box-shadow: none;
         cursor: not-allowed;
       }

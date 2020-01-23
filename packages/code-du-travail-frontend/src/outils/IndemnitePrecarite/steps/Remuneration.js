@@ -3,8 +3,9 @@ import { TypeRemuneration } from "../components/TypeRemuneration";
 import { Field } from "react-final-form";
 import { CurrencyField } from "../../common/CurrencyField";
 import { theme } from "@socialgouv/react-ui";
-import styled from "styled-components";
+
 import { Salaires } from "../components/Salaires";
+import { SmallText } from "../../common/stepStyles";
 
 function StepRemuneration({ form }) {
   return (
@@ -39,10 +40,12 @@ function StepRemuneration({ form }) {
             />
 
             {["mensuel", "total"].includes(input.value) && (
-              <Info>
-                * Majorations, indemnités, primes et accessoires compris sauf
-                les remboursements de frais et l’indemnité de congés payés.
-              </Info>
+              <p>
+                <SmallText>
+                  Majorations, indemnités, primes et accessoires compris sauf
+                  les remboursements de frais et l’indemnité de congés payés.
+                </SmallText>
+              </p>
             )}
           </>
         )}
@@ -54,8 +57,3 @@ function StepRemuneration({ form }) {
 export { StepRemuneration };
 
 const { fonts } = theme;
-
-const Info = styled.p`
-  font-size: ${fonts.sizes.small};
-  font-style: italic;
-`;

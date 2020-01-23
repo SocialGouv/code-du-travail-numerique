@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
-import { Button, Input, Select, theme } from "@socialgouv/react-ui";
+import { Input, Select, theme } from "@socialgouv/react-ui";
 import { Error } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
+import { AddButton, DelButton } from "../../common/Buttons";
 import { Question } from "../../common/Question";
 import { OnChange } from "react-final-form-listeners";
 
+const mobileMediaQuery = `(max-width: ${theme.breakpoints.mobile})`;
+
 function AbsencePeriods({ name, visible = true, onChange }) {
+  const [isHeaderVisible, setHeaderVisible] = useState(true);
+  const mqlListener = useCallback(
+    e => {
+      setHeaderVisible(e.matches);
+    },
+    [setHeaderVisible]
+  );
+  useEffect(() => {
+    if (window.matchMedia) {
+      const mql = window.matchMedia(mobileMediaQuery);
+      setHeaderVisible(mql.matches);
+      mql.addListener(mqlListener);
+      return () => {
+        mql.removeListener(mqlListener);
+      };
+    }
+  }, [mqlListener]);
+
   return (
     <FieldArray name={name}>
       {({ fields }) => (
@@ -30,22 +51,30 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                 Quels sont le motif et la durée de ces absences
                 prolongées&nbsp;?
               </Question>
-              <Row key={name}>
-                <CellHeader as={MotifCell}>Motif</CellHeader>
-                <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
-              </Row>
+              {!isHeaderVisible && (
+                <Row key={name}>
+                  <CellHeader as={MotifCell}>Motif</CellHeader>
+                  <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
+                </Row>
+              )}
             </>
           )}
           {fields.map((name, index) => (
             <Row key={name}>
               <MotifCell>
-                <Field name={`${name}.type`} component={Select}>
+                {isHeaderVisible && (
+                  <CellHeader as={MotifCell}>Motif</CellHeader>
+                )}
+                <Field name={`${name}.type`} component={StyledSelect}>
                   {motifs.map(({ label }) => (
                     <option key={label}>{label}</option>
                   ))}
                 </Field>
               </MotifCell>
               <DurationCell>
+                {isHeaderVisible && (
+                  <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
+                )}
                 <Field
                   name={`${name}.duration`}
                   validate={isNumber}
@@ -57,7 +86,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                   }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
-                      <Input
+                      <StyledInput
                         {...input}
                         type="number"
                         invalid={touched && invalid}
@@ -67,19 +96,13 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                   )}
                 />
               </DurationCell>
-              <DelButton
-                variant="flat"
-                type="button"
-                onClick={() => fields.remove(index)}
-              >
+              <DelButton onClick={() => fields.remove(index)}>
                 Supprimer
               </DelButton>
             </Row>
           ))}
           {visible && (
             <AddButton
-              variant="link"
-              type="button"
               onClick={() =>
                 fields.push({
                   type: "Absence pour maladie non professionnelle",
@@ -108,42 +131,59 @@ AbsencePeriods.propTypes = {
 };
 export { AbsencePeriods };
 
-const { spacings } = theme;
+const { fonts, spacings } = theme;
 
-const AddButton = styled(Button)`
-  margin: ${spacings.medium} 0;
-`;
 const Row = styled.div`
   display: flex;
-  align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: ${spacings.tiny};
+  @media ${mobileMediaQuery} {
+    flex-direction: column;
+  }
 `;
 const MotifCell = styled.div`
   flex: 0 1 35rem;
   margin-right: ${spacings.medium};
+  @media ${mobileMediaQuery} {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
 `;
 const DurationCell = styled.div`
   margin-right: ${spacings.medium};
+  @media ${mobileMediaQuery} {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
 `;
 const CellHeader = styled.div`
+  padding-top: ${spacings.small};
+  padding-bottom: ${spacings.tiny};
   font-weight: 700;
+  font-size: ${fonts.sizes.small};
 `;
 
-const DelButton = styled(Button)`
-  margin-left: ${spacings.medium};
+const StyledSelect = styled(Select)`
+  @media ${mobileMediaQuery} {
+    width: 100%;
+  }
+`;
+
+const StyledInput = styled(Input)`
+  @media ${mobileMediaQuery} {
+    width: 100%;
+  }
 `;
 
 export const motifs = [
   { label: "Absence pour maladie non professionnelle", value: 1.0 },
-  { label: "Grève", value: 1.0 },
-  { label: "Mise à pied", value: 1.0 },
+  { label: "Arrêt maladie lié à un accident de trajet", value: 1.0 },
   { label: "Congé sabbatique", value: 1.0 },
   { label: "Congé pour création d'entreprise", value: 1.0 },
-  { label: "Congé de solidarité familiale", value: 1.0 },
-  { label: "Congé de solidarité internationale", value: 1.0 },
   { label: "Congé parental d'éducation", value: 0.5 },
-  { label: "Congé de proche aidant", value: 1.0 },
   { label: "Congés sans solde", value: 1.0 },
-  { label: "Arrêt maladie lié à un accident de trajet", value: 1.0 }
+  { label: "Grève", value: 1.0 },
+  { label: "Mise à pied", value: 1.0 },
+  { label: "Maladie d'origine non professionnelle", value: 1.0 },
+  { label: "Congé de paternité", value: 1.0 }
 ];

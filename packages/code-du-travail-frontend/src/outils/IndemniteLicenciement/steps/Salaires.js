@@ -7,6 +7,7 @@ import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { Error } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
+import { SmallText } from "../../common/stepStyles";
 import { parse } from "../../common/date";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import {
@@ -90,17 +91,16 @@ function StepSalaires({ form }) {
                                 Quel a été le montant du salaire mensuel
                                 brut&nbsp;?
                               </Question>
-
+                              <SmallText>
+                                Prendre en compte les primes et avantages en
+                                nature.
+                              </SmallText>
                               <StyledInput
                                 {...input}
                                 type="number"
                                 invalid={touched && invalid}
                                 icon={icons.Euro}
                               />
-                              <span>
-                                Prendre en compte les primes et avantages en
-                                nature.
-                              </span>
                               {error && touched && invalid ? (
                                 <Error>{error}</Error>
                               ) : null}

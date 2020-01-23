@@ -56,6 +56,7 @@ export const Highlight = styled.strong`
 
 export const SmallText = styled.span`
   color: ${colors.paragraph};
+  font-size: ${fonts.sizes.small};
   font-style: italic;
 `;
 
