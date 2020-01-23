@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> renders text 1`] = `
+.c0 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+<div>
+  <span
+    class="c0"
+    font-size="1.8rem"
+    font-weight="400"
+  >
+    A text
+  </span>
+</div>
+`;
+
+exports[`<Text /> renders text with fontSize 1`] = `
+.c0 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+<div>
+  <span
+    class="c0"
+    font-size="hLarge"
+    font-weight="400"
+  >
+    A text
+  </span>
+</div>
+`;
+
+exports[`<Text /> renders text with fontWeight 1`] = `
+.c0 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+<div>
+  <span
+    class="c0"
+    font-size="1.8rem"
+    font-weight="700"
+  >
+    A bold text
+  </span>
+</div>
+`;
+
+exports[`<Text /> renders text with variant 1`] = `
+.c0 {
+  color: #f66663;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+<div>
+  <span
+    class="c0"
+    font-size="1.8rem"
+    font-weight="400"
+  >
+    A colored text
+  </span>
+</div>
+`;
