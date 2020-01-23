@@ -183,11 +183,11 @@ function StepResult({ form }) {
       />
       <SectionTitle>Détails</SectionTitle>
       {idcc > 0 && (
-        <p>
+        <>
           Il s’agit de la durée la plus longue entre la durée légale prévue par
           le Code du travail et la durée conventionnelle prévue par la
           convention collective:
-        </p>
+        </>
       )}
       <ul>
         <li>
@@ -213,7 +213,8 @@ function StepResult({ form }) {
           )}
         </li>
       </ul>
-      <p>Éléments saisis&nbsp;:</p>
+      Éléments saisis&nbsp;:
+      <br />
       {recapSituation({
         "Licenciement pour faute grave": seriousMisconduct ? "Oui" : "Non",
         "Reconnu en tant que travailleur handicapé": disabledWorker

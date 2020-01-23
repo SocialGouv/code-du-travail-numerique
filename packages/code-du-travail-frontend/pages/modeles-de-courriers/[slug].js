@@ -66,7 +66,7 @@ class ModeleCourrier extends React.Component {
             </Wrapper>
           </Section>
           <Heading as="h4">Télécharger le modèle</Heading>
-          <Alert varaint="primary">
+          <Alert>
             Attention, chaque modèle de document proposé est à personnaliser
             selon votre situation et est susceptible d’évoluer suite à des
             changements de règlementation. Assurez-vous d’avoir la dernière

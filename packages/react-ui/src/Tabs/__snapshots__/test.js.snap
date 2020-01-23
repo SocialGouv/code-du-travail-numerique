@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabs /> renders 1`] = `
+.c4:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+}
+
 .c0 {
   margin-bottom: 3.2rem;
 }
@@ -17,7 +29,7 @@ exports[`<Tabs /> renders 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0.4rem 0 0;
   overflow: visible;
   list-style-type: none;
 }
@@ -52,18 +64,18 @@ exports[`<Tabs /> renders 1`] = `
   background-color: #fff;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c3.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width:600px) {
@@ -77,6 +89,7 @@ exports[`<Tabs /> renders 1`] = `
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding: 0;
   }
 }
 
@@ -146,7 +159,16 @@ exports[`<Tabs /> renders 1`] = `
       id="react-tabs-1"
       role="tabpanel"
     >
-      This panel can contain nodes
+      <div
+        class="c4"
+      >
+        Tab 1
+      </div>
+      <div
+        class="c5"
+      >
+        This panel can contain nodes
+      </div>
     </div>
     <div
       aria-labelledby="react-tabs-2"

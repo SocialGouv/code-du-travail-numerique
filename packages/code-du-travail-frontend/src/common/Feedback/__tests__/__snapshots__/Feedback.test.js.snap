@@ -7,43 +7,10 @@ exports[`<Feedback/> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c0 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
-}
-
-.c5 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c3 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c7 {
@@ -105,6 +72,31 @@ exports[`<Feedback/> should render 1`] = `
   color: rgba(62,72,110,0.4);
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c5 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c3 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
 }
 
 .c2 {
@@ -180,6 +172,18 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
   .c3 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -189,18 +193,6 @@ exports[`<Feedback/> should render 1`] = `
 @media (max-width:600px) {
   .c3 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    padding: 0 3rem;
   }
 }
 
@@ -305,43 +297,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   padding: 0 2rem;
 }
 
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c0 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
-}
-
-.c5 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c3 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c8 {
@@ -407,6 +366,31 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transform: translateX(4px);
 }
 
+.c5 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: none;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c3 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c2 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -467,6 +451,12 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
+  .c8 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c3 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -476,12 +466,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 @media (max-width:600px) {
   .c3 {
     font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.4rem;
   }
 }
 
@@ -585,14 +569,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   padding: 0 2rem;
 }
 
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c0 {
   padding: 3.2rem 0;
   background-color: transparent;
@@ -614,7 +590,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 
 .c3 {
   position: relative;
-  margin: 0 0 1rem 0;
+  margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;

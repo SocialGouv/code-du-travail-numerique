@@ -1,6 +1,7 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
 
+import { Title } from "../Titles/Title";
 import { Tabs } from ".";
 
 export default {
@@ -13,19 +14,19 @@ export const base = () => (
     <Tabs
       data={[
         {
-          tab: "Tab 1",
+          tab: <Title>This is a Title tab</Title>,
           panel: "This panel can contain nodes"
         },
         {
-          tab: "Tab 2",
+          tab: <Title>Title tabs render normally</Title>,
           panel: "These tabs are not 'controlled', no onSelect is provided"
         },
         {
-          tab: "Tab 3",
+          tab: "Tab 3 (not a title)",
           panel: "Content 3"
         },
         {
-          tab: "Tab 4",
+          tab: <h3>Tab 4 - h3</h3>,
           panel: "Content 4"
         },
         {
@@ -37,7 +38,7 @@ export const base = () => (
           panel: "Content 6"
         },
         {
-          tab: "Tab 7",
+          tab: <h2>This is a h2 tab</h2>,
           panel: "Content 7"
         }
       ]}

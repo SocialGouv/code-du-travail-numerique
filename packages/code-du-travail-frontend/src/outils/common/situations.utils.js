@@ -101,18 +101,22 @@ export function recapSituation(criteria) {
 }
 
 export function getRef(refs) {
-  return refs.map(({ ref, refUrl }) => (
-    <p key={refUrl}>
-      <a
-        href={refUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        title={`Consultez l’${ref.toLowerCase()}`}
-      >
-        {ref}
-      </a>
-    </p>
-  ));
+  return (
+    <ul>
+      {refs.map(({ ref, refUrl }) => (
+        <li key={refUrl}>
+          <a
+            href={refUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`Consultez l’${ref.toLowerCase()}`}
+          >
+            {ref}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export const getFormProps = ({ key, criteria, pastQuestions }) =>

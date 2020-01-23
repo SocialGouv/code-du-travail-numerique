@@ -102,7 +102,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 }
 
 .c1 {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .c0 {
@@ -282,7 +282,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
 }
 
 .c1 {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .c0 {

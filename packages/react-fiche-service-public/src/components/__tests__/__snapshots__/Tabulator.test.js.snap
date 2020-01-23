@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
+.c4:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+}
+
 .c7 {
   position: absolute;
   background-color: #7994d4;
@@ -12,18 +24,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.c4:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
 }
 
 .c0 {
@@ -42,7 +42,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0.4rem 0 0;
   overflow: visible;
   list-style-type: none;
 }
@@ -77,22 +77,33 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   background-color: #fff;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c3.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c5 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
@@ -120,6 +131,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding: 0;
   }
 }
 
@@ -149,6 +161,12 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 @media (max-width:600px) {
   .c3.react-tabs__tab-panel--selected {
     padding: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    font-size: 1.6rem;
   }
 }
 
@@ -224,21 +242,18 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
           </h2>
         </header>
       </div>
-      <header
-        class="c5"
+      <div
+        class="c8"
       >
         <h3
-          class="c6"
+          class="c9"
         >
-          <div
-            class="c7"
-          />
           titre 1
         </h3>
-      </header>
-      <p>
-        paragraphe 1
-      </p>
+        <p>
+          paragraphe 1
+        </p>
+      </div>
     </div>
     <div
       aria-labelledby="react-tabs-2"
@@ -251,16 +266,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
-.c5 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c4:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -289,7 +294,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0.4rem 0 0;
   overflow: visible;
   list-style-type: none;
 }
@@ -324,24 +329,28 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   background-color: #fff;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c3.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
-  }
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 @media (max-width:600px) {
@@ -355,6 +364,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding: 0;
   }
 }
 
@@ -384,6 +394,12 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 @media (max-width:600px) {
   .c3.react-tabs__tab-panel--selected {
     padding: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
   }
 }
 
@@ -433,14 +449,18 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
           CDI
         </h4>
       </div>
-      <h5
-        class="c5"
+      <div
+        class="c6"
       >
-        titre 1
-      </h5>
-      <p>
-        paragraphe 1
-      </p>
+        <h5
+          class="c5"
+        >
+          titre 1
+        </h5>
+        <p>
+          paragraphe 1
+        </p>
+      </div>
     </div>
     <div
       aria-labelledby="react-tabs-6"
@@ -453,16 +473,6 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 `;
 
 exports[`<Tabulator /> should render 1`] = `
-.c5 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c4:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -491,7 +501,7 @@ exports[`<Tabulator /> should render 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0.4rem 0 0;
   overflow: visible;
   list-style-type: none;
 }
@@ -526,24 +536,28 @@ exports[`<Tabulator /> should render 1`] = `
   background-color: #fff;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c3.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
-  }
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 @media (max-width:600px) {
@@ -557,6 +571,7 @@ exports[`<Tabulator /> should render 1`] = `
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding: 0;
   }
 }
 
@@ -586,6 +601,12 @@ exports[`<Tabulator /> should render 1`] = `
 @media (max-width:600px) {
   .c3.react-tabs__tab-panel--selected {
     padding: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.6rem;
   }
 }
 
@@ -635,14 +656,18 @@ exports[`<Tabulator /> should render 1`] = `
           CDI
         </h5>
       </div>
-      <h6
-        class="c5"
+      <div
+        class="c6"
       >
-        titre 1
-      </h6>
-      <p>
-        paragraphe 1
-      </p>
+        <h6
+          class="c5"
+        >
+          titre 1
+        </h6>
+        <p>
+          paragraphe 1
+        </p>
+      </div>
     </div>
     <div
       aria-labelledby="react-tabs-10"

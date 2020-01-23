@@ -1,35 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<List /> should render and increment heading level of children by one 1`] = `
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .c1 {
-  margin-bottom: 1.6rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c2 {
   position: relative;
-  margin: 0;
+  margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
 }
 
 .c0 {
@@ -38,20 +17,7 @@ exports[`<List /> should render and increment heading level of children by one 1
 
 @media (max-width:600px) {
   .c1 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -60,18 +26,11 @@ exports[`<List /> should render and increment heading level of children by one 1
     <li
       class="c0"
     >
-      <header
+      <h3
         class="c1"
       >
-        <h3
-          class="c2"
-        >
-          <div
-            class="c3"
-          />
-          title
-        </h3>
-      </header>
+        title
+      </h3>
     </li>
     <li
       class="c0"

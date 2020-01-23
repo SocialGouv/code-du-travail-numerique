@@ -14,12 +14,6 @@ export const Container = styled.div`
       `;
     }
   }}
-  & > *:first-child {
-    margin-top: 0;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
-  }
   @media (max-width: ${breakpoints.mobile}) {
     padding: ${({ narrow, noPadding }) =>
       narrow && noPadding ? "0" : `0 ${spacings.small}`};

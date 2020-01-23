@@ -21,7 +21,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
       description="Le droit du travail, c'est quoi ?"
       image={ogImage}
     />
-    <StyledSection>
+    <Section>
       <Container>
         <PageTitle>Le droit du travail, c’est quoi&nbsp;?</PageTitle>
         <FlexContainer>
@@ -59,20 +59,16 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
             </Wrapper>
           </SmallBlock>
         </FlexContainer>
+        <Origins />
+        <Hierarchy />
       </Container>
-    </StyledSection>
-    <Origins />
-    <Hierarchy />
+    </Section>
   </Layout>
 );
 
 export default DroitDuTravail;
 
 const { box, breakpoints, spacings } = theme;
-
-const StyledSection = styled(Section)`
-  padding: ${spacings.larger} 0;
-`;
 
 const FlexContainer = styled.div`
   display: flex;

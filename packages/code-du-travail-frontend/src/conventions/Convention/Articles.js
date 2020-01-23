@@ -12,7 +12,7 @@ function getArticleUrl({ id, containerId }) {
 function Articles({ blocs, containerId }) {
   const articlesByTheme = blocs.map(({ bloc, articles }) => ({
     id: `bloc-${bloc}`,
-    title: <AccordionHeader>{blocsLabels[bloc]}</AccordionHeader>,
+    title: blocsLabels[bloc],
     body: (
       <Grid columns={3}>
         {articles.map(({ title, id, section }) => (
@@ -56,10 +56,6 @@ function Articles({ blocs, containerId }) {
 export { Articles };
 
 const { spacings } = theme;
-
-const AccordionHeader = styled.strong`
-  margin: ${spacings.base} 0;
-`;
 
 const Label = styled.label`
   display: inline-block;

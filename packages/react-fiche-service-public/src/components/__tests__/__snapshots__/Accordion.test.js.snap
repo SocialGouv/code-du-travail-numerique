@@ -1,29 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should have two different levels of headings 1`] = `
-.c2 {
+.c9:not(:focus):not(:active) {
   position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
 }
 
-.c5 + .c4 {
+.c4 {
+  position: relative;
+  z-index: 1;
+}
+
+.c11 {
+  position: relative;
+  z-index: 1;
   border-top: 1px solid #bbcadf;
 }
 
-.c8 {
-  margin: 2rem 0;
-  padding: 0;
-}
-
-.c7 {
+.c6 {
   position: relative;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
@@ -38,14 +39,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   color: #7994d4;
 }
 
-[aria-expanded="true"] .c7,
-[aria-selected="true"] .c7 {
+[aria-expanded="true"] .c6,
+[aria-selected="true"] .c6 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,33 +63,66 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   cursor: pointer;
 }
 
-.c6:hover,
-.c6:focus,
-.c6:focus-within,
-.c6[aria-expanded="true"] {
+.c5:hover,
+.c5:focus,
+.c5:focus-within,
+.c5[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c9 {
+.c7 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c8 {
   padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c9.accordion__body--hidden {
+.c8.accordion__body--hidden {
   display: none;
 }
 
+.c10 > *:first-child {
+  margin-top: 0;
+}
+
+.c10 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c12 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c0 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
@@ -110,8 +144,20 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c7 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
     padding: 1rem 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    font-size: 1.6rem;
   }
 }
 
@@ -154,190 +200,252 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     class="c3"
     data-accordion-component="Accordion"
   >
-    <div
-      class="c4 c5"
-      data-accordion-component="AccordionItem"
-    >
+    <div>
       <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
+        class="c4"
+        data-accordion-component="AccordionItem"
+        index="0"
       >
         <div
-          aria-controls="accordion__panel-0"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c6"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-0"
-          role="button"
-          tabindex="0"
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
         >
-          <svg
-            class="c7"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            aria-controls="accordion__panel-0"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c5"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-0"
+            role="button"
+            tabindex="0"
           >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <h2
-            class="c8"
-          >
-            titre 1
-          </h2>
-        </div>
-      </div>
-      <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-0"
-        class="c9"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-0"
-      >
-        <p>
-          paragraphe 1-1
-        </p>
-        <p>
-          paragraphe 1-2
-        </p>
-      </div>
-    </div>
-    <div
-      class="c4 c5"
-      data-accordion-component="AccordionItem"
-    >
-      <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
-      >
-        <div
-          aria-controls="accordion__panel-1"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c6"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-1"
-          role="button"
-          tabindex="0"
-        >
-          <svg
-            class="c7"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <h2
-            class="c8"
-          >
-            titre 2
-          </h2>
-        </div>
-      </div>
-      <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-1"
-        class="c9"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-1"
-      >
-        <p>
-          paragraphe 2-1
-        </p>
-        <p>
-          paragraphe 2-2
-        </p>
-        <header
-          class="c0"
-        >
-          <h3
-            class="c1"
-          >
+            <svg
+              class="c6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
             <div
-              class="c2"
-            />
-            titre 2-1
-          </h3>
-        </header>
-      </div>
-    </div>
-    <div
-      class="c4 c5"
-      data-accordion-component="AccordionItem"
-    >
-      <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
-      >
+              class="c7"
+            >
+              titre 1
+            </div>
+          </div>
+        </div>
         <div
-          aria-controls="accordion__panel-2"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c6"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-2"
-          role="button"
-          tabindex="0"
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-0"
+          class="c8"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-0"
         >
-          <svg
-            class="c7"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="c9"
           >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <h2
-            class="c8"
+            <header
+              class="c0"
+            >
+              <h2
+                class="c1"
+              >
+                <div
+                  class="c2"
+                />
+                titre 1
+              </h2>
+            </header>
+          </div>
+          <div
+            class="c10"
           >
-            titre 3
-          </h2>
+            <p>
+              paragraphe 1-1
+            </p>
+            <p>
+              paragraphe 1-2
+            </p>
+          </div>
         </div>
       </div>
+    </div>
+    <div>
       <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-2"
-        class="c9"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-2"
+        class="c11"
+        data-accordion-component="AccordionItem"
+        index="1"
       >
-        <p>
-          paragraphe 3-1
-        </p>
+        <div
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
+        >
+          <div
+            aria-controls="accordion__panel-1"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c5"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-1"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              class="c6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c7"
+            >
+              titre 2
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-1"
+          class="c8"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-1"
+        >
+          <div
+            class="c9"
+          >
+            <header
+              class="c0"
+            >
+              <h2
+                class="c1"
+              >
+                <div
+                  class="c2"
+                />
+                titre 2
+              </h2>
+            </header>
+          </div>
+          <div
+            class="c10"
+          >
+            <p>
+              paragraphe 2-1
+            </p>
+            <p>
+              paragraphe 2-2
+            </p>
+            <h3
+              class="c12"
+            >
+              titre 2-1
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="c11"
+        data-accordion-component="AccordionItem"
+        index="2"
+      >
+        <div
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
+        >
+          <div
+            aria-controls="accordion__panel-2"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c5"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-2"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              class="c6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c7"
+            >
+              titre 3
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-2"
+          class="c8"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-2"
+        >
+          <div
+            class="c9"
+          >
+            <header
+              class="c0"
+            >
+              <h2
+                class="c1"
+              >
+                <div
+                  class="c2"
+                />
+                titre 3
+              </h2>
+            </header>
+          </div>
+          <div
+            class="c10"
+          >
+            <p>
+              paragraphe 3-1
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -348,26 +456,30 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Accordion /> should render all, siblings included 1`] = `
-.c0 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+.c7:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
 }
 
-.c3 + .c2 {
+.c2 {
+  position: relative;
+  z-index: 1;
+}
+
+.c9 {
+  position: relative;
+  z-index: 1;
   border-top: 1px solid #bbcadf;
 }
 
-.c6 {
-  margin: 2rem 0;
-  padding: 0;
-}
-
-.c5 {
+.c4 {
   position: relative;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
@@ -382,14 +494,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   color: #7994d4;
 }
 
-[aria-expanded="true"] .c5,
-[aria-selected="true"] .c5 {
+[aria-expanded="true"] .c4,
+[aria-selected="true"] .c4 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -406,29 +518,48 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   cursor: pointer;
 }
 
-.c4:hover,
-.c4:focus,
-.c4:focus-within,
-.c4[aria-expanded="true"] {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c7 {
+.c5 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c6 {
   padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c7 > *:first-child {
+.c6.accordion__body--hidden {
+  display: none;
+}
+
+.c8 > *:first-child {
   margin-top: 0;
 }
 
-.c7 > *:last-child {
+.c8 > *:last-child {
   margin-bottom: 0;
 }
 
-.c7.accordion__body--hidden {
-  display: none;
+.c0 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c1 {
@@ -436,14 +567,20 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 }
 
 @media (max-width:600px) {
-  .c0 {
+  .c5 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     padding: 1rem 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
   }
 }
 
@@ -460,183 +597,231 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     class="c1"
     data-accordion-component="Accordion"
   >
-    <div
-      class="c2 c3"
-      data-accordion-component="AccordionItem"
-    >
+    <div>
       <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
+        class="c2"
+        data-accordion-component="AccordionItem"
+        index="0"
       >
         <div
-          aria-controls="accordion__panel-3"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c4"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-3"
-          role="button"
-          tabindex="0"
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
         >
-          <svg
-            class="c5"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            aria-controls="accordion__panel-3"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c3"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-3"
+            role="button"
+            tabindex="0"
           >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <h5
-            class="c6"
-          >
-            titre 1
-          </h5>
+            <svg
+              class="c4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c5"
+            >
+              titre 1
+            </div>
+          </div>
         </div>
-      </div>
-      <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-3"
-        class="c7"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-3"
-      >
-        <p>
-          paragraphe 1-1
-        </p>
-        <p>
-          paragraphe 1-2
-        </p>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-3"
+          class="c6"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-3"
+        >
+          <div
+            class="c7"
+          >
+            <h5
+              class="c0"
+            >
+              titre 1
+            </h5>
+          </div>
+          <div
+            class="c8"
+          >
+            <p>
+              paragraphe 1-1
+            </p>
+            <p>
+              paragraphe 1-2
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-    <div
-      class="c2 c3"
-      data-accordion-component="AccordionItem"
-    >
+    <div>
       <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
+        class="c9"
+        data-accordion-component="AccordionItem"
+        index="1"
       >
         <div
-          aria-controls="accordion__panel-4"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c4"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-4"
-          role="button"
-          tabindex="0"
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
         >
-          <svg
-            class="c5"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            aria-controls="accordion__panel-4"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c3"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-4"
+            role="button"
+            tabindex="0"
           >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <h5
-            class="c6"
-          >
-            titre 2
-          </h5>
+            <svg
+              class="c4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c5"
+            >
+              titre 2
+            </div>
+          </div>
         </div>
-      </div>
-      <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-4"
-        class="c7"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-4"
-      >
-        <p>
-          paragraphe 2-1
-        </p>
-        <p>
-          paragraphe 2-2
-        </p>
-        <h6
-          class="c0"
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-4"
+          class="c6"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-4"
         >
-          titre 2-1
-        </h6>
+          <div
+            class="c7"
+          >
+            <h5
+              class="c0"
+            >
+              titre 2
+            </h5>
+          </div>
+          <div
+            class="c8"
+          >
+            <p>
+              paragraphe 2-1
+            </p>
+            <p>
+              paragraphe 2-2
+            </p>
+            <h6
+              class="c0"
+            >
+              titre 2-1
+            </h6>
+          </div>
+        </div>
       </div>
     </div>
-    <div
-      class="c2 c3"
-      data-accordion-component="AccordionItem"
-    >
+    <div>
       <div
-        aria-level="3"
-        class="accordion__heading"
-        data-accordion-component="AccordionItemHeading"
-        role="heading"
+        class="c9"
+        data-accordion-component="AccordionItem"
+        index="2"
       >
         <div
-          aria-controls="accordion__panel-5"
-          aria-disabled="false"
-          aria-expanded="false"
-          class="c4"
-          data-accordion-component="AccordionItemButton"
-          id="accordion__heading-5"
-          role="button"
-          tabindex="0"
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
         >
-          <svg
-            class="c5"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            aria-controls="accordion__panel-5"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c3"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-5"
+            role="button"
+            tabindex="0"
           >
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-          </svg>
-          <h5
-            class="c6"
-          >
-            titre 3
-          </h5>
+            <svg
+              class="c4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c5"
+            >
+              titre 3
+            </div>
+          </div>
         </div>
-      </div>
-      <div
-        aria-hidden="true"
-        aria-labelledby="accordion__heading-5"
-        class="c7"
-        data-accordion-component="AccordionItemPanel"
-        hidden=""
-        id="accordion__panel-5"
-      >
-        <p>
-          paragraphe 3-1
-        </p>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-5"
+          class="c6"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-5"
+        >
+          <div
+            class="c7"
+          >
+            <h5
+              class="c0"
+            >
+              titre 3
+            </h5>
+          </div>
+          <div
+            class="c8"
+          >
+            <p>
+              paragraphe 3-1
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

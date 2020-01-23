@@ -13,7 +13,7 @@ class Title extends React.PureComponent {
       case 0:
         return <UITitle>{children}</UITitle>;
       case 1:
-        return <UITitle as="h3">{children}</UITitle>;
+        return <Heading>{children}</Heading>;
       case 2:
         return <Heading as="h4">{children}</Heading>;
       case 3:

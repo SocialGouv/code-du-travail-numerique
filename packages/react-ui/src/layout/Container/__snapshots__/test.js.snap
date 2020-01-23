@@ -7,14 +7,6 @@ exports[`<Container /> renders 1`] = `
   padding: 0 2rem;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 @media (max-width:600px) {
   .c0 {
     padding: 0 1rem;
@@ -43,14 +35,6 @@ exports[`<Container /> renders narrow 1`] = `
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
 }
 
 @media (max-width:600px) {
@@ -84,14 +68,6 @@ exports[`<Container /> renders narrow without padding 1`] = `
   max-width: 74rem;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 @media (max-width:600px) {
   .c0 {
     padding: 0;
@@ -119,14 +95,6 @@ exports[`<Container /> renders without padding even if the prop is specified, be
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
 }
 
 @media (max-width:600px) {

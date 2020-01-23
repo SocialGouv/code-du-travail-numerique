@@ -138,7 +138,8 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 }
 
 .c0 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
@@ -724,7 +725,8 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 }
 
 .c0 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
@@ -1227,7 +1229,8 @@ exports[`<Step /> should render 1`] = `
 }
 
 .c0 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }

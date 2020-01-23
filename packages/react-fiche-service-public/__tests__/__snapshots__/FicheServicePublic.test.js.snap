@@ -1,36 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FicheServicePublic /> should render 1`] = `
-.c9 {
+.c6:not(:focus):not(:active) {
   position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c22 {
-  position: relative;
-  margin: 0 0 1rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c12 + .c11 {
-  border-top: 1px solid #bbcadf;
-}
-
-.c15 {
-  margin: 2rem 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
   padding: 0;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+}
+
+.c12 {
+  position: relative;
+  z-index: 1;
+}
+
+.c19 {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid #bbcadf;
 }
 
 .c14 {
@@ -79,25 +70,34 @@ exports[`<FicheServicePublic /> should render 1`] = `
   color: #3e486e;
 }
 
+.c15 {
+  margin: 2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c16 {
   padding: 1.6rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c16 > *:first-child {
-  margin-top: 0;
-}
-
-.c16 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c16.accordion__body--hidden {
   display: none;
 }
 
-.c20 {
+.c18 > *:first-child {
+  margin-top: 0;
+}
+
+.c18 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -134,16 +134,16 @@ exports[`<FicheServicePublic /> should render 1`] = `
   opacity: 1;
 }
 
-.c20:link,
-.c20:visited {
+.c23:link,
+.c23:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c20:not([disabled]):hover,
-.c20:not([disabled]):active,
-.c20:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):active,
+.c23:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -152,22 +152,23 @@ exports[`<FicheServicePublic /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c20[disabled] {
+.c23[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c6:not(:focus):not(:active) {
+.c9 {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .c2 {
@@ -186,7 +187,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0.4rem 0 0;
   overflow: visible;
   list-style-type: none;
 }
@@ -221,22 +222,33 @@ exports[`<FicheServicePublic /> should render 1`] = `
   background-color: #fff;
 }
 
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c5.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
+.c10 > *:first-child {
+  margin-top: 0;
+}
+
+.c10 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c17 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c7 {
-  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
@@ -253,15 +265,15 @@ exports[`<FicheServicePublic /> should render 1`] = `
   text-align: left;
 }
 
-.c10 {
+.c11 {
   margin-bottom: 3.2rem;
 }
 
-.c17 {
+.c20 {
   margin-bottom: 0.4rem;
 }
 
-.c18 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -279,7 +291,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c19 {
+.c22 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -289,23 +301,25 @@ exports[`<FicheServicePublic /> should render 1`] = `
   font-size: 1.8rem;
 }
 
-.c21 {
+.c24 {
   display: inline-block;
   margin-top: 0.4rem;
 }
 
-.c23 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem;
-  background-color: #f2f5fa;
+.c25 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
   border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  margin-bottom: 1.6rem;
 }
 
-.c23 > *:first-child {
+.c25 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c25 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -322,7 +336,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c15 {
     font-size: 1.6rem;
   }
 }
@@ -334,13 +348,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c23 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c23 {
     padding: 0 3rem;
   }
 }
@@ -356,6 +370,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding: 0;
   }
 }
 
@@ -389,6 +404,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c17 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c7 {
     margin-bottom: 1rem;
     margin-left: auto;
@@ -408,14 +429,27 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c21 {
     padding: 1rem 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c22 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c25 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c25 {
+    padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -502,1023 +536,1179 @@ exports[`<FicheServicePublic /> should render 1`] = `
         </div>
         <div
           class="c10"
-          data-accordion-component="Accordion"
         >
           <div
-            class="c11 c12"
-            data-accordion-component="AccordionItem"
+            class="c11"
+            data-accordion-component="Accordion"
           >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
+            <div>
               <div
-                aria-controls="accordion__panel-0"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c13"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-0"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c14"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c15"
-                >
-                  De quoi s'agit-il ?
-                </h3>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-0"
-              class="c16"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-0"
-            >
-              <p>
-                La démission est un mode de rupture du contrat de travail qui  vous permet de quitter votre entreprise sans avoir à justifier cette décision.
-              </p>
-              <p>
-                
-                  Ce  droit peut être  exercé à tout moment, même si le  contrat de travail est
-                  
-                suspendu
-                
-                  .
-               
-              </p>
-            </div>
-          </div>
-          <div
-            class="c11 c12"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-1"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c13"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-1"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c14"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c15"
-                >
-                  Conditions
-                </h3>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-1"
-              class="c16"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-1"
-            >
-              <p>
-                Le salarié peut mettre fin à son contrat de travail dans les cas suivants :
-              </p>
-              <ul>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    Dans le cadre d'une rupture volontaire du contrat de travail par le salarié
-                  </p>
-                </li>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    
-                        Pendant la
-                        
-                    période d'essai
-                    
-                        sans motif particulier
-                     
-                  </p>
-                </li>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    
-                        En cas de
-                        
-                    départ volontaire à la retraite
-                  </p>
-                </li>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    
-                        Dans le cadre d'une
-                        
-                    résiliation judiciaire
-                  </p>
-                </li>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    
-                        Dans le cadre d'une
-                        
-                    prise d'acte
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="c11 c12"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-2"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c13"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-2"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c14"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c15"
-                >
-                  Volonté de démissionner
-                </h3>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-2"
-              class="c16"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-2"
-            >
-              <p>
-                Pour qu'une démission soit valable, vous devez manifester de façon claire et non équivoque votre volonté de mettre fin au contrat de travail.
-              </p>
-              <p>
-                
-                  Une absence injustifiée ou un
-                  
-                abandon de poste
-                
-                  ne peuvent pas être considérés comme une démission.
-               
-              </p>
-              <p>
-                
-                  En cas d'ambiguïté sur votre volonté claire et non équivoque, le conseil de prud'hommes  peut requalifier la démission  en
-                  
-                licenciement injustifié (ou sans cause réelle et sérieuse)
-                
-                  .
-               
-              </p>
-              <p>
-                
-                  Dans certains cas, vous pouvez
-                  
-                revenir sur votre démission
-                
-                  .
-               
-              </p>
-              <p>
-                
-                  La démission ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur. Sinon, vous pouvez être condamné(e) au versement de
-                  
-                dommages et intérêts
-                
-                  à l'employeur.
-               
-              </p>
-            </div>
-          </div>
-          <div
-            class="c11 c12"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-3"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c13"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-3"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c14"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c15"
-                >
-                  Procédure
-                </h3>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-3"
-              class="c16"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-3"
-            >
-              <p>
-                Pour manifester votre volonté claire et non équivoque de démissionner, vous devez nécessairement prévenir votre employeur.
-              </p>
-              <p>
-                Il n'y a pas de procédure légale imposée pour signifier une démission. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de démission.
-              </p>
-              <div
-                class="c18"
+                class="c12"
+                data-accordion-component="AccordionItem"
+                index="0"
               >
                 <div
-                  class="c19"
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
                 >
-                  Modèle de document
-                </div>
-                <a
-                  class="c20 no-after"
-                  href="https://www.service-public.fr/simulateur/calcul/Demission"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Lettre de démission du salarié
-                </a>
-                <small
-                  class="c21"
-                >
-                  Direction de l'information légale et administrative (Premier ministre)
-                </small>
-              </div>
-              <p>
-                
-                  Des
-                  
-                dispositions conventionnelles
-                
-                  peuvent imposer l'envoi de la lettre de démission par lettre recommandée avec
-                  
-                RAR
-                
-                  .
-               
-              </p>
-            </div>
-          </div>
-          <div
-            class="c11 c12"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-4"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c13"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-4"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c14"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c15"
-                >
-                  Préavis
-                </h3>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-4"
-              class="c16"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-4"
-            >
-              <p>
-                Vous ne pouvez pas quitter votre travail dès que vous avez signifié votre démission à votre employeur. Vous continuez de travailler jusqu'à la fin de votre contrat de travail, dans le respect du délai de préavis prévu (sauf en cas de dispense du préavis).
-              </p>
-              <h4
-                class="c22"
-              >
-                Durée
-              </h4>
-              <div
-                class="c2"
-                data-tabs="true"
-              >
-                <ul
-                  class="c3"
-                  role="tablist"
-                >
-                  <li
-                    aria-controls="react-tabs-7"
+                  <div
+                    aria-controls="accordion__panel-0"
                     aria-disabled="false"
-                    aria-selected="true"
-                    class="c4 react-tabs__tab--selected"
-                    id="react-tabs-6"
-                    role="tab"
+                    aria-expanded="false"
+                    class="c13"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-0"
+                    role="button"
                     tabindex="0"
                   >
-                    Cas général
-                  </li>
-                  <li
-                    aria-controls="react-tabs-9"
-                    aria-disabled="false"
-                    aria-selected="false"
-                    class="c4"
-                    id="react-tabs-8"
-                    role="tab"
-                  >
-                    Journaliste
-                  </li>
-                  <li
-                    aria-controls="react-tabs-11"
-                    aria-disabled="false"
-                    aria-selected="false"
-                    class="c4"
-                    id="react-tabs-10"
-                    role="tab"
-                  >
-                    VRP
-                  </li>
-                </ul>
+                    <svg
+                      class="c14"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polyline
+                        points="9 18 15 12 9 6"
+                      />
+                    </svg>
+                    <div
+                      class="c15"
+                    >
+                      De quoi s'agit-il ?
+                    </div>
+                  </div>
+                </div>
                 <div
-                  aria-labelledby="react-tabs-6"
-                  class="c5 react-tabs__tab-panel--selected"
-                  id="react-tabs-7"
-                  role="tabpanel"
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-0"
+                  class="c16"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-0"
                 >
                   <div
                     class="c6"
                   >
-                    <h5
-                      class="c22"
+                    <h3
+                      class="c17"
                     >
-                      Cas général
-                    </h5>
+                      De quoi s'agit-il ?
+                    </h3>
                   </div>
-                  <p>
-                    La durée du préavis de démission est fixée :
-                  </p>
-                  <ul>
-                    <li
-                      class="c17"
-                    >
-                      <p>
-                        Soit par convention collective ou accord collectif
-                      </p>
-                    </li>
-                    <li
-                      class="c17"
-                    >
-                      <p>
-                        
-                                 Soit par les
-                                 
-                        usages
-                        
-                                 pratiqués dans la localité et dans la profession
-                              
-                      </p>
-                    </li>
-                    <li
-                      class="c17"
-                    >
-                      <p>
-                        Soit par le droit local (en Alsace-Moselle)
-                      </p>
-                    </li>
-                  </ul>
-                  <p>
-                    Votre contrat de travail peut prévoir un préavis de démission, qui s'applique si sa durée est plus courte que celle prévue par la convention collective, l'accord collectif ou les usages.
-                  </p>
-                  <p>
-                    Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
-                  </p>
                   <div
-                    class="c23"
+                    class="c18"
                   >
-                    <h6
-                      class="c22"
-                    >
-                      À savoir
-                    </h6>
                     <p>
-                      le préavis commence à courir à compter de la notification à l'employeur de votre démission.
+                      La démission est un mode de rupture du contrat de travail qui  vous permet de quitter votre entreprise sans avoir à justifier cette décision.
+                    </p>
+                    <p>
+                      
+                  Ce  droit peut être  exercé à tout moment, même si le  contrat de travail est
+                  
+                      suspendu
+                      
+                  .
+               
                     </p>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="react-tabs-8"
-                  class="c5"
-                  id="react-tabs-9"
-                  role="tabpanel"
-                />
-                <div
-                  aria-labelledby="react-tabs-10"
-                  class="c5"
-                  id="react-tabs-11"
-                  role="tabpanel"
-                />
               </div>
-              <h4
-                class="c22"
-              >
-                Dispense de préavis
-              </h4>
-              <p>
-                Vous n'êtes pas tenu(e) d'effectuer de préavis dans les cas suivants :
-              </p>
-              <ul>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    
-                           Démission
-                           
-                    pendant la grossesse ou pour élever un enfant
-                  </p>
-                </li>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    
-                           Démission à l'issue d'un
-                           
-                    congé pour création d'entreprise
-                  </p>
-                </li>
-              </ul>
-              <p>
-                En dehors de ces deux cas, vous pouvez être dispensé d'effectuer votre préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
-              </p>
+            </div>
+            <div>
               <div
-                class="c2"
-                data-tabs="true"
+                class="c19"
+                data-accordion-component="AccordionItem"
+                index="1"
               >
-                <ul
-                  class="c3"
-                  role="tablist"
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
                 >
-                  <li
-                    aria-controls="react-tabs-13"
+                  <div
+                    aria-controls="accordion__panel-1"
                     aria-disabled="false"
-                    aria-selected="true"
-                    class="c4 react-tabs__tab--selected"
-                    id="react-tabs-12"
-                    role="tab"
+                    aria-expanded="false"
+                    class="c13"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-1"
+                    role="button"
                     tabindex="0"
                   >
-                    Vous demandez une dispense de préavis
-                  </li>
-                  <li
-                    aria-controls="react-tabs-15"
-                    aria-disabled="false"
-                    aria-selected="false"
-                    class="c4"
-                    id="react-tabs-14"
-                    role="tab"
-                  >
-                    Votre employeur vous dispense de préavis
-                  </li>
-                </ul>
-                <div
-                  aria-labelledby="react-tabs-12"
-                  class="c5 react-tabs__tab-panel--selected"
-                  id="react-tabs-13"
-                  role="tabpanel"
-                >
-                  <div
-                    class="c6"
-                  >
-                    <h5
-                      class="c22"
+                    <svg
+                      class="c14"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      Vous demandez une dispense de préavis
-                    </h5>
-                  </div>
-                  <p>
-                    Vous pouvez demander à votre employeur de vous dispenser d'effectuer votre préavis (par écrit ou par oral) :
-                  </p>
-                  <div
-                    class="c10"
-                    data-accordion-component="Accordion"
-                  >
+                      <polyline
+                        points="9 18 15 12 9 6"
+                      />
+                    </svg>
                     <div
-                      class="c11 c12"
-                      data-accordion-component="AccordionItem"
+                      class="c15"
                     >
-                      <div
-                        aria-level="3"
-                        class="accordion__heading"
-                        data-accordion-component="AccordionItemHeading"
-                        role="heading"
-                      >
-                        <div
-                          aria-controls="accordion__panel-5"
-                          aria-disabled="false"
-                          aria-expanded="false"
-                          class="c13"
-                          data-accordion-component="AccordionItemButton"
-                          id="accordion__heading-5"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <svg
-                            class="c14"
-                            fill="none"
-                            height="24"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <polyline
-                              points="9 18 15 12 9 6"
-                            />
-                          </svg>
-                          <h6
-                            class="c15"
-                          >
-                            Accord de l'employeur
-                          </h6>
-                        </div>
-                      </div>
-                      <div
-                        aria-hidden="true"
-                        aria-labelledby="accordion__heading-5"
-                        class="c16"
-                        data-accordion-component="AccordionItemPanel"
-                        hidden=""
-                        id="accordion__panel-5"
-                      >
-                        <p>
-                          
-                                 Si votre employeur accepte, votre contrat de travail prend fin à la date convenue entre vous. Dans ce cas, l'employeur n'est pas tenu de verser
-                                 
-                          l'indemnité compensatrice
-                          
-                                 .
-                              
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="c11 c12"
-                      data-accordion-component="AccordionItem"
-                    >
-                      <div
-                        aria-level="3"
-                        class="accordion__heading"
-                        data-accordion-component="AccordionItemHeading"
-                        role="heading"
-                      >
-                        <div
-                          aria-controls="accordion__panel-6"
-                          aria-disabled="false"
-                          aria-expanded="false"
-                          class="c13"
-                          data-accordion-component="AccordionItemButton"
-                          id="accordion__heading-6"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <svg
-                            class="c14"
-                            fill="none"
-                            height="24"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <polyline
-                              points="9 18 15 12 9 6"
-                            />
-                          </svg>
-                          <h6
-                            class="c15"
-                          >
-                            Refus de l'employeur
-                          </h6>
-                        </div>
-                      </div>
-                      <div
-                        aria-hidden="true"
-                        aria-labelledby="accordion__heading-6"
-                        class="c16"
-                        data-accordion-component="AccordionItemPanel"
-                        hidden=""
-                        id="accordion__panel-6"
-                      >
-                        <p>
-                          Si votre employeur refuse, vous devez effectuer votre préavis, sous peine de devoir lui verser une indemnité d'un montant égal à la rémunération brute que vous auriez perçue si vous aviez travaillé.
-                        </p>
-                      </div>
+                      Conditions
                     </div>
                   </div>
                 </div>
                 <div
-                  aria-labelledby="react-tabs-14"
-                  class="c5"
-                  id="react-tabs-15"
-                  role="tabpanel"
-                />
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-1"
+                  class="c16"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-1"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <h3
+                      class="c17"
+                    >
+                      Conditions
+                    </h3>
+                  </div>
+                  <div
+                    class="c18"
+                  >
+                    <p>
+                      Le salarié peut mettre fin à son contrat de travail dans les cas suivants :
+                    </p>
+                    <ul>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          Dans le cadre d'une rupture volontaire du contrat de travail par le salarié
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          
+                        Pendant la
+                        
+                          période d'essai
+                          
+                        sans motif particulier
+                     
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          
+                        En cas de
+                        
+                          départ volontaire à la retraite
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          
+                        Dans le cadre d'une
+                        
+                          résiliation judiciaire
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          
+                        Dans le cadre d'une
+                        
+                          prise d'acte
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <h4
-                class="c22"
+            </div>
+            <div>
+              <div
+                class="c19"
+                data-accordion-component="AccordionItem"
+                index="2"
               >
-                Report ou suspension du préavis
-              </h4>
-              <p>
-                Le préavis peut être reporté ou suspendu dans les cas suivants :
-              </p>
-              <ul>
-                <li
-                  class="c17"
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
                 >
-                  <p>
-                    Accord entre le salarié et l'employeur
-                  </p>
-                </li>
-                <li
-                  class="c17"
+                  <div
+                    aria-controls="accordion__panel-2"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c13"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-2"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      class="c14"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polyline
+                        points="9 18 15 12 9 6"
+                      />
+                    </svg>
+                    <div
+                      class="c15"
+                    >
+                      Volonté de démissionner
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-2"
+                  class="c16"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-2"
                 >
-                  <p>
-                    
+                  <div
+                    class="c6"
+                  >
+                    <h3
+                      class="c17"
+                    >
+                      Volonté de démissionner
+                    </h3>
+                  </div>
+                  <div
+                    class="c18"
+                  >
+                    <p>
+                      Pour qu'une démission soit valable, vous devez manifester de façon claire et non équivoque votre volonté de mettre fin au contrat de travail.
+                    </p>
+                    <p>
+                      
+                  Une absence injustifiée ou un
+                  
+                      abandon de poste
+                      
+                  ne peuvent pas être considérés comme une démission.
+               
+                    </p>
+                    <p>
+                      
+                  En cas d'ambiguïté sur votre volonté claire et non équivoque, le conseil de prud'hommes  peut requalifier la démission  en
+                  
+                      licenciement injustifié (ou sans cause réelle et sérieuse)
+                      
+                  .
+               
+                    </p>
+                    <p>
+                      
+                  Dans certains cas, vous pouvez
+                  
+                      revenir sur votre démission
+                      
+                  .
+               
+                    </p>
+                    <p>
+                      
+                  La démission ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur. Sinon, vous pouvez être condamné(e) au versement de
+                  
+                      dommages et intérêts
+                      
+                  à l'employeur.
+               
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="c19"
+                data-accordion-component="AccordionItem"
+                index="3"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-3"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c13"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-3"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      class="c14"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polyline
+                        points="9 18 15 12 9 6"
+                      />
+                    </svg>
+                    <div
+                      class="c15"
+                    >
+                      Procédure
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-3"
+                  class="c16"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-3"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <h3
+                      class="c17"
+                    >
+                      Procédure
+                    </h3>
+                  </div>
+                  <div
+                    class="c18"
+                  >
+                    <p>
+                      Pour manifester votre volonté claire et non équivoque de démissionner, vous devez nécessairement prévenir votre employeur.
+                    </p>
+                    <p>
+                      Il n'y a pas de procédure légale imposée pour signifier une démission. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de démission.
+                    </p>
+                    <div
+                      class="c21"
+                    >
+                      <div
+                        class="c22"
+                      >
+                        Modèle de document
+                      </div>
+                      <a
+                        class="c23 no-after"
+                        href="https://www.service-public.fr/simulateur/calcul/Demission"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        Lettre de démission du salarié
+                      </a>
+                      <small
+                        class="c24"
+                      >
+                        Direction de l'information légale et administrative (Premier ministre)
+                      </small>
+                    </div>
+                    <p>
+                      
+                  Des
+                  
+                      dispositions conventionnelles
+                      
+                  peuvent imposer l'envoi de la lettre de démission par lettre recommandée avec
+                  
+                      RAR
+                      
+                  .
+               
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="c19"
+                data-accordion-component="AccordionItem"
+                index="4"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-4"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c13"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-4"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      class="c14"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polyline
+                        points="9 18 15 12 9 6"
+                      />
+                    </svg>
+                    <div
+                      class="c15"
+                    >
+                      Préavis
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-4"
+                  class="c16"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-4"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <h3
+                      class="c17"
+                    >
+                      Préavis
+                    </h3>
+                  </div>
+                  <div
+                    class="c18"
+                  >
+                    <p>
+                      Vous ne pouvez pas quitter votre travail dès que vous avez signifié votre démission à votre employeur. Vous continuez de travailler jusqu'à la fin de votre contrat de travail, dans le respect du délai de préavis prévu (sauf en cas de dispense du préavis).
+                    </p>
+                    <h4
+                      class="c17"
+                    >
+                      Durée
+                    </h4>
+                    <div
+                      class="c2"
+                      data-tabs="true"
+                    >
+                      <ul
+                        class="c3"
+                        role="tablist"
+                      >
+                        <li
+                          aria-controls="react-tabs-7"
+                          aria-disabled="false"
+                          aria-selected="true"
+                          class="c4 react-tabs__tab--selected"
+                          id="react-tabs-6"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          Cas général
+                        </li>
+                        <li
+                          aria-controls="react-tabs-9"
+                          aria-disabled="false"
+                          aria-selected="false"
+                          class="c4"
+                          id="react-tabs-8"
+                          role="tab"
+                        >
+                          Journaliste
+                        </li>
+                        <li
+                          aria-controls="react-tabs-11"
+                          aria-disabled="false"
+                          aria-selected="false"
+                          class="c4"
+                          id="react-tabs-10"
+                          role="tab"
+                        >
+                          VRP
+                        </li>
+                      </ul>
+                      <div
+                        aria-labelledby="react-tabs-6"
+                        class="c5 react-tabs__tab-panel--selected"
+                        id="react-tabs-7"
+                        role="tabpanel"
+                      >
+                        <div
+                          class="c6"
+                        >
+                          <h5
+                            class="c17"
+                          >
+                            Cas général
+                          </h5>
+                        </div>
+                        <div
+                          class="c10"
+                        >
+                          <p>
+                            La durée du préavis de démission est fixée :
+                          </p>
+                          <ul>
+                            <li
+                              class="c20"
+                            >
+                              <p>
+                                Soit par convention collective ou accord collectif
+                              </p>
+                            </li>
+                            <li
+                              class="c20"
+                            >
+                              <p>
+                                
+                                 Soit par les
+                                 
+                                usages
+                                
+                                 pratiqués dans la localité et dans la profession
+                              
+                              </p>
+                            </li>
+                            <li
+                              class="c20"
+                            >
+                              <p>
+                                Soit par le droit local (en Alsace-Moselle)
+                              </p>
+                            </li>
+                          </ul>
+                          <p>
+                            Votre contrat de travail peut prévoir un préavis de démission, qui s'applique si sa durée est plus courte que celle prévue par la convention collective, l'accord collectif ou les usages.
+                          </p>
+                          <p>
+                            Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
+                          </p>
+                          <div
+                            class="c25"
+                          >
+                            <h6
+                              class="c17"
+                            >
+                              À savoir
+                            </h6>
+                            <p>
+                              le préavis commence à courir à compter de la notification à l'employeur de votre démission.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-labelledby="react-tabs-8"
+                        class="c5"
+                        id="react-tabs-9"
+                        role="tabpanel"
+                      />
+                      <div
+                        aria-labelledby="react-tabs-10"
+                        class="c5"
+                        id="react-tabs-11"
+                        role="tabpanel"
+                      />
+                    </div>
+                    <h4
+                      class="c17"
+                    >
+                      Dispense de préavis
+                    </h4>
+                    <p>
+                      Vous n'êtes pas tenu(e) d'effectuer de préavis dans les cas suivants :
+                    </p>
+                    <ul>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          
+                           Démission
+                           
+                          pendant la grossesse ou pour élever un enfant
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          
+                           Démission à l'issue d'un
+                           
+                          congé pour création d'entreprise
+                        </p>
+                      </li>
+                    </ul>
+                    <p>
+                      En dehors de ces deux cas, vous pouvez être dispensé d'effectuer votre préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
+                    </p>
+                    <div
+                      class="c2"
+                      data-tabs="true"
+                    >
+                      <ul
+                        class="c3"
+                        role="tablist"
+                      >
+                        <li
+                          aria-controls="react-tabs-13"
+                          aria-disabled="false"
+                          aria-selected="true"
+                          class="c4 react-tabs__tab--selected"
+                          id="react-tabs-12"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          Vous demandez une dispense de préavis
+                        </li>
+                        <li
+                          aria-controls="react-tabs-15"
+                          aria-disabled="false"
+                          aria-selected="false"
+                          class="c4"
+                          id="react-tabs-14"
+                          role="tab"
+                        >
+                          Votre employeur vous dispense de préavis
+                        </li>
+                      </ul>
+                      <div
+                        aria-labelledby="react-tabs-12"
+                        class="c5 react-tabs__tab-panel--selected"
+                        id="react-tabs-13"
+                        role="tabpanel"
+                      >
+                        <div
+                          class="c6"
+                        >
+                          <h5
+                            class="c17"
+                          >
+                            Vous demandez une dispense de préavis
+                          </h5>
+                        </div>
+                        <div
+                          class="c10"
+                        >
+                          <p>
+                            Vous pouvez demander à votre employeur de vous dispenser d'effectuer votre préavis (par écrit ou par oral) :
+                          </p>
+                          <div
+                            class="c11"
+                            data-accordion-component="Accordion"
+                          >
+                            <div>
+                              <div
+                                class="c12"
+                                data-accordion-component="AccordionItem"
+                                index="0"
+                              >
+                                <div
+                                  aria-level="3"
+                                  class="accordion__heading"
+                                  data-accordion-component="AccordionItemHeading"
+                                  role="heading"
+                                >
+                                  <div
+                                    aria-controls="accordion__panel-5"
+                                    aria-disabled="false"
+                                    aria-expanded="false"
+                                    class="c13"
+                                    data-accordion-component="AccordionItemButton"
+                                    id="accordion__heading-5"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      class="c14"
+                                      fill="none"
+                                      height="24"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      />
+                                    </svg>
+                                    <div
+                                      class="c15"
+                                    >
+                                      Accord de l'employeur
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  aria-hidden="true"
+                                  aria-labelledby="accordion__heading-5"
+                                  class="c16"
+                                  data-accordion-component="AccordionItemPanel"
+                                  hidden=""
+                                  id="accordion__panel-5"
+                                >
+                                  <div
+                                    class="c6"
+                                  >
+                                    <h6
+                                      class="c17"
+                                    >
+                                      Accord de l'employeur
+                                    </h6>
+                                  </div>
+                                  <div
+                                    class="c18"
+                                  >
+                                    <p>
+                                      
+                                 Si votre employeur accepte, votre contrat de travail prend fin à la date convenue entre vous. Dans ce cas, l'employeur n'est pas tenu de verser
+                                 
+                                      l'indemnité compensatrice
+                                      
+                                 .
+                              
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div
+                                class="c19"
+                                data-accordion-component="AccordionItem"
+                                index="1"
+                              >
+                                <div
+                                  aria-level="3"
+                                  class="accordion__heading"
+                                  data-accordion-component="AccordionItemHeading"
+                                  role="heading"
+                                >
+                                  <div
+                                    aria-controls="accordion__panel-6"
+                                    aria-disabled="false"
+                                    aria-expanded="false"
+                                    class="c13"
+                                    data-accordion-component="AccordionItemButton"
+                                    id="accordion__heading-6"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      class="c14"
+                                      fill="none"
+                                      height="24"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      />
+                                    </svg>
+                                    <div
+                                      class="c15"
+                                    >
+                                      Refus de l'employeur
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  aria-hidden="true"
+                                  aria-labelledby="accordion__heading-6"
+                                  class="c16"
+                                  data-accordion-component="AccordionItemPanel"
+                                  hidden=""
+                                  id="accordion__panel-6"
+                                >
+                                  <div
+                                    class="c6"
+                                  >
+                                    <h6
+                                      class="c17"
+                                    >
+                                      Refus de l'employeur
+                                    </h6>
+                                  </div>
+                                  <div
+                                    class="c18"
+                                  >
+                                    <p>
+                                      Si votre employeur refuse, vous devez effectuer votre préavis, sous peine de devoir lui verser une indemnité d'un montant égal à la rémunération brute que vous auriez perçue si vous aviez travaillé.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-labelledby="react-tabs-14"
+                        class="c5"
+                        id="react-tabs-15"
+                        role="tabpanel"
+                      />
+                    </div>
+                    <h4
+                      class="c17"
+                    >
+                      Report ou suspension du préavis
+                    </h4>
+                    <p>
+                      Le préavis peut être reporté ou suspendu dans les cas suivants :
+                    </p>
+                    <ul>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          Accord entre le salarié et l'employeur
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          
                            Prise de
                            
-                    congés payés
-                    
+                          congés payés
+                          
                            dont la date a été fixée avant la notification de la rupture
                         
-                  </p>
-                </li>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    Arrêt de travail
-                    
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          Arrêt de travail
+                          
                            survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
                         
-                  </p>
-                </li>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    Dispositions conventionnelles
-                    
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          Dispositions conventionnelles
+                          
                            le prévoyant
                         
-                  </p>
-                </li>
-              </ul>
-              <h4
-                class="c22"
-              >
-                Absence pour recherche d'emploi
-              </h4>
-              <p>
-                
+                        </p>
+                      </li>
+                    </ul>
+                    <h4
+                      class="c17"
+                    >
+                      Absence pour recherche d'emploi
+                    </h4>
+                    <p>
+                      
                      Il n'existe aucune disposition légale vous permettant de vous
                      
-                absenter
-                
+                      absenter
+                      
                      pour rechercher un emploi.
                   
-              </p>
-              <p>
-                Toutefois, des dispositions conventionnelles ou, à défaut, un usage dans la localité ou la profession peuvent prévoir des temps d'absence pour rechercher un emploi pendant la durée du préavis.
-              </p>
-            </div>
-          </div>
-          <div
-            class="c11 c12"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-7"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c13"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-7"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c14"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c15"
-                >
-                  Indemnisation
-                </h3>
+                    </p>
+                    <p>
+                      Toutefois, des dispositions conventionnelles ou, à défaut, un usage dans la localité ou la profession peuvent prévoir des temps d'absence pour rechercher un emploi pendant la durée du préavis.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-7"
-              class="c16"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-7"
-            >
-              <p>
-                <strong>
-                  Indemnité compensatrice de préavis
-                </strong>
-              </p>
-              <p>
-                
+            <div>
+              <div
+                class="c19"
+                data-accordion-component="AccordionItem"
+                index="5"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-7"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c13"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-7"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      class="c14"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polyline
+                        points="9 18 15 12 9 6"
+                      />
+                    </svg>
+                    <div
+                      class="c15"
+                    >
+                      Indemnisation
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-7"
+                  class="c16"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-7"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <h3
+                      class="c17"
+                    >
+                      Indemnisation
+                    </h3>
+                  </div>
+                  <div
+                    class="c18"
+                  >
+                    <p>
+                      <strong>
+                        Indemnité compensatrice de préavis
+                      </strong>
+                    </p>
+                    <p>
+                      
                   Si vous êtes dispensé(e) d'effectuer votre préavis par votre employeur, vous avez droit au versement d'une
                   
-                indemnité compensatrice de préavis
-                
+                      indemnité compensatrice de préavis
+                      
                   .
                
-              </p>
-              <p>
-                <strong>
-                  Indemnité compensatrice de congés payés
-                </strong>
-              </p>
-              <p>
-                
+                    </p>
+                    <p>
+                      <strong>
+                        Indemnité compensatrice de congés payés
+                      </strong>
+                    </p>
+                    <p>
+                      
                   Vous avez droit à une
                   
-                indemnité compensatrice de congés payés
-                
+                      indemnité compensatrice de congés payés
+                      
                   si vous n'avez pas pu prendre la totalité des congés acquis avant la date de rupture de votre contrat.
                
-              </p>
-              <p>
-                <strong>
-                  Complémentaire santé
-                </strong>
-              </p>
-              <p>
-                
+                    </p>
+                    <p>
+                      <strong>
+                        Complémentaire santé
+                      </strong>
+                    </p>
+                    <p>
+                      
                   Certains motifs de démission ouvrent droit au versement  des
                   
-                allocations chômage
-                
+                      allocations chômage
+                      
                   . Si c'est votre cas, vous continuez à bénéficier de la couverture santé que vous avez souscrite dans le cadre de votre ancien travail, sous
                   
-                certaines conditions
-                
+                      certaines conditions
+                      
                   .
                
-              </p>
-              <p>
-                <strong>
-                  Épargne salariale
-                </strong>
-              </p>
-              <p>
-                
+                    </p>
+                    <p>
+                      <strong>
+                        Épargne salariale
+                      </strong>
+                    </p>
+                    <p>
+                      
                   Si vous bénéficiez d'un dispositif d'épargne salariale, vous pouvez
                   
-                demander le déblocage anticipé
-                
+                      demander le déblocage anticipé
+                      
                   des sommes.
                
-              </p>
-            </div>
-          </div>
-          <div
-            class="c11 c12"
-            data-accordion-component="AccordionItem"
-          >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-8"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c13"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-8"
-                role="button"
-                tabindex="0"
-              >
-                <svg
-                  class="c14"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <h3
-                  class="c15"
-                >
-                  Documents remis au salarié
-                </h3>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-8"
-              class="c16"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-8"
-            >
-              <p>
-                L'employeur doit remettre au salarié les documents suivants :
-              </p>
-              <ul>
-                <li
-                  class="c17"
+            <div>
+              <div
+                class="c19"
+                data-accordion-component="AccordionItem"
+                index="6"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
                 >
-                  <p>
-                    Certificat de travail
-                  </p>
-                </li>
-                <li
-                  class="c17"
+                  <div
+                    aria-controls="accordion__panel-8"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c13"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-8"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      class="c14"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polyline
+                        points="9 18 15 12 9 6"
+                      />
+                    </svg>
+                    <div
+                      class="c15"
+                    >
+                      Documents remis au salarié
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-8"
+                  class="c16"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-8"
                 >
-                  <p>
-                    Attestation Pôle emploi
-                  </p>
-                </li>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    Solde de tout compte
-                  </p>
-                </li>
-                <li
-                  class="c17"
-                >
-                  <p>
-                    En cas de dispositifs de participation, d'intéressement et des plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
-                  </p>
-                </li>
-              </ul>
+                  <div
+                    class="c6"
+                  >
+                    <h3
+                      class="c17"
+                    >
+                      Documents remis au salarié
+                    </h3>
+                  </div>
+                  <div
+                    class="c18"
+                  >
+                    <p>
+                      L'employeur doit remettre au salarié les documents suivants :
+                    </p>
+                    <ul>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          Certificat de travail
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          Attestation Pôle emploi
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          Solde de tout compte
+                        </p>
+                      </li>
+                      <li
+                        class="c20"
+                      >
+                        <p>
+                          En cas de dispositifs de participation, d'intéressement et des plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1537,15 +1727,15 @@ exports[`<FicheServicePublic /> should render 1`] = `
       />
     </div>
     <div
-      class="c18"
+      class="c21"
     >
       <div
-        class="c19"
+        class="c22"
       >
         Modèle de document
       </div>
       <a
-        class="c20 no-after"
+        class="c23 no-after"
         href="https://www.service-public.fr/simulateur/calcul/Demission"
         rel="noopener noreferrer"
         target="_blank"
@@ -1553,7 +1743,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         Lettre de démission du salarié
       </a>
       <small
-        class="c21"
+        class="c24"
       >
         Direction de l'information légale et administrative (Premier ministre)
       </small>

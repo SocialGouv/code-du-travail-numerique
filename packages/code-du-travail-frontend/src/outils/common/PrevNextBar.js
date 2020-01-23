@@ -52,7 +52,9 @@ const { breakpoints, spacings } = theme;
 
 const StyledButton = styled(Button)`
   & + & {
-    margin-top: ${spacings.base};
+    @media (max-width: ${breakpoints.tablet}) {
+      margin-top: ${spacings.base};
+    }
   }
 `;
 

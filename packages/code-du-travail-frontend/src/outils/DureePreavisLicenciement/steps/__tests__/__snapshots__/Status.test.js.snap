@@ -316,7 +316,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 .c5 {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 @media (max-width:600px) {

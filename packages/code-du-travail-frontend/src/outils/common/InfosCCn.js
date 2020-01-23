@@ -50,10 +50,11 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                   <br />
                   {input.value.label && `(${input.value.label})`}
                 </p>
-
-                <Button variant="link" type="button" onClick={clearCCInfo}>
-                  Changer de convention collective
-                </Button>
+                <p>
+                  <Button variant="link" type="button" onClick={clearCCInfo}>
+                    Changer de convention collective
+                  </Button>
+                </p>
                 {error && <ErrorToast>{error}</ErrorToast>}
               </>
             );

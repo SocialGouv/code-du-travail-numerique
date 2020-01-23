@@ -10,13 +10,19 @@ import { TitleParagraph } from "../common/TitleParagraph";
 export const Title = ({
   as,
   children,
-  topStripped = false,
+  isFirst,
   shift = "",
   subtitle,
+  topStripped = false,
   variant,
   ...props
 }) => (
-  <Header leftStripped={!topStripped} shift={shift} {...props}>
+  <Header
+    isFirst={isFirst}
+    leftStripped={!topStripped}
+    shift={shift}
+    {...props}
+  >
     <StyledTitle leftStripped={!topStripped} as={as} shift={shift}>
       <Stripe
         rounded={variant !== "primary"}
@@ -36,6 +42,7 @@ export const Title = ({
 Title.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
+  isFirst: PropTypes.bool,
   shift: PropTypes.string,
   subtitle: PropTypes.string,
   topStripped: PropTypes.bool,
@@ -43,6 +50,7 @@ Title.propTypes = {
 };
 
 Title.defaultProps = {
+  isFirst: false,
   variant: "secondary"
 };
 

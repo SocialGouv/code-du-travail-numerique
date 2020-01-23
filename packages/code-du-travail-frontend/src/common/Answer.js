@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
 
-import useGlossary from "../glossary";
+// import useGlossary from "../glossary";
 import Article from "./Article";
 import { Feedback } from "./Feedback";
 import { RelatedItems } from "./RelatedItems";
@@ -29,7 +29,7 @@ function Answer({
   relatedItems = [],
   emptyMessage = "Aucun résultat"
 }) {
-  const glossaryItems = useGlossary(children, html);
+  // const glossaryItems = useGlossary(children, html);
   const router = useRouter();
 
   return (
@@ -54,7 +54,6 @@ function Answer({
               {intro && <IntroWrapper variant="dark">{intro}</IntroWrapper>}
               {html && <Html>{html}</Html>}
               {children}
-              {glossaryItems}
             </Article>
           )}
           {additionalContent}

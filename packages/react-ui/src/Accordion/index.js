@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {
   Accordion as RootAccordion,
   AccordionItem,
@@ -8,30 +8,39 @@ import {
   AccordionItemButton,
   AccordionItemPanel
 } from "react-accessible-accordion";
-import { box, breakpoints, spacings } from "../theme";
-import { Heading } from "../Titles/Heading";
+
+import { box, breakpoints, fonts, spacings } from "../theme";
+import { getTextFromComponent } from "../utils/getTextFromComponent";
 import { VerticalArrow } from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
+import { ScreenReaderOnly } from "../ScreenReaderOnly";
 
-export const Accordion = ({ items, ...props }) => (
-  <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
-    {items.map(({ body, id, title, as }, index) => (
-      <StyledAccordionItem uuid={id} key={index}>
-        <AccordionItemHeading>
-          <StyledAccordionItemButton>
-            <StyledVerticalArrow />
-            {typeof title === "string" ? (
-              <StyledHeading as={as}>{title}</StyledHeading>
-            ) : (
-              <>{title}</>
+export const Accordion = ({ items, ...props }) => {
+  return (
+    <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
+      {items.map(({ body, id, title }, index) => (
+        <div id={id} key={`${id}-${index}`}>
+          {typeof id !== "undefined" &&
+            props.preExpanded.find(element => element === id) && (
+              <PushBelowHeader />
             )}
-          </StyledAccordionItemButton>
-        </AccordionItemHeading>
-        <StyledAccordionItemPanel>{body}</StyledAccordionItemPanel>
-      </StyledAccordionItem>
-    ))}
-  </RootAccordion>
-);
+          <StyledAccordionItem uuid={id} index={index}>
+            <AccordionItemHeading>
+              <StyledAccordionItemButton>
+                <StyledVerticalArrow />
+                <ButtonText>{getTextFromComponent(title)}</ButtonText>
+              </StyledAccordionItemButton>
+            </AccordionItemHeading>
+            <StyledAccordionItemPanel>
+              <ScreenReaderOnly>{title}</ScreenReaderOnly>
+              <AccordionItemPanelContent>{body}</AccordionItemPanelContent>
+            </StyledAccordionItemPanel>
+          </StyledAccordionItem>
+        </div>
+      ))}
+    </RootAccordion>
+  );
+};
 
 Accordion.propTypes = {
   preExpanded: PropTypes.arrayOf(PropTypes.string),
@@ -49,15 +58,27 @@ Accordion.defaultProps = {
 };
 
 const StyledAccordionItem = styled(AccordionItem)`
-  & + & {
-    border-top: ${({ theme }) => box.border(theme.border)};
+  position: relative;
+  z-index: 1;
+  ${({ index, theme }) =>
+    index > 0 &&
+    css`
+      border-top: ${box.border(theme.border)};
+    `}
+`;
+
+// This prevents preOpened item to be hidden behind header
+const PushBelowHeader = styled.div`
+  margin-top: -11rem; /* Fixed header's negative height */
+  padding-top: 11rem; /* Fixed header's height */
+  visibility: hidden;
+  pointer-events: none;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-top: -6rem;
+    padding-top: 6rem;
   }
 `;
 
-const StyledHeading = styled(Heading)`
-  margin: ${spacings.medium} 0;
-  padding: 0;
-`;
 const StyledVerticalArrow = styled(VerticalArrow)`
   flex: 0 0 auto;
   margin-right: ${spacings.small};
@@ -78,20 +99,35 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
   }
 `;
 
+const ButtonText = styled.div`
+  margin: ${spacings.medium} 0 ${spacings.medium} 0;
+  color: ${({ theme }) => theme.title};
+  font-weight: 600;
+  font-size: ${fonts.sizes.headings.small};
+  font-family: "Open Sans", sans-serif;
+  line-height: ${fonts.lineHeightTitle};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.default};
+  }
+`;
+
 const StyledAccordionItemPanel = styled(AccordionItemPanel)`
   padding: ${spacings.base};
   animation: ${fadeIn} 0.35s ease-in;
-  & > *:first-child {
-    margin-top: 0;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
-  }
   /* This might not work anymore */
   &.accordion__body--hidden {
     display: none;
   }
   @media (max-width: ${breakpoints.mobile}) {
     padding: ${spacings.small} 0;
+  }
+`;
+
+const AccordionItemPanelContent = styled.div`
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
   }
 `;

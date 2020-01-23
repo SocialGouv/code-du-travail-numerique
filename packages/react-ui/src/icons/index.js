@@ -8,6 +8,7 @@ export { default as Formation } from "./components/bicolor/Formation";
 export { default as Health } from "./components/bicolor/Health";
 export { default as Holidays } from "./components/bicolor/Holidays";
 export { default as Indemnity } from "./components/bicolor/Indemnity";
+export { default as Logo } from "./components/bicolor/Logo";
 export { default as Nego } from "./components/bicolor/Nego";
 export { default as Precarity } from "./components/bicolor/Precarity";
 export { default as PriorNotice } from "./components/bicolor/PriorNotice";

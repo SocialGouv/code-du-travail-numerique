@@ -23,11 +23,9 @@ import Mdx from "../../src/common/Mdx";
 import { useLocalStorage } from "../lib/useLocalStorage";
 
 const RefLink = ({ title, url }) => (
-  <LineRef>
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      {title}
-    </a>
-  </LineRef>
+  <a href={url} target="_blank" rel="noopener noreferrer">
+    {title}
+  </a>
 );
 
 const References = ({ references = [] }) => {
@@ -46,45 +44,52 @@ const References = ({ references = [] }) => {
       {agreementRefs.length !== 0 && (
         <>
           <Subtitle>Convention collective</Subtitle>
-          {agreementRefs.map(({ agreement }) =>
-            agreement.url ? (
-              <RefLink
-                key={agreement.id}
-                title={agreement.title}
-                url={agreement.url}
-              />
-            ) : (
-              <div key={agreement.id}>{agreement.title}</div>
-            )
-          )}
+          <ul>
+            {agreementRefs.map(({ agreement, index }) => (
+              <li key={`${index}-${agreement.id}`}>
+                {agreement.url ? (
+                  <RefLink
+                    key={agreement.id}
+                    title={agreement.title}
+                    url={agreement.url}
+                  />
+                ) : (
+                  <div key={agreement.id}>{agreement.title}</div>
+                )}
+              </li>
+            ))}
+          </ul>
         </>
       )}
       {laborCodeRef.length !== 0 && (
         <>
           <Subtitle>Code du travail</Subtitle>
-          {laborCodeRef.map(ref => (
-            <Link
-              key={ref.title}
-              href={{
-                pathname: `/${getRouteBySource(SOURCES.CDT)}/[slug]`
-              }}
-              as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
-            >
-              <a>{ref.title}</a>
-            </Link>
-          ))}
+          <ul>
+            {laborCodeRef.map(ref => (
+              <li key={ref.title}>
+                <Link
+                  href={{
+                    pathname: `/${getRouteBySource(SOURCES.CDT)}/[slug]`
+                  }}
+                  as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
+                >
+                  <a>{ref.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </>
       )}
       {othersRefs.length !== 0 && (
         <>
           <Subtitle>Autres sources</Subtitle>
-          {othersRefs.map((ref, id) => (
-            <RefLink
-              key={`external-ref-${id}`}
-              title={ref.title}
-              url={ref.url}
-            />
-          ))}
+          <ul>
+            {othersRefs.map((ref, index) => (
+              <li key={`external-ref-${ref.id}-${index}`}>
+                <RefLink title={ref.title} url={ref.url} />
+              </li>
+            ))}
+          </ul>
         </>
       )}
     </>
@@ -145,7 +150,7 @@ const Contribution = ({ answers, content }) => {
             <StyledTitle
               shift={spacings.xmedium}
               variant="primary"
-              marginTop={Boolean(answers.generic)}
+              hasMarginTop={Boolean(answers.generic)}
               id="customisation"
             >
               Que dit votre convention collective&nbsp;?
@@ -203,11 +208,6 @@ const Contribution = ({ answers, content }) => {
 
 const { breakpoints, fonts, spacings } = theme;
 
-const LineRef = styled.li`
-  margin: 5px 0;
-  list-style-type: none;
-`;
-
 const MdxWrapper = styled.div`
   margin-bottom: ${spacings.medium};
 `;
@@ -238,11 +238,11 @@ const StyledDiv = styled.div`
 `;
 
 const StyledTitle = styled(Title)`
-  margin-top: ${({ marginTop }) => (marginTop ? spacings.large : "0")};
+  margin-top: ${({ hasMarginTop }) => (hasMarginTop ? spacings.large : "0")};
 `;
 
 const ButtonWrapper = styled.div`
-  margin-bottom: ${spacings.base};
+  margin: ${spacings.base} 0 !important;
   text-align: center;
 `;
 

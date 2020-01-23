@@ -93,7 +93,8 @@ function StepResult({ form }) {
       )}
       <HdnToast />
       <SectionTitle>Détails</SectionTitle>
-      <p>Éléments saisis&nbsp;:</p>
+      Éléments saisis&nbsp;:
+      <br />
       {recapSituation({
         "Convention collective": `${ccLabel} (${idcc})`,
         ...situation.criteria
