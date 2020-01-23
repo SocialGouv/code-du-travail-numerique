@@ -189,9 +189,11 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 
 .c4 {
   display: block;
-  -webkit-flex: 0 0 4.2rem;
-  -ms-flex: 0 0 4.2rem;
-  flex: 0 0 4.2rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
   margin-right: 2.4rem;
 }
 
@@ -383,9 +385,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 
 @media (max-width:600px) {
   .c4 {
-    -webkit-flex: 0 0 3.4rem;
-    -ms-flex: 0 0 3.4rem;
-    flex: 0 0 3.4rem;
+    width: 3.4rem;
     margin-right: 1rem;
   }
 }
@@ -853,9 +853,11 @@ exports[`<Contribution /> should render answer references 1`] = `
 
 .c4 {
   display: block;
-  -webkit-flex: 0 0 4.2rem;
-  -ms-flex: 0 0 4.2rem;
-  flex: 0 0 4.2rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
   margin-right: 2.4rem;
 }
 
@@ -1072,9 +1074,7 @@ exports[`<Contribution /> should render answer references 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    -webkit-flex: 0 0 3.4rem;
-    -ms-flex: 0 0 3.4rem;
-    flex: 0 0 3.4rem;
+    width: 3.4rem;
     margin-right: 1rem;
   }
 }
@@ -1590,9 +1590,11 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 
 .c4 {
   display: block;
-  -webkit-flex: 0 0 4.2rem;
-  -ms-flex: 0 0 4.2rem;
-  flex: 0 0 4.2rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
   margin-right: 2.4rem;
 }
 
@@ -1788,9 +1790,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    -webkit-flex: 0 0 3.4rem;
-    -ms-flex: 0 0 3.4rem;
-    flex: 0 0 3.4rem;
+    width: 3.4rem;
     margin-right: 1rem;
   }
 }
@@ -2143,9 +2143,11 @@ exports[`<Contribution /> should render with both answers 1`] = `
 
 .c4 {
   display: block;
-  -webkit-flex: 0 0 4.2rem;
-  -ms-flex: 0 0 4.2rem;
-  flex: 0 0 4.2rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
   margin-right: 2.4rem;
 }
 
@@ -2357,9 +2359,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    -webkit-flex: 0 0 3.4rem;
-    -ms-flex: 0 0 3.4rem;
-    flex: 0 0 3.4rem;
+    width: 3.4rem;
     margin-right: 1rem;
   }
 }
@@ -2650,9 +2650,11 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c4 {
   display: block;
-  -webkit-flex: 0 0 4.2rem;
-  -ms-flex: 0 0 4.2rem;
-  flex: 0 0 4.2rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
   margin-right: 2.4rem;
 }
 
@@ -2832,9 +2834,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    -webkit-flex: 0 0 3.4rem;
-    -ms-flex: 0 0 3.4rem;
-    flex: 0 0 3.4rem;
+    width: 3.4rem;
     margin-right: 1rem;
   }
 }

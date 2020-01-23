@@ -20,10 +20,12 @@ const FlexDiv = styled.div`
 
 const IconWrapper = styled.div`
   display: ${({ theme }) => (theme.noColors ? "none" : "block")};
-  flex: 0 0 4.2rem;
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
   margin-right: ${spacings.xmedium};
   @media (max-width: ${breakpoints.mobile}) {
-    flex: 0 0 3.4rem;
+    width: 3.4rem;
     margin-right: ${spacings.small};
   }
 `;
