@@ -89,7 +89,7 @@ class ModeleCourrier extends React.Component {
                 >
                   <Download />
                   <ScreenReaderOnly>
-                    Télécharger le modèle ({extension} - {filesizeFormated}Ko)
+                    Télécharger le document ({extension} - {filesizeFormated}Ko)
                   </ScreenReaderOnly>
                 </Button>
               </FloatWrapper>
@@ -97,7 +97,7 @@ class ModeleCourrier extends React.Component {
             </LightWrapper>
           </Section>
           <Notice>
-            Type: Modèle de courrier - Format: {extension} - Taille:{" "}
+            Type: Modèle de document - Format: {extension} - Taille:{" "}
             {filesizeFormated}
             Ko{" "}
           </Notice>
@@ -109,8 +109,12 @@ class ModeleCourrier extends React.Component {
             version mise à jour avant toute utilisation.
           </Disclaimenr>
           <Centered>
-            <Button variant="primary" href={`${API_URL}/docs/${filename}`}>
-              Télécharger le modèle ({extension} - {filesizeFormated}Ko)
+            <Button
+              as="a"
+              variant="primary"
+              href={`${API_URL}/docs/${filename}`}
+            >
+              Télécharger le modèle ({extension} - {filesizeFormated}Ko) &nbsp;
               <Download />
             </Button>
           </Centered>
@@ -132,6 +136,7 @@ const FloatWrapper = styled.div`
 
 const LightWrapper = styled(Wrapper).attrs(() => ({ variant: "light" }))`
   position: relative;
+  padding-top: ${spacings.large};
 `;
 const Disclaimenr = styled(Wrapper).attrs(() => ({ variant: "dark" }))`
   margin-top: ${spacings.medium};

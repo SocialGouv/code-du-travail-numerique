@@ -1099,6 +1099,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   border: 1px solid #bbcadf;
   background-color: #fff;
   position: relative;
+  padding-top: 3.2rem;
 }
 
 .c42 > *:first-child {
@@ -2057,7 +2058,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                       <div
                         class="c46"
                       >
-                        Télécharger le modèle (
+                        Télécharger le document (
                         pdf
                          - 
                         12.35
@@ -2075,7 +2076,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <p
                 class="c47"
               >
-                Type: Modèle de courrier - Format: 
+                Type: Modèle de document - Format: 
                 pdf
                  - Taille:
                  
@@ -2091,7 +2092,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <p
                 class="c49"
               >
-                <button
+                <a
                   class="c50"
                   href="api.url/docs/filename.pdf"
                 >
@@ -2099,7 +2100,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   pdf
                    - 
                   12.35
-                  Ko)
+                  Ko)  
                   <svg
                     class="c45"
                     fill="none"
@@ -2110,7 +2111,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </button>
+                </a>
               </p>
             </div>
           </div>

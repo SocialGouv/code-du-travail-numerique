@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
@@ -34,9 +33,6 @@ function Answer({
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
       <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
       <StyledContainer>
         <StyledContent hasResults={relatedItems.length > 0}>
