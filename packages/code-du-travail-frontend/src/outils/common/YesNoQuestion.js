@@ -44,8 +44,8 @@ function YesNoQuestion({
             <InputRadio id={`${name}-no`} label="Non" {...props.input} />
           )}
         </Field>
-        <ErrorField name={name} />
       </RadioContainer>
+      <ErrorField name={name} />
       {onChange && (
         <OnChange name={name}>{values => onChange(values)}</OnChange>
       )}
