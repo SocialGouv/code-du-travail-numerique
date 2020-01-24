@@ -50,7 +50,6 @@ Build @cdt/nlp:
     #
     F1_PACKAGES_NAME: dump
     F1_PACKAGES_FOLDER: packages/${CONTEXT}/data/dump.tf.json
-    F1_CACHE_FOLDER: none # No cache folder here...
     F1_CHECK_FILES: packages/${CONTEXT}/data/dump.json
   image: python:3.7-slim-buster
   script:
