@@ -7,7 +7,6 @@ Install nlp:
   variables:
     CONTEXT: code-du-travail-nlp
     PIP_CACHE_DIR: "${CI_PROJECT_DIR}/packages/${CONTEXT}/.cache/pip"
-    PYTHONPATH: "${CI_PROJECT_DIR}/packages/code-du-travail-nlp"
   cache:
     key: "install-nlp-${CI_COMMIT_REF_SLUG}"
     paths:
@@ -15,13 +14,10 @@ Install nlp:
   script:
     - cd packages/${CONTEXT}
     - pip install --user -r requirements.txt
-    - pip show tensorflow
-    - ls -la $HOME
-    - ls -la $HOME/.local/
   artifacts:
     expire_in: 30 mins
     paths:
-      - packages/${CONTEXT}/.cache/pip
+      - $HOME/.local
 
 #
 
