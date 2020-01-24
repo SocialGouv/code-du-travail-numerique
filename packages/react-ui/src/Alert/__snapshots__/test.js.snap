@@ -19,10 +19,6 @@ exports[`<Alert /> it should render a primary alert 1`] = `
   margin-bottom: 0;
 }
 
-.c0:last-child {
-  margin-bottom: 0;
-}
-
 <div>
   <div
     class="c0"
@@ -53,10 +49,6 @@ exports[`<Alert /> it should render a secondary alert 1`] = `
   margin-bottom: 0;
 }
 
-.c0:last-child {
-  margin-bottom: 0;
-}
-
 <div>
   <div
     class="c0"
@@ -84,10 +76,6 @@ exports[`<Alert /> should render 1`] = `
 }
 
 .c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c0:last-child {
   margin-bottom: 0;
 }
 
