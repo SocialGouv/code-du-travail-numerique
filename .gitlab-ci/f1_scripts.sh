@@ -44,7 +44,10 @@ function f1_install_before () {
   sha1sum ${F1_CHECK_FILES} > PACKAGE_SHA
   cat PACKAGE_SHA
 
-  if [[ -d "${CI_PROJECT_DIR}/${F1_PACKAGES_FOLDER}" ]] && cmp -s PACKAGE_SHA SHA ; then
+  if ( \
+      [[ -d "${CI_PROJECT_DIR}/${F1_PACKAGES_FOLDER}" ]] || \
+      [[ -f "${CI_PROJECT_DIR}/${F1_PACKAGES_FOLDER}" ]] \
+    ) && cmp -s PACKAGE_SHA SHA ; then
     echo "No changes detected."
     exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
   else
