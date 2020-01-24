@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+[[ -n "${TRACE}" ]] && set -x
+
 #
 
 if type apt-get; then apt-get -y update; fi

@@ -44,6 +44,7 @@ Build @cdt/nlp:
     - Install nlp
   variables:
     CONTEXT: code-du-travail-nlp
+    TRACE: true
     #
     PYTHONPATH: "${CI_PROJECT_DIR}/packages/${CONTEXT}"
     PYTHONUSERBASE: "${CI_PROJECT_DIR}/python_user_packages"
