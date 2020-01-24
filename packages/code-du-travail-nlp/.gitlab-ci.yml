@@ -2,7 +2,7 @@
 
 Install nlp:
   extends: .prepare_stage
-  image: python:3.7-slim-buster
+  image: python:3.7-alpine3.11
   interruptible: true
   variables:
     CONTEXT: code-du-travail-nlp
