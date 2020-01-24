@@ -2,7 +2,6 @@ import React from "react";
 import { TypeRemuneration } from "../components/TypeRemuneration";
 import { Field } from "react-final-form";
 import { CurrencyField } from "../../common/CurrencyField";
-import { theme } from "@socialgouv/react-ui";
 
 import { Salaires } from "../components/Salaires";
 import { SmallText } from "../../common/stepStyles";
