@@ -43,23 +43,25 @@ Build @cdt/nlp:
     - Install data
     - Install nlp
   variables:
-    PYTHONPATH: "${CI_PROJECT_DIR}/packages/code-du-travail-nlp"
+    CONTEXT: code-du-travail-nlp
+    #
+    PYTHONPATH: "${CI_PROJECT_DIR}/packages/${CONTEXT}"
     PYTHONUSERBASE: "${CI_PROJECT_DIR}/python_user_packages"
     #
-    F1_PACKAGES_FOLDER: packages/code-du-travail-nlp/data/dump.tf.json
+    F1_PACKAGES_FOLDER: packages/${CONTEXT}/data/dump.tf.json
     F1_CACHE_FOLDER: README.md # No cache folder here...
-    F1_CHECK_FILES: packages/code-du-travail-nlp/data/dump.json
+    F1_CHECK_FILES: packages/${CONTEXT}/data/dump.json
   image: python:3.7-slim-buster
   script:
     #
     - cp ./packages/code-du-travail-data/dist/dump.data.json
-        ./packages/code-du-travail-nlp/data/dump.json
+        ./packages/${CONTEXT}/data/dump.json
     #
     - source .gitlab-ci/f1_scripts.sh
     #
     - f1_install_before
     #
-    - cd packages/code-du-travail-nlp
+    - cd packages/${CONTEXT}
     - export PATH=$PATH:$PYTHONUSERBASE/bin
     - python ./scripts/dump.py
     #
@@ -67,7 +69,7 @@ Build @cdt/nlp:
   artifacts:
     expire_in: 30 mins
     paths:
-      - packages/code-du-travail-nlp/data/dump.tf.json
+      - packages/${CONTEXT}/data/dump.tf.json
 
 #
 
