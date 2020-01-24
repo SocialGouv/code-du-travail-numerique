@@ -129,6 +129,10 @@ Register api image:
     - source ./.gitlab-ci/env.sh
     - HOST=${API_HOST}
     - export ES_INDEX_PREFIX="cdtn-master"
+    - >-
+      if [[ "$HOST" == *"master.svc.cluster.local" ]]; then
+        exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
+      fi
 
 Deploy @cdtn/api (dev):
   extends:
