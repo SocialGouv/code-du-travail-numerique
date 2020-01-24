@@ -1,35 +1,23 @@
-import React, { useEffect, useCallback, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
-import { Input, Select, icons, theme } from "@socialgouv/react-ui";
+import { Input, Select, Text, icons, theme } from "@socialgouv/react-ui";
 import { AddButton, DelButton } from "../../common/Buttons";
 import { Error } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
 import { isNumber } from "../../common/validators";
+import {
+  Row,
+  MobileOnlyCell,
+  DesktopOnly,
+  CellHeader
+} from "../../common/stepStyles";
 
 const mobileMediaQuery = `(max-width: ${theme.breakpoints.mobile})`;
 
 function SalaireTempsPartiel({ name, visible = true, onChange }) {
-  const [isHeaderVisible, setHeaderVisible] = useState(true);
-  const mqlListener = useCallback(
-    e => {
-      setHeaderVisible(e.matches);
-    },
-    [setHeaderVisible]
-  );
-  useEffect(() => {
-    if (window.matchMedia) {
-      const mql = window.matchMedia(mobileMediaQuery);
-      setHeaderVisible(mql.matches);
-      mql.addListener(mqlListener);
-      return () => {
-        mql.removeListener(mqlListener);
-      };
-    }
-  }, [mqlListener]);
-
   return (
     <FieldArray name={name}>
       {({ fields }) => (
@@ -40,40 +28,39 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                 Quels ont été les durées et les salaires des périodes à temps
                 plein et à temps partiel&nbsp;?
               </Question>
-              {!isHeaderVisible && (
-                <Row>
-                  <CellHeader as={CellType}>
-                    {" "}
-                    Type de durée de travail{" "}
-                  </CellHeader>
-                  <CellHeader as={CellDuration}>Durée (en mois)</CellHeader>
-                  <CellHeader>Rémunération</CellHeader>
-                </Row>
-              )}
+              <Row as={DesktopOnly}>
+                <CellHeader as={CellType}>Type de durée de travail</CellHeader>
+                <CellHeader as={CellDuration}>Durée (en mois)</CellHeader>
+                <CellHeader>Rémunération</CellHeader>
+              </Row>
             </>
           )}
           {fields.map((name, index) => (
             <Row key={name}>
+              <MobileOnlyCell>
+                <Text variant="secondary" fontSize="hsmall">
+                  Période {index + 1}
+                </Text>
+                <DelButton small onClick={() => fields.remove(index)}>
+                  Supprimer
+                </DelButton>
+              </MobileOnlyCell>
               <CellType>
-                {isHeaderVisible && (
-                  <CellHeader as={CellType}>
-                    Type de durée de travail
-                  </CellHeader>
-                )}
+                <CellHeader as={MobileOnlyCell}>
+                  Type de durée de travail
+                </CellHeader>
                 <Field name={`${name}.type`}>
                   {({ input }) => (
-                    <StyledSelect {...input}>
+                    <Select {...input}>
                       {typePeriod.map(item => (
                         <option key={item}>{item}</option>
                       ))}
-                    </StyledSelect>
+                    </Select>
                   )}
                 </Field>
               </CellType>
               <CellDuration>
-                {isHeaderVisible && (
-                  <CellHeader as={CellDuration}>Durée (en mois)</CellHeader>
-                )}
+                <CellHeader as={MobileOnlyCell}>Durée (en mois)</CellHeader>
                 <Field
                   name={`${name}.duration`}
                   validate={isNumber}
@@ -85,7 +72,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                   }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
-                      <StyledInput
+                      <Input
                         {...input}
                         type="number"
                         invalid={touched && invalid}
@@ -98,7 +85,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                 />
               </CellDuration>
               <CellRemuneration>
-                {isHeaderVisible && <CellHeader>Rémunération</CellHeader>}
+                <CellHeader as={MobileOnlyCell}>Rémunération</CellHeader>
                 <Field
                   name={`${name}.salary`}
                   validate={isNumber}
@@ -110,7 +97,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                   }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
-                      <StyledInput
+                      <Input
                         {...input}
                         type="number"
                         invalid={touched && invalid}
@@ -123,9 +110,11 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                   )}
                 />
               </CellRemuneration>
-              <DelButton onClick={() => fields.remove(index)}>
-                Supprimer
-              </DelButton>
+              <DesktopOnly>
+                <DelButton onClick={() => fields.remove(index)}>
+                  Supprimer
+                </DelButton>
+              </DesktopOnly>
             </Row>
           ))}
           {visible && (
@@ -151,16 +140,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
 }
 export { SalaireTempsPartiel };
 
-const { fonts, spacings } = theme;
-
-const Row = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: ${spacings.tiny};
-  @media ${mobileMediaQuery} {
-    flex-direction: column;
-  }
-`;
+const { spacings } = theme;
 
 const CellType = styled.div`
   flex-basis: 20rem;
@@ -182,23 +162,6 @@ const CellRemuneration = styled.div`
   flex-basis: 20rem;
   @media ${mobileMediaQuery} {
     flex-basis: 100%;
-  }
-`;
-const CellHeader = styled.div`
-  padding-top: ${spacings.small};
-  padding-bottom: ${spacings.tiny};
-  font-weight: 700;
-  font-size: ${fonts.sizes.small};
-`;
-const StyledSelect = styled(Select)`
-  @media ${mobileMediaQuery} {
-    width: 100%;
-  }
-`;
-
-const StyledInput = styled(Input)`
-  @media ${mobileMediaQuery} {
-    width: 100%;
   }
 `;
 

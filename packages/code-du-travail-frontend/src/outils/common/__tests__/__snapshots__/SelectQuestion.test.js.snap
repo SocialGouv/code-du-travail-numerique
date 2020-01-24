@@ -88,6 +88,12 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 }
 
 @media (max-width:600px) {
+  .c2 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
   }
@@ -252,6 +258,12 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 
 .c0 {
   margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {

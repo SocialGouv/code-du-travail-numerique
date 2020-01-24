@@ -64,3 +64,39 @@ export const Summary = styled.summary`
   display: block;
   margin-bottom: ${spacings.base};
 `;
+
+/**
+ * use for table like form multi-row
+ * on mobile each line become a block
+ */
+export const Row = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: ${spacings.small};
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    flex-direction: column;
+    margin-bottom: ${spacings.large};
+  }
+`;
+
+export const DesktopOnly = styled.div`
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    display: none;
+  }
+`;
+
+export const MobileOnlyCell = styled.div`
+  display: none;
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+export const CellHeader = styled.div`
+  padding-top: ${spacings.small};
+  padding-bottom: ${spacings.tiny};
+  font-weight: 700;
+  font-size: ${fonts.sizes.small};
+`;

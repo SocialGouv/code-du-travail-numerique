@@ -31,10 +31,6 @@ exports[`<FicheSP /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c22:last-child {
-  margin-bottom: 0;
-}
-
 .c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

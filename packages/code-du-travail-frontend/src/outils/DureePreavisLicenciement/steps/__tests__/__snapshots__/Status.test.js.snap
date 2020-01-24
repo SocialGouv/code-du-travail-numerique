@@ -323,6 +323,12 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 @media (max-width:600px) {
+  .c8 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     font-size: 1.6rem;
   }

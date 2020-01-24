@@ -19,10 +19,6 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   margin-bottom: 0;
 }
 
-.c1:last-child {
-  margin-bottom: 0;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;

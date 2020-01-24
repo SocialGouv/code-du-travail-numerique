@@ -402,6 +402,12 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
+  .c7 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c9 {
     padding: 0 1rem;
     padding-right: 2rem;

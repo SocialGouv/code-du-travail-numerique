@@ -281,6 +281,12 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 }
 
 @media (max-width:600px) {
+  .c6 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     font-size: 1.6rem;
   }
@@ -595,6 +601,12 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 
 .c4 {
   margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
+  .c6 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {

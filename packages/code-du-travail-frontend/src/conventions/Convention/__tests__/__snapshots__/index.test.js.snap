@@ -115,10 +115,6 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 0;
 }
 
-.c13:last-child {
-  margin-bottom: 0;
-}
-
 .c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -611,6 +607,12 @@ exports[`<Convention /> renders 1`] = `
   .c21 {
     padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    width: 100%;
   }
 }
 

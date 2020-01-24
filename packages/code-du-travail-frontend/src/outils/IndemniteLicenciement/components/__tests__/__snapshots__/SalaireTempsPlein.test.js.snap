@@ -135,6 +135,12 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 }
 
 @media (max-width:600px) {
+  .c5 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c6 {
     padding: 0 1rem;
     padding-right: 5rem;
@@ -398,6 +404,12 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 
 .c4 {
   font-size: 1.4rem;
+}
+
+@media (max-width:600px) {
+  .c5 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {

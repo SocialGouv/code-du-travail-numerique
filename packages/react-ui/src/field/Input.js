@@ -33,6 +33,9 @@ const INPUT_HEIGHT = "5.4rem";
 const StyledWrapper = styled.span`
   position: relative;
   display: inline-block;
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+  }
 `;
 
 const StyledInput = styled.input`
@@ -83,7 +86,6 @@ const StyledInput = styled.input`
   }
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
-    width: 100%;
     padding: 0 ${spacings.small};
     padding-right: ${props => (props.hasIcon ? "5rem" : spacings.medium)};
   }

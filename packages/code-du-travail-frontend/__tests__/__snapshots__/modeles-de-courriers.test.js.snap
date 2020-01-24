@@ -854,6 +854,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c25 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c21 {
     margin-bottom: 3.2rem;
     margin-left: auto;

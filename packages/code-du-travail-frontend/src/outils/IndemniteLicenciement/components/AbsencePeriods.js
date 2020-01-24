@@ -1,36 +1,22 @@
-import React, { useEffect, useCallback, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
-import { Input, Select, theme } from "@socialgouv/react-ui";
+import { OnChange } from "react-final-form-listeners";
+import { Input, Select, Text, theme } from "@socialgouv/react-ui";
 import { Error } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 import { AddButton, DelButton } from "../../common/Buttons";
 import { Question } from "../../common/Question";
-import { OnChange } from "react-final-form-listeners";
-
-const mobileMediaQuery = `(max-width: ${theme.breakpoints.mobile})`;
+import {
+  Row,
+  MobileOnlyCell,
+  DesktopOnly,
+  CellHeader
+} from "../../common/stepStyles";
 
 function AbsencePeriods({ name, visible = true, onChange }) {
-  const [isHeaderVisible, setHeaderVisible] = useState(true);
-  const mqlListener = useCallback(
-    e => {
-      setHeaderVisible(e.matches);
-    },
-    [setHeaderVisible]
-  );
-  useEffect(() => {
-    if (window.matchMedia) {
-      const mql = window.matchMedia(mobileMediaQuery);
-      setHeaderVisible(mql.matches);
-      mql.addListener(mqlListener);
-      return () => {
-        mql.removeListener(mqlListener);
-      };
-    }
-  }, [mqlListener]);
-
   return (
     <FieldArray name={name}>
       {({ fields }) => (
@@ -51,30 +37,32 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                 Quels sont le motif et la durée de ces absences
                 prolongées&nbsp;?
               </Question>
-              {!isHeaderVisible && (
-                <Row key={name}>
-                  <CellHeader as={MotifCell}>Motif</CellHeader>
-                  <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
-                </Row>
-              )}
+              <Row as={DesktopOnly}>
+                <CellHeader as={MotifCell}>Motif</CellHeader>
+                <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
+              </Row>
             </>
           )}
           {fields.map((name, index) => (
             <Row key={name}>
+              <MobileOnlyCell>
+                <Text variant="secondary" fontSize="hsmall">
+                  Période {index + 1}
+                </Text>
+                <DelButton small onClick={() => fields.remove(index)}>
+                  Supprimer
+                </DelButton>
+              </MobileOnlyCell>
               <MotifCell>
-                {isHeaderVisible && (
-                  <CellHeader as={MotifCell}>Motif</CellHeader>
-                )}
-                <Field name={`${name}.type`} component={StyledSelect}>
+                <CellHeader as={MobileOnlyCell}>Motif</CellHeader>
+                <Field name={`${name}.type`} component={Select}>
                   {motifs.map(({ label }) => (
                     <option key={label}>{label}</option>
                   ))}
                 </Field>
               </MotifCell>
               <DurationCell>
-                {isHeaderVisible && (
-                  <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
-                )}
+                <CellHeader as={MobileOnlyCell}>Durée (en mois)</CellHeader>
                 <Field
                   name={`${name}.duration`}
                   validate={isNumber}
@@ -86,7 +74,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                   }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
-                      <StyledInput
+                      <Input
                         {...input}
                         type="number"
                         invalid={touched && invalid}
@@ -96,9 +84,11 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                   )}
                 />
               </DurationCell>
-              <DelButton onClick={() => fields.remove(index)}>
-                Supprimer
-              </DelButton>
+              <DesktopOnly>
+                <DelButton onClick={() => fields.remove(index)}>
+                  Supprimer
+                </DelButton>
+              </DesktopOnly>
             </Row>
           ))}
           {visible && (
@@ -129,49 +119,24 @@ function AbsencePeriods({ name, visible = true, onChange }) {
 AbsencePeriods.propTypes = {
   name: PropTypes.string.isRequired
 };
+
 export { AbsencePeriods };
 
 const { fonts, spacings } = theme;
 
-const Row = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: ${spacings.tiny};
-  @media ${mobileMediaQuery} {
-    flex-direction: column;
-  }
-`;
 const MotifCell = styled.div`
   flex: 0 1 35rem;
   margin-right: ${spacings.medium};
-  @media ${mobileMediaQuery} {
+  @media (max-width: ${theme.breakpoints.mobile}) {
     flex-basis: 100%;
     margin-right: 0;
   }
 `;
 const DurationCell = styled.div`
   margin-right: ${spacings.medium};
-  @media ${mobileMediaQuery} {
+  @media (max-width: ${theme.breakpoints.mobile}) {
     flex-basis: 100%;
     margin-right: 0;
-  }
-`;
-const CellHeader = styled.div`
-  padding-top: ${spacings.small};
-  padding-bottom: ${spacings.tiny};
-  font-weight: 700;
-  font-size: ${fonts.sizes.small};
-`;
-
-const StyledSelect = styled(Select)`
-  @media ${mobileMediaQuery} {
-    width: 100%;
-  }
-`;
-
-const StyledInput = styled(Input)`
-  @media ${mobileMediaQuery} {
-    width: 100%;
   }
 `;
 

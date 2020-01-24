@@ -2377,6 +2377,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
+  .c17 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c19 {
     padding: 0 1rem;
     padding-right: 2rem;
@@ -2848,6 +2854,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   .c4 {
     width: 3.4rem;
     margin-right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    width: 100%;
   }
 }
 

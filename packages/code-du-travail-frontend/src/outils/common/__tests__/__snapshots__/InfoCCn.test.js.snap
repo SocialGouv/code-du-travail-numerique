@@ -109,6 +109,12 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
 }
 
 @media (max-width:600px) {
+  .c2 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
     padding: 0 1rem;
     padding-right: 2rem;
@@ -262,6 +268,12 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
 
 .c1 {
   font-style: italic;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {

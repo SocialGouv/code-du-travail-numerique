@@ -1264,6 +1264,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c55 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c57 {
     padding: 0 1rem;
     padding-right: 2rem;
@@ -3927,6 +3933,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c78 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c55 {
+    width: 100%;
   }
 }
 

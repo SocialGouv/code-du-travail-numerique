@@ -97,6 +97,12 @@ exports[`<EchelonChimie /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c2 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     font-size: 1.6rem;
   }
@@ -370,6 +376,12 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
 
 .c3 {
   width: 100%;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {

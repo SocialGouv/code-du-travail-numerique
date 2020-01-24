@@ -232,9 +232,21 @@ exports[`<Step /> should ask detail about categories 1`] = `
 }
 
 @media (max-width:600px) {
+  .c10 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c11 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
   }
 }
 
@@ -676,9 +688,21 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 }
 
 @media (max-width:600px) {
+  .c8 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c9 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
   }
 }
 
@@ -1044,9 +1068,21 @@ exports[`<Step /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c8 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c9 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
   }
 }
 

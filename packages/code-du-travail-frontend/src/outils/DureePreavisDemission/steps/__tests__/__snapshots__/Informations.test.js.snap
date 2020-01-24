@@ -116,6 +116,12 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 }
 
 @media (max-width:600px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     font-size: 1.6rem;
   }
@@ -294,6 +300,12 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {

@@ -286,6 +286,12 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 }
 
 @media (max-width:600px) {
+  .c13 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     padding: 0 1rem;
     padding-right: 5rem;
