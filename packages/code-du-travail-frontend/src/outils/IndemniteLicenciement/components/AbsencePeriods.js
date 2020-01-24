@@ -122,7 +122,7 @@ AbsencePeriods.propTypes = {
 
 export { AbsencePeriods };
 
-const { fonts, spacings } = theme;
+const { spacings } = theme;
 
 const MotifCell = styled.div`
   flex: 0 1 35rem;
