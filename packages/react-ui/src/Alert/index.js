@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { box, spacings } from "../theme";
 
 export const Alert = styled.div`
-  margin-top: ${spacings.base};
   margin-bottom: ${spacings.base};
   padding: ${spacings.small} ${spacings.medium};
   color: ${({ theme }) => theme.paragraph};

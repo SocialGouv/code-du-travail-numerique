@@ -2,7 +2,6 @@
 
 exports[`<Alert /> it should render a primary alert 1`] = `
 .c0 {
-  margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -32,7 +31,6 @@ exports[`<Alert /> it should render a primary alert 1`] = `
 
 exports[`<Alert /> it should render a secondary alert 1`] = `
 .c0 {
-  margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -62,7 +60,6 @@ exports[`<Alert /> it should render a secondary alert 1`] = `
 
 exports[`<Alert /> should render 1`] = `
 .c0 {
-  margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
