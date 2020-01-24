@@ -2076,13 +2076,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <p
                 class="c47"
               >
-                Type: Modèle de document - Format: 
-                pdf
-                 - Taille:
-                 
-                12.35
-                Ko
-                 
+                Type: Modèle de document - Format: pdf - Taille: 12.35Ko 
               </p>
               <div
                 class="c48"
@@ -2096,11 +2090,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   class="c50"
                   href="api.url/docs/filename.pdf"
                 >
-                  Télécharger le modèle (
-                  pdf
-                   - 
-                  12.35
-                  Ko)  
+                  Télécharger le modèle (pdf - 12.35Ko)  
                   <svg
                     class="c45"
                     fill="none"
@@ -2255,6 +2245,16 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                     href="/mentions-legales"
                   >
                     Mentions légales
+                  </a>
+                </li>
+                <li
+                  class="c75"
+                >
+                  <a
+                    class="c76"
+                    href="/politique-confidentialite"
+                  >
+                    Politique de confidentialité
                   </a>
                 </li>
                 <li

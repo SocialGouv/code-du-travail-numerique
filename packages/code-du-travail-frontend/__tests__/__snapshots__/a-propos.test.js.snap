@@ -1493,6 +1493,16 @@ exports[`<About /> should render 1`] = `
                 >
                   <a
                     class="c47"
+                    href="/politique-confidentialite"
+                  >
+                    Politique de confidentialité
+                  </a>
+                </li>
+                <li
+                  class="c46"
+                >
+                  <a
+                    class="c47"
                     href="/stats"
                   >
                     Statistiques d’utilisation

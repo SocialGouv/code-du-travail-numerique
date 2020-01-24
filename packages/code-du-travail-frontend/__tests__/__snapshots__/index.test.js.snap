@@ -2933,6 +2933,16 @@ exports[`<Home /> should render 1`] = `
                 >
                   <a
                     class="c72"
+                    href="/politique-confidentialite"
+                  >
+                    Politique de confidentialité
+                  </a>
+                </li>
+                <li
+                  class="c71"
+                >
+                  <a
+                    class="c72"
                     href="/stats"
                   >
                     Statistiques d’utilisation

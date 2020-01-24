@@ -9,6 +9,7 @@ import { Feedback } from "./Feedback";
 import { RelatedItems } from "./RelatedItems";
 import Html from "./Html";
 import { ThemeBreadcrumbs } from "./ThemeBreadcrumbs";
+import useGlossary from "../glossary";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
@@ -28,7 +29,7 @@ function Answer({
   relatedItems = [],
   emptyMessage = "Aucun résultat"
 }) {
-  // const glossaryItems = useGlossary(children, html);
+  const glossaryItems = useGlossary(children, html);
   const router = useRouter();
 
   return (
@@ -53,6 +54,7 @@ function Answer({
             </Article>
           )}
           {additionalContent}
+          {glossaryItems}
           <Feedback
             query={router.query.q}
             sourceType={source && source.name}

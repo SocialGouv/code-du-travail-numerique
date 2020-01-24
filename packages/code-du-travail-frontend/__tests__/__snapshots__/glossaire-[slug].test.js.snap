@@ -1384,6 +1384,16 @@ exports[`<Term /> should render 1`] = `
                 >
                   <a
                     class="c45"
+                    href="/politique-confidentialite"
+                  >
+                    Politique de confidentialité
+                  </a>
+                </li>
+                <li
+                  class="c44"
+                >
+                  <a
+                    class="c45"
                     href="/stats"
                   >
                     Statistiques d’utilisation
