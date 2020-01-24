@@ -51,8 +51,21 @@ fi
 
 export API_HOST="api-${DOMAIN}";
 export FRONTEND_HOST="${DOMAIN}";
-export NLP_HOST="nlp-python.cdtn-master.svc.cluster.local";
+export NLP_HOST="nlp-python";
+
+[[ -f packages/code-du-travail-api/USE_MASTER ]] && \
+[[ -f packages/code-du-travail-nlp/USE_MASTER ]] && \
+[[ -f packages/code-du-travail-data/USE_MASTER ]] && \
+export API_HOST="api-master-code-travail.dev.fabrique.social.gouv.fr";
+
+[[ -f packages/code-du-travail-nlp/USE_MASTER ]] && \
+export NLP_HOST="${NLP_HOST}.cdtn-master.svc.cluster.local";
+
+[[ -f packages/code-du-travail-data/USE_MASTER ]] && \
+export ES_INDEX_PREFIX="cdtn-master"
+
 export NLP_URL="http://${NLP_HOST}:${NLP_PORT}";
+
 
 #
 
@@ -67,5 +80,5 @@ printenv | grep -E \
   "BRANCH_HASH|BRANCH_NAME|BRANCH_HASH_DOT|COMMIT|COMMIT_TAG|DOMAIN|CLUSTER_NAME|HASH_SIZE|JOB_ID|K8S_NAMESPACE" \
   | sort
 printenv | grep -E \
-  "API_HOST|API_URL|FRONTEND_HOST|FRONTEND_URL|NLP_HOST|NLP_URL" \
+  "API_HOST|API_URL|ES_INDEX_PREFIX|FRONTEND_HOST|FRONTEND_URL|NLP_HOST|NLP_URL" \
   | sort

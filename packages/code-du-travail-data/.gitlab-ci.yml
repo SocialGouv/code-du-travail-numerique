@@ -76,3 +76,38 @@ Register data image:
   variables:
     CONTEXT: packages/code-du-travail-data
     IMAGE_NAME: $CI_REGISTRY_IMAGE/data
+
+
+.deploy_data_stage: &deploy_data_stage
+  extends:
+    - .deploy_stage
+  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/kubectl:0.20.0
+  variables:
+    CONTEXT: data
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
+  script:
+    - source ./.gitlab-ci/env.sh
+    #
+    - >-
+      if [[ "${BRANCH_NAME}" != "master" ]] && [[ "${ES_INDEX_PREFIX}" == *"master"* ]]; then
+        exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
+      fi
+    #
+    - kubectl config set-context --current --namespace=${K8S_NAMESPACE}
+    #
+    - kubectl delete job ${CONTEXT} || true
+    - cat ./.k8s/data.job.yml | envsubst | kubectl apply -f -
+
+#
+
+Deploy @cdtn/data (dev):
+  extends:
+    - .deploy_data_stage
+    - .dev_stage
+  dependencies:
+    - Register data image
+
+# Deploy @cdtn/data (prod):
+#   <<: *deploy_data
+#   <<: *prod_stage

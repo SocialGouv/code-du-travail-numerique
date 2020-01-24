@@ -75,6 +75,23 @@ stages:
   extends: .base_stage
   stage: "Registration"
   dependencies: []
+  after_script:
+    # FIXME: replace `douglasduteil-refacto-gitlab-separate-package-installation`  by `${CI_DEFAULT_BRANCH}`
+    - docker pull "${IMAGE_NAME}:douglasduteil-refacto-gitlab-separate-package-installation"
+    # FIXME: replace `douglasduteil-refacto-gitlab-separate-package-installation`  by `${CI_DEFAULT_BRANCH}`
+    - docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:douglasduteil-refacto-gitlab-separate-package-installation > DEFAULT_LAYERS
+    - docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_COMMIT_SHA} > COMMIT_LAYERS
+    - >-
+      if cmp -s DEFAULT_LAYERS COMMIT_LAYERS ; then
+        echo "No changes detected."
+        touch ${CONTEXT}/USE_MASTER
+      else
+        echo "Changes detected."
+      fi
+  artifacts:
+    expire_in: 30 mins
+    paths:
+      - ${CONTEXT}/USE_MASTER
 
 .deploy_stage:
   extends: .base_stage

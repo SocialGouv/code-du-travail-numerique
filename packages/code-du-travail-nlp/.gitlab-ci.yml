@@ -99,8 +99,9 @@ Register nlp image:
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${NLP_HOST}
+    #
     - >-
-      if [[ "$HOST" == *"master.svc.cluster.local" ]]; then
+      if [[ "${BRANCH_NAME}" != "master" ]] && [[ "${HOST}" == *"master"* ]]; then
         exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
       fi
 
@@ -110,6 +111,8 @@ Deploy @cdtn/nlp (dev):
   extends:
     - .deploy_nlp_stage
     - .dev_stage
+  dependencies:
+    - Register nlp image
 
 # Deploy @cdtn/nlp (prod):
 #   extends:

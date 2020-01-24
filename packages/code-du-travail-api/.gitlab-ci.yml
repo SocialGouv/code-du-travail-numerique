@@ -118,9 +118,6 @@ Register api image:
   extends:
     - .base_deploy_hpa_chart_stage
     - .deploy_stage
-    - .dev_stage
-  dependencies:
-    - Build @cdt/api
   variables:
     CONTEXT: api
     PORT: 8000
@@ -128,13 +125,16 @@ Register api image:
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${API_HOST}
-    - export ES_INDEX_PREFIX="cdtn-master"
     - >-
-      if [[ "$HOST" == *"master.svc.cluster.local" ]]; then
+      if [[ "${BRANCH_NAME}" != "master" ]] && [[ "${HOST}" == *"master"* ]]; then
         exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
       fi
 
 Deploy @cdtn/api (dev):
+  dependencies:
+    - Register api image
+    - Register data image
+    - Register nlp image
   extends:
     - .deploy_api_stage
     - .dev_stage
