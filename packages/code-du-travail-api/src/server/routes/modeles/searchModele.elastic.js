@@ -1,7 +1,7 @@
 function getModeleBody() {
   return {
     size: 1000,
-    _source: ["title", "slug", "description", "author", "date", "filename"],
+    _source: ["title", "slug", "description", "source", "breadcrumbs"],
     query: {
       bool: {
         filter: [

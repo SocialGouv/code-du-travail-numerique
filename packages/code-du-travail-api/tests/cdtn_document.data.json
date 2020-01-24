@@ -4784,6 +4784,20 @@
       0.04145657643675804,
       -0.03282266482710838,
       0.004532359540462494
+    ],
+    "breadcrumbs": [
+      {
+        "title": "Départ de l'entreprise",
+        "slug": "8-depart-de-lentreprise"
+      },
+      {
+        "title": "Rupture conventionnelle",
+        "slug": "83-rupture-conventionnelle"
+      },
+      {
+        "title": "Rupture conventionnelle individuelle",
+        "slug": "831-rupture-conventionnelle-individuelle"
+      }
     ]
   },
   {
@@ -5310,6 +5324,20 @@
       0.07535862922668457,
       -0.029690740630030632,
       0.024393446743488312
+    ],
+    "breadcrumbs": [
+      {
+        "title": "Embauche et contrat de travail",
+        "slug": "1-embauche-et-contrat-de-travail"
+      },
+      {
+        "title": "Embauche",
+        "slug": "11-embauche"
+      },
+      {
+        "title": "Période d'essai",
+        "slug": "113-periode-dessai"
+      }
     ]
   },
   {

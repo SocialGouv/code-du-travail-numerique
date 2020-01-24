@@ -19,7 +19,6 @@ export const Heading = ({ children, stripped = false, variant, ...props }) => (
 );
 
 Heading.propTypes = {
-  as: PropTypes.string,
   isFirst: PropTypes.bool,
   children: PropTypes.node,
   shift: PropTypes.string,
