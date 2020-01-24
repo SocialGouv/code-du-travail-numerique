@@ -48,8 +48,9 @@ Build @cdt/nlp:
     PYTHONPATH: "${CI_PROJECT_DIR}/packages/${CONTEXT}"
     PYTHONUSERBASE: "${CI_PROJECT_DIR}/python_user_packages"
     #
+    F1_PACKAGES_NAME: dump
     F1_PACKAGES_FOLDER: packages/${CONTEXT}/data/dump.tf.json
-    F1_CACHE_FOLDER: README.md # No cache folder here...
+    F1_CACHE_FOLDER: none # No cache folder here...
     F1_CHECK_FILES: packages/${CONTEXT}/data/dump.json
   image: python:3.7-slim-buster
   script:
