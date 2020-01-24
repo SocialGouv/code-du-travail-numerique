@@ -44,7 +44,7 @@ Build @cdt/nlp:
     - cp ./packages/code-du-travail-data/dist/dump.data.json
         ./packages/code-du-travail-nlp/data/dump.json
     #
-    - cd packages/${CONTEXT}
+    - cd packages/code-du-travail-nlp
     - python ./scripts/dump.py
   artifacts:
     expire_in: 30 mins
