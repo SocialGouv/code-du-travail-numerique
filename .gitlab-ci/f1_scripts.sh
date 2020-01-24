@@ -24,7 +24,7 @@ function f1_install_before () {
   echo "Reinstall the ${F1_PACKAGES_FOLDER}"
   echo "Using ${F1_CACHE_FOLDER}"
 
-  local package_name=${F1_PACKAGES_NAME:=F1_PACKAGES_FOLDER}
+  local package_name=${F1_PACKAGES_NAME:=${F1_PACKAGES_FOLDER}}
 
   if [[ -z ${NO_CACHE} ]]; then
     checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-${package_name}.tar.gz" || \
@@ -32,7 +32,7 @@ function f1_install_before () {
     true
   fi
 
-  sha1sum "${F1_CHECK_FILES}" > PACKAGE_SHA
+  sha1sum ${F1_CHECK_FILES} > PACKAGE_SHA
   cat PACKAGE_SHA
 
   if [[ -d "${CI_PROJECT_DIR}/${F1_PACKAGES_FOLDER}" ]] && cmp -s PACKAGE_SHA SHA ; then
