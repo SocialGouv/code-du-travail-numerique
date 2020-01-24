@@ -1,9 +1,17 @@
 const mammoth = require("mammoth");
-const data = require("./courriers.json");
-const { SOURCES } = require("@cdt/sources");
-const slugify = require("../../slugify");
-const DOC_DIR = "docx";
 const fs = require("fs");
+const data = require("./courriers.json");
+const { SOURCES, getRouteBySource } = require("@cdt/sources");
+const slugify = require("../../slugify");
+const allThemes = require("../datafiller/themes.data.json");
+
+const themes = allThemes.filter(theme =>
+  theme.refs.some(ref =>
+    ref.url.startsWith(`/${getRouteBySource(SOURCES.LETTERS)}`)
+  )
+);
+
+const DOC_DIR = "docx";
 
 const basic_styles = `<style>
 .courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}
@@ -29,21 +37,35 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
       },
       options
     )
-    .then(result => ({
-      filename,
-      source: SOURCES.LETTERS,
-      slug: slugify(title),
-      filesize: fs.statSync(`${__dirname}/${DOC_DIR}/${filename}`).size,
-      title,
-      text: description,
-      description,
-      ...rest,
-      html:
-        basic_styles +
-        result.value
-          .replace(/\t/g, " ")
-          .replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>")
-    }));
+    .then(result => {
+      const slug = slugify(title);
+      const theme = themes.find(theme =>
+        theme.refs.some(ref => ref.url.match(new RegExp(slug)))
+      );
+      let breadcrumbs = [];
+      if (theme) {
+        breadcrumbs = (theme.breadcrumbs || []).concat([
+          { title: theme.title, slug: theme.slug }
+        ]);
+      }
+
+      return {
+        filename,
+        breadcrumbs,
+        source: SOURCES.LETTERS,
+        slug,
+        filesize: fs.statSync(`${__dirname}/${DOC_DIR}/${filename}`).size,
+        title,
+        text: description,
+        description,
+        ...rest,
+        html:
+          basic_styles +
+          result.value
+            .replace(/\t/g, " ")
+            .replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>")
+      };
+    });
 };
 
 const getCourriers = () => Promise.all(data.map(convertFile2Html));

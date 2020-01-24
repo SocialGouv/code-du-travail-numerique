@@ -2516,7 +2516,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         >
           Voir en bas de page
         </a>
-         pour renseigner votre covention collective.
+         pour renseigner votre convention collective.
       </div>
     </div>
   </div>
@@ -2972,7 +2972,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         >
           Voir en bas de page
         </a>
-         pour renseigner votre covention collective.
+         pour renseigner votre convention collective.
       </div>
     </div>
   </div>

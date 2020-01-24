@@ -19,14 +19,18 @@ const Article = ({ subtitle, title, source, date, children }) => {
           {title}
         </StyledPageTitle>
         <Meta>
-          {source && source.url && (
-            <Source>
-              Source:{" "}
-              <a href={source.url} target="_blank" rel="noopener noreferrer">
-                {source.name}
-              </a>
-            </Source>
-          )}
+          {source &&
+            (source.url ? (
+              <span>
+                Source:{" "}
+                <a href={source.url} target="_blank" rel="noopener noreferrer">
+                  {source.name}
+                </a>
+              </span>
+            ) : (
+              <span>Source: {source.name}</span>
+            ))}
+          {source && date && <span aria-hidden="true">&nbsp;-&nbsp;</span>}
           {date && <span>Mis à jour le&nbsp;: {date}</span>}
         </Meta>
         <Content>{children}</Content>
@@ -66,10 +70,6 @@ const Meta = styled.div`
     flex-flow: column;
     align-items: flex-start;
   }
-`;
-
-const Source = styled.span`
-  margin-right: ${spacings.small};
 `;
 
 const StyledPageTitle = styled(PageTitle)`

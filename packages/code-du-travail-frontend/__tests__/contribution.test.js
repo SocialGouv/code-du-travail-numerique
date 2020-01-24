@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import FicheContribution from "../pages/fiche-ministere-travail/[slug]";
+import FicheContribution from "../pages/contribution/[slug]";
 
 const data = {
   _source: {

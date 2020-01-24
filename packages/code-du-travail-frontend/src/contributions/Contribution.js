@@ -128,7 +128,7 @@ const Contribution = ({ answers, content }) => {
                   Le contenu de cette page peut être personnalisé en fonction de
                   votre situation.{" "}
                   <a href="#customisation">Voir en bas de page</a> pour
-                  renseigner votre covention collective.
+                  renseigner votre convention collective.
                 </>
               )}
             </IconStripe>
