@@ -2,7 +2,7 @@
 
 Install nlp:
   extends: .prepare_stage
-  image: python:3.7-alpine3.11
+  image: python:3.7-slim-buster
   interruptible: true
   variables:
     CONTEXT: code-du-travail-nlp
@@ -38,6 +38,7 @@ Install nlp:
       fi
     #
     - cd packages/${CONTEXT}
+    - pip install --upgrade pip
     - pip install --user -r requirements.txt
     #
     - creating_cache ${CONTEXT}-pip.tar.gz .cache/pip || true

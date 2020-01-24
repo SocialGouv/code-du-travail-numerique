@@ -2,9 +2,10 @@
 
 #
 
-[[ type curl ]] || apk add curl=~7
-[[ type git ]] || apk add git=~2
-[[ type jq ]] || apk add jq=~1
+[[ type apt-get ]] && apt-get -y update
+[[ type curl ]] || apk add curl=~7 || apt-get install curl=7.*
+[[ type git ]] || apk add git=~2 || apt-get install git=1:2.*
+[[ type jq ]] || apk add jq=~1 || apt-get install jq=1.*
 
 #
 
