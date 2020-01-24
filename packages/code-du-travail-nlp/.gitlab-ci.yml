@@ -43,12 +43,12 @@ Install nlp:
     #
     - cd ${CI_PROJECT_DIR}
     - creating_cache ${CONTEXT}-pip.tar.gz .cache/pip || true
-    - creating_cache ${CONTEXT}-python_user_packages.tar.gz SHA ${CI_PROJECT_DIR}/python_user_packages || true
+    - creating_cache ${CONTEXT}-python_user_packages.tar.gz SHA python_user_packages || true
 
   artifacts:
     expire_in: 30 mins
     paths:
-      - ${CI_PROJECT_DIR}/python_user_packages
+      - python_user_packages
 
 #
 
