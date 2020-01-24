@@ -7,6 +7,7 @@ Install nlp:
   variables:
     CONTEXT: code-du-travail-nlp
     PIP_CACHE_DIR: "${CI_PROJECT_DIR}/packages/${CONTEXT}/.cache/pip"
+    PYTHONUSERBASE: "${CI_PROJECT_DIR}/python_user_packages"
   cache:
     key: "install-nlp-${CI_COMMIT_REF_SLUG}"
     paths:
@@ -17,7 +18,7 @@ Install nlp:
   artifacts:
     expire_in: 30 mins
     paths:
-      - $HOME/.local
+      - ${CI_PROJECT_DIR}/python_user_packages
 
 #
 
@@ -33,6 +34,7 @@ Build @cdt/nlp:
     - Install nlp
   variables:
     PYTHONPATH: "${CI_PROJECT_DIR}/packages/code-du-travail-nlp"
+    PYTHONUSERBASE: "${CI_PROJECT_DIR}/python_user_packages"
   image: python:3.7-slim-buster
   script:
     # - find packages/code-du-travail-api/src -type f \( -exec sha1sum {} \; \) | sha1sum
@@ -45,6 +47,7 @@ Build @cdt/nlp:
         ./packages/code-du-travail-nlp/data/dump.json
     #
     - cd packages/code-du-travail-nlp
+    - export PATH=$PATH:$PYTHONUSERBASE/bin
     - python ./scripts/dump.py
   artifacts:
     expire_in: 30 mins
