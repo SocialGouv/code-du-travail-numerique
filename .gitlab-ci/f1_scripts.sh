@@ -21,7 +21,7 @@ source ./manual_caching.sh
 
 function f1_install_before () {
   echo "🏎️ If ${F1_CHECK_FILES} changes"
-  echo "🏎️ Reinstall the ${F1_PACKAGES_FOLDER}"
+  echo "🏎️ Reinstall the ${F1_PACKAGES_FOLDER} as ${package_name}"
   echo "🏎️ Using ${F1_CACHE_FOLDER}"
 
   local package_name=${F1_PACKAGES_NAME:=${F1_PACKAGES_FOLDER}}
@@ -67,6 +67,8 @@ function f1_install_after () {
     creating_cache "${CONTEXT}-${F1_CACHE_FOLDER}.tar.gz" "${F1_CACHE_FOLDER}" || true
   fi
 
-  echo "Cache ${F1_PACKAGES_FOLDER}"
+  local package_name=${F1_PACKAGES_NAME:=${F1_PACKAGES_FOLDER}}
+
+  echo "Cache ${F1_PACKAGES_FOLDER} as ${package_name}"
   creating_cache "${CONTEXT}-${package_name}.tar.gz" SHA "${F1_PACKAGES_FOLDER}" || true
 }
