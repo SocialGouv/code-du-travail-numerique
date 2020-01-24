@@ -6,44 +6,24 @@ Install nlp:
   interruptible: true
   variables:
     CONTEXT: code-du-travail-nlp
-    PIP_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/pip"
+    #
+    PIP_CACHE_DIR: "${CI_PROJECT_DIR}/pip"
     PYTHONUSERBASE: "${CI_PROJECT_DIR}/python_user_packages"
+    #
+    F1_PACKAGES_FOLDER: python_user_packages
+    F1_CACHE_FOLDER: pip
+    F1_CHECK_FILES: packages/${CONTEXT}/requirements.txt
   script:
     - source .gitlab-ci/f1_scripts.sh
     #
-    - >-
-      if [[ -z ${NO_CACHE} ]]; then
-        checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-python_user_packages.tar.gz" || \
-        (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-python_user_packages.tar.gz) || \
-        true
-      fi
-    #
-    - sha1sum packages/${CONTEXT}/requirements.txt > PACKAGE_SHA
-    - cat PACKAGE_SHA
-    - >-
-      if [[ -d ${CI_PROJECT_DIR}/python_user_packages ]] && cmp -s PACKAGE_SHA SHA ; then
-        echo "No changes detected."
-        exit ${CI_JOB_SKIP_EXIT_CODE:-0}
-      else
-        echo "Changes detected."
-        rm -rf ${CI_PROJECT_DIR}/python_user_packages
-        mv PACKAGE_SHA SHA
-      fi
-    #
-    - >-
-      if [[ -z ${NO_CACHE} ]]; then
-        checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-pip.tar.gz" || \
-        (echo "" && checking_cache ${CI_DEFAULT_BRANCH}/${CONTEXT}-pip.tar.gz) || \
-        true
-      fi
+    - f1_install_before
     #
     - cd packages/${CONTEXT}
     - pip install --upgrade pip
     - pip install --user -r requirements.txt
-    #
     - cd ${CI_PROJECT_DIR}
-    - creating_cache ${CONTEXT}-pip.tar.gz .cache/pip || true
-    - creating_cache ${CONTEXT}-python_user_packages.tar.gz SHA python_user_packages || true
+    #
+    - f1_install_after
 
   artifacts:
     expire_in: 30 mins
