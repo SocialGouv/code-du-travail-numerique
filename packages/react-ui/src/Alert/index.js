@@ -18,9 +18,6 @@ export const Alert = styled.div`
   & > *:last-child {
     margin-bottom: 0;
   }
-  &:last-child {
-    margin-bottom: 0;
-  }
 `;
 
 Alert.propTypes = {

@@ -83,6 +83,7 @@ const StyledInput = styled.input`
   }
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
     padding: 0 ${spacings.small};
     padding-right: ${props => (props.hasIcon ? "5rem" : spacings.medium)};
   }
