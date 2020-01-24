@@ -153,9 +153,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 .c23[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
+  color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
 }
