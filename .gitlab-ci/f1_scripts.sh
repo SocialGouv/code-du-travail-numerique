@@ -2,10 +2,10 @@
 
 #
 
-[[ type apt-get ]] && apt-get -y update
-[[ type curl ]] || apk add curl=~7 || apt-get install curl=7.*
-[[ type git ]] || apk add git=~2 || apt-get install git=1:2.*
-[[ type jq ]] || apk add jq=~1 || apt-get install jq=1.*
+if type apt-get; then apt-get -y update; fi
+if type curl; then curl --version; else apk add curl=~7 || apt-get install curl=7.* ; fi
+if type git; then git --version; else apk add git=~2 || apt-get install git=1:2.* ; fi
+if type jq; then jq --version; else  apk add jq=~1 || apt-get install jq=1.* ; fi
 
 #
 
