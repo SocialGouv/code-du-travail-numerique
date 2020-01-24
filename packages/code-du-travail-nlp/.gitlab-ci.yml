@@ -99,6 +99,10 @@ Register nlp image:
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${NLP_HOST}
+    - >-
+      if [[ "$HOST" == *"master.svc.cluster.local" ]]; then
+        exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
+      fi
 
 #
 
