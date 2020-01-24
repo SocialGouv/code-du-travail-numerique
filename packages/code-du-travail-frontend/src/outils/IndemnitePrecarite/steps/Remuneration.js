@@ -55,5 +55,3 @@ function StepRemuneration({ form }) {
 }
 
 export { StepRemuneration };
-
-const { fonts } = theme;
