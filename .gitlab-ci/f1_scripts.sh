@@ -3,9 +3,10 @@
 #
 
 if type apt-get; then apt-get -y update; fi
-if type curl; then curl --version; else apk add curl=~7 || apt-get install curl=7.* ; fi
-if type git; then git --version; else apk add git=~2 || apt-get install git=1:2.* ; fi
-if type jq; then jq --version; else  apk add jq=~1 || apt-get install jq=1.* ; fi
+if type curl; then curl --version; else apk add curl=~7 || apt-get install -y curl=7.* ; fi
+if type wget; then wget --version || true; else apk add wget=~1 || apt-get install -y wget=1.* ; fi
+if type git; then git --version; else apk add git=~2 || apt-get install -y git=1:2.* ; fi
+if type jq; then jq --version; else  apk add jq=~1 || apt-get install -y jq=1.* ; fi
 
 #
 
