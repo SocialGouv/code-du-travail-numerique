@@ -45,20 +45,25 @@ Build @cdt/nlp:
   variables:
     PYTHONPATH: "${CI_PROJECT_DIR}/packages/code-du-travail-nlp"
     PYTHONUSERBASE: "${CI_PROJECT_DIR}/python_user_packages"
+    #
+    F1_PACKAGES_FOLDER: packages/code-du-travail-nlp/data/dump.tf.json
+    F1_CACHE_FOLDER: README.md # No cache folder here...
+    F1_CHECK_FILES: packages/code-du-travail-nlp/data/dump.json
   image: python:3.7-slim-buster
   script:
-    # - find packages/code-du-travail-api/src -type f \( -exec sha1sum {} \; \) | sha1sum
-    # - sha1sum yarn.lock packages/${CONTEXT}/package.json > PACKAGE_SHA
-    # - cat PACKAGE_SHA
-    # - >-
-    #   if [[ -d node_modules ]] && cmp -s PACKAGE_SHA SHA ; then
-    # Copy the `@cdt/data` artefact to the nlp data directory
+    #
     - cp ./packages/code-du-travail-data/dist/dump.data.json
         ./packages/code-du-travail-nlp/data/dump.json
+    #
+    - source .gitlab-ci/f1_scripts.sh
+    #
+    - f1_install_before
     #
     - cd packages/code-du-travail-nlp
     - export PATH=$PATH:$PYTHONUSERBASE/bin
     - python ./scripts/dump.py
+    #
+    - f1_install_after
   artifacts:
     expire_in: 30 mins
     paths:
