@@ -65,6 +65,7 @@ Build @cdt/nlp:
     - cd packages/${CONTEXT}
     - export PATH=$PATH:$PYTHONUSERBASE/bin
     - python ./scripts/dump.py
+    - cd ${CI_PROJECT_DIR}
     #
     - f1_install_after
   artifacts:

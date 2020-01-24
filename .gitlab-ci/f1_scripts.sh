@@ -20,17 +20,24 @@ wget -qO ./manual_caching.sh https://raw.githubusercontent.com/SocialGouv/gitlab
 source ./manual_caching.sh
 
 function f1_install_before () {
-  echo "If ${F1_CHECK_FILES} changes"
-  echo "Reinstall the ${F1_PACKAGES_FOLDER}"
-  echo "Using ${F1_CACHE_FOLDER}"
+  echo "🏎️ If ${F1_CHECK_FILES} changes"
+  echo "🏎️ Reinstall the ${F1_PACKAGES_FOLDER}"
+  echo "🏎️ Using ${F1_CACHE_FOLDER}"
 
   local package_name=${F1_PACKAGES_NAME:=${F1_PACKAGES_FOLDER}}
 
   if [[ -z ${NO_CACHE} ]]; then
+    echo ""
+    echo "///"
+    echo ""
     checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-${package_name}.tar.gz" || \
     (echo "" && checking_cache "${CI_DEFAULT_BRANCH}/${CONTEXT}-${package_name}.tar.gz") || \
     true
   fi
+
+  echo ""
+  echo "///"
+  echo ""
 
   sha1sum ${F1_CHECK_FILES} > PACKAGE_SHA
   cat PACKAGE_SHA
@@ -45,6 +52,9 @@ function f1_install_before () {
   fi
 
   if [[ -n "${F1_CACHE_FOLDER}" ]] && [[ -z ${NO_CACHE} ]]; then
+    echo ""
+    echo "///"
+    echo ""
     checking_cache "${CI_COMMIT_REF_SLUG}/${CONTEXT}-${F1_CACHE_FOLDER}.tar.gz" || \
     (echo "" && checking_cache "${CI_DEFAULT_BRANCH}/${CONTEXT}-${F1_CACHE_FOLDER}.tar.gz") || \
     true
