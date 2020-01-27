@@ -1193,6 +1193,16 @@ exports[`<Theme /> should render 1`] = `
                 >
                   <a
                     class="c40"
+                    href="/politique-confidentialite"
+                  >
+                    Politique de confidentialité
+                  </a>
+                </li>
+                <li
+                  class="c39"
+                >
+                  <a
+                    class="c40"
                     href="/stats"
                   >
                     Statistiques d’utilisation

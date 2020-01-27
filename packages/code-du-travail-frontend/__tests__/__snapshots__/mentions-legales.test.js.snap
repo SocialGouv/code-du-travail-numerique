@@ -8,7 +8,7 @@ exports[`<MentionLegales /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c46 {
+.c34 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -47,109 +47,6 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 .c24 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c36:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
-.c31 {
-  position: relative;
-  z-index: 1;
-}
-
-.c39 {
-  position: relative;
-  z-index: 1;
-  border-top: 1px solid #bbcadf;
-}
-
-.c38 {
-  margin-top: -11rem;
-  padding-top: 11rem;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.c33 {
-  position: relative;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-[aria-expanded="true"] .c33,
-[aria-selected="true"] .c33 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c32:hover,
-.c32:focus,
-.c32:focus-within,
-.c32[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c34 {
-  margin: 2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c35 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c35.accordion__body--hidden {
-  display: none;
-}
-
-.c37 > *:first-child {
-  margin-top: 0;
-}
-
-.c37 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -214,7 +111,7 @@ exports[`<MentionLegales /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c41 {
+.c38 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -251,16 +148,16 @@ exports[`<MentionLegales /> should render 1`] = `
   opacity: 1;
 }
 
-.c41:link,
-.c41:visited {
+.c38:link,
+.c38:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c41:not([disabled]):hover,
-.c41:not([disabled]):active,
-.c41:not([disabled]):focus {
+.c38:not([disabled]):hover,
+.c38:not([disabled]):active,
+.c38:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -269,7 +166,7 @@ exports[`<MentionLegales /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c41[disabled] {
+.c38[disabled] {
   color: rgba(255,255,255,0.4);
   box-shadow: none;
   cursor: not-allowed;
@@ -301,7 +198,7 @@ exports[`<MentionLegales /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c42 {
+.c30 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -311,7 +208,7 @@ exports[`<MentionLegales /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c55 {
+.c44 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -335,7 +232,7 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: left;
 }
 
-.c47 {
+.c35 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -365,7 +262,7 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: left;
 }
 
-.c48 {
+.c36 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -598,12 +495,12 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c43 {
+.c31 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c44 {
+.c32 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -611,7 +508,7 @@ exports[`<MentionLegales /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c44:before {
+.c32:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -623,13 +520,13 @@ exports[`<MentionLegales /> should render 1`] = `
   content: "";
 }
 
-.c45 {
+.c33 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c49 {
+.c37 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -638,17 +535,17 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c50 {
+.c39 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c51 {
+.c40 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c52 {
+.c41 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -662,31 +559,31 @@ exports[`<MentionLegales /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c54 + .c53 {
+.c43 + .c42 {
   padding-left: 1.6rem;
 }
 
-.c57 {
+.c46 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c56 {
+.c45 {
   font-size: 1.6rem;
 }
 
-.c58 {
+.c47 {
   margin: 0.4rem 0;
 }
 
-.c59 {
+.c48 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c60 {
+.c49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -705,14 +602,14 @@ exports[`<MentionLegales /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c61 {
+.c50 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
 }
 
-.c62 {
+.c51 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -748,12 +645,6 @@ exports[`<MentionLegales /> should render 1`] = `
   margin: 2rem 0;
 }
 
-.c40 {
-  margin: 2rem 0;
-  padding-left: 2rem;
-  list-style-type: disc;
-}
-
 .c29 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -771,10 +662,6 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c30 {
-  margin-bottom: 2rem;
-}
-
 @media (max-width:600px) {
   .c20 {
     padding: 0 1rem;
@@ -789,13 +676,13 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c34 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c46 {
+  .c34 {
     max-width: 100%;
     padding: 0;
   }
@@ -815,50 +702,31 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c38 {
-    margin-top: -6rem;
-    padding-top: 6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c34 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c35 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c38 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c38 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c30 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c55 {
+  .c44 {
     font-size: 1.6rem;
   }
 }
@@ -878,7 +746,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c35 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -903,7 +771,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c36 {
     font-size: 2.2rem;
   }
 }
@@ -1051,52 +919,52 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media print {
-  .c44 {
+  .c32 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c33 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c37 {
     padding: 0;
   }
 }
 
 @media print {
-  .c49 {
+  .c37 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c40 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c41 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c52 {
+  .c41 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c41 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1104,26 +972,26 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c54 + .c53 {
+  .c43 + .c42 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c46 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c45 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c62 {
+  .c51 {
     display: none;
   }
 }
@@ -1432,29 +1300,21 @@ exports[`<MentionLegales /> should render 1`] = `
             </h2>
           </header>
           <p>
-            Ce site est hébergé en propre par le Ministère des Affaires sociales et de la Santé :
+            Ce site est hébergé par Microsoft Azure France (région France centre) :
           </p>
           <address
             class="c25"
           >
-            Ministère des affaires sociales et de la santé
+            Microsoft France
             <br />
-            14 avenue Duquesne
+            37 Quai du Président Roosevelt
             <br />
-            75530 PARIS
+            92130 ISSY-LES-MOULINEAUX
           </address>
           <div
             class="c29"
           >
-            Le
-             
-            <a
-              href="https://github.com/SocialGouv/code-du-travail-numerique"
-            >
-              code du logiciel
-            </a>
-             
-            est libre, et peut donc être vérifié et amélioré par toutes et tous à l’adresse suivante:
+            Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l’adresse suivante:
              
             <a
               href="https://github.com/SocialGouv/code-du-travail-numerique"
@@ -1472,228 +1332,6 @@ exports[`<MentionLegales /> should render 1`] = `
               <div
                 class="c28"
               />
-              Modalités d’utilisation
-            </h2>
-          </header>
-          <div
-            class="c30"
-            data-accordion-component="Accordion"
-          >
-            <div>
-              <div
-                class="c31"
-                data-accordion-component="AccordionItem"
-                index="0"
-              >
-                <div
-                  aria-level="3"
-                  class="accordion__heading"
-                  data-accordion-component="AccordionItemHeading"
-                  role="heading"
-                >
-                  <div
-                    aria-controls="accordion__panel-0"
-                    aria-disabled="false"
-                    aria-expanded="false"
-                    class="c32"
-                    data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-0"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <svg
-                      class="c33"
-                      fill="none"
-                      height="24"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      width="24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <polyline
-                        points="9 18 15 12 9 6"
-                      />
-                    </svg>
-                    <div
-                      class="c34"
-                    >
-                      Traitement des données à caractère personnel
-                    </div>
-                  </div>
-                </div>
-                <div
-                  aria-hidden="true"
-                  aria-labelledby="accordion__heading-0"
-                  class="c35"
-                  data-accordion-component="AccordionItemPanel"
-                  hidden=""
-                  id="accordion__panel-0"
-                >
-                  <div
-                    class="c36"
-                  >
-                    <h3>
-                      Traitement des données à caractère personnel
-                    </h3>
-                  </div>
-                  <div
-                    class="c37"
-                  >
-                    <p>
-                      Le code du travail numérique ne vous demande ni ne stocke d’information nominative.
-                    </p>
-                    <p>
-                      Pour autant, nous enregistrons les informations saisies dans la barre de recherche. Elles sont conservées pendant deux années pour analyser les usages, améliorer la précision des réponses apportées et améliorer le service.
-                    </p>
-                    <p>
-                      Nous nous engageons à ne jamais céder ces informations à des tiers.
-                    </p>
-                    <p>
-                      Vous avez un droit d’accès, de rectification et de suppression de vos données. Pour l’exercer, faites-nous parvenir une demande en précisant la date et l’heure précise de la requête - ces éléments sont indispensables pour nous permettre de retrouver votre recherche - par voie électronique à l’adresse suivante :
-                       
-                      <a
-                        href="mailto:codedutravailnumerique@travail.gouv.fr"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        codedutravailnumerique@travail.gouv.fr
-                      </a>
-                       
-                      ou par voie postale :
-                    </p>
-                    <address
-                      class="c25"
-                    >
-                      Direction des systèmes d’information
-                      <br />
-                      Ministère des affaires sociales et de la santé
-                      <br />
-                      39-43 Quai André Citroën
-                      <br />
-                      75015 PARIS
-                    </address>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              id="cookies"
-            >
-              <div
-                class="c38"
-              />
-              <div
-                class="c39"
-                data-accordion-component="AccordionItem"
-                index="1"
-              >
-                <div
-                  aria-level="3"
-                  class="accordion__heading"
-                  data-accordion-component="AccordionItemHeading"
-                  role="heading"
-                >
-                  <div
-                    aria-controls="accordion__panel-cookies"
-                    aria-disabled="false"
-                    aria-expanded="true"
-                    class="c32"
-                    data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-cookies"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <svg
-                      class="c33"
-                      fill="none"
-                      height="24"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      width="24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <polyline
-                        points="9 18 15 12 9 6"
-                      />
-                    </svg>
-                    <div
-                      class="c34"
-                    >
-                      Utilisation de témoins de connexion (« cookies »)
-                    </div>
-                  </div>
-                </div>
-                <div
-                  aria-hidden="false"
-                  aria-labelledby="accordion__heading-cookies"
-                  class="c35"
-                  data-accordion-component="AccordionItemPanel"
-                  id="accordion__panel-cookies"
-                >
-                  <div
-                    class="c36"
-                  >
-                    <h3
-                      id="cookies"
-                    >
-                      Utilisation de témoins de connexion (« cookies »)
-                    </h3>
-                  </div>
-                  <div
-                    class="c37"
-                  >
-                    <p>
-                      Nous collectons également des données par l’intermédiaire de dispositifs appelés “cookies” permettant d’établir des mesures statistiques de fréquentation et d’utilisation du site pouvant être utilisées à des fins de suivi et d’amélioration du service :
-                    </p>
-                    <ul
-                      class="c40"
-                    >
-                      <li>
-                        Les données collectées ne sont pas recoupées avec d’autres traitements.
-                      </li>
-                      <li>
-                        Le cookie déposé sert uniquement à la production de statistiques anonymes.
-                      </li>
-                      <li>
-                        Le cookie ne permet pas de suivre la navigation de l’internaute sur d’autres sites.
-                      </li>
-                    </ul>
-                    <p>
-                      <button
-                        class="c41"
-                      >
-                        Modifier les réglages
-                      </button>
-                    </p>
-                    <p>
-                      La mesure d’audience (nombre de visites, pages consultées) est réalisée par un outil libre intitulé Matomo spécifiquement paramétré, respectant les conditions d’exemption du consentement de l’internaute définies par la recommandation « Cookies » de la Commission nationale informatique et libertés (CNIL).
-                    </p>
-                    <p>
-                      À tout moment, vous pouvez refuser l’utilisation des cookies et désactiver le dépôt sur votre ordinateur en utilisant la fonction dédiée de votre navigateur (fonction disponible notamment sur Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple Safari et Opera).
-                    </p>
-                    <p>
-                      L’ensemble de ces informations sont nécessaires à la mise en oeuvre de ce service public numérique.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <header
-            class="c26"
-          >
-            <h2
-              class="c27"
-            >
-              <div
-                class="c28"
-              />
               Accessibilité
             </h2>
           </header>
@@ -1701,18 +1339,25 @@ exports[`<MentionLegales /> should render 1`] = `
             La conformité aux normes d’accessibilité numérique est un objectif ultérieur mais nous tâchons de rendre dès la conception, ce site accessible à toutes et à tous.
           </p>
           <h3
-            class="c42"
+            class="c30"
           >
             Signaler un dysfonctionnement
           </h3>
           <p>
-            Si vous rencontrez un défaut d’accessibilité vous empêchant d’accéder à un contenu ou une fonctionnalité du site, merci de nous en faire part.
+            Si vous rencontrez un défaut d’accessibilité vous empêchant d’accéder à un contenu ou une fonctionnalité du site,
+             
+            <a
+              href="mailto:codedutravailnumerique@travail.gouv.fr"
+              title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
+            >
+              merci de nous en faire part.
+            </a>
           </p>
           <p>
             Si vous n’obtenez pas de réponse rapide de notre part, vous êtes en droit de faire parvenir vos doléances ou une demande de saisine au Défenseur des droits.
           </p>
           <h3
-            class="c42"
+            class="c30"
           >
             En savoir plus
           </h3>
@@ -1745,22 +1390,22 @@ exports[`<MentionLegales /> should render 1`] = `
     </div>
   </main>
   <div
-    class="c43"
+    class="c31"
   >
     <footer
-      class="c44"
+      class="c32"
     >
       <div
-        class="c19 c45"
+        class="c19 c33"
       >
         <div
-          class="c46"
+          class="c34"
         >
           <header
-            class="c47"
+            class="c35"
           >
             <h3
-              class="c48"
+              class="c36"
             >
               <div
                 class="c23"
@@ -1769,16 +1414,16 @@ exports[`<MentionLegales /> should render 1`] = `
             </h3>
           </header>
           <div
-            class="c49"
+            class="c37"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </div>
           <button
-            class="c41"
+            class="c38"
           >
             Contacter nos services en région
             <svg
-              class="c50"
+              class="c39"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -1791,78 +1436,88 @@ exports[`<MentionLegales /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c19 c51"
+        class="c19 c40"
       >
         <nav>
           <div
-            class="c52"
+            class="c41"
           >
             <div
-              class="c53 c54"
+              class="c42 c43"
             >
               <h3
-                class="c55 c56"
+                class="c44 c45"
               >
                 Code du travail numérique
               </h3>
               <ul
-                class="c57"
+                class="c46"
               >
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
+                    href="/politique-confidentialite"
+                  >
+                    Politique de confidentialité
+                  </a>
+                </li>
+                <li
+                  class="c47"
+                >
+                  <a
+                    class="c48"
                     href="/stats"
                   >
                     Statistiques d’utilisation
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="mailto:codedutravailnumerique@travail.gouv.fr"
                     title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
@@ -1872,21 +1527,21 @@ exports[`<MentionLegales /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c53 c54"
+              class="c42 c43"
             >
               <h3
-                class="c55 c56"
+                class="c44 c45"
               >
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c57"
+                class="c46"
               >
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1895,10 +1550,10 @@ exports[`<MentionLegales /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1909,21 +1564,21 @@ exports[`<MentionLegales /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c53 c54"
+              class="c42 c43"
             >
               <h3
-                class="c55 c56"
+                class="c44 c45"
               >
                 En collaboration avec
               </h3>
               <ul
-                class="c57"
+                class="c46"
               >
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1932,10 +1587,10 @@ exports[`<MentionLegales /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="https://incubateur.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1944,10 +1599,10 @@ exports[`<MentionLegales /> should render 1`] = `
                   </a>
                 </li>
                 <li
-                  class="c58"
+                  class="c47"
                 >
                   <a
-                    class="c59"
+                    class="c48"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1961,10 +1616,10 @@ exports[`<MentionLegales /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c60"
+        class="c49"
       >
         <a
-          class="c61"
+          class="c50"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1973,12 +1628,12 @@ exports[`<MentionLegales /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c51"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c50"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -1987,12 +1642,12 @@ exports[`<MentionLegales /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c51"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c50"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2001,12 +1656,12 @@ exports[`<MentionLegales /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c51"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c50"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2015,12 +1670,12 @@ exports[`<MentionLegales /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c51"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c50"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -2029,12 +1684,12 @@ exports[`<MentionLegales /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c62"
+          class="c51"
         >
           |
         </span>
         <a
-          class="c61"
+          class="c50"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"

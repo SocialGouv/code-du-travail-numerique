@@ -81,6 +81,11 @@ const Footer = () => {
                     </Link>
                   </StyledListItem>
                   <StyledListItem>
+                    <Link passHref href="/politique-confidentialite">
+                      <StyledLink>Politique de confidentialité</StyledLink>
+                    </Link>
+                  </StyledListItem>
+                  <StyledListItem>
                     <Link passHref href="/stats">
                       <StyledLink>Statistiques d’utilisation</StyledLink>
                     </Link>

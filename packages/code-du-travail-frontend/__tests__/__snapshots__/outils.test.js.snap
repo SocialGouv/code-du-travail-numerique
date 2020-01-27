@@ -2501,6 +2501,16 @@ exports[`<Outils /> should render 1`] = `
                 >
                   <a
                     class="c60"
+                    href="/politique-confidentialite"
+                  >
+                    Politique de confidentialité
+                  </a>
+                </li>
+                <li
+                  class="c59"
+                >
+                  <a
+                    class="c60"
                     href="/stats"
                   >
                     Statistiques d’utilisation

@@ -3537,6 +3537,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 >
                   <a
                     class="c67"
+                    href="/politique-confidentialite"
+                  >
+                    Politique de confidentialité
+                  </a>
+                </li>
+                <li
+                  class="c66"
+                >
+                  <a
+                    class="c67"
                     href="/stats"
                   >
                     Statistiques d’utilisation

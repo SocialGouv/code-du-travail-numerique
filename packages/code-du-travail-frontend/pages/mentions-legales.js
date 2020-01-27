@@ -1,8 +1,6 @@
-import React, { useCallback } from "react";
+import React from "react";
 import styled from "styled-components";
 import {
-  Accordion,
-  Button,
   Container,
   Heading,
   PageTitle,
@@ -16,12 +14,6 @@ import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
 
 const LegalPage = ({ pageUrl, ogImage }) => {
-  const openTarteAuCitron = useCallback(() => {
-    if (window && window.tarteaucitron) {
-      window.tarteaucitron.userInterface.openPanel();
-    }
-  }, []);
-
   return (
     <Layout>
       <Metas
@@ -56,140 +48,24 @@ const LegalPage = ({ pageUrl, ogImage }) => {
             <p>Yves Struillou, Directeur Général du Travail</p>
             <Title shift={spacings.larger}>Hébergement</Title>
             <p>
-              Ce site est hébergé en propre par le Ministère des Affaires
-              sociales et de la Santé :
+              Ce site est hébergé par Microsoft Azure France (région France
+              centre)&nbsp;:
             </p>
             <Address>
-              Ministère des affaires sociales et de la santé
+              Microsoft France
               <br />
-              14 avenue Duquesne
+              37 Quai du Président Roosevelt
               <br />
-              75530 PARIS
+              92130 ISSY-LES-MOULINEAUX
             </Address>
             <StyledWrapper variant="dark">
-              Le{" "}
-              <a href="https://github.com/SocialGouv/code-du-travail-numerique">
-                code du logiciel
-              </a>{" "}
-              est libre, et peut donc être vérifié et amélioré par toutes et
-              tous à l’adresse suivante:{" "}
+              Le code du logiciel est libre, et peut donc être vérifié et
+              amélioré par toutes et tous à l’adresse suivante:{" "}
               <a href="https://github.com/SocialGouv/code-du-travail-numerique">
                 https://github.com/SocialGouv/code-du-travail-numerique
               </a>
               .
             </StyledWrapper>
-            <Title shift={spacings.larger}>Modalités d’utilisation</Title>
-            <StyledAccordion
-              preExpanded={["cookies"]}
-              items={[
-                {
-                  title: <h3>Traitement des données à caractère personnel</h3>,
-                  body: (
-                    <>
-                      <p>
-                        Le code du travail numérique ne vous demande ni ne
-                        stocke d’information nominative.
-                      </p>
-                      <p>
-                        Pour autant, nous enregistrons les informations saisies
-                        dans la barre de recherche. Elles sont conservées
-                        pendant deux années pour analyser les usages, améliorer
-                        la précision des réponses apportées et améliorer le
-                        service.
-                      </p>
-                      <p>
-                        Nous nous engageons à ne jamais céder ces informations à
-                        des tiers.
-                      </p>
-                      <p>
-                        Vous avez un droit d’accès, de rectification et de
-                        suppression de vos données. Pour l’exercer, faites-nous
-                        parvenir une demande en précisant la date et l’heure
-                        précise de la requête - ces éléments sont indispensables
-                        pour nous permettre de retrouver votre recherche - par
-                        voie électronique à l’adresse suivante :{" "}
-                        <a
-                          href="mailto:codedutravailnumerique@travail.gouv.fr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          codedutravailnumerique@travail.gouv.fr
-                        </a>{" "}
-                        ou par voie postale :
-                      </p>
-                      <Address>
-                        Direction des systèmes d’information
-                        <br />
-                        Ministère des affaires sociales et de la santé
-                        <br />
-                        39-43 Quai André Citroën
-                        <br />
-                        75015 PARIS
-                      </Address>
-                    </>
-                  )
-                },
-                {
-                  title: (
-                    <h3 id="cookies">
-                      Utilisation de témoins de connexion (« cookies »)
-                    </h3>
-                  ),
-                  id: "cookies",
-                  body: (
-                    <>
-                      <p>
-                        Nous collectons également des données par
-                        l’intermédiaire de dispositifs appelés “cookies”
-                        permettant d’établir des mesures statistiques de
-                        fréquentation et d’utilisation du site pouvant être
-                        utilisées à des fins de suivi et d’amélioration du
-                        service :
-                      </p>
-                      <StyledList>
-                        <li>
-                          Les données collectées ne sont pas recoupées avec
-                          d’autres traitements.
-                        </li>
-                        <li>
-                          Le cookie déposé sert uniquement à la production de
-                          statistiques anonymes.
-                        </li>
-                        <li>
-                          Le cookie ne permet pas de suivre la navigation de
-                          l’internaute sur d’autres sites.
-                        </li>
-                      </StyledList>
-                      <p>
-                        <Button onClick={openTarteAuCitron}>
-                          Modifier les réglages
-                        </Button>
-                      </p>
-                      <p>
-                        La mesure d’audience (nombre de visites, pages
-                        consultées) est réalisée par un outil libre intitulé
-                        Matomo spécifiquement paramétré, respectant les
-                        conditions d’exemption du consentement de l’internaute
-                        définies par la recommandation « Cookies » de la
-                        Commission nationale informatique et libertés (CNIL).
-                      </p>
-                      <p>
-                        À tout moment, vous pouvez refuser l’utilisation des
-                        cookies et désactiver le dépôt sur votre ordinateur en
-                        utilisant la fonction dédiée de votre navigateur
-                        (fonction disponible notamment sur Microsoft Internet
-                        Explorer 11, Google Chrome, Mozilla Firefox, Apple
-                        Safari et Opera).
-                      </p>
-                      <p>
-                        L’ensemble de ces informations sont nécessaires à la
-                        mise en oeuvre de ce service public numérique.
-                      </p>
-                    </>
-                  )
-                }
-              ]}
-            />
             <Title shift={spacings.larger}>Accessibilité</Title>
             <p>
               La conformité aux normes d’accessibilité numérique est un objectif
@@ -199,8 +75,13 @@ const LegalPage = ({ pageUrl, ogImage }) => {
             <Heading>Signaler un dysfonctionnement</Heading>
             <p>
               Si vous rencontrez un défaut d’accessibilité vous empêchant
-              d’accéder à un contenu ou une fonctionnalité du site, merci de
-              nous en faire part.
+              d’accéder à un contenu ou une fonctionnalité du site,{" "}
+              <a
+                title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
+                href="mailto:codedutravailnumerique@travail.gouv.fr"
+              >
+                merci de nous en faire part.
+              </a>
             </p>
             <p>
               Si vous n’obtenez pas de réponse rapide de notre part, vous êtes
@@ -236,16 +117,7 @@ const Address = styled.address`
   display: block;
   margin: ${spacings.medium} 0;
 `;
-const StyledList = styled.ul`
-  margin: ${spacings.medium} 0;
-  padding-left: ${spacings.medium};
-  list-style-type: disc;
-`;
 
 const StyledWrapper = styled(Wrapper)`
-  margin-bottom: ${spacings.medium};
-`;
-
-const StyledAccordion = styled(Accordion)`
   margin-bottom: ${spacings.medium};
 `;

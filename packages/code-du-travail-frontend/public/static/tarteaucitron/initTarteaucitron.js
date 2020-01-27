@@ -3,7 +3,7 @@ var currentLanguage = document.documentElement.lang;
 window.tarteaucitronForceLanguage = currentLanguage;
 
 tarteaucitron.init({
-  privacyUrl: "" /* Privacy policy url */,
+  privacyUrl: "/politique-confidentialite#cookie" /* Privacy policy url */,
 
   hashtag: "#tarteaucitron" /* Open the panel with this hashtag */,
   cookieName: "tarteaucitron" /* Cookie name */,
@@ -24,7 +24,7 @@ tarteaucitron.init({
   //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
 
   readmoreLink:
-    "/mentions-legales#cookies" /* Change the default readmore link */
+    "/politique-confidentialite#cookie" /* Change the default readmore link */
 });
 tarteaucitron.user.gtagUa = "DC-3048978";
 tarteaucitron.user.gtagMore = function() {

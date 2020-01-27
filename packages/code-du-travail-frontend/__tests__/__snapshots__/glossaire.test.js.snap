@@ -3779,6 +3779,16 @@ exports[`<Glossaire /> should render 1`] = `
                 >
                   <a
                     class="c48"
+                    href="/politique-confidentialite"
+                  >
+                    Politique de confidentialité
+                  </a>
+                </li>
+                <li
+                  class="c47"
+                >
+                  <a
+                    class="c48"
                     href="/stats"
                   >
                     Statistiques d’utilisation
