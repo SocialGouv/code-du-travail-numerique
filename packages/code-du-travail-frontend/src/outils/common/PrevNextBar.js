@@ -62,6 +62,7 @@ const StyledButton = styled(Button)`
 const Box = styled.div`
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   justify-content: space-between;
   margin: ${spacings.large} 0;
   @media (max-width: ${breakpoints.tablet}) {
