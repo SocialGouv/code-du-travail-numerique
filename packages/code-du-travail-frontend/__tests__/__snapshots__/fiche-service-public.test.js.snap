@@ -14,6 +14,7 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 .c22 {
+  margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;

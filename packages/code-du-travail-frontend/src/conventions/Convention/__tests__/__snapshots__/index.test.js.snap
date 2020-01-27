@@ -98,6 +98,7 @@ exports[`<Convention /> renders 1`] = `
 }
 
 .c13 {
+  margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
