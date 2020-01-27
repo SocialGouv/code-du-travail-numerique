@@ -79,7 +79,9 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 .c6[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -253,6 +255,12 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 @media (max-width:600px) {
   .c2 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    width: 100%;
   }
 }
 

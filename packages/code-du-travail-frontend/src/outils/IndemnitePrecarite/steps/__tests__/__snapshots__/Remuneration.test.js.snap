@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
-.c12 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -30,39 +30,41 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   -moz-appearance: none;
   appearance: none;
   height: 5.2rem;
-  padding: 0 4.4rem;
+  padding: 0 1.9rem;
   color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
+  background: transparent;
+  border-color: transparent;
   box-shadow: none;
   opacity: 1;
 }
 
-.c12:link,
-.c12:visited {
+.c11:link,
+.c11:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
-  opacity: 1;
+.c11:not([disabled]):hover,
+.c11:not([disabled]):active,
+.c11:not([disabled]):focus {
+  opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: transparent;
+  border-color: transparent;
 }
 
-.c12[disabled] {
-  color: rgba(62,72,110,0.4);
+.c11[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c14 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -90,39 +92,39 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c14:focus,
-.c14:hover,
-.c14:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c15:link,
+.c15:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
 }
 
-.c16 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
 }
 
-.c11:hover .c16 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
+.c15[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c8 {
@@ -282,8 +284,18 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
+}
+
+.c4 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 .c1 {
@@ -300,15 +312,39 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   max-width: 40rem;
 }
 
+.c16 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.c12 {
+  margin-left: 1rem;
+}
+
+.c14 {
+  width: 2rem;
+  margin-left: 0.4rem;
+  color: #f66663;
+}
+
+.c17 {
+  width: 2rem;
+  margin-right: 0.4rem;
+  color: #f66663;
+}
+
 .c6 {
   display: inline-block;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   margin-right: 1rem;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -324,50 +360,27 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   margin-bottom: 0.4rem;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.c13 {
-  margin-left: 2rem;
-}
-
-.c15 {
-  margin: 2rem 0;
-}
-
-.c17 {
+.c18 {
+  color: #3e486e;
   font-size: 1.4rem;
   font-style: italic;
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
-    padding: 0 3rem;
+  .c15 {
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
-    font-size: 1.4rem;
+  .c8 {
+    width: 100%;
   }
 }
 
@@ -381,6 +394,44 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 @media (max-width:600px) {
   .c0 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
   }
 }
 
@@ -407,11 +458,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       type="radio"
       value="total"
     />
-    En indiquant le 
-    <strong>
-       montant total 
-    </strong>
-    des rémunérations.
+    <span>
+      En indiquant le
+      <strong>
+         montant total 
+      </strong>
+      des rémunérations.
+    </span>
   </label>
   <label
     class="c2"
@@ -425,131 +478,164 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       type="radio"
       value="mensuel"
     />
-    En indiquant le 
-    <strong>
-       salaire mensuel 
-    </strong>
-    pour chaque mois.
+    <span>
+      En indiquant le
+      <strong>
+         salaire mensuel 
+      </strong>
+       pour chaque mois.
+    </span>
   </label>
-  <p>
-    Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-  </p>
-  <div
+  <label
     class="c4"
   >
-    <div
-      class="c5"
+    Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
+    <span
+      aria-label="champs obligatoire"
+      class="c1"
     >
-      <label
-        class="c6"
-        for="2"
+      *
+    </span>
+  </label>
+  <div
+    class="c5"
+  >
+    <label
+      class="c6"
+      for="2"
+    >
+      Montant :
+    </label>
+    <div
+      class="c7"
+    >
+      <span
+        class="c8"
       >
-        Montant :
-      </label>
-      <div
-        class="c7"
-      >
-        <span
-          class="c8"
+        <input
+          class="c9"
+          id="2"
+          name="salaires[0].salaire"
+          type="number"
+          value="2000"
+        />
+        <div
+          class="c10"
         >
-          <input
-            class="c9"
-            id="2"
-            name="salaires[0].salaire"
-            type="number"
-            value="2000"
-          />
-          <div
-            class="c10"
+          <svg
+            fill="none"
+            viewBox="0 0 32 32"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 32 32"
-            >
-              <path
-                d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </span>
-      </div>
-      <button
-        class="c11 c12 c13"
-        type="button"
-      >
-        Supprimer
-      </button>
+            <path
+              d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </span>
     </div>
+    <button
+      class="c11 c12 c13"
+      type="button"
+    >
+      Supprimer
+      <svg
+        aria-hidden="true"
+        class="c14"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
   </div>
   <div
-    class="c4"
+    class="c5"
   >
-    <div
-      class="c5"
+    <label
+      class="c6"
+      for="4"
     >
-      <label
-        class="c6"
-        for="4"
+      Montant :
+    </label>
+    <div
+      class="c7"
+    >
+      <span
+        class="c8"
       >
-        Montant :
-      </label>
-      <div
-        class="c7"
-      >
-        <span
-          class="c8"
+        <input
+          class="c9"
+          id="4"
+          name="salaires[1].salaire"
+          type="number"
+          value="1500"
+        />
+        <div
+          class="c10"
         >
-          <input
-            class="c9"
-            id="4"
-            name="salaires[1].salaire"
-            type="number"
-            value="1500"
-          />
-          <div
-            class="c10"
+          <svg
+            fill="none"
+            viewBox="0 0 32 32"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 32 32"
-            >
-              <path
-                d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </span>
-      </div>
-      <button
-        class="c11 c12 c13"
-        type="button"
-      >
-        Supprimer
-      </button>
+            <path
+              d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </span>
     </div>
+    <button
+      class="c11 c12 c13"
+      type="button"
+    >
+      Supprimer
+      <svg
+        aria-hidden="true"
+        class="c14"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
   </div>
   <button
-    class="c11 c14 c15"
+    class="c15 c16"
     type="button"
   >
-    Ajouter un salaire
     <svg
-      class="c16"
+      aria-hidden="true"
+      class="c17"
       fill="none"
-      viewBox="0 0 28 15"
+      viewBox="0 0 16 16"
     >
       <path
-        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        clip-rule="evenodd"
+        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
+    Ajouter un salaire
   </button>
-  <p
-    class="c17"
-  >
-    * Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
+  <p>
+    <span
+      class="c18"
+    >
+      Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
+    </span>
   </p>
 </div>
 `;
@@ -712,6 +798,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
@@ -720,6 +807,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -739,8 +827,15 @@ exports[`<StepRemuneration /> should render one input 1`] = `
 }
 
 .c9 {
+  color: #3e486e;
   font-size: 1.4rem;
   font-style: italic;
+}
+
+@media (max-width:600px) {
+  .c6 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {
@@ -759,6 +854,18 @@ exports[`<StepRemuneration /> should render one input 1`] = `
 @media (max-width:600px) {
   .c4 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -786,11 +893,13 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       type="radio"
       value="total"
     />
-    En indiquant le 
-    <strong>
-       montant total 
-    </strong>
-    des rémunérations.
+    <span>
+      En indiquant le
+      <strong>
+         montant total 
+      </strong>
+      des rémunérations.
+    </span>
   </label>
   <label
     class="c2"
@@ -803,11 +912,13 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       type="radio"
       value="mensuel"
     />
-    En indiquant le 
-    <strong>
-       salaire mensuel 
-    </strong>
-    pour chaque mois.
+    <span>
+      En indiquant le
+      <strong>
+         salaire mensuel 
+      </strong>
+       pour chaque mois.
+    </span>
   </label>
   <label
     class="c4"
@@ -849,10 +960,12 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       </div>
     </span>
   </div>
-  <p
-    class="c9"
-  >
-    * Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
+  <p>
+    <span
+      class="c9"
+    >
+      Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
+    </span>
   </p>
 </div>
 `;

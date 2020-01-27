@@ -3,11 +3,18 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
-import { Button, Input, Select, theme } from "@socialgouv/react-ui";
+import { OnChange } from "react-final-form-listeners";
+import { Input, Select, Text, theme } from "@socialgouv/react-ui";
 import { Error } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
+import { AddButton, DelButton } from "../../common/Buttons";
 import { Question } from "../../common/Question";
-import { OnChange } from "react-final-form-listeners";
+import {
+  Row,
+  MobileOnlyCell,
+  DesktopOnly,
+  CellHeader
+} from "../../common/stepStyles";
 
 function AbsencePeriods({ name, visible = true, onChange }) {
   return (
@@ -30,7 +37,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                 Quels sont le motif et la durée de ces absences
                 prolongées&nbsp;?
               </Question>
-              <Row key={name}>
+              <Row as={DesktopOnly}>
                 <CellHeader as={MotifCell}>Motif</CellHeader>
                 <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
               </Row>
@@ -38,7 +45,16 @@ function AbsencePeriods({ name, visible = true, onChange }) {
           )}
           {fields.map((name, index) => (
             <Row key={name}>
+              <MobileOnlyCell>
+                <Text variant="secondary" fontSize="hsmall">
+                  Période {index + 1}
+                </Text>
+                <DelButton small onClick={() => fields.remove(index)}>
+                  Supprimer
+                </DelButton>
+              </MobileOnlyCell>
               <MotifCell>
+                <CellHeader as={MobileOnlyCell}>Motif</CellHeader>
                 <Field name={`${name}.type`} component={Select}>
                   {motifs.map(({ label }) => (
                     <option key={label}>{label}</option>
@@ -46,6 +62,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                 </Field>
               </MotifCell>
               <DurationCell>
+                <CellHeader as={MobileOnlyCell}>Durée (en mois)</CellHeader>
                 <Field
                   name={`${name}.duration`}
                   validate={isNumber}
@@ -67,19 +84,15 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                   )}
                 />
               </DurationCell>
-              <DelButton
-                variant="flat"
-                type="button"
-                onClick={() => fields.remove(index)}
-              >
-                Supprimer
-              </DelButton>
+              <DesktopOnly>
+                <DelButton onClick={() => fields.remove(index)}>
+                  Supprimer
+                </DelButton>
+              </DesktopOnly>
             </Row>
           ))}
           {visible && (
             <AddButton
-              variant="link"
-              type="button"
               onClick={() =>
                 fields.push({
                   type: "Absence pour maladie non professionnelle",
@@ -106,44 +119,36 @@ function AbsencePeriods({ name, visible = true, onChange }) {
 AbsencePeriods.propTypes = {
   name: PropTypes.string.isRequired
 };
+
 export { AbsencePeriods };
 
 const { spacings } = theme;
 
-const AddButton = styled(Button)`
-  margin: ${spacings.medium} 0;
-`;
-const Row = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-bottom: ${spacings.tiny};
-`;
 const MotifCell = styled.div`
   flex: 0 1 35rem;
   margin-right: ${spacings.medium};
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
 `;
 const DurationCell = styled.div`
   margin-right: ${spacings.medium};
-`;
-const CellHeader = styled.div`
-  font-weight: 700;
-`;
-
-const DelButton = styled(Button)`
-  margin-left: ${spacings.medium};
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
 `;
 
 export const motifs = [
   { label: "Absence pour maladie non professionnelle", value: 1.0 },
-  { label: "Grève", value: 1.0 },
-  { label: "Mise à pied", value: 1.0 },
+  { label: "Arrêt maladie lié à un accident de trajet", value: 1.0 },
   { label: "Congé sabbatique", value: 1.0 },
   { label: "Congé pour création d'entreprise", value: 1.0 },
-  { label: "Congé de solidarité familiale", value: 1.0 },
-  { label: "Congé de solidarité internationale", value: 1.0 },
   { label: "Congé parental d'éducation", value: 0.5 },
-  { label: "Congé de proche aidant", value: 1.0 },
   { label: "Congés sans solde", value: 1.0 },
-  { label: "Arrêt maladie lié à un accident de trajet", value: 1.0 }
+  { label: "Grève", value: 1.0 },
+  { label: "Mise à pied", value: 1.0 },
+  { label: "Maladie d'origine non professionnelle", value: 1.0 },
+  { label: "Congé de paternité", value: 1.0 }
 ];

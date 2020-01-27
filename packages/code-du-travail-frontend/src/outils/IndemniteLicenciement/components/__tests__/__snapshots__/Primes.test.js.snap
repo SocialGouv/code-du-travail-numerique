@@ -57,7 +57,9 @@ exports[`<Primes /> should add a prime 1`] = `
 }
 
 .c5[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -263,6 +265,12 @@ exports[`<Primes /> should add a prime 1`] = `
 @media (max-width:600px) {
   .c7 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    width: 100%;
   }
 }
 
@@ -485,7 +493,9 @@ exports[`<Primes /> should render 1`] = `
 }
 
 .c5[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -691,6 +701,12 @@ exports[`<Primes /> should render 1`] = `
 @media (max-width:600px) {
   .c7 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    width: 100%;
   }
 }
 

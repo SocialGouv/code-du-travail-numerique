@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { box, fonts, spacings } from "../theme";
+import { box, breakpoints, fonts, spacings } from "../theme";
 
 export const Textarea = ({ name, ...props }) => (
   <StyledTextarea name={name} {...props} />
@@ -38,5 +38,8 @@ const StyledTextarea = styled.textarea`
   }
   &:focus::placeholder {
     color: transparent;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
   }
 `;

@@ -4,12 +4,12 @@ import { Text } from ".";
 
 describe("<Text />", () => {
   it("renders text", () => {
-    const { container } = render(<Text>A text</Text>);
+    const { container } = render(<Text>A simple text</Text>);
     expect(container).toMatchSnapshot();
   });
 
   it("renders text with fontSize", () => {
-    const { container } = render(<Text fontSize="hLarge">A text</Text>);
+    const { container } = render(<Text fontSize="hlarge">A large text</Text>);
     expect(container).toMatchSnapshot();
   });
   it("renders text with variant", () => {
@@ -17,7 +17,7 @@ describe("<Text />", () => {
     expect(container).toMatchSnapshot();
   });
   it("renders text with fontWeight", () => {
-    const { container } = render(<Text fontWeight="700">A bold text</Text>);
+    const { container } = render(<Text fontWeight={700}>A bold text</Text>);
     expect(container).toMatchSnapshot();
   });
 });

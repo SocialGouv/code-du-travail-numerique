@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import { ArrowDown } from "../icons";
-import { animations, box, fonts, spacings } from "../theme";
+import { animations, box, breakpoints, fonts, spacings } from "../theme";
 
 export const Select = ({ children, disabled, className, ...props }) => (
   <StyledWrapper className={className}>
@@ -35,6 +35,9 @@ const StyledWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+  }
 `;
 
 const StyledArrowDown = styled.div`

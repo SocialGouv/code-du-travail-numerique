@@ -1,11 +1,13 @@
 import { parse } from "./date";
 
 export function required(value) {
-  return value ? undefined : "Ce champ est requis";
+  return value ? undefined : "Vous devez répondre à cette question";
 }
 
 export function requiredBoolean(value) {
-  return value === false || value === true ? undefined : "Ce champ est requis";
+  return value === false || value === true
+    ? undefined
+    : "Vous devez répondre à cette question";
 }
 
 export function isNumber(value) {

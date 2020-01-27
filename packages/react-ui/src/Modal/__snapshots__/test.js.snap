@@ -67,7 +67,9 @@ exports[`<Modal /> does not render at first and then render 2`] = `
 }
 
 .c2[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -285,7 +287,9 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
 }
 
 .c2[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

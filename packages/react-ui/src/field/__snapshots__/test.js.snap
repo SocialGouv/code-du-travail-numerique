@@ -90,6 +90,12 @@ exports[`<Input /> should render input field 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c1 {
     padding: 0 1rem;
     padding-right: 2rem;
@@ -269,9 +275,21 @@ exports[`<InputDate /> should render input date field 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c2 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    width: 100%;
   }
 }
 
@@ -430,6 +448,12 @@ exports[`<Select /> should render select field 1`] = `
   background-color: #e4e8ef;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -539,6 +563,12 @@ exports[`<Textarea /> should render textarea 1`] = `
 
 .c0:focus::placeholder {
   color: transparent;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    width: 100%;
+  }
 }
 
 <div>

@@ -1,83 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
-.c0 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c0:before,
-.c0:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c0:before {
-  left: -2rem;
-}
-
-.c0:after {
-  right: -2rem;
-}
-
-.c1 {
-  overflow-x: auto;
-}
-
-.c2 {
-  text-align: left;
-  empty-cells: show;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.c2 caption {
-  padding: 1rem 0;
-  font-style: italic;
-  text-align: center;
-}
-
-.c2 td,
-.c2 th {
-  padding: 1rem 1.6rem;
-  border: 1px solid #bbcadf;
-}
-
-.c2 th {
-  color: #2f3b6c;
-  font-weight: 600;
-  background: #e4e8ef;
-}
-
-.c2 thead,
-.c2 tfoot {
-  padding: 1rem 1.6rem;
-  vertical-align: bottom;
-  background: #f2f5fa;
-}
-
-.c2 tfoot {
-  vertical-align: top;
-}
-
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
 }
 
-.c5 {
+.c6 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -99,15 +28,15 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   appearance: none;
 }
 
-.c5::-webkit-outer-spin-button,
-.c5::-webkit-inner-spin-button {
+.c6::-webkit-outer-spin-button,
+.c6::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c5::-webkit-calendar-picker-indicator {
+.c6::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -120,47 +49,47 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c5:invalid {
+.c6:invalid {
   border-color: #eb5757;
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   color: #9298af;
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c5::placeholder {
+.c6::placeholder {
   color: #9298af;
 }
 
-.c5:focus {
+.c6:focus {
   border-color: #7994d4;
 }
 
-.c5:focus::-webkit-input-placeholder {
+.c6:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c5:focus::-moz-placeholder {
+.c6:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c5:focus:-ms-input-placeholder {
+.c6:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c5:focus::placeholder {
+.c6:focus::placeholder {
   color: transparent;
 }
 
-.c6 {
+.c7 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -171,230 +100,185 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   color: #9298af;
 }
 
-.c3 {
-  width: 70%;
+.c2 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-.c3 tr > td:nth-child(2) {
-  width: 70%;
+.c3 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
+.c0 {
+  width: 100%;
   text-align: left;
 }
 
-@media (max-width:600px) {
-  .c0 {
-    overflow-x: hidden;
-  }
+.c0 tr > td:nth-child(2) {
+  width: 80%;
+  text-align: left;
 }
 
-@media (max-width:600px) {
-  .c0:before,
-  .c0:after {
-    display: block;
-  }
+.c1 {
+  margin-bottom: 2.4rem;
+  text-align: left;
 }
 
-@media (max-width:600px) {
-  .c1 {
-    overflow-x: auto;
-  }
+.c4 {
+  font-size: 1.4rem;
 }
 
 @media (max-width:600px) {
   .c5 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
     padding: 0 1rem;
     padding-right: 5rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
     width: 100%;
   }
 
-  .c3 tr > td:nth-child(2) {
+  .c0 tr > td:nth-child(2) {
     width: 60%;
   }
 }
 
 <div>
-  <div
+  <table
     class="c0"
   >
-    <div
+    <caption
       class="c1"
     >
-      <table
-        class="c2 c3"
+      <label
+        class="c2"
       >
-        <caption>
-          Salaire mensuel brut (prendre en compte les primes et avantages en nature)
-        </caption>
-        <thead>
-          <tr>
-            <th>
-              Mois
-            </th>
-            <th>
-              Salaire mensuel brut
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <label
-                for="salary0"
+        Salaire mensuel brut (Prendre en compte les primes et avantages en nature)
+        <span
+          aria-label="champs obligatoire"
+          class="c3"
+        >
+          *
+        </span>
+      </label>
+    </caption>
+    <thead>
+      <tr>
+        <th
+          class="c4"
+        >
+          Mois
+        </th>
+        <th
+          class="c4"
+        >
+          Salaire mensuel brut
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <label
+            for="salary0"
+          >
+            janvier
+          </label>
+        </td>
+        <td>
+          <span
+            class="c5"
+          >
+            <input
+              class="c6"
+              id="salary0"
+              name="periods[0].salary"
+              type="number"
+              value="2000"
+            />
+            <div
+              class="c7"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 32 32"
               >
-                janvier
-              </label>
-            </td>
-            <td>
-              <span
-                class="c4"
-              >
-                <input
-                  class="c5"
-                  id="salary0"
-                  name="periods[0].salary"
-                  type="number"
-                  value="2000"
+                <path
+                  d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+                  fill="currentColor"
                 />
-                <div
-                  class="c6"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label
-                for="salary1"
+              </svg>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            for="salary1"
+          >
+            février
+          </label>
+        </td>
+        <td>
+          <span
+            class="c5"
+          >
+            <input
+              class="c6"
+              id="salary1"
+              name="periods[1].salary"
+              type="number"
+              value="2000"
+            />
+            <div
+              class="c7"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 32 32"
               >
-                février
-              </label>
-            </td>
-            <td>
-              <span
-                class="c4"
-              >
-                <input
-                  class="c5"
-                  id="salary1"
-                  name="periods[1].salary"
-                  type="number"
-                  value="2000"
+                <path
+                  d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+                  fill="currentColor"
                 />
-                <div
-                  class="c6"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+              </svg>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;
 
 exports[`<SalaireTempsPlein /> should render 1`] = `
-.c0 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c0:before,
-.c0:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c0:before {
-  left: -2rem;
-}
-
-.c0:after {
-  right: -2rem;
-}
-
-.c1 {
-  overflow-x: auto;
-}
-
-.c2 {
-  text-align: left;
-  empty-cells: show;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.c2 caption {
-  padding: 1rem 0;
-  font-style: italic;
-  text-align: center;
-}
-
-.c2 td,
-.c2 th {
-  padding: 1rem 1.6rem;
-  border: 1px solid #bbcadf;
-}
-
-.c2 th {
-  color: #2f3b6c;
-  font-weight: 600;
-  background: #e4e8ef;
-}
-
-.c2 thead,
-.c2 tfoot {
-  padding: 1rem 1.6rem;
-  vertical-align: bottom;
-  background: #f2f5fa;
-}
-
-.c2 tfoot {
-  vertical-align: top;
-}
-
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
 }
 
-.c5 {
+.c6 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -416,15 +300,15 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   appearance: none;
 }
 
-.c5::-webkit-outer-spin-button,
-.c5::-webkit-inner-spin-button {
+.c6::-webkit-outer-spin-button,
+.c6::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c5::-webkit-calendar-picker-indicator {
+.c6::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -437,47 +321,47 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c5:invalid {
+.c6:invalid {
   border-color: #eb5757;
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   color: #9298af;
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c5::placeholder {
+.c6::placeholder {
   color: #9298af;
 }
 
-.c5:focus {
+.c6:focus {
   border-color: #7994d4;
 }
 
-.c5:focus::-webkit-input-placeholder {
+.c6:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c5:focus::-moz-placeholder {
+.c6:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c5:focus:-ms-input-placeholder {
+.c6:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c5:focus::placeholder {
+.c6:focus::placeholder {
   color: transparent;
 }
 
-.c6 {
+.c7 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -488,148 +372,174 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   color: #9298af;
 }
 
-.c3 {
-  width: 70%;
+.c2 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-.c3 tr > td:nth-child(2) {
-  width: 70%;
+.c3 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
+.c0 {
+  width: 100%;
   text-align: left;
 }
 
-@media (max-width:600px) {
-  .c0 {
-    overflow-x: hidden;
-  }
+.c0 tr > td:nth-child(2) {
+  width: 80%;
+  text-align: left;
 }
 
-@media (max-width:600px) {
-  .c0:before,
-  .c0:after {
-    display: block;
-  }
+.c1 {
+  margin-bottom: 2.4rem;
+  text-align: left;
 }
 
-@media (max-width:600px) {
-  .c1 {
-    overflow-x: auto;
-  }
+.c4 {
+  font-size: 1.4rem;
 }
 
 @media (max-width:600px) {
   .c5 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
     padding: 0 1rem;
     padding-right: 5rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
     width: 100%;
   }
 
-  .c3 tr > td:nth-child(2) {
+  .c0 tr > td:nth-child(2) {
     width: 60%;
   }
 }
 
 <div>
-  <div
+  <table
     class="c0"
   >
-    <div
+    <caption
       class="c1"
     >
-      <table
-        class="c2 c3"
+      <label
+        class="c2"
       >
-        <caption>
-          Salaire mensuel brut (prendre en compte les primes et avantages en nature)
-        </caption>
-        <thead>
-          <tr>
-            <th>
-              Mois
-            </th>
-            <th>
-              Salaire mensuel brut
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <label
-                for="salary0"
+        Salaire mensuel brut (Prendre en compte les primes et avantages en nature)
+        <span
+          aria-label="champs obligatoire"
+          class="c3"
+        >
+          *
+        </span>
+      </label>
+    </caption>
+    <thead>
+      <tr>
+        <th
+          class="c4"
+        >
+          Mois
+        </th>
+        <th
+          class="c4"
+        >
+          Salaire mensuel brut
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <label
+            for="salary0"
+          >
+            janvier
+          </label>
+        </td>
+        <td>
+          <span
+            class="c5"
+          >
+            <input
+              class="c6"
+              id="salary0"
+              name="periods[0].salary"
+              type="number"
+              value="2000"
+            />
+            <div
+              class="c7"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 32 32"
               >
-                janvier
-              </label>
-            </td>
-            <td>
-              <span
-                class="c4"
-              >
-                <input
-                  class="c5"
-                  id="salary0"
-                  name="periods[0].salary"
-                  type="number"
-                  value="2000"
+                <path
+                  d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+                  fill="currentColor"
                 />
-                <div
-                  class="c6"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label
-                for="salary1"
+              </svg>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            for="salary1"
+          >
+            février
+          </label>
+        </td>
+        <td>
+          <span
+            class="c5"
+          >
+            <input
+              class="c6"
+              id="salary1"
+              name="periods[1].salary"
+              type="number"
+              value="1000"
+            />
+            <div
+              class="c7"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 32 32"
               >
-                février
-              </label>
-            </td>
-            <td>
-              <span
-                class="c4"
-              >
-                <input
-                  class="c5"
-                  id="salary1"
-                  name="periods[1].salary"
-                  type="number"
-                  value="1000"
+                <path
+                  d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+                  fill="currentColor"
                 />
-                <div
-                  class="c6"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+              </svg>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;

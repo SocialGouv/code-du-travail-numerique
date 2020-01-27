@@ -2,7 +2,9 @@ import { required, requiredBoolean, isNumber } from "../validators";
 
 describe("required", () => {
   it("should return undefined if an input value is provided", () => {
-    expect(required()).toMatchInlineSnapshot(`"Ce champ est requis"`);
+    expect(required()).toMatchInlineSnapshot(
+      `"Vous devez répondre à cette question"`
+    );
     expect(required(true)).toMatchInlineSnapshot(`undefined`);
     expect(required(1)).toMatchInlineSnapshot(`undefined`);
     expect(required("test")).toMatchInlineSnapshot(`undefined`);
@@ -11,9 +13,11 @@ describe("required", () => {
 
 describe("requiredBoolean", () => {
   it("should return undefined if an input value is provided", () => {
-    expect(requiredBoolean()).toMatchInlineSnapshot(`"Ce champ est requis"`);
+    expect(requiredBoolean()).toMatchInlineSnapshot(
+      `"Vous devez répondre à cette question"`
+    );
     expect(requiredBoolean("test")).toMatchInlineSnapshot(
-      `"Ce champ est requis"`
+      `"Vous devez répondre à cette question"`
     );
     expect(requiredBoolean(false)).toMatchInlineSnapshot(`undefined`);
     expect(requiredBoolean(true)).toMatchInlineSnapshot(`undefined`);

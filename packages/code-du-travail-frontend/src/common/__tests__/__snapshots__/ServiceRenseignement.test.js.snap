@@ -188,6 +188,12 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 @media (max-width:600px) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c6 {
     padding: 0 1rem;
     padding-right: 2rem;

@@ -93,6 +93,7 @@ exports[`<TextQuestion /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -113,6 +114,12 @@ exports[`<TextQuestion /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {

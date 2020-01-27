@@ -57,7 +57,9 @@ exports[`<SearchBar /> should render 1`] = `
 }
 
 .c3[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -263,7 +265,9 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 }
 
 .c5[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

@@ -114,6 +114,11 @@ function Wizard({
                 printVisible={printVisible}
                 previousVisible={previousVisible}
               />
+              {stepIndex > 0 && stepIndex < steps.length && (
+                <Notice>
+                  <Mandatory>*</Mandatory> Champs obligatoire
+                </Notice>
+              )}
             </StyledForm>
           </>
         );
@@ -142,7 +147,7 @@ Wizard.propTypes = {
 
 export { Wizard };
 
-const { spacings, breakpoints } = theme;
+const { breakpoints, box, spacings } = theme;
 
 const StyledForm = styled.form`
   display: flex;
@@ -175,4 +180,14 @@ const IconWrapper = styled.span`
   width: 5.2rem;
   height: 5.2rem;
   margin-right: ${spacings.base};
+`;
+
+const Notice = styled.p`
+  padding-top: ${spacings.medium};
+  border-top: ${({ theme }) => box.border(theme.border)};
+`;
+
+const Mandatory = styled.span`
+  color: ${({ theme }) => theme.primary};
+  font-weight: 600;
 `;

@@ -69,7 +69,9 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
 }
 
 .c0[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -130,7 +132,9 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
 }
 
 .c9[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

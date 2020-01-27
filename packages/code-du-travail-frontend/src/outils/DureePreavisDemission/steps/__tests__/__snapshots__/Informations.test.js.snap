@@ -93,6 +93,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -112,6 +113,12 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {
@@ -273,6 +280,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -292,6 +300,12 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {

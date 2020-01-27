@@ -36,6 +36,6 @@ describe("<TextQuestion />", () => {
     );
     const bt = getByTestId("next");
     bt.click();
-    expect(getByText(/ce champ est requis/i)).toBeDefined();
+    expect(getByText(/Vous devez répondre à cette question/i)).toBeDefined();
   });
 });

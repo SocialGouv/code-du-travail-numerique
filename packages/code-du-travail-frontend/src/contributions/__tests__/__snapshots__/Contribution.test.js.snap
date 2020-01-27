@@ -110,7 +110,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 .c20[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -171,7 +173,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 .c23[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -774,7 +778,9 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 .c20[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -835,7 +841,9 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 .c26[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1511,7 +1519,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 .c20[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1572,7 +1582,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 .c24[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -2365,6 +2377,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
+  .c17 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c19 {
     padding: 0 1rem;
     padding-right: 2rem;
@@ -2836,6 +2854,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   .c4 {
     width: 3.4rem;
     margin-right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    width: 100%;
   }
 }
 

@@ -208,6 +208,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -231,9 +232,21 @@ exports[`<Step /> should ask detail about categories 1`] = `
 }
 
 @media (max-width:600px) {
+  .c10 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c11 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
   }
 }
 
@@ -642,6 +655,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -650,6 +664,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
@@ -673,9 +688,21 @@ exports[`<Step /> should ask detail about retirement  1`] = `
 }
 
 @media (max-width:600px) {
+  .c8 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c9 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
   }
 }
 
@@ -1017,6 +1044,7 @@ exports[`<Step /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -1040,9 +1068,21 @@ exports[`<Step /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c8 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c9 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
   }
 }
 

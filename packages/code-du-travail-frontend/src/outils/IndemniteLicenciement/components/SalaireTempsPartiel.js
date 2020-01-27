@@ -3,10 +3,19 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
-import { Button, icons, Input, Select, theme } from "@socialgouv/react-ui";
+import { Input, Select, Text, icons, theme } from "@socialgouv/react-ui";
+import { AddButton, DelButton } from "../../common/Buttons";
 import { Error } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
 import { isNumber } from "../../common/validators";
+import {
+  Row,
+  MobileOnlyCell,
+  DesktopOnly,
+  CellHeader
+} from "../../common/stepStyles";
+
+const mobileMediaQuery = `(max-width: ${theme.breakpoints.mobile})`;
 
 function SalaireTempsPartiel({ name, visible = true, onChange }) {
   return (
@@ -19,16 +28,27 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                 Quels ont été les durées et les salaires des périodes à temps
                 plein et à temps partiel&nbsp;?
               </Question>
-              <Row>
+              <Row as={DesktopOnly}>
                 <CellHeader as={CellType}>Type de durée de travail</CellHeader>
-                <CellHeader as={CellDuration}>Durée en mois</CellHeader>
+                <CellHeader as={CellDuration}>Durée (en mois)</CellHeader>
                 <CellHeader>Rémunération</CellHeader>
               </Row>
             </>
           )}
           {fields.map((name, index) => (
             <Row key={name}>
+              <MobileOnlyCell>
+                <Text variant="secondary" fontSize="hsmall">
+                  Période {index + 1}
+                </Text>
+                <DelButton small onClick={() => fields.remove(index)}>
+                  Supprimer
+                </DelButton>
+              </MobileOnlyCell>
               <CellType>
+                <CellHeader as={MobileOnlyCell}>
+                  Type de durée de travail
+                </CellHeader>
                 <Field name={`${name}.type`}>
                   {({ input }) => (
                     <Select {...input}>
@@ -40,6 +60,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                 </Field>
               </CellType>
               <CellDuration>
+                <CellHeader as={MobileOnlyCell}>Durée (en mois)</CellHeader>
                 <Field
                   name={`${name}.duration`}
                   validate={isNumber}
@@ -64,6 +85,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                 />
               </CellDuration>
               <CellRemuneration>
+                <CellHeader as={MobileOnlyCell}>Rémunération</CellHeader>
                 <Field
                   name={`${name}.salary`}
                   validate={isNumber}
@@ -88,15 +110,15 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                   )}
                 />
               </CellRemuneration>
-              <DelButton variant="flat" onClick={() => fields.remove(index)}>
-                Supprimer
-              </DelButton>
+              <DesktopOnly>
+                <DelButton onClick={() => fields.remove(index)}>
+                  Supprimer
+                </DelButton>
+              </DesktopOnly>
             </Row>
           ))}
           {visible && (
             <AddButton
-              variant="link"
-              type="button"
               onClick={() =>
                 fields.push({
                   type: TEMPS_PARTIEL,
@@ -120,33 +142,27 @@ export { SalaireTempsPartiel };
 
 const { spacings } = theme;
 
-const AddButton = styled(Button)`
-  margin: ${spacings.medium} 0;
-`;
-
-const Row = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: ${spacings.tiny};
-`;
-
 const CellType = styled.div`
   flex-basis: 20rem;
   margin-right: ${spacings.medium};
+  @media ${mobileMediaQuery} {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
 `;
 const CellDuration = styled.div`
   flex-basis: 15rem;
   margin-right: ${spacings.medium};
+  @media ${mobileMediaQuery} {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
 `;
 const CellRemuneration = styled.div`
   flex-basis: 20rem;
-`;
-const CellHeader = styled.div`
-  font-weight: 700;
-`;
-
-const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin-left: ${spacings.medium};
+  @media ${mobileMediaQuery} {
+    flex-basis: 100%;
+  }
 `;
 
 export const TEMPS_PLEIN = "Temps plein";

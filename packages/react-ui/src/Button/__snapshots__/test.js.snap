@@ -57,7 +57,9 @@ exports[`<Button /> it renders a Button flat 1`] = `
 }
 
 .c0[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -118,7 +120,9 @@ exports[`<Button /> it renders a Button flat 1`] = `
 }
 
 .c1[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -179,7 +183,9 @@ exports[`<Button /> it renders a Button flat 1`] = `
 }
 
 .c2[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -415,7 +421,9 @@ exports[`<Button /> it renders a Button naked 1`] = `
 }
 
 .c0[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -476,7 +484,9 @@ exports[`<Button /> it renders a Button naked 1`] = `
 }
 
 .c1[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -537,7 +547,9 @@ exports[`<Button /> it renders a Button naked 1`] = `
 }
 
 .c2[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -648,7 +660,9 @@ exports[`<Button /> it renders a Button primary 1`] = `
 }
 
 .c1[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -709,7 +723,9 @@ exports[`<Button /> it renders a Button primary 1`] = `
 }
 
 .c2[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -770,7 +786,9 @@ exports[`<Button /> it renders a Button primary 1`] = `
 }
 
 .c3[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -887,7 +905,9 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 }
 
 .c1[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -948,7 +968,9 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 }
 
 .c2[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1009,7 +1031,9 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 }
 
 .c3[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1126,7 +1150,9 @@ exports[`<Button /> renders 1`] = `
 }
 
 .c0[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1209,7 +1235,9 @@ exports[`<Button /> renders as a link 1`] = `
 }
 
 .c0[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1293,7 +1321,9 @@ exports[`<Button /> renders as div 1`] = `
 }
 
 .c0[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

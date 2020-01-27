@@ -57,7 +57,9 @@ exports[`<StepPrimes /> should render 1`] = `
 }
 
 .c10[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -301,6 +303,7 @@ exports[`<StepPrimes /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
@@ -350,6 +353,12 @@ exports[`<StepPrimes /> should render 1`] = `
 @media (max-width:600px) {
   .c12 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    width: 100%;
   }
 }
 

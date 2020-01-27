@@ -9,9 +9,15 @@ function ErrorField({ name }) {
     <Field
       name={name}
       subscription={{ error: true, touched: true, submitFailed: true }}
-      render={({ meta: { error, submitFailed } }) =>
-        submitFailed && error ? <Error>{error}</Error> : null
-      }
+      render={({ meta: { error, submitFailed } }) => {
+        if (!submitFailed || !error) {
+          return null;
+        }
+        if (typeof error === "string") {
+          return <Error>{error}</Error>;
+        }
+        return error;
+      }}
     />
   );
 }

@@ -59,6 +59,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
@@ -98,11 +99,13 @@ exports[`<TypeRemuneration /> should render 1`] = `
       type="radio"
       value="total"
     />
-    En indiquant le 
-    <strong>
-       montant total 
-    </strong>
-    des rémunérations.
+    <span>
+      En indiquant le
+      <strong>
+         montant total 
+      </strong>
+      des rémunérations.
+    </span>
   </label>
   <label
     class="c2"
@@ -115,11 +118,13 @@ exports[`<TypeRemuneration /> should render 1`] = `
       type="radio"
       value="mensuel"
     />
-    En indiquant le 
-    <strong>
-       salaire mensuel 
-    </strong>
-    pour chaque mois.
+    <span>
+      En indiquant le
+      <strong>
+         salaire mensuel 
+      </strong>
+       pour chaque mois.
+    </span>
   </label>
 </div>
 `;

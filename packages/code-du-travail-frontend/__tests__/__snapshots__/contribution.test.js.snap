@@ -146,7 +146,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c16[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -207,7 +209,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c62[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -268,7 +272,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c72[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -1254,6 +1260,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 @media (max-width:600px) {
   .c78 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c55 {
+    width: 100%;
   }
 }
 
@@ -2807,7 +2819,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c16[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -2868,7 +2882,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c62[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -2929,7 +2945,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c72[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -3915,6 +3933,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c78 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c55 {
+    width: 100%;
   }
 }
 

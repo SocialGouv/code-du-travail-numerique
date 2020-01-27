@@ -247,6 +247,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
@@ -255,6 +256,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -284,6 +286,12 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 }
 
 @media (max-width:600px) {
+  .c13 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     padding: 0 1rem;
     padding-right: 5rem;
@@ -299,6 +307,18 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 @media (max-width:600px) {
   .c11 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -596,6 +616,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }

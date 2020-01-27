@@ -8,6 +8,7 @@ export const Text = styled.span`
     const fontSizeTheme = fontSize.startsWith("h")
       ? fonts.sizes.headings[fontSize.replace("h", "")]
       : fonts.sizes[fontSize];
+
     return css`
       color: ${color};
       line-height: ${fonts.lineHeightTitle};
@@ -33,6 +34,6 @@ Text.propTypes = {
   fontWeight: PropTypes.oneOf([300, 400, 500, 600, 700])
 };
 Text.defaultProps = {
-  fontSize: fonts.sizes.headings.small,
+  fontSize: "default",
   fontWeight: 400
 };

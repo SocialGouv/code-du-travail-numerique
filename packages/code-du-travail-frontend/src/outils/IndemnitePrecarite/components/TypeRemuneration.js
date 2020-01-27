@@ -25,11 +25,13 @@ function TypeRemuneration({ name, onChange }) {
         {props => (
           <InputRadio
             id={`${name}-amount`}
-            label={[
-              "En indiquant le ",
-              <strong key="montant">&nbsp;montant total&nbsp;</strong>,
-              "des rémunérations."
-            ]}
+            label={
+              <span>
+                En indiquant le
+                <strong key="montant">&nbsp;montant total&nbsp;</strong>
+                des rémunérations.
+              </span>
+            }
             {...props.input}
           />
         )}
@@ -44,11 +46,13 @@ function TypeRemuneration({ name, onChange }) {
         {props => (
           <InputRadio
             id={`${name}-pay`}
-            label={[
-              "En indiquant le ",
-              <strong key="salaire">&nbsp;salaire mensuel&nbsp;</strong>,
-              "pour chaque mois."
-            ]}
+            label={
+              <span>
+                En indiquant le
+                <strong key="salaire">&nbsp;salaire mensuel&nbsp;</strong> pour
+                chaque mois.
+              </span>
+            }
             {...props.input}
           />
         )}

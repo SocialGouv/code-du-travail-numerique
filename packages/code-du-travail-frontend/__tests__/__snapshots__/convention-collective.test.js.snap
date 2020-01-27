@@ -86,7 +86,9 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 .c11[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

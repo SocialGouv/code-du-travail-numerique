@@ -99,7 +99,9 @@ exports[`<Stats /> should render 1`] = `
 }
 
 .c16[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -160,7 +162,9 @@ exports[`<Stats /> should render 1`] = `
 }
 
 .c39[disabled] {
-  color: rgba(255,255,255,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }

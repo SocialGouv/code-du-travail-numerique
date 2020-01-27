@@ -97,6 +97,7 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
@@ -105,6 +106,12 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   display: inline-block;
   margin-left: 1rem;
   color: #eb5757;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {
@@ -254,12 +261,19 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
 
 .c1 {
   font-style: italic;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
+  }
 }
 
 @media (max-width:600px) {

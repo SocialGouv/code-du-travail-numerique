@@ -170,7 +170,9 @@ exports[`<Convention /> renders 1`] = `
 }
 
 .c31[disabled] {
-  color: rgba(62,72,110,0.4);
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -604,6 +606,12 @@ exports[`<Convention /> renders 1`] = `
   .c21 {
     padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    width: 100%;
   }
 }
 

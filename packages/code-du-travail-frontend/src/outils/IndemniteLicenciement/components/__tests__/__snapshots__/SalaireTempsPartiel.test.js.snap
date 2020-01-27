@@ -1,7 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SalaireTempsPartiel /> should add a period 1`] = `
-.c14 {
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c8:link,
+.c8:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c8[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -30,107 +93,53 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   -moz-appearance: none;
   appearance: none;
   height: 5.2rem;
-  padding: 0 4.4rem;
+  padding: 0 1.9rem;
   color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
+  background: transparent;
+  border-color: transparent;
   box-shadow: none;
   opacity: 1;
 }
 
-.c14:link,
-.c14:visited {
+.c19:link,
+.c19:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
-  opacity: 1;
+.c19:not([disabled]):hover,
+.c19:not([disabled]):active,
+.c19:not([disabled]):focus {
+  opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: transparent;
+  border-color: transparent;
 }
 
-.c14[disabled] {
-  color: rgba(62,72,110,0.4);
+.c19[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
+.c7 {
+  color: #7994d4;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
-.c16:focus,
-.c16:hover,
-.c16:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c18 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c13:hover .c18 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c8 {
+.c14 {
   position: relative;
   display: inline-block;
 }
 
-.c9 {
+.c15 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -152,15 +161,15 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   appearance: none;
 }
 
-.c9::-webkit-outer-spin-button,
-.c9::-webkit-inner-spin-button {
+.c15::-webkit-outer-spin-button,
+.c15::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-calendar-picker-indicator {
+.c15::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -173,47 +182,47 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c9:invalid {
+.c15:invalid {
   border-color: #eb5757;
 }
 
-.c9::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c9::-moz-placeholder {
+.c15::-moz-placeholder {
   color: #9298af;
 }
 
-.c9:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c9::placeholder {
+.c15::placeholder {
   color: #9298af;
 }
 
-.c9:focus {
+.c15:focus {
   border-color: #7994d4;
 }
 
-.c9:focus::-webkit-input-placeholder {
+.c15:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c9:focus::-moz-placeholder {
+.c15:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c9:focus:-ms-input-placeholder {
+.c15:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c9:focus::placeholder {
+.c15:focus::placeholder {
   color: transparent;
 }
 
-.c11 {
+.c17 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -235,15 +244,15 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   appearance: none;
 }
 
-.c11::-webkit-outer-spin-button,
-.c11::-webkit-inner-spin-button {
+.c17::-webkit-outer-spin-button,
+.c17::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11::-webkit-calendar-picker-indicator {
+.c17::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -256,47 +265,47 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c11:invalid {
+.c17:invalid {
   border-color: #eb5757;
 }
 
-.c11::-webkit-input-placeholder {
+.c17::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c11::-moz-placeholder {
+.c17::-moz-placeholder {
   color: #9298af;
 }
 
-.c11:-ms-input-placeholder {
+.c17:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c11::placeholder {
+.c17::placeholder {
   color: #9298af;
 }
 
-.c11:focus {
+.c17:focus {
   border-color: #7994d4;
 }
 
-.c11:focus::-webkit-input-placeholder {
+.c17:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c11:focus::-moz-placeholder {
+.c17:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c11:focus:-ms-input-placeholder {
+.c17:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c11:focus::placeholder {
+.c17:focus::placeholder {
   color: transparent;
 }
 
-.c12 {
+.c18 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -307,7 +316,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   color: #9298af;
 }
 
-.c5 {
+.c11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -327,7 +336,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c13 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -337,7 +346,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c12 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -358,37 +367,58 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c12::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c12 *::-ms-backdrop,
+.c12 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c12:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c12:disabled {
   background-color: #e4e8ef;
+}
+
+.c20 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.c9 {
+  margin-left: 1rem;
+}
+
+.c10 {
+  width: 2rem;
+  margin-left: 0.4rem;
+  color: #f66663;
+}
+
+.c21 {
+  width: 2rem;
+  margin-right: 0.4rem;
+  color: #f66663;
 }
 
 .c0 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
-.c17 {
-  margin: 2rem 0;
-}
-
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -397,72 +427,139 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
 }
 
-.c2 {
+.c6 {
+  display: none;
+}
+
+.c4 {
+  padding-top: 1rem;
+  padding-bottom: 0.4rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.c3 {
   -webkit-flex-basis: 20rem;
   -ms-flex-preferred-size: 20rem;
   flex-basis: 20rem;
   margin-right: 2rem;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-basis: 15rem;
   -ms-flex-preferred-size: 15rem;
   flex-basis: 15rem;
   margin-right: 2rem;
 }
 
-.c10 {
+.c16 {
   -webkit-flex-basis: 20rem;
   -ms-flex-preferred-size: 20rem;
   flex-basis: 20rem;
 }
 
-.c3 {
-  font-weight: 700;
-}
-
-.c15 {
-  margin-left: 2rem;
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c19 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
   .c14 {
-    padding: 0 3rem;
+    width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
+  .c15 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c17 {
     padding: 0 1rem;
     padding-right: 5rem;
   }
 }
 
 @media (max-width:600px) {
+  .c11 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -473,35 +570,71 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
     Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
   </label>
   <div
-    class="c1"
+    class="c1 c2"
   >
     <div
-      class="c2 c3"
+      class="c3 c4"
     >
       Type de durée de travail
     </div>
     <div
-      class="c4 c3"
+      class="c5 c4"
     >
-      Durée en mois
+      Durée (en mois)
     </div>
     <div
-      class="c3"
+      class="c4"
     >
       Rémunération
     </div>
   </div>
   <div
-    class="c1"
+    class="c2"
   >
     <div
-      class="c2"
+      class="c6"
+    >
+      <span
+        class="c7"
+        font-size="hsmall"
+        font-weight="400"
+      >
+        Période 
+        1
+      </span>
+      <button
+        class="c8 c9"
+        type="button"
+      >
+        Supprimer
+        <svg
+          aria-hidden="true"
+          class="c10"
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="c3"
     >
       <div
-        class="c5"
+        class="c6 c4"
+      >
+        Type de durée de travail
+      </div>
+      <div
+        class="c11"
       >
         <select
-          class="c6"
+          class="c12"
           name="periods[0].type"
         >
           <option>
@@ -513,7 +646,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
         </select>
         <div
           aria-hidden="true"
-          class="c7"
+          class="c13"
         >
           <svg
             fill="none"
@@ -542,13 +675,18 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
       </div>
     </div>
     <div
-      class="c4"
+      class="c5"
     >
+      <div
+        class="c6 c4"
+      >
+        Durée (en mois)
+      </div>
       <span
-        class="c8"
+        class="c14"
       >
         <input
-          class="c9"
+          class="c15"
           name="periods[0].duration"
           type="number"
           value=""
@@ -556,19 +694,24 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
       </span>
     </div>
     <div
-      class="c10"
+      class="c16"
     >
+      <div
+        class="c6 c4"
+      >
+        Rémunération
+      </div>
       <span
-        class="c8"
+        class="c14"
       >
         <input
-          class="c11"
+          class="c17"
           name="periods[0].salary"
           type="number"
           value=""
         />
         <div
-          class="c12"
+          class="c18"
         >
           <svg
             fill="none"
@@ -582,34 +725,117 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
         </div>
       </span>
     </div>
-    <button
-      class="c13 c14 c15"
-      type="button"
+    <div
+      class="c1"
     >
-      Supprimer
-    </button>
+      <button
+        class="c19 c9"
+        type="button"
+      >
+        Supprimer
+        <svg
+          aria-hidden="true"
+          class="c10"
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
   <button
-    class="c13 c16 c17"
+    class="c8 c20"
     type="button"
   >
-    Ajouter une période
     <svg
-      class="c18"
+      aria-hidden="true"
+      class="c21"
       fill="none"
-      viewBox="0 0 28 15"
+      viewBox="0 0 16 16"
     >
       <path
-        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        clip-rule="evenodd"
+        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
+    Ajouter une période
   </button>
 </div>
 `;
 
 exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
-.c14 {
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c8:link,
+.c8:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c8[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -638,107 +864,53 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   -moz-appearance: none;
   appearance: none;
   height: 5.2rem;
-  padding: 0 4.4rem;
+  padding: 0 1.9rem;
   color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
+  background: transparent;
+  border-color: transparent;
   box-shadow: none;
   opacity: 1;
 }
 
-.c14:link,
-.c14:visited {
+.c19:link,
+.c19:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
-  opacity: 1;
+.c19:not([disabled]):hover,
+.c19:not([disabled]):active,
+.c19:not([disabled]):focus {
+  opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: transparent;
+  border-color: transparent;
 }
 
-.c14[disabled] {
-  color: rgba(62,72,110,0.4);
+.c19[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
+.c7 {
+  color: #7994d4;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
-.c16:focus,
-.c16:hover,
-.c16:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c18 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c13:hover .c18 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c8 {
+.c14 {
   position: relative;
   display: inline-block;
 }
 
-.c9 {
+.c15 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -760,15 +932,15 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   appearance: none;
 }
 
-.c9::-webkit-outer-spin-button,
-.c9::-webkit-inner-spin-button {
+.c15::-webkit-outer-spin-button,
+.c15::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-calendar-picker-indicator {
+.c15::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -781,47 +953,47 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c9:invalid {
+.c15:invalid {
   border-color: #eb5757;
 }
 
-.c9::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c9::-moz-placeholder {
+.c15::-moz-placeholder {
   color: #9298af;
 }
 
-.c9:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c9::placeholder {
+.c15::placeholder {
   color: #9298af;
 }
 
-.c9:focus {
+.c15:focus {
   border-color: #7994d4;
 }
 
-.c9:focus::-webkit-input-placeholder {
+.c15:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c9:focus::-moz-placeholder {
+.c15:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c9:focus:-ms-input-placeholder {
+.c15:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c9:focus::placeholder {
+.c15:focus::placeholder {
   color: transparent;
 }
 
-.c11 {
+.c17 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -843,15 +1015,15 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   appearance: none;
 }
 
-.c11::-webkit-outer-spin-button,
-.c11::-webkit-inner-spin-button {
+.c17::-webkit-outer-spin-button,
+.c17::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11::-webkit-calendar-picker-indicator {
+.c17::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -864,47 +1036,47 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c11:invalid {
+.c17:invalid {
   border-color: #eb5757;
 }
 
-.c11::-webkit-input-placeholder {
+.c17::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c11::-moz-placeholder {
+.c17::-moz-placeholder {
   color: #9298af;
 }
 
-.c11:-ms-input-placeholder {
+.c17:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c11::placeholder {
+.c17::placeholder {
   color: #9298af;
 }
 
-.c11:focus {
+.c17:focus {
   border-color: #7994d4;
 }
 
-.c11:focus::-webkit-input-placeholder {
+.c17:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c11:focus::-moz-placeholder {
+.c17:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c11:focus:-ms-input-placeholder {
+.c17:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c11:focus::placeholder {
+.c17:focus::placeholder {
   color: transparent;
 }
 
-.c12 {
+.c18 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -915,7 +1087,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   color: #9298af;
 }
 
-.c5 {
+.c11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -935,7 +1107,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c13 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -945,7 +1117,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c12 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -966,37 +1138,58 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c12::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c12 *::-ms-backdrop,
+.c12 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c12:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c12:disabled {
   background-color: #e4e8ef;
+}
+
+.c20 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.c9 {
+  margin-left: 1rem;
+}
+
+.c10 {
+  width: 2rem;
+  margin-left: 0.4rem;
+  color: #f66663;
+}
+
+.c21 {
+  width: 2rem;
+  margin-right: 0.4rem;
+  color: #f66663;
 }
 
 .c0 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
-.c17 {
-  margin: 2rem 0;
-}
-
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1005,72 +1198,139 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
 }
 
-.c2 {
+.c6 {
+  display: none;
+}
+
+.c4 {
+  padding-top: 1rem;
+  padding-bottom: 0.4rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.c3 {
   -webkit-flex-basis: 20rem;
   -ms-flex-preferred-size: 20rem;
   flex-basis: 20rem;
   margin-right: 2rem;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-basis: 15rem;
   -ms-flex-preferred-size: 15rem;
   flex-basis: 15rem;
   margin-right: 2rem;
 }
 
-.c10 {
+.c16 {
   -webkit-flex-basis: 20rem;
   -ms-flex-preferred-size: 20rem;
   flex-basis: 20rem;
 }
 
-.c3 {
-  font-weight: 700;
-}
-
-.c15 {
-  margin-left: 2rem;
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c19 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
   .c14 {
-    padding: 0 3rem;
+    width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
+  .c15 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c17 {
     padding: 0 1rem;
     padding-right: 5rem;
   }
 }
 
 @media (max-width:600px) {
+  .c11 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -1081,35 +1341,71 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
     Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
   </label>
   <div
-    class="c1"
+    class="c1 c2"
   >
     <div
-      class="c2 c3"
+      class="c3 c4"
     >
       Type de durée de travail
     </div>
     <div
-      class="c4 c3"
+      class="c5 c4"
     >
-      Durée en mois
+      Durée (en mois)
     </div>
     <div
-      class="c3"
+      class="c4"
     >
       Rémunération
     </div>
   </div>
   <div
-    class="c1"
+    class="c2"
   >
     <div
-      class="c2"
+      class="c6"
+    >
+      <span
+        class="c7"
+        font-size="hsmall"
+        font-weight="400"
+      >
+        Période 
+        1
+      </span>
+      <button
+        class="c8 c9"
+        type="button"
+      >
+        Supprimer
+        <svg
+          aria-hidden="true"
+          class="c10"
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="c3"
     >
       <div
-        class="c5"
+        class="c6 c4"
+      >
+        Type de durée de travail
+      </div>
+      <div
+        class="c11"
       >
         <select
-          class="c6"
+          class="c12"
           name="periods[0].type"
         >
           <option>
@@ -1121,7 +1417,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
         </select>
         <div
           aria-hidden="true"
-          class="c7"
+          class="c13"
         >
           <svg
             fill="none"
@@ -1150,13 +1446,18 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
       </div>
     </div>
     <div
-      class="c4"
+      class="c5"
     >
+      <div
+        class="c6 c4"
+      >
+        Durée (en mois)
+      </div>
       <span
-        class="c8"
+        class="c14"
       >
         <input
-          class="c9"
+          class="c15"
           name="periods[0].duration"
           type="number"
           value="6"
@@ -1164,19 +1465,24 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
       </span>
     </div>
     <div
-      class="c10"
+      class="c16"
     >
+      <div
+        class="c6 c4"
+      >
+        Rémunération
+      </div>
       <span
-        class="c8"
+        class="c14"
       >
         <input
-          class="c11"
+          class="c17"
           name="periods[0].salary"
           type="number"
           value="1000"
         />
         <div
-          class="c12"
+          class="c18"
         >
           <svg
             fill="none"
@@ -1190,34 +1496,117 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
         </div>
       </span>
     </div>
-    <button
-      class="c13 c14 c15"
-      type="button"
+    <div
+      class="c1"
     >
-      Supprimer
-    </button>
+      <button
+        class="c19 c9"
+        type="button"
+      >
+        Supprimer
+        <svg
+          aria-hidden="true"
+          class="c10"
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
   <button
-    class="c13 c16 c17"
+    class="c8 c20"
     type="button"
   >
-    Ajouter une période
     <svg
-      class="c18"
+      aria-hidden="true"
+      class="c21"
       fill="none"
-      viewBox="0 0 28 15"
+      viewBox="0 0 16 16"
     >
       <path
-        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        clip-rule="evenodd"
+        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
+    Ajouter une période
   </button>
 </div>
 `;
 
 exports[`<SalaireTempsPartiel /> should render 1`] = `
-.c14 {
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c8:link,
+.c8:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c8[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1246,107 +1635,53 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   -moz-appearance: none;
   appearance: none;
   height: 5.2rem;
-  padding: 0 4.4rem;
+  padding: 0 1.9rem;
   color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
+  background: transparent;
+  border-color: transparent;
   box-shadow: none;
   opacity: 1;
 }
 
-.c14:link,
-.c14:visited {
+.c19:link,
+.c19:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
-  opacity: 1;
+.c19:not([disabled]):hover,
+.c19:not([disabled]):active,
+.c19:not([disabled]):focus {
+  opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: transparent;
+  border-color: transparent;
 }
 
-.c14[disabled] {
-  color: rgba(62,72,110,0.4);
+.c19[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.c16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
+.c7 {
+  color: #7994d4;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
-.c16:focus,
-.c16:hover,
-.c16:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c18 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c13:hover .c18 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c8 {
+.c14 {
   position: relative;
   display: inline-block;
 }
 
-.c9 {
+.c15 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -1368,15 +1703,15 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   appearance: none;
 }
 
-.c9::-webkit-outer-spin-button,
-.c9::-webkit-inner-spin-button {
+.c15::-webkit-outer-spin-button,
+.c15::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-calendar-picker-indicator {
+.c15::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -1389,47 +1724,47 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c9:invalid {
+.c15:invalid {
   border-color: #eb5757;
 }
 
-.c9::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c9::-moz-placeholder {
+.c15::-moz-placeholder {
   color: #9298af;
 }
 
-.c9:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c9::placeholder {
+.c15::placeholder {
   color: #9298af;
 }
 
-.c9:focus {
+.c15:focus {
   border-color: #7994d4;
 }
 
-.c9:focus::-webkit-input-placeholder {
+.c15:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c9:focus::-moz-placeholder {
+.c15:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c9:focus:-ms-input-placeholder {
+.c15:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c9:focus::placeholder {
+.c15:focus::placeholder {
   color: transparent;
 }
 
-.c11 {
+.c17 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -1451,15 +1786,15 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   appearance: none;
 }
 
-.c11::-webkit-outer-spin-button,
-.c11::-webkit-inner-spin-button {
+.c17::-webkit-outer-spin-button,
+.c17::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11::-webkit-calendar-picker-indicator {
+.c17::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -1472,47 +1807,47 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c11:invalid {
+.c17:invalid {
   border-color: #eb5757;
 }
 
-.c11::-webkit-input-placeholder {
+.c17::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c11::-moz-placeholder {
+.c17::-moz-placeholder {
   color: #9298af;
 }
 
-.c11:-ms-input-placeholder {
+.c17:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c11::placeholder {
+.c17::placeholder {
   color: #9298af;
 }
 
-.c11:focus {
+.c17:focus {
   border-color: #7994d4;
 }
 
-.c11:focus::-webkit-input-placeholder {
+.c17:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c11:focus::-moz-placeholder {
+.c17:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c11:focus:-ms-input-placeholder {
+.c17:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c11:focus::placeholder {
+.c17:focus::placeholder {
   color: transparent;
 }
 
-.c12 {
+.c18 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -1523,7 +1858,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   color: #9298af;
 }
 
-.c5 {
+.c11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1543,7 +1878,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c13 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -1553,7 +1888,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c12 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -1574,37 +1909,58 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c12::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c12 *::-ms-backdrop,
+.c12 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c12:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c12:disabled {
   background-color: #e4e8ef;
+}
+
+.c20 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.c9 {
+  margin-left: 1rem;
+}
+
+.c10 {
+  width: 2rem;
+  margin-left: 0.4rem;
+  color: #f66663;
+}
+
+.c21 {
+  width: 2rem;
+  margin-right: 0.4rem;
+  color: #f66663;
 }
 
 .c0 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
-.c17 {
-  margin: 2rem 0;
-}
-
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1613,72 +1969,139 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
 }
 
-.c2 {
+.c6 {
+  display: none;
+}
+
+.c4 {
+  padding-top: 1rem;
+  padding-bottom: 0.4rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.c3 {
   -webkit-flex-basis: 20rem;
   -ms-flex-preferred-size: 20rem;
   flex-basis: 20rem;
   margin-right: 2rem;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-basis: 15rem;
   -ms-flex-preferred-size: 15rem;
   flex-basis: 15rem;
   margin-right: 2rem;
 }
 
-.c10 {
+.c16 {
   -webkit-flex-basis: 20rem;
   -ms-flex-preferred-size: 20rem;
   flex-basis: 20rem;
 }
 
-.c3 {
-  font-weight: 700;
-}
-
-.c15 {
-  margin-left: 2rem;
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c19 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
   .c14 {
-    padding: 0 3rem;
+    width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
+  .c15 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c17 {
     padding: 0 1rem;
     padding-right: 5rem;
   }
 }
 
 @media (max-width:600px) {
+  .c11 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c0 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -1689,35 +2112,71 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
     Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
   </label>
   <div
-    class="c1"
+    class="c1 c2"
   >
     <div
-      class="c2 c3"
+      class="c3 c4"
     >
       Type de durée de travail
     </div>
     <div
-      class="c4 c3"
+      class="c5 c4"
     >
-      Durée en mois
+      Durée (en mois)
     </div>
     <div
-      class="c3"
+      class="c4"
     >
       Rémunération
     </div>
   </div>
   <div
-    class="c1"
+    class="c2"
   >
     <div
-      class="c2"
+      class="c6"
+    >
+      <span
+        class="c7"
+        font-size="hsmall"
+        font-weight="400"
+      >
+        Période 
+        1
+      </span>
+      <button
+        class="c8 c9"
+        type="button"
+      >
+        Supprimer
+        <svg
+          aria-hidden="true"
+          class="c10"
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="c3"
     >
       <div
-        class="c5"
+        class="c6 c4"
+      >
+        Type de durée de travail
+      </div>
+      <div
+        class="c11"
       >
         <select
-          class="c6"
+          class="c12"
           name="periods[0].type"
         >
           <option>
@@ -1729,7 +2188,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </select>
         <div
           aria-hidden="true"
-          class="c7"
+          class="c13"
         >
           <svg
             fill="none"
@@ -1758,13 +2217,18 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c4"
+      class="c5"
     >
+      <div
+        class="c6 c4"
+      >
+        Durée (en mois)
+      </div>
       <span
-        class="c8"
+        class="c14"
       >
         <input
-          class="c9"
+          class="c15"
           name="periods[0].duration"
           type="number"
           value="12"
@@ -1772,19 +2236,24 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       </span>
     </div>
     <div
-      class="c10"
+      class="c16"
     >
+      <div
+        class="c6 c4"
+      >
+        Rémunération
+      </div>
       <span
-        class="c8"
+        class="c14"
       >
         <input
-          class="c11"
+          class="c17"
           name="periods[0].salary"
           type="number"
           value="2000"
         />
         <div
-          class="c12"
+          class="c18"
         >
           <svg
             fill="none"
@@ -1798,24 +2267,77 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </div>
       </span>
     </div>
-    <button
-      class="c13 c14 c15"
-      type="button"
+    <div
+      class="c1"
     >
-      Supprimer
-    </button>
+      <button
+        class="c19 c9"
+        type="button"
+      >
+        Supprimer
+        <svg
+          aria-hidden="true"
+          class="c10"
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
   <div
-    class="c1"
+    class="c2"
   >
     <div
-      class="c2"
+      class="c6"
+    >
+      <span
+        class="c7"
+        font-size="hsmall"
+        font-weight="400"
+      >
+        Période 
+        2
+      </span>
+      <button
+        class="c8 c9"
+        type="button"
+      >
+        Supprimer
+        <svg
+          aria-hidden="true"
+          class="c10"
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="c3"
     >
       <div
-        class="c5"
+        class="c6 c4"
+      >
+        Type de durée de travail
+      </div>
+      <div
+        class="c11"
       >
         <select
-          class="c6"
+          class="c12"
           name="periods[1].type"
         >
           <option>
@@ -1827,7 +2349,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </select>
         <div
           aria-hidden="true"
-          class="c7"
+          class="c13"
         >
           <svg
             fill="none"
@@ -1856,13 +2378,18 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c4"
+      class="c5"
     >
+      <div
+        class="c6 c4"
+      >
+        Durée (en mois)
+      </div>
       <span
-        class="c8"
+        class="c14"
       >
         <input
-          class="c9"
+          class="c15"
           name="periods[1].duration"
           type="number"
           value="6"
@@ -1870,19 +2397,24 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       </span>
     </div>
     <div
-      class="c10"
+      class="c16"
     >
+      <div
+        class="c6 c4"
+      >
+        Rémunération
+      </div>
       <span
-        class="c8"
+        class="c14"
       >
         <input
-          class="c11"
+          class="c17"
           name="periods[1].salary"
           type="number"
           value="1000"
         />
         <div
-          class="c12"
+          class="c18"
         >
           <svg
             fill="none"
@@ -1896,28 +2428,48 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </div>
       </span>
     </div>
-    <button
-      class="c13 c14 c15"
-      type="button"
+    <div
+      class="c1"
     >
-      Supprimer
-    </button>
+      <button
+        class="c19 c9"
+        type="button"
+      >
+        Supprimer
+        <svg
+          aria-hidden="true"
+          class="c10"
+          fill="none"
+          viewBox="0 0 32 32"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
   <button
-    class="c13 c16 c17"
+    class="c8 c20"
     type="button"
   >
-    Ajouter une période
     <svg
-      class="c18"
+      aria-hidden="true"
+      class="c21"
       fill="none"
-      viewBox="0 0 28 15"
+      viewBox="0 0 16 16"
     >
       <path
-        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        clip-rule="evenodd"
+        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
+    Ajouter une période
   </button>
 </div>
 `;

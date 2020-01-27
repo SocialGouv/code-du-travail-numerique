@@ -92,6 +92,12 @@ exports[`<Categorie /> should render 1`] = `
   font-family: "Open Sans",sans-serif;
 }
 
+@media (max-width:600px) {
+  .c2 {
+    width: 100%;
+  }
+}
+
 <div>
   <h2
     class="c0"
