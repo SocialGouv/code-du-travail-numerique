@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.2.1...v4.3.0) (2020-01-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency next-transpile-modules to v3 ([#2267](https://github.com/SocialGouv/code-du-travail-numerique/issues/2267)) ([ac87007](https://github.com/SocialGouv/code-du-travail-numerique/commit/ac87007592c721e4e04781fcd0a3c0fe2201b811))
+* **front:** Titles margins, accordion/tabs fixes and prevent content from going behind header when having anchors plus minor typos ([#2242](https://github.com/SocialGouv/code-du-travail-numerique/issues/2242)) ([b6c3f13](https://github.com/SocialGouv/code-du-travail-numerique/commit/b6c3f13764ebfeb95b27e242b477efd18ae13572))
+
+
+### Features
+
+* **cookie:** add a cookie policy page ([#2294](https://github.com/SocialGouv/code-du-travail-numerique/issues/2294)) ([effb634](https://github.com/SocialGouv/code-du-travail-numerique/commit/effb63474236768ad6535bad22ea4e3a63892401)), closes [#2293](https://github.com/SocialGouv/code-du-travail-numerique/issues/2293) [#2292](https://github.com/SocialGouv/code-du-travail-numerique/issues/2292)
+* **courrier:** add breadcrumbs to doc template ([#2286](https://github.com/SocialGouv/code-du-travail-numerique/issues/2286)) ([cb7dc5a](https://github.com/SocialGouv/code-du-travail-numerique/commit/cb7dc5a38fdf141d3ece64e4d4983bcfad4f8e41))
+* **stat:** use dynamic value from matomo and es ([#2278](https://github.com/SocialGouv/code-du-travail-numerique/issues/2278)) ([7a0827c](https://github.com/SocialGouv/code-du-travail-numerique/commit/7a0827cd79577b0c0bad25a1c202fdd57e3a0fcd))
+
+
+
+
+
 ## [4.2.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.2.0...v4.2.1) (2020-01-23)
 
 

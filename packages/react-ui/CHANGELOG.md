@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.2.1...v4.3.0) (2020-01-27)
+
+
+### Bug Fixes
+
+* **front:** Titles margins, accordion/tabs fixes and prevent content from going behind header when having anchors plus minor typos ([#2242](https://github.com/SocialGouv/code-du-travail-numerique/issues/2242)) ([b6c3f13](https://github.com/SocialGouv/code-du-travail-numerique/commit/b6c3f13764ebfeb95b27e242b477efd18ae13572))
+
+
+### Features
+
+* **ui:** add text component ([#2287](https://github.com/SocialGouv/code-du-travail-numerique/issues/2287)) ([61c06eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/61c06eb1d976f405f64439b28bf727c0c7389630))
+
+
+
+
+
 # [4.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.1...v4.2.0) (2020-01-22)
 
 **Note:** Version bump only for package @socialgouv/react-ui

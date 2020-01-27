@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.2.1...v4.3.0) (2020-01-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency koa-router to v8 ([#2284](https://github.com/SocialGouv/code-du-travail-numerique/issues/2284)) ([2ec908a](https://github.com/SocialGouv/code-du-travail-numerique/commit/2ec908ace041a2622b68b75f0ed300e7eb5294ca))
+
+
+### Features
+
+* **stat:** use dynamic value from matomo and es ([#2278](https://github.com/SocialGouv/code-du-travail-numerique/issues/2278)) ([7a0827c](https://github.com/SocialGouv/code-du-travail-numerique/commit/7a0827cd79577b0c0bad25a1c202fdd57e3a0fcd))
+
+
+
+
+
 # [4.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.1...v4.2.0) (2020-01-22)
 
 

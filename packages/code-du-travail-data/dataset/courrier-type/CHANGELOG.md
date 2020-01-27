@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.2.1...v4.3.0) (2020-01-27)
+
+
+### Features
+
+* **courrier:** add breadcrumbs to doc template ([#2286](https://github.com/SocialGouv/code-du-travail-numerique/issues/2286)) ([cb7dc5a](https://github.com/SocialGouv/code-du-travail-numerique/commit/cb7dc5a38fdf141d3ece64e4d4983bcfad4f8e41))
+
+
+
+
+
 # [4.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.1...v4.2.0) (2020-01-22)
 
 
