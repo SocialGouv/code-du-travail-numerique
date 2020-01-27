@@ -1,5 +1,5 @@
 import React from "react";
-import data from "@cdt/data...preavis-demission/data.json";
+import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
 import { SectionTitle } from "../../common/stepStyles";

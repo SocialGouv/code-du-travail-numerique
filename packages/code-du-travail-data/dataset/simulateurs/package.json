@@ -1,13 +1,14 @@
 {
-  "name": "@cdt/data...preavis-licenciement",
-  "version": "4.1.0",
+  "name": "@cdt/data...simulateurs",
+  "version": "1.0.0",
   "private": true,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js > ./data.json"
+    "start": "node -r esm index.js > ./data.json"
   },
   "dependencies": {
+    "esm": "^3.2.25",
     "google-spreadsheets": "^2.0.0"
   }
 }

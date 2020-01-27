@@ -4,7 +4,7 @@ import { StepResult } from "./steps/Result";
 import { StepInformations } from "./steps/Informations";
 import { StepStatus } from "./steps/Status";
 import { isNotYetProcessed } from "../common/situations.utils";
-import data from "@cdt/data...preavis-licenciement/data.json";
+import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
 
 export const initialState = {
   stepIndex: 0,

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import { Toast } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
-import data from "@cdt/data...preavis-demission/data.json";
+import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 

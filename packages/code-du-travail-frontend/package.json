@@ -22,8 +22,7 @@
   "dependencies": {
     "@cdt/data": "^4.3.0",
     "@cdt/data...datafiller": "^4.2.0",
-    "@cdt/data...preavis-demission": "^4.1.0",
-    "@cdt/data...preavis-licenciement": "^4.1.0",
+    "@cdt/data...simulateurs": "^1.0.0",
     "@cdt/data...prime-precarite": "^4.1.0",
     "@cdt/data...tools": "^4.1.0",
     "@cdt/sources": "^4.1.0",
