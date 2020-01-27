@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import getConfig from "next/config";
 import Link from "next/link";
+import { SOURCES, getRouteBySource } from "@cdt/sources";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import {
@@ -8,10 +9,12 @@ import {
   FlatList,
   Tile,
   PageTitle,
+  Heading,
   Section,
+  Select,
   theme
 } from "@socialgouv/react-ui";
-
+import { summarize } from "../../src/search/utils";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
@@ -19,64 +22,110 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-class Modeles extends React.Component {
-  static async getInitialProps() {
-    const response = await fetch(`${API_URL}/modeles`);
-    if (!response.ok) {
-      return { statusCode: response.status };
-    }
-    const data = await response.json();
-    return { data };
-  }
+const title = "Modèles de documents";
+const subtitle =
+  "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail";
 
-  render() {
-    const { data = { hits: {} }, pageUrl, ogImage } = this.props;
-    return (
-      <Layout>
-        <Metas
-          url={pageUrl}
-          title="Modèles de courriers - Code du travail numérique"
-          description="Retrouvez l'ensemble des modèles de courriers à votre disposition."
-          image={ogImage}
-        />
-        <Section>
-          <Container narrow>
-            <PageTitle>
-              Consultez et téléchargez nos modèles de documents
-            </PageTitle>
-            <StyledList>
-              {data.hits.hits.map(({ _id, _source }) => (
-                <StyledListItem key={_id}>
-                  <Link
-                    href="modeles-de-courriers/[slug]"
-                    as={`modeles-de-courriers/${_source.slug}`}
-                    passHref
-                  >
-                    <ModeleCourrier modele={_source} />
-                  </Link>
-                </StyledListItem>
-              ))}
-            </StyledList>
-          </Container>
-        </Section>
-      </Layout>
-    );
-  }
+function Modeles(props) {
+  const { data = [], pageUrl, ogImage } = props;
+  const themes = [];
+  const modelesByTheme = data.reduce((state, templateDoc) => {
+    const [theme] = templateDoc.breadcrumbs;
+    if (!state[theme.slug]) {
+      state[theme.slug] = {
+        title: theme.title,
+        items: []
+      };
+      themes.push(theme);
+    }
+    state[theme.slug].items.push(templateDoc);
+    return state;
+  }, {});
+
+  const [selectedTheme, setSelectedTheme] = useState("all");
+  const [documents, setDocuments] = useState(modelesByTheme);
+  const selectThemeHandler = useCallback(
+    event => {
+      const themeSlug = event.target.value;
+      setSelectedTheme(event.target.value);
+      if (themeSlug === "all") {
+        setDocuments(modelesByTheme);
+      } else {
+        setDocuments({ [themeSlug]: modelesByTheme[themeSlug] });
+      }
+    },
+    [modelesByTheme, setDocuments, setSelectedTheme]
+  );
+  return (
+    <Layout>
+      <Metas
+        url={pageUrl}
+        title={`${title} - Code du travail numérique`}
+        description={subtitle}
+        image={ogImage}
+      />
+      <Section>
+        <Container narrow>
+          <PageTitle subtitle={subtitle}>{title}</PageTitle>
+          <LargeSelect value={selectedTheme} onChange={selectThemeHandler}>
+            {themes &&
+              [
+                <option key="all" value="all">
+                  Tous les thèmes
+                </option>
+              ].concat(
+                themes.map(({ title, slug }) => (
+                  <option key={slug} value={slug}>
+                    {title}
+                  </option>
+                ))
+              )}
+          </LargeSelect>
+          <StyledList>
+            {Object.values(documents).map(({ title, items }) => (
+              <React.Fragment key={title}>
+                <Heading as={HeadingBlue}>{title}</Heading>
+                {items.map(docTemplate => (
+                  <StyledListItem key={docTemplate.slug}>
+                    <ModeleCourrier modele={docTemplate} />
+                  </StyledListItem>
+                ))}
+              </React.Fragment>
+            ))}
+          </StyledList>
+        </Container>
+      </Section>
+    </Layout>
+  );
 }
 
-const ModeleCourrier = ({ modele, ...props }) => {
-  const { filename, title, author } = modele;
-  const [, extension] = filename.split(/\.([a-z]{2,4})$/);
-  return (
-    <Tile wide {...props} title={title}>
-      <Label>Source</Label>: <Label>{author}</Label>
-      {extension && author ? " - " : null}
-      <Value>{extension}</Value>
-    </Tile>
-  );
+Modeles.getInitialProps = async function() {
+  const response = await fetch(`${API_URL}/modeles`);
+  if (!response.ok) {
+    return { statusCode: response.status };
+  }
+  const data = await response.json();
+  return { data };
 };
 
-const { colors, spacings } = theme;
+function ModeleCourrier({ modele }) {
+  const { title, description, breadcrumbs, slug } = modele;
+  const [theme] = breadcrumbs.slice(-1);
+
+  return (
+    <Link
+      href={`${getRouteBySource(SOURCES.LETTERS)}/[slug]`}
+      as={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
+      passHref
+    >
+      <Tile wide custom title={title} subtitle={theme.title}>
+        {summarize(description)}
+      </Tile>
+    </Link>
+  );
+}
+
+const { spacings } = theme;
 
 const StyledList = styled(FlatList)`
   margin: ${spacings.small} 0;
@@ -86,15 +135,10 @@ const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
 `;
 
-const Label = styled.span`
-  color: ${colors.altText};
-  font-weight: 700;
+const LargeSelect = styled(Select)`
+  width: 100%;
 `;
-
-const Value = styled.span`
-  color: ${colors.altText};
-  font-weight: 700;
-  text-transform: uppercase;
+const HeadingBlue = styled.h2`
+  color: ${({ theme }) => theme.secondary};
 `;
-
 export default Modeles;

@@ -60,6 +60,20 @@ Object {
     Object {
       "_score": 1.0560172,
       "algo": "semantic",
+      "breadcrumbs": Array [
+        Object {
+          "slug": "1-embauche-et-contrat-de-travail",
+          "title": "Embauche et contrat de travail",
+        },
+        Object {
+          "slug": "11-embauche",
+          "title": "Embauche",
+        },
+        Object {
+          "slug": "113-periode-dessai",
+          "title": "Période d'essai",
+        },
+      ],
       "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
       "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
       "source": "modeles_de_courriers",
@@ -68,6 +82,20 @@ Object {
     Object {
       "_score": 1.0499763,
       "algo": "semantic",
+      "breadcrumbs": Array [
+        Object {
+          "slug": "8-depart-de-lentreprise",
+          "title": "Départ de l'entreprise",
+        },
+        Object {
+          "slug": "83-rupture-conventionnelle",
+          "title": "Rupture conventionnelle",
+        },
+        Object {
+          "slug": "831-rupture-conventionnelle-individuelle",
+          "title": "Rupture conventionnelle individuelle",
+        },
+      ],
       "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
       "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
       "source": "modeles_de_courriers",
