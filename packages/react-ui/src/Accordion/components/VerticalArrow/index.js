@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { ChevronRight } from "react-feather";
-import { animations } from "../theme";
+
+import { animations } from "../../../theme";
 
 const StyledChevronRight = styled(ChevronRight)`
   position: relative;
+  flex: 0 0 auto;
+  color: ${({ theme }) => theme.secondary};
   transform: rotate(0);
   transition: transform ${animations.transitionTiming} linear;
   [aria-expanded="true"] &,

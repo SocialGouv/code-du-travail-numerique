@@ -1,17 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Section } from "../layout/Section";
 import { Title } from "../Titles/Title";
+import { Custom } from "../icons";
 import { Accordion } from ".";
 
 export default {
   component: Accordion,
   title: "Components|Accordion"
-};
-
-const CustomTitle = ({ children }) => <strong>{children}</strong>;
-CustomTitle.propTypes = {
-  children: PropTypes.node
 };
 
 export const base = () => (
@@ -65,4 +60,144 @@ export const base = () => (
       />
     </Section>
   </>
+);
+
+export const tile = () => (
+  <Section>
+    <Accordion
+      variant="tile"
+      items={[
+        {
+          title: <h5>1 - A tile title</h5>,
+          body: "this is the single body"
+        },
+        {
+          title: <h5>2 - A tile title</h5>,
+          body: "this is the single body"
+        },
+        {
+          title: <h5>3 - A tile title with an icon</h5>,
+          icon: Custom,
+          body: "this is the single body"
+        },
+        {
+          title: <h5>4 - A tile title with an icon</h5>,
+          icon: Custom,
+          body: "this is the single body"
+        },
+        {
+          title: <h5>5 - A tile title</h5>,
+          body: "this is the single body"
+        },
+        {
+          title: <h5>6 - A tile title with an icon</h5>,
+          icon: Custom,
+          body: "this is the single body"
+        },
+        {
+          title: <h5>7 - A tile title with an icon</h5>,
+          icon: Custom,
+          body: "this is the single body"
+        },
+        {
+          title: <h5>8 - A tile title</h5>,
+          body: "this is the single body"
+        }
+      ]}
+    />
+  </Section>
+);
+
+export const Hierarchy = () => (
+  <Section>
+    <Accordion
+      variant="hierarchy"
+      items={[
+        {
+          title: <h5>A hiearchy title</h5>,
+          body: (
+            <div>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+            </div>
+          )
+        },
+        {
+          title: <h5>A hiearchy title with an icon</h5>,
+          icon: Custom,
+          body: "this is the single body"
+        },
+        {
+          title: <h5>A hiearchy title</h5>,
+          body: (
+            <div>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+            </div>
+          )
+        },
+        {
+          title: <h5>A hiearchy title</h5>,
+          body: "this is the single body"
+        },
+        {
+          icon: Custom,
+          title: (
+            <h5>
+              A hiearchy title, crazy long so we check the render of the last
+              left dash on every viewport
+            </h5>
+          ),
+          body: (
+            <div>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+            </div>
+          )
+        }
+      ]}
+    />
+  </Section>
 );

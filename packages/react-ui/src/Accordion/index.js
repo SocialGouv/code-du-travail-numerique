@@ -3,67 +3,111 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import {
   Accordion as RootAccordion,
-  AccordionItem,
   AccordionItemHeading,
-  AccordionItemButton,
   AccordionItemPanel
 } from "react-accessible-accordion";
 
-import { box, breakpoints, fonts, spacings } from "../theme";
+import { box, breakpoints, spacings } from "../theme";
 import { getTextFromComponent } from "../utils/getTextFromComponent";
-import { VerticalArrow } from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
+import { BaseItem, BaseButton } from "./components/variants/Base";
+import {
+  MOBILE_NUMBER_WIDTH,
+  NUMBER_WIDTH,
+  HierarchyItem,
+  HierarchyButton
+} from "./components/variants/Hierarchy";
+import { TileItem, TileButton } from "./components/variants/Tile";
 
-export const Accordion = ({ items, ...props }) => {
+export const Accordion = ({ items, variant, ...props }) => {
+  let AccordionItem = BaseItem;
+  let AccordionItemButton = BaseButton;
+  if (variant === "tile") {
+    AccordionItem = TileItem;
+    AccordionItemButton = TileButton;
+  }
+  if (variant === "hierarchy") {
+    AccordionItem = HierarchyItem;
+    AccordionItemButton = HierarchyButton;
+  }
+
   return (
-    <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
-      {items.map(({ body, id, title }, index) => (
+    <StyledRootAccordion
+      variant={variant}
+      allowZeroExpanded
+      allowMultipleExpanded
+      {...props}
+    >
+      {items.map(({ body, icon, id, title }, index) => (
         <div id={id} key={`${id}-${index}`}>
           {typeof id !== "undefined" &&
             props.preExpanded.find(element => element === id) && (
               <PushBelowHeader />
             )}
-          <StyledAccordionItem uuid={id} index={index}>
+          <AccordionItem
+            uuid={id}
+            index={index}
+            isLast={index === items.length - 1}
+          >
             <AccordionItemHeading>
-              <StyledAccordionItemButton>
-                <StyledVerticalArrow />
-                <ButtonText>{getTextFromComponent(title)}</ButtonText>
-              </StyledAccordionItemButton>
+              <AccordionItemButton
+                icon={icon}
+                index={index}
+                isLast={index === items.length - 1}
+              >
+                {getTextFromComponent(title)}
+              </AccordionItemButton>
             </AccordionItemHeading>
-            <StyledAccordionItemPanel>
+            <StyledAccordionItemPanel variant={variant}>
               <ScreenReaderOnly>{title}</ScreenReaderOnly>
               <AccordionItemPanelContent>{body}</AccordionItemPanelContent>
             </StyledAccordionItemPanel>
-          </StyledAccordionItem>
+          </AccordionItem>
         </div>
       ))}
-    </RootAccordion>
+    </StyledRootAccordion>
   );
 };
 
 Accordion.propTypes = {
-  preExpanded: PropTypes.arrayOf(PropTypes.string),
   items: PropTypes.arrayOf(
     PropTypes.shape({
       body: PropTypes.node.isRequired,
+      icon: PropTypes.elementType,
       id: PropTypes.string,
       title: PropTypes.node.isRequired
     })
-  ).isRequired
+  ).isRequired,
+  preExpanded: PropTypes.arrayOf(PropTypes.string),
+  variant: PropTypes.oneOf(["base", "tile", "hierarchy"])
 };
 
 Accordion.defaultProps = {
-  preExpanded: []
+  preExpanded: [],
+  variant: "base"
 };
 
-const StyledAccordionItem = styled(AccordionItem)`
-  position: relative;
-  z-index: 1;
-  ${({ index, theme }) =>
-    index > 0 &&
+const StyledRootAccordion = styled(RootAccordion)`
+  ${({ variant }) =>
+    variant === "tile" &&
     css`
-      border-top: ${box.border(theme.border)};
+      display: flex;
+      flex-wrap: wrap;
+      & > div {
+        width: calc(50% - (${spacings.medium} / 2));
+        &:nth-child(odd) {
+          margin-right: ${spacings.medium};
+        }
+      }
+      @media (max-width: ${breakpoints.tablet}) {
+        & > div {
+          width: 100%;
+          &:nth-child(odd) {
+            margin-right: 0;
+          }
+        }
+      }
     `}
 `;
 
@@ -79,38 +123,6 @@ const PushBelowHeader = styled.div`
   }
 `;
 
-const StyledVerticalArrow = styled(VerticalArrow)`
-  flex: 0 0 auto;
-  margin-right: ${spacings.small};
-  color: ${({ theme }) => theme.secondary};
-`;
-
-const StyledAccordionItemButton = styled(AccordionItemButton)`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-  &:hover,
-  &:focus,
-  &:focus-within,
-  &[aria-expanded="true"] {
-    color: ${({ theme }) => theme.paragraph};
-  }
-`;
-
-const ButtonText = styled.div`
-  margin: ${spacings.medium} 0 ${spacings.medium} 0;
-  color: ${({ theme }) => theme.title};
-  font-weight: 600;
-  font-size: ${fonts.sizes.headings.small};
-  font-family: "Open Sans", sans-serif;
-  line-height: ${fonts.lineHeightTitle};
-  @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.default};
-  }
-`;
-
 const StyledAccordionItemPanel = styled(AccordionItemPanel)`
   padding: ${spacings.base};
   animation: ${fadeIn} 0.35s ease-in;
@@ -121,6 +133,31 @@ const StyledAccordionItemPanel = styled(AccordionItemPanel)`
   @media (max-width: ${breakpoints.mobile}) {
     padding: ${spacings.small} 0;
   }
+
+  ${({ variant }) => {
+    if (variant === "tile") {
+      return css`
+        @media (max-width: ${breakpoints.mobile}) {
+          padding: ${spacings.small};
+        }
+      `;
+    }
+    if (variant === "hierarchy") {
+      return css`
+        margin-left: ${NUMBER_WIDTH};
+        background-color: ${({ theme }) => theme.bgSecondary};
+        border-radius: 0 0 ${box.borderRadius} ${box.borderRadius};
+        border: ${({ theme }) =>
+          box.border(theme.noColors ? theme.border : theme.bgSecondary)};
+        border-top: transparent;
+        animation: none;
+        @media (max-width: ${breakpoints.mobile}) {
+          margin-left: ${MOBILE_NUMBER_WIDTH};
+          padding: ${spacings.small};
+        }
+      `;
+    }
+  }}
 `;
 
 const AccordionItemPanelContent = styled.div`
