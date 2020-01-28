@@ -11,7 +11,12 @@ const { Search: SearchIcon } = icons;
 
 const suggestMaxResults = 5;
 
-const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
+const SearchBar = ({
+  hasFocus = false,
+  inputId,
+  hasButton = false,
+  hasSearchIcon = false
+}) => {
   const router = useRouter();
   // query in the input box
   const [query, setQuery] = useState(router.query.q || "");
@@ -64,11 +69,12 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
   };
   return (
     <SearchForm action="/recherche" onSubmit={onFormSubmit}>
-      {hasButton && <SearchIconLeft />}
+      {hasButton && !hasSearchIcon && <SearchIconLeft />}
       <SearchInput
         inputId={inputId}
         hasFocus={hasFocus}
         hasButton={hasButton}
+        hasSearchIcon={hasSearchIcon}
         onChange={onChange}
         query={query}
         placeholder={
@@ -81,8 +87,12 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
         ariaLabel="recherchez par mots-clés"
       />
       {hasButton ? (
-        <SubmitButton variant="primary" type="submit">
-          Rechercher
+        <SubmitButton
+          hasSearchIcon={hasSearchIcon}
+          variant="primary"
+          type="submit"
+        >
+          {(hasSearchIcon && <StyledSearchIcon />) || "Rechercher"}
         </SubmitButton>
       ) : (
         <SubmitIcon type="submit" small narrow variant="naked">
@@ -129,8 +139,12 @@ const SearchInput = styled(DocumentSuggester)`
   width: 100%;
   height: ${({ hasButton }) => (hasButton ? "7rem" : "5.4rem")};
   margin: 0;
-  padding: ${({ hasButton }) =>
-    hasButton ? `2rem 18.5rem 2rem 6rem` : `1rem 5.5rem 1rem ${spacings.base}`};
+  padding: ${({ hasButton, hasSearchIcon }) =>
+    hasButton
+      ? `2rem ${hasSearchIcon ? "9rem" : "18.5rem"} 2rem ${
+          hasSearchIcon ? spacings.xmedium : "6rem"
+        }`
+      : `1rem 5.5rem 1rem ${spacings.base}`};
   color: ${({ theme }) => theme.paragraph};
   font-weight: normal;
   font-size: ${fonts.sizes.default};
@@ -158,6 +172,8 @@ const SubmitButton = styled(Button)`
   position: absolute;
   top: ${spacings.xsmall};
   right: ${spacings.xsmall};
+  padding: 0
+    ${({ hasSearchIcon }) => (hasSearchIcon ? spacings.base : "inherit")};
   @media (max-width: ${breakpoints.mobile}) {
     position: static;
     margin-top: ${spacings.small};
