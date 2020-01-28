@@ -1328,7 +1328,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             À tout moment, vous pouvez refuser l’utilisation des cookies et désactiver le dépôt sur votre ordinateur en utilisant la fonction dédiée de votre navigateur (fonction disponible notamment sur Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple Safari et Opera).
           </p>
           <p>
-            Pour l'outil Matomo, vous pouvez décider de ne jamais être suivi, y compris anonymement :
+            Pour l'outil Matomo, vous pouvez décider de ne jamais être suivi, y compris anonymement&nbsp;:
           </p>
           <iframe
             src="https://matomo.fabrique.social.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=&fontSize=&fontFamily="
