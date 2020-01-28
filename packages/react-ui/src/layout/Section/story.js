@@ -1,5 +1,7 @@
 import React from "react";
 import { PageTitle } from "../../Titles/PageTitle";
+import { Title } from "../../Titles/Title";
+import { Wrapper } from "../../layout/Wrapper";
 import { Section } from ".";
 
 export default {
@@ -24,8 +26,26 @@ export const base = () => (
       </Section>
     </Section>
     <Section>
-      <Section decorated variant="dark">
-        A decorated dark section
+      <Section
+        decorated
+        variant="dark"
+        innerTopContent={
+          <Title subtitle="With a subtitle that should never get out of the decorative layer">
+            I am a quite large title I am a quite large title I am a quite large
+            title
+          </Title>
+        }
+        innerBottomContent={
+          <Wrapper>
+            And I am an inner bottom content that should never get out of the
+            decorative layer And I am an inner bottom content that should never
+            get out of the decorative layer And I am an inner bottom content
+            that should never get out of the decorative layer
+          </Wrapper>
+        }
+      >
+        I can get out of the layer though I can get out of the layer though I
+        can get out of the layer though I can get out of the layer though
       </Section>
     </Section>
     <Section>

@@ -1,13 +1,38 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { AccordionItem, AccordionItemButton } from "react-accessible-accordion";
+import {
+  Accordion as RootAccordion,
+  AccordionItemButton,
+  AccordionItem,
+  AccordionItemPanel
+} from "react-accessible-accordion";
 
 import { box, breakpoints, fonts, spacings } from "../../../theme";
+import { fadeIn } from "../../../keyframes";
 import { VerticalArrow } from "../VerticalArrow";
 
+export const Accordion = styled(RootAccordion)`
+  display: flex;
+  flex-wrap: wrap;
+  & > div {
+    width: calc(50% - (${spacings.medium} / 2));
+    &:nth-child(odd) {
+      margin-right: ${spacings.medium};
+    }
+  }
+  @media (max-width: ${breakpoints.tablet}) {
+    & > div {
+      width: 100%;
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
+  }
+`;
+
 // eslint-disable-next-line
-export const TileItem = styled(({ index, isLast, ...rest }) => (
+export const Item = styled(({ index, isLast, ...rest }) => (
   <AccordionItem {...rest} />
 ))`
   position: relative;
@@ -36,7 +61,15 @@ export const TileItem = styled(({ index, isLast, ...rest }) => (
     }
 `;
 
-export const TileButton = ({ children, icon: Icon }) => (
+export const ItemPanel = styled(AccordionItemPanel)`
+  padding: ${spacings.base};
+  animation: ${fadeIn} 0.35s ease-in;
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: ${spacings.small};
+  }
+`;
+
+export const ItemButton = ({ children, icon: Icon }) => (
   <StyledAccordionItemButton>
     <FlexContainer>
       {Icon && (
@@ -50,7 +83,7 @@ export const TileButton = ({ children, icon: Icon }) => (
   </StyledAccordionItemButton>
 );
 
-TileButton.propTypes = {
+ItemButton.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.elementType
 };

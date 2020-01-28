@@ -31,8 +31,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
           subtitle={
             <span>
               Retrouvez la définition du droit du travail, les textes qui en
-              sont à l’origine
-              <DesktopOnlyLineBreak />
+              sont à l’origine <DesktopOnlyLineBreak />
               ainsi que leur articulation.
             </span>
           }

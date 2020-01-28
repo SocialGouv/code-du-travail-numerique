@@ -1,18 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { AccordionItem, AccordionItemButton } from "react-accessible-accordion";
+import {
+  Accordion as RootAccordion,
+  AccordionItemButton,
+  AccordionItem,
+  AccordionItemPanel
+} from "react-accessible-accordion";
 
 import { box, breakpoints, fonts, spacings } from "../../../theme";
 import { VerticalArrow } from "../VerticalArrow";
 
 const ITEM_SPACING = spacings.base;
 const ITEM_SPACING_MOBILE = spacings.tiny;
-export const NUMBER_WIDTH = "8.8rem";
-export const MOBILE_NUMBER_WIDTH = "4.6rem";
+export const LEFT_WIDTH = "8rem";
+export const LEFT_WIDTH_MOBILE = "4.6rem";
+const NUMBER_WIDTH = "4rem";
+const NUMBER_WIDTH_MOBILE = "3rem";
+const STROKE_WIDTH = "3px";
+const NARROW_STROKE_WIDTH = "1px";
+
+export const Accordion = RootAccordion;
 
 // eslint-disable-next-line
-export const HierarchyItem = styled(({ index, isLast, ...rest }) => (
+export const Item = styled(({ index, isLast, ...rest }) => (
   <AccordionItem {...rest} />
 ))`
   position: relative;
@@ -24,7 +35,7 @@ export const HierarchyItem = styled(({ index, isLast, ...rest }) => (
   &:after {
     position: absolute;
     bottom: -1.4rem;
-    left: calc(50% + ${NUMBER_WIDTH} / 2);
+    left: calc(50% + ${LEFT_WIDTH} / 2);
     z-index: 1;
     display: ${({ theme }) => (theme.noColors ? "none" : "block")};
     width: 0;
@@ -49,12 +60,25 @@ export const HierarchyItem = styled(({ index, isLast, ...rest }) => (
         margin-top: ${ITEM_SPACING_MOBILE};
       `}
     &:after {
-      left: calc(50% + ${MOBILE_NUMBER_WIDTH} / 2);
+      left: calc(50% + ${LEFT_WIDTH_MOBILE} / 2);
     }
   }
 `;
 
-export const HierarchyButton = ({ children, icon: Icon, index, isLast }) => (
+export const ItemPanel = styled(AccordionItemPanel)`
+  margin-left: ${LEFT_WIDTH};
+  padding: ${spacings.base};
+  background-color: ${({ theme }) => theme.bgSecondary};
+  border: ${({ theme }) =>
+    box.border(theme.noColors ? theme.border : theme.bgSecondary)};
+  border-top: transparent;
+  border-radius: 0 0 ${box.borderRadius} ${box.borderRadius};
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-left: ${LEFT_WIDTH_MOBILE};
+  }
+`;
+
+export const ItemButton = ({ children, icon: Icon, index, isLast }) => (
   <StyledAccordionItemButton>
     <NumberWrapper index={index} isLast={isLast}>
       <Number>{index + 1}</Number>
@@ -72,7 +96,7 @@ export const HierarchyButton = ({ children, icon: Icon, index, isLast }) => (
   </StyledAccordionItemButton>
 );
 
-HierarchyButton.propTypes = {
+ItemButton.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.elementType,
   index: PropTypes.number.isRequired,
@@ -93,9 +117,9 @@ const NumberWrapper = styled.div`
   &:before {
     position: absolute;
     top: -${ITEM_SPACING};
-    left: 2.3rem;
+    left: calc(${NUMBER_WIDTH} / 2 - ${STROKE_WIDTH} / 2);
     z-index: -1;
-    width: 3px;
+    width: ${STROKE_WIDTH};
     height: calc(${ITEM_SPACING} + 4.5rem);
     background-color: ${({ theme }) => theme.secondary};
     content: "";
@@ -108,9 +132,9 @@ const NumberWrapper = styled.div`
   &:after {
     position: absolute;
     top: 4rem;
-    left: 2.3rem;
+    left: calc(${NUMBER_WIDTH} / 2 - ${STROKE_WIDTH} / 2);
     z-index: -1;
-    width: 3px;
+    width: ${STROKE_WIDTH};
     height: calc(100% - 4rem);
     background-color: ${({ theme }) => theme.secondary};
     content: "";
@@ -121,9 +145,14 @@ const NumberWrapper = styled.div`
       `}
   }
   @media (max-width: ${breakpoints.mobile}) {
+    &:before {
+      top: -${ITEM_SPACING_MOBILE};
+      height: calc(${ITEM_SPACING_MOBILE} + 5rem);
+    }
+    ,
     &:before,
     &:after {
-      left: 1.4rem;
+      left: calc(${NUMBER_WIDTH_MOBILE} / 2 - ${STROKE_WIDTH} / 2);
     }
   }
 `;
@@ -134,49 +163,56 @@ const Number = styled.div`
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  width: 4.8rem;
-  height: 4.8rem;
+  width: ${NUMBER_WIDTH};
+  height: ${NUMBER_WIDTH};
   color: ${({ theme }) => theme.white};
   font-weight: bold;
   font-size: ${fonts.sizes.headings.small};
   background-color: ${({ theme }) => theme.secondary};
   border-radius: 50%;
   @media (max-width: ${breakpoints.mobile}) {
-    width: 3rem;
-    height: 3rem;
+    width: ${NUMBER_WIDTH_MOBILE};
+    height: ${NUMBER_WIDTH_MOBILE};
   }
 `;
 
 const Decoration = styled.div`
   position: relative;
-  left: ${spacings.tiny};
-  flex: 1 0 4rem;
-  width: 4rem;
-  height: 1px;
+  width: calc(${LEFT_WIDTH} - ${NUMBER_WIDTH} - ${NUMBER_WIDTH} / 10);
+  height: ${NARROW_STROKE_WIDTH};
+  margin-left: calc(${NUMBER_WIDTH} / 10);
   background-color: ${({ theme }) => theme.secondary};
   &:before {
     position: absolute;
-    top: -2.75rem;
-    left: -2.8rem;
+    top: calc(
+      (${NUMBER_WIDTH} / 10 + ${NUMBER_WIDTH}) / -2 - 2 * ${NARROW_STROKE_WIDTH}
+    );
+    left: calc(${NUMBER_WIDTH} / -10 - ${NUMBER_WIDTH} / 2);
     z-index: -1;
-    width: 2.8rem;
-    height: 5.6rem;
+    box-sizing: border-box;
+    width: calc(${NUMBER_WIDTH} / 10 + ${NUMBER_WIDTH} / 2);
+    height: calc((${NUMBER_WIDTH} / 10) * 2 + ${NUMBER_WIDTH});
     background-color: transparent;
-    border: 1px solid ${({ theme }) => theme.secondary};
-    border-top-right-radius: 2.8rem;
-    border-bottom-right-radius: 2.8rem;
+    border: ${NARROW_STROKE_WIDTH} solid ${({ theme }) => theme.secondary};
+    border-top-right-radius: ${NUMBER_WIDTH};
+    border-bottom-right-radius: ${NUMBER_WIDTH};
     content: "";
   }
   @media (max-width: ${breakpoints.mobile}) {
-    flex: 1 0 1.6rem;
-    width: 1.6rem;
+    left: calc(${NUMBER_WIDTH} / 10);
+    width: calc(
+      ${LEFT_WIDTH_MOBILE} - (${NUMBER_WIDTH_MOBILE} / 10) -
+        ${NUMBER_WIDTH_MOBILE}
+    );
     &:before {
-      top: -1.9rem;
-      left: -2rem;
-      width: 2rem;
-      height: 3.8rem;
-      border-top-right-radius: 2rem;
-      border-bottom-right-radius: 2rem;
+      top: calc((-2 * ${NUMBER_WIDTH_MOBILE} / 3) + ${NARROW_STROKE_WIDTH});
+      left: calc(-2 * ${NUMBER_WIDTH_MOBILE} / 3);
+      width: calc(2 * ${NUMBER_WIDTH_MOBILE} / 3);
+      height: calc(
+        (4 * ${NUMBER_WIDTH_MOBILE} / 3) - 2 * ${NARROW_STROKE_WIDTH}
+      );
+      border-top-right-radius: calc(2 * ${NUMBER_WIDTH_MOBILE} / 3);
+      border-bottom-right-radius: calc(2 * ${NUMBER_WIDTH_MOBILE} / 3);
     }
   }
 `;
@@ -226,8 +262,8 @@ const ArrowBox = styled.div`
 const IconWrapper = styled.div`
   display: ${({ theme }) => (theme.noColors ? "none" : "block")};
   flex: 0 0 auto;
-  width: 7.2rem;
-  height: 7.2rem;
+  width: 5.2rem;
+  height: 5.2rem;
   margin-right: ${spacings.medium};
   @media (max-width: ${breakpoints.mobile}) {
     width: 3rem;

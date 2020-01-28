@@ -1,13 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { AccordionItem, AccordionItemButton } from "react-accessible-accordion";
+import {
+  Accordion as RootAccordion,
+  AccordionItemButton,
+  AccordionItem,
+  AccordionItemPanel
+} from "react-accessible-accordion";
 
-import { box, breakpoints, fonts, spacings } from "../../../theme";
+import { animations, box, breakpoints, fonts, spacings } from "../../../theme";
+import { fadeIn } from "../../../keyframes";
 import { VerticalArrow } from "../VerticalArrow";
 
+export const Accordion = RootAccordion;
+
 // eslint-disable-next-line
-export const BaseItem = styled(({ isLast, ...rest }) => (
+export const Item = styled(({ isLast, ...rest }) => (
   <AccordionItem {...rest} />
 ))`
   position: relative;
@@ -19,14 +27,22 @@ export const BaseItem = styled(({ isLast, ...rest }) => (
     `}
 `;
 
-export const BaseButton = ({ children }) => (
+export const ItemPanel = styled(AccordionItemPanel)`
+  padding: ${spacings.base};
+  animation: ${fadeIn} ${animations.transitionTiming} ease-in;
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: ${spacings.small} 0;
+  }
+`;
+
+export const ItemButton = ({ children }) => (
   <StyledAccordionItemButton>
     <VerticalArrow />
     <ButtonText>{children}</ButtonText>
   </StyledAccordionItemButton>
 );
 
-BaseButton.propTypes = {
+ItemButton.propTypes = {
   children: PropTypes.node.isRequired
 };
 

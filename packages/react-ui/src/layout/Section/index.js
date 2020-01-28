@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
+import { Container } from "../../layout/Container";
 import { breakpoints, spacings } from "../../theme";
 
 const BORDER_RADIUS = "10rem";
@@ -21,12 +22,25 @@ const assignBackgroundColor = ({ variant, theme }) => {
   `;
 };
 
-export const Section = ({ decorated, large, variant, ...props }) => {
+export const Section = ({
+  decorated,
+  large,
+  innerTopContent,
+  innerBottomContent,
+  variant,
+  ...props
+}) => {
   if (decorated) {
     return (
       <StyledSection large={large} decorated>
         <Decoration variant={variant} />
+        {innerTopContent && (
+          <PaddedContainer>{innerTopContent}</PaddedContainer>
+        )}
         <Content {...props} />
+        {innerBottomContent && (
+          <PaddedContainer>{innerBottomContent}</PaddedContainer>
+        )}
       </StyledSection>
     );
   }
@@ -57,18 +71,29 @@ const StyledSection = styled.div`
   color: ${({ theme }) => theme.paragraph};
 `;
 
+const SPACING_RIGHT = "30%";
+const SPACING_RIGHT_MOBILE = spacings.medium;
+
 const Decoration = styled.div`
   position: absolute;
   top: 0;
-  right: 30%;
+  right: ${SPACING_RIGHT};
   bottom: 0;
   left: 0;
+  z-index: -1;
   display: ${({ theme }) => (theme.noColors ? "none" : "block")};
   ${assignBackgroundColor};
   border-radius: 0 ${BORDER_RADIUS} ${BORDER_RADIUS} 0;
   content: "";
   @media (max-width: ${breakpoints.mobile}) {
-    right: ${spacings.medium};
+    right: ${SPACING_RIGHT_MOBILE};
+  }
+`;
+
+const PaddedContainer = styled(Container)`
+  padding-right: ${SPACING_RIGHT};
+  @media (max-width: ${breakpoints.mobile}) {
+    padding-right: ${SPACING_RIGHT_MOBILE};
   }
 `;
 
@@ -81,11 +106,15 @@ Section.propTypes = {
   children: PropTypes.node.isRequired,
   decorated: PropTypes.bool,
   large: PropTypes.bool,
+  innerTopContent: PropTypes.node,
+  innerBottomContent: PropTypes.node,
   variant: PropTypes.oneOf(["default", "white", "light", "dark"])
 };
 
 Section.defaultProps = {
   decorated: false,
   large: false,
+  innerTopContent: null,
+  innerBottomContent: null,
   variant: "default"
 };

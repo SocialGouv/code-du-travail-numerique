@@ -11,17 +11,25 @@ import {
 } from "@socialgouv/react-ui";
 
 const Origins = () => (
-  <Section variant="light" decorated>
+  <Section
+    variant="light"
+    decorated
+    innerTopContent={
+      <>
+        <Title isFirst>
+          Quels sont les textes à l’origine du droit du travail&nbsp;?
+        </Title>
+        <StyledP>
+          Le droit du travail est construit par de nombreux textes juridiques
+          dont les sources sont diverses&nbsp;: sources internationales, sources
+          européennes et sources nationales. Vous trouverez les textes
+          participant à la construction du droit du travail en France
+          ci-dessous.
+        </StyledP>
+      </>
+    }
+  >
     <Container>
-      <Title isFirst>
-        Quels sont les textes à l’origine du droit du travail&nbsp;?
-      </Title>
-      <StyledP>
-        Le droit du travail est construit par de nombreux textes juridiques dont
-        les sources sont diverses&nbsp;: sources internationales, sources
-        européennes et sources nationales. Vous trouverez les textes participant
-        à la construction du droit du travail en France ci-dessous.
-      </StyledP>
       <FlexWrapper>
         <Accordion
           variant="tile"
