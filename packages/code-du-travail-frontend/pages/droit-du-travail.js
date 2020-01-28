@@ -84,7 +84,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
 
 export default DroitDuTravail;
 
-const { breakpoints, fonts, spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const DesktopOnlyLineBreak = styled.br`
   @media (max-width: ${breakpoints.desktop}) {

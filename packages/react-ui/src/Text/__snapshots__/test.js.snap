@@ -4,22 +4,14 @@ exports[`<Text /> renders text 1`] = `
 .c0 {
   color: #3e486e;
   line-height: 1.25;
-<<<<<<< HEAD
   font-size: 1.6rem;
-=======
-  font-size: 1.8rem;
->>>>>>> wip
   font-weight: 400;
 }
 
 <div>
   <span
     class="c0"
-<<<<<<< HEAD
     font-size="default"
-=======
-    font-size="hsmall"
->>>>>>> wip
     font-weight="400"
   >
     A simple text
@@ -50,22 +42,14 @@ exports[`<Text /> renders text with fontWeight 1`] = `
 .c0 {
   color: #3e486e;
   line-height: 1.25;
-<<<<<<< HEAD
   font-size: 1.6rem;
-=======
-  font-size: 1.8rem;
->>>>>>> wip
   font-weight: 700;
 }
 
 <div>
   <span
     class="c0"
-<<<<<<< HEAD
     font-size="default"
-=======
-    font-size="hsmall"
->>>>>>> wip
     font-weight="700"
   >
     A bold text
@@ -77,22 +61,14 @@ exports[`<Text /> renders text with variant 1`] = `
 .c0 {
   color: #f66663;
   line-height: 1.25;
-<<<<<<< HEAD
   font-size: 1.6rem;
-=======
-  font-size: 1.8rem;
->>>>>>> wip
   font-weight: 400;
 }
 
 <div>
   <span
     class="c0"
-<<<<<<< HEAD
     font-size="default"
-=======
-    font-size="hsmall"
->>>>>>> wip
     font-weight="400"
   >
     A colored text

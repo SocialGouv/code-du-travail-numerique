@@ -207,7 +207,7 @@ const Contribution = ({ answers, content }) => {
   );
 };
 
-const { breakpoints, fonts, spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const MdxWrapper = styled.div`
   margin-bottom: ${spacings.medium};
