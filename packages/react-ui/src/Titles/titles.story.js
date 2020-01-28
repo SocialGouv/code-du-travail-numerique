@@ -1,8 +1,11 @@
 import React from "react";
 import { spacings } from "../theme";
+import { Section } from "../layout/Section";
 import { Wrapper } from "../layout/Wrapper";
 import { Heading } from "./Heading";
+import { InsertTitle } from "./InsertTitle";
 import { PageTitle } from "./PageTitle";
+import { Subtitle } from "./Subtitle";
 import { Title } from "./Title";
 
 export default {
@@ -12,8 +15,8 @@ export default {
 export const readme = () => (
   <>
     <PageTitle>How it works</PageTitle>
-    <Title>Stripes and shifts</Title>
-    <p>
+    <Section>
+      <Title>Stripes and shifts</Title>
       Some title come with stripes, you can also add/swap horizontal or vertical
       ones ans shift them in some case.
       <br />
@@ -33,19 +36,22 @@ export const readme = () => (
           This is a badly shifted Heading
         </Heading>
       </Wrapper>
-    </p>
-    <Title>Hiearchy of headings</Title>
-    <p>Unlike humans, titles are not born equal</p>
-    <Heading>PageTitle</Heading>
-    <p>As their name state it, they are top level headings</p>
-    <Heading>Title</Heading>
-    <p>For second level titles or important ones</p>
-    <Heading>Heading</Heading>
-    <p>For title that are not so important</p>
-    <Heading>Subtitles</Heading>
-    <p>
-      Theses one are tiny titles that you can use in cards or to split
-      paragraphs under a `Heading` for example
-    </p>
+    </Section>
+    <Section>
+      <p>Unlike humans, titles are not born equal</p>
+      <PageTitle>PageTitle</PageTitle>
+      <p>As their name state it, they are top level headings</p>
+      <Title>Title</Title>
+      <p>For second level titles or important ones</p>
+      <Heading>Heading</Heading>
+      <p>For title that are not so important</p>
+      <InsertTitle>Heading</InsertTitle>
+      <p>For insert titles !</p>
+      <Subtitle>Subtitles</Subtitle>
+      <p>
+        Theses one are tiny titles that you can use in cards or to split
+        paragraphs under a `Heading` for example
+      </p>
+    </Section>
   </>
 );

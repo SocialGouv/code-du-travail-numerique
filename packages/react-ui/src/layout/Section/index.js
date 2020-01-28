@@ -45,8 +45,7 @@ const StyledSection = styled.div`
       return css`
         position: relative;
         margin: ${large ? "6rem" : "5rem"} 0;
-        padding: ${large ? "6rem" : spacings.large} 0
-          ${large ? "6rem" : spacings.medium};
+        padding: ${large ? "6rem" : spacings.large} 0;
         min-height: ${BORDER_RADIUS};
         @media (max-width: ${breakpoints.mobile}) {
           ${large && `margin: ${spacings.large} 0 ${spacings.larger};`}
@@ -61,7 +60,7 @@ const StyledSection = styled.div`
 const Decoration = styled.div`
   position: absolute;
   top: 0;
-  right: 35%;
+  right: 30%;
   bottom: 0;
   left: 0;
   display: ${({ theme }) => (theme.noColors ? "none" : "block")};
@@ -69,7 +68,7 @@ const Decoration = styled.div`
   border-radius: 0 ${BORDER_RADIUS} ${BORDER_RADIUS} 0;
   content: "";
   @media (max-width: ${breakpoints.mobile}) {
-    right: ${spacings.small};
+    right: ${spacings.medium};
   }
 `;
 

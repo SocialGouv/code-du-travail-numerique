@@ -27,6 +27,13 @@ export const Wrapper = styled.div`
           box.border(theme.noColors ? theme.border : theme.bgSecondary)};
       `;
     }
+    if (props.variant === "darker") {
+      return css`
+        background-color: ${({ theme }) => theme.bgTertiary};
+        border: ${({ theme }) =>
+          box.border(theme.noColors ? theme.border : theme.bgTertiary)};
+      `;
+    }
     if (props.variant === "main") {
       return css`
         position: relative;
@@ -65,7 +72,14 @@ export const Wrapper = styled.div`
 Wrapper.propTypes = {
   children: PropTypes.node.isRequired,
   size: PropTypes.oneOf(["default", "large"]),
-  variant: PropTypes.oneOf(["dark", "default", "light", "main", "shadow"])
+  variant: PropTypes.oneOf([
+    "dark",
+    "darker",
+    "default",
+    "light",
+    "main",
+    "shadow"
+  ])
 };
 
 Wrapper.defaultProps = {

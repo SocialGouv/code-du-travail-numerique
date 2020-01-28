@@ -44,7 +44,7 @@ Title.propTypes = {
   children: PropTypes.node,
   isFirst: PropTypes.bool,
   shift: PropTypes.string,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   topStripped: PropTypes.bool,
   variant: PropTypes.string
 };
