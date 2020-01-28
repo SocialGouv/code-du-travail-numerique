@@ -153,7 +153,7 @@ const CookiePolicy = ({ pageUrl, ogImage }) => {
             </p>
             <p>
               Pour l&apos;outil Matomo, vous pouvez décider de ne jamais être
-              suivi, y compris anonymement :
+              suivi, y compris anonymement&nbsp;:
             </p>
             <iframe
               title="matomo optout"
