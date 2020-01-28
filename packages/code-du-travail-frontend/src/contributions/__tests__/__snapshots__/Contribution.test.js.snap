@@ -272,6 +272,15 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   color: #f66663;
 }
 
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #f66663;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c7 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -329,12 +338,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 
 .c2 > *:last-child {
   margin-bottom: 0;
-}
-
-.c6 {
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
 }
 
 .c17 {
@@ -401,6 +404,12 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c7 {
     margin-bottom: 1rem;
     margin-left: auto;
@@ -454,12 +463,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 @media (max-width:600px) {
   .c2 {
     margin-bottom: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
   }
 }
 
@@ -961,6 +964,15 @@ exports[`<Contribution /> should render answer references 1`] = `
   color: #f66663;
 }
 
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #f66663;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c7 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -1022,12 +1034,6 @@ exports[`<Contribution /> should render answer references 1`] = `
 
 .c2 > *:last-child {
   margin-bottom: 0;
-}
-
-.c6 {
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
 }
 
 .c17 {
@@ -1100,6 +1106,12 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c7 {
     margin-bottom: 1rem;
     margin-left: auto;
@@ -1153,12 +1165,6 @@ exports[`<Contribution /> should render answer references 1`] = `
 @media (max-width:600px) {
   .c2 {
     margin-bottom: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
   }
 }
 
@@ -1681,6 +1687,15 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   color: #f66663;
 }
 
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #f66663;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c7 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -1742,12 +1757,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 
 .c2 > *:last-child {
   margin-bottom: 0;
-}
-
-.c6 {
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
 }
 
 .c17 {
@@ -1814,6 +1823,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c7 {
     margin-bottom: 1rem;
     margin-left: auto;
@@ -1867,12 +1882,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 @media (max-width:600px) {
   .c2 {
     margin-bottom: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
   }
 }
 
@@ -2283,6 +2292,15 @@ exports[`<Contribution /> should render with both answers 1`] = `
   color: transparent;
 }
 
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #f66663;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c7 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -2346,12 +2364,6 @@ exports[`<Contribution /> should render with both answers 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
-}
-
 .c14 {
   margin-top: 3.2rem;
 }
@@ -2386,6 +2398,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
   .c19 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
   }
 }
 
@@ -2443,12 +2461,6 @@ exports[`<Contribution /> should render with both answers 1`] = `
 @media (max-width:600px) {
   .c2 {
     margin-bottom: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
   }
 }
 
@@ -2783,6 +2795,15 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   color: transparent;
 }
 
+.c6 {
+  margin: 0 0 1rem 0;
+  color: #f66663;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
 .c10 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -2827,12 +2848,6 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
-}
-
 .c11 {
   margin-top: 0;
 }
@@ -2871,6 +2886,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c10 {
     margin-bottom: 1rem;
     margin-left: -1rem;
@@ -2905,12 +2926,6 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 @media (max-width:600px) {
   .c2 {
     margin-bottom: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
   }
 }
 

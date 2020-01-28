@@ -7,7 +7,6 @@ exports[`<SearchResults/> should render results 1`] = `
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
-  padding: 0;
   max-width: 74rem;
 }
 
@@ -20,7 +19,7 @@ exports[`<SearchResults/> should render results 1`] = `
 .c20 {
   position: relative;
   margin: 5rem 0;
-  padding: 3.2rem 0 2rem;
+  padding: 3.2rem 0;
   min-height: 10rem;
   color: #3e486e;
 }
@@ -28,7 +27,7 @@ exports[`<SearchResults/> should render results 1`] = `
 .c21 {
   position: absolute;
   top: 0;
-  right: 35%;
+  right: 30%;
   bottom: 0;
   left: 0;
   display: block;
@@ -450,7 +449,7 @@ exports[`<SearchResults/> should render results 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    padding: 0;
+    padding: 0 1rem;
   }
 }
 
@@ -476,7 +475,7 @@ exports[`<SearchResults/> should render results 1`] = `
 
 @media (max-width:600px) {
   .c21 {
-    right: 1rem;
+    right: 2rem;
   }
 }
 

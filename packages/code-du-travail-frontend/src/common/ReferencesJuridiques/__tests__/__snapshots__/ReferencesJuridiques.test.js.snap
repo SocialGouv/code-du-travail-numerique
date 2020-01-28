@@ -41,24 +41,18 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c4 {
-  position: relative;
-  z-index: 1;
-}
-
 .c6 {
   position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  margin-right: 1rem;
-  color: #7994d4;
 }
 
 [aria-expanded="true"] .c6,
@@ -66,6 +60,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.c4 {
+  position: relative;
+  z-index: 1;
 }
 
 .c5 {
@@ -93,7 +92,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 .c7 {
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
@@ -239,8 +238,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           Références juridiques
         </h3>
         <div
-          class="accordion"
+          class=""
           data-accordion-component="Accordion"
+          variant="base"
         >
           <div>
             <div
@@ -294,6 +294,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 data-accordion-component="AccordionItemPanel"
                 hidden=""
                 id="accordion__panel-0"
+                variant="base"
               >
                 <div
                   class="c9"

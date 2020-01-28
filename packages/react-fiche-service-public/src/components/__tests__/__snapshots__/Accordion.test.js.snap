@@ -13,6 +13,27 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   clip: rect(0,0,0,0);
 }
 
+.c6 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c6,
+[aria-selected="true"] .c6 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 .c4 {
   position: relative;
   z-index: 1;
@@ -22,28 +43,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   position: relative;
   z-index: 1;
   border-top: 1px solid #bbcadf;
-}
-
-.c6 {
-  position: relative;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-[aria-expanded="true"] .c6,
-[aria-selected="true"] .c6 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
 
 .c5 {
@@ -71,7 +70,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 }
 
 .c7 {
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
@@ -199,6 +198,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   <div
     class="c3"
     data-accordion-component="Accordion"
+    variant="base"
   >
     <div>
       <div
@@ -252,6 +252,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-0"
+          variant="base"
         >
           <div
             class="c9"
@@ -334,6 +335,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-1"
+          variant="base"
         >
           <div
             class="c9"
@@ -421,6 +423,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-2"
+          variant="base"
         >
           <div
             class="c9"
@@ -468,6 +471,27 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   clip: rect(0,0,0,0);
 }
 
+.c4 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c4,
+[aria-selected="true"] .c4 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 .c2 {
   position: relative;
   z-index: 1;
@@ -477,28 +501,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   position: relative;
   z-index: 1;
   border-top: 1px solid #bbcadf;
-}
-
-.c4 {
-  position: relative;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c4 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
 
 .c3 {
@@ -526,7 +528,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 }
 
 .c5 {
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
@@ -596,6 +598,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   <div
     class="c1"
     data-accordion-component="Accordion"
+    variant="base"
   >
     <div>
       <div
@@ -649,6 +652,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-3"
+          variant="base"
         >
           <div
             class="c7"
@@ -724,6 +728,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-4"
+          variant="base"
         >
           <div
             class="c7"
@@ -804,6 +809,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-5"
+          variant="base"
         >
           <div
             class="c7"
