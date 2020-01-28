@@ -114,8 +114,10 @@ const LogoLink = styled.a`
   text-decoration: none;
   @media (max-width: ${breakpoints.mobile}) {
     /* 6.2rem is half logo's width so it gets centered */
-    flex: 0 0 calc(50% + 6.2rem);
+    flex-grow: 0;
+    flex-shrink: 0;
     justify-content: space-between;
+    width: calc(50% + 6.2rem);
   }
 `;
 
@@ -123,7 +125,8 @@ const Marianne = styled.img`
   width: 7rem;
   margin-right: ${spacings.large};
   @media (max-width: ${breakpoints.mobile}) {
-    width: auto;
+    flex: 0 0 5rem;
+    width: 5rem;
     height: 5rem;
   }
 `;
@@ -131,7 +134,8 @@ const Logo = styled(icons.Logo)`
   width: 17rem;
   color: ${({ theme }) => theme.primary};
   @media (max-width: ${breakpoints.mobile}) {
-    width: auto;
+    flex: 0 0 12.4rem;
+    width: 12.4rem;
     height: 5rem;
   }
 `;
