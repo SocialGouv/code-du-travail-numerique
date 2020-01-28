@@ -31,9 +31,9 @@ Text.propTypes = {
     "hlarge"
   ]),
   variant: PropTypes.oneOf(["primary", "secondary"]),
-  fontWeight: PropTypes.oneOf([300, 400, 500, 600, 700])
+  fontWeight: PropTypes.oneOf(["300", "400", "500", "600", "700"])
 };
 Text.defaultProps = {
   fontSize: "default",
-  fontWeight: 400
+  fontWeight: "400"
 };
