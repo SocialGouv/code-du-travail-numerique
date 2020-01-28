@@ -152,6 +152,16 @@ const CookiePolicy = ({ pageUrl, ogImage }) => {
               Apple Safari et Opera).
             </p>
             <p>
+              Pour l&apos;outil Matomo, vous pouvez décider de ne jamais être
+              suivi, y compris anonymement :
+            </p>
+            <iframe
+              title="matomo optout"
+              style={{ border: 0, width: "100%" }}
+              src="https://matomo.fabrique.social.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=&fontSize=&fontFamily="
+            ></iframe>
+
+            <p>
               Pour aller plus loin, vous pouvez consulter les fiches proposées
               par la Commission Nationale de l’Informatique et des Libertés
               (CNIL)&nbsp;:
