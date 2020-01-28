@@ -91,12 +91,7 @@ export const ListLink = ({
 
 export const Results = ({ id, isSearch, items, query }) => {
   return (
-    <Container
-      narrow
-      noPadding
-      role="region"
-      aria-label="Résultats de recherche"
-    >
+    <Container narrow role="region" aria-label="Résultats de recherche">
       {isSearch ? (
         <Heading id={id}>{`Résultats de recherche pour “${query}”`}</Heading>
       ) : (

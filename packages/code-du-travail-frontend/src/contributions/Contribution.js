@@ -7,6 +7,7 @@ import {
   Heading,
   icons,
   IconStripe,
+  InsertTitle,
   Section,
   Subtitle,
   theme,
@@ -114,7 +115,7 @@ const Contribution = ({ answers, content }) => {
           <Badge />
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
-              <CustomTitle>Page personnalisable</CustomTitle>
+              <InsertTitle>Page personnalisable</InsertTitle>
               {isCcDetected ? (
                 <>
                   Cette page a été personnalisée avec l’ajout des{" "}
@@ -220,15 +221,6 @@ const CustomWrapper = styled(Wrapper)`
   margin-bottom: ${spacings.large};
   @media (max-width: ${breakpoints.mobile}) {
     margin-bottom: ${spacings.medium};
-  }
-`;
-
-const CustomTitle = styled.div`
-  color: ${({ theme }) => theme.primary};
-  font-weight: 600;
-  font-size: ${fonts.sizes.headings.small};
-  @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.default};
   }
 `;
 
