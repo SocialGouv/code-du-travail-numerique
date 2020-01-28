@@ -15,9 +15,8 @@ const SearchBar = ({
   hasFocus = false,
   inputId,
   hasButton = false,
-  hasSearchButtonIcon = false
+  hasSearchIcon = false
 }) => {
-  hasButton = hasSearchButtonIcon ? hasSearchButtonIcon : hasButton;
   const router = useRouter();
   // query in the input box
   const [query, setQuery] = useState(router.query.q || "");
@@ -70,12 +69,12 @@ const SearchBar = ({
   };
   return (
     <SearchForm action="/recherche" onSubmit={onFormSubmit}>
-      {hasButton && !hasSearchButtonIcon && <SearchIconLeft />}
+      {hasButton && !hasSearchIcon && <SearchIconLeft />}
       <SearchInput
         inputId={inputId}
         hasFocus={hasFocus}
         hasButton={hasButton}
-        hasSearchButtonIcon={hasSearchButtonIcon}
+        hasSearchIcon={hasSearchIcon}
         onChange={onChange}
         query={query}
         placeholder={
@@ -89,11 +88,11 @@ const SearchBar = ({
       />
       {hasButton ? (
         <SubmitButton
-          hasSearchButtonIcon={hasSearchButtonIcon}
+          hasSearchIcon={hasSearchIcon}
           variant="primary"
           type="submit"
         >
-          {(hasSearchButtonIcon && <StyledSearchIcon />) || "Rechercher"}
+          {(hasSearchIcon && <StyledSearchIcon />) || "Rechercher"}
         </SubmitButton>
       ) : (
         <SubmitIcon type="submit" small narrow variant="naked">
@@ -140,10 +139,10 @@ const SearchInput = styled(DocumentSuggester)`
   width: 100%;
   height: ${({ hasButton }) => (hasButton ? "7rem" : "5.4rem")};
   margin: 0;
-  padding: ${({ hasButton, hasSearchButtonIcon }) =>
+  padding: ${({ hasButton, hasSearchIcon }) =>
     hasButton
-      ? `2rem ${hasSearchButtonIcon ? "9rem" : "18.5rem"} 2rem ${
-          hasSearchButtonIcon ? spacings.xmedium : "6rem"
+      ? `2rem ${hasSearchIcon ? "9rem" : "18.5rem"} 2rem ${
+          hasSearchIcon ? spacings.xmedium : "6rem"
         }`
       : `1rem 5.5rem 1rem ${spacings.base}`};
   color: ${({ theme }) => theme.paragraph};
@@ -174,8 +173,7 @@ const SubmitButton = styled(Button)`
   top: ${spacings.xsmall};
   right: ${spacings.xsmall};
   padding: 0
-    ${({ hasSearchButtonIcon }) =>
-      hasSearchButtonIcon ? spacings.base : "inherit"};
+    ${({ hasSearchIcon }) => (hasSearchIcon ? spacings.base : "inherit")};
   @media (max-width: ${breakpoints.mobile}) {
     position: static;
     margin-top: ${spacings.small};

@@ -98,9 +98,7 @@ export const Results = ({ id, isSearch, items, query }) => {
       aria-label="Résultats de recherche"
     >
       {isSearch ? (
-        <StyledHeading
-          id={id}
-        >{`Résultats de recherche pour “${query}”`}</StyledHeading>
+        <Heading id={id}>{`Résultats de recherche pour “${query}”`}</Heading>
       ) : (
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
@@ -119,8 +117,4 @@ const { spacings } = theme;
 
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
-`;
-
-const StyledHeading = styled(Heading)`
-  margin-bottom: ${spacings.large};
 `;

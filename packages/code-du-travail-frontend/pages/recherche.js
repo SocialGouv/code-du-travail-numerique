@@ -52,7 +52,7 @@ class SearchPage extends React.Component {
             <PageTitle>Recherche</PageTitle>
           </label>
           <SearchBarWrapper>
-            <SearchBar inputId={SEARCH_ID} hasSearchButtonIcon />
+            <SearchBar inputId={SEARCH_ID} hasButton hasSearchIcon />
           </SearchBarWrapper>
         </Container>
         {query &&
