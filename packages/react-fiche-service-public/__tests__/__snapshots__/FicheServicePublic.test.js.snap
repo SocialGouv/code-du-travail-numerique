@@ -13,6 +13,27 @@ exports[`<FicheServicePublic /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
+.c14 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c14,
+[aria-selected="true"] .c14 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 .c12 {
   position: relative;
   z-index: 1;
@@ -24,26 +45,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
   border-top: 1px solid #bbcadf;
 }
 
-.c14 {
-  position: relative;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-[aria-expanded="true"] .c14,
-[aria-selected="true"] .c14 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+.c16 {
+  padding: 1.6rem;
+  -webkit-animation: bcCCNc 250ms ease-in;
+  animation: bcCCNc 250ms ease-in;
 }
 
 .c13 {
@@ -71,22 +76,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 .c15 {
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c16 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c16.accordion__body--hidden {
-  display: none;
 }
 
 .c18 > *:first-child {
@@ -338,14 +333,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c15 {
-    font-size: 1.6rem;
+  .c16 {
+    padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
-    padding: 1rem 0;
+  .c15 {
+    font-size: 1.6rem;
   }
 }
 

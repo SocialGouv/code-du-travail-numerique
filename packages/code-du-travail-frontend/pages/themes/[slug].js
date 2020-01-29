@@ -67,13 +67,13 @@ class Theme extends React.Component {
                 ))}
               </StyledContainer>
             )}
-            {theme.refs && theme.refs.length > 0 && (
-              <SearchResults
-                query={theme.title}
-                items={{ documents: theme.refs, articles: [], themes: [] }}
-              />
-            )}
           </Container>
+          {theme.refs && theme.refs.length > 0 && (
+            <SearchResults
+              query={theme.title}
+              items={{ documents: theme.refs, articles: [], themes: [] }}
+            />
+          )}
         </Section>
       </Layout>
     );

@@ -26,7 +26,6 @@ export { Tabs } from "./Tabs";
 export { Tile } from "./Tile";
 export { Toast } from "./Toast";
 export { Text } from "./Text";
-export { VerticalArrow } from "./VerticalArrow";
 
 // Fields
 export { Input } from "./field/Input";
@@ -38,6 +37,7 @@ export { Select } from "./field/Select";
 export { Textarea } from "./field/Textarea";
 
 export { Heading } from "./Titles/Heading";
+export { InsertTitle } from "./Titles/InsertTitle";
 export { PageTitle } from "./Titles/PageTitle";
 export { Subtitle } from "./Titles/Subtitle";
 export { Title } from "./Titles/Title";

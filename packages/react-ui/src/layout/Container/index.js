@@ -2,8 +2,10 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { breakpoints, spacings } from "../../theme";
 
+export const CONTAINER_MAX_WIDTH = "124rem";
+
 export const Container = styled.div`
-  max-width: 124rem;
+  max-width: ${CONTAINER_MAX_WIDTH};
   margin: 0 auto;
   padding: 0 ${spacings.medium};
   ${({ narrow, noPadding }) => {

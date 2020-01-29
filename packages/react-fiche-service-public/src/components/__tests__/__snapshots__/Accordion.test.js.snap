@@ -13,6 +13,27 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   clip: rect(0,0,0,0);
 }
 
+.c6 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c6,
+[aria-selected="true"] .c6 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 .c4 {
   position: relative;
   z-index: 1;
@@ -24,26 +45,10 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   border-top: 1px solid #bbcadf;
 }
 
-.c6 {
-  position: relative;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-[aria-expanded="true"] .c6,
-[aria-selected="true"] .c6 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+.c8 {
+  padding: 1.6rem;
+  -webkit-animation: bcCCNc 250ms ease-in;
+  animation: bcCCNc 250ms ease-in;
 }
 
 .c5 {
@@ -71,22 +76,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 }
 
 .c7 {
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c8 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c8.accordion__body--hidden {
-  display: none;
 }
 
 .c10 > *:first-child {
@@ -144,14 +139,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
+  .c8 {
+    padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
-    padding: 1rem 0;
+  .c7 {
+    font-size: 1.6rem;
   }
 }
 
@@ -468,6 +463,27 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   clip: rect(0,0,0,0);
 }
 
+.c4 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c4,
+[aria-selected="true"] .c4 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 .c2 {
   position: relative;
   z-index: 1;
@@ -479,26 +495,10 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   border-top: 1px solid #bbcadf;
 }
 
-.c4 {
-  position: relative;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c4 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+.c6 {
+  padding: 1.6rem;
+  -webkit-animation: bcCCNc 250ms ease-in;
+  animation: bcCCNc 250ms ease-in;
 }
 
 .c3 {
@@ -526,22 +526,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 }
 
 .c5 {
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c6 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c6.accordion__body--hidden {
-  display: none;
 }
 
 .c8 > *:first-child {
@@ -567,14 +557,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
+  .c6 {
+    padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
-    padding: 1rem 0;
+  .c5 {
+    font-size: 1.6rem;
   }
 }
 

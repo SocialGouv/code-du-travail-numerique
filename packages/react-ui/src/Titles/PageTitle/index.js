@@ -38,7 +38,7 @@ PageTitle.propTypes = {
   children: PropTypes.node,
   shift: PropTypes.string,
   leftStripped: PropTypes.bool,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   variant: PropTypes.string
 };
 

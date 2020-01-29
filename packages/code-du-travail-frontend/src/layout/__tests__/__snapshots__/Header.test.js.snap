@@ -380,26 +380,37 @@ exports[`<Header /> should render 1`] = `
 
 @media (max-width:600px) {
   .c3 {
-    -webkit-flex: 0 0 calc(50% + 6.2rem);
-    -ms-flex: 0 0 calc(50% + 6.2rem);
-    flex: 0 0 calc(50% + 6.2rem);
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    width: calc(50% + 6.2rem);
   }
 }
 
 @media (max-width:600px) {
   .c4 {
-    width: auto;
+    -webkit-flex: 0 0 5rem;
+    -ms-flex: 0 0 5rem;
+    flex: 0 0 5rem;
+    width: 5rem;
     height: 5rem;
   }
 }
 
 @media (max-width:600px) {
   .c5 {
-    width: auto;
+    -webkit-flex: 0 0 12.4rem;
+    -ms-flex: 0 0 12.4rem;
+    flex: 0 0 12.4rem;
+    width: 12.4rem;
     height: 5rem;
   }
 }

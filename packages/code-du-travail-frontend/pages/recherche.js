@@ -69,9 +69,7 @@ class SearchPage extends React.Component {
         ) : (
           <>
             <Section>
-              <Container>
-                <SearchResults items={items} isSearch query={query} />
-              </Container>
+              <SearchResults items={items} isSearch query={query} />
             </Section>
             <Section>
               <Container>

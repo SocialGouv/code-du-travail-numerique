@@ -17,7 +17,7 @@ describe("<Text />", () => {
     expect(container).toMatchSnapshot();
   });
   it("renders text with fontWeight", () => {
-    const { container } = render(<Text fontWeight={700}>A bold text</Text>);
+    const { container } = render(<Text fontWeight="700">A bold text</Text>);
     expect(container).toMatchSnapshot();
   });
 });
