@@ -1,5 +1,5 @@
-import GoogleSpreadsheets from "google-spreadsheets";
-import { promisify } from "util";
+const GoogleSpreadsheets = require("google-spreadsheets");
+const { promisify } = require("util");
 
 const getCells = promisify(GoogleSpreadsheets.cells);
 

@@ -48,7 +48,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 @media print {
@@ -198,7 +198,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 @media print {
@@ -305,7 +305,7 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 @media print {

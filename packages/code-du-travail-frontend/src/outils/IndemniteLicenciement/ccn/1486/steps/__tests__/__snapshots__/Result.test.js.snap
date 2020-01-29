@@ -48,7 +48,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 .c8 {
@@ -435,7 +435,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 .c8 {

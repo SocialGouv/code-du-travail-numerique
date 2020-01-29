@@ -1,11 +1,10 @@
 {
   "name": "@cdt/data...simulateurs",
-  "version": "1.0.0",
-  "private": true,
+  "version": "4.1.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node -r esm index.js"
+    "start": "node index.js "
   },
   "dependencies": {
     "esm": "^3.2.25",

@@ -88,18 +88,18 @@ function Disclaimer({ duration }) {
   if (parseInt(duration, 10) === 0) {
     return (
       <Alert>
-        Le contrat de travail, un accord d’entreprise ou un usage peuvent
-        prévoir un nombre d’heure différent. Dans ce cas, il faut appliquer la
-        durée la plus courte.
+        La possibilité de bénéficier d’heures de recherche d’emploi au cours du
+        préavis peut également être prévue par un accord de groupe, d’entreprise
+        ou d’établissement, le contrat de travail, un usage dans la profession
+        ou l’entreprise ou d’un commun accord entre l’employeur et le salarié
       </Alert>
     );
   } else {
     return (
       <Alert>
-        La possibilité de bénéficier d’heures de recherche d’emploi au cours du
-        préavis peut également être prévue par un accord de groupe, d’entreprise
-        ou d’établissement, le contrat de travail, un usage dans la profession
-        ou l’entreprise ou d’un commun accord entre l’employeur et le salarié
+        Le contrat de travail, un accord d’entreprise ou un usage peuvent
+        prévoir un nombre d’heure différent. Dans ce cas, il faut appliquer la
+        durée la plus courte.
       </Alert>
     );
   }
