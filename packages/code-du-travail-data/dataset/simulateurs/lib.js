@@ -7,7 +7,8 @@ const csvColumns = {
   type: 1,
   idcc: 2,
   answer: 24,
-  duration: 26,
+  answer2: 25,
+  answer3: 26,
   ref: 27,
   refUrl: 28
 };

@@ -94,5 +94,19 @@ module.exports = [
       "Calculez la durée de préavis à respecter en cas de licenciement",
     action: "Calculer",
     date: "08/11/2019"
+  },
+  {
+    icon: "Time",
+    title: "Heure pour recherche d’emploi",
+    slug: "heure-recherche-emploi",
+    questions: [
+      "ai-je droit à des heures de recherche d'emploi",
+      "quel est le nombre d'heures pour rechercher un emploi",
+      "rechercher un emploi en période de préavis"
+    ],
+    description:
+      "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+    action: "Calculer",
+    date: "08/11/2019"
   }
 ];

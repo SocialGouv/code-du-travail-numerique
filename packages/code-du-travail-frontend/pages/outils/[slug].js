@@ -10,16 +10,17 @@ import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciem
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
-
+import { HeureRechercheEmploi } from "../../src/outils/HeureRechercheEmploi";
 const toolsBySlug = {
   "indemnite-licenciement": CalculateurIndemnite,
   "preavis-licenciement": DureePreavisLicenciement,
   "simulateur-embauche": SimulateurEmbauche,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
-  "preavis-demission": DureePreavisDemission
+  "preavis-demission": DureePreavisDemission,
+  "heure-recherche-emploi": HeureRechercheEmploi
 };
 
-function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
+function Outils({ description, icon, ogImage, pageUrl, slug, title, data }) {
   const Tool = toolsBySlug[slug];
   return (
     <Layout>
@@ -32,7 +33,7 @@ function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
       <Section>
         <Container>
           <Wrapper variant="main">
-            <Tool icon={icon} title={title} />
+            <Tool icon={icon} title={title} data={data} />
             <Badge />
           </Wrapper>
         </Container>
@@ -46,6 +47,7 @@ export default Outils;
 Outils.getInitialProps = async ({ query }) => {
   const { slug } = query;
   const { description, icon, title } = tools.find(tool => tool.slug === slug);
+
   return {
     description,
     icon,

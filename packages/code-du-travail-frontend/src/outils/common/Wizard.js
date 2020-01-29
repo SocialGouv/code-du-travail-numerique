@@ -119,6 +119,13 @@ function Wizard({
                   <Mandatory>*</Mandatory> Champs obligatoire
                 </Notice>
               )}
+              {process.env.NODE_ENV !== "production" &&
+                process.env.NODE_ENV !== "test" && (
+                  <details>
+                    <summary>state</summary>
+                    <pre>{JSON.stringify(form.getState().values, 0, 2)}</pre>
+                  </details>
+                )}
             </StyledForm>
           </>
         );

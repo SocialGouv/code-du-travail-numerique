@@ -48,7 +48,7 @@ export const Highlight = styled.strong`
   color: ${colors.paragraph};
   font-weight: 700;
   font-size: ${fonts.sizes.headings.small};
-  white-space: nowrap;
+  white-space: pre-line;
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }

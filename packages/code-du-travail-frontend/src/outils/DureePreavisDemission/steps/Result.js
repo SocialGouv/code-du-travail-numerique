@@ -85,7 +85,7 @@ function StepResult({ form }) {
       <p>
         <Highlight>{situation.answer}</Highlight>.
       </p>
-      {parseInt(situation.duration, 10) === 0 && (
+      {parseInt(situation.answer3, 10) === 0 && (
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.

@@ -142,7 +142,7 @@ function StepResult({ form }) {
   const [situationCDT] = possibleCDTSituations;
   const {
     criteria: { ancienneté: seniorityCDT, ...situationCDTCriteria },
-    duration: durationCDT
+    answer3: durationCDT
   } = situationCDT;
 
   // Situation CC
@@ -153,7 +153,7 @@ function StepResult({ form }) {
   const [situationCC] = possibleCCSituations;
   const {
     criteria: { ancienneté: seniorityCC, ...situationCCCriteria },
-    duration: durationCC
+    answer3: durationCC
   } = situationCC || { criteria: {} };
 
   const refs = [

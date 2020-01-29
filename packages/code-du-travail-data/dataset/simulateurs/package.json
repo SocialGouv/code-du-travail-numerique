@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node -r esm index.js > ./data.json"
+    "start": "node -r esm index.js"
   },
   "dependencies": {
     "esm": "^3.2.25",
