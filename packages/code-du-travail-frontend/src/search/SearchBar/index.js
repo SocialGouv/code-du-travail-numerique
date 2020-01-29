@@ -32,7 +32,7 @@ const SearchBar = ({
       router.push({
         pathname: "/recherche",
         query: {
-          q: encodeURIComponent(query)
+          q: query
         }
       });
     }
