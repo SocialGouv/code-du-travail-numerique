@@ -45,6 +45,12 @@ exports[`<Convention /> renders 1`] = `
   border-top: 1px solid #bbcadf;
 }
 
+.c10 {
+  padding: 1.6rem;
+  -webkit-animation: bcCCNc 250ms ease-in;
+  animation: bcCCNc 250ms ease-in;
+}
+
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -76,16 +82,6 @@ exports[`<Convention /> renders 1`] = `
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c10 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c10.accordion__body--hidden {
-  display: none;
 }
 
 .c12 > *:first-child {
@@ -508,14 +504,14 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
-    font-size: 1.6rem;
+  .c10 {
+    padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
-    padding: 1rem 0;
+  .c9 {
+    font-size: 1.6rem;
   }
 }
 
@@ -715,9 +711,8 @@ exports[`<Convention /> renders 1`] = `
     </h2>
   </header>
   <div
-    class=""
+    class="accordion"
     data-accordion-component="Accordion"
-    variant="base"
   >
     <div
       id="Départ de l'entreprise"
@@ -773,7 +768,6 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Départ de l'entreprise"
-          variant="base"
         >
           <div
             class="c11"
@@ -784,9 +778,8 @@ exports[`<Convention /> renders 1`] = `
             class="c12"
           >
             <div
-              class=""
+              class="accordion"
               data-accordion-component="Accordion"
-              variant="base"
             >
               <div
                 id="quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
@@ -842,7 +835,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -977,7 +969,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -1089,7 +1080,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -1194,7 +1184,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -1299,7 +1288,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -1395,7 +1383,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -1537,7 +1524,6 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Congés et repos"
-          variant="base"
         >
           <div
             class="c11"
@@ -1548,9 +1534,8 @@ exports[`<Convention /> renders 1`] = `
             class="c12"
           >
             <div
-              class=""
+              class="accordion"
               data-accordion-component="Accordion"
-              variant="base"
             >
               <div
                 id="jours-feries-et-ponts-dans-le-secteur-prive"
@@ -1606,7 +1591,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -1712,7 +1696,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -1865,7 +1848,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-les-conges-pour-evenements-familiaux"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -2012,7 +1994,6 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Embauche et contrat de travail"
-          variant="base"
         >
           <div
             class="c11"
@@ -2023,9 +2004,8 @@ exports[`<Convention /> renders 1`] = `
             class="c12"
           >
             <div
-              class=""
+              class="accordion"
               data-accordion-component="Accordion"
-              variant="base"
             >
               <div
                 id="quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
@@ -2081,7 +2061,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -2185,7 +2164,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-comment-determiner-lanciennete-du-salarie"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -2341,7 +2319,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -2508,7 +2485,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -2604,7 +2580,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -2702,7 +2677,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -2803,7 +2777,6 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Salaire et Rémunération"
-          variant="base"
         >
           <div
             class="c11"
@@ -2814,9 +2787,8 @@ exports[`<Convention /> renders 1`] = `
             class="c12"
           >
             <div
-              class=""
+              class="accordion"
               data-accordion-component="Accordion"
-              variant="base"
             >
               <div
                 id="quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
@@ -2872,7 +2844,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -2961,7 +2932,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -3081,7 +3051,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -3208,7 +3177,6 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Santé, sécurité et conditions de travail"
-          variant="base"
         >
           <div
             class="c11"
@@ -3219,9 +3187,8 @@ exports[`<Convention /> renders 1`] = `
             class="c12"
           >
             <div
-              class=""
+              class="accordion"
               data-accordion-component="Accordion"
-              variant="base"
             >
               <div
                 id="en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
@@ -3277,7 +3244,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -3658,7 +3624,6 @@ exports[`<Convention /> renders 1`] = `
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-                    variant="base"
                   >
                     <div
                       class="c11"
@@ -3764,9 +3729,8 @@ exports[`<Convention /> renders 1`] = `
     </li>
   </label>
   <div
-    class=""
+    class="accordion"
     data-accordion-component="Accordion"
-    variant="base"
   >
     <div
       id="bloc-1"
@@ -3822,7 +3786,6 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-bloc-1"
-          variant="base"
         >
           <div
             class="c11"
@@ -4018,7 +3981,6 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-bloc-6"
-          variant="base"
         >
           <div
             class="c11"
@@ -4446,7 +4408,6 @@ exports[`<Convention /> renders 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-bloc-2"
-          variant="base"
         >
           <div
             class="c11"

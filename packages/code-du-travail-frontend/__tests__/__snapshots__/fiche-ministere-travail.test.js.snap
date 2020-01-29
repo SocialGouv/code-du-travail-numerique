@@ -81,6 +81,12 @@ exports[`<FicheMT /> should render 1`] = `
   z-index: 1;
 }
 
+.c44 {
+  padding: 1.6rem;
+  -webkit-animation: bcCCNc 250ms ease-in;
+  animation: bcCCNc 250ms ease-in;
+}
+
 .c41 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -112,16 +118,6 @@ exports[`<FicheMT /> should render 1`] = `
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c44 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c44.accordion__body--hidden {
-  display: none;
 }
 
 .c46 > *:first-child {
@@ -1059,14 +1055,14 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c43 {
-    font-size: 1.6rem;
+  .c44 {
+    padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
-    padding: 1rem 0;
+  .c43 {
+    font-size: 1.6rem;
   }
 }
 
@@ -1891,9 +1887,8 @@ exports[`<FicheMT /> should render 1`] = `
                 </div>
               </div>
               <div
-                class=""
+                class="accordion"
                 data-accordion-component="Accordion"
-                variant="base"
               >
                 <div
                   id="t1-Visite-d-information-et-de-prevention-pour-qui"
@@ -1949,7 +1944,6 @@ exports[`<FicheMT /> should render 1`] = `
                       data-accordion-component="AccordionItemPanel"
                       hidden=""
                       id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
-                      variant="base"
                     >
                       <div
                         class="c45"

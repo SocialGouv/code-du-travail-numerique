@@ -39,6 +39,12 @@ exports[`<Accordion /> renders 1`] = `
   z-index: 1;
 }
 
+.c4 {
+  padding: 1.6rem;
+  -webkit-animation: bcCCNc 250ms ease-in;
+  animation: bcCCNc 250ms ease-in;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -72,16 +78,6 @@ exports[`<Accordion /> renders 1`] = `
   line-height: 1.25;
 }
 
-.c4 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c4.accordion__body--hidden {
-  display: none;
-}
-
 .c6 > *:first-child {
   margin-top: 0;
 }
@@ -91,22 +87,21 @@ exports[`<Accordion /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c4 {
     padding: 1rem 0;
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
-    class=""
+    class="accordion"
     data-accordion-component="Accordion"
-    variant="base"
   >
     <div>
       <div
@@ -160,7 +155,6 @@ exports[`<Accordion /> renders 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-0"
-          variant="base"
         >
           <div
             class="c5"
@@ -220,6 +214,12 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
   z-index: 1;
 }
 
+.c4 {
+  padding: 1.6rem;
+  -webkit-animation: bcCCNc 250ms ease-in;
+  animation: bcCCNc 250ms ease-in;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -253,16 +253,6 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
   line-height: 1.25;
 }
 
-.c4 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c4.accordion__body--hidden {
-  display: none;
-}
-
 .c6 > *:first-child {
   margin-top: 0;
 }
@@ -272,22 +262,21 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c4 {
     padding: 1rem 0;
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
-    class=""
+    class="accordion"
     data-accordion-component="Accordion"
-    variant="base"
   >
     <div>
       <div
@@ -341,7 +330,6 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-3"
-          variant="base"
         >
           <div
             class="c5"
@@ -401,6 +389,12 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
   z-index: 1;
 }
 
+.c4 {
+  padding: 1.6rem;
+  -webkit-animation: bcCCNc 250ms ease-in;
+  animation: bcCCNc 250ms ease-in;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -434,16 +428,6 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
   line-height: 1.25;
 }
 
-.c4 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c4.accordion__body--hidden {
-  display: none;
-}
-
 .c6 > *:first-child {
   margin-top: 0;
 }
@@ -453,22 +437,21 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c4 {
     padding: 1rem 0;
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
-    class=""
+    class="accordion"
     data-accordion-component="Accordion"
-    variant="base"
   >
     <div>
       <div
@@ -522,7 +505,6 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-2"
-          variant="base"
         >
           <div
             class="c5"
@@ -582,6 +564,12 @@ exports[`<Accordion /> renders as h2 1`] = `
   z-index: 1;
 }
 
+.c4 {
+  padding: 1.6rem;
+  -webkit-animation: bcCCNc 250ms ease-in;
+  animation: bcCCNc 250ms ease-in;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -615,16 +603,6 @@ exports[`<Accordion /> renders as h2 1`] = `
   line-height: 1.25;
 }
 
-.c4 {
-  padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c4.accordion__body--hidden {
-  display: none;
-}
-
 .c6 > *:first-child {
   margin-top: 0;
 }
@@ -634,22 +612,21 @@ exports[`<Accordion /> renders as h2 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c4 {
     padding: 1rem 0;
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <div
-    class=""
+    class="accordion"
     data-accordion-component="Accordion"
-    variant="base"
   >
     <div>
       <div
@@ -703,7 +680,6 @@ exports[`<Accordion /> renders as h2 1`] = `
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-1"
-          variant="base"
         >
           <div
             class="c5"

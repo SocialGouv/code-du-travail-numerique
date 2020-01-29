@@ -30,6 +30,7 @@ exports[`<SearchResults/> should render results 1`] = `
   right: 30%;
   bottom: 0;
   left: 0;
+  z-index: -1;
   display: block;
   background-color: #f2f5fa;
   border-radius: 0 10rem 10rem 0;
