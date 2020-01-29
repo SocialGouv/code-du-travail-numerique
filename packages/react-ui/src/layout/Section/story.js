@@ -1,7 +1,8 @@
 import React from "react";
+import { Container } from "../../layout/Container";
+import { Wrapper } from "../../layout/Wrapper";
 import { PageTitle } from "../../Titles/PageTitle";
 import { Title } from "../../Titles/Title";
-import { Wrapper } from "../../layout/Wrapper";
 import { Section } from ".";
 
 export default {
@@ -44,8 +45,10 @@ export const base = () => (
           </Wrapper>
         }
       >
-        I can get out of the layer though I can get out of the layer though I
-        can get out of the layer though I can get out of the layer though
+        <Container>
+          I can get out of the layer though I can get out of the layer though I
+          can get out of the layer though I can get out of the layer though
+        </Container>
       </Section>
     </Section>
     <Section>

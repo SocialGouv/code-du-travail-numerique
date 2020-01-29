@@ -13,12 +13,14 @@ import { VerticalArrow } from "../VerticalArrow";
 
 const ITEM_SPACING = spacings.base;
 const ITEM_SPACING_MOBILE = spacings.tiny;
-export const LEFT_WIDTH = "8rem";
-export const LEFT_WIDTH_MOBILE = "4.6rem";
+const COUNTER_WIDTH = "8rem";
+const COUNTER_WIDTH_MOBILE = "4.6rem";
 const NUMBER_WIDTH = "4rem";
+const STROKE_DISTANCE = "0.4rem"; // NUMBER_WIDTH / 10
 const NUMBER_WIDTH_MOBILE = "3rem";
-const STROKE_WIDTH = "3px";
-const NARROW_STROKE_WIDTH = "1px";
+const STROKE_DISTANCE_MOBILE = "0.3rem"; // NUMBER_WIDTH_MOBILE / 10
+const STROKE_WIDTH = "0.3rem";
+const NARROW_STROKE_WIDTH = "0.1rem";
 
 export const Accordion = RootAccordion;
 
@@ -35,7 +37,7 @@ export const Item = styled(({ index, isLast, ...rest }) => (
   &:after {
     position: absolute;
     bottom: -1.4rem;
-    left: calc(50% + ${LEFT_WIDTH} / 2);
+    left: calc(50% + ${COUNTER_WIDTH} / 2);
     z-index: 1;
     display: ${({ theme }) => (theme.noColors ? "none" : "block")};
     width: 0;
@@ -60,13 +62,13 @@ export const Item = styled(({ index, isLast, ...rest }) => (
         margin-top: ${ITEM_SPACING_MOBILE};
       `}
     &:after {
-      left: calc(50% + ${LEFT_WIDTH_MOBILE} / 2);
+      left: calc(50% + ${COUNTER_WIDTH_MOBILE} / 2);
     }
   }
 `;
 
 export const ItemPanel = styled(AccordionItemPanel)`
-  margin-left: ${LEFT_WIDTH};
+  margin-left: ${COUNTER_WIDTH};
   padding: ${spacings.base};
   background-color: ${({ theme }) => theme.bgSecondary};
   border: ${({ theme }) =>
@@ -74,7 +76,7 @@ export const ItemPanel = styled(AccordionItemPanel)`
   border-top: transparent;
   border-radius: 0 0 ${box.borderRadius} ${box.borderRadius};
   @media (max-width: ${breakpoints.mobile}) {
-    margin-left: ${LEFT_WIDTH_MOBILE};
+    margin-left: ${COUNTER_WIDTH_MOBILE};
   }
 `;
 
@@ -176,44 +178,39 @@ const Number = styled.div`
   }
 `;
 
-const Decoration = styled.div`
-  position: relative;
-  width: calc(${LEFT_WIDTH} - ${NUMBER_WIDTH} - ${NUMBER_WIDTH} / 10);
-  height: ${NARROW_STROKE_WIDTH};
-  margin-left: calc(${NUMBER_WIDTH} / 10);
-  background-color: ${({ theme }) => theme.secondary};
+const decorationHelper = (COUNTER_WIDTH, NUMBER_WIDTH, STROKE_DISTANCE) => css`
+  width: calc(${COUNTER_WIDTH} - ${NUMBER_WIDTH} - ${STROKE_DISTANCE});
+  margin-left: ${STROKE_DISTANCE};
   &:before {
-    position: absolute;
     top: calc(
-      (${NUMBER_WIDTH} / 10 + ${NUMBER_WIDTH}) / -2 - 2 * ${NARROW_STROKE_WIDTH}
+      (${STROKE_DISTANCE} + ${NUMBER_WIDTH}) / -2 - 1.5 * ${NARROW_STROKE_WIDTH}
     );
-    left: calc(${NUMBER_WIDTH} / -10 - ${NUMBER_WIDTH} / 2);
-    z-index: -1;
-    box-sizing: border-box;
-    width: calc(${NUMBER_WIDTH} / 10 + ${NUMBER_WIDTH} / 2);
-    height: calc((${NUMBER_WIDTH} / 10) * 2 + ${NUMBER_WIDTH});
-    background-color: transparent;
-    border: ${NARROW_STROKE_WIDTH} solid ${({ theme }) => theme.secondary};
+    left: calc(-1 * ${STROKE_DISTANCE} - ${NUMBER_WIDTH} / 2);
+    width: calc(${STROKE_DISTANCE} + ${NUMBER_WIDTH} / 2);
+    height: calc((${STROKE_DISTANCE}) * 2 + ${NUMBER_WIDTH});
     border-top-right-radius: ${NUMBER_WIDTH};
     border-bottom-right-radius: ${NUMBER_WIDTH};
+  }
+`;
+
+const Decoration = styled.div`
+  position: relative;
+  height: ${NARROW_STROKE_WIDTH};
+  background-color: ${({ theme }) => theme.secondary};
+  ${decorationHelper(COUNTER_WIDTH, NUMBER_WIDTH, STROKE_DISTANCE)}
+  &:before {
+    position: absolute;
+    z-index: -1;
+    background-color: transparent;
+    border: ${NARROW_STROKE_WIDTH} solid ${({ theme }) => theme.secondary};
     content: "";
   }
   @media (max-width: ${breakpoints.mobile}) {
-    left: calc(${NUMBER_WIDTH} / 10);
-    width: calc(
-      ${LEFT_WIDTH_MOBILE} - (${NUMBER_WIDTH_MOBILE} / 10) -
-        ${NUMBER_WIDTH_MOBILE}
-    );
-    &:before {
-      top: calc((-2 * ${NUMBER_WIDTH_MOBILE} / 3) + ${NARROW_STROKE_WIDTH});
-      left: calc(-2 * ${NUMBER_WIDTH_MOBILE} / 3);
-      width: calc(2 * ${NUMBER_WIDTH_MOBILE} / 3);
-      height: calc(
-        (4 * ${NUMBER_WIDTH_MOBILE} / 3) - 2 * ${NARROW_STROKE_WIDTH}
-      );
-      border-top-right-radius: calc(2 * ${NUMBER_WIDTH_MOBILE} / 3);
-      border-bottom-right-radius: calc(2 * ${NUMBER_WIDTH_MOBILE} / 3);
-    }
+    ${decorationHelper(
+      COUNTER_WIDTH_MOBILE,
+      NUMBER_WIDTH_MOBILE,
+      STROKE_DISTANCE_MOBILE
+    )}
   }
 `;
 

@@ -11,7 +11,6 @@ import {
   Modal,
   theme,
   Title,
-  Toast,
   Wrapper
 } from "@socialgouv/react-ui";
 
@@ -68,7 +67,7 @@ const Hierarchy = () => {
                   articles du Code du travail. Il existe 3 hiérarchies
                   possibles&nbsp;:
                 </p>
-                <Accordion
+                <StyledAccordion
                   items={[
                     {
                       title: (
@@ -108,7 +107,7 @@ const Hierarchy = () => {
                             défavorable pour le salarié que la loi.
                           </p>
                           <i>
-                            Exemples&nbsp;:
+                            Exemple&nbsp;:
                             <ul>
                               <li>
                                 le taux de majoration des heures
@@ -140,14 +139,15 @@ const Hierarchy = () => {
                             la loi ne s’applique pas.
                           </p>
                           <i>
-                            Exemples&nbsp;:
+                            Exemple&nbsp;:
                             <ul>
                               <li>
-                                Taux de majoration des heures supplémentaires.
-                                En l’absence d’accord collectif sur le taux de
-                                majoration des heures supplémentaires s’applique
-                                le code du travail (25% de majoration pour les 8
-                                premières heures et 50% pour les suivantes).
+                                le taux de majoration des heures
+                                supplémentaires. En l’absence d’accord collectif
+                                sur le taux de majoration des heures
+                                supplémentaires s’applique le code du travail
+                                (25% de majoration pour les 8 premières heures
+                                et 50% pour les suivantes).
                               </li>
                             </ul>
                           </i>
@@ -156,7 +156,7 @@ const Hierarchy = () => {
                     }
                   ]}
                 />
-                <Wrapper variant="darker">
+                <Wrapper variant="light">
                   <IconStripe icon={icons.Warning}>
                     <InsertTitle as="h4">
                       Attention à certaines règles du Code du travail
@@ -185,45 +185,49 @@ const Hierarchy = () => {
             title: <h3>Les conventions et accords collectifs</h3>,
             body: (
               <>
-                <Heading as="h4">
-                  Hiérarchie entre conventions et accords collectifs de niveaux
-                  différents
-                </Heading>
                 <p>
                   La règle qui détermine quel est le texte applicable est
                   différente en fonction du niveau des textes comparés.
                 </p>
                 <Heading as="h4">
-                  Hiérarchie entre accord de branche et accord d’entreprise
+                  Hiérarchie entre convention collective de branche et accord
+                  d’entreprise
                 </Heading>
                 <p>
                   Le principe est que l’accord d’entreprise s’applique en
-                  priorité par rapport à l’accord ou la convention de branche
-                  même si, l’accord d’entreprise est plus désavantageux pour le
-                  salarié que l’accord de branche.
+                  priorité par rapport à l’accord ou la convention collective de
+                  branche. Cela signifie que même si l’accord d’entreprise peut
+                  prévoir des règles différentes voire plus désavantageuses pour
+                  le salarié que la convention collective de branche, ce sera
+                  lui qui s’appliqura au salarié et non la convention collective
+                  de branche.
                 </p>
-                <Toast>
-                  Le principe ne s’applique pas dans{" "}
-                  <Button
-                    variant="link"
-                    onClick={() => setModal13MatieresOpen(true)}
-                  >
-                    13 matières
-                  </Button>{" "}
-                  où la loi reconnaît la primauté à l’accord de branche et{" "}
-                  <Button
-                    variant="link"
-                    onClick={() => setModal4MatieresOpen(true)}
-                  >
-                    4 matières
-                  </Button>{" "}
-                  où la branche elle-même peut reconnaître sa primauté, sauf si
-                  l’accord d’entreprise a des garanties au moins équivalentes.
-                </Toast>
+                <Wrapper variant="light">
+                  <IconStripe icon={icons.Warning}>
+                    Ce principe ne s’applique pas dans{" "}
+                    <Button
+                      variant="link"
+                      onClick={() => setModal13MatieresOpen(true)}
+                    >
+                      13 matières
+                    </Button>{" "}
+                    où la loi reconnaît la primauté à la convention collective
+                    de branche et{" "}
+                    <Button
+                      variant="link"
+                      onClick={() => setModal4MatieresOpen(true)}
+                    >
+                      4 matières
+                    </Button>{" "}
+                    où la branche elle-même peut reconnaître sa primauté, sauf
+                    si l’accord d’entreprise a des garanties au moins
+                    équivalentes.
+                  </IconStripe>
+                </Wrapper>
                 <p>
-                  Ces règles sont les mêmes pour la hiérarchie entre accord de
-                  branche et accord de groupe et entre accord de branche et
-                  accord d’établissement.
+                  Ces règles sont les mêmes pour la hiérarchie entre convention
+                  collective de branche et accord de groupe ou accord
+                  d’établissement.
                 </p>
                 <Heading as="h4">
                   Hiérarchie entre accord de groupe et accord d’entreprise
@@ -359,6 +363,10 @@ const { breakpoints, spacings } = theme;
 
 const StyledP = styled.p`
   margin: ${spacings.small} 0 0 0;
+`;
+
+const StyledAccordion = styled(Accordion)`
+  margin-bottom: ${spacings.xmedium};
 `;
 
 const ListContainer = styled.div`

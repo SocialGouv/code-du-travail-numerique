@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { Container } from "../../layout/Container";
+import { CONTAINER_MAX_WIDTH, Container } from "../../layout/Container";
 import { breakpoints, spacings } from "../../theme";
 
 const BORDER_RADIUS = "10rem";
@@ -91,9 +91,28 @@ const Decoration = styled.div`
 `;
 
 const PaddedContainer = styled(Container)`
-  padding-right: ${SPACING_RIGHT};
+  /*
+    The issue here is that the container has a max width so the
+    padding right cannot simply equals the SPACING_RIGHT of the section
+    when the width is too big.
+    To get the correct padding-right, we need some calculation:
+      IF
+        X = the missing padding-right to add to the container
+        Y = margin-right of the container (which is dynamic, because auto)
+      NOWING THAT
+        Y = (100% - CONTAINER_MAX_WIDTH) / 2
+        SPACING_RIGHT = X + Y
+      THEN
+        X = SPACING_RIGHT - (100% - CONTAINER_MAX_WIDTH) / 2
+  */
+  padding-right: calc(
+    ${SPACING_RIGHT} - (100% - ${CONTAINER_MAX_WIDTH}) / 2 + ${spacings.medium}
+  );
+  @media (max-width: ${breakpoints.desktop}) {
+    padding-right: calc(${SPACING_RIGHT} + ${spacings.medium});
+  }
   @media (max-width: ${breakpoints.mobile}) {
-    padding-right: ${SPACING_RIGHT_MOBILE};
+    padding-right: calc(${SPACING_RIGHT_MOBILE} + ${spacings.small});
   }
 `;
 

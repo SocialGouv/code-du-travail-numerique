@@ -9,10 +9,12 @@ import { ScreenReaderOnly } from "../ScreenReaderOnly";
 import * as variants from "./components/variants";
 
 export const Accordion = ({ items, variant, ...props }) => {
+  /* eslint-disable import/namespace */
   const AccordionVariant = variants[variant].Accordion;
   const AccordionItem = variants[variant].Item;
   const AccordionItemButton = variants[variant].ItemButton;
   const AccordionItemPanel = variants[variant].ItemPanel;
+  /* eslint-enable */
   return (
     <AccordionVariant allowZeroExpanded allowMultipleExpanded {...props}>
       {items.map(({ body, icon, id, title }, index) => (

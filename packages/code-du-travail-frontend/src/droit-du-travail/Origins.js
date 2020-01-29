@@ -401,7 +401,7 @@ const Origins = () => (
         />
       </FlexWrapper>
       <Container narrow noPadding>
-        <StyledWrapper variant="darker">
+        <StyledWrapper variant="light">
           La jurisprudence de la Cour Européenne des droits de l’Homme, de la
           Cour de justice de l’Union européenne, du Conseil Constitutionnel, du
           Conseil d’Etat et de la Cour de cassation influence également le droit
