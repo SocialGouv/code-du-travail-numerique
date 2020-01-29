@@ -1,12 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { theme } from "@socialgouv/react-ui";
+import { theme, Toast } from "@socialgouv/react-ui";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
-
 import { getIndemnitePrecarite } from "../indemnite";
-import { Summary, Highlight } from "../../common/stepStyles";
+import { SectionTitle, Summary, Highlight } from "../../common/stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import {
   filterSituations,
@@ -32,10 +31,11 @@ function StepIndemnite({ form }) {
   let rate = "10%";
   let bonusAltName = "La prime de précarité";
   let references;
+  let situation;
 
   switch (situations.length) {
     case 1: {
-      const [situation] = situations;
+      [situation] = situations;
       rate = situation.rate;
       bonusAltName = situation.bonusLabel || bonusAltName;
       references = getRef(situation);
@@ -43,7 +43,7 @@ function StepIndemnite({ form }) {
     }
     default: {
       const situations = getSituationsFor(data, { idcc: 0, contractType });
-      const [situation] = situations;
+      [situation] = situations;
       references = getRef(situation);
     }
   }
@@ -67,7 +67,11 @@ function StepIndemnite({ form }) {
       <p>
         {bonusAltName} est estimée à&nbsp;
         <Highlight>{indemnite}&nbsp;€</Highlight>.
+        {situation && situation.disclaimer && (
+          <StyledToast>{situation.disclaimer}</StyledToast>
+        )}
       </p>
+
       <details>
         <Summary>Détail du calcul</Summary>
         <div>
@@ -126,29 +130,31 @@ function getRef({ refLabel, refUrl }) {
   const labels = refLabel.split(/\n/);
   const refs = urls.map((url, i) => [url, labels[i]]);
   return (
-    <p>
-      {refs
-        .map(([url, label]) => (
-          <a
-            key={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            href={url}
-            title={`Consultez l’${label.toLowerCase()}`}
-          >
-            {label}
-          </a>
-        ))
-        .reduce((state, item) => (
-          <>
-            {state}, {item}
-          </>
+    <>
+      <SectionTitle>Source</SectionTitle>
+      <ul>
+        {refs.map(([url, label]) => (
+          <li key={url}>
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`Consultez l’${label.toLowerCase()}`}
+            >
+              {label}
+            </a>
+          </li>
         ))}
-    </p>
+      </ul>
+    </>
   );
 }
 
 const { spacings, fonts } = theme;
+
+const StyledToast = styled(Toast)`
+  margin: ${spacings.base} 0;
+`;
 
 const Heading = styled.strong`
   font-weight: bold;
