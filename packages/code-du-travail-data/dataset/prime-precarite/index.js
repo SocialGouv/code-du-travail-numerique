@@ -14,8 +14,9 @@ const csvColumns = {
   endMessage: 13,
   rate: 14,
   bonusLabel: 16,
-  refLabel: 17,
-  refUrl: 18
+  disclaimer: 17,
+  refLabel: 18,
+  refUrl: 19
 };
 
 const criteriaIndex = {
