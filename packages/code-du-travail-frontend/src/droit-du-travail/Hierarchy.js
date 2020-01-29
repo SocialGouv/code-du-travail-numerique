@@ -196,11 +196,11 @@ const Hierarchy = () => {
                 <p>
                   Le principe est que l’accord d’entreprise s’applique en
                   priorité par rapport à l’accord ou la convention collective de
-                  branche. Cela signifie que même si l’accord d’entreprise peut
-                  prévoir des règles différentes voire plus désavantageuses pour
-                  le salarié que la convention collective de branche, ce sera
-                  lui qui s’appliqura au salarié et non la convention collective
-                  de branche.
+                  branche. Cela signifie que même si l’accord d’entreprise
+                  prévoit des règles différentes, voire plus désavantageuses,
+                  que la convention collective de branche, ce sera lui qui
+                  s’appliqura au salarié et non la convention collective de
+                  branche.
                 </p>
                 <Wrapper variant="light">
                   <IconStripe icon={icons.Warning}>
