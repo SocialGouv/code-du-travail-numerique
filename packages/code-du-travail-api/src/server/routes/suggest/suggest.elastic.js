@@ -28,7 +28,7 @@ function getSuggestQuery(query, size) {
               log: {
                 scaling_factor: 1
               },
-              boost: 3
+              boost: 10
             }
           }
         ]

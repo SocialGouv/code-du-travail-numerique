@@ -12,7 +12,8 @@ export const suggestionMapping = {
           type: "text",
           analyzer: "sugg_prefix"
         }
-      }
+      },
+      norms: false
     }
   }
 };
