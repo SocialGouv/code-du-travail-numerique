@@ -8,7 +8,8 @@ import { SectionTitle, Highlight } from "../../common/stepStyles";
 import {
   filterSituations,
   getSituationsFor,
-  recapSituation
+  recapSituation,
+  getRef
 } from "../../common/situations.utils";
 
 function Duration({ duration }) {
@@ -54,21 +55,7 @@ function Disclaimer({ duration }) {
   }
 }
 
-function LienSource() {
-  return (
-    <p>
-      <Link
-        href={`/${getRouteBySource(SOURCES.CDT)}/[slug]`}
-        as={`/${getRouteBySource(SOURCES.CDT)}/l1234-7`}
-      >
-        <a>Article L1234-17</a>
-      </Link>{" "}
-      du code du travail (dispositions spécifiques Alsace Moselle)
-    </p>
-  );
-}
-
-function NoResult({ idcc, ccn }) {
+function NoResult({ idcc, ccn, ref }) {
   let result =
     "Aucun résultat : la convention collective n'a pas encore été traitée par nos services.";
   if (idcc === 0) {
@@ -104,7 +91,7 @@ function NoResult({ idcc, ccn }) {
         )}
       </Alert>
       <SectionTitle>Source</SectionTitle>
-      <LienSource />
+      {ref && getRef([ref])}
     </>
   );
 }
@@ -114,11 +101,14 @@ export function StepResult({ form }) {
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.convention.num : 0;
 
+  const [situationCdt] = getSituationsFor(data.situations, { idcc: 0 });
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
-
+  const refCdt = situationCdt
+    ? { ref: situationCdt.ref, refUrl: situationCdt.refUrl }
+    : null;
   if (idcc === 0 || possibleSituations.length === 0) {
-    return <NoResult idcc={idcc} ccn={ccn} />;
+    return <NoResult idcc={idcc} ccn={ccn} ref={refCdt} />;
   }
 
   const [situation] = possibleSituations;
@@ -133,7 +123,9 @@ export function StepResult({ form }) {
         ...situation.criteria
       })}
       <SectionTitle>Source</SectionTitle>
-      <LienSource />
+      {situation.ref &&
+        situation.refUrl &&
+        getRef([{ ref: situation.ref, refUrl: situation.refUrl }])}
     </>
   );
 }
