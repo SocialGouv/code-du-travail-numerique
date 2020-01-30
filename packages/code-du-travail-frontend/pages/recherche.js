@@ -76,20 +76,24 @@ class SearchPage extends React.Component {
             <Section>
               <Container>
                 <Wrapper variant="light">
-                  <Heading shift="2.4rem" variant="primary" stripped>
+                  <Heading
+                    shift={theme.spacings.xmedium}
+                    variant="primary"
+                    stripped
+                  >
                     Vous n&apos;avez pas trouvé ce que vous cherchiez ? Essayez
-                    ...
+                    &hellip;
                   </Heading>
                   <>
                     <ConventionModal key="convention-modal">
                       {openModal => (
-                        <Tag variant="secondary" onClick={openModal}>
+                        <Tag as="a" variant="secondary" onClick={openModal}>
                           Chercher une convention collective
                         </Tag>
                       )}
                     </ConventionModal>
                     <Link href="/themes" passHref>
-                      <Tag>Consulter les themes</Tag>
+                      <Tag as="a">Consulter les thèmes</Tag>
                     </Link>
                   </>
                 </Wrapper>

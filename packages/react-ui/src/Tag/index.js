@@ -23,7 +23,6 @@ Tag.defaultProps = {
 const StyledTag = styled.div`
   display: inline-block;
   width: ${props => (props.wide ? "100%" : "auto")};
-  margin-bottom: ${spacings.base};
   color: ${({ theme }) => theme.altText};
   font-weight: 600;
   text-decoration: none;
@@ -37,6 +36,16 @@ const StyledTag = styled.div`
   cursor: pointer;
   & + & {
     margin-left: ${spacings.base};
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: ${({ theme }) => theme.altText};
+    box-shadow: ${({ shadow, theme }) =>
+      shadow
+        ? box.shadow.large(theme.secondary)
+        : box.shadow.default(theme.secondary)};
+    transform: translateY(-2px);
   }
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;

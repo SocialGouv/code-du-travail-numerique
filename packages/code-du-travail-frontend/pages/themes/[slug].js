@@ -54,7 +54,9 @@ class Theme extends React.Component {
                     as={`/themes/${slug}`}
                     passHref
                   >
-                    <Tag shadow>{title}</Tag>
+                    <Tag as="a" shadow>
+                      {title}
+                    </Tag>
                   </Link>
                 ))}
               </StyledContainer>
