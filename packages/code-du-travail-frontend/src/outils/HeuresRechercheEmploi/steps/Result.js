@@ -124,7 +124,7 @@ export function StepResult({ form }) {
   const [situation] = possibleSituations;
   return (
     <>
-      <SectionTitle>Nombre d’heure</SectionTitle>
+      <SectionTitle>Nombre d’heures</SectionTitle>
       <Duration duration={situation.answer} />
       <Disclaimer duration={situation.answer} />
       <SectionTitle>Détails</SectionTitle>
