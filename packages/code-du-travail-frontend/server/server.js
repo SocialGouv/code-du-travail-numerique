@@ -3,6 +3,7 @@ const next = require("next");
 const Koa = require("koa");
 const Router = require("koa-router");
 const helmet = require("koa-helmet");
+var bodyParser = require("koa-bodyparser");
 /**
  * this env variable is use to target developpement / staging deployement
  * in order to block indexing bot using a x-robot-header and an appropriate robots.txt
@@ -31,8 +32,40 @@ const nextHandler = nextApp.getRequestHandler();
 nextApp.prepare().then(() => {
   const server = new Koa();
   const router = new Router();
+  if (dev) {
+    server.use(bodyParser());
+  }
+  server.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc: [
+            "'self'",
+            "*.travail.gouv.fr",
+            "*.data.gouv.fr",
+            "*.fabrique.social.gouv.fr"
+          ],
+          scriptSrc: ["'self'", "'unsafe-inline'"],
+          frameAncestors: ["'none'"],
+          styleSrc: ["'self'", "'unsafe-inline'"],
+          imgSrc: ["'self'", "https://travail-emploi.gouv.fr"],
+          ...(dev && { reportUri: "/report-violation" })
+        },
+        reportOnly: () => dev
+      }
+    })
+  );
+  if (dev) {
+    router.post("/report-violation", ctx => {
+      if (ctx.request.body) {
+        console.log("CSP Violation: ", ctx.request.body);
+      } else {
+        console.log("CSP Violation: No data received!");
+      }
 
-  server.use(helmet());
+      ctx.status = 204;
+    });
+  }
   if (IS_PRODUCTION_DEPLOYMENT) {
     server.use(async function(ctx) {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
@@ -64,7 +97,7 @@ nextApp.prepare().then(() => {
   });
 
   server.use(async (ctx, next) => {
-    ctx.res.statusCode = 200;
+    ctx.status = 200;
     await next();
   });
 
