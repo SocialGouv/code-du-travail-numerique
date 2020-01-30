@@ -23,6 +23,7 @@ export { ScreenReaderOnly } from "./ScreenReaderOnly";
 export { Stripe } from "./Stripe";
 export { Table } from "./Table";
 export { Tabs } from "./Tabs";
+export { Tag } from "./Tag";
 export { Tile } from "./Tile";
 export { Toast } from "./Toast";
 export { Text } from "./Text";
