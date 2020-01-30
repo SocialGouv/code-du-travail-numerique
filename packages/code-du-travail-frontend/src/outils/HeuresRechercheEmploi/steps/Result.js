@@ -55,7 +55,7 @@ function Disclaimer({ duration }) {
   }
 }
 
-function NoResult({ idcc, ccn, ref }) {
+function NoResult({ idcc, ccn, legalRefs }) {
   let result =
     "Aucun résultat : la convention collective n'a pas encore été traitée par nos services.";
   if (idcc === 0) {
@@ -91,7 +91,7 @@ function NoResult({ idcc, ccn, ref }) {
         )}
       </Alert>
       <SectionTitle>Source</SectionTitle>
-      {ref && getRef([ref])}
+      {legalRefs && getRef(legalRefs)}
     </>
   );
 }
@@ -104,11 +104,9 @@ export function StepResult({ form }) {
   const [situationCdt] = getSituationsFor(data.situations, { idcc: 0 });
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
-  const refCdt = situationCdt
-    ? { ref: situationCdt.ref, refUrl: situationCdt.refUrl }
-    : null;
+
   if (idcc === 0 || possibleSituations.length === 0) {
-    return <NoResult idcc={idcc} ccn={ccn} ref={refCdt} />;
+    return <NoResult idcc={idcc} ccn={ccn} legalRefs={[situationCdt]} />;
   }
 
   const [situation] = possibleSituations;
@@ -123,9 +121,7 @@ export function StepResult({ form }) {
         ...situation.criteria
       })}
       <SectionTitle>Source</SectionTitle>
-      {situation.ref &&
-        situation.refUrl &&
-        getRef([{ ref: situation.ref, refUrl: situation.refUrl }])}
+      {situation.ref && situation.refUrl && getRef([situation])}
     </>
   );
 }

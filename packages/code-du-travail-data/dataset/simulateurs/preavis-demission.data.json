@@ -494,7 +494,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ouvriers, collaborateurs et tehniciens",
         "coefficient": "1| inférieur à 160"
       },
       "type": "préavis de démission",
@@ -507,7 +506,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ouvriers, collaborateurs et tehniciens",
         "coefficient": "2| entre 160 (inclus) et 175"
       },
       "type": "préavis de démission",
@@ -520,7 +518,6 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "14| ouvriers, collaborateurs et tehniciens",
         "coefficient": "8| 190 et plus"
       },
       "type": "préavis de démission",

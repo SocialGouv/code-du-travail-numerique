@@ -232,7 +232,6 @@
     },
     {
       "criteria": {
-        "période essai": "3| non",
         "catégorie socio-professionnelle": "6| Ouvriers, Employés"
       },
       "type": "heures pour recherche d'emploi",
@@ -245,35 +244,6 @@
     },
     {
       "criteria": {
-        "période essai": "1| oui",
-        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "durée du préavis": "2| 6 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 44,
-      "answer": "12 heures",
-      "answer2": "Le salaire est maintenu durant ces absences. ",
-      "answer3": "Les absences sont à la convenance du salarié.",
-      "ref": "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6FB19FCFF92FEBEF03724AB1800F25B3.tplgfr28s_1?idArticle=KALIARTI000005846362&cidTexte=KALITEXT000005677782&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "période essai": "1| oui",
-        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
-        "durée du préavis": "5| 15 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 44,
-      "answer": "30 heures",
-      "answer2": "Le salaire est maintenu durant ces absences.",
-      "answer3": "Les absences sont à la convenance du salarié.",
-      "ref": "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6FB19FCFF92FEBEF03724AB1800F25B3.tplgfr28s_1?idArticle=KALIARTI000005846362&cidTexte=KALITEXT000005677782&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "période essai": "3| non",
         "catégorie socio-professionnelle": "28| Techniciens",
         "groupe": "3| de I à III"
       },
@@ -287,7 +257,6 @@
     },
     {
       "criteria": {
-        "période essai": "3| non",
         "catégorie socio-professionnelle": "28| Techniciens",
         "groupe": "6| IV"
       },
@@ -301,9 +270,7 @@
     },
     {
       "criteria": {
-        "période essai": "3| non",
-        "catégorie socio-professionnelle": "23| Agents de maîtrise",
-        "groupe": "6| IV"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
@@ -315,7 +282,6 @@
     },
     {
       "criteria": {
-        "période essai": "3| non",
         "catégorie socio-professionnelle": "60| Ingénieurs, Cadres"
       },
       "type": "heures pour recherche d'emploi",
@@ -323,34 +289,6 @@
       "answer": "Un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement (par exemple : si la durée du travail est de 35 heures dans l'établissement, et si le préavis est de 1 mois, le salarié a droit à 35 heures de recherche d'emploi)",
       "answer2": "Le salaire est maintenu durant ces absences. Les heures non utilisées ne seront pas payées",
       "answer3": "Possibilité de s'absenter après avoir trouvé un accord avec la direction",
-      "ref": "Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres Article 4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A1DB5F1F24C4E5819010CD7A35AB832F.tplgfr28s_1?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "période essai": "1| oui",
-        "catégorie socio-professionnelle": "60| Ingénieurs, Cadres",
-        "ancienneté": "5| plus de 1 mois et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 44,
-      "answer": "30 heures",
-      "answer2": "Le salaire est maintenu durant ces absences. ",
-      "answer3": "L'utilisation de ces heures est laissée à la convenance du cadre",
-      "ref": "Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres Article 4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A1DB5F1F24C4E5819010CD7A35AB832F.tplgfr28s_1?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "période essai": "1| oui",
-        "catégorie socio-professionnelle": "60| Ingénieurs, Cadres",
-        "ancienneté": "4| moins de 1 mois et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 44,
-      "answer": "0",
-      "answer2": null,
-      "answer3": "La convention collective ne prévoit pas d'heures de recherche d'emploi dans ce cas",
       "ref": "Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres Article 4",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A1DB5F1F24C4E5819010CD7A35AB832F.tplgfr28s_1?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=29990101&categorieLien=id"
     },
@@ -393,7 +331,7 @@
     },
     {
       "criteria": {
-        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "catégorie socio-professionnelle": "21| Agents de maîtrise et Techniciens",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -467,7 +405,7 @@
       "idcc": 86,
       "answer": "0",
       "answer2": null,
-      "answer3": "La convention collective ne prévoit pas d'heures de recherche d'emploi dans ce cas",
+      "answer3": "La convention collective ne prévoit pas d'heures de recherche d'emploi dans ce cas.",
       "ref": "Article 30",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857304&cidTexte=KALITEXT000005682357&dateTexte=19740607"
     },
@@ -563,7 +501,7 @@
       "answer": "2 heures",
       "answer2": "Le salaire est maintenu au cours de ces absences.",
       "answer3": "Les heures sont fixées chaque jour alternativement par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe I et II, article 4",
+      "ref": "Annexe I et II, article 3 ",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -578,7 +516,7 @@
       "answer": "2 heures",
       "answer2": "Ces heures d'absence ne sont pas rémunérées",
       "answer3": "Les heures sont fixées chaque jour alternativement par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe I et II, article 5",
+      "ref": "Annexe I et II, article 3 ",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -607,7 +545,7 @@
       "answer": "2 heures",
       "answer2": "Ces heures d'absence ne sont pas rémunérées",
       "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe III, article 4",
+      "ref": "Annexe III, article 3 ",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -622,7 +560,7 @@
       "answer": "2 heures",
       "answer2": "Le salaire est maintenu au cours de ces absences.",
       "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe III, article 5",
+      "ref": "Annexe III, article 3 ",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -645,7 +583,7 @@
       "idcc": 292,
       "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu au cours de ces absences.",
-      "answer3": "Le cadre est autorisé à s'absenter pour effectuer ces heures de recherche d'emploi, en une ou plusieurs fois en accord avec l'employeur",
+      "answer3": "Le cadre est autorisé à s'absenter pour effectuer ces heures de recherche d'emploi, en une ou plusieurs fois en accord avec l'employeur.",
       "ref": "Avenant Cadres, Article 8\r\n",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005682082&idSectionTA=KALISCTA000005726361&idConvention=KALICONT000005635856&dateTexte=29990101"
     },
@@ -683,7 +621,7 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 413,
       "answer": "2 heures par jour de travail, ou 1 journée de travail par semaine de travail",
-      "answer2": "Ces heures ne sont pas rémunérées",
+      "answer2": "Ces heures ne sont pas rémunérées.",
       "answer3": null,
       "ref": "Article 16",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7F66290E5A27E516CA3A19F104D2C7.tplgfr24s_3?idArticle=KALIARTI000005863125&cidTexte=KALITEXT000022192697&dateTexte=29990101&categorieLien=id"
@@ -696,7 +634,7 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 413,
       "answer": "50 heures par mois. Prise possible en une ou plusieurs fois.",
-      "answer2": "Ces heures ne sont pas rémunérées",
+      "answer2": "Ces heures ne sont pas rémunérées.",
       "answer3": null,
       "ref": "Article 9, de l'annexe 6",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
@@ -740,7 +678,7 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 675,
       "answer": "2 heures par jour",
-      "answer2": "Le salaire est maintenu au cours de ces absences, considérées comme temps de trvail effectif",
+      "answer2": "Le salaire est maintenu au cours de ces absences, considérées comme temps de travail effectif",
       "answer3": "Les heures absences sont fixées d'un commun accord entre l'employeur et le salarié, et peuvent être groupés. A défaut d'accord, ces heures absences sont fixées: un jour par l'employeur, et le suivant  par le salarié. ",
       "ref": "Article 39",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AF6CA15C9F4A85C0EE9D4210D1FFD9A4.tplgfr41s_1?idArticle=KALIARTI000005851079&cidTexte=KALITEXT000005679762&dateTexte=29990101&categorieLien=id"
@@ -1037,7 +975,7 @@
       "idcc": 1043,
       "answer": "2 heures par jour, dans la limite de 40 heures",
       "answer2": "Le salaire est maintenu, au cours de ces absences.",
-      "answer3": "Ces heures d'absence seront fixées d'un commun accord entre l'intéressé  et l'employeur oour éviter qu'elles ne soient  préjudiciables au service. En cas de désaccord, elles seront prises alternativement par l'employeur et le salarié.\nEn cas de besoin et à la demande de l'intéressé, les heures pourront être bloquées en une ou plusieurs fois, après accord écrit de l'employeur.",
+      "answer3": "Ces heures d'absence seront fixées d'un commun accord entre l'intéressé  et l'employeur pour éviter qu'elles ne soient  préjudiciables au service. En cas de désaccord, elles seront prises alternativement par l'employeur et le salarié.\nEn cas de besoin et à la demande de l'intéressé, les heures pourront être bloquées en une ou plusieurs fois, après accord écrit de l'employeur.",
       "ref": "Article 15",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021181025&cidTexte=KALITEXT000021180979&dateTexte=20120924"
     },
@@ -1359,7 +1297,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "answer": "2 heures par jour ouvré (dans une limite de 40 heures). Pour les salariés de  l'arrondissement de Valancienne, cette limite est portée à 50 heures.",
+      "answer": "2 heures par jour ouvré (dans une limite de 40 heures). Pour les salariés de  l'arrondissement de Valencienne, cette limite est portée à 50 heures.",
       "answer2": "Le salaire est maintenu, au cours de ces absences.",
       "answer3": "\nLes heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
       "ref": "Article 16",
@@ -1373,7 +1311,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "answer": "2 heures par jour  ouvré,  heures proratisées,  dans une limite de 40heures. sauf arrondissement de Valencienne où cette limite est portée à 50 heures.(exemple : si un salarié à templs plein effectue 35 heures par semaine, un salarié travaillant à temps partiel à hauteur de  28 heures  par semaine, aura droit hors arrondissement de Valencienne à un crédit équivalent à 84 minutes par jour (60*2)/35*28)",
+      "answer": "2 heures par jour  ouvré,  heures proratisées,  dans une limite de 40 heures. sauf arrondissement de Valencienne où cette limite est portée à 50 heures.(exemple : si un salarié à temps plein effectue 35 heures par semaine, un salarié travaillant à temps partiel à hauteur de  28 heures  par semaine, aura droit hors arrondissement de Valencienne à un crédit équivalent à 84 minutes par jour (60*2)/35*28)",
       "answer2": "Le salaire est maintenu, au cours de ces absences.",
       "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
       "ref": "Article 16",
@@ -1401,7 +1339,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "answer": "2 heures par jour ouvré,  heures proratisées .(exemple : si un salarié à templs plein effectue 35 heures par semaine, un salarié travaillant à temps partiel à hauteur de  28 heures  par semaine, aura droit hors arrondissement de Valencienne à un crédit équivalent à 84 minutes par jour (60*2)/35*28)",
+      "answer": "2 heures par jour ouvré,  heures proratisées .(exemple : si un salarié à temps plein effectue 35 heures par semaine, un salarié travaillant à temps partiel à hauteur de  28 heures  par semaine, aura droit hors arrondissement de Valencienne à un crédit équivalent à 84 minutes par jour (60*2)/35*28)",
       "answer2": "Le salaire est maintenu, au cours de ces absences.",
       "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
       "ref": "Article 16",
@@ -1415,7 +1353,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "answer": "2 heures par jour ouvré (dans une limite de 40 heures). Pour les salariés de  l'arrondissement de Valancienne, cette limite est portée à 50 heures.",
+      "answer": "2 heures par jour ouvré (dans une limite de 40 heures). Pour les salariés de  l'arrondissement de Valencienne, cette limite est portée à 50 heures.",
       "answer2": "Le salaire est maintenu, au cours de ces absences.",
       "answer3": "\nLes heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
       "ref": "Article 16",
@@ -1429,7 +1367,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "answer": "2 heures par jour  ouvré,  heures proratisées,  dans une limite de 40heures. sauf arrondissement de Valencienne où cette limite est portée à 50 heures.(exemple : si un salarié à templs plein effectue 35 heures par semaine, un salarié travaillant à temps partiel à hauteur de  28 heures  par semaine, aura droit hors arrondissement de Valencienne à un crédit équivalent à 84 minutes par jour (60*2)/35*28)",
+      "answer": "2 heures par jour  ouvré,  heures proratisées,  dans une limite de 40 heures. sauf arrondissement de Valencienne où cette limite est portée à 50 heures.(exemple : si un salarié à temps plein effectue 35 heures par semaine, un salarié travaillant à temps partiel à hauteur de  28 heures  par semaine, aura droit hors arrondissement de Valencienne à un crédit équivalent à 84 minutes par jour (60*2)/35*28)",
       "answer2": "Le salaire est maintenu, au cours de ces absences.",
       "answer3": "\nLes heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
       "ref": "Article 10",
@@ -1465,33 +1403,6 @@
     },
     {
       "criteria": {
-        "période essai": "1| oui",
-        "type de rupture": "3| licenciement"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1486,
-      "answer": "2 heures par jour, chaque jour entre la date du licenciement et la date de sortie de l'entreprise",
-      "answer2": "Le salaire est maintenu, au cours de ces absences.  Pour les chargés d'enquête : il n'y a pas de réduction du minimum garanti.",
-      "answer3": "Aucune indemnité particulière n'est due au salarié ou chargé d'enquête qui n'utilise pas ces heures d'absence.",
-      "ref": "Article 16",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=77FFB0EC2E6BD765EAE02D1B078BF784.tplgfr22s_2?idSectionTA=KALISCTA000005752517&cidTexte=KALITEXT000005679895&idConvention=KALICONT000005635173"
-    },
-    {
-      "criteria": {
-        "période essai": "1| oui",
-        "type de rupture": "1| démission"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1486,
-      "answer": "2 heures par jour, chaque jour entre la date de la démission et la date de sortie de l'entreprise",
-      "answer2": "Ces heures ne sont pas rémunérées",
-      "answer3": null,
-      "ref": "Article 16",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=77FFB0EC2E6BD765EAE02D1B078BF784.tplgfr22s_2?idSectionTA=KALISCTA000005752517&cidTexte=KALITEXT000005679895&idConvention=KALICONT000005635173"
-    },
-    {
-      "criteria": {
-        "période essai": "3| non",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -1504,7 +1415,6 @@
     },
     {
       "criteria": {
-        "période essai": "3| non",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -3002,7 +2912,7 @@
       "idcc": 2420,
       "answer": " 5 journées ou 10 demi-journées par mois",
       "answer2": "Le salaire est maintenu au cours de ces absences.",
-      "answer3": "Ces absences peuvent être prises en une ou plusieurs fois, et fixé alternativement par le salairé et l'employeur.",
+      "answer3": "Ces absences peuvent être prises en une ou plusieurs fois, et fixé alternativement par le salarié et l'employeur.",
       "ref": "Article 7.3",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=66A29F5D26CA9B3AB9D6CF5888110E5B.tplgfr30s_3?idArticle=KALIARTI000017941895&cidTexte=KALITEXT000017941844&dateTexte=29990101&categorieLien=id"
     },
