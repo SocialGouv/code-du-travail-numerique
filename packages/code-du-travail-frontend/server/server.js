@@ -45,14 +45,21 @@ nextApp.prepare().then(() => {
             "*.data.gouv.fr",
             "*.fabrique.social.gouv.fr"
           ],
-          scriptSrc: ["'self'", "'unsafe-inline'", "https://mon-entreprise.fr"],
+          scriptSrc: [
+            "'self'",
+            "'unsafe-inline'",
+            "https://mon-entreprise.fr",
+            "https://www.googletagmanager.com",
+            "*.fabrique.social.gouv.fr"
+          ],
           frameSrc: ["https://mon-entreprise.fr"],
           frameAncestors: ["'none'"],
           styleSrc: ["'self'", "'unsafe-inline'"],
           imgSrc: [
             "'self'",
             "https://travail-emploi.gouv.fr",
-            "https://mon-entreprise.fr"
+            "https://mon-entreprise.fr",
+            "https://ad.doubleclick.net"
           ],
           ...(dev && { reportUri: "/report-violation" })
         },
