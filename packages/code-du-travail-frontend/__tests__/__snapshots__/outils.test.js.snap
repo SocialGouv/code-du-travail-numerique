@@ -2200,7 +2200,7 @@ exports[`<Outils /> should render 1`] = `
               >
                 <a
                   class="c31"
-                  href="/outils/heure-recherche-emploi"
+                  href="/outils/heures-recherche-emploi"
                 >
                   <div
                     class="c32"
@@ -2264,7 +2264,7 @@ exports[`<Outils /> should render 1`] = `
                       <h3
                         class="c37 c38"
                       >
-                        Heure pour recherche d’emploi
+                        Heures pour recherche d’emploi
                       </h3>
                     </div>
                   </div>

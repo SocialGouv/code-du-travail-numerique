@@ -1,5 +1,5 @@
 import React from "react";
-import data from "@cdt/data...simulateurs/heure-recherche-emploi.data.json";
+import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
 import { SectionTitle } from "../../common/stepStyles";

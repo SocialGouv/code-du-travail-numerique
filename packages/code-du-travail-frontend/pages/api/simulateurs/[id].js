@@ -1,6 +1,6 @@
 import preavisDemission from "@cdt/data...simulateurs/preavis-demission.data.json";
 import preavisLicenciement from "@cdt/data...simulateurs/preavis-licenciement.data.json";
-import heureRechercheEmploi from "@cdt/data...simulateurs/heure-recherche-emploi.data.json";
+import heureRechercheEmploi from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
 const data = {
   "preavis-demission": preavisDemission,

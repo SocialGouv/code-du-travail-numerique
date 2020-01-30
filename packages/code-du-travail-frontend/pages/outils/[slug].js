@@ -10,14 +10,14 @@ import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciem
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
-import { HeureRechercheEmploi } from "../../src/outils/HeureRechercheEmploi";
+import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
 const toolsBySlug = {
   "indemnite-licenciement": CalculateurIndemnite,
   "preavis-licenciement": DureePreavisLicenciement,
   "simulateur-embauche": SimulateurEmbauche,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "preavis-demission": DureePreavisDemission,
-  "heure-recherche-emploi": HeureRechercheEmploi
+  "heures-recherche-emploi": HeuresRechercheEmploi
 };
 
 function Outils({ description, icon, ogImage, pageUrl, slug, title, data }) {

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { Alert } from "@socialgouv/react-ui";
-import data from "@cdt/data...simulateurs/heure-recherche-emploi.data.json";
+import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 
 import {
@@ -10,6 +10,63 @@ import {
   getSituationsFor,
   recapSituation
 } from "../../common/situations.utils";
+
+function Duration({ duration }) {
+  if (parseInt(duration, 10) === 0) {
+    return (
+      <p>
+        La convention collective ne prévoit pas cette possibilité. Il n’est donc
+        pas possible de bénéficier d’heures de recherche d’emploi au regard de
+        la situation renseignée.
+      </p>
+    );
+  }
+  return (
+    <>
+      <p>
+        À partir des éléments que vous avez saisis, le nombre d’heures pour
+        recherche d’emploi est estimé à&nbsp;:
+      </p>
+      <p>
+        <Highlight>{duration}</Highlight>.
+      </p>
+    </>
+  );
+}
+
+function Disclaimer({ duration }) {
+  if (parseInt(duration, 10) === 0) {
+    return (
+      <Alert>
+        Un accord d’entreprise ou à défaut un usage dans la profession ou
+        l’entreprise plus récent peut prévoir l’existence, le cadre et la durée
+        des absences pour rechercher un emploi au cours du préavis.
+      </Alert>
+    );
+  } else {
+    return (
+      <Alert>
+        Un accord d’entreprise ou à défaut un usage dans la profession ou
+        l’entreprise plus récent peut prévoir l’existence, le cadre et une durée
+        différentes des absences pour rechercher un emploi au cours du préavis.
+      </Alert>
+    );
+  }
+}
+
+function LienSource() {
+  return (
+    <p>
+      <Link
+        href={`/${getRouteBySource(SOURCES.CDT)}/[slug]`}
+        as={`/${getRouteBySource(SOURCES.CDT)}/l1234-7`}
+      >
+        <a>Article L1234-17</a>
+      </Link>{" "}
+      du code du travail (dispositions spécifiques Alsace Moselle)
+    </p>
+  );
+}
 
 function NoResult({ idcc, ccn }) {
   let result =
@@ -20,7 +77,7 @@ function NoResult({ idcc, ccn }) {
   }
   return (
     <>
-      <SectionTitle>Nombre d’heure</SectionTitle>
+      <SectionTitle>Nombre d’heures</SectionTitle>
       <Highlight>{result}</Highlight>
       <p>
         Le code du travail ne prévoit pas le droit pour le salarié de s’absenter
@@ -31,7 +88,7 @@ function NoResult({ idcc, ccn }) {
       </p>
       <Alert>
         Une convention collective, un accord d’entreprise ou un usage dans la
-        profession ou l’entreprise peuvent prévoir et encadrer des absences pour
+        profession ou l’entreprise peut prévoir et encadrer des absences pour
         rechercher un emploi au cours du préavis.
         {idcc > 0 && (
           <>
@@ -47,62 +104,9 @@ function NoResult({ idcc, ccn }) {
         )}
       </Alert>
       <SectionTitle>Source</SectionTitle>
-
-      <p>
-        <Link
-          href={`/${getRouteBySource(SOURCES.CDT)}/[slug]`}
-          as={`/${getRouteBySource(SOURCES.CDT)}/l1234-7`}
-        >
-          <a>Article L1234-17</a>
-        </Link>{" "}
-        du code du travail (dispositions spécifiques Alsace Moselle)
-      </p>
+      <LienSource />
     </>
   );
-}
-
-function Duration({ duration }) {
-  if (parseInt(duration, 10) === 0) {
-    return (
-      <p>
-        La convention collective ne prévoit pas cette possibilité. Il n’est donc
-        pas possible de bénéficier d’heures de recherche d’emploi au regard de
-        la situation renseignée.
-      </p>
-    );
-  }
-  return (
-    <>
-      <p>
-        À partir des éléments que vous avez saisis, la durée du préavis de
-        démission est estimée à&nbsp;:
-      </p>
-      <p>
-        <Highlight>{duration}</Highlight>.
-      </p>
-    </>
-  );
-}
-
-function Disclaimer({ duration }) {
-  if (parseInt(duration, 10) === 0) {
-    return (
-      <Alert>
-        La possibilité de bénéficier d’heures de recherche d’emploi au cours du
-        préavis peut également être prévue par un accord de groupe, d’entreprise
-        ou d’établissement, le contrat de travail, un usage dans la profession
-        ou l’entreprise ou d’un commun accord entre l’employeur et le salarié
-      </Alert>
-    );
-  } else {
-    return (
-      <Alert>
-        Le contrat de travail, un accord d’entreprise ou un usage peuvent
-        prévoir un nombre d’heure différent. Dans ce cas, il faut appliquer la
-        durée la plus courte.
-      </Alert>
-    );
-  }
 }
 
 export function StepResult({ form }) {
@@ -128,6 +132,8 @@ export function StepResult({ form }) {
         ...(ccn && { "Convention collective": ccn.convention.shortTitle }),
         ...situation.criteria
       })}
+      <SectionTitle>Source</SectionTitle>
+      <LienSource />
     </>
   );
 }

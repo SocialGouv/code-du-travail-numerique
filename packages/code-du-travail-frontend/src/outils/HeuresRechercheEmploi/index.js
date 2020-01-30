@@ -3,7 +3,7 @@ import React from "react";
 import { Wizard } from "../common/Wizard";
 import { initialState, stepReducer } from "./stepReducer";
 
-function HeureRechercheEmploi({ icon, title }) {
+function HeuresRechercheEmploi({ icon, title }) {
   return (
     <Wizard
       icon={icon}
@@ -14,4 +14,4 @@ function HeureRechercheEmploi({ icon, title }) {
   );
 }
 
-export { HeureRechercheEmploi };
+export { HeuresRechercheEmploi };

@@ -245,6 +245,34 @@
     },
     {
       "criteria": {
+        "période essai": "1| oui",
+        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
+        "durée du préavis": "2| 6 jours"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 44,
+      "answer": "12 heures",
+      "answer2": "Le salaire est maintenu durant ces absences. ",
+      "answer3": "Les absences sont à la convenance du salarié.",
+      "ref": "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6FB19FCFF92FEBEF03724AB1800F25B3.tplgfr28s_1?idArticle=KALIARTI000005846362&cidTexte=KALITEXT000005677782&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "période essai": "1| oui",
+        "catégorie socio-professionnelle": "6| Ouvriers, Employés",
+        "durée du préavis": "5| 15 jours"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 44,
+      "answer": "30 heures",
+      "answer2": "Le salaire est maintenu durant ces absences.",
+      "answer3": "Les absences sont à la convenance du salarié.",
+      "ref": "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6FB19FCFF92FEBEF03724AB1800F25B3.tplgfr28s_1?idArticle=KALIARTI000005846362&cidTexte=KALITEXT000005677782&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
         "période essai": "3| non",
         "catégorie socio-professionnelle": "28| Techniciens",
         "groupe": "3| de I à III"
@@ -260,7 +288,7 @@
     {
       "criteria": {
         "période essai": "3| non",
-        "catégorie socio-professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "catégorie socio-professionnelle": "28| Techniciens",
         "groupe": "6| IV"
       },
       "type": "heures pour recherche d'emploi",
@@ -274,8 +302,21 @@
     {
       "criteria": {
         "période essai": "3| non",
-        "catégorie socio-professionnelle": "60| Ingénieurs, Cadres",
-        "groupe": "9| V"
+        "catégorie socio-professionnelle": "23| Agents de maîtrise",
+        "groupe": "6| IV"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 44,
+      "answer": "Un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement (par exemple : si la durée du travail est de 35 heures dans l'établissement, et si le préavis est de 1 mois, le salarié a droit à 35 heures de recherche d'emploi)",
+      "answer2": "Le salaire est maintenu durant ces absences. Les heures non utilisées ne seront pas payées",
+      "answer3": "Les agents de maîtrise et les techniciens (Groupe IV) peuvent utiliser ces heures après en avoir informé la direction",
+      "ref": "Avenant n° 2  du 14 mars 1955,relatif aux agents de maîtrise et techniciens, article 20",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795"
+    },
+    {
+      "criteria": {
+        "période essai": "3| non",
+        "catégorie socio-professionnelle": "60| Ingénieurs, Cadres"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
@@ -289,7 +330,6 @@
       "criteria": {
         "période essai": "1| oui",
         "catégorie socio-professionnelle": "60| Ingénieurs, Cadres",
-        "groupe": "9| V",
         "ancienneté": "5| plus de 1 mois et demi"
       },
       "type": "heures pour recherche d'emploi",
@@ -304,7 +344,6 @@
       "criteria": {
         "période essai": "1| oui",
         "catégorie socio-professionnelle": "60| Ingénieurs, Cadres",
-        "groupe": "9| V",
         "ancienneté": "4| moins de 1 mois et demi"
       },
       "type": "heures pour recherche d'emploi",
@@ -317,7 +356,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines"
+        "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 54,
@@ -329,7 +368,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois et plus "
+        "durée du préavis": "9| un mois et plus "
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 54,
@@ -746,7 +785,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines"
+        "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 822,
@@ -758,7 +797,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois et plus "
+        "durée du préavis": "9| un mois et plus "
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 822,
@@ -806,7 +845,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -819,7 +858,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois",
+        "durée du préavis": "8| un mois",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -844,7 +883,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -857,7 +896,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois",
+        "durée du préavis": "8| un mois",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -870,7 +909,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines"
+        "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 898,
@@ -882,7 +921,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois"
+        "durée du préavis": "8| un mois"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 898,
@@ -918,7 +957,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -931,7 +970,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -956,7 +995,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -969,7 +1008,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -1018,7 +1057,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -1033,7 +1072,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -1076,7 +1115,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "durée du travail": "1| temps complet",
-        "durée du préavis": "4| plus de 2 semaines",
+        "durée du préavis": "7| plus de 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -1091,7 +1130,7 @@
       "criteria": {
         "catégorie socio-professionnelle": "6| Ouvriers, Employés",
         "durée du travail": "1| temps complet",
-        "durée du préavis": "4| plus de 2 semaines",
+        "durée du préavis": "7| plus de 2 semaines",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -1755,7 +1794,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines"
+        "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1560,
@@ -1767,7 +1806,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois et plus "
+        "durée du préavis": "9| un mois et plus "
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1560,
@@ -1779,7 +1818,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines"
+        "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1564,
@@ -1791,7 +1830,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois et plus "
+        "durée du préavis": "9| un mois et plus "
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1564,
@@ -1817,7 +1856,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines"
+        "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
@@ -1830,7 +1869,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "4| plus de 2 semaines"
+        "durée du préavis": "7| plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
@@ -1856,7 +1895,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "3| 2 semaines"
+        "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
@@ -1869,7 +1908,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "4| plus de 2 semaines"
+        "durée du préavis": "7| plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
@@ -1895,7 +1934,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines"
+        "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
@@ -1908,7 +1947,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "4| plus de 2 semaines"
+        "durée du préavis": "7| plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
@@ -1934,7 +1973,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "3| 2 semaines"
+        "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
@@ -1947,7 +1986,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "4| plus de 2 semaines"
+        "durée du préavis": "7| plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
@@ -2074,7 +2113,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2088,7 +2127,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2116,7 +2155,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2130,7 +2169,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2158,7 +2197,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2172,7 +2211,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2200,7 +2239,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2214,7 +2253,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2242,7 +2281,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2256,7 +2295,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "5| un mois",
+        "durée du préavis": "8| un mois",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2270,7 +2309,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "6| 2 mois",
+        "durée du préavis": "10| 2 mois",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2298,7 +2337,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2312,7 +2351,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "5| un mois",
+        "durée du préavis": "8| un mois",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2326,7 +2365,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 mois",
+        "durée du préavis": "10| 2 mois",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2354,7 +2393,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2368,7 +2407,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "5| un mois",
+        "durée du préavis": "8| un mois",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2382,7 +2421,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "6| 2 mois",
+        "durée du préavis": "10| 2 mois",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2410,7 +2449,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2424,7 +2463,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "5| un mois",
+        "durée du préavis": "8| un mois",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2438,7 +2477,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 mois",
+        "durée du préavis": "10| 2 mois",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2451,7 +2490,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2464,7 +2503,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "5| un mois",
+        "durée du préavis": "8| un mois",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2490,7 +2529,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2504,7 +2543,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2518,7 +2557,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2532,7 +2571,7 @@
     {
       "criteria": {
         "durée du travail": "1| temps complet",
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2546,7 +2585,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2560,7 +2599,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "1| démission"
       },
       "type": "heures pour recherche d'emploi",
@@ -2574,7 +2613,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2588,7 +2627,7 @@
     {
       "criteria": {
         "durée du travail": "2| temps partiel",
-        "durée du préavis": "5| un mois et plus ",
+        "durée du préavis": "9| un mois et plus ",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2921,7 +2960,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "3| 2 semaines",
+        "durée du préavis": "6| 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
@@ -2934,7 +2973,7 @@
     },
     {
       "criteria": {
-        "durée du préavis": "4| plus de 2 semaines",
+        "durée du préavis": "7| plus de 2 semaines",
         "type de rupture": "3| licenciement"
       },
       "type": "heures pour recherche d'emploi",
