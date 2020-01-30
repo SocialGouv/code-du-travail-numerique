@@ -45,10 +45,15 @@ nextApp.prepare().then(() => {
             "*.data.gouv.fr",
             "*.fabrique.social.gouv.fr"
           ],
-          scriptSrc: ["'self'", "'unsafe-inline'"],
+          scriptSrc: ["'self'", "'unsafe-inline'", "https://mon-entreprise.fr"],
+          frameSrc: ["https://mon-entreprise.fr"],
           frameAncestors: ["'none'"],
           styleSrc: ["'self'", "'unsafe-inline'"],
-          imgSrc: ["'self'", "https://travail-emploi.gouv.fr"],
+          imgSrc: [
+            "'self'",
+            "https://travail-emploi.gouv.fr",
+            "https://mon-entreprise.fr"
+          ],
           ...(dev && { reportUri: "/report-violation" })
         },
         reportOnly: () => dev
