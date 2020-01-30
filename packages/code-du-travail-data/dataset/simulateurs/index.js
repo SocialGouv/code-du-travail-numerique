@@ -10,7 +10,7 @@ const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
 const dataTab = {
   "preavis-demission": 2,
   "preavis-licenciement": 3,
-  "heure-recherche-emploi": 4
+  "heures-recherche-emploi": 4
 };
 
 async function main() {

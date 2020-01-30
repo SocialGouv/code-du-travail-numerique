@@ -97,12 +97,20 @@ module.exports = [
   },
   {
     icon: "Time",
-    title: "Heure pour recherche d’emploi",
-    slug: "heure-recherche-emploi",
+    title: "Heures pour recherche d’emploi",
+    slug: "heures-recherche-emploi",
     questions: [
       "ai-je droit à des heures de recherche d'emploi",
       "quel est le nombre d'heures pour rechercher un emploi",
-      "rechercher un emploi en période de préavis"
+      "rechercher un emploi en période de préavis",
+      "comment prendre ses heures de recherche d'emploi",
+      "démission recherche emploi pendant préavis",
+      "licenciement recherche d emploi pendant préavis",
+      "heures de recherche d'emploi en cas de licenciement",
+      "Ai-je droit aux heures pour recherche d’emploi dans le cadre d'une démission",
+      "autorisation d absence pour recherche d emploi",
+      "chercher un emploi pendant son préavis",
+      "absence 2h pour recherche d'emploi pendant préavis"
     ],
     description:
       "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
