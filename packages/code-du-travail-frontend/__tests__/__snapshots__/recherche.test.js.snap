@@ -191,7 +191,6 @@ exports[`<Recherche /> should render 1`] = `
 .c28 {
   display: inline-block;
   width: auto;
-  margin-bottom: 1.6rem;
   color: #4d73b8;
   font-weight: 600;
   -webkit-text-decoration: none;
@@ -207,6 +206,16 @@ exports[`<Recherche /> should render 1`] = `
 
 .c28 + .c27 {
   margin-left: 1.6rem;
+}
+
+.c28:hover,
+.c28:active,
+.c28:focus {
+  color: #4d73b8;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .c29 {
@@ -1210,9 +1219,9 @@ exports[`<Recherche /> should render 1`] = `
             <div
               class="c26"
             />
-            Vous n'avez pas trouvé ce que vous cherchiez ? Essayez ...
+            Vous n'avez pas trouvé ce que vous cherchiez ? Essayez …
           </h3>
-          <div
+          <a
             class="c27 c28"
           >
             <div
@@ -1220,17 +1229,17 @@ exports[`<Recherche /> should render 1`] = `
             >
               Chercher une convention collective
             </div>
-          </div>
-          <div
+          </a>
+          <a
             class="c27 c28"
             href="/themes"
           >
             <div
               class="c29"
             >
-              Consulter les themes
+              Consulter les thèmes
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

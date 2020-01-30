@@ -4,7 +4,6 @@ exports[`<Tag /> render default Tag 1`] = `
 .c1 {
   display: inline-block;
   width: auto;
-  margin-bottom: 1.6rem;
   color: #4d73b8;
   font-weight: 600;
   -webkit-text-decoration: none;
@@ -20,6 +19,16 @@ exports[`<Tag /> render default Tag 1`] = `
 
 .c1 + .c0 {
   margin-left: 1.6rem;
+}
+
+.c1:hover,
+.c1:active,
+.c1:focus {
+  color: #4d73b8;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .c2 {
@@ -65,7 +74,6 @@ exports[`<Tag /> render primary tag 1`] = `
 .c1 {
   display: inline-block;
   width: auto;
-  margin-bottom: 1.6rem;
   color: #4d73b8;
   font-weight: 600;
   -webkit-text-decoration: none;
@@ -81,6 +89,16 @@ exports[`<Tag /> render primary tag 1`] = `
 
 .c1 + .c0 {
   margin-left: 1.6rem;
+}
+
+.c1:hover,
+.c1:active,
+.c1:focus {
+  color: #4d73b8;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .c2 {
@@ -129,7 +147,6 @@ exports[`<Tag /> render secondary tag 1`] = `
 .c1 {
   display: inline-block;
   width: auto;
-  margin-bottom: 1.6rem;
   color: #4d73b8;
   font-weight: 600;
   -webkit-text-decoration: none;
@@ -145,6 +162,16 @@ exports[`<Tag /> render secondary tag 1`] = `
 
 .c1 + .c0 {
   margin-left: 1.6rem;
+}
+
+.c1:hover,
+.c1:active,
+.c1:focus {
+  color: #4d73b8;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .c3 + .c0 {
