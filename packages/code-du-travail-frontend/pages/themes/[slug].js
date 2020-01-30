@@ -2,13 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import getConfig from "next/config";
-import {
-  Container,
-  PageTitle,
-  Section,
-  theme,
-  Toast
-} from "@socialgouv/react-ui";
+import { Container, PageTitle, Section, Tag } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
 
 import { SearchResults } from "../../src/search/SearchResults";
@@ -60,9 +54,7 @@ class Theme extends React.Component {
                     as={`/themes/${slug}`}
                     passHref
                   >
-                    <StyledLink>
-                      <StyledToast shadow>{title}</StyledToast>
-                    </StyledLink>
+                    <Tag shadow>{title}</Tag>
                   </Link>
                 ))}
               </StyledContainer>
@@ -82,31 +74,6 @@ class Theme extends React.Component {
 
 export default Theme;
 
-const { box, breakpoints, spacings } = theme;
-
 const StyledContainer = styled(Container)`
   text-align: center;
-`;
-
-const StyledLink = styled.a`
-  display: inline-block;
-  margin-bottom: ${spacings.base};
-  text-decoration: none;
-  & + & {
-    margin-left: ${spacings.base};
-  }
-  @media (max-width: ${breakpoints.mobile}) {
-    width: 100%;
-    & + & {
-      margin-left: 0;
-    }
-  }
-`;
-
-const StyledToast = styled(Toast)`
-  color: ${({ theme }) => theme.altText};
-  border: ${({ theme }) => box.border(theme.border)};
-  @media (max-width: ${breakpoints.mobile}) {
-    width: 100%;
-  }
 `;

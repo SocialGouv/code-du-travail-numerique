@@ -5,11 +5,13 @@ import styled from "styled-components";
 import { withRouter } from "next/router";
 import {
   Alert,
-  Button,
   Container,
   PageTitle,
   Section,
-  theme
+  Tag,
+  Heading,
+  theme,
+  Wrapper
 } from "@socialgouv/react-ui";
 
 import { ConventionModal } from "../src/conventions/Search/Modal";
@@ -73,22 +75,24 @@ class SearchPage extends React.Component {
             </Section>
             <Section>
               <Container>
-                <p>
-                  <ConventionModal key="convention-modal">
-                    {openModal => (
-                      <Button variant="secondary" onClick={openModal}>
-                        Chercher une convention collective
-                      </Button>
-                    )}
-                  </ConventionModal>
-                </p>
-                <p>
-                  <Link href="/themes" passHref>
-                    <Button as="a" variant="secondary">
-                      Consulter les themes
-                    </Button>
-                  </Link>
-                </p>
+                <Wrapper variant="light">
+                  <Heading shift="2.4rem" variant="primary" stripped>
+                    Vous n&apos;avez pas trouvé ce que vous cherchiez ? Essayez
+                    ...
+                  </Heading>
+                  <>
+                    <ConventionModal key="convention-modal">
+                      {openModal => (
+                        <Tag variant="secondary" onClick={openModal}>
+                          Chercher une convention collective
+                        </Tag>
+                      )}
+                    </ConventionModal>
+                    <Link href="/themes" passHref>
+                      <Tag>Consulter les themes</Tag>
+                    </Link>
+                  </>
+                </Wrapper>
               </Container>
             </Section>
           </>
