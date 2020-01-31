@@ -5,7 +5,7 @@ import { StepRemuneration } from "./steps/Remuneration";
 import { StepIndemnite } from "./steps/Indemnite";
 
 export const initialState = {
-  stepIndex: 4,
+  stepIndex: 0,
   steps: [
     {
       component: StepIntro,

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 import { getIndemnitePrecarite } from "../indemnite";
-import { SectionTitle, Summary, Highlight } from "../../common/stepStyles";
+import { SectionTitle, Highlight } from "../../common/stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import {
   filterSituations,
@@ -55,11 +55,11 @@ function Disclaimer({ situation }) {
   );
 }
 
-function extractRef(refs) {
+function extractRefs(refs = []) {
   return refs.flatMap(({ refUrl, refLabel }) => {
     const urls = refUrl.split(/\n/);
     const labels = refLabel.split(/\n/);
-    return urls.map((url, i) => [url, labels[i]]);
+    return urls.map((url, i) => ({ refUrl: url, ref: labels[i] }));
   });
 }
 
@@ -83,17 +83,17 @@ function StepIndemnite({ form }) {
   let bonusAltName = "La prime de précarité";
   let legalRefs = [];
   let situation;
-
   switch (situations.length) {
     case 1: {
       [situation] = situations;
-      rate = situation.rate;
+      rate = situation.rate || "0%";
       bonusAltName = situation.bonusLabel || bonusAltName;
-      legalRefs = extractRef([situation, situationCdt]);
+      legalRefs = extractRefs([situation, situationCdt]);
       break;
     }
     default: {
-      legalRefs = extractRef([situation]);
+      situation = situationCdt;
+      legalRefs = extractRefs([situationCdt]);
     }
   }
 
@@ -113,37 +113,29 @@ function StepIndemnite({ form }) {
 
   return (
     <>
+      <SectionTitle>Montant</SectionTitle>
       <p>
         {bonusAltName} est estimée à&nbsp;
         <Highlight>{indemnite}&nbsp;€</Highlight>.
-        {situation && situation.disclaimer && (
-          <StyledToast>{situation.disclaimer}</StyledToast>
-        )}
       </p>
-
       <Disclaimer situation={situation} />
-
-      <details>
-        <Summary>Détail du calcul</Summary>
-        <div>
-          <Heading>Éléments saisis :</Heading>
-          {entries.length > 0 && (
-            <List>
-              {entries.map(([label, value], index) => (
-                <Item key={index}>
-                  {label}&nbsp;: {value}
-                </Item>
-              ))}
-            </List>
-          )}
-          <Heading>Calcul :</Heading>
-          <ErrorBoundary>
-            <FormuleWrapper>
-              <MathJax math={"`" + formule + "`"} />
-            </FormuleWrapper>
-          </ErrorBoundary>
-        </div>
-      </details>
+      <SectionTitle>Détails du calcul</SectionTitle>
+      <Heading>Éléments saisis :</Heading>
+      {entries.length > 0 && (
+        <List>
+          {entries.map(([label, value], index) => (
+            <Item key={index}>
+              {label}&nbsp;: {value}
+            </Item>
+          ))}
+        </List>
+      )}
+      <Heading>Calcul :</Heading>
+      <ErrorBoundary>
+        <FormuleWrapper>
+          <MathJax math={"`" + formule + "`"} />
+        </FormuleWrapper>
+      </ErrorBoundary>
       <SectionTitle>Source</SectionTitle>
       {getRef(legalRefs)}
       <p>
@@ -175,10 +167,6 @@ function StepIndemnite({ form }) {
 export { StepIndemnite };
 
 const { spacings, fonts } = theme;
-
-const StyledToast = styled(Toast)`
-  margin: ${spacings.base} 0;
-`;
 
 const Heading = styled.strong`
   font-weight: bold;

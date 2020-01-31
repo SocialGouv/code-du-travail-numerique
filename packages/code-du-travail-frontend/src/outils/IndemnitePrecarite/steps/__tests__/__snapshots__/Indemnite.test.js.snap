@@ -1,41 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: auto;
-  min-height: 48px;
+.c2 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-  background-color: #fff;
-  border-color: #7994d4;
-  border-style: solid;
-  border-width: 2px;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
-  box-shadow: none;
-  -webkit-animation: none;
-  animation: none;
 }
 
-.c3 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem 1.6rem;
-  text-align: left;
+.c2 > *:first-child {
+  margin-top: 0;
 }
 
-.c9 {
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   color: #4d73b8;
@@ -44,123 +27,123 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
   font-family: "Open Sans",sans-serif;
 }
 
-.c0 {
+.c1 {
   color: #f66663;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: pre-line;
 }
 
-.c4 {
-  display: block;
-  margin-bottom: 1.6rem;
-}
-
-.c2 {
-  margin: 1.6rem 0;
-}
-
-.c5 {
+.c3 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c6 {
+.c4 {
   list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c7 {
+.c5 {
   font-size: 1.4rem;
 }
 
-.c8 {
+.c6 {
   margin: 1.6rem 0;
 }
 
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
 @media (max-width:600px) {
-  .c0 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 <div>
+  <h2
+    class="c0"
+  >
+    Montant
+  </h2>
   <p>
     La prime de précarité
      est estimée à 
     <strong
-      class="c0"
+      class="c1"
     >
       2000
        €
     </strong>
     .
-    <div
-      class="c1 c2"
-    >
-      <div
-        class="c3"
-        role="alert"
-      >
-        Une convention collective de branche ou un accord d’entreprise peut prévoit un montant différent qu’il soit plus élevé ou plus faible que celui prévu par le code du travail. Attention, dans le cas où la convention ou l'accord collectif prévoit un taux inférieur à 10% dans la limite de 6 %, il doit y avoir des contreparties offertes au salarié, notamment sous la forme d'un accès privilégié à la formation professionnelle (action de formation, bilan de compétences). 
-Dans tous les cas, le contrat de travail peut prévoir un montant plus favorable pour le salarié. Il faut alors appliquer ce montant.
-      </div>
-    </div>
   </p>
-  <details>
-    <summary
-      class="c4"
+  <div
+    class="c2"
+  >
+    Un accord d’entreprise peut prévoit un montant différent qu’il soit plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu par l’accord d’entreprise, sauf si le contrat de travail prévoit un montant plus favorable pour le salarié.
+  </div>
+  <h2
+    class="c0"
+  >
+    Détails du calcul
+  </h2>
+  <strong
+    class="c3"
+  >
+    Éléments saisis :
+  </strong>
+  <ul
+    class="c4"
+  >
+    <li
+      class="c5"
     >
-      Détail du calcul
-    </summary>
-    <div>
-      <strong
-        class="c5"
-      >
-        Éléments saisis :
-      </strong>
-      <ul
-        class="c6"
-      >
-        <li
-          class="c7"
-        >
-          somme des salaires
-           : 
-          20000
-        </li>
-      </ul>
-      <strong
-        class="c5"
-      >
-        Calcul :
-      </strong>
+      somme des salaires
+       : 
+      20000
+    </li>
+  </ul>
+  <strong
+    class="c3"
+  >
+    Calcul :
+  </strong>
+  <div
+    class="c6"
+  >
+    <div
+      id="react-mathjax-preview"
+    >
       <div
-        class="c8"
+        id="react-mathjax-preview-result"
       >
-        <div
-          id="react-mathjax-preview"
-        >
-          <div
-            id="react-mathjax-preview-result"
-          >
-            \`10/100 * somme(salaires)\`
-          </div>
-        </div>
+        \`10/100 * somme(salaires)\`
       </div>
     </div>
-  </details>
+  </div>
   <h2
-    class="c9"
+    class="c0"
   >
     Source
   </h2>
   <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-8 du code du travail"
+      >
+        Article L1243-8 du code du travail
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-9 du code du travail"
+      >
+        Article L1243-9 du code du travail
+      </a>
+    </li>
     <li>
       <a
         href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
@@ -197,7 +180,24 @@ Dans tous les cas, le contrat de travail peut prévoir un montant plus favorable
 `;
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
-.c6 {
+.c2 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   color: #4d73b8;
@@ -206,102 +206,123 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   font-family: "Open Sans",sans-serif;
 }
 
-.c0 {
+.c1 {
   color: #f66663;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: pre-line;
 }
 
-.c1 {
-  display: block;
-  margin-bottom: 1.6rem;
-}
-
-.c2 {
+.c3 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c3 {
+.c4 {
   list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c4 {
+.c5 {
   font-size: 1.4rem;
 }
 
-.c5 {
+.c6 {
   margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {
-  .c0 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 <div>
+  <h2
+    class="c0"
+  >
+    Montant
+  </h2>
   <p>
     La prime de précarité
      est estimée à 
     <strong
-      class="c0"
+      class="c1"
     >
       300
        €
     </strong>
     .
   </p>
-  <details>
-    <summary
-      class="c1"
+  <div
+    class="c2"
+  >
+    Un accord d’entreprise peut prévoit un montant différent qu’il soit plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu par l’accord d’entreprise, sauf si le contrat de travail prévoit un montant plus favorable pour le salarié.
+  </div>
+  <h2
+    class="c0"
+  >
+    Détails du calcul
+  </h2>
+  <strong
+    class="c3"
+  >
+    Éléments saisis :
+  </strong>
+  <ul
+    class="c4"
+  >
+    <li
+      class="c5"
     >
-      Détail du calcul
-    </summary>
-    <div>
-      <strong
-        class="c2"
-      >
-        Éléments saisis :
-      </strong>
-      <ul
-        class="c3"
-      >
-        <li
-          class="c4"
-        >
-          total des salaires
-           : 
-          3000
-        </li>
-      </ul>
-      <strong
-        class="c2"
-      >
-        Calcul :
-      </strong>
+      total des salaires
+       : 
+      3000
+    </li>
+  </ul>
+  <strong
+    class="c3"
+  >
+    Calcul :
+  </strong>
+  <div
+    class="c6"
+  >
+    <div
+      id="react-mathjax-preview"
+    >
       <div
-        class="c5"
+        id="react-mathjax-preview-result"
       >
-        <div
-          id="react-mathjax-preview"
-        >
-          <div
-            id="react-mathjax-preview-result"
-          >
-            \`10/100 * "totalSalaires"\`
-          </div>
-        </div>
+        \`10/100 * "totalSalaires"\`
       </div>
     </div>
-  </details>
+  </div>
   <h2
-    class="c6"
+    class="c0"
   >
     Source
   </h2>
   <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-8 du code du travail"
+      >
+        Article L1243-8 du code du travail
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-9 du code du travail"
+      >
+        Article L1243-9 du code du travail
+      </a>
+    </li>
     <li>
       <a
         href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"

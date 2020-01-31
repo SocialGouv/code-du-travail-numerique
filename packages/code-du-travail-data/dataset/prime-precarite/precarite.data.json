@@ -86,7 +86,9 @@
     "refUrl": null
   },
   {
-    "criteria": {},
+    "criteria": {
+      "cddType": "Autres"
+    },
     "contractType": "CDD",
     "idcc": 29,
     "hasConventionalProvision": false,
