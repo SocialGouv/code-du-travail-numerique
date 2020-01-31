@@ -14,7 +14,6 @@ const csvColumns = {
   endMessage: 13,
   rate: 14,
   bonusLabel: 16,
-  disclaimer: 17,
   refLabel: 18,
   refUrl: 19
 };

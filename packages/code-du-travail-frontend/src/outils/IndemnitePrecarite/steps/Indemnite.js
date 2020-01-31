@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { theme, Toast } from "@socialgouv/react-ui";
+import { theme, Alert } from "@socialgouv/react-ui";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
@@ -9,9 +9,59 @@ import { SectionTitle, Summary, Highlight } from "../../common/stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import {
   filterSituations,
-  getSituationsFor
+  getSituationsFor,
+  getRef
 } from "../../common/situations.utils";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
+
+function Disclaimer({ situation }) {
+  if (situation.idcc > 0) {
+    if (situation.hasConventionalProvision) {
+      return (
+        <Alert>
+          Une convention collective de branche étendue ou un accord d’entreprise
+          peut prévoit un montant différent qu’il soit plus élevé ou plus faible
+          que celui prévu par le code du travail. Attention, dans le cas où la
+          convention ou l’accord collectif prévoit un taux inférieur à 10% dans
+          la limite de 6 %, il doit y avoir des contreparties offertes au
+          salarié, notamment sous la forme d’un accès privilégié à la formation
+          professionnelle (action de formation, bilan de compétences). Dans tous
+          les cas, le contrat de travail peut prévoir un montant plus favorable
+          pour le salarié. Il faut alors appliquer ce montant.
+        </Alert>
+      );
+    } else {
+      return (
+        <Alert>
+          Un accord d’entreprise peut prévoit un montant différent qu’il soit
+          plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu
+          par l’accord d’entreprise, sauf si le contrat de travail prévoit un
+          montant plus favorable pour le salarié. Attention, dans le cas où
+          l’accord d’entreprise prévoit un taux inférieur à 10% dans la limite
+          de 6 %, il doit y avoir des contreparties offertes au salarié,
+          notamment sous la forme d’un accès privilégié à la formation
+          professionnelle (action de formation, bilan de compétences)
+        </Alert>
+      );
+    }
+  }
+  return (
+    <Alert>
+      Un accord d’entreprise peut prévoit un montant différent qu’il soit plus
+      élevé ou plus faible. Dans ce cas, s’applique le montant prévu par
+      l’accord d’entreprise, sauf si le contrat de travail prévoit un montant
+      plus favorable pour le salarié.
+    </Alert>
+  );
+}
+
+function extractRef(refs) {
+  return refs.flatMap(({ refUrl, refLabel }) => {
+    const urls = refUrl.split(/\n/);
+    const labels = refLabel.split(/\n/);
+    return urls.map((url, i) => [url, labels[i]]);
+  });
+}
 
 function StepIndemnite({ form }) {
   const state = form.getState();
@@ -25,12 +75,13 @@ function StepIndemnite({ form }) {
   } = state.values;
 
   const idcc = ccn ? ccn.convention.num : 0;
+  const [situationCdt] = getSituationsFor(data, { idcc: 0, contractType });
   const initialSituations = getSituationsFor(data, { idcc, contractType });
   const situations = filterSituations(initialSituations, criteria);
 
   let rate = "10%";
   let bonusAltName = "La prime de précarité";
-  let references;
+  let legalRefs = [];
   let situation;
 
   switch (situations.length) {
@@ -38,13 +89,11 @@ function StepIndemnite({ form }) {
       [situation] = situations;
       rate = situation.rate;
       bonusAltName = situation.bonusLabel || bonusAltName;
-      references = getRef(situation);
+      legalRefs = extractRef([situation, situationCdt]);
       break;
     }
     default: {
-      const situations = getSituationsFor(data, { idcc: 0, contractType });
-      [situation] = situations;
-      references = getRef(situation);
+      legalRefs = extractRef([situation]);
     }
   }
 
@@ -72,6 +121,8 @@ function StepIndemnite({ form }) {
         )}
       </p>
 
+      <Disclaimer situation={situation} />
+
       <details>
         <Summary>Détail du calcul</Summary>
         <div>
@@ -93,7 +144,8 @@ function StepIndemnite({ form }) {
           </ErrorBoundary>
         </div>
       </details>
-      {references}
+      <SectionTitle>Source</SectionTitle>
+      {getRef(legalRefs)}
       <p>
         En savoir plus sur la prime de précarité d’un{" "}
         {contractType === CONTRACT_TYPE.CDD ? (
@@ -121,34 +173,6 @@ function StepIndemnite({ form }) {
 }
 
 export { StepIndemnite };
-
-function getRef({ refLabel, refUrl }) {
-  if (!refLabel || !refUrl) {
-    return null;
-  }
-  const urls = refUrl.split(/\n/);
-  const labels = refLabel.split(/\n/);
-  const refs = urls.map((url, i) => [url, labels[i]]);
-  return (
-    <>
-      <SectionTitle>Source</SectionTitle>
-      <ul>
-        {refs.map(([url, label]) => (
-          <li key={url}>
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={`Consultez l’${label.toLowerCase()}`}
-            >
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </>
-  );
-}
 
 const { spacings, fonts } = theme;
 
