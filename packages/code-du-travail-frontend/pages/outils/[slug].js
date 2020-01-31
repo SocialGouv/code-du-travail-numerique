@@ -20,7 +20,7 @@ const toolsBySlug = {
   "heures-recherche-emploi": HeuresRechercheEmploi
 };
 
-function Outils({ description, icon, ogImage, pageUrl, slug, title, data }) {
+function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
   const Tool = toolsBySlug[slug];
   return (
     <Layout>
@@ -33,7 +33,7 @@ function Outils({ description, icon, ogImage, pageUrl, slug, title, data }) {
       <Section>
         <Container>
           <Wrapper variant="main">
-            <Tool icon={icon} title={title} data={data} />
+            <Tool icon={icon} title={title} />
             <Badge />
           </Wrapper>
         </Container>
