@@ -24,7 +24,7 @@ COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/datafiller/themes.data.json ./dataset/datafiller/themes.data.json
 
-COPY ./dataset/suggestions.txt ./dataset/datafiller/themes.data.json
+COPY ./dataset/suggestions.txt ./dataset/suggestions.txt
 
 WORKDIR /app
 ENV SUGGEST_FILE=../dataset/suggestions.txt
