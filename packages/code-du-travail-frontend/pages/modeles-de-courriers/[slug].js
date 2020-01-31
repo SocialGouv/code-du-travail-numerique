@@ -83,9 +83,10 @@ class ModeleCourrier extends React.Component {
               <FloatWrapper>
                 <Button
                   as="a"
-                  variant="primary"
-                  narrow
+                  className="no-after"
                   href={`${API_URL}/docs/${filename}`}
+                  narrow
+                  variant="primary"
                 >
                   <Download />
                   <ScreenReaderOnly>
@@ -111,8 +112,9 @@ class ModeleCourrier extends React.Component {
           <Centered>
             <Button
               as="a"
-              variant="primary"
+              className="no-after"
               href={`${API_URL}/docs/${filename}`}
+              variant="primary"
             >
               Télécharger le modèle ({extension} - {filesizeFormated}Ko) &nbsp;
               <Download />

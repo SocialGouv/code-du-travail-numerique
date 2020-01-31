@@ -8,7 +8,7 @@ const utils = require("../search/utils");
 const getRelatedItemsBody = require("./relatedItems.elastic");
 const { logger } = require("../../utils/logger");
 
-const MAX_RESULTS = 5;
+const MAX_RESULTS = 7;
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
@@ -16,7 +16,6 @@ const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
 
 async function getRelatedItems({ title, settings, slug }) {
-  const size = MAX_RESULTS;
   const sources = [
     SOURCES.TOOLS,
     SOURCES.SHEET_SP,
@@ -38,7 +37,7 @@ async function getRelatedItems({ title, settings, slug }) {
   const semBody = getSemBody({
     query_vector,
     // we +1 the size to remove the document source that should match perfectly for the given vector
-    size: size + 1,
+    size: MAX_RESULTS + 1,
     sources
   });
   // we use relatedItem query _source to have the same prop returned

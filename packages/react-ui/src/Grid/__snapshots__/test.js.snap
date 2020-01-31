@@ -70,12 +70,12 @@ exports[`<Grid /> should render 1`] = `
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
+  margin: 1rem;
+  padding: 0;
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem - 1px);
-  margin: 1rem;
-  padding: 0;
 }
 
 @media (max-width:600px) {
@@ -258,12 +258,12 @@ exports[`<Grid /> should render 5columns 1`] = `
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
+  margin: 1rem;
+  padding: 0;
+  width: calc(100% / 5 - 2 * 1rem - 1px);
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 5 - 2 * 1rem - 1px);
-  margin: 1rem;
-  padding: 0;
 }
 
 @media (max-width:600px) {

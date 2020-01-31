@@ -90,7 +90,6 @@ const StyledWrapper = styled(Wrapper)`
   @media (max-width: ${breakpoints.desktop}) {
     flex-direction: column;
     align-items: stretch;
-    max-width: 60rem;
     margin-right: auto;
     margin-left: auto;
   }

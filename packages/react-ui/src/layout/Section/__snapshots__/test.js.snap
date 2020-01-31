@@ -7,6 +7,12 @@ exports[`<Section /> it renders a dark Section 1`] = `
   color: #3e486e;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -23,6 +29,12 @@ exports[`<Section /> it renders a default Section 1`] = `
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
+  }
 }
 
 <div>
@@ -43,6 +55,12 @@ exports[`<Section /> it renders a light Section 1`] = `
   color: #3e486e;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -59,6 +77,12 @@ exports[`<Section /> it renders a white Section 1`] = `
   padding: 3.2rem 0;
   background-color: #fff;
   color: #3e486e;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
+  }
 }
 
 <div>

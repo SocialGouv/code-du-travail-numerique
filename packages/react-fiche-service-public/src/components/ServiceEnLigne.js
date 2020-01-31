@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Button, theme } from "@socialgouv/react-ui";
+import { theme, Tile } from "@socialgouv/react-ui";
 
 import { getText } from "../utils";
 
@@ -16,52 +16,25 @@ class ServiceEnLigne extends React.PureComponent {
     const title = getText(data.children[0]);
     const source = getText(data.children[1]);
     return (
-      <Wrapper>
-        <Type>{type}</Type>
-        <Button
-          as="a"
-          href={url}
-          rel="noopener noreferrer"
-          target="_blank"
-          className="no-after"
-        >
-          {title}
-        </Button>
-        <Source>{source}</Source>
-      </Wrapper>
+      <StyledTile
+        wide
+        href={url}
+        rel="noopener noreferrer"
+        target="_blank"
+        className="no-after"
+        subtitle={type}
+        title={title}
+      >
+        Source: {source}
+      </StyledTile>
     );
   }
 }
 
 export default ServiceEnLigne;
 
-const { breakpoints, colors, fonts, spacings, box } = theme;
+const { spacings } = theme;
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+const StyledTile = styled(Tile)`
   margin-bottom: ${spacings.base};
-  padding: ${spacings.large};
-  background-color: ${colors.bgTertiary};
-  border-radius: ${box.borderRadius};
-  @media (max-width: ${breakpoints.mobile}) {
-    padding: ${spacings.small} ${spacings.medium};
-  }
-`;
-
-const Type = styled.div`
-  align-self: flex-start;
-  margin-bottom: ${spacings.tiny};
-  color: ${colors.paragraph};
-  font-weight: bold;
-  font-size: ${fonts.sizes.headings.small};
-  @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.default};
-  }
-`;
-
-const Source = styled.small`
-  display: inline-block;
-  margin-top: ${spacings.tiny};
 `;

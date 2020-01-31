@@ -1,27 +1,37 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { ArrowLink, Tile, icons, theme } from "@socialgouv/react-ui";
+import {
+  ArrowLink,
+  Container,
+  FlatList,
+  Grid,
+  Section,
+  Tile,
+  icons,
+  theme
+} from "@socialgouv/react-ui";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 
 import { CallToActionTile } from "./tiles/CallToAction";
 
 export const RelatedItems = ({ items = [] }) => {
-  const tool = items.find(({ source }) => source === SOURCES.TOOLS);
-  const letter = items.find(({ source }) => source === SOURCES.LETTERS);
-  const external = items.find(({ source }) => source === SOURCES.EXTERNALS);
+  const tools = items.filter(({ source }) => source === SOURCES.TOOLS);
+  const letters = items.filter(({ source }) => source === SOURCES.LETTERS);
+  const externals = items.filter(({ source }) => source === SOURCES.EXTERNALS);
   const relatedItems = items.filter(
     item =>
       ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(item.source)
   );
 
   return (
-    <StyledList>
-      {letter && (
-        <StyledListItem>
+    <StyledSection>
+      <Grid singleLined>
+        {letters.map(letter => (
           <Link
-            href={`/${getRouteBySource(letter.source)}/[slug]`}
             as={`/${getRouteBySource(letter.source)}/${letter.slug}`}
+            href={`/${getRouteBySource(letter.source)}/[slug]`}
+            key={letter.slug}
             passHref
           >
             <StyledCallToActionTile
@@ -32,13 +42,12 @@ export const RelatedItems = ({ items = [] }) => {
               subtitle={getLabelBySource(letter.source)}
             />
           </Link>
-        </StyledListItem>
-      )}
-      {tool && (
-        <StyledListItem>
+        ))}
+        {tools.map(tool => (
           <Link
-            href={`/${getRouteBySource(tool.source)}/[slug]`}
             as={`/${getRouteBySource(tool.source)}/${tool.slug}`}
+            href={`/${getRouteBySource(tool.source)}/[slug]`}
+            key={tool.slug}
             passHref
           >
             <StyledCallToActionTile
@@ -51,57 +60,59 @@ export const RelatedItems = ({ items = [] }) => {
               {tool.description}
             </StyledCallToActionTile>
           </Link>
-        </StyledListItem>
-      )}
-      {external && (
-        <StyledListItem>
+        ))}
+        {externals.map(external => (
           <StyledTile
             href={external.url}
-            rel="noopener nofollow"
-            target="_blank"
             icon={icons[external.icon]}
-            title={external.title}
+            key={external.url}
+            rel="noopener nofollow"
             subtitle={external.subtitle}
+            target="_blank"
+            title={external.title}
           >
             {external.description}
           </StyledTile>
-        </StyledListItem>
-      )}
+        ))}
+      </Grid>
       {relatedItems.length > 0 && (
-        <span>Les articles pouvant vous intéresser&nbsp;:</span>
+        <Container>
+          <div>Les articles pouvant vous intéresser&nbsp;:</div>
+          <FlatList>
+            {relatedItems.slice(0, 3).map(({ slug, source, title }) => (
+              <StyledListItem key={slug}>
+                <Link
+                  href={`/${getRouteBySource(source)}/[slug]`}
+                  as={`/${getRouteBySource(source)}/${slug}`}
+                  passHref
+                >
+                  <ArrowLink arrowPosition="left">{title}</ArrowLink>
+                </Link>
+              </StyledListItem>
+            ))}
+          </FlatList>
+        </Container>
       )}
-      {relatedItems.slice(0, 3).map(({ slug, source, title }) => (
-        <StyledListItem key={slug}>
-          <Link
-            href={`/${getRouteBySource(source)}/[slug]`}
-            as={`/${getRouteBySource(source)}/${slug}`}
-            passHref
-          >
-            <ArrowLink arrowPosition="left">{title}</ArrowLink>
-          </Link>
-        </StyledListItem>
-      ))}
-    </StyledList>
+    </StyledSection>
   );
 };
 
 const { breakpoints, spacings } = theme;
 
-const StyledList = styled.ul`
+const StyledSection = styled(Section)`
   position: sticky;
   top: 12rem;
-  width: 30%;
-  margin: 0;
-  padding: 0 ${spacings.base} 0 ${spacings.larger};
+  width: calc(30% - ${spacings.larger});
+  margin-left: ${spacings.larger};
+  @media (min-width: ${breakpoints.tablet}) {
+    padding-top: 0;
+  }
   @media (max-width: ${breakpoints.desktop}) {
-    padding-left: ${spacings.base};
+    width: 30%;
+    margin: 0;
   }
   @media (max-width: ${breakpoints.tablet}) {
-    display: none;
-  }
-  list-style-type: none;
-  & > *:first-child {
-    margin-top: 0;
+    width: 100%;
   }
 `;
 
