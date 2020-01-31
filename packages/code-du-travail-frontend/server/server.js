@@ -3,7 +3,12 @@ const next = require("next");
 const Koa = require("koa");
 const Router = require("koa-router");
 const helmet = require("koa-helmet");
-var bodyParser = require("koa-bodyparser");
+const bodyParser = require("koa-bodyparser");
+const Sentry = require("@sentry/node");
+const { initializeSentry } = require("../src/sentry");
+
+initializeSentry();
+
 /**
  * this env variable is use to target developpement / staging deployement
  * in order to block indexing bot using a x-robot-header and an appropriate robots.txt
@@ -74,7 +79,6 @@ nextApp.prepare().then(() => {
       } else {
         console.log("CSP Violation: No data received!");
       }
-
       ctx.status = 204;
     });
   }
@@ -114,9 +118,16 @@ nextApp.prepare().then(() => {
   });
 
   // centralize error logging
-  server.on("error", ({ code, message }) => {
-    console.error(`${code} - ${message}`);
+  server.on("error", (err, ctx) => {
+    Sentry.withScope(function(scope) {
+      scope.setTag(`koa`, true);
+      scope.addEventProcessor(function(event) {
+        return Sentry.Handlers.parseRequest(event, ctx.request);
+      });
+      Sentry.captureException(err);
+    });
   });
+
   server.use(router.routes());
   server.listen(PORT, () => {
     console.log(`
