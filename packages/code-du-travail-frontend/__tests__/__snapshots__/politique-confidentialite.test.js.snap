@@ -1331,7 +1331,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             Pour l'outil Matomo, vous pouvez décider de ne jamais être suivi, y compris anonymement :
           </p>
           <iframe
-            src="https://matomo.fabrique.social.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=&fontSize=&fontFamily="
+            src="https://matomo.fabrique.social.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=2f3b6c&fontSize=16px&fontFamily=sans-serif"
             style="border: 0px; width: 100%;"
             title="matomo optout"
           />
