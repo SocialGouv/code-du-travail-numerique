@@ -5,10 +5,10 @@ import styled from "styled-components";
 import { withRouter } from "next/router";
 import {
   Alert,
+  Button,
   Container,
   PageTitle,
   Section,
-  Tag,
   Heading,
   theme,
   Wrapper
@@ -75,7 +75,7 @@ class SearchPage extends React.Component {
             </Section>
             <Section>
               <Container>
-                <Wrapper variant="light">
+                <StyledWrapper variant="light">
                   <Heading
                     shift={theme.spacings.xmedium}
                     variant="primary"
@@ -84,19 +84,21 @@ class SearchPage extends React.Component {
                     Vous n&apos;avez pas trouvé ce que vous cherchiez ? Essayez
                     &hellip;
                   </Heading>
-                  <>
+                  <StyledContent>
+                    <Link href="/themes" passHref>
+                      <StyledLink variant="flat" as={Button}>
+                        Consulter les thèmes
+                      </StyledLink>
+                    </Link>
                     <ConventionModal key="convention-modal">
                       {openModal => (
-                        <Tag as="a" variant="secondary" onClick={openModal}>
+                        <Button variant="flat" onClick={openModal}>
                           Chercher une convention collective
-                        </Tag>
+                        </Button>
                       )}
                     </ConventionModal>
-                    <Link href="/themes" passHref>
-                      <Tag as="a">Consulter les thèmes</Tag>
-                    </Link>
-                  </>
-                </Wrapper>
+                  </StyledContent>
+                </StyledWrapper>
               </Container>
             </Section>
           </>
@@ -107,8 +109,25 @@ class SearchPage extends React.Component {
 }
 export default withRouter(SearchPage);
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const SearchBarWrapper = styled.div`
   margin-bottom: ${spacings.large} !important;
+`;
+
+const StyledWrapper = styled(Wrapper)`
+  padding-top: ${spacings.large};
+  padding-bottom: ${spacings.large};
+`;
+
+const StyledContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const StyledLink = styled.a`
+  margin-right: ${spacings.medium};
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-bottom: ${spacings.medium};
+  }
 `;

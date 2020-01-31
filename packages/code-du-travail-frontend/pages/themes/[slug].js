@@ -2,7 +2,13 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import getConfig from "next/config";
-import { Container, PageTitle, Section, Tag } from "@socialgouv/react-ui";
+import {
+  Button,
+  Container,
+  PageTitle,
+  Section,
+  theme
+} from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
 
 import { SearchResults } from "../../src/search/SearchResults";
@@ -54,9 +60,9 @@ class Theme extends React.Component {
                     as={`/themes/${slug}`}
                     passHref
                   >
-                    <Tag as="a" shadow>
+                    <StyledLink variant="flat" as={Button}>
                       {title}
-                    </Tag>
+                    </StyledLink>
                   </Link>
                 ))}
               </StyledContainer>
@@ -76,6 +82,12 @@ class Theme extends React.Component {
 
 export default Theme;
 
+const { spacings } = theme;
+
 const StyledContainer = styled(Container)`
   text-align: center;
+`;
+
+const StyledLink = styled.a`
+  margin: ${spacings.small};
 `;
