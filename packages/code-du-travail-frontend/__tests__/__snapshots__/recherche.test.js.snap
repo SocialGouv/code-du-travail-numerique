@@ -20,22 +20,6 @@ exports[`<Recherche /> should render 1`] = `
   color: #3e486e;
 }
 
-.c24 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c24 > *:first-child {
-  margin-top: 0;
-}
-
-.c24 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -92,6 +76,69 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 .c19[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c28 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c28:link,
+.c28:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c28:not([disabled]):hover,
+.c28:not([disabled]):active,
+.c28:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #fff;
+  border-color: #dee5ef;
+}
+
+.c28[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -188,48 +235,6 @@ exports[`<Recherche /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c28 {
-  display: inline-block;
-  width: auto;
-  color: #4d73b8;
-  font-weight: 600;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-color: #7994d4;
-  border-style: solid;
-  border-radius: 0.6rem;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-.c28 + .c27 {
-  margin-left: 1.6rem;
-}
-
-.c28:hover,
-.c28:active,
-.c28:focus {
-  color: #4d73b8;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.c29 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem 1.6rem;
-  text-align: left;
-}
-
 .c25 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
@@ -237,7 +242,7 @@ exports[`<Recherche /> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -249,7 +254,7 @@ exports[`<Recherche /> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c12 {
@@ -641,6 +646,38 @@ exports[`<Recherche /> should render 1`] = `
   margin-bottom: 3.2rem !important;
 }
 
+.c24 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+
+.c24 > *:first-child {
+  margin-top: 0;
+}
+
+.c24 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c29 {
+  margin-right: 2rem;
+}
+
 @media (max-width:600px) {
   .c11 {
     padding: 0 1rem;
@@ -668,19 +705,6 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c24 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c24 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
   .c19 {
     font-size: 1.4rem;
   }
@@ -688,29 +712,31 @@ exports[`<Recherche /> should render 1`] = `
 
 @media (max-width:600px) {
   .c19 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c36 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c36 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
   .c28 {
-    width: 100%;
+    font-size: 1.4rem;
   }
+}
 
-  .c28 + .c27 {
-    margin-left: 0;
+@media (max-width:600px) {
+  .c28 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
+    padding: 0 3rem;
   }
 }
 
@@ -975,6 +1001,25 @@ exports[`<Recherche /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c24 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c24 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
+    margin-bottom: 2rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -1221,25 +1266,21 @@ exports[`<Recherche /> should render 1`] = `
             />
             Vous n'avez pas trouvé ce que vous cherchiez ? Essayez …
           </h3>
-          <a
-            class="c27 c28"
+          <div
+            class="c27"
           >
-            <div
-              class="c29"
-            >
-              Chercher une convention collective
-            </div>
-          </a>
-          <a
-            class="c27 c28"
-            href="/themes"
-          >
-            <div
-              class="c29"
+            <button
+              class="c28 c29"
+              href="/themes"
             >
               Consulter les thèmes
-            </div>
-          </a>
+            </button>
+            <button
+              class="c28"
+            >
+              Chercher une convention collective
+            </button>
+          </div>
         </div>
       </div>
     </div>

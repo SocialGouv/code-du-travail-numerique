@@ -252,7 +252,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -264,7 +264,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c36 {

@@ -197,7 +197,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c54 {
@@ -207,7 +207,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c38 {

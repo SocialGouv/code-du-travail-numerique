@@ -96,7 +96,7 @@ exports[`<Feedback/> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -388,7 +388,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -597,7 +597,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }

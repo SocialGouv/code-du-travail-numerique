@@ -8,7 +8,7 @@ exports[`<Heading /> renders a H3 heading  1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 @media (max-width:600px) {
@@ -47,7 +47,7 @@ exports[`<Heading /> renders a stripped shifted H4 heading  1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2rem;
   padding-left: 2rem;
 }
