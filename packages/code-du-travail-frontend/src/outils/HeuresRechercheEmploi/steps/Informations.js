@@ -1,5 +1,5 @@
 import React from "react";
-import data from "@cdt/data...simulateurs/preavis-demission.data.json";
+import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
 import { SectionTitle } from "../../common/stepStyles";
@@ -41,7 +41,7 @@ function StepInformations({ form }) {
 
   return (
     <>
-      <SectionTitle>Informations sur le statut du salarié</SectionTitle>
+      <SectionTitle>Statut du salarié</SectionTitle>
       {pastQuestions.map(([key, answers]) => (
         <SelectQuestion
           key={key}

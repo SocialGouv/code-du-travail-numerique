@@ -52,7 +52,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 .c7 {

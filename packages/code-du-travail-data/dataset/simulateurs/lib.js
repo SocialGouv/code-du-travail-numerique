@@ -1,9 +1,5 @@
-const { promisify } = require("util");
 const GoogleSpreadsheets = require("google-spreadsheets");
-
-const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
-const SPREADSHEET_QUESTIONS_TAB = 1;
-const SPREADSHEET_DATA_TAB = 2;
+const { promisify } = require("util");
 
 const getCells = promisify(GoogleSpreadsheets.cells);
 
@@ -11,7 +7,8 @@ const csvColumns = {
   type: 1,
   idcc: 2,
   answer: 24,
-  duration: 26,
+  answer2: 25,
+  answer3: 26,
   ref: 27,
   refUrl: 28
 };
@@ -19,7 +16,7 @@ const csvColumns = {
 const criteriaIndex = [
   4, // aéroport paris
   5, // agents payés a l'heure
-  6, // catégorie
+  6, // catégorie socio-professionnelle
   7, // personnel de conduite
   8, // motif de rupture
   9, // durée du travail
@@ -38,54 +35,51 @@ const criteriaIndex = [
   22 // age
 ];
 
-function getHeaders(row) {
+export async function getQuestions({ spreadsheetKey, worksheet }) {
+  const cells = await getDataFromSpreadsheet({ spreadsheetKey, worksheet });
+  return cells.map(extractQuestions).filter(Boolean);
+}
+
+export async function getSituations({ spreadsheetKey, worksheet }) {
+  const cells = await getDataFromSpreadsheet({ spreadsheetKey, worksheet });
+  const [headerRows, ...valueRows] = Object.values(cells);
+
+  const headers = getRowHeaders(headerRows);
+  const rowTransformerWithHeaders = row => transformRow(headers, row);
+  return Object.values(valueRows)
+    .map(rowTransformerWithHeaders)
+    .filter(Boolean);
+}
+
+async function getDataFromSpreadsheet({ spreadsheetKey, worksheet }) {
+  const { cells } = await getCells({
+    key: spreadsheetKey,
+    worksheet: worksheet
+  });
+
+  return Object.values(cells);
+}
+
+function getRowHeaders(row) {
   const headers = {};
   for (const [col, item] of Object.entries(row)) {
     headers[col] = item.value.trim().toLowerCase();
   }
   return headers;
 }
-async function getQuestions() {
-  const { cells } = await getCells({
-    key: SPREADSHEET_KEY,
-    worksheet: SPREADSHEET_QUESTIONS_TAB
-  });
 
-  return Object.values(cells)
-    .slice(1)
-    .map(extractQuestions)
-    .filter(Boolean);
-}
 function extractQuestions(row) {
   const rowMapping = { name: 1, question: 2 };
   const data = {};
   for (const [key, index] of Object.entries(rowMapping)) {
-    data[key] = (row[index] && row[index].value) || null;
+    data[key.trim()] = (row[index] && row[index].value) || null;
   }
   return data;
-}
-async function getData() {
-  const { cells } = await getCells({
-    key: SPREADSHEET_KEY,
-    worksheet: SPREADSHEET_DATA_TAB
-  });
-
-  const [headersRow] = Object.values(cells).slice(0, 1);
-  const headers = getHeaders(headersRow);
-  const createRowWithHeaders = headers => row => transformRow(headers, row);
-  const rowTransformer = createRowWithHeaders(headers);
-  return Object.values(cells)
-    .slice(1)
-    .map(rowTransformer)
-    .filter(Boolean);
 }
 
 function transformRow(headers, row) {
   const data = { criteria: {} };
-  // we are only intereeted in type: préavis de démission
-  if (row[csvColumns.type].value !== "préavis de démission") {
-    return null;
-  }
+
   for (const [key, index] of Object.entries(csvColumns)) {
     data[key] = (row[index] && row[index].value) || null;
   }
@@ -100,16 +94,4 @@ function transformRow(headers, row) {
   }
 
   return data;
-}
-
-async function main() {
-  const situations = await getData();
-  const questions = await getQuestions();
-  console.log(JSON.stringify({ questions, situations }, 0, 2));
-}
-
-if (module === require.main) {
-  main().catch(error => {
-    console.error(error);
-  });
 }

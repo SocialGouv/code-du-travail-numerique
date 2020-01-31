@@ -10,13 +10,14 @@ import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciem
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
-
+import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
 const toolsBySlug = {
   "indemnite-licenciement": CalculateurIndemnite,
   "preavis-licenciement": DureePreavisLicenciement,
   "simulateur-embauche": SimulateurEmbauche,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
-  "preavis-demission": DureePreavisDemission
+  "preavis-demission": DureePreavisDemission,
+  "heures-recherche-emploi": HeuresRechercheEmploi
 };
 
 function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
@@ -46,6 +47,7 @@ export default Outils;
 Outils.getInitialProps = async ({ query }) => {
   const { slug } = query;
   const { description, icon, title } = tools.find(tool => tool.slug === slug);
+
   return {
     description,
     icon,

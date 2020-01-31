@@ -1,10 +1,9 @@
 import { StepIntro } from "./steps/Introduction";
-import { StepInfoCCn } from "./steps/InfosCCn";
+import { StepInfoCCnOptionnal } from "../common/InfosCCn";
 import { StepResult } from "./steps/Result";
 import { StepInformations } from "./steps/Informations";
-import { StepStatus } from "./steps/Status";
 import { isNotYetProcessed } from "../common/situations.utils";
-import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
 export const initialState = {
   stepIndex: 0,
@@ -15,23 +14,20 @@ export const initialState = {
       label: "Introduction"
     },
     {
-      component: StepStatus,
-      name: "situation",
-      label: "Situation du salarié"
-    },
-    {
-      component: StepInfoCCn,
+      component: StepInfoCCnOptionnal,
       name: "info_cc",
       label: "Convention collective"
     },
     {
       component: StepInformations,
       name: "infos",
-      label: "Informations complémentaires",
+      label: "Informations",
       skip: values =>
         !values.ccn ||
         (values.ccn &&
-          isNotYetProcessed(data.situations, values.ccn.convention.num))
+          isNotYetProcessed(data.situations, values.ccn.convention.num)) ||
+        data.situations.filter(({ idcc }) => idcc === values.ccn.convention.num)
+          .length === 1
     },
     {
       component: StepResult,

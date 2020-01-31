@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { Toast } from "@socialgouv/react-ui";
-import data from "@cdt/data...preavis-licenciement/data.json";
+import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 
@@ -141,7 +142,7 @@ function StepResult({ form }) {
   const [situationCDT] = possibleCDTSituations;
   const {
     criteria: { ancienneté: seniorityCDT, ...situationCDTCriteria },
-    duration: durationCDT
+    answer3: durationCDT
   } = situationCDT;
 
   // Situation CC
@@ -152,7 +153,7 @@ function StepResult({ form }) {
   const [situationCC] = possibleCCSituations;
   const {
     criteria: { ancienneté: seniorityCC, ...situationCCCriteria },
-    duration: durationCC
+    answer3: durationCC
   } = situationCC || { criteria: {} };
 
   const refs = [

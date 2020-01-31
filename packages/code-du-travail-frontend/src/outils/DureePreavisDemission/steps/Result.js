@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import { Toast } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
-import data from "@cdt/data...preavis-demission/data.json";
+import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 
@@ -85,7 +85,7 @@ function StepResult({ form }) {
       <p>
         <Highlight>{situation.answer}</Highlight>.
       </p>
-      {parseInt(situation.duration, 10) === 0 && (
+      {parseInt(situation.answer3, 10) === 0 && (
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.

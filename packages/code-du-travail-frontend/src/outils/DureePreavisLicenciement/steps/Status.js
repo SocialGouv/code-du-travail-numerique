@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import data from "@cdt/data...preavis-licenciement/data.json";
+import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+
 import { Toast } from "@socialgouv/react-ui";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { SelectQuestion } from "../../common/SelectQuestion";

@@ -3,7 +3,7 @@ import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepResult } from "./steps/Result";
 import { StepInformations } from "./steps/Informations";
 import { isNotYetProcessed } from "../common/situations.utils";
-import data from "@cdt/data...preavis-demission/data.json";
+import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
 export const initialState = {
   stepIndex: 0,

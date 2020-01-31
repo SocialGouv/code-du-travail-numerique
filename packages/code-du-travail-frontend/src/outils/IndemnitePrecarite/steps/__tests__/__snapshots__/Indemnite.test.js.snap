@@ -5,7 +5,7 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 .c1 {
@@ -128,7 +128,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   color: #3e486e;
   font-weight: 700;
   font-size: 1.8rem;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 .c1 {
