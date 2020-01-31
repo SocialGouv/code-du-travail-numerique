@@ -5,9 +5,6 @@ const Router = require("koa-router");
 const helmet = require("koa-helmet");
 const bodyParser = require("koa-bodyparser");
 const Sentry = require("@sentry/node");
-const { initializeSentry } = require("../src/sentry");
-
-initializeSentry();
 
 /**
  * this env variable is use to target developpement / staging deployement
@@ -18,6 +15,20 @@ const IS_PRODUCTION_DEPLOYMENT =
 const PORT = parseInt(process.env.FRONTEND_PORT, 10) || 3000;
 const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
+const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
+const PACKAGE_VERSION = process.env.PACKAGE_VERSION || "";
+
+export function getSentryCspUrl() {
+  // NOTE(douglasduteil): is pre production if we can find the version in the url
+  // All "http://<version>-code-travail.dev.frabrique.social.gouv.fr" are preprod
+  // "http://code.travail.gouv.fr" is prod
+
+  const isPreProduction =
+    PACKAGE_VERSION && /^v\d+-\d+-\d+/.test(FRONTEND_HOST);
+  const environment = isPreProduction ? "preproduction" : "production";
+
+  return `https://sentry.io/api/-1/security/?sentry_key=${SENTRY_PUBLIC_DSN}&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
+}
 
 const dev = process.env.NODE_ENV !== "production";
 
@@ -37,7 +48,9 @@ const nextHandler = nextApp.getRequestHandler();
 nextApp.prepare().then(() => {
   const server = new Koa();
   const router = new Router();
+
   if (dev) {
+    // handle local csp reportUri endpoint
     server.use(bodyParser());
   }
   server.use(
@@ -66,7 +79,8 @@ nextApp.prepare().then(() => {
             "https://mon-entreprise.fr",
             "https://ad.doubleclick.net"
           ],
-          ...(dev && { reportUri: "/report-violation" })
+          ...(dev && { reportUri: "/report-violation" }),
+          ...(!dev && SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() })
         },
         reportOnly: () => dev
       }
