@@ -98,7 +98,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c5 {
@@ -350,7 +350,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 @media (max-width:600px) {
@@ -557,7 +557,7 @@ exports[`<Tabulator /> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 @media (max-width:600px) {

@@ -139,7 +139,7 @@ exports[`<Answer /> should renders 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -740,7 +740,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -1531,7 +1531,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -2233,7 +2233,7 @@ exports[`<Answer /> should renders related content 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -2245,7 +2245,7 @@ exports[`<Answer /> should renders related content 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c31 {
@@ -3352,7 +3352,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -3960,7 +3960,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -4554,7 +4554,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }
@@ -5139,7 +5139,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
 }

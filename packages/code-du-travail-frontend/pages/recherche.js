@@ -9,7 +9,9 @@ import {
   Container,
   PageTitle,
   Section,
-  theme
+  Heading,
+  theme,
+  Wrapper
 } from "@socialgouv/react-ui";
 
 import { ConventionModal } from "../src/conventions/Search/Modal";
@@ -73,22 +75,30 @@ class SearchPage extends React.Component {
             </Section>
             <Section>
               <Container>
-                <p>
-                  <ConventionModal key="convention-modal">
-                    {openModal => (
-                      <Button variant="secondary" onClick={openModal}>
-                        Chercher une convention collective
-                      </Button>
-                    )}
-                  </ConventionModal>
-                </p>
-                <p>
-                  <Link href="/themes" passHref>
-                    <Button as="a" variant="secondary">
-                      Consulter les themes
-                    </Button>
-                  </Link>
-                </p>
+                <StyledWrapper variant="light">
+                  <Heading
+                    shift={theme.spacings.xmedium}
+                    variant="primary"
+                    stripped
+                  >
+                    Vous n&apos;avez pas trouvé ce que vous cherchiez ? Essayez
+                    &hellip;
+                  </Heading>
+                  <StyledContent>
+                    <Link href="/themes" passHref>
+                      <StyledLink variant="flat" as={Button}>
+                        Consulter les thèmes
+                      </StyledLink>
+                    </Link>
+                    <ConventionModal key="convention-modal">
+                      {openModal => (
+                        <Button variant="flat" onClick={openModal}>
+                          Chercher une convention collective
+                        </Button>
+                      )}
+                    </ConventionModal>
+                  </StyledContent>
+                </StyledWrapper>
               </Container>
             </Section>
           </>
@@ -99,8 +109,25 @@ class SearchPage extends React.Component {
 }
 export default withRouter(SearchPage);
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const SearchBarWrapper = styled.div`
   margin-bottom: ${spacings.large} !important;
+`;
+
+const StyledWrapper = styled(Wrapper)`
+  padding-top: ${spacings.large};
+  padding-bottom: ${spacings.large};
+`;
+
+const StyledContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const StyledLink = styled.a`
+  margin-right: ${spacings.medium};
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-bottom: ${spacings.medium};
+  }
 `;

@@ -39,7 +39,8 @@ const StyledHeading = styled.h3`
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
   font-family: "Open Sans", sans-serif;
-  line-height: ${fonts.lineHeightTitle};
+  line-height: ${stripped =>
+    stripped ? fonts.lineHeight : fonts.lineHeightTitle};
   ${({ stripped, shift }) => {
     if (stripped) {
       return css`
