@@ -246,6 +246,12 @@ exports[`<SearchHero /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c15 {
     font-size: 1.4rem;
   }

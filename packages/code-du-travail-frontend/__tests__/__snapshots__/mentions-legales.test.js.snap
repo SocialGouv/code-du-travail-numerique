@@ -693,6 +693,12 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c19 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c24 {
     padding: 1.6rem 1rem;
   }

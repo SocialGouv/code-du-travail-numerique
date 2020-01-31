@@ -1042,6 +1042,12 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c48 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c30 {
     padding: 1.6rem 1rem;
   }
@@ -1206,7 +1212,6 @@ exports[`<FicheMT /> should render 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    max-width: 60rem;
     margin-right: auto;
     margin-left: auto;
   }

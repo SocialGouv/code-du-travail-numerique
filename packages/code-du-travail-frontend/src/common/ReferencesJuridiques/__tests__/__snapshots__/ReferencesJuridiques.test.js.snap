@@ -29,7 +29,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c9:not(:focus):not(:active) {
+.c10:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -41,7 +41,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c6 {
+.c7 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -55,25 +55,25 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c6,
-[aria-selected="true"] .c6 {
+[aria-expanded="true"] .c7,
+[aria-selected="true"] .c7 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c4 {
+.c5 {
   position: relative;
   z-index: 1;
 }
 
-.c8 {
+.c9 {
   padding: 1.6rem;
   -webkit-animation: dpvxPj 250ms ease-in;
   animation: dpvxPj 250ms ease-in;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,14 +90,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   cursor: pointer;
 }
 
-.c5:hover,
-.c5:focus,
-.c5:focus-within,
-.c5[aria-expanded="true"] {
+.c6:hover,
+.c6:focus,
+.c6:focus-within,
+.c6[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c7 {
+.c8 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -106,15 +106,15 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c10 > *:first-child {
+.c11 > *:first-child {
   margin-top: 0;
 }
 
-.c10 > *:last-child {
+.c11 > *:last-child {
   margin-bottom: 0;
 }
 
-.c13 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -127,14 +127,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   text-decoration: none;
 }
 
-.c16 {
+.c17 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c15 {
+.c16 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -148,13 +148,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c12:hover .c15 {
+.c13:hover .c16 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c11 {
+.c12 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -170,8 +170,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c14 {
+.c15 {
   padding: 1.6rem 0;
+}
+
+.c4 {
+  color: #4d73b8;
 }
 
 @media (max-width:600px) {
@@ -184,6 +188,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   .c1 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 2.4rem 0;
   }
 }
 
@@ -201,13 +211,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     font-size: 1.6rem;
   }
 }
@@ -229,7 +239,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         class="c2"
       >
         <h3
-          class="c3"
+          class="c3 c4"
         >
           Références juridiques
         </h3>
@@ -239,7 +249,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         >
           <div>
             <div
-              class="c4"
+              class="c5"
               data-accordion-component="AccordionItem"
               index="0"
             >
@@ -253,14 +263,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   aria-controls="accordion__panel-0"
                   aria-disabled="false"
                   aria-expanded="false"
-                  class="c5"
+                  class="c6"
                   data-accordion-component="AccordionItemButton"
                   id="accordion__heading-0"
                   role="button"
                   tabindex="0"
                 >
                   <svg
-                    class="c6"
+                    class="c7"
                     fill="none"
                     height="24"
                     stroke="currentColor"
@@ -276,7 +286,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     />
                   </svg>
                   <div
-                    class="c7"
+                    class="c8"
                   >
                     Voir les références juridiques concernées
                   </div>
@@ -285,31 +295,31 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               <div
                 aria-hidden="true"
                 aria-labelledby="accordion__heading-0"
-                class="c8"
+                class="c9"
                 data-accordion-component="AccordionItemPanel"
                 hidden=""
                 id="accordion__panel-0"
               >
                 <div
-                  class="c9"
+                  class="c10"
                 >
                   <h3>
                     Voir les références juridiques concernées
                   </h3>
                 </div>
                 <div
-                  class="c10"
+                  class="c11"
                 >
                   <ul
-                    class="c11"
+                    class="c12"
                   >
                     <li>
                       <a
-                        class="c12 c13 c14"
+                        class="c13 c14 c15"
                         href="/code-du-travail/l1244-3"
                       >
                         <svg
-                          class="c15"
+                          class="c16"
                           fill="none"
                           viewBox="0 0 28 15"
                         >
@@ -319,7 +329,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                           />
                         </svg>
                         <span
-                          class="c16"
+                          class="c17"
                         >
                           Article L1244-3 du code du travail
                         </span>
@@ -327,11 +337,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     </li>
                     <li>
                       <a
-                        class="c12 c13 c14"
+                        class="c13 c14 c15"
                         href="/code-du-travail/r1244-4"
                       >
                         <svg
-                          class="c15"
+                          class="c16"
                           fill="none"
                           viewBox="0 0 28 15"
                         >
@@ -341,7 +351,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                           />
                         </svg>
                         <span
-                          class="c16"
+                          class="c17"
                         >
                           Article L1244-4 du code du travail
                         </span>
@@ -349,12 +359,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     </li>
                     <li>
                       <a
-                        class="c12 c13 c14"
+                        class="c13 c14 c15"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         <svg
-                          class="c15"
+                          class="c16"
                           fill="none"
                           viewBox="0 0 28 15"
                         >
@@ -364,7 +374,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                           />
                         </svg>
                         <span
-                          class="c16"
+                          class="c17"
                         >
                           Autre: Article L3121-44 du JO
                         </span>
@@ -372,12 +382,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     </li>
                     <li>
                       <a
-                        class="c12 c13 c14"
+                        class="c13 c14 c15"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         <svg
-                          class="c15"
+                          class="c16"
                           fill="none"
                           viewBox="0 0 28 15"
                         >
@@ -387,7 +397,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                           />
                         </svg>
                         <span
-                          class="c16"
+                          class="c17"
                         >
                           Autre: Article xxx du JPO
                         </span>
@@ -395,11 +405,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     </li>
                     <li>
                       <a
-                        class="c12 c13 c14"
+                        class="c13 c14 c15"
                         href="/convention-collective/ma-convention"
                       >
                         <svg
-                          class="c15"
+                          class="c16"
                           fill="none"
                           viewBox="0 0 28 15"
                         >
@@ -409,7 +419,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                           />
                         </svg>
                         <span
-                          class="c16"
+                          class="c17"
                         >
                           Convention collective: Article yyy de la CC
                         </span>

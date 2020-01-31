@@ -126,10 +126,10 @@ describe("<Answer />", () => {
     ).toBe(3);
     expect(
       container.querySelectorAll(`[href*="${SLUG_LETTER_BASE}"]`).length
-    ).toBe(1);
+    ).toBe(2);
     expect(
       container.querySelectorAll(`[href*="${SLUG_TOOL_BASE}"]`).length
-    ).toBe(1);
+    ).toBe(2);
     expect(container).toMatchSnapshot();
   });
 

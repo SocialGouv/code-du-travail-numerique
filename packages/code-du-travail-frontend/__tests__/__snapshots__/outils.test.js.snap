@@ -302,12 +302,12 @@ exports[`<Outils /> should render 1`] = `
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
+  margin: 1rem;
+  padding: 0;
+  width: calc(100% / 4 - 2 * 1rem - 1px);
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
-  width: calc(100% / 4 - 2 * 1rem - 1px);
-  margin: 1rem;
-  padding: 0;
 }
 
 .c25 {
@@ -893,6 +893,12 @@ exports[`<Outils /> should render 1`] = `
   .c22 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c21 {
+    padding: 2.4rem 0;
   }
 }
 

@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Article /> should render 1`] = `
-.c20 {
+.c24 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c0 {
+  padding: 3.2rem 0;
+  background-color: transparent;
+  color: #3e486e;
+}
+
+.c28 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -14,14 +26,14 @@ exports[`<Article /> should render 1`] = `
   text-decoration: none;
 }
 
-.c22 {
+.c30 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c21 {
+.c29 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -35,13 +47,13 @@ exports[`<Article /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c19:hover .c21 {
+.c27:hover .c29 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c4 {
+.c9 {
   position: absolute;
   top: 0;
   right: 0;
@@ -52,7 +64,7 @@ exports[`<Article /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c4:before {
+.c9:before {
   position: absolute;
   display: block;
   width: 0;
@@ -63,7 +75,7 @@ exports[`<Article /> should render 1`] = `
   content: "";
 }
 
-.c5 {
+.c10 {
   position: absolute;
   top: 0;
   right: 0;
@@ -72,7 +84,7 @@ exports[`<Article /> should render 1`] = `
   height: 3rem;
 }
 
-.c16 {
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -113,14 +125,14 @@ exports[`<Article /> should render 1`] = `
   overflow: visible;
 }
 
-.c16:focus,
-.c16:hover,
-.c16:active {
+.c21:focus,
+.c21:hover,
+.c21:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c17 {
+.c22 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -129,13 +141,113 @@ exports[`<Article /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c15:hover .c17 {
+.c20:hover .c22 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c10 {
+.c2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c2:before,
+.c2:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c2:before {
+  left: -2rem;
+}
+
+.c2:after {
+  right: -2rem;
+}
+
+.c4 {
+  overflow-x: auto;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-right: calc(-1 * 1rem);
+  margin-bottom: 4rem;
+  margin-left: calc(-1 * 1rem);
+  padding: 0;
+  list-style-type: none;
+  margin-right: 0;
+  margin-left: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin: 1rem;
+  padding: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.c6:first-of-type {
+  margin-left: 2rem;
+}
+
+.c6:last-of-type:after {
+  display: block;
+  width: 2rem;
+  height: 100%;
+  background-color: transparent;
+  content: "";
+}
+
+.c25 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c15 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -145,7 +257,7 @@ exports[`<Article /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c9 {
+.c14 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -156,7 +268,7 @@ exports[`<Article /> should render 1`] = `
   text-transform: uppercase;
 }
 
-.c2 {
+.c7 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -197,9 +309,9 @@ exports[`<Article /> should render 1`] = `
   appearance: none;
 }
 
-.c2:hover,
-.c2:active,
-.c2:focus {
+.c7:hover,
+.c7:active,
+.c7:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -207,7 +319,7 @@ exports[`<Article /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c7 {
+.c12 {
   display: block;
   width: 7.2rem;
   height: 7.2rem;
@@ -217,28 +329,28 @@ exports[`<Article /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c6 {
+.c11 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c8 {
+.c13 {
   padding-right: 1rem;
 }
 
-.c11 {
+.c16 {
   margin: 0;
 }
 
-.c12 {
+.c17 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-.c13 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -253,387 +365,569 @@ exports[`<Article /> should render 1`] = `
   height: 100%;
 }
 
-.c14 {
+.c19 {
   margin-top: 1rem;
 }
 
-.c0 {
+.c1 {
   position: -webkit-sticky;
   position: sticky;
   top: 12rem;
-  width: 30%;
-  margin: 0;
-  padding: 0 1.6rem 0 4rem;
-  list-style-type: none;
+  width: calc(30% - 4rem);
+  margin-left: 4rem;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c18 {
+.c23 {
   max-width: 28rem;
 }
 
-.c3 {
+.c8 {
   max-width: 28rem;
 }
 
-.c1 {
+.c26 {
   margin: 1.6rem 0;
   padding: 0;
 }
 
 @media (max-width:600px) {
-  .c16 {
-    font-size: 1.4rem;
+  .c24 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c24 {
+    max-width: 100%;
+    padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
-    font-size: 1.6rem;
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c21 {
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
   .c2 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c2:before,
+  .c2:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
+@media (min-width:980px) {
+  .c1 {
+    padding-top: 0;
+  }
+}
+
 @media (max-width:1180px) {
-  .c0 {
-    padding-left: 1.6rem;
+  .c1 {
+    width: 30%;
+    margin: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c0 {
-    display: none;
+  .c1 {
+    width: 100%;
   }
 }
 
 <div>
-  <ul
-    class="c0"
+  <div
+    class="c0 c1"
   >
-    <li
-      class="c1"
+    <div
+      class="c2 c3"
     >
-      <a
-        class="c2 c3"
-        href="/modeles-de-courriers/modele.url"
+      <div
+        class="c4"
       >
-        <div
-          class="c4"
+        <ul
+          class="c5"
         >
-          <div
-            class="c5"
+          <li
+            class="c6"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 32 32"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="c6"
-        >
-          <div
-            class="c7"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 52 52"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M26.567 3.89L32.544 8H42a1 1 0 011 1v6.188l6.566 4.514a1 1 0 01.434.824V47a1 1 0 01-1 1H3a1 1 0 01-1-1V20.526a1 1 0 01.433-.824L9 15.188V9a1 1 0 011-1h9.455l5.979-4.11a1 1 0 011.133 0zM22.985 8h6.03L26 5.927 22.985 8zM9 17.615l-5 3.437v.323l5 3.438v-7.198zm2 8.573l10.537 7.244 2.873-1.796a3 3 0 013.18 0l2.873 1.796L41 26.188V10H11v16.188zm32-1.375l5-3.438v-.323l-5-3.437v7.198zm5-1.01L32.313 34.586 48 44.392v-20.59zM4 44.391l15.687-9.805L4 23.802v20.59zm21.47-11.06L5.2 46h41.6L26.53 33.332a1 1 0 00-1.06 0z"
-                fill="#4E6896"
-                fill-rule="evenodd"
-              />
-              <path
-                d="M16 17c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H17.053C16.47 18 16 17.552 16 17zm1.053 5C16.47 22 16 22.448 16 23s.471 1 1.053 1h17.894C35.53 24 36 23.552 36 23s-.471-1-1.053-1H17.053z"
-                fill="#FF7067"
-              />
-            </svg>
-          </div>
-          <div
-            class="c8"
-          >
-            <span
-              class="c9"
-            >
-              Modèles de documents
-            </span>
-            <h3
-              class="c10 c11"
-            >
-              modele de courrier
-            </h3>
-          </div>
-        </div>
-        <div
-          class="c12"
-        >
-          <div
-            class="c13"
-          >
-            <div
-              class="c14"
+            <a
+              class="c7 c8"
+              href="/modeles-de-courriers/modele.url"
             >
               <div
-                class="c15 c16"
+                class="c9"
               >
-                Consulter
-                <svg
-                  class="c17"
-                  fill="none"
-                  viewBox="0 0 28 15"
+                <div
+                  class="c10"
                 >
-                  <path
-                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    viewBox="0 0 32 32"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li
-      class="c1"
-    >
-      <a
-        class="c2 c3"
-        href="/outils/outils.url"
-      >
-        <div
-          class="c4"
-        >
-          <div
-            class="c5"
+              <div
+                class="c11"
+              >
+                <div
+                  class="c12"
+                >
+                  <svg
+                    fill="none"
+                    viewBox="0 0 52 52"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M26.567 3.89L32.544 8H42a1 1 0 011 1v6.188l6.566 4.514a1 1 0 01.434.824V47a1 1 0 01-1 1H3a1 1 0 01-1-1V20.526a1 1 0 01.433-.824L9 15.188V9a1 1 0 011-1h9.455l5.979-4.11a1 1 0 011.133 0zM22.985 8h6.03L26 5.927 22.985 8zM9 17.615l-5 3.437v.323l5 3.438v-7.198zm2 8.573l10.537 7.244 2.873-1.796a3 3 0 013.18 0l2.873 1.796L41 26.188V10H11v16.188zm32-1.375l5-3.438v-.323l-5-3.437v7.198zm5-1.01L32.313 34.586 48 44.392v-20.59zM4 44.391l15.687-9.805L4 23.802v20.59zm21.47-11.06L5.2 46h41.6L26.53 33.332a1 1 0 00-1.06 0z"
+                      fill="#4E6896"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M16 17c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H17.053C16.47 18 16 17.552 16 17zm1.053 5C16.47 22 16 22.448 16 23s.471 1 1.053 1h17.894C35.53 24 36 23.552 36 23s-.471-1-1.053-1H17.053z"
+                      fill="#FF7067"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <span
+                    class="c14"
+                  >
+                    Modèles de documents
+                  </span>
+                  <h3
+                    class="c15 c16"
+                  >
+                    modele de courrier
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="c17"
+              >
+                <div
+                  class="c18"
+                >
+                  <div
+                    class="c19"
+                  >
+                    <div
+                      class="c20 c21"
+                    >
+                      Consulter
+                      <svg
+                        class="c22"
+                        fill="none"
+                        viewBox="0 0 28 15"
+                      >
+                        <path
+                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c6"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 32 32"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="c6"
-        >
-          <div
-            class="c7"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 52 52"
-            >
-              <path
-                d="M43.566 34.192a.752.752 0 00-.47-.191.615.615 0 00-.454.173.592.592 0 00-.177.444v3.68H29v4.939h13.467v3.682c0 .163.067.32.185.436a.635.635 0 00.445.181.625.625 0 00.45-.183l6.277-6.143a.645.645 0 000-.885l-6.258-6.133z"
-                fill="#FF7067"
-              />
-              <path
-                d="M29.112 4c-.312-.015-.495.131-.698.361-.201.228-.215.563-.214.871L28.195 27 17.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.257 1.257 0 00-.157.62V27L4.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.258 1.258 0 00-.157.62l.151 30.652c0 .327.127.64.352.871.225.231.53.361.848.361h35.427c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872V46H39v2H5V20l11.157 9.602a1.177 1.177 0 001.204-.003c.183-.109.334-.266.439-.455a1.26 1.26 0 00.156-.62L18 20.5l10.2 9.102a1.177 1.177 0 001.205-.003c.182-.109.334-.266.438-.455a1.25 1.25 0 00.157-.62V6h9v29h1.978V5.232c0-.327-.127-.64-.352-.871a1.185 1.185 0 00-.848-.36H29.112z"
-                fill="#4E6896"
-              />
-              <path
-                d="M35 37v-2.809c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.6a1.173 1.173 0 00-.113 0 1.19 1.19 0 00-.776.398 1.251 1.251 0 00-.311.833v8.624c0 .327.127.64.352.871.224.231.53.361.848.361H27V42h-1v-7h7v2h2z"
-                fill="#4E6896"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M10.287 32.96a1.189 1.189 0 00-.776.398 1.25 1.25 0 00-.311.833v8.624c0 .327.126.64.351.871.226.231.53.361.849.361h8.4c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872v-8.624c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.4a1.173 1.173 0 00-.113 0zM11 35h7v7h-7v-7z"
-                fill="#4E6896"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div
-            class="c8"
-          >
-            <span
-              class="c9"
-            >
-              Outils
-            </span>
-            <h3
-              class="c10 c11"
-            >
-              Simulateur
-            </h3>
-          </div>
-        </div>
-        <div
-          class="c12"
-        >
-          <div
-            class="c13"
-          >
-            <div
-              class="c14"
+            <a
+              class="c7 c8"
+              href="/outils/outils.url"
             >
               <div
-                class="c15 c16"
+                class="c9"
               >
-                simuler
-                <svg
-                  class="c17"
-                  fill="none"
-                  viewBox="0 0 28 15"
+                <div
+                  class="c10"
                 >
-                  <path
-                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    viewBox="0 0 32 32"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li
-      class="c1"
+              <div
+                class="c11"
+              >
+                <div
+                  class="c12"
+                >
+                  <svg
+                    fill="none"
+                    viewBox="0 0 52 52"
+                  >
+                    <path
+                      d="M43.566 34.192a.752.752 0 00-.47-.191.615.615 0 00-.454.173.592.592 0 00-.177.444v3.68H29v4.939h13.467v3.682c0 .163.067.32.185.436a.635.635 0 00.445.181.625.625 0 00.45-.183l6.277-6.143a.645.645 0 000-.885l-6.258-6.133z"
+                      fill="#FF7067"
+                    />
+                    <path
+                      d="M29.112 4c-.312-.015-.495.131-.698.361-.201.228-.215.563-.214.871L28.195 27 17.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.257 1.257 0 00-.157.62V27L4.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.258 1.258 0 00-.157.62l.151 30.652c0 .327.127.64.352.871.225.231.53.361.848.361h35.427c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872V46H39v2H5V20l11.157 9.602a1.177 1.177 0 001.204-.003c.183-.109.334-.266.439-.455a1.26 1.26 0 00.156-.62L18 20.5l10.2 9.102a1.177 1.177 0 001.205-.003c.182-.109.334-.266.438-.455a1.25 1.25 0 00.157-.62V6h9v29h1.978V5.232c0-.327-.127-.64-.352-.871a1.185 1.185 0 00-.848-.36H29.112z"
+                      fill="#4E6896"
+                    />
+                    <path
+                      d="M35 37v-2.809c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.6a1.173 1.173 0 00-.113 0 1.19 1.19 0 00-.776.398 1.251 1.251 0 00-.311.833v8.624c0 .327.127.64.352.871.224.231.53.361.848.361H27V42h-1v-7h7v2h2z"
+                      fill="#4E6896"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.287 32.96a1.189 1.189 0 00-.776.398 1.25 1.25 0 00-.311.833v8.624c0 .327.126.64.351.871.226.231.53.361.849.361h8.4c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872v-8.624c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.4a1.173 1.173 0 00-.113 0zM11 35h7v7h-7v-7z"
+                      fill="#4E6896"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <span
+                    class="c14"
+                  >
+                    Outils
+                  </span>
+                  <h3
+                    class="c15 c16"
+                  >
+                    Simulateur
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="c17"
+              >
+                <div
+                  class="c18"
+                >
+                  <div
+                    class="c19"
+                  >
+                    <div
+                      class="c20 c21"
+                    >
+                      simuler
+                      <svg
+                        class="c22"
+                        fill="none"
+                        viewBox="0 0 28 15"
+                      >
+                        <path
+                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c6"
+          >
+            <a
+              class="c7 c8"
+              href="/outils/outil-2.slug"
+            >
+              <div
+                class="c9"
+              >
+                <div
+                  class="c10"
+                >
+                  <svg
+                    fill="none"
+                    viewBox="0 0 32 32"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="c11"
+              >
+                <div
+                  class="c12"
+                >
+                  <svg
+                    fill="none"
+                    viewBox="0 0 52 52"
+                  >
+                    <path
+                      d="M41.953 2H9.047A3.05 3.05 0 006 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016v41.906c0 .56-.456 1.016-1.016 1.016H9.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 009.047 50h32.906A3.05 3.05 0 0045 46.953V5.047A3.05 3.05 0 0041.953 2z"
+                      fill="#4E6896"
+                    />
+                    <path
+                      d="M7.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297zm13.063 18.297a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.255-1.255a1.016 1.016 0 00-1.437 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437zm.06-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
+                      fill="#4E6896"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M12.016 10h10c.56 0 1.015.455 1.015 1.016v9.968c0 .561-.454 1.016-1.015 1.016h-10A1.016 1.016 0 0111 20.984v-9.968c0-.561.455-1.016 1.016-1.016zM21 19.969h-7.969V12.03H21v7.938z"
+                      fill="#4E6896"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M29.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm8.96 10H26.024C25.46 29 25 29.448 25 30s.459 1 1.024 1h11.952C38.54 31 39 30.552 39 30s-.459-1-1.024-1zm0 9H26.024C25.46 38 25 38.448 25 39s.459 1 1.024 1h11.952C38.54 40 39 39.552 39 39s-.459-1-1.024-1zm.149-23h-9.11a1.016 1.016 0 000 2.031h9.11a1.016 1.016 0 000-2.031z"
+                      fill="#FF7067"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <span
+                    class="c14"
+                  >
+                    Outils
+                  </span>
+                  <h3
+                    class="c15 c16"
+                  >
+                    fiche sp
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="c17"
+              >
+                <div
+                  class="c18"
+                >
+                  <div
+                    class="c19"
+                  >
+                    <div
+                      class="c20 c21"
+                    >
+                      tester
+                      <svg
+                        class="c22"
+                        fill="none"
+                        viewBox="0 0 28 15"
+                      >
+                        <path
+                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c6"
+          >
+            <a
+              class="c7 c23"
+              href="external.tools"
+              rel="noopener nofollow"
+              target="_blank"
+            >
+              <div
+                class="c11"
+              >
+                <div
+                  class="c12"
+                >
+                  <svg
+                    fill="none"
+                    viewBox="0 0 52 52"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M17 2L6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
+                      fill="#4E6896"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M27 50v-2H9a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM7 20a1 1 0 100-2 1 1 0 000 2z"
+                      fill="#4E6896"
+                    />
+                    <path
+                      d="M15.053 20C14.47 20 14 20.448 14 21s.471 1 1.053 1h17.894C33.53 22 34 21.552 34 21s-.471-1-1.053-1H15.053zM14 27c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H15.053C14.47 28 14 27.552 14 27z"
+                      fill="#FF7067"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M36.5 37.938a3.548 3.548 0 00-3.563 3.562 3.548 3.548 0 003.563 3.563 3.548 3.548 0 003.563-3.563 3.548 3.548 0 00-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
+                      fill="#FF7067"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M46 43.242v-3.404l-1.663-.871-.475-1.109.555-1.9-2.375-2.375-1.821.555-1.108-.475L38.241 32h-3.404l-.871 1.663-1.109.475-1.9-.555-2.375 2.375.555 1.821-.476 1.108-1.662.871v3.404l1.663.871.474 1.109-.554 1.9 2.375 2.375 1.821-.555 1.108.475.871 1.663h3.404l.871-1.663 1.109-.475 1.9.555 2.375-2.375-.555-1.821.475-1.108L46 43.241zm-3.275-.317L41.9 44.95l.375 1.35-1.05 1.05-1.35-.375-2.025.825-.6 1.2h-1.5l-.675-1.275-2.025-.825-1.35.375-1.05-1.05.375-1.35-.825-2.025-1.2-.6v-1.5l1.275-.675.825-2.025-.375-1.35 1.05-1.05 1.35.375 2.025-.825.6-1.2h1.5l.675 1.275 2.025.825 1.35-.375 1.05 1.05-.375 1.35.825 2.025 1.2.6v1.5l-1.275.675z"
+                      fill="#FF7067"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="c13"
+                >
+                  
+                  <h3
+                    class="c15 c16"
+                  >
+                    externalTool
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c24"
     >
-      <a
-        class="c2 c18"
-        href="external.tools"
-        rel="noopener nofollow"
-        target="_blank"
+      <div>
+        Les articles pouvant vous intéresser :
+      </div>
+      <ul
+        class="c25"
       >
-        <div
-          class="c6"
+        <li
+          class="c26"
         >
-          <div
-            class="c7"
+          <a
+            class="c27 c28"
+            href="/fiche-service-public/fiche.sp.url"
           >
             <svg
+              class="c29"
               fill="none"
-              viewBox="0 0 52 52"
+              viewBox="0 0 28 15"
             >
               <path
-                clip-rule="evenodd"
-                d="M17 2L6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
-                fill="#4E6896"
-                fill-rule="evenodd"
-              />
-              <path
-                d="M27 50v-2H9a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM7 20a1 1 0 100-2 1 1 0 000 2z"
-                fill="#4E6896"
-              />
-              <path
-                d="M15.053 20C14.47 20 14 20.448 14 21s.471 1 1.053 1h17.894C33.53 22 34 21.552 34 21s-.471-1-1.053-1H15.053zM14 27c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H15.053C14.47 28 14 27.552 14 27z"
-                fill="#FF7067"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M36.5 37.938a3.548 3.548 0 00-3.563 3.562 3.548 3.548 0 003.563 3.563 3.548 3.548 0 003.563-3.563 3.548 3.548 0 00-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
-                fill="#FF7067"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M46 43.242v-3.404l-1.663-.871-.475-1.109.555-1.9-2.375-2.375-1.821.555-1.108-.475L38.241 32h-3.404l-.871 1.663-1.109.475-1.9-.555-2.375 2.375.555 1.821-.476 1.108-1.662.871v3.404l1.663.871.474 1.109-.554 1.9 2.375 2.375 1.821-.555 1.108.475.871 1.663h3.404l.871-1.663 1.109-.475 1.9.555 2.375-2.375-.555-1.821.475-1.108L46 43.241zm-3.275-.317L41.9 44.95l.375 1.35-1.05 1.05-1.35-.375-2.025.825-.6 1.2h-1.5l-.675-1.275-2.025-.825-1.35.375-1.05-1.05.375-1.35-.825-2.025-1.2-.6v-1.5l1.275-.675.825-2.025-.375-1.35 1.05-1.05 1.35.375 2.025-.825.6-1.2h1.5l.675 1.275 2.025.825 1.35-.375 1.05 1.05-.375 1.35.825 2.025 1.2.6v1.5l-1.275.675z"
-                fill="#FF7067"
-                fill-rule="evenodd"
+                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                fill="currentColor"
               />
             </svg>
-          </div>
-          <div
-            class="c8"
-          >
-            
-            <h3
-              class="c10 c11"
+            <span
+              class="c30"
             >
-              externalTool
-            </h3>
-          </div>
-        </div>
-      </a>
-    </li>
-    <span>
-      Les articles pouvant vous intéresser :
-    </span>
-    <li
-      class="c1"
-    >
-      <a
-        class="c19 c20"
-        href="/fiche-service-public/fiche.sp.url"
-      >
-        <svg
-          class="c21"
-          fill="none"
-          viewBox="0 0 28 15"
+              fiche sp
+            </span>
+          </a>
+        </li>
+        <li
+          class="c26"
         >
-          <path
-            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-            fill="currentColor"
-          />
-        </svg>
-        <span
-          class="c22"
-        >
-          fiche sp
-        </span>
-      </a>
-    </li>
-    <li
-      class="c1"
-    >
-      <a
-        class="c19 c20"
-        href="/contribution/contrib.url"
-      >
-        <svg
-          class="c21"
-          fill="none"
-          viewBox="0 0 28 15"
-        >
-          <path
-            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-            fill="currentColor"
-          />
-        </svg>
-        <span
-          class="c22"
-        >
-          contrib
-        </span>
-      </a>
-    </li>
-  </ul>
+          <a
+            class="c27 c28"
+            href="/contribution/contrib.url"
+          >
+            <svg
+              class="c29"
+              fill="none"
+              viewBox="0 0 28 15"
+            >
+              <path
+                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="c30"
+            >
+              contrib
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;
