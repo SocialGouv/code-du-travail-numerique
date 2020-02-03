@@ -228,7 +228,15 @@ exports[`<Modal /> does not render at first and then render 2`] = `
 
 exports[`<Modal /> renders the provided wrapper 1`] = `
 <body>
-  <div
+  @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+<div
     aria-hidden="true"
   />
   .c2 {

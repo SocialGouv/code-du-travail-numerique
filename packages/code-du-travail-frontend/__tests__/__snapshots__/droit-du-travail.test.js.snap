@@ -169,8 +169,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c78 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 250ms ease-in;
-  animation: bcCCNc 250ms ease-in;
+  -webkit-animation: dpvxPj 250ms ease-in;
+  animation: dpvxPj 250ms ease-in;
 }
 
 .c76 {
@@ -629,8 +629,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c53 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
+  -webkit-animation: dpvxPj 0.35s ease-in;
+  animation: dpvxPj 0.35s ease-in;
 }
 
 .c48 {
@@ -1720,6 +1720,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:980px) {
   .c56 {
     margin-top: 2rem;
   }
@@ -2143,6 +2151,54 @@ exports[`<DroitDuTravail /> should render 1`] = `
   .c26 {
     display: none;
   }
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
 }
 
 <div>
@@ -4899,7 +4955,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="c100"
+                class="sc-fzXfNO c100"
               >
                 <li
                   class="c101"
@@ -4983,7 +5039,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="c100"
+                class="sc-fzXfNO c100"
               >
                 <li
                   class="c101"
@@ -5020,7 +5076,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="c100"
+                class="sc-fzXfNO c100"
               >
                 <li
                   class="c101"

@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { GlobalStyles } from "./index";
+import { BurgerStyles } from "../BurgerStyles";
 import "jest-styled-components";
-describe("GlobalStyles", () => {
+describe("BurgerStyles", () => {
   it("generates styles", () => {
-    render(<GlobalStyles />);
+    render(<BurgerStyles />);
     const burgerStyles = document.head.getElementsByTagName("style");
     expect(burgerStyles).toMatchSnapshot();
   });

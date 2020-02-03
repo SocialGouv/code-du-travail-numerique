@@ -61,10 +61,13 @@ const StyledSection = styled.div`
         margin: ${large ? "6rem" : "5rem"} 0;
         padding: ${large ? "6rem" : spacings.large} 0;
         min-height: ${BORDER_RADIUS};
-        @media (max-width: ${breakpoints.mobile}) {
-          ${large && `margin: ${spacings.large} 0 ${spacings.larger};`}
-          ${large && `padding: ${spacings.large} 0 ${spacings.larger};`}
-        }
+        ${large &&
+          `
+            @media (max-width: ${breakpoints.mobile}) {
+              margin: ${spacings.large} 0 ${spacings.larger};
+              padding: ${spacings.large} 0 ${spacings.larger};
+            }
+        `}
       `;
     }
   }}

@@ -395,7 +395,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
       Heures pour recherche d'emploi
     </h1>
     <div
-      class="c2"
+      class="sc-AykKH c2"
     >
       <span
         class="c3"

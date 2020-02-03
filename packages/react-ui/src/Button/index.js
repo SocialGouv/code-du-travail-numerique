@@ -124,15 +124,15 @@ export const StyledButton = styled.button`
         box-shadow: none;
         cursor: not-allowed;
       }
-      @media (max-width: ${breakpoints.mobile}) {
-        ${({ narrow, small, variant }) => {
-          if (variant !== "link" && !small && !narrow) {
-            return css`
+      ${({ narrow, small, variant }) => {
+        if (variant !== "link" && !small && !narrow) {
+          return css`
+            @media (max-width: ${breakpoints.mobile}) {
               padding: 0 3rem;
-            `;
-          }
-        }}
-      }
+            }
+          `;
+        }
+      }}
     `;
   }}
 `;

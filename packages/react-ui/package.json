@@ -23,7 +23,7 @@
     "prop-types": "15.x",
     "react": "16.x",
     "react-dom": "16.x",
-    "styled-components": "4.x"
+    "styled-components": "5.x"
   },
   "dependencies": {
     "@reach/dialog": "0.7.4",
@@ -53,7 +53,7 @@
     "babel-loader": "^8.0.6",
     "eslint": "^6.8.0",
     "jest": "^25.1.0",
-    "jest-styled-components": "^6.3.4",
+    "jest-styled-components": "^7.0.0",
     "npx": "^10.2.1",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
@@ -64,7 +64,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-replace": "^2.2.0",
-    "styled-components": "^4.4.1",
+    "styled-components": "^5.0.0",
     "stylelint": "^13.0.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^3.0.0",

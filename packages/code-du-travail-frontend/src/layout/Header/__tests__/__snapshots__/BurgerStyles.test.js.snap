@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BurgerStyles generates styles 1`] = `
+HTMLCollection [
+  @media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (min-width:981px) {
+
+}
+
+<style
+    data-styled="active"
+    data-styled-version="5.0.0"
+  >
+    .bm-burger-button{position:relative;z-index:auto !important;width:5.4rem;height:5.4rem;color:#7994d4;}
+    @media (min-width:981px){.bm-burger-button{display:none;}}
+    @media (max-width:600px){.bm-burger-button{width:3.2rem;height:3.2rem;}}
+    .bm-burger-button:hover,.bm-burger-button:focus-within{opacity:0.6;}
+    @media (min-width:981px){.bm-cross-button{display:none;}}
+    @media (max-width:600px){.bm-cross-button{top:1.6rem !important;right:1.6rem !important;}}
+    .bm-cross{width:2.4rem;height:2.4rem;color:#7994d4;}
+    .bm-menu-wrap{position:fixed;top:0;left:0;z-index:2 !important;height:100%;opacity:0.95;}
+    @media (min-width:981px){.bm-menu-wrap{position:relative !important;width:auto !important;height:100% !important;-webkit-transform:none !important;-ms-transform:none !important;transform:none !important;}}
+    @media (max-width:980px){.bm-menu-wrap{width:30rem !important;}}
+    @media (max-width:600px){.bm-menu-wrap{width:100% !important;height:auto !important;padding:1rem;}}
+    .bm-menu{padding:4rem 0 1.6rem 0;overflow:visible !important;background:#fff;}
+    @media (min-width:981px){.bm-menu{height:100%;padding:0;background:none;}}
+    @media (max-width:600px){.bm-menu{width:100% !important;height:auto !important;border-radius:0.6rem;box-shadow:0 1rem 2rem rgba(121,148,212,0.2);}}
+    @media (min-width:981px){.bm-item-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}}
+    @media (max-width:600px){.bm-item-list{height:auto !important;}}
+    .bm-overlay{top:0;left:0;z-index:2 !important;display:block;background:rgba(0,0,0,0.3);}
+    @media (min-width:981px){.bm-overlay{display:none;}}
+  </style>,
+]
+`;
