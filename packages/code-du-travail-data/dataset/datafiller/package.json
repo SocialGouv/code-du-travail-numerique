@@ -24,6 +24,6 @@
   },
   "devDependencies": {
     "esm": "^3.2.25",
-    "jest-cli": "^24.9.0"
+    "jest-cli": "^25.1.0"
   }
 }
