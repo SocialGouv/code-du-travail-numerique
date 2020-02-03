@@ -1127,7 +1127,7 @@ exports[`<Term /> should render 1`] = `
                     />
                   </svg>
                   <button
-                    style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0; background: transparent; cursor: pointer;"
+                    style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0px; background: transparent; cursor: pointer;"
                     tabindex="0"
                   >
                     Close Menu
@@ -1154,7 +1154,7 @@ exports[`<Term /> should render 1`] = `
                   />
                 </svg>
                 <button
-                  style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0; background: transparent; cursor: pointer;"
+                  style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0px; background: transparent; cursor: pointer;"
                 >
                   Open Menu
                 </button>

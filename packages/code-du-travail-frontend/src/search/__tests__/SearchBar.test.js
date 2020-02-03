@@ -49,7 +49,7 @@ describe("<SearchBar />", () => {
   });
 
   it("should track suggestions and selectedSuggestion", async () => {
-    const { getByText, getByLabelText, getAllByRole } = render(<SearchBar />);
+    const { getByText, getByLabelText } = render(<SearchBar />);
 
     const input = getByLabelText(/recherchez/i);
     await act(async () => {
@@ -58,7 +58,6 @@ describe("<SearchBar />", () => {
     });
     const suggestion = getByText("foobar");
     suggestion.click();
-    await waitForElement(() => getAllByRole("option"));
     expect(matopush).toHaveBeenCalledTimes(2);
     expect(matopush.mock.calls[0][0]).toEqual([
       "trackEvent",
