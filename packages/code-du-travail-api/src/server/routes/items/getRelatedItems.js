@@ -8,7 +8,7 @@ const utils = require("../search/utils");
 const getRelatedItemsBody = require("./relatedItems.elastic");
 const { logger } = require("../../utils/logger");
 
-const MAX_RESULTS = 7;
+const MAX_RESULTS = 5;
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;

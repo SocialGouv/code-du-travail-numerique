@@ -5,13 +5,11 @@ import { Grid as RootGrid } from "./Grid";
 import { GridCell } from "./GridCell";
 
 export { RootGrid, GridCell };
-export const Grid = ({ children, singleLined, ...props }) => (
-  <RootGrid singleLined={singleLined} {...props}>
+export const Grid = ({ children, ...props }) => (
+  <RootGrid {...props}>
     {Array.isArray(children) ? (
       React.Children.map(children, element => (
-        <GridCell singleLined={singleLined} key={element.key}>
-          {element}
-        </GridCell>
+        <GridCell key={element.key}>{element}</GridCell>
       ))
     ) : (
       <GridCell>{children}</GridCell>
@@ -21,11 +19,9 @@ export const Grid = ({ children, singleLined, ...props }) => (
 
 Grid.propTypes = {
   children: PropTypes.node.isRequired,
-  columns: PropTypes.number,
-  singleLined: PropTypes.bool
+  columns: PropTypes.number
 };
 
 Grid.defaultProps = {
-  columns: 4,
-  singleLined: false
+  columns: 4
 };

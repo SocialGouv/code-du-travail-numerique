@@ -1,27 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { OverflowWrapper } from "../OverflowWrapper";
 import { breakpoints, spacings } from "../theme";
 
 export const GridContext = React.createContext({ columns: 4 });
 
-export const Grid = ({ columns, singleLined, ...props }) => {
+export const Grid = ({ columns, ...props }) => {
   return (
-    <StyledOverflowWrapper mobileOnly={!singleLined}>
+    <StyledOverflowWrapper mobileOnly>
       <GridContext.Provider value={columns}>
-        <List singleLined={singleLined} {...props} />
+        <List {...props} />
       </GridContext.Provider>
     </StyledOverflowWrapper>
   );
 };
 Grid.propTypes = {
-  columns: PropTypes.number,
-  singleLined: PropTypes.bool
+  columns: PropTypes.number
 };
 Grid.defaultProps = {
-  columns: 4,
-  singleLined: false
+  columns: 4
 };
 
 export const StyledOverflowWrapper = styled(OverflowWrapper)`
@@ -50,11 +48,4 @@ export const List = styled.ul`
     margin-bottom: ${spacings.medium};
     margin-left: 0;
   }
-  ${({ singleLined }) =>
-    singleLined &&
-    css`
-      margin-right: 0;
-      margin-left: 0;
-      flex-wrap: nowrap;
-    `}
 `;
