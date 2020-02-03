@@ -144,7 +144,7 @@ const Disclaimenr = styled(Wrapper).attrs(() => ({ variant: "dark" }))`
 `;
 
 const Download = styled(icons.Download)`
-  min-width: 3rem;
+  width: 3rem;
 `;
 
 const Notice = styled.p`

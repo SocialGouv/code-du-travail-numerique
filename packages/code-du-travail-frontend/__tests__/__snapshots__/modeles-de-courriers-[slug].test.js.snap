@@ -1139,7 +1139,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 .c45 {
-  min-width: 3rem;
+  width: 3rem;
 }
 
 .c47 {
