@@ -27,8 +27,8 @@
     "@cdt/data...tools": "^4.1.0",
     "@cdt/sources": "^4.1.0",
     "@next/bundle-analyzer": "^9.2.1",
-    "@reach/tooltip": "0.7.4",
-    "@sentry/browser": "^5.11.1",
+    "@reach/tooltip": "0.8.0",
+    "@sentry/browser": "^5.11.2",
     "@socialgouv/react-fiche-service-public": "^4.3.0",
     "@socialgouv/react-ui": "^4.3.0",
     "@zeit/next-source-maps": "^0.0.3",
@@ -69,9 +69,9 @@
     "url-search-params": "^1.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@socialgouv/eslint-config-react": "^0.15.0",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@socialgouv/eslint-config-react": "^0.16.0",
     "@testing-library/react": "^9.4.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
