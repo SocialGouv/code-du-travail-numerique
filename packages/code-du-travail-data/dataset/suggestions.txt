@@ -196,7 +196,7 @@
 {"entity": "heure pour recherche emploi", "value": 2.0}
 {"entity": "l 1235-1", "value": 2.0}
 {"entity": "combien de fois le contrat de travail peut-il \u00eatre renouvel\u00e9 ?", "value": 2.0}
-{"entity": "obligatoire de payer  heures suppl\u00e9mentaires", "value": 2.0}
+{"entity": "obligatoire de payer heures suppl\u00e9mentaires", "value": 2.0}
 {"entity": "entreprises ext\u00e9rieures", "value": 33.19}
 {"entity": "prime", "value": 56.16}
 {"entity": "obligation emploi", "value": 22.79}
@@ -2455,7 +2455,7 @@
 {"entity": "whistleblower", "value": 10.0}
 {"entity": "\u00e0 quelle date l'employeur doit-il me remettre mes documents de fin de contrat ?", "value": 10.0}
 {"entity": "\u00e0 quoi sert le m\u00e9decin du travail ?", "value": 30.79}
-{"entity": "accord  d'entreprise de moins de 50 salari\u00e9s", "value": 10.0}
+{"entity": "accord d'entreprise de moins de 50 salari\u00e9s", "value": 10.0}
 {"entity": "activit\u00e9 partielle et r\u00e9duction des heures de travail", "value": 30.79}
 {"entity": "ai-je le droit \u00e0 l'allocation ch\u00f4mage en cas de rupture conventionnelle ?", "value": 26.48}
 {"entity": "ai je droit au ch\u00f4mage", "value": 30.79}
@@ -2467,7 +2467,7 @@
 {"entity": "assistance d\u2019un syndicat et entretien pr\u00e9alable", "value": 10.0}
 {"entity": "c'est quoi le cong\u00e9 parental d'\u00e9ducation ?", "value": 10.0}
 {"entity": "c'est quoi un contrat de travail ?", "value": 10.0}
-{"entity": "c'est quoi une clause de non concurrence  ?", "value": 10.0}
+{"entity": "c'est quoi une clause de non concurrence ?", "value": 10.0}
 {"entity": "c'est quoi une faute grave ?", "value": 10.0}
 {"entity": "calcul des cong\u00e9s pay\u00e9s et cong\u00e9 individuel de formation", "value": 10.0}
 {"entity": "calcul des cong\u00e9s pay\u00e9s et cong\u00e9 maternit\u00e9", "value": 10.0}
@@ -2514,7 +2514,7 @@
 {"entity": "d\u00e9mission l\u00e9gitime pour suivre son conjoint", "value": 34.14}
 {"entity": "diff\u00e9rence entre changement des horaires et modification des horaires de travail", "value": 47.27}
 {"entity": "diff\u00e9rence entre cong\u00e9 sans solde et cong\u00e9 sabbatique", "value": 10.0}
-{"entity": "disponibilit\u00e9  des droits des salari\u00e9s", "value": 10.0}
+{"entity": "disponibilit\u00e9 des droits des salari\u00e9s", "value": 10.0}
 {"entity": "dispositifs de formation accessible au salari\u00e9", "value": 26.48}
 {"entity": "dispositifs de formation d\u00e9finition", "value": 10.0}
 {"entity": "\u00e9lections du cse moins de 20 salari\u00e9s", "value": 26.48}
@@ -2526,9 +2526,9 @@
 {"entity": "faut-il informer l'employeur que je suis enceinte ?", "value": 10.0}
 {"entity": "fille au pair France r\u00e9glementation", "value": 10.0}
 {"entity": "formation salari\u00e9 obligation de l\u2019employeur", "value": 49.59}
-{"entity": "l'employeur peut il obliger un salari\u00e9  \u00e0 travailler le samedi", "value": 10.0}
+{"entity": "l'employeur peut il obliger un salari\u00e9 \u00e0 travailler le samedi", "value": 10.0}
 {"entity": "l\u2019employeur peut-il r\u00e9embaucher apr\u00e8s une rupture conventionnelle collective sur les postes devenus vacants ?", "value": 10.0}
-{"entity": "suivi m\u00e9dical des travailleurs  expos\u00e9 \u00e0 des agents biologiques de cat\u00e9gorie 2", "value": 10.0}
+{"entity": "suivi m\u00e9dical des travailleurs expos\u00e9 \u00e0 des agents biologiques de cat\u00e9gorie 2", "value": 10.0}
 {"entity": "accord rupture conventionnelle collective", "value": 10.0}
 {"entity": "am\u00e9nagement temps de travail", "value": 58.87}
 {"entity": "arr\u00eat maladie puis cong\u00e9s pay\u00e9s", "value": 36.879999999999995}
@@ -2778,5 +2778,49 @@
 {"entity": "diff\u00e9rence jour ouvr\u00e9 jour ouvrable", "value": 38.879999999999995}
 {"entity": "indemnisation pendant un accident du travail", "value": 12.0}
 {"entity": "salari\u00e9e enceinte m\u00e9dical", "value": 22.4}
-{"entity": "informer maternit\u00e9", "value": "10"}
-{"entity": "r\u00e9v\u00e9ler maternit\u00e9", "value": "10"}
+{"entity": "informer maternit\u00e9", "value": 10.0}
+{"entity": "r\u00e9v\u00e9ler maternit\u00e9", "value": 10.0}
+{"entity": "formation", "value": 78.41}
+{"entity": "rupture conventionnelle", "value": 94.79}
+{"entity": "astreinte", "value": 78.68}
+{"entity": "formation", "value": 78.41}
+{"entity": "cssct", "value": 72.37}
+{"entity": "maladie", "value": 71.08}
+{"entity": "repos compensateur", "value": 66.96}
+{"entity": "incendie", "value": 66.15}
+{"entity": "anciennet\u00e9", "value": 66.15}
+{"entity": "allaitement", "value": 66.15}
+{"entity": "pr\u00e9avis cdi", "value": 66.36}
+{"entity": "formation cse", "value": 65.94}
+{"entity": "clause de non concurrence", "value": 64.38}
+{"entity": "repos hebdomadaire", "value": 64.38}
+{"entity": "int\u00e9ressement", "value": 63.91}
+{"entity": "maternit\u00e9", "value": 63.16}
+{"entity": "repos", "value": 63.16}
+{"entity": "repas", "value": 62.91}
+{"entity": "stage", "value": 62.65}
+{"entity": "invalidit\u00e9", "value": 61.27}
+{"entity": "syntec", "value": 61.83}
+{"entity": "prime macron", "value": 58.76}
+{"entity": "contrat", "value": 58.76}
+{"entity": "handicap", "value": 58.76}
+{"entity": "grossesse", "value": 58.07}
+{"entity": "prise d'acte", "value": 58.76}
+{"entity": "enfant malade", "value": 58.07}
+{"entity": "mutuelle", "value": 58.07}
+{"entity": "s\u00e9curit\u00e9", "value": 57.33}
+{"entity": "vestiaire", "value": 56.95}
+{"entity": "document unique", "value": 56.95}
+{"entity": "assistante maternelle", "value": 56.56}
+{"entity": "taxe d'apprentissage", "value": 55.33}
+{"entity": "pr\u00e9voyance", "value": 55.33}
+{"entity": "int\u00e9rim", "value": 43.59}
+{"entity": "risque chimique", "value": 54.9}
+{"entity": "repr\u00e9sentant syndical", "value": 53.99}
+{"entity": "rgpd", "value": 53.99}
+{"entity": "rupture", "value": 53.99}
+{"entity": "naissance", "value": 53.02}
+{"entity": "froid", "value": 53.02}
+{"entity": "m\u00e9tallurgie", "value": 51.98}
+{"entity": "mutation", "value": 51.44}
+{"entity": "contrat de professionnalisation", "value": 51.44}
