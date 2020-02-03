@@ -262,7 +262,7 @@ exports[`<Feedback/> should render 1`] = `
       class="c1"
     >
       <div
-        class="c2"
+        class="sc-AykKH c2"
       >
         <h3
           class="c3 c4"
@@ -453,6 +453,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
   }
@@ -513,6 +521,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:1180px) {
+
+}
+
+@media (max-width:1180px) {
+
+}
+
+@media (max-width:1180px) {
   .c6 {
     margin-top: 0;
   }
@@ -526,7 +542,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
       class="c1"
     >
       <div
-        class="c2"
+        class="sc-AykKH c2"
       >
         <h3
           class="c3 c4"
@@ -662,6 +678,14 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c3 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -716,6 +740,14 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:1180px) {
+
+}
+
+@media (max-width:1180px) {
+
+}
+
+@media (max-width:1180px) {
   .c6 {
     margin-top: 0;
   }
@@ -729,7 +761,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
       class="c1"
     >
       <div
-        class="c2"
+        class="sc-AykKH c2"
       >
         <h3
           class="c3 c4"

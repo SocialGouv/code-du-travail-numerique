@@ -67,14 +67,14 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   align-items: stretch;
 }
 
-.c13 {
-  width: calc(50% * 1);
+.c5 {
+  width: calc(50% * 0.9100320789890648);
   background-color: #7994d4;
   border-radius: 0.6rem;
 }
 
-.c5 {
-  width: calc(50% * 0.9100320789890648);
+.c13 {
+  width: calc(50% * 1);
   background-color: #7994d4;
   border-radius: 0.6rem;
 }
@@ -147,14 +147,14 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 }
 
 @media (max-width:980px) {
-  .c13 {
-    width: calc(100% * 1);
+  .c5 {
+    width: calc(100% * 0.9100320789890648);
   }
 }
 
 @media (max-width:980px) {
-  .c5 {
-    width: calc(100% * 0.9100320789890648);
+  .c13 {
+    width: calc(100% * 1);
   }
 }
 

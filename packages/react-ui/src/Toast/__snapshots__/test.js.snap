@@ -241,8 +241,8 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   border-width: 2px;
   border-radius: 0.6rem;
   box-shadow: none;
-  -webkit-animation: iowhYu 300ms ease-out;
-  animation: iowhYu 300ms ease-out;
+  -webkit-animation: hcRHWy 300ms ease-out;
+  animation: hcRHWy 300ms ease-out;
 }
 
 .c1 {
@@ -297,8 +297,8 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   border-width: 2px;
   border-radius: 0.6rem;
   box-shadow: none;
-  -webkit-animation: kqOaZP 500ms ease-out;
-  animation: kqOaZP 500ms ease-out;
+  -webkit-animation: hEnPCZ 500ms ease-out;
+  animation: hEnPCZ 500ms ease-out;
 }
 
 .c1 {
@@ -353,8 +353,8 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   border-width: 2px;
   border-radius: 0.6rem;
   box-shadow: none;
-  -webkit-animation: geNrKo 500ms ease-out;
-  animation: geNrKo 500ms ease-out;
+  -webkit-animation: eJimlk 500ms ease-out;
+  animation: eJimlk 500ms ease-out;
 }
 
 .c1 {
@@ -409,8 +409,8 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   border-width: 2px;
   border-radius: 0.6rem;
   box-shadow: none;
-  -webkit-animation: jYyoao 0.3s ease-out;
-  animation: jYyoao 0.3s ease-out;
+  -webkit-animation: bpesKf 0.3s ease-out;
+  animation: bpesKf 0.3s ease-out;
 }
 
 .c1 {

@@ -766,6 +766,22 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c0 {
     font-size: 1.6rem;
   }
@@ -784,6 +800,10 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   .c1 {
     display: none;
   }
+}
+
+@media (max-width:600px) {
+
 }
 
 @media (max-width:600px) {

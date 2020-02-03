@@ -41,8 +41,8 @@ exports[`<Accordion /> renders 1`] = `
 
 .c4 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 250ms ease-in;
-  animation: bcCCNc 250ms ease-in;
+  -webkit-animation: dpvxPj 250ms ease-in;
+  animation: dpvxPj 250ms ease-in;
 }
 
 .c1 {
@@ -216,8 +216,8 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
 
 .c4 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 250ms ease-in;
-  animation: bcCCNc 250ms ease-in;
+  -webkit-animation: dpvxPj 250ms ease-in;
+  animation: dpvxPj 250ms ease-in;
 }
 
 .c1 {
@@ -391,8 +391,8 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
 
 .c4 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 250ms ease-in;
-  animation: bcCCNc 250ms ease-in;
+  -webkit-animation: dpvxPj 250ms ease-in;
+  animation: dpvxPj 250ms ease-in;
 }
 
 .c1 {
@@ -566,8 +566,8 @@ exports[`<Accordion /> renders as h2 1`] = `
 
 .c4 {
   padding: 1.6rem;
-  -webkit-animation: bcCCNc 250ms ease-in;
-  animation: bcCCNc 250ms ease-in;
+  -webkit-animation: dpvxPj 250ms ease-in;
+  animation: dpvxPj 250ms ease-in;
 }
 
 .c1 {
