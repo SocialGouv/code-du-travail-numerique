@@ -5,8 +5,8 @@ import {
   ArrowLink,
   Container,
   FlatList,
+  Heading,
   Section,
-  Tile,
   icons,
   theme
 } from "@socialgouv/react-ui";
@@ -26,9 +26,9 @@ export const RelatedItems = ({ items = [] }) => {
   return (
     <StyledSection>
       <Container>
-        <FlatList>
+        <StyledFlatList>
           {relatedTilesItems.slice(0, 2).map(item => (
-            <StyledListItem key={item.slug || item.url}>
+            <StyledTileItem key={item.slug || item.url}>
               {item.source !== SOURCES.EXTERNALS ? (
                 <Link
                   as={`/${getRouteBySource(item.source)}/${item.slug}`}
@@ -63,15 +63,17 @@ export const RelatedItems = ({ items = [] }) => {
                   {item.description}
                 </CallToActionTile>
               )}
-            </StyledListItem>
+            </StyledTileItem>
           ))}
-        </FlatList>
+        </StyledFlatList>
         {relatedLinkItems.length > 0 && (
           <>
-            <div>Les articles pouvant vous intéresser&nbsp;:</div>
+            <Heading as="div">
+              Les articles pouvant vous intéresser&nbsp;:
+            </Heading>
             <FlatList>
               {relatedLinkItems.slice(0, 3).map(({ slug, source, title }) => (
-                <StyledListItem key={slug}>
+                <StyledLinkItem key={slug}>
                   <Link
                     href={`/${getRouteBySource(source)}/[slug]`}
                     as={`/${getRouteBySource(source)}/${slug}`}
@@ -79,7 +81,7 @@ export const RelatedItems = ({ items = [] }) => {
                   >
                     <ArrowLink arrowPosition="left">{title}</ArrowLink>
                   </Link>
-                </StyledListItem>
+                </StyledLinkItem>
               ))}
             </FlatList>
           </>
@@ -108,11 +110,37 @@ const StyledSection = styled(Section)`
   }
 `;
 
-const StyledTile = styled(Tile)`
-  max-width: 28rem;
+const StyledFlatList = styled(FlatList)`
+  @media (max-width: ${breakpoints.tablet}) {
+    display: flex;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
-const StyledListItem = styled.li`
-  margin: ${spacings.base} 0;
+const StyledTileItem = styled.li`
+  margin: 0 0 ${spacings.base} 0;
+  padding: 0;
+  @media (max-width: ${breakpoints.tablet}) {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: stretch;
+    width: calc((100% - ${spacings.base}) / 2);
+    & + & {
+      margin-left: ${spacings.base};
+    }
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    flex: 1 0 auto;
+    width: 100%;
+    & + & {
+      margin-left: 0;
+    }
+  }
+`;
+
+const StyledLinkItem = styled.li`
+  margin: 0 0 ${spacings.base} 0;
   padding: 0;
 `;

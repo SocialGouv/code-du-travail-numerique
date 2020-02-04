@@ -458,17 +458,17 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
 
 }
 
 @media (max-width:600px) {
 
-=======
-  .c0 {
-    padding: 2.4rem 0;
-  }
->>>>>>> test(front): update snaps
 }
 
 @media (max-width:600px) {
@@ -688,17 +688,17 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
+  .c0 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
 
 }
 
 @media (max-width:600px) {
 
-=======
-  .c0 {
-    padding: 2.4rem 0;
-  }
->>>>>>> test(front): update snaps
 }
 
 @media (max-width:600px) {

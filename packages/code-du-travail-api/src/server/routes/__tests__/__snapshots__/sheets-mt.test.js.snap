@@ -119,21 +119,6 @@ Si l’avis d’inaptitude mentionne expressément que tout maintien du salarié
       "title": "Démission d'une assistante maternelle",
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
-    Object {
-      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
-      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-      "source": "modeles_de_courriers",
-      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
-    },
-    Object {
-      "action": "Consulter",
-      "description": "Consulter et utiliser ses droits pour la formation",
-      "icon": "Formation",
-      "slug": "mon-compte-formation",
-      "source": "external",
-      "title": "Mon compte formation",
-      "url": "https://www.moncompteformation.gouv.fr",
-    },
   ],
 }
 `;

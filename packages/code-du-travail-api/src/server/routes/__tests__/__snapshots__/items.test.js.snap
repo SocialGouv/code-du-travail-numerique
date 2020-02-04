@@ -638,20 +638,6 @@ Object {
       "source": "outils",
       "title": "Préavis de démission",
     },
-    Object {
-      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
-      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-      "source": "modeles_de_courriers",
-      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
-    },
-    Object {
-      "action": "Estimer",
-      "description": "Estimez le montant de l’indemnité de licenciement",
-      "icon": "Indemnity",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Indemnité de licenciement",
-    },
   ],
 }
 `;

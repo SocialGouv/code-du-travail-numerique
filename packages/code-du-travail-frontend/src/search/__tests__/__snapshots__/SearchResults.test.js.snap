@@ -205,12 +205,12 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  margin: 1rem;
-  padding: 0;
-  width: calc(100% / 3 - 2 * 1rem - 1px);
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  margin: 1rem;
+  padding: 0;
+  width: calc(100% / 3 - 2 * 1rem - 1px);
 }
 
 .c29 {
@@ -222,12 +222,12 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  margin: 1rem;
-  padding: 0;
-  width: calc(100% / 4 - 2 * 1rem - 1px);
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  margin: 1rem;
+  padding: 0;
+  width: calc(100% / 4 - 2 * 1rem - 1px);
 }
 
 .c4 {
@@ -522,6 +522,27 @@ exports[`<SearchResults/> should render results 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c28 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    min-width: 23rem;
+  }
+
+  .c28:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c28:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
+  }
+}
+
 @media (max-width:1180px) {
   .c28 {
     width: calc( 100% / 2 - 2 * 1rem - 1px );
@@ -536,18 +557,23 @@ exports[`<SearchResults/> should render results 1`] = `
 
 @media (max-width:600px) {
   .c28 {
+    width: 80%;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    width: 80%;
     min-width: 23rem;
   }
 
-  .c28:first-of-type {
+  .c29:first-of-type {
     margin-left: 2rem;
   }
 
-  .c28:last-of-type:after {
+  .c29:last-of-type:after {
     display: block;
     width: 2rem;
     height: 100%;
@@ -570,23 +596,7 @@ exports[`<SearchResults/> should render results 1`] = `
 
 @media (max-width:600px) {
   .c29 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
     width: 60%;
-    min-width: 23rem;
-  }
-
-  .c29:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c29:last-of-type:after {
-    display: block;
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
   }
 }
 
@@ -784,7 +794,30 @@ exports[`<SearchResults/> should render results 1`] = `
           <div
             class="c11"
           >
-            description
+            <div
+              class="c15"
+            >
+              description
+              <div
+                class="c16"
+              >
+                <div
+                  class="c17 c18"
+                >
+                  Consulter
+                  <svg
+                    class="c19"
+                    fill="none"
+                    viewBox="0 0 28 15"
+                  >
+                    <path
+                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </a>
       </li>
