@@ -38,7 +38,8 @@ export const Wrapper = styled.div`
           left: 0;
           z-index: -1;
           width: 100%;
-          height: 30rem;
+          height: 100%;
+          max-height: 30rem;
           border: none;
           border-radius: ${box.borderRadius};
           box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
