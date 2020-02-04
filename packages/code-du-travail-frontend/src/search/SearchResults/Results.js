@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 import {
+  Button,
   Container,
   Heading,
   FlatList,
@@ -92,6 +93,8 @@ export const ListLink = ({
 };
 
 export const Results = ({ id, isSearch, items, query }) => {
+  const pageSize = 7;
+  const [page, setPage] = useState(1);
   return (
     <Container narrow role="region" aria-label="Résultats de recherche">
       {isSearch ? (
@@ -100,11 +103,14 @@ export const Results = ({ id, isSearch, items, query }) => {
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
       <FlatList>
-        {items.map((item, i) => (
+        {items.slice(0, page * pageSize).map((item, i) => (
           <StyledListItem key={`item.slug${i}`}>
             <ListLink item={item} isSearch={isSearch} query={query} />
           </StyledListItem>
         ))}
+        {items.length > page * pageSize && (
+          <Button onClick={() => setPage(page + 1)}>Plus de résultats</Button>
+        )}
       </FlatList>
     </Container>
   );
