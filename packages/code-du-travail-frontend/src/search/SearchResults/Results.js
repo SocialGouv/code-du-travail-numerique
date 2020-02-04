@@ -108,16 +108,35 @@ export const Results = ({ id, isSearch, items, query }) => {
             <ListLink item={item} isSearch={isSearch} query={query} />
           </StyledListItem>
         ))}
-        {items.length > page * pageSize && (
-          <Button onClick={() => setPage(page + 1)}>Plus de résultats</Button>
-        )}
       </FlatList>
+      {items.length > page * pageSize && (
+        <ButtonWrapper>
+          <StyledButton onClick={() => setPage(page + 1)}>
+            Plus de résultats
+          </StyledButton>
+        </ButtonWrapper>
+      )}
     </Container>
   );
 };
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: ${spacings.large};
+  @media (max-width: ${breakpoints.mobile}) {
+    justify-content: stretch;
+  }
+`;
+
+const StyledButton = styled(Button)`
+  @media (max-width: ${breakpoints.mobile}) {
+    flex: 1 0 auto;
+  }
 `;
