@@ -17,6 +17,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -47,6 +48,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
 }
@@ -603,6 +605,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -769,6 +772,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin-bottom: 3.2rem;
@@ -2757,6 +2761,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -2787,6 +2792,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
 }
@@ -3343,6 +3349,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -3509,6 +3516,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin-bottom: 3.2rem;

@@ -11,6 +11,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
 }
@@ -327,6 +328,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin-bottom: 3.2rem;
@@ -688,6 +690,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
 }
@@ -1029,6 +1032,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin-bottom: 3.2rem;
@@ -1440,6 +1444,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
 }
@@ -1760,6 +1765,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin-bottom: 3.2rem;
@@ -2128,6 +2134,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
 }
@@ -2371,6 +2378,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin-bottom: 3.2rem;
@@ -2650,6 +2658,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
 }
@@ -2861,6 +2870,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin-bottom: 3.2rem;

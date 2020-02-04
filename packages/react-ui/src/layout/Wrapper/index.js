@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   padding: ${spacings.medium} ${spacings.xmedium};
   color: ${({ theme }) => theme.paragraph};
   border-radius: ${box.borderRadius};
+  min-height: 300px;
   ${props => {
     if (props.size === "large") {
       return css`

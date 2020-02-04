@@ -74,6 +74,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   position: absolute;
@@ -613,6 +614,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   position: absolute;
@@ -1097,6 +1099,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   position: absolute;
@@ -1571,6 +1574,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   position: absolute;
@@ -2101,6 +2105,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   position: absolute;
@@ -2593,6 +2598,7 @@ exports[`<Wizard /> should render a step 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
+  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   position: absolute;
