@@ -39,13 +39,23 @@ describe("api entreprise", () => {
     const query = "Corso balard";
     const results = await searchEntrepriseByName(query);
     const apiEntrepriseMatcher = new RegExp(
-      `${API_ENTREPRISE_URL}/full_text/${encodeURIComponent(query)}`
+      `${API_ENTREPRISE_URL}/full_text/corso%20balard`
     );
     expect(fetch).toHaveBeenCalledTimes(2);
     expect(fetch.mock.calls[0][0]).toMatch(apiEntrepriseMatcher);
     expect(fetch.mock.calls[1][0]).toMatch(
       new RegExp(`${API_SIRET2IDCC_URL}/80258570300035,80258570300027`)
     );
+    expect(results).toMatchSnapshot();
+  });
+  it("strip accents", async () => {
+    const query = "véolia";
+    const results = await searchEntrepriseByName(query);
+    const apiEntrepriseMatcher = new RegExp(
+      `${API_ENTREPRISE_URL}/full_text/veolia`
+    );
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch.mock.calls[0][0]).toMatch(apiEntrepriseMatcher);
     expect(results).toMatchSnapshot();
   });
   it("can get entreprise data by siret and resuse memoized call from previous siret2idcc", async () => {

@@ -2,6 +2,7 @@ import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import memoizee from "memoizee";
 import debounce from "debounce-promise";
+import slugify from "@cdt/data/slugify";
 
 const {
   publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL }
@@ -17,11 +18,16 @@ const apiSiret2idcc = memoizee(
   { promise: true }
 );
 
+// slugify but keep spaces
+const cleanEntrepriseName = name => slugify(name).replace("-", " ");
+
 // api entreprise full text call
 const apiEntrepriseFullText = memoizee(
   query =>
     fetch(
-      `${API_ENTREPRISE_URL}/full_text/${encodeURIComponent(query)}?per_page=50`
+      `${API_ENTREPRISE_URL}/full_text/${encodeURIComponent(
+        cleanEntrepriseName(query)
+      )}?per_page=50`
     )
       .then(r => r.json())
       .then(formatFullTextResults)
