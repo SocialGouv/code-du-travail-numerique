@@ -705,6 +705,12 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c22 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c19 {
     font-size: 1.4rem;
   }

@@ -360,6 +360,12 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
+  .c10 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c12 {
     padding: 1.6rem 1rem;
   }
@@ -1053,6 +1059,12 @@ exports[`<Contribution /> should render answer references 1`] = `
 .c27 {
   width: 2.8rem;
   margin-left: 1.6rem;
+}
+
+@media (max-width:600px) {
+  .c10 {
+    padding: 2.4rem 0;
+  }
 }
 
 @media (max-width:600px) {
@@ -1781,6 +1793,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
+  .c10 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c12 {
     padding: 1.6rem 1rem;
   }
@@ -2371,6 +2389,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
+  .c10 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c12 {
     padding: 1.6rem 1rem;
   }
@@ -2852,6 +2876,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c11 {
   margin-top: 0;
+}
+
+@media (max-width:600px) {
+  .c7 {
+    padding: 2.4rem 0;
+  }
 }
 
 @media (max-width:600px) {

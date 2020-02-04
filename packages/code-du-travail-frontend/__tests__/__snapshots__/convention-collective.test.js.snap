@@ -226,6 +226,12 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c4 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c11 {
     font-size: 1.4rem;
   }
@@ -272,7 +278,6 @@ exports[`<ConventionCollective /> should render 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    max-width: 60rem;
     margin-right: auto;
     margin-left: auto;
   }

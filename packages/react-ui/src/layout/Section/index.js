@@ -53,6 +53,9 @@ const StyledSection = styled.div`
       return css`
         padding: ${spacings.large} 0;
         ${assignBackgroundColor};
+        @media (max-width: ${breakpoints.mobile}) {
+          padding: ${spacings.xmedium} 0;
+        }
       `;
     }
     if (decorated) {

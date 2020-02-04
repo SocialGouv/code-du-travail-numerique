@@ -561,6 +561,12 @@ exports[`<Layout /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c21 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }

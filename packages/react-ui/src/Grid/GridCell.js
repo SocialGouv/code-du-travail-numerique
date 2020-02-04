@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { breakpoints, spacings } from "../theme";
 
 import { GridContext } from "./Grid";
@@ -15,24 +15,10 @@ export const ListItem = styled.li`
   display: flex;
   flex-grow: 0;
   flex-shrink: 1;
-  width: calc(100% / ${props => props.columns} - 2 * ${spacings.small} - 1px);
   margin: ${spacings.small};
   padding: 0;
-  @media (max-width: ${breakpoints.desktop}) {
-    width: calc(
-      100% / ${props => Math.max(props.columns - 1, 0)} - 2 * ${spacings.small} -
-        1px
-    );
-  }
-  @media (max-width: ${breakpoints.tablet}) {
-    width: calc(
-      100% / ${props => Math.max(props.columns - 2, 0)} - 2 * ${spacings.small} -
-        1px
-    );
-  }
   @media (max-width: ${breakpoints.mobile}) {
     flex-shrink: 0;
-    width: ${({ columns }) => (Math.max(columns - 2, 0) < 2 ? "80%" : "60%")};
     min-width: 23rem;
     &:first-of-type {
       margin-left: ${spacings.medium};
@@ -45,4 +31,20 @@ export const ListItem = styled.li`
       content: "";
     }
   }
+  ${({ columns }) => css`
+    width: calc(100% / ${columns} - 2 * ${spacings.small} - 1px);
+    @media (max-width: ${breakpoints.desktop}) {
+      width: calc(
+        100% / ${Math.max(columns - 1, 0)} - 2 * ${spacings.small} - 1px
+      );
+    }
+    @media (max-width: ${breakpoints.tablet}) {
+      width: calc(
+        100% / ${Math.max(columns - 2, 0)} - 2 * ${spacings.small} - 1px
+      );
+    }
+    @media (max-width: ${breakpoints.mobile}) {
+      width: ${Math.max(columns - 2, 0) < 2 ? "80%" : "60%"};
+    }
+  `}
 `;

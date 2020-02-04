@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { SOURCES } from "@cdt/sources";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 
 import Answer from "../Answer";
 import Router from "next/router";
@@ -67,6 +67,7 @@ describe("<Answer />", () => {
     const SLUG_LINK_BASE = "LINK_";
     const SLUG_TOOL_BASE = "TOOL_";
     const SLUG_LETTER_BASE = "LETTER_";
+    const EXTERNAL_URL = "url.extrenal/tool";
     const { container } = renderAnswer({
       html:
         "<p class='test-content'>annualisation du temps de travail. Annualisation de l'annualisation.</p>",
@@ -83,7 +84,6 @@ describe("<Answer />", () => {
         },
         {
           source: SOURCES.EXTERNALS,
-          slug: `${SLUG_LINK_BASE}3`,
           url: "url.extrenal/tool",
           title: "related external title 1",
           action: "extern action",
@@ -124,12 +124,19 @@ describe("<Answer />", () => {
     expect(
       container.querySelectorAll(`[href*="${SLUG_LINK_BASE}"]`).length
     ).toBe(3);
+    expect(container.querySelectorAll(`[href*="${EXTERNAL_URL}"]`).length).toBe(
+      1
+    );
     expect(
-      container.querySelectorAll(`[href*="${SLUG_LETTER_BASE}"]`).length
+      container.querySelectorAll(`[href*="${getRouteBySource(SOURCES.TOOLS)}"]`)
+        .length
     ).toBe(1);
+    // only the first two tile items are picked
     expect(
-      container.querySelectorAll(`[href*="${SLUG_TOOL_BASE}"]`).length
-    ).toBe(1);
+      container.querySelectorAll(
+        `[href*="${getRouteBySource(SOURCES.LETTERS)}"]`
+      ).length
+    ).toBe(0);
     expect(container).toMatchSnapshot();
   });
 

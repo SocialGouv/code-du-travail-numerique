@@ -1172,6 +1172,12 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c41 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c30 {
     padding: 1.6rem 1rem;
   }
@@ -1342,7 +1348,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    max-width: 60rem;
     margin-right: auto;
     margin-left: auto;
   }
@@ -2111,7 +2116,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c43"
                   >
                     <a
-                      class="c44"
+                      class="c44 no-after"
                       href="api.url/docs/filename.pdf"
                     >
                       <svg
@@ -2156,7 +2161,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 class="c49"
               >
                 <a
-                  class="c50"
+                  class="c50 no-after"
                   href="api.url/docs/filename.pdf"
                 >
                   Télécharger le modèle (pdf - 12.35Ko)  

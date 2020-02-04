@@ -1508,6 +1508,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c20 {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width:600px) {
   .c39 {
     right: 2rem;
   }

@@ -5,6 +5,7 @@ import { Tab, Tabs as RootTabs, TabList, TabPanel } from "react-tabs";
 
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
 import { getTextFromComponent } from "../utils/getTextFromComponent";
+import { OverflowWrapper } from "../OverflowWrapper";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
 
 export const Tabs = props => {
@@ -21,11 +22,13 @@ export const Tabs = props => {
   return (
     <>
       <StyledTabs {...refinedProps}>
-        <StyledTabList>
-          {data.map(({ tab }, index) => (
-            <StyledTab key={index}>{getTextFromComponent(tab)}</StyledTab>
-          ))}
-        </StyledTabList>
+        <StyledOverflowWrapper>
+          <StyledTabList>
+            {data.map(({ tab }, index) => (
+              <StyledTab key={index}>{getTextFromComponent(tab)}</StyledTab>
+            ))}
+          </StyledTabList>
+        </StyledOverflowWrapper>
         {data.map(({ tab, panel }, index) => (
           <StyledTabPanel key={index}>
             <ScreenReaderOnly>{tab}</ScreenReaderOnly>
@@ -61,23 +64,26 @@ const StyledTabs = styled(RootTabs)`
   }
 `;
 
+const StyledOverflowWrapper = styled(OverflowWrapper)`
+  margin-right: ${spacings.tiny};
+`;
+
 const StyledTabList = styled(TabList)`
-  position: relative;
-  top: 1px;
   display: flex;
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0;
-  padding: 0 ${spacings.tiny} 0 0;
+  padding: 0 0 0 0;
   overflow: visible;
   list-style-type: none;
   @media (max-width: ${breakpoints.tablet}) {
-    flex-wrap: wrap;
     padding: 0;
   }
 `;
 
 const StyledTab = styled(Tab)`
+  flex: 1 0 auto;
+  max-height: 11rem;
   margin-left: ${spacings.tiny};
   padding: ${spacings.small} ${spacings.base};
   color: ${({ theme }) => theme.altText};
@@ -85,7 +91,7 @@ const StyledTab = styled(Tab)`
   font-size: ${fonts.sizes.headings.small};
   background-color: ${({ theme }) => theme.white};
   border: ${({ theme }) => box.border(theme.border)};
-  border-bottom: 1px solid ${({ theme }) => theme.border};
+  border-bottom: 1px solid transparent;
   border-radius: ${box.borderRadius} ${box.borderRadius} 0 0;
   cursor: pointer;
   opacity: 1;
@@ -98,7 +104,6 @@ const StyledTab = styled(Tab)`
     background-color: ${({ theme }) => theme.secondary};
   }
   @media (max-width: ${breakpoints.tablet}) {
-    flex: 1 1 auto;
     margin: ${spacings.tiny};
     border-bottom: ${({ theme }) => box.border(theme.border)};
     border-radius: ${box.borderRadius};
