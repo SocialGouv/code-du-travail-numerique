@@ -17,7 +17,6 @@ exports[`<Answer /> should renders 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -29,7 +28,8 @@ exports[`<Answer /> should renders 1`] = `
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 30rem;
+  height: 100%;
+  max-height: 30rem;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
@@ -183,7 +183,6 @@ exports[`<Answer /> should renders 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -269,7 +268,6 @@ exports[`<Answer /> should renders 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin: 1.6rem auto;
@@ -593,7 +591,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -605,7 +602,8 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 30rem;
+  height: 100%;
+  max-height: 30rem;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
@@ -803,7 +801,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -958,7 +955,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin: 1.6rem auto;
@@ -1419,7 +1415,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -1431,7 +1426,8 @@ exports[`<Answer /> should renders back to results link 1`] = `
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 30rem;
+  height: 100%;
+  max-height: 30rem;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
@@ -1585,7 +1581,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -1671,7 +1666,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin: 1.6rem auto;
@@ -1995,7 +1989,6 @@ exports[`<Answer /> should renders related content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -2007,7 +2000,8 @@ exports[`<Answer /> should renders related content 1`] = `
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 30rem;
+  height: 100%;
+  max-height: 30rem;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
@@ -2404,7 +2398,6 @@ exports[`<Answer /> should renders related content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -2537,7 +2530,6 @@ exports[`<Answer /> should renders related content 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin: 1.6rem auto;
@@ -3260,7 +3252,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -3272,7 +3263,8 @@ exports[`<Answer /> should renders tooltip 1`] = `
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 30rem;
+  height: 100%;
+  max-height: 30rem;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
@@ -3426,7 +3418,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -3516,7 +3507,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin: 1.6rem auto;
@@ -3876,7 +3866,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -3888,7 +3877,8 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 30rem;
+  height: 100%;
+  max-height: 30rem;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
@@ -4042,7 +4032,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -4132,7 +4121,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin: 1.6rem auto;
@@ -4478,7 +4466,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -4490,7 +4477,8 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 30rem;
+  height: 100%;
+  max-height: 30rem;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
@@ -4644,7 +4632,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -4734,7 +4721,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin: 1.6rem auto;
@@ -5071,7 +5057,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -5083,7 +5068,8 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 30rem;
+  height: 100%;
+  max-height: 30rem;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
@@ -5237,7 +5223,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -5327,7 +5312,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   margin: 1.6rem auto;

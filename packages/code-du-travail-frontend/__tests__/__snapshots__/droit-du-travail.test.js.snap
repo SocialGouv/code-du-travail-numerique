@@ -65,7 +65,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   position: relative;
   padding: 4rem;
   background-color: #fff;
@@ -77,7 +76,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 30rem;
+  height: 100%;
+  max-height: 30rem;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
@@ -96,7 +96,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
 }
@@ -113,7 +112,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
 }
@@ -1446,7 +1444,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   max-width: 66rem;

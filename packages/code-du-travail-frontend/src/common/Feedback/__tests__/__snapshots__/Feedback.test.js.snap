@@ -105,7 +105,6 @@ exports[`<Feedback/> should render 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -403,7 +402,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
@@ -634,7 +632,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
-  min-height: 300px;
   border: 1px solid #bbcadf;
   background-color: #fff;
   display: -webkit-box;
