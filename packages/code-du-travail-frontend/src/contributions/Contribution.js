@@ -46,16 +46,16 @@ const References = ({ references = [] }) => {
         <>
           <Subtitle>Convention collective</Subtitle>
           <ul>
-            {agreementRefs.map(({ agreement, index }) => (
+            {agreementRefs.map(({ agreement, title, index }) => (
               <li key={`${index}-${agreement.id}`}>
                 {agreement.url ? (
                   <RefLink
                     key={agreement.id}
-                    title={agreement.title}
+                    title={title}
                     url={agreement.url}
                   />
                 ) : (
-                  <div key={agreement.id}>{agreement.title}</div>
+                  <div key={agreement.id}>{title}</div>
                 )}
               </li>
             ))}
