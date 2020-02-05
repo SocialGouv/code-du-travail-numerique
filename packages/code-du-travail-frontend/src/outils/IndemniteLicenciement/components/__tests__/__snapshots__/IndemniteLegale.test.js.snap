@@ -11,9 +11,9 @@ exports[`<IndemniteLegale /> should render 1`] = `
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 

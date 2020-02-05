@@ -221,7 +221,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: border-color 250ms ease;
   transition: border-color 250ms ease;
@@ -277,7 +277,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 }
 
 .c4 {
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
 }
 
 @media (max-width:600px) {
@@ -544,7 +544,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: border-color 250ms ease;
   transition: border-color 250ms ease;
@@ -600,7 +600,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 }
 
 .c4 {
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
 }
 
 @media (max-width:600px) {

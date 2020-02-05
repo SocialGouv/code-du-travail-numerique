@@ -143,7 +143,7 @@ exports[`<PrevNextBar /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c4 {
@@ -365,7 +365,7 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c4 {
@@ -588,7 +588,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c4 {
@@ -747,7 +747,7 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 @media (max-width:600px) {

@@ -45,9 +45,9 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -178,13 +178,12 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
-     
+    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à 
     <strong
       class="c1"
     >
       17,444.44
-       € brut
+       € brut.
     </strong>
   </p>
   <h2
@@ -432,9 +431,9 @@ exports[`<Result /> renders legal indemnite 1`] = `
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -555,13 +554,12 @@ exports[`<Result /> renders legal indemnite 1`] = `
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
-     
+    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à 
     <strong
       class="c1"
     >
       15,875.00
-       € brut
+       € brut.
     </strong>
   </p>
   <h2

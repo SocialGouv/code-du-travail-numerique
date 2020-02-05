@@ -11,9 +11,9 @@ exports[`<Result /> should render 1`] = `
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -134,13 +134,12 @@ exports[`<Result /> should render 1`] = `
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
-     
+    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à 
     <strong
       class="c1"
     >
       2,500.00
-       € brut
+       € brut.
     </strong>
   </p>
   <h2

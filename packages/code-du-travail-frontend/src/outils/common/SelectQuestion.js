@@ -85,5 +85,5 @@ const StyledSelect = styled(Select)`
 `;
 
 const Wrapper = styled.div`
-  margin-bottom: ${spacings.medium};
+  margin-bottom: ${spacings.large};
 `;

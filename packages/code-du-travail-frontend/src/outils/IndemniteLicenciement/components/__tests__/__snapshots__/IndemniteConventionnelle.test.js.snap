@@ -55,9 +55,9 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -178,13 +178,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
-     
+    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à 
     <strong
       class="c1"
     >
       2,000.00
-       € brut
+       € brut.
     </strong>
   </p>
   <h2
@@ -375,9 +374,9 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -498,13 +497,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     Indemnité de licenciement
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à
-     
+    À partir des éléments que vous avez saisis, l’indemnité de licenciement est estimée à 
     <strong
       class="c1"
     >
       2,500.00
-       € brut
+       € brut.
     </strong>
   </p>
   <h2

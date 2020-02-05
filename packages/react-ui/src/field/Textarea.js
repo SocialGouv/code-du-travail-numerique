@@ -23,7 +23,7 @@ const StyledTextarea = styled.textarea`
   background: ${({ theme }) => theme.white};
   border: 1px solid transparent;
   border-radius: ${box.borderRadius};
-  box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
+  box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   appearance: none;
   &::placeholder {
     color: ${({ theme }) => theme.placeholder};

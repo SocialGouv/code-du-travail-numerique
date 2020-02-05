@@ -27,7 +27,7 @@ function IndemniteCCn({
         <>
           <p>
             À partir des éléments que vous avez saisis, l’indemnité de
-            licenciement est estimée à{" "}
+            licenciement est estimée à&nbsp;
             <Highlight>
               {Math.max(
                 indemniteLegale,
@@ -36,7 +36,7 @@ function IndemniteCCn({
                 maximumFractionDigits: 2,
                 minimumFractionDigits: 2
               })}
-              &nbsp;€ brut
+              &nbsp;€ brut.
             </Highlight>
           </p>
           <SectionTitle>Détails</SectionTitle>

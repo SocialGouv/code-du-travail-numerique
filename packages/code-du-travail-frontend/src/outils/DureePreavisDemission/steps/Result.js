@@ -80,10 +80,7 @@ function StepResult({ form }) {
       <SectionTitle>Durée du préavis</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
-        démission est estimée à&nbsp;:
-      </p>
-      <p>
-        <Highlight>{situation.answer}</Highlight>.
+        démission est estimée à&nbsp;<Highlight>{situation.answer}</Highlight>.
       </p>
       {parseInt(situation.answer3, 10) === 0 && (
         <p>

@@ -45,9 +45,9 @@ export const SectionTitle = styled.h2`
 `;
 
 export const Highlight = styled.strong`
-  color: ${colors.paragraph};
+  color: ${colors.primary};
   font-weight: 700;
-  font-size: ${fonts.sizes.headings.small};
+  font-size: ${fonts.sizes.headings.xmedium};
   white-space: pre-line;
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};

@@ -63,7 +63,7 @@ const StyledSelect = styled.select`
   background-color: ${({ theme }) => theme.white};
   border: none;
   border-radius: ${box.borderRadius};
-  box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
+  box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   cursor: pointer;
   transition: border-color ${animations.transitionTiming} ease;
   appearance: none;

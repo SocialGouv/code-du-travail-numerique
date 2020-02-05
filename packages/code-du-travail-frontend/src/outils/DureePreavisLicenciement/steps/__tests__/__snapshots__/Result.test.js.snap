@@ -45,9 +45,9 @@ exports[`<StepResult /> should render with O duration 1`] = `
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -228,9 +228,9 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -253,14 +253,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     Durée du préavis
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
-  </p>
-  <p>
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à 
     <strong
       class="c1"
     >
       1 mois
     </strong>
+    .
   </p>
   <div
     class="c2"
@@ -417,9 +416,9 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -442,14 +441,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     Durée du préavis
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
-  </p>
-  <p>
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à 
     <strong
       class="c1"
     >
       1 mois
     </strong>
+    .
   </p>
   <div
     class="c2"
@@ -604,9 +602,9 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -629,14 +627,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     Durée du préavis
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
-  </p>
-  <p>
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à 
     <strong
       class="c1"
     >
       2 mois
     </strong>
+    .
   </p>
   <div
     class="c2"
@@ -740,9 +737,9 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 }
 
 .c1 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   white-space: pre-line;
 }
 
@@ -765,14 +762,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     Durée du préavis
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
-  </p>
-  <p>
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à 
     <strong
       class="c1"
     >
       2 mois
     </strong>
+    .
   </p>
   <div
     class="c2"
