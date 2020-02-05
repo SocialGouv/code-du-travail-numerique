@@ -126,7 +126,7 @@ exports[`<StepResult /> should render with duration 1`] = `
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -143,9 +143,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Nombre d’heures
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, le nombre d’heures pour recherche d’emploi est estimé à :
-  </p>
-  <p>
+    À partir des éléments que vous avez saisis, le nombre d’heures pour recherche d’emploi est estimé à 
     <strong
       class="c1"
     >
@@ -236,7 +234,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -252,11 +250,15 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   >
     Nombre d’heures
   </h2>
-  <strong
-    class="c1"
-  >
-    Aucun résultat : la convention collective n'a pas été renseignée.
-  </strong>
+  <p>
+    <strong
+      class="c1"
+    >
+      Aucun résultat
+    </strong>
+     : 
+    la convention collective n’a pas été renseignée.
+  </p>
   <p>
     Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un « délai raisonnable » pour rechercher un emploi.
   </p>
@@ -315,7 +317,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -331,11 +333,15 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   >
     Nombre d’heures
   </h2>
-  <strong
-    class="c1"
-  >
-    Aucun résultat : la convention collective n'a pas encore été traitée par nos services.
-  </strong>
+  <p>
+    <strong
+      class="c1"
+    >
+      Aucun résultat
+    </strong>
+     : 
+    la convention collective n’a pas encore été traitée par nos services.
+  </p>
   <p>
     Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un « délai raisonnable » pour rechercher un emploi.
   </p>

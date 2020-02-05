@@ -630,12 +630,10 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </svg>
     Ajouter un salaire
   </button>
-  <p>
-    <span
-      class="c18"
-    >
-      Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
-    </span>
+  <p
+    class="c18"
+  >
+    Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>
 </div>
 `;
@@ -960,12 +958,10 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       </div>
     </span>
   </div>
-  <p>
-    <span
-      class="c9"
-    >
-      Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
-    </span>
+  <p
+    class="c9"
+  >
+    Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>
 </div>
 `;

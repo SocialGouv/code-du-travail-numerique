@@ -47,7 +47,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -195,7 +195,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -217,11 +217,15 @@ exports[`<StepResult /> should render with no cc 1`] = `
   >
     Durée du préavis
   </h2>
-  <strong
-    class="c1"
-  >
-    Aucun résultat : la convention collective n'a pas été renseignée.
-  </strong>
+  <p>
+    <strong
+      class="c1"
+    >
+      Aucun résultat
+    </strong>
+     : 
+    la convention collective n’a pas été renseignée.
+  </p>
   <p>
     Le code du travail ne prévoit pas de durée de préavis de démission sauf, cas particuliers.
   </p>
@@ -302,7 +306,7 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -324,11 +328,15 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   >
     Durée du préavis
   </h2>
-  <strong
-    class="c1"
-  >
-    Aucun résultat : la convention collective n'a pas encore été traitée par nos services.
-  </strong>
+  <p>
+    <strong
+      class="c1"
+    >
+      Aucun résultat
+    </strong>
+     : 
+    la convention collective n’a pas encore été traitée par nos services.
+  </p>
   <p>
     Le code du travail ne prévoit pas de durée de préavis de démission sauf, cas particuliers.
   </p>

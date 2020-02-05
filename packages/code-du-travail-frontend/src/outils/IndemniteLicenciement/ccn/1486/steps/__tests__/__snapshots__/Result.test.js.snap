@@ -47,7 +47,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -183,8 +183,9 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
       class="c1"
     >
       17,444.44
-       € brut.
+       € brut
     </strong>
+    .
   </p>
   <h2
     class="c0"
@@ -433,7 +434,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -559,8 +560,9 @@ exports[`<Result /> renders legal indemnite 1`] = `
       class="c1"
     >
       15,875.00
-       € brut.
+       € brut
     </strong>
+    .
   </p>
   <h2
     class="c0"

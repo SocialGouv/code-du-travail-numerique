@@ -57,7 +57,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -183,8 +183,9 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
       class="c1"
     >
       2,000.00
-       € brut.
+       € brut
     </strong>
+    .
   </p>
   <h2
     class="c0"
@@ -376,7 +377,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 .c1 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
@@ -502,8 +503,9 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
       class="c1"
     >
       2,500.00
-       € brut.
+       € brut
     </strong>
+    .
   </p>
   <h2
     class="c0"

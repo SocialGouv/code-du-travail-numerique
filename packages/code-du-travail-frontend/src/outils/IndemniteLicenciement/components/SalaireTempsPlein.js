@@ -97,7 +97,7 @@ SalaireTempsPlein.propTypes = {
 
 export { SalaireTempsPlein };
 
-const { fonts, spacings, breakpoints } = theme;
+const { fonts, breakpoints } = theme;
 
 const Table = styled.table`
   width: 100%;

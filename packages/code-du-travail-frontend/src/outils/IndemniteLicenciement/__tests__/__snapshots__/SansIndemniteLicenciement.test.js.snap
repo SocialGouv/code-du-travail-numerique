@@ -51,7 +51,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 .c5 {
   color: #f66663;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   white-space: pre-line;
 }
 
