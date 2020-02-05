@@ -39,12 +39,10 @@ function StepRemuneration({ form }) {
             />
 
             {["mensuel", "total"].includes(input.value) && (
-              <p>
-                <SmallText>
-                  Majorations, indemnités, primes et accessoires compris sauf
-                  les remboursements de frais et l’indemnité de congés payés.
-                </SmallText>
-              </p>
+              <SmallText>
+                Majorations, indemnités, primes et accessoires compris sauf les
+                remboursements de frais et l’indemnité de congés payés.
+              </SmallText>
             )}
           </>
         )}

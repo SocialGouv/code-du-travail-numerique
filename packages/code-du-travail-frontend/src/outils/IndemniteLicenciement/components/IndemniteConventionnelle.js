@@ -36,8 +36,9 @@ function IndemniteCCn({
                 maximumFractionDigits: 2,
                 minimumFractionDigits: 2
               })}
-              &nbsp;€ brut.
+              &nbsp;€ brut
             </Highlight>
+            .
           </p>
           <SectionTitle>Détails</SectionTitle>
           <p>

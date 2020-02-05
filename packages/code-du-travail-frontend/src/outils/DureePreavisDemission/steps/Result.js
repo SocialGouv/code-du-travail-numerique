@@ -52,16 +52,17 @@ function StepResult({ form }) {
 
   // No ccn selected or UunhandledCC
   if (idcc === 0 || possibleSituations.length === 0) {
-    let result =
-      "Aucun résultat : la convention collective n'a pas encore été traitée par nos services.";
+    let reason =
+      "la convention collective n’a pas encore été traitée par nos services.";
     if (idcc === 0) {
-      result =
-        "Aucun résultat : la convention collective n'a pas été renseignée.";
+      reason = "la convention collective n’a pas été renseignée.";
     }
     return (
       <>
         <SectionTitle>Durée du préavis</SectionTitle>
-        <Highlight>{result}</Highlight>
+        <p>
+          <Highlight>Aucun résultat</Highlight>&nbsp;:&nbsp;{reason}
+        </p>
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.

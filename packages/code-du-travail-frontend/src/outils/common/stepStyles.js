@@ -47,14 +47,14 @@ export const SectionTitle = styled.h2`
 export const Highlight = styled.strong`
   color: ${colors.primary};
   font-weight: 700;
-  font-size: ${fonts.sizes.headings.xmedium};
+  font-size: ${fonts.sizes.headings.small};
   white-space: pre-line;
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }
 `;
 
-export const SmallText = styled.span`
+export const SmallText = styled.p`
   color: ${colors.paragraph};
   font-size: ${fonts.sizes.small};
   font-style: italic;

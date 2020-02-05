@@ -65,8 +65,8 @@ function StepIndemnite({ form }) {
   return (
     <>
       <p>
-        {bonusAltName} est estimée à&nbsp;<Highlight>{indemnite}</Highlight>
-        &nbsp;€.
+        {bonusAltName} est estimée à&nbsp;
+        <Highlight>{indemnite}&nbsp;€</Highlight>.
       </p>
       <details>
         <Summary>Détail du calcul</Summary>
