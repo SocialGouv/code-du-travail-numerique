@@ -62,7 +62,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: border-color 250ms ease;
   transition: border-color 250ms ease;
@@ -103,7 +103,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 }
 
 .c1 {
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
 }
 
 .c0 {
@@ -259,7 +259,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
   background-color: #fff;
   border: none;
   border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
   -webkit-transition: border-color 250ms ease;
   transition: border-color 250ms ease;
@@ -300,7 +300,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
 }
 
 .c1 {
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
 }
 
 .c0 {

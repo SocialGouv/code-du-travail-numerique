@@ -157,8 +157,6 @@ export { Wizard };
 const { breakpoints, box, spacings } = theme;
 
 const StyledForm = styled.form`
-  display: flex;
-  flex-direction: column;
   padding: 0 0 0 ${STEP_LIST_WIDTH};
   overflow: visible;
   @media (max-width: ${breakpoints.tablet}) {
@@ -172,7 +170,7 @@ const StyledForm = styled.form`
 const ToolTitle = styled.h1`
   display: flex;
   align-items: center;
-  margin-bottom: ${spacings.small};
+  margin-bottom: ${spacings.larger};
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.tablet}) {

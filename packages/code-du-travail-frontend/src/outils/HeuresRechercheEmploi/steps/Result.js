@@ -26,10 +26,7 @@ function Duration({ duration }) {
     <>
       <p>
         À partir des éléments que vous avez saisis, le nombre d’heures pour
-        recherche d’emploi est estimé à&nbsp;:
-      </p>
-      <p>
-        <Highlight>{duration}</Highlight>.
+        recherche d’emploi est estimé à&nbsp;<Highlight>{duration}</Highlight>.
       </p>
     </>
   );
@@ -56,16 +53,17 @@ function Disclaimer({ duration }) {
 }
 
 function NoResult({ idcc, ccn, legalRefs }) {
-  let result =
-    "Aucun résultat : la convention collective n'a pas encore été traitée par nos services.";
+  let reason =
+    "la convention collective n’a pas encore été traitée par nos services.";
   if (idcc === 0) {
-    result =
-      "Aucun résultat : la convention collective n'a pas été renseignée.";
+    reason = "la convention collective n’a pas été renseignée.";
   }
   return (
     <>
       <SectionTitle>Nombre d’heures</SectionTitle>
-      <Highlight>{result}</Highlight>
+      <p>
+        <Highlight>Aucun résultat</Highlight>&nbsp;:&nbsp;{reason}
+      </p>
       <p>
         Le code du travail ne prévoit pas le droit pour le salarié de s’absenter
         pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe

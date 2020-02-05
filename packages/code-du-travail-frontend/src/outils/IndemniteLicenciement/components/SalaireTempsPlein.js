@@ -7,6 +7,7 @@ import { icons, Input, theme } from "@socialgouv/react-ui";
 
 import { InlineError } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
+import { SmallText } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 
 function SalaireTempsPlein({ name }) {
@@ -16,10 +17,10 @@ function SalaireTempsPlein({ name }) {
         fields.length > 0 && (
           <Table>
             <Caption>
-              <Question required>
-                Salaire mensuel brut (Prendre en compte les primes et avantages
-                en nature)
-              </Question>
+              <Question required>Salaire mensuel brut</Question>
+              <SmallText>
+                Prendre en compte les primes et avantages en nature.
+              </SmallText>
             </Caption>
             <thead>
               <tr>
@@ -96,7 +97,7 @@ SalaireTempsPlein.propTypes = {
 
 export { SalaireTempsPlein };
 
-const { fonts, spacings, breakpoints } = theme;
+const { fonts, breakpoints } = theme;
 
 const Table = styled.table`
   width: 100%;
@@ -114,7 +115,6 @@ const Table = styled.table`
 `;
 
 const Caption = styled.caption`
-  margin-bottom: ${spacings.xmedium};
   text-align: left;
 `;
 

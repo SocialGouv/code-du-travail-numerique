@@ -2,7 +2,7 @@
 
 exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
 .c0 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: pre-line;
@@ -39,13 +39,14 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
 <div>
   <p>
     La prime de précarité
-     est estimée à 
+     est estimée à 
     <strong
       class="c0"
     >
       2000
+       €
     </strong>
-     €.
+    .
   </p>
   <details>
     <summary
@@ -125,7 +126,7 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 .c0 {
-  color: #3e486e;
+  color: #f66663;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: pre-line;
@@ -162,13 +163,14 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 <div>
   <p>
     La prime de précarité
-     est estimée à 
+     est estimée à 
     <strong
       class="c0"
     >
       300
+       €
     </strong>
-     €.
+    .
   </p>
   <details>
     <summary

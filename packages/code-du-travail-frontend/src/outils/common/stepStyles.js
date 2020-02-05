@@ -45,7 +45,7 @@ export const SectionTitle = styled.h2`
 `;
 
 export const Highlight = styled.strong`
-  color: ${colors.paragraph};
+  color: ${colors.primary};
   font-weight: 700;
   font-size: ${fonts.sizes.headings.small};
   white-space: pre-line;
@@ -54,7 +54,7 @@ export const Highlight = styled.strong`
   }
 `;
 
-export const SmallText = styled.span`
+export const SmallText = styled.p`
   color: ${colors.paragraph};
   font-size: ${fonts.sizes.small};
   font-style: italic;

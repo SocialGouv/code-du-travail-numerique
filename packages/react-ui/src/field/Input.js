@@ -55,7 +55,7 @@ const StyledInput = styled.input`
   border-color: ${({ invalid, theme }) =>
     invalid ? theme.error : "transparent"};
   border-radius: ${box.borderRadius};
-  box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
+  box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     margin: 0;

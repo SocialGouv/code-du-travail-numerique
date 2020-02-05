@@ -52,16 +52,17 @@ function StepResult({ form }) {
 
   // No ccn selected or UunhandledCC
   if (idcc === 0 || possibleSituations.length === 0) {
-    let result =
-      "Aucun résultat : la convention collective n'a pas encore été traitée par nos services.";
+    let reason =
+      "la convention collective n’a pas encore été traitée par nos services.";
     if (idcc === 0) {
-      result =
-        "Aucun résultat : la convention collective n'a pas été renseignée.";
+      reason = "la convention collective n’a pas été renseignée.";
     }
     return (
       <>
         <SectionTitle>Durée du préavis</SectionTitle>
-        <Highlight>{result}</Highlight>
+        <p>
+          <Highlight>Aucun résultat</Highlight>&nbsp;:&nbsp;{reason}
+        </p>
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
@@ -80,10 +81,7 @@ function StepResult({ form }) {
       <SectionTitle>Durée du préavis</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
-        démission est estimée à&nbsp;:
-      </p>
-      <p>
-        <Highlight>{situation.answer}</Highlight>.
+        démission est estimée à&nbsp;<Highlight>{situation.answer}</Highlight>.
       </p>
       {parseInt(situation.answer3, 10) === 0 && (
         <p>

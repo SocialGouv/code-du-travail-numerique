@@ -216,7 +216,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c16 {
@@ -225,13 +225,6 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding: 0 0 0 28rem;
   overflow: visible;
 }
@@ -245,7 +238,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }

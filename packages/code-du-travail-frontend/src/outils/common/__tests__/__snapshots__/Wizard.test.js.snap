@@ -216,7 +216,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c16 {
@@ -225,13 +225,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding: 0 0 0 28rem;
   overflow: visible;
 }
@@ -245,7 +238,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
@@ -755,17 +748,10 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding: 0 0 0 28rem;
   overflow: visible;
 }
@@ -779,7 +765,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
@@ -1239,7 +1225,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c16 {
@@ -1248,13 +1234,6 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding: 0 0 0 28rem;
   overflow: visible;
 }
@@ -1268,7 +1247,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
@@ -1713,7 +1692,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c16 {
@@ -1722,13 +1701,6 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding: 0 0 0 28rem;
   overflow: visible;
 }
@@ -1742,7 +1714,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
@@ -2243,17 +2215,10 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding: 0 0 0 28rem;
   overflow: visible;
 }
@@ -2267,7 +2232,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
@@ -2735,7 +2700,7 @@ exports[`<Wizard /> should render a step 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin: 5rem 0 3.2rem 0;
 }
 
 .c16 {
@@ -2744,13 +2709,6 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding: 0 0 0 28rem;
   overflow: visible;
 }
@@ -2764,7 +2722,7 @@ exports[`<Wizard /> should render a step 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }

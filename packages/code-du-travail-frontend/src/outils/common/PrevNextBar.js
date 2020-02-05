@@ -13,7 +13,7 @@ function PrevNextBar({
 }) {
   return (
     <>
-      <Box>
+      <StyledDiv>
         {printVisible && (
           <StyledButton onClick={printResult}>
             Imprimer le résultat
@@ -30,7 +30,7 @@ function PrevNextBar({
             Précédent
           </StyledButton>
         )}
-      </Box>
+      </StyledDiv>
     </>
   );
 }
@@ -59,12 +59,12 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const Box = styled.div`
+const StyledDiv = styled.div`
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  margin: ${spacings.large} 0;
+  margin: 5rem 0 ${spacings.large} 0;
   @media (max-width: ${breakpoints.tablet}) {
     flex-flow: column;
     align-items: stretch;

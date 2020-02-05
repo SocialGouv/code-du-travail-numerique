@@ -119,10 +119,7 @@ function DurationResult({ duration, durationCC, durationCDT }) {
     <>
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
-        licenciement est estimée à&nbsp;:
-      </p>
-      <p>
-        <Highlight>{duration}</Highlight>
+        licenciement est estimée à&nbsp;<Highlight>{duration}</Highlight>.
       </p>
     </>
   );
