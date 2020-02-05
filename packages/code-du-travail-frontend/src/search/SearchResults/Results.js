@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
@@ -95,6 +95,9 @@ export const ListLink = ({
 export const Results = ({ id, isSearch, items, query }) => {
   const pageSize = 7;
   const [page, setPage] = useState(1);
+  useEffect(() => {
+    setPage(1);
+  }, [query]);
   return (
     <Container narrow role="region" aria-label="Résultats de recherche">
       {isSearch ? (
