@@ -1407,7 +1407,7 @@ exports[`<Term /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="sc-fzXfNO c43"
+                class="sc-fznMnq c43"
               >
                 <li
                   class="c44"
@@ -1491,7 +1491,7 @@ exports[`<Term /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="sc-fzXfNO c43"
+                class="sc-fznMnq c43"
               >
                 <li
                   class="c44"
@@ -1540,7 +1540,7 @@ exports[`<Term /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="sc-fzXfNO c43"
+                class="sc-fznMnq c43"
               >
                 <li
                   class="c44"

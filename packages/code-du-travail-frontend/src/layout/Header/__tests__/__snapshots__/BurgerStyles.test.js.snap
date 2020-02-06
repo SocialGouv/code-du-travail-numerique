@@ -52,7 +52,7 @@ HTMLCollection [
 
 <style
     data-styled="active"
-    data-styled-version="5.0.0"
+    data-styled-version="5.0.1"
   >
     .bm-burger-button{position:relative;z-index:auto !important;width:5.4rem;height:5.4rem;color:#7994d4;}
     @media (min-width:981px){.bm-burger-button{display:none;}}

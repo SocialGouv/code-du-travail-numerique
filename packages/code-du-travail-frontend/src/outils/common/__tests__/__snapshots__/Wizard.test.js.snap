@@ -400,7 +400,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       test
     </h1>
     <div
-      class="sc-AykKH c2"
+      class="sc-AxgMl c2"
     >
       <span
         class="c3"
@@ -931,7 +931,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       test
     </h1>
     <div
-      class="sc-AykKH c2"
+      class="sc-AxgMl c2"
     >
       <span
         class="c3"
@@ -1397,7 +1397,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       test
     </h1>
     <div
-      class="sc-AykKH c2"
+      class="sc-AxgMl c2"
     >
       <span
         class="c3"
@@ -1867,7 +1867,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
       test
     </h1>
     <div
-      class="sc-AykKH c2"
+      class="sc-AxgMl c2"
     >
       <span
         class="c3"
@@ -2406,7 +2406,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       test
     </h1>
     <div
-      class="sc-AykKH c2"
+      class="sc-AxgMl c2"
     >
       <span
         class="c3"
@@ -2872,7 +2872,7 @@ exports[`<Wizard /> should render a step 1`] = `
       test
     </h1>
     <div
-      class="sc-AykKH c2"
+      class="sc-AxgMl c2"
     >
       <span
         class="c3"

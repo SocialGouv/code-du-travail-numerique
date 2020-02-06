@@ -2489,7 +2489,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fzXfNO c80"
+                  class="sc-fznMnq c80"
                 >
                   <li
                     class="c81"
@@ -2573,7 +2573,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fzXfNO c80"
+                  class="sc-fznMnq c80"
                 >
                   <li
                     class="c81"
@@ -2622,7 +2622,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fzXfNO c80"
+                  class="sc-fznMnq c80"
                 >
                   <li
                     class="c81"
@@ -5242,7 +5242,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fzXfNO c80"
+                  class="sc-fznMnq c80"
                 >
                   <li
                     class="c81"
@@ -5326,7 +5326,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fzXfNO c80"
+                  class="sc-fznMnq c80"
                 >
                   <li
                     class="c81"
@@ -5375,7 +5375,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fzXfNO c80"
+                  class="sc-fznMnq c80"
                 >
                   <li
                     class="c81"

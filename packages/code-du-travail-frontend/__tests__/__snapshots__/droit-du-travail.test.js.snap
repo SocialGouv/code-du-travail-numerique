@@ -170,8 +170,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c78 {
   padding: 1.6rem;
-  -webkit-animation: dpvxPj 250ms ease-in;
-  animation: dpvxPj 250ms ease-in;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
 }
 
 .c76 {
@@ -630,8 +630,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c53 {
   padding: 1.6rem;
-  -webkit-animation: dpvxPj 0.35s ease-in;
-  animation: dpvxPj 0.35s ease-in;
+  -webkit-animation: iHsNqv 0.35s ease-in;
+  animation: iHsNqv 0.35s ease-in;
 }
 
 .c48 {
@@ -4962,7 +4962,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="sc-fzXfNO c100"
+                class="sc-fznMnq c100"
               >
                 <li
                   class="c101"
@@ -5046,7 +5046,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="sc-fzXfNO c100"
+                class="sc-fznMnq c100"
               >
                 <li
                   class="c101"
@@ -5095,7 +5095,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="sc-fzXfNO c100"
+                class="sc-fznMnq c100"
               >
                 <li
                   class="c101"

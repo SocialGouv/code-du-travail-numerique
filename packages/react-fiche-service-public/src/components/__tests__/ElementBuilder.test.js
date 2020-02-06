@@ -105,22 +105,22 @@ const tests = [
 
 <div>
   <div
-    class="sc-AykKH c0"
+    class="sc-AxgMl c0"
   >
     stuff 0
   </div>
   <div
-    class="sc-AykKH c0"
+    class="sc-AxgMl c0"
   >
     stuff 1
   </div>
   <div
-    class="sc-AykKH c0"
+    class="sc-AxgMl c0"
   >
     stuff 2
   </div>
   <div
-    class="sc-AykKH c0"
+    class="sc-AxgMl c0"
   >
     stuff 3
   </div>

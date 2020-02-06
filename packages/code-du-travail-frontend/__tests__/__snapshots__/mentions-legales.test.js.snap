@@ -1521,7 +1521,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="sc-fzXfNO c46"
+                class="sc-fznMnq c46"
               >
                 <li
                   class="c47"
@@ -1605,7 +1605,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="sc-fzXfNO c46"
+                class="sc-fznMnq c46"
               >
                 <li
                   class="c47"
@@ -1654,7 +1654,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="sc-fzXfNO c46"
+                class="sc-fznMnq c46"
               >
                 <li
                   class="c47"

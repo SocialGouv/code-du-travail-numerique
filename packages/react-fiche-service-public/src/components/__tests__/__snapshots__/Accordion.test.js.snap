@@ -47,8 +47,8 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 
 .c8 {
   padding: 1.6rem;
-  -webkit-animation: dpvxPj 250ms ease-in;
-  animation: dpvxPj 250ms ease-in;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
 }
 
 .c5 {
@@ -497,8 +497,8 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 
 .c6 {
   padding: 1.6rem;
-  -webkit-animation: dpvxPj 250ms ease-in;
-  animation: dpvxPj 250ms ease-in;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
 }
 
 .c3 {
