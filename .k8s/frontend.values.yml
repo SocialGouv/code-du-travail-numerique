@@ -138,3 +138,4 @@ autoscaling:
   minReplicas: 1
   maxReplicas: 10
   targetCPUAverageUtilizationPercentage: 80
+  targetMemoryAverageUtilizationPercentage: 80
