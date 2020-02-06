@@ -2015,6 +2015,11 @@
     "theme": "3f22a0c2-f6d7-4073-a2ee-9b6d9987407c",
     "refs": [
       {
+        "url": "/modeles-de-courriers/lettre-de-reclamation-des-heures-supplementaires",
+        "title": "Modèle : lettre de réclamation des heures supplémentaires",
+        "relevance": 5
+      },
+      {
         "url": "/fiche-ministere-travail/les-heures-supplementaires-definition-et-limites#Quelles-sont-les-limites-a-l-accomplissement-d-heures-supplementaires-nbsp",
         "title": "Les heures supplémentaires : quelles sont les limites à l’accomplissement d’heures supplémentaires ?",
         "relevance": 5
@@ -2028,11 +2033,6 @@
         "url": "/fiche-ministere-travail/les-heures-supplementaires-definition-et-limites#Quelles-sont-les-regles-applicables-au-contingent-d-heures-supplementaires-nbsp",
         "title": "Les heures supplémentaires : quelles sont les règles applicables au contingent d’heures supplémentaires ?",
         "relevance": 4
-      },
-      {
-        "url": "/modeles-de-courriers/lettre-de-reclamation-des-heures-supplementaires",
-        "title": "Modèle : lettre de réclamation des heures supplémentaires",
-        "relevance": 3
       },
       {
         "url": "/fiche-ministere-travail/les-heures-supplementaires-contreparties#Quelles-sont-les-majorations-de-salaire-applicables",
@@ -2050,8 +2050,8 @@
     "theme": "ec4f3127-e5b9-4f4f-911b-5a5c5930c5a3",
     "refs": [
       {
-        "url": "/outils/indemnite-licenciement",
-        "title": "calculateur d'indemnité de licenciement",
+        "url": "/external/telerc",
+        "title": "TéléRC",
         "relevance": 5
       },
       {
@@ -2065,31 +2065,6 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/r1234-1",
-        "title": "Article R1234-1",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/r1234-2",
-        "title": "Article R1234-2",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/r1234-4",
-        "title": "Article R1234-4",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/l1237-13",
-        "title": "Article L1237-13",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/l1234-9",
-        "title": "Article L1234-9",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-service-public/rupture-conventionnelle",
         "title": "Rupture conventionnelle",
         "relevance": 4
@@ -2098,6 +2073,31 @@
         "url": "/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi",
         "title": "Indemnité de licenciement",
         "relevance": 4
+      },
+      {
+        "url": "/code-du-travail/r1234-1",
+        "title": "Article R1234-1",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/r1234-2",
+        "title": "Article R1234-2",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/r1234-4",
+        "title": "Article R1234-4",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/l1237-13",
+        "title": "Article L1237-13",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/l1234-9",
+        "title": "Article L1234-9",
+        "relevance": 3
       },
       {
         "url": "/fiche-ministere-travail/la-rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee#Quel-est-le-contenu-de-la-convention",
@@ -2134,11 +2134,6 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi",
-        "title": "Indemnité de licenciement",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-ministere-travail/lindemnite-legale-de-licenciement#Comment-calculer-le-salaire-de-reference",
         "title": "L’indemnité légale de licenciement : comment calculer le salaire de référence ?",
         "relevance": 5
@@ -2149,18 +2144,13 @@
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/r1234-4",
-        "title": "Article R1234-4",
-        "relevance": 5
-      },
-      {
-        "url": "/code-du-travail/r1234-2",
-        "title": "Article R1234-2",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-service-public/percoit-on-des-indemnites-en-cas-de-licenciement-pour-inaptitude-physique",
         "title": "Perçoit-on des indemnités en cas de licenciement pour inaptitude physique ?",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi",
+        "title": "Indemnité de licenciement",
         "relevance": 4
       },
       {
@@ -2171,6 +2161,16 @@
       {
         "url": "/fiche-service-public/comment-calculer-lanciennete-en-matiere-dindemnite-de-licenciement",
         "title": "Comment calculer l'ancienneté en matière d'indemnité de licenciement ?",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/r1234-4",
+        "title": "Article R1234-4",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/r1234-2",
+        "title": "Article R1234-2",
         "relevance": 3
       },
       {
@@ -4051,24 +4051,24 @@
         "relevance": 5
       },
       {
+        "url": "/fiche-ministere-travail/conge-individuel-de-formation-cif#Qui-peut-solliciter-un-conge-individuel-de-formation",
+        "title": "CIF : qui peut solliciter un congé individuel de formation ?",
+        "relevance": 5
+      },
+      {
+        "url": "/fiche-service-public/conge-de-formation-dun-conseiller-prudhomal",
+        "title": "Congé de formation d'un conseiller prud'homal",
+        "relevance": 4
+      },
+      {
         "url": "/fiche-service-public/conge-de-formation-economique-sociale-et-syndicale",
         "title": "Congé de formation économique, sociale et syndicale",
         "relevance": 4
       },
       {
-        "url": "/fiche-ministere-travail/conge-individuel-de-formation-cif#Qui-peut-solliciter-un-conge-individuel-de-formation",
-        "title": "CIF : qui peut solliciter un congé individuel de formation ?",
-        "relevance": 4
-      },
-      {
-        "url": "/fiche-service-public/conge-de-formation-dun-conseiller-prudhomal",
-        "title": "Congé de formation d'un conseiller prud'homal",
-        "relevance": 3
-      },
-      {
         "url": "/fiche-service-public/conge-de-formation-animateur-ou-cadre-pour-la-jeunesse",
         "title": "Congé de formation - Animateur ou cadre pour la jeunesse",
-        "relevance": 3
+        "relevance": 4
       },
       {
         "url": "/fiche-service-public/un-salarie-peut-il-reclamer-une-formation-a-son-employeur",
@@ -7085,6 +7085,21 @@
     "theme": "13840451-12bb-49d8-b28c-cf744213c811",
     "refs": [
       {
+        "url": "/modeles-de-courriers/lettre-de-reclamation-des-documents-de-fin-de-contrat",
+        "title": "Modèle : lettre de réclamation des documents de fin de contrat",
+        "relevance": 5
+      },
+      {
+        "url": "/modeles-de-courriers/recu-pour-solde-de-tout-compte",
+        "title": "Reçu pour solde de tout compte",
+        "relevance": 5
+      },
+      {
+        "url": "/modeles-de-courriers/certificat-de-travail",
+        "title": "Certificat de travail",
+        "relevance": 5
+      },
+      {
         "url": "/fiche-service-public/quels-sont-les-documents-remis-au-salarie-a-la-fin-de-son-contrat",
         "title": "/fiche-service-public/quels-sont-les-documents-remis-au-salarie-a-la-fin-de-son-contrat",
         "relevance": 5
@@ -7095,23 +7110,13 @@
         "relevance": 5
       },
       {
-        "url": "/fiche-service-public/solde-de-tout-compte",
-        "title": "Solde de tout compte",
-        "relevance": 5
-      },
-      {
         "url": "/fiche-ministere-travail/les-documents-remis-aux-salaries-lors-de-la-rupture-du-contrat-de-travail#Et-l-attestation-pour-Pole-Emploi",
         "title": "Les documents remis aux salariés lors de la rupture du contrat de travail : et l’attestation pour Pôle Emploi ?",
         "relevance": 5
       },
       {
-        "url": "/code-du-travail/l5134-28-1",
-        "title": "Article L5134-28-1",
-        "relevance": 5
-      },
-      {
-        "url": "/modeles-de-courriers/lettre-de-reclamation-des-documents-de-fin-de-contrat",
-        "title": "Modèle : lettre de réclamation des documents de fin de contrat",
+        "url": "/fiche-service-public/solde-de-tout-compte",
+        "title": "Solde de tout compte",
         "relevance": 4
       },
       {
@@ -7157,6 +7162,11 @@
       {
         "url": "/fiche-ministere-travail/le-contrat-de-travail-a-duree-indeterminee-cdi#Comment-le-CDI-peut-il-prendre-fin",
         "title": "Comment le CDI peut-il prendre fin ?",
+        "relevance": 3
+      },
+      {
+        "url": "/code-du-travail/l5134-28-1",
+        "title": "Article L5134-28-1",
         "relevance": 3
       },
       {
@@ -7413,13 +7423,13 @@
     "theme": "c3e02ffb-759e-463e-9dce-d185c5fe6721",
     "refs": [
       {
-        "url": "/fiche-service-public/quels-sont-les-differents-dispositifs-de-formation-pour-le-secteur-prive",
-        "title": "Quels sont les différents dispositifs de formation pour le secteur privé ?",
+        "url": "/external/mon-compte-formation",
+        "title": "Mon compte formation",
         "relevance": 5
       },
       {
-        "url": "https://www.moncompteformation.gouv.fr/espace-prive/html/#/",
-        "title": "Mon compte formation",
+        "url": "/fiche-service-public/quels-sont-les-differents-dispositifs-de-formation-pour-le-secteur-prive",
+        "title": "Quels sont les différents dispositifs de formation pour le secteur privé ?",
         "relevance": 5
       },
       {
@@ -8639,6 +8649,16 @@
     "theme": "bd17aa4e-066e-4197-8028-3dc2e05110d0",
     "refs": [
       {
+        "url": "/modeles-de-courriers/signalement-de-harcelement-sexuel",
+        "title": "Signalement de harcèlement sexuel",
+        "relevance": 5
+      },
+      {
+        "url": "/modeles-de-courriers/reponse-a-un-signalement-de-harcelement-sexuel",
+        "title": "Réponse à un signalement de harcèlement sexuel",
+        "relevance": 5
+      },
+      {
         "url": "/fiche-ministere-travail/le-harcelement-sexuel#Comment-est-defini-le-harcelement-sexuel",
         "title": "Le harcèlement sexuel : comment est défini le harcèlement sexuel ?",
         "relevance": 5
@@ -8647,6 +8667,11 @@
         "url": "/fiche-ministere-travail/le-harcelement-sexuel#Victime-ou-temoin-de-harcelement-sexuel-quel-recours",
         "title": "Le harcèlement sexuel : victime ou témoin de harcèlement sexuel, quel recours ?",
         "relevance": 5
+      },
+      {
+        "url": "/modeles-de-courriers/affichage-obligatoire-relatif-au-harcelement-sexuel",
+        "title": "Affichage obligatoire relatif au harcèlement sexuel",
+        "relevance": 4
       },
       {
         "url": "/fiche-ministere-travail/le-harcelement-moral#Qui-organise-la-prevention-en-matiere-de-harcelement-moral",
@@ -10471,6 +10496,11 @@
     "title": "lettre-licenciement-économique",
     "theme": "30b99d6c-c854-4ee2-85a1-9681e2c11b46",
     "refs": [
+      {
+        "url": "/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-economique-de-moins-de-10-salaries-pendant-30-jours",
+        "title": "Convocation à un entretien préalable au licenciement économique de moins de 10 salariés pendant 30 jours",
+        "relevance": 5
+      },
       {
         "url": "/fiche-service-public/licenciement-economique-lettre-de-licenciement",
         "title": "Licenciement économique : lettre de licenciement",
