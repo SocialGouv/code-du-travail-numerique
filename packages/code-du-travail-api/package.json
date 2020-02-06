@@ -36,7 +36,7 @@
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-mount": "^4.0.0",
-    "koa-router": "^8.0.6",
+    "koa-router": "^8.0.7",
     "koa-send": "^5.0.0",
     "lodash.deburr": "^4.1.0",
     "node-fetch": "^2.6.0",
