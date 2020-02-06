@@ -84,8 +84,8 @@ exports[`<FicheMT /> should render 1`] = `
 
 .c44 {
   padding: 1.6rem;
-  -webkit-animation: dpvxPj 250ms ease-in;
-  animation: dpvxPj 250ms ease-in;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
 }
 
 .c41 {
@@ -2167,7 +2167,7 @@ exports[`<FicheMT /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="sc-fzXfNO c72"
+                class="sc-fznMnq c72"
               >
                 <li
                   class="c73"
@@ -2251,7 +2251,7 @@ exports[`<FicheMT /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="sc-fzXfNO c72"
+                class="sc-fznMnq c72"
               >
                 <li
                   class="c73"
@@ -2300,7 +2300,7 @@ exports[`<FicheMT /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="sc-fzXfNO c72"
+                class="sc-fznMnq c72"
               >
                 <li
                   class="c73"

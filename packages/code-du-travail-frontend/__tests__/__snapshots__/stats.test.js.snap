@@ -1589,7 +1589,7 @@ exports[`<Stats /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="sc-fzXfNO c47"
+                class="sc-fznMnq c47"
               >
                 <li
                   class="c48"
@@ -1673,7 +1673,7 @@ exports[`<Stats /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="sc-fzXfNO c47"
+                class="sc-fznMnq c47"
               >
                 <li
                   class="c48"
@@ -1722,7 +1722,7 @@ exports[`<Stats /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="sc-fzXfNO c47"
+                class="sc-fznMnq c47"
               >
                 <li
                   class="c48"

@@ -1310,7 +1310,7 @@ exports[`<Recherche /> should render 1`] = `
         class="c23"
       >
         <div
-          class="sc-AykKH c24"
+          class="sc-AxgMl c24"
         >
           <h3
             class="c25"
@@ -1401,7 +1401,7 @@ exports[`<Recherche /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="sc-fzXfNO c44"
+                class="sc-fznMnq c44"
               >
                 <li
                   class="c45"
@@ -1485,7 +1485,7 @@ exports[`<Recherche /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="sc-fzXfNO c44"
+                class="sc-fznMnq c44"
               >
                 <li
                   class="c45"
@@ -1534,7 +1534,7 @@ exports[`<Recherche /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="sc-fzXfNO c44"
+                class="sc-fznMnq c44"
               >
                 <li
                   class="c45"

@@ -47,8 +47,8 @@ exports[`<FicheServicePublic /> should render 1`] = `
 
 .c19 {
   padding: 1.6rem;
-  -webkit-animation: dpvxPj 250ms ease-in;
-  animation: dpvxPj 250ms ease-in;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
 }
 
 .c16 {
@@ -1182,7 +1182,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
                           </p>
                           <div
-                            class="sc-AykKH c31"
+                            class="sc-AxgMl c31"
                           >
                             <h6
                               class="c20"

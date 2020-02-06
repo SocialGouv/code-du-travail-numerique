@@ -1471,7 +1471,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="sc-fzXfNO c29"
+          class="sc-fznMnq c29"
         >
           <h2
             class="c30 c31"
@@ -1663,7 +1663,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="sc-fzXfNO c56"
+                class="sc-fznMnq c56"
               >
                 <li
                   class="c57"
@@ -1747,7 +1747,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="sc-fzXfNO c56"
+                class="sc-fznMnq c56"
               >
                 <li
                   class="c57"
@@ -1796,7 +1796,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="sc-fzXfNO c56"
+                class="sc-fznMnq c56"
               >
                 <li
                   class="c57"

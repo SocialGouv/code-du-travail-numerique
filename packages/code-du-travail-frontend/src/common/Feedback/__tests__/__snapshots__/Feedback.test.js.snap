@@ -267,7 +267,7 @@ exports[`<Feedback/> should render 1`] = `
       class="c1"
     >
       <div
-        class="sc-AykKH c2"
+        class="sc-AxgMl c2"
       >
         <h3
           class="c3 c4"
@@ -552,7 +552,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
       class="c1"
     >
       <div
-        class="sc-AykKH c2"
+        class="sc-AxgMl c2"
       >
         <h3
           class="c3 c4"
@@ -776,7 +776,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
       class="c1"
     >
       <div
-        class="sc-AykKH c2"
+        class="sc-AxgMl c2"
       >
         <h3
           class="c3 c4"
