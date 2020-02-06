@@ -28,6 +28,7 @@ Install frontend:
       -not -name preavis-demission
       -not -name preavis-licenciement
       -not -name prime-precarite
+      -not -name simulateurs
       -not -name tools | tail -n +2 | xargs rm -rf
   artifacts:
     expire_in: 30 mins
