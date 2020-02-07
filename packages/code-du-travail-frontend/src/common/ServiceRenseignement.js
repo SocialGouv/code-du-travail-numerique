@@ -35,7 +35,7 @@ class ServiceRenseignement extends React.Component {
 
     return (
       <>
-        <Heading as="h4">Contact téléphonique&nbsp;:</Heading>
+        <Heading as="h4">Contact téléphonique</Heading>
         <NumberInsert href="tel:+0033806000126">
           <Number>0 806 000 126</Number>
           <Pricing>
@@ -43,9 +43,7 @@ class ServiceRenseignement extends React.Component {
           </Pricing>
         </NumberInsert>
 
-        <Heading as="h4">
-          Coordonnées du service de votre département&nbsp;:
-        </Heading>
+        <Heading as="h4">Contact par email et prise de rendez-vous</Heading>
         <p>
           <UID name={id => `id_${id}`}>
             {id => (
@@ -72,11 +70,7 @@ class ServiceRenseignement extends React.Component {
           sont pas compétents pour :
           <ul>
             <li>{"les demandes d'intervention en entreprise"}</li>
-            <li>
-              {
-                "le règlement des litiges, et la constitution des dossiers prud'homaux"
-              }
-            </li>
+            <li>{"la constitution des dossiers prud'homaux"}</li>
             <li>{"les calculs de droit au chômage"}</li>
             <li>{"vous renseigner sur les cotisations sociales"}</li>
           </ul>
