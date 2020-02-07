@@ -13,8 +13,12 @@ function getContributionUrl({ slug }) {
 }
 
 function Contributions({ contributions }) {
+  const UNTHEMED_LABEL = "Autres";
   // group questions by theme
   const contributionsByTheme = contributions.reduce((state, answer) => {
+    if (!answer.theme) {
+      answer.theme = UNTHEMED_LABEL;
+    }
     if (!state[answer.theme]) {
       state[answer.theme] = [answer];
     } else {
@@ -24,19 +28,29 @@ function Contributions({ contributions }) {
   }, {});
 
   // show themes contents in Accordions
-  const themes = Object.keys(contributionsByTheme).map(theme => ({
-    id: theme,
-    title: theme,
-    body: (
-      <Accordion
-        items={contributionsByTheme[theme].map(item => ({
-          id: item.slug,
-          title: item.question,
-          body: AccordionContent(item)
-        }))}
-      />
-    )
-  }));
+  const themes = Object.keys(contributionsByTheme)
+    .sort((a, b) => {
+      if (b === UNTHEMED_LABEL) {
+        return -1;
+      }
+      if (a === UNTHEMED_LABEL) {
+        return 1;
+      }
+      return a.localeCompare(b);
+    })
+    .map(theme => ({
+      id: theme,
+      title: theme || "Sans thème",
+      body: (
+        <Accordion
+          items={contributionsByTheme[theme].map(item => ({
+            id: item.slug,
+            title: item.question,
+            body: AccordionContent(item)
+          }))}
+        />
+      )
+    }));
 
   return (
     <React.Fragment>
