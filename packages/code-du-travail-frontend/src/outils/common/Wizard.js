@@ -6,6 +6,7 @@ import arrayMutators from "final-form-arrays";
 import { icons, theme } from "@socialgouv/react-ui";
 import { StepList, STEP_LIST_WIDTH } from "./StepList";
 import { PrevNextBar } from "./PrevNextBar";
+import { matopush } from "../../piwik";
 
 function Wizard({
   initialState,
@@ -35,6 +36,13 @@ function Wizard({
       skipFn = steps[nextStepIndex].skip || (() => false);
     }
     setStepIndex(nextStepIndex);
+
+    matopush([
+      "trackEvent",
+      `outil_${title}`,
+      "click_previous",
+      initialState.steps[nextStepIndex + 1].label
+    ]);
   };
   const nextStep = values => {
     let nextStepIndex = stepIndex;
@@ -44,6 +52,13 @@ function Wizard({
       skipFn = steps[nextStepIndex].skip || (() => false);
     }
     setStepIndex(nextStepIndex);
+
+    matopush([
+      "trackEvent",
+      `outil_${title}`,
+      "view_step",
+      initialState.steps[nextStepIndex].label
+    ]);
   };
 
   const previousVisible = stepIndex > 0;
