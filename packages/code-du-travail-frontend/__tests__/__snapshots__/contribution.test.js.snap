@@ -1094,6 +1094,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .c83 {
@@ -1119,6 +1120,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
   margin: 0 1rem 1rem 1rem;
 }
 
@@ -2556,8 +2558,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   >
                     <a
                       class="c82"
-                      href="mailto:codedutravailnumerique@travail.gouv.fr"
-                      title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                     >
                       Contact
                     </a>
@@ -3847,6 +3847,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .c83 {
@@ -3872,6 +3873,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
   margin: 0 1rem 1rem 1rem;
 }
 
@@ -5309,8 +5311,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   >
                     <a
                       class="c82"
-                      href="mailto:codedutravailnumerique@travail.gouv.fr"
-                      title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                     >
                       Contact
                     </a>

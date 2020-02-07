@@ -1364,6 +1364,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .c103 {
@@ -1389,6 +1390,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
   margin: 0 1rem 1rem 1rem;
 }
 
@@ -5029,8 +5031,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 >
                   <a
                     class="c102"
-                    href="mailto:codedutravailnumerique@travail.gouv.fr"
-                    title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
                   </a>

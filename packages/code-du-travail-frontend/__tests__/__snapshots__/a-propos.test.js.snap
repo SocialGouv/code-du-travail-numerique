@@ -592,6 +592,7 @@ exports[`<About /> should render 1`] = `
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .c48 {
@@ -617,6 +618,7 @@ exports[`<About /> should render 1`] = `
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
   margin: 0 1rem 1rem 1rem;
 }
 
@@ -1583,8 +1585,6 @@ exports[`<About /> should render 1`] = `
                 >
                   <a
                     class="c47"
-                    href="mailto:codedutravailnumerique@travail.gouv.fr"
-                    title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
                   >
                     Contact
                   </a>

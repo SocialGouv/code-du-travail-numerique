@@ -487,7 +487,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             <h4
               class="c3"
             >
-              Contact téléphonique :
+              Contact téléphonique
             </h4>
             <a
               class="c4"
@@ -510,7 +510,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             <h4
               class="c3"
             >
-              Coordonnées du service de votre département :
+              Contact par email et prise de rendez-vous
             </h4>
             <p>
               <label
@@ -541,7 +541,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                   les demandes d'intervention en entreprise
                 </li>
                 <li>
-                  le règlement des litiges, et la constitution des dossiers prud'homaux
+                  la constitution des dossiers prud'homaux
                 </li>
                 <li>
                   les calculs de droit au chômage

@@ -237,7 +237,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   <h4
     class="c0"
   >
-    Contact téléphonique :
+    Contact téléphonique
   </h4>
   <a
     class="c1"
@@ -260,7 +260,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   <h4
     class="c0"
   >
-    Coordonnées du service de votre département :
+    Contact par email et prise de rendez-vous
   </h4>
   <p>
     <label
@@ -300,7 +300,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
         les demandes d'intervention en entreprise
       </li>
       <li>
-        le règlement des litiges, et la constitution des dossiers prud'homaux
+        la constitution des dossiers prud'homaux
       </li>
       <li>
         les calculs de droit au chômage
