@@ -20,7 +20,8 @@
   "peerDependencies": {
     "prop-types": "15.x",
     "react": "16.x",
-    "react-dom": "16.x"
+    "react-dom": "16.x",
+    "react-uid": "^2.2.0"
   },
   "dependencies": {
     "@socialgouv/react-ui": "^4.3.0"

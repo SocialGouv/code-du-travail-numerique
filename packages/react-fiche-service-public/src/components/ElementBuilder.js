@@ -1,4 +1,5 @@
 import React from "react";
+import { uid } from "react-uid";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -28,7 +29,11 @@ export function ElementBuilder({ data, headingLevel }) {
   // In case we get children
   if (Array.isArray(data)) {
     return data.map((child, index) => (
-      <ElementBuilder key={index} data={child} headingLevel={headingLevel} />
+      <ElementBuilder
+        key={uid(child, index)}
+        data={child}
+        headingLevel={headingLevel}
+      />
     ));
   }
   if (data.type === "text") {
