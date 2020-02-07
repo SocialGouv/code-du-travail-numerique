@@ -33,7 +33,7 @@ const formatAnchor = node => {
   }
 };
 
-const flattendCsBlocs = node => {
+const flattenCsBlocs = node => {
   node.insertAdjacentHTML("afterend", node.innerHTML);
   node.parentNode.removeChild(node);
 };
@@ -48,7 +48,7 @@ const getSectionTag = article => {
 function parseDom(dom, url) {
   const article = $(dom.window.document, "main");
   $$(article, "a").forEach(formatAnchor);
-  $$(article, ".cs_blocs").forEach(flattendCsBlocs);
+  $$(article, ".cs_blocs").forEach(flattenCsBlocs);
   $$(article, "img")
     .filter(node => node.getAttribute("src").indexOf("data:image") === -1)
     .forEach(node => {

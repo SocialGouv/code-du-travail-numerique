@@ -18,7 +18,6 @@ class ConventionCollective extends React.Component {
       return { statusCode: responseContainer.status };
     }
     const convention = await responseContainer.json();
-    console.log(convention);
     return { convention };
   }
 

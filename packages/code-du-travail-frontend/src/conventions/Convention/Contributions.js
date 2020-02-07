@@ -40,7 +40,7 @@ function Contributions({ contributions }) {
     })
     .map(theme => ({
       id: theme,
-      title: theme || "Sans thème",
+      title: theme,
       body: (
         <Accordion
           items={contributionsByTheme[theme].map(item => ({
