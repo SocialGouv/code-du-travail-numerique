@@ -720,12 +720,482 @@ exports[`<Convention /> renders 1`] = `
     data-accordion-component="Accordion"
   >
     <div
-      id="Départ de l'entreprise"
+      id="Congés et repos"
     >
       <div
         class="c6"
         data-accordion-component="AccordionItem"
         index="0"
+      >
+        <div
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
+        >
+          <div
+            aria-controls="accordion__panel-Congés et repos"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c7"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-Congés et repos"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              class="c8"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c9"
+            >
+              Congés et repos
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-Congés et repos"
+          class="c10"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-Congés et repos"
+        >
+          <div
+            class="c11"
+          >
+            Congés et repos
+          </div>
+          <div
+            class="c12"
+          >
+            <div
+              class="accordion"
+              data-accordion-component="Accordion"
+            >
+              <div
+                id="jours-feries-et-ponts-dans-le-secteur-prive"
+              >
+                <div
+                  class="c6"
+                  data-accordion-component="AccordionItem"
+                  index="0"
+                >
+                  <div
+                    aria-level="3"
+                    class="accordion__heading"
+                    data-accordion-component="AccordionItemHeading"
+                    role="heading"
+                  >
+                    <div
+                      aria-controls="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
+                      aria-disabled="false"
+                      aria-expanded="false"
+                      class="c7"
+                      data-accordion-component="AccordionItemButton"
+                      id="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <svg
+                        class="c8"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                      <div
+                        class="c9"
+                      >
+                        Jours fériés et ponts dans le secteur privé
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    aria-labelledby="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
+                    class="c10"
+                    data-accordion-component="AccordionItemPanel"
+                    hidden=""
+                    id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
+                  >
+                    <div
+                      class="c11"
+                    >
+                      Jours fériés et ponts dans le secteur privé
+                    </div>
+                    <div
+                      class="c12"
+                    >
+                      <div>
+                        <p>
+                          Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.
+                        </p>
+                        
+
+                        <p>
+                          Toutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé.
+                        </p>
+                        
+
+                        <p>
+                          Le chômage des jours fériés ne peut pas donner lieu à récupération.
+                        </p>
+                        
+
+                      </div>
+                      <p>
+                        Sources 
+                        <a
+                          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+                          rel="noopener nofollow noreferrer"
+                          target="_blank"
+                        >
+                          IDCC 1596 - Article 5-11
+                        </a>
+                      </p>
+                      <div
+                        class="c13"
+                      >
+                        Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                         
+                        <a
+                          href="/contribution/jours-feries-et-ponts-dans-le-secteur-prive"
+                        >
+                          à la réponse complète à cette question
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                id="quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
+              >
+                <div
+                  class="c14"
+                  data-accordion-component="AccordionItem"
+                  index="1"
+                >
+                  <div
+                    aria-level="3"
+                    class="accordion__heading"
+                    data-accordion-component="AccordionItemHeading"
+                    role="heading"
+                  >
+                    <div
+                      aria-controls="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
+                      aria-disabled="false"
+                      aria-expanded="false"
+                      class="c7"
+                      data-accordion-component="AccordionItemButton"
+                      id="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <svg
+                        class="c8"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                      <div
+                        class="c9"
+                      >
+                        Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
+                    class="c10"
+                    data-accordion-component="AccordionItemPanel"
+                    hidden=""
+                    id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
+                  >
+                    <div
+                      class="c11"
+                    >
+                      Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
+                    </div>
+                    <div
+                      class="c12"
+                    >
+                      <div>
+                        <p>
+                          Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.
+                        </p>
+                        
+
+                        <p>
+                          Pour en bénéficier, les salariées doivent avoir une ancienneté appréciée dans les conditions suivantes :
+                        </p>
+                        
+
+                        <ul>
+                          
+
+                          <li>
+                            
+
+                            <p>
+                              Pour les salariées âgées de moins de 25 ans et pour les apprenties sous contrat : 1 mois d'ancienneté dans l'entreprise ;
+                            </p>
+                            
+
+                          </li>
+                          
+
+                          <li>
+                            
+
+                            <p>
+                              Pour les ouvrières âgées d'au moins 25 ans :
+                            </p>
+                            
+
+                            <ul>
+                              
+
+                              <li>
+                                soit 3 mois d'ancienneté dans l'entreprise ;
+                              </li>
+                              
+
+                              <li>
+                                soit 1 mois d'ancienneté dans l'entreprise, si elles ont au moins acquis 750 points de retraite CNRO (calculés selon les dispositions prévues au règlement de cette institution), dans les 10 dernières années précédant le jour où se produit l'arrêt de travail.
+                              </li>
+                              
+
+                            </ul>
+                            
+
+                          </li>
+                          
+
+                        </ul>
+                        
+
+                      </div>
+                      <p>
+                        Sources 
+                        <a
+                          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+                          rel="noopener nofollow noreferrer"
+                          target="_blank"
+                        >
+                          IDCC 1596 - Article 6.121
+                        </a>
+                        , 
+                        <a
+                          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+                          rel="noopener nofollow noreferrer"
+                          target="_blank"
+                        >
+                          IDCC 1596 - Article 6.21
+                        </a>
+                      </p>
+                      <div
+                        class="c13"
+                      >
+                        Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                         
+                        <a
+                          href="/contribution/quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
+                        >
+                          à la réponse complète à cette question
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                id="les-conges-pour-evenements-familiaux"
+              >
+                <div
+                  class="c14"
+                  data-accordion-component="AccordionItem"
+                  index="2"
+                >
+                  <div
+                    aria-level="3"
+                    class="accordion__heading"
+                    data-accordion-component="AccordionItemHeading"
+                    role="heading"
+                  >
+                    <div
+                      aria-controls="accordion__panel-les-conges-pour-evenements-familiaux"
+                      aria-disabled="false"
+                      aria-expanded="false"
+                      class="c7"
+                      data-accordion-component="AccordionItemButton"
+                      id="accordion__heading-les-conges-pour-evenements-familiaux"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <svg
+                        class="c8"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                      <div
+                        class="c9"
+                      >
+                        Les congés pour événements familiaux
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    aria-labelledby="accordion__heading-les-conges-pour-evenements-familiaux"
+                    class="c10"
+                    data-accordion-component="AccordionItemPanel"
+                    hidden=""
+                    id="accordion__panel-les-conges-pour-evenements-familiaux"
+                  >
+                    <div
+                      class="c11"
+                    >
+                      Les congés pour événements familiaux
+                    </div>
+                    <div
+                      class="c12"
+                    >
+                      <div>
+                        <p>
+                          Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :
+                        </p>
+                        
+
+                        <ul>
+                          
+
+                          <li>
+                            Mariage du salarié : 4 jours ;
+                          </li>
+                          
+
+                          <li>
+                            Mariage d'un de ses enfants : 1 jour ;
+                          </li>
+                          
+
+                          <li>
+                            Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité ;
+                          </li>
+                          
+
+                          <li>
+                            Obsèques de son conjoint : 3 jours ;
+                          </li>
+                          
+
+                          <li>
+                            Obsèques d'un de ses enfants : 3 jours ;
+                          </li>
+                          
+
+                          <li>
+                            Obsèques de son père, de sa mère : 3 jours ;
+                          </li>
+                          
+
+                          <li>
+                            Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour.
+                          </li>
+                          
+
+                        </ul>
+                        
+
+                        <p>
+                          Ces absences s'ajoutent aux congés payés.
+                        </p>
+                        
+
+                      </div>
+                      <p>
+                        Sources 
+                        <a
+                          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+                          rel="noopener nofollow noreferrer"
+                          target="_blank"
+                        >
+                          IDCC 1596 - Article  5-12
+                        </a>
+                      </p>
+                      <div
+                        class="c13"
+                      >
+                        Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
+                         
+                        <a
+                          href="/contribution/les-conges-pour-evenements-familiaux"
+                        >
+                          à la réponse complète à cette question
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="Départ de l'entreprise"
+    >
+      <div
+        class="c14"
+        data-accordion-component="AccordionItem"
+        index="1"
       >
         <div
           aria-level="3"
@@ -1462,476 +1932,6 @@ exports[`<Convention /> renders 1`] = `
                          
                         <a
                           href="/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      id="Congés et repos"
-    >
-      <div
-        class="c14"
-        data-accordion-component="AccordionItem"
-        index="1"
-      >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-Congés et repos"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c7"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-Congés et repos"
-            role="button"
-            tabindex="0"
-          >
-            <svg
-              class="c8"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c9"
-            >
-              Congés et repos
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-Congés et repos"
-          class="c10"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-Congés et repos"
-        >
-          <div
-            class="c11"
-          >
-            Congés et repos
-          </div>
-          <div
-            class="c12"
-          >
-            <div
-              class="accordion"
-              data-accordion-component="Accordion"
-            >
-              <div
-                id="jours-feries-et-ponts-dans-le-secteur-prive"
-              >
-                <div
-                  class="c6"
-                  data-accordion-component="AccordionItem"
-                  index="0"
-                >
-                  <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c7"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        class="c8"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="c9"
-                      >
-                        Jours fériés et ponts dans le secteur privé
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
-                    class="c10"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
-                  >
-                    <div
-                      class="c11"
-                    >
-                      Jours fériés et ponts dans le secteur privé
-                    </div>
-                    <div
-                      class="c12"
-                    >
-                      <div>
-                        <p>
-                          Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.
-                        </p>
-                        
-
-                        <p>
-                          Toutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé.
-                        </p>
-                        
-
-                        <p>
-                          Le chômage des jours fériés ne peut pas donner lieu à récupération.
-                        </p>
-                        
-
-                      </div>
-                      <p>
-                        Sources 
-                        <a
-                          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                          rel="noopener nofollow noreferrer"
-                          target="_blank"
-                        >
-                          IDCC 1596 - Article 5-11
-                        </a>
-                      </p>
-                      <div
-                        class="c13"
-                      >
-                        Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/jours-feries-et-ponts-dans-le-secteur-prive"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-              >
-                <div
-                  class="c14"
-                  data-accordion-component="AccordionItem"
-                  index="1"
-                >
-                  <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c7"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        class="c8"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="c9"
-                      >
-                        Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                    class="c10"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                  >
-                    <div
-                      class="c11"
-                    >
-                      Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
-                    </div>
-                    <div
-                      class="c12"
-                    >
-                      <div>
-                        <p>
-                          Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.
-                        </p>
-                        
-
-                        <p>
-                          Pour en bénéficier, les salariées doivent avoir une ancienneté appréciée dans les conditions suivantes :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            
-
-                            <p>
-                              Pour les salariées âgées de moins de 25 ans et pour les apprenties sous contrat : 1 mois d'ancienneté dans l'entreprise ;
-                            </p>
-                            
-
-                          </li>
-                          
-
-                          <li>
-                            
-
-                            <p>
-                              Pour les ouvrières âgées d'au moins 25 ans :
-                            </p>
-                            
-
-                            <ul>
-                              
-
-                              <li>
-                                soit 3 mois d'ancienneté dans l'entreprise ;
-                              </li>
-                              
-
-                              <li>
-                                soit 1 mois d'ancienneté dans l'entreprise, si elles ont au moins acquis 750 points de retraite CNRO (calculés selon les dispositions prévues au règlement de cette institution), dans les 10 dernières années précédant le jour où se produit l'arrêt de travail.
-                              </li>
-                              
-
-                            </ul>
-                            
-
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                      </div>
-                      <p>
-                        Sources 
-                        <a
-                          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                          rel="noopener nofollow noreferrer"
-                          target="_blank"
-                        >
-                          IDCC 1596 - Article 6.121
-                        </a>
-                        , 
-                        <a
-                          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                          rel="noopener nofollow noreferrer"
-                          target="_blank"
-                        >
-                          IDCC 1596 - Article 6.21
-                        </a>
-                      </p>
-                      <div
-                        class="c13"
-                      >
-                        Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                        >
-                          à la réponse complète à cette question
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="les-conges-pour-evenements-familiaux"
-              >
-                <div
-                  class="c14"
-                  data-accordion-component="AccordionItem"
-                  index="2"
-                >
-                  <div
-                    aria-level="3"
-                    class="accordion__heading"
-                    data-accordion-component="AccordionItemHeading"
-                    role="heading"
-                  >
-                    <div
-                      aria-controls="accordion__panel-les-conges-pour-evenements-familiaux"
-                      aria-disabled="false"
-                      aria-expanded="false"
-                      class="c7"
-                      data-accordion-component="AccordionItemButton"
-                      id="accordion__heading-les-conges-pour-evenements-familiaux"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <svg
-                        class="c8"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline
-                          points="9 18 15 12 9 6"
-                        />
-                      </svg>
-                      <div
-                        class="c9"
-                      >
-                        Les congés pour événements familiaux
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    aria-labelledby="accordion__heading-les-conges-pour-evenements-familiaux"
-                    class="c10"
-                    data-accordion-component="AccordionItemPanel"
-                    hidden=""
-                    id="accordion__panel-les-conges-pour-evenements-familiaux"
-                  >
-                    <div
-                      class="c11"
-                    >
-                      Les congés pour événements familiaux
-                    </div>
-                    <div
-                      class="c12"
-                    >
-                      <div>
-                        <p>
-                          Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :
-                        </p>
-                        
-
-                        <ul>
-                          
-
-                          <li>
-                            Mariage du salarié : 4 jours ;
-                          </li>
-                          
-
-                          <li>
-                            Mariage d'un de ses enfants : 1 jour ;
-                          </li>
-                          
-
-                          <li>
-                            Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité ;
-                          </li>
-                          
-
-                          <li>
-                            Obsèques de son conjoint : 3 jours ;
-                          </li>
-                          
-
-                          <li>
-                            Obsèques d'un de ses enfants : 3 jours ;
-                          </li>
-                          
-
-                          <li>
-                            Obsèques de son père, de sa mère : 3 jours ;
-                          </li>
-                          
-
-                          <li>
-                            Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour.
-                          </li>
-                          
-
-                        </ul>
-                        
-
-                        <p>
-                          Ces absences s'ajoutent aux congés payés.
-                        </p>
-                        
-
-                      </div>
-                      <p>
-                        Sources 
-                        <a
-                          href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                          rel="noopener nofollow noreferrer"
-                          target="_blank"
-                        >
-                          IDCC 1596 - Article  5-12
-                        </a>
-                      </p>
-                      <div
-                        class="c13"
-                      >
-                        Pour savoir si la mesure prévue par la convention collective s'applique à votre situation, reportez-vous
-                         
-                        <a
-                          href="/contribution/les-conges-pour-evenements-familiaux"
                         >
                           à la réponse complète à cette question
                         </a>

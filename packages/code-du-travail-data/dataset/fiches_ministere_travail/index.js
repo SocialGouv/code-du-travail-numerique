@@ -11,6 +11,10 @@ const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
 
 const formatAnchor = node => {
+  if (node.textContent === "") {
+    node.remove();
+    return;
+  }
   let href = node.getAttribute("href");
   // remove ATTAg(...) on pdf link
   node.removeAttribute("onclick");
@@ -29,7 +33,7 @@ const formatAnchor = node => {
   }
 };
 
-const smooshCsBlocs = node => {
+const flattenCsBlocs = node => {
   node.insertAdjacentHTML("afterend", node.innerHTML);
   node.parentNode.removeChild(node);
 };
@@ -44,7 +48,7 @@ const getSectionTag = article => {
 function parseDom(dom, url) {
   const article = $(dom.window.document, "main");
   $$(article, "a").forEach(formatAnchor);
-  $$(article, ".cs_blocs").forEach(smooshCsBlocs);
+  $$(article, ".cs_blocs").forEach(flattenCsBlocs);
   $$(article, "img")
     .filter(node => node.getAttribute("src").indexOf("data:image") === -1)
     .forEach(node => {
