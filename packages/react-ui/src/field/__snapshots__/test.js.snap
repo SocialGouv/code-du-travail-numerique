@@ -28,6 +28,13 @@ exports[`<Input /> should render input field 1`] = `
   appearance: none;
 }
 
+.c1[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c1::-webkit-outer-spin-button,
 .c1::-webkit-inner-spin-button {
   margin: 0;
@@ -207,6 +214,13 @@ exports[`<InputDate /> should render input date field 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c2[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c2::-webkit-outer-spin-button,
@@ -419,7 +433,7 @@ exports[`<Select /> should render select field 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -430,22 +444,20 @@ exports[`<Select /> should render select field 1`] = `
   appearance: none;
 }
 
+.c1[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c1::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c1 *::-ms-backdrop,
-.c1 {
+.c1 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c1:invalid {
-  border-color: #eb5757;
-}
-
-.c1:disabled {
-  background-color: #e4e8ef;
 }
 
 @media (max-width:600px) {
@@ -563,6 +575,13 @@ exports[`<Textarea /> should render textarea 1`] = `
 
 .c0:focus::placeholder {
   color: transparent;
+}
+
+.c0[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 @media (max-width:600px) {

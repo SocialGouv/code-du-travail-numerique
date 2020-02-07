@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { box, breakpoints, fonts, spacings } from "../theme";
 
 export const Input = ({ icon: Icon, className, ...props }) => {
@@ -56,6 +56,12 @@ const StyledInput = styled.input`
     invalid ? theme.error : "transparent"};
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
+  &[disabled] {
+    color: ${({ theme }) => theme.placeholder};
+    background-color: ${({ theme }) => theme.bgTertiary};
+    box-shadow: none;
+    cursor: not-allowed;
+  }
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     margin: 0;

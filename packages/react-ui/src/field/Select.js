@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { ArrowDown } from "../icons";
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
@@ -61,25 +61,29 @@ const StyledSelect = styled.select`
   font-family: "Open Sans", sans-serif;
   vertical-align: middle;
   background-color: ${({ theme }) => theme.white};
-  border: none;
+  border: 1px solid transparent;
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   cursor: pointer;
   transition: border-color ${animations.transitionTiming} ease;
   appearance: none;
+  ${({ invalid }) =>
+    invalid &&
+    css`
+      border-color: ${({ theme }) => theme.error};
+    `}
+  &[disabled] {
+    color: ${({ theme }) => theme.placeholder};
+    background-color: ${({ theme }) => theme.bgTertiary};
+    box-shadow: none;
+    cursor: not-allowed;
+  }
   /* Internet Explorer 11 specifics rules */
   &::-ms-expand {
     background-color: transparent;
     border: 0 transparent;
   }
-  *::-ms-backdrop,
-  & {
+  *::-ms-backdrop {
     padding-right: ${spacings.base};
-  }
-  &:invalid {
-    border-color: ${({ theme }) => theme.error};
-  }
-  &:disabled {
-    background-color: ${({ theme }) => theme.bgTertiary};
   }
 `;

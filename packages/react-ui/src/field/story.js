@@ -124,7 +124,7 @@ export const checkbox = () => (
 export const input = () => (
   <>
     <Section>
-      <Label htmlFor="input">Input normal</Label>
+      <Label htmlFor="input">Standard Input</Label>
       <Input
         id="input"
         name="input"
@@ -132,40 +132,34 @@ export const input = () => (
       />
     </Section>
     <Section>
-      <Label htmlFor="input">Input avec picto 32</Label>
+      <Label htmlFor="input1">Input with Icon</Label>
       <Input
-        id="input"
-        name="input"
+        id="input1"
+        name="input1"
         icon={Search}
         placeholder="Rechercher (Ex : Durée du préavis...)"
       />
     </Section>
     <Section>
-      <Label htmlFor="input">Input avec picto currency</Label>
-      <StyledInput id="input" name="input" type="number" icon={Euro} />
+      <Label htmlFor="input2">Input with Euro Icon</Label>
+      <StyledInput id="input2" name="input2" type="number" icon={Euro} />
     </Section>
     <Section>
-      <Label htmlFor="input">Input avec texte</Label>
+      <Label htmlFor="input3">Input with text</Label>
       <Input
-        id="input"
-        name="input"
+        id="input3"
+        name="input3"
         value="Avec texte"
         placeholder="Rechercher (Ex : Durée du préavis...)"
       />
     </Section>
     <Section>
-      <Label htmlFor="input" autofocus>
-        Input Focus
-      </Label>
-      <Input
-        id="input"
-        name="input"
-        placeholder="Rechercher (Ex : Durée du préavis...)"
-      />
+      <Label htmlFor="input5">Disabled Input</Label>
+      <Input name="input5" id="input5" disabled />
     </Section>
     <Section>
-      <Label htmlFor="input">Input erreur</Label>
-      <Input name="input" id="input" value="Avec texte" invalid={true} />
+      <Label htmlFor="input6">Errored Input</Label>
+      <Input name="input6" id="input6" invalid />
     </Section>
   </>
 );
@@ -175,6 +169,14 @@ export const inputDate = () => (
     <Section>
       <Label htmlFor="input_date">Input Date</Label>
       <InputDate name="input_date" id="input_date" />
+    </Section>
+    <Section>
+      <Label htmlFor="input_date1">Disabled Input Date</Label>
+      <InputDate name="input_date1" disabled id="input_date1" />
+    </Section>
+    <Section>
+      <Label htmlFor="input_date1">Invalid Input Date</Label>
+      <InputDate name="input_date1" invalid id="input_date1" />
     </Section>
   </>
 );
@@ -218,8 +220,17 @@ export const select = () => (
       </StyledSelect>
     </Section>
     <Section>
-      <Label htmlFor="select_disabled">Select disabled</Label>
+      <Label htmlFor="select_disabled">Disabled Select</Label>
       <Select id="select_disabled" disabled>
+        <option>...</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </Select>
+    </Section>
+    <Section>
+      <Label htmlFor="select_disabled">Invalid Select</Label>
+      <Select id="select_disabled" invalid>
         <option>...</option>
         <option>Option 1</option>
         <option>Option 2</option>
@@ -234,6 +245,10 @@ export const textarea = () => (
     <Section>
       <Label htmlFor="textarea">Textarea</Label>
       <Textarea name="textarea" id="textarea" />
+    </Section>
+    <Section>
+      <Label htmlFor="textarea1">Disabled Textarea</Label>
+      <Textarea name="textarea1" id="textarea1" disabled />
     </Section>
   </>
 );

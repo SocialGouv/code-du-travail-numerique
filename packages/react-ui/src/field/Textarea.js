@@ -39,6 +39,12 @@ const StyledTextarea = styled.textarea`
   &:focus::placeholder {
     color: transparent;
   }
+  &[disabled] {
+    color: ${({ theme }) => theme.placeholder};
+    background-color: ${({ theme }) => theme.bgTertiary};
+    box-shadow: none;
+    cursor: not-allowed;
+  }
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
   }
