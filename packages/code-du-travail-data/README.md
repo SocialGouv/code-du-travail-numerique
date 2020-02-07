@@ -1,13 +1,12 @@
 # code-du-travail-data
 
 L'image docker DATA contient un dump des documents ainsi que les vecteurs associés à chaque documents.
-Ce fichier est récupéré de l'image [NLP](../code_du_travail_nlp/README.md#Docker)
+Ce fichier est récupéré de l'image [NLP](../code-du-travail-nlp/README.md#Docker).
 Ce document est par la suite utilisé par le container data pour réaliser l'indexation.
 
 ## Données
 
-Par defaut, le script d'indexation va chercher les données dans l'arborescence `/packages/code-du-travail-nlp/data` 
-mais il possible de changer ce chemin avec la variable d'environnement `DUMP_PATH`.
+Par defaut, le script d'indexation va chercher les données dans `/packages/code-du-travail-nlp/data/data.tf.json` mais il possible de changer ce chemin avec la variable d'environnement `DUMP-PATH`.
 
 ### Génération en local
 
@@ -22,12 +21,18 @@ Il faut ensuite lancer le script de dump de l'api nlp pour rajouter les vecteurs
 
 ### Récupération depuis une image
 
-Si vous disposez d'une image nlp sur votre machine vous pouvez copier le fichier de dump complet 
+Si vous disposez d'une image nlp sur votre machine vous pouvez copier le fichier de dump complet
 via la commande docker suivante.
 
 ```sh
 $ docker run --rm --entrypoint cat cdtn_nlp:local  /app/data/dump.tf.json  > dump.data.json
 ```
+
+## Related
+
+- [fiches-vdd](https://github.com/SocialGouv/fiches-vdd)
+- [legi-data](https://github.com/SocialGouv/legi-data)
+- [kali-data](https://github.com/SocialGouv/kali-data)
 
 ## Schéma
 

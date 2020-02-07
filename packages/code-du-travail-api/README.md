@@ -1,8 +1,15 @@
 # Code du travail - API (@cdt/api)
 
-> Ce dépôt de code contient l'API permettant d'intérroger les différentes sources de données relatives au Code du travail.
+API permettant d'intérroger les différentes sources de données relatives au Code du travail numérique.
 
 ## Usage
+
+### Local dev
+
+```sh
+export ELASTICSEARCH_URL=http://127.0.0.1:9200
+yarn dev
+```
 
 ### Docker image
 
