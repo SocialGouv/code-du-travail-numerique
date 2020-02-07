@@ -154,6 +154,13 @@ exports[`<Salaires /> should add a salaire 1`] = `
   appearance: none;
 }
 
+.c6[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c6::-webkit-outer-spin-button,
 .c6::-webkit-inner-spin-button {
   margin: 0;
@@ -766,6 +773,13 @@ exports[`<Salaires /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c6[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c6::-webkit-outer-spin-button,

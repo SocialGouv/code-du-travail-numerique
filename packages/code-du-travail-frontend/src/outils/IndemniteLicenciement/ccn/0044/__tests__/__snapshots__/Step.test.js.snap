@@ -108,7 +108,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -119,22 +119,20 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   appearance: none;
 }
 
+.c7[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c7::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c7 *::-ms-backdrop,
-.c7 {
+.c7 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c7:invalid {
-  border-color: #eb5757;
-}
-
-.c7:disabled {
-  background-color: #e4e8ef;
 }
 
 .c0 {
@@ -547,6 +545,13 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   appearance: none;
 }
 
+.c16[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c16::-webkit-outer-spin-button,
 .c16::-webkit-inner-spin-button {
   margin: 0;
@@ -702,7 +707,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -713,22 +718,20 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   appearance: none;
 }
 
+.c7[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c7::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c7 *::-ms-backdrop,
-.c7 {
+.c7 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c7:invalid {
-  border-color: #eb5757;
-}
-
-.c7:disabled {
-  background-color: #e4e8ef;
 }
 
 .c0 {
@@ -1220,7 +1223,7 @@ exports[`<Step /> should render 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -1231,22 +1234,20 @@ exports[`<Step /> should render 1`] = `
   appearance: none;
 }
 
+.c7[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c7::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c7 *::-ms-backdrop,
-.c7 {
+.c7 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c7:invalid {
-  border-color: #eb5757;
-}
-
-.c7:disabled {
-  background-color: #e4e8ef;
 }
 
 .c0 {

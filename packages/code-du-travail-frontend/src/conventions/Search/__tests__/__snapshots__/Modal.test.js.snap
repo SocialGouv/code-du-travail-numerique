@@ -153,6 +153,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   appearance: none;
 }
 
+.c5[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c5::-webkit-outer-spin-button,
 .c5::-webkit-inner-spin-button {
   margin: 0;

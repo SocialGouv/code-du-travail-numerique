@@ -28,6 +28,13 @@ exports[`<TextQuestion /> should render 1`] = `
   appearance: none;
 }
 
+.c4[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c4::-webkit-outer-spin-button,
 .c4::-webkit-inner-spin-button {
   margin: 0;

@@ -219,7 +219,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -230,22 +230,20 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   appearance: none;
 }
 
+.c8[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c8::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c8 *::-ms-backdrop,
-.c8 {
+.c8 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c8:invalid {
-  border-color: #eb5757;
-}
-
-.c8:disabled {
-  background-color: #e4e8ef;
 }
 
 .c0 {
@@ -542,7 +540,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -553,22 +551,20 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   appearance: none;
 }
 
+.c8[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c8::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c8 *::-ms-backdrop,
-.c8 {
+.c8 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c8:invalid {
-  border-color: #eb5757;
-}
-
-.c8:disabled {
-  background-color: #e4e8ef;
 }
 
 .c0 {

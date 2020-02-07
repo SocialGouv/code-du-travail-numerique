@@ -2414,7 +2414,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <h3
                 class="c73 c74"
               >
-                Aidez-nous à améliorer cet outil
+                Participez à l’amélioration du site
               </h3>
               <ul
                 class="sc-fznMnq c75"
@@ -2424,11 +2424,21 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 >
                   <a
                     class="c77"
+                    href="/newsletter"
+                  >
+                    Inscrivez-vous à la newsletter
+                  </a>
+                </li>
+                <li
+                  class="c76"
+                >
+                  <a
+                    class="c77"
                     href="https://calendly.com/code-du-travail-numerique/ambassadeur-du-code-du-travail-numerique"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Devenir ambassadeur
+                    Devenez ambassadeur
                   </a>
                 </li>
                 <li
@@ -2440,7 +2450,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Contribuer sur Github
+                    Contribuez sur Github
                   </a>
                 </li>
                 <li

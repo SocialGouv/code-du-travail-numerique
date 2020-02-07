@@ -1620,7 +1620,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <h3
                 class="c43 c44"
               >
-                Aidez-nous à améliorer cet outil
+                Participez à l’amélioration du site
               </h3>
               <ul
                 class="sc-fznMnq c45"
@@ -1630,11 +1630,21 @@ exports[`<CookiePolicy /> should render 1`] = `
                 >
                   <a
                     class="c47"
+                    href="/newsletter"
+                  >
+                    Inscrivez-vous à la newsletter
+                  </a>
+                </li>
+                <li
+                  class="c46"
+                >
+                  <a
+                    class="c47"
                     href="https://calendly.com/code-du-travail-numerique/ambassadeur-du-code-du-travail-numerique"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Devenir ambassadeur
+                    Devenez ambassadeur
                   </a>
                 </li>
                 <li
@@ -1646,7 +1656,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Contribuer sur Github
+                    Contribuez sur Github
                   </a>
                 </li>
                 <li

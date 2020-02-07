@@ -28,6 +28,13 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   appearance: none;
 }
 
+.c7[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c7::-webkit-outer-spin-button,
 .c7::-webkit-inner-spin-button {
   margin: 0;
@@ -308,6 +315,13 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c7[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c7::-webkit-outer-spin-button,

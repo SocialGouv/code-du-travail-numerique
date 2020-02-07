@@ -41,7 +41,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -52,22 +52,20 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   appearance: none;
 }
 
+.c4[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c4::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c4 *::-ms-backdrop,
-.c4 {
+.c4 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c4:invalid {
-  border-color: #eb5757;
-}
-
-.c4:disabled {
-  background-color: #e4e8ef;
 }
 
 .c1 {
@@ -214,7 +212,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -225,22 +223,20 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   appearance: none;
 }
 
+.c4[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c4::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c4 *::-ms-backdrop,
-.c4 {
+.c4 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c4:invalid {
-  border-color: #eb5757;
-}
-
-.c4:disabled {
-  background-color: #e4e8ef;
 }
 
 .c1 {

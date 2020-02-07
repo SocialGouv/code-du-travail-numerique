@@ -41,7 +41,7 @@ exports[`<StepInformations /> should render 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -52,22 +52,20 @@ exports[`<StepInformations /> should render 1`] = `
   appearance: none;
 }
 
+.c6[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c6::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c6 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c6:invalid {
-  border-color: #eb5757;
-}
-
-.c6:disabled {
-  background-color: #e4e8ef;
 }
 
 .c2 {
@@ -251,7 +249,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -262,22 +260,20 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   appearance: none;
 }
 
+.c5[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c5::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c5 *::-ms-backdrop,
-.c5 {
+.c5 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c5:invalid {
-  border-color: #eb5757;
-}
-
-.c5:disabled {
-  background-color: #e4e8ef;
 }
 
 .c2 {
@@ -453,7 +449,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -464,22 +460,20 @@ exports[`<StepInformations /> should render groupe 1`] = `
   appearance: none;
 }
 
+.c5[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c5::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c5 *::-ms-backdrop,
-.c5 {
+.c5 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c5:invalid {
-  border-color: #eb5757;
-}
-
-.c5:disabled {
-  background-color: #e4e8ef;
 }
 
 .c2 {

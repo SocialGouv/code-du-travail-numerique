@@ -2301,7 +2301,7 @@ exports[`<FicheMT /> should render 1`] = `
               <h3
                 class="c71 c72"
               >
-                Aidez-nous à améliorer cet outil
+                Participez à l’amélioration du site
               </h3>
               <ul
                 class="sc-fznMnq c73"
@@ -2311,11 +2311,21 @@ exports[`<FicheMT /> should render 1`] = `
                 >
                   <a
                     class="c75"
+                    href="/newsletter"
+                  >
+                    Inscrivez-vous à la newsletter
+                  </a>
+                </li>
+                <li
+                  class="c74"
+                >
+                  <a
+                    class="c75"
                     href="https://calendly.com/code-du-travail-numerique/ambassadeur-du-code-du-travail-numerique"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Devenir ambassadeur
+                    Devenez ambassadeur
                   </a>
                 </li>
                 <li
@@ -2327,7 +2337,7 @@ exports[`<FicheMT /> should render 1`] = `
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Contribuer sur Github
+                    Contribuez sur Github
                   </a>
                 </li>
                 <li

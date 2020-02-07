@@ -1349,7 +1349,7 @@ exports[`<Theme /> should render 1`] = `
               <h3
                 class="c37 c38"
               >
-                Aidez-nous à améliorer cet outil
+                Participez à l’amélioration du site
               </h3>
               <ul
                 class="sc-fznMnq c39"
@@ -1359,11 +1359,21 @@ exports[`<Theme /> should render 1`] = `
                 >
                   <a
                     class="c41"
+                    href="/newsletter"
+                  >
+                    Inscrivez-vous à la newsletter
+                  </a>
+                </li>
+                <li
+                  class="c40"
+                >
+                  <a
+                    class="c41"
                     href="https://calendly.com/code-du-travail-numerique/ambassadeur-du-code-du-travail-numerique"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Devenir ambassadeur
+                    Devenez ambassadeur
                   </a>
                 </li>
                 <li
@@ -1375,7 +1385,7 @@ exports[`<Theme /> should render 1`] = `
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Contribuer sur Github
+                    Contribuez sur Github
                   </a>
                 </li>
                 <li

@@ -2251,6 +2251,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
   appearance: none;
 }
 
+.c19[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c19::-webkit-outer-spin-button,
 .c19::-webkit-inner-spin-button {
   margin: 0;
@@ -2758,6 +2765,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c16[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c16::-webkit-outer-spin-button,

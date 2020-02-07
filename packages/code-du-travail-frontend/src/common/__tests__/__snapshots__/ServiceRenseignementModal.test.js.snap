@@ -206,6 +206,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   appearance: none;
 }
 
+.c9[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c9::-webkit-outer-spin-button,
 .c9::-webkit-inner-spin-button {
   margin: 0;

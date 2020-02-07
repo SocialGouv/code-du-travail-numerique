@@ -28,6 +28,13 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   appearance: none;
 }
 
+.c11[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c11::-webkit-outer-spin-button,
 .c11::-webkit-inner-spin-button {
   margin: 0;
@@ -832,6 +839,13 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   appearance: none;
 }
 
+.c9[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c9::-webkit-outer-spin-button,
 .c9::-webkit-inner-spin-button {
   margin: 0;
@@ -1324,6 +1338,13 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   appearance: none;
 }
 
+.c20[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c20::-webkit-outer-spin-button,
 .c20::-webkit-inner-spin-button {
   margin: 0;
@@ -1405,6 +1426,13 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c22[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c22::-webkit-outer-spin-button,
@@ -1573,7 +1601,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   font-family: "Open Sans",sans-serif;
   vertical-align: middle;
   background-color: #fff;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
   cursor: pointer;
@@ -1584,22 +1612,20 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   appearance: none;
 }
 
+.c17[disabled] {
+  color: #9298af;
+  background-color: #e4e8ef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c17::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c17 *::-ms-backdrop,
-.c17 {
+.c17 *::-ms-backdrop {
   padding-right: 1.6rem;
-}
-
-.c17:invalid {
-  border-color: #eb5757;
-}
-
-.c17:disabled {
-  background-color: #e4e8ef;
 }
 
 .c2 {
