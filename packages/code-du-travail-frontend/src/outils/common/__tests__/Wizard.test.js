@@ -4,6 +4,17 @@ import { Wizard } from "../Wizard";
 import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
 import { Field } from "react-final-form";
 
+jest.mock("../../../piwik", () => {
+  let events = [];
+  return {
+    matopush: event => events.push(event),
+    events,
+    flushEvents() {
+      events = [];
+    }
+  };
+});
+
 const FirstStep = () => <p>Premiere Etape</p>;
 FirstStep.validate = jest.fn();
 
