@@ -35,6 +35,4 @@ jest.spyOn(Date.prototype, "toLocaleString").mockImplementation(function() {
 // eslint-disable-next-line import/no-extraneous-dependencies
 require("@reach/utils").checkStyles = jest.fn();
 
-document.body.scrollIntoView = jest.fn();
-
 window.scrollTo = jest.fn();
