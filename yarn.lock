@@ -2491,10 +2491,10 @@
     eslint-plugin-jest "~23.6.0"
     eslint-plugin-prettier "~3.1.2"
 
-"@socialgouv/fiches-vdd@^1.0.137":
-  version "1.0.137"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.137.tgz#8d1eb71cfd122e58243c43a08bb20b088aa3979e"
-  integrity sha512-mSqM5S4CLftJxjCjU628lOgCywB9AiSukBKR6lAZ6IJbCitwvm3g1R3Ecq+yuGvZIpdQQsSvxIgXv/CloR04GQ==
+"@socialgouv/fiches-vdd@^1.0.138":
+  version "1.0.138"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.138.tgz#2073bd2214594ed6af15edd72a35541378a23eda"
+  integrity sha512-sOps5sbi5+QwoPUFvAcRBEIz8qM+846IpNctFsEo39SczIYh9glEio7z0ekl6TpcTR6PQeL4YiemwoFSYbQiFw==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.3"
@@ -6400,7 +6400,7 @@ css-select@^2.0.0:
     domutils "^1.7.0"
     nth-check "^1.0.2"
 
-css-selector-parser@^1.1.0:
+css-selector-parser@^1.0.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/css-selector-parser/-/css-selector-parser-1.3.0.tgz#5f1ad43e2d8eefbfdc304fcd39a521664943e3eb"
   integrity sha1-XxrUPi2O77/cME/NOaUhZklD4+s=
@@ -7356,7 +7356,7 @@ es6-symbol@^3.1.1, es6-symbol@~3.1.3:
     d "^1.0.1"
     ext "^1.1.2"
 
-es6-weak-map@^2.0.1, es6-weak-map@^2.0.2:
+es6-weak-map@^2.0.0, es6-weak-map@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/es6-weak-map/-/es6-weak-map-2.0.3.tgz#b6da1f16cc2cc0d9be43e6bdbfc5e7dfcdf31d53"
   integrity sha512-p5um32HOTO1kP+w7PRnB+5lQ43Z6muuMuIMffvDN8ZB4GcnjLBV6zGStpbASIMk4DCAvEaamhe2zhyCb/QXXsA==
@@ -12889,7 +12889,7 @@ npx@^10.2.2:
     libnpx "10.2.2"
     npm "5.1.0"
 
-nth-check@^1.0.1, nth-check@^1.0.2, nth-check@~1.0.1:
+nth-check@^1.0.0, nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
   integrity sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==
@@ -18309,12 +18309,12 @@ unist-util-is@^4.0.0:
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.0.1.tgz#ae3e39b9ad1b138c8e3b9d2f4658ad0031be4610"
   integrity sha512-7NYjErP4LJtkEptPR22wO5RsCPnHZZrop7t2SoQzjvpFedCFer4WW8ujj9GI5DkUX7yVcffXLjoURf6h2QUv6Q==
 
-unist-util-parents@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/unist-util-parents/-/unist-util-parents-1.0.2.tgz#f982bf0feb4fa472d60209224bfb42f513468673"
-  integrity sha512-GwY81F/q2KMYi+A7+A0QZCJX/GlmRfeU4fRlEmndSgLGPWLBBcR/xKb5B5irFSzzrbTK94XgBQ++s7c9/Jdoig==
+unist-util-parents@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/unist-util-parents/-/unist-util-parents-1.0.3.tgz#9730446164303c40c01bcbe03221d11bc9189a4d"
+  integrity sha512-GA82HBLgPxR+qkOzbti/jxzmkMBDu8iS/mw58iCwLpCl9JpLyGxkVr7nsFpAX956qIsa5yKNKM5SeGS8yCY8Lw==
   dependencies:
-    es6-weak-map "^2.0.1"
+    es6-weak-map "^2.0.0"
 
 unist-util-position@^3.0.0:
   version "3.0.4"
@@ -18335,16 +18335,16 @@ unist-util-remove@^1.0.0:
   dependencies:
     unist-util-is "^3.0.0"
 
-unist-util-select@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-3.0.0.tgz#36cef56c000caa09c51383269946ab17365c702e"
-  integrity sha512-eBOYflIHlKWNI/FTmObsPiPbRQG59POGuddDx4X7b99uxDDMpbOfJLozkazJhcOpKmCYAKqwpZ4IqEaOONqk3A==
+unist-util-select@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-3.0.1.tgz#787fc452db9ba77f0ade0e7dc53c3d9d4acc79c7"
+  integrity sha512-VQpTuqZVJlRbosQdnLdTPIIqwZeU70YZ5aMBOqtFNGeeCdYn6ORZt/9RiaVlbl06ocuf58SVMoFa7a13CSGPMA==
   dependencies:
-    css-selector-parser "^1.1.0"
+    css-selector-parser "^1.0.0"
     not "^0.1.0"
-    nth-check "^1.0.1"
+    nth-check "^1.0.0"
     unist-util-is "^4.0.0"
-    zwitch "^1.0.3"
+    zwitch "^1.0.0"
 
 unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1:
   version "1.1.2"
@@ -19394,7 +19394,7 @@ ylru@^1.2.0:
   resolved "https://registry.yarnpkg.com/ylru/-/ylru-1.2.1.tgz#f576b63341547989c1de7ba288760923b27fe84f"
   integrity sha512-faQrqNMzcPCHGVC2aaOINk13K+aaBDUPjGWl0teOXywElLjyVAB6Oe2jj62jHYtwsU49jXhScYbvPENK+6zAvQ==
 
-zwitch@^1.0.0, zwitch@^1.0.3:
+zwitch@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.4.tgz#93b1b993b13c8926753a41afaf8f27bbfac6be8b"
   integrity sha512-YO803/X+13GNaZB7fVopjvHH0uWQKgJkgKnU1YCjxShjKGVuN9PPHHW8g+uFDpkHpSTNi3rCMKMewIcbC1BAYg==
