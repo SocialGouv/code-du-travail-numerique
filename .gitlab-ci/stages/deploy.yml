@@ -186,7 +186,7 @@ Deploy @cdtn/nlp (dev):
     - .deploy_nlp_stage
     - .dev_stage
   variables:
-    HELM_RENDER_ARGS: "--set deployment.resources.requests.memory 1.5G"
+    HELM_RENDER_ARGS: "--set deployment.resources.requests.memory=1.5G"
 
 Deploy @cdtn/nlp (prod):
   <<: *deploy_nlp_stage
