@@ -6,7 +6,7 @@ include:
     ref: v4.6.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_nodejs_chart_stage.yml
-    ref: v4.6.0
+    ref: v7.2.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_hpa_chart_stage.yml
     ref: v4.6.0
@@ -182,8 +182,13 @@ Create Elasticsearch Index (prod):
 #
 
 Deploy @cdtn/nlp (dev):
-  <<: *deploy_nlp_stage
-  <<: *dev_stage
+  extends:
+    - .deploy_nlp_stage
+    - .dev_stage
+  variables:
+    HELM_RENDER_ARGS: >-
+      --set deployment.resources.requests.memory=1Gi
+      --set deployment.resources.requests.cpu=5m
 
 Deploy @cdtn/nlp (prod):
   <<: *deploy_nlp_stage
