@@ -26,7 +26,7 @@ services:
       - NLP_URL=http://localhost
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.5.2
+    image: docker.elastic.co/kibana/kibana:7.6.0
     ports:
       - 5601:5601
     depends_on:
