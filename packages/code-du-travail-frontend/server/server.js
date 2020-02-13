@@ -150,6 +150,10 @@ nextApp.prepare().then(() => {
   Environment:
 
   - process.env.NODE_ENV : ${process.env.NODE_ENV || "development"}
+  - version: ${PACKAGE_VERSION}
+  - is deployed on prod(${PROD_HOSTNAME}): ${IS_PRODUCTION_DEPLOYMENT}
+  - sentry: ${SENTRY_PUBLIC_DSN},
+
 `);
   });
 });
