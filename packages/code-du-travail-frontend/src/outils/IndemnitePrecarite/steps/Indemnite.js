@@ -15,7 +15,6 @@ import {
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 
 function Disclaimer({ situation, idcc }) {
-  console.log(situation);
   if (idcc > 0) {
     if (situation.hasConventionalProvision) {
       return (
