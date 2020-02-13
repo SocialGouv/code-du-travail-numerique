@@ -9,7 +9,7 @@ include:
     ref: v7.2.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_hpa_chart_stage.yml
-    ref: v4.6.0
+    ref: v7.2.0
 
 #
 
@@ -117,8 +117,12 @@ Deploy @cdtn/api (prod):
 #
 
 Deploy @cdtn/frontend (dev):
-  <<: *deploy_frontend_stage
-  <<: *dev_stage
+  extends:
+    - .deploy_frontend_stage
+    - .dev_stage
+  variables:
+    HELM_RENDER_ARGS: >-
+      --set autoscaling.enabled=false
 
 Deploy @cdtn/frontend (prod):
   <<: *deploy_frontend_stage
