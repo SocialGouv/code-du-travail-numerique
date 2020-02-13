@@ -18,7 +18,7 @@ const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
 const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
 const PACKAGE_VERSION = process.env.PACKAGE_VERSION || "";
 
-export function getSentryCspUrl() {
+function getSentryCspUrl() {
   // NOTE(douglasduteil): is pre production if we can find the version in the url
   // All "http://<version>-code-travail.dev.frabrique.social.gouv.fr" are preprod
   // "http://code.travail.gouv.fr" is prod
