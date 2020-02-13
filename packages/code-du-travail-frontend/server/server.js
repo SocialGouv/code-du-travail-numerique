@@ -1,6 +1,10 @@
-// Custom server using Express.
-const express = require("express");
+// Import prerequisite packages
 const next = require("next");
+const Koa = require("koa");
+const Router = require("koa-router");
+const helmet = require("koa-helmet");
+const bodyParser = require("koa-bodyparser");
+const Sentry = require("@sentry/node");
 
 /**
  * this env variable is use to target developpement / staging deployement
@@ -8,24 +12,27 @@ const next = require("next");
  */
 const IS_PRODUCTION_DEPLOYMENT =
   process.env.IS_PRODUCTION_DEPLOYMENT === "true";
-const PORT = process.env.FRONTEND_PORT || 3000;
+const PORT = parseInt(process.env.FRONTEND_PORT, 10) || 3000;
 const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
-const dev = process.env.NODE_ENV !== "production";
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
+const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
+const PACKAGE_VERSION = process.env.PACKAGE_VERSION || "";
 
-const app = next({ dev });
-const handler = app.getRequestHandler();
-const HEALTH = "health";
+export function getSentryCspUrl() {
+  // NOTE(douglasduteil): is pre production if we can find the version in the url
+  // All "http://<version>-code-travail.dev.frabrique.social.gouv.fr" are preprod
+  // "http://code.travail.gouv.fr" is prod
 
-/**
- * This middleware is only used for dev / staging deployement
- * to block crawler that come to the page without checking robots.txt
- */
-const disallowRobots = (_, res, next) => {
-  res.setHeader("X-Robots-Tag", "noindex, nofollow, nosnippet");
-  next();
-};
+  const isPreProduction =
+    PACKAGE_VERSION && /^v\d+-\d+-\d+/.test(FRONTEND_HOST);
+  const environment = isPreProduction ? "preproduction" : "production";
 
+  return `https://sentry.io/api/-1/security/?sentry_key=${SENTRY_PUBLIC_DSN}&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
+}
+
+const dev = process.env.NODE_ENV !== "production";
+
+const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
 const robotsProd = [
   "User-agent: *",
   "Disallow: /assets/",
@@ -34,47 +41,118 @@ const robotsProd = [
   `Sitemap: https://${PROD_HOSTNAME}/sitemap.xml`
 ].join("\n");
 
-const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
+// Initialize NextJs instance and expose request handler
+const nextApp = next({ dev });
+const nextHandler = nextApp.getRequestHandler();
 
-const robotTxtHandler = (req, res) => {
-  res
-    .status(200)
-    .set("Content-Type", "text/plain")
-    .send(IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev);
-};
+nextApp.prepare().then(() => {
+  const server = new Koa();
+  const router = new Router();
 
-const redirectHostname = (req, res, next) => {
-  const isProdUrl = req.get("Host") === PROD_HOSTNAME;
-  const isHealthCheckUrl = req.path === HEALTH;
-  if (!isProdUrl && !isHealthCheckUrl) {
-    return res.redirect(301, `https://${PROD_HOSTNAME}${req.originalUrl}`);
+  if (dev) {
+    // handle local csp reportUri endpoint
+    server.use(bodyParser());
   }
-  return next();
-};
-
-app.prepare().then(() => {
-  const server = express();
-  server.get(`/${HEALTH}`, (_, res) =>
-    res.status(200).json({ status: "up and running" })
+  server.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc: [
+            "'self'",
+            "*.travail.gouv.fr",
+            "*.data.gouv.fr",
+            "*.fabrique.social.gouv.fr"
+          ],
+          scriptSrc: [
+            "'self'",
+            "'unsafe-inline'",
+            "https://mon-entreprise.fr",
+            "https://www.googletagmanager.com",
+            "*.fabrique.social.gouv.fr"
+          ],
+          frameSrc: ["https://mon-entreprise.fr"],
+          frameAncestors: ["'none'"],
+          styleSrc: ["'self'", "'unsafe-inline'"],
+          imgSrc: [
+            "'self'",
+            "https://travail-emploi.gouv.fr",
+            "https://mon-entreprise.fr",
+            "https://ad.doubleclick.net"
+          ],
+          ...(dev && { reportUri: "/report-violation" }),
+          ...(!dev && SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() })
+        },
+        reportOnly: () => dev
+      }
+    })
   );
-  server.get("/robots.txt", robotTxtHandler);
-
-  if (IS_PRODUCTION_DEPLOYMENT) {
-    server.use(redirectHostname);
-  } else {
-    server.use(disallowRobots);
+  if (dev) {
+    router.post("/report-violation", ctx => {
+      if (ctx.request.body) {
+        console.log("CSP Violation: ", ctx.request.body);
+      } else {
+        console.log("CSP Violation: No data received!");
+      }
+      ctx.status = 204;
+    });
   }
-  server.use(handler);
-  server.listen(PORT, err => {
-    if (err) throw err;
-    // eslint-disable-next-line no-console
-    console.log(`
+  if (IS_PRODUCTION_DEPLOYMENT) {
+    server.use(async function(ctx) {
+      const isProdUrl = ctx.host === PROD_HOSTNAME;
+      const isHealthCheckUrl = ctx.path === "/health";
+      if (!isProdUrl && !isHealthCheckUrl) {
+        ctx.status = 301;
+        ctx.redirect(`https://${PROD_HOSTNAME}${ctx.originalUrl}`);
+        return;
+      }
+    });
+  } else {
+    server.use(async function(ctx, next) {
+      ctx.set({ "X-Robots-Tag": "noindex, nofollow, nosnippet" });
+      await next();
+    });
+  }
 
-  > Ready on ${FRONTEND_HOST}
+  router.get("/health", async ctx => {
+    ctx.body = { status: "up and running" };
+  });
+
+  router.get("/robots.txt", async ctx => {
+    ctx.respond = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
+  });
+
+  router.all("*", async ctx => {
+    await nextHandler(ctx.req, ctx.res);
+    ctx.respond = false;
+  });
+
+  server.use(async (ctx, next) => {
+    ctx.status = 200;
+    await next();
+  });
+
+  // centralize error logging
+  server.on("error", (err, ctx) => {
+    Sentry.withScope(function(scope) {
+      scope.setTag(`koa`, true);
+      scope.addEventProcessor(function(event) {
+        return Sentry.Handlers.parseRequest(event, ctx.request);
+      });
+      Sentry.captureException(err);
+    });
+  });
+
+  server.use(router.routes());
+  server.listen(PORT, () => {
+    console.log(`
+  › Ready on ${FRONTEND_HOST}
 
   Environment:
 
-    - process.env.NODE_ENV : ${process.env.NODE_ENV}
+  - process.env.NODE_ENV : ${process.env.NODE_ENV || "development"}
+  - version: ${PACKAGE_VERSION}
+  - is deployed on prod(${PROD_HOSTNAME}): ${IS_PRODUCTION_DEPLOYMENT}
+  - sentry: ${SENTRY_PUBLIC_DSN},
 
 `);
   });

@@ -24,7 +24,7 @@ class SimulateurEmbauche extends React.PureComponent {
 
   componentDidMount() {
     const script = document.createElement("script");
-    script.src = "https://embauche.beta.gouv.fr/dist/simulateur.js";
+    script.src = "https://mon-entreprise.fr/simulateur-iframe-integration.js";
     script.async = true;
     script.dataset.couleur = "#2975D1";
     script.id = "script-simulateur-embauche";

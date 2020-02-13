@@ -19,6 +19,7 @@ export function initializeSentry() {
   const isPreProduction =
     packageVersion && /^v\d+-\d+-\d+/.test(location.hostname);
   const environment = isPreProduction ? "preproduction" : "production";
+
   Sentry.init({
     dsn: SENTRY_PUBLIC_DSN,
     debug: isPreProduction,
