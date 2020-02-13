@@ -14,26 +14,13 @@ import {
 } from "../../common/situations.utils";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 
-function Disclaimer({ situation }) {
-  if (situation.idcc > 0) {
+function Disclaimer({ situation, idcc }) {
+  console.log(situation);
+  if (idcc > 0) {
     if (situation.hasConventionalProvision) {
       return (
         <Alert>
-          Une convention collective de branche étendue ou un accord d’entreprise
-          peut prévoit un montant différent qu’il soit plus élevé ou plus faible
-          que celui prévu par le code du travail. Attention, dans le cas où la
-          convention ou l’accord collectif prévoit un taux inférieur à 10% dans
-          la limite de 6 %, il doit y avoir des contreparties offertes au
-          salarié, notamment sous la forme d’un accès privilégié à la formation
-          professionnelle (action de formation, bilan de compétences). Dans tous
-          les cas, le contrat de travail peut prévoir un montant plus favorable
-          pour le salarié. Il faut alors appliquer ce montant.
-        </Alert>
-      );
-    } else {
-      return (
-        <Alert>
-          Un accord d’entreprise peut prévoit un montant différent qu’il soit
+          Un accord d’entreprise peut prévoir un montant différent qu’il soit
           plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu
           par l’accord d’entreprise, sauf si le contrat de travail prévoit un
           montant plus favorable pour le salarié. Attention, dans le cas où
@@ -43,11 +30,25 @@ function Disclaimer({ situation }) {
           professionnelle (action de formation, bilan de compétences)
         </Alert>
       );
+    } else {
+      return (
+        <Alert>
+          Une convention collective de branche étendue ou un accord d’entreprise
+          peut prévoir un montant différent qu’il soit plus élevé ou plus faible
+          que celui prévu par le code du travail. Attention, dans le cas où la
+          convention ou l’accord collectif prévoit un taux inférieur à 10% dans
+          la limite de 6 %, il doit y avoir des contreparties offertes au
+          salarié, notamment sous la forme d’un accès privilégié à la formation
+          professionnelle (action de formation, bilan de compétences). Dans tous
+          les cas, le contrat de travail peut prévoir un montant plus favorable
+          pour le salarié. Il faut alors appliquer ce montant.
+        </Alert>
+      );
     }
   }
   return (
     <Alert>
-      Un accord d’entreprise peut prévoit un montant différent qu’il soit plus
+      Un accord d’entreprise peut prévoir un montant différent qu’il soit plus
       élevé ou plus faible. Dans ce cas, s’applique le montant prévu par
       l’accord d’entreprise, sauf si le contrat de travail prévoit un montant
       plus favorable pour le salarié.
@@ -78,7 +79,6 @@ function StepIndemnite({ form }) {
   const [situationCdt] = getSituationsFor(data, { idcc: 0, contractType });
   const initialSituations = getSituationsFor(data, { idcc, contractType });
   const situations = filterSituations(initialSituations, criteria);
-
   let rate = "10%";
   let bonusAltName = "La prime de précarité";
   let legalRefs = [];
@@ -88,7 +88,11 @@ function StepIndemnite({ form }) {
       [situation] = situations;
       rate = situation.rate || "0%";
       bonusAltName = situation.bonusLabel || bonusAltName;
-      legalRefs = extractRefs([situation, situationCdt]);
+      if (idcc !== 0) {
+        legalRefs = extractRefs([situation, situationCdt]);
+      } else {
+        legalRefs = extractRefs([situationCdt]);
+      }
       break;
     }
     default: {
@@ -96,7 +100,6 @@ function StepIndemnite({ form }) {
       legalRefs = extractRefs([situationCdt]);
     }
   }
-
   const [, value] = rate.match(/(\d+)%/);
   const rateValue = parseInt(value) / 100;
   const rateLabel = `${value}/100`;
@@ -118,7 +121,7 @@ function StepIndemnite({ form }) {
         {bonusAltName} est estimée à&nbsp;
         <Highlight>{indemnite}&nbsp;€</Highlight>.
       </p>
-      <Disclaimer situation={situation} />
+      <Disclaimer situation={situation} idcc={idcc} />
       <SectionTitle>Détails du calcul</SectionTitle>
       <Heading>Éléments saisis :</Heading>
       {entries.length > 0 && (
