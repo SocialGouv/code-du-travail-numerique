@@ -72,12 +72,9 @@ export const documentMapping = {
     breadcrumbs: {
       properties: {
         label: { type: "text" },
-        slug: { type: "keyword" },
-        parent: { type: "keyword" }
+        path: { type: "keyword" },
+        slug: { type: "keyword" }
       }
-    },
-    theme: {
-      type: "keyword"
     },
     shortTitle: {
       type: "text",

@@ -2,6 +2,8 @@ const fetch = require("node-fetch");
 const kaliData = require("@socialgouv/kali-data/data/index.json");
 const remark = require("remark");
 const strip = require("strip-markdown");
+const { SOURCES, getRouteBySource } = require("@cdt/sources");
+
 const slugify = require("../../slugify");
 const allThemes = require("../datafiller/themes.data.json");
 const mdStriper = remark().use(strip);
@@ -114,7 +116,11 @@ const fetchContributions = async () => {
       let breadcrumbs = [];
       if (theme) {
         breadcrumbs = (theme.breadcrumbs || []).concat([
-          { title: theme.title, slug: theme.slug }
+          {
+            label: theme.title,
+            path: getRouteBySource(SOURCES.THEMES),
+            slug: theme.slug
+          }
         ]);
       }
       return {

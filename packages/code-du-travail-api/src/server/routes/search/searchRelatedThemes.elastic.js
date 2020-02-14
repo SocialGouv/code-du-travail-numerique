@@ -21,7 +21,7 @@ function getRelatedThemesBody({ query, size = 5 }) {
           },
           {
             match: {
-              "breadcrumbs.title": {
+              "breadcrumbs.label": {
                 query: `${query}`,
                 fuzziness: "auto"
               }

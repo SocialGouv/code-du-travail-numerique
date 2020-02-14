@@ -1,12 +1,7 @@
 const fetch = require("node-fetch");
 const slugify = require("../../slugify");
-const { SOURCES } = require("@cdt/sources");
-const {
-  sortByKey,
-  getVariants,
-  sortRowRefsByPosition,
-  slimify
-} = require("./utils");
+const { SOURCES, getRouteBySource } = require("@cdt/sources");
+const { sortByKey, getVariants, sortRowRefsByPosition } = require("./utils");
 
 /*
  fetch raw datafiller themes data, filter and sort properly
@@ -41,8 +36,6 @@ const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/the
 
 const getSlug = row => `${row.position || 1}-${slugify(row.title)}`;
 
-const slimifyTheme = obj => slimify(obj, ["title", "slug"]);
-
 // for breadcrumbs
 const getParents = (rows, row) => {
   let parent = row.parent;
@@ -54,7 +47,11 @@ const getParents = (rows, row) => {
     }
     parent = node && node.parent;
   }
-  return parts.map(slimifyTheme);
+  return parts.map(({ title, slug }) => ({
+    label: title,
+    path: getRouteBySource(SOURCES.THEMES),
+    slug
+  }));
 };
 
 const getChildren = (rows, row) =>

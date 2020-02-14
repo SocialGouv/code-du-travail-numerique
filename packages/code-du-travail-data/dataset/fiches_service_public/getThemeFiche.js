@@ -1,3 +1,5 @@
+const { SOURCES, getRouteBySource } = require("@cdt/sources");
+
 const themes = require("../datafiller/themes.data.json");
 const slugify = require("../../slugify");
 
@@ -6,24 +8,19 @@ function getThemeFiche(fiche) {
   const theme = themes.find(theme =>
     theme.refs.map(r => r.url).includes(ficheUrl)
   );
-  return {
-    themeSlug: theme && theme.slug,
-    breadcrumbs:
-      theme &&
-      (
-        (theme.breadcrumbs &&
-          theme.breadcrumbs.map(node => ({
-            title: node.title,
-            slug: node.slug
-          }))) ||
-        []
-      ).concat([
-        {
-          title: theme.title,
-          slug: theme.slug
-        }
-      ])
-  };
+  const breadcrumbs = [];
+  if (theme) {
+    if (theme.breadcrumbs) {
+      breadcrumbs.push(...theme.breadcrumbs);
+    }
+    breadcrumbs.push({
+      label: theme.title,
+      path: getRouteBySource(SOURCES.THEMES),
+      slug: theme.slug
+    });
+  }
+
+  return { breadcrumbs };
 }
 
 module.exports = { getThemeFiche };

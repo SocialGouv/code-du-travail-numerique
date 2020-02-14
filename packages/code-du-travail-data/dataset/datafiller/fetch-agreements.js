@@ -8,7 +8,6 @@ import themes from "./themes.data.json";
 import remark from "remark";
 import html from "remark-html";
 import slugify from "../../slugify";
-import { formatIdcc } from "../../lib";
 
 const compiler = remark().use(html, { sanitize: true });
 
@@ -100,7 +99,7 @@ function getContributionAnswers(agreementNum) {
         let rootTheme = null;
         if (theme) {
           rootTheme = theme.breadcrumbs
-            ? theme.breadcrumbs[0].title
+            ? theme.breadcrumbs[0].label
             : theme.title;
         }
 
