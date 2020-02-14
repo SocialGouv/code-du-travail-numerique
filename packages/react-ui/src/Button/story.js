@@ -104,6 +104,11 @@ export const link = () => (
       </Button>
     </Section>
     <Section>
+      <Button variant="navLink" onClick={action("link button clicked")}>
+        Button with navLink variant
+      </Button>
+    </Section>
+    <Section>
       <Button variant="link" onClick={action("link button clicked")} />
     </Section>
     <Section>

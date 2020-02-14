@@ -94,7 +94,9 @@ const Footer = () => {
                   <StyledListItem>
                     <ContactModal>
                       {openModal => (
-                        <StyledLink onClick={openModal}>Contact</StyledLink>
+                        <Button variant="navLink" onClick={openModal}>
+                          Contact
+                        </Button>
                       )}
                     </ContactModal>
                   </StyledListItem>
@@ -338,6 +340,7 @@ const StyledHeading = styled(Heading)`
 const StyledListItem = styled.li`
   margin: ${spacings.tiny} 0;
 `;
+
 const StyledLink = styled.a`
   font-weight: normal;
   text-decoration: none;

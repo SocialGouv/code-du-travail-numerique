@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { slide as Menu } from "react-burger-menu";
-import { icons, theme } from "@socialgouv/react-ui";
+import { Button, icons, theme } from "@socialgouv/react-ui";
 
 import { AccessibilityModal } from "../../common/AccessibilityModal";
 import { BurgerStyles } from "./BurgerStyles";
@@ -34,7 +34,9 @@ export const BurgerNav = ({ currentPage }) => {
       >
         <AccessibilityModal>
           {openModal => (
-            <BaseNavItem onClick={openModal}>Accessibilité</BaseNavItem>
+            <BaseNavItem variant="navLink" onClick={openModal}>
+              Accessibilité
+            </BaseNavItem>
           )}
         </AccessibilityModal>
         {currentPage !== "tools" ? (
@@ -58,23 +60,21 @@ export const BurgerNav = ({ currentPage }) => {
 
 const { box, breakpoints, fonts, spacings } = theme;
 
-const BaseNavItem = styled.button`
+const BaseNavItem = styled(Button)`
   position: relative;
   display: flex !important;
   align-items: center;
   height: 100%;
   padding: 0 ${spacings.base};
-  color: ${({ theme }) => theme.title};
   font-weight: normal;
   font-size: ${fonts.sizes.default};
   font-family: "Open Sans", sans-serif;
-  background: none;
   border: none;
-  cursor: pointer;
   @media (max-width: ${breakpoints.tablet}) {
     justify-content: center;
     width: 100%;
     height: 5.4rem;
+    padding: 0;
     font-weight: 600;
     font-size: ${fonts.sizes.headings.small};
   }

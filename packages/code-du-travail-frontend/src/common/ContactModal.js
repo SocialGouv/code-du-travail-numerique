@@ -32,8 +32,8 @@ export const ContactModal = ({ children: renderProp }) => {
             <Heading as="h4">Contact </Heading>
             <p>
               <Text>
-                Vous pouvez joindre l&apos;équipe en charge de la conception et
-                du développement du site à l&apos;adresse suivante&nbsp;:&nbsp;
+                Vous pouvez joindre l’équipe en charge de la conception et du
+                développement du site à l’adresse suivante&nbsp;:&nbsp;
                 <StyledLink href="mailto:codedutravailnumerique@travail.gouv.fr">
                   codedutravailnumerique@travail.gouv.fr
                 </StyledLink>
@@ -41,10 +41,10 @@ export const ContactModal = ({ children: renderProp }) => {
             </p>
             <p>
               <Text>
-                Attention : l&apos;équipe n&apos;est pas habilitée à répondre
-                aux questions concernant le droit du travail. Si vous avez
-                besoin de renseignements sur votre situation ou celle d&apos;un
-                proche, nous vous invitons à contacter&nbsp;
+                Attention : l’équipe n’est pas habilitée à répondre aux
+                questions concernant le droit du travail. Si vous avez besoin de
+                renseignements sur votre situation ou celle d’un proche, nous
+                vous invitons à contacter&nbsp;
                 <StyledLink onClick={showServiceRenseignement}>
                   les services dédiés
                 </StyledLink>

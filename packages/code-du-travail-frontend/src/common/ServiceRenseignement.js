@@ -70,7 +70,7 @@ class ServiceRenseignement extends React.Component {
           sont pas compétents pour :
           <ul>
             <li>{"les demandes d'intervention en entreprise"}</li>
-            <li>{"la constitution des dossiers prud'homaux"}</li>
+            <li>{"la constitution des dossiers prud’homaux"}</li>
             <li>{"les calculs de droit au chômage"}</li>
             <li>{"vous renseigner sur les cotisations sociales"}</li>
           </ul>
