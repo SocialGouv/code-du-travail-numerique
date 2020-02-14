@@ -2,11 +2,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Santé au travail",
+        "label": "Santé au travail",
+        "path": "themes",
         "slug": "63-sante-au-travail"
       }
     ],
@@ -102,11 +104,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Autres départs",
+        "label": "Autres départs",
+        "path": "themes",
         "slug": "86-autres-departs"
       }
     ],
@@ -127,11 +131,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Formation professionnelle",
+        "label": "Formation professionnelle",
+        "path": "themes",
         "slug": "51-formation-professionnelle"
       }
     ],
@@ -152,7 +158,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Temps de travail",
+        "label": "Temps de travail",
+        "path": "themes",
         "slug": "3-temps-de-travail"
       }
     ],
@@ -197,11 +204,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       },
       {
-        "title": "Congés",
+        "label": "Congés",
+        "path": "themes",
         "slug": "41-conges"
       }
     ],
@@ -366,7 +375,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       }
     ],
@@ -418,7 +428,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Salaire et Rémunération",
+        "label": "Salaire et Rémunération",
+        "path": "themes",
         "slug": "2-salaire-et-remuneration"
       }
     ],
@@ -528,11 +539,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Contrat de travail",
+        "label": "Contrat de travail",
+        "path": "themes",
         "slug": "12-contrat-de-travail"
       }
     ],
@@ -634,11 +647,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Contrat de travail",
+        "label": "Contrat de travail",
+        "path": "themes",
         "slug": "12-contrat-de-travail"
       }
     ],
@@ -723,7 +738,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       }
     ],
@@ -768,11 +784,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Emploi",
+        "label": "Emploi",
+        "path": "themes",
         "slug": "52-emploi"
       }
     ],
@@ -813,11 +831,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Formation professionnelle",
+        "label": "Formation professionnelle",
+        "path": "themes",
         "slug": "51-formation-professionnelle"
       }
     ],
@@ -880,11 +900,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Risques professionnels et prévention",
+        "label": "Risques professionnels et prévention",
+        "path": "themes",
         "slug": "62-risques-professionnels-et-prevention"
       }
     ],
@@ -913,7 +935,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       }
     ],
@@ -1031,7 +1054,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       }
     ],
@@ -1096,11 +1120,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Formation professionnelle",
+        "label": "Formation professionnelle",
+        "path": "themes",
         "slug": "51-formation-professionnelle"
       }
     ],
@@ -1199,11 +1225,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       },
       {
-        "title": "Congés",
+        "label": "Congés",
+        "path": "themes",
         "slug": "41-conges"
       }
     ],
@@ -1409,11 +1437,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       },
       {
-        "title": "Congés",
+        "label": "Congés",
+        "path": "themes",
         "slug": "41-conges"
       }
     ],
@@ -1535,11 +1565,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       },
       {
-        "title": "Congés",
+        "label": "Congés",
+        "path": "themes",
         "slug": "41-conges"
       }
     ],
@@ -1599,11 +1631,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Contrat de travail",
+        "label": "Contrat de travail",
+        "path": "themes",
         "slug": "12-contrat-de-travail"
       }
     ],
@@ -1745,11 +1779,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Contrat de travail",
+        "label": "Contrat de travail",
+        "path": "themes",
         "slug": "12-contrat-de-travail"
       }
     ],
@@ -1836,7 +1872,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       }
     ],
@@ -1981,11 +2018,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Contrat de travail",
+        "label": "Contrat de travail",
+        "path": "themes",
         "slug": "12-contrat-de-travail"
       }
     ],
@@ -2144,11 +2183,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Contrat de travail",
+        "label": "Contrat de travail",
+        "path": "themes",
         "slug": "12-contrat-de-travail"
       }
     ],
@@ -2269,11 +2310,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Temps de travail",
+        "label": "Temps de travail",
+        "path": "themes",
         "slug": "3-temps-de-travail"
       },
       {
-        "title": "Durée du travail",
+        "label": "Durée du travail",
+        "path": "themes",
         "slug": "31-duree-du-travail"
       }
     ],
@@ -2330,11 +2373,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Emploi",
+        "label": "Emploi",
+        "path": "themes",
         "slug": "52-emploi"
       }
     ],
@@ -2372,7 +2417,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       }
     ],
@@ -2457,18 +2503,6 @@
       {
         "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires",
         "title": "De nouveaux droits pour les salariés démissionnaires"
-      },
-      {
-        "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires#Avant-la-demission",
-        "title": "De nouveaux droits pour les salariés démissionnaires : avant la démission"
-      },
-      {
-        "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires#Apres-sa-demission",
-        "title": "De nouveaux droits pour les salariés démissionnaires : après sa démission"
-      },
-      {
-        "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires#A-la-suite-de-l-inscription-a-Pole-emploi",
-        "title": "De nouveaux droits pour les salariés démissionnaires : à la suite de l’inscription à pôle emploi"
       },
       {
         "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries#Tous-les-salaries-ayant-au-moins-5-ans-d-anciennete-dans-leur-entreprise-nbsp",
@@ -2564,11 +2598,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Retraite",
+        "label": "Retraite",
+        "path": "themes",
         "slug": "85-retraite"
       }
     ],
@@ -2599,11 +2635,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Embauche",
+        "label": "Embauche",
+        "path": "themes",
         "slug": "11-embauche"
       }
     ],
@@ -2709,7 +2747,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       }
     ],
@@ -2804,11 +2843,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Formation professionnelle",
+        "label": "Formation professionnelle",
+        "path": "themes",
         "slug": "51-formation-professionnelle"
       }
     ],
@@ -2982,7 +3023,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       }
     ],
@@ -3047,11 +3089,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Conditions de travail",
+        "label": "Conditions de travail",
+        "path": "themes",
         "slug": "61-conditions-de-travail"
       }
     ],
@@ -3084,7 +3128,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Temps de travail",
+        "label": "Temps de travail",
+        "path": "themes",
         "slug": "3-temps-de-travail"
       }
     ],
@@ -3133,11 +3178,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Temps de travail",
+        "label": "Temps de travail",
+        "path": "themes",
         "slug": "3-temps-de-travail"
       },
       {
-        "title": "Durée du travail",
+        "label": "Durée du travail",
+        "path": "themes",
         "slug": "31-duree-du-travail"
       }
     ],
@@ -3158,11 +3205,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Temps de travail",
+        "label": "Temps de travail",
+        "path": "themes",
         "slug": "3-temps-de-travail"
       },
       {
-        "title": "Durée du travail",
+        "label": "Durée du travail",
+        "path": "themes",
         "slug": "31-duree-du-travail"
       }
     ],
@@ -3195,11 +3244,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Conditions de travail",
+        "label": "Conditions de travail",
+        "path": "themes",
         "slug": "61-conditions-de-travail"
       }
     ],
@@ -3313,7 +3364,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       }
     ],
@@ -3407,7 +3459,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       }
     ],
@@ -3617,7 +3670,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       }
     ],
@@ -3694,7 +3748,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Salaire et Rémunération",
+        "label": "Salaire et Rémunération",
+        "path": "themes",
         "slug": "2-salaire-et-remuneration"
       }
     ],
@@ -3749,11 +3804,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Conditions de travail",
+        "label": "Conditions de travail",
+        "path": "themes",
         "slug": "61-conditions-de-travail"
       }
     ],
@@ -3919,11 +3976,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Travailleurs et secteurs spécifiques",
+        "label": "Travailleurs et secteurs spécifiques",
+        "path": "themes",
         "slug": "64-travailleurs-et-secteurs-specifiques"
       }
     ],
@@ -3969,7 +4028,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       }
     ],
@@ -4014,11 +4074,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Embauche",
+        "label": "Embauche",
+        "path": "themes",
         "slug": "11-embauche"
       }
     ],
@@ -4127,7 +4189,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       }
     ],
@@ -4200,7 +4263,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Conflits au travail et contrôle de la réglementation",
+        "label": "Conflits au travail et contrôle de la réglementation",
+        "path": "themes",
         "slug": "9-conflits-au-travail-et-controle-de-la-reglementation"
       }
     ],
@@ -4233,45 +4297,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
-        "slug": "1-embauche-et-contrat-de-travail"
-      },
-      {
-        "title": "Embauche",
-        "slug": "11-embauche"
-      }
-    ],
-    "children": [],
-    "position": 118,
-    "refs": [
-      {
-        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Qui-est-concerne-par-l-obligation-d-emploi-des-travailleurs-handicapes-nbsp",
-        "title": "Qui est concerné par l’obligation d’emploi des travailleurs handicapés (OETH) ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Comment-l-employeur-peut-il-s-acquitter-de-son-OETH",
-        "title": "Comment l’employeur peut-il s’acquitter de son OETH ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Comment-l-obligation-d-emploi-des-travailleurs-handicapes-est-elle-nbsp",
-        "title": "OETH : comment l’obligation d’emploi des travailleurs handicapés est-elle contrôlée ?"
-      }
-    ],
-    "slug": "118-handicap",
-    "source": "themes",
-    "title": "Handicap",
-    "variants": [
-      "Handicap"
-    ]
-  },
-  {
-    "breadcrumbs": [
-      {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Travailleurs et secteurs spécifiques",
+        "label": "Travailleurs et secteurs spécifiques",
+        "path": "themes",
         "slug": "64-travailleurs-et-secteurs-specifiques"
       }
     ],
@@ -4301,11 +4333,49 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
+        "slug": "1-embauche-et-contrat-de-travail"
+      },
+      {
+        "label": "Embauche",
+        "path": "themes",
+        "slug": "11-embauche"
+      }
+    ],
+    "children": [],
+    "position": 118,
+    "refs": [
+      {
+        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Qui-est-concerne-par-l-obligation-d-emploi-des-travailleurs-handicapes-nbsp",
+        "title": "Qui est concerné par l’obligation d’emploi des travailleurs handicapés (OETH) ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Comment-l-employeur-peut-il-s-acquitter-de-son-OETH",
+        "title": "Comment l’employeur peut-il s’acquitter de son OETH ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/obligation-demploi-en-faveur-des-travailleurs-handicapes-oeth#Comment-l-obligation-d-emploi-des-travailleurs-handicapes-est-elle-nbsp",
+        "title": "OETH : comment l’obligation d’emploi des travailleurs handicapés est-elle contrôlée ?"
+      }
+    ],
+    "slug": "118-handicap",
+    "source": "themes",
+    "title": "Handicap",
+    "variants": [
+      "Handicap"
+    ]
+  },
+  {
+    "breadcrumbs": [
+      {
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Conditions de travail",
+        "label": "Conditions de travail",
+        "path": "themes",
         "slug": "61-conditions-de-travail"
       }
     ],
@@ -4443,7 +4513,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Temps de travail",
+        "label": "Temps de travail",
+        "path": "themes",
         "slug": "3-temps-de-travail"
       }
     ],
@@ -4512,11 +4583,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Santé au travail",
+        "label": "Santé au travail",
+        "path": "themes",
         "slug": "63-sante-au-travail"
       }
     ],
@@ -4578,7 +4651,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Conflits au travail et contrôle de la réglementation",
+        "label": "Conflits au travail et contrôle de la réglementation",
+        "path": "themes",
         "slug": "9-conflits-au-travail-et-controle-de-la-reglementation"
       }
     ],
@@ -4631,11 +4705,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Salaire et Rémunération",
+        "label": "Salaire et Rémunération",
+        "path": "themes",
         "slug": "2-salaire-et-remuneration"
       },
       {
-        "title": "Épargne salariale",
+        "label": "Épargne salariale",
+        "path": "themes",
         "slug": "24-epargne-salariale"
       }
     ],
@@ -4662,11 +4738,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Contrat de travail",
+        "label": "Contrat de travail",
+        "path": "themes",
         "slug": "12-contrat-de-travail"
       }
     ],
@@ -4718,11 +4796,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Embauche",
+        "label": "Embauche",
+        "path": "themes",
         "slug": "11-embauche"
       }
     ],
@@ -4759,53 +4839,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
-        "slug": "6-sante-securite-et-conditions-de-travail"
-      },
-      {
-        "title": "Travailleurs et secteurs spécifiques",
-        "slug": "64-travailleurs-et-secteurs-specifiques"
-      }
-    ],
-    "children": [],
-    "position": 641,
-    "refs": [
-      {
-        "url": "/fiche-ministere-travail/la-protection-de-la-sante-des-jeunes-travailleurs#A-quel-age-peut-on-travailler-en-France",
-        "title": "La protection de la santé des jeunes travailleurs : a quel âge peut-on travailler en france ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-protection-de-la-sante-des-jeunes-travailleurs#Pourquoi-et-comment-proteger-les-jeunes",
-        "title": "La protection de la santé des jeunes travailleurs : pourquoi et comment protéger les jeunes ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-protection-de-la-sante-des-jeunes-travailleurs#Les-jeunes-travailleurs-peuvent-ils-etre-affectes-a-tous-les-travaux-nbsp",
-        "title": "La protection de la santé des jeunes travailleurs : les jeunes travailleurs peuvent-ils être affectés à tous les travaux ?"
-      },
-      {
-        "url": "/fiche-service-public/jeune-de-15-a-18-ans-en-entreprise-travaux-interdits-et-travaux-reglementes",
-        "title": "Jeune de 15 à 18 ans en entreprise : travaux interdits et travaux réglementés"
-      },
-      {
-        "url": "/fiche-service-public/travail-de-nuit-dun-jeune-de-moins-de-18-ans",
-        "title": "Travail de nuit d'un jeune de moins de 18 ans"
-      }
-    ],
-    "slug": "641-jeunes-travailleurs",
-    "source": "themes",
-    "title": "Jeunes travailleurs",
-    "variants": [
-      "Jeunes travailleurs"
-    ]
-  },
-  {
-    "breadcrumbs": [
-      {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Emploi",
+        "label": "Emploi",
+        "path": "themes",
         "slug": "52-emploi"
       }
     ],
@@ -4879,11 +4919,57 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
+        "slug": "6-sante-securite-et-conditions-de-travail"
+      },
+      {
+        "label": "Travailleurs et secteurs spécifiques",
+        "path": "themes",
+        "slug": "64-travailleurs-et-secteurs-specifiques"
+      }
+    ],
+    "children": [],
+    "position": 641,
+    "refs": [
+      {
+        "url": "/fiche-ministere-travail/la-protection-de-la-sante-des-jeunes-travailleurs#A-quel-age-peut-on-travailler-en-France",
+        "title": "La protection de la santé des jeunes travailleurs : a quel âge peut-on travailler en france ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-protection-de-la-sante-des-jeunes-travailleurs#Pourquoi-et-comment-proteger-les-jeunes",
+        "title": "La protection de la santé des jeunes travailleurs : pourquoi et comment protéger les jeunes ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/la-protection-de-la-sante-des-jeunes-travailleurs#Les-jeunes-travailleurs-peuvent-ils-etre-affectes-a-tous-les-travaux-nbsp",
+        "title": "La protection de la santé des jeunes travailleurs : les jeunes travailleurs peuvent-ils être affectés à tous les travaux ?"
+      },
+      {
+        "url": "/fiche-service-public/jeune-de-15-a-18-ans-en-entreprise-travaux-interdits-et-travaux-reglementes",
+        "title": "Jeune de 15 à 18 ans en entreprise : travaux interdits et travaux réglementés"
+      },
+      {
+        "url": "/fiche-service-public/travail-de-nuit-dun-jeune-de-moins-de-18-ans",
+        "title": "Travail de nuit d'un jeune de moins de 18 ans"
+      }
+    ],
+    "slug": "641-jeunes-travailleurs",
+    "source": "themes",
+    "title": "Jeunes travailleurs",
+    "variants": [
+      "Jeunes travailleurs"
+    ]
+  },
+  {
+    "breadcrumbs": [
+      {
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Formation professionnelle",
+        "label": "Formation professionnelle",
+        "path": "themes",
         "slug": "51-formation-professionnelle"
       }
     ],
@@ -4928,7 +5014,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Conflits au travail et contrôle de la réglementation",
+        "label": "Conflits au travail et contrôle de la réglementation",
+        "path": "themes",
         "slug": "9-conflits-au-travail-et-controle-de-la-reglementation"
       }
     ],
@@ -4975,7 +5062,7 @@
         "url": "/fiche-service-public/doit-on-se-presenter-en-personne-devant-le-conseil-de-prudhommes-cph"
       },
       {
-        "url": "/fiche-ministere-travail/le-conseil-de-prudhommes#A-quel-conseil-de-prud-039-hommes-s-039-adresser",
+        "url": "/fiche-ministere-travail/le-conseil-de-prudhommes",
         "title": "Le conseil de prud’hommes : à quel conseil de prud'hommes s'adresser ?"
       },
       {
@@ -5010,11 +5097,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Emploi",
+        "label": "Emploi",
+        "path": "themes",
         "slug": "52-emploi"
       }
     ],
@@ -5127,7 +5216,7 @@
         "title": "ARE : dans quelles conditions l’allocation d’aide au retour à l’emploi est-elle versée ?"
       },
       {
-        "url": "/fiche-ministere-travail/allocation-daide-au-retour-a-lemploi-are#Dans-quelles-conditions-l-allocation-peut-elle-etre-supprimee-ou-reduite-nbsp",
+        "url": "/fiche-ministere-travail/allocation-daide-au-retour-a-lemploi-are#Dans-quelles-conditions-l-allocation-peut-elle-etre-supprimee-nbsp",
         "title": "ARE : dans quelles conditions l’allocation peut elle être supprimée ou réduite ?"
       },
       {
@@ -5221,11 +5310,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Emploi",
+        "label": "Emploi",
+        "path": "themes",
         "slug": "52-emploi"
       }
     ],
@@ -5358,7 +5449,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Représentation du personnel et négociation collective",
+        "label": "Représentation du personnel et négociation collective",
+        "path": "themes",
         "slug": "7-representation-du-personnel-et-negociation-collective"
       }
     ],
@@ -5441,11 +5533,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Conditions de travail",
+        "label": "Conditions de travail",
+        "path": "themes",
         "slug": "61-conditions-de-travail"
       }
     ],
@@ -5476,7 +5570,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       }
     ],
@@ -5592,11 +5687,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Licenciement",
+        "label": "Licenciement",
+        "path": "themes",
         "slug": "84-licenciement"
       }
     ],
@@ -5617,11 +5714,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Licenciement",
+        "label": "Licenciement",
+        "path": "themes",
         "slug": "84-licenciement"
       }
     ],
@@ -5895,11 +5994,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Licenciement",
+        "label": "Licenciement",
+        "path": "themes",
         "slug": "84-licenciement"
       }
     ],
@@ -5988,11 +6089,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Conditions de travail",
+        "label": "Conditions de travail",
+        "path": "themes",
         "slug": "61-conditions-de-travail"
       }
     ],
@@ -6036,7 +6139,7 @@
         "title": "L’interdiction de fumer dans les lieux de travail : quelles sont les obligations qui pèsent sur l’employeur ?"
       },
       {
-        "url": "/fiche-ministere-travail/linterdiction-de-fumer-et-de-vapoter-dans-les-lieux-de-travail#Quelle-sont-les-sanctions",
+        "url": "/fiche-ministere-travail/linterdiction-de-fumer-et-de-vapoter-dans-les-lieux-de-travail",
         "title": "L’interdiction de fumer dans les lieux de travail : quelle sont les sanctions ?"
       },
       {
@@ -6122,11 +6225,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Santé au travail",
+        "label": "Santé au travail",
+        "path": "themes",
         "slug": "63-sante-au-travail"
       }
     ],
@@ -6189,11 +6294,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Embauche",
+        "label": "Embauche",
+        "path": "themes",
         "slug": "11-embauche"
       }
     ],
@@ -6277,11 +6384,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Retraite",
+        "label": "Retraite",
+        "path": "themes",
         "slug": "85-retraite"
       }
     ],
@@ -6306,11 +6415,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Contrat de travail",
+        "label": "Contrat de travail",
+        "path": "themes",
         "slug": "12-contrat-de-travail"
       }
     ],
@@ -6397,7 +6508,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Représentation du personnel et négociation collective",
+        "label": "Représentation du personnel et négociation collective",
+        "path": "themes",
         "slug": "7-representation-du-personnel-et-negociation-collective"
       }
     ],
@@ -6464,7 +6576,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Représentation du personnel et négociation collective",
+        "label": "Représentation du personnel et négociation collective",
+        "path": "themes",
         "slug": "7-representation-du-personnel-et-negociation-collective"
       }
     ],
@@ -6552,11 +6665,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Risques professionnels et prévention",
+        "label": "Risques professionnels et prévention",
+        "path": "themes",
         "slug": "62-risques-professionnels-et-prevention"
       }
     ],
@@ -6612,11 +6727,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       },
       {
-        "title": "Repos",
+        "label": "Repos",
+        "path": "themes",
         "slug": "42-repos"
       }
     ],
@@ -6642,11 +6759,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Embauche",
+        "label": "Embauche",
+        "path": "themes",
         "slug": "11-embauche"
       }
     ],
@@ -6721,11 +6840,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Salaire et Rémunération",
+        "label": "Salaire et Rémunération",
+        "path": "themes",
         "slug": "2-salaire-et-remuneration"
       },
       {
-        "title": "Épargne salariale",
+        "label": "Épargne salariale",
+        "path": "themes",
         "slug": "24-epargne-salariale"
       }
     ],
@@ -6786,11 +6907,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Emploi",
+        "label": "Emploi",
+        "path": "themes",
         "slug": "52-emploi"
       }
     ],
@@ -6908,11 +7031,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Retraite",
+        "label": "Retraite",
+        "path": "themes",
         "slug": "85-retraite"
       }
     ],
@@ -6951,7 +7076,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Salaire et Rémunération",
+        "label": "Salaire et Rémunération",
+        "path": "themes",
         "slug": "2-salaire-et-remuneration"
       }
     ],
@@ -7026,11 +7152,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Autres départs",
+        "label": "Autres départs",
+        "path": "themes",
         "slug": "86-autres-departs"
       }
     ],
@@ -7054,11 +7182,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Formation professionnelle",
+        "label": "Formation professionnelle",
+        "path": "themes",
         "slug": "51-formation-professionnelle"
       }
     ],
@@ -7116,7 +7246,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       }
     ],
@@ -7137,11 +7268,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Conditions de travail",
+        "label": "Conditions de travail",
+        "path": "themes",
         "slug": "61-conditions-de-travail"
       }
     ],
@@ -7174,7 +7307,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Salaire et Rémunération",
+        "label": "Salaire et Rémunération",
+        "path": "themes",
         "slug": "2-salaire-et-remuneration"
       }
     ],
@@ -7208,7 +7342,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       }
     ],
@@ -7234,11 +7369,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Congés et repos",
+        "label": "Congés et repos",
+        "path": "themes",
         "slug": "4-conges-et-repos"
       },
       {
-        "title": "Repos",
+        "label": "Repos",
+        "path": "themes",
         "slug": "42-repos"
       }
     ],
@@ -7263,7 +7400,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Représentation du personnel et négociation collective",
+        "label": "Représentation du personnel et négociation collective",
+        "path": "themes",
         "slug": "7-representation-du-personnel-et-negociation-collective"
       }
     ],
@@ -7715,7 +7853,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       }
     ],
@@ -7853,11 +7992,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Risques professionnels et prévention",
+        "label": "Risques professionnels et prévention",
+        "path": "themes",
         "slug": "62-risques-professionnels-et-prevention"
       }
     ],
@@ -8698,7 +8839,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       }
     ],
@@ -8763,7 +8905,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       }
     ],
@@ -8793,11 +8936,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Rupture conventionnelle",
+        "label": "Rupture conventionnelle",
+        "path": "themes",
         "slug": "83-rupture-conventionnelle"
       }
     ],
@@ -8805,23 +8950,23 @@
     "position": 832,
     "refs": [
       {
-        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-collective#Comment-est-mise-en-place-la-rupture-conventionnelle-collective-nbsp",
+        "url": "/fiche-ministere-travail/rupture-conventionnelle-collective#Comment-est-mise-en-place-la-rupture-conventionnelle-collective-nbsp",
         "title": "La rupture conventionnelle collective : comment est mise en place la rupture conventionnelle collective ?"
       },
       {
-        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-collective#Comment-la-rupture-conventionnelle-collective-est-elle-mise-en-oeuvre-nbsp",
+        "url": "/fiche-ministere-travail/rupture-conventionnelle-collective#Comment-la-rupture-conventionnelle-collective-est-elle-mise-en-oeuvre-nbsp",
         "title": "La rupture conventionnelle collective : comment la rupture conventionnelle collective est-elle mise en œuvre ?"
       },
       {
-        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-collective#Quel-est-le-suivi-de-mise-en-oeuvre-de-l-accord-de-rupture-conventionnelle-nbsp",
+        "url": "/fiche-ministere-travail/rupture-conventionnelle-collective#Quel-est-le-suivi-de-mise-en-oeuvre-de-l-accord-de-rupture-conventionnelle-nbsp",
         "title": "La rupture conventionnelle collective : quel est le suivi de mise en œuvre de l’accord de rupture conventionnelle ?"
       },
       {
-        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-collective#L-accord-de-rupture-conventionnelle-collective-peut-il-etre-conteste-nbsp",
+        "url": "/fiche-ministere-travail/rupture-conventionnelle-collective#L-accord-de-rupture-conventionnelle-collective-peut-il-etre-conteste-nbsp",
         "title": "La rupture conventionnelle collective : l’accord de rupture conventionnelle collective peut-il être contesté ?"
       },
       {
-        "url": "/fiche-ministere-travail/la-rupture-conventionnelle-collective#L-obligation-de-revitalisation-des-territoires-s-applique-t-elle-dans-le-nbsp",
+        "url": "/fiche-ministere-travail/rupture-conventionnelle-collective#L-obligation-de-revitalisation-des-territoires-s-applique-t-elle-dans-le-nbsp",
         "title": "La rupture conventionnelle collective : l’obligation de revitalisation des territoires s’applique-t-elle dans le cadre des accords portant rupture conventionnelle collective ?"
       }
     ],
@@ -8835,11 +8980,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
+        "label": "Départ de l'entreprise",
+        "path": "themes",
         "slug": "8-depart-de-lentreprise"
       },
       {
-        "title": "Rupture conventionnelle",
+        "label": "Rupture conventionnelle",
+        "path": "themes",
         "slug": "83-rupture-conventionnelle"
       }
     ],
@@ -8904,7 +9051,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Salaire et Rémunération",
+        "label": "Salaire et Rémunération",
+        "path": "themes",
         "slug": "2-salaire-et-remuneration"
       }
     ],
@@ -9140,7 +9288,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Conflits au travail et contrôle de la réglementation",
+        "label": "Conflits au travail et contrôle de la réglementation",
+        "path": "themes",
         "slug": "9-conflits-au-travail-et-controle-de-la-reglementation"
       }
     ],
@@ -9196,7 +9345,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       }
     ],
@@ -9298,11 +9448,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Emploi",
+        "label": "Emploi",
+        "path": "themes",
         "slug": "52-emploi"
       }
     ],
@@ -9336,11 +9488,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Embauche",
+        "label": "Embauche",
+        "path": "themes",
         "slug": "11-embauche"
       }
     ],
@@ -9368,11 +9522,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Santé au travail",
+        "label": "Santé au travail",
+        "path": "themes",
         "slug": "63-sante-au-travail"
       }
     ],
@@ -9443,11 +9599,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Conditions de travail",
+        "label": "Conditions de travail",
+        "path": "themes",
         "slug": "61-conditions-de-travail"
       }
     ],
@@ -9525,7 +9683,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Temps de travail",
+        "label": "Temps de travail",
+        "path": "themes",
         "slug": "3-temps-de-travail"
       }
     ],
@@ -9637,7 +9796,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Temps de travail",
+        "label": "Temps de travail",
+        "path": "themes",
         "slug": "3-temps-de-travail"
       }
     ],
@@ -9673,7 +9833,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Conflits au travail et contrôle de la réglementation",
+        "label": "Conflits au travail et contrôle de la réglementation",
+        "path": "themes",
         "slug": "9-conflits-au-travail-et-controle-de-la-reglementation"
       }
     ],
@@ -9733,11 +9894,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Travailleurs et secteurs spécifiques",
+        "label": "Travailleurs et secteurs spécifiques",
+        "path": "themes",
         "slug": "64-travailleurs-et-secteurs-specifiques"
       }
     ],
@@ -9791,11 +9954,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       },
       {
-        "title": "Travailleurs et secteurs spécifiques",
+        "label": "Travailleurs et secteurs spécifiques",
+        "path": "themes",
         "slug": "64-travailleurs-et-secteurs-specifiques"
       }
     ],
@@ -9829,11 +9994,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Embauche et contrat de travail",
+        "label": "Embauche et contrat de travail",
+        "path": "themes",
         "slug": "1-embauche-et-contrat-de-travail"
       },
       {
-        "title": "Embauche",
+        "label": "Embauche",
+        "path": "themes",
         "slug": "11-embauche"
       }
     ],
@@ -9887,7 +10054,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Santé, sécurité et conditions de travail",
+        "label": "Santé, sécurité et conditions de travail",
+        "path": "themes",
         "slug": "6-sante-securite-et-conditions-de-travail"
       }
     ],
@@ -9958,11 +10126,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Emploi",
+        "label": "Emploi",
+        "path": "themes",
         "slug": "52-emploi"
       }
     ],
@@ -10198,11 +10368,13 @@
   {
     "breadcrumbs": [
       {
-        "title": "Emploi et formation professionnelle",
+        "label": "Emploi et formation professionnelle",
+        "path": "themes",
         "slug": "5-emploi-et-formation-professionnelle"
       },
       {
-        "title": "Formation professionnelle",
+        "label": "Formation professionnelle",
+        "path": "themes",
         "slug": "51-formation-professionnelle"
       }
     ],
