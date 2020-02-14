@@ -293,7 +293,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
                 font-size="default"
                 font-weight="400"
               >
-                Vous pouvez joindre l'équipe en charge de la conception et du développement du site à l'adresse suivante : 
+                Vous pouvez joindre l’équipe en charge de la conception et du développement du site à l’adresse suivante : 
                 <a
                   class="c5"
                   href="mailto:codedutravailnumerique@travail.gouv.fr"
@@ -308,7 +308,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
                 font-size="default"
                 font-weight="400"
               >
-                Attention : l'équipe n'est pas habilitée à répondre aux questions concernant le droit du travail. Si vous avez besoin de renseignements sur votre situation ou celle d'un proche, nous vous invitons à contacter 
+                Attention : l’équipe n’est pas habilitée à répondre aux questions concernant le droit du travail. Si vous avez besoin de renseignements sur votre situation ou celle d’un proche, nous vous invitons à contacter 
                 <a
                   class="c5"
                 >

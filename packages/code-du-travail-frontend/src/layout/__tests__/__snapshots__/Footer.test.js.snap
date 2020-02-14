@@ -76,6 +76,57 @@ exports[`<Footer /> should render 1`] = `
   cursor: not-allowed;
 }
 
+.c20 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c20:focus,
+.c20:hover,
+.c20:active {
+  color: #f66663;
+}
+
 .c7 {
   position: absolute;
   background-color: #7994d4;
@@ -207,7 +258,7 @@ exports[`<Footer /> should render 1`] = `
   cursor: pointer;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -226,7 +277,7 @@ exports[`<Footer /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c21 {
+.c22 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -234,7 +285,7 @@ exports[`<Footer /> should render 1`] = `
   margin: 0 1rem 1rem 1rem;
 }
 
-.c22 {
+.c23 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -270,6 +321,12 @@ exports[`<Footer /> should render 1`] = `
 @media (max-width:600px) {
   .c9 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    font-size: 1.4rem;
   }
 }
 
@@ -365,7 +422,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c22 {
+  .c23 {
     display: none;
   }
 }
@@ -498,11 +555,11 @@ exports[`<Footer /> should render 1`] = `
                 <li
                   class="c18"
                 >
-                  <a
-                    class="c19"
+                  <button
+                    class="c20"
                   >
                     Contact
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -608,10 +665,10 @@ exports[`<Footer /> should render 1`] = `
         </nav>
       </div>
       <div
-        class="c20"
+        class="c21"
       >
         <a
-          class="c21"
+          class="c22"
           href="https://travail-emploi.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -620,12 +677,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c22"
+          class="c23"
         >
           |
         </span>
         <a
-          class="c21"
+          class="c22"
           href="https://www.service-public.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -634,12 +691,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c22"
+          class="c23"
         >
           |
         </span>
         <a
-          class="c21"
+          class="c22"
           href="https://www.legifrance.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -648,12 +705,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c22"
+          class="c23"
         >
           |
         </span>
         <a
-          class="c21"
+          class="c22"
           href="https://www.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -662,12 +719,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c22"
+          class="c23"
         >
           |
         </span>
         <a
-          class="c21"
+          class="c22"
           href="https://www.gouvernement.fr"
           rel="noopener noreferrer"
           target="_blank"
@@ -676,12 +733,12 @@ exports[`<Footer /> should render 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="c22"
+          class="c23"
         >
           |
         </span>
         <a
-          class="c21"
+          class="c22"
           href="https://www.cnil.fr/"
           rel="noopener noreferrer"
           target="_blank"

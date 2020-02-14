@@ -603,6 +603,89 @@ exports[`<Button /> it renders a Button naked 1`] = `
 </div>
 `;
 
+exports[`<Button /> it renders a Button navLink 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c0:focus,
+.c0:hover,
+.c0:active {
+  color: #f66663;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    this is a Button 
+    navLink
+     
+  </button>
+  <button
+    class="c0"
+  >
+    this is a small Button 
+    navLink
+     
+  </button>
+  <button
+    class="c0"
+  >
+    this is a narrow Button 
+    navLink
+     
+  </button>
+</div>
+`;
+
 exports[`<Button /> it renders a Button primary 1`] = `
 .c0 {
   display: -webkit-inline-box;
