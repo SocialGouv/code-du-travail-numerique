@@ -53,7 +53,7 @@ class Fiche extends React.Component {
           relatedItems={relatedItems}
           date={
             date_debut &&
-            format(parseISO(date_debut), "dd MMMM yyyy", {
+            format(parseISO(date_debut), "dd/MM/yyyy", {
               locale: frLocale
             })
           }

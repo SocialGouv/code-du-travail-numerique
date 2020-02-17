@@ -33,7 +33,7 @@ function Modeles(props) {
     const [theme] = templateDoc.breadcrumbs;
     if (!state[theme.slug]) {
       state[theme.slug] = {
-        title: theme.title,
+        title: theme.label,
         items: []
       };
       themes.push(theme);
@@ -74,9 +74,9 @@ function Modeles(props) {
                   Tous les thèmes
                 </option>
               ].concat(
-                themes.map(({ title, slug }) => (
+                themes.map(({ label, slug }) => (
                   <option key={slug} value={slug}>
-                    {title}
+                    {label}
                   </option>
                 ))
               )}

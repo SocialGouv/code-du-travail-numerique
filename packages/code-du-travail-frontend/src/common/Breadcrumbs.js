@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Link from "next/link";
 import { Container, icons, OverflowWrapper, theme } from "@socialgouv/react-ui";
 
-const { ArrowRight } = icons;
+const { ArrowRight, Home: HomeIcon } = icons;
 
 const Breadcrumbs = ({ items = [] }) => {
   if (!items || items.length === 0) {
@@ -13,13 +14,35 @@ const Breadcrumbs = ({ items = [] }) => {
     <Nav>
       <OverflowWrapper>
         <StyledContainer>
-          {items.map((item, index) => (
-            <React.Fragment key={index}>
-              <NavItem>
-                {index !== 0 && <StyledArrowRight />} {item}
-              </NavItem>
-            </React.Fragment>
-          ))}
+          {[
+            <NavItem key="home">
+              <Link href="/" passHref>
+                <StyledLink title="Retour à l'accueil">
+                  <StyledHomeIcon />
+                  Accueil
+                </StyledLink>
+              </Link>
+            </NavItem>,
+            ...items.map(({ label, path, slug }) =>
+              path ? (
+                <NavItem key={slug}>
+                  <StyledArrowRight />{" "}
+                  <Link
+                    key={`${path}${slug}`}
+                    href={`/${path}${slug ? "/[slug]" : ""}`}
+                    {...(slug && { as: `/${path}/${slug}` })}
+                    passHref
+                  >
+                    <StyledLink>{label}</StyledLink>
+                  </Link>
+                </NavItem>
+              ) : (
+                <StyledSpan key={slug}>
+                  <StyledArrowRight /> {label}
+                </StyledSpan>
+              )
+            )
+          ]}
         </StyledContainer>
       </OverflowWrapper>
     </Nav>
@@ -42,7 +65,7 @@ const StyledContainer = styled(Container)`
   align-items: center;
 `;
 
-const NavItem = styled.span`
+const NavItem = styled.div`
   display: flex;
   align-items: center;
   padding: 0 ${spacings.small} 0 0;
@@ -56,6 +79,34 @@ const NavItem = styled.span`
       display: none;
     }
   }
+`;
+
+const StyledLink = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+`;
+
+const StyledSpan = styled.span`
+  display: flex;
+  align-items: center;
+  padding: 0 ${spacings.small} 0 0;
+  white-space: nowrap;
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
+  }
+`;
+
+const StyledHomeIcon = styled(HomeIcon)`
+  width: 2rem;
+  height: 2rem;
+  margin-right: ${spacings.small};
+  color: ${({ theme }) => theme.secondary};
 `;
 
 const StyledArrowRight = styled(ArrowRight)`

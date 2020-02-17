@@ -31,7 +31,7 @@ export const ListLink = ({
 }) => {
   let subtitle = "";
   if (isSearch && source !== SOURCES.THEMES && breadcrumbs.length) {
-    subtitle = breadcrumbs[breadcrumbs.length - 1].title;
+    subtitle = breadcrumbs[breadcrumbs.length - 1].label;
   }
 
   const tileCommonProps = {
