@@ -147,6 +147,6 @@ describe("populate_suggestion", () => {
   });
 });
 /**
- * 
+ *
  SUGGEST_INDEX_NAME=suggest-index SUGGEST_FILE=/Users/remim/dev/cdtn/code-du-travail-numeriqu/packages/code-du-travail-data/indexing/__tests__/suggestion_data_test.txt
  */

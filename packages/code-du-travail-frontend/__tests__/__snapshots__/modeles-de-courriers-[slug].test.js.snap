@@ -705,13 +705,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   padding-left: 0;
 }
 
-.c27 {
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
 .c25 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -735,6 +728,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 .c26 {
   width: 2rem;
   height: 2rem;
+  margin-right: 1rem;
+  color: #7994d4;
+}
+
+.c27 {
+  width: 1.2rem;
+  height: 1.2rem;
   margin-right: 1rem;
   color: #7994d4;
 }
@@ -2043,10 +2043,9 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           <div
             class="c23"
           >
-            <span
+            <div
               class="c24"
             >
-               
               <a
                 class="c25"
                 href="/"
@@ -2064,8 +2063,8 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </svg>
                 Accueil
               </a>
-            </span>
-            <span
+            </div>
+            <div
               class="c24"
             >
               <svg
@@ -2082,11 +2081,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <a
                 class="c25"
                 href="/themes/theme"
-                title="Voir le theme theme"
               >
                 theme
               </a>
-            </span>
+            </div>
           </div>
         </div>
       </div>

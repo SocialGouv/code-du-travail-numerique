@@ -5,6 +5,10 @@ Object {
   "breadcrumbs": null,
   "children": Array [
     Object {
+      "slug": "80-documents-a-remettre-au-salarie",
+      "title": "Documents à remettre au salarié",
+    },
+    Object {
       "slug": "81-demission",
       "title": "Démission",
     },
@@ -28,10 +32,6 @@ Object {
       "slug": "86-autres-departs",
       "title": "Autres départs",
     },
-    Object {
-      "slug": "87-documents-a-remettre-au-salarie",
-      "title": "Documents à remettre au salarié",
-    },
   ],
   "position": 8,
   "refs": Array [],
@@ -45,6 +45,10 @@ Object {
   "children": Array [
     Object {
       "children": Array [
+        Object {
+          "slug": "80-documents-a-remettre-au-salarie",
+          "title": "Documents à remettre au salarié",
+        },
         Object {
           "slug": "81-demission",
           "title": "Démission",
@@ -68,10 +72,6 @@ Object {
         Object {
           "slug": "86-autres-departs",
           "title": "Autres départs",
-        },
-        Object {
-          "slug": "87-documents-a-remettre-au-salarie",
-          "title": "Documents à remettre au salarié",
         },
       ],
       "icon": "Depart",

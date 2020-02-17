@@ -70,11 +70,13 @@ const data = {
     },
     breadcrumbs: [
       {
-        title: "Départ de l'entreprise",
+        label: "Départ de l'entreprise",
+        path: "themes",
         slug: "8-depart-de-lentreprise"
       },
       {
-        title: "Autres départs",
+        label: "Autres départs",
+        path: "themes",
         slug: "86-autres-departs"
       }
     ]

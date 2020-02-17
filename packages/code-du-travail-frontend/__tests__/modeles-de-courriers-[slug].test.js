@@ -6,7 +6,7 @@ describe("<ModelesDeCourrier />", () => {
   it("should render", () => {
     const data = {
       _source: {
-        breadcrumbs: [{ title: "theme", slug: "theme" }],
+        breadcrumbs: [{ label: "theme", path: "themes", slug: "theme" }],
         date: "01/01/2020",
         description: "un description",
         filename: "filename.pdf",
