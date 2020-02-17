@@ -3,23 +3,21 @@
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_create_namespace_stage.yml
-    ref: v4.6.0
+    ref: v7.3.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_nodejs_chart_stage.yml
-    ref: v7.2.0
+    ref: v7.3.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_hpa_chart_stage.yml
-    ref: v7.2.0
+    ref: v7.3.0
 
 #
 
 Create namespace:
-  extends: .base_create_namespace_stage
+  extends:
+    - .base_create_namespace_stage
+    - .dev_stage
   stage: "Post Registration"
-  except:
-    variables:
-      # Don't run when running e2e tests
-      - $E2E_TEST
   before_script:
     - source ./.gitlab-ci/env.sh
   after_script:
