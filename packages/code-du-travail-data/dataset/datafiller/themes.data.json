@@ -260,26 +260,6 @@
         "title": "Allocation journalière d'accompagnement d'une personne en fin de vie"
       },
       {
-        "url": "/fiche-ministere-travail/5-questions-sur-le-conge-de-proche-aidant#t1-Qui-peut-en-beneficier-Dans-quelles-circonstances",
-        "title": "Le congé de proche aidant : qui peut en bénéficier ? dans quelles circonstances ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-sur-le-conge-de-proche-aidant#t2-Quelle-est-sa-duree",
-        "title": "Le congé de proche aidant : quelle est sa durée ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-sur-le-conge-de-proche-aidant#t3-Est-il-remunere",
-        "title": "Le congé de proche aidant : est-il rémunéré ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-sur-le-conge-de-proche-aidant#t4-Comment-le-demander",
-        "title": "Le congé de proche aidant : comment le demander ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-sur-le-conge-de-proche-aidant#t5-Quel-impact-sur-la-retraite",
-        "title": "Le congé de proche aidant : quel impact sur la retraite ?"
-      },
-      {
         "url": "/fiche-ministere-travail/le-conge-sabbatique#Quels-salaries-y-ont-droit",
         "title": "Le congé sabbatique : quels salariés y ont droit ?"
       },
@@ -1298,18 +1278,6 @@
       },
       {
         "url": "/fiche-service-public/jours-dabsence-pour-la-survenue-du-handicap-dun-enfant-salarie-du-prive"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-conges-familiaux#Question-1-Enfant-malade-quel-droit-a-conge",
-        "title": "Les congés \"familiaux\" : enfant malade : quel droit à congé ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-conges-familiaux#Question-4-Conge-de-maternite-quelle-duree",
-        "title": "Les congés \"familiaux\" : congé de maternité : quelle durée ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-les-conges-familiaux#Question-5-Conge-parental-un-droit-pour-tous",
-        "title": "Les congés \"familiaux\" : congé parental : un droit pour tous ?"
       },
       {
         "url": "/fiche-ministere-travail/le-conge-dadoption#Qui-peut-beneficier-d-un-conge-d-adoption",
@@ -4489,10 +4457,6 @@
       {
         "url": "/modeles-de-courriers/releve-dheures-supplementaires",
         "title": "Relevé d’heures supplémentaires"
-      },
-      {
-        "url": "/modeles-de-courriers/modele-releve-dheures-supplementaires",
-        "title": "Modèle : Relevé d’heures supplémentaires"
       },
       {
         "url": "/fiche-service-public/heures-supplementaires-dun-salarie-du-secteur-prive"
@@ -9164,21 +9128,7 @@
     ],
     "icon": "Salary",
     "position": 2,
-    "refs": [
-      {
-        "url": "/modeles-de-courriers/demande-de-paiement-de-salaire",
-        "title": "Demande de paiement de salaire"
-      },
-      {
-        "url": "/fiche-service-public/un-salarie-doit-il-rembourser-du-materiel-de-lentreprise-casse-ou-perdu"
-      },
-      {
-        "url": "/fiche-service-public/quels-sont-les-delais-de-prescription-en-matiere-de-cotisations-sociales"
-      },
-      {
-        "url": "/fiche-service-public/remuneration-du-dirigeant-dune-association"
-      }
-    ],
+    "refs": [],
     "slug": "2-salaire-et-remuneration",
     "source": "themes",
     "title": "Salaire et Rémunération",
@@ -9230,6 +9180,10 @@
       {
         "url": "/fiche-service-public/faute-grave-ou-lourde-commise-pendant-un-preavis-quelles-consequences",
         "title": "Faute grave ou lourde commise pendant un préavis : quelles conséquences ?"
+      },
+      {
+        "url": "/fiche-service-public/un-salarie-doit-il-rembourser-du-materiel-de-lentreprise-casse-ou-perdu",
+        "title": "Un salarié doit-il rembourser du matériel de l'entreprise cassé ou perdu ?"
       }
     ],
     "slug": "92-sanctions-disciplinaires",
@@ -9582,8 +9536,8 @@
         "url": "/fiche-service-public/temps-partiel-dans-le-secteur-prive"
       },
       {
-        "url": "/modeles-de-courriers/demande-de-derogation-pour-un-temps-partiel",
-        "title": "Demande de dérogation pour un temps partiel"
+        "url": "/modeles-de-courriers/demande-de-derogation-a-la-duree-minimale-de-travail-pour-un-temps-partiel",
+        "title": "Demande de dérogation à la durée minimale de travail pour un temps partiel"
       },
       {
         "url": "/fiche-service-public/lemployeur-peut-il-instaurer-du-travail-a-temps-partiel-dans-lentreprise"
@@ -9627,10 +9581,6 @@
       {
         "url": "/fiche-ministere-travail/le-travail-a-temps-partiel-contrat-et-statut-du-salarie#Quels-sont-les-droits-des-salaries-a-temps-partiel",
         "title": "Le travail à temps partiel : quels sont les droits des salariés à temps partiel ?"
-      },
-      {
-        "url": "/modeles-de-courriers/demande-de-derogation-a-la-duree-minimale-de-travail-pour-un-temps-partiel",
-        "title": "Modèle : Demande de dérogation à la durée minimale de travail pour un temps partiel"
       },
       {
         "url": "/contribution/quelles-sont-les-conditions-de-cumul-demplois",
