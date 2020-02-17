@@ -46,6 +46,29 @@ export const StyledButton = styled.button`
         }
       `;
     }
+    if (variant === "navLink") {
+      return css`
+        padding: 0;
+        color: ${theme.paragraph};
+        font-weight: normal;
+        font-size: ${fonts.sizes.default};
+        line-height: ${fonts.lineHeight};
+        vertical-align: baseline;
+        text-decoration: none;
+        text-align: left;
+        background: none;
+        border: none;
+        border-radius: 0;
+        overflow: visible;
+        transition: color ${animations.transitionTiming} linear,
+          text-decoration ${animations.transitionTiming} linear;
+        &:focus,
+        &:hover,
+        &:active {
+          color: ${({ theme }) => theme.primary};
+        }
+      `;
+    }
 
     let height = "5.2rem";
     let backgroundColor = theme[variant];
@@ -167,7 +190,14 @@ Button.propTypes = {
   onClick: PropTypes.func,
   small: PropTypes.bool,
   narrow: PropTypes.bool,
-  variant: PropTypes.oneOf(["link", "flat", "naked", "primary", "secondary"])
+  variant: PropTypes.oneOf([
+    "link",
+    "navLink",
+    "flat",
+    "naked",
+    "primary",
+    "secondary"
+  ])
 };
 
 Button.defaultProps = {

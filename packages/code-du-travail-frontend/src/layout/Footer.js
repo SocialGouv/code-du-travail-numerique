@@ -14,6 +14,7 @@ import {
 } from "@socialgouv/react-ui";
 
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
+import { ContactModal } from "../common/ContactModal";
 import { useRouter } from "next/router";
 
 const { DirectionRight: DirectionRightIcon } = icons;
@@ -91,12 +92,13 @@ const Footer = () => {
                     </Link>
                   </StyledListItem>
                   <StyledListItem>
-                    <StyledLink
-                      title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
-                      href="mailto:codedutravailnumerique@travail.gouv.fr"
-                    >
-                      Contact
-                    </StyledLink>
+                    <ContactModal>
+                      {openModal => (
+                        <Button variant="navLink" onClick={openModal}>
+                          Contact
+                        </Button>
+                      )}
+                    </ContactModal>
                   </StyledListItem>
                 </StyledList>
               </Category>
@@ -338,9 +340,11 @@ const StyledHeading = styled(Heading)`
 const StyledListItem = styled.li`
   margin: ${spacings.tiny} 0;
 `;
+
 const StyledLink = styled.a`
   font-weight: normal;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 const GovernmentSection = styled.div`

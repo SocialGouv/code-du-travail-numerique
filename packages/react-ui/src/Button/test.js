@@ -20,7 +20,7 @@ describe("<Button />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test.each(["naked", "flat", "link", "primary", "secondary"])(
+  test.each(["naked", "flat", "link", "navLink", "primary", "secondary"])(
     "it renders a Button %s",
     variant => {
       const { container } = render(
