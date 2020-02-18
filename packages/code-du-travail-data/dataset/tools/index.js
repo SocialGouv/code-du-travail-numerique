@@ -1,5 +1,5 @@
 const { SOURCES, getRouteBySource } = require("@cdt/sources");
-const allThemes = require("../datafiller/themes.data.json");
+const allThemes = require("@cdt/data...datafiller/themes.data.json");
 
 const themes = allThemes.filter(theme =>
   theme.refs.some(ref =>
