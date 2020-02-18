@@ -64,12 +64,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     Montant
   </h2>
   <p>
-    La prime de précarité
+    La prime d'intervention
      est estimée à 
     <strong
       class="c1"
     >
-      300
+      180
        €
     </strong>
     .
@@ -125,7 +125,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
       <div
         id="react-mathjax-preview-result"
       >
-        \`10/100 * "totalSalaires"\`
+        \`6/100 * "totalSalaires"\`
       </div>
     </div>
   </div>
@@ -135,6 +135,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     Source
   </h2>
   <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’chapitre iii : contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès"
+      >
+        Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès
+      </a>
+    </li>
     <li>
       <a
         href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"

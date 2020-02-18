@@ -84,7 +84,9 @@ describe("<StepIndemnite />", () => {
       contractType: CONTRACT_TYPE.CDD,
       ccn: ccWitConventionalProvition,
       criteria: {
-        cddType: "Autres"
+        cddType:
+          "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès",
+        hasCdiProposal: "non"
       },
       salaire: 3000
     };
