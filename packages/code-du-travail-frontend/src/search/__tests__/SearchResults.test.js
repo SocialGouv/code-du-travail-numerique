@@ -84,7 +84,7 @@ describe("<SearchResults/>", () => {
   });
   it("should render results", () => {
     const { container } = render(
-      <SearchResults items={items} query="search test" />
+      <SearchResults isSearch items={items} query="search test" />
     );
     expect(container).toMatchSnapshot();
   });
