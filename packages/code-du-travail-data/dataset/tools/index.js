@@ -127,8 +127,7 @@ const tools = [
     date: "08/11/2019"
   }
 ];
-
-module.exports = tools.map(tool => {
+const toolsWithBreadCrumbs = tools.map(tool => {
   const theme = themes.find(theme =>
     theme.refs.some(ref => ref.url.match(new RegExp(tool.slug)))
   );
@@ -147,3 +146,5 @@ module.exports = tools.map(tool => {
     breadcrumbs
   };
 });
+
+module.exports = toolsWithBreadCrumbs;
