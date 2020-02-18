@@ -10,8 +10,7 @@ describe("<FicheMT />", () => {
         breadcrumbs: [
           {
             label: "Santé, sécurité et conditions de travail",
-            path: "themes",
-            slug: "6-sante-securite-et-conditions-de-travail"
+            slug: "/themes/6-sante-securite-et-conditions-de-travail"
           }
         ],
         date: "01/01/2020",

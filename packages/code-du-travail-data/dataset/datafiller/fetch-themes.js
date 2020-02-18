@@ -49,8 +49,7 @@ const getParents = (rows, row) => {
   }
   return parts.map(({ title, slug }) => ({
     label: title,
-    path: getRouteBySource(SOURCES.THEMES),
-    slug
+    slug: `/${getRouteBySource(SOURCES.THEMES)}/${slug}`
   }));
 };
 

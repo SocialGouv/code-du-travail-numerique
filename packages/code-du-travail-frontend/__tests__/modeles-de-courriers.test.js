@@ -14,18 +14,15 @@ describe("<ModelesDeCourriers />", () => {
         breadcrumbs: [
           {
             label: "Embauche et contrat de travail",
-            path: "themes",
-            slug: "1-embauche-et-contrat-de-travail"
+            slug: "/themes/1-embauche-et-contrat-de-travail"
           },
           {
             label: "Embauche",
-            path: "themes",
-            slug: "11-embauche"
+            slug: "/themes/11-embauche"
           },
           {
             label: "Période d'essai",
-            path: "themes",
-            slug: "113-periode-dessai"
+            slug: "/themes/113-periode-dessai"
           }
         ]
       },
@@ -38,18 +35,15 @@ describe("<ModelesDeCourriers />", () => {
         breadcrumbs: [
           {
             label: "Départ de l'entreprise",
-            path: "themes",
-            slug: "8-depart-de-lentreprise"
+            slug: "/themes/8-depart-de-lentreprise"
           },
           {
             label: "Rupture conventionnelle",
-            path: "themes",
-            slug: "83-rupture-conventionnelle"
+            slug: "/themes/83-rupture-conventionnelle"
           },
           {
             label: "Rupture conventionnelle individuelle",
-            path: "themes",
-            slug: "831-rupture-conventionnelle-individuelle"
+            slug: "/themes/831-rupture-conventionnelle-individuelle"
           }
         ]
       }

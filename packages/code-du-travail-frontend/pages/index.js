@@ -27,7 +27,7 @@ const {
 } = getConfig();
 
 export const CCTile = (
-  <Link href={`/${getRouteBySource(SOURCES.CCN)}/recherche`} passHref>
+  <Link href={`/${getRouteBySource(SOURCES.CCN)}`} passHref>
     <CallToActionTile
       action="Consulter"
       custom

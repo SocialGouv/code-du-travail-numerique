@@ -15,8 +15,7 @@ function getThemeFiche(fiche) {
     }
     breadcrumbs.push({
       label: theme.title,
-      path: getRouteBySource(SOURCES.THEMES),
-      slug: theme.slug
+      slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`
     });
   }
 

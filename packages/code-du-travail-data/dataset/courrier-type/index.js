@@ -47,8 +47,7 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
         breadcrumbs = (theme.breadcrumbs || []).concat([
           {
             label: theme.title,
-            path: getRouteBySource(SOURCES.THEMES),
-            slug: theme.slug
+            slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`
           }
         ]);
       }

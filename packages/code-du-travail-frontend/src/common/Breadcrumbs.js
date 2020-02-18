@@ -23,31 +23,25 @@ const Breadcrumbs = ({ items = [] }) => {
                 </StyledLink>
               </Link>
             </NavItem>,
-            ...items.map(({ label, path, slug }) =>
-              path ? (
-                <NavItem key={slug}>
-                  <StyledArrowRight />{" "}
-                  <Link
-                    key={`${path}${slug}`}
-                    href={`/${path}${slug ? "/[slug]" : ""}`}
-                    {...(slug && { as: `/${path}/${slug}` })}
-                    passHref
-                  >
-                    <StyledLink>{label}</StyledLink>
-                  </Link>
-                </NavItem>
-              ) : (
-                <StyledSpan key={slug}>
-                  <StyledArrowRight /> {label}
-                </StyledSpan>
-              )
-            )
+            ...items.map(({ label, slug }) => (
+              <NavItem key={slug}>
+                <StyledArrowRight />{" "}
+                <Link key={slug} href={getLinkHref(slug)} as={slug} passHref>
+                  <StyledLink>{label}</StyledLink>
+                </Link>
+              </NavItem>
+            ))
           ]}
         </StyledContainer>
       </OverflowWrapper>
     </Nav>
   );
 };
+
+function getLinkHref(slug) {
+  const subPageMatcher = new RegExp("/[^/]+/(.+)$");
+  return subPageMatcher.test(slug) ? slug.replace(/\/[^/]+$/, "/[slug]") : slug;
+}
 
 Breadcrumbs.propTypes = {
   items: PropTypes.arrayOf(PropTypes.node)
@@ -89,16 +83,6 @@ const StyledLink = styled.a`
   &:hover,
   &:active {
     text-decoration: underline;
-  }
-`;
-
-const StyledSpan = styled.span`
-  display: flex;
-  align-items: center;
-  padding: 0 ${spacings.small} 0 0;
-  white-space: nowrap;
-  @media (max-width: ${breakpoints.mobile}) {
-    display: none;
   }
 `;
 
