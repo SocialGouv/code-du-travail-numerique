@@ -9,22 +9,16 @@ function updateTheme(fiches) {
     const theme = themes.find(theme =>
       theme.refs.map(r => r.url.split("#")[0]).includes(ficheUrl)
     );
-    fiche.themeSlug = theme && theme.slug;
-    fiche.breadcrumbs =
-      theme &&
-      (
-        (theme.breadcrumbs &&
-          theme.breadcrumbs.map(node => ({
-            title: node.title,
-            slug: node.slug
-          }))) ||
-        []
-      ).concat([
-        {
-          title: theme.title,
-          slug: theme.slug
-        }
-      ]);
+    fiche.breadcrumbs = [];
+    if (theme) {
+      if (theme.breadcrumbs) {
+        fiche.breadcrumbs.push(...theme.breadcrumbs);
+      }
+      fiche.breadcrumbs.push({
+        label: theme.title,
+        slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`
+      });
+    }
   });
 }
 

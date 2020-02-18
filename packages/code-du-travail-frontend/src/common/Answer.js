@@ -8,7 +8,7 @@ import Article from "./Article";
 import { Feedback } from "./Feedback";
 import { RelatedItems } from "./RelatedItems";
 import Html from "./Html";
-import { ThemeBreadcrumbs } from "./ThemeBreadcrumbs";
+import { Breadcrumbs } from "./Breadcrumbs";
 import useGlossary from "../glossary";
 
 const BigError = ({ children }) => (
@@ -34,7 +34,7 @@ function Answer({
 
   return (
     <>
-      <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
+      <Breadcrumbs items={breadcrumbs} />
       <StyledContainer>
         <StyledContent hasResults={relatedItems.length > 0}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
@@ -42,7 +42,7 @@ function Answer({
             <Article
               subtitle={
                 breadcrumbs.length > 0 &&
-                breadcrumbs[breadcrumbs.length - 1].title
+                breadcrumbs[breadcrumbs.length - 1].label
               }
               title={title}
               date={date}

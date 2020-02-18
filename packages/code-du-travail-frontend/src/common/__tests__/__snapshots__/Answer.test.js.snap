@@ -891,13 +891,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   padding-left: 0;
 }
 
-.c7 {
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -921,6 +914,13 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 .c6 {
   width: 2rem;
   height: 2rem;
+  margin-right: 1rem;
+  color: #7994d4;
+}
+
+.c7 {
+  width: 1.2rem;
+  height: 1.2rem;
   margin-right: 1rem;
   color: #7994d4;
 }
@@ -1218,10 +1218,9 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         <div
           class="c3"
         >
-          <span
+          <div
             class="c4"
           >
-             
             <a
               class="c5"
               href="/"
@@ -1239,8 +1238,8 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               </svg>
               Accueil
             </a>
-          </span>
-          <span
+          </div>
+          <div
             class="c4"
           >
             <svg
@@ -1257,12 +1256,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <a
               class="c5"
               href="/themes/tag-1"
-              title="Voir le theme tag1"
             >
               tag1
             </a>
-          </span>
-          <span
+          </div>
+          <div
             class="c4"
           >
             <svg
@@ -1279,11 +1277,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <a
               class="c5"
               href="/themes/tag-2"
-              title="Voir le theme tag2"
             >
               tag2
             </a>
-          </span>
+          </div>
         </div>
       </div>
     </div>

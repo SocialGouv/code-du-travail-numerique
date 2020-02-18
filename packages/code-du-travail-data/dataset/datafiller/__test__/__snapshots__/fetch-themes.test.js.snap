@@ -54,8 +54,8 @@ Array [
   Object {
     "breadcrumbs": Array [
       Object {
-        "slug": "1-title1",
-        "title": "title1",
+        "label": "title1",
+        "slug": "/themes/1-title1",
       },
     ],
     "children": Array [
@@ -92,12 +92,12 @@ Array [
   Object {
     "breadcrumbs": Array [
       Object {
-        "slug": "1-title1",
-        "title": "title1",
+        "label": "title1",
+        "slug": "/themes/1-title1",
       },
       Object {
-        "slug": "2-title2",
-        "title": "title2",
+        "label": "title2",
+        "slug": "/themes/2-title2",
       },
     ],
     "children": Array [],
@@ -129,8 +129,8 @@ Array [
   Object {
     "breadcrumbs": Array [
       Object {
-        "slug": "1-title1",
-        "title": "title1",
+        "label": "title1",
+        "slug": "/themes/1-title1",
       },
     ],
     "children": Array [],

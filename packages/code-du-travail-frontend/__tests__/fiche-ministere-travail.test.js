@@ -9,8 +9,8 @@ describe("<FicheMT />", () => {
         title: "Fiche MT test",
         breadcrumbs: [
           {
-            title: "Santé, sécurité et conditions de travail",
-            slug: "6-sante-securite-et-conditions-de-travail"
+            label: "Santé, sécurité et conditions de travail",
+            slug: "/themes/6-sante-securite-et-conditions-de-travail"
           }
         ],
         date: "01/01/2020",

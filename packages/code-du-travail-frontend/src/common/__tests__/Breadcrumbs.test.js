@@ -10,9 +10,9 @@ describe("<Breadcrumbs />", () => {
 
   it("should render a breadcrumbs", () => {
     const data = [
-      { label: "item 1", slug: "item-1" },
-      { label: "item 2", slug: "item-2" }
-    ].map(item => <span key={item.slug}> {item.label} </span>);
+      { label: "item 1", slug: "/themes/item-1" },
+      { label: "item 2", slug: "/themes/item-2" }
+    ];
 
     const { container } = render(<Breadcrumbs items={data} />);
     expect(container).toMatchSnapshot();

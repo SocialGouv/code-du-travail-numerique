@@ -120,15 +120,24 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Outils ===");
   yield require("../dataset/tools").map(
-    ({ action, date, description, icon, questions, slug, themes, title }) => ({
+    ({
       action,
+      breadcrumbs,
+      date,
+      description,
+      icon,
+      questions,
+      slug,
+      title
+    }) => ({
+      action,
+      breadcrumbs,
       date,
       description,
       icon,
       slug,
       source: SOURCES.TOOLS,
       text: questions.join("\n"),
-      themes: themes,
       title
     })
   );

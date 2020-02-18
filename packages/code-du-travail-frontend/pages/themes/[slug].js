@@ -14,7 +14,7 @@ import fetch from "isomorphic-unfetch";
 import { SearchResults } from "../../src/search/SearchResults";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
-import { ThemeBreadcrumbs } from "../../src/common/ThemeBreadcrumbs";
+import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -47,7 +47,7 @@ class Theme extends React.Component {
           description={`Explorez les contenus autour du thème ${theme.title}`}
           image={ogImage}
         />
-        <ThemeBreadcrumbs theme={theme} />
+        <Breadcrumbs items={theme.breadcrumbs} />
         <Section>
           <Container>
             <PageTitle>{theme.title}</PageTitle>

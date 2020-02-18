@@ -18,8 +18,8 @@ const item = {
   description: "description",
   algo: "semantic",
   breadcrumbs: [
-    { slug: "theme-root", title: "test content" },
-    { slug: "theme-test", title: "test theme content" }
+    { slug: "/themes/theme-root", label: "test content" },
+    { slug: "/themes/theme-test", label: "test theme content" }
   ]
 };
 

@@ -75,9 +75,6 @@ const sortRowRefs = cb => row => ({
 const sortRowRefsByPosition = sortRowRefs(node => node.position);
 const sortRowRefsByRelevance = sortRowRefs(node => -node.relevance);
 
-const slimify = (obj, keys) =>
-  keys.reduce((a, k) => ({ ...a, [k]: obj[k] }), {});
-
 module.exports = {
   sortByKey,
   getVariants,
@@ -85,6 +82,5 @@ module.exports = {
   sortRowRefs,
   sortRowRefsByPosition,
   sortRowRefsByRelevance,
-  slimify,
   decodeHTML
 };

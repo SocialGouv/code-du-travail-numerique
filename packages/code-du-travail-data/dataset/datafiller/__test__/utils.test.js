@@ -1,4 +1,4 @@
-const { slimify, getVariants, sortByKey, sortRefs } = require("../utils");
+const { getVariants, sortByKey, sortRefs } = require("../utils");
 
 describe("getVariants", () => {
   it("should split lines", () => {
@@ -134,14 +134,5 @@ describe("sortRefs", () => {
 
   it("sort refs by relevance and source type", () => {
     expect(refs.sort(sortRefs(node => -node.relevance))).toMatchSnapshot();
-  });
-});
-
-describe("slimify", () => {
-  it("should slimify object", () => {
-    expect(slimify({ a: 1, b: 2, c: 3, d: 4 }, ["b", "c"])).toEqual({
-      b: 2,
-      c: 3
-    });
   });
 });

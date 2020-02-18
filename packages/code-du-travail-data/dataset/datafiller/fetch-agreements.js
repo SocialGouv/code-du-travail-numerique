@@ -1,14 +1,13 @@
 import fetch from "node-fetch";
 import kaliData from "@socialgouv/kali-data/data/index.json";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import find from "unist-util-find";
 import parents from "unist-util-parents";
-
 import contributions from "../contributions/contributions.data.json";
 import themes from "./themes.data.json";
 import remark from "remark";
 import html from "remark-html";
 import slugify from "../../slugify";
-import { formatIdcc } from "../../lib";
 
 const compiler = remark().use(html, { sanitize: true });
 
@@ -17,6 +16,7 @@ const DATAFILLER_URL =
 
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/ccns/records?_sort=title`;
 const createSorter = prop => ({ [prop]: a }, { [prop]: b }) => a - b;
+
 async function fetchAgreements() {
   const ccnBlockRecords = await fetch(RECORDS_URL, { params: { _limit: 1000 } })
     .then(res => res.json())
@@ -41,11 +41,14 @@ async function fetchAgreements() {
     });
 }
 
+export { fetchAgreements };
+
 if (require.main === module) {
   fetchAgreements()
     .then(data => console.log(JSON.stringify(data, null, 2)))
     .catch(console.error);
 }
+
 /**
  * Get CCn geenral information
  * @param {Object} agreement
@@ -100,7 +103,7 @@ function getContributionAnswers(agreementNum) {
         let rootTheme = null;
         if (theme) {
           rootTheme = theme.breadcrumbs
-            ? theme.breadcrumbs[0].title
+            ? theme.breadcrumbs[0].label
             : theme.title;
         }
 
@@ -152,5 +155,3 @@ function getArticleByBlock(groups, agreementTree) {
     }))
     .filter(({ articles }) => articles.length > 0);
 }
-
-export { fetchAgreements };

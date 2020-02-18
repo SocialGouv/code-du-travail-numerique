@@ -13,16 +13,16 @@ describe("<ModelesDeCourriers />", () => {
           "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
         breadcrumbs: [
           {
-            title: "Embauche et contrat de travail",
-            slug: "1-embauche-et-contrat-de-travail"
+            label: "Embauche et contrat de travail",
+            slug: "/themes/1-embauche-et-contrat-de-travail"
           },
           {
-            title: "Embauche",
-            slug: "11-embauche"
+            label: "Embauche",
+            slug: "/themes/11-embauche"
           },
           {
-            title: "Période d'essai",
-            slug: "113-periode-dessai"
+            label: "Période d'essai",
+            slug: "/themes/113-periode-dessai"
           }
         ]
       },
@@ -34,16 +34,16 @@ describe("<ModelesDeCourriers />", () => {
           "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
         breadcrumbs: [
           {
-            title: "Départ de l'entreprise",
-            slug: "8-depart-de-lentreprise"
+            label: "Départ de l'entreprise",
+            slug: "/themes/8-depart-de-lentreprise"
           },
           {
-            title: "Rupture conventionnelle",
-            slug: "83-rupture-conventionnelle"
+            label: "Rupture conventionnelle",
+            slug: "/themes/83-rupture-conventionnelle"
           },
           {
-            title: "Rupture conventionnelle individuelle",
-            slug: "831-rupture-conventionnelle-individuelle"
+            label: "Rupture conventionnelle individuelle",
+            slug: "/themes/831-rupture-conventionnelle-individuelle"
           }
         ]
       }

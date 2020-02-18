@@ -2,8 +2,8 @@
   {
     "breadcrumbs": [
       {
-        "title": "Départ de l'entreprise",
-        "slug": "8-depart-de-lentreprise"
+        "label": "Départ de l'entreprise",
+        "slug": "/themes/8-depart-de-lentreprise"
       }
     ],
     "children": [],
@@ -69,9 +69,6 @@
         "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-parental"
       },
       {
-        "url": "https://www.service-public.fr/particuliers/vosdroits/F2883"
-      },
-      {
         "url": "/fiche-ministere-travail/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
         "title": "La démission : l’absence prolongée du salarié est-elle une démission ?"
       },
@@ -88,7 +85,28 @@
         "title": "Le droit aux allocations chômage du salarié démissionnaire : que se passe-t-il dans les autres cas ?"
       },
       {
-        "url": "https://demission-reconversion.gouv.fr/"
+        "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires",
+        "title": "De nouveaux droits pour les salariés démissionnaires"
+      },
+      {
+        "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires#Avant-la-demission",
+        "title": "De nouveaux droits pour les salariés démissionnaires : avant la démission"
+      },
+      {
+        "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires#Apres-sa-demission",
+        "title": "De nouveaux droits pour les salariés démissionnaires : après sa démission"
+      },
+      {
+        "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires#A-la-suite-de-l-inscription-a-Pole-emploi",
+        "title": "De nouveaux droits pour les salariés démissionnaires : à la suite de l’inscription à pôle emploi"
+      },
+      {
+        "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries#Tous-les-salaries-ayant-au-moins-5-ans-d-anciennete-dans-leur-entreprise-nbsp",
+        "title": "De nouveaux droits pour les salariés : tous les salariés ayant au moins 5 ans d’ancienneté dans leur entreprise auront droit à l’assurance chômage quand ils démissionnent pour réaliser un projet professionnel."
+      },
+      {
+        "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries#Tous-les-salaries-seront-gratuitement-accompagnes-pour-elaborer-et-realiser-nbsp",
+        "title": "De nouveaux droits pour les salariés : tous les salariés seront gratuitement accompagnés pour élaborer et réaliser leur projet professionnel lorsqu’ils démissionnent."
       }
     ],
     "slug": "81-demission",
@@ -101,6 +119,10 @@
   {
     "breadcrumbs": null,
     "children": [
+      {
+        "title": "Documents à remettre au salarié",
+        "slug": "80-documents-a-remettre-au-salarie"
+      },
       {
         "title": "Démission",
         "slug": "81-demission"
@@ -124,10 +146,6 @@
       {
         "title": "Autres départs",
         "slug": "86-autres-departs"
-      },
-      {
-        "title": "Documents à remettre au salarié",
-        "slug": "87-documents-a-remettre-au-salarie"
       }
     ],
     "icon": "Depart",
@@ -146,32 +164,20 @@
         "title": "Arrêt maladie pendant le préavis : quelles conséquences ?"
       },
       {
-        "url": "/modeles-de-courriers/modele-lettre-de-reclamation-des-documents-de-fin-de-contrat",
-        "title": "Lettre de réclamation des documents de fin de contrat"
+        "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
+        "title": " Quelle est la durée de préavis en cas de mise à la retraite ?"
       },
       {
         "url": "/fiche-service-public/le-salarie-beneficie-t-il-dheures-de-recherche-demploi-pendant-son-preavis"
       },
       {
-        "url": "/fiche-service-public/peut-on-travailler-pour-un-nouvel-employeur-avant-la-fin-du-preavis",
-        "title": "Peut-on travailler pour un nouvel employeur avant la fin du préavis ?"
-      },
-      {
         "url": "/fiche-service-public/peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail"
-      },
-      {
-        "url": "/fiche-service-public/quelles-sont-les-consequences-dune-faute-grave-commise-pendant-un-preavis",
-        "title": "Quelles sont les conséquences d'une faute grave commise pendant un préavis ?"
       },
       {
         "url": "/fiche-service-public/indemnite-compensatrice-de-preavis"
       },
       {
         "url": "/fiche-service-public/indemnite-compensatrice-de-conges-payes"
-      },
-      {
-        "url": "/fiche-service-public/faute-grave-ou-lourde-commise-pendant-un-preavis-quelles-consequences",
-        "title": "Faute grave ou lourde commise pendant un préavis : quelles conséquences ?"
       },
       {
         "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
