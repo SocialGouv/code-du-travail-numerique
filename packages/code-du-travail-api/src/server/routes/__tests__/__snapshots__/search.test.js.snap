@@ -141,8 +141,8 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.123209,
-      "algo": "semantic",
+      "_score": 0.8025915,
+      "algo": "fulltext",
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
@@ -265,8 +265,8 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.123209,
-      "algo": "semantic",
+      "_score": 0.8025915,
+      "algo": "fulltext",
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
