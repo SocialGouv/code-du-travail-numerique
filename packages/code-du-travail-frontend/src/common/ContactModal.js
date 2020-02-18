@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Heading, Modal, Text } from "@socialgouv/react-ui";
+import { Button, Heading, Modal, Text } from "@socialgouv/react-ui";
 
 import { ServiceRenseignement } from "./ServiceRenseignement";
 
@@ -45,9 +45,9 @@ export const ContactModal = ({ children: renderProp }) => {
                 questions concernant le droit du travail. Si vous avez besoin de
                 renseignements sur votre situation ou celle d’un proche, nous
                 vous invitons à contacter&nbsp;
-                <StyledLink onClick={showServiceRenseignement}>
+                <Button variant="link" onClick={showServiceRenseignement}>
                   les services dédiés
-                </StyledLink>
+                </Button>
                 .
               </Text>
             </p>
