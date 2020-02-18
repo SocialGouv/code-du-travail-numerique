@@ -1,4 +1,3 @@
-import React from "react";
 import { StepIndemnite } from "../Indemnite";
 import { CONTRACT_TYPE } from "../../components/TypeContrat";
 import { renderForm } from "../../../../../test/renderForm";
