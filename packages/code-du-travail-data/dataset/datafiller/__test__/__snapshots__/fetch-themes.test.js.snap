@@ -55,8 +55,7 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "title1",
-        "path": "themes",
-        "slug": "1-title1",
+        "slug": "/themes/1-title1",
       },
     ],
     "children": Array [
@@ -94,13 +93,11 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "title1",
-        "path": "themes",
-        "slug": "1-title1",
+        "slug": "/themes/1-title1",
       },
       Object {
         "label": "title2",
-        "path": "themes",
-        "slug": "2-title2",
+        "slug": "/themes/2-title2",
       },
     ],
     "children": Array [],
@@ -133,8 +130,7 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "title1",
-        "path": "themes",
-        "slug": "1-title1",
+        "slug": "/themes/1-title1",
       },
     ],
     "children": Array [],
