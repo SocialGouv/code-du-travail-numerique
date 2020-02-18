@@ -151,6 +151,12 @@ exports[`<StepResult /> should render with duration 1`] = `
     </strong>
     .
   </p>
+  <p>
+    Le salaire est maintenu durant ces absences.
+  </p>
+  <p>
+    Un accord entre l'employeur et le salarié définit la prise de ces heures dans la journée, ou de façon groupée par demi-journées ou journées consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.
+  </p>
   <div
     class="c2"
   >
