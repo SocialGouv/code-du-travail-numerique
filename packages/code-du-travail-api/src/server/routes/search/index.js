@@ -23,6 +23,7 @@ const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
 const THEMES_RESULTS_NUMBER = 5;
 const CDT_RESULTS_NUMBER = 5;
+const SEMANTIC_THRESHOLD = 1.11;
 
 const router = new Router({ prefix: API_BASE_URL });
 
@@ -84,7 +85,7 @@ router.get("/search", async ctx => {
       )}`
     );
     const query_vector = await fetchWithTimeout(
-      `${NLP_URL}/api/search?q=${encodeURIComponent(query)}`
+      `${NLP_URL}/api/search?q=${encodeURIComponent(query.toLowerCase())}`
     )
       .then(response => (response = response.json()))
       .catch(error => {
@@ -148,7 +149,13 @@ router.get("/search", async ctx => {
     ];
     fulltextHits.forEach(item => (item._source.algo = "fulltext"));
     semanticHits.forEach(item => (item._source.algo = "semantic"));
-    documents = mergePipe(semanticHits, fulltextHits, size);
+
+    // we only consider semantic results above a given threshold
+    const semanticHitsFiltered = semanticHits.filter(
+      item => item._score > SEMANTIC_THRESHOLD
+    );
+    semanticHitsFiltered.forEach(item => (item._source.algo = "semantic"));
+    documents = mergePipe(fulltextHits, semanticHitsFiltered, size);
   }
   if (shouldRequestThemes) {
     const { hits: { hits: fulltextHits } = { hits: [] } } = results[THEMES_ES];
