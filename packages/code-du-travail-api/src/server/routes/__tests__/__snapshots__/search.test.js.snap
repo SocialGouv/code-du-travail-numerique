@@ -14,18 +14,16 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 1.1318611,
+      "_score": 1.131861,
       "algo": "semantic",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Dans ces hypothèses (souvent qualifiées d’abandon de poste), l’employeur doit demander à l’intéressé les raisons de son absence. Si le salarié ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement pour absence injustifiée Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
@@ -67,13 +65,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
@@ -87,18 +83,15 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Embauche et contrat de travail",
-          "path": "themes",
-          "slug": "1-embauche-et-contrat-de-travail",
+          "slug": "/themes/1-embauche-et-contrat-de-travail",
         },
         Object {
           "label": "Embauche",
-          "path": "themes",
-          "slug": "11-embauche",
+          "slug": "/themes/11-embauche",
         },
         Object {
           "label": "Période d'essai",
-          "path": "themes",
-          "slug": "113-periode-dessai",
+          "slug": "/themes/113-periode-dessai",
         },
       ],
       "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
@@ -112,18 +105,15 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Rupture conventionnelle",
-          "path": "themes",
-          "slug": "83-rupture-conventionnelle",
+          "slug": "/themes/83-rupture-conventionnelle",
         },
         Object {
           "label": "Rupture conventionnelle individuelle",
-          "path": "themes",
-          "slug": "831-rupture-conventionnelle-individuelle",
+          "slug": "/themes/831-rupture-conventionnelle-individuelle",
         },
       ],
       "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
@@ -137,13 +127,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
@@ -153,7 +141,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 1.0382854,
+      "_score": 1.0382855,
       "action": "Calculer",
       "algo": "semantic",
       "description": "L’outil de calcul de votre index égalité professionnelle femmes-hommes",
@@ -168,13 +156,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
@@ -231,13 +217,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
@@ -252,13 +236,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
@@ -272,13 +254,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
@@ -329,18 +309,16 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 1.1318611,
+      "_score": 1.131861,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Dans ces hypothèses (souvent qualifiées d’abandon de poste), l’employeur doit demander à l’intéressé les raisons de son absence. Si le salarié ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement pour absence injustifiée Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
@@ -354,13 +332,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
@@ -393,13 +369,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
@@ -423,13 +397,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "path": "themes",
-          "slug": "81-demission",
+          "slug": "/themes/81-demission",
         },
       ],
       "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
@@ -444,18 +416,15 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Embauche et contrat de travail",
-          "path": "themes",
-          "slug": "1-embauche-et-contrat-de-travail",
+          "slug": "/themes/1-embauche-et-contrat-de-travail",
         },
         Object {
           "label": "Embauche",
-          "path": "themes",
-          "slug": "11-embauche",
+          "slug": "/themes/11-embauche",
         },
         Object {
           "label": "Période d'essai",
-          "path": "themes",
-          "slug": "113-periode-dessai",
+          "slug": "/themes/113-periode-dessai",
         },
       ],
       "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
@@ -469,18 +438,15 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "path": "themes",
-          "slug": "8-depart-de-lentreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
           "label": "Rupture conventionnelle",
-          "path": "themes",
-          "slug": "83-rupture-conventionnelle",
+          "slug": "/themes/83-rupture-conventionnelle",
         },
         Object {
           "label": "Rupture conventionnelle individuelle",
-          "path": "themes",
-          "slug": "831-rupture-conventionnelle-individuelle",
+          "slug": "/themes/831-rupture-conventionnelle-individuelle",
         },
       ],
       "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
@@ -489,7 +455,7 @@ Object {
       "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
     },
     Object {
-      "_score": 1.0382854,
+      "_score": 1.0382855,
       "action": "Calculer",
       "algo": "semantic",
       "description": "L’outil de calcul de votre index égalité professionnelle femmes-hommes",

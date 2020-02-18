@@ -3,8 +3,7 @@
     "breadcrumbs": [
       {
         "label": "Départ de l'entreprise",
-        "path": "themes",
-        "slug": "8-depart-de-lentreprise"
+        "slug": "/themes/8-depart-de-lentreprise"
       }
     ],
     "children": [],

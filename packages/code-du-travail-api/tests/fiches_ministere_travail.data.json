@@ -35,19 +35,16 @@
     "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/5-questions-reponses-sur-la-sante-au-travail",
     "breadcrumbs": [
       {
-        "path": "themes",
         "label": "Santé, sécurité et conditions de travail",
-        "slug": "6-sante-securite-et-conditions-de-travail"
+        "slug": "/themes/6-sante-securite-et-conditions-de-travail"
       },
       {
-        "path": "themes",
         "label": "Santé au travail",
-        "slug": "63-sante-au-travail"
+        "slug": "/themes/63-sante-au-travail"
       },
       {
-        "path": "themes",
         "label": "Suivi médical des salariés",
-        "slug": "634-suivi-medical-des-salaries"
+        "slug": "/themes/634-suivi-medical-des-salaries"
       }
     ]
   },
@@ -87,19 +84,16 @@
     "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/la-validation-des-acquis-de-l-experience-vae-expliquee",
     "breadcrumbs": [
       {
-        "path": "themes",
         "label": "Emploi et formation professionnelle",
-        "slug": "5-emploi-et-formation-professionnelle"
+        "slug": "/themes/5-emploi-et-formation-professionnelle"
       },
       {
-        "path": "themes",
         "label": "Formation professionnelle",
-        "slug": "51-formation-professionnelle"
+        "slug": "/themes/51-formation-professionnelle"
       },
       {
-        "path": "themes",
         "label": "Dispositifs d'accès à la formation",
-        "slug": "511-dispositifs-dacces-a-la-formation"
+        "slug": "/themes/511-dispositifs-dacces-a-la-formation"
       }
     ]
   }
