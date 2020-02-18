@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import Link from "next/link";
 import styled from "styled-components";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
@@ -90,6 +91,21 @@ export const ListLink = ({
       <ResultTile {...tileCommonProps} />
     </Link>
   );
+};
+ListLink.propTypes = {
+  isSearch: PropTypes.bool,
+  query: PropTypes.string,
+  item: PropTypes.shape({
+    title: PropTypes.string,
+    source: PropTypes.string,
+    slug: PropTypes.string,
+    breadcrumbs: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string,
+        slug: PropTypes.string
+      })
+    )
+  })
 };
 
 export const Results = ({ id, isSearch, items, query }) => {

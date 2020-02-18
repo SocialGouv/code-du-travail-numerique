@@ -55,7 +55,13 @@ SearchResults.propTypes = {
       PropTypes.shape({
         title: PropTypes.string,
         source: PropTypes.string,
-        slug: PropTypes.string
+        slug: PropTypes.string,
+        breadcrumbs: PropTypes.arrayOf(
+          PropTypes.shape({
+            label: PropTypes.string,
+            slug: PropTypes.string
+          })
+        )
       })
     ),
     articles: PropTypes.arrayOf(
