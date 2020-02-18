@@ -1055,6 +1055,6 @@ exports[`<SearchResults/> should track event candidateResults 1`] = `
 Array [
   "trackEvent",
   "candidateResults",
-  "search test"
+  "search test",
 ]
 `;
