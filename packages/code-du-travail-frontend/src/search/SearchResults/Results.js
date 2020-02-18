@@ -31,8 +31,12 @@ export const ListLink = ({
   query
 }) => {
   let subtitle = "";
-  if (isSearch && source !== SOURCES.THEMES && breadcrumbs.length) {
-    subtitle = breadcrumbs[breadcrumbs.length - 1].label;
+  if (isSearch && source !== SOURCES.THEMES) {
+    if (breadcrumbs.length > 0) {
+      subtitle = breadcrumbs[breadcrumbs.length - 1].label;
+    } else {
+      subtitle = getLabelBySource(source);
+    }
   }
 
   const tileCommonProps = {
@@ -70,11 +74,9 @@ export const ListLink = ({
     ResultTile = CallToActionTile;
     tileCommonProps.action = action || "Consulter";
     tileCommonProps.custom = true;
-    tileCommonProps.subtitle = getLabelBySource(source);
   }
   if (source === SOURCES.CONTRIBUTIONS) {
     tileCommonProps.custom = true;
-    tileCommonProps.subtitle = getLabelBySource(source);
   }
 
   return (
