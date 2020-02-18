@@ -15,8 +15,8 @@ const items = {
       slug: "mer-il-est-fou",
       description: "description",
       breadcrumbs: [
-        { path: "themes", slug: "theme-root", label: "test content" },
-        { path: "themes", slug: "theme-test", label: "test theme content" }
+        { slug: "/themes/theme-root", label: "test content" },
+        { slug: "/themes/theme-test", label: "test theme content" }
       ]
     },
     {
@@ -38,9 +38,7 @@ const items = {
       title: "Mer il est fou 2!",
       slug: "mer-il-est-fou2",
       description: "description",
-      breadcrumbs: [
-        { path: "themes", slug: "theme-root", label: "test root content" }
-      ]
+      breadcrumbs: [{ slug: "/themes/theme-root", label: "test root content" }]
     },
     {
       source: "contribution",
@@ -48,8 +46,8 @@ const items = {
       slug: "mer-il-est-fou4",
       description: "description",
       breadcrumbs: [
-        { path: "themes", slug: "theme-root", label: "test content" },
-        { path: "themes", slug: "theme-test", label: "test theme content" }
+        { slug: "/themes/theme-root", label: "test content" },
+        { slug: "/themes/theme-test", label: "test theme content" }
       ]
     }
   ],
