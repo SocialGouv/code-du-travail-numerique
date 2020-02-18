@@ -55,24 +55,17 @@ exports[`<StepResult /> should render no results 1`] = `
       </strong>
     </li>
     <li>
+      Période essai
+       : 
+      <strong>
+        oui
+      </strong>
+    </li>
+    <li>
       Catégorie socio-professionnelle
        : 
       <strong>
         Employés
-      </strong>
-    </li>
-    <li>
-      Type de rupture
-       : 
-      <strong>
-        licenciement
-      </strong>
-    </li>
-    <li>
-      Ancienneté
-       : 
-      <strong>
-        2 ans ou moins
       </strong>
     </li>
   </ul>
@@ -84,12 +77,12 @@ exports[`<StepResult /> should render no results 1`] = `
   <ul>
     <li>
       <a
-        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857304&cidTexte=KALITEXT000005682357&dateTexte=19740607"
+        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=68C4D11B1B434910FCC8731A925B638E.tplgfr28s_1?idArticle=KALIARTI000022438632&cidTexte=KALITEXT000005682357&dateTexte=29990101&categorieLien=id"
         rel="noopener noreferrer"
         target="_blank"
-        title="Consultez l’article 30"
+        title="Consultez l’article 15"
       >
-        Article 30
+        Article 15
       </a>
     </li>
   </ul>
@@ -173,6 +166,13 @@ exports[`<StepResult /> should render with duration 1`] = `
        : 
       <strong>
         Entreprises de la publicité et assimilées
+      </strong>
+    </li>
+    <li>
+      Période essai
+       : 
+      <strong>
+        non
       </strong>
     </li>
     <li>

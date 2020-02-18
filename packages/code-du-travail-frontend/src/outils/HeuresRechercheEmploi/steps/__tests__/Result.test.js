@@ -16,6 +16,7 @@ describe("<StepResult />", () => {
   it("should render with duration", () => {
     const { container } = renderForm(StepResult, {
       criteria: {
+        "période essai": "3| non",
         "catégorie socio-professionnelle": "16| Employés",
         "type de rupture": "1| démission"
       },
@@ -27,9 +28,8 @@ describe("<StepResult />", () => {
   it("should render no results", () => {
     const { container } = renderForm(StepResult, {
       criteria: {
-        "catégorie socio-professionnelle": "16| Employés",
-        "type de rupture": "3| licenciement",
-        ancienneté: "38| 2 ans ou moins"
+        "période essai": "1| oui",
+        "catégorie socio-professionnelle": "16| Employés"
       },
       ccn: ccn86
     });

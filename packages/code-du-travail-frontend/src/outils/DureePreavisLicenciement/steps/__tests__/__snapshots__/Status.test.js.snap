@@ -466,17 +466,17 @@ exports[`<StepStatus /> should render coefficient 1`] = `
           ...
         </option>
         <option
-          value="13| moins de 6 mois"
+          value="15| moins de 6 mois"
         >
           moins de 6 mois
         </option>
         <option
-          value="31| 6 mois à moins de 2 ans"
+          value="33| 6 mois à moins de 2 ans"
         >
           6 mois à moins de 2 ans
         </option>
         <option
-          value="41| plus de 2 ans"
+          value="43| plus de 2 ans"
         >
           plus de 2 ans
         </option>
