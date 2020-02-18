@@ -40,135 +40,6 @@ Object {
       "source": "outils",
       "title": "Préavis de démission",
     },
-    Object {
-      "_score": 1.1074626,
-      "action": "Estimer",
-      "algo": "semantic",
-      "description": "Estimez simplement le montant de l’indemnité de licenciement",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Indemnité de licenciement",
-    },
-    Object {
-      "_score": 1.0799015,
-      "action": "Consulter",
-      "algo": "semantic",
-      "description": "Consultez en ligne vos droits à la formation, cherchez et réservez une formation",
-      "slug": "mon-compte-formation",
-      "source": "external",
-      "title": "Mon compte formation",
-      "url": "https://www.moncompteformation.gouv.fr",
-    },
-    Object {
-      "_score": 1.0769699,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "slug": "/themes/81-demission",
-        },
-      ],
-      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).",
-      "slug": "la-demission#Comment-presenter-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : comment présenter une démission ?",
-    },
-    Object {
-      "_score": 1.0560172,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Embauche et contrat de travail",
-          "slug": "/themes/1-embauche-et-contrat-de-travail",
-        },
-        Object {
-          "label": "Embauche",
-          "slug": "/themes/11-embauche",
-        },
-        Object {
-          "label": "Période d'essai",
-          "slug": "/themes/113-periode-dessai",
-        },
-      ],
-      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
-      "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-      "source": "modeles_de_courriers",
-      "title": "Rupture de période d’essai à l'initiative de l'employeur",
-    },
-    Object {
-      "_score": 1.0499763,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-        Object {
-          "label": "Rupture conventionnelle",
-          "slug": "/themes/83-rupture-conventionnelle",
-        },
-        Object {
-          "label": "Rupture conventionnelle individuelle",
-          "slug": "/themes/831-rupture-conventionnelle-individuelle",
-        },
-      ],
-      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
-      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-      "source": "modeles_de_courriers",
-      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
-    },
-    Object {
-      "_score": 1.0449069,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "slug": "/themes/81-demission",
-        },
-      ],
-      "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
-      "slug": "demission-dune-assistante-maternelle",
-      "source": "fiches_service_public",
-      "title": "Démission d'une assistante maternelle",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
-    },
-    Object {
-      "_score": 1.0382855,
-      "action": "Calculer",
-      "algo": "semantic",
-      "description": "L’outil de calcul de votre index égalité professionnelle femmes-hommes",
-      "slug": "index-egapro",
-      "source": "external",
-      "title": "Index Egapro",
-      "url": "https://index-egapro.travail.gouv.fr",
-    },
-    Object {
-      "_score": 1.0301336,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "slug": "/themes/81-demission",
-        },
-      ],
-      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
-      "slug": "demission-dun-salarie",
-      "source": "fiches_service_public",
-      "title": "Démission d'un salarié",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
-    },
   ],
   "themes": Array [
     Object {
@@ -309,6 +180,25 @@ Object {
   ],
   "documents": Array [
     Object {
+      "_score": 8.825487,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "slug": "/themes/81-demission",
+        },
+      ],
+      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
+      "slug": "demission-dun-salarie",
+      "source": "fiches_service_public",
+      "title": "Démission d'un salarié",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+    },
+    Object {
       "_score": 1.131861,
       "algo": "both",
       "breadcrumbs": Array [
@@ -327,26 +217,7 @@ Object {
       "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
     Object {
-      "_score": 8.825487,
-      "algo": "both",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "slug": "/themes/81-demission",
-        },
-      ],
-      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
-      "slug": "demission-dun-salarie",
-      "source": "fiches_service_public",
-      "title": "Démission d'un salarié",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
-    },
-    Object {
-      "_score": 1.1191392,
+      "_score": 8.572784,
       "action": "Calculer",
       "algo": "both",
       "description": "Calculez la durée de préavis à respecter en cas de démission",
@@ -355,17 +226,8 @@ Object {
       "title": "Préavis de démission",
     },
     Object {
-      "_score": 1.1074626,
-      "action": "Estimer",
-      "algo": "semantic",
-      "description": "Estimez simplement le montant de l’indemnité de licenciement",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Indemnité de licenciement",
-    },
-    Object {
       "_score": 8.245559,
-      "algo": "both",
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
@@ -382,18 +244,8 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "_score": 1.0799015,
-      "action": "Consulter",
-      "algo": "semantic",
-      "description": "Consultez en ligne vos droits à la formation, cherchez et réservez une formation",
-      "slug": "mon-compte-formation",
-      "source": "external",
-      "title": "Mon compte formation",
-      "url": "https://www.moncompteformation.gouv.fr",
-    },
-    Object {
       "_score": 7.8831825,
-      "algo": "both",
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
@@ -409,60 +261,6 @@ Object {
       "source": "fiches_service_public",
       "title": "Démission d'une assistante maternelle",
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
-    },
-    Object {
-      "_score": 1.0560172,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Embauche et contrat de travail",
-          "slug": "/themes/1-embauche-et-contrat-de-travail",
-        },
-        Object {
-          "label": "Embauche",
-          "slug": "/themes/11-embauche",
-        },
-        Object {
-          "label": "Période d'essai",
-          "slug": "/themes/113-periode-dessai",
-        },
-      ],
-      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
-      "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-      "source": "modeles_de_courriers",
-      "title": "Rupture de période d’essai à l'initiative de l'employeur",
-    },
-    Object {
-      "_score": 1.0499763,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-        Object {
-          "label": "Rupture conventionnelle",
-          "slug": "/themes/83-rupture-conventionnelle",
-        },
-        Object {
-          "label": "Rupture conventionnelle individuelle",
-          "slug": "/themes/831-rupture-conventionnelle-individuelle",
-        },
-      ],
-      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
-      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-      "source": "modeles_de_courriers",
-      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
-    },
-    Object {
-      "_score": 1.0382855,
-      "action": "Calculer",
-      "algo": "semantic",
-      "description": "L’outil de calcul de votre index égalité professionnelle femmes-hommes",
-      "slug": "index-egapro",
-      "source": "external",
-      "title": "Index Egapro",
-      "url": "https://index-egapro.travail.gouv.fr",
     },
   ],
   "themes": Array [
