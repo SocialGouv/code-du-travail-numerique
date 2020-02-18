@@ -57,7 +57,7 @@ async function getRelatedItems({ title, settings, slug }) {
   const [rootSlug] = slug.split("#");
 
   return utils
-    .mergePipe(semanticHits, fullTextHits, MAX_RESULTS)
+    .mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
     .filter(({ _source }) => !_source.slug.startsWith(rootSlug))
     .map(({ _source }) => _source);
 }
