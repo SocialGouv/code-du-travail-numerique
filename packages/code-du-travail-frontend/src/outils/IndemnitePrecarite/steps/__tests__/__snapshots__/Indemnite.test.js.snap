@@ -1,115 +1,703 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
+exports[`<StepIndemnite /> should render cdd indemnite with conventional provision message 1`] = `
+.c2 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
   color: #f66663;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: pre-line;
 }
 
-.c1 {
-  display: block;
-  margin-bottom: 1.6rem;
-}
-
-.c2 {
+.c3 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c3 {
+.c4 {
   list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c4 {
+.c5 {
   font-size: 1.4rem;
 }
 
-.c5 {
+.c6 {
   margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {
-  .c0 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 <div>
+  <h2
+    class="c0"
+  >
+    Montant
+  </h2>
   <p>
-    La prime de précarité
+    La prime d'intervention
      est estimée à 
     <strong
-      class="c0"
+      class="c1"
     >
-      2000
+      180
        €
     </strong>
     .
   </p>
-  <details>
-    <summary
-      class="c1"
+  <div
+    class="c2"
+  >
+    Un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu par l’accord d’entreprise, sauf si le contrat de travail prévoit un montant plus favorable pour le salarié.
+  </div>
+  <h2
+    class="c0"
+  >
+    Détails du calcul
+  </h2>
+  <strong
+    class="c3"
+  >
+    Éléments saisis :
+  </strong>
+  <ul
+    class="c4"
+  >
+    <li
+      class="c5"
     >
-      Détail du calcul
-    </summary>
-    <div>
-      <strong
-        class="c2"
-      >
-        Éléments saisis :
+      convention collective
+       : 
+      <strong>
+        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. 
       </strong>
-      <ul
-        class="c3"
-      >
-        <li
-          class="c4"
-        >
-          somme des salaires
-           : 
-          20000
-        </li>
-      </ul>
-      <strong
-        class="c2"
-      >
-        Calcul :
+    </li>
+    <li
+      class="c5"
+    >
+      total des salaires
+       : 
+      <strong>
+        3000
       </strong>
+    </li>
+  </ul>
+  <strong
+    class="c3"
+  >
+    Calcul :
+  </strong>
+  <div
+    class="c6"
+  >
+    <div
+      id="react-mathjax-preview"
+    >
       <div
-        class="c5"
+        id="react-mathjax-preview-result"
       >
-        <div
-          id="react-mathjax-preview"
-        >
-          <div
-            id="react-mathjax-preview-result"
-          >
-            \`10/100 * somme(salaires)\`
-          </div>
-        </div>
+        \`6/100 * "totalSalaires"\`
       </div>
     </div>
-  </details>
+  </div>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’chapitre iii : contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès"
+      >
+        Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-8 du code du travail"
+      >
+        Article L1243-8 du code du travail
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-9 du code du travail"
+      >
+        Article L1243-9 du code du travail
+      </a>
+    </li>
+  </ul>
   <p>
+    En savoir plus sur la prime de précarité d’un
+     
     <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+      href="/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
       rel="noopener noreferrer"
       target="_blank"
-      title="Consultez l’article l1243-8 du code du travail"
     >
-      Article L1243-8 du code du travail
-    </a>
-    , 
-    <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’article l1243-9 du code du travail"
-    >
-      Article L1243-9 du code du travail
+      salarié en CDD
     </a>
   </p>
+</div>
+`;
+
+exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] = `
+.c2 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #f66663;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: pre-line;
+}
+
+.c3 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.c4 {
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.c5 {
+  font-size: 1.4rem;
+}
+
+.c6 {
+  margin: 1.6rem 0;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Montant
+  </h2>
+  <p>
+    La prime de précarité
+     est estimée à 
+    <strong
+      class="c1"
+    >
+      300
+       €
+    </strong>
+    .
+  </p>
+  <div
+    class="c2"
+  >
+    <p>
+      Une convention collective de branche étendue ou un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible que celui prévu par le code du travail.
+    </p>
+    <p>
+      Attention, dans le cas où la convention ou l’accord collectif prévoit un taux inférieur à 10% dans la limite de 6%, il doit y avoir des contreparties offertes au salarié, notamment sous la forme d’un accès privilégié à la formation professionnelle (action de formation, bilan de compétences). Dans tous les cas, le contrat de travail peut prévoir un montant plus favorable pour le salarié. Il faut alors appliquer ce montant.
+    </p>
+  </div>
+  <h2
+    class="c0"
+  >
+    Détails du calcul
+  </h2>
+  <strong
+    class="c3"
+  >
+    Éléments saisis :
+  </strong>
+  <ul
+    class="c4"
+  >
+    <li
+      class="c5"
+    >
+      convention collective
+       : 
+      <strong>
+        La convention collective n'a pas été renseignée.
+      </strong>
+    </li>
+    <li
+      class="c5"
+    >
+      total des salaires
+       : 
+      <strong>
+        3000
+      </strong>
+    </li>
+  </ul>
+  <strong
+    class="c3"
+  >
+    Calcul :
+  </strong>
+  <div
+    class="c6"
+  >
+    <div
+      id="react-mathjax-preview"
+    >
+      <div
+        id="react-mathjax-preview-result"
+      >
+        \`10/100 * "totalSalaires"\`
+      </div>
+    </div>
+  </div>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-8 du code du travail"
+      >
+        Article L1243-8 du code du travail
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-9 du code du travail"
+      >
+        Article L1243-9 du code du travail
+      </a>
+    </li>
+  </ul>
+  <p>
+    En savoir plus sur la prime de précarité d’un
+     
+    <a
+      href="/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      salarié en CDD
+    </a>
+  </p>
+</div>
+`;
+
+exports[`<StepIndemnite /> should render cdd indemnite with no conventional provision message 1`] = `
+.c2 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #f66663;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: pre-line;
+}
+
+.c3 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.c4 {
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.c5 {
+  font-size: 1.4rem;
+}
+
+.c6 {
+  margin: 1.6rem 0;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Montant
+  </h2>
+  <p>
+    La prime de précarité
+     est estimée à 
+    <strong
+      class="c1"
+    >
+      300
+       €
+    </strong>
+    .
+  </p>
+  <div
+    class="c2"
+  >
+    Un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu par l’accord d’entreprise, sauf si le contrat de travail prévoit un montant plus favorable pour le salarié.
+    <br />
+    Attention, dans le cas où l’accord d’entreprise prévoit un taux inférieur à 10% dans la limite de 6%, il doit y avoir des contreparties offertes au salarié, notamment sous la forme d’un accès privilégié à la formation professionnelle (action de formation, bilan de compétences).
+  </div>
+  <h2
+    class="c0"
+  >
+    Détails du calcul
+  </h2>
+  <strong
+    class="c3"
+  >
+    Éléments saisis :
+  </strong>
+  <ul
+    class="c4"
+  >
+    <li
+      class="c5"
+    >
+      convention collective
+       : 
+      <strong>
+        Convention collective nationale des etablissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.
+      </strong>
+    </li>
+    <li
+      class="c5"
+    >
+      total des salaires
+       : 
+      <strong>
+        3000
+      </strong>
+    </li>
+  </ul>
+  <strong
+    class="c3"
+  >
+    Calcul :
+  </strong>
+  <div
+    class="c6"
+  >
+    <div
+      id="react-mathjax-preview"
+    >
+      <div
+        id="react-mathjax-preview-result"
+      >
+        \`10/100 * "totalSalaires"\`
+      </div>
+    </div>
+  </div>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B2ED091AF8ACCF6952BB5EA67D9DE5AE.tplgfr27s_1?idArticle=KALIARTI000005787408&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article 16.03 de la convention collective"
+      >
+        Article 16.03 de la convention collective
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-8 du code du travail"
+      >
+        Article L1243-8 du code du travail
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-9 du code du travail"
+      >
+        Article L1243-9 du code du travail
+      </a>
+    </li>
+  </ul>
+  <p>
+    En savoir plus sur la prime de précarité d’un
+     
+    <a
+      href="/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      salarié en CDD
+    </a>
+  </p>
+</div>
+`;
+
+exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message 1`] = `
+.c2 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #f66663;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: pre-line;
+}
+
+.c3 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.c4 {
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.c5 {
+  font-size: 1.4rem;
+}
+
+.c6 {
+  margin: 1.6rem 0;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Montant
+  </h2>
+  <p>
+    La prime de précarité
+     est estimée à 
+    <strong
+      class="c1"
+    >
+      300
+       €
+    </strong>
+    .
+  </p>
+  <div
+    class="c2"
+  >
+    <p>
+      Une convention collective de branche étendue ou un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible que celui prévu par le code du travail.
+    </p>
+    <p>
+      Attention, dans le cas où la convention ou l’accord collectif prévoit un taux inférieur à 10% dans la limite de 6%, il doit y avoir des contreparties offertes au salarié, notamment sous la forme d’un accès privilégié à la formation professionnelle (action de formation, bilan de compétences). Dans tous les cas, le contrat de travail peut prévoir un montant plus favorable pour le salarié. Il faut alors appliquer ce montant.
+    </p>
+  </div>
+  <h2
+    class="c0"
+  >
+    Détails du calcul
+  </h2>
+  <strong
+    class="c3"
+  >
+    Éléments saisis :
+  </strong>
+  <ul
+    class="c4"
+  >
+    <li
+      class="c5"
+    >
+      convention collective
+       : 
+      <strong>
+        La convention collective n'a pas été traitée par nos services.
+      </strong>
+    </li>
+    <li
+      class="c5"
+    >
+      total des salaires
+       : 
+      <strong>
+        3000
+      </strong>
+    </li>
+  </ul>
+  <strong
+    class="c3"
+  >
+    Calcul :
+  </strong>
+  <div
+    class="c6"
+  >
+    <div
+      id="react-mathjax-preview"
+    >
+      <div
+        id="react-mathjax-preview-result"
+      >
+        \`10/100 * "totalSalaires"\`
+      </div>
+    </div>
+  </div>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-8 du code du travail"
+      >
+        Article L1243-8 du code du travail
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-9 du code du travail"
+      >
+        Article L1243-9 du code du travail
+      </a>
+    </li>
+  </ul>
   <p>
     En savoir plus sur la prime de précarité d’un
      
@@ -125,115 +713,166 @@ exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
 `;
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
+.c2 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
   color: #f66663;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: pre-line;
 }
 
-.c1 {
-  display: block;
-  margin-bottom: 1.6rem;
-}
-
-.c2 {
+.c3 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c3 {
+.c4 {
   list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c4 {
+.c5 {
   font-size: 1.4rem;
 }
 
-.c5 {
+.c6 {
   margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {
-  .c0 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 <div>
+  <h2
+    class="c0"
+  >
+    Montant
+  </h2>
   <p>
     La prime de précarité
      est estimée à 
     <strong
-      class="c0"
+      class="c1"
     >
       300
        €
     </strong>
     .
   </p>
-  <details>
-    <summary
-      class="c1"
+  <div
+    class="c2"
+  >
+    <p>
+      Une convention collective de branche étendue ou un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible que celui prévu par le code du travail.
+    </p>
+    <p>
+      Attention, dans le cas où la convention ou l’accord collectif prévoit un taux inférieur à 10% dans la limite de 6%, il doit y avoir des contreparties offertes au salarié, notamment sous la forme d’un accès privilégié à la formation professionnelle (action de formation, bilan de compétences). Dans tous les cas, le contrat de travail peut prévoir un montant plus favorable pour le salarié. Il faut alors appliquer ce montant.
+    </p>
+  </div>
+  <h2
+    class="c0"
+  >
+    Détails du calcul
+  </h2>
+  <strong
+    class="c3"
+  >
+    Éléments saisis :
+  </strong>
+  <ul
+    class="c4"
+  >
+    <li
+      class="c5"
     >
-      Détail du calcul
-    </summary>
-    <div>
-      <strong
-        class="c2"
-      >
-        Éléments saisis :
+      convention collective
+       : 
+      <strong>
+        La convention collective n'a pas été renseignée.
       </strong>
-      <ul
-        class="c3"
-      >
-        <li
-          class="c4"
-        >
-          total des salaires
-           : 
-          3000
-        </li>
-      </ul>
-      <strong
-        class="c2"
-      >
-        Calcul :
+    </li>
+    <li
+      class="c5"
+    >
+      total des salaires
+       : 
+      <strong>
+        3000
       </strong>
+    </li>
+  </ul>
+  <strong
+    class="c3"
+  >
+    Calcul :
+  </strong>
+  <div
+    class="c6"
+  >
+    <div
+      id="react-mathjax-preview"
+    >
       <div
-        class="c5"
+        id="react-mathjax-preview-result"
       >
-        <div
-          id="react-mathjax-preview"
-        >
-          <div
-            id="react-mathjax-preview-result"
-          >
-            \`10/100 * "totalSalaires"\`
-          </div>
-        </div>
+        \`10/100 * "totalSalaires"\`
       </div>
     </div>
-  </details>
-  <p>
-    <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’article l1243-8 du code du travail"
-    >
-      Article L1243-8 du code du travail
-    </a>
-    , 
-    <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Consultez l’article l1243-9 du code du travail"
-    >
-      Article L1243-9 du code du travail
-    </a>
-  </p>
+  </div>
+  <h2
+    class="c0"
+  >
+    Source
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-8 du code du travail"
+      >
+        Article L1243-8 du code du travail
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Consultez l’article l1243-9 du code du travail"
+      >
+        Article L1243-9 du code du travail
+      </a>
+    </li>
+  </ul>
   <p>
     En savoir plus sur la prime de précarité d’un
      

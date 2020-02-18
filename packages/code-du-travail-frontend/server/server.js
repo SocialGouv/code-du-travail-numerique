@@ -68,13 +68,15 @@ nextApp.prepare().then(() => {
             "'unsafe-inline'",
             "https://mon-entreprise.fr",
             "https://www.googletagmanager.com",
-            "*.fabrique.social.gouv.fr"
+            "*.fabrique.social.gouv.fr",
+            "https://cdnjs.cloudflare.com"
           ],
           frameSrc: ["https://mon-entreprise.fr"],
           frameAncestors: ["'none'"],
           styleSrc: ["'self'", "'unsafe-inline'"],
           imgSrc: [
             "'self'",
+            "data:",
             "https://travail-emploi.gouv.fr",
             "https://mon-entreprise.fr",
             "https://ad.doubleclick.net"
