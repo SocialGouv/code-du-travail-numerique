@@ -24,7 +24,7 @@ const Breadcrumbs = ({ items = [] }) => {
               </Link>
             </NavItem>,
             ...items.map(({ label, slug }) => (
-              <NavItem key={slug}>
+              <NavItem key={`${slug}`}>
                 <StyledArrowRight />{" "}
                 <Link key={slug} href={getLinkHref(slug)} as={slug} passHref>
                   <StyledLink>{label}</StyledLink>
@@ -39,12 +39,17 @@ const Breadcrumbs = ({ items = [] }) => {
 };
 
 function getLinkHref(slug) {
-  const subPageMatcher = new RegExp("/[^/]+/(.+)$");
+  const subPageMatcher = new RegExp("/[^/]+/.+$");
   return subPageMatcher.test(slug) ? slug.replace(/\/[^/]+$/, "/[slug]") : slug;
 }
 
 Breadcrumbs.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.node)
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      slug: PropTypes.string
+    })
+  )
 };
 
 export { Breadcrumbs };

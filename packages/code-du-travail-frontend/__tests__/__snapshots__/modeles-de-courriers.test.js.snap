@@ -1475,12 +1475,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               Tous les thèmes
             </option>
             <option
-              value="1-embauche-et-contrat-de-travail"
+              value="/themes/1-embauche-et-contrat-de-travail"
             >
               Embauche et contrat de travail
             </option>
             <option
-              value="8-depart-de-lentreprise"
+              value="/themes/8-depart-de-lentreprise"
             >
               Départ de l'entreprise
             </option>

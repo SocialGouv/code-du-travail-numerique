@@ -28,8 +28,8 @@ describe("<Answer />", () => {
   it("should renders a breadcrumbs", () => {
     const { container } = renderAnswer({
       breadcrumbs: [
-        { label: "tag1", path: "themes", slug: "tag-1" },
-        { label: "tag2", path: "themes", slug: "tag-2" }
+        { label: "tag1", slug: "/themes/tag-1" },
+        { label: "tag2", slug: "/themes/tag-2" }
       ]
     });
     expect(container).toMatchSnapshot();
