@@ -43,7 +43,7 @@ export function validateSituation(initialSituations, criteria, errors) {
     const [lastQuestionKey] = lastQuestionTuple;
     if (situations.length >= 1) {
       const [situation] = situations;
-      if (!situation.allowBonus) {
+      if (!situation.allowBonus && situation.hasConventionalProvision) {
         return {
           ...errors,
           criteria: { [lastQuestionKey]: situation.endMessage }

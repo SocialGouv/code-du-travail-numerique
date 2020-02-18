@@ -15,52 +15,73 @@ import {
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 
 function Disclaimer({ situation, idcc }) {
-  if (idcc > 0) {
+  if (idcc > 0 && situation.idcc > 0) {
     if (situation.hasConventionalProvision) {
       return (
         <Alert>
           Un accord d’entreprise peut prévoir un montant différent qu’il soit
           plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu
           par l’accord d’entreprise, sauf si le contrat de travail prévoit un
-          montant plus favorable pour le salarié. Attention, dans le cas où
-          l’accord d’entreprise prévoit un taux inférieur à 10% dans la limite
-          de 6 %, il doit y avoir des contreparties offertes au salarié,
-          notamment sous la forme d’un accès privilégié à la formation
-          professionnelle (action de formation, bilan de compétences)
+          montant plus favorable pour le salarié.
         </Alert>
       );
     } else {
       return (
         <Alert>
-          Une convention collective de branche étendue ou un accord d’entreprise
-          peut prévoir un montant différent qu’il soit plus élevé ou plus faible
-          que celui prévu par le code du travail. Attention, dans le cas où la
-          convention ou l’accord collectif prévoit un taux inférieur à 10% dans
-          la limite de 6 %, il doit y avoir des contreparties offertes au
-          salarié, notamment sous la forme d’un accès privilégié à la formation
-          professionnelle (action de formation, bilan de compétences). Dans tous
-          les cas, le contrat de travail peut prévoir un montant plus favorable
-          pour le salarié. Il faut alors appliquer ce montant.
+          Un accord d’entreprise peut prévoir un montant différent qu’il soit
+          plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu
+          par l’accord d’entreprise, sauf si le contrat de travail prévoit un
+          montant plus favorable pour le salarié.
+          <br />
+          Attention, dans le cas où l’accord d’entreprise prévoit un taux
+          inférieur à 10% dans la limite de 6%, il doit y avoir des
+          contreparties offertes au salarié, notamment sous la forme d’un accès
+          privilégié à la formation professionnelle (action de formation, bilan
+          de compétences).
         </Alert>
       );
     }
   }
+  // case for no ccn provided or unhandled ccn
   return (
     <Alert>
-      Un accord d’entreprise peut prévoir un montant différent qu’il soit plus
-      élevé ou plus faible. Dans ce cas, s’applique le montant prévu par
-      l’accord d’entreprise, sauf si le contrat de travail prévoit un montant
-      plus favorable pour le salarié.
+      <p>
+        Une convention collective de branche étendue ou un accord d’entreprise
+        peut prévoir un montant différent qu’il soit plus élevé ou plus faible
+        que celui prévu par le code du travail.
+      </p>
+      <p>
+        Attention, dans le cas où la convention ou l’accord collectif prévoit un
+        taux inférieur à 10% dans la limite de 6%, il doit y avoir des
+        contreparties offertes au salarié, notamment sous la forme d’un accès
+        privilégié à la formation professionnelle (action de formation, bilan de
+        compétences). Dans tous les cas, le contrat de travail peut prévoir un
+        montant plus favorable pour le salarié. Il faut alors appliquer ce
+        montant.
+      </p>
     </Alert>
   );
 }
 
 function extractRefs(refs = []) {
-  return refs.flatMap(({ refUrl, refLabel }) => {
-    const urls = refUrl.split(/\n/);
-    const labels = refLabel.split(/\n/);
-    return urls.map((url, i) => ({ refUrl: url, ref: labels[i] }));
-  });
+  //some ref are duplicated so we need to dedup them
+
+  const tempRefs = refs
+    .filter(item => item.refLabel && item.refUrl)
+    .flatMap(({ refUrl, refLabel }) => {
+      const urls = refUrl.split(/\n/);
+      const labels = refLabel.split(/\n/);
+      return urls.map((url, i) => ({ refUrl: url, refLabel: labels[i] }));
+    });
+
+  const refMap = {};
+  for (const { refUrl, refLabel } of tempRefs) {
+    refMap[refUrl] = refLabel;
+  }
+  return Object.entries(refMap).map(([refUrl, ref]) => ({
+    refUrl,
+    ref
+  }));
 }
 
 function StepIndemnite({ form }) {
@@ -85,7 +106,9 @@ function StepIndemnite({ form }) {
   switch (situations.length) {
     case 1: {
       [situation] = situations;
-      rate = situation.rate || "0%";
+      if (situation.hasConventionalProvision) {
+        rate = situation.rate;
+      }
       bonusAltName = situation.bonusLabel || bonusAltName;
       if (idcc !== 0) {
         legalRefs = extractRefs([situation, situationCdt]);
@@ -111,7 +134,14 @@ function StepIndemnite({ form }) {
     rateLabel
   });
 
-  const entries = Object.entries(inputs);
+  const entries = Object.entries({
+    "convention collective": ccn
+      ? situations.length > 0
+        ? ccn.convention.title
+        : "La convention collective n'a pas été traitée par nos services."
+      : "La convention collective n'a pas été renseignée.",
+    ...inputs
+  });
 
   return (
     <>
@@ -127,7 +157,7 @@ function StepIndemnite({ form }) {
         <List>
           {entries.map(([label, value], index) => (
             <Item key={index}>
-              {label}&nbsp;: {value}
+              {label}&nbsp;: <strong>{value}</strong>
             </Item>
           ))}
         </List>

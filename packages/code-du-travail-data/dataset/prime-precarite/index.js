@@ -8,21 +8,21 @@ const getCells = promisify(GoogleSpreadsheets.cells);
 
 const csvColumns = {
   contractType: 2,
-  idcc: 5,
-  hasConventionalProvision: 7,
-  allowBonus: 12,
-  endMessage: 13,
-  rate: 14,
-  bonusLabel: 16,
-  refLabel: 18,
-  refUrl: 19
+  idcc: 3,
+  hasConventionalProvision: 5,
+  allowBonus: 10,
+  endMessage: 11,
+  rate: 12,
+  bonusLabel: 14,
+  refLabel: 16,
+  refUrl: 17
 };
 
 const criteriaIndex = {
-  8: "cddType",
-  9: "hasCdiProposal",
-  10: "hasCdiRenewal",
-  11: "hasEquivalentCdiRenewal"
+  6: "cddType",
+  7: "hasCdiProposal",
+  8: "hasCdiRenewal",
+  9: "hasEquivalentCdiRenewal"
 };
 
 function rowWithIdcc(row) {
