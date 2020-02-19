@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import styled from "styled-components";
+import { matopush } from "../../piwik";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Button,
@@ -132,7 +133,12 @@ export const Results = ({ id, isSearch, items, query }) => {
       </FlatList>
       {items.length > page * pageSize && (
         <ButtonWrapper>
-          <StyledButton onClick={() => setPage(page + 1)}>
+          <StyledButton
+            onClick={() => {
+              matopush(["trackEvent", "nextResultPage", query]);
+              setPage(page + 1);
+            }}
+          >
             Plus de résultats
           </StyledButton>
         </ButtonWrapper>
