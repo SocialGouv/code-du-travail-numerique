@@ -77,6 +77,7 @@ nextApp.prepare().then(() => {
           imgSrc: [
             "'self'",
             "data:",
+            "*.fabrique.social.gouv.fr",
             "https://travail-emploi.gouv.fr",
             "https://mon-entreprise.fr",
             "https://ad.doubleclick.net"
