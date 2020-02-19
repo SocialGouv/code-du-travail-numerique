@@ -12,8 +12,8 @@ import {
   getRef
 } from "../../common/situations.utils";
 
-function Duration({ duration }) {
-  if (parseInt(duration, 10) === 0) {
+function Duration({ situation }) {
+  if (parseInt(situation.answer, 10) === 0) {
     return (
       <p>
         La convention collective ne prévoit pas cette possibilité. Il n’est donc
@@ -26,8 +26,21 @@ function Duration({ duration }) {
     <>
       <p>
         À partir des éléments que vous avez saisis, le nombre d’heures pour
-        recherche d’emploi est estimé à&nbsp;<Highlight>{duration}</Highlight>.
+        recherche d’emploi est estimé à&nbsp;
+        <Highlight>{situation.answer}</Highlight>.
       </p>
+      {situation.answer2 && (
+        <>
+          <SectionTitle>Rémunération</SectionTitle>
+          <p>{situation.answer2}</p>
+        </>
+      )}
+      {situation.answer3 && (
+        <>
+          <SectionTitle>Modalités d’utilisation</SectionTitle>
+          <p>{situation.answer3}</p>
+        </>
+      )}
     </>
   );
 }
@@ -111,7 +124,7 @@ export function StepResult({ form }) {
   return (
     <>
       <SectionTitle>Nombre d’heures</SectionTitle>
-      <Duration duration={situation.answer} />
+      <Duration situation={situation} />
       <Disclaimer duration={situation.answer} />
       <SectionTitle>Détails</SectionTitle>
       {recapSituation({

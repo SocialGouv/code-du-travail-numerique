@@ -18,7 +18,7 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "13| moins de 6 mois"
+        ancienneté: "15| moins de 6 mois"
       },
       criteria: {
         "catégorie socio-professionnelle": "16| Employés",
@@ -33,11 +33,11 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "13| moins de 6 mois"
+        ancienneté: "15| moins de 6 mois"
       },
       criteria: {
         "catégorie socio-professionnelle": "16| Employés",
-        ancienneté: "28| 1 mois à moins de 2 ans"
+        ancienneté: "30| 1 mois à moins de 2 ans"
       },
       ccn: ccn16
     });
@@ -48,11 +48,11 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "31| 6 mois à moins de 2 ans"
+        ancienneté: "33| 6 mois à moins de 2 ans"
       },
       criteria: {
         "catégorie socio-professionnelle": "16| Employés",
-        ancienneté: "28| 1 mois à moins de 2 ans"
+        ancienneté: "30| 1 mois à moins de 2 ans"
       },
       ccn: ccn16
     });
@@ -63,7 +63,7 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "41| plus de 2 ans"
+        ancienneté: "43| plus de 2 ans"
       }
     });
     expect(container).toMatchSnapshot();
@@ -73,7 +73,7 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "41| plus de 2 ans"
+        ancienneté: "43| plus de 2 ans"
       },
       ccn: {
         convention: {
