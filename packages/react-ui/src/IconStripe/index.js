@@ -15,6 +15,7 @@ export const IconStripe = ({ children, icon: Icon, ...props }) => (
 
 const FlexDiv = styled.div`
   display: flex;
+  ${({ centered }) => centered && "align-items: center;"}
   justify-content: stretch;
 `;
 
@@ -35,6 +36,7 @@ const ChildrenWrapper = styled.div`
 `;
 
 IconStripe.propTypes = {
+  centered: PropTypes.bool,
   children: PropTypes.node.isRequired,
   icon: PropTypes.elementType.isRequired
 };

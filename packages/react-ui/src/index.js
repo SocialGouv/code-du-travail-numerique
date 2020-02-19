@@ -18,6 +18,7 @@ export { Grid, RootGrid, GridCell } from "./Grid";
 export { FlatList } from "./FlatList";
 export { IconStripe } from "./IconStripe";
 export { Modal, ModalContentWrapper } from "./Modal";
+export { MoreContent } from "./MoreContent";
 export { OverflowWrapper } from "./OverflowWrapper";
 export { ScreenReaderOnly } from "./ScreenReaderOnly";
 export { Stripe } from "./Stripe";
