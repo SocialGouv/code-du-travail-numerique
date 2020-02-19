@@ -20,8 +20,10 @@ const Convention = ({ num, shortTitle, onClick }) => {
     <Box>
       {onClick ? (
         <span>
-          <ConventionLink onClick={onClick}>{shortTitle}</ConventionLink> (IDCC{" "}
-          {formatIdcc(num)})
+          <ConventionLink as="button" onClick={onClick}>
+            {shortTitle}
+          </ConventionLink>{" "}
+          (IDCC {formatIdcc(num)})
         </span>
       ) : (
         <>
@@ -186,7 +188,7 @@ const Search = ({
   );
 };
 
-const { box, colors, fonts, spacings, breakpoints } = theme;
+const { animations, box, colors, fonts, spacings, breakpoints } = theme;
 const BlockInput = styled(Input)`
   display: block;
 `;
@@ -222,8 +224,18 @@ const ResultsContainer = styled.div`
 `;
 
 const ConventionLink = styled.a`
-  color: ${colors.altText};
+  display: inline;
+  padding: 0;
+  color: ${({ theme }) => theme.secondary};
+  font-weight: 600;
+  font-size: ${fonts.sizes.default};
+  text-decoration: underline ${({ theme }) => theme.primary};
+  border: none;
   cursor: pointer;
+  transition: color ${animations.transitionTiming} linear;
+  :hover {
+    color: ${({ theme }) => theme.primary};
+  }
 `;
 
 const Box = styled.div`
