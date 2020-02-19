@@ -1,12 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import { Accordion, Alert } from "@socialgouv/react-ui";
+import styled from "styled-components";
+import { Accordion, theme, Title } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
-import slugify from "@cdt/data/slugify";
 
-import { Title } from "./index";
 import Html from "../../common/Html";
-import { jsxJoin } from "../../lib/jsxJoin";
+import ReferencesJuridiques from "../../common/ReferencesJuridiques";
+import TYPE_REFERENCE from "../../common/ReferencesJuridiques/typeReference";
+
+const { spacings } = theme;
 
 function getContributionUrl({ slug }) {
   return `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`;
@@ -53,70 +55,48 @@ function Contributions({ contributions }) {
     }));
 
   return (
-    <React.Fragment>
-      <Title>Questions fréquentes sur cette convention collective</Title>
+    <>
+      <Title
+        subtitle="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective."
+        shift={spacings.larger}
+      >
+        Questions-réponses fréquentes
+      </Title>
       <Accordion items={themes} />
-    </React.Fragment>
+    </>
   );
 }
 
 function AccordionContent({ answer, slug, references }) {
   return (
-    <React.Fragment>
+    <>
       <Html>{answer}</Html>
-      {references && <AnswerReferences articles={references} />}
-      <Alert>
-        Pour savoir si la mesure prévue par la convention collective
-        s&apos;applique à votre situation, reportez-vous{" "}
+      {references && (
+        <StyledReferencesJuridiques
+          references={references.map(({ title, url, category }) => ({
+            title,
+            url,
+            type:
+              category === "labour_code"
+                ? TYPE_REFERENCE.codeDuTravail
+                : category
+          }))}
+        />
+      )}
+      <strong>
+        Pour savoir si la mesure prévue par la convention collective s’applique
+        à votre situation, reportez-vous{" "}
         <Link href={getContributionUrl({ slug })} passHref>
           <a>à la réponse complète à cette question</a>
         </Link>
-      </Alert>
-    </React.Fragment>
+        .
+      </strong>
+    </>
   );
 }
 
-function AnswerReferences({ articles }) {
-  const refs = articles.map(ref => {
-    switch (ref.category) {
-      case "agreement": {
-        return ref.url ? (
-          <a target="_blank" rel="noopener nofollow noreferrer" href={ref.url}>
-            {ref.title}
-          </a>
-        ) : (
-          <div>{ref.title}</div>
-        );
-      }
-      case "labor_code": {
-        return (
-          <Link
-            href={{
-              pathname: `${getRouteBySource(SOURCES.CDT)}/[slug]`
-            }}
-            as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
-          >
-            <a>{ref.title} du Code du travail</a>
-          </Link>
-        );
-      }
-      default: {
-        return ref.url ? (
-          <a
-            target="_blank"
-            rel="noopener nofollow noreferrer"
-            title={ref.title}
-            href={ref.url}
-          >
-            {ref.title}
-          </a>
-        ) : (
-          <div>{ref.title}</div>
-        );
-      }
-    }
-  });
-  return <p>Sources {jsxJoin(refs)}</p>;
-}
-
 export { Contributions };
+
+const StyledReferencesJuridiques = styled(ReferencesJuridiques)`
+  margin-bottom: ${spacings.xmedium};
+`;

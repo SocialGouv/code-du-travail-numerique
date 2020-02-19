@@ -1,44 +1,45 @@
 const SOURCES = {
   CCN: "conventions_collectives",
   CDT: "code_du_travail",
-  SHEET_SP: "fiches_service_public",
-  SHEET_MT: "fiches_ministere_travail",
-  THEMES: "themes",
-  TOOLS: "outils",
-  LETTERS: "modeles_de_courriers",
-  IDCC: "idcc",
-  SHEET: "fiches",
+  CONTRIBUTIONS: "contributions",
   EXTERNALS: "external",
-  CONTRIBUTIONS: "contributions"
+  IDCC: "idcc",
+  LABOUR_LAW: "droit_du_travail",
+  LETTERS: "modeles_de_courriers",
+  SHEET_MT: "fiches_ministere_travail",
+  SHEET_SP: "fiches_service_public",
+  THEMES: "themes",
+  TOOLS: "outils"
 };
 
 // mapping elastic search source type -> route name
 const routeBySource = {
-  [SOURCES.SHEET_SP]: "fiche-service-public",
-  [SOURCES.SHEET_MT]: "fiche-ministere-travail",
-  [SOURCES.CDT]: "code-du-travail",
-  [SOURCES.LETTERS]: "modeles-de-courriers",
-  [SOURCES.THEMES]: "themes",
-  [SOURCES.TOOLS]: "outils",
-  [SOURCES.IDCC]: "idcc",
   [SOURCES.CCN]: "convention-collective",
+  [SOURCES.CDT]: "code-du-travail",
+  [SOURCES.CONTRIBUTIONS]: "contribution",
   [SOURCES.EXTERNALS]: "external",
-  [SOURCES.CONTRIBUTIONS]: "contribution"
+  [SOURCES.IDCC]: "idcc",
+  [SOURCES.LABOUR_LAW]: "droit-du-travail",
+  [SOURCES.LETTERS]: "modeles-de-courriers",
+  [SOURCES.SHEET_MT]: "fiche-ministere-travail",
+  [SOURCES.SHEET_SP]: "fiche-service-public",
+  [SOURCES.THEMES]: "themes",
+  [SOURCES.TOOLS]: "outils"
 };
 
 // mapping elastic search source type -> source label
 const labelBySource = {
+  [SOURCES.CCN]: "Legifrance",
+  [SOURCES.CDT]: "Code du travail",
+  [SOURCES.CONTRIBUTIONS]: "Contributions",
+  [SOURCES.EXTERNALS]: "Outils externes",
+  [SOURCES.IDCC]: "Legifrance",
+  [SOURCES.LABOUR_LAW]: "Le droit du travail",
+  [SOURCES.LETTERS]: "Modèles de documents",
   [SOURCES.SHEET_SP]: "service-public.fr",
   [SOURCES.SHEET_MT]: "Ministère du Travail",
-  [SOURCES.CDT]: "Code du travail",
-  [SOURCES.LETTERS]: "Modèles de documents",
   [SOURCES.THEMES]: "Themes",
-  [SOURCES.TOOLS]: "Outils",
-  [SOURCES.IDCC]: "Legifrance",
-  [SOURCES.CCN]: "Legifrance",
-  [SOURCES.EXTERNALS]: "Outils externes",
-  [SOURCES.SHEET]: "Fiches",
-  [SOURCES.CONTRIBUTIONS]: "Contributions"
+  [SOURCES.TOOLS]: "Outils"
 };
 
 const sources = Object.values(SOURCES);

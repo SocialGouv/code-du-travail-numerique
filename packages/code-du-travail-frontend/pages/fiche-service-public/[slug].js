@@ -3,6 +3,7 @@ import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
+import { Container, Section } from "@socialgouv/react-ui";
 import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
@@ -58,7 +59,11 @@ class Fiche extends React.Component {
           date={date}
           source={{ name: "Fiche service-public.fr", url }}
           additionalContent={
-            <ReferencesJuridiques references={references_juridiques} />
+            <Section>
+              <Container>
+                <ReferencesJuridiques references={references_juridiques} />
+              </Container>
+            </Section>
           }
           breadcrumbs={breadcrumbs}
         >

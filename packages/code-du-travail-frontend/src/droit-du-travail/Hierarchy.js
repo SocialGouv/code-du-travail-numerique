@@ -14,7 +14,7 @@ import {
   Wrapper
 } from "@socialgouv/react-ui";
 
-const Hierarchy = () => {
+const Hierarchy = ({ anchor }) => {
   const [isModal13MatieresOpen, setModal13MatieresOpen] = useState(false);
   const [isModal4MatieresOpen, setModal4MatieresOpen] = useState(false);
   return (
@@ -31,6 +31,7 @@ const Hierarchy = () => {
         récapitulant <strong>la hiérarchie des textes entre eux</strong>.
       </p>
       <Accordion
+        preExpanded={[anchor]}
         variant="hierarchy"
         items={[
           {
@@ -182,6 +183,7 @@ const Hierarchy = () => {
           },
           {
             icon: icons.Agreement,
+            id: "hierarchie",
             title: <h3>Les conventions et accords collectifs</h3>,
             body: (
               <>

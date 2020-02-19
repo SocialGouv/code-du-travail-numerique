@@ -18,16 +18,19 @@ const BigError = ({ children }) => (
 );
 
 function Answer({
-  title,
-  intro = null,
-  html = null,
-  children = null,
-  date,
-  source,
   additionalContent,
   breadcrumbs = [],
+  children = null,
+  date,
+  dateLabel,
+  emptyMessage = "Aucun résultat",
+  html = null,
+  intro = null,
   relatedItems = [],
-  emptyMessage = "Aucun résultat"
+  source,
+  subtitle,
+  suptitle,
+  title
 }) {
   const glossaryItems = useGlossary(children, html);
   const router = useRouter();
@@ -40,12 +43,15 @@ function Answer({
           {!html && !children && <BigError>{emptyMessage}</BigError>}
           {(html || children) && (
             <Article
-              subtitle={
-                breadcrumbs.length > 0 &&
-                breadcrumbs[breadcrumbs.length - 1].label
+              suptitle={
+                suptitle ||
+                (breadcrumbs.length > 0 &&
+                  breadcrumbs[breadcrumbs.length - 1].label)
               }
+              subtitle={subtitle}
               title={title}
               date={date}
+              dateLabel={dateLabel}
               source={source}
             >
               {intro && <IntroWrapper variant="dark">{intro}</IntroWrapper>}

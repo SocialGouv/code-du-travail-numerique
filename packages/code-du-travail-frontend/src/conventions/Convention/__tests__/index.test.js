@@ -5,7 +5,7 @@ import { agreement } from "../../__tests__/api.conventions.mock";
 
 describe("<Convention />", () => {
   it("renders", () => {
-    const { container } = render(<Convention convention={agreement} />);
+    const { container } = render(<Convention {...agreement} />);
     expect(container).toMatchSnapshot();
   });
 });

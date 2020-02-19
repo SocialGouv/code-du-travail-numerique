@@ -17,7 +17,7 @@ import Metas from "../src/common/Metas";
 import Origins from "../src/droit-du-travail/Origins";
 import Hierarchy from "../src/droit-du-travail/Hierarchy";
 
-const DroitDuTravail = ({ ogImage, pageUrl }) => (
+const DroitDuTravail = ({ anchor, ogImage, pageUrl }) => (
   <Layout>
     <Metas
       url={pageUrl}
@@ -76,12 +76,17 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
         </Container>
       </Container>
       <Origins />
-      <Hierarchy />
+      <Hierarchy anchor={anchor} />
     </Section>
   </Layout>
 );
 
 export default DroitDuTravail;
+
+DroitDuTravail.getInitialProps = ({ asPath }) => {
+  const anchor = asPath.split("#")[1];
+  return { anchor };
+};
 
 const { breakpoints, spacings } = theme;
 

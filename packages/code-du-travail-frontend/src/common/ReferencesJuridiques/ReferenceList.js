@@ -26,14 +26,19 @@ const ConventionLink = ({ title, slug }) => (
   </Link>
 );
 
-const OtherLink = ({ title, url }) => (
-  <StyledArrowLink
-    href={url}
-    rel="noopener noreferrer"
-    target="_blank"
-    arrowPosition="left"
-  >{`Autre: ${title}`}</StyledArrowLink>
-);
+const OtherLink = ({ title, url }) =>
+  url ? (
+    <StyledArrowLink
+      href={url}
+      rel="noopener noreferrer"
+      target="_blank"
+      arrowPosition="left"
+    >
+      {title}
+    </StyledArrowLink>
+  ) : (
+    <div>{title}</div>
+  );
 
 const getLink = reference => {
   switch (reference.type) {
@@ -41,7 +46,7 @@ const getLink = reference => {
       return <CodeDuTravailLink title={reference.title} slug={reference.id} />;
     case TYPE_REFERENCE.conventionCollective:
       return <ConventionLink title={reference.title} slug={reference.slug} />;
-    case TYPE_REFERENCE.journalOfficiel:
+    default:
       return <OtherLink title={reference.title} url={reference.url} />;
   }
 };
@@ -49,8 +54,8 @@ const getLink = reference => {
 const ReferenceList = ({ references }) => {
   return (
     <FlatList>
-      {references.map(reference => (
-        <li key={reference.id}>{getLink(reference)}</li>
+      {references.map((reference, index) => (
+        <li key={`${reference.id}${index}`}>{getLink(reference)}</li>
       ))}
     </FlatList>
   );
@@ -61,5 +66,5 @@ export default ReferenceList;
 const { spacings } = theme;
 
 const StyledArrowLink = styled(ArrowLink)`
-  padding: ${spacings.base} 0;
+  padding: ${spacings.xsmall} 0;
 `;
