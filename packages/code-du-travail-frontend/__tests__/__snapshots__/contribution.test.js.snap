@@ -7,7 +7,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 0 2rem;
 }
 
-.c49 {
+.c48 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -44,7 +44,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 0;
 }
 
-.c51 {
+.c50 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -52,11 +52,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c51 > *:first-child {
+.c50 > *:first-child {
   margin-top: 0;
 }
 
-.c51 > *:last-child {
+.c50 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -205,7 +205,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
-.c63 {
+.c62 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -242,16 +242,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   opacity: 1;
 }
 
-.c63:link,
-.c63:visited {
+.c62:link,
+.c62:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c63:not([disabled]):hover,
-.c63:not([disabled]):active,
-.c63:not([disabled]):focus {
+.c62:not([disabled]):hover,
+.c62:not([disabled]):active,
+.c62:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -260,7 +260,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #dee5ef;
 }
 
-.c63[disabled] {
+.c62[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -268,7 +268,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
-.c73 {
+.c72 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -305,16 +305,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   opacity: 1;
 }
 
-.c73:link,
-.c73:visited {
+.c72:link,
+.c72:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c73:not([disabled]):hover,
-.c73:not([disabled]):active,
-.c73:not([disabled]):focus {
+.c72:not([disabled]):hover,
+.c72:not([disabled]):active,
+.c72:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -323,7 +323,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #a0b3e0;
 }
 
-.c73[disabled] {
+.c72[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -404,7 +404,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c55 {
+.c54 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -417,7 +417,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c71 {
+.c70 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -430,7 +430,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c60 {
+.c59 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -442,7 +442,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c79 {
+.c78 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -463,12 +463,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-transform: uppercase;
 }
 
-.c56 {
+.c55 {
   position: relative;
   display: inline-block;
 }
 
-.c58 {
+.c57 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -490,15 +490,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   appearance: none;
 }
 
-.c58::-webkit-outer-spin-button,
-.c58::-webkit-inner-spin-button {
+.c57::-webkit-outer-spin-button,
+.c57::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c58::-webkit-calendar-picker-indicator {
+.c57::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -511,43 +511,43 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c58:invalid {
+.c57:invalid {
   border-color: #eb5757;
 }
 
-.c58::-webkit-input-placeholder {
+.c57::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c58::-moz-placeholder {
+.c57::-moz-placeholder {
   color: #9298af;
 }
 
-.c58:-ms-input-placeholder {
+.c57:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c58::placeholder {
+.c57::placeholder {
   color: #9298af;
 }
 
-.c58:focus {
+.c57:focus {
   border-color: #7994d4;
 }
 
-.c58:focus::-webkit-input-placeholder {
+.c57:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c58:focus::-moz-placeholder {
+.c57:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c58:focus:-ms-input-placeholder {
+.c57:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c58:focus::placeholder {
+.c57:focus::placeholder {
   color: transparent;
 }
 
@@ -574,14 +574,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c52 {
+.c51 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c69 {
+.c68 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -611,7 +611,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c54 {
+.c53 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -623,7 +623,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c70 {
+.c69 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -651,7 +651,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin: 3.2rem 0 0 0;
 }
 
-.c59 {
+.c58 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -674,15 +674,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: stretch;
 }
 
-.c59 > *:first-child {
+.c58 > *:first-child {
   margin-top: 0;
 }
 
-.c59 > *:last-child {
+.c58 > *:last-child {
   margin-bottom: 0;
 }
 
-.c61 {
+.c60 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -691,7 +691,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-bottom: 1rem;
 }
 
-.c62 {
+.c61 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -706,7 +706,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin: 0;
 }
 
-.c65 + .c64 {
+.c64 + .c63 {
   margin-left: 4rem;
 }
 
@@ -779,10 +779,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #7994d4;
 }
 
-.c48 {
-  border-bottom: 1px dotted #7994d4;
-}
-
 .c28 {
   max-width: 124rem;
   margin: 0 auto;
@@ -809,11 +805,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   width: 80%;
 }
 
-.c57 {
+.c56 {
   display: block;
 }
 
-.c50 {
+.c49 {
   padding-bottom: 0;
 }
 
@@ -834,7 +830,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 0;
 }
 
-.c53 {
+.c52 {
   margin-top: 3.2rem;
 }
 
@@ -1053,12 +1049,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-left: 1.6rem;
 }
 
-.c66 {
+.c65 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c67 {
+.c66 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -1066,7 +1062,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #f2f5fa;
 }
 
-.c67:before {
+.c66:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -1078,13 +1074,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   content: "";
 }
 
-.c68 {
+.c67 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c72 {
+.c71 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -1093,17 +1089,17 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 2rem;
 }
 
-.c74 {
+.c73 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c75 {
+.c74 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c76 {
+.c75 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -1117,32 +1113,32 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: space-between;
 }
 
-.c78 + .c77 {
+.c77 + .c76 {
   padding-left: 1.6rem;
 }
 
-.c81 {
+.c80 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c80 {
+.c79 {
   font-size: 1.6rem;
 }
 
-.c82 {
+.c81 {
   margin: 0.4rem 0;
 }
 
-.c83 {
+.c82 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.c84 {
+.c83 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1161,7 +1157,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #e4e8ef;
 }
 
-.c85 {
+.c84 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1169,7 +1165,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin: 0 1rem 1rem 1rem;
 }
 
-.c86 {
+.c85 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1214,7 +1210,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c48 {
     padding: 2.4rem 0;
   }
 }
@@ -1233,13 +1229,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c50 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c51 {
+  .c50 {
     padding: 0 5pt;
     border: none;
   }
@@ -1258,25 +1254,25 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c63 {
+  .c62 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c63 {
+  .c62 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c73 {
+  .c72 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c73 {
+  .c72 {
     padding: 0 3rem;
   }
 }
@@ -1308,32 +1304,32 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c59 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c59 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c79 {
+  .c78 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c55 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c57 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -1360,14 +1356,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c51 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c69 {
+  .c68 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -1398,19 +1394,19 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c53 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c53 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c70 {
+  .c69 {
     font-size: 2.2rem;
   }
 }
@@ -1434,20 +1430,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c59 {
+  .c58 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c59 {
+  .c58 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c59 {
+  .c58 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1461,20 +1457,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c61 {
+  .c60 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c61 {
+  .c60 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c62 {
+  .c61 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -1483,7 +1479,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c65 + .c64 {
+  .c64 + .c63 {
     margin-left: 0;
   }
 }
@@ -1719,26 +1715,45 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media print {
-  .c67 {
+  .c66 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c68 {
+  .c67 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c72 {
+  .c71 {
     padding: 0;
   }
 }
 
 @media print {
-  .c72 {
+  .c71 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c74 {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c75 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c75 {
     max-width: 100%;
     padding: 0;
   }
@@ -1746,25 +1761,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 @media (max-width:600px) {
   .c75 {
-    padding-bottom: 4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c76 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c76 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c76 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1772,26 +1768,26 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c78 + .c77 {
+  .c77 + .c76 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c81 {
+  .c80 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c80 {
+  .c79 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c86 {
+  .c85 {
     display: none;
   }
 }
@@ -2329,19 +2325,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     
 
                     <p>
-                      Lorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La 
-                      <span
-                        data-tooltip-ref="__tt__0"
-                      >
-                        <span
-                          class="c48"
-                          data-reach-tooltip-trigger=""
-                          tabindex="0"
-                        >
-                          convention collective
-                        </span>
-                      </span>
-                       applicable en définit les conditions.
+                      Lorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.
                     </p>
                     
 
@@ -2378,57 +2362,33 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </div>
                 </section>
                 <div
-                  class="c49 c50"
+                  class="c48 c49"
                 >
                   <div
-                    class="c51"
+                    class="c50"
                   >
                     <header
-                      class="c52 c53"
+                      class="c51 c52"
                       id="customisation"
                     >
                       <h2
-                        class="c54"
+                        class="c53"
                       >
                         <div
-                          class="c55"
+                          class="c54"
                         />
                         Que dit votre convention collective ?
                       </h2>
                     </header>
                     
                     <p>
-                      Renseignez le nom de votre entreprise, son 
-                      <span
-                        data-tooltip-ref="__tt__1"
-                      >
-                        <span
-                          class="c48"
-                          data-reach-tooltip-trigger=""
-                          tabindex="0"
-                        >
-                          SIRET
-                        </span>
-                      </span>
-                       ou le nom de votre 
-                      <span
-                        data-tooltip-ref="__tt__0"
-                      >
-                        <span
-                          class="c48"
-                          data-reach-tooltip-trigger=""
-                          tabindex="0"
-                        >
-                          convention collective
-                        </span>
-                      </span>
-                      .
+                      Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
                     </p>
                     <span
-                      class="c56 c57"
+                      class="c55 c56"
                     >
                       <input
-                        class="c58"
+                        class="c57"
                         name="q"
                         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
                         role="search"
@@ -2443,32 +2403,32 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </div>
           </div>
           <div
-            class="c49"
+            class="c48"
           >
             <div
               class="c30"
             >
               <div
-                class="c59"
+                class="c58"
               >
                 <h3
-                  class="c60 c61"
+                  class="c59 c60"
                 >
                   <div
-                    class="c55"
+                    class="c54"
                   />
                   Avez-vous trouvé la réponse à votre question ?
                 </h3>
                 <p
-                  class="c62"
+                  class="c61"
                 >
                   <button
-                    class="c63 c64 c65"
+                    class="c62 c63 c64"
                   >
                     Non
                   </button>
                   <button
-                    class="c63 c64 c65"
+                    class="c62 c63 c64"
                   >
                     Oui
                   </button>
@@ -2480,40 +2440,40 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       </div>
     </main>
     <div
-      class="c66"
+      class="c65"
     >
       <footer
-        class="c67"
+        class="c66"
       >
         <div
-          class="c49 c68"
+          class="c48 c67"
         >
           <div
             class="c30"
           >
             <header
-              class="c69"
+              class="c68"
             >
               <h3
-                class="c70"
+                class="c69"
               >
                 <div
-                  class="c71"
+                  class="c70"
                 />
                 Besoin de plus d’informations ?
               </h3>
             </header>
             <div
-              class="c72"
+              class="c71"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c73"
+              class="c72"
             >
               Contacter nos services en région
               <svg
-                class="c74"
+                class="c73"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -2526,85 +2486,85 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           </div>
         </div>
         <div
-          class="c49 c75"
+          class="c48 c74"
         >
           <nav>
             <div
-              class="c76"
+              class="c75"
             >
               <div
-                class="c77 c78"
+                class="c76 c77"
               >
                 <h3
-                  class="c79 c80"
+                  class="c78 c79"
                 >
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fznMnq c81"
+                  class="sc-fznMnq c80"
                 >
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <button
                       class="c9"
@@ -2615,21 +2575,21 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c77 c78"
+                class="c76 c77"
               >
                 <h3
-                  class="c79 c80"
+                  class="c78 c79"
                 >
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fznMnq c81"
+                  class="sc-fznMnq c80"
                 >
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://calendly.com/code-du-travail-numerique/ambassadeur-du-code-du-travail-numerique"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2638,10 +2598,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2650,10 +2610,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2664,21 +2624,21 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c77 c78"
+                class="c76 c77"
               >
                 <h3
-                  class="c79 c80"
+                  class="c78 c79"
                 >
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fznMnq c81"
+                  class="sc-fznMnq c80"
                 >
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2687,10 +2647,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://incubateur.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2699,10 +2659,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2716,10 +2676,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           </nav>
         </div>
         <div
-          class="c84"
+          class="c83"
         >
           <a
-            class="c85"
+            class="c84"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2728,12 +2688,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2742,12 +2702,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2756,12 +2716,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2770,12 +2730,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2784,12 +2744,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"
@@ -2810,7 +2770,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 0 2rem;
 }
 
-.c49 {
+.c48 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -2847,7 +2807,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 0;
 }
 
-.c51 {
+.c50 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -2855,11 +2815,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c51 > *:first-child {
+.c50 > *:first-child {
   margin-top: 0;
 }
 
-.c51 > *:last-child {
+.c50 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -3008,7 +2968,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
-.c63 {
+.c62 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3045,16 +3005,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   opacity: 1;
 }
 
-.c63:link,
-.c63:visited {
+.c62:link,
+.c62:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c63:not([disabled]):hover,
-.c63:not([disabled]):active,
-.c63:not([disabled]):focus {
+.c62:not([disabled]):hover,
+.c62:not([disabled]):active,
+.c62:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3063,7 +3023,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-color: #dee5ef;
 }
 
-.c63[disabled] {
+.c62[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -3071,7 +3031,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
-.c73 {
+.c72 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3108,16 +3068,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   opacity: 1;
 }
 
-.c73:link,
-.c73:visited {
+.c72:link,
+.c72:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c73:not([disabled]):hover,
-.c73:not([disabled]):active,
-.c73:not([disabled]):focus {
+.c72:not([disabled]):hover,
+.c72:not([disabled]):active,
+.c72:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3126,7 +3086,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-color: #a0b3e0;
 }
 
-.c73[disabled] {
+.c72[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -3207,7 +3167,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c55 {
+.c54 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -3220,7 +3180,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c71 {
+.c70 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -3233,7 +3193,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c60 {
+.c59 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -3245,7 +3205,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c79 {
+.c78 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -3266,12 +3226,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-transform: uppercase;
 }
 
-.c56 {
+.c55 {
   position: relative;
   display: inline-block;
 }
 
-.c58 {
+.c57 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -3293,15 +3253,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   appearance: none;
 }
 
-.c58::-webkit-outer-spin-button,
-.c58::-webkit-inner-spin-button {
+.c57::-webkit-outer-spin-button,
+.c57::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c58::-webkit-calendar-picker-indicator {
+.c57::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -3314,43 +3274,43 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c58:invalid {
+.c57:invalid {
   border-color: #eb5757;
 }
 
-.c58::-webkit-input-placeholder {
+.c57::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c58::-moz-placeholder {
+.c57::-moz-placeholder {
   color: #9298af;
 }
 
-.c58:-ms-input-placeholder {
+.c57:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c58::placeholder {
+.c57::placeholder {
   color: #9298af;
 }
 
-.c58:focus {
+.c57:focus {
   border-color: #7994d4;
 }
 
-.c58:focus::-webkit-input-placeholder {
+.c57:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c58:focus::-moz-placeholder {
+.c57:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c58:focus:-ms-input-placeholder {
+.c57:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c58:focus::placeholder {
+.c57:focus::placeholder {
   color: transparent;
 }
 
@@ -3377,14 +3337,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c52 {
+.c51 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c69 {
+.c68 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -3414,7 +3374,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c54 {
+.c53 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -3426,7 +3386,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c70 {
+.c69 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -3454,7 +3414,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin: 3.2rem 0 0 0;
 }
 
-.c59 {
+.c58 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -3477,15 +3437,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: stretch;
 }
 
-.c59 > *:first-child {
+.c58 > *:first-child {
   margin-top: 0;
 }
 
-.c59 > *:last-child {
+.c58 > *:last-child {
   margin-bottom: 0;
 }
 
-.c61 {
+.c60 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -3494,7 +3454,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-bottom: 1rem;
 }
 
-.c62 {
+.c61 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3509,7 +3469,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin: 0;
 }
 
-.c65 + .c64 {
+.c64 + .c63 {
   margin-left: 4rem;
 }
 
@@ -3582,10 +3542,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #7994d4;
 }
 
-.c48 {
-  border-bottom: 1px dotted #7994d4;
-}
-
 .c28 {
   max-width: 124rem;
   margin: 0 auto;
@@ -3612,11 +3568,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   width: 80%;
 }
 
-.c57 {
+.c56 {
   display: block;
 }
 
-.c50 {
+.c49 {
   padding-bottom: 0;
 }
 
@@ -3637,7 +3593,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 0;
 }
 
-.c53 {
+.c52 {
   margin-top: 3.2rem;
 }
 
@@ -3856,12 +3812,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-left: 1.6rem;
 }
 
-.c66 {
+.c65 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c67 {
+.c66 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -3869,7 +3825,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   background-color: #f2f5fa;
 }
 
-.c67:before {
+.c66:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -3881,13 +3837,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   content: "";
 }
 
-.c68 {
+.c67 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c72 {
+.c71 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -3896,17 +3852,17 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 2rem;
 }
 
-.c74 {
+.c73 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c75 {
+.c74 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c76 {
+.c75 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -3920,32 +3876,32 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: space-between;
 }
 
-.c78 + .c77 {
+.c77 + .c76 {
   padding-left: 1.6rem;
 }
 
-.c81 {
+.c80 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c80 {
+.c79 {
   font-size: 1.6rem;
 }
 
-.c82 {
+.c81 {
   margin: 0.4rem 0;
 }
 
-.c83 {
+.c82 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.c84 {
+.c83 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3964,7 +3920,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   background-color: #e4e8ef;
 }
 
-.c85 {
+.c84 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3972,7 +3928,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin: 0 1rem 1rem 1rem;
 }
 
-.c86 {
+.c85 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4017,7 +3973,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c48 {
     padding: 2.4rem 0;
   }
 }
@@ -4036,13 +3992,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c50 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c51 {
+  .c50 {
     padding: 0 5pt;
     border: none;
   }
@@ -4061,25 +4017,25 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c63 {
+  .c62 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c63 {
+  .c62 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c73 {
+  .c72 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c73 {
+  .c72 {
     padding: 0 3rem;
   }
 }
@@ -4111,32 +4067,32 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c59 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c59 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c79 {
+  .c78 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c55 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c57 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -4163,14 +4119,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c51 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c69 {
+  .c68 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -4201,19 +4157,19 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c53 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c53 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c70 {
+  .c69 {
     font-size: 2.2rem;
   }
 }
@@ -4237,20 +4193,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c59 {
+  .c58 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c59 {
+  .c58 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c59 {
+  .c58 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -4264,20 +4220,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c61 {
+  .c60 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c61 {
+  .c60 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c62 {
+  .c61 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -4286,7 +4242,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c65 + .c64 {
+  .c64 + .c63 {
     margin-left: 0;
   }
 }
@@ -4522,26 +4478,45 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media print {
-  .c67 {
+  .c66 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c68 {
+  .c67 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c72 {
+  .c71 {
     padding: 0;
   }
 }
 
 @media print {
-  .c72 {
+  .c71 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c74 {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c75 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c75 {
     max-width: 100%;
     padding: 0;
   }
@@ -4549,25 +4524,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 @media (max-width:600px) {
   .c75 {
-    padding-bottom: 4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c76 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c76 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c76 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -4575,26 +4531,26 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c78 + .c77 {
+  .c77 + .c76 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c81 {
+  .c80 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c80 {
+  .c79 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c86 {
+  .c85 {
     display: none;
   }
 }
@@ -5132,19 +5088,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     
 
                     <p>
-                      Lorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La 
-                      <span
-                        data-tooltip-ref="__tt__0"
-                      >
-                        <span
-                          class="c48"
-                          data-reach-tooltip-trigger=""
-                          tabindex="0"
-                        >
-                          convention collective
-                        </span>
-                      </span>
-                       applicable en définit les conditions.
+                      Lorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.
                     </p>
                     
 
@@ -5181,57 +5125,33 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </div>
                 </section>
                 <div
-                  class="c49 c50"
+                  class="c48 c49"
                 >
                   <div
-                    class="c51"
+                    class="c50"
                   >
                     <header
-                      class="c52 c53"
+                      class="c51 c52"
                       id="customisation"
                     >
                       <h2
-                        class="c54"
+                        class="c53"
                       >
                         <div
-                          class="c55"
+                          class="c54"
                         />
                         Que dit votre convention collective ?
                       </h2>
                     </header>
                     
                     <p>
-                      Renseignez le nom de votre entreprise, son 
-                      <span
-                        data-tooltip-ref="__tt__1"
-                      >
-                        <span
-                          class="c48"
-                          data-reach-tooltip-trigger=""
-                          tabindex="0"
-                        >
-                          SIRET
-                        </span>
-                      </span>
-                       ou le nom de votre 
-                      <span
-                        data-tooltip-ref="__tt__0"
-                      >
-                        <span
-                          class="c48"
-                          data-reach-tooltip-trigger=""
-                          tabindex="0"
-                        >
-                          convention collective
-                        </span>
-                      </span>
-                      .
+                      Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
                     </p>
                     <span
-                      class="c56 c57"
+                      class="c55 c56"
                     >
                       <input
-                        class="c58"
+                        class="c57"
                         name="q"
                         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
                         role="search"
@@ -5246,32 +5166,32 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </div>
           </div>
           <div
-            class="c49"
+            class="c48"
           >
             <div
               class="c30"
             >
               <div
-                class="c59"
+                class="c58"
               >
                 <h3
-                  class="c60 c61"
+                  class="c59 c60"
                 >
                   <div
-                    class="c55"
+                    class="c54"
                   />
                   Avez-vous trouvé la réponse à votre question ?
                 </h3>
                 <p
-                  class="c62"
+                  class="c61"
                 >
                   <button
-                    class="c63 c64 c65"
+                    class="c62 c63 c64"
                   >
                     Non
                   </button>
                   <button
-                    class="c63 c64 c65"
+                    class="c62 c63 c64"
                   >
                     Oui
                   </button>
@@ -5283,40 +5203,40 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       </div>
     </main>
     <div
-      class="c66"
+      class="c65"
     >
       <footer
-        class="c67"
+        class="c66"
       >
         <div
-          class="c49 c68"
+          class="c48 c67"
         >
           <div
             class="c30"
           >
             <header
-              class="c69"
+              class="c68"
             >
               <h3
-                class="c70"
+                class="c69"
               >
                 <div
-                  class="c71"
+                  class="c70"
                 />
                 Besoin de plus d’informations ?
               </h3>
             </header>
             <div
-              class="c72"
+              class="c71"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c73"
+              class="c72"
             >
               Contacter nos services en région
               <svg
-                class="c74"
+                class="c73"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -5329,85 +5249,85 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           </div>
         </div>
         <div
-          class="c49 c75"
+          class="c48 c74"
         >
           <nav>
             <div
-              class="c76"
+              class="c75"
             >
               <div
-                class="c77 c78"
+                class="c76 c77"
               >
                 <h3
-                  class="c79 c80"
+                  class="c78 c79"
                 >
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fznMnq c81"
+                  class="sc-fznMnq c80"
                 >
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <button
                       class="c9"
@@ -5418,21 +5338,21 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c77 c78"
+                class="c76 c77"
               >
                 <h3
-                  class="c79 c80"
+                  class="c78 c79"
                 >
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fznMnq c81"
+                  class="sc-fznMnq c80"
                 >
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://calendly.com/code-du-travail-numerique/ambassadeur-du-code-du-travail-numerique"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5441,10 +5361,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5453,10 +5373,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5467,21 +5387,21 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c77 c78"
+                class="c76 c77"
               >
                 <h3
-                  class="c79 c80"
+                  class="c78 c79"
                 >
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fznMnq c81"
+                  class="sc-fznMnq c80"
                 >
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5490,10 +5410,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://incubateur.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5502,10 +5422,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c82"
+                    class="c81"
                   >
                     <a
-                      class="c83"
+                      class="c82"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5519,10 +5439,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           </nav>
         </div>
         <div
-          class="c84"
+          class="c83"
         >
           <a
-            class="c85"
+            class="c84"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5531,12 +5451,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5545,12 +5465,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5559,12 +5479,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5573,12 +5493,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5587,12 +5507,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c86"
+            class="c85"
           >
             |
           </span>
           <a
-            class="c85"
+            class="c84"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"
