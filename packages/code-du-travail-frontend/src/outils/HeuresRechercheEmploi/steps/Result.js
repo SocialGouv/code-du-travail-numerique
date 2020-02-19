@@ -29,8 +29,18 @@ function Duration({ situation }) {
         recherche d’emploi est estimé à&nbsp;
         <Highlight>{situation.answer}</Highlight>.
       </p>
-      {situation.answer2 && <p>{situation.answer2}</p>}
-      {situation.answer3 && <p>{situation.answer3}</p>}
+      {situation.answer2 && (
+        <>
+          <SectionTitle>Rémunération</SectionTitle>
+          <p>{situation.answer2}</p>
+        </>
+      )}
+      {situation.answer3 && (
+        <>
+          <SectionTitle>Modalités d'utilisation</SectionTitle>
+          <p>{situation.answer3}</p>
+        </>
+      )}
     </>
   );
 }
