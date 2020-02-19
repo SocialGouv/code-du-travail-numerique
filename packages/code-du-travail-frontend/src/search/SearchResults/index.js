@@ -6,7 +6,6 @@ import { Results } from "./Results";
 import { Law } from "./Law";
 import { Themes } from "./Themes";
 import { matopush } from "../../piwik";
-import { formatUrlMatomo } from "../utils";
 
 const SearchResults = ({
   items: { documents, themes, articles },
@@ -14,21 +13,9 @@ const SearchResults = ({
   query
 }) => {
   useEffect(() => {
-    const toLogCandidate = ({ url, source, slug, algo }) => {
-      const trackedUrl = formatUrlMatomo(source, slug, url);
-      return {
-        slug: trackedUrl,
-        algo
-      };
-    };
-    const results = JSON.stringify({
-      documents: documents.map(toLogCandidate),
-      themes: themes.map(toLogCandidate),
-      articles: articles.map(toLogCandidate)
-    });
     // distinction between actual search and theme search when logging
     const eventType = isSearch ? "candidateResults" : "themeResults";
-    matopush(["trackEvent", eventType, query, results]);
+    matopush(["trackEvent", eventType, query]);
   });
 
   return (

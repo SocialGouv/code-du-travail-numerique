@@ -5,7 +5,8 @@ const getEsReferences = require("./getEsReferences");
 const fuzz = require("fuzzball");
 const deburr = require("lodash.deburr");
 
-const threshold = 90;
+const THRESHOLD = 90;
+const NON_FUZZY_TOKENS = new Set(["cdd", "cdi", "csp"]);
 
 // Preprocess query : remove accentuation and
 //  non alpha numerical to speed up the lookup.
@@ -32,6 +33,24 @@ const fuzzOptions = {
   limit: 2
 };
 
+const testFuzzyAllowed = (query, match) => {
+  // don't apply fuzzy matching to specific terms
+  const matchingNonFuzz = match
+    .split(/\s+/)
+    .filter(token => NON_FUZZY_TOKENS.has(token));
+
+  // if the matching variant contains non-fuzzy tokens,
+  // ensure the query also contains it
+  const queryTokens = query.split(/\s+/);
+  if (matchingNonFuzz.length > 0) {
+    return (
+      matchingNonFuzz.filter(token => queryTokens.includes(token)).length > 0
+    );
+  } else {
+    return true;
+  }
+};
+
 // Test if a given query fuzzy matches with
 //  a known one (and variants).
 const testMatch = query => {
@@ -44,7 +63,8 @@ const testMatch = query => {
     const closerMatch = results[0][0];
     const bestScore = results[0][1];
 
-    if (bestScore > threshold) {
+    // ensure match is valid
+    if (testFuzzyAllowed(query, closerMatch) && bestScore > THRESHOLD) {
       return knownQueriesSet[closerMatch];
     }
   }
@@ -52,7 +72,7 @@ const testMatch = query => {
 
 // find known query if any
 const getSavedResult = async query => {
-  const knownQuery = query.length > 5 && testMatch(query);
+  const knownQuery = query.length > 3 && testMatch(query);
 
   if (knownQuery && knownQuery.refs) {
     // get ES results for a known query
