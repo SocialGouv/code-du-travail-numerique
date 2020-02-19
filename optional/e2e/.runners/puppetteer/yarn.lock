@@ -26,11 +26,6 @@
   resolved "https://registry.yarnpkg.com/@types/mime-types/-/mime-types-2.1.0.tgz#9ca52cda363f699c69466c2a6ccdaad913ea7a73"
   integrity sha1-nKUs2jY/aZxpRmwqbM2q2RPqenM=
 
-"@types/mocha@^5.2.7":
-  version "5.2.7"
-  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.7.tgz#315d570ccb56c53452ff8638738df60726d5b6ea"
-  integrity sha512-NYrtPht0wGzhwe9+/idPaBB+TqkY9AhTvOLMkThm0IoEfLaiVQZwBwyJ5puCkO3AUCWrmcoePjp2mbFocKy4SQ==
-
 "@wdio/config@5.18.4":
   version "5.18.4"
   resolved "https://registry.yarnpkg.com/@wdio/config/-/config-5.18.4.tgz#cabbac2f42bb1f8ac768f79d0e7671976d97d30e"
@@ -373,13 +368,12 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
-codeceptjs@^2.4.3:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/codeceptjs/-/codeceptjs-2.4.3.tgz#cf6d7146cdc38b8ade036b7e700618dfd9ae6bc7"
-  integrity sha512-XbpWZpoUxqkatBu5m4GzXIJujnXk81qUbrK1nc8WeZk4WxlusWvVkSeWLjf1zwWZ0f7gFUEGcJnCrdtolmp9GQ==
+codeceptjs@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/codeceptjs/-/codeceptjs-2.5.0.tgz#dee631ce18dd35d1237dbb28ee47a02f19a9a2ec"
+  integrity sha512-HVgUkBrgLzWy+R4O4VMHih4LymR0dn/c1IkY/JhAUx5xVHbwkTa+MeLInrNbPToURSBH6ZLKR7DRrqTmR1Fp5A==
   dependencies:
     "@codeceptjs/configure" "^0.4.0"
-    "@types/mocha" "^5.2.7"
     allure-js-commons "^1.3.2"
     arrify "^2.0.1"
     axios "^0.19.1"
