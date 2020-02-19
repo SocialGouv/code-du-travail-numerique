@@ -1,4 +1,4 @@
-import extractMdxContentUrl from "../extractMdxContentUrl";
+const extractMdxContentUrl = require("../extractMdxContentUrl");
 
 const tests = [
   {
