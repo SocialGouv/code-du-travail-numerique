@@ -1,10 +1,8 @@
 import fetch from "node-fetch";
 import kaliData from "@socialgouv/kali-data/data/index.json";
-import { getRouteBySource, SOURCES } from "@cdt/sources";
 import find from "unist-util-find";
 import parents from "unist-util-parents";
 import contributions from "../contributions/contributions.data.json";
-import themes from "./themes.data.json";
 import remark from "remark";
 import html from "remark-html";
 import slugify from "../../slugify";
@@ -91,20 +89,15 @@ function getContributionAnswers(agreementNum) {
     };
   };
   return contributions
-    .map(({ title, slug, index, answers }) => {
+    .map(({ title, slug, index, answers, breadcrumbs }) => {
       const [answer] = answers.conventions.filter(
         ({ idcc }) => parseInt(idcc) === parseInt(agreementNum)
       );
       const unhandledRegexp = /La convention collective ne prévoit rien sur ce point/i;
       if (answer && !unhandledRegexp.test(answer.markdown)) {
-        const slugMatcher = new RegExp(slug);
-        const themeFinder = ({ url }) => slugMatcher.test(url);
-        const theme = themes.find(theme => theme.refs.some(themeFinder));
         let rootTheme = null;
-        if (theme) {
-          rootTheme = theme.breadcrumbs
-            ? theme.breadcrumbs[0].label
-            : theme.title;
+        if (breadcrumbs.length > 0) {
+          rootTheme = breadcrumbs[0].label;
         }
 
         return {
