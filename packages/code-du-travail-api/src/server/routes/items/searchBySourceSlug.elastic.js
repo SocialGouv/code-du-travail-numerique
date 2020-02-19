@@ -16,8 +16,7 @@ function getSearchBody({ source, slug }) {
     _source: [
       "action", // outils
       "date",
-      "date_debut", // code-du-travail
-      "date_fin", // code-du-travail
+      "dateDebut", // code-du-travail
       "description", // modele de courrier
       "filename", // modele de courrier
       "filesize", // modele de courrier
@@ -25,6 +24,7 @@ function getSearchBody({ source, slug }) {
       "html",
       "icon", // outils
       "id",
+      "notaHtml",
       "path", // code-du-travail
       "raw", // service-public
       "references_juridiques", // service-public, ministere-travail

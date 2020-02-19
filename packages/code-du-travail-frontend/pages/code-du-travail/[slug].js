@@ -1,14 +1,16 @@
 import React from "react";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
-import { format, parseISO } from "date-fns";
+import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
+import { Alert } from "@socialgouv/react-ui";
 
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
+import Html from "../../src/common/Html";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -30,7 +32,7 @@ class Fiche extends React.Component {
   render() {
     const {
       data: {
-        _source: { title, description, date_debut, html, url },
+        _source: { title, description, dateDebut, html, url, notaHtml },
         relatedItems
       } = {
         _source: {}
@@ -52,15 +54,22 @@ class Fiche extends React.Component {
           title={title}
           relatedItems={relatedItems}
           date={
-            date_debut &&
-            format(parseISO(date_debut), "dd MMMM yyyy", {
+            dateDebut &&
+            format(new Date(dateDebut), "dd/MM/yyyy", {
               locale: frLocale
             })
           }
           emptyMessage="Article introuvable"
           html={fixedHtml}
           source={{ name: "Code du travail", url }}
-        />
+        >
+          {notaHtml && (
+            <Alert>
+              <strong>NOTA</strong>
+              <Html>{notaHtml}</Html>
+            </Alert>
+          )}
+        </Answer>
       </Layout>
     );
   }
