@@ -37,7 +37,7 @@ function Duration({ situation }) {
       )}
       {situation.answer3 && (
         <>
-          <SectionTitle>Modalités d'utilisation</SectionTitle>
+          <SectionTitle>Modalités d’utilisation</SectionTitle>
           <p>{situation.answer3}</p>
         </>
       )}
