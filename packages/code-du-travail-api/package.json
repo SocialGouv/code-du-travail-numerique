@@ -36,7 +36,7 @@
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-mount": "^4.0.0",
-    "koa-router": "^8.0.7",
+    "koa-router": "^8.0.8",
     "koa-send": "^5.0.0",
     "lodash.deburr": "^4.1.0",
     "node-fetch": "^2.6.0",
@@ -50,7 +50,7 @@
     "esm": "^3.2.25",
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
-    "superagent": "^5.2.1",
+    "superagent": "^5.2.2",
     "supertest": "^4.0.2"
   },
   "jest": {
