@@ -78,16 +78,19 @@ async function* cdtnDocumentsGen() {
   yield selectAll(
     "article",
     require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
-  ).map(({ data: { id, num, date_debut, texte, texteHtml } }) => ({
-    source: SOURCES.CDT,
-    title: fixArticleNum(id, num),
-    slug: slugify(fixArticleNum(id, num)),
-    description: texte.slice(0, texte.indexOf("…", 150)),
-    html: texteHtml,
-    text: texte,
-    date_debut,
-    url: getArticleUrl(id)
-  }));
+  ).map(
+    ({ data: { id, num, dateDebut, nota, notaHtml, texte, texteHtml } }) => ({
+      source: SOURCES.CDT,
+      title: fixArticleNum(id, num),
+      slug: slugify(fixArticleNum(id, num)),
+      description: texte.slice(0, texte.indexOf("…", 150)),
+      html: texteHtml,
+      text: `${texte}\n${nota}`,
+      dateDebut,
+      ...(nota.length > 0 && { notaHtml }),
+      url: getArticleUrl(id)
+    })
+  );
 
   logger.info("=== Fiches SP ===");
   yield getFichesSP();
