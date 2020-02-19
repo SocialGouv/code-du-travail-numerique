@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import tools from "@cdt/data...tools";
 import { Badge, Container, Section, Wrapper } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
+import { matopush } from "../../src/piwik";
 import Metas from "../../src/common/Metas";
 
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
@@ -11,6 +12,7 @@ import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
+
 const toolsBySlug = {
   "indemnite-licenciement": CalculateurIndemnite,
   "preavis-licenciement": DureePreavisLicenciement,
@@ -22,6 +24,9 @@ const toolsBySlug = {
 
 function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
   const Tool = toolsBySlug[slug];
+  useEffect(() => {
+    matopush(["trackEvent", `outil_${title}`, "start"]);
+  });
   return (
     <Layout>
       <Metas
