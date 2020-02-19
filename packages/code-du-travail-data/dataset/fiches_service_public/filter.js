@@ -1,4 +1,6 @@
 const uniqBy = require("lodash.uniqby");
+const contributions = require("../contributions/contributions.data.json");
+const extractMdxContentUrl = require("../contributions/extractMdxContentUrl");
 
 const filter = fiches => {
   const filteredFiches = fiches.filter(fiche => {
@@ -14,7 +16,9 @@ const filter = fiches => {
     if (excludeFicheId.some(matchFilDAriane)) {
       return false;
     }
-
+    if (excludeContribFicheId.some(matchFilDAriane)) {
+      return false;
+    }
     if (excludeDossierId.some(matchFilDAriane)) {
       // Il existe des fiches que l'on souhaite garder, alors que
       // l'on ne souhaite pas garder son dossier parent
@@ -179,3 +183,13 @@ const includeFicheId = [
   "F34705",
   "F34902"
 ];
+
+/** Fiche SP referenced from a contribution */
+
+const excludeContribFicheId = contributions
+  .map(({ answers }) => extractMdxContentUrl(answers.generic.markdown))
+  .filter(Boolean)
+  .map(url => {
+    const [, id] = url.match(/\/(\w+)$/);
+    return id;
+  });
