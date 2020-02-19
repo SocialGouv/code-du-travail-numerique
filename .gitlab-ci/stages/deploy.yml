@@ -89,8 +89,14 @@ Create namespace:
 #
 
 Deploy @cdtn/api (dev):
-  <<: *deploy_api_stage
-  <<: *dev_stage
+  extends:
+    - .deploy_api_stage
+    - .dev_stage
+  variables:
+    HELM_RENDER_ARGS: >-
+      --set autoscaling.enabled=false
+      --set deployment.resources.requests.memory=100Mi
+      --set deployment.resources.requests.cpu=.1m
 
 Deploy @cdtn/api (prod):
   <<: *deploy_api_stage
@@ -121,6 +127,8 @@ Deploy @cdtn/frontend (dev):
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
+      --set deployment.resources.requests.memory=100Mi
+      --set deployment.resources.requests.cpu=.1m
 
 Deploy @cdtn/frontend (prod):
   <<: *deploy_frontend_stage
