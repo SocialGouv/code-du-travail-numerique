@@ -12,4 +12,4 @@ const extractMdxContentUrl = markdown => {
   );
 };
 
-export default extractMdxContentUrl;
+module.exports = extractMdxContentUrl;
