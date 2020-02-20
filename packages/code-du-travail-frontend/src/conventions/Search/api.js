@@ -66,6 +66,8 @@ export const loadResults = async query => {
         id: match.num,
         conventions: [match]
       }));
+    } else {
+      return [];
     }
   }
   return null;

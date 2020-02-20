@@ -1,5 +1,10 @@
 import React from "react";
-import { fireEvent, render, wait } from "@testing-library/react";
+import {
+  fireEvent,
+  render,
+  wait,
+  waitForElement
+} from "@testing-library/react";
 import fetch from "isomorphic-unfetch";
 
 jest.mock("isomorphic-unfetch");
@@ -7,9 +12,9 @@ jest.useFakeTimers();
 
 import Search from "../Form";
 
-afterEach(() => {
-  fetch.mockReset();
-});
+jest.mock("../../../piwik", () => ({
+  matopush: jest.fn()
+}));
 
 function renderSearchForm({
   title = "Recherche de convention collective",
@@ -25,11 +30,20 @@ function renderSearchForm({
   );
 }
 
-const fetchMock = results =>
-  fetch.mockResolvedValueOnce({
-    ok: true,
-    json: () => Promise.resolve(results)
+const mockFetch = resultsByService => {
+  fetch.mockReset();
+  fetch.mockImplementation(url => {
+    const mockFetchResponse = data =>
+      Promise.resolve({ ok: true, json: () => Promise.resolve(data) });
+
+    for (const [service, data] of Object.entries(resultsByService)) {
+      if (new RegExp(service).test(url)) {
+        return mockFetchResponse(data);
+      }
+    }
+    return Promise.resolve({ ok: false });
   });
+};
 
 describe("<Search />", () => {
   it("should render", () => {
@@ -38,7 +52,7 @@ describe("<Search />", () => {
   });
 
   it("should show spinner when loading", () => {
-    fetchMock({});
+    mockFetch({ "api.url/idcc": {} });
     const { container, getByRole } = renderSearchForm({
       onSelectConvention: null
     });
@@ -47,28 +61,30 @@ describe("<Search />", () => {
   });
 
   it("when input is IDCC, should search conventions", async () => {
-    fetchMock({
-      hits: {
-        hits: [
-          {
-            _source: {
-              idcc: 275,
-              id: "KALICONT000000000001",
-              title: "titre convention 1",
-              shortTitle: "small titre",
-              slug: "slug-convention-1"
+    mockFetch({
+      "api.url/idcc": {
+        hits: {
+          hits: [
+            {
+              _source: {
+                idcc: 275,
+                id: "KALICONT000000000001",
+                title: "titre convention 1",
+                shortTitle: "small titre",
+                slug: "slug-convention-1"
+              }
+            },
+            {
+              _source: {
+                idcc: 276,
+                id: "KALICONT000000000002",
+                title: "titre convention 2",
+                shortTitle: "smaller convention 2",
+                slug: "slug-convention-2"
+              }
             }
-          },
-          {
-            _source: {
-              idcc: 276,
-              id: "KALICONT000000000002",
-              title: "titre convention 2",
-              shortTitle: "smaller convention 2",
-              slug: "slug-convention-2"
-            }
-          }
-        ]
+          ]
+        }
       }
     });
     const { container, getByRole } = renderSearchForm({
@@ -83,28 +99,30 @@ describe("<Search />", () => {
   });
 
   it("when input is a valid IDCC, should show only the perfect match ", async () => {
-    fetchMock({
-      hits: {
-        hits: [
-          {
-            _source: {
-              idcc: 275,
-              id: "KALICONT000000000001",
-              title: "titre convention 1",
-              shortTitle: "small titre",
-              slug: "slug-convention-1"
+    mockFetch({
+      "api.url/idcc": {
+        hits: {
+          hits: [
+            {
+              _source: {
+                idcc: 275,
+                id: "KALICONT000000000001",
+                title: "titre convention 1",
+                shortTitle: "small titre",
+                slug: "slug-convention-1"
+              }
+            },
+            {
+              _source: {
+                idcc: 4567,
+                id: "KALICONT000000000002",
+                title: "titre convention 2",
+                shortTitle: "smaller convention 2",
+                slug: "slug-convention-2"
+              }
             }
-          },
-          {
-            _source: {
-              idcc: 4567,
-              id: "KALICONT000000000002",
-              title: "titre convention 2",
-              shortTitle: "smaller convention 2",
-              slug: "slug-convention-2"
-            }
-          }
-        ]
+          ]
+        }
       }
     });
     const { container, getByRole } = renderSearchForm({
@@ -119,45 +137,49 @@ describe("<Search />", () => {
   });
 
   it("should show no results when no result", async () => {
-    fetchMock({
-      hits: {
-        hits: []
+    mockFetch({
+      "api.url/idcc": {
+        hits: {
+          hits: []
+        }
       }
     });
-    const { container, getByRole } = renderSearchForm({
+    const { container, getByRole, findByText } = renderSearchForm({
       onSelectConvention: null
     });
     fireEvent.change(getByRole("search"), { target: { value: "9999" } });
     jest.runAllTimers();
-    await wait();
+    await waitForElement(() => findByText(/Aucun résultat/i), { container });
     expect(container).toMatchSnapshot();
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=9999");
   });
 
   it("should use onSelectConvention callback when given", async () => {
-    fetchMock({
-      hits: {
-        hits: [
-          {
-            _source: {
-              idcc: 275,
-              id: "KALICONT000000000001",
-              title: "titre convention 1",
-              shortTitle: "small titre",
-              slug: "slug-convention-1"
+    mockFetch({
+      "api.url/idcc": {
+        hits: {
+          hits: [
+            {
+              _source: {
+                idcc: 275,
+                id: "KALICONT000000000001",
+                title: "titre convention 1",
+                shortTitle: "small titre",
+                slug: "slug-convention-1"
+              }
+            },
+            {
+              _source: {
+                idcc: 4567,
+                id: "KALICONT000000000002",
+                title: "titre convention 2",
+                shortTitle: "smaller convention 2",
+                slug: "slug-convention-2"
+              }
             }
-          },
-          {
-            _source: {
-              idcc: 4567,
-              id: "KALICONT000000000002",
-              title: "titre convention 2",
-              shortTitle: "smaller convention 2",
-              slug: "slug-convention-2"
-            }
-          }
-        ]
+          ]
+        }
       }
     });
     const onSelectConvention = jest.fn();
@@ -183,62 +205,52 @@ describe("<Search />", () => {
   });
 
   it("when searching by text, should use ES, api SIREN and siret2idcc", async () => {
-    fetch.mockImplementation(url => {
-      return Promise.resolve({
-        ok: true,
-        json: () => {
-          if (url === "api.url/idcc?q=hello") {
-            return Promise.resolve({
-              hits: {
-                hits: [
-                  {
-                    _source: {
-                      idcc: 275,
-                      id: "KALICONT000000000001",
-                      title: "titre convention 1",
-                      shortTitle: "titre convention 1",
-                      slug: "slug-convention-1"
-                    }
-                  }
-                ]
+    mockFetch({
+      "api.url/idcc": {
+        hits: {
+          hits: [
+            {
+              _source: {
+                idcc: 275,
+                id: "KALICONT000000000001",
+                title: "titre convention 1",
+                shortTitle: "titre convention 1",
+                slug: "slug-convention-1"
               }
-            });
-          } else if (
-            url === "api-entreprises.url/full_text/hello?per_page=50"
-          ) {
-            return Promise.resolve({
-              etablissement: [
-                {
-                  id: 199308119,
-                  siret: "44144914700020",
-                  nom_raison_sociale: "Entreprise 1",
-                  code_postal: 93100,
-                  libelle_commune: "Commune test"
-                }
-              ]
-            });
-          } else if (url === "siret2idcc.url/44144914700020") {
-            return Promise.resolve([
-              {
-                siret: "44144914700020",
-                conventions: [
-                  {
-                    active: true,
-                    date_publi: "1976-04-01T00:00:00.000Z",
-                    etat: "VIGUEUR_ETEN",
-                    id: "KALICONT000005635886",
-                    nature: "IDCC",
-                    num: 843,
-                    title: "Convention 1",
-                    shortTitle: "Short Convention 1"
-                  }
-                ]
-              }
-            ]);
-          }
+            }
+          ]
         }
-      });
+      },
+      "siret2idcc.url": [
+        {
+          siret: "44144914700020",
+          conventions: [
+            {
+              active: true,
+              date_publi: "1976-04-01T00:00:00.000Z",
+              etat: "VIGUEUR_ETEN",
+              id: "KALICONT000005635886",
+              nature: "IDCC",
+              num: 843,
+              title: "Convention 1",
+              shortTitle: "Short Convention 1"
+            }
+          ]
+        }
+      ],
+      "api-entreprises.url": {
+        etablissement: [
+          {
+            id: 199308119,
+            siret: "44144914700020",
+            nom_raison_sociale: "Entreprise 1",
+            code_postal: 93100,
+            libelle_commune: "Commune test"
+          }
+        ]
+      }
     });
+
     const onSelectConvention = jest.fn();
     const { container, getByRole } = renderSearchForm({
       onSelectConvention
@@ -251,36 +263,25 @@ describe("<Search />", () => {
   });
 
   it("should not use siret2idcc when no entreprise result", async () => {
-    fetch.mockImplementation(url => {
-      return Promise.resolve({
-        ok: true,
-        json: () => {
-          if (url === "api.url/idcc?q=xxxx") {
-            return Promise.resolve({
-              hits: {
-                hits: [
-                  {
-                    _source: {
-                      idcc: 275,
-                      id: "KALICONT000000000001",
-                      title: "titre convention 1",
-                      shortTitle: "small title 1",
-                      slug: "slug-convention-1"
-                    }
-                  }
-                ]
+    mockFetch({
+      "api.url/idcc": {
+        hits: {
+          hits: [
+            {
+              _source: {
+                idcc: 275,
+                id: "KALICONT000000000001",
+                title: "titre convention 1",
+                shortTitle: "small title 1",
+                slug: "slug-convention-1"
               }
-            });
-          } else if (
-            url ===
-            "https://entreprise.data.gouv.fr/api/sirene/v1/full_text/xxxx?per_page=50"
-          ) {
-            return Promise.resolve({
-              message: "no results found"
-            });
-          }
+            }
+          ]
         }
-      });
+      },
+      "entreprise.data.gouv.fr": {
+        message: "no results found"
+      }
     });
 
     const onSelectConvention = jest.fn();
@@ -295,41 +296,34 @@ describe("<Search />", () => {
   });
 
   it("when searching SIRET, should use API SIREN and siret2idcc", async () => {
-    fetch.mockImplementation(url => {
-      return Promise.resolve({
-        ok: true,
-        json: () => {
-          if (url === "api-entreprises.url/siret/01234567891011") {
-            return Promise.resolve({
-              etablissement: {
-                id: 199308119,
-                siret: "01234567891011",
-                nom_raison_sociale: "Entreprise 1",
-                code_postal: 93100,
-                libelle_commune: "Commune test"
-              }
-            });
-          } else if (url === "siret2idcc.url/01234567891011") {
-            return Promise.resolve([
-              {
-                siret: "01234567891011",
-                conventions: [
-                  {
-                    active: true,
-                    date_publi: "1976-04-01T00:00:00.000Z",
-                    etat: "VIGUEUR_ETEN",
-                    id: "KALICONT000005635886",
-                    nature: "IDCC",
-                    num: "843",
-                    title: "Convention 1"
-                  }
-                ]
-              }
-            ]);
-          }
+    mockFetch({
+      "api-entreprises": {
+        etablissement: {
+          id: 199308119,
+          siret: "01234567891011",
+          nom_raison_sociale: "Entreprise 1",
+          code_postal: 93100,
+          libelle_commune: "Commune test"
         }
-      });
+      },
+      "siret2idcc.url": [
+        {
+          siret: "01234567891011",
+          conventions: [
+            {
+              active: true,
+              date_publi: "1976-04-01T00:00:00.000Z",
+              etat: "VIGUEUR_ETEN",
+              id: "KALICONT000005635886",
+              nature: "IDCC",
+              num: "843",
+              title: "Convention 1"
+            }
+          ]
+        }
+      ]
     });
+
     const onSelectConvention = jest.fn();
     const { container, getByRole } = renderSearchForm({
       onSelectConvention

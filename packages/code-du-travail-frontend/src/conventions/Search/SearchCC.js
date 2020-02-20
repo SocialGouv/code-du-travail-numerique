@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 import { loadResults } from "./api";
 
-// a render prop that return idcc search results
+// a hook that return [status, searchResults]
 // todo: package as a module
-const SearchCC = ({ query, render }) => {
+const useSearchCC = query => {
   const [results, setResults] = useState();
   const [status, setStatus] = useState("idle");
   // load results when query change
@@ -17,11 +17,13 @@ const SearchCC = ({ query, render }) => {
         try {
           const results = await loadResults(query);
           if (shouldUpdate) {
-            setResults(results);
-            if (results && results.length) {
-              setStatus("success");
-            } else {
-              setStatus("error");
+            if (results) {
+              if (results.length) {
+                setStatus("success");
+              } else {
+                setStatus("empty");
+              }
+              setResults(results);
             }
           }
         } catch (e) {
@@ -38,7 +40,7 @@ const SearchCC = ({ query, render }) => {
     };
   }, [query]);
 
-  return render({ status, results });
+  return [status, results];
 };
 
-export default SearchCC;
+export default useSearchCC;
