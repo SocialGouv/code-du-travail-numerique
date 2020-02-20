@@ -5,7 +5,7 @@ import Link from "next/link";
 import Spinner from "react-svg-spinner";
 
 import slugify from "@cdt/data/slugify";
-import { Input, Table, Heading, theme } from "@socialgouv/react-ui";
+import { Button, Input, Table, Heading, theme } from "@socialgouv/react-ui";
 import { formatIdcc } from "@cdt/data/lib";
 
 import SearchCC from "./SearchCC";
@@ -20,9 +20,9 @@ const Convention = ({ num, shortTitle, onClick }) => {
     <Box>
       {onClick ? (
         <span>
-          <ConventionLink as="button" onClick={onClick}>
+          <ConventionButton variant="navLink" onClick={onClick}>
             {shortTitle}
-          </ConventionLink>{" "}
+          </ConventionButton>
           (IDCC {formatIdcc(num)})
         </span>
       ) : (
@@ -35,7 +35,9 @@ const Convention = ({ num, shortTitle, onClick }) => {
             })}`}
             passHref
           >
-            <ConventionLink>{shortTitle}</ConventionLink>
+            <ConventionButton variant="navLink" as="a">
+              {shortTitle}
+            </ConventionButton>
           </Link>
           <span> (IDCC {formatIdcc(num)})</span>
         </>
@@ -188,7 +190,7 @@ const Search = ({
   );
 };
 
-const { animations, box, colors, fonts, spacings, breakpoints } = theme;
+const { box, colors, fonts, spacings, breakpoints } = theme;
 const BlockInput = styled(Input)`
   display: block;
 `;
@@ -223,19 +225,12 @@ const ResultsContainer = styled.div`
   margin-top: ${spacings.medium};
 `;
 
-const ConventionLink = styled.a`
+const ConventionButton = styled(Button)`
   display: inline;
-  padding: 0;
   color: ${({ theme }) => theme.secondary};
   font-weight: 600;
-  font-size: ${fonts.sizes.default};
+  text-align: left;
   text-decoration: underline ${({ theme }) => theme.primary};
-  border: none;
-  cursor: pointer;
-  transition: color ${animations.transitionTiming} linear;
-  :hover {
-    color: ${({ theme }) => theme.primary};
-  }
 `;
 
 const Box = styled.div`
