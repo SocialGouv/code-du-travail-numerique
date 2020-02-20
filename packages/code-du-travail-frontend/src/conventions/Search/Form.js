@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import styled from "styled-components";
 import Link from "next/link";
@@ -8,7 +8,9 @@ import slugify from "@cdt/data/slugify";
 import { Button, Input, Table, Heading, theme } from "@socialgouv/react-ui";
 import { formatIdcc } from "@cdt/data/lib";
 
-import SearchCC from "./SearchCC";
+import useSearchCC from "./SearchCC";
+import { useRouter } from "next/router";
+import { matopush } from "../../piwik";
 
 // following data/populate.js slug rules
 const getConventionSlug = convention =>
@@ -16,11 +18,16 @@ const getConventionSlug = convention =>
 
 // link to a Convention
 const Convention = ({ num, shortTitle, onClick }) => {
+  const router = useRouter();
+  const trackClick = event => {
+    onClick && onClick(event);
+    matopush(["trackEvent", "cc_select", router.asPath, shortTitle]);
+  };
   return (
     <Box>
       {onClick ? (
         <span>
-          <ConventionButton variant="navLink" onClick={onClick}>
+          <ConventionButton variant="navLink" onClick={trackClick}>
             {shortTitle}
           </ConventionButton>
           (IDCC {formatIdcc(num)})
@@ -35,7 +42,7 @@ const Convention = ({ num, shortTitle, onClick }) => {
             })}`}
             passHref
           >
-            <ConventionButton variant="navLink" as="a">
+            <ConventionButton variant="navLink" as="a" onClick={trackClick}>
               {shortTitle}
             </ConventionButton>
           </Link>
@@ -94,12 +101,15 @@ const Search = ({
   resetOnClick = true,
   onSelectConvention
 }) => {
+  const router = useRouter();
   const [query, setQuery] = useState("");
-  const onInputChange = e => {
-    const value = e.target.value;
+
+  const onInputChange = keyEvent => {
+    const value = keyEvent.target.value;
     setQuery(value);
   };
-  const selectConvention = convention => {
+
+  const selectConventionHandler = convention => {
     if (onSelectConvention) {
       onSelectConvention(convention);
       if (resetOnClick) {
@@ -107,6 +117,22 @@ const Search = ({
       }
     }
   };
+
+  const [status, results] = useSearchCC(query);
+
+  useEffect(() => {
+    if (status === "success" && query.length > 1) {
+      matopush(["trackEvent", "cc_search", router.asPath, query]);
+    }
+    if (status === "empty" && query.length > 1) {
+      matopush(["trackEvent", "cc_search_empty", router.asPath, query]);
+    }
+  }, [query, router.asPath, status]);
+
+  const resultsConventions =
+    results && results.filter(r => r.type === "convention");
+  const resultsEntreprises =
+    results && results.filter(r => r.type === "entreprise");
 
   return (
     <>
@@ -123,69 +149,59 @@ const Search = ({
         name="q"
         onChange={onInputChange}
       />
-      <SearchCC
-        query={query}
-        render={({ status, results }) => {
-          const resultsConventions =
-            results && results.filter(r => r.type === "convention");
-          const resultsEntreprises =
-            results && results.filter(r => r.type === "entreprise");
-          return (
-            query && (
-              <ResultsContainer>
-                {status === "loading" && (
-                  <div>
-                    <Spinner /> Recherche des convention collectives...
-                  </div>
+      {query && (
+        <ResultsContainer>
+          {status === "loading" && (
+            <div>
+              <Spinner /> Recherche des convention collectives...
+            </div>
+          )}
+          {status === "error" && (
+            <div>Le service de rechercher est indisponible.</div>
+          )}
+          {status === "empty" && <div>Aucun résultat n’a été trouvé.</div>}
+          {status === "success" && results && results.length !== 0 && (
+            <FixedTable>
+              <tbody>
+                {resultsConventions.length !== 0 && (
+                  <React.Fragment>
+                    <tr>
+                      <StyledTh>Conventions collectives</StyledTh>
+                    </tr>
+                    {resultsConventions.map(result => (
+                      <SearchResult
+                        key={result.id}
+                        {...result}
+                        selectConvention={
+                          // only use callback when defined. otherwise, use <Link/>
+                          onSelectConvention && selectConventionHandler
+                        }
+                      />
+                    ))}
+                  </React.Fragment>
                 )}
-                {status === "error" && (
-                  <div>La convention collective n‘a pas été trouvée.</div>
+                {resultsEntreprises.length !== 0 && (
+                  <React.Fragment>
+                    <tr>
+                      <StyledTh>Entreprises</StyledTh>
+                    </tr>
+                    {resultsEntreprises.map(result => (
+                      <SearchResult
+                        key={result.id}
+                        {...result}
+                        selectConvention={
+                          // only use callback when defined. otherwise, use <Link/>
+                          onSelectConvention && selectConventionHandler
+                        }
+                      />
+                    ))}
+                  </React.Fragment>
                 )}
-                {status === "success" && results && results.length !== 0 && (
-                  <FixedTable>
-                    <tbody>
-                      {resultsConventions.length !== 0 && (
-                        <React.Fragment>
-                          <tr>
-                            <StyledTh>Conventions collectives</StyledTh>
-                          </tr>
-                          {resultsConventions.map(result => (
-                            <SearchResult
-                              key={result.id}
-                              {...result}
-                              selectConvention={
-                                // only use callback when defined. otherwise, use <Link/>
-                                onSelectConvention && selectConvention
-                              }
-                            />
-                          ))}
-                        </React.Fragment>
-                      )}
-                      {resultsEntreprises.length !== 0 && (
-                        <React.Fragment>
-                          <tr>
-                            <StyledTh>Entreprises</StyledTh>
-                          </tr>
-                          {resultsEntreprises.map(result => (
-                            <SearchResult
-                              key={result.id}
-                              {...result}
-                              selectConvention={
-                                // only use callback when defined. otherwise, use <Link/>
-                                onSelectConvention && selectConvention
-                              }
-                            />
-                          ))}
-                        </React.Fragment>
-                      )}
-                    </tbody>
-                  </FixedTable>
-                )}
-              </ResultsContainer>
-            )
-          );
-        }}
-      />
+              </tbody>
+            </FixedTable>
+          )}
+        </ResultsContainer>
+      )}
     </>
   );
 };
