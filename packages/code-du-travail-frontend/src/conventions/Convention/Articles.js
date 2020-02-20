@@ -20,51 +20,43 @@ function getArticleUrl({ id, containerId }) {
 }
 
 function Articles({ blocs, containerId }) {
-  const articlesByTheme = blocs
-    .sort((a, b) => {
-      return (
-        blocsLabels[a.bloc] &&
-        blocsLabels[b.bloc] &&
-        blocsLabels[a.bloc].label.localeCompare(blocsLabels[b.bloc].label)
-      );
-    })
-    .map(({ bloc, articles }) => {
-      return {
-        id: `bloc-${bloc}`,
-        title: blocsLabels[bloc].label,
-        body: (
-          <>
-            {blocsLabels[bloc].important && (
-              <>
-                <InsertTitle>Important</InsertTitle>
-                <P>
-                  Pour que ce thème s’applique à votre situation, il doit être
-                  indiqué dans l’article en question qu’un accord d’entreprise
-                  ne peut par déroger à la convention collective; à moins que
-                  l’accord d’entreprise ne prévoie des garanties au moins
-                  équivalentes.
-                </P>
-              </>
-            )}
-            <Grid columns={3}>
-              {articles.map(({ title, id, section }) => (
-                <Tile
-                  key={id}
-                  wide
-                  target="_blank"
-                  rel="nofollow noopener"
-                  href={getArticleUrl({ id, containerId })}
-                  subtitle={`Article ${title}`}
-                  className={"no-after"}
-                >
-                  {section}
-                </Tile>
-              ))}
-            </Grid>
-          </>
-        )
-      };
-    });
+  const articlesByTheme = blocs.map(({ bloc, articles }) => {
+    return {
+      id: `bloc-${bloc}`,
+      title: blocsLabels[bloc].label,
+      body: (
+        <>
+          {blocsLabels[bloc].important && (
+            <>
+              <InsertTitle>Important</InsertTitle>
+              <P>
+                Pour que ce thème s’applique à votre situation, il doit être
+                indiqué dans l’article en question qu’un accord d’entreprise ne
+                peut par déroger à la convention collective; à moins que
+                l’accord d’entreprise ne prévoie des garanties au moins
+                équivalentes.
+              </P>
+            </>
+          )}
+          <Grid columns={3}>
+            {articles.map(({ title, id, section }) => (
+              <Tile
+                key={id}
+                wide
+                target="_blank"
+                rel="nofollow noopener"
+                href={getArticleUrl({ id, containerId })}
+                subtitle={`Article ${title}`}
+                className={"no-after"}
+              >
+                {section}
+              </Tile>
+            ))}
+          </Grid>
+        </>
+      )
+    };
+  });
 
   return (
     <React.Fragment>
