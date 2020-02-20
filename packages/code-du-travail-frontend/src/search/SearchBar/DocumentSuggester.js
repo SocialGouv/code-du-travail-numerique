@@ -117,8 +117,7 @@ const SuggestionContainer = styled.div`
 `;
 
 const renderSuggestion = (suggestion, query) => {
-  const regexp = new RegExp(query);
-  const title = suggestion.replace(regexp, "<b>$&</b>");
+  const title = suggestion.replace(query, `<b>${query}</b>`);
   return (
     <SuggestionContainer>
       <Html inline>{title}</Html>

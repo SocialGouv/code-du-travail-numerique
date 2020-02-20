@@ -34,7 +34,7 @@ const SearchBar = ({
       router.push({
         pathname: "/recherche",
         query: {
-          q: query
+          q: query.trim()
         }
       });
     }
