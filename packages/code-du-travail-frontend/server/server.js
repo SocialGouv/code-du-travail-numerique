@@ -27,7 +27,7 @@ function getSentryCspUrl() {
     PACKAGE_VERSION && /^v\d+-\d+-\d+/.test(FRONTEND_HOST);
   const environment = isPreProduction ? "preproduction" : "production";
 
-  return `https://sentry.io/api/-1/security/?sentry_key=${SENTRY_PUBLIC_DSN}&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
+  return `${SENTRY_PUBLIC_DSN}&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
 }
 
 const dev = process.env.NODE_ENV !== "production";
