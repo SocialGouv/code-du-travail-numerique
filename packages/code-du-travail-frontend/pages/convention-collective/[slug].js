@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
@@ -7,7 +6,7 @@ import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { formatIdcc } from "@cdt/data/lib";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
-import { theme } from "@socialgouv/react-ui";
+import { Text } from "@socialgouv/react-ui";
 
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
@@ -82,14 +81,14 @@ class ConventionCollective extends React.Component {
             url: convention.url
           }}
           subtitle={
-            <SmallText>
+            <Text fontSize="small">
               {convention.title} (IDCC {formatIdcc(convention.num)})
-            </SmallText>
+            </Text>
           }
           suptitle="CONVENTION COLLECTIVE"
           title={shortTitle}
         >
-          <Convention {...convention} />
+          <Convention convention={convention} />
         </Answer>
       </Layout>
     );
@@ -97,9 +96,3 @@ class ConventionCollective extends React.Component {
 }
 
 export default withRouter(ConventionCollective);
-
-const { fonts } = theme;
-
-const SmallText = styled.span`
-  font-size: ${fonts.sizes.small};
-`;

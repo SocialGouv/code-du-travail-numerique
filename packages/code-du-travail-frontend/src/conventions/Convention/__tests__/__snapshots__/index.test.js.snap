@@ -4649,7 +4649,7 @@ exports[`<Convention /> renders 1`] = `
     data-accordion-component="Accordion"
   >
     <div
-      id="bloc-2"
+      id="bloc-1"
     >
       <div
         class="c4"
@@ -4663,12 +4663,12 @@ exports[`<Convention /> renders 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-bloc-2"
+            aria-controls="accordion__panel-bloc-1"
             aria-disabled="false"
             aria-expanded="false"
             class="c5"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-bloc-2"
+            id="accordion__heading-bloc-1"
             role="button"
             tabindex="0"
           >
@@ -4691,22 +4691,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Classifications
+              Salaires minima hiérarchiques
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-bloc-2"
+          aria-labelledby="accordion__heading-bloc-1"
           class="c8"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-bloc-2"
+          id="accordion__panel-bloc-1"
         >
           <div
             class="c9"
           >
-            Classifications
+            Salaires minima hiérarchiques
           </div>
           <div
             class="c10"
@@ -4725,7 +4725,7 @@ exports[`<Convention /> renders 1`] = `
                   >
                     <a
                       class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4738,14 +4738,14 @@ exports[`<Convention /> renders 1`] = `
                           <span
                             class="sc-fzokvW c36"
                           >
-                            Article 12-1
+                            Article 1-4
                           </span>
                         </div>
                       </div>
                       <div
                         class="c37"
                       >
-                        Préambule
+                        Salaires minimaux
                       </div>
                     </a>
                   </li>
@@ -4754,7 +4754,7 @@ exports[`<Convention /> renders 1`] = `
                   >
                     <a
                       class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4767,14 +4767,14 @@ exports[`<Convention /> renders 1`] = `
                           <span
                             class="sc-fzokvW c36"
                           >
-                            Article 12-2
+                            Article 4-1
                           </span>
                         </div>
                       </div>
                       <div
                         class="c37"
                       >
-                        Définitions générales des critères et des niveaux
+                        Salaire mensuel
                       </div>
                     </a>
                   </li>
@@ -4783,7 +4783,7 @@ exports[`<Convention /> renders 1`] = `
                   >
                     <a
                       class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4796,14 +4796,14 @@ exports[`<Convention /> renders 1`] = `
                           <span
                             class="sc-fzokvW c36"
                           >
-                            Article 12-3
+                            Article 4-2
                           </span>
                         </div>
                       </div>
                       <div
                         class="c37"
                       >
-                        Coefficients hiérarchiques
+                        Déduction des heures non travaillées
                       </div>
                     </a>
                   </li>
@@ -4812,7 +4812,7 @@ exports[`<Convention /> renders 1`] = `
                   >
                     <a
                       class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -4825,101 +4825,14 @@ exports[`<Convention /> renders 1`] = `
                           <span
                             class="sc-fzokvW c36"
                           >
-                            Article 12-4
+                            Article 12-8
                           </span>
                         </div>
                       </div>
                       <div
                         class="c37"
                       >
-                        Prise en compte des diplômes professionnels bâtiment
-                      </div>
-                    </a>
-                  </li>
-                  <li
-                    class="c32"
-                  >
-                    <a
-                      class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c34"
-                      >
-                        <div
-                          class="c35"
-                        >
-                          <span
-                            class="sc-fzokvW c36"
-                          >
-                            Article 12-5
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        class="c37"
-                      >
-                        Polyvalence
-                      </div>
-                    </a>
-                  </li>
-                  <li
-                    class="c32"
-                  >
-                    <a
-                      class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c34"
-                      >
-                        <div
-                          class="c35"
-                        >
-                          <span
-                            class="sc-fzokvW c36"
-                          >
-                            Article 12-6
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        class="c37"
-                      >
-                        Evolution de carrière
-                      </div>
-                    </a>
-                  </li>
-                  <li
-                    class="c32"
-                  >
-                    <a
-                      class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c34"
-                      >
-                        <div
-                          class="c35"
-                        >
-                          <span
-                            class="sc-fzokvW c36"
-                          >
-                            Article 12-7
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        class="c37"
-                      >
-                        Suivi de l'application dans l'entreprise
+                        Barèmes de salaires minimaux
                       </div>
                     </a>
                   </li>
@@ -5358,7 +5271,7 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
     <div
-      id="bloc-1"
+      id="bloc-2"
     >
       <div
         class="c20"
@@ -5372,12 +5285,12 @@ exports[`<Convention /> renders 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-bloc-1"
+            aria-controls="accordion__panel-bloc-2"
             aria-disabled="false"
             aria-expanded="false"
             class="c5"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-bloc-1"
+            id="accordion__heading-bloc-2"
             role="button"
             tabindex="0"
           >
@@ -5400,22 +5313,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Salaires minima hiérarchiques
+              Classifications
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-bloc-1"
+          aria-labelledby="accordion__heading-bloc-2"
           class="c8"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-bloc-1"
+          id="accordion__panel-bloc-2"
         >
           <div
             class="c9"
           >
-            Salaires minima hiérarchiques
+            Classifications
           </div>
           <div
             class="c10"
@@ -5434,7 +5347,7 @@ exports[`<Convention /> renders 1`] = `
                   >
                     <a
                       class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -5447,14 +5360,14 @@ exports[`<Convention /> renders 1`] = `
                           <span
                             class="sc-fzokvW c36"
                           >
-                            Article 1-4
+                            Article 12-1
                           </span>
                         </div>
                       </div>
                       <div
                         class="c37"
                       >
-                        Salaires minimaux
+                        Préambule
                       </div>
                     </a>
                   </li>
@@ -5463,7 +5376,7 @@ exports[`<Convention /> renders 1`] = `
                   >
                     <a
                       class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -5476,14 +5389,14 @@ exports[`<Convention /> renders 1`] = `
                           <span
                             class="sc-fzokvW c36"
                           >
-                            Article 4-1
+                            Article 12-2
                           </span>
                         </div>
                       </div>
                       <div
                         class="c37"
                       >
-                        Salaire mensuel
+                        Définitions générales des critères et des niveaux
                       </div>
                     </a>
                   </li>
@@ -5492,7 +5405,7 @@ exports[`<Convention /> renders 1`] = `
                   >
                     <a
                       class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -5505,14 +5418,14 @@ exports[`<Convention /> renders 1`] = `
                           <span
                             class="sc-fzokvW c36"
                           >
-                            Article 4-2
+                            Article 12-3
                           </span>
                         </div>
                       </div>
                       <div
                         class="c37"
                       >
-                        Déduction des heures non travaillées
+                        Coefficients hiérarchiques
                       </div>
                     </a>
                   </li>
@@ -5521,7 +5434,7 @@ exports[`<Convention /> renders 1`] = `
                   >
                     <a
                       class="c33 no-after"
-                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -5534,14 +5447,101 @@ exports[`<Convention /> renders 1`] = `
                           <span
                             class="sc-fzokvW c36"
                           >
-                            Article 12-8
+                            Article 12-4
                           </span>
                         </div>
                       </div>
                       <div
                         class="c37"
                       >
-                        Barèmes de salaires minimaux
+                        Prise en compte des diplômes professionnels bâtiment
+                      </div>
+                    </a>
+                  </li>
+                  <li
+                    class="c32"
+                  >
+                    <a
+                      class="c33 no-after"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c34"
+                      >
+                        <div
+                          class="c35"
+                        >
+                          <span
+                            class="sc-fzokvW c36"
+                          >
+                            Article 12-5
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="c37"
+                      >
+                        Polyvalence
+                      </div>
+                    </a>
+                  </li>
+                  <li
+                    class="c32"
+                  >
+                    <a
+                      class="c33 no-after"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c34"
+                      >
+                        <div
+                          class="c35"
+                        >
+                          <span
+                            class="sc-fzokvW c36"
+                          >
+                            Article 12-6
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="c37"
+                      >
+                        Evolution de carrière
+                      </div>
+                    </a>
+                  </li>
+                  <li
+                    class="c32"
+                  >
+                    <a
+                      class="c33 no-after"
+                      href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c34"
+                      >
+                        <div
+                          class="c35"
+                        >
+                          <span
+                            class="sc-fzokvW c36"
+                          >
+                            Article 12-7
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="c37"
+                      >
+                        Suivi de l'application dans l'entreprise
                       </div>
                     </a>
                   </li>

@@ -88,19 +88,19 @@ export const RelatedItems = ({ items = [] }) => {
             <FlatList>
               {relatedLinkItems.slice(0, 3).map(({ slug, source, title }) => {
                 let rootSlug = slug;
-                let anchor = "";
+                let hash;
                 if (slug.includes("#")) {
-                  [rootSlug, anchor] = slug.split("#");
+                  [rootSlug, hash] = slug.split("#");
                 }
+                hash = hash ? `#${hash}` : "";
+                rootSlug = rootSlug ? `/${rootSlug}` : "";
                 return (
                   <StyledLinkItem key={slug}>
                     <Link
                       href={`/${getRouteBySource(source)}${
                         rootSlug ? "/[slug]" : ""
                       }`}
-                      as={`/${getRouteBySource(source)}${
-                        rootSlug ? `/${rootSlug}` : ""
-                      }${anchor ? `#${anchor}` : ""}`}
+                      as={`/${getRouteBySource(source)}${rootSlug}${hash}`}
                       passHref
                     >
                       <ArrowLink arrowPosition="left">{title}</ArrowLink>

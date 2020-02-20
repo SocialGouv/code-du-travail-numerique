@@ -47,7 +47,7 @@ const Article = ({
           )}
           {date && (
             <Span>
-              {dateLabel ? dateLabel : "Mis à jour le"}&nbsp;:&nbsp;{date}
+              {dateLabel}&nbsp;:&nbsp;{date}
             </Span>
           )}
         </Meta>
@@ -64,6 +64,7 @@ Article.propTypes = {
   /** article content */
   children: PropTypes.node,
   date: PropTypes.string,
+  dateLabel: PropTypes.string,
   source: PropTypes.shape({
     name: PropTypes.string,
     url: PropTypes.string
@@ -74,6 +75,7 @@ Article.propTypes = {
 };
 
 Article.defaultProps = {
+  dateLabel: "Mis à jour le",
   subtitle: false
 };
 

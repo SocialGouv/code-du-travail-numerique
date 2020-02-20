@@ -54,8 +54,8 @@ const getLink = reference => {
 const ReferenceList = ({ references }) => {
   return (
     <FlatList>
-      {references.map((reference, index) => (
-        <li key={`${reference.id}${index}`}>{getLink(reference)}</li>
+      {references.map(reference => (
+        <li key={`${reference.id}`}>{getLink(reference)}</li>
       ))}
     </FlatList>
   );
