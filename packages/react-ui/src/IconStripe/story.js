@@ -21,5 +21,14 @@ export const base = () => (
         Check how it fits with another icon
       </IconStripe>
     </Section>
+    <Section>
+      <IconStripe centered icon={Document}>
+        In some case, you may prefer that the icon gets centered with the text.
+        <br />
+        You can do that by providing a centered prop to the component.
+        <br />
+        Another line to be sure it is centered.
+      </IconStripe>
+    </Section>
   </>
 );

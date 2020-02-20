@@ -16,55 +16,69 @@ import { CallToActionTile } from "./tiles/CallToAction";
 
 export const RelatedItems = ({ items = [] }) => {
   const tileSources = [SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS];
-  const relatedTilesItems = items.filter(item =>
-    tileSources.includes(item.source)
+
+  const relatedTilesItems = items.filter(({ source }) =>
+    tileSources.includes(source)
   );
   const relatedLinkItems = items.filter(
-    item => !tileSources.includes(item.source)
+    ({ source }) => !tileSources.includes(source)
   );
 
   return (
     <StyledSection>
       <Container>
         <StyledFlatList>
-          {relatedTilesItems.slice(0, 2).map(item => (
-            <StyledTileItem key={item.slug || item.url}>
-              {item.source !== SOURCES.EXTERNALS ? (
-                <Link
-                  as={`/${getRouteBySource(item.source)}/${item.slug}`}
-                  href={`/${getRouteBySource(item.source)}/[slug]`}
-                  passHref
-                >
-                  <CallToActionTile
-                    action={item.action || "Consulter"}
-                    custom
-                    icon={
-                      item.source === SOURCES.LETTERS
-                        ? icons.Document
-                        : icons[item.icon]
-                    }
-                    title={item.title}
-                    subtitle={getLabelBySource(item.source)}
-                  >
-                    {item.description}
-                  </CallToActionTile>
-                </Link>
-              ) : (
-                <CallToActionTile
-                  action={item.action || "Consulter"}
-                  custom={false}
-                  href={item.url}
-                  icon={icons[item.icon]}
-                  rel="noopener nofollow"
-                  subtitle={item.subtitle}
-                  target="_blank"
-                  title={item.title}
-                >
-                  {item.description}
-                </CallToActionTile>
-              )}
-            </StyledTileItem>
-          ))}
+          {relatedTilesItems
+            .slice(0, 2)
+            .map(
+              ({
+                action,
+                description,
+                icon,
+                slug,
+                source,
+                subtitle,
+                title,
+                url
+              }) => (
+                <StyledTileItem key={slug || url}>
+                  {source !== SOURCES.EXTERNALS ? (
+                    <Link
+                      as={`/${getRouteBySource(source)}/${slug}`}
+                      href={`/${getRouteBySource(source)}/[slug]`}
+                      passHref
+                    >
+                      <CallToActionTile
+                        action={action || "Consulter"}
+                        custom
+                        icon={
+                          source === SOURCES.LETTERS
+                            ? icons.Document
+                            : icons[icon]
+                        }
+                        title={title}
+                        subtitle={getLabelBySource(source)}
+                      >
+                        {description}
+                      </CallToActionTile>
+                    </Link>
+                  ) : (
+                    <CallToActionTile
+                      action={action || "Consulter"}
+                      custom={false}
+                      href={url}
+                      icon={icons[icon]}
+                      rel="noopener nofollow"
+                      subtitle={subtitle}
+                      target="_blank"
+                      title={title}
+                    >
+                      {description}
+                    </CallToActionTile>
+                  )}
+                </StyledTileItem>
+              )
+            )}
         </StyledFlatList>
         {relatedLinkItems.length > 0 && (
           <>
@@ -72,17 +86,28 @@ export const RelatedItems = ({ items = [] }) => {
               Les articles pouvant vous intéresser&nbsp;:
             </Heading>
             <FlatList>
-              {relatedLinkItems.slice(0, 3).map(({ slug, source, title }) => (
-                <StyledLinkItem key={slug}>
-                  <Link
-                    href={`/${getRouteBySource(source)}/[slug]`}
-                    as={`/${getRouteBySource(source)}/${slug}`}
-                    passHref
-                  >
-                    <ArrowLink arrowPosition="left">{title}</ArrowLink>
-                  </Link>
-                </StyledLinkItem>
-              ))}
+              {relatedLinkItems.slice(0, 3).map(({ slug, source, title }) => {
+                let rootSlug = slug;
+                let hash;
+                if (slug.includes("#")) {
+                  [rootSlug, hash] = slug.split("#");
+                }
+                hash = hash ? `#${hash}` : "";
+                rootSlug = rootSlug ? `/${rootSlug}` : "";
+                return (
+                  <StyledLinkItem key={slug}>
+                    <Link
+                      href={`/${getRouteBySource(source)}${
+                        rootSlug ? "/[slug]" : ""
+                      }`}
+                      as={`/${getRouteBySource(source)}${rootSlug}${hash}`}
+                      passHref
+                    >
+                      <ArrowLink arrowPosition="left">{title}</ArrowLink>
+                    </Link>
+                  </StyledLinkItem>
+                );
+              })}
             </FlatList>
           </>
         )}

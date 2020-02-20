@@ -219,17 +219,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c28 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
 .c24 {
   position: relative;
   display: -webkit-inline-box;
@@ -289,6 +278,17 @@ exports[`<FicheServicePublic /> should render 1`] = `
 
 .c27 {
   padding-right: 1rem;
+}
+
+.c28 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 
 .c29 {
@@ -969,7 +969,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           class="c27"
                         >
                           <span
-                            class="c28"
+                            class="sc-fzokvW c28"
                           >
                             Modèle de document
                           </span>
@@ -1795,7 +1795,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           class="c27"
         >
           <span
-            class="c28"
+            class="sc-fzokvW c28"
           >
             Modèle de document
           </span>

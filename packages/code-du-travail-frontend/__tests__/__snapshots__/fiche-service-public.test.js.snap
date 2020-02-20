@@ -1500,6 +1500,13 @@ exports[`<FicheSP /> should render 1`] = `
         >
           <div
             class="c25"
+          />
+        </div>
+        <div
+          class="c24"
+        >
+          <div
+            class="c25"
           >
             <div
               class="sc-AxgMl c26"

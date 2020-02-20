@@ -1,13 +1,18 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState } from "react";
+import Link from "next/link";
 import styled from "styled-components";
-import { Alert, Button, icons, Input, theme } from "@socialgouv/react-ui";
+import {
+  Button,
+  icons,
+  IconStripe,
+  Input,
+  theme,
+  Title
+} from "@socialgouv/react-ui";
 
-import { Title } from "./index";
-
-const mobileMediaQuery = `(max-width: ${theme.breakpoints.mobile})`;
+const { spacings } = theme;
 
 export function TextSearch({ containerId }) {
-  const [hasButton, setButtonVisible] = useState(false);
   const [query, setQuery] = useState("");
   const formatQuery = useCallback(
     e => {
@@ -15,64 +20,47 @@ export function TextSearch({ containerId }) {
     },
     [setQuery]
   );
-  const mqlListener = useCallback(
-    e => {
-      setButtonVisible(!e.matches);
-    },
-    [setButtonVisible]
-  );
-  useEffect(() => {
-    if (window.matchMedia) {
-      const mql = window.matchMedia(mobileMediaQuery);
-      setButtonVisible(!mql.matches);
-      mql.addListener(mqlListener);
-      return () => {
-        mql.removeListener(mqlListener);
-      };
-    }
-  }, [mqlListener]);
   return (
-    <form
-      target="_blank"
-      action="https://beta.legifrance.gouv.fr/search/kali#kali"
-    >
-      <Title>Recherche par mots-clés</Title>
-      <p>
-        <label htmlFor="search-agreement">
-          Effectuez une recherche dans le texte de la convention collective sur
-          Légifrance&nbsp;:
-        </label>
-      </p>
-      <Alert>
-        Pour savoir si ce qui est prévu par la convention collective de branche
-        est bien applicable à votre situation particulière vous devez vous
-        reporter à la fiche traitant du même sujet et pour lequel l&apos;accord
-        d&apos;entreprise peut comporter d&apos;autres règles.
-      </Alert>
-      <Box>
-        <StyledInput
-          onChange={formatQuery}
-          id="search-agreement"
-          type="search"
-          autoComplete="off"
-          name="rawQuery"
-          placeholder="congé exceptionnel, prime"
-        />{" "}
-        <input type="hidden" name="query" value={query} />
-        <input type="hidden" name="cidKaliCont" value={containerId} />
-        <input type="hidden" name="searchField" value="ALL" />
-        <input type="hidden" name="searchType" value="ALL" />
-        <input type="hidden" name="tab_selection" value="kali" />
-        <input type="hidden" name="page" value="1" />
-        {hasButton ? (
-          <Button variant="secondary">Rechercher</Button>
-        ) : (
+    <>
+      <Title
+        subtitle="Recherchez par mots clés dans le texte de la convention collective sur le site Légifrance."
+        shift={spacings.larger}
+      >
+        Recherche dans la convention collective
+      </Title>
+      <Form
+        target="_blank"
+        action="https://beta.legifrance.gouv.fr/search/kali#kali"
+      >
+        <Box>
+          <StyledInput
+            onChange={formatQuery}
+            id="search-agreement"
+            type="search"
+            autoComplete="off"
+            name="rawQuery"
+            placeholder="Congés exceptionnels, prime"
+          />
+          <input type="hidden" name="query" value={query} />
+          <input type="hidden" name="cidKaliCont" value={containerId} />
+          <input type="hidden" name="searchField" value="ALL" />
+          <input type="hidden" name="searchType" value="ALL" />
+          <input type="hidden" name="tab_selection" value="kali" />
+          <input type="hidden" name="page" value="1" />
           <SubmitIcon type="submit" small narrow variant="naked">
             <StyledSearchIcon />
           </SubmitIcon>
-        )}
-      </Box>
-    </form>
+        </Box>
+      </Form>
+      <IconStripe centered icon={icons.Warning}>
+        Selon le thème, un accord collectif d’entreprise peut prévoir des règles
+        différentes par rapport à la convention collective.{" "}
+        <Link href="/droit-du-travail" as="/droit-du-travail#hierarchie">
+          <a>En savoir plus</a>
+        </Link>
+        .
+      </IconStripe>
+    </>
   );
 }
 
@@ -82,9 +70,9 @@ const Box = styled.div`
 `;
 
 const StyledInput = styled(Input)`
-  flex: 1 1 40%;
-  @media ${mobileMediaQuery} {
-    padding-right: 5.5rem;
+  width: 100%;
+  input {
+    padding-right: 5rem;
   }
 `;
 
@@ -95,6 +83,10 @@ const SubmitIcon = styled(Button)`
   width: 3rem;
   height: 5.4rem;
   color: ${({ theme }) => theme.secondary};
+`;
+
+const Form = styled.form`
+  margin-bottom: ${spacings.xmedium};
 `;
 
 const StyledSearchIcon = styled(icons.Search)`
