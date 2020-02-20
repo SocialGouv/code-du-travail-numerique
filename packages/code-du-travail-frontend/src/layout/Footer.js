@@ -16,6 +16,7 @@ import {
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
 import { ContactModal } from "../common/ContactModal";
 import { useRouter } from "next/router";
+import { matopush } from "../piwik";
 
 const { DirectionRight: DirectionRightIcon } = icons;
 const { publicRuntimeConfig } = getConfig();
@@ -94,7 +95,18 @@ const Footer = () => {
                   <StyledListItem>
                     <ContactModal>
                       {openModal => (
-                        <Button variant="navLink" onClick={openModal}>
+                        <Button
+                          variant="navLink"
+                          onClick={() => {
+                            matopush([
+                              "trackEvent",
+                              "contact",
+                              "click_contact_cdtn_team",
+                              path
+                            ]);
+                            openModal();
+                          }}
+                        >
                           Contact
                         </Button>
                       )}

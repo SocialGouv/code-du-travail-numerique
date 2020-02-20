@@ -3,6 +3,10 @@ import { render } from "@testing-library/react";
 import { Button } from "@socialgouv/react-ui";
 import { ServiceRenseignementModal } from "../ServiceRenseignementModal";
 
+jest.mock("../../piwik", () => ({
+  matopush: jest.fn()
+}));
+
 describe("<ServiceRenseignementModal />", () => {
   it("renders the given element", () => {
     const { getByText } = render(
