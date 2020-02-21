@@ -71,7 +71,10 @@ nextApp.prepare().then(() => {
             "*.fabrique.social.gouv.fr",
             "https://cdnjs.cloudflare.com"
           ],
-          frameSrc: ["https://mon-entreprise.fr"],
+          frameSrc: [
+            "https://mon-entreprise.fr",
+            "https://matomo.fabrique.social.gouv.fr"
+          ],
           frameAncestors: ["'none'"],
           styleSrc: ["'self'", "'unsafe-inline'"],
           imgSrc: [
