@@ -10,7 +10,6 @@ export const ContactModal = ({ children: renderProp }) => {
   const [isServiceRenseignement, setServiceRenseignement] = useState(false);
 
   const openModal = useCallback(e => {
-    if (e) e.preventDefault();
     setModalVisibility(true);
   }, []);
 
