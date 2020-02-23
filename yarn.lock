@@ -11475,11 +11475,6 @@ load-json-file@^5.3.0:
     strip-bom "^3.0.0"
     type-fest "^0.3.0"
 
-load-script@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
-  integrity sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
-
 load-source-map@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/load-source-map/-/load-source-map-1.0.0.tgz#318f49905ce8a709dfb7cc3f16f3efe3bcf1dd05"
@@ -15243,13 +15238,12 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-mathjax-preview@^0.1.16:
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/react-mathjax-preview/-/react-mathjax-preview-0.1.16.tgz#74916a30c5a2905e853a18912dd153fa45c5982b"
-  integrity sha512-2aSy5sJBi5JZnTpS+n+wWIA45HU3zexZS7kg+QeqTNu884HPiy0K6v913N8ah5r+Oe+Afta7b43iUqJgWuvluQ==
+react-mathjax-preview@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-mathjax-preview/-/react-mathjax-preview-1.0.0.tgz#c0635575d91e574dd32f4be0663f83884970114d"
+  integrity sha512-DgYLhbOjThzzjddZdeoN09aQju9k+E2hy6AjWB0K2Jjx37yqeXWfoR/SAAjw/zM3ICtyUS7//BEtBuBdvWIM1Q==
   dependencies:
     dompurify "^2.0.0"
-    load-script "^1.0.0"
 
 react-popper-tooltip@^2.8.3:
   version "2.10.1"
