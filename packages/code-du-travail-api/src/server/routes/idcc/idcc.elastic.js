@@ -18,7 +18,7 @@ function getIdccBody({ query }) {
                 match: {
                   "shortTitle.french": {
                     query: `${query}`,
-                    fuzziness: "AUTO",
+                    fuzziness: "1",
                     boost: ".9"
                   }
                 }
