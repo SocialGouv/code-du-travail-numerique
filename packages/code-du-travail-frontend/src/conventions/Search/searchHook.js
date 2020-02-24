@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { loadResults } from "./api";
+import { getResults } from "./api";
 
 // a hook that return [status, searchResults]
 // todo: package as a module
@@ -13,12 +13,12 @@ const useSearchCC = query => {
     async function load(query) {
       if (query) {
         setStatus("loading");
-        setResults([]);
+        setResults();
         try {
-          const results = await loadResults(query);
+          const results = await getResults(query);
           if (shouldUpdate) {
             if (results) {
-              if (results.length) {
+              if (results.conventions.length || results.entreprises.length) {
                 setStatus("success");
               } else {
                 setStatus("empty");
@@ -30,7 +30,7 @@ const useSearchCC = query => {
           setStatus("error");
         }
       } else {
-        setResults([]);
+        setResults();
         setStatus("idle");
       }
     }

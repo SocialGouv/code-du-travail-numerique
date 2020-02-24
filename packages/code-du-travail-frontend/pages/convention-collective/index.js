@@ -1,9 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { Container, PageTitle, Section, Wrapper } from "@socialgouv/react-ui";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
-import ConventionForm from "../../src/conventions/Search/Form";
+import ConventionForm from "../../src/conventions/Search";
 
 const SearchConvention = ({ ogImage, pageUrl }) => (
   <Layout currentPage="about">
@@ -17,7 +16,7 @@ const SearchConvention = ({ ogImage, pageUrl }) => (
       <Container narrow>
         <PageTitle>Recherchez votre convention collective</PageTitle>
         <Wrapper variant="main">
-          <StyledConventionForm />
+          <ConventionForm />
         </Wrapper>
       </Container>
     </Section>
@@ -25,7 +24,3 @@ const SearchConvention = ({ ogImage, pageUrl }) => (
 );
 
 export default SearchConvention;
-
-const StyledConventionForm = styled(ConventionForm)`
-  min-height: 30rem;
-`;

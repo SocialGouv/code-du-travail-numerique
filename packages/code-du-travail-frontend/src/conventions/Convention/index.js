@@ -6,11 +6,11 @@ import { TextSearch } from "./TextSearch";
 import { Contributions } from "./Contributions";
 
 const Convention = ({ convention }) => {
-  const [, setCcInfo] = useLocalStorage("convention", {});
+  const [, setCcInfo] = useLocalStorage("convention");
 
   useEffect(() => {
     const { slug, id, num, title, shortTitle } = convention;
-    setCcInfo({ convention: { id, slug, title, shortTitle, num } });
+    setCcInfo({ id, slug, title, shortTitle, num });
   }, [convention, setCcInfo]);
 
   return (

@@ -125,8 +125,8 @@ export const Results = ({ id, isSearch, items, query }) => {
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
       <FlatList>
-        {items.slice(0, page * pageSize).map((item, i) => (
-          <StyledListItem key={`item.slug${i}`}>
+        {items.slice(0, page * pageSize).map(item => (
+          <StyledListItem key={item.slug}>
             <ListLink item={item} isSearch={isSearch} query={query} />
           </StyledListItem>
         ))}
