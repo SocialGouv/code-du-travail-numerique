@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
-.c18 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -46,84 +46,19 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c18:focus,
-.c18:hover,
-.c18:active {
+.c11:focus,
+.c11:hover,
+.c11:active {
   color: #f66663;
 }
 
-.c5 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c5:before,
-.c5:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c5:before {
-  left: -2rem;
-}
-
-.c5:after {
-  right: -2rem;
-}
-
-.c6 {
-  overflow-x: auto;
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c7 {
-  text-align: left;
-  empty-cells: show;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.c7 caption {
-  padding: 1rem 0;
-  font-style: italic;
-  text-align: center;
-}
-
-.c7 td,
-.c7 th {
-  padding: 1rem 1.6rem;
-  border: 1px solid #bbcadf;
-}
-
-.c7 th {
-  color: #2f3b6c;
-  font-weight: 600;
-  background: #e4e8ef;
-}
-
-.c7 thead,
-.c7 tfoot {
-  padding: 1rem 1.6rem;
-  vertical-align: bottom;
-  background: #f2f5fa;
-}
-
-.c7 tfoot {
-  vertical-align: top;
-}
-
-.c0 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -221,121 +156,76 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   color: transparent;
 }
 
-.c2 {
-  display: block;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
+  cursor: pointer;
 }
 
-.c8 {
-  width: 100%;
-  overflow: hidden;
-  table-layout: fixed;
-  background: #bbcadf;
-  border: 1px solid #bbcadf;
+.c6 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
   border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
 }
 
-.c8 td {
-  border: none;
+.c6 > *:first-child {
+  margin-top: 0;
 }
 
-.c10 {
-  font-weight: bold;
-  background: #e4e8ef;
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 + .c5 {
+  margin-top: 1.6rem;
+}
+
+.c10 + .c9 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c12 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c13 {
-  background: #fff;
+  font-weight: normal;
 }
 
-.c12 .c9 {
-  border-bottom: 1px solid #fff;
-}
-
-.c12 + .c11 {
-  border-top: 1px solid #bbcadf;
+.c2 {
+  width: 100%;
 }
 
 .c4 {
   margin-top: 2rem;
 }
 
-.c19 {
-  display: inline;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: underline #f66663;
-  text-decoration: underline #f66663;
-}
-
-.c17 {
-  margin: 1rem 0;
-}
-
-.c16 {
-  margin-top: 1rem;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c15 {
-  -webkit-flex: 1 1 calc(100% - 200px);
-  -ms-flex: 1 1 calc(100% - 200px);
-  flex: 1 1 calc(100% - 200px);
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  overflow: hidden;
-  color: #3e486e;
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-
 @media (max-width:600px) {
-  .c18 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c5:before,
-  .c5:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
@@ -353,43 +243,32 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   }
 }
 
-@media screen and (min-width:980px) {
-  .c14 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: baseline;
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
+@media (max-width:600px) {
+  .c6 {
+    padding: 1.6rem 1rem;
   }
 }
 
-@media screen and (min-width:980px) {
-  .c15 {
-    -webkit-align-self: baseline;
-    -ms-flex-item-align: baseline;
-    align-self: baseline;
-    margin-top: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+@media print {
+  .c6 {
+    padding: 0 5pt;
+    border: none;
   }
 }
 
 <div>
-  <h3
+  <label
     class="c0"
+    for="convention-search"
   >
-    Recherche de convention collective
-  </h3>
-  <p>
     Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-  </p>
+  </label>
   <span
     class="c1 c2"
   >
     <input
       class="c3"
+      id="convention-search"
       name="q"
       placeholder="Nom d'entreprise, SIRET, nom de convention collective"
       role="search"
@@ -401,74 +280,40 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
     class="c4"
   >
     <div
-      class="c5"
+      class="sc-AxgMl c5 c6"
     >
-      <div
-        class="c6"
+      <h3
+        class="c7"
       >
-        <table
-          class="c7 c8"
+        CONVENTIONS COLLECTIVES (1 résultat)
+      </h3>
+      <ul
+        class="c8"
+      >
+        <li
+          class="c9 c10"
         >
-          <tbody>
-            <tr>
-              <td
-                class="c9 c10"
-              >
-                Conventions collectives
-              </td>
-            </tr>
-            <tr
-              class="c11 c12"
+          <button
+            class="c11 c12"
+          >
+            small title 1
+             
+            <span
+              class="c13"
             >
-              <td
-                class="c13"
-              >
-                <div
-                  class="c14"
-                >
-                  <div
-                    class="c15"
-                  />
-                </div>
-                <div
-                  class="c16"
-                >
-                  <div
-                    class="c17"
-                  >
-                    <span>
-                      <button
-                        class="c18 c19"
-                      >
-                        small title 1
-                      </button>
-                      (IDCC 
-                      0275
-                      )
-                    </span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              (IDCC 
+              0275
+              )
+            </span>
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 `;
 
 exports[`<Search /> should render 1`] = `
-.c0 {
-  position: relative;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c1 {
   position: relative;
   display: inline-block;
@@ -557,14 +402,22 @@ exports[`<Search /> should render 1`] = `
   color: transparent;
 }
 
-.c2 {
-  display: block;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
+  cursor: pointer;
 }
 
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
+.c2 {
+  width: 100%;
 }
 
 @media (max-width:600px) {
@@ -581,19 +434,18 @@ exports[`<Search /> should render 1`] = `
 }
 
 <div>
-  <h3
+  <label
     class="c0"
+    for="convention-search"
   >
-    Recherche de convention collective
-  </h3>
-  <p>
     Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-  </p>
+  </label>
   <span
     class="c1 c2"
   >
     <input
       class="c3"
+      id="convention-search"
       name="q"
       placeholder="Nom d'entreprise, SIRET, nom de convention collective"
       role="search"
@@ -606,16 +458,6 @@ exports[`<Search /> should render 1`] = `
 `;
 
 exports[`<Search /> should show no results when no result 1`] = `
-.c0 {
-  position: relative;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c1 {
   position: relative;
   display: inline-block;
@@ -704,18 +546,26 @@ exports[`<Search /> should show no results when no result 1`] = `
   color: transparent;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
+  cursor: pointer;
+}
+
 .c2 {
-  display: block;
+  width: 100%;
 }
 
 .c4 {
   margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -732,19 +582,18 @@ exports[`<Search /> should show no results when no result 1`] = `
 }
 
 <div>
-  <h3
+  <label
     class="c0"
+    for="convention-search"
   >
-    Recherche de convention collective
-  </h3>
-  <p>
     Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-  </p>
+  </label>
   <span
     class="c1 c2"
   >
     <input
       class="c3"
+      id="convention-search"
       name="q"
       placeholder="Nom d'entreprise, SIRET, nom de convention collective"
       role="search"
@@ -763,16 +612,6 @@ exports[`<Search /> should show no results when no result 1`] = `
 `;
 
 exports[`<Search /> should show spinner when loading 1`] = `
-.c0 {
-  position: relative;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c1 {
   position: relative;
   display: inline-block;
@@ -861,18 +700,26 @@ exports[`<Search /> should show spinner when loading 1`] = `
   color: transparent;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
+  cursor: pointer;
+}
+
 .c2 {
-  display: block;
+  width: 100%;
 }
 
 .c4 {
   margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -889,19 +736,18 @@ exports[`<Search /> should show spinner when loading 1`] = `
 }
 
 <div>
-  <h3
+  <label
     class="c0"
+    for="convention-search"
   >
-    Recherche de convention collective
-  </h3>
-  <p>
     Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-  </p>
+  </label>
   <span
     class="c1 c2"
   >
     <input
       class="c3"
+      id="convention-search"
       name="q"
       placeholder="Nom d'entreprise, SIRET, nom de convention collective"
       role="search"
@@ -965,78 +811,13 @@ exports[`<Search /> should show spinner when loading 1`] = `
 `;
 
 exports[`<Search /> when input is IDCC, should search conventions 1`] = `
-.c5 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c5:before,
-.c5:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c5:before {
-  left: -2rem;
-}
-
-.c5:after {
-  right: -2rem;
-}
-
-.c6 {
-  overflow-x: auto;
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c7 {
-  text-align: left;
-  empty-cells: show;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.c7 caption {
-  padding: 1rem 0;
-  font-style: italic;
-  text-align: center;
-}
-
-.c7 td,
-.c7 th {
-  padding: 1rem 1.6rem;
-  border: 1px solid #bbcadf;
-}
-
-.c7 th {
-  color: #2f3b6c;
-  font-weight: 600;
-  background: #e4e8ef;
-}
-
-.c7 thead,
-.c7 tfoot {
-  padding: 1rem 1.6rem;
-  vertical-align: bottom;
-  background: #f2f5fa;
-}
-
-.c7 tfoot {
-  vertical-align: top;
-}
-
-.c0 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -1134,115 +915,81 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   color: transparent;
 }
 
-.c2 {
-  display: block;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
+  cursor: pointer;
 }
 
-.c8 {
-  width: 100%;
-  overflow: hidden;
-  table-layout: fixed;
-  background: #bbcadf;
-  border: 1px solid #bbcadf;
+.c6 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
   border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
 }
 
-.c8 td {
-  border: none;
+.c6 > *:first-child {
+  margin-top: 0;
 }
 
-.c10 {
-  font-weight: bold;
-  background: #e4e8ef;
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 + .c5 {
+  margin-top: 1.6rem;
+}
+
+.c10 + .c9 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c11 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c13 {
-  background: #fff;
+  display: block;
+  padding: 1.6rem 0;
+  color: #7994d4;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.c12 .c9 {
-  border-bottom: 1px solid #fff;
+.c12 {
+  font-weight: normal;
 }
 
-.c12 + .c11 {
-  border-top: 1px solid #bbcadf;
+.c2 {
+  width: 100%;
 }
 
 .c4 {
   margin-top: 2rem;
 }
 
-.c18 {
-  display: inline;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: underline #f66663;
-  text-decoration: underline #f66663;
-}
-
-.c17 {
-  margin: 1rem 0;
-}
-
-.c16 {
-  margin-top: 1rem;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c15 {
-  -webkit-flex: 1 1 calc(100% - 200px);
-  -ms-flex: 1 1 calc(100% - 200px);
-  flex: 1 1 calc(100% - 200px);
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  overflow: hidden;
-  color: #3e486e;
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-
 @media (max-width:600px) {
-  .c5 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c5:before,
-  .c5:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
@@ -1260,43 +1007,32 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   }
 }
 
-@media screen and (min-width:980px) {
-  .c14 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: baseline;
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
+@media (max-width:600px) {
+  .c6 {
+    padding: 1.6rem 1rem;
   }
 }
 
-@media screen and (min-width:980px) {
-  .c15 {
-    -webkit-align-self: baseline;
-    -ms-flex-item-align: baseline;
-    align-self: baseline;
-    margin-top: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+@media print {
+  .c6 {
+    padding: 0 5pt;
+    border: none;
   }
 }
 
 <div>
-  <h3
+  <label
     class="c0"
+    for="convention-search"
   >
-    Recherche de convention collective
-  </h3>
-  <p>
     Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-  </p>
+  </label>
   <span
     class="c1 c2"
   >
     <input
       class="c3"
+      id="convention-search"
       name="q"
       placeholder="Nom d'entreprise, SIRET, nom de convention collective"
       role="search"
@@ -1308,171 +1044,66 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     class="c4"
   >
     <div
-      class="c5"
+      class="sc-AxgMl c5 c6"
     >
-      <div
-        class="c6"
+      <h3
+        class="c7"
       >
-        <table
-          class="c7 c8"
+        CONVENTIONS COLLECTIVES (2 résultats)
+      </h3>
+      <ul
+        class="c8"
+      >
+        <li
+          class="c9 c10"
         >
-          <tbody>
-            <tr>
-              <td
-                class="c9 c10"
-              >
-                Conventions collectives
-              </td>
-            </tr>
-            <tr
-              class="c11 c12"
+          <a
+            class="c11"
+            href="/convention-collective/275-small-titre"
+          >
+            small titre
+             
+            <span
+              class="c12"
             >
-              <td
-                class="c13"
-              >
-                <div
-                  class="c14"
-                >
-                  <div
-                    class="c15"
-                  />
-                </div>
-                <div
-                  class="c16"
-                >
-                  <div
-                    class="c17"
-                  >
-                    <a
-                      class="c18"
-                      href="/convention-collective/275-small-titre"
-                    >
-                      small titre
-                    </a>
-                    <span>
-                       (IDCC 
-                      0275
-                      )
-                    </span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr
-              class="c11 c12"
+              (IDCC 
+              0275
+              )
+            </span>
+          </a>
+        </li>
+        <li
+          class="c9 c10"
+        >
+          <a
+            class="c13"
+            href="/convention-collective/276-smaller-convention-2"
+          >
+            smaller convention 2
+             
+            <span
+              class="c12"
             >
-              <td
-                class="c13"
-              >
-                <div
-                  class="c14"
-                >
-                  <div
-                    class="c15"
-                  />
-                </div>
-                <div
-                  class="c16"
-                >
-                  <div
-                    class="c17"
-                  >
-                    <a
-                      class="c18"
-                      href="/convention-collective/276-smaller-convention-2"
-                    >
-                      smaller convention 2
-                    </a>
-                    <span>
-                       (IDCC 
-                      0276
-                      )
-                    </span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              (IDCC 
+              0276
+              )
+            </span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 `;
 
 exports[`<Search /> when input is a valid IDCC, should show only the perfect match  1`] = `
-.c5 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c5:before,
-.c5:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c5:before {
-  left: -2rem;
-}
-
-.c5:after {
-  right: -2rem;
-}
-
-.c6 {
-  overflow-x: auto;
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c7 {
-  text-align: left;
-  empty-cells: show;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.c7 caption {
-  padding: 1rem 0;
-  font-style: italic;
-  text-align: center;
-}
-
-.c7 td,
-.c7 th {
-  padding: 1rem 1.6rem;
-  border: 1px solid #bbcadf;
-}
-
-.c7 th {
-  color: #2f3b6c;
-  font-weight: 600;
-  background: #e4e8ef;
-}
-
-.c7 thead,
-.c7 tfoot {
-  padding: 1rem 1.6rem;
-  vertical-align: bottom;
-  background: #f2f5fa;
-}
-
-.c7 tfoot {
-  vertical-align: top;
-}
-
-.c0 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -1570,115 +1201,70 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   color: transparent;
 }
 
-.c2 {
-  display: block;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
+  cursor: pointer;
 }
 
-.c8 {
-  width: 100%;
-  overflow: hidden;
-  table-layout: fixed;
-  background: #bbcadf;
-  border: 1px solid #bbcadf;
+.c6 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
   border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
 }
 
-.c8 td {
-  border: none;
+.c6 > *:first-child {
+  margin-top: 0;
 }
 
-.c10 {
-  font-weight: bold;
-  background: #e4e8ef;
+.c6 > *:last-child {
+  margin-bottom: 0;
 }
 
-.c13 {
-  background: #fff;
+.c6 + .c5 {
+  margin-top: 1.6rem;
 }
 
-.c12 .c9 {
-  border-bottom: 1px solid #fff;
-}
-
-.c12 + .c11 {
+.c10 + .c9 {
   border-top: 1px solid #bbcadf;
+}
+
+.c11 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c12 {
+  font-weight: normal;
+}
+
+.c2 {
+  width: 100%;
 }
 
 .c4 {
   margin-top: 2rem;
 }
 
-.c18 {
-  display: inline;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: underline #f66663;
-  text-decoration: underline #f66663;
-}
-
-.c17 {
-  margin: 1rem 0;
-}
-
-.c16 {
-  margin-top: 1rem;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c15 {
-  -webkit-flex: 1 1 calc(100% - 200px);
-  -ms-flex: 1 1 calc(100% - 200px);
-  flex: 1 1 calc(100% - 200px);
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  overflow: hidden;
-  color: #3e486e;
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-
 @media (max-width:600px) {
-  .c5 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c5:before,
-  .c5:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
@@ -1696,43 +1282,32 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   }
 }
 
-@media screen and (min-width:980px) {
-  .c14 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: baseline;
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
+@media (max-width:600px) {
+  .c6 {
+    padding: 1.6rem 1rem;
   }
 }
 
-@media screen and (min-width:980px) {
-  .c15 {
-    -webkit-align-self: baseline;
-    -ms-flex-item-align: baseline;
-    align-self: baseline;
-    margin-top: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+@media print {
+  .c6 {
+    padding: 0 5pt;
+    border: none;
   }
 }
 
 <div>
-  <h3
+  <label
     class="c0"
+    for="convention-search"
   >
-    Recherche de convention collective
-  </h3>
-  <p>
     Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-  </p>
+  </label>
   <span
     class="c1 c2"
   >
     <input
       class="c3"
+      id="convention-search"
       name="q"
       placeholder="Nom d'entreprise, SIRET, nom de convention collective"
       role="search"
@@ -1744,197 +1319,41 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
     class="c4"
   >
     <div
-      class="c5"
+      class="sc-AxgMl c5 c6"
     >
-      <div
-        class="c6"
+      <h3
+        class="c7"
       >
-        <table
-          class="c7 c8"
+        CONVENTIONS COLLECTIVES (1 résultat)
+      </h3>
+      <ul
+        class="c8"
+      >
+        <li
+          class="c9 c10"
         >
-          <tbody>
-            <tr>
-              <td
-                class="c9 c10"
-              >
-                Conventions collectives
-              </td>
-            </tr>
-            <tr
-              class="c11 c12"
+          <a
+            class="c11"
+            href="/convention-collective/4567-smaller-convention-2"
+          >
+            smaller convention 2
+             
+            <span
+              class="c12"
             >
-              <td
-                class="c13"
-              >
-                <div
-                  class="c14"
-                >
-                  <div
-                    class="c15"
-                  />
-                </div>
-                <div
-                  class="c16"
-                >
-                  <div
-                    class="c17"
-                  >
-                    <a
-                      class="c18"
-                      href="/convention-collective/4567-smaller-convention-2"
-                    >
-                      smaller convention 2
-                    </a>
-                    <span>
-                       (IDCC 
-                      4567
-                      )
-                    </span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              (IDCC 
+              4567
+              )
+            </span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 `;
 
 exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`] = `
-.c18 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c18:focus,
-.c18:hover,
-.c18:active {
-  color: #f66663;
-}
-
-.c5 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c5:before,
-.c5:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c5:before {
-  left: -2rem;
-}
-
-.c5:after {
-  right: -2rem;
-}
-
-.c6 {
-  overflow-x: auto;
-}
-
-.c7 {
-  text-align: left;
-  empty-cells: show;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.c7 caption {
-  padding: 1rem 0;
-  font-style: italic;
-  text-align: center;
-}
-
-.c7 td,
-.c7 th {
-  padding: 1rem 1.6rem;
-  border: 1px solid #bbcadf;
-}
-
-.c7 th {
-  color: #2f3b6c;
-  font-weight: 600;
-  background: #e4e8ef;
-}
-
-.c7 thead,
-.c7 tfoot {
-  padding: 1rem 1.6rem;
-  vertical-align: bottom;
-  background: #f2f5fa;
-}
-
-.c7 tfoot {
-  vertical-align: top;
-}
-
-.c0 {
-  position: relative;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c1 {
   position: relative;
   display: inline-block;
@@ -2023,123 +1442,26 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   color: transparent;
 }
 
-.c2 {
-  display: block;
-}
-
-.c8 {
-  width: 100%;
-  overflow: hidden;
-  table-layout: fixed;
-  background: #bbcadf;
-  border: 1px solid #bbcadf;
-  border-radius: 0.6rem;
-}
-
-.c8 td {
-  border: none;
-}
-
-.c10 {
-  font-weight: bold;
-  background: #e4e8ef;
-}
-
-.c13 {
-  background: #fff;
-}
-
-.c12 .c9 {
-  border-bottom: 1px solid #fff;
-}
-
-.c12 + .c11 {
-  border-top: 1px solid #bbcadf;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-.c19 {
-  display: inline;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: underline #f66663;
-  text-decoration: underline #f66663;
-}
-
-.c17 {
-  margin: 1rem 0;
-}
-
-.c16 {
-  margin-top: 1rem;
-}
-
-.c14 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
+  cursor: pointer;
 }
 
-.c15 {
-  -webkit-flex: 1 1 calc(100% - 200px);
-  -ms-flex: 1 1 calc(100% - 200px);
-  flex: 1 1 calc(100% - 200px);
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  overflow: hidden;
-  color: #3e486e;
-  font-weight: bold;
-  font-size: 1.8rem;
+.c2 {
+  width: 100%;
 }
 
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c5:before,
-  .c5:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
+.c4 {
+  margin-top: 2rem;
 }
 
 @media (max-width:600px) {
@@ -2155,43 +1477,19 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   }
 }
 
-@media screen and (min-width:980px) {
-  .c14 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: baseline;
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
-  }
-}
-
-@media screen and (min-width:980px) {
-  .c15 {
-    -webkit-align-self: baseline;
-    -ms-flex-item-align: baseline;
-    align-self: baseline;
-    margin-top: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-}
-
 <div>
-  <h3
+  <label
     class="c0"
+    for="convention-search"
   >
-    Recherche de convention collective
-  </h3>
-  <p>
     Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-  </p>
+  </label>
   <span
     class="c1 c2"
   >
     <input
       class="c3"
+      id="convention-search"
       name="q"
       placeholder="Nom d'entreprise, SIRET, nom de convention collective"
       role="search"
@@ -2202,77 +1500,15 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   <div
     class="c4"
   >
-    <div
-      class="c5"
-    >
-      <div
-        class="c6"
-      >
-        <table
-          class="c7 c8"
-        >
-          <tbody>
-            <tr>
-              <td
-                class="c9 c10"
-              >
-                Entreprises
-              </td>
-            </tr>
-            <tr
-              class="c11 c12"
-            >
-              <td
-                class="c13"
-              >
-                <div
-                  class="c14"
-                >
-                  <div
-                    class="c15"
-                  >
-                    Entreprise 1 93100 Commune test
-                  </div>
-                  <a
-                    href="https://entreprise.data.gouv.fr/etablissement/01234567891011"
-                    rel="noopener noreferrer"
-                    style="font-size: 0.8em;"
-                    target="_blank"
-                    title="Ouvrir la fiche entreprise"
-                  >
-                    Fiche entreprise
-                  </a>
-                </div>
-                <div
-                  class="c16"
-                >
-                  <div
-                    class="c17"
-                  >
-                    <span>
-                      <button
-                        class="c18 c19"
-                      >
-                        
-                      </button>
-                      (IDCC 
-                      0843
-                      )
-                    </span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div>
+      Aucun résultat n’a été trouvé.
     </div>
   </div>
 </div>
 `;
 
 exports[`<Search /> when searching by text, should use ES, api SIREN and siret2idcc 1`] = `
-.c18 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2317,84 +1553,19 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c18:focus,
-.c18:hover,
-.c18:active {
+.c11:focus,
+.c11:hover,
+.c11:active {
   color: #f66663;
 }
 
-.c5 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c5:before,
-.c5:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c5:before {
-  left: -2rem;
-}
-
-.c5:after {
-  right: -2rem;
-}
-
-.c6 {
-  overflow-x: auto;
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c7 {
-  text-align: left;
-  empty-cells: show;
-  background-color: #fff;
-  border: 1px solid #bbcadf;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.c7 caption {
-  padding: 1rem 0;
-  font-style: italic;
-  text-align: center;
-}
-
-.c7 td,
-.c7 th {
-  padding: 1rem 1.6rem;
-  border: 1px solid #bbcadf;
-}
-
-.c7 th {
-  color: #2f3b6c;
-  font-weight: 600;
-  background: #e4e8ef;
-}
-
-.c7 thead,
-.c7 tfoot {
-  padding: 1rem 1.6rem;
-  vertical-align: bottom;
-  background: #f2f5fa;
-}
-
-.c7 tfoot {
-  vertical-align: top;
-}
-
-.c0 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -2492,121 +1663,92 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   color: transparent;
 }
 
-.c2 {
-  display: block;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
+  cursor: pointer;
 }
 
-.c8 {
-  width: 100%;
-  overflow: hidden;
-  table-layout: fixed;
-  background: #bbcadf;
-  border: 1px solid #bbcadf;
+.c6 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
   border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
 }
 
-.c8 td {
-  border: none;
+.c6 > *:first-child {
+  margin-top: 0;
 }
 
-.c10 {
-  font-weight: bold;
-  background: #e4e8ef;
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 + .c5 {
+  margin-top: 1.6rem;
+}
+
+.c10 + .c9 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c12 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c15 {
+  display: block;
+  padding: 0.8rem 0;
+  color: #7994d4;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c13 {
-  background: #fff;
+  font-weight: normal;
 }
 
-.c12 .c9 {
-  border-bottom: 1px solid #fff;
+.c14 {
+  margin: 0.8rem 0 0 0;
+  font-weight: bold;
 }
 
-.c12 + .c11 {
-  border-top: 1px solid #bbcadf;
+.c2 {
+  width: 100%;
 }
 
 .c4 {
   margin-top: 2rem;
 }
 
-.c19 {
-  display: inline;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: underline #f66663;
-  text-decoration: underline #f66663;
-}
-
-.c17 {
-  margin: 1rem 0;
-}
-
-.c16 {
-  margin-top: 1rem;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c15 {
-  -webkit-flex: 1 1 calc(100% - 200px);
-  -ms-flex: 1 1 calc(100% - 200px);
-  flex: 1 1 calc(100% - 200px);
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  overflow: hidden;
-  color: #3e486e;
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-
 @media (max-width:600px) {
-  .c18 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c5:before,
-  .c5:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
@@ -2624,43 +1766,32 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   }
 }
 
-@media screen and (min-width:980px) {
-  .c14 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: baseline;
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
+@media (max-width:600px) {
+  .c6 {
+    padding: 1.6rem 1rem;
   }
 }
 
-@media screen and (min-width:980px) {
-  .c15 {
-    -webkit-align-self: baseline;
-    -ms-flex-item-align: baseline;
-    align-self: baseline;
-    margin-top: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+@media print {
+  .c6 {
+    padding: 0 5pt;
+    border: none;
   }
 }
 
 <div>
-  <h3
+  <label
     class="c0"
+    for="convention-search"
   >
-    Recherche de convention collective
-  </h3>
-  <p>
     Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-  </p>
+  </label>
   <span
     class="c1 c2"
   >
     <input
       class="c3"
+      id="convention-search"
       name="q"
       placeholder="Nom d'entreprise, SIRET, nom de convention collective"
       role="search"
@@ -2672,109 +1803,69 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
     class="c4"
   >
     <div
-      class="c5"
+      class="sc-AxgMl c5 c6"
     >
-      <div
-        class="c6"
+      <h3
+        class="c7"
       >
-        <table
-          class="c7 c8"
+        CONVENTIONS COLLECTIVES (1 résultat)
+      </h3>
+      <ul
+        class="c8"
+      >
+        <li
+          class="c9 c10"
         >
-          <tbody>
-            <tr>
-              <td
-                class="c9 c10"
-              >
-                Conventions collectives
-              </td>
-            </tr>
-            <tr
-              class="c11 c12"
+          <button
+            class="c11 c12"
+          >
+            titre convention 1
+             
+            <span
+              class="c13"
             >
-              <td
-                class="c13"
-              >
-                <div
-                  class="c14"
-                >
-                  <div
-                    class="c15"
-                  />
-                </div>
-                <div
-                  class="c16"
-                >
-                  <div
-                    class="c17"
-                  >
-                    <span>
-                      <button
-                        class="c18 c19"
-                      >
-                        titre convention 1
-                      </button>
-                      (IDCC 
-                      0275
-                      )
-                    </span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td
-                class="c9 c10"
-              >
-                Entreprises
-              </td>
-            </tr>
-            <tr
-              class="c11 c12"
+              (IDCC 
+              0275
+              )
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="sc-AxgMl c5 c6"
+    >
+      <h3
+        class="c7"
+      >
+        ENTREPRISES (1 résultat)
+      </h3>
+      <ul
+        class="c8"
+      >
+        <li
+          class="c9 c10"
+        >
+          <div
+            class="c14"
+          >
+            Entreprise 1 93100 Commune test
+          </div>
+          <button
+            class="c11 c15"
+          >
+            Short Convention 1
+             
+            <span
+              class="c13"
             >
-              <td
-                class="c13"
-              >
-                <div
-                  class="c14"
-                >
-                  <div
-                    class="c15"
-                  >
-                    Entreprise 1 93100 Commune test
-                  </div>
-                  <a
-                    href="https://entreprise.data.gouv.fr/etablissement/44144914700020"
-                    rel="noopener noreferrer"
-                    style="font-size: 0.8em;"
-                    target="_blank"
-                    title="Ouvrir la fiche entreprise"
-                  >
-                    Fiche entreprise
-                  </a>
-                </div>
-                <div
-                  class="c16"
-                >
-                  <div
-                    class="c17"
-                  >
-                    <span>
-                      <button
-                        class="c18 c19"
-                      >
-                        Short Convention 1
-                      </button>
-                      (IDCC 
-                      0843
-                      )
-                    </span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              (IDCC 
+              0843
+              )
+            </span>
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

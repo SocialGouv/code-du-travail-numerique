@@ -103,10 +103,7 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
   >
     La convention collective
   </label>
-  <p>
-    <br />
-    (ccn des 5 mondes)
-  </p>
+  <p />
   <p>
     <button
       class="c1 c2"

@@ -116,16 +116,6 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   right: 0;
 }
 
-.c2 {
-  position: relative;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c3 {
   position: relative;
   display: inline-block;
@@ -214,8 +204,22 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   color: transparent;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 2;
+  cursor: pointer;
+}
+
 .c4 {
-  display: block;
+  width: 100%;
 }
 
 @media (max-width:600px) {
@@ -249,12 +253,6 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
     position: fixed;
     top: 1rem;
     right: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 1.6rem;
   }
 }
 
@@ -308,19 +306,18 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             role="dialog"
             tabindex="-1"
           >
-            <h3
+            <label
               class="c2"
+              for="convention-search"
             >
-              Recherche de convention collective
-            </h3>
-            <p>
               Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
-            </p>
+            </label>
             <span
               class="c3 c4"
             >
               <input
                 class="c5"
+                id="convention-search"
                 name="q"
                 placeholder="Nom d'entreprise, SIRET, nom de convention collective"
                 role="search"
