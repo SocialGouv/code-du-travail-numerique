@@ -58,9 +58,7 @@ export const RelatedItems = ({ items = [] }) => {
                         }
                         title={title}
                         subtitle={getLabelBySource(source)}
-                      >
-                        {description}
-                      </CallToActionTile>
+                      ></CallToActionTile>
                     </Link>
                   ) : (
                     <CallToActionTile

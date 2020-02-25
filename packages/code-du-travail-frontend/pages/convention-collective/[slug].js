@@ -46,8 +46,8 @@ class ConventionCollective extends React.Component {
         <Answer
           breadcrumbs={[
             {
-              label: "Recherche",
-              slug: getRouteBySource(SOURCES.CCN)
+              label: "Conventions collectives",
+              slug: `/${getRouteBySource(SOURCES.CCN)}`
             }
           ]}
           date={

@@ -478,6 +478,10 @@
         "title": "Emploi à domicile : peut-on être exonéré des cotisations sociales ?"
       },
       {
+        "url": "/fiche-service-public/quels-sont-les-delais-de-prescription-en-matiere-de-cotisations-sociales",
+        "title": "Quels sont les délais de prescription en matière de cotisations sociales ?"
+      },
+      {
         "url": "/fiche-ministere-travail/le-bulletin-de-paie#Quelles-sont-les-mentions-obligatoires",
         "title": "Le bulletin de paie : quelles sont les mentions obligatoires ?"
       },
@@ -834,6 +838,10 @@
         "url": "/fiche-service-public/projet-de-transition-professionnelle-ptp-cpf-de-transition"
       },
       {
+        "url": "/fiche-service-public/compte-personnel-de-formation-cpf-secteur-prive",
+        "title": "Compte personnel de formation (CPF) - Secteur privé"
+      },
+      {
         "url": "/fiche-ministere-travail/compte-personnel-de-formation-cpf",
         "title": "Compte personnel de formation (CPF)"
       },
@@ -1019,6 +1027,10 @@
       },
       {
         "url": "/fiche-service-public/quels-sont-les-delais-de-conservation-des-documents-dune-association"
+      },
+      {
+        "url": "/fiche-service-public/le-salarie-et-lemployeur-peuvent-ils-regler-un-conflit-a-lamiable",
+        "title": "Le salarié et l'employeur peuvent-ils régler un conflit à l'amiable ?"
       }
     ],
     "slug": "9-conflits-au-travail-et-controle-de-la-reglementation",
@@ -1084,6 +1096,10 @@
       },
       {
         "url": "/fiche-service-public/quels-sont-les-differents-motifs-dabsence-de-lassistante-maternelle"
+      },
+      {
+        "url": "/fiche-service-public/cure-thermale-du-salarie-quelles-sont-les-regles",
+        "title": "Cure thermale du salarié : quelles sont les règles ?"
       }
     ],
     "slug": "41-conges",
@@ -1563,6 +1579,14 @@
       {
         "url": "/fiche-ministere-travail/les-conges-pour-evenements-familiaux#Quelle-est-la-duree-du-conge",
         "title": "Les congés pour événements familiaux : quelle est la durée du congé ?"
+      },
+      {
+        "url": "/fiche-service-public/autorisation-dabsence-pour-deces-dun-membre-de-la-famille-salarie-du-prive",
+        "title": "Autorisation d'absence pour décès d'un membre de la famille (salarié du privé)"
+      },
+      {
+        "url": "/fiche-service-public/jours-dabsence-a-lannonce-dun-handicap-chez-lenfant-salarie-du-prive",
+        "title": "Jours d'absence à l'annonce d'un handicap chez l'enfant (salarié du privé)"
       },
       {
         "url": "/fiche-ministere-travail/lallocation-journaliere-daccompagnement-dune-personne-en-fin-de-vie",
@@ -2455,6 +2479,10 @@
         "title": "Le droit aux allocations chômage du salarié démissionnaire : que se passe-t-il dans les autres cas ?"
       },
       {
+        "url": "/fiche-service-public/beneficie-t-on-dheures-de-recherche-demploi-pendant-le-preavis-de-demission",
+        "title": "Bénéficie-t-on d'heures de recherche d'emploi pendant le préavis de démission ?"
+      },
+      {
         "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires",
         "title": "De nouveaux droits pour les salariés démissionnaires"
       },
@@ -2524,6 +2552,10 @@
       {
         "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
         "title": " Quelle est la durée de préavis en cas de mise à la retraite ?"
+      },
+      {
+        "url": "/outils/heures-recherche-emploi",
+        "title": "Heures pour recherche d’emploi"
       },
       {
         "url": "/fiche-service-public/le-salarie-beneficie-t-il-dheures-de-recherche-demploi-pendant-son-preavis"
@@ -2958,6 +2990,34 @@
       {
         "url": "/fiche-ministere-travail/les-services-proposes-par-le-portail-de-lalternance#Je-calcule-ma-remuneration",
         "title": "Les services proposés par le Portail de l’Alternance : je calcule ma rémunération"
+      },
+      {
+        "url": "/fiche-ministere-travail/projet-de-transition-professionnelle#Qu-est-ce-que-le-projet-de-transition-professionnelle",
+        "title": "Projet de transition professionnelle : qu’est-ce que le projet de transition professionnelle ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/projet-de-transition-professionnelle#Quelles-sont-les-formations-financees-par-le-projet-de-transition-nbsp",
+        "title": "Projet de transition professionnelle : quelles sont les formations financées par le projet de transition professionnelle ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/projet-de-transition-professionnelle#Quelles-conditions-dois-je-remplir-pour-pouvoir-utiliser-mon-projet-de-nbsp",
+        "title": "Projet de transition professionnelle : quelles conditions dois-je remplir pour pouvoir utiliser mon projet de transition professionnelle ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/projet-de-transition-professionnelle#Quelles-sont-les-demarches-a-accomplir-aupres-de-l-employeur-nbsp",
+        "title": "Projet de transition professionnelle : quelles sont les démarches à accomplir auprès de l’employeur ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/projet-de-transition-professionnelle#L-employeur-peut-il-refuser-une-demande-de-conge-pour-projet-de-transition-nbsp",
+        "title": "Projet de transition professionnelle : l’employeur peut-il refuser une demande de congé pour projet de transition professionnelle ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/projet-de-transition-professionnelle#La-remuneration-pendant-le-conge-de-transition-professionnelle",
+        "title": "Projet de transition professionnelle : la rémunération pendant le congé de transition professionnelle"
+      },
+      {
+        "url": "/fiche-ministere-travail/projet-de-transition-professionnelle#Quelles-sont-les-incidences-du-projet-de-transition-professionnelle-sur-le-nbsp",
+        "title": "Projet de transition professionnelle : quelles sont les incidences du projet de transition professionnelle sur le contrat de travail ?"
       }
     ],
     "slug": "511-dispositifs-dacces-a-la-formation",
@@ -3197,6 +3257,10 @@
       {
         "url": "/external/index-egapro",
         "title": "Index Egapro"
+      },
+      {
+        "url": "/fiche-service-public/quest-ce-que-lindex-de-legalite-professionnelle",
+        "title": "Qu'est-ce que l'index de l'égalité professionnelle ?"
       },
       {
         "url": "/fiche-ministere-travail/index-de-legalite-professionnelle-calcul-et-questions-reponses#Qu-est-ce-que-l-Index-de-l-egalite-professionnelle-entre-les-hommes-et-les-nbsp",
@@ -3986,6 +4050,10 @@
       {
         "url": "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-de-travail-a-duree-determinee",
         "title": "Rupture d’un commun accord d’un contrat de travail à durée déterminée"
+      },
+      {
+        "url": "/contribution/dans-le-cadre-dun-contrat-de-mission-interim-quel-est-le-montant-de-lindemnite-de-fin-de-contrat",
+        "title": "Dans le cadre d’un contrat de mission (intérim), quel est le montant de l’indemnité de fin de contrat ? "
       },
       {
         "url": "/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd",
@@ -5568,6 +5636,10 @@
       {
         "url": "/contribution/le-preavis-de-licenciement-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
         "title": "Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?"
+      },
+      {
+        "url": "/fiche-service-public/peut-on-beneficier-dheures-de-recherche-demploi-pendant-le-preavis-de-licenciement",
+        "title": "Peut-on bénéficier d'heures de recherche d'emploi pendant le préavis de licenciement ?"
       }
     ],
     "slug": "84-licenciement",
@@ -6618,6 +6690,10 @@
       {
         "url": "/fiche-service-public/pause-dejeuner-quelles-sont-les-regles",
         "title": "Pause déjeuner : quelles sont les règles ?"
+      },
+      {
+        "url": "/fiche-service-public/pause-dejeuner-du-salarie-quelles-sont-les-regles",
+        "title": "Pause déjeuner du salarié : quelles sont les règles ?"
       }
     ],
     "slug": "421-pause",
@@ -7644,6 +7720,46 @@
       {
         "url": "/fiche-ministere-travail/le-chsct-et-le-droit-dalerte-particulier",
         "title": "Le CHSCT et le droit d’alerte particulier"
+      },
+      {
+        "url": "/fiche-service-public/quels-sont-les-moyens-daction-du-comite-social-et-economique-cse",
+        "title": "Quels sont les moyens d'action du comité social et économique (CSE) ?"
+      },
+      {
+        "url": "/fiche-service-public/hygiene-et-securite-quand-faut-il-consulter-le-cse-ex-chsct",
+        "title": "Hygiène et sécurité : quand faut-il consulter le CSE (ex-CHSCT) ?"
+      },
+      {
+        "url": "/fiche-service-public/peut-on-encore-profiter-du-cse-si-on-ne-travaille-plus-dans-lentreprise",
+        "title": "Peut-on encore profiter du CSE si on ne travaille plus dans l'entreprise ?"
+      },
+      {
+        "url": "/fiche-service-public/comment-se-deroulent-les-reunions-du-comite-social-et-economique-cse",
+        "title": "Comment se déroulent les réunions du comité social et économique (CSE) ?"
+      },
+      {
+        "url": "/fiche-service-public/le-comite-dentreprise-ce-existe-t-il-toujours",
+        "title": "Le comité d'entreprise (CE) existe-t-il toujours ?"
+      },
+      {
+        "url": "/fiche-service-public/le-comite-dhygiene-de-securite-et-des-conditions-de-travail-chsct-existe-t-il-toujours",
+        "title": "Le comité d'hygiène, de sécurité et des conditions de travail (CHSCT) existe-t-il toujours ?"
+      },
+      {
+        "url": "/fiche-service-public/linstance-unique-des-representants-du-personnel-irp-existe-t-elle-toujours",
+        "title": "L'instance unique des représentants du personnel (IRP) existe-t-elle toujours ?"
+      },
+      {
+        "url": "/fiche-service-public/le-delegue-du-personnel-dp-existe-t-il-toujours",
+        "title": "Le délégué du personnel (DP) existe-t-il toujours ?"
+      },
+      {
+        "url": "/fiche-service-public/la-delegation-unique-du-personnel-dup-existe-t-elle-toujours",
+        "title": "La délégation unique du personnel (DUP) existe-t-elle toujours ?"
+      },
+      {
+        "url": "/fiche-service-public/en-quoi-consiste-le-droit-dalerte-du-comite-social-et-economique-cse",
+        "title": "En quoi consiste le droit d'alerte du comité social et économique (CSE) ?"
       }
     ],
     "slug": "71-representation-du-personnel",
@@ -7829,6 +7945,26 @@
       {
         "url": "/fiche-service-public/retraite-complementaire-dans-le-prive-agirc-arrco",
         "title": "Retraite complémentaire dans le privé : Agirc-Arrco"
+      },
+      {
+        "url": "/fiche-service-public/calcul-de-la-retraite-du-salarie-du-secteur-prive",
+        "title": "Calcul de la retraite du salarié du secteur privé"
+      },
+      {
+        "url": "/fiche-service-public/retraite-dans-le-prive-majoration-dassurance-retraite-pour-enfant",
+        "title": "Retraite dans le privé : majoration d'assurance retraite pour enfant"
+      },
+      {
+        "url": "/fiche-service-public/retraite-du-salarie-majoration-dassurance-retraite-pour-conge-parental-deducation",
+        "title": "Retraite du salarié : majoration d'assurance retraite pour congé parental d'éducation"
+      },
+      {
+        "url": "/fiche-service-public/retraite-du-salarie-majoration-dassurance-retraite-pour-enfant-handicape",
+        "title": "Retraite du salarié : majoration d'assurance retraite pour enfant handicapé"
+      },
+      {
+        "url": "/fiche-service-public/duree-dassurance-retraite-du-salarie-du-secteur-prive",
+        "title": "Durée d'assurance retraite du salarié du secteur privé"
       }
     ],
     "slug": "85-retraite",
@@ -9344,6 +9480,10 @@
       },
       {
         "url": "/fiche-service-public/embauche-a-la-fin-dun-stage-quelles-consequences-sur-lanciennete"
+      },
+      {
+        "url": "/fiche-service-public/gratification-minimale-dun-stagiaire",
+        "title": "Gratification minimale d'un stagiaire"
       }
     ],
     "slug": "117-stage",
