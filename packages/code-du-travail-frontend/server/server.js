@@ -16,7 +16,7 @@ const PORT = parseInt(process.env.FRONTEND_PORT, 10) || 3000;
 const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
 const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
-const PACKAGE_VERSION = process.env.PACKAGE_VERSION || "";
+const PACKAGE_VERSION = process.env.VERSION || "";
 
 function getSentryCspUrl() {
   // NOTE(douglasduteil): is pre production if we can find the version in the url
@@ -103,7 +103,7 @@ nextApp.prepare().then(() => {
     });
   }
   if (IS_PRODUCTION_DEPLOYMENT) {
-    server.use(async function(ctx) {
+    server.use(async function(ctx, next) {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
       const isHealthCheckUrl = ctx.path === "/health";
       if (!isProdUrl && !isHealthCheckUrl) {
@@ -111,6 +111,7 @@ nextApp.prepare().then(() => {
         ctx.redirect(`https://${PROD_HOSTNAME}${ctx.originalUrl}`);
         return;
       }
+      await next();
     });
   } else {
     server.use(async function(ctx, next) {
