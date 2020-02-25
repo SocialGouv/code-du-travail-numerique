@@ -46,12 +46,34 @@ CODECEPT_BASEURL=https://master-code-travail.dev.fabrique.social.gouv.fr
 or by changing the launcher script
 
 ```yaml
-  script:
-    - curl
-        --request POST
-        --form "token=${CI_JOB_TOKEN}"
-        --form "ref=${CI_COMMIT_REF_NAME}"
-        --form "variables[CODECEPT_BASEURL]=https://master-code-travail.dev.fabrique.social.gouv.fr"
-        --form "variables[E2E_TEST]=true"
-        ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+script:
+  - curl
+    --request POST
+    --form "token=${CI_JOB_TOKEN}"
+    --form "ref=${CI_COMMIT_REF_NAME}"
+    --form "variables[CODECEPT_BASEURL]=https://master-code-travail.dev.fabrique.social.gouv.fr"
+    --form "variables[E2E_TEST]=true"
+    ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+```
+
+## HOW-TO
+
+> How can I run only tests that match a string pattern ?
+
+```sh
+yarn test --grep "propos"
+```
+
+will only run tests which name match "propos"
+
+> How can I run test using my localhost server
+
+```sh
+$ CODECEPT_BASEURL=http://localhost:3000 yarn test
+```
+
+> How can I debug my failing test
+
+```sh
+$ yarn test --verbose --steps
 ```
