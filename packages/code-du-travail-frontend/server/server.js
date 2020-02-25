@@ -106,13 +106,12 @@ nextApp.prepare().then(() => {
     server.use(async function(ctx, next) {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
       const isHealthCheckUrl = ctx.path === "/health";
-      console.log({ isProdUrl, isHealthCheckUrl });
       if (!isProdUrl && !isHealthCheckUrl) {
         ctx.status = 301;
         ctx.redirect(`https://${PROD_HOSTNAME}${ctx.originalUrl}`);
         return;
       }
-      next();
+      await next();
     });
   } else {
     server.use(async function(ctx, next) {
