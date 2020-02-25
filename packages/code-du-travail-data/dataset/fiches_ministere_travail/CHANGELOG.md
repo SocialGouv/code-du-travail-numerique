@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.4.0-alpha.0 (2020-02-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2363](https://github.com/SocialGouv/code-du-travail-numerique/issues/2363)) ([984a960](https://github.com/SocialGouv/code-du-travail-numerique/commit/984a960a2d44404bcd239c91c4d26d7ac6e9fe11))
+* **front:** closes [#2241](https://github.com/SocialGouv/code-du-travail-numerique/issues/2241) [#2297](https://github.com/SocialGouv/code-du-travail-numerique/issues/2297) ([#2347](https://github.com/SocialGouv/code-du-travail-numerique/issues/2347)) ([312e655](https://github.com/SocialGouv/code-du-travail-numerique/commit/312e655094e31ff67a657376ca6860e783b0a178))
+
+
+### Features
+
+* **chore:** update breadcrumbs ([#2362](https://github.com/SocialGouv/code-du-travail-numerique/issues/2362)) ([e4d5287](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4d5287126e02a2f46b1cd3afdaaf878dd217ed2))
+
+
+
+
+
 # [4.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.2.1...v4.3.0) (2020-01-27)
 
 **Note:** Version bump only for package @cdt/data...fiches_ministere_travail

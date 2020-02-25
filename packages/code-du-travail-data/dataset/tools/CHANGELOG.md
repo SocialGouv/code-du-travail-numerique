@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.4.0-alpha.0 (2020-02-25)
+
+
+### Bug Fixes
+
+* **results:** add theme in contribution and tools ([#2374](https://github.com/SocialGouv/code-du-travail-numerique/issues/2374)) ([66e8764](https://github.com/SocialGouv/code-du-travail-numerique/commit/66e876434839e9e7b08bcab2c8604bfd503e93b4))
+
+
+### Features
+
+* **hre:** remove hre tool  before release ([#2400](https://github.com/SocialGouv/code-du-travail-numerique/issues/2400)) ([afc4ff2](https://github.com/SocialGouv/code-du-travail-numerique/commit/afc4ff23b1f97ade8aa5cc1b96e094fea629fb29))
+
+
+
+
+
 # [4.1.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.2...v4.1.0) (2020-01-16)
 
 **Note:** Version bump only for package @cdt/data...tools

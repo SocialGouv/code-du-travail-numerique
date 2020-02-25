@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.4.0-alpha.0 (2020-02-25)
+
+
+### Features
+
+* **frontend:** new cc layout ([#2379](https://github.com/SocialGouv/code-du-travail-numerique/issues/2379)) ([6d93cb2](https://github.com/SocialGouv/code-du-travail-numerique/commit/6d93cb284185cb53ac6f4e90e86fdfa8615a8335))
+
+
+
+
+
 # [4.1.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.2...v4.1.0) (2020-01-16)
 
 **Note:** Version bump only for package @cdt/sources

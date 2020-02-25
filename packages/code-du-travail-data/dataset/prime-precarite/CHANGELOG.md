@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.4.0-alpha.0 (2020-02-25)
+
+
+### Bug Fixes
+
+* **precarite:** handle disclaimer ([#2310](https://github.com/SocialGouv/code-du-travail-numerique/issues/2310)) ([ba49055](https://github.com/SocialGouv/code-du-travail-numerique/commit/ba49055300367f069205190fcd2c35c0326bc16f))
+
+
+
+
+
 # [4.1.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.0-alpha.2...v4.1.0) (2020-01-16)
 
 **Note:** Version bump only for package @cdt/data...prime-precarite

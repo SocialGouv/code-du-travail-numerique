@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.4.0-alpha.0 (2020-02-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2330](https://github.com/SocialGouv/code-du-travail-numerique/issues/2330)) ([ccb96a7](https://github.com/SocialGouv/code-du-travail-numerique/commit/ccb96a75b2f2fef401e5f913e90d80a2ea84bca5))
+* **deps:** update all non-major dependencies ([#2348](https://github.com/SocialGouv/code-du-travail-numerique/issues/2348)) ([19f0dcf](https://github.com/SocialGouv/code-du-travail-numerique/commit/19f0dcf10d81e8b187ed14dafaa4aa3480686f9e))
+* **deps:** update all non-major dependencies ([#2352](https://github.com/SocialGouv/code-du-travail-numerique/issues/2352)) ([e2371c0](https://github.com/SocialGouv/code-du-travail-numerique/commit/e2371c0d1eefffab4ad1e8cffd449ffdf4443e3e))
+* **deps:** update all non-major dependencies ([#2357](https://github.com/SocialGouv/code-du-travail-numerique/issues/2357)) ([d06647f](https://github.com/SocialGouv/code-du-travail-numerique/commit/d06647f7cd2e63cfed12437eed1788edd88be9ec))
+* **deps:** update all non-major dependencies ([#2360](https://github.com/SocialGouv/code-du-travail-numerique/issues/2360)) ([0ef49b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/0ef49b7a4c5da7914656f76b5dedb32a26a1153a))
+* **deps:** update all non-major dependencies ([#2363](https://github.com/SocialGouv/code-du-travail-numerique/issues/2363)) ([984a960](https://github.com/SocialGouv/code-du-travail-numerique/commit/984a960a2d44404bcd239c91c4d26d7ac6e9fe11))
+* **deps:** update all non-major dependencies ([#2386](https://github.com/SocialGouv/code-du-travail-numerique/issues/2386)) ([a41f4d7](https://github.com/SocialGouv/code-du-travail-numerique/commit/a41f4d7d467e2a3b11abb66d58b22a714be36287))
+* **deps:** update all non-major dependencies ([#2397](https://github.com/SocialGouv/code-du-travail-numerique/issues/2397)) ([9864b99](https://github.com/SocialGouv/code-du-travail-numerique/commit/9864b99a1fccf8bb9d6e9f08c5e92796d4fadda7))
+
+
+### Features
+
+* **chore:** update breadcrumbs ([#2362](https://github.com/SocialGouv/code-du-travail-numerique/issues/2362)) ([e4d5287](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4d5287126e02a2f46b1cd3afdaaf878dd217ed2))
+* **data:** remove duplicate fiche sp referenced in contributions ([#2380](https://github.com/SocialGouv/code-du-travail-numerique/issues/2380)) ([6ba133e](https://github.com/SocialGouv/code-du-travail-numerique/commit/6ba133e4c6be21bff69e874e2dce9f60f0ae74e6))
+
+
+
+
+
 # [4.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.1.1...v4.2.0) (2020-01-22)
 
 **Note:** Version bump only for package @cdt/data...fiches_service_public

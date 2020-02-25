@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.4.0-alpha.0 (2020-02-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2330](https://github.com/SocialGouv/code-du-travail-numerique/issues/2330)) ([ccb96a7](https://github.com/SocialGouv/code-du-travail-numerique/commit/ccb96a75b2f2fef401e5f913e90d80a2ea84bca5))
+* **deps:** update all non-major dependencies ([#2348](https://github.com/SocialGouv/code-du-travail-numerique/issues/2348)) ([19f0dcf](https://github.com/SocialGouv/code-du-travail-numerique/commit/19f0dcf10d81e8b187ed14dafaa4aa3480686f9e))
+* **deps:** update all non-major dependencies ([#2357](https://github.com/SocialGouv/code-du-travail-numerique/issues/2357)) ([d06647f](https://github.com/SocialGouv/code-du-travail-numerique/commit/d06647f7cd2e63cfed12437eed1788edd88be9ec))
+* **deps:** update all non-major dependencies ([#2360](https://github.com/SocialGouv/code-du-travail-numerique/issues/2360)) ([0ef49b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/0ef49b7a4c5da7914656f76b5dedb32a26a1153a))
+* **deps:** update all non-major dependencies ([#2363](https://github.com/SocialGouv/code-du-travail-numerique/issues/2363)) ([984a960](https://github.com/SocialGouv/code-du-travail-numerique/commit/984a960a2d44404bcd239c91c4d26d7ac6e9fe11))
+* **deps:** update all non-major dependencies ([#2397](https://github.com/SocialGouv/code-du-travail-numerique/issues/2397)) ([9864b99](https://github.com/SocialGouv/code-du-travail-numerique/commit/9864b99a1fccf8bb9d6e9f08c5e92796d4fadda7))
+
+
+### Features
+
+* **frontend:** new cc layout ([#2379](https://github.com/SocialGouv/code-du-travail-numerique/issues/2379)) ([6d93cb2](https://github.com/SocialGouv/code-du-travail-numerique/commit/6d93cb284185cb53ac6f4e90e86fdfa8615a8335))
+
+
+
+
+
 # [4.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.2.1...v4.3.0) (2020-01-27)
 
 

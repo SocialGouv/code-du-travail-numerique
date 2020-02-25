@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.4.0-alpha.0 (2020-02-25)
+
+
+### Features
+
+* **chore:** update breadcrumbs ([#2362](https://github.com/SocialGouv/code-du-travail-numerique/issues/2362)) ([e4d5287](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4d5287126e02a2f46b1cd3afdaaf878dd217ed2))
+* **mail:** update templates ([#2401](https://github.com/SocialGouv/code-du-travail-numerique/issues/2401)) ([ceae61d](https://github.com/SocialGouv/code-du-travail-numerique/commit/ceae61d3f92d0ab30342f4d6507845b7594a2e0c))
+
+
+
+
+
 # [4.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.2.1...v4.3.0) (2020-01-27)
 
 
