@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.4.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.0...v4.4.1) (2020-02-25)
+
+
+### Bug Fixes
+
+* **frontend:** fix middleware chain on prod ([#2406](https://github.com/SocialGouv/code-du-travail-numerique/issues/2406)) ([e6dc054](https://github.com/SocialGouv/code-du-travail-numerique/commit/e6dc054479b643a59875e2b91754fd05d1de9c35))
+
+
+
+
+
 # [4.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.0-alpha.1...v4.4.0) (2020-02-25)
 
 **Note:** Version bump only for package @socialgouv/code-du-travail
