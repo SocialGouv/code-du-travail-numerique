@@ -200,7 +200,6 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   padding-top: 0;
   color: #7994d4;
   font-weight: 600;
-  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -959,7 +958,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   padding-top: 0;
   color: #7994d4;
   font-weight: 600;
-  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -970,7 +968,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   padding: 1.6rem 0;
   color: #7994d4;
   font-weight: 600;
-  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1245,7 +1242,6 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   padding-top: 0;
   color: #7994d4;
   font-weight: 600;
-  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1707,7 +1703,6 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   padding-top: 0;
   color: #7994d4;
   font-weight: 600;
-  font-size: 1.8rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1718,7 +1713,6 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   padding: 0.8rem 0;
   color: #7994d4;
   font-weight: 600;
-  font-size: 1.6rem;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
