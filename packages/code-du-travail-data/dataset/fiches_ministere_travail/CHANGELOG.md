@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.0-alpha.1...v4.4.0) (2020-02-25)
+
+**Note:** Version bump only for package @cdt/data...fiches_ministere_travail
+
+
+
+
+
 # [4.4.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.0-alpha.0...v4.4.0-alpha.1) (2020-02-25)
 
 **Note:** Version bump only for package @cdt/data...fiches_ministere_travail
