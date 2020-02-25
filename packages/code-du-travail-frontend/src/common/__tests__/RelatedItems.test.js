@@ -1,9 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-// import { matopush } from "../../piwik";
+import { matopush } from "../../piwik";
 import { RelatedItems } from "../RelatedItems";
 
-/*
 jest.mock("../../piwik", () => ({
   matopush: jest.fn()
 }));
@@ -11,7 +10,6 @@ jest.mock("../../piwik", () => ({
 jest.mock("next/link", () => {
   return ({ children }) => children;
 });
-*/
 
 const items = [
   {
@@ -58,7 +56,6 @@ describe("<RelatedItems />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  /*
   it("should track related items clicks", async () => {
     jest.resetAllMocks();
     const { getByText } = render(<RelatedItems items={items} />);
@@ -70,5 +67,5 @@ describe("<RelatedItems />", () => {
       "selectRelated",
       "fiche-service-public/fiche.sp.url"
     ]);
-  });*/
+  });
 });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Article /> should render 1`] = `
+exports[`<RelatedItems /> should render 1`] = `
 .c2 {
   max-width: 124rem;
   margin: 0 auto;
@@ -507,9 +507,8 @@ exports[`<Article /> should render 1`] = `
         <li
           class="c4 c5"
         >
-          <a
+          <button
             class="c6"
-            href="/modeles-de-courriers/modele.url"
           >
             <div
               class="c18"
@@ -600,7 +599,7 @@ exports[`<Article /> should render 1`] = `
                 </div>
               </div>
             </div>
-          </a>
+          </button>
         </li>
       </ul>
       <div
@@ -616,7 +615,6 @@ exports[`<Article /> should render 1`] = `
         >
           <a
             class="c23 c24"
-            href="/fiche-service-public/fiche.sp.url"
           >
             <svg
               class="c25"
@@ -640,7 +638,6 @@ exports[`<Article /> should render 1`] = `
         >
           <a
             class="c23 c24"
-            href="/contribution/contrib.url"
           >
             <svg
               class="c25"
