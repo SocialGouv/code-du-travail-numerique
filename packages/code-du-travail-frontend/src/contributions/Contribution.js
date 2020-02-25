@@ -108,7 +108,7 @@ const Contribution = ({ answers, content }) => {
       answer => parseInt(answer.idcc, 10) === convention.num
     );
   // ensure we have valid data in ccInfo
-  const isCcDetected =
+  const isConventionDetected =
     convention && convention.id && convention.num && convention.title;
   return (
     <>
@@ -118,7 +118,7 @@ const Contribution = ({ answers, content }) => {
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
               <InsertTitle>Page personnalisable</InsertTitle>
-              {isCcDetected ? (
+              {isConventionDetected ? (
                 <>
                   Cette page a été personnalisée avec l’ajout des{" "}
                   <a href="#customisation">
@@ -158,10 +158,9 @@ const Contribution = ({ answers, content }) => {
             >
               Que dit votre convention collective&nbsp;?
             </StyledTitle>
-            {!isCcDetected && (
+            {!isConventionDetected ? (
               <SearchConvention onSelectConvention={setConvention} />
-            )}
-            {isCcDetected && (
+            ) : (
               <>
                 <StyledDiv>
                   Ce contenu est personnalisé avec les informations de la
@@ -170,7 +169,7 @@ const Contribution = ({ answers, content }) => {
                 <Toast variant="primary" onRemove={() => setConvention()}>
                   {convention.shortTitle}
                 </Toast>
-                {(conventionAnswer && (
+                {conventionAnswer ? (
                   <>
                     <MdxWrapper>
                       <Mdx
@@ -181,7 +180,7 @@ const Contribution = ({ answers, content }) => {
 
                     <References references={conventionAnswer.references} />
                   </>
-                )) || (
+                ) : (
                   <>
                     <Section>
                       Désolé, nous n’avons pas de réponse pour cette convention

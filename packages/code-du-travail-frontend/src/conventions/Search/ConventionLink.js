@@ -47,7 +47,7 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
   );
 };
 
-const { fonts, spacings } = theme;
+const { spacings } = theme;
 
 const StyledLink = styled.a`
   display: block;
@@ -55,8 +55,6 @@ const StyledLink = styled.a`
   ${({ isFirst }) => isFirst && "padding-top: 0;"}
   color: ${({ theme }) => theme.secondary};
   font-weight: 600;
-  font-size: ${({ small }) =>
-    small ? fonts.sizes.default : fonts.sizes.headings.small};
   text-align: left;
   text-decoration: none;
 `;

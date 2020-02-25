@@ -26,7 +26,7 @@ function HdnToast({ ccn }) {
           Vous pouvez faire une recherche par mots-clés dans{" "}
           <Link
             href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
-            as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.convention.slug}`}
+            as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}
           >
             <a>votre convention collective</a>
           </Link>
@@ -39,7 +39,7 @@ function HdnToast({ ccn }) {
 function StepResult({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
-  const idcc = ccn ? ccn.convention.num : 0;
+  const idcc = ccn ? ccn.num : 0;
 
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
@@ -75,7 +75,6 @@ function StepResult({ form }) {
   }
   // CCn Selected
   const [situation] = possibleSituations;
-  const { title: ccLabel } = ccn.convention;
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
@@ -94,7 +93,7 @@ function StepResult({ form }) {
       Éléments saisis&nbsp;:
       <br />
       {recapSituation({
-        "Convention collective": `${ccLabel} (${idcc})`,
+        "Convention collective": `${ccn.title} (${idcc})`,
         ...situation.criteria
       })}
       <SectionTitle>Source</SectionTitle>

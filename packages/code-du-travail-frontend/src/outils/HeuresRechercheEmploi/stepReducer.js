@@ -24,10 +24,9 @@ export const initialState = {
       label: "Informations",
       skip: values =>
         !values.ccn ||
-        (values.ccn &&
-          isNotYetProcessed(data.situations, values.ccn.convention.num)) ||
-        data.situations.filter(({ idcc }) => idcc === values.ccn.convention.num)
-          .length === 1
+        (values.ccn && isNotYetProcessed(data.situations, values.ccn.num)) ||
+        data.situations.filter(({ idcc }) => idcc === values.ccn.num).length ===
+          1
     },
     {
       component: StepResult,

@@ -38,7 +38,12 @@ export const ResultList = ({
       </FlatList>
       {items.length > page * pageSize && (
         <ButtonWrapper>
-          <StyledButton type="button" onClick={() => setPage(page + 1)}>
+          <StyledButton
+            variant="flat"
+            small
+            type="button"
+            onClick={() => setPage(page + 1)}
+          >
             {buttonLabel}
           </StyledButton>
         </ButtonWrapper>

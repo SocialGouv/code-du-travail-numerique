@@ -24,8 +24,7 @@ export const initialState = {
       label: "Informations",
       skip: values =>
         !values.ccn ||
-        (values.ccn &&
-          isNotYetProcessed(data.situations, values.ccn.convention.num))
+        (values.ccn && isNotYetProcessed(data.situations, values.ccn.num))
     },
     {
       component: StepResult,

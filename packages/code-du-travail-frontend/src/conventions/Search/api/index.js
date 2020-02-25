@@ -18,7 +18,11 @@ export const getResults = async query => {
   if (type === "text") {
     [conventions, entreprises] = await Promise.all([
       searchConvention(trimmedQuery),
-      searchEntrepriseByName(trimmedQuery)
+      searchEntrepriseByName(trimmedQuery).then(entreprises =>
+        entreprises.filter(
+          entreprise => entreprise.conventions && entreprise.conventions.length
+        )
+      )
     ]);
   } else if (type === "siret") {
     entreprises = await searchEntrepriseBySiret(query.replace(/[\s .-]/g, ""));
