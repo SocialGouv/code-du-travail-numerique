@@ -36,9 +36,9 @@ spec:
               value: "${ES_INDEX_PREFIX}"
           resources:
             requests:
-              cpu: .1m
+              cpu: 5m
               memory: 100Mi
             limits:
-              cpu: 200m
-              memory: 320Mi
+              cpu: 300m
+              memory: 1Gi
       restartPolicy: Never

@@ -68,6 +68,9 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
             .replace(/\t/g, " ")
             .replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>")
       };
+    })
+    .catch(err => {
+      console.error(`Error while converting ${filename}`, err);
     });
 };
 
