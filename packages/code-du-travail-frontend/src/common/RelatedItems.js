@@ -102,16 +102,20 @@ export const RelatedItems = ({ items = [] }) => {
                     <Link
                       href={`/${route}${rootSlug ? "/[slug]" : ""}`}
                       as={`/${route}${rootSlug}${hash}`}
-                      onClick={() =>
-                        matopush([
-                          "trackEvent",
-                          "selectRelated",
-                          `${route}${rootSlug}${hash}`
-                        ])
-                      }
                       passHref
                     >
-                      <ArrowLink arrowPosition="left">{title}</ArrowLink>
+                      <ArrowLink
+                        arrowPosition="left"
+                        onClick={() =>
+                          matopush([
+                            "trackEvent",
+                            "selectRelated",
+                            `${route}${rootSlug}${hash}`
+                          ])
+                        }
+                      >
+                        {title}
+                      </ArrowLink>
                     </Link>
                   </StyledLinkItem>
                 );
