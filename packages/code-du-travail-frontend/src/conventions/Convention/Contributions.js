@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import { uid } from "react-uid";
 import { Accordion, theme, Title } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 
@@ -73,13 +74,14 @@ function AccordionContent({ answer, slug, references }) {
       <Html>{answer}</Html>
       {references && (
         <StyledReferencesJuridiques
-          references={references.map(({ title, url, category }) => ({
+          references={references.map(({ title, url, category }, index) => ({
+            id: uid(url, index),
             title,
-            url,
             type:
               category === "labour_code"
                 ? TYPE_REFERENCE.codeDuTravail
-                : category
+                : TYPE_REFERENCE.external,
+            url
           }))}
         />
       )}

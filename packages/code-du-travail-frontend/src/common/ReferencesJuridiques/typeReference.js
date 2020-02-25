@@ -2,7 +2,8 @@
 const TYPE_REFERENCE = {
   codeDuTravail: "code-du-travail",
   conventionCollective: "convention-collective",
-  journalOfficiel: "journal-officiel"
+  journalOfficiel: "journal-officiel",
+  external: "external"
 };
 
 export default TYPE_REFERENCE;

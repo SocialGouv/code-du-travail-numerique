@@ -37,9 +37,10 @@ class ReferencesJuridiques extends React.PureComponent {
 ReferencesJuridiques.propTypes = {
   references: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       type: PropTypes.oneOf(Object.values(TYPE_REFERENCE)).isRequired,
-      id: PropTypes.string.isRequired
+      url: PropTypes.string
     })
   )
 };

@@ -60,7 +60,7 @@ const Article = ({
 Article.propTypes = {
   /** article title */
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  subtitle: PropTypes.node,
   /** article content */
   children: PropTypes.node,
   date: PropTypes.string,
@@ -76,7 +76,7 @@ Article.propTypes = {
 
 Article.defaultProps = {
   dateLabel: "Mis à jour le",
-  subtitle: false
+  subtitle: null
 };
 
 export default Article;
