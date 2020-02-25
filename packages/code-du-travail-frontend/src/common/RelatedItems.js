@@ -11,6 +11,7 @@ import {
   theme
 } from "@socialgouv/react-ui";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
+import { matopush } from "../piwik";
 
 import { CallToActionTile } from "./tiles/CallToAction";
 
@@ -92,16 +93,27 @@ export const RelatedItems = ({ items = [] }) => {
                 }
                 hash = hash ? `#${hash}` : "";
                 rootSlug = rootSlug ? `/${rootSlug}` : "";
+                const route = getRouteBySource(source);
+
                 return (
                   <StyledLinkItem key={slug}>
                     <Link
-                      href={`/${getRouteBySource(source)}${
-                        rootSlug ? "/[slug]" : ""
-                      }`}
-                      as={`/${getRouteBySource(source)}${rootSlug}${hash}`}
+                      href={`/${route}${rootSlug ? "/[slug]" : ""}`}
+                      as={`/${route}${rootSlug}${hash}`}
                       passHref
                     >
-                      <ArrowLink arrowPosition="left">{title}</ArrowLink>
+                      <ArrowLink
+                        arrowPosition="left"
+                        onClick={() =>
+                          matopush([
+                            "trackEvent",
+                            "selectRelated",
+                            `${route}${rootSlug}${hash}`
+                          ])
+                        }
+                      >
+                        {title}
+                      </ArrowLink>
                     </Link>
                   </StyledLinkItem>
                 );
