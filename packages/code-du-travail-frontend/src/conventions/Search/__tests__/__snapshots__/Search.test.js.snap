@@ -284,7 +284,9 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
       <h3
         class="c7"
       >
-        CONVENTIONS COLLECTIVES (1 résultat)
+        CONVENTIONS COLLECTIVES (1
+         
+        résultat)
       </h3>
       <ul
         class="c8"
@@ -1046,7 +1048,9 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
       <h3
         class="c7"
       >
-        CONVENTIONS COLLECTIVES (2 résultats)
+        CONVENTIONS COLLECTIVES (2
+         
+        résultats)
       </h3>
       <ul
         class="c8"
@@ -1320,7 +1324,9 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
       <h3
         class="c7"
       >
-        CONVENTIONS COLLECTIVES (1 résultat)
+        CONVENTIONS COLLECTIVES (1
+         
+        résultat)
       </h3>
       <ul
         class="c8"
@@ -1802,7 +1808,9 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
       <h3
         class="c7"
       >
-        CONVENTIONS COLLECTIVES (1 résultat)
+        CONVENTIONS COLLECTIVES (1
+         
+        résultat)
       </h3>
       <ul
         class="c8"
@@ -1832,7 +1840,9 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
       <h3
         class="c7"
       >
-        ENTREPRISES (1 résultat)
+        ENTREPRISES (1
+         
+        résultat)
       </h3>
       <ul
         class="c8"
