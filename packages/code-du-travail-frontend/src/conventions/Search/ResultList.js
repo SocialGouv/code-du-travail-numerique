@@ -23,9 +23,10 @@ export const ResultList = ({
   }, [query]);
   return (
     <StyledWrapper variant="light">
-      <Heading>{`${title} (${items.length} résultat${
-        items.length > 1 ? "s" : ""
-      })`}</Heading>
+      <Heading>
+        {`${title} (${items.length}`}&nbsp;
+        {`résultat${items.length > 1 ? "s" : ""})`}
+      </Heading>
       <FlatList>
         {items.slice(0, page * pageSize).map((item, index) => (
           <StyledListItem
