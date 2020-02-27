@@ -231,9 +231,7 @@ exports[`<Result /> should render 1`] = `
           >
             <div
               id="react-mathjax-preview-result"
-            >
-              \`(1/4 * Sref * 10) + (1/3 * Sref * "A2")\`
-            </div>
+            />
           </div>
         </div>
       </details>
@@ -341,9 +339,7 @@ exports[`<Result /> should render 1`] = `
           >
             <div
               id="react-mathjax-preview-result"
-            >
-              \`1/2 * Sref * S1 + 1/4 * Sref * S2\`
-            </div>
+            />
           </div>
         </div>
       </details>

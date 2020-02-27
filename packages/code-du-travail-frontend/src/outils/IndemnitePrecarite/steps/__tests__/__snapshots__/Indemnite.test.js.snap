@@ -124,9 +124,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     >
       <div
         id="react-mathjax-preview-result"
-      >
-        \`6/100 * "totalSalaires"\`
-      </div>
+      />
     </div>
   </div>
   <h2
@@ -309,9 +307,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     >
       <div
         id="react-mathjax-preview-result"
-      >
-        \`10/100 * "totalSalaires"\`
-      </div>
+      />
     </div>
   </div>
   <h2
@@ -481,9 +477,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     >
       <div
         id="react-mathjax-preview-result"
-      >
-        \`10/100 * "totalSalaires"\`
-      </div>
+      />
     </div>
   </div>
   <h2
@@ -666,9 +660,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     >
       <div
         id="react-mathjax-preview-result"
-      >
-        \`10/100 * "totalSalaires"\`
-      </div>
+      />
     </div>
   </div>
   <h2
@@ -841,9 +833,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     >
       <div
         id="react-mathjax-preview-result"
-      >
-        \`10/100 * "totalSalaires"\`
-      </div>
+      />
     </div>
   </div>
   <h2
