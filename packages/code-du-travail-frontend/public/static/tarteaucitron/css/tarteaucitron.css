@@ -668,6 +668,13 @@ a.tarteaucitronSelfLink {
   width: calc(100% - 2rem);
   margin: 1rem;
   border: 2px solid #7994d4;
+
+}
+
+@media print {
+  #tarteaucitronRoot {
+    display:none;
+  }
 }
 
 #tarteaucitronAlertBig #tarteaucitronPrivacyUrl,
