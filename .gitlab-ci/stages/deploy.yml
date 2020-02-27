@@ -95,8 +95,8 @@ Deploy @cdtn/api (dev):
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
-      --set deployment.resources.requests.memory=100Mi
-      --set deployment.resources.requests.cpu=.1m
+      --set deployment.resources.requests.memory=256Mi
+      --set deployment.resources.requests.cpu=.3m
 
 Deploy @cdtn/api (prod):
   <<: *deploy_api_stage
@@ -127,7 +127,7 @@ Deploy @cdtn/frontend (dev):
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
-      --set deployment.resources.requests.memory=100Mi
+      --set deployment.resources.requests.memory=256Mi
       --set deployment.resources.requests.cpu=.1m
 
 Deploy @cdtn/frontend (prod):
