@@ -31,6 +31,6 @@ with open(dump_path, "r") as dump:
                 document.get("title"), document.get("text"))
 
     with open(dump_path.replace(".json", ".tf.json"), 'w') as fp:
-        json.dump(documents, fp, ensure_ascii=False)
+        json.dump(documents, fp, ensure_ascii=False, indent=2)
     end = time.time()
     logger.info("Dump with vectors done in {:.2f}sec 🤖".format(end-start))
