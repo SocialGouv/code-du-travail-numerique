@@ -10,10 +10,10 @@ deployment:
   resources:
     limits:
       cpu: 200m
-      memory: 320Mi # 256 + 64~(20% of 256)
+      memory: 400Mi # 333.4 + 66.6~(20% of 333.4)
     requests:
       cpu: 200m
-      memory: 320Mi
+      memory: 400Mi
 
   livenessProbe:
     path: /health
