@@ -25,6 +25,11 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
         },
         filter: {
           bool: {
+            must: {
+              term: {
+                excludeFromSearch: false
+              }
+            },
             should: sources.map(source => ({ term: { source } }))
           }
         }

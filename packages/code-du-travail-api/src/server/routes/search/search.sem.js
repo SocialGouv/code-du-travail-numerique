@@ -19,6 +19,11 @@ function getSemQuery({ query_vector, size, sources = [] }) {
           bool: {
             filter: {
               bool: {
+                must: {
+                  term: {
+                    excludeFromSearch: false
+                  }
+                },
                 should: sources.map(source => ({ term: { source } }))
               }
             }

@@ -99,6 +99,9 @@ export const documentMapping = {
     ape: {
       type: "text",
       analyzer: "idcc_ape"
+    },
+    excludeFromSearch: {
+      type: "boolean"
     }
   }
 };

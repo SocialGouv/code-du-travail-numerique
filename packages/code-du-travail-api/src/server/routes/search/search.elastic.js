@@ -15,6 +15,11 @@ function getSearchBody({ query, size, sources = [] }) {
     ],
     query: {
       bool: {
+        filter: {
+          term: {
+            excludeFromSearch: false
+          }
+        },
         must: [
           {
             bool: {
