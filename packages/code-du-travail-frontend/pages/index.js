@@ -14,7 +14,7 @@ import {
   theme
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
-import tools from "@cdt/data...tools";
+import tools from "@cdt/data...tools/internals.json";
 
 import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";

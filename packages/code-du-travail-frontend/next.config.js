@@ -1,8 +1,10 @@
+const withPlugins = require("next-compose-plugins");
 const withSourceMaps = require("@zeit/next-source-maps");
 
 const withTranspileModule = require("next-transpile-modules")([
   "@cdt/sources",
   "@cdt/data",
+  "@cdt/data...contributions",
   "parse5",
   "is-plain-obj"
 ]);
@@ -17,7 +19,7 @@ const withTM = function(config) {
   return config;
 };
 
-const compose = (...fns) => args => fns.reduceRight((arg, fn) => fn(arg), args);
+// const compose = (...fns) => args => fns.reduceRight((arg, fn) => fn(arg), args);
 
 const nextConfig = {
   webpack: config => {
@@ -45,8 +47,7 @@ const nextConfig = {
   }
 };
 
-module.exports = compose(
-  withSourceMaps,
-  withBundleAnalyzer,
-  withTM
-)(nextConfig);
+module.exports = withPlugins(
+  [withSourceMaps, withBundleAnalyzer, withTM],
+  nextConfig
+);

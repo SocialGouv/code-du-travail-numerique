@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import tools from "@cdt/data...tools";
+import tools from "@cdt/data...tools/internals.json";
 import { Badge, Container, Section, Wrapper } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
