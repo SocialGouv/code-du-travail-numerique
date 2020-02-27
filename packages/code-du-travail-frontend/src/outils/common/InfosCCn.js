@@ -1,57 +1,44 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
 import { Button, Toast, theme } from "@socialgouv/react-ui";
 
-import Search from "../../conventions/Search/Form";
+import ConventionSearch from "../../conventions/Search";
 import { required } from "./validators";
 import { ErrorField } from "./ErrorField";
 import { Question } from "./Question";
 import { useLocalStorage } from "../../lib/useLocalStorage";
 
-export const CCN = "ccn";
+export const CONVENTION_NAME = "ccn";
 
 function StepInfoCCn({ form, isOptionnal = true }) {
-  const [ccInfo, setCcInfo] = useLocalStorage("convention", {});
+  const [storedConvention, setConvention] = useLocalStorage("convention");
 
-  const clearCCInfo = useCallback(() => {
-    setCcInfo();
-  }, [setCcInfo]);
-
-  const setCCInfoMemo = useCallback(
-    ({ convention, label = "" }) => {
-      setCcInfo({ convention, label });
-    },
-    [setCcInfo]
-  );
   useEffect(() => {
     form.batch(() => {
-      const { convention, label = "" } = ccInfo || {};
       form.change("criteria", undefined);
-      form.change(CCN, convention ? { convention, label } : null);
+      form.change(CONVENTION_NAME, storedConvention);
     });
-    // INFO(@lionelb): do not put form in useEffect dependencies
-    // it will cause useEffect to run continuously in IE11
     // eslint-disable-next-line
-  }, [ccInfo]);
+  }, [storedConvention]);
   return (
     <>
       <Field
-        name={CCN}
+        name={CONVENTION_NAME}
         validate={isOptionnal ? null : required}
         render={({ input, meta: { error } }) => {
           if (input.value) {
             return (
               <>
                 <Question>La convention collective</Question>
+                <p>{input.value.title}</p>
                 <p>
-                  {input.value.convention.title}
-                  <br />
-                  {input.value.label && `(${input.value.label})`}
-                </p>
-                <p>
-                  <Button variant="link" type="button" onClick={clearCCInfo}>
+                  <Button
+                    variant="link"
+                    type="button"
+                    onClick={() => setConvention()}
+                  >
                     Changer de convention collective
                   </Button>
                 </p>
@@ -71,8 +58,8 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                   en cliquant sur le bouton Suivant.
                 </P>
               )}
-              <SearchStyled title="" onSelectConvention={setCCInfoMemo} />
-              <ErrorField name={CCN} />
+              <StyledConventionSearch onSelectConvention={setConvention} />
+              <ErrorField name={CONVENTION_NAME} />
             </>
           );
         }}
@@ -89,7 +76,7 @@ export const StepInfoCCnOptionnal = props => (
   <StepInfoCCn {...props} isOptionnal={true} />
 );
 
-const SearchStyled = styled(Search)`
+const StyledConventionSearch = styled(ConventionSearch)`
   padding-right: 0;
   padding-left: 0;
 `;

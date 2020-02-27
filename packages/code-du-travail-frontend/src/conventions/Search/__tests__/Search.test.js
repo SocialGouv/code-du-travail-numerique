@@ -10,7 +10,7 @@ import fetch from "isomorphic-unfetch";
 jest.mock("isomorphic-unfetch");
 jest.useFakeTimers();
 
-import Search from "../Form";
+import Search from "../";
 
 jest.mock("../../../piwik", () => ({
   matopush: jest.fn()
@@ -18,15 +18,10 @@ jest.mock("../../../piwik", () => ({
 
 function renderSearchForm({
   title = "Recherche de convention collective",
-  resetOnClick = true,
   onSelectConvention = jest.fn()
 } = {}) {
   return render(
-    <Search
-      title={title}
-      resetOnClick={resetOnClick}
-      onSelectConvention={onSelectConvention}
-    />
+    <Search title={title} onSelectConvention={onSelectConvention} />
   );
 }
 
@@ -194,13 +189,11 @@ describe("<Search />", () => {
     fireEvent.click(link);
     expect(onSelectConvention).toHaveBeenCalledTimes(1);
     expect(onSelectConvention).toHaveBeenCalledWith({
-      convention: {
-        id: "KALICONT000000000002",
-        num: 4567,
-        slug: "slug-convention-2",
-        title: "titre convention 2",
-        shortTitle: "smaller convention 2"
-      }
+      id: "KALICONT000000000002",
+      num: 4567,
+      slug: "slug-convention-2",
+      title: "titre convention 2",
+      shortTitle: "smaller convention 2"
     });
   });
 

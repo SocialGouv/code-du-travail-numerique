@@ -34,8 +34,6 @@ const apiIdcc = memoizee(
   { promise: true }
 );
 
-// debounced versions
-
 const searchConvention = debounce(apiIdcc, 300);
 
 export { searchConvention };

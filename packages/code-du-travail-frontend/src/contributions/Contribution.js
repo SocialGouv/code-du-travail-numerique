@@ -18,7 +18,7 @@ import {
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import slugify from "@cdt/data/slugify";
 
-import SearchConvention from "../../src/conventions/Search/Form";
+import SearchConvention from "../../src/conventions/Search";
 import rehypeToReact from "./rehypeToReact";
 import Mdx from "../../src/common/Mdx";
 import { useLocalStorage } from "../lib/useLocalStorage";
@@ -100,14 +100,16 @@ const References = ({ references = [] }) => {
 const Contribution = ({ answers, content }) => {
   const hasConventionAnswers =
     answers.conventions && answers.conventions.length > 0;
-  const [{ convention = {} }, setCcInfo] = useLocalStorage("convention", {});
+  const [convention, setConvention] = useLocalStorage("convention");
   const conventionAnswer =
+    convention &&
     answers.conventions &&
     answers.conventions.find(
       answer => parseInt(answer.idcc, 10) === convention.num
     );
   // ensure we have valid data in ccInfo
-  const isCcDetected = convention.id && convention.num && convention.title;
+  const isConventionDetected =
+    convention && convention.id && convention.num && convention.title;
   return (
     <>
       {hasConventionAnswers && (
@@ -116,7 +118,7 @@ const Contribution = ({ answers, content }) => {
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
               <InsertTitle>Page personnalisable</InsertTitle>
-              {isCcDetected ? (
+              {isConventionDetected ? (
                 <>
                   Cette page a été personnalisée avec l’ajout des{" "}
                   <a href="#customisation">
@@ -156,24 +158,18 @@ const Contribution = ({ answers, content }) => {
             >
               Que dit votre convention collective&nbsp;?
             </StyledTitle>
-            {!isCcDetected && (
-              <SearchConvention
-                title=""
-                onSelectConvention={({ convention, label }) =>
-                  setCcInfo({ convention, label })
-                }
-              />
-            )}
-            {isCcDetected && (
+            {!isConventionDetected ? (
+              <SearchConvention onSelectConvention={setConvention} />
+            ) : (
               <>
                 <StyledDiv>
                   Ce contenu est personnalisé avec les informations de la
                   convention collective:
                 </StyledDiv>
-                <Toast variant="primary" onRemove={() => setCcInfo({})}>
+                <Toast variant="primary" onRemove={() => setConvention()}>
                   {convention.shortTitle}
                 </Toast>
-                {(conventionAnswer && (
+                {conventionAnswer ? (
                   <>
                     <MdxWrapper>
                       <Mdx
@@ -184,7 +180,7 @@ const Contribution = ({ answers, content }) => {
 
                     <References references={conventionAnswer.references} />
                   </>
-                )) || (
+                ) : (
                   <>
                     <Section>
                       Désolé, nous n’avons pas de réponse pour cette convention
@@ -193,7 +189,7 @@ const Contribution = ({ answers, content }) => {
                   </>
                 )}
                 <ButtonWrapper>
-                  <Button variant="primary" onClick={() => setCcInfo({})}>
+                  <Button variant="primary" onClick={() => setConvention()}>
                     Changer de convention collective
                     <StyledCloseIcon />
                   </Button>

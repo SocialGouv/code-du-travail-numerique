@@ -11,10 +11,10 @@ import {
   fulltextPayload,
   siretPayload,
   siretIdccPayload
-} from "./api.entretrise.mock";
+} from "./entretrise.mock";
 
 import fetch from "isomorphic-unfetch";
-import { fetchResponse } from "../../../test/mockFetch";
+import { fetchResponse } from "../../../../../test/mockFetch";
 
 jest.mock("isomorphic-unfetch");
 

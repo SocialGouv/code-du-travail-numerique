@@ -94,7 +94,7 @@ function NoResult({ idcc, ccn, legalRefs }) {
             Vous pouvez faire une recherche par mots-clés dans{" "}
             <Link
               href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
-              as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.convention.slug}`}
+              as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}
             >
               <a>votre convention collective</a>
             </Link>
@@ -110,7 +110,7 @@ function NoResult({ idcc, ccn, legalRefs }) {
 export function StepResult({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
-  const idcc = ccn ? ccn.convention.num : 0;
+  const idcc = ccn ? ccn.num : 0;
 
   const [situationCdt] = getSituationsFor(data.situations, { idcc: 0 });
   const initialSituations = getSituationsFor(data.situations, { idcc });
@@ -128,7 +128,7 @@ export function StepResult({ form }) {
       <Disclaimer duration={situation.answer} />
       <SectionTitle>Détails</SectionTitle>
       {recapSituation({
-        ...(ccn && { "Convention collective": ccn.convention.shortTitle }),
+        ...(ccn && { "Convention collective": ccn.shortTitle }),
         ...situation.criteria
       })}
       <SectionTitle>Source</SectionTitle>

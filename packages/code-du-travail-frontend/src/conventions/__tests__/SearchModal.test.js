@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { ConventionModal } from "../Modal";
+import { ConventionModal } from "../SearchModal";
 
 // Trouvez votre convention collective
 

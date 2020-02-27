@@ -30,7 +30,7 @@ function DisclaimerToast({ durationCC, durationCDT, ccn }) {
               Vous pouvez faire une recherche par mots-clés dans{" "}
               <Link
                 href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
-                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.convention.slug}`}
+                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}
               >
                 <a>votre convention collective</a>
               </Link>
@@ -51,7 +51,7 @@ function DisclaimerToast({ durationCC, durationCDT, ccn }) {
               Vous pouvez faire une recherche par mots-clés dans{" "}
               <Link
                 href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
-                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.convention.slug}`}
+                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}
               >
                 <a>votre convention collective</a>
               </Link>
@@ -128,7 +128,7 @@ function DurationResult({ duration, durationCC, durationCDT }) {
 function StepResult({ form }) {
   const { values } = form.getState();
   const { ccn, cdt, seriousMisconduct, disabledWorker, criteria = {} } = values;
-  const idcc = ccn ? ccn.convention.num : 0;
+  const idcc = ccn ? ccn.num : 0;
 
   // Situation CDT
   const initialCDTSituations = getSituationsFor(allSituations, {
@@ -228,7 +228,7 @@ function StepResult({ form }) {
             ...(seniorityCC && {
               "Ancienneté selon la convention collective": seniorityCC
             }),
-            ...(ccn && { "Convention collective": ccn.convention.title })
+            ...(ccn && { "Convention collective": ccn.title })
           })}
           <SectionTitle>Source</SectionTitle>
           {situationCC.ref && situationCC.refUrl && getRef(refs)}

@@ -95,7 +95,7 @@ function StepIndemnite({ form }) {
     criteria = {}
   } = state.values;
 
-  const idcc = ccn ? ccn.convention.num : 0;
+  const idcc = ccn ? ccn.num : 0;
   const [situationCdt] = getSituationsFor(data, { idcc: 0, contractType });
   const initialSituations = getSituationsFor(data, { idcc, contractType });
   const situations = filterSituations(initialSituations, criteria);
@@ -137,7 +137,7 @@ function StepIndemnite({ form }) {
   const entries = Object.entries({
     "convention collective": ccn
       ? situations.length > 0
-        ? ccn.convention.title
+        ? ccn.title
         : "La convention collective n'a pas été traitée par nos services."
       : "La convention collective n'a pas été renseignée.",
     ...inputs
