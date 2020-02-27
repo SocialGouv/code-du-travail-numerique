@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { uid } from "react-uid";
+import { useUIDSeed } from "react-uid";
 import { Accordion, theme, Title } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 
@@ -69,19 +69,20 @@ function Contributions({ contributions }) {
 }
 
 function AccordionContent({ answer, slug, references }) {
+  const seedId = useUIDSeed();
   return (
     <>
       <Html>{answer}</Html>
       {references && (
         <StyledReferencesJuridiques
-          references={references.map(({ title, url, category }, index) => ({
-            id: uid(url, index),
-            title,
+          references={references.map(reference => ({
+            id: seedId(reference),
+            title: reference.title,
             type:
-              category === "labour_code"
+              reference.category === "labour_code"
                 ? TYPE_REFERENCE.codeDuTravail
                 : TYPE_REFERENCE.external,
-            url
+            url: reference.url
           }))}
         />
       )}
