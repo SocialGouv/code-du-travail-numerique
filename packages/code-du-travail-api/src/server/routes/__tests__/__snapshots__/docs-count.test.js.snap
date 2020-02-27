@@ -5,6 +5,10 @@ Object {
   "sources": Object {
     "buckets": Array [
       Object {
+        "doc_count": 3,
+        "key": "fiches_service_public",
+      },
+      Object {
         "doc_count": 2,
         "key": "code_du_travail",
       },
@@ -19,10 +23,6 @@ Object {
       Object {
         "doc_count": 2,
         "key": "fiches_ministere_travail",
-      },
-      Object {
-        "doc_count": 2,
-        "key": "fiches_service_public",
       },
       Object {
         "doc_count": 2,

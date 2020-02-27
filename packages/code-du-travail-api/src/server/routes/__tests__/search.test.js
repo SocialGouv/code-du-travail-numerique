@@ -9,13 +9,22 @@ const getSearchBody = require("../search/search.elastic");
 const getSemBody = require("../search/search.sem");
 const getDocumentByUrlQuery = require("../search/getDocumentByUrlQuery");
 const demission_vector = require("./demission.vector");
+const r1225_18_vector = require("./r1225-18.vector.json");
 
 const { logger } = require("../../utils/logger");
 logger.level = winston.error;
 
 // mock fetch function to return vector for démission
 jest.mock("node-fetch");
-fetch.mockResolvedValue({ json: () => demission_vector });
+fetch.mockImplementation(req => {
+  let data = r1225_18_vector;
+  if (/démission/.test(decodeURIComponent(req))) {
+    data = demission_vector;
+  }
+  return Promise.resolve({
+    json: () => Promise.resolve(data)
+  });
+});
 
 const app = new Koa();
 app.use(router.routes());
@@ -55,7 +64,7 @@ it("returns search results for demission from elastic", async () => {
 
 it("returns article results when searching article R1225-18", async () => {
   const response = await request(app.callback()).get(
-    `/api/v1/search?q=R1225-18`
+    `/api/v1/search?q=r1225-18`
   );
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();

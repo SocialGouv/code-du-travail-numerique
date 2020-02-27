@@ -4,9 +4,9 @@ exports[`return idcc results for boulangerie 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "12",
+      "_id": "13",
       "_index": "cdtn_test_documents",
-      "_score": 1.1574411,
+      "_score": 1.1832592,
       "_source": Object {
         "id": "KALICONT000005635691",
         "idcc": 1747,
@@ -18,9 +18,9 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "13",
+      "_id": "14",
       "_index": "cdtn_test_documents",
-      "_score": 1.1574411,
+      "_score": 1.1832592,
       "_source": Object {
         "id": "KALICONT000005635886",
         "idcc": 843,
@@ -32,7 +32,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 1.1574411,
+  "max_score": 1.1832592,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -44,9 +44,9 @@ exports[`return idcc results for pati 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "12",
+      "_id": "13",
       "_index": "cdtn_test_documents",
-      "_score": 1.1164187,
+      "_score": 1.1422368,
       "_source": Object {
         "id": "KALICONT000005635691",
         "idcc": 1747,
@@ -58,9 +58,9 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "13",
+      "_id": "14",
       "_index": "cdtn_test_documents",
-      "_score": 1.1164187,
+      "_score": 1.1422368,
       "_source": Object {
         "id": "KALICONT000005635886",
         "idcc": 843,
@@ -72,7 +72,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 1.1164187,
+  "max_score": 1.1422368,
   "total": Object {
     "relation": "eq",
     "value": 2,

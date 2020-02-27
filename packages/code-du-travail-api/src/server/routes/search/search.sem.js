@@ -17,16 +17,18 @@ function getSemQuery({ query_vector, size, sources = [] }) {
       script_score: {
         query: {
           bool: {
-            filter: {
-              bool: {
-                must: {
-                  term: {
-                    excludeFromSearch: false
-                  }
-                },
-                should: sources.map(source => ({ term: { source } }))
+            filter: [
+              {
+                term: {
+                  excludeFromSearch: false
+                }
+              },
+              {
+                bool: {
+                  should: sources.map(source => ({ term: { source } }))
+                }
               }
-            }
+            ]
           }
         },
         script: {

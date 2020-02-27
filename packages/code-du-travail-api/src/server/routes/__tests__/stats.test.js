@@ -34,15 +34,15 @@ test("return stats", async () => {
   const response = await request(app.callback()).get(`/api/v1/stats`);
   expect(response.status).toBe(200);
   expect(response.body).toMatchInlineSnapshot(`
-      Object {
-        "feedback": Object {
-          "negative": 2,
-          "positive": 3,
-        },
-        "nbDocuments": 16,
-        "nbPageViews": 10,
-        "nbSearches": 4,
-        "nbVisits": 20,
-      }
-    `);
+    Object {
+      "feedback": Object {
+        "negative": 2,
+        "positive": 3,
+      },
+      "nbDocuments": 17,
+      "nbPageViews": 10,
+      "nbSearches": 4,
+      "nbVisits": 20,
+    }
+  `);
 });

@@ -26,6 +26,7 @@ const client = new Client({
 const documentsSlugs = [
   "/themes/81-demission",
   "/themes/1-embauche-et-contrat-de-travail",
+  "/fiche-service-public/arret-maladie-pendant-le-preavis-quelles-consequences",
   "/fiche-service-public/demission-dun-salarie",
   "/fiche-service-public/demission-dune-assistante-maternelle",
   "/fiche-ministere-travail/la-demission#Comment-presenter-une-demission",
