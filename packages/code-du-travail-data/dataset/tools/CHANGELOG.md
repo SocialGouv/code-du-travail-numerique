@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.1...v4.5.0) (2020-02-28)
+
+
+### Bug Fixes
+
+* **frontend:** ie issues ([#2421](https://github.com/SocialGouv/code-du-travail-numerique/issues/2421)) ([f071649](https://github.com/SocialGouv/code-du-travail-numerique/commit/f0716499759a52984440488a48a33f51afb0a23b))
+
+
+
+
+
 # [4.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.0-alpha.1...v4.4.0) (2020-02-25)
 
 **Note:** Version bump only for package @cdt/data...tools

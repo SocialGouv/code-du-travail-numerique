@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.1...v4.5.0) (2020-02-28)
+
+
+### Bug Fixes
+
+* **data:** use a boolean flag to hide content ([#2419](https://github.com/SocialGouv/code-du-travail-numerique/issues/2419)) ([ec461d6](https://github.com/SocialGouv/code-du-travail-numerique/commit/ec461d6d91fd5d6289e4de48d54a23e12a583f26))
+
+
+### Features
+
+* **frontend:** new convention search layout ([#2395](https://github.com/SocialGouv/code-du-travail-numerique/issues/2395)) ([e310841](https://github.com/SocialGouv/code-du-travail-numerique/commit/e310841a300d557ac4bdffa1e29458b96058940d))
+
+
+
+
+
 # [4.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.0-alpha.1...v4.4.0) (2020-02-25)
 
 **Note:** Version bump only for package @cdt/api
