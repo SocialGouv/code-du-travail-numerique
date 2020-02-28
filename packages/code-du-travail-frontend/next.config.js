@@ -3,6 +3,7 @@ const withSourceMaps = require("@zeit/next-source-maps");
 const withTranspileModule = require("next-transpile-modules")([
   "@cdt/sources",
   "@cdt/data",
+  "@cdt/data...contributions",
   "parse5",
   "is-plain-obj"
 ]);

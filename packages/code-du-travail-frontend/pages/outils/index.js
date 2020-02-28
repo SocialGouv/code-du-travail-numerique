@@ -8,7 +8,7 @@ import {
   Section
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
-import tools from "@cdt/data...tools";
+import tools from "@cdt/data...tools/internals.json";
 import externalTools from "@cdt/data...tools/externals.json";
 
 import { Layout } from "../../src/layout/Layout";
