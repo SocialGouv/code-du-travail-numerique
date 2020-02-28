@@ -23,11 +23,18 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
             like: settings
           }
         },
-        filter: {
-          bool: {
-            should: sources.map(source => ({ term: { source } }))
+        filter: [
+          {
+            term: {
+              excludeFromSearch: false
+            }
+          },
+          {
+            bool: {
+              should: sources.map(source => ({ term: { source } }))
+            }
           }
-        }
+        ]
       }
     }
   };

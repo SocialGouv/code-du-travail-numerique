@@ -69,7 +69,8 @@ async function* cdtnDocumentsGen() {
         shortTitle,
         slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
         text: `IDCC ${num} ${title}`,
-        url
+        url,
+        excludeFromSearch: false
       };
     }
   );
@@ -88,7 +89,8 @@ async function* cdtnDocumentsGen() {
       text: `${texte}\n${nota}`,
       dateDebut,
       ...(nota.length > 0 && { notaHtml }),
-      url: getArticleUrl(id)
+      url: getArticleUrl(id),
+      excludeFromSearch: false
     })
   );
 
@@ -105,7 +107,8 @@ async function* cdtnDocumentsGen() {
       html,
       slug,
       text,
-      title
+      title,
+      excludeFromSearch: false
     })
   );
 
@@ -114,7 +117,8 @@ async function* cdtnDocumentsGen() {
     ({ slug, title }) => ({
       source: SOURCES.THEMES,
       title: title,
-      slug
+      slug,
+      excludeFromSearch: false
     })
   );
 
@@ -141,7 +145,8 @@ async function* cdtnDocumentsGen() {
       slug,
       source: SOURCES.TOOLS,
       text: questions.join("\n"),
-      title
+      title,
+      excludeFromSearch: false
     })
   );
 
@@ -155,7 +160,8 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.EXTERNALS,
       text: description,
       url,
-      title
+      title,
+      excludeFromSearch: false
     })
   );
 
@@ -170,7 +176,8 @@ async function* cdtnDocumentsGen() {
         breadcrumbs,
         description: (answers.generic && answers.generic.text) || title,
         text: (answers.generic && answers.generic.text) || title,
-        answers
+        answers,
+        excludeFromSearch: false
       };
     }
   );

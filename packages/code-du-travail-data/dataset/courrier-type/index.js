@@ -62,6 +62,7 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
         text: description,
         description,
         ...rest,
+        excludeFromSearch: false,
         html:
           basic_styles +
           result.value

@@ -27,7 +27,7 @@ async function getRelatedItems({ title, settings, slug }) {
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index }, relatedItemBody];
   const query_vector = await fetchWithTimeout(
-    `${NLP_URL}/api/search?q=${encodeURIComponent(title)}`
+    `${NLP_URL}/api/search?q=${encodeURIComponent(title.toLowerCase())}`
   )
     .then(response => (response = response.json()))
     .catch(error => {
@@ -42,7 +42,7 @@ async function getRelatedItems({ title, settings, slug }) {
   });
   // we use relatedItem query _source to have the same prop returned
   // for both request
-  semBody._source = relatedItemBody._source;
+  // semBody._source = relatedItemBody._source;
   requestBodies.push({ index }, semBody);
 
   const {
@@ -53,7 +53,6 @@ async function getRelatedItems({ title, settings, slug }) {
 
   const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
   const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
-
   const [rootSlug] = slug.split("#");
 
   return utils

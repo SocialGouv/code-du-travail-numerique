@@ -3,11 +3,24 @@ const fiches = require("@socialgouv/fiches-vdd");
 const { SOURCES } = require("@cdt/sources");
 
 const slugify = require("../../slugify");
-const filter = require("./filter");
+const { filter } = require("./filter");
 const format = require("./format");
 const { getThemeFiche } = require("./getThemeFiche");
 
+const contributions = require("../contributions/contributions.data.json");
+const extractMdxContentUrl = require("../contributions/extractMdxContentUrl");
+
 const TYPES = ["particuliers", "professionnels", "associations"];
+
+/** Fiche SP referenced from a contribution */
+
+const contribFicheId = contributions
+  .map(({ answers }) => extractMdxContentUrl(answers.generic.markdown))
+  .filter(Boolean)
+  .map(url => {
+    const [, id] = url.match(/\/(\w+)$/);
+    return id;
+  });
 
 const fullFiches = [].concat(
   ...TYPES.map(type =>
@@ -51,7 +64,8 @@ const getFichesSP = () =>
         raw,
         date,
         references_juridiques,
-        url
+        url,
+        excludeFromSearch: contribFicheId.includes(id)
       })
     );
 
