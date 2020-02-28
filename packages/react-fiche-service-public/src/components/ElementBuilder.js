@@ -1,5 +1,5 @@
 import React from "react";
-import { uid } from "react-uid";
+import { useUIDSeed } from "react-uid";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -23,14 +23,15 @@ const parseChildren = (children, headingLevel) => (
 
 // Beware, this one is recursive
 export function ElementBuilder({ data, headingLevel }) {
+  const seedId = useUIDSeed();
   // in cases where the parent's "$"/children is undefined while it should not
   // e.g. in a "Texte" element. It occurs sometimes.
   if (!data) return null;
   // In case we get children
   if (Array.isArray(data)) {
-    return data.map((child, index) => (
+    return data.map(child => (
       <ElementBuilder
-        key={uid(child, index)}
+        key={seedId(child)}
         data={child}
         headingLevel={headingLevel}
       />

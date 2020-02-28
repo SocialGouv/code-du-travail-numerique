@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
-import { uid } from "react-uid";
+import { useUIDSeed } from "react-uid";
 
 import {
   Button,
@@ -18,6 +18,7 @@ export const ResultList = ({
 }) => {
   const pageSize = 4;
   const [page, setPage] = useState(1);
+  const seedId = useUIDSeed();
   useEffect(() => {
     setPage(1);
   }, [query]);
@@ -31,7 +32,7 @@ export const ResultList = ({
         {items.slice(0, page * pageSize).map((item, index) => (
           <StyledListItem
             isLast={index === page * pageSize - 1}
-            key={uid(item, index)}
+            key={seedId(item)}
           >
             {item}
           </StyledListItem>
