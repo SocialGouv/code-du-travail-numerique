@@ -33,7 +33,7 @@
     "@socialgouv/legi-data": "^1.1.14",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
-    "query-string": "^6.11.0",
+    "query-string": "^6.11.1",
     "unist-util-find": "^1.0.1",
     "unist-util-select": "^3.0.1",
     "winston": "^3.2.1"
