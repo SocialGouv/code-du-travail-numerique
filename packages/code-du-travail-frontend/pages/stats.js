@@ -1,7 +1,6 @@
 import React from "react";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
-import Head from "next/head";
 import getConfig from "next/config";
 import { max, startOfDay, subMonths } from "date-fns";
 import {
@@ -14,24 +13,24 @@ import {
 } from "@socialgouv/react-ui";
 
 import { Layout } from "../src/layout/Layout";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const Stats = ({ data }) => {
+const Stats = ({ data, pageUrl, ogImage }) => {
   const launchDate = new Date(Date.UTC(2020, 0, 1));
   const startDate = max([subMonths(startOfDay(new Date()), 6), launchDate]);
 
   return (
     <Layout>
-      <Head>
-        <title>Statistiques du Code du travail numérique</title>
-        <meta
-          name="description"
-          content="Statistiques du Code du travail numérique"
-        />
-      </Head>
+      <Metas
+        url={pageUrl}
+        title="Statistiques - Code du travail numérique"
+        description="Statistiques d’utilisation du Code du travail numérique"
+        image={ogImage}
+      />
       <Section>
         <Container>
           <PageTitle>Statistiques du Code du travail numérique</PageTitle>

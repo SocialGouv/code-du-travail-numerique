@@ -63,8 +63,8 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
   <Layout currentPage="home">
     <Metas
       url={pageUrl}
-      title="Code du travail numérique"
-      description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
+      title="Code du travail numérique - Ministère du Travail"
+      description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
       image={ogImage}
     />
     <SearchHero />
