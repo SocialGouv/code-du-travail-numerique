@@ -26,17 +26,27 @@ function splitArticle(article) {
   prefixTitle = prefixTitle.replace(/\s+/g, " ").trim();
   return article.sections
     .filter(isUnusedSection)
-    .map(({ anchor, description, html, text, title: sectionTitle }) => {
-      const title = transformSectionTitle({ sectionTitle, prefixTitle });
-      return {
+    .map(
+      ({
         anchor,
         description,
         html,
-        slug: `${slug}${anchor ? `#${anchor}` : ""}`,
         text,
-        title
-      };
-    });
+        references,
+        title: sectionTitle
+      }) => {
+        const title = transformSectionTitle({ sectionTitle, prefixTitle });
+        return {
+          anchor,
+          description,
+          html,
+          slug: `${slug}${anchor ? `#${anchor}` : ""}`,
+          text,
+          references,
+          title
+        };
+      }
+    );
 }
 
 function isUnusedSection({ title }) {

@@ -47,42 +47,50 @@ function prefixMatcher(token) {
   return 0;
 }
 
+function infixMatcher(token) {
+  return ["à", "à"].includes(token);
+}
+
 // classify sequence of tokens to identify references to articles
 function classifyTokens(tokens) {
   // step 1 : check for prefix matchs or articles
   const step1 = tokens.map(token => {
     const prefix = prefixMatcher(token);
+    const infix = infixMatcher(token);
     const article = articleMatcher(token);
 
     if (prefix > 0) {
       return prefix;
     } else if (article) {
       return 3;
+    } else if (infix) {
+      return 4;
     } else {
       return 0;
     }
   });
 
-  //   console.log(tokens);
-  //   console.log(step1);
+  // console.log(tokens);
+  // console.log(step1);
 
   // step 2 : confirm valid sequences
   // hack : we keep a buffer as last element of the accumulator
   const predictions = step1.reduce(
     (acc, e) => {
-      //   console.log(acc);
-      //   console.log(e);
+      // console.log(acc);
+      // console.log(e);
       const buffer = acc[acc.length - 1];
       const inSequence = buffer.length > 0;
+      const lastElement = buffer[buffer.length - 1];
 
       // case continue existing
-      if (e > 1 && inSequence) {
+      if (e >= 1 && inSequence) {
         // console.log("case continue");
         buffer.push(e);
       }
 
       // case finish existing
-      else if (e == 0 && inSequence && buffer[buffer.length - 1] > 1) {
+      else if (e == 0 && inSequence && lastElement > 1) {
         // console.log("case finish");
         acc.pop();
         // push buffer
@@ -93,8 +101,8 @@ function classifyTokens(tokens) {
         acc.push([]);
       }
 
-      // case start
-      else if (e != 0 && !inSequence) {
+      // case start (valid start are 1 or 2, as 3 is number only without prefix)
+      else if (e > 0 && e < 3 && !inSequence) {
         // console.log("case start");
         buffer.push(e);
       }
@@ -120,6 +128,7 @@ function classifyTokens(tokens) {
   // conclude
   const residual = predictions.pop();
   // if ends with 2 then add residual as true
+  // if (residual.length > 0 && [2, 3].includes(residual[residual.length - 1])) {
   if (residual.length > 0 && residual[residual.length - 1] > 1) {
     predictions.push(...residual.map(() => true));
   } else {

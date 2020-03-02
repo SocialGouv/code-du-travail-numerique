@@ -6,7 +6,11 @@ const slugify = require("@cdt/data/slugify");
 
 const urls = require("./ministere-travail-liste-fiches.json");
 const { splitArticle } = require("./articleSplitter");
+<<<<<<< HEAD
 // const { addTags } = require("./enrichText");
+=======
+const { extractReferences } = require("./referenceExtractor");
+>>>>>>> seems ok
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
@@ -125,7 +129,11 @@ function parseDom(dom, url) {
           section.html += nextEl.outerHTML;
           nextEl = nextEl.nextElementSibling;
         }
+<<<<<<< HEAD
         // section.html = addTags(section.html);
+=======
+        section.references = extractReferences(section.text);
+>>>>>>> seems ok
         sections.push(section);
       }
     });
