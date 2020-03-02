@@ -1660,18 +1660,6 @@ exports[`<About /> should render 1`] = `
                 >
                   <a
                     class="c48"
-                    href="https://calendly.com/code-du-travail-numerique/ambassadeur-du-code-du-travail-numerique"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Devenir ambassadeur
-                  </a>
-                </li>
-                <li
-                  class="c47"
-                >
-                  <a
-                    class="c48"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"

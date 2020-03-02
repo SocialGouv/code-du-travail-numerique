@@ -14,7 +14,8 @@
     "lint": "lerna run lint --parallel",
     "postinstall": "node scripts/setup-env.js",
     "start": "lerna run start --parallel",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "jest:ui": "yarn workspace @cdt/frontend jest -u && yarn workspace @socialgouv/react-fiche-service-public jest -u && yarn workspace @socialgouv/react-ui jest -u"
   },
   "repository": {
     "type": "git",
