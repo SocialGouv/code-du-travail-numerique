@@ -1706,15 +1706,6 @@ exports[`<Stats /> should render 1`] = `
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c49"
-                >
-                  <button
-                    class="c9"
-                  >
-                    Contact
-                  </button>
-                </li>
               </ul>
             </div>
             <div
@@ -1728,6 +1719,15 @@ exports[`<Stats /> should render 1`] = `
               <ul
                 class="sc-fznMnq c48"
               >
+                <li
+                  class="c49"
+                >
+                  <button
+                    class="c9"
+                  >
+                    Contact
+                  </button>
+                </li>
                 <li
                   class="c49"
                 >
