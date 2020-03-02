@@ -121,15 +121,6 @@ const Footer = () => {
                 <StyledList>
                   <StyledListItem>
                     <StyledLink
-                      href="https://calendly.com/code-du-travail-numerique/ambassadeur-du-code-du-travail-numerique"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Devenir ambassadeur
-                    </StyledLink>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <StyledLink
                       href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
                       target="_blank"
                       rel="noopener noreferrer"
