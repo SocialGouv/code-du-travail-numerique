@@ -2300,15 +2300,6 @@ exports[`<FicheMT /> should render 1`] = `
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c76"
-                >
-                  <button
-                    class="c9"
-                  >
-                    Contact
-                  </button>
-                </li>
               </ul>
             </div>
             <div
@@ -2322,6 +2313,15 @@ exports[`<FicheMT /> should render 1`] = `
               <ul
                 class="sc-fznMnq c75"
               >
+                <li
+                  class="c76"
+                >
+                  <button
+                    class="c9"
+                  >
+                    Contact
+                  </button>
+                </li>
                 <li
                   class="c76"
                 >

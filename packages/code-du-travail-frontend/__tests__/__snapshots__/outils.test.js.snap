@@ -2643,15 +2643,6 @@ exports[`<Outils /> should render 1`] = `
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c60"
-                >
-                  <button
-                    class="c9 c10"
-                  >
-                    Contact
-                  </button>
-                </li>
               </ul>
             </div>
             <div
@@ -2665,6 +2656,15 @@ exports[`<Outils /> should render 1`] = `
               <ul
                 class="sc-fznMnq c59"
               >
+                <li
+                  class="c60"
+                >
+                  <button
+                    class="c9 c10"
+                  >
+                    Contact
+                  </button>
+                </li>
                 <li
                   class="c60"
                 >

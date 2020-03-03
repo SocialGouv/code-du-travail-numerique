@@ -15,8 +15,7 @@ export const AccessibilityModal = ({ children: renderProp }) => {
 
   const { currentTheme, toggleTheme } = useTheme();
 
-  const openModal = useCallback(e => {
-    e.preventDefault();
+  const openModal = useCallback(() => {
     setModalVisibility(true);
   }, []);
 

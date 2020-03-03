@@ -92,6 +92,13 @@ const Footer = () => {
                       <StyledLink>Statistiques d’utilisation</StyledLink>
                     </Link>
                   </StyledListItem>
+                </StyledList>
+              </Category>
+              <Category>
+                <StyledHeading isFirst>
+                  Aidez-nous à améliorer cet outil
+                </StyledHeading>
+                <StyledList>
                   <StyledListItem>
                     <ContactModal>
                       {openModal => (
@@ -112,13 +119,6 @@ const Footer = () => {
                       )}
                     </ContactModal>
                   </StyledListItem>
-                </StyledList>
-              </Category>
-              <Category>
-                <StyledHeading isFirst>
-                  Aidez-nous à améliorer cet outil
-                </StyledHeading>
-                <StyledList>
                   <StyledListItem>
                     <StyledLink
                       href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}

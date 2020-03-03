@@ -3078,15 +3078,6 @@ exports[`<Home /> should render 1`] = `
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c72"
-                >
-                  <button
-                    class="c9 c10"
-                  >
-                    Contact
-                  </button>
-                </li>
               </ul>
             </div>
             <div
@@ -3100,6 +3091,15 @@ exports[`<Home /> should render 1`] = `
               <ul
                 class="sc-fznMnq c71"
               >
+                <li
+                  class="c72"
+                >
+                  <button
+                    class="c9 c10"
+                  >
+                    Contact
+                  </button>
+                </li>
                 <li
                   class="c72"
                 >

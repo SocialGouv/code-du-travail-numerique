@@ -22,7 +22,7 @@ const DroitDuTravail = ({ hash, ogImage, pageUrl }) => (
     <Metas
       url={pageUrl}
       title="Le droit du travail - Code du travail numérique"
-      description="Le droit du travail, c'est quoi ?"
+      description="Qu’est-ce que le droit du travail ?"
       image={ogImage}
     />
     <Section>

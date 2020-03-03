@@ -5081,15 +5081,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c102"
-                >
-                  <button
-                    class="c9 c10"
-                  >
-                    Contact
-                  </button>
-                </li>
               </ul>
             </div>
             <div
@@ -5103,6 +5094,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <ul
                 class="sc-fznMnq c101"
               >
+                <li
+                  class="c102"
+                >
+                  <button
+                    class="c9 c10"
+                  >
+                    Contact
+                  </button>
+                </li>
                 <li
                   class="c102"
                 >

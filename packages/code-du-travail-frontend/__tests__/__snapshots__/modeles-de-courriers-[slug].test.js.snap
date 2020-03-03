@@ -2404,15 +2404,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c77"
-                >
-                  <button
-                    class="c9"
-                  >
-                    Contact
-                  </button>
-                </li>
               </ul>
             </div>
             <div
@@ -2426,6 +2417,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <ul
                 class="sc-fznMnq c76"
               >
+                <li
+                  class="c77"
+                >
+                  <button
+                    class="c9"
+                  >
+                    Contact
+                  </button>
+                </li>
                 <li
                   class="c77"
                 >

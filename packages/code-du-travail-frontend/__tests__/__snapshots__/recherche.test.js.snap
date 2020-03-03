@@ -1518,15 +1518,6 @@ exports[`<Recherche /> should render 1`] = `
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c46"
-                >
-                  <button
-                    class="c9"
-                  >
-                    Contact
-                  </button>
-                </li>
               </ul>
             </div>
             <div
@@ -1540,6 +1531,15 @@ exports[`<Recherche /> should render 1`] = `
               <ul
                 class="sc-fznMnq c45"
               >
+                <li
+                  class="c46"
+                >
+                  <button
+                    class="c9"
+                  >
+                    Contact
+                  </button>
+                </li>
                 <li
                   class="c46"
                 >

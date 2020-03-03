@@ -552,15 +552,6 @@ exports[`<Footer /> should render 1`] = `
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c18"
-                >
-                  <button
-                    class="c20"
-                  >
-                    Contact
-                  </button>
-                </li>
               </ul>
             </div>
             <div
@@ -574,6 +565,15 @@ exports[`<Footer /> should render 1`] = `
               <ul
                 class="sc-fznMnq c17"
               >
+                <li
+                  class="c18"
+                >
+                  <button
+                    class="c20"
+                  >
+                    Contact
+                  </button>
+                </li>
                 <li
                   class="c18"
                 >

@@ -2596,15 +2596,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       Statistiques d’utilisation
                     </a>
                   </li>
-                  <li
-                    class="c83"
-                  >
-                    <button
-                      class="c9"
-                    >
-                      Contact
-                    </button>
-                  </li>
                 </ul>
               </div>
               <div
@@ -2618,6 +2609,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <ul
                   class="sc-fznMnq c82"
                 >
+                  <li
+                    class="c83"
+                  >
+                    <button
+                      class="c9"
+                    >
+                      Contact
+                    </button>
+                  </li>
                   <li
                     class="c83"
                   >
@@ -5380,15 +5380,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       Statistiques d’utilisation
                     </a>
                   </li>
-                  <li
-                    class="c83"
-                  >
-                    <button
-                      class="c9"
-                    >
-                      Contact
-                    </button>
-                  </li>
                 </ul>
               </div>
               <div
@@ -5402,6 +5393,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <ul
                   class="sc-fznMnq c82"
                 >
+                  <li
+                    class="c83"
+                  >
+                    <button
+                      class="c9"
+                    >
+                      Contact
+                    </button>
+                  </li>
                   <li
                     class="c83"
                   >
