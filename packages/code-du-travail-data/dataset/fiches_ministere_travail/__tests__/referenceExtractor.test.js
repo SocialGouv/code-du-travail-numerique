@@ -50,13 +50,12 @@ const testCases = [
 ];
 
 test("should extract article tokens in examples", () => {
-  return testCases.forEach(({ input, expected }) => {
-    const predictions = extractReferences(input);
-    expect(predictions).toEqual(expected);
-  });
+  expect(
+    testCases.map(({ input }) => extractReferences(input))
+  ).toMatchSnapshot();
 });
 
-test("should success with actual test set", () => {
+test("should success with actual real life set", () => {
   const predictions = classifyTokens(tokens);
   // keep this to easily check prediction errors :
   /*
@@ -73,3 +72,6 @@ test("should success with actual test set", () => {
   */
   expect(predictions).toEqual(labels);
 });
+
+test("should find with code for actual real life set", () =>
+  expect(extractReferences(tokens.join(" "))).toMatchSnapshot());

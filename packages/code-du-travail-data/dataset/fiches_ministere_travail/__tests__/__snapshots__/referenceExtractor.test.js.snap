@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should extract article tokens in examples 1`] = `
+Array [
+  Array [
+    Object {
+      "article": "L. 2313-8",
+      "code": "code du travail",
+    },
+    Object {
+      "article": "R. 2313-3 à R. 2313-6",
+      "code": "code du travail",
+    },
+  ],
+  Array [
+    Object {
+      "article": "L. 613-19 à L.613-19-2",
+      "code": undefined,
+    },
+    Object {
+      "article": "L. 722-8 à 25",
+      "code": undefined,
+    },
+    Object {
+      "article": "L. 732-10 à L. 732-12-1",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D212",
+      "code": undefined,
+    },
+    Object {
+      "article": "R413",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D212",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D-212",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D.212",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D212-3",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D-212-4",
+      "code": undefined,
+    },
+  ],
+  Array [],
+  Array [
+    Object {
+      "article": "D. 212-4",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D. 212-4",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D.212-5",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D.212-5-6",
+      "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "D.212-5-6-7",
+      "code": undefined,
+    },
+  ],
+  Array [],
+]
+`;
+
+exports[`should find with code for actual real life set 1`] = `
+Array [
+  Object {
+    "article": "L. 2313-8",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 2313-3 à R. 2313-6",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 2242-7",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "L. 2242-8",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 2242-2 à R. 2242-11",
+    "code": undefined,
+  },
+  Object {
+    "article": "L. 2242-9",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 2242-9 à R. 2242-11",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "L. 135-1",
+    "code": "code de la sécurité sociale",
+  },
+  Object {
+    "article": "D. 1142-2",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "D. 1142-2-1",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "L. 4521-1",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "D. 1142-2",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "D. 1142-2-1",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 1234-9",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "L. 130-1",
+    "code": "code de la sécurité sociale",
+  },
+  Object {
+    "article": "R. 130-1",
+    "code": "code de la sécurité sociale",
+  },
+  Object {
+    "article": "D. 8223-2",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 1263-3",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 1263-4",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 1263-6",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "L. 613-19 à L. 613-19-2",
+    "code": "code de la sécurité sociale",
+  },
+  Object {
+    "article": "L. 722-8 à L. 722-8-3",
+    "code": "code de la sécurité sociale",
+  },
+  Object {
+    "article": "L. 732-10 à L. 732-12-1",
+    "code": undefined,
+  },
+  Object {
+    "article": "L. 4412-2",
+    "code": undefined,
+  },
+  Object {
+    "article": "R. 4412-97/II",
+    "code": undefined,
+  },
+  Object {
+    "article": "L. 2315-24",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "L. 2315-38 à 40",
+    "code": undefined,
+  },
+  Object {
+    "article": "L1111-2",
+    "code": undefined,
+  },
+  Object {
+    "article": "L. 2314-6",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 2314-6",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "L 2312-36",
+    "code": "code du travail",
+  },
+  Object {
+    "article": "R. 2312-8",
+    "code": undefined,
+  },
+  Object {
+    "article": "R. 2312-10 à R. 2312-14",
+    "code": undefined,
+  },
+  Object {
+    "article": "R. 2312-9",
+    "code": undefined,
+  },
+  Object {
+    "article": "R. 2312-10 à R. 2312-14",
+    "code": undefined,
+  },
+]
+`;

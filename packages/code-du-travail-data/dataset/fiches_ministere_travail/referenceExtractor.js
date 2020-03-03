@@ -1,7 +1,20 @@
 const treebank = require("talisman/tokenizers/words/treebank");
 
 const NEGATIVE = "O";
-const POSITIVE = "B-ART";
+const ARTICLE = "B-ART";
+const CODE_PREFIX = "B-COD";
+// code du travail
+const CODE_TRA = CODE_PREFIX + "_TRA";
+// code sécurité sociale
+const CODE_SS = CODE_PREFIX + "_SS";
+
+const codesFullNames = {
+  [CODE_SS]: "code de la sécurité sociale",
+  [CODE_TRA]: "code du travail"
+};
+
+// maximum distance between code tokens and corresponding article ref
+const range = 20;
 
 const articleRegEx = new RegExp("^(\\d{1,4}(-\\d+){0,3})\\b"); //          nums        123 123-45 123-45-6 123-45-6-7
 function articleMatcher(token) {
@@ -48,6 +61,7 @@ function prefixMatcher(token) {
 }
 
 function infixMatcher(token) {
+  // this is quite subtle...
   return ["à", "à"].includes(token);
 }
 
@@ -136,20 +150,91 @@ function classifyTokens(tokens) {
   }
 
   //   console.log("predicitions " + predictions);
-  return predictions.map(p => (p ? POSITIVE : NEGATIVE));
+  return predictions.map(p => (p ? ARTICLE : NEGATIVE));
+}
+
+function identifyCodes(tokens, predicitions) {
+  // we look for "code" tokens (starting a code reference)
+  const matchCode = tokens.map((token, i) => {
+    return token.toLowerCase() == "code" ? CODE_PREFIX : predicitions[i];
+  });
+
+  // we search for entire code references
+  const resolvedCodePreds = matchCode.map((pred, i) => {
+    if (pred == CODE_PREFIX) {
+      const joinedNextTokens = tokens
+        .slice(i, i + 5)
+        .join(" ")
+        .toLowerCase();
+      if (joinedNextTokens.startsWith(codesFullNames[CODE_SS])) {
+        return CODE_SS;
+      } else if (joinedNextTokens.startsWith(codesFullNames[CODE_TRA])) {
+        return CODE_TRA;
+      } else {
+        return NEGATIVE;
+      }
+    } else {
+      return pred;
+    }
+  });
+
+  return resolvedCodePreds;
 }
 
 // extract references from free text : tokenize and classify
 function extractReferences(text) {
   const tokens = treebank(text);
-  const predictions = classifyTokens(tokens);
+  let predictions = classifyTokens(tokens);
+  predictions = identifyCodes(tokens, predictions);
 
-  //   console.log(tokens);
+  // console.log(tokens);
+  // console.log(predictions);
+
+  // group continuous positives tokens and set code
+  // while contnuous match, merge
+  // if code, then associate it to articles within range
+  return tokens
+    .map((token, index) => {
+      return { token, index, pred: predictions[index] };
+    })
+    .reduce((acc, { token, index, pred }) => {
+      // case article we start or merge
+      if (pred == ARTICLE) {
+        if (acc.length == 0) {
+          acc.push({ token, index });
+        } else {
+          const last = acc[acc.length - 1];
+          // case continuous : we merge
+          if (last.index + 1 == index) {
+            last.token = `${last.token} ${token}`;
+            last.index = index;
+          } else {
+            acc.push({ token, index });
+          }
+        }
+      }
+      // case code, we associate it to articles within range
+      else if (pred.startsWith(CODE_PREFIX) && acc.length > 0) {
+        acc.forEach(match => {
+          // if no code yet and in range
+          if (!match.code && match.index + range >= index) {
+            match.code = codesFullNames[pred];
+            // console.log("heeeere : " + JSON.stringify(match));
+          }
+        });
+      }
+
+      return acc;
+    }, [])
+    .map(({ token, code }) => {
+      return { article: token, code };
+    });
+  /*
 
   // group continuous positives tokens
-  return tokens
+  const matches = tokens
     .map((token, index) =>
-      predictions[index] != NEGATIVE ? { token, index } : undefined
+      predictions[index] == ARTICLE ? { token, index } : undefined
     )
     .filter(f => f)
     .reduce((acc, e) => {
@@ -168,6 +253,10 @@ function extractReferences(text) {
       return acc;
     }, [])
     .map(e => e.token);
+
+  console.log(matches);
+  return matches;
+  */
 }
 
 module.exports = { classifyTokens, extractReferences };
