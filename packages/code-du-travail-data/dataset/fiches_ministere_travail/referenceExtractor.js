@@ -8,15 +8,17 @@ const CODE_TRA = CODE_PREFIX + "_TRA";
 // code sécurité sociale
 const CODE_SS = CODE_PREFIX + "_SS";
 
+const CODE_TRAVAIL = {
+  name: "code du travail",
+  id: "LEGITEXT000006072050"
+};
+
 const codesFullNames = {
   [CODE_SS]: {
     name: "code de la sécurité sociale",
     id: "LEGITEXT000006073189"
   },
-  [CODE_TRA]: {
-    name: "code du travail",
-    id: "LEGITEXT000006072050"
-  }
+  [CODE_TRA]: CODE_TRAVAIL
 };
 
 // maximum distance between code tokens and corresponding article ref
@@ -220,4 +222,9 @@ function extractReferences(text) {
     });
 }
 
-module.exports = { classifyTokens, extractReferences, codesFullNames };
+module.exports = {
+  classifyTokens,
+  extractReferences,
+  codesFullNames,
+  CODE_TRAVAIL
+};

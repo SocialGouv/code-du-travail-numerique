@@ -17,6 +17,10 @@ Array [
         "name": "code du travail",
       },
     },
+    Object {
+      "article": "L. 1251-18",
+      "code": undefined,
+    },
   ],
   Array [
     Object {
@@ -349,6 +353,16 @@ Array [
     "fmt": "R2313-6",
     "id": "LEGIARTI000036414727",
     "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036414727&cidTexte=LEGITEXT000006072050",
+  },
+  Object {
+    "article": "L. 1251-18",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
+    "fmt": "L1251-18",
+    "id": "LEGIARTI000006901269",
+    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901269&cidTexte=LEGITEXT000006072050",
   },
 ]
 `;
