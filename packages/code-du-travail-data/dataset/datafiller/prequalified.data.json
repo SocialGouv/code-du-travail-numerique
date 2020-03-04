@@ -1998,10 +1998,8 @@
       "combien de conges payes",
       "congés payés et maternité",
       "congés payés et paternité",
-      "calcul des congés payés pour CDD",
       "congés payés et maladie",
       "congés payés et congé parental d'éducation",
-      "congés payés et congé sabbatique",
       "congés payés et absences",
       "congés payés et congé fractionnement",
       "congés payés et fractionnement",
@@ -5714,8 +5712,6 @@
       "CDD quelle est la durée maximale ?",
       "quelle est la durée du CDD",
       "CDD période d'essai",
-      "CDD indemnité",
-      "CDD prime de précarité",
       "Quelles sont les mentions obligatoires du CDD ?",
       "c'est quoi un CDD ?",
       "qu'est ce qu'un CDD",
@@ -6358,7 +6354,6 @@
       "délai de prévenance période d'essai",
       "préavis période d'essai",
       "quel préavis en période d'essai",
-      "préavis CDD",
       "délai de prévenance CDD",
       "Période d'essai : rupture et délai de prévenance",
       "Quel délai pour mettre fin à une période d'essai ?",
@@ -11113,6 +11108,68 @@
     ]
   },
   {
+    "title": "liquidation et redressement judiciaire",
+    "theme": null,
+    "refs": [
+      {
+        "url": "/fiche-service-public/liquidation-judiciaire",
+        "title": "Liquidation judiciaire",
+        "relevance": 5
+      },
+      {
+        "url": "/fiche-service-public/redressement-judiciaire",
+        "title": "Redressement judiciaire",
+        "relevance": 5
+      },
+      {
+        "url": "/fiche-service-public/entreprise-en-difficulte-financiere-quest-ce-que-la-garantie-des-salaires",
+        "title": "Entreprise en difficulté financière : qu'est-ce que la garantie des salaires ?",
+        "relevance": 4
+      },
+      {
+        "url": "/fiche-ministere-travail/la-garantie-en-cas-de-sauvegarde-de-redressement-ou-de-liquidation-judiciaire#Quelles-sont-les-sommes-garanties",
+        "title": "La garantie en cas de sauvegarde, de redressement ou de liquidation judiciaire : quelles sont les sommes garanties ?",
+        "relevance": 3
+      },
+      {
+        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-versement-du-salaire#t5-La-garantie-des-salaires-c-est-quoi",
+        "title": "Le versement du salaire : la garantie des salaires : c’est quoi ?",
+        "relevance": 2
+      },
+      {
+        "url": "/fiche-ministere-travail/la-garantie-en-cas-de-sauvegarde-de-redressement-ou-de-liquidation-judiciaire#Qui-sont-les-employeurs-assujettis",
+        "title": "La garantie en cas de sauvegarde, de redressement ou de liquidation judiciaire : qui sont les employeurs assujettis ?",
+        "relevance": 1
+      }
+    ],
+    "variants": [
+      "liquidation et redressement judiciaire",
+      "liquidation judiciaire entreprise",
+      "liquidation judiciaire",
+      "redressement judiciaire",
+      "liquidation judiciaire salarié non payé",
+      "liquidation judiciaire licenciement salarié protégé",
+      "liquidation judiciaire salarié cdd",
+      "liquidation judiciaire peut on travailler",
+      "ags liquidation judiciaire",
+      "droit au chomage apres liquidation judiciaire",
+      "solde de tout compte apres liquidation judiciaire",
+      "demission avant liquidation judiciaire",
+      "prime de licenciement en cas de liquidation judiciaire",
+      "qui paie les salaires en redressement judiciaire",
+      "paiement des salaires lors d'un redressement judiciaire",
+      "ags congés payés non pris",
+      "delai paiement salaire mandataire judiciaire",
+      "congés payés pendant redressement judiciaire",
+      "reprise des salariés après liquidation judiciaire",
+      "quitter une entreprise en redressement judiciaire",
+      "rupture conventionnelle pendant redressement judiciaire",
+      "liquidation judiciaire salarié préavis",
+      "redressement judiciaire et licenciement pour inaptitude",
+      "redressement judiciaire et procédure prud'homale"
+    ]
+  },
+  {
     "title": "maintien de salaire et maladie",
     "theme": "47042834-cd29-400f-9f80-fc8a22067c3d",
     "refs": [
@@ -12763,7 +12820,6 @@
       "durée du préavis",
       "préavis des cadres",
       "préavis des non cadres",
-      "préavis et CDD",
       "préavis et CDI de chantier",
       "préavis et cessation de l'entreprise",
       "préavis et contrat de sécurisation professionnelle",
@@ -12773,27 +12829,22 @@
       "préavis et faute grave",
       "préavis et femme enceinte",
       "préavis et force majeure",
-      "rupture cdd pour CDI et préavis",
       "arrêt maladie et préavis",
       "calcul d'ancienneté",
       "durée du préavis agent de maîtrise",
       "préavis et ancienneté",
       "préavis et droit local Alsace Moselle",
-      "préavis et grève",
       "préavis et travailleurs handicapés",
       "prolongation du préavis",
-      "usages",
       "préavis réduit",
-      "fermeture de l'entreprise au cours du préavis.",
+      "fermeture de l'entreprise au cours du préavis",
       "congés payés et préavis",
       "Impossibilité d'exécution du préavis",
       "inexécution du préavis",
       "Inobservation du préavis",
       "préavis et accident du travail",
       "préavis et chômage technique",
-      "préavis et CIF",
       "préavis et congés payés",
-      "préavis et heures de recherche d'emploi",
       "préavis et maladie",
       "report du préavis",
       "indemnité conventionnelle de préavis",
@@ -12804,15 +12855,10 @@
       "changer d'emploi sans préavis",
       "Exécution du préavis",
       "préavis apprentissage",
-      "préavis assistantes maternelles",
-      "prévis donnée à assistante maternelle",
-      "préavis de départ en retraite",
-      "préavis et CESU",
-      "préavis et mise à la retraite",
       "préavis et VRP",
       "quel préavis dois-je respecter en cas de démission",
       "quel préavis en cas de démission HCR",
-      "point de départ du préavis.",
+      "point de départ du préavis",
       "droit au préavis",
       "préavis et contrat de travail",
       "préavis et maternité",
@@ -12891,8 +12937,12 @@
       "conditions départ à la retraite",
       "durée préavis départ à la retraite",
       "durée de préavis départ à la retraite",
+      "préavis de départ en retraite",
+      "preavis depart en retraite",
+      "Preavis depart en retraité",
       "durée de préavis de départ à la retraite",
       "durée du préavis départ à la retraite",
+      "Préavis et départ retraite",
       "durée du préavis de départ à la retraite",
       "Quel est le délai pour avertir son employeur départ retraite ?",
       "Quel est le préavis pour un départ en retraite ?"
@@ -12945,7 +12995,9 @@
     ],
     "variants": [
       "préavis mise à la retraite",
-      "durée du préavis en cas de mise à la retraite"
+      "durée du préavis en cas de mise à la retraite",
+      "préavis et mise à la retraite",
+      "preavis depart mise a la retraite"
     ]
   },
   {
@@ -13178,6 +13230,7 @@
       "prime de precarite",
       "prime de précarité",
       "prime de précarité cdd",
+      "cdd prime de précarité",
       "prime précarité",
       "indemnité de fin de contrat CDD",
       "indemnité de fin de CDD",
@@ -14844,11 +14897,6 @@
       "rupture du contrat et respect d'un préavis",
       "rupture du contrat et indemnité",
       "rupture de contrat et droit au chômage",
-      "rupture du contrat à durée indéterminée (CDI)",
-      "rupture du contrat de travail à durée déterminée (CDD)",
-      "rupture du contrat du contrat de travail temporaire (CTT)",
-      "rupture du contrat de travail contrat unique d'insertion",
-      "rupture du contrat de professionnalisation",
       "rupture du contrat de travail avec une assistante maternelle",
       "conditions de la rupture du contrat",
       "contestation de rupture du contrat de travail",
@@ -16289,21 +16337,6 @@
         "url": "/contribution/en-cas-de-perte-de-marche-par-lemployeur-quelles-sont-les-conditions-dun-transfert-des-contrats-de-travail",
         "title": "En cas de perte de marché par l’employeur, quelles sont les conditions d'un transfert des contrats de travail ? ",
         "relevance": 4
-      },
-      {
-        "url": "/fiche-service-public/liquidation-judiciaire",
-        "title": "Liquidation judiciaire",
-        "relevance": 3
-      },
-      {
-        "url": "/fiche-service-public/redressement-judiciaire",
-        "title": "Redressement judiciaire",
-        "relevance": 3
-      },
-      {
-        "url": "/fiche-service-public/entreprise-en-difficulte-financiere-quest-ce-que-la-garantie-des-salaires",
-        "title": "Entreprise en difficulté financière : qu'est-ce que la garantie des salaires ?",
-        "relevance": 2
       }
     ],
     "variants": [
@@ -16330,26 +16363,6 @@
       "cession \"fonds de commerce\" \"congés payés\"",
       "cession d entreprise et délégués du personnel",
       "rachat entreprise",
-      "liquidation judiciaire entreprise",
-      "liquidation judiciaire salarié non payé",
-      "liquidation judiciaire licenciement salarié protégé",
-      "liquidation judiciaire salarié cdd",
-      "liquidation judiciaire peut on travailler",
-      "ags liquidation judiciaire",
-      "droit au chomage apres liquidation judiciaire",
-      "solde de tout compte apres liquidation judiciaire",
-      "demission avant liquidation judiciaire",
-      "prime de licenciement en cas de liquidation judiciaire",
-      "qui paie les salaires en redressement judiciaire",
-      "paiement des salaires lors d'un redressement judiciaire",
-      "ags congés payés non pris",
-      "delai paiement salaire mandataire judiciaire",
-      "congés payés pendant redressement judiciaire",
-      "quitter une entreprise en redressement judiciaire",
-      "rupture conventionnelle pendant redressement judiciaire",
-      "liquidation judiciaire salarié préavis",
-      "redressement judiciaire et licenciement pour inaptitude",
-      "redressement judiciaire et procédure prud'homale",
       "reprise du personnel sécurité",
       "contrat de travail et perte d'un marché de services",
       "refus de reprise du personnel securite privee",
