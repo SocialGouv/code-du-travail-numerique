@@ -1859,7 +1859,6 @@
 {"entity": "quel pourcentage de la masse salariale pour la formation ?", "value": 20.4}
 {"entity": "quel pourcentage du salaire en cas d'accident du travail ?", "value": 20.4}
 {"entity": "quel revenu pendant un cong\u00e9 parental ?", "value": 10.0}
-{"entity": "quel risque si je suis \u00e9lu d\u00e9l\u00e9gu\u00e9 syndical", "value": 49.59}
 {"entity": "quel salaire en cas d'accident du travail ?", "value": 20.4}
 {"entity": "quel salaire pendant arr\u00eat maladie ?", "value": 10.0}
 {"entity": "quel salaire pendant un accident de travail ?", "value": 10.0}
