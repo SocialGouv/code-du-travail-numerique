@@ -5,21 +5,33 @@ Array [
   Array [
     Object {
       "article": "L. 2313-8",
-      "code": "code du travail",
+      "code": Object {
+        "id": "LEGITEXT000006072050",
+        "name": "code du travail",
+      },
     },
     Object {
       "article": "R. 2313-3 à R. 2313-6",
-      "code": "code du travail",
+      "code": Object {
+        "id": "LEGITEXT000006072050",
+        "name": "code du travail",
+      },
     },
   ],
   Array [
     Object {
       "article": "L. 613-19 à L.613-19-2",
-      "code": undefined,
+      "code": Object {
+        "id": "LEGITEXT000006073189",
+        "name": "code de la sécurité sociale",
+      },
     },
     Object {
       "article": "L. 722-8 à 25",
-      "code": undefined,
+      "code": Object {
+        "id": "LEGITEXT000006073189",
+        "name": "code de la sécurité sociale",
+      },
     },
     Object {
       "article": "L. 732-10 à L. 732-12-1",
@@ -105,19 +117,31 @@ exports[`should find with code for actual real life set 1`] = `
 Array [
   Object {
     "article": "L. 2313-8",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 2313-3 à R. 2313-6",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 2242-7",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "L. 2242-8",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 2242-2 à R. 2242-11",
@@ -125,71 +149,107 @@ Array [
   },
   Object {
     "article": "L. 2242-9",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 2242-9 à R. 2242-11",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "L. 135-1",
-    "code": "code de la sécurité sociale",
+    "code": undefined,
   },
   Object {
     "article": "D. 1142-2",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "D. 1142-2-1",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "L. 4521-1",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "D. 1142-2",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "D. 1142-2-1",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 1234-9",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "L. 130-1",
-    "code": "code de la sécurité sociale",
+    "code": undefined,
   },
   Object {
     "article": "R. 130-1",
-    "code": "code de la sécurité sociale",
+    "code": undefined,
   },
   Object {
     "article": "D. 8223-2",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 1263-3",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 1263-4",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 1263-6",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "L. 613-19 à L. 613-19-2",
-    "code": "code de la sécurité sociale",
+    "code": undefined,
   },
   Object {
     "article": "L. 722-8 à L. 722-8-3",
-    "code": "code de la sécurité sociale",
+    "code": undefined,
   },
   Object {
     "article": "L. 732-10 à L. 732-12-1",
@@ -205,7 +265,10 @@ Array [
   },
   Object {
     "article": "L. 2315-24",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "L. 2315-38 à 40",
@@ -217,15 +280,24 @@ Array [
   },
   Object {
     "article": "L. 2314-6",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 2314-6",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "L 2312-36",
-    "code": "code du travail",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
   },
   Object {
     "article": "R. 2312-8",
@@ -242,6 +314,41 @@ Array [
   Object {
     "article": "R. 2312-10 à R. 2312-14",
     "code": undefined,
+  },
+]
+`;
+
+exports[`should resolve example codes 1`] = `
+Array [
+  Object {
+    "article": "L. 2313-8",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
+    "fmt": "L2313-8",
+    "id": "LEGIARTI000036262496",
+    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036262496&cidTexte=LEGITEXT000006072050",
+  },
+  Object {
+    "article": "R. 2313-3",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
+    "fmt": "R2313-3",
+    "id": "LEGIARTI000036481802",
+    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036481802&cidTexte=LEGITEXT000006072050",
+  },
+  Object {
+    "article": "R. 2313-6",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
+    "fmt": "R2313-6",
+    "id": "LEGIARTI000036414727",
+    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036414727&cidTexte=LEGITEXT000006072050",
   },
 ]
 `;

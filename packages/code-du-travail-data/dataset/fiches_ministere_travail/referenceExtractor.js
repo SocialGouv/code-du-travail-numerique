@@ -9,8 +9,14 @@ const CODE_TRA = CODE_PREFIX + "_TRA";
 const CODE_SS = CODE_PREFIX + "_SS";
 
 const codesFullNames = {
-  [CODE_SS]: "code de la sécurité sociale",
-  [CODE_TRA]: "code du travail"
+  [CODE_SS]: {
+    name: "code de la sécurité sociale",
+    id: "LEGITEXT000006073189"
+  },
+  [CODE_TRA]: {
+    name: "code du travail",
+    id: "LEGITEXT000006072050"
+  }
 };
 
 // maximum distance between code tokens and corresponding article ref
@@ -33,7 +39,7 @@ function prefixMatcher(token) {
   // if starts with possible prefix
   const matchingPrefix =
     validPrefix.filter(p => lowToken.startsWith(p)).length > 0;
-  //   matchingPrefix ? console.log(matchingPrefix + "\t" + token) : undefined;
+
   if (matchingPrefix) {
     const residual = lowToken.slice(1);
 
@@ -84,28 +90,21 @@ function classifyTokens(tokens) {
     }
   });
 
-  // console.log(tokens);
-  // console.log(step1);
-
   // step 2 : confirm valid sequences
   // hack : we keep a buffer as last element of the accumulator
   const predictions = step1.reduce(
     (acc, e) => {
-      // console.log(acc);
-      // console.log(e);
       const buffer = acc[acc.length - 1];
       const inSequence = buffer.length > 0;
       const lastElement = buffer[buffer.length - 1];
 
       // case continue existing
       if (e >= 1 && inSequence) {
-        // console.log("case continue");
         buffer.push(e);
       }
 
       // case finish existing
       else if (e == 0 && inSequence && lastElement > 1) {
-        // console.log("case finish");
         acc.pop();
         // push buffer
         buffer.forEach(() => acc.push(true));
@@ -117,22 +116,15 @@ function classifyTokens(tokens) {
 
       // case start (valid start are 1 or 2, as 3 is number only without prefix)
       else if (e > 0 && e < 3 && !inSequence) {
-        // console.log("case start");
         buffer.push(e);
       }
 
       // other cases, flush buffer and append current
       else {
-        // console.log("case other");
-        // console.log(acc);
         acc.pop();
-        // console.log(acc);
         acc.push(...buffer.map(() => false));
-        // console.log(acc);
         acc.push(false);
-        // console.log(acc);
         acc.push([]);
-        // console.log(acc);
       }
 
       return acc;
@@ -141,15 +133,13 @@ function classifyTokens(tokens) {
   );
   // conclude
   const residual = predictions.pop();
-  // if ends with 2 then add residual as true
-  // if (residual.length > 0 && [2, 3].includes(residual[residual.length - 1])) {
+  // if ends with bigger than 1, then add residual as true
   if (residual.length > 0 && residual[residual.length - 1] > 1) {
     predictions.push(...residual.map(() => true));
   } else {
     predictions.push(...residual.map(() => false));
   }
 
-  //   console.log("predicitions " + predictions);
   return predictions.map(p => (p ? ARTICLE : NEGATIVE));
 }
 
@@ -166,9 +156,9 @@ function identifyCodes(tokens, predicitions) {
         .slice(i, i + 5)
         .join(" ")
         .toLowerCase();
-      if (joinedNextTokens.startsWith(codesFullNames[CODE_SS])) {
+      if (joinedNextTokens.startsWith(codesFullNames[CODE_SS].name)) {
         return CODE_SS;
-      } else if (joinedNextTokens.startsWith(codesFullNames[CODE_TRA])) {
+      } else if (joinedNextTokens.startsWith(codesFullNames[CODE_TRA].name)) {
         return CODE_TRA;
       } else {
         return NEGATIVE;
@@ -219,7 +209,6 @@ function extractReferences(text) {
           // if no code yet and in range
           if (!match.code && match.index + range >= index) {
             match.code = codesFullNames[pred];
-            // console.log("heeeere : " + JSON.stringify(match));
           }
         });
       }
@@ -229,34 +218,6 @@ function extractReferences(text) {
     .map(({ token, code }) => {
       return { article: token, code };
     });
-  /*
-
-  // group continuous positives tokens
-  const matches = tokens
-    .map((token, index) =>
-      predictions[index] == ARTICLE ? { token, index } : undefined
-    )
-    .filter(f => f)
-    .reduce((acc, e) => {
-      if (acc.length == 0) {
-        acc.push(e);
-      } else {
-        const last = acc[acc.length - 1];
-        // case continuous
-        if (last.index + 1 == e.index) {
-          last.token = `${last.token} ${e.token}`;
-          last.index = e.index;
-        } else {
-          acc.push(e);
-        }
-      }
-      return acc;
-    }, [])
-    .map(e => e.token);
-
-  console.log(matches);
-  return matches;
-  */
 }
 
-module.exports = { classifyTokens, extractReferences };
+module.exports = { classifyTokens, extractReferences, codesFullNames };

@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { classifyTokens, extractReferences } = require("../referenceExtractor");
+const { resolveReferences } = require("../referenceResolver");
 
 const annotatedTokens = fs
   .readFileSync(path.join(__dirname, "referenceExtractor.test.txt"))
@@ -73,5 +74,10 @@ test("should success with actual real life set", () => {
   expect(predictions).toEqual(labels);
 });
 
-test("should find with code for actual real life set", () =>
+it("should find with code for actual real life set", () =>
   expect(extractReferences(tokens.join(" "))).toMatchSnapshot());
+
+it("should resolve example codes", () => {
+  const refs = extractReferences(testCases[0].input);
+  expect(resolveReferences(refs)).toMatchSnapshot();
+});
