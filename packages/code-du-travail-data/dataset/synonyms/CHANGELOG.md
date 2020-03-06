@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.6.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.5.0...v4.6.0-alpha.0) (2020-03-06)
+
+**Note:** Version bump only for package @cdt/data...synonyms
+
+
+
+
+
 # [4.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.0-alpha.1...v4.4.0) (2020-02-25)
 
 **Note:** Version bump only for package @cdt/data...synonyms
