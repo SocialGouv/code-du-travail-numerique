@@ -1,11 +1,11 @@
 {
   "name": "@cdt/data...contributions",
-  "version": "4.6.0-alpha.0",
+  "version": "4.6.0-alpha.1",
   "main": "index.js",
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@cdt/sources": "^4.6.0-alpha.0",
+    "@cdt/sources": "^4.6.0-alpha.1",
     "@socialgouv/kali-data": "^1.3.19",
     "node-fetch": "^2.6.0",
     "remark": "^11.0.2",

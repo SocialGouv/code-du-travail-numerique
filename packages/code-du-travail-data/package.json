@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data",
-  "version": "4.6.0-alpha.0",
+  "version": "4.6.0-alpha.1",
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
   "main": "indexing/index.js",
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "dependencies": {
-    "@cdt/sources": "^4.6.0-alpha.0",
+    "@cdt/sources": "^4.6.0-alpha.1",
     "@elastic/elasticsearch": "^7.6.0",
     "@socialgouv/fiches-vdd": "^1.0.164",
     "@socialgouv/kali-data": "^1.3.19",
