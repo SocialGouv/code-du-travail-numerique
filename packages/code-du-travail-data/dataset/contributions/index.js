@@ -8,7 +8,7 @@ const slugify = require("../../slugify");
 const allThemes = require("../datafiller/themes.data.json");
 const mdStriper = remark().use(strip);
 
-const API_URL = `https://contributions-api.codedutravail.num.social.gouv.fr`;
+const API_URL = `https://contributions-api.codedutravail.fabrique.social.gouv.fr`;
 
 const comparableIdcc = num => parseInt(num);
 
