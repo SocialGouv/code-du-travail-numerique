@@ -3,10 +3,10 @@
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_notify_github_stage.yml
-    ref: v7.3.0
+    ref: v8.0.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_delete_useless_k8s_ns_stage.yml
-    ref: v7.3.0
+    ref: v8.0.0
 
 #
 
