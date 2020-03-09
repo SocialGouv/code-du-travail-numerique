@@ -88,7 +88,7 @@
     "jest-styled-components": "^7.0.0",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
-    "stylelint": "^13.2.0",
+    "stylelint": "^13.2.1",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
