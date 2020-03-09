@@ -2269,7 +2269,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         Page personnalisable
                       </div>
                       Le contenu de cette page peut être personnalisé en fonction de votre situation.
-                       
+                      <br />
                       <a
                         href="#customisation"
                       >
@@ -5053,7 +5053,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         Page personnalisable
                       </div>
                       Le contenu de cette page peut être personnalisé en fonction de votre situation.
-                       
+                      <br />
                       <a
                         href="#customisation"
                       >
