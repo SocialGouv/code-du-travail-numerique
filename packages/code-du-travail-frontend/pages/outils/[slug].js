@@ -25,7 +25,7 @@ const toolsBySlug = {
 function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
-    matopush(["trackEvent", `outil_${title}`, "start"]);
+    matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
   });
   return (
     <Layout>

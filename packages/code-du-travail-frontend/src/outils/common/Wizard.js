@@ -39,9 +39,9 @@ function Wizard({
 
     matopush([
       "trackEvent",
-      `outil_${title}`,
-      "click_previous",
-      initialState.steps[nextStepIndex + 1].label
+      "outil",
+      `click_previous_${title}`,
+      initialState.steps[nextStepIndex].name
     ]);
   };
   const nextStep = values => {
@@ -55,9 +55,9 @@ function Wizard({
 
     matopush([
       "trackEvent",
-      `outil_${title}`,
-      "view_step",
-      initialState.steps[nextStepIndex].label
+      "outil",
+      `view_step_${title}`,
+      initialState.steps[nextStepIndex].name
     ]);
   };
 

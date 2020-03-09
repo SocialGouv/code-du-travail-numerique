@@ -3,11 +3,12 @@ import { render } from "@testing-library/react";
 import { Wizard } from "../Wizard";
 import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
 import { Field } from "react-final-form";
+import { matopush } from "../../../piwik";
 
 jest.mock("../../../piwik", () => {
   let events = [];
   return {
-    matopush: event => events.push(event),
+    matopush: jest.fn().mockImplementation(event => events.push(event)),
     events,
     flushEvents() {
       events = [];
@@ -74,6 +75,12 @@ describe("<Wizard />", () => {
     );
     const button = getByText(/suivant/i);
     button.click();
+    expect(matopush).toHaveBeenCalledWith([
+      "trackEvent",
+      "outil",
+      "view_step_test",
+      "second_step"
+    ]);
     expect(container).toMatchSnapshot();
   });
   it("should call Step.validate when click on Suivant", () => {
@@ -103,6 +110,12 @@ describe("<Wizard />", () => {
     const button = getByText(/précédent/i);
     button.click();
     expect(container).toMatchSnapshot();
+    expect(matopush).toHaveBeenCalledWith([
+      "trackEvent",
+      "outil",
+      "click_previous_test",
+      "first_step"
+    ]);
   });
   it("should handle initialValues", () => {
     const state = { stepIndex: 0, steps: steps.concat(additionalStep) };
