@@ -43,10 +43,12 @@ const apiEntrepriseSiret = memoizee(
       .then(async data => {
         if (data.etablissement) {
           const idcc = await apiSiret2idcc(data.etablissement.siret);
-          return {
-            ...formatEtablissement(data.etablissement),
-            conventions: (idcc.length && idcc[0].conventions) || []
-          };
+          return [
+            {
+              ...formatEtablissement(data.etablissement),
+              conventions: (idcc.length && idcc[0].conventions) || []
+            }
+          ];
         }
       }),
   { promise: true }
