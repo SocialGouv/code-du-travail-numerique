@@ -12,7 +12,7 @@ const Layout = ({ children, currentPage }) => {
       <BackgroundLayer currentPage={currentPage} />
       <Header currentPage={currentPage} />
       <ErrorBoundary message="Une erreur est survenue">
-        <Main>{children}</Main>
+        <main>{children}</main>
       </ErrorBoundary>
       <Footer />
     </>
@@ -22,12 +22,6 @@ const Layout = ({ children, currentPage }) => {
 export { Layout };
 
 const { breakpoints } = theme;
-
-const Main = styled.main`
-  /* we don't want to focus explicitely main
-  it's only use to reset the focus position */
-  outline: none;
-`;
 
 const BackgroundLayer = styled.div`
   position: absolute;
