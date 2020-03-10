@@ -1154,9 +1154,7 @@ exports[`<Layout /> should render 1`] = `
       </div>
     </div>
   </header>
-  <main
-    id="main"
-  >
+  <main>
     <h1>
       home
     </h1>

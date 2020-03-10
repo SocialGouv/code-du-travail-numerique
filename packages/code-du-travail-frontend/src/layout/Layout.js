@@ -12,7 +12,7 @@ const Layout = ({ children, currentPage }) => {
       <BackgroundLayer currentPage={currentPage} />
       <Header currentPage={currentPage} />
       <ErrorBoundary message="Une erreur est survenue">
-        <main id="main">{children}</main>
+        <main>{children}</main>
       </ErrorBoundary>
       <Footer />
     </>

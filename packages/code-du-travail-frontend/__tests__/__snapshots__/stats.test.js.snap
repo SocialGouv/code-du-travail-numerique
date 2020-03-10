@@ -1446,27 +1446,32 @@ exports[`<Stats /> should render 1`] = `
       </div>
     </div>
   </header>
-  <main
-    id="main"
-  >
+  <main>
     <div
       class="c20"
     >
       <div
         class="c21"
       >
-        <header
-          class="c22"
+        <div
+          data-next-focus-root="true"
+          role="group"
+          style="outline: none;"
+          tabindex="-1"
         >
-          <h1
-            class="c23"
+          <header
+            class="c22"
           >
-            <div
-              class="c24"
-            />
-            Statistiques du Code du travail numérique
-          </h1>
-        </header>
+            <h1
+              class="c23"
+            >
+              <div
+                class="c24"
+              />
+              Statistiques du Code du travail numérique
+            </h1>
+          </header>
+        </div>
         <div
           class="c25"
         >

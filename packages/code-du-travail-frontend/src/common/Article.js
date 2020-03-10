@@ -24,6 +24,8 @@ const Article = ({
       <Wrapper variant="main" data-main-content>
         {suptitle && <Suptitle>{suptitle}</Suptitle>}
         <StyledPageTitle
+          tabIndex="-1"
+          data-next-focus-root
           subtitle={subtitle}
           leftStripped
           shift={theme.spacings.larger}
@@ -94,6 +96,7 @@ const Meta = styled.div`
 
 const StyledPageTitle = styled(PageTitle)`
   margin-bottom: ${spacings.small};
+  outline: none;
 `;
 
 const Content = styled.div`

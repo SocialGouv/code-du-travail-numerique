@@ -11,7 +11,7 @@ import { initPiwik } from "../src/piwik";
 import { initializeSentry } from "../src/sentry";
 
 import { ThemeProvider } from "../src/layout/ThemeProvider.js";
-
+import { A11y } from "../src/a11y";
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
 } = getConfig();
@@ -77,6 +77,7 @@ export default class MyApp extends App {
         <ThemeProvider>
           <>
             <GlobalStyles />
+            <A11y />
             <Component {...pageProps} />
           </>
         </ThemeProvider>

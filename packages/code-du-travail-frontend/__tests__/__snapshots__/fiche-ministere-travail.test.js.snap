@@ -521,6 +521,7 @@ exports[`<FicheMT /> should render 1`] = `
 
 .c34 {
   margin-bottom: 1rem;
+  outline: none;
 }
 
 .c40 {
@@ -1878,9 +1879,7 @@ exports[`<FicheMT /> should render 1`] = `
       </div>
     </div>
   </header>
-  <main
-    id="main"
-  >
+  <main>
     <nav
       class="c20"
     >
@@ -1959,6 +1958,8 @@ exports[`<FicheMT /> should render 1`] = `
             </span>
             <header
               class="c33 c34"
+              data-next-focus-root="true"
+              tabindex="-1"
             >
               <h1
                 class="c35"

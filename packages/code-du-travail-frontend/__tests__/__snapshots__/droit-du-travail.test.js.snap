@@ -2480,38 +2480,43 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </div>
   </header>
-  <main
-    id="main"
-  >
+  <main>
     <div
       class="c21"
     >
       <div
         class="c22"
       >
-        <header
-          class="c23"
+        <div
+          data-next-focus-root="true"
+          role="group"
+          style="outline: none;"
+          tabindex="-1"
         >
-          <h1
-            class="c24"
+          <header
+            class="c23"
           >
-            <div
-              class="c25"
-            />
-            Le droit du travail
-          </h1>
-          <p
-            class="c26"
-          >
-            <span>
-              Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
-              <br
-                class="c27"
+            <h1
+              class="c24"
+            >
+              <div
+                class="c25"
               />
-              ainsi que leur articulation.
-            </span>
-          </p>
-        </header>
+              Le droit du travail
+            </h1>
+            <p
+              class="c26"
+            >
+              <span>
+                Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
+                <br
+                  class="c27"
+                />
+                ainsi que leur articulation.
+              </span>
+            </p>
+          </header>
+        </div>
         <div
           class="c28"
         >

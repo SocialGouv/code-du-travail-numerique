@@ -123,6 +123,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c10 + .c7 {
@@ -144,6 +145,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c8 + .c7 {
@@ -422,7 +424,9 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         class="c6"
       >
         <li
+          aria-live="polite"
           class="c7 c8"
+          tabindex="-1"
         >
           <span
             class="c9"
@@ -655,6 +659,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c8 + .c7 {
@@ -676,6 +681,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c10 + .c7 {
@@ -963,7 +969,9 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
           First Step
         </li>
         <li
+          aria-live="polite"
           class="c7 c10"
+          tabindex="-1"
         >
           <span
             class="c11"
@@ -1132,6 +1140,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c8 + .c7 {
@@ -1153,6 +1162,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c10 + .c7 {
@@ -1419,7 +1429,9 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         class="c6"
       >
         <li
+          aria-live="polite"
           class="c7 c8"
+          tabindex="-1"
         >
           <span
             class="c9"
@@ -1599,6 +1611,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c8 + .c7 {
@@ -1620,6 +1633,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c10 + .c7 {
@@ -1889,7 +1903,9 @@ exports[`<Wizard /> should inject rules component 1`] = `
         class="c6"
       >
         <li
+          aria-live="polite"
           class="c7 c8"
+          tabindex="-1"
         >
           <span
             class="c9"
@@ -2122,6 +2138,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c10 + .c7 {
@@ -2143,6 +2160,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c8 + .c7 {
@@ -2438,7 +2456,9 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
           First Step
         </li>
         <li
+          aria-live="polite"
           class="c7 c10"
+          tabindex="-1"
         >
           <span
             class="c11"
@@ -2607,6 +2627,7 @@ exports[`<Wizard /> should render a step 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c8 + .c7 {
@@ -2628,6 +2649,7 @@ exports[`<Wizard /> should render a step 1`] = `
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
 .c10 + .c7 {
@@ -2894,7 +2916,9 @@ exports[`<Wizard /> should render a step 1`] = `
         class="c6"
       >
         <li
+          aria-live="polite"
           class="c7 c8"
+          tabindex="-1"
         >
           <span
             class="c9"

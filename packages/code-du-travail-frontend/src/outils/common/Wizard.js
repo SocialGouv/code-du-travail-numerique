@@ -8,6 +8,8 @@ import { StepList, STEP_LIST_WIDTH } from "./StepList";
 import { PrevNextBar } from "./PrevNextBar";
 import { matopush } from "../../piwik";
 
+const anchorRef = React.createRef();
+
 function Wizard({
   initialState,
   initialValues = {},
@@ -23,6 +25,10 @@ function Wizard({
     dispatch({ type: "setStepIndex", payload: index });
 
   useEffect(() => {
+    const node = anchorRef.current;
+    if (node) {
+      node.focus();
+    }
     if (window) {
       window.scrollTo(0, 0);
     }
@@ -120,8 +126,13 @@ function Wizard({
                 )}
                 {title}
               </ToolTitle>
-              <StepList activeIndex={stepIndex} items={stepItems} />
+              <StepList
+                activeIndex={stepIndex}
+                items={stepItems}
+                anchorRef={anchorRef}
+              />
               <Step form={form} dispatch={dispatch} />
+
               <PrevNextBar
                 hasError={invalid && submitFailed}
                 onPrev={() => prevStep(form.getState().values)}

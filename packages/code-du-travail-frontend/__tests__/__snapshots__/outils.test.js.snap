@@ -1619,27 +1619,32 @@ exports[`<Outils /> should render 1`] = `
       </div>
     </div>
   </header>
-  <main
-    id="main"
-  >
+  <main>
     <div
       class="c22"
     >
       <div
         class="c23"
       >
-        <header
-          class="c24"
+        <div
+          data-next-focus-root="true"
+          role="group"
+          style="outline: none;"
+          tabindex="-1"
         >
-          <h1
-            class="c25"
+          <header
+            class="c24"
           >
-            <div
-              class="c26"
-            />
-            Retrouvez tous nos outils
-          </h1>
-        </header>
+            <h1
+              class="c25"
+            >
+              <div
+                class="c26"
+              />
+              Retrouvez tous nos outils
+            </h1>
+          </header>
+        </div>
         <div
           class="c27 c28"
         >

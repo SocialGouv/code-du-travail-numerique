@@ -1710,9 +1710,7 @@ exports[`<Home /> should render 1`] = `
       </div>
     </div>
   </header>
-  <main
-    id="main"
-  >
+  <main>
     <div
       class="c13 c14"
     >

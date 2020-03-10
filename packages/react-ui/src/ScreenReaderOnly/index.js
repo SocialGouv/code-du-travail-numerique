@@ -2,14 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-export const ScreenReaderOnly = ({ type, children }) => {
+export const ScreenReaderOnly = ({ type, ...props }) => {
   const Component = type === "inline" ? InlineSR : BlockSR;
-  return <Component>{children}</Component>;
+  return <Component {...props}></Component>;
 };
 
 ScreenReaderOnly.propTypes = {
-  type: PropTypes.oneOf(["block", "inline"]),
-  children: PropTypes.node.isRequired
+  type: PropTypes.oneOf(["block", "inline"])
 };
 
 ScreenReaderOnly.defaultProps = {

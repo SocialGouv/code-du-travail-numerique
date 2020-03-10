@@ -21,6 +21,7 @@ import SearchBar from "../src/search/SearchBar";
 import { Layout } from "../src/layout/Layout";
 
 import Metas from "../src/common/Metas";
+import { FocusRoot } from "../src/a11y";
 
 const SEARCH_ID = "search-input";
 
@@ -39,7 +40,10 @@ class SearchPage extends React.Component {
     } = this.props;
     const { q: query = "" } = router.query;
     return (
-      <Layout currentPage="search">
+      <Layout
+        currentPage="search"
+        initialTitle={`${query} - Code du travail numérique`}
+      >
         <Head>
           <meta name="robots" content="noindex, follow" />
         </Head>
@@ -71,6 +75,7 @@ class SearchPage extends React.Component {
         ) : (
           <>
             <Section>
+              <FocusRoot />
               <SearchResults items={items} isSearch query={query} />
             </Section>
             <Section>

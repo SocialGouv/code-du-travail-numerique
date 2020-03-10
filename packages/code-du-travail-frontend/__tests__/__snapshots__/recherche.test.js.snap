@@ -1282,9 +1282,7 @@ exports[`<Recherche /> should render 1`] = `
       </div>
     </div>
   </header>
-  <main
-    id="main"
-  >
+  <main>
     <div
       class="c12"
     >
@@ -1357,7 +1355,14 @@ exports[`<Recherche /> should render 1`] = `
     </div>
     <div
       class="c23"
-    />
+    >
+      <div
+        data-next-focus-root="true"
+        role="group"
+        style="outline: none;"
+        tabindex="-1"
+      />
+    </div>
     <div
       class="c23"
     >
