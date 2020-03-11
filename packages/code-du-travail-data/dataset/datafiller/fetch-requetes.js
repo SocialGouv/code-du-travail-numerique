@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const { sortRowRefsByRelevance, getVariants, decodeHTML } = require("./utils");
+const { sortRowRefsByPosition, getVariants, decodeHTML } = require("./utils");
 
 /*
  fetch raw datafiller requetes data, filter and sort properly
@@ -10,22 +10,6 @@ const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/requetes/records?_sort=title`;
-/*
-
- {
-  id: "fzef-zefzef-zefzef-zefzef",
-  title: "some title",
-  variants: "variant 1\nvariant 2\nvariant 3",
-  refs:[{
-    url: "/fiche-service-public/titre-de-la-fiche,
-    relevance: 5
-  },{
-    url: "/fiche-service-public/titre-de-la-fiche-2,
-    relevance: 2
-  }]
- }
-
-*/
 
 // fetch title from remote url
 const getPageTitle = async url => {
@@ -57,7 +41,7 @@ const fixRefsTitles = refs =>
     refs.map(async ref => ({
       url: ref.url,
       title: await getTitle(ref),
-      relevance: ref.relevance
+      position: ref.position
     }))
   );
 
@@ -80,7 +64,7 @@ const fetchAll = async () => {
       }))
   );
 
-  const sortedRows = await rows.map(sortRowRefsByRelevance);
+  const sortedRows = await rows.map(sortRowRefsByPosition);
 
   return sortedRows;
 };
