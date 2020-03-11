@@ -1,7 +1,12 @@
-fullnameOverride: ${NLP_HOST}
-
 image:
   repository: ${CI_REGISTRY_IMAGE}/nlp
+
+fullnameOverride: ${NLP_HOST}
+
+labels:
+  app.kubernetes.io/part-of: cdtn
+  owner: cdtn
+  team: cdtn
 
 deployment:
   port: ${PORT}
