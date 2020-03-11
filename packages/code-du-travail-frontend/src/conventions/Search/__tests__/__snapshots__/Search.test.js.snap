@@ -1356,6 +1356,73 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 `;
 
 exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`] = `
+.c12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c12:focus,
+.c12:hover,
+.c12:active {
+  color: #f66663;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c7 {
+  position: relative;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c1 {
   position: relative;
   display: inline-block;
@@ -1458,12 +1525,67 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   cursor: pointer;
 }
 
+.c6 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+}
+
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 + .c5 {
+  margin-top: 1.6rem;
+}
+
+.c10 + .c9 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c13 {
+  display: block;
+  padding: 0.8rem 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c14 {
+  font-weight: normal;
+}
+
+.c11 {
+  margin: 0.8rem 0 0 0;
+  font-weight: bold;
+}
+
 .c2 {
   width: 100%;
 }
 
 .c4 {
   margin-top: 2rem;
+}
+
+@media (max-width:600px) {
+  .c12 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -1476,6 +1598,19 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   .c3 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c6 {
+    padding: 0 5pt;
+    border: none;
   }
 }
 
@@ -1502,8 +1637,41 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   <div
     class="c4"
   >
-    <div>
-      Aucun résultat n’a été trouvé.
+    <div
+      class="sc-AxgMl c5 c6"
+    >
+      <h3
+        class="c7"
+      >
+        ENTREPRISES (1
+         
+        résultat)
+      </h3>
+      <ul
+        class="c8"
+      >
+        <li
+          class="c9 c10"
+        >
+          <div
+            class="c11"
+          >
+            Entreprise 1 93100 Commune test
+          </div>
+          <button
+            class="c12 c13"
+          >
+             
+            <span
+              class="c14"
+            >
+              (IDCC 
+              0843
+              )
+            </span>
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
