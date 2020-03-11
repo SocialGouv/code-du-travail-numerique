@@ -5,9 +5,12 @@ metadata:
   name: ${CONTEXT}
   labels:
     app: ${CONTEXT}
+    app.kubernetes.io/part-of: cdtn
     git/branch: ${BRANCH_NAME}
     git/commit: ${COMMIT}
     gitlab/job: "${JOB_ID}"
+    owner: cdtn
+    team: cdtn
 spec:
   template:
     spec:
