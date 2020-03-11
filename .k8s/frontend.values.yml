@@ -4,6 +4,11 @@ image:
 
 fullnameOverride: "frontend-nodejs"
 
+labels:
+  app.kubernetes.io/part-of: cdtn
+  owner: cdtn
+  team: cdtn
+
 deployment:
   port: ${PORT}
 
