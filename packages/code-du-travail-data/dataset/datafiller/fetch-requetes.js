@@ -41,7 +41,7 @@ const fixRefsTitles = refs =>
     refs.map(async ref => ({
       url: ref.url,
       title: await getTitle(ref),
-      relevance: ref.relevance
+      position: ref.position
     }))
   );
 
