@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`highlights refs should be sorted by position 1`] = `
+Array [
+  Object {
+    "position": 1,
+    "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
+  },
+  Object {
+    "position": 2,
+    "title": "Conclusion du contrat de travail à durée déterminée (CDD)",
+    "url": "/fiche-service-public/conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
+  },
+  Object {
+    "position": 3,
+    "url": "/some-unknown-source/test",
+  },
+  Object {
+    "position": 4,
+    "title": "Fiche 3",
+    "url": "/fiche-service-public/fiche-3",
+  },
+  Object {
+    "position": 5,
+    "title": "Article L1221-3",
+    "url": "/code-du-travail/l1221-3",
+  },
+  Object {
+    "position": 8,
+    "title": "Fiche 2",
+    "url": "/fiche-service-public/fiche-2",
+  },
+]
+`;
+
+exports[`it should get all highlights 1`] = `
+Array [
+  Object {
+    "refs": Array [
+      Object {
+        "position": 1,
+        "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
+      },
+      Object {
+        "position": 2,
+        "title": "Conclusion du contrat de travail à durée déterminée (CDD)",
+        "url": "/fiche-service-public/conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
+      },
+      Object {
+        "position": 3,
+        "url": "/some-unknown-source/test",
+      },
+      Object {
+        "position": 4,
+        "title": "Fiche 3",
+        "url": "/fiche-service-public/fiche-3",
+      },
+      Object {
+        "position": 5,
+        "title": "Article L1221-3",
+        "url": "/code-du-travail/l1221-3",
+      },
+      Object {
+        "position": 8,
+        "title": "Fiche 2",
+        "url": "/fiche-service-public/fiche-2",
+      },
+    ],
+    "title": "title1",
+  },
+  Object {
+    "refs": Array [
+      Object {
+        "position": 1,
+        "title": "Thématique",
+        "url": "/themes/theme1",
+      },
+      Object {
+        "position": 3,
+        "title": "Le salaire : quelles sont les modalités de paiement ?",
+        "url": "/fiche-ministere-travail/le-salaire-quelles-sont-les-modalites-de-paiement",
+      },
+      Object {
+        "position": 5,
+        "title": "Article L3221-3",
+        "url": "/code-du-travail/l3221-3",
+      },
+    ],
+    "title": "title2",
+  },
+]
+`;

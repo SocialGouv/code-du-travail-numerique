@@ -4,18 +4,19 @@ const cors = require("@koa/cors");
 
 // const corsConf = require('./conf/cors')
 
-const docsCount = require("./routes/docs-count");
-const idccRoutes = require("./routes/idcc");
 const conventionsRoutes = require("./routes/conventions");
+const docsRoutes = require("./routes/docs");
+const docsCountRoutes = require("./routes/docs-count");
+const highlightRoutes = require("./routes/highlights");
+const idccRoutes = require("./routes/idcc");
 const itemsRoutes = require("./routes/items");
 const modelesRoutes = require("./routes/modeles");
+const statsRoute = require("./routes/stats");
 const searchRoutes = require("./routes/search");
 const sheetMTRoutes = require("./routes/sheets-mt");
-const versionRoutes = require("./routes/version");
-const docsRoutes = require("./routes/docs");
-const themesRoute = require("./routes/themes");
 const suggestRoute = require("./routes/suggest");
-const statsRoute = require("./routes/stats");
+const themesRoute = require("./routes/themes");
+const versionRoutes = require("./routes/version");
 
 const { logger } = require("./utils/logger");
 
@@ -50,19 +51,19 @@ app.use(async (ctx, next) => {
 
 app.use(bodyParser());
 
-app.use(docsCount.routes());
-app.use(idccRoutes.routes());
 app.use(conventionsRoutes.routes());
+app.use(docsRoutes);
+app.use(docsCountRoutes.routes());
+app.use(highlightRoutes.routes());
+app.use(idccRoutes.routes());
+app.use(itemsRoutes.routes());
 app.use(modelesRoutes.routes());
 app.use(searchRoutes.routes());
 app.use(sheetMTRoutes.routes());
-app.use(itemsRoutes.routes());
-app.use(versionRoutes.routes());
-app.use(themesRoute.routes());
-app.use(suggestRoute.routes());
 app.use(statsRoute.routes());
-
-app.use(docsRoutes);
+app.use(suggestRoute.routes());
+app.use(themesRoute.routes());
+app.use(versionRoutes.routes());
 
 if (process.env.NODE_ENV !== "production") {
   console.log("-- DEV MODE ---");

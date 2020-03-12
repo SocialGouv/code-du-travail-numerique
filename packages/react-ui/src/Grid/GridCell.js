@@ -35,16 +35,16 @@ export const ListItem = styled.li`
     width: calc(100% / ${columns} - 2 * ${spacings.small} - 1px);
     @media (max-width: ${breakpoints.desktop}) {
       width: calc(
-        100% / ${Math.max(columns - 1, 0)} - 2 * ${spacings.small} - 1px
+        100% / ${Math.max(columns - 1, 2)} - 2 * ${spacings.small} - 1px
       );
     }
     @media (max-width: ${breakpoints.tablet}) {
       width: calc(
-        100% / ${Math.max(columns - 2, 0)} - 2 * ${spacings.small} - 1px
+        100% / ${Math.max(columns - 2, 1)} - 2 * ${spacings.small} - 1px
       );
     }
     @media (max-width: ${breakpoints.mobile}) {
-      width: ${Math.max(columns - 2, 0) < 2 ? "80%" : "60%"};
+      width: ${Math.max(columns - 2, 1) < 2 ? "80%" : "60%"};
     }
   `}
 `;

@@ -1,0 +1,44 @@
+[
+  {
+    "refs": [
+      {
+        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries",
+        "title": "Coronavirus : Questions/réponses pour les entreprises et les salariés",
+        "valid": true,
+        "position": 0
+      },
+      {
+        "url": "/fiche-service-public/teletravail-dans-le-secteur-prive",
+        "title": "Télétravail dans le secteur privé",
+        "valid": true,
+        "position": 1
+      },
+      {
+        "url": "/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission",
+        "title": "Quelle est la durée du préavis en cas de démission ?",
+        "valid": true,
+        "position": 2
+      },
+      {
+        "url": "/fiche-service-public/conge-du-salarie-pour-mariage-ou-pacs",
+        "title": "Congé du salarié pour mariage ou Pacs",
+        "valid": true,
+        "position": 3
+      },
+      {
+        "url": "/fiche-service-public/arret-maladie-pendant-le-preavis-quelles-consequences",
+        "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
+        "valid": true,
+        "position": 4
+      },
+      {
+        "url": "/fiche-ministere-travail/index-de-legalite-professionnelle-calcul-et-questions-reponses#Questions-reponses-sur-le-calcul-de-l-Index",
+        "title": "Index de l’égalité professionnelle : questions - réponses sur le calcul de l’index",
+        "valid": true
+      }
+    ],
+    "title": "homepage",
+    "id": "6f359be3-67a8-42c7-8a83-97d9647df15c",
+    "last_modified": 1584029487349
+  }
+]

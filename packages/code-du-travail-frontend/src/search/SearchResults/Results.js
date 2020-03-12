@@ -28,11 +28,11 @@ export const ListLink = ({
     title,
     url
   },
-  isSearch,
+  showTheme = true,
   query
 }) => {
   let subtitle = "";
-  if (isSearch && source !== SOURCES.THEMES) {
+  if (showTheme && source !== SOURCES.THEMES) {
     if (breadcrumbs.length > 0) {
       subtitle = breadcrumbs[breadcrumbs.length - 1].label;
     } else {
@@ -96,7 +96,7 @@ export const ListLink = ({
   );
 };
 ListLink.propTypes = {
-  isSearch: PropTypes.bool,
+  showTheme: PropTypes.bool,
   query: PropTypes.string,
   item: PropTypes.shape({
     title: PropTypes.string,
@@ -127,7 +127,7 @@ export const Results = ({ id, isSearch, items, query }) => {
       <FlatList>
         {items.slice(0, page * pageSize).map(item => (
           <StyledListItem key={item.slug}>
-            <ListLink item={item} isSearch={isSearch} query={query} />
+            <ListLink item={item} showTheme={Boolean(isSearch)} query={query} />
           </StyledListItem>
         ))}
       </FlatList>
