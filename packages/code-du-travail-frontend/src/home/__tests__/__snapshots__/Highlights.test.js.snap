@@ -356,7 +356,7 @@ exports[`<Highlights /> should render 1`] = `
           <div
             class="c4"
           />
-          Suggestions du moment
+          En ce moment
         </h2>
       </header>
       <div
