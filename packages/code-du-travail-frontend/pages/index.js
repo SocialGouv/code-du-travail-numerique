@@ -21,6 +21,7 @@ import Metas from "../src/common/Metas";
 import SearchHero from "../src/search/SearchHero";
 import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Themes } from "../src/home/Themes";
+import { Highlights } from "../src/home/Highlights";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -59,7 +60,7 @@ const selectedTools = [
   tools.find(tool => tool.slug === "simulateur-embauche")
 ];
 
-const Home = ({ pageUrl, ogImage, themes = [] }) => (
+const Home = ({ pageUrl, ogImage, themes = [], highlights = [] }) => (
   <Layout currentPage="home" initialTitle="Code du travail numérique">
     <Metas
       url={pageUrl}
@@ -114,21 +115,31 @@ const Home = ({ pageUrl, ogImage, themes = [] }) => (
       </Container>
     </Section>
     {themes.length > 0 && <Themes themes={themes} />}
+    {highlights.length > 0 && (
+      <Highlights highlights={highlights.slice(0, 6)} />
+    )}
   </Layout>
 );
 
 Home.getInitialProps = async () => {
+  let themes = [];
+  let highlights = [];
   try {
-    const response = await fetch(`${API_URL}/themes`);
-    if (response.ok) {
-      const { children: themes } = await response.json();
-      return { themes };
+    const [themesResponse, highlightsResponse] = await Promise.all([
+      fetch(`${API_URL}/themes`),
+      fetch(`${API_URL}/highlights/homepage`)
+    ]);
+    if (themesResponse.ok) {
+      themes = await themesResponse.json().then(themes => themes.children);
+    }
+    if (highlightsResponse.ok) {
+      highlights = await highlightsResponse.json();
     }
   } catch (e) {
     console.error(e);
     Sentry.captureException(e);
   }
-  return { themes: [] };
+  return { themes, highlights };
 };
 
 export default Home;
