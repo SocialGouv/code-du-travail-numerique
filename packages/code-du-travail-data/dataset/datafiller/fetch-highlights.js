@@ -11,8 +11,6 @@ const DATAFILLER_URL =
 
 const HIGHLIGHTS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/highlights/records`;
 
-// import only valid data from datafiller
-// == has more than one ref
 const fetchAll = async () => {
   const highlights = await fetch(HIGHLIGHTS_URL)
     .then(res => res.json())
