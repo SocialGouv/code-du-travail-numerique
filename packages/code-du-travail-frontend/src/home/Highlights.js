@@ -9,7 +9,7 @@ export const Highlights = ({ highlights = [] }) => {
     <Section>
       <Container>
         <PageTitle as="h2" leftStripped>
-          Suggestions du moment
+          En ce moment
         </PageTitle>
         <Grid columns={2}>
           {highlights.map(highlight => (

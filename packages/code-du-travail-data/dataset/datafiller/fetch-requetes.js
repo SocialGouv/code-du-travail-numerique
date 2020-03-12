@@ -74,5 +74,5 @@ module.exports = fetchAll;
 if (require.main === module) {
   fetchAll()
     .then(data => console.log(JSON.stringify(data, null, 2)))
-    .catch(console.log);
+    .catch(console.error);
 }

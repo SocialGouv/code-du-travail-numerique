@@ -2,9 +2,9 @@ const fetch = require("node-fetch");
 
 const { sortRowRefsByPosition } = require("./utils");
 
-/*
- fetch raw datafiller highlight data and sort properly
-*/
+/**
+ * Fetch raw datafiller highlight data and sort it properly
+ */
 
 const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
@@ -26,5 +26,5 @@ module.exports = fetchAll;
 if (require.main === module) {
   fetchAll()
     .then(data => console.log(JSON.stringify(data, null, 2)))
-    .catch(console.log);
+    .catch(console.error);
 }
