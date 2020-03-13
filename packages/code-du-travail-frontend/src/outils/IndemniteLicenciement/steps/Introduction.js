@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 const StepIntro = () => (
   <>
@@ -18,17 +17,6 @@ const StepIntro = () => (
       les renseignements demandés, munissez-vous des informations relatives au
       licenciement (dates d’entrée et de sortie de l’entreprise, courrier de
       licenciement, derniers bulletins de salaire, etc.).
-    </p>
-    <p>
-      Pour en savoir plus sur l’indemnité de licenciement et son mode de calcul,
-      consultez{" "}
-      <Link
-        href="/fiche-service-public/[slug]"
-        as={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
-      >
-        <a>cet article</a>
-      </Link>
-      .
     </p>
     <p>Pour commencer la simulation cliquez sur &quot;Suivant&quot;.</p>
   </>
