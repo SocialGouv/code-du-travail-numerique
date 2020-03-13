@@ -31,7 +31,12 @@ function Modeles(props) {
   const { data = [], pageUrl, ogImage } = props;
   const themes = [];
   const modelesByTheme = data.reduce((state, templateDoc) => {
-    const [theme] = templateDoc.breadcrumbs;
+    const other = {
+      title: "Autres",
+      label: "Autres",
+      slug: "autres"
+    };
+    const [theme = other] = templateDoc.breadcrumbs;
     if (!state[theme.slug]) {
       state[theme.slug] = {
         title: theme.label,
@@ -113,7 +118,7 @@ Modeles.getInitialProps = async function() {
 
 function ModeleCourrier({ modele }) {
   const { title, description, breadcrumbs, slug } = modele;
-  const [theme] = breadcrumbs.slice(-1);
+  const [theme = { title: "Modèle de courrier" }] = breadcrumbs.slice(-1);
 
   return (
     <Link
