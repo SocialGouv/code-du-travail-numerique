@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.6.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.5.0...v4.6.0) (2020-03-13)
+
+
+### Bug Fixes
+
+* **data:** requetes DF : order by position ([#2460](https://github.com/SocialGouv/code-du-travail-numerique/issues/2460)) ([a9b8a38](https://github.com/SocialGouv/code-du-travail-numerique/commit/a9b8a389f7639219b8958483bf73c430a5b6ba83))
+* **deps:** update all non-major dependencies ([#2425](https://github.com/SocialGouv/code-du-travail-numerique/issues/2425)) ([33ee415](https://github.com/SocialGouv/code-du-travail-numerique/commit/33ee415e33a2b942230a384656ff95262e04fe0d))
+* **deps:** update all non-major dependencies ([#2433](https://github.com/SocialGouv/code-du-travail-numerique/issues/2433)) ([6a27d87](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a27d87e8d075a260e8a08b21313a33e584ac832))
+* **deps:** update all non-major dependencies ([#2444](https://github.com/SocialGouv/code-du-travail-numerique/issues/2444)) ([b6ddeb1](https://github.com/SocialGouv/code-du-travail-numerique/commit/b6ddeb16781fb9cab21cec42c3897f6415700f51))
+* **deps:** update all non-major dependencies ([#2449](https://github.com/SocialGouv/code-du-travail-numerique/issues/2449)) ([2f818ad](https://github.com/SocialGouv/code-du-travail-numerique/commit/2f818adca09789bfd715b25a21a5db9edf98e321))
+* **deps:** update all non-major dependencies ([#2456](https://github.com/SocialGouv/code-du-travail-numerique/issues/2456)) ([72c820b](https://github.com/SocialGouv/code-du-travail-numerique/commit/72c820b66eb1e627d9ee1af764d7c51a19f59ead))
+* **deps:** update dependency elastic-apm-node to ^3.5.0 ([#2452](https://github.com/SocialGouv/code-du-travail-numerique/issues/2452)) ([1360107](https://github.com/SocialGouv/code-du-travail-numerique/commit/136010761cf7fbf03488b4439abe239a07ff635d))
+* **deps:** update dependency query-string to ^6.11.1 ([#2429](https://github.com/SocialGouv/code-du-travail-numerique/issues/2429)) ([e959a9a](https://github.com/SocialGouv/code-du-travail-numerique/commit/e959a9a75f24ce1206b153289735003e821d9767))
+* **search CC:** fix search by siret ([#2461](https://github.com/SocialGouv/code-du-travail-numerique/issues/2461)) ([f35cac2](https://github.com/SocialGouv/code-du-travail-numerique/commit/f35cac24049a0a941259c46557178f1e971c000f))
+* **ui:** add linebreak  in contrib ([#2451](https://github.com/SocialGouv/code-du-travail-numerique/issues/2451)) ([ea367f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/ea367f9a07c1568d3f4321479b9119a09d72c89e)), closes [#2436](https://github.com/SocialGouv/code-du-travail-numerique/issues/2436)
+
+
+### Features
+
+* **chore:** add suggested content ([#2465](https://github.com/SocialGouv/code-du-travail-numerique/issues/2465)) ([c9b058c](https://github.com/SocialGouv/code-du-travail-numerique/commit/c9b058cd9e510cd49afa955634202c0b77b189a8))
+* **data:** update  ([#2448](https://github.com/SocialGouv/code-du-travail-numerique/issues/2448)) ([085bc77](https://github.com/SocialGouv/code-du-travail-numerique/commit/085bc77023668e5c13345b2f25749dc5b03b1e12))
+* **data:** update courriers.json ([#2472](https://github.com/SocialGouv/code-du-travail-numerique/issues/2472)) ([9e8da0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/9e8da0cd89b55d79bb21a8b6b21f2c176b0f8104)), closes [#2473](https://github.com/SocialGouv/code-du-travail-numerique/issues/2473)
+* **frontend:** change home meta ([#2432](https://github.com/SocialGouv/code-du-travail-numerique/issues/2432)) ([183b517](https://github.com/SocialGouv/code-du-travail-numerique/commit/183b517304f79b51295a0ed4b09f0367f829c4d9))
+* **frontend:** remove ambassador link ([#2431](https://github.com/SocialGouv/code-du-travail-numerique/issues/2431)) ([22129c9](https://github.com/SocialGouv/code-du-travail-numerique/commit/22129c9525255c0b4788c32f8a4be33913bef8ee))
+* **tools:** move link from intro to result ([#2470](https://github.com/SocialGouv/code-du-travail-numerique/issues/2470)) ([e4814db](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4814db7c0e0498e57b83ef11dfb1dd4bfc8396b))
+* **tracking:** udpate tools tracking name ([#2454](https://github.com/SocialGouv/code-du-travail-numerique/issues/2454)) ([9ee5f8c](https://github.com/SocialGouv/code-du-travail-numerique/commit/9ee5f8c4e94f156ff3435fd15a787f47432f9030))
+* Update_liste_fiche_Ministère ([#2438](https://github.com/SocialGouv/code-du-travail-numerique/issues/2438)) ([416030b](https://github.com/SocialGouv/code-du-travail-numerique/commit/416030bcd3db2c77e073ab3c05f8ec9c71506598))
+
+
+
+
+
 # [4.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.1...v4.5.0) (2020-02-28)
 
 

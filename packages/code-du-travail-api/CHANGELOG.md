@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.6.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.5.0...v4.6.0) (2020-03-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency elastic-apm-node to ^3.5.0 ([#2452](https://github.com/SocialGouv/code-du-travail-numerique/issues/2452)) ([1360107](https://github.com/SocialGouv/code-du-travail-numerique/commit/136010761cf7fbf03488b4439abe239a07ff635d))
+
+
+### Features
+
+* **chore:** add suggested content ([#2465](https://github.com/SocialGouv/code-du-travail-numerique/issues/2465)) ([c9b058c](https://github.com/SocialGouv/code-du-travail-numerique/commit/c9b058cd9e510cd49afa955634202c0b77b189a8))
+
+
+
+
+
 # [4.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.1...v4.5.0) (2020-02-28)
 
 

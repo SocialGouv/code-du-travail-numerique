@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.6.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.5.0...v4.6.0) (2020-03-13)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2456](https://github.com/SocialGouv/code-du-travail-numerique/issues/2456)) ([72c820b](https://github.com/SocialGouv/code-du-travail-numerique/commit/72c820b66eb1e627d9ee1af764d7c51a19f59ead))
+
+
+### Features
+
+* **data:** update  ([#2448](https://github.com/SocialGouv/code-du-travail-numerique/issues/2448)) ([085bc77](https://github.com/SocialGouv/code-du-travail-numerique/commit/085bc77023668e5c13345b2f25749dc5b03b1e12))
+* **data:** update courriers.json ([#2472](https://github.com/SocialGouv/code-du-travail-numerique/issues/2472)) ([9e8da0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/9e8da0cd89b55d79bb21a8b6b21f2c176b0f8104)), closes [#2473](https://github.com/SocialGouv/code-du-travail-numerique/issues/2473)
+* Update_liste_fiche_Ministère ([#2438](https://github.com/SocialGouv/code-du-travail-numerique/issues/2438)) ([416030b](https://github.com/SocialGouv/code-du-travail-numerique/commit/416030bcd3db2c77e073ab3c05f8ec9c71506598))
+
+
+
+
+
 # [4.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.4.1...v4.5.0) (2020-02-28)
 
 **Note:** Version bump only for package @cdt/data...fiches_ministere_travail
