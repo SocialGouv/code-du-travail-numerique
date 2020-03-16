@@ -332,7 +332,6 @@ Array [
     },
     "fmt": "L2313-8",
     "id": "LEGIARTI000036262496",
-    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036262496&cidTexte=LEGITEXT000006072050",
   },
   Object {
     "article": "R. 2313-3",
@@ -341,8 +340,7 @@ Array [
       "name": "code du travail",
     },
     "fmt": "R2313-3",
-    "id": "LEGIARTI000036481802",
-    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036481802&cidTexte=LEGITEXT000006072050",
+    "id": "LEGIARTI000039624940",
   },
   Object {
     "article": "R. 2313-6",
@@ -351,8 +349,7 @@ Array [
       "name": "code du travail",
     },
     "fmt": "R2313-6",
-    "id": "LEGIARTI000036414727",
-    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036414727&cidTexte=LEGITEXT000006072050",
+    "id": "LEGIARTI000039624937",
   },
   Object {
     "article": "L. 1251-18",
@@ -362,7 +359,6 @@ Array [
     },
     "fmt": "L1251-18",
     "id": "LEGIARTI000006901269",
-    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901269&cidTexte=LEGITEXT000006072050",
   },
 ]
 `;

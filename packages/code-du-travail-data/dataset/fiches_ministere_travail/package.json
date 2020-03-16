@@ -15,7 +15,8 @@
     "ora": "^4.0.3",
     "p-limit": "^2.2.2",
     "superagent": "^5.2.2",
-    "talisman": "^0.21.0"
+    "talisman": "^0.21.0",
+    "unist-util-find": "^1.0.1"
   },
   "scripts": {
     "start": "node index",

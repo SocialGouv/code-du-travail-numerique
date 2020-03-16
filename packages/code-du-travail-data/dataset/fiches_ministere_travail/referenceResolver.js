@@ -1,9 +1,10 @@
 const { codesFullNames, CODE_TRAVAIL } = require("./referenceExtractor");
+const find = require("unist-util-find");
 
-const codesArticles = {};
+const codes = {};
 Object.values(codesFullNames).forEach(({ id }) => {
-  const articles = require(`./articles/${id}.json`);
-  codesArticles[id] = articles;
+  const code = require(`@socialgouv/legi-data/data/${id}.json`);
+  codes[id] = code;
 });
 
 // duplicated in reference Extractor / ln.71
@@ -30,14 +31,16 @@ function resolveReference(ref) {
   return toResolve.map(a => {
     // by default we try to resolve code du travail
     const codeId = a.code ? a.code.id : CODE_TRAVAIL.id;
-    const articles = codesArticles[codeId];
-    if (articles) {
+    const code = codes[codeId];
+    if (code) {
       const formattedArticle = formatArticle(a.article);
-      const articleId = articles[formattedArticle];
-      if (articleId) {
-        a.id = articleId;
+      const article = find(
+        code,
+        node => node.type === "article" && node.data.num === formattedArticle
+      );
+      if (article) {
+        a.id = article.data.id;
         a.fmt = formattedArticle;
-        a.url = `https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=${articleId}&cidTexte=${codeId}`;
         // case we guessed code du travail and found article
         if (!a.code) {
           a.code = CODE_TRAVAIL;
