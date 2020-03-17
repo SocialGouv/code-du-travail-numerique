@@ -1,5 +1,5 @@
 {
-  "name": "@optional/e2e.runner.puppetteer",
+  "name": "@optional/e2e.runner.puppeteer",
   "version": "0.0.0",
   "description": "",
   "main": "codecept.conf.js",

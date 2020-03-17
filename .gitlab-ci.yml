@@ -18,7 +18,7 @@ include:
   - /.gitlab-ci/stages/deploy.yml
   - /.gitlab-ci/stages/notify.yml
 
-  - /optional/e2e/.runners/puppetteer/.gitlab-ci.yml
+  - /optional/e2e/.runners/puppeteer/.gitlab-ci.yml
 
 stages:
   - "Prepare"
