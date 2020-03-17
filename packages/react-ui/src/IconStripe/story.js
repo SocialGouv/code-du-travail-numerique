@@ -30,5 +30,10 @@ export const base = () => (
         Another line to be sure it is centered.
       </IconStripe>
     </Section>
+    <Section>
+      <IconStripe small icon={Document}>
+        In some case, you may prefer that the icon gets smaller.
+      </IconStripe>
+    </Section>
   </>
 );

@@ -1318,6 +1318,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 @media (max-width:600px) {
   .c43 {
     width: 3.4rem;
+    height: 3.4rem;
     margin-right: 1rem;
   }
 }
@@ -4103,6 +4104,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c43 {
     width: 3.4rem;
+    height: 3.4rem;
     margin-right: 1rem;
   }
 }

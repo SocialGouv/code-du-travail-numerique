@@ -3,7 +3,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styled, { css } from "styled-components";
 
-import { Container, icons, theme } from "@socialgouv/react-ui";
+import {
+  Container,
+  IconStripe,
+  icons,
+  theme,
+  Toast
+} from "@socialgouv/react-ui";
 
 import SearchBar from "../../search/SearchBar";
 import { BurgerNav } from "./BurgerNav";
@@ -53,6 +59,19 @@ const Header = ({ currentPage = "" }) => {
           )}
         </RightSide>
       </StyledContainer>
+      {currentPage === "home" && (
+        <Headband>
+          <Toast wide variant="primary">
+            <Container>
+              <IconStripe icon={icons.Help} small centered>
+                <Link href="/#en-ce-moment">
+                  <a>Coronavirus : informations utiles</a>
+                </Link>
+              </IconStripe>
+            </Container>
+          </Toast>
+        </Headband>
+      )}
     </StyledHeader>
   );
 };
@@ -80,7 +99,8 @@ const StyledHeader = styled.header`
   background-color: ${({ currentPage, theme }) =>
     currentPage === "home" ? "transparent" : theme.white};
   @media (max-width: ${breakpoints.mobile}) {
-    height: ${HEADER_HEIGHT_MOBILE};
+    height: ${({ currentPage }) =>
+      currentPage === "home" ? "10rem" : HEADER_HEIGHT_MOBILE};
     margin-bottom: ${spacings.larger};
   }
   @media print {
@@ -174,6 +194,10 @@ const SearchBarWrapper = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
+`;
+
+const Headband = styled.div`
+  padding: ${spacings.small};
 `;
 
 export default Header;
