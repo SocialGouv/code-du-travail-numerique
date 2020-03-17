@@ -26,6 +26,9 @@ export const base = () => (
       <Toast shadow>Here is a toast with a shadow.</Toast>
     </Section>
     <Section>
+      <Toast squared>Here is a squared toast</Toast>
+    </Section>
+    <Section>
       <Toast onRemove={action("remove button clicked")}>
         {"Here is a removable info"}
       </Toast>

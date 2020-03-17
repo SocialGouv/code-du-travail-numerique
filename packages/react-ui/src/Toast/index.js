@@ -39,6 +39,7 @@ export const Toast = ({ children, onRemove, timeout, variant, ...props }) => {
 Toast.propTypes = {
   variant: PropTypes.oneOf(["primary", "secondary"]),
   wide: PropTypes.bool,
+  squared: PropTypes.bool,
   shadow: PropTypes.bool,
   animate: PropTypes.oneOf([
     "from-top",
@@ -53,6 +54,7 @@ Toast.propTypes = {
 
 Toast.defaultProps = {
   wide: false,
+  squared: false,
   variant: "secondary",
   animate: null,
   onRemove: null
@@ -68,7 +70,7 @@ const StyledToast = styled.div`
   border-color: ${({ theme, variant }) => theme[variant]};
   border-style: solid;
   border-width: 2px;
-  border-radius: ${box.borderRadius};
+  border-radius: ${({ squared }) => (squared ? "0" : box.borderRadius)};
   box-shadow: ${({ shadow, theme, variant }) =>
     shadow ? box.shadow.default(theme[variant]) : "none"};
   animation: ${({ animate }) => {

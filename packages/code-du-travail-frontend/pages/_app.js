@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import Link from "next/link";
 import App from "next/app";
 import getConfig from "next/config";
 import * as Sentry from "@sentry/browser";
-import { GlobalStyles } from "@socialgouv/react-ui";
+import { GlobalStyles, IconStripe, icons, Toast } from "@socialgouv/react-ui";
 
 import ErrorPage from "./_error";
 
@@ -78,6 +80,15 @@ export default class MyApp extends App {
           <>
             <GlobalStyles />
             <A11y />
+            <Toast squared wide variant="primary">
+              <Centerer>
+                <IconStripe icon={icons.Help} small centered>
+                  <Link href="/#en-ce-moment">
+                    <a>Coronavirus (Covid-19) : informations utiles</a>
+                  </Link>
+                </IconStripe>
+              </Centerer>
+            </Toast>
             <Component {...pageProps} />
           </>
         </ThemeProvider>
@@ -85,3 +96,8 @@ export default class MyApp extends App {
     );
   }
 }
+
+const Centerer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
