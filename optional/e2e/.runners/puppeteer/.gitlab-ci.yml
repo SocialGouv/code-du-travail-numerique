@@ -21,26 +21,26 @@ Launch e2e tests:
 #
 #
 
-E2E Test @optional/e2e.runner.puppetteer:
+E2E Test @optional/e2e.runner.puppeteer:
   stage: Code Quality
-  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/puppetteer:0.18.0
+  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/puppeteer:0.18.0
   variables:
     CODECEPT_BASEURL: "https://master-code-travail.dev.fabrique.social.gouv.fr"
   artifacts:
     expire_in: 1 week
     when: always
     paths:
-      - optional/e2e/.runners/puppetteer/output
+      - optional/e2e/.runners/puppeteer/output
   only:
     variables:
       - $E2E_TEST
   cache:
     key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:
-      - optional/e2e/.runners/puppetteer/node_modules
+      - optional/e2e/.runners/puppeteer/node_modules
       - $CI_PROJECT_DIR/.yarn
   before_script:
-    - cd ./optional/e2e/.runners/puppetteer
+    - cd ./optional/e2e/.runners/puppeteer
   script:
     - yarn config set cache-folder $CI_PROJECT_DIR/.yarn
     - yarn --frozen-lockfile
