@@ -1,3 +1,17 @@
+/*
+Extracting references is done in several steps :
+1) classifyTokens : we identify valid article references (start with l/r/d then token of shape like 1234-12) => split text into sequence of tokens and give a label to each token
+2) identifyCode : we search for the associated code after the ref tokens (valid options are : code du travail / code de la scurite sociale)
+3) we group those to constitute structured reference of shape : 
+  {
+    "article": "L. 2313-8",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
+  }
+*/
+
 const treebank = require("talisman/tokenizers/words/treebank");
 
 const NEGATIVE = "O";
@@ -75,7 +89,7 @@ function infixMatcher(token) {
 
 // classify sequence of tokens to identify references to articles
 function classifyTokens(tokens) {
-  // step 1 : check for prefix matchs or articles
+  // step 1 : check for prefix matches or articles
   const step1 = tokens.map(token => {
     const prefix = prefixMatcher(token);
     const infix = infixMatcher(token);
@@ -183,7 +197,7 @@ function extractReferences(text) {
   // console.log(predictions);
 
   // group continuous positives tokens and set code
-  // while contnuous match, merge
+  // while continuous match, merge
   // if code, then associate it to articles within range
   return tokens
     .map((token, index) => {

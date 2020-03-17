@@ -1,3 +1,9 @@
+/*
+Here we resolve the references : 
+Given an article and its code (code du travail ou securite sociale), we search for its
+actual id in the legi data corpus. 
+*/
+
 const { codesFullNames, CODE_TRAVAIL } = require("./referenceExtractor");
 const find = require("unist-util-find");
 
@@ -7,7 +13,7 @@ Object.values(codesFullNames).forEach(({ id }) => {
   codes[id] = code;
 });
 
-// duplicated in reference Extractor / ln.71
+// duplicated in reference Extractor
 const rangeMarkers = ["à", "à"];
 
 function unravelRange(range) {

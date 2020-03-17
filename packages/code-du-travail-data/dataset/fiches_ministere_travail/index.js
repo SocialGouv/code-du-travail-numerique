@@ -128,7 +128,10 @@ function parseDom(dom, url) {
           nextEl = nextEl.nextElementSibling;
         }
         // section.html = addTags(section.html);
+
+        // first we extract the tokens referencing articles
         const references = extractReferences(section.text);
+        // then we try to resolve the actual articles ids using legi-data
         section.references = resolveReferences(references);
         sections.push(section);
       }
