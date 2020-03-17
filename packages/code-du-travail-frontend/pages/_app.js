@@ -5,7 +5,7 @@ import Link from "next/link";
 import App from "next/app";
 import getConfig from "next/config";
 import * as Sentry from "@sentry/browser";
-import { GlobalStyles, IconStripe, icons, Toast } from "@socialgouv/react-ui";
+import { GlobalStyles, IconStripe, icons, theme } from "@socialgouv/react-ui";
 
 import ErrorPage from "./_error";
 
@@ -80,15 +80,17 @@ export default class MyApp extends App {
           <>
             <GlobalStyles />
             <A11y />
-            <Toast squared wide variant="primary">
+            <Headband>
               <Centerer>
-                <IconStripe icon={icons.Help} small centered>
-                  <Link href="/#en-ce-moment">
-                    <a>Coronavirus (Covid-19) : informations utiles</a>
-                  </Link>
-                </IconStripe>
+                <Link href="/#en-ce-moment" passHref>
+                  <StyledLink>
+                    <IconStripe icon={icons.Help} small centered>
+                      Coronavirus (Covid-19) : informations utiles
+                    </IconStripe>
+                  </StyledLink>
+                </Link>
               </Centerer>
-            </Toast>
+            </Headband>
             <Component {...pageProps} />
           </>
         </ThemeProvider>
@@ -97,7 +99,25 @@ export default class MyApp extends App {
   }
 }
 
+const { spacings } = theme;
+
 const Centerer = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+const Headband = styled.div`
+  padding: ${spacings.small};
+  color: white;
+  background-color: ${({ theme }) => theme.secondary};
+`;
+
+const StyledLink = styled.a`
+  color: ${({ theme }) => theme.white};
+  &:hover,
+  &:active,
+  &:focus {
+    color: ${({ theme }) => theme.white};
+    text-decoration: underline;
+  }
 `;
