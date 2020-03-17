@@ -17,7 +17,8 @@ const basic_styles = `<style>
 .courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}
 .courrier-destinataire {display: flex; align-items: flex-end; flex-direction:column;}
 .courrier-signature {display: flex; flex-direction:column; align-items: flex-end;}
-.center {display: flex; align-items: center; flex-direction:column;}
+.title-center {display: flex; align-items: center; flex-direction:column;}
+.center {display: flex; align-items: center; flex-direction:column; font-size: 1.4rem; font-weight:bold}
 .checklist { list-style-image:list-style-image: url(data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221rem%22%20height%3D%221rem%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M2%202h10v10H2z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20stroke%3D%22currentColor%22%20stroke-width%3D%22.5%22%20d%3D%22M1%201h9v9H1z%22%2F%3E%3C%2Fsvg%3E);}
 .editable {color: #4d73b8}
 </style>`;
@@ -25,8 +26,9 @@ const basic_styles = `<style>
 const options = {
   styleMap: [
     "p[style-name='signature'] => div.courrier-signature > p:fresh",
-    "li[style-name='choix'] => li.checklist",
-    "p[style-name='centre'] => div.centre > p:fresh",
+    "p[style-name='choix'] => li.checklist:fresh",
+    "p[style-name='centre'] => div.center > p:fresh",
+    "p[style-name='Titre-centre'] => div.title-center:fresh",
     "p[style-name='expediteur'] => div.courrier-expediteur > p:fresh",
     "p[style-name='destinataire'] => div.courrier-destinataire > p:fresh",
     "p[style-name='Titre'] => h3.courrier-titre:fresh"
