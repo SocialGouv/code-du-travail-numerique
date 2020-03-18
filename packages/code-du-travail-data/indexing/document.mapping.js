@@ -96,6 +96,9 @@ export const documentMapping = {
         },
       },
     },
+    effectif: {
+      type: "rank_feature"
+    },
     ape: {
       type: "text",
       analyzer: "idcc_ape",

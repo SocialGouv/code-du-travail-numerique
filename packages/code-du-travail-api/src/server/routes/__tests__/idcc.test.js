@@ -18,3 +18,9 @@ test("return idcc results for pati", async () => {
   expect(response.status).toBe(200);
   expect(response.body.hits).toMatchSnapshot();
 });
+
+test("return idcc results in correct order for banque", async () => {
+  const response = await request(app.callback()).get(`/api/v1/idcc?q=banque`);
+  expect(response.status).toBe(200);
+  expect(response.body.hits).toMatchSnapshot();
+});

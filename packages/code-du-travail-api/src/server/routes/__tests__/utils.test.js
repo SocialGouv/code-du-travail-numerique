@@ -141,7 +141,7 @@ test("test remove duplicates", () => {
 });
 
 test("test mergePipe", () => {
-  test_dupl.forEach(t => {
+  test_dupl.forEach(() => {
     expect(utils.mergePipe(arr1, arr2, 4)).toEqual(test_mergePipe_result);
   });
 });
