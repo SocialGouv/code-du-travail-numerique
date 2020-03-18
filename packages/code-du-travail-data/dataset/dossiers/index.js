@@ -4,8 +4,8 @@ const thematicFiles = [
     title: "Le Coronavirus (Covid-19) et le monde du travail",
     description:
       "Découvrez l’intégralité de nos contenus liés au Coronavirus : <a href='#essentiel' title='se déplacer sur l'essentiel'>l’essentiel à savoir</a> en tant que salarié et employeur, des <a href='#courriers' title='se déplacer sur les modèles de courriers'>modèles de courriers</a> indispensables et téléchargeables, des <a href='#fiches-pratiques' title='se déplacer sur fiches pratiques'>fiches pratiques</a> et les <a href='#liens-utiles' title='se déplacer sur les liens utiles'>liens utiles</a>.",
-    aside:
-      "Rester informer sur le Coronavirus :\n - [](https://www.gouvernement.fr/info-coronavirus)\n Demander l’activité partielle : \n - [](https://activitepartielle.emploi.gouv.fr/apart/)\n Déclarer un arrêt de travail pour un salarié contraint de garder son enfant à domicile : \n - [](https://declare.ameli.fr/)\n Coronavirus et paiement des cotisations salariales et patronales : \n - [](https://www.urssaf.fr/portail/home/actualites/toute-lactualite-employeur/mesures-exceptionnelles-pour-les.html)\n Coronavirus et données personnelles : \n - [](https://www.cnil.fr/fr/coronavirus-covid-19-les-rappels-de-la-cnil-sur-la-collecte-de-donnees-personnelles)\n",
+    asideContent:
+      "Rester informer sur le Coronavirus :\n - https://www.gouvernement.fr/info-coronavirus \n \n Demander l’activité partielle : \n - https://activitepartielle.emploi.gouv.fr/apart/ \n \n Déclarer un arrêt de travail pour un salarié contraint de garder son enfant à domicile : \n - https://declare.ameli.fr/ \n \n Coronavirus et paiement des cotisations salariales et patronales : \n - https://www.urssaf.fr/portail/home/actualites/toute-lactualite-employeur/mesures-exceptionnelles-pour-les.html \n \n Coronavirus et données personnelles : \n - https://www.cnil.fr/fr/coronavirus-covid-19-les-rappels-de-la-cnil-sur-la-collecte-de-donnees-personnelles \n",
     refs: [
       {
         type: "main",

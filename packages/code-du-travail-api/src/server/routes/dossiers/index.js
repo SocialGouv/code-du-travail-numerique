@@ -18,7 +18,6 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/dossiers/:slug", async ctx => {
   const { slug } = ctx.params;
   const file = thematicFiles.find(file => file.slug === slug);
-  console.log(slug);
   if (!file) {
     throw (404, `there is no thematic files that match ${slug}`);
   }

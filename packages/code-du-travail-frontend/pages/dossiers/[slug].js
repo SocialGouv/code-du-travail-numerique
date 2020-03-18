@@ -4,16 +4,22 @@ import fetch from "isomorphic-unfetch";
 import {
   Container,
   FlatList,
-  ListItem,
+  Heading,
   Title,
-  PageTitle,
-  Section
+  PageTitle
 } from "@socialgouv/react-ui";
 
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
+import {
+  AsideContent,
+  MainAsideLayout,
+  MainContent
+} from "../../src/layout/AnswerLayout";
 import Metas from "../../src/common/Metas";
 import Html from "../../src/common/Html";
+import Mdx from "../../src/common/Mdx";
+
 import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import { ListLink } from "../../src/search/SearchResults/Results";
 
@@ -25,12 +31,13 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   if (!dossier) {
     return <Answer emptyMessage="Cet dossier thématique n'a pas été trouvé" />;
   }
-  const { title, description, refs, aside } = dossier;
-  console.log(refs);
+  const { title, description, refs, asideContent } = dossier;
+
   const mainRefs = refs.filter(({ type }) => type === "main");
   const secondaryRefs = refs.filter(({ type }) => type === "secondary");
   const themeRefs = refs.filter(({ type }) => type === "theme");
   const templateRefs = refs.filter(({ type }) => type === "template");
+
   return (
     <Layout>
       <Metas
@@ -39,13 +46,13 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
         description={title}
         image={ogImage}
       />
-      <Section>
-        <Breadcrumbs items={[{ slug: "/dossiers", label: "dossiers" }]} />
-        <Container narrow>
-          <PageTitle>{title}</PageTitle>
-          <Html>{description}</Html>
-        </Container>
-        <Container>
+      <Breadcrumbs items={[{ slug: "/dossiers", label: "dossiers" }]} />
+      <Container narrow>
+        <PageTitle>{title}</PageTitle>
+        <Html>{description}</Html>
+      </Container>
+      <MainAsideLayout>
+        <MainContent hasResults>
           <Title>L’essentiel</Title>
           <FlatList>
             {mainRefs.map(item => (
@@ -55,8 +62,12 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
             ))}
           </FlatList>
           <Title>Pour aller plus loin</Title>
-        </Container>
-      </Section>
+        </MainContent>
+        <AsideContent>
+          <Heading>des Liens</Heading>
+          <Mdx markdown={asideContent} />
+        </AsideContent>
+      </MainAsideLayout>
     </Layout>
   );
 }
