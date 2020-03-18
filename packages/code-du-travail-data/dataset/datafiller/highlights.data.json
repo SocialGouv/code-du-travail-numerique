@@ -8,38 +8,38 @@
         "position": 0
       },
       {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer",
+        "title": "Coronavirus - COVID-19 et monde du Travail : pour résumer",
+        "valid": true,
+        "position": 1
+      },
+      {
+        "url": "/modeles-de-courriers/attestation-sur-lhonneur-deplacement-derogatoire",
+        "title": "Attestation sur l’honneur : déplacement dérogatoire",
+        "valid": true,
+        "position": 2
+      },
+      {
         "url": "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
         "title": "Activité partielle : démarches de l'employeur (chômage partiel ou technique)",
         "valid": true,
-        "position": 1
+        "position": 3
       },
       {
         "url": "/fiche-service-public/teletravail-dans-le-secteur-prive",
         "title": "Télétravail dans le secteur privé",
         "valid": true,
-        "position": 2
-      },
-      {
-        "url": "/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission",
-        "title": "Quelle est la durée du préavis en cas de démission ?",
-        "valid": true,
-        "position": 3
-      },
-      {
-        "url": "/fiche-service-public/conge-du-salarie-pour-mariage-ou-pacs",
-        "title": "Congé du salarié pour mariage ou Pacs",
-        "valid": true,
         "position": 4
       },
       {
-        "url": "/fiche-service-public/arret-maladie-pendant-le-preavis-quelles-consequences",
-        "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
+        "url": "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",
+        "title": "Attestation sur l’honneur : arrêt de travail pour la garde d’enfant",
         "valid": true,
         "position": 5
       }
     ],
     "title": "homepage",
     "id": "6f359be3-67a8-42c7-8a83-97d9647df15c",
-    "last_modified": 1584094813688
+    "last_modified": 1584525330232
   }
 ]
