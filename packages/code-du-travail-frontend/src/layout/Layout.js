@@ -8,20 +8,24 @@ import { ErrorBoundary } from "../common/ErrorBoundary";
 
 const Layout = ({ children, currentPage }) => {
   return (
-    <>
+    <BackgroundContainer>
       <BackgroundLayer currentPage={currentPage} />
       <Header currentPage={currentPage} />
       <ErrorBoundary message="Une erreur est survenue">
         <main>{children}</main>
       </ErrorBoundary>
       <Footer />
-    </>
+    </BackgroundContainer>
   );
 };
 
 export { Layout };
 
 const { breakpoints } = theme;
+
+const BackgroundContainer = styled.div`
+  position: relative;
+`;
 
 const BackgroundLayer = styled.div`
   position: absolute;
