@@ -19,7 +19,10 @@ export function A11y({ initialTitle = "" }) {
        * the aria-live annouvement.
        */
       setTimeout(() => {
-        setAriaTitle(`${document.querySelector("h1").textContent}`);
+        const titleNode = document.querySelector("h1");
+        if (titleNode) {
+          setAriaTitle(`${titleNode.textContent}`);
+        }
         const focusRoot = document.querySelector("[data-next-focus-root]");
         if (focusRoot) {
           focusRoot.focus();
