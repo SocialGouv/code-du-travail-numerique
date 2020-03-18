@@ -114,10 +114,12 @@ const Headband = styled.div`
 
 const StyledLink = styled.a`
   color: ${({ theme }) => theme.white};
+  text-decoration: none;
   &:hover,
   &:active,
   &:focus {
     color: ${({ theme }) => theme.white};
     text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme.white};
   }
 `;
