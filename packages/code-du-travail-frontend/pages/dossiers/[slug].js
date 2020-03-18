@@ -1,12 +1,17 @@
 import React from "react";
+import Link from "next/link";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
+import styled from "styled-components";
+import { getRouteBySource } from "@cdt/sources";
 import {
+  ArrowLink,
   Container,
   FlatList,
   Heading,
   Title,
-  PageTitle
+  PageTitle,
+  theme
 } from "@socialgouv/react-ui";
 
 import Answer from "../../src/common/Answer";
@@ -35,9 +40,12 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
 
   const mainRefs = refs.filter(({ type }) => type === "main");
   const secondaryRefs = refs.filter(({ type }) => type === "secondary");
-  const themeRefs = refs.filter(({ type }) => type === "theme");
+  // const themeRefs = refs.filter(({ type }) => type === "theme");
   const templateRefs = refs.filter(({ type }) => type === "template");
-
+  const componentMappings = {
+    ul: FlatList,
+    a: LeftArrowLink
+  };
   return (
     <Layout>
       <Metas
@@ -53,19 +61,40 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
       </Container>
       <MainAsideLayout>
         <MainContent hasResults>
-          <Title>L’essentiel</Title>
-          <FlatList>
-            {mainRefs.map(item => (
-              <li key={item.slug}>
-                <ListLink item={item} />
-              </li>
-            ))}
-          </FlatList>
-          <Title>Pour aller plus loin</Title>
+          <Container>
+            <Title>L’essentiel</Title>
+            <FlatList>
+              {mainRefs.map(item => (
+                <StyledListItem key={item.slug}>
+                  <ListLink item={item} />
+                </StyledListItem>
+              ))}
+            </FlatList>
+            <Title>Pour aller plus loin</Title>
+            <FlatList>
+              {secondaryRefs.map(item => (
+                <StyledListItem key={item.slug}>
+                  <ListLink item={item} />
+                </StyledListItem>
+              ))}
+            </FlatList>
+          </Container>
         </MainContent>
         <AsideContent>
-          <Heading>des Liens</Heading>
-          <Mdx markdown={asideContent} />
+          <Container>
+            <Heading>Modèles utiles</Heading>
+            <FlatList>
+              {templateRefs.map(({ source, slug, title }) => (
+                <li key={slug}>
+                  <InternalLink source={source} slug={slug} passHref>
+                    <LeftArrowLink>{title}</LeftArrowLink>
+                  </InternalLink>
+                </li>
+              ))}
+            </FlatList>
+            <Heading>Liens utiles</Heading>
+            <Mdx markdown={asideContent} components={componentMappings} />
+          </Container>
         </AsideContent>
       </MainAsideLayout>
     </Layout>
@@ -80,5 +109,36 @@ DossierThematique.getInitialProps = async ({ query: { slug } }) => {
   const dossier = await responseContainer.json();
   return { dossier };
 };
+
+const { spacings } = theme;
+
+const LeftArrowLink = styled(ArrowLink).attrs(() => ({
+  arrowPosition: "left",
+  className: "no-after"
+}))`
+  word-break: break-word;
+`;
+
+const InternalLink = ({ source, slug, ...props }) => {
+  let rootSlug = slug;
+  let hash;
+  if (slug.includes("#")) {
+    [rootSlug, hash] = slug.split("#");
+  }
+  hash = hash ? `#${hash}` : "";
+  rootSlug = rootSlug ? `/${rootSlug}` : "";
+  const route = getRouteBySource(source);
+  return (
+    <Link
+      href={`/${route}${rootSlug ? "/[slug]" : ""}`}
+      as={`/${route}${rootSlug}${hash}`}
+      {...props}
+    />
+  );
+};
+
+const StyledListItem = styled.li`
+  margin-bottom: ${spacings.medium};
+`;
 
 export default DossierThematique;
