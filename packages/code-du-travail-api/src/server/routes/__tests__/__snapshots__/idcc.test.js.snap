@@ -42,6 +42,7 @@ Object {
 }
 `;
 
+
 exports[`return idcc results for pati 1`] = `
 Object {
   "hits": Array [
