@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.8.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.7.0...v4.8.0) (2020-03-18)
+
+
+### Bug Fixes
+
+* **a11y:** prevent accessing page without h1 ([#2497](https://github.com/SocialGouv/code-du-travail-numerique/issues/2497)) ([02a06a4](https://github.com/SocialGouv/code-du-travail-numerique/commit/02a06a4393f26a4807ca36e3557616459bb532ca))
+* **deps:** update all non-major dependencies ([#2468](https://github.com/SocialGouv/code-du-travail-numerique/issues/2468)) ([9aced61](https://github.com/SocialGouv/code-du-travail-numerique/commit/9aced616faefade1e7f37695ffb236f7ed25b32e))
+* **deps:** update all non-major dependencies ([#2486](https://github.com/SocialGouv/code-du-travail-numerique/issues/2486)) ([3e2282d](https://github.com/SocialGouv/code-du-travail-numerique/commit/3e2282dfe5f391446bd83a8b0fa8c24c29e948dd))
+* **deps:** update dependency rehype-react to v5 ([#2478](https://github.com/SocialGouv/code-du-travail-numerique/issues/2478)) ([55c53b3](https://github.com/SocialGouv/code-du-travail-numerique/commit/55c53b379823477c66d8d924716d0aead63d72ed))
+* **e2e:** fix typo ([#2487](https://github.com/SocialGouv/code-du-travail-numerique/issues/2487)) ([849153c](https://github.com/SocialGouv/code-du-travail-numerique/commit/849153caf4dc52070da8914165f29e632cc87677))
+* **frontend:** ugly style ([#2495](https://github.com/SocialGouv/code-du-travail-numerique/issues/2495)) ([35ea26f](https://github.com/SocialGouv/code-du-travail-numerique/commit/35ea26f20131728346666e26059d8eef429493dc))
+
+
+### Features
+
+* **data:** add new courrier ([#2491](https://github.com/SocialGouv/code-du-travail-numerique/issues/2491)) ([9aa3600](https://github.com/SocialGouv/code-du-travail-numerique/commit/9aa3600e20a122711043e8e039a892801f8486a8))
+* **data:** update dataset ([#2496](https://github.com/SocialGouv/code-du-travail-numerique/issues/2496)) ([7750969](https://github.com/SocialGouv/code-du-travail-numerique/commit/77509690d6f77604de40d4c32366b80dafff7f4f))
+* **frontend:** add headband ([#2492](https://github.com/SocialGouv/code-du-travail-numerique/issues/2492)) ([48a52b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/48a52b03c751bfd7ffb93cb82588877e1dea2286))
+
+
+
+
+
 # [4.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.5.0...v4.7.0) (2020-03-14)
 
 
