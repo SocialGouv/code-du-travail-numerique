@@ -1860,6 +1860,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 @media (max-width:600px) {
   .c36 {
     width: 3.4rem;
+    height: 3.4rem;
     margin-right: 1rem;
   }
 }
