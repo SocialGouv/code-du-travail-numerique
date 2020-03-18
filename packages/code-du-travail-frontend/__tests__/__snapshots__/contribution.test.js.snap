@@ -2239,7 +2239,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       >
                         <svg
                           fill="none"
+                          height="auto"
                           viewBox="0 0 52 52"
+                          width="auto"
                         >
                           <path
                             clip-rule="evenodd"
@@ -5033,7 +5035,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       >
                         <svg
                           fill="none"
+                          height="auto"
                           viewBox="0 0 52 52"
+                          width="auto"
                         >
                           <path
                             clip-rule="evenodd"

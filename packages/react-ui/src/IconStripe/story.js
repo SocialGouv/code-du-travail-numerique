@@ -1,4 +1,6 @@
 import React from "react";
+import { AlertCircle } from "react-feather";
+
 import { Custom, Document } from "../icons";
 import { Section } from "../layout/Section";
 import { IconStripe } from ".";
@@ -33,6 +35,11 @@ export const base = () => (
     <Section>
       <IconStripe small icon={Document}>
         In some case, you may prefer that the icon gets smaller.
+      </IconStripe>
+    </Section>
+    <Section>
+      <IconStripe small centered icon={AlertCircle}>
+        You can also use feather icons
       </IconStripe>
     </Section>
   </>

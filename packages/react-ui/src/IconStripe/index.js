@@ -7,7 +7,7 @@ import { breakpoints, spacings } from "../theme";
 export const IconStripe = ({ children, icon: Icon, small, ...props }) => (
   <FlexDiv {...props}>
     <IconWrapper small={small}>
-      <Icon />
+      <Icon width="auto" height="auto" />
     </IconWrapper>
     <ChildrenWrapper>{children}</ChildrenWrapper>
   </FlexDiv>

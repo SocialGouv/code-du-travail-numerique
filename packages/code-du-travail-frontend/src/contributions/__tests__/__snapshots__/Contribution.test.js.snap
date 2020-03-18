@@ -425,7 +425,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       >
         <svg
           fill="none"
+          height="auto"
           viewBox="0 0 52 52"
+          width="auto"
         >
           <path
             clip-rule="evenodd"
@@ -965,7 +967,9 @@ exports[`<Contribution /> should render answer references 1`] = `
       >
         <svg
           fill="none"
+          height="auto"
           viewBox="0 0 52 52"
+          width="auto"
         >
           <path
             clip-rule="evenodd"
@@ -1505,7 +1509,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       >
         <svg
           fill="none"
+          height="auto"
           viewBox="0 0 52 52"
+          width="auto"
         >
           <path
             clip-rule="evenodd"
@@ -2045,7 +2051,9 @@ exports[`<Contribution /> should render with both answers 1`] = `
       >
         <svg
           fill="none"
+          height="auto"
           viewBox="0 0 52 52"
+          width="auto"
         >
           <path
             clip-rule="evenodd"
@@ -2534,7 +2542,9 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       >
         <svg
           fill="none"
+          height="auto"
           viewBox="0 0 52 52"
+          width="auto"
         >
           <path
             clip-rule="evenodd"
