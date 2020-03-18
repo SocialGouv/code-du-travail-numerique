@@ -779,7 +779,6 @@ exports[`<Convention /> renders 1`] = `
 @media (max-width:600px) {
   .c47 {
     width: 3.4rem;
-    height: 3.4rem;
     margin-right: 1rem;
   }
 }

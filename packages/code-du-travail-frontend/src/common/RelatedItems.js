@@ -155,6 +155,7 @@ const StyledFlatList = styled(FlatList)`
 `;
 
 const StyledTileItem = styled.li`
+  display: flex;
   margin: 0 0 ${spacings.base} 0;
   padding: 0;
   @media (max-width: ${breakpoints.tablet}) {
