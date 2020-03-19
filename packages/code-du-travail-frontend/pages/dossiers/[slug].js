@@ -30,7 +30,6 @@ import Html from "../../src/common/Html";
 import Mdx from "../../src/common/Mdx";
 import { ViewMore } from "../../src/common/ViewMore";
 
-import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 
@@ -60,7 +59,6 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
         description={title}
         image={ogImage}
       />
-      <Breadcrumbs items={[{ slug: "/dossiers", label: "dossiers" }]} />
       <Container narrow>
         <PageTitle>{title}</PageTitle>
         <Html>{description}</Html>
