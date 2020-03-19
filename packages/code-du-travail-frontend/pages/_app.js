@@ -87,7 +87,7 @@ export default class MyApp extends App {
                 <Link href="/#en-ce-moment" passHref>
                   <StyledLink>
                     <IconStripe icon={AlertCircle} small centered>
-                      Coronavirus (Covid-19) : informations utiles
+                      "Coronavirus (Covid-19) : notre dossier dédié
                     </IconStripe>
                   </StyledLink>
                 </Link>
@@ -111,7 +111,7 @@ const Centerer = styled.div`
 const Headband = styled.div`
   padding: ${spacings.small};
   color: white;
-  background-color: ${({ theme }) => theme.secondary};
+  background-color: #fb7721;
 `;
 
 const StyledLink = styled.a`
