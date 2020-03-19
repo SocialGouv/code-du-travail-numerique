@@ -8,9 +8,13 @@ import {
   ArrowLink,
   Container,
   FlatList,
+  Grid,
   Heading,
-  Title,
   PageTitle,
+  Section,
+  Tile,
+  Title,
+  icons,
   theme
 } from "@socialgouv/react-ui";
 
@@ -24,9 +28,11 @@ import {
 import Metas from "../../src/common/Metas";
 import Html from "../../src/common/Html";
 import Mdx from "../../src/common/Mdx";
+import { ViewMore } from "../../src/common/ViewMore";
 
 import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import { ListLink } from "../../src/search/SearchResults/Results";
+import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -40,7 +46,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
 
   const mainRefs = refs.filter(({ type }) => type === "main");
   const secondaryRefs = refs.filter(({ type }) => type === "secondary");
-  // const themeRefs = refs.filter(({ type }) => type === "theme");
+  const themeRefs = refs.filter(({ type }) => type === "theme");
   const templateRefs = refs.filter(({ type }) => type === "template");
   const componentMappings = {
     ul: FlatList,
@@ -62,7 +68,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
       <MainAsideLayout>
         <MainContent hasResults>
           <Container>
-            <Title>L’essentiel</Title>
+            <Title id="essentiel">L’essentiel</Title>
             <FlatList>
               {mainRefs.map(item => (
                 <StyledListItem key={item.slug}>
@@ -70,19 +76,22 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
                 </StyledListItem>
               ))}
             </FlatList>
-            <Title>Pour aller plus loin</Title>
+            <br />
+            <Title id="fiches-pratiques">Pour aller plus loin</Title>
             <FlatList>
-              {secondaryRefs.map(item => (
-                <StyledListItem key={item.slug}>
-                  <ListLink item={item} />
-                </StyledListItem>
-              ))}
+              <ViewMore>
+                {secondaryRefs.map(item => (
+                  <StyledListItem key={item.slug}>
+                    <ListLink item={item} />
+                  </StyledListItem>
+                ))}
+              </ViewMore>
             </FlatList>
           </Container>
         </MainContent>
         <AsideContent>
           <Container>
-            <Heading>Modèles utiles</Heading>
+            <Heading id="liens-utiles">Modèles utiles</Heading>
             <FlatList>
               {templateRefs.map(({ source, slug, title }) => (
                 <li key={slug}>
@@ -97,6 +106,41 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
           </Container>
         </AsideContent>
       </MainAsideLayout>
+      <Section decorated variant="light">
+        <Container>
+          <Title id="courriers">
+            Les modèles suivants peuvent vous intéresser
+          </Title>
+          <Grid>
+            {templateRefs.map(item => (
+              <InternalLink
+                key={item.slug}
+                source={item.source}
+                slug={item.slug}
+              >
+                <CallToActionTile
+                  action="Voir le modèle"
+                  custom
+                  icon={icons.Document}
+                  title={item.title}
+                />
+              </InternalLink>
+            ))}
+          </Grid>
+          <Title>Les thèmes suivants peuvent vous intéresser</Title>
+          <Grid>
+            {themeRefs.map(item => (
+              <InternalLink
+                key={item.slug}
+                source={item.source}
+                slug={item.slug}
+              >
+                <Tile title={item.title} striped />
+              </InternalLink>
+            ))}
+          </Grid>
+        </Container>
+      </Section>
     </Layout>
   );
 }
