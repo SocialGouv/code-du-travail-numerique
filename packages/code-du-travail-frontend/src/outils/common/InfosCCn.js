@@ -41,7 +41,13 @@ function StepInfoCCn({ form, isOptionnal = true }) {
               <>
                 <Question>La convention collective</Question>
                 <p>Vous avez sélectionné la convention collective&nbsp;</p>
-                <Toast variant="primary" onRemove={() => setConvention()}>
+                <Toast
+                  variant="primary"
+                  onRemove={event => {
+                    event.preventDefault();
+                    setConvention();
+                  }}
+                >
                   {input.value.shortTitle}
                 </Toast>
                 <p>Cliquez sur suivant pour poursuivre la simulation.</p>
