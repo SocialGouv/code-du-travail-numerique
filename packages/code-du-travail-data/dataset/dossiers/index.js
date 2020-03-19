@@ -1,9 +1,9 @@
 const thematicFiles = [
   {
-    slug: "le-coronavirus-covid-19-et-le-monde-du-travail",
-    title: "Le Coronavirus (Covid-19) et le monde du travail",
+    slug: "ministere-du-travail-notre-dossier-sur-le-coronavirus",
+    title: "Ministère du travail : notre dossier sur le coronavirus",
     description:
-      "Découvrez l’intégralité de nos contenus liés au Coronavirus : <a href='#essentiel' title='se déplacer sur l'essentiel'>l’essentiel à savoir</a> en tant que salarié et employeur, des <a href='#courriers' title='se déplacer sur les modèles de courriers'>modèles de courriers</a> indispensables et téléchargeables, des <a href='#fiches-pratiques' title='se déplacer sur fiches pratiques'>fiches pratiques</a> et les <a href='#liens-utiles' title='se déplacer sur les liens utiles'>liens utiles</a>.",
+      "Découvrez nos contenus liés au Coronavirus : l’essentiel à savoir en tant que salarié ou employeur : des fiches pratiques, des liens utiles, des modèles de courriers téléchargeables, etc.",
     asideContent: `
 Rester informer sur le Coronavirus :
  - https://www.gouvernement.fr/info-coronavirus

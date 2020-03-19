@@ -59,51 +59,52 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
         description={title}
         image={ogImage}
       />
-      <Container narrow>
-        <PageTitle>{title}</PageTitle>
-        <Html>{description}</Html>
-      </Container>
-      <MainAsideLayout>
-        <MainContent hasResults>
-          <Container>
-            <Title id="essentiel">L’essentiel</Title>
-            <FlatList>
-              {mainRefs.map(item => (
-                <StyledListItem key={item.slug}>
-                  <ListLink item={item} />
-                </StyledListItem>
-              ))}
-            </FlatList>
-            <br />
-            <Title id="fiches-pratiques">Pour aller plus loin</Title>
-            <FlatList>
-              <ViewMore>
-                {secondaryRefs.map(item => (
+      <Section>
+        <Container narrow>
+          <PageTitle subtitle={description}>{title}</PageTitle>
+        </Container>
+        <MainAsideLayout>
+          <MainContent hasResults>
+            <Container>
+              <Title id="essentiel">L’essentiel</Title>
+              <FlatList>
+                {mainRefs.map(item => (
                   <StyledListItem key={item.slug}>
                     <ListLink item={item} />
                   </StyledListItem>
                 ))}
-              </ViewMore>
-            </FlatList>
-          </Container>
-        </MainContent>
-        <AsideContent>
-          <Container>
-            <Heading id="liens-utiles">Modèles utiles</Heading>
-            <FlatList>
-              {templateRefs.map(({ source, slug, title }) => (
-                <li key={slug}>
-                  <InternalLink source={source} slug={slug} passHref>
-                    <LeftArrowLink>{title}</LeftArrowLink>
-                  </InternalLink>
-                </li>
-              ))}
-            </FlatList>
-            <Heading>Liens utiles</Heading>
-            <Mdx markdown={asideContent} components={componentMappings} />
-          </Container>
-        </AsideContent>
-      </MainAsideLayout>
+              </FlatList>
+              <br />
+              <Title id="fiches-pratiques">Pour aller plus loin</Title>
+              <FlatList>
+                <ViewMore>
+                  {secondaryRefs.map(item => (
+                    <StyledListItem key={item.slug}>
+                      <ListLink item={item} />
+                    </StyledListItem>
+                  ))}
+                </ViewMore>
+              </FlatList>
+            </Container>
+          </MainContent>
+          <AsideContent>
+            <Container>
+              <Heading id="liens-utiles">Modèles utiles</Heading>
+              <FlatList>
+                {templateRefs.map(({ source, slug, title }) => (
+                  <li key={slug}>
+                    <InternalLink source={source} slug={slug} passHref>
+                      <LeftArrowLink>{title}</LeftArrowLink>
+                    </InternalLink>
+                  </li>
+                ))}
+              </FlatList>
+              <Heading>Liens utiles</Heading>
+              <Mdx markdown={asideContent} components={componentMappings} />
+            </Container>
+          </AsideContent>
+        </MainAsideLayout>
+      </Section>
       <Section decorated variant="light">
         <Container>
           <Title id="courriers">

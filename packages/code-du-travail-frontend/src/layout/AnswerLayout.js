@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { Container, Section, theme } from "@socialgouv/react-ui";
 
 const { breakpoints, spacings } = theme;
@@ -22,7 +23,7 @@ export const MainContent = styled.div`
 `;
 
 export const AsideContent = styled(Section)`
-  position: sticky;
+  position: ${props => (props.sticky ? "sticky" : "static")};
   top: 12rem;
   width: calc(30% - ${spacings.larger});
   margin-left: ${spacings.larger};
@@ -37,3 +38,10 @@ export const AsideContent = styled(Section)`
     width: 100%;
   }
 `;
+
+AsideContent.propTypes = {
+  sticky: PropTypes.bool
+};
+AsideContent.defaultProps = {
+  sticky: false
+};

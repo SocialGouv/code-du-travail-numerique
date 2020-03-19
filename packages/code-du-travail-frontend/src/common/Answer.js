@@ -74,7 +74,7 @@ function Answer({
           />
         </MainContent>
         {relatedItems.length > 0 && (
-          <AsideContent>
+          <AsideContent sticky>
             <RelatedItems items={relatedItems} />
           </AsideContent>
         )}
