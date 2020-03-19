@@ -14,7 +14,15 @@ export const CONVENTION_NAME = "ccn";
 
 function StepInfoCCn({ form, isOptionnal = true }) {
   const [storedConvention, setConvention] = useLocalStorage("convention");
-
+  const onSelectConvention = useCallback(
+    data => {
+      setConvention(data);
+      if (window) {
+        window.scrollTo(0, 0);
+      }
+    },
+    [setConvention]
+  );
   useEffect(() => {
     form.batch(() => {
       form.change("criteria", undefined);
@@ -37,7 +45,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                   <Button
                     variant="link"
                     type="button"
-                    onClick={() => setConvention()}
+                    onClick={onSelectConvention}
                   >
                     Changer de convention collective
                   </Button>
