@@ -42,7 +42,7 @@ const labelBySource = {
   [SOURCES.SHEET_MT]: "Ministère du Travail",
   [SOURCES.THEMES]: "Themes",
   [SOURCES.TOOLS]: "Outils",
-  [SOURCES.TOOLS]: "Dossiers"
+  [SOURCES.THEMATIC_FILES]: "Dossiers"
 };
 
 const sources = Object.values(SOURCES);
