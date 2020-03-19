@@ -28,6 +28,7 @@ router.get("/dossiers/:slug", async ctx => {
     ctx.throw(404, `there is no thematic files that match ${slug}`);
   }
   const thematicFile = response.body.hits.hits[0]._source;
+
   const refTypeByUrl = [];
   for (const { url, type } of thematicFile.refs) {
     const [, slug] = url.match(/\/.+\/(.+)$/);

@@ -23,7 +23,7 @@ Coronavirus et données personnelles :
       {
         type: "main",
         url:
-          "fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer"
+          "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer"
       },
       {
         type: "main",
@@ -52,6 +52,11 @@ Coronavirus et données personnelles :
       {
         type: "secondary",
         url:
+          "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie"
+      },
+      {
+        type: "secondary",
+        url:
           "/fiche-service-public/securite-et-sante-au-travail-obligations-de-lemployeur"
       },
       {
@@ -60,9 +65,29 @@ Coronavirus et données personnelles :
           "/fiche-service-public/un-salarie-peut-il-refuser-de-travailler-dans-une-situation-dangereuse"
       },
       {
+        type: "secondary",
+        url:
+          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-apprentissage"
+      },
+      {
+        type: "secondary",
+        url:
+          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-formation-professionnelle-des-salaries-alternants-et-personnes-en-recherche-demploi"
+      },
+      {
+        type: "secondary",
+        url:
+          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-mon-compte-formation"
+      },
+      {
         type: "template",
         url:
-          "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant"
+          "/modeles-de-courriers/attestation-sur-lhonneur-deplacement-derogatoire"
+      },
+      {
+        type: "template",
+        url:
+          "/modeles-de-courriers/justificatif-de-lemployeur-de-deplacement-professionnel"
       },
       {
         type: "template",
