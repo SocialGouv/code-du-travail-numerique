@@ -5,7 +5,9 @@ import Link from "next/link";
 import App from "next/app";
 import getConfig from "next/config";
 import * as Sentry from "@sentry/browser";
-import { GlobalStyles, IconStripe, icons, theme } from "@socialgouv/react-ui";
+import { AlertCircle } from "react-feather";
+
+import { GlobalStyles, IconStripe, theme } from "@socialgouv/react-ui";
 
 import ErrorPage from "./_error";
 
@@ -84,7 +86,7 @@ export default class MyApp extends App {
               <Centerer>
                 <Link href="/#en-ce-moment" passHref>
                   <StyledLink>
-                    <IconStripe icon={icons.Help} small centered>
+                    <IconStripe icon={AlertCircle} small centered>
                       Coronavirus (Covid-19) : informations utiles
                     </IconStripe>
                   </StyledLink>
