@@ -23,6 +23,11 @@ Coronavirus et données personnelles :
       {
         type: "main",
         url:
+          "fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer"
+      },
+      {
+        type: "main",
+        url:
           "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
       },
       {
@@ -46,17 +51,13 @@ Coronavirus et données personnelles :
       },
       {
         type: "secondary",
-        url: "/fiche-ministere-travail/conventions-de-fne-formation"
+        url:
+          "/fiche-service-public/securite-et-sante-au-travail-obligations-de-lemployeur"
       },
       {
         type: "secondary",
         url:
-          "/fiche-ministere-travail/coronavirus-suspension-de-laccueil-dans-les-cfa-et-les-organismes-de-formation-et-continuite-dactivite-a-distance"
-      },
-      {
-        type: "secondary",
-        url:
-          "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer"
+          "/fiche-service-public/un-salarie-peut-il-refuser-de-travailler-dans-une-situation-dangereuse"
       },
       {
         type: "template",

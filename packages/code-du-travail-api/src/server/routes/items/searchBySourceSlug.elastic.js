@@ -14,6 +14,7 @@ function getSearchBody({ source, slug }) {
       }
     },
     _source: [
+      "asideContent", // thematic file
       "action", // outils
       "date",
       "dateDebut", // code-du-travail
@@ -36,7 +37,8 @@ function getSearchBody({ source, slug }) {
       "breadcrumbs",
       "idcc",
       "date_publi", // convention-collective
-      "answers" // contributions
+      "answers", // contributions
+      "refs" // thematic file
     ]
   };
 }

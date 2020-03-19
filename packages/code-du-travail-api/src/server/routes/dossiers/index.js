@@ -1,11 +1,15 @@
 const Router = require("koa-router");
-const { thematicFiles } = require("@cdt/data...dossiers");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { SOURCES } = require("@cdt/sources");
+const getItemBySlugBody = require("../items/searchBySourceSlug.elastic");
+const elasticsearchClient = require("../../conf/elasticsearch.js");
 
 const API_BASE_URL = require("../v1.prefix");
 const getEsReferences = require("../search/getEsReferences");
 
 const router = new Router({ prefix: API_BASE_URL });
-
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 /**
  * Return thematic files that match a given slug
  *
@@ -17,19 +21,22 @@ const router = new Router({ prefix: API_BASE_URL });
 
 router.get("/dossiers/:slug", async ctx => {
   const { slug } = ctx.params;
-  const file = thematicFiles.find(file => file.slug === slug);
-  if (!file) {
-    throw (404, `there is no thematic files that match ${slug}`);
+  const body = getItemBySlugBody({ source: SOURCES.THEMATIC_FILES, slug });
+  const response = await elasticsearchClient.search({ index, body });
+
+  if (response.body.hits.total.value === 0) {
+    ctx.throw(404, `there is no thematic files that match ${slug}`);
   }
+  const thematicFile = response.body.hits.hits[0]._source;
   const refTypeByUrl = [];
-  for (const { url, type } of file.refs) {
+  for (const { url, type } of thematicFile.refs) {
     const [, slug] = url.match(/\/.+\/(.+)$/);
     refTypeByUrl[slug] = type;
   }
-  const refs = await getEsReferences(file.refs);
+  const refs = await getEsReferences(thematicFile.refs);
 
   ctx.body = {
-    ...file,
+    ...thematicFile,
     refs: refs.map(({ _source }) => {
       _source.type = refTypeByUrl[_source.slug];
       return _source;
