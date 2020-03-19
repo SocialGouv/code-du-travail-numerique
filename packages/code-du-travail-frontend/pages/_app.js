@@ -1,13 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import Link from "next/link";
 import App from "next/app";
 import getConfig from "next/config";
 import * as Sentry from "@sentry/browser";
-import { AlertCircle } from "react-feather";
 
-import { GlobalStyles, IconStripe, theme } from "@socialgouv/react-ui";
+import { GlobalStyles } from "@socialgouv/react-ui";
 
 import ErrorPage from "./_error";
 
@@ -16,6 +13,9 @@ import { initializeSentry } from "../src/sentry";
 
 import { ThemeProvider } from "../src/layout/ThemeProvider.js";
 import { A11y } from "../src/a11y";
+
+import HeadBandAlert from "../src/common/HeadBandAlert";
+
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
 } = getConfig();
@@ -82,17 +82,7 @@ export default class MyApp extends App {
           <>
             <GlobalStyles />
             <A11y />
-            <Headband>
-              <Centerer>
-                <Link href="/#en-ce-moment" passHref>
-                  <StyledLink>
-                    <IconStripe icon={AlertCircle} small centered>
-                      "Coronavirus (Covid-19) : notre dossier dédié
-                    </IconStripe>
-                  </StyledLink>
-                </Link>
-              </Centerer>
-            </Headband>
+            <HeadBandAlert />
             <Component {...pageProps} />
           </>
         </ThemeProvider>
@@ -100,28 +90,3 @@ export default class MyApp extends App {
     );
   }
 }
-
-const { spacings } = theme;
-
-const Centerer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-const Headband = styled.div`
-  padding: ${spacings.small};
-  color: white;
-  background-color: #fb7721;
-`;
-
-const StyledLink = styled.a`
-  color: ${({ theme }) => theme.white};
-  text-decoration: none;
-  &:hover,
-  &:active,
-  &:focus {
-    color: ${({ theme }) => theme.white};
-    text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.white};
-  }
-`;
