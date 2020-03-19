@@ -115,7 +115,7 @@ function parseDom(dom, url) {
         let nextEl = el.nextElementSibling;
         const section = {
           anchor: el.id,
-          description: nextEl.textContent.trim(),
+          description: nextEl.textContent.trim().slice(0, 200),
           html: "",
           text: "",
           title: el.textContent.trim()
