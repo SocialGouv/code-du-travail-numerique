@@ -2352,10 +2352,10 @@
     "@reach/utils" "^0.9.0"
     tslib "^1.10.0"
 
-"@reach/dialog@0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.9.0.tgz#aecd82d1e8ff1749e913409a8721865914ffc66f"
-  integrity sha512-Z36euv6TEtGsAUhzygmaaM8dal3kttkcf53HZnxJw/S5CsclvNk8MVm7XyYdUwIjzuYmOc0CuwOgZ77fYiuPig==
+"@reach/dialog@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.9.1.tgz#683daf9be621d8a4e7cde2bc0ca545cf6935224c"
+  integrity sha512-UR959q6d5LEeB2OSRhPwRtIW3C7UVXdgxayP1F5+IUW4YlcpC25/FQm86dj8CC1fR7Sgs6z14nF2sIY5l05HxQ==
   dependencies:
     "@reach/portal" "^0.9.0"
     "@reach/utils" "^0.9.0"
@@ -2398,10 +2398,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/tooltip@0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.9.0.tgz#eb80ad3fdf7ccfd602b74f0a7bd5cc1f74ddea93"
-  integrity sha512-dhDyyQbKoeMZttvgr5fWmBshxm7rfbe5EQqA9svLN+Ym6fJpIk1A9JhgPWsPhrxCKME+Nxo3AN3sItXggkcRTw==
+"@reach/tooltip@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.9.1.tgz#c636b93baf27ad94b8ff0a6890d3949210ee56b4"
+  integrity sha512-yOd/rehu/KnT6RYhFs4oOFPywRx7oCnta/Bevs3lf8pWYmZ1FOJRuxOmtncwl5hp0GpAAdgzsgNXXfX2o479Gw==
   dependencies:
     "@reach/auto-id" "^0.9.0"
     "@reach/portal" "^0.9.0"
@@ -2543,20 +2543,20 @@
     eslint-plugin-jest "~23.8.2"
     eslint-plugin-prettier "~3.1.2"
 
-"@socialgouv/fiches-vdd@^1.0.180":
-  version "1.0.180"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.180.tgz#59be1a158b6c4a7a2da6f712edd51c6614154ae8"
-  integrity sha512-v4/8yy5pQUArktmYXmKk7JibqVPb3r6/0VlD0JwjYPU8s3xl9HxRT4wUv7ZmEpelL2ztNS0lo7jm5bN3MCMjwA==
+"@socialgouv/fiches-vdd@^1.0.181":
+  version "1.0.181"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.181.tgz#fe7a34cb256a3a5c078909ad86ae478b676667f5"
+  integrity sha512-mlwlGmv2A2Qq7rAUV3Pi3JFynKhnju9WhVjAIG0D0lBhimz6gBLY/sudgZPxAL8+cyiWZ+tW0QLKC4WrwELSGg==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.3"
     unzipper "^0.10.10"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.3.28":
-  version "1.3.28"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.3.28.tgz#8ac269c28606add1b30b92a945909b737f5c318d"
-  integrity sha512-RSO7nq+oTRp1JdmZqu3qu0Ey9NCdutElGFNPYhYyOYJVox26GFch8bDnGOQhheVV9dGpSLaldgMbpuOuSRGOFw==
+"@socialgouv/kali-data@^1.3.29":
+  version "1.3.29"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.3.29.tgz#92226b6acf9cb4f9258900e8d7798ebff4be9cfe"
+  integrity sha512-M7F610AGyY99gVBGLC74Zq3PX+ZJiJUKvVWPrqKEfOLBdEYlQDi0c3GF1GJg5T2F9JLdOf+fYFiu/TN3JPGizw==
   dependencies:
     "@socialgouv/dila-api-client" "^1.1.0"
     p-pipe "^3.0.0"

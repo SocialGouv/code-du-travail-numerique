@@ -27,7 +27,7 @@
     "@cdt/data...tools": "^4.8.0",
     "@cdt/sources": "^4.4.0",
     "@next/bundle-analyzer": "^9.3.1",
-    "@reach/tooltip": "0.9.0",
+    "@reach/tooltip": "0.9.1",
     "@sentry/browser": "^5.14.2",
     "@sentry/node": "^5.14.2",
     "@socialgouv/react-fiche-service-public": "^4.8.0",
