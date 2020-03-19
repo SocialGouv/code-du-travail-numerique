@@ -26,16 +26,6 @@ Coronavirus et données personnelles :
           "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer"
       },
       {
-        type: "main",
-        url:
-          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
-      },
-      {
-        type: "main",
-        url:
-          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur"
-      },
-      {
         type: "secondary",
         url:
           "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique"
