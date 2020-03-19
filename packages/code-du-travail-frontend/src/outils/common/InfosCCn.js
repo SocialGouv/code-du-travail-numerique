@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
-import { Button, Toast, theme } from "@socialgouv/react-ui";
+import { Toast, theme } from "@socialgouv/react-ui";
 
 import ConventionSearch from "../../conventions/Search";
 import { required } from "./validators";
@@ -40,16 +40,11 @@ function StepInfoCCn({ form, isOptionnal = true }) {
             return (
               <>
                 <Question>La convention collective</Question>
-                <p>{input.value.title}</p>
-                <p>
-                  <Button
-                    variant="link"
-                    type="button"
-                    onClick={onSelectConvention}
-                  >
-                    Changer de convention collective
-                  </Button>
-                </p>
+                <p>Vous avez sélectionné la convention collective&nbsp;</p>
+                <Toast variant="primary" onRemove={() => setConvention()}>
+                  {input.value.shortTitle}
+                </Toast>
+                <p>Cliquez sur suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}
               </>
             );
@@ -66,7 +61,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                   en cliquant sur le bouton Suivant.
                 </P>
               )}
-              <StyledConventionSearch onSelectConvention={setConvention} />
+              <StyledConventionSearch onSelectConvention={onSelectConvention} />
               <ErrorField name={CONVENTION_NAME} />
             </>
           );

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfoCCn /> should render CC infos step 1`] = `
-.c2 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -29,39 +29,78 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c3:link,
+.c3:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c3[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: auto;
+  min-height: 48px;
+  color: #3e486e;
+  background-color: #fff;
+  border-color: #f66663;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.6rem;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.c2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem 1.6rem;
   text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
 }
 
-.c2:focus,
-.c2:hover,
-.c2:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c1:hover .c3 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
+.c4 {
+  margin-top: 0.4rem;
+  color: #f66663;
 }
 
 .c0 {
@@ -74,8 +113,14 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c3 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c1 {
+    display: none;
   }
 }
 
@@ -103,24 +148,50 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
   >
     La convention collective
   </label>
-  <p />
   <p>
+    Vous avez sélectionné la convention collective 
+  </p>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+      role="alert"
+    />
     <button
-      class="c1 c2"
-      type="button"
+      aria-label="Fermer"
+      class="c3"
     >
-      Changer de convention collective
       <svg
-        class="c3"
+        class="c4"
         fill="none"
-        viewBox="0 0 28 15"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        variant="primary"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-          fill="currentColor"
+        <line
+          x1="18"
+          x2="6"
+          y1="6"
+          y2="18"
+        />
+        <line
+          x1="6"
+          x2="18"
+          y1="6"
+          y2="18"
         />
       </svg>
     </button>
+  </div>
+  <p>
+    Cliquez sur suivant pour poursuivre la simulation.
   </p>
   <button
     data-testid="submit-test"
