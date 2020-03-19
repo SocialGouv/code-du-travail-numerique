@@ -290,6 +290,10 @@ exports[`<RelatedItems /> should render 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 0 1.6rem 0;
   padding: 0;
 }
