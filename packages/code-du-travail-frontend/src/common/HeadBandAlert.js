@@ -8,7 +8,11 @@ const HeadBandAlert = () => {
   return (
     <Headband>
       <Centerer>
-        <Link href="/#en-ce-moment" passHref>
+        <Link
+          href="/dossiers/[slug]"
+          as="/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
+          passHref
+        >
           <StyledLinkHeadband>
             <IconStripe icon={AlertCircle} small centered>
               Coronavirus (Covid-19) : notre dossier dédié
