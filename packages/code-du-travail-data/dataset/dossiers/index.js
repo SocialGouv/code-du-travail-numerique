@@ -8,6 +8,9 @@ const thematicFiles = [
 Rester informer sur le Coronavirus :
  - https://www.gouvernement.fr/info-coronavirus
 
+Le ministère de l'économie soutient les entreprises :
+ - https://www.economie.gouv.fr/coronavirus-soutien-entreprises
+
 Demander l’activité partielle :
 - https://activitepartielle.emploi.gouv.fr/apart/
 
@@ -19,10 +22,7 @@ Coronavirus et paiement des cotisations salariales et patronales :
 
 Coronavirus et données personnelles :
  - https://www.cnil.fr/fr/coronavirus-covid-19-les-rappels-de-la-cnil-sur-la-collecte-de-donnees-personnelles
-
-Le ministère de l'économie soutient les entreprises :
- - https://www.economie.gouv.fr/coronavirus-soutien-entreprises
- `,
+`,
     refs: [
       {
         type: "main",
