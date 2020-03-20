@@ -108,7 +108,7 @@ Coronavirus et données personnelles :
       },
       {
         type: "theme",
-        url: "/themes/9-conflits-au-travail-et-controle-de-la-reglementation"
+        url: "/themes/631-maladie"
       }
     ]
   }
