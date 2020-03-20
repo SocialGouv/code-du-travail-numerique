@@ -16,6 +16,7 @@ const searchRoutes = require("./routes/search");
 const sheetMTRoutes = require("./routes/sheets-mt");
 const suggestRoute = require("./routes/suggest");
 const themesRoute = require("./routes/themes");
+const dossiersRoute = require("./routes/dossiers");
 const versionRoutes = require("./routes/version");
 
 const { logger } = require("./utils/logger");
@@ -63,6 +64,7 @@ app.use(sheetMTRoutes.routes());
 app.use(statsRoute.routes());
 app.use(suggestRoute.routes());
 app.use(themesRoute.routes());
+app.use(dossiersRoute.routes());
 app.use(versionRoutes.routes());
 
 if (process.env.NODE_ENV !== "production") {

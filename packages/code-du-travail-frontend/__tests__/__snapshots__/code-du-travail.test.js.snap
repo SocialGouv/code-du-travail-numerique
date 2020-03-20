@@ -396,15 +396,6 @@ exports[`<CodeDuTravail /> should render 1`] = `
   margin-left: 4rem;
 }
 
-.c23 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  margin: 20%;
-  font-size: 3.2rem;
-  text-align: center;
-}
-
 .c21 {
   max-width: 124rem;
   margin: 0 auto;
@@ -429,6 +420,15 @@ exports[`<CodeDuTravail /> should render 1`] = `
 
 .c22 {
   width: 80%;
+}
+
+.c23 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  margin: 20%;
+  font-size: 3.2rem;
+  text-align: center;
 }
 
 .c17 ul {
@@ -940,25 +940,6 @@ exports[`<CodeDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c23 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
   .c21 {
     padding: 0 1rem;
   }
@@ -980,6 +961,25 @@ exports[`<CodeDuTravail /> should render 1`] = `
 @media (max-width:980px) {
   .c22 {
     width: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c23 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 2.8rem;
   }
 }
 

@@ -5,6 +5,7 @@ import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
 import { parseIdcc } from "../lib";
 import { getCourriers } from "../dataset/courrier-type";
+import { thematicFiles } from "../dataset/dossiers";
 import { getFichesSP } from "../dataset/fiches_service_public";
 
 function flattenTags(tags = []) {
@@ -165,7 +166,6 @@ async function* cdtnDocumentsGen() {
     })
   );
 
-  // Temporary removed from ES
   logger.info("=== Contributions ===");
   yield require("../dataset/contributions/contributions.data.json").map(
     ({ title, slug, answers, breadcrumbs }) => {
@@ -177,6 +177,22 @@ async function* cdtnDocumentsGen() {
         description: (answers.generic && answers.generic.text) || title,
         text: (answers.generic && answers.generic.text) || title,
         answers,
+        excludeFromSearch: false
+      };
+    }
+  );
+
+  logger.info("=== Dossiers ===");
+  yield thematicFiles.map(
+    ({ title, slug, asideContent, description, refs }) => {
+      return {
+        source: SOURCES.THEMATIC_FILES,
+        title,
+        slug,
+        description,
+        asideContent,
+        text: `${title}\n${description}`,
+        refs,
         excludeFromSearch: false
       };
     }

@@ -3,13 +3,17 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
 
-// import useGlossary from "../glossary";
 import Article from "./Article";
 import { Feedback } from "./Feedback";
 import { RelatedItems } from "./RelatedItems";
 import Html from "./Html";
 import { Breadcrumbs } from "./Breadcrumbs";
 import useGlossary from "../glossary";
+import {
+  AsideContent,
+  MainAsideLayout,
+  MainContent
+} from "../layout/AnswerLayout";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
@@ -38,8 +42,8 @@ function Answer({
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
-      <StyledContainer>
-        <StyledContent hasResults={relatedItems.length > 0}>
+      <MainAsideLayout>
+        <MainContent hasResults={relatedItems.length > 0}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
           {(html || children) && (
             <Article
@@ -68,9 +72,13 @@ function Answer({
             url={router.asPath}
             title={title}
           />
-        </StyledContent>
-        {relatedItems.length > 0 && <RelatedItems items={relatedItems} />}
-      </StyledContainer>
+        </MainContent>
+        {relatedItems.length > 0 && (
+          <AsideContent sticky>
+            <RelatedItems items={relatedItems} />
+          </AsideContent>
+        )}
+      </MainAsideLayout>
     </>
   );
 }
@@ -85,24 +93,6 @@ const StyledErrorContainer = styled(Container)`
   text-align: center;
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.headings.medium};
-  }
-`;
-
-const StyledContainer = styled(Container)`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-around;
-  padding: 0;
-  @media (max-width: ${breakpoints.mobile}) {
-    padding: 0;
-  }
-`;
-
-const StyledContent = styled.div`
-  width: ${props => (props.hasResults ? "70%" : "80%")};
-  @media (max-width: ${breakpoints.tablet}) {
-    width: 100%;
   }
 `;
 

@@ -82,7 +82,7 @@ exports[`<HeadBandAlert /> should render 1`] = `
     >
       <a
         class="c2"
-        href="/#en-ce-moment"
+        href="/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
       >
         <div
           class="c3"

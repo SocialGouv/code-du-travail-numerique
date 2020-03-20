@@ -2,6 +2,12 @@
   {
     "refs": [
       {
+        "url": "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus",
+        "title": "Ministère du travail : notre dossier sur le coronavirus",
+        "valid": true,
+        "position": 0
+      },
+      {
         "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries",
         "title": "Coronavirus : Questions/réponses pour les entreprises et les salariés",
         "valid": true,
