@@ -3,7 +3,7 @@ const thematicFiles = [
     slug: "ministere-du-travail-notre-dossier-sur-le-coronavirus",
     title: "Ministère du travail : notre dossier sur le coronavirus",
     description:
-      "Découvrez nos contenus liés au Coronavirus : l’essentiel à savoir en tant que salarié ou employeur : des fiches pratiques, des liens utiles, des modèles de courriers téléchargeables, etc.",
+      "L’essentiel à savoir sur le Coronavirus en tant que salarié ou employeur : des fiches pratiques, des liens utiles, des modèles de courriers téléchargeables, etc.",
     asideContent: `
 Rester informer sur le Coronavirus :
  - https://www.gouvernement.fr/info-coronavirus
@@ -11,7 +11,7 @@ Rester informer sur le Coronavirus :
 Demander l’activité partielle :
 - https://activitepartielle.emploi.gouv.fr/apart/
 
-Déclarer un arrêt de travail pour un salarié contraint de garder son enfant à domicile :
+Déclarer un arrêt de travail pour un salarié contraint de garder son enfant à domicile ou dit à « risque » (affections longue maladie etc) :
  - https://declare.ameli.fr/
 
 Coronavirus et paiement des cotisations salariales et patronales :
@@ -24,6 +24,16 @@ Coronavirus et données personnelles :
         type: "main",
         url:
           "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer"
+      },
+      {
+        type: "main",
+        url:
+          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
+      },
+      {
+        type: "main",
+        url:
+          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur"
       },
       {
         type: "secondary",
