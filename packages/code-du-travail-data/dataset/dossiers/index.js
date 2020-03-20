@@ -18,7 +18,11 @@ Coronavirus et paiement des cotisations salariales et patronales :
  - https://www.urssaf.fr/portail/home/actualites/toute-lactualite-employeur/mesures-exceptionnelles-pour-les.html
 
 Coronavirus et données personnelles :
- - https://www.cnil.fr/fr/coronavirus-covid-19-les-rappels-de-la-cnil-sur-la-collecte-de-donnees-personnelles`,
+ - https://www.cnil.fr/fr/coronavirus-covid-19-les-rappels-de-la-cnil-sur-la-collecte-de-donnees-personnelles
+
+Le ministère de l'économie soutient les entreprises :
+ - https://www.economie.gouv.fr/coronavirus-soutien-entreprises
+ `,
     refs: [
       {
         type: "main",
@@ -92,7 +96,7 @@ Coronavirus et données personnelles :
       {
         type: "template",
         url:
-          "/modeles-de-courriers/attestation-sur-lhonneur-deplacement-derogatoire"
+          "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant"
       },
       {
         type: "theme",

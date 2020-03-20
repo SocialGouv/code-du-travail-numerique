@@ -634,6 +634,22 @@
       {
         "url": "/fiche-service-public/dans-quel-secteur-peut-on-recourir-au-cdd-dusage-ou-a-linterim",
         "title": "Dans quel secteur peut-on recourir au CDD d'usage ou à l'intérim ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-dusage",
+        "title": "Le Contrat à durée déterminée d’usage"
+      },
+      {
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-dusage#Dans-quelles-conditions-peut-on-conclure-un-CDD-d-usage",
+        "title": "Le Contrat à durée déterminée d’usage : dans quelles conditions peut-on conclure un cdd d’usage ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-dusage#Quelles-sont-les-regles-applicables-aux-CDD-d-usage",
+        "title": "Le Contrat à durée déterminée d’usage : quelles sont les règles applicables aux cdd d’usage ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-dusage#Quelles-sont-les-dispositions-visant-a-limiter-le-recours-excessif-aux-CDD-nbsp",
+        "title": "Le Contrat à durée déterminée d’usage : quelles sont les dispositions visant à limiter le recours excessif aux cdd d’usage ?"
       }
     ],
     "slug": "122-cdd",
@@ -888,6 +904,10 @@
       {
         "url": "/fiche-ministere-travail/compte-personnel-de-formation-cpf#Que-se-passe-t-il-en-cas-de-changement-de-situation",
         "title": "CPF : que se passe-t-il en cas de changement de situation ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-mon-compte-formation",
+        "title": "Coronavirus – COVID-19 | Questions-réponses Mon Compte Formation"
       }
     ],
     "slug": "512-compte-personnel-de-formation-cpf",
@@ -1773,6 +1793,10 @@
       {
         "url": "/fiche-ministere-travail/apprentissage-financement-de-lapprentissage",
         "title": "Apprentissage | Financement de l’apprentissage : apprentissage | financement de l’apprentissage"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-apprentissage",
+        "title": "Coronavirus – COVID-19 | Questions-réponses Apprentissage"
       }
     ],
     "slug": "124-contrat-dapprentissage",
@@ -4259,6 +4283,10 @@
       },
       {
         "url": "/fiche-service-public/quest-ce-que-le-socle-de-connaissances-et-de-competences-professionnelles"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-formation-professionnelle-des-salaries-alternants-et-personnes-en-recherche-demploi",
+        "title": "Coronavirus – COVID-19 | Questions-réponses Formation professionnelle des salariés, alternants et personnes en recherche d’emploi"
       }
     ],
     "slug": "51-formation-professionnelle",
@@ -9432,6 +9460,10 @@
         "title": "Attestation sur l’honneur : déplacement dérogatoire"
       },
       {
+        "url": "/modeles-de-courriers/justificatif-de-lemployeur-de-deplacement-professionnel",
+        "title": "Justificatif de l’employeur de déplacement professionnel"
+      },
+      {
         "url": "/fiche-service-public/complementaire-sante-dentreprise-mutuelle-sante",
         "title": "Complémentaire santé d'entreprise (mutuelle santé)"
       },
@@ -9442,6 +9474,10 @@
       {
         "url": "/fiche-service-public/mutuelle-sante-dentreprise-les-obligations-de-lemployeur",
         "title": "Mutuelle santé d'entreprise : les obligations de l'employeur"
+      },
+      {
+        "url": "/fiche-service-public/droit-du-travail-secteur-prive-quest-ce-que-la-force-majeure",
+        "title": "Droit du travail (secteur privé) : qu'est-ce que la force majeure ?"
       },
       {
         "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries",
