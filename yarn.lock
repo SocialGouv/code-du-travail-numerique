@@ -11750,7 +11750,7 @@ lodash.without@~4.4.0:
   resolved "https://registry.yarnpkg.com/lodash.without/-/lodash.without-4.4.0.tgz#3cd4574a00b67bae373a94b748772640507b7aac"
   integrity sha1-PNRXSgC2e643OpS3SHcmQFB7eqw=
 
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.2.1, lodash@^4.6.1:
+lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.2.1:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -11787,10 +11787,10 @@ lolex@^5.0.0:
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-long@^3.1.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/long/-/long-3.2.0.tgz#d821b7138ca1cb581c172990ef14db200b5c474b"
-  integrity sha1-2CG3E4yhy1gcFymQ7xTbIAtcR0s=
+long@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/long/-/long-4.0.0.tgz#9a7b71cfb7d361a194ea555241c92f7468d5bf28"
+  integrity sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA==
 
 longest-streak@^1.0.0:
   version "1.0.0"
@@ -12556,12 +12556,12 @@ mkdirp@*, mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~
   dependencies:
     minimist "0.0.8"
 
-mnemonist@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/mnemonist/-/mnemonist-0.14.0.tgz#9e85e529d4b6f78cade8ec6d4a919bb9d9e36c7e"
-  integrity sha512-GosoNab9mShR9w6QJA+bFT9NC2fN+2smFuQ6dEvjt4myuMLFvy63qeFE0cJZ8DQQxmCrqKftTAA/8N686cRPiQ==
+mnemonist@^0.34.0:
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/mnemonist/-/mnemonist-0.34.0.tgz#94244ba4f8922ee25863d4624b3c6cccfd81b126"
+  integrity sha512-eKQxmumFOJhd7ea/u8zVvj7gA2tD6QFkuDfUIvoT/VIq+yR1VzXpp0tM8QFgeSRig5brIN/3NUE72/wvvyc9ug==
   dependencies:
-    obliterator "^1.2.1"
+    obliterator "^1.6.1"
 
 modify-values@^1.0.0:
   version "1.0.1"
@@ -13443,7 +13443,7 @@ object.values@^1.1.0, object.values@^1.1.1:
     function-bind "^1.1.1"
     has "^1.0.3"
 
-obliterator@^1.2.0, obliterator@^1.2.1:
+obliterator@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/obliterator/-/obliterator-1.6.1.tgz#dea03e8ab821f6c4d96a299e17aef6a3af994ef3"
   integrity sha512-9WXswnqINnnhOG/5SLimUlzuU1hFJUc8zkwyD59Sd+dPOMf05PmnYG/d6Q7HZ+KmgkZJa1PxRso6QdM3sTNHig==
@@ -17983,16 +17983,16 @@ table@^5.0.0, table@^5.2.3, table@^5.4.6:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-talisman@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/talisman/-/talisman-0.21.0.tgz#8de5af867107e27c9b3015a4974e59d04ceea25c"
-  integrity sha512-KUUq5mpHxJlvENZLsgngVxc08rtCGIs+v1Xfs41fbni+ysDJGWsZUDVER6JVV79eKiIFzECEQLrgunchc3M5WQ==
+talisman@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/talisman/-/talisman-1.1.1.tgz#b5f2f4e21976697f7c2b1f386f3e0a9dfb4d3293"
+  integrity sha512-huMFHdjI5Q/yiusME4rw9tIa9gITxwQfhjEzzAQ3BzkbJF/9CQ1pXiFJ2OtBcmTnQAEtgSV1ah5VbN6JO5gt7A==
   dependencies:
     html-entities "^1.2.0"
-    lodash "^4.6.1"
-    long "^3.1.0"
-    mnemonist "^0.14.0"
-    obliterator "^1.2.0"
+    lodash "^4.17.15"
+    long "^4.0.0"
+    mnemonist "^0.34.0"
+    obliterator "^1.6.1"
     pandemonium "^1.0.2"
 
 tapable@^1.0.0, tapable@^1.1.3:
