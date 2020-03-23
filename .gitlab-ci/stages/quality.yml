@@ -84,20 +84,23 @@ Test @cdtn/api:
     - Register elasticsearch image
     - Register socialgouv/cdtn base image
   services:
-    - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
+    - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
+      alias: elasticsearch
   variables:
     GIT_STRATEGY: none
-    ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
+    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
   script:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.
     - |-
-      retry=120;
+      echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA"
+      echo "http://ELASTICSEARCH_URL:9200"
+      retry=180;
       while
         ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
-      echo $retry
+      [ "$retry" -eq "-1" ] && exit 1
     #
     - yarn workspace @cdt/api test --coverage
 
