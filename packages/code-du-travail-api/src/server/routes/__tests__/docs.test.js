@@ -7,7 +7,7 @@ app.use(docsRoutes);
 
 test("should send certificat-de-travail.docx", async () => {
   const response = await request(app.callback()).get(
-    "/api/v1/docs/certificat_de_travail.docx"
+    "/api/v1/docs/certificat_de_travail.docx",
   );
   expect(response.status).toBe(200);
 });

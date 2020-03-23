@@ -7,7 +7,9 @@ describe("<ContactModal />", () => {
   it("renders the given element", () => {
     const { getByText } = render(
       <ContactModal>
-        {openModal => <Button onClick={openModal}>texte dans le bouton</Button>}
+        {(openModal) => (
+          <Button onClick={openModal}>texte dans le bouton</Button>
+        )}
       </ContactModal>
     );
     const button = getByText(/texte dans le bouton/i);
@@ -17,7 +19,9 @@ describe("<ContactModal />", () => {
   it("renders a popup when click on button", () => {
     const { baseElement, getByText, getByLabelText } = render(
       <ContactModal>
-        {openModal => <Button onClick={openModal}>texte dans le bouton</Button>}
+        {(openModal) => (
+          <Button onClick={openModal}>texte dans le bouton</Button>
+        )}
       </ContactModal>
     );
     const button = getByText(/texte dans le bouton/i);
@@ -30,7 +34,9 @@ describe("<ContactModal />", () => {
   it("closes the modal", async () => {
     const { getByText, getByTitle, queryByLabelText } = render(
       <ContactModal>
-        {openModal => <Button onClick={openModal}>texte dans le bouton</Button>}
+        {(openModal) => (
+          <Button onClick={openModal}>texte dans le bouton</Button>
+        )}
       </ContactModal>
     );
     const button = getByText(/texte dans le bouton/i);

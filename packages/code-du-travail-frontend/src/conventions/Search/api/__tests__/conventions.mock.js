@@ -13,11 +13,11 @@ export const idccPayload = {
           text:
             "IDCC 843 Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
           url:
-            "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886"
-        }
-      }
-    ]
-  }
+            "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
+        },
+      },
+    ],
+  },
 };
 export const convention = {
   source: "conventions_collectives",
@@ -30,7 +30,7 @@ export const convention = {
   text:
     "IDCC 1747 Convention collective nationale des activités industrielles de boulangerie et pâtisserie du 13 juillet 1993. Mise à jour par avenant n°10 du 11 octobre 2011.",
   url:
-    "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635691"
+    "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635691",
 };
 
 export const agreement = {
@@ -53,27 +53,27 @@ export const agreement = {
           title: "1-4",
           id: "KALIARTI000005778263",
           cid: "KALIARTI000005778263",
-          section: "Salaires minimaux"
+          section: "Salaires minimaux",
         },
         {
           title: "4-1",
           id: "KALIARTI000005778297",
           cid: "KALIARTI000005778297",
-          section: "Salaire mensuel"
+          section: "Salaire mensuel",
         },
         {
           title: "4-2",
           id: "KALIARTI000005778298",
           cid: "KALIARTI000005778298",
-          section: "Déduction des heures non travaillées"
+          section: "Déduction des heures non travaillées",
         },
         {
           title: "12-8",
           id: "KALIARTI000005778377",
           cid: "KALIARTI000005778376",
-          section: "Barèmes de salaires minimaux"
-        }
-      ]
+          section: "Barèmes de salaires minimaux",
+        },
+      ],
     },
     {
       bloc: "6",
@@ -83,75 +83,75 @@ export const agreement = {
           id: "KALIARTI000005778277",
           cid: "KALIARTI000005778276",
           section:
-            "Contingent d'heures supplémentaires non soumis à autorisation"
+            "Contingent d'heures supplémentaires non soumis à autorisation",
         },
         {
           title: "3-14",
           id: "KALIARTI000005778278",
           cid: "KALIARTI000005778278",
-          section: "Heures supplémentaires exceptionnelles"
+          section: "Heures supplémentaires exceptionnelles",
         },
         {
           title: "3-15",
           id: "KALIARTI000005778279",
           cid: "KALIARTI000005778279",
-          section: "Plafonds"
+          section: "Plafonds",
         },
         {
           title: "3-16",
           id: "KALIARTI000005778280",
           cid: "KALIARTI000005778280",
-          section: "Définition de la durée du travail"
+          section: "Définition de la durée du travail",
         },
         {
           title: "3-17",
           id: "KALIARTI000005778282",
           cid: "KALIARTI000005778281",
-          section: "Majoration pour heures supplémentaires."
+          section: "Majoration pour heures supplémentaires.",
         },
         {
           title: "3-18",
           id: "KALIARTI000005778283",
           cid: "KALIARTI000005778283",
-          section: "Equivalences et dérogations permanentes"
+          section: "Equivalences et dérogations permanentes",
         },
         {
           title: "3-21",
           id: "KALIARTI000005778285",
           cid: "KALIARTI000005778285",
-          section: "Semaine de travail en 5 jours"
+          section: "Semaine de travail en 5 jours",
         },
         {
           title: "3-22",
           id: "KALIARTI000005778286",
           cid: "KALIARTI000005778286",
-          section: "Exceptions à la semaine de travail en 5 jours"
+          section: "Exceptions à la semaine de travail en 5 jours",
         },
         {
           title: "3-24",
           id: "KALIARTI000005778288",
           cid: "KALIARTI000005778288",
-          section: "Horaires individualisés"
+          section: "Horaires individualisés",
         },
         {
           title: "3-25",
           id: "KALIARTI000005778289",
           cid: "KALIARTI000005778289",
-          section: "Horaires à temps partiel"
+          section: "Horaires à temps partiel",
         },
         {
           title: "3-28",
           id: "KALIARTI000005778294",
           cid: "KALIARTI000005778294",
-          section: "Récupération des heures perdues pour intempéries"
+          section: "Récupération des heures perdues pour intempéries",
         },
         {
           title: "3-29",
           id: "KALIARTI000005778295",
           cid: "KALIARTI000005778295",
-          section: "Cas des chefs d'équipe"
-        }
-      ]
+          section: "Cas des chefs d'équipe",
+        },
+      ],
     },
     {
       bloc: "2",
@@ -160,46 +160,46 @@ export const agreement = {
           title: "12-1",
           id: "KALIARTI000005778366",
           cid: "KALIARTI000005778366",
-          section: "Préambule"
+          section: "Préambule",
         },
         {
           title: "12-2",
           id: "KALIARTI000005778367",
           cid: "KALIARTI000005778367",
-          section: "Définitions générales des critères et des niveaux"
+          section: "Définitions générales des critères et des niveaux",
         },
         {
           title: "12-3",
           id: "KALIARTI000005778368",
           cid: "KALIARTI000005778368",
-          section: "Coefficients hiérarchiques"
+          section: "Coefficients hiérarchiques",
         },
         {
           title: "12-4",
           id: "KALIARTI000005778369",
           cid: "KALIARTI000005778369",
-          section: "Prise en compte des diplômes professionnels bâtiment"
+          section: "Prise en compte des diplômes professionnels bâtiment",
         },
         {
           title: "12-5",
           id: "KALIARTI000005778370",
           cid: "KALIARTI000005778370",
-          section: "Polyvalence"
+          section: "Polyvalence",
         },
         {
           title: "12-6",
           id: "KALIARTI000005778374",
           cid: "KALIARTI000005778374",
-          section: "Evolution de carrière"
+          section: "Evolution de carrière",
         },
         {
           title: "12-7",
           id: "KALIARTI000005778375",
           cid: "KALIARTI000005778375",
-          section: "Suivi de l'application dans l'entreprise"
-        }
-      ]
-    }
+          section: "Suivi de l'application dans l'entreprise",
+        },
+      ],
+    },
   ],
   answers: [
     {
@@ -212,16 +212,16 @@ export const agreement = {
           title: "IDCC 1596 - Article 10.11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
+          category: "agreement",
         },
         {
           title: "IDCC 1596 - Article 10.13",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
+      slug: "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
     },
     {
       question: " Quelle est la durée du préavis en cas de démission ?",
@@ -233,10 +233,10 @@ export const agreement = {
           title: "IDCC 1596 - Article 10.11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "quelle-est-la-duree-du-preavis-en-cas-de-demission"
+      slug: "quelle-est-la-duree-du-preavis-en-cas-de-demission",
     },
     {
       question: "Jours fériés et ponts dans le secteur privé",
@@ -248,10 +248,10 @@ export const agreement = {
           title: "IDCC 1596 - Article 5-11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "jours-feries-et-ponts-dans-le-secteur-prive"
+      slug: "jours-feries-et-ponts-dans-le-secteur-prive",
     },
     {
       question:
@@ -265,17 +265,17 @@ export const agreement = {
             "IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
+          category: "agreement",
         },
         {
           title:
             "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120",
-          category: null
-        }
+          category: null,
+        },
       ],
-      slug: "quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
+      slug: "quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite",
     },
     {
       question:
@@ -288,11 +288,11 @@ export const agreement = {
           title: "IDCC 1596 - Article 2-4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
       slug:
-        "quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
+        "quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
     },
     {
       question:
@@ -305,17 +305,17 @@ export const agreement = {
           title: "IDCC 1596 - Article 6.121",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
+          category: "agreement",
         },
         {
           title: "IDCC 1596 - Article 6.21",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
       slug:
-        "quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
+        "quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite",
     },
     {
       question: "Comment déterminer l'ancienneté du salarié ?",
@@ -327,16 +327,16 @@ export const agreement = {
           title: "IDCC 1596 - Article 10.4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
+          category: "agreement",
         },
         {
           title: "IDCC 1596 - Article 11-2",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "comment-determiner-lanciennete-du-salarie"
+      slug: "comment-determiner-lanciennete-du-salarie",
     },
     {
       question:
@@ -349,11 +349,11 @@ export const agreement = {
           title: "IDCC 1596 - Article 2-3",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
       slug:
-        "quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
+        "quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement",
     },
     {
       question:
@@ -367,17 +367,17 @@ export const agreement = {
             "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120",
-          category: null
+          category: null,
         },
         {
           title:
             "IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
+      slug: "quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
     },
     {
       question:
@@ -390,11 +390,11 @@ export const agreement = {
           title: "IDCC 1596 - Article 10.12",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
       slug:
-        "quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
+        "quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
     },
     {
       question: "Les congés pour événements familiaux",
@@ -406,10 +406,10 @@ export const agreement = {
           title: "IDCC 1596 - Article  5-12",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "les-conges-pour-evenements-familiaux"
+      slug: "les-conges-pour-evenements-familiaux",
     },
     {
       question:
@@ -419,7 +419,7 @@ export const agreement = {
       theme: "Salaire et Rémunération",
       references: [],
       slug:
-        "quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
+        "quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres",
     },
     {
       question:
@@ -432,35 +432,35 @@ export const agreement = {
           title: "IDCC 1596 - Article 6-11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
+          category: "agreement",
         },
         {
           title: "IDCC 1596 - Article 6-12",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
+          category: "agreement",
         },
         {
           title: "IDCC 1596 - Article 6-13",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
+          category: "agreement",
         },
         {
           title: "IDCC 1596 - Article 6-14",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
+          category: "agreement",
         },
         {
           title: "IDCC 1596 - Article 6-15",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
       slug:
-        "en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
+        "en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
     },
     {
       question:
@@ -473,10 +473,10 @@ export const agreement = {
           title: "IDCC 1596 - Article 5-25",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "quelles-sont-les-primes-prevues-par-la-convention-collective"
+      slug: "quelles-sont-les-primes-prevues-par-la-convention-collective",
     },
     {
       question:
@@ -489,10 +489,10 @@ export const agreement = {
           title: "IDCC 1596 - Article 2-3",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
+      slug: "est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
     },
     {
       question:
@@ -505,11 +505,11 @@ export const agreement = {
           title: "IDCC 1596 - Article 10.2",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
       slug:
-        "le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
+        "le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
     },
     {
       question: " Embauche en contrat d'extra (CDD d'usage)",
@@ -517,7 +517,7 @@ export const agreement = {
         "<p>La convention collective ne prévoit pas le recours au contrat d'usage.</p>\n<p>La liste des secteurs d'activité prévue par la loi (article D1242-1 du code du travail) permettant le recours à un CDD d'usage vise le secteur du bâtiment et des travaux publics pour les chantiers <strong>à l'étranger</strong>. En France, l'entreprise ne peut pas embaucher de salarié en CDD d'usage.</p>\n",
       theme: "Embauche et contrat de travail",
       references: [],
-      slug: "embauche-en-contrat-dextra-cdd-dusage"
+      slug: "embauche-en-contrat-dextra-cdd-dusage",
     },
     {
       question: "Quelles sont les conditions de cumul d'emplois ?",
@@ -529,10 +529,10 @@ export const agreement = {
           title: "IDCC 1596 - Article 2-3",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "quelles-sont-les-conditions-de-cumul-demplois"
+      slug: "quelles-sont-les-conditions-de-cumul-demplois",
     },
     {
       question:
@@ -545,11 +545,11 @@ export const agreement = {
           title: "IDCC 1596 - Article 5-24",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
       slug:
-        "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
+        "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
     },
     {
       question:
@@ -562,10 +562,10 @@ export const agreement = {
           title: "IDCC 1596 - Article 6-11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-          category: "agreement"
-        }
+          category: "agreement",
+        },
       ],
-      slug: "en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-    }
-  ]
+      slug: "en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi",
+    },
+  ],
 };

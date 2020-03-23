@@ -1,7 +1,7 @@
 function range(start, end, size = 1) {
   return Array.from(
     { length: Math.ceil((end - start) / size) },
-    (_, i) => start + i * size
+    (_, i) => start + i * size,
   );
 }
 
@@ -16,7 +16,7 @@ async function batchPromise(list, size, callback) {
   let nbBatch = 0;
   for (const items of batch(list, size)) {
     const values = await Promise.all(
-      items.map((item, i) => callback(item, i + nbBatch * size, list))
+      items.map((item, i) => callback(item, i + nbBatch * size, list)),
     );
     nbBatch += 1;
     results = [...results, ...values];
@@ -25,5 +25,5 @@ async function batchPromise(list, size, callback) {
 }
 
 module.exports = {
-  batchPromise
+  batchPromise,
 };

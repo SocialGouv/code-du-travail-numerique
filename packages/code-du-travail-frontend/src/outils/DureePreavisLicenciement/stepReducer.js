@@ -12,32 +12,32 @@ export const initialState = {
     {
       component: StepIntro,
       name: "intro",
-      label: "Introduction"
+      label: "Introduction",
     },
     {
       component: StepStatus,
       name: "situation",
-      label: "Situation du salarié"
+      label: "Situation du salarié",
     },
     {
       component: StepInfoCCn,
       name: "info_cc",
-      label: "Convention collective"
+      label: "Convention collective",
     },
     {
       component: StepInformations,
       name: "infos",
       label: "Informations complémentaires",
-      skip: values =>
+      skip: (values) =>
         !values.ccn ||
-        (values.ccn && isNotYetProcessed(data.situations, values.ccn.num))
+        (values.ccn && isNotYetProcessed(data.situations, values.ccn.num)),
     },
     {
       component: StepResult,
       name: "results",
-      label: "Durée du préavis"
-    }
-  ]
+      label: "Durée du préavis",
+    },
+  ],
 };
 
 export function stepReducer(state, { type, payload }) {

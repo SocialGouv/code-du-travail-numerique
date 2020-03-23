@@ -8,7 +8,7 @@ describe("<Toast />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it.each([["primary"], ["secondary"]])("render %s toast", variant => {
+  it.each([["primary"], ["secondary"]])("render %s toast", (variant) => {
     const { container } = render(
       <Toast variant={variant}>{variant} content</Toast>
     );
@@ -50,7 +50,7 @@ describe("<Toast />", () => {
 
   it.each([["from-top"], ["from-right"], ["from-bottom"], ["from-left"]])(
     "render with %s animated toast",
-    animation => {
+    (animation) => {
       const { container } = render(
         <Toast animate={animation}>{animation} content</Toast>
       );

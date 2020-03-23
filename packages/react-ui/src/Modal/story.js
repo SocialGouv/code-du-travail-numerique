@@ -7,34 +7,34 @@ import { Modal, ModalContentWrapper } from ".";
 
 export default {
   component: Modal,
-  title: "Components|Modal"
+  title: "Components|Modal",
 };
 
 const StyledModalContentWrapper = styled(ModalContentWrapper)({
   width: "50%",
   height: "50%",
   textAlign: "center",
-  backgroundColor: "fuchsia"
+  backgroundColor: "fuchsia",
 });
 class ExampleModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       defaultModalOpened: false,
-      styledModalOpened: false
+      styledModalOpened: false,
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
   openModal(modalName) {
-    this.setState(previousState => {
+    this.setState((previousState) => {
       return { ...previousState, [`${modalName}Opened`]: true };
     });
   }
 
   closeModal(modalName) {
-    this.setState(previousState => {
+    this.setState((previousState) => {
       return { ...previousState, [`${modalName}Opened`]: false };
     });
   }

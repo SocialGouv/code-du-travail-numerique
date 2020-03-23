@@ -1,6 +1,6 @@
 import {
   getIndemnite as getIndemniteConventionnelle,
-  getSalaireRef as getSalaireRefConventionnel
+  getSalaireRef as getSalaireRefConventionnel,
 } from "../indemnite";
 import { getIndemnite, getSalaireRef } from "../../../indemnite";
 import {
@@ -9,7 +9,7 @@ import {
   NE_SAIT_PAS,
   DISCIPLINAIRE,
   NON_DISCIPLINAIRE,
-  ECONOMIQUE
+  ECONOMIQUE,
 } from "../Step";
 
 const initialValues = {
@@ -21,16 +21,16 @@ const initialValues = {
   dateSortie: "2019-09-01",
   anciennete: 0.91,
   branche: "2120",
-  age: "55"
+  age: "55",
 };
 
 const tests = [
   {
     title: "2k, 12mois d'ancienneté",
     data: {
-      ...initialValues
+      ...initialValues,
     },
-    result: 0
+    result: 0,
   },
   {
     title: "2k, 10ans et 8mois d'ancienneté, motif disciplinaire",
@@ -39,9 +39,9 @@ const tests = [
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
       motif: DISCIPLINAIRE,
-      anciennete: 10.667
+      anciennete: 10.667,
     },
-    result: 0
+    result: 0,
   },
   {
     title: "2k, 10ans et 8mois d'ancienneté, motif non disciplinaire",
@@ -49,9 +49,9 @@ const tests = [
       ...initialValues,
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
-      anciennete: 10.667
+      anciennete: 10.667,
     },
-    result: 7753.84
+    result: 7753.84,
   },
   {
     title: "2k, 10ans et 8mois d'ancienneté, motif economique",
@@ -60,9 +60,9 @@ const tests = [
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
       anciennete: 10.667,
-      motif: ECONOMIQUE
+      motif: ECONOMIQUE,
     },
-    result: 9692.3
+    result: 9692.3,
   },
   {
     title: "2k, 19ans et 8mois d'ancienneté",
@@ -70,9 +70,9 @@ const tests = [
       ...initialValues,
       dateEntree: "2000-01-01",
       dateSortie: "2019-09-01",
-      anciennete: 19.667
+      anciennete: 19.667,
     },
-    result: 16233.42
+    result: 16233.42,
   },
   {
     title: "2k, 19ans et 8mois d'ancienneté, motif economique",
@@ -81,9 +81,9 @@ const tests = [
       dateEntree: "2000-01-01",
       dateSortie: "2019-09-01",
       anciennete: 19.667,
-      motif: ECONOMIQUE
+      motif: ECONOMIQUE,
     },
-    result: 19846.15
+    result: 19846.15,
   },
   {
     title: "2k, 20ans et 8mois d'ancienneté, cadre, embauche avant le 2000",
@@ -92,9 +92,9 @@ const tests = [
       dateEntree: "1999-01-01",
       dateSortie: "2019-09-01",
       anciennete: 20.667,
-      categorie: CADRE
+      categorie: CADRE,
     },
-    result: 17888.59
+    result: 17888.59,
   },
   {
     title:
@@ -105,9 +105,9 @@ const tests = [
       dateSortie: "2019-09-01",
       anciennete: 20.667,
       motif: ECONOMIQUE,
-      categorie: CADRE
+      categorie: CADRE,
     },
-    result: 21692.3
+    result: 21692.3,
   },
   {
     title: "2k, 20ans et 8mois d'ancienneté, non cadre, embauche avant le 2000",
@@ -116,9 +116,9 @@ const tests = [
       dateEntree: "1999-01-01",
       dateSortie: "2019-09-01",
       anciennete: 20.667,
-      categorie: NON_CADRE
+      categorie: NON_CADRE,
     },
-    result: 17888.59
+    result: 17888.59,
   },
   {
     title:
@@ -128,20 +128,20 @@ const tests = [
       dateEntree: "1999-01-01",
       dateSortie: "2019-09-01",
       anciennete: 20.667,
-      categorie: NE_SAIT_PAS
+      categorie: NE_SAIT_PAS,
     },
-    result: 17888.59
-  }
+    result: 17888.59,
+  },
 ];
 describe("getIndemnite", () => {
   tests.forEach(({ title, data, result }) => {
     it(title, () => {
       const salaireRef = getSalaireRefConventionnel({
-        ...data
+        ...data,
       });
       const res = getIndemniteConventionnelle({
         ...data,
-        salaireRef
+        salaireRef,
       });
       expect(res.indemniteConventionnelle).toBe(result);
       expect(res.infoCalculConventionnel).toMatchSnapshot();
@@ -152,16 +152,16 @@ describe("getIndemnite", () => {
     const salaireRef = getSalaireRef({ ...initialValues });
     const { indemnite } = getIndemnite({
       salaireRef,
-      ...initialValues
+      ...initialValues,
     });
     const salaireRefConventionnel = getSalaireRefConventionnel({
-      ...initialValues
+      ...initialValues,
     });
 
     const res = getIndemniteConventionnelle({
       salaireRef: salaireRefConventionnel,
       indemnite,
-      ...initialValues
+      ...initialValues,
     });
 
     expect(res.error).toMatchInlineSnapshot(
@@ -172,10 +172,10 @@ describe("getIndemnite", () => {
     const salaireRef = getSalaireRef({ ...initialValues });
     const { indemnite } = getIndemnite({
       salaireRef,
-      ...initialValues
+      ...initialValues,
     });
     const salaireRefConventionnel = getSalaireRefConventionnel({
-      ...initialValues
+      ...initialValues,
     });
 
     const res = getIndemniteConventionnelle({
@@ -185,7 +185,7 @@ describe("getIndemnite", () => {
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
       anciennete: 10.667,
-      motif: DISCIPLINAIRE
+      motif: DISCIPLINAIRE,
     });
 
     expect(res.error).toMatchInlineSnapshot(

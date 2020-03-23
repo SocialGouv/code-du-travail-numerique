@@ -40,10 +40,10 @@ console.log(
             specific: cleanMulti(x[2]),
             related: rmBreaks(x[3].trim()),
             notes: x[4].trim(),
-            equivalent: rmBreaks(x[5].trim())
-          }))
+            equivalent: rmBreaks(x[5].trim()),
+          })),
         );
         return terms;
-      }, [])
-  )
+      }, []),
+  ),
 );

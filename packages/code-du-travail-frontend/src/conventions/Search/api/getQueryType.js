@@ -1,5 +1,5 @@
 // detect query type (IA level++)
-const getQueryType = str => {
+const getQueryType = (str) => {
   if (str.match(/^[\d .-]+$/) && str.length >= 2) {
     const strClean = str.replace(/[\s .-]/g, "");
     if (strClean.length <= 4) {

@@ -29,15 +29,15 @@ describe("<Answer />", () => {
     const { container } = renderAnswer({
       breadcrumbs: [
         { label: "tag1", slug: "/themes/tag-1" },
-        { label: "tag2", slug: "/themes/tag-2" }
-      ]
+        { label: "tag2", slug: "/themes/tag-2" },
+      ],
     });
     expect(container).toMatchSnapshot();
   });
   it("should renders tooltip", () => {
     const { container } = renderAnswer({
       html:
-        "<p class='test-content'>Contenu au format <strong>html</strong> contenant des tooltip sur certains mot comme rescrit. match aussi les abbréviation comme APE mais pas ape ou ses variantes comme code ape</p>"
+        "<p class='test-content'>Contenu au format <strong>html</strong> contenant des tooltip sur certains mot comme rescrit. match aussi les abbréviation comme APE mais pas ape ou ses variantes comme code ape</p>",
     });
     expect(container).toMatchSnapshot();
   });
@@ -45,20 +45,20 @@ describe("<Answer />", () => {
   it("should renders tooltip for words with diacritics without breaking html", () => {
     const { container } = renderAnswer({
       html:
-        "<p class='test-content'>Contenu au format <strong>indemnités</strong>comme code ape</p>"
+        "<p class='test-content'>Contenu au format <strong>indemnités</strong>comme code ape</p>",
     });
     expect(container).toMatchSnapshot();
   });
   it("should renders tooltip without breaking previous word", () => {
     const { container } = renderAnswer({
       html:
-        "<p class='test-content'>annualisation du temps de travail. Annualisation de l'annualisation.</p>"
+        "<p class='test-content'>annualisation du temps de travail. Annualisation de l'annualisation.</p>",
     });
     expect(container).toMatchSnapshot();
   });
   it("should renders tooltip without breaking a tag", () => {
     const { container } = renderAnswer({
-      html: `<p class='test-content'><a href="emploi/accompagnement-des-mutations-economiques/csp" class="spip_in">le contrat de sécurisation professionnelle APE</a></p>`
+      html: `<p class='test-content'><a href="emploi/accompagnement-des-mutations-economiques/csp" class="spip_in">le contrat de sécurisation professionnelle APE</a></p>`,
     });
     expect(container).toMatchSnapshot();
   });
@@ -75,50 +75,50 @@ describe("<Answer />", () => {
         {
           source: SOURCES.SHEET_SP,
           slug: `${SLUG_LINK_BASE}1`,
-          title: "related sheet sp title 1"
+          title: "related sheet sp title 1",
         },
         {
           source: SOURCES.SHEET_MT,
           slug: `${SLUG_LINK_BASE}2`,
-          title: "related sheet mt title 1"
+          title: "related sheet mt title 1",
         },
         {
           source: SOURCES.EXTERNALS,
           url: "url.extrenal/tool",
           title: "related external title 1",
           action: "extern action",
-          icon: "Contract"
+          icon: "Contract",
         },
         {
           source: SOURCES.SHEET_SP,
           slug: `${SLUG_LINK_BASE}4`,
-          title: "related sheet sp title 2"
+          title: "related sheet sp title 2",
         },
         {
           source: SOURCES.TOOLS,
           slug: `${SLUG_TOOL_BASE}1`,
           title: "related tool title 1",
           action: "tools action",
-          icon: "Depart"
+          icon: "Depart",
         },
         {
           source: SOURCES.TOOLS,
           slug: `${SLUG_TOOL_BASE}2`,
           title: "related tool title 2",
           action: "tools action 2",
-          icon: "Depart"
+          icon: "Depart",
         },
         {
           source: SOURCES.LETTERS,
           slug: `${SLUG_LETTER_BASE}1`,
-          title: "related letter title 1"
+          title: "related letter title 1",
         },
         {
           source: SOURCES.LETTERS,
           slug: `${SLUG_LETTER_BASE}2`,
-          title: "related letter title 2"
-        }
-      ]
+          title: "related letter title 2",
+        },
+      ],
     });
 
     expect(

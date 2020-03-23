@@ -30,7 +30,7 @@ export const OverflowWrapper = ({
       const {
         offsetWidth,
         scrollLeft,
-        scrollWidth
+        scrollWidth,
       } = scrollableElement.current;
       const scrolled = scrollLeft + offsetWidth;
       if (scrollLeft !== 0) {
@@ -74,7 +74,7 @@ export const OverflowWrapper = ({
 OverflowWrapper.propTypes = {
   children: PropTypes.node.isRequired,
   mobileOnly: PropTypes.bool,
-  shadowColor: PropTypes.string
+  shadowColor: PropTypes.string,
 };
 
 const StyledDiv = styled.div`

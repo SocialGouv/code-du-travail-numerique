@@ -6,14 +6,14 @@ jest.mock(
   "../../data/services-de-renseignement.json",
   () => ({
     "26": {
-      url: "link.url"
-    }
+      url: "link.url",
+    },
   }),
   { virtual: true }
 );
 
 jest.mock("../../piwik", () => ({
-  matopush: jest.fn()
+  matopush: jest.fn(),
 }));
 
 describe("<ServiceRenseignement />", () => {

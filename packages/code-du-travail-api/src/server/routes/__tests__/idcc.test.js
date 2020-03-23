@@ -7,7 +7,7 @@ app.use(router.routes());
 
 test("return idcc results for boulangerie", async () => {
   const response = await request(app.callback()).get(
-    `/api/v1/idcc?q=boulangerie`
+    `/api/v1/idcc?q=boulangerie`,
   );
   expect(response.status).toBe(200);
   expect(response.body.hits).toMatchSnapshot();

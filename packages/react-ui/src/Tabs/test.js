@@ -5,12 +5,12 @@ import { Tabs } from ".";
 const items = [
   {
     tab: "Tab 1",
-    panel: "This panel can contain nodes"
+    panel: "This panel can contain nodes",
   },
   {
     tab: "Tab 2",
-    panel: "These tabs are not 'controlled'"
-  }
+    panel: "These tabs are not 'controlled'",
+  },
 ];
 
 describe("<Tabs />", () => {

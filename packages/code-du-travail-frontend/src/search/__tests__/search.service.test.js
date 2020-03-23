@@ -6,11 +6,11 @@ jest.mock("isomorphic-unfetch");
 
 fetch.mockResolvedValue({
   ok: true,
-  json: () => Promise.resolve(results)
+  json: () => Promise.resolve(results),
 });
 
 const results = {
-  foo: "bar"
+  foo: "bar",
 };
 const query = "foo";
 

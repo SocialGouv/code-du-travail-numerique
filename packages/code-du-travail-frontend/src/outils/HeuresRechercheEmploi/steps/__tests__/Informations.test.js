@@ -8,14 +8,14 @@ describe("<StepInformations />", () => {
   });
   it("should render période d'essai", () => {
     const { container } = renderForm(StepInformations, {
-      ccn: { num: 44 }
+      ccn: { num: 44 },
     });
     expect(container).toMatchSnapshot();
   });
   it("should render catégorie", () => {
     const { container } = renderForm(StepInformations, {
       ccn: { num: 44 },
-      criteria: { "période essai": "1| oui" }
+      criteria: { "période essai": "1| oui" },
     });
     expect(container).toMatchSnapshot();
   });
@@ -24,8 +24,8 @@ describe("<StepInformations />", () => {
       ccn: { num: 44 },
       criteria: {
         "période essai": "1| oui",
-        "catégorie socio-professionnelle": "28| Techniciens"
-      }
+        "catégorie socio-professionnelle": "28| Techniciens",
+      },
     });
     expect(container).toMatchSnapshot();
   });
@@ -35,8 +35,8 @@ describe("<StepInformations />", () => {
       criteria: {
         "période essai": "1| oui",
         "catégorie socio-professionnelle": "28| Techniciens",
-        "durée du préavis": "2| 6 jours"
-      }
+        "durée du préavis": "2| 6 jours",
+      },
     });
     expect(container).toMatchSnapshot();
   });

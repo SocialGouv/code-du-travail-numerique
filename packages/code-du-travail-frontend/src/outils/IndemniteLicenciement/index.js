@@ -6,7 +6,7 @@ import {
   stepPrime,
   stepSalaires,
   stepReducer,
-  initialState
+  initialState,
 } from "./stepReducer";
 import { Wizard } from "../common/Wizard";
 
@@ -17,17 +17,17 @@ function CalculateurIndemnite({ icon, title }) {
   const Rules = ({ values, dispatch }) => (
     <>
       <OnChange key="rule-same-salaire" name="hasSameSalaire">
-        {value =>
+        {(value) =>
           value === false
             ? dispatch({
                 type: "add_step",
-                payload: { insertAfter: stepSalaires.name, step: stepPrime }
+                payload: { insertAfter: stepSalaires.name, step: stepPrime },
               })
             : dispatch({ type: "remove_step", payload: stepPrime.name })
         }
       </OnChange>
       <OnChange key="rule-branche" name="branche">
-        {async value => {
+        {async (value) => {
           if (value) {
             const module = await import(`./ccn/${value}`);
             const steps = module.steps.filter(({ condition = () => true }) =>
@@ -54,7 +54,7 @@ function CalculateurIndemnite({ icon, title }) {
 }
 
 CalculateurIndemnite.propTypes = {
-  initialState: PropTypes.object
+  initialState: PropTypes.object,
 };
 
 export { CalculateurIndemnite };

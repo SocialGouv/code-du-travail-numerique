@@ -7,7 +7,7 @@ import {
   Section,
   theme,
   Title,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 
 const Origins = () => (
@@ -101,7 +101,7 @@ const Origins = () => (
                     </i>
                   </p>
                 </>
-              )
+              ),
             },
             {
               icon: icons.Eurotext,
@@ -197,7 +197,7 @@ const Origins = () => (
                     </li>
                   </ul>
                 </>
-              )
+              ),
             },
             {
               icon: icons.Constitution,
@@ -255,7 +255,7 @@ const Origins = () => (
                     d’obtenir un emploi et l’absence de discrimination.
                   </p>
                 </>
-              )
+              ),
             },
             {
               icon: icons.Laws,
@@ -301,7 +301,7 @@ const Origins = () => (
                     </i>
                   </p>
                 </>
-              )
+              ),
             },
             {
               icon: icons.Agreement,
@@ -328,7 +328,7 @@ const Origins = () => (
                     entreprise ou au niveau d’un établissement.
                   </p>
                 </>
-              )
+              ),
             },
             {
               icon: icons.Uses,
@@ -356,7 +356,7 @@ const Origins = () => (
                     </i>
                   </p>
                 </>
-              )
+              ),
             },
             {
               icon: icons.Resignation,
@@ -367,7 +367,7 @@ const Origins = () => (
                   l’employeur qui fixe les règles concernant la discipline, la
                   santé et la sécurité dans l’entreprise.
                 </>
-              )
+              ),
             },
             {
               icon: icons.Contract,
@@ -395,8 +395,8 @@ const Origins = () => (
                     confié au salarié.
                   </p>
                 </>
-              )
-            }
+              ),
+            },
           ]}
         />
       </FlexWrapper>

@@ -4,7 +4,7 @@ import { getResults } from "./api";
 
 // a hook that return [status, searchResults]
 // todo: package as a module
-const useSearchCC = query => {
+const useSearchCC = (query) => {
   const [results, setResults] = useState();
   const [status, setStatus] = useState("idle");
   // load results when query change
@@ -35,7 +35,7 @@ const useSearchCC = query => {
       }
     }
     load(query);
-    return function() {
+    return function () {
       shouldUpdate = false;
     };
   }, [query]);

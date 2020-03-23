@@ -17,7 +17,7 @@ import { A11y } from "../src/a11y";
 import HeadBandAlert from "../src/common/HeadBandAlert";
 
 const {
-  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
+  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
 } = getConfig();
 
 initializeSentry();
@@ -28,7 +28,7 @@ export default class MyApp extends App {
   // IE10 static props hoisting doesn't work
   static childContextTypes = {
     headManager: PropTypes.object,
-    router: PropTypes.object
+    router: PropTypes.object,
   };
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
@@ -54,8 +54,8 @@ export default class MyApp extends App {
   }
 
   componentDidCatch(error, errorInfo) {
-    Sentry.withScope(scope => {
-      Object.keys(errorInfo).forEach(key => {
+    Sentry.withScope((scope) => {
+      Object.keys(errorInfo).forEach((key) => {
         scope.setExtra(key, errorInfo[key]);
       });
 

@@ -23,12 +23,12 @@ async function createIndex({ client, indexName, mappings }) {
               filter,
               analyzer,
               char_filter,
-              tokenizer
-            }
-          }
+              tokenizer,
+            },
+          },
         },
-        mappings: mappings
-      }
+        mappings: mappings,
+      },
     });
     logger.info(`Index ${indexName} created.`);
   } catch (error) {
@@ -51,13 +51,13 @@ async function bulkIndexDocuments({ client, indexName, documents }) {
             {
               index: {
                 _index: indexName,
-                ...(process.env.NODE_ENV === "test" && { _id: i })
-              }
+                ...(process.env.NODE_ENV === "test" && { _id: i }),
+              },
             },
             doc
           ),
         []
-      )
+      ),
     });
     logger.info(`Index ${documents.length} documents.`);
   } catch (error) {
@@ -69,7 +69,7 @@ async function indexDocumentsBatched({
   client,
   indexName,
   documents,
-  size = 1000
+  size = 1000,
 }) {
   logger.info(`Loaded ${documents.length} documents`);
   for (const chunk of chunks(documents, size)) {
@@ -105,10 +105,10 @@ function range(start, end, size = 1) {
 
 function getIndicesToDelete(patterns, timestamp, indices) {
   function isCdtnIndex({ index }) {
-    return patterns.some(pattern => index.startsWith(`${pattern}-`));
+    return patterns.some((pattern) => index.startsWith(`${pattern}-`));
   }
 
-  const currentIndices = patterns.map(pattern => `${pattern}-${timestamp}`);
+  const currentIndices = patterns.map((pattern) => `${pattern}-${timestamp}`);
 
   return indices
     .filter(({ index }) => !currentIndices.includes(index))
@@ -132,5 +132,5 @@ export {
   deleteOldIndex,
   chunks,
   range,
-  getIndicesToDelete
+  getIndicesToDelete,
 };

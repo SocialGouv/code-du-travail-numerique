@@ -5,11 +5,11 @@ export const steps = [
   {
     component: Step,
     name: "branche_step",
-    label: "Informations particulières"
+    label: "Informations particulières",
   },
   {
     component: Result,
     name: "branche_result",
-    label: "Indemnité conventionnelle"
-  }
+    label: "Indemnité conventionnelle",
+  },
 ];

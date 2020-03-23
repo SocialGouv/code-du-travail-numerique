@@ -8,20 +8,20 @@ function getSheetMTQuery({ slug }) {
       "sections",
       "slug",
       "title",
-      "url"
+      "url",
     ],
     query: {
       bool: {
         filter: {
           term: {
-            slug
-          }
-        }
-      }
-    }
+            slug,
+          },
+        },
+      },
+    },
   };
 }
 
 module.exports = {
-  getSheetMTQuery
+  getSheetMTQuery,
 };

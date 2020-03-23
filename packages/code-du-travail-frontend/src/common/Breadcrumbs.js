@@ -30,7 +30,7 @@ const Breadcrumbs = ({ items = [] }) => {
                   <StyledLink>{label}</StyledLink>
                 </Link>
               </NavItem>
-            ))
+            )),
           ]}
         </StyledContainer>
       </OverflowWrapper>
@@ -47,9 +47,9 @@ Breadcrumbs.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
-      slug: PropTypes.string
+      slug: PropTypes.string,
     })
-  )
+  ),
 };
 
 export { Breadcrumbs };

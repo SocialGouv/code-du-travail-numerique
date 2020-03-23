@@ -11,7 +11,7 @@ import {
   Section,
   Heading,
   theme,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 
 import { ConventionModal } from "../src/conventions/SearchModal";
@@ -36,7 +36,7 @@ class SearchPage extends React.Component {
       router,
       items = { documents: [], articles: [], themes: [] },
       pageUrl,
-      ogImage
+      ogImage,
     } = this.props;
     const { q: query = "" } = router.query;
     return (
@@ -96,7 +96,7 @@ class SearchPage extends React.Component {
                       </StyledLink>
                     </Link>
                     <ConventionModal key="convention-modal">
-                      {openModal => (
+                      {(openModal) => (
                         <Button variant="flat" onClick={openModal}>
                           Chercher une convention collective
                         </Button>

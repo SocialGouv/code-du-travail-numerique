@@ -40,5 +40,5 @@ IconStripe.propTypes = {
   centered: PropTypes.bool,
   children: PropTypes.node.isRequired,
   icon: PropTypes.elementType.isRequired,
-  small: PropTypes.bool
+  small: PropTypes.bool,
 };

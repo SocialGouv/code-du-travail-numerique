@@ -4,7 +4,7 @@ import memoizee from "memoizee";
 import debounce from "debounce-promise";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const formatCCn = ({ idcc: num, id, slug, title, shortTitle }) => ({
@@ -12,19 +12,19 @@ const formatCCn = ({ idcc: num, id, slug, title, shortTitle }) => ({
   slug,
   title,
   shortTitle,
-  num
+  num,
 });
 
 // memoize search results
 const apiIdcc = memoizee(
-  query => {
+  (query) => {
     const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
 
-    return fetch(url).then(response => {
+    return fetch(url).then((response) => {
       if (response.ok) {
         return response
           .json()
-          .then(results =>
+          .then((results) =>
             results.hits.hits.map(({ _source }) => formatCCn(_source))
           );
       }

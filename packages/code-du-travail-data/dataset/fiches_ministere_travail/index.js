@@ -75,7 +75,7 @@ function parseDom(dom, url) {
   intro = intro && intro.innerHTML.trim();
   const description = $(
     dom.window.document,
-    "meta[name=description]"
+    "meta[name=description]",
   ).getAttribute("content");
   const sections = [];
   const sectionTag = getSectionTag(article);
@@ -87,7 +87,7 @@ function parseDom(dom, url) {
     title: title,
     anchor: "",
     html: "",
-    text: ""
+    text: "",
   };
   while (
     nextArticleElement &&
@@ -118,7 +118,7 @@ function parseDom(dom, url) {
           description: nextEl.textContent.trim().slice(0, 200),
           html: "",
           text: "",
-          title: el.textContent.trim()
+          title: el.textContent.trim(),
         };
         while (nextEl && nextEl.tagName.toLowerCase() !== sectionTag) {
           section.text += nextEl.textContent.trim();
@@ -137,7 +137,7 @@ function parseDom(dom, url) {
     sections,
     slug,
     title,
-    url
+    url,
   };
 }
 
@@ -164,7 +164,7 @@ const fetchAndParse = urls => {
   async function parseFiches(urls) {
     const inputs = urls.map(url => limit(() => parseFiche(url)));
     const results = (await Promise.all(inputs)).filter(
-      fiche => !!fiche.sections
+      fiche => !!fiche.sections,
     );
     fs.writeFileSync(
       "./fiches-mt.json",
@@ -174,12 +174,12 @@ const fetchAndParse = urls => {
           sections: fiche.sections.map(
             // description and text are not needed in the file
             // eslint-disable-next-line no-unused-vars
-            ({ description, text, ...section }) => section
-          )
+            ({ description, text, ...section }) => section,
+          ),
         })),
         null,
-        2
-      )
+        2,
+      ),
     );
 
     const fiches = results
@@ -187,7 +187,7 @@ const fetchAndParse = urls => {
       .reduce((accumulator, documents) => accumulator.concat(documents), []);
     fs.writeFileSync(
       "./fiches-mt-split.json",
-      JSON.stringify(fiches.filter(Boolean), null, 2)
+      JSON.stringify(fiches.filter(Boolean), null, 2),
     );
 
     spinner.stop().clear();
@@ -197,7 +197,7 @@ const fetchAndParse = urls => {
 };
 
 module.exports = {
-  parseDom
+  parseDom,
 };
 
 if (module === require.main) {

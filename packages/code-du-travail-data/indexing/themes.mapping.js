@@ -4,15 +4,15 @@ export const themesMapping = {
     children: {
       properties: {
         title: { type: "text" },
-        slug: { type: "text" }
-      }
+        slug: { type: "text" },
+      },
     },
     // The local document slug
     slug: {
-      type: "keyword"
+      type: "keyword",
     },
     position: {
-      type: "integer"
+      type: "integer",
     },
     title: {
       type: "text",
@@ -20,9 +20,9 @@ export const themesMapping = {
       fields: {
         french_with_synonyms: {
           type: "text",
-          analyzer: "french_with_synonyms"
-        }
-      }
-    }
-  }
+          analyzer: "french_with_synonyms",
+        },
+      },
+    },
+  },
 };

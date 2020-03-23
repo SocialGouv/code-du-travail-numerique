@@ -11,7 +11,7 @@ import {
   filterSituations,
   getSituationsFor,
   recapSituation,
-  getRef
+  getRef,
 } from "../../common/situations.utils";
 
 const { situations: allSituations } = data;
@@ -132,14 +132,14 @@ function StepResult({ form }) {
 
   // Situation CDT
   const initialCDTSituations = getSituationsFor(allSituations, {
-    idcc: 0
+    idcc: 0,
   });
   const possibleCDTSituations = filterSituations(initialCDTSituations, cdt);
 
   const [situationCDT] = possibleCDTSituations;
   const {
     criteria: { ancienneté: seniorityCDT, ...situationCDTCriteria },
-    answer3: durationCDT
+    answer3: durationCDT,
   } = situationCDT;
 
   // Situation CC
@@ -150,15 +150,15 @@ function StepResult({ form }) {
   const [situationCC] = possibleCCSituations;
   const {
     criteria: { ancienneté: seniorityCC, ...situationCCCriteria },
-    answer3: durationCC
+    answer3: durationCC,
   } = situationCC || { criteria: {} };
 
   const refs = [
     {
       ref: "Article L.1234-1 du code du travail",
       refUrl:
-        "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-    }
+        "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501",
+    },
   ];
   if (situationCC) {
     refs.push({ ref: situationCC.ref, refUrl: situationCC.refUrl });
@@ -219,16 +219,16 @@ function StepResult({ form }) {
           ? "Oui"
           : "Non",
         "Ancienneté selon le code du travail": seniorityCDT,
-        ...situationCDTCriteria
+        ...situationCDTCriteria,
       })}
       {situationCC && (
         <>
           {recapSituation({
             ...situationCCCriteria,
             ...(seniorityCC && {
-              "Ancienneté selon la convention collective": seniorityCC
+              "Ancienneté selon la convention collective": seniorityCC,
             }),
-            ...(ccn && { "Convention collective": ccn.title })
+            ...(ccn && { "Convention collective": ccn.title }),
           })}
           <SectionTitle>Source</SectionTitle>
           {situationCC.ref && situationCC.refUrl && getRef(refs)}
@@ -240,8 +240,8 @@ function StepResult({ form }) {
 
 StepResult.propTypes = {
   form: PropTypes.shape({
-    getState: PropTypes.func.isRequired
-  })
+    getState: PropTypes.func.isRequired,
+  }),
 };
 
 export { StepResult };
@@ -249,7 +249,7 @@ export { StepResult };
 export function getResult({
   durationCDT = 0,
   durationCC = 0,
-  disabledWorker = true
+  disabledWorker = true,
 }) {
   const durationMax = Math.max(durationCDT, durationCC);
   if (durationMax === 0) {

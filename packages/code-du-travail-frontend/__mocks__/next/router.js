@@ -7,7 +7,7 @@ const router = {
   push: jest.fn(path => {
     route(path);
     return Promise.resolve();
-  })
+  }),
 };
 
 module.exports = {
@@ -16,14 +16,14 @@ module.exports = {
   events: {
     on() {},
     off() {},
-    trigger() {}
+    trigger() {},
   },
   useRouter: () => router,
   withRouter: component => {
     component.defaultProps = {
       ...component.defaultProps,
-      router
+      router,
     };
     return component;
-  }
+  },
 };

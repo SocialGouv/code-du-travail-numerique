@@ -4,9 +4,9 @@ import { theme } from "@socialgouv/react-ui";
 const { breakpoints, fonts, colors, spacings } = theme;
 
 export const Input = styled.input`
-  width: ${props => (props.type === "number" ? "10em" : "auto")};
-  text-align: ${props => (props.type === "number" ? "right" : "left")};
-  border-color: ${props => (props.invalid ? colors.error : colors.border)};
+  width: ${(props) => (props.type === "number" ? "10em" : "auto")};
+  text-align: ${(props) => (props.type === "number" ? "right" : "left")};
+  border-color: ${(props) => (props.invalid ? colors.error : colors.border)};
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     margin: 0;
@@ -23,7 +23,7 @@ export const Label = styled.label`
 
 export const RadioContainer = styled.div`
   display: flex;
-  flex-direction: ${props => (props.direction === "row" ? "row" : "column")};
+  flex-direction: ${(props) => (props.direction === "row" ? "row" : "column")};
   align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: ${spacings.medium};

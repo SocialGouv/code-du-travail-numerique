@@ -11,7 +11,7 @@ function renderForm(data) {
       mutators={{ ...arrayMutators }}
       onSubmit={jest.fn()}
       initialValues={{
-        ...data
+        ...data,
       }}
       render={({ form }) => <StepRemuneration form={form} />}
     />
@@ -22,14 +22,14 @@ describe("<StepRemuneration />", () => {
   it("should render one input", () => {
     const { container } = renderForm({
       typeRemuneration: "total",
-      salaire: 3000
+      salaire: 3000,
     });
     expect(container).toMatchSnapshot();
   });
   it("should render multiple inputs", () => {
     const { container } = renderForm({
       typeRemuneration: "mensuel",
-      salaires: [{ salaire: 2000 }, { salaire: 1500 }]
+      salaires: [{ salaire: 2000 }, { salaire: 1500 }],
     });
     expect(container).toMatchSnapshot();
   });

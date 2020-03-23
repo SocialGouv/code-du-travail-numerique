@@ -5,7 +5,7 @@ import {
   Accordion as RootAccordion,
   AccordionItemButton,
   AccordionItem,
-  AccordionItemPanel
+  AccordionItemPanel,
 } from "react-accessible-accordion";
 
 import { box, breakpoints, fonts, spacings } from "../../../theme";
@@ -102,7 +102,7 @@ ItemButton.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.elementType,
   index: PropTypes.number.isRequired,
-  isLast: PropTypes.bool.isRequired
+  isLast: PropTypes.bool.isRequired,
 };
 
 const StyledAccordionItemButton = styled(AccordionItemButton)`
@@ -209,7 +209,7 @@ const Decoration = styled.div`
     ${decorationHelper(
       COUNTER_WIDTH_MOBILE,
       NUMBER_WIDTH_MOBILE,
-      STROKE_DISTANCE_MOBILE
+      STROKE_DISTANCE_MOBILE,
     )}
   }
 `;

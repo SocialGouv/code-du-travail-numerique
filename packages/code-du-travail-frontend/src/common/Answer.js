@@ -12,7 +12,7 @@ import useGlossary from "../glossary";
 import {
   AsideContent,
   MainAsideLayout,
-  MainContent
+  MainContent,
 } from "../layout/AnswerLayout";
 
 const BigError = ({ children }) => (
@@ -34,7 +34,7 @@ function Answer({
   source,
   subtitle,
   suptitle,
-  title
+  title,
 }) {
   const glossaryItems = useGlossary(children, html);
   const router = useRouter();

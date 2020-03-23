@@ -13,7 +13,7 @@ export const Law = ({ items, query }) => (
           key={slug}
           href={{
             pathname: `${getRouteBySource(source)}/[slug]`,
-            query: query ? { q: query } : null
+            query: query ? { q: query } : null,
           }}
           as={`/${getRouteBySource(source)}/${slug}${
             query ? `?q=${query}` : ""

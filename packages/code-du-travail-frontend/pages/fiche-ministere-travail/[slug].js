@@ -10,7 +10,7 @@ import Metas from "../../src/common/Metas";
 import Html from "../../src/common/Html";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const fetchSheetMT = ({ slug }) => fetch(`${API_URL}/sheets-mt/${slug}`);
@@ -38,19 +38,19 @@ class Fiche extends React.Component {
         intro,
         sections = [],
         title,
-        url
+        url,
       },
-      relatedItems
+      relatedItems,
     } = data;
 
     // titleless section have the page title but no anchor.
-    const untitledSection = sections.find(section => !section.anchor);
+    const untitledSection = sections.find((section) => !section.anchor);
     const titledSections = sections
-      .filter(section => section.anchor)
+      .filter((section) => section.anchor)
       .map(({ anchor, html, title }) => ({
         id: anchor,
         title: <h2>{title}</h2>,
-        body: <TabContent>{html}</TabContent>
+        body: <TabContent>{html}</TabContent>,
       }));
     return (
       <Layout>

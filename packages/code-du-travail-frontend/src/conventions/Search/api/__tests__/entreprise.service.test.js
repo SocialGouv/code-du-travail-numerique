@@ -1,16 +1,16 @@
 import getConfig from "next/config";
 import {
   searchEntrepriseBySiret,
-  searchEntrepriseByName
+  searchEntrepriseByName,
 } from "../entreprise.service";
 const {
-  publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL }
+  publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL },
 } = getConfig();
 
 import {
   fulltextPayload,
   siretPayload,
-  siretIdccPayload
+  siretIdccPayload,
 } from "./entretrise.mock";
 
 import fetch from "isomorphic-unfetch";
@@ -18,7 +18,7 @@ import { fetchResponse } from "../../../../../test/mockFetch";
 
 jest.mock("isomorphic-unfetch");
 
-fetch.mockImplementation(url => {
+fetch.mockImplementation((url) => {
   if (url.startsWith(`${API_ENTREPRISE_URL}/full_text`)) {
     return Promise.resolve(fetchResponse(fulltextPayload));
   } else if (url.startsWith(`${API_ENTREPRISE_URL}/siret`)) {

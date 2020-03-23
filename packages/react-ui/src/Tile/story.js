@@ -7,7 +7,7 @@ import { Tile } from ".";
 
 export default {
   component: Tile,
-  title: "Components|Tile"
+  title: "Components|Tile",
 };
 
 export const base = () => (
@@ -17,7 +17,7 @@ export const base = () => (
       flexDirection: "column",
       alignItems: "stretch",
       width: "270px",
-      maxWidth: "100%"
+      maxWidth: "100%",
     }}
   >
     <Section>
@@ -69,7 +69,7 @@ export const wide = () => (
       flexDirection: "column",
       alignItems: "stretch",
       width: "600px",
-      maxWidth: "100%"
+      maxWidth: "100%",
     }}
   >
     <Section>

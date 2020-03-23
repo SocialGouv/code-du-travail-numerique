@@ -26,7 +26,7 @@ const getTextType = qs => {
 const getArticleNumFromId = id => {
   const article = find(
     cdt,
-    node => node.type === "article" && node.data.id === id
+    node => node.type === "article" && node.data.id === id,
   );
   return article && article.data.num;
 };
@@ -44,21 +44,21 @@ const getArticlesFromSection = id => {
 const createCDTRef = id => ({
   type: "code-du-travail",
   id: id.toLowerCase(),
-  title: `Article ${id} du code du travail`
+  title: `Article ${id} du code du travail`,
 });
 
 const createCCRef = (id, slug, title) => ({
   type: "convention-collective",
   id,
   slug,
-  title
+  title,
 });
 
 const createJORef = (id, title, url) => ({
   type: "journal-officiel",
   id,
   title,
-  url
+  url,
 });
 
 const parseReference = reference => {
@@ -80,14 +80,14 @@ const parseReference = reference => {
       break;
     case "convention-collective": {
       const { id, title, num, shortTitle } = conventions.find(
-        convention => convention.id === qs.idConvention
+        convention => convention.id === qs.idConvention,
       );
       const slug = slugify(`${num}-${shortTitle}`.substring(0, 80)); // as in populate.js
       return [createCCRef(id, slug, title)];
     }
     case "journal-officiel":
       return [
-        createJORef(qs.cidTexte, reference.children[0].children[0].text, url)
+        createJORef(qs.cidTexte, reference.children[0].children[0].text, url),
       ];
     default:
       return [];

@@ -11,7 +11,7 @@ function StepRemuneration({ form }) {
     <>
       <TypeRemuneration
         name="typeRemuneration"
-        onChange={typeRemuneration => {
+        onChange={(typeRemuneration) => {
           typeRemuneration === "mensuel"
             ? form.change("salaires", [{ salaire: null }, { salaire: null }])
             : form.change("salaires", []);
@@ -31,7 +31,7 @@ function StepRemuneration({ form }) {
             <Salaires
               visible={input.value === "mensuel"}
               name="salaires"
-              onChange={salaires => {
+              onChange={(salaires) => {
                 if (salaires.length === 0) {
                   form.change("typeRemuneration", "total");
                 }

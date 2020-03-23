@@ -29,10 +29,10 @@ export const Container = styled.div`
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   narrow: PropTypes.bool,
-  noPadding: PropTypes.bool
+  noPadding: PropTypes.bool,
 };
 
 Container.defaultProps = {
   narrow: false,
-  noPadding: false
+  noPadding: false,
 };

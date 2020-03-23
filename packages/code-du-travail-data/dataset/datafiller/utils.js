@@ -35,7 +35,7 @@ const entities = {
   lt: "<",
   gt: ">",
   nbsp: " ",
-  quot: '"'
+  quot: '"',
 };
 
 const decodeHTML = text =>
@@ -45,7 +45,7 @@ const sourcesPriority = [
   SOURCES.SHEET_SP,
   SOURCES.SHEET_MT,
   SOURCES.EXTERNAL,
-  SOURCES.CDT
+  SOURCES.CDT,
 ];
 
 const getSource = url => {
@@ -69,7 +69,7 @@ const hasUrl = row => !!row.url;
 // filter and sort row refs
 const sortRowRefs = cb => row => ({
   ...row,
-  refs: (row.refs && row.refs.filter(hasUrl).sort(sortRefs(cb))) || []
+  refs: (row.refs && row.refs.filter(hasUrl).sort(sortRefs(cb))) || [],
 });
 
 const sortRowRefsByPosition = sortRowRefs(node => node.position);
@@ -82,5 +82,5 @@ module.exports = {
   sortRowRefs,
   sortRowRefsByPosition,
   sortRowRefsByRelevance,
-  decodeHTML
+  decodeHTML,
 };

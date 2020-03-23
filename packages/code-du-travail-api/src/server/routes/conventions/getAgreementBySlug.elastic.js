@@ -2,8 +2,8 @@ function getAgreementBody({ slug }) {
   return {
     size: 1,
     query: {
-      term: { slug }
-    }
+      term: { slug },
+    },
   };
 }
 module.exports = getAgreementBody;

@@ -13,7 +13,7 @@ function IndemniteCCn({
   indemniteLegale,
   infoCalculLegal,
   infoCalculConventionnel,
-  error
+  error,
 }) {
   const isIndemniteConventionnelleBigger =
     indemniteConventionnelle > indemniteLegale;
@@ -34,7 +34,7 @@ function IndemniteCCn({
                 indemniteConventionnelle
               ).toLocaleString("fr-FR", {
                 maximumFractionDigits: 2,
-                minimumFractionDigits: 2
+                minimumFractionDigits: 2,
               })}
               &nbsp;€ brut
             </Highlight>
@@ -107,12 +107,12 @@ IndemniteCCn.propTypes = {
   error: PropTypes.string,
   infoCalculLegal: PropTypes.shape({
     formula: PropTypes.string.isRequired,
-    labels: PropTypes.object.isRequired
+    labels: PropTypes.object.isRequired,
   }).isRequired,
   infoCalculConventionnel: PropTypes.shape({
     formula: PropTypes.string.isRequired,
-    labels: PropTypes.object.isRequired
-  }).isRequired
+    labels: PropTypes.object.isRequired,
+  }).isRequired,
 };
 
 export { IndemniteCCn };

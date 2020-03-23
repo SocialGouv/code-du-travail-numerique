@@ -133,7 +133,7 @@ Section.propTypes = {
   large: PropTypes.bool,
   innerTopContent: PropTypes.node,
   innerBottomContent: PropTypes.node,
-  variant: PropTypes.oneOf(["default", "white", "light", "dark"])
+  variant: PropTypes.oneOf(["default", "white", "light", "dark"]),
 };
 
 Section.defaultProps = {
@@ -141,5 +141,5 @@ Section.defaultProps = {
   large: false,
   innerTopContent: null,
   innerBottomContent: null,
-  variant: "default"
+  variant: "default",
 };

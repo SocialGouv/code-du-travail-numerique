@@ -41,7 +41,7 @@ router.get("/dossiers/:slug", async ctx => {
     refs: refs.map(({ _source }) => {
       _source.type = refTypeByUrl[_source.slug];
       return _source;
-    })
+    }),
   };
 });
 

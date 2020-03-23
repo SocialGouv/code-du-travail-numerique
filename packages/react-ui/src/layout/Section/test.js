@@ -7,16 +7,16 @@ describe("<Section />", () => {
     "it renders a %s Section",
     variant => {
       const { container } = render(
-        <Section variant={variant}>this is a Button {variant} </Section>
+        <Section variant={variant}>this is a Button {variant} </Section>,
       );
       expect(container).toMatchSnapshot();
-    }
+    },
   );
   it("renders with correct decoration", () => {
     const { container } = render(
       <Section decorated variant="dark">
         A decorated dark section
-      </Section>
+      </Section>,
     );
     expect(container).toMatchSnapshot();
   });
@@ -24,7 +24,7 @@ describe("<Section />", () => {
     const { container } = render(
       <Section large decorated variant="dark">
         A decorated dark section
-      </Section>
+      </Section>,
     );
     expect(container).toMatchSnapshot();
   });

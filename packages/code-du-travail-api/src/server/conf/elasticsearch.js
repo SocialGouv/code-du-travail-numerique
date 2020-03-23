@@ -8,7 +8,7 @@ const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
 
 const esClientConfig = {
-  node: `${ELASTICSEARCH_URL}`
+  node: `${ELASTICSEARCH_URL}`,
 };
 
 switch (process.env.NODE_ENV) {
@@ -18,7 +18,7 @@ switch (process.env.NODE_ENV) {
   case "production":
     esClientConfig.auth = {
       username: process.env.ELASTICSEARCH_USER || "elastic",
-      password: process.env.ELASTICSEARCH_PWD
+      password: process.env.ELASTICSEARCH_PWD,
     };
     break;
 }

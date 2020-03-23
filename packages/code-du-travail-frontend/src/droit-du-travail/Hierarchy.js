@@ -11,7 +11,7 @@ import {
   Modal,
   theme,
   Title,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 
 const Hierarchy = ({ hash }) => {
@@ -42,7 +42,7 @@ const Hierarchy = ({ hash }) => {
                 Les textes nationaux doivent être conformes aux textes
                 internationaux et européens.
               </>
-            )
+            ),
           },
           {
             icon: icons.Constitution,
@@ -52,7 +52,7 @@ const Hierarchy = ({ hash }) => {
                 Tous les textes nationaux doivent être conformes à la
                 Constitution française ainsi qu’au bloc de constitutionnalité.
               </>
-            )
+            ),
           },
           {
             icon: icons.Laws,
@@ -86,7 +86,7 @@ const Hierarchy = ({ hash }) => {
                           le salarié. Dans ce cas, c’est le texte le plus
                           avantageux pour le salarié qui s’applique.
                         </>
-                      )
+                      ),
                     },
                     {
                       title: (
@@ -120,7 +120,7 @@ const Hierarchy = ({ hash }) => {
                             </ul>
                           </i>
                         </>
-                      )
+                      ),
                     },
                     {
                       title: (
@@ -153,8 +153,8 @@ const Hierarchy = ({ hash }) => {
                             </ul>
                           </i>
                         </>
-                      )
-                    }
+                      ),
+                    },
                   ]}
                 />
                 <Wrapper variant="light">
@@ -179,7 +179,7 @@ const Hierarchy = ({ hash }) => {
                   </IconStripe>
                 </Wrapper>
               </>
-            )
+            ),
           },
           {
             icon: icons.Agreement,
@@ -252,7 +252,7 @@ const Hierarchy = ({ hash }) => {
                   s’applique.
                 </p>
               </>
-            )
+            ),
           },
           {
             icon: icons.Uses,
@@ -264,7 +264,7 @@ const Hierarchy = ({ hash }) => {
                 salarié. Dans ce cas, ce sont les textes les plus avantageux qui
                 s’appliquent.
               </>
-            )
+            ),
           },
           {
             icon: icons.Resignation,
@@ -275,7 +275,7 @@ const Hierarchy = ({ hash }) => {
                 Il peut être plus avantageux pour le salarié. Dans ce cas, c’est
                 le texte le plus avantageux pour le salarié qui s’applique.
               </>
-            )
+            ),
           },
           {
             icon: icons.Contract,
@@ -286,8 +286,8 @@ const Hierarchy = ({ hash }) => {
                 Il peut prévoir des mesures plus avantageuses pour le salarié.
                 Dans ce cas, c’est le contrat de travail qui s’applique.
               </>
-            )
-          }
+            ),
+          },
         ]}
       />
       <Modal

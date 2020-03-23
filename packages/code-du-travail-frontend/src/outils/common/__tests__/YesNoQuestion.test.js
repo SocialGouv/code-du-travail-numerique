@@ -59,7 +59,7 @@ describe("<YesNoQuestion />", () => {
     const { getByTestId, getByLabelText, getByText } = render(
       <Form
         onSubmit={onSubmit}
-        validate={values =>
+        validate={(values) =>
           values.test === "oui" ? {} : { test: "mauvaise réponse" }
         }
       >

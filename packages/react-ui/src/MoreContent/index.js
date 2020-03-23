@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionItemButton,
   AccordionItemHeading,
-  AccordionItemPanel
+  AccordionItemPanel,
 } from "react-accessible-accordion";
 
 import { animations, breakpoints, spacings } from "../theme";
@@ -36,11 +36,11 @@ export const MoreContent = ({ children, title, ...props }) => {
 MoreContent.propTypes = {
   children: PropTypes.node.isRequired,
   preExpanded: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 MoreContent.defaultProps = {
-  preExpanded: []
+  preExpanded: [],
 };
 
 const StyledAccordion = styled(RootAccordion)`

@@ -5,15 +5,15 @@ import { getText } from "../utils";
 
 export class LienExterneCommente extends React.PureComponent {
   static propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
   };
   render() {
     const { data } = this.props;
     const commentaire = data.children.find(
-      child => child.name === "Commentaire"
+      (child) => child.name === "Commentaire"
     );
     const lienExterne = data.children.find(
-      child => child.name === "LienExterne"
+      (child) => child.name === "LienExterne"
     );
     return (
       <>
@@ -28,7 +28,7 @@ export class LienExterneCommente extends React.PureComponent {
 
 export class LienExterne extends React.PureComponent {
   static propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
   };
   render() {
     const { data } = this.props;

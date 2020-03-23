@@ -26,7 +26,7 @@ export const Salaire = ({ form }) => {
           <YesNoQuestion
             name="hasBrancheNewRegularSalaire"
             label="Le salaire mensuel a-t-il été le même durant les 12 derniers mois&nbsp;?"
-            onChange={hasSameSalaire => {
+            onChange={(hasSameSalaire) => {
               if (hasSameSalaire) {
                 form.change("brancheNewIrregularSalaire", undefined);
               } else {
@@ -37,10 +37,10 @@ export const Salaire = ({ form }) => {
                       subMonths(parse(data.dateSortie), index),
                       "MMMM yyyy",
                       {
-                        locale: frLocale
+                        locale: frLocale,
                       }
                     ),
-                    salary: null
+                    salary: null,
                   }))
                 );
                 form.change("brancheNewRegularSalaire", undefined);
@@ -67,7 +67,7 @@ const RegularNewSalaire = ({ name }) => (
         value: true,
         error: true,
         touched: true,
-        invalid: true
+        invalid: true,
       }}
     >
       {({ input, meta: { touched, error, invalid } }) => (
@@ -113,7 +113,7 @@ const IrregularNewSalaire = ({ name }) => (
                       name={`${name}.salary`}
                       validate={isNumber}
                       formatOnBlur
-                      format={value => {
+                      format={(value) => {
                         // Hack auto fill
                         fields.value.forEach((field, fieldIndex) => {
                           if (
@@ -131,11 +131,11 @@ const IrregularNewSalaire = ({ name }) => (
                         value: true,
                         error: true,
                         touched: true,
-                        invalid: true
+                        invalid: true,
                       }}
                       render={({
                         input,
-                        meta: { touched, error, invalid }
+                        meta: { touched, error, invalid },
                       }) => (
                         <>
                           <CurrencyWrapper>

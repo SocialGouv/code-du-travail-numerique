@@ -34,7 +34,7 @@ describe("<Suggester />", () => {
       <Suggester
         onSelect={() => {}}
         onSearch={onSearch}
-        reformatEnteredValue={v => v.replace(/e/, "O")}
+        reformatEnteredValue={(v) => v.replace(/e/, "O")}
       />
     );
     const input = getByPlaceholderText(/faire une recherche/i);

@@ -14,7 +14,7 @@ import Convention from "../../src/conventions/Convention";
 import Metas from "../../src/common/Metas";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 class ConventionCollective extends React.Component {
@@ -47,13 +47,13 @@ class ConventionCollective extends React.Component {
           breadcrumbs={[
             {
               label: "Conventions collectives",
-              slug: `/${getRouteBySource(SOURCES.CCN)}`
-            }
+              slug: `/${getRouteBySource(SOURCES.CCN)}`,
+            },
           ]}
           date={
             convention.date_publi &&
             format(parseISO(convention.date_publi), "dd/MM/yyyy", {
-              locale: frLocale
+              locale: frLocale,
             })
           }
           dateLabel="Entrée en vigueur le"
@@ -62,23 +62,23 @@ class ConventionCollective extends React.Component {
             {
               slug: "convention-collective",
               source: SOURCES.SHEET_SP,
-              title: "Convention collective"
+              title: "Convention collective",
             },
             {
               slug: "comment-consulter-un-accord-dentreprise",
               source: SOURCES.SHEET_SP,
-              title: "Comment consulter un accord d'entreprise ?"
+              title: "Comment consulter un accord d'entreprise ?",
             },
             {
               slug: "#hierarchie",
               source: SOURCES.LABOUR_LAW,
               title:
-                "Droit du travail: Existe-t-il une hiérarchie entre les textes ?"
-            }
+                "Droit du travail: Existe-t-il une hiérarchie entre les textes ?",
+            },
           ]}
           source={{
             name: "Légifrance",
-            url: convention.url
+            url: convention.url,
           }}
           subtitle={
             <Text fontSize="small">

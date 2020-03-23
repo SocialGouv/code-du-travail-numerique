@@ -4,7 +4,7 @@ const matchers = [
   "accords de branches",
   "accord de branche",
   "disposition conventionnelle",
-  "dispositions conventionnelles"
+  "dispositions conventionnelles",
 ];
 
 function execOne(htmlContent, match) {

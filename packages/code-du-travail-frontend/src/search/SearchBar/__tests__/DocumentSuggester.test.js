@@ -11,7 +11,7 @@ function renderDocumentSuggester({
   onChange = jest.fn(),
   query = "foo",
   placeholder = "document suggester placeholder",
-  suggestions = []
+  suggestions = [],
 }) {
   return render(
     <DocumentSuggester
@@ -35,7 +35,7 @@ describe("<DocumentSuggester />", () => {
   it("should render suggestions", () => {
     const { container, getByPlaceholderText } = renderDocumentSuggester({
       placeholder: "search foo",
-      suggestions
+      suggestions,
     });
     const input = getByPlaceholderText(/search foo/i);
     input.focus();
@@ -46,7 +46,7 @@ describe("<DocumentSuggester />", () => {
     const onChange = jest.fn();
     const { getByPlaceholderText } = renderDocumentSuggester({
       placeholder: "search foo",
-      onChange
+      onChange,
     });
 
     const input = getByPlaceholderText(/search foo/i);
@@ -59,7 +59,7 @@ describe("<DocumentSuggester />", () => {
 
     const { getByPlaceholderText } = renderDocumentSuggester({
       placeholder: "search foo",
-      onSearch
+      onSearch,
     });
 
     const input = getByPlaceholderText(/search foo/i);
@@ -75,7 +75,7 @@ describe("<DocumentSuggester />", () => {
     const { getAllByRole, getByPlaceholderText } = renderDocumentSuggester({
       placeholder: "the place to be",
       suggestions,
-      onSelect
+      onSelect,
     });
     const input = getByPlaceholderText(/the place to be/i);
     input.focus();

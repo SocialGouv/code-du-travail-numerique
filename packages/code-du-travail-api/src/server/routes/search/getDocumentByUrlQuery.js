@@ -10,8 +10,8 @@ const getDocumentByUrlQuery = (
     "description",
     "url",
     "action",
-    "breadcrumbs"
-  ]
+    "breadcrumbs",
+  ],
 ) => {
   const [, source, slug] = url.split("/");
   const esSource = getSourceByRoute(source);
@@ -23,9 +23,9 @@ const getDocumentByUrlQuery = (
     size: 1,
     query: {
       bool: {
-        filter: [{ term: { slug } }, { term: { source: esSource } }]
-      }
-    }
+        filter: [{ term: { slug } }, { term: { source: esSource } }],
+      },
+    },
   };
 };
 

@@ -7,7 +7,7 @@ describe("<FormulaDetails />", () => {
     const formula = "1337% * 3.14";
     const labels = {
       "value 1": "foo",
-      "Value 2": 1
+      "Value 2": 1,
     };
     const { container } = render(
       <FormulaDetails infoCalcul={{ labels, formula }} />

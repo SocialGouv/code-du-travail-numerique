@@ -9,7 +9,7 @@ function Montant({ value, ratio = 1 }) {
       <Value>
         {value.toLocaleString("fr-FR", {
           maximumFractionDigit: 2,
-          minimumFractionDigits: 2
+          minimumFractionDigits: 2,
         })}
         &nbsp;€ brut
       </Value>

@@ -118,7 +118,7 @@ export const fulltextPayload = {
       geo_id: "ADRNIVX_0000000270765963",
       geo_ligne: "G",
       geo_l4: "28 RUE DE VENISE",
-      geo_l5: null
+      geo_l5: null,
     },
     {
       id: 108527673,
@@ -234,11 +234,11 @@ export const fulltextPayload = {
       geo_id: "ADRNIVX_0000000270801227",
       geo_ligne: "G",
       geo_l4: "52 RUE BALARD",
-      geo_l5: null
-    }
+      geo_l5: null,
+    },
   ],
   spellcheck: null,
-  suggestions: ["corso balard"]
+  suggestions: ["corso balard"],
 };
 
 export const siretPayload = {
@@ -356,8 +356,8 @@ export const siretPayload = {
     geo_id: "ADRNIVX_0000000270801227",
     geo_ligne: "G",
     geo_l4: "52 RUE BALARD",
-    geo_l5: null
-  }
+    geo_l5: null,
+  },
 };
 
 export const siretIdccPayload = [
@@ -378,8 +378,8 @@ export const siretIdccPayload = [
         effectif: 580085,
         shortTitle: "Hôtels Cafés Restaurants (Hcr)",
         url:
-          "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635534"
-      }
-    ]
-  }
+          "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635534",
+      },
+    ],
+  },
 ];

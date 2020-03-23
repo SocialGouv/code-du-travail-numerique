@@ -12,7 +12,7 @@ export const Highlights = ({ highlights = [] }) => {
           En ce moment
         </PageTitle>
         <Grid columns={2}>
-          {highlights.map(highlight => (
+          {highlights.map((highlight) => (
             <ListLink item={highlight} key={highlight.slug} />
           ))}
         </Grid>

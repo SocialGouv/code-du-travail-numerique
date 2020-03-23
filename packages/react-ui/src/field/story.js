@@ -13,7 +13,7 @@ import { Euro, Search } from "../icons";
 
 export default {
   component: Select,
-  title: "Field|Components"
+  title: "Field|Components",
 };
 
 const StyledInput = styled(Input)`

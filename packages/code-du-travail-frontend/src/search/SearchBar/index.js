@@ -15,7 +15,7 @@ const SearchBar = ({
   hasFocus = false,
   inputId,
   hasButton = false,
-  hasSearchIcon = false
+  hasSearchIcon = false,
 }) => {
   const router = useRouter();
   // query in the input box
@@ -26,7 +26,7 @@ const SearchBar = ({
     setQuery(router.query.q);
   }, [router.query.q]);
 
-  const onFormSubmit = e => {
+  const onFormSubmit = (e) => {
     e.preventDefault();
     if (query) {
       window.scrollTo(0, 0);
@@ -34,8 +34,8 @@ const SearchBar = ({
       router.push({
         pathname: "/recherche",
         query: {
-          q: query.trim()
-        }
+          q: query.trim(),
+        },
       });
     }
   };
@@ -53,7 +53,7 @@ const SearchBar = ({
     document.body.focus();
     router.push({
       pathname: "/recherche",
-      query: { q: suggestion }
+      query: { q: suggestion },
     });
   };
 
@@ -63,7 +63,7 @@ const SearchBar = ({
 
   const onSearch = async ({ value }) => {
     try {
-      const results = await fetchSuggestResults(value).then(items =>
+      const results = await fetchSuggestResults(value).then((items) =>
         items.slice(0, suggestMaxResults)
       );
       setSuggestions(results);

@@ -4,7 +4,7 @@ import { render } from "@testing-library/react";
 import { matopush } from "../../piwik";
 
 jest.mock("../../piwik", () => ({
-  matopush: jest.fn()
+  matopush: jest.fn(),
 }));
 
 const items = {
@@ -16,14 +16,14 @@ const items = {
       description: "description",
       breadcrumbs: [
         { slug: "/themes/theme-root", label: "test content" },
-        { slug: "/themes/theme-test", label: "test theme content" }
-      ]
+        { slug: "/themes/theme-test", label: "test theme content" },
+      ],
     },
     {
       source: "outils",
       title: "simulateur de prime de précarite",
       slug: "simulateur-precarite",
-      description: "description"
+      description: "description",
     },
     {
       source: "external",
@@ -31,14 +31,14 @@ const items = {
       url:
         "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
       slug: "simulateur-licenciement-telerc",
-      description: "description"
+      description: "description",
     },
     {
       source: "outils",
       title: "Mer il est fou 2!",
       slug: "mer-il-est-fou2",
       description: "description",
-      breadcrumbs: [{ slug: "/themes/theme-root", label: "test root content" }]
+      breadcrumbs: [{ slug: "/themes/theme-root", label: "test root content" }],
     },
     {
       source: "contribution",
@@ -47,30 +47,30 @@ const items = {
       description: "description",
       breadcrumbs: [
         { slug: "/themes/theme-root", label: "test content" },
-        { slug: "/themes/theme-test", label: "test theme content" }
-      ]
-    }
+        { slug: "/themes/theme-test", label: "test theme content" },
+      ],
+    },
   ],
   articles: [
     {
       source: "code_du_travail",
       title: "L1243-1",
       slug: "L1243-1",
-      description: "la description"
-    }
+      description: "la description",
+    },
   ],
   themes: [
     {
       source: "themes",
       title: "Contrat",
-      slug: "1-contrat"
-    }
-  ]
+      slug: "1-contrat",
+    },
+  ],
 };
 const emptyItems = {
   documents: [],
   articles: [],
-  themes: []
+  themes: [],
 };
 describe("<SearchResults/>", () => {
   beforeEach(() => {

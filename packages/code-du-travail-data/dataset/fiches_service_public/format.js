@@ -22,7 +22,7 @@ const format = fiche => {
 
   // We filter out the elements we will never use nor display
   publication.children = publication.children.filter(
-    child => child.name !== "OuSAdresser" && child.name !== "ServiceEnLigne"
+    child => child.name !== "OuSAdresser" && child.name !== "ServiceEnLigne",
   );
 
   const title = getText(getChild(publication, "dc:title"));
@@ -56,7 +56,7 @@ const format = fiche => {
     references_juridiques,
     title,
     description,
-    url
+    url,
   };
 };
 

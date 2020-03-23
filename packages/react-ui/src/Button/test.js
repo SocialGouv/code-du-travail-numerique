@@ -22,7 +22,7 @@ describe("<Button />", () => {
 
   test.each(["naked", "flat", "link", "navLink", "primary", "secondary"])(
     "it renders a Button %s",
-    variant => {
+    (variant) => {
       const { container } = render(
         <>
           <Button variant={variant}>this is a Button {variant} </Button>

@@ -5,7 +5,7 @@ import { Stripe } from ".";
 
 export default {
   component: Stripe,
-  title: "Components|Stripe"
+  title: "Components|Stripe",
 };
 
 export const base = () => (

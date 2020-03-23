@@ -20,7 +20,7 @@ export const Accordion = ({ items, variant, ...props }) => {
       {items.map(({ body, icon, id, title }, index) => (
         <div id={id} key={`${id}-${index}`}>
           {typeof id !== "undefined" &&
-            props.preExpanded.find(element => element === id) && (
+            props.preExpanded.find((element) => element === id) && (
               <PushBelowHeader />
             )}
           <AccordionItem
@@ -54,16 +54,16 @@ Accordion.propTypes = {
       body: PropTypes.node.isRequired,
       icon: PropTypes.elementType,
       id: PropTypes.string,
-      title: PropTypes.node.isRequired
+      title: PropTypes.node.isRequired,
     })
   ).isRequired,
   preExpanded: PropTypes.arrayOf(PropTypes.string),
-  variant: PropTypes.oneOf(["base", "tile", "hierarchy"])
+  variant: PropTypes.oneOf(["base", "tile", "hierarchy"]),
 };
 
 Accordion.defaultProps = {
   preExpanded: [],
-  variant: "base"
+  variant: "base",
 };
 
 // This prevents preOpened item to be hidden behind header

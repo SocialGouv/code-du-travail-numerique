@@ -10,7 +10,7 @@ import { matopush } from "../../piwik";
 const SearchResults = ({
   items: { documents, themes, articles },
   isSearch,
-  query
+  query,
 }) => {
   useEffect(() => {
     // distinction between actual search and theme search when logging
@@ -46,26 +46,26 @@ SearchResults.propTypes = {
         breadcrumbs: PropTypes.arrayOf(
           PropTypes.shape({
             label: PropTypes.string,
-            slug: PropTypes.string
+            slug: PropTypes.string,
           })
-        )
+        ),
       })
     ),
     articles: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string,
         source: PropTypes.string,
-        slug: PropTypes.string
+        slug: PropTypes.string,
       })
     ),
     themes: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string,
         source: PropTypes.string,
-        slug: PropTypes.string
+        slug: PropTypes.string,
       })
-    )
-  })
+    ),
+  }),
 };
 
 export { SearchResults };

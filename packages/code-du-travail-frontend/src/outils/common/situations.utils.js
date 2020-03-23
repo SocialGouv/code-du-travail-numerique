@@ -1,6 +1,6 @@
 import React from "react";
 
-const createValuesMatcher = values => item => {
+const createValuesMatcher = (values) => (item) => {
   function swallowEqual(a, b) {
     return Object.entries(a).every(([key, value]) => {
       if (value && value.constructor === Object) {
@@ -23,10 +23,10 @@ export function getNextQuestionKey(
   values = {}
 ) {
   const [criterion] = criteriaOrder
-    .filter(criterion =>
-      possibleSituations.some(situation => situation.criteria[criterion])
+    .filter((criterion) =>
+      possibleSituations.some((situation) => situation.criteria[criterion])
     )
-    .filter(criterion => !values[criterion]);
+    .filter((criterion) => !values[criterion]);
   return criterion;
 }
 
@@ -41,7 +41,7 @@ export function getOptions(possibleSituations, nextQuestionKey) {
       const [, numB] = b.match(/([0-9]+)\|/) || [];
       return numA && numB ? numA - numB : a.localeCompare(b);
     })
-    .map(a => [a, a.replace(/([0-9]+\|)?/, "").trim()]);
+    .map((a) => [a, a.replace(/([0-9]+\|)?/, "").trim()]);
 }
 
 export function getPastQuestions(
@@ -73,21 +73,21 @@ export function getPastQuestions(
 }
 
 export function getSituationsFor(data, obj) {
-  return data.filter(situation =>
+  return data.filter((situation) =>
     Object.entries(obj).every(([key, value]) => situation[key] === value)
   );
 }
 
 export const isNotYetProcessed = (data, idcc) => {
   const situtation = data.filter(
-    situation => parseInt(situation.idcc, 10) === parseInt(idcc, 10)
+    (situation) => parseInt(situation.idcc, 10) === parseInt(idcc, 10)
   );
   return !situtation.length;
 };
 
 export function recapSituation(criteria) {
-  const cleanValue = value => `${value}`.replace(/[0-9]+\|/, "").trim();
-  const capitalize = str => str.slice(0, 1).toUpperCase() + str.slice(1);
+  const cleanValue = (value) => `${value}`.replace(/[0-9]+\|/, "").trim();
+  const capitalize = (str) => str.slice(0, 1).toUpperCase() + str.slice(1);
 
   return (
     <ul>
@@ -122,7 +122,7 @@ export function getRef(refs) {
 export const getFormProps = ({ key, criteria, pastQuestions }) =>
   // list keys that no longer exist
   Object.keys(criteria)
-    .filter(k => !pastQuestions.find(([key]) => k === key))
+    .filter((k) => !pastQuestions.find(([key]) => k === key))
     .concat(
       // list keys that need to be reseted
       pastQuestions

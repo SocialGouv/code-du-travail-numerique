@@ -6,10 +6,10 @@ jest.mock("next/router", () => ({
   events: {
     on() {},
     off() {},
-    trigger() {}
+    trigger() {},
   },
   useRouter: () => ({
-    query: { slug: "accord-dentreprise" }
+    query: { slug: "accord-dentreprise" },
   }),
   withRouter: component => {
     component.defaultProps = {
@@ -18,11 +18,11 @@ jest.mock("next/router", () => ({
         asPath: "mock",
         route: "mock",
         pathname: "mock",
-        query: { slug: "accord-dentreprise" }
-      }
+        query: { slug: "accord-dentreprise" },
+      },
     };
     return component;
-  }
+  },
 }));
 
 describe("<Term />", () => {

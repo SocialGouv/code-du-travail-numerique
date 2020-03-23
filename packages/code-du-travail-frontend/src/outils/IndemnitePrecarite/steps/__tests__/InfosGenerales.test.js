@@ -29,7 +29,7 @@ describe("<StepInfosGenerales />", () => {
 
   it("should render with CDD", () => {
     const { container } = renderForm({
-      contractType: CONTRACT_TYPE.CDD
+      contractType: CONTRACT_TYPE.CDD,
     });
     expect(container).toMatchSnapshot();
   });
@@ -37,7 +37,7 @@ describe("<StepInfosGenerales />", () => {
   it("should render with CDD and not handled ccn", () => {
     const { container } = renderForm({
       ccn: { convention: { num: 16 } },
-      contractType: CONTRACT_TYPE.CDD
+      contractType: CONTRACT_TYPE.CDD,
     });
     expect(container).toMatchSnapshot();
   });
@@ -49,7 +49,7 @@ describe("<StepInfosGenerales />", () => {
 
   it("should display and error if ctt and contrat is mission-formation", () => {
     const { getByTestId, getByText } = renderForm({
-      contractType: CONTRACT_TYPE.CTT
+      contractType: CONTRACT_TYPE.CTT,
     });
     const missionFormation = getByTestId("cttFormation").querySelector(
       `input[value=true]`
@@ -62,7 +62,7 @@ describe("<StepInfosGenerales />", () => {
   });
   it("should display and info alert if ctt and contrat is not mission-formation", () => {
     const { getByTestId, getByText } = renderForm({
-      contractType: CONTRACT_TYPE.CTT
+      contractType: CONTRACT_TYPE.CTT,
     });
     const missionFormation = getByTestId("cttFormation").querySelector(
       `input[value=false]`

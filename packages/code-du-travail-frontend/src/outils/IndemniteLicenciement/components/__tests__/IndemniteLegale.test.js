@@ -9,7 +9,7 @@ describe("<IndemniteLegale />", () => {
         indemnite={42}
         infoCalcul={{
           formula: "1337% * 3.14",
-          labels: { value: 1 }
+          labels: { value: 1 },
         }}
       />
     );

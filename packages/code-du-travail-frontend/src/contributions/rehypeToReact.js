@@ -6,23 +6,23 @@ import {
   Alert,
   Heading,
   theme,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 import Html from "../../src/common/Html";
 
 //Custom MDX component
-const Tab = props => (
+const Tab = (props) => (
   <StyledAccordion
     items={[
       {
         title: <h3>{props.title}</h3>,
-        body: props.children
-      }
+        body: props.children,
+      },
     ]}
   />
 );
 
-const Hdn = props => (
+const Hdn = (props) => (
   <Alert>
     <Heading>Texte applicable</Heading>
     <div {...props} />
@@ -39,7 +39,7 @@ const ContentSP = ({ raw }) => (
   </>
 );
 
-const ContentMT = props => {
+const ContentMT = (props) => {
   const { intro, sections } = props;
   return (
     <>
@@ -50,10 +50,10 @@ const ContentMT = props => {
       )}
       {sections && (
         <Accordion
-          items={sections.map(section => ({
+          items={sections.map((section) => ({
             id: section.anchor,
             title: <h3>{section.title}</h3>,
-            body: <TabContent>{section.html}</TabContent>
+            body: <TabContent>{section.html}</TabContent>,
           }))}
         />
       )}
@@ -61,7 +61,7 @@ const ContentMT = props => {
   );
 };
 
-const rehypeToReact = content => {
+const rehypeToReact = (content) => {
   const contentComponent =
     content && content.raw ? (
       <ContentSP raw={content.raw} />
@@ -71,7 +71,7 @@ const rehypeToReact = content => {
   return {
     tab: Tab,
     hdn: Hdn,
-    content: () => contentComponent
+    content: () => contentComponent,
   };
 };
 

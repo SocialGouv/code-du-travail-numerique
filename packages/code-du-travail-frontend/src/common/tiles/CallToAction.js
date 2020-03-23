@@ -23,12 +23,12 @@ CallToActionTile.displayName = "CallToActionTile";
 
 CallToActionTile.propTypes = {
   action: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 CallToActionTile.defaultProps = {
   action: "",
-  children: null
+  children: null,
 };
 
 const { spacings } = theme;

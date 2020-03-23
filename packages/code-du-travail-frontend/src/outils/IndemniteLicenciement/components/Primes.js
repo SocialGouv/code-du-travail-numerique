@@ -28,7 +28,7 @@ function Primes({ name, visible = true, onChange }) {
                   value: true,
                   error: true,
                   touched: true,
-                  invalid: true
+                  invalid: true,
                 }}
                 render={({ input, meta: { touched, error, invalid } }) => (
                   <div>
@@ -58,7 +58,7 @@ function Primes({ name, visible = true, onChange }) {
             </AddButton>
           )}
           {onChange && (
-            <OnChange name={name}>{values => onChange(values)}</OnChange>
+            <OnChange name={name}>{(values) => onChange(values)}</OnChange>
           )}
         </>
       )}
@@ -66,7 +66,7 @@ function Primes({ name, visible = true, onChange }) {
   );
 }
 Primes.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 export { Primes };
 

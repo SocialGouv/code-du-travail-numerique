@@ -7,12 +7,12 @@ function getModeleBody() {
         filter: [
           {
             term: {
-              source: "modeles_de_courriers"
-            }
-          }
-        ]
-      }
-    }
+              source: "modeles_de_courriers",
+            },
+          },
+        ],
+      },
+    },
   };
 }
 

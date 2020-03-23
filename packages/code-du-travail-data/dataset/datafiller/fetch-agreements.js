@@ -25,7 +25,7 @@ async function fetchAgreements() {
     .map(agreement => {
       const agreementTree = require(`@socialgouv/kali-data/data/${agreement.id}.json`);
       const blocksData = ccnBlockRecords.find(
-        data => data.cid === agreement.id
+        data => data.cid === agreement.id,
       );
       return {
         ...getCCNInfo(agreement),
@@ -34,7 +34,7 @@ async function fetchAgreements() {
           blocksData && blocksData.groups
             ? getArticleByBlock(blocksData.groups, agreementTree)
             : [],
-        answers: getContributionAnswers(agreement.num)
+        answers: getContributionAnswers(agreement.num),
       };
     });
 }
@@ -60,7 +60,7 @@ function getCCNInfo({ id, num, date_publi, mtime, title, shortTitle, url }) {
     title,
     shortTitle,
     url,
-    num
+    num,
   };
 }
 /**
@@ -68,7 +68,7 @@ function getCCNInfo({ id, num, date_publi, mtime, title, shortTitle, url }) {
  */
 function getNbText(agreementTree) {
   const texteDeBase = find(agreementTree, node =>
-    node.data.title.startsWith("Texte de base")
+    node.data.title.startsWith("Texte de base"),
   );
   if (!texteDeBase) {
     return;
@@ -85,13 +85,13 @@ function getContributionAnswers(agreementNum) {
     return {
       title,
       url: url || (agreement && agreement.url),
-      category: category
+      category: category,
     };
   };
   return contributions
     .map(({ title, slug, index, answers, breadcrumbs }) => {
       const [answer] = answers.conventions.filter(
-        ({ idcc }) => parseInt(idcc) === parseInt(agreementNum)
+        ({ idcc }) => parseInt(idcc) === parseInt(agreementNum),
       );
       const unhandledRegexp = /La convention collective ne prévoit rien sur ce point/i;
       if (answer && !unhandledRegexp.test(answer.markdown)) {
@@ -106,7 +106,7 @@ function getContributionAnswers(agreementNum) {
           answer: compiler.processSync(answer.markdown).contents,
           theme: rootTheme,
           references: answer.references.map(transformRef),
-          slug
+          slug,
         };
       }
     })
@@ -128,11 +128,11 @@ function getArticleByBlock(groups, agreementTree) {
         .map(articleId => {
           const node = find(
             treeWithParents,
-            node => node.data.id === articleId
+            node => node.data.id === articleId,
           );
           if (!node) {
             console.error(
-              `${articleId} not found in idcc ${agreementTree.data.num}`
+              `${articleId} not found in idcc ${agreementTree.data.num}`,
             );
           }
           return node
@@ -140,11 +140,11 @@ function getArticleByBlock(groups, agreementTree) {
                 title: node.data.num || "non numéroté",
                 id: node.data.id,
                 cid: node.data.cid,
-                section: node.parent.data.title
+                section: node.parent.data.title,
               }
             : null;
         })
-        .filter(Boolean)
+        .filter(Boolean),
     }))
     .filter(({ articles }) => articles.length > 0);
 }

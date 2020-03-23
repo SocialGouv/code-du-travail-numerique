@@ -15,16 +15,16 @@ InputRadio.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired
+  size: PropTypes.string.isRequired,
 };
 
 InputRadio.defaultProps = {
-  size: "1.6rem"
+  size: "1.6rem",
 };
 
 const StyledLabel = styled.label`
   display: flex;
-  font-size: ${props => props.size};
+  font-size: ${(props) => props.size};
   cursor: pointer;
 `;
 
@@ -32,10 +32,10 @@ const StyledRadio = styled.input`
   position: relative;
   display: inline-block;
   flex-shrink: 0;
-  width: calc(${props => props.size} * 1.25);
-  height: calc(${props => props.size} * 1.25);
-  margin: calc(${props => props.size} / 5) calc(2 * ${props => props.size} / 3)
-    0 0;
+  width: calc(${(props) => props.size} * 1.25);
+  height: calc(${(props) => props.size} * 1.25);
+  margin: calc(${(props) => props.size} / 5)
+    calc(2 * ${(props) => props.size} / 3) 0 0;
   padding: 0;
   line-height: inherit;
   background: ${({ theme }) => theme.white};
@@ -49,8 +49,8 @@ const StyledRadio = styled.input`
     top: 50%;
     left: 50%;
     display: none;
-    width: calc(${props => props.size} / 1.5);
-    height: calc(${props => props.size} / 1.5);
+    width: calc(${(props) => props.size} / 1.5);
+    height: calc(${(props) => props.size} / 1.5);
     background-color: ${({ theme }) => theme.primary};
     border-radius: 50%;
     transform: translate(-50%, -50%);

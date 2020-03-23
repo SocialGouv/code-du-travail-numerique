@@ -19,7 +19,7 @@ function renderForm() {
 const testQuestions = [
   ["ruptureContratFauteGrave", true],
   ["propositionCDIFinContrat", true],
-  ["refusSouplesse", true]
+  ["refusSouplesse", true],
 ];
 
 describe("<StepCTT />", () => {

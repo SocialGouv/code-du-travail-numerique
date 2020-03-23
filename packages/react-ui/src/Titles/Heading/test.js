@@ -11,7 +11,7 @@ describe("<Heading />", () => {
     const { container } = render(
       <Heading stripped shift="2rem" as="h4">
         Lorem Ipsum
-      </Heading>
+      </Heading>,
     );
     expect(container).toMatchSnapshot();
   });

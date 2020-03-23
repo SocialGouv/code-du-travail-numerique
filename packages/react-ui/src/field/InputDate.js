@@ -9,7 +9,7 @@ export const InputDate = ({ ...props }) => (
 );
 
 InputDate.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 const StyledInputDate = styled(Input)`

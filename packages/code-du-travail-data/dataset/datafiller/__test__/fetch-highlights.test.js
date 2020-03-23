@@ -6,58 +6,58 @@ const highlights = [
       {
         url: "/code-du-travail/l1221-3",
         title: "Article L1221-3",
-        position: 5
+        position: 5,
       },
       {
         url:
           "/fiche-service-public/conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
         title:
           "Conclusion du contrat de travail \u00e0 dur\u00e9e d\u00e9termin\u00e9e (CDD)",
-        position: 2
+        position: 2,
       },
       {
         url: "/fiche-service-public/fiche-3",
         title: "Fiche 3",
-        position: 4
+        position: 4,
       },
       {
         url: "/fiche-service-public/fiche-2",
         title: "Fiche 2",
-        position: 8
+        position: 8,
       },
       {
         url:
           "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
-        position: 1
+        position: 1,
       },
       {
         url: "/some-unknown-source/test",
-        position: 3
-      }
+        position: 3,
+      },
     ],
-    title: "title1"
+    title: "title1",
   },
   {
     refs: [
       {
         url: "/code-du-travail/l3221-3",
         title: "Article L3221-3",
-        position: 5
+        position: 5,
       },
       {
         url: "/themes/theme1",
         title: "Thématique",
-        position: 1
+        position: 1,
       },
       {
         url:
           "/fiche-ministere-travail/le-salaire-quelles-sont-les-modalites-de-paiement",
         title: "Le salaire : quelles sont les modalités de paiement ?",
-        position: 3
-      }
+        position: 3,
+      },
     ],
-    title: "title2"
-  }
+    title: "title2",
+  },
 ];
 
 const mockResponse = () =>
@@ -65,8 +65,8 @@ const mockResponse = () =>
     ok: true,
     status: 200,
     json: () => ({
-      data: highlights
-    })
+      data: highlights,
+    }),
   });
 
 jest.mock("node-fetch", () => mockResponse);

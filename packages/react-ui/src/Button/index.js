@@ -196,8 +196,8 @@ Button.propTypes = {
     "flat",
     "naked",
     "primary",
-    "secondary"
-  ])
+    "secondary",
+  ]),
 };
 
 Button.defaultProps = {
@@ -205,5 +205,5 @@ Button.defaultProps = {
   onClick: () => {},
   narrow: false,
   small: false,
-  variant: "secondary"
+  variant: "secondary",
 };

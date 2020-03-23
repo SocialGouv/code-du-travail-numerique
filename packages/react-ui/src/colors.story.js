@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
 export default {
-  title: "Theme|Colors"
+  title: "Theme|Colors",
 };
 
 export const Colors = () => {
@@ -18,7 +18,7 @@ export const Colors = () => {
             width: "100px",
             height: "1em",
             background: theme[key],
-            border: "1px solid silver"
+            border: "1px solid silver",
           }}
         />
         <span>{key}</span>

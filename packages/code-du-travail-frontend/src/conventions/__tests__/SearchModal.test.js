@@ -8,7 +8,7 @@ describe("<ConventionModal />", () => {
   it("should render", () => {
     const { container } = render(
       <ConventionModal>
-        {openModal => (
+        {(openModal) => (
           <button data-testid="bt" onClick={openModal}>
             voir les conventions
           </button>
@@ -21,7 +21,7 @@ describe("<ConventionModal />", () => {
   it("should render a popup when click on button", () => {
     const { baseElement, getByTestId, getByPlaceholderText } = render(
       <ConventionModal>
-        {openModal => (
+        {(openModal) => (
           <button data-testid="bt" onClick={openModal}>
             voir les conventions
           </button>
@@ -40,7 +40,7 @@ describe("<ConventionModal />", () => {
   it("should close the modal", async () => {
     const { getByTitle, getByTestId, queryByPlaceholderText } = render(
       <ConventionModal>
-        {openModal => (
+        {(openModal) => (
           <button data-testid="bt" onClick={openModal}>
             chercher votre convention
           </button>

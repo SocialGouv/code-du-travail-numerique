@@ -9,7 +9,7 @@ export const Label = ({ children, ...props }) => (
 );
 
 Label.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 const StyledLabel = styled.label`

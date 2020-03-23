@@ -42,20 +42,20 @@ const baseParams = {
   module: "API",
   format: "JSON",
   period: "range",
-  date: getDate(new Date())
+  date: getDate(new Date()),
 };
 
 const methodParams = [
   {
-    method: "VisitsSummary.getVisits"
+    method: "VisitsSummary.getVisits",
   },
   {
-    method: "Actions.get"
+    method: "Actions.get",
   },
   {
     method: "Events.getAction",
-    label: ["negative", "positive"] // transform into label[]=
-  }
+    label: ["negative", "positive"], // transform into label[]=
+  },
 ];
 
 router.get("/stats", async ctx => {
@@ -65,11 +65,11 @@ router.get("/stats", async ctx => {
   }
   const promises = methodParams.map(params =>
     fetch(getUrl(MATOMO_URL, { ...baseParams, ...params })).then(data =>
-      data.json()
-    )
+      data.json(),
+    ),
   );
   const {
-    body: { aggregations }
+    body: { aggregations },
   } = await elasticsearchClient.search({ index, body: docsCountBody });
   let nbDocuments = 0;
   const { buckets = [] } = aggregations.sources;
@@ -85,9 +85,9 @@ router.get("/stats", async ctx => {
     nbSearches: infoData.nb_searches,
     feedback: {
       positive: positiveFeedback.nb_events,
-      negative: negativeFeedback.nb_events
+      negative: negativeFeedback.nb_events,
     },
-    nbDocuments
+    nbDocuments,
   };
 });
 

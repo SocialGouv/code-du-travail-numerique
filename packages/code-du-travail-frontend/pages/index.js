@@ -11,7 +11,7 @@ import {
   icons,
   PageTitle,
   Section,
-  theme
+  theme,
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import tools from "@cdt/data...tools/internals.json";
@@ -24,7 +24,7 @@ import { Themes } from "../src/home/Themes";
 import { Highlights } from "../src/home/Highlights";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 export const CCTile = (
@@ -56,8 +56,8 @@ export const DocumentsTile = (
 );
 
 const selectedTools = [
-  tools.find(tool => tool.slug === "preavis-demission"),
-  tools.find(tool => tool.slug === "simulateur-embauche")
+  tools.find((tool) => tool.slug === "preavis-demission"),
+  tools.find((tool) => tool.slug === "simulateur-embauche"),
 ];
 
 const Home = ({ pageUrl, ogImage, themes = [], highlights = [] }) => (
@@ -83,7 +83,7 @@ const Home = ({ pageUrl, ogImage, themes = [], highlights = [] }) => (
             ({ action, description, href, icon, slug, title }) => {
               const linkProps = {
                 href,
-                passHref: true
+                passHref: true,
               };
               if (!href) {
                 linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/[slug]`;
@@ -127,10 +127,10 @@ Home.getInitialProps = async () => {
   try {
     const [themesResponse, highlightsResponse] = await Promise.all([
       fetch(`${API_URL}/themes`),
-      fetch(`${API_URL}/highlights/homepage`)
+      fetch(`${API_URL}/highlights/homepage`),
     ]);
     if (themesResponse.ok) {
-      themes = await themesResponse.json().then(themes => themes.children);
+      themes = await themesResponse.json().then((themes) => themes.children);
     }
     if (highlightsResponse.ok) {
       highlights = await highlightsResponse.json();

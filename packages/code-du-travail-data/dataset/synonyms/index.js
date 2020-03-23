@@ -4,7 +4,7 @@ const thesaurus = require("./TESS.json");
 const thesaurusSynonyms = thesaurus
   .filter(
     ({ term, equivalent }) =>
-      term && equivalent && !Number.isInteger(parseInt(equivalent, 10))
+      term && equivalent && !Number.isInteger(parseInt(equivalent, 10)),
   )
   .map(({ term, equivalent }) => `${term}, ${equivalent}`);
 

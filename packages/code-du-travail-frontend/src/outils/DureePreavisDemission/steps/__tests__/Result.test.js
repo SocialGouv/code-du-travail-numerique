@@ -7,8 +7,8 @@ describe("<StepResult />", () => {
       ccn: { num: 292, title: "Plasturgie" },
       criteria: {
         "catégorie socio-professionnelle": "42| Collaborateurs",
-        coefficient: "28| 800 à 830 inclus"
-      }
+        coefficient: "28| 800 à 830 inclus",
+      },
     });
     expect(container).toMatchSnapshot();
   });
@@ -24,8 +24,8 @@ describe("<StepResult />", () => {
         title:
           "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
         shortTitle: "Cordonnerie multiservice",
-        num: 1561
-      }
+        num: 1561,
+      },
     });
     expect(container).toMatchSnapshot();
   });

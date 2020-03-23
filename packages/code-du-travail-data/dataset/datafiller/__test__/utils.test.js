@@ -7,8 +7,8 @@ describe("getVariants", () => {
         title: "title",
         variants: `line1
 line2
-line3`
-      })
+line3`,
+      }),
     ).toEqual(["title", "line1", "line2", "line3"]);
   });
 
@@ -16,8 +16,8 @@ line3`
     expect(
       getVariants({
         title: "title",
-        variants: null
-      })
+        variants: null,
+      }),
     ).toEqual(["title"]);
   });
 
@@ -25,8 +25,8 @@ line3`
     expect(
       getVariants({
         title: "title",
-        variants: ""
-      })
+        variants: "",
+      }),
     ).toEqual(["title"]);
   });
 
@@ -35,8 +35,8 @@ line3`
       getVariants({
         title: " title ",
         variants: `     page
-          page2 `
-      })
+          page2 `,
+      }),
     ).toEqual(["title", "page", "page2"]);
   });
 
@@ -44,8 +44,8 @@ line3`
     expect(
       getVariants({
         title: "",
-        variants: ""
-      })
+        variants: "",
+      }),
     ).toEqual([]);
   });
 
@@ -53,8 +53,8 @@ line3`
     expect(
       getVariants({
         title: null,
-        variants: null
-      })
+        variants: null,
+      }),
     ).toEqual([]);
   });
 
@@ -62,8 +62,8 @@ line3`
     expect(
       getVariants({
         title: null,
-        variants: null
-      })
+        variants: null,
+      }),
     ).toEqual([]);
   });
 });
@@ -73,11 +73,11 @@ describe("sortByKey", () => {
     {
       a: 1,
       b: 3,
-      c: "r1234-5"
+      c: "r1234-5",
     },
     { a: 277, b: 1, c: "r1234-2" },
     { a: 32, b: 12, c: "r223" },
-    { a: 28, b: 0, c: "r1235" }
+    { a: 28, b: 0, c: "r1235" },
   ];
 
   it("should sort by integer key", () => {
@@ -98,38 +98,38 @@ describe("sortRefs", () => {
     {
       id: 1,
       url: "/code-du-travail/1",
-      relevance: 2
+      relevance: 2,
     },
     {
       id: 2,
       url: "/fiche-service-public/2",
-      relevance: 2
+      relevance: 2,
     },
     {
       id: 3,
       url: "/fiche-service-public/3",
-      relevance: 3
+      relevance: 3,
     },
     {
       id: 4,
       url: "/code-du-travail/4",
-      relevance: 5
+      relevance: 5,
     },
     {
       id: 5,
       url: "/code-du-travail/5",
-      relevance: 2
+      relevance: 2,
     },
     {
       id: 6,
       url: "/external/6",
-      relevance: 2
+      relevance: 2,
     },
     {
       id: 7,
       url: "/fiche-ministere-travail/7",
-      relevance: 5
-    }
+      relevance: 5,
+    },
   ];
 
   it("sort refs by relevance and source type", () => {

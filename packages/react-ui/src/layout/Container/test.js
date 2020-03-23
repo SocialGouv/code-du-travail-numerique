@@ -9,7 +9,7 @@ describe("<Container />", () => {
   });
   it("renders narrow", () => {
     const { container } = render(
-      <Container narrow>Narrow contained</Container>
+      <Container narrow>Narrow contained</Container>,
     );
     expect(container).toMatchSnapshot();
   });
@@ -17,7 +17,7 @@ describe("<Container />", () => {
     const { container } = render(
       <Container narrow noPadding>
         noPadding prop can only be used with the narrow prop
-      </Container>
+      </Container>,
     );
     expect(container).toMatchSnapshot();
   });
@@ -25,7 +25,7 @@ describe("<Container />", () => {
     const { container } = render(
       <Container noPadding>
         noPadding prop can only be used with the narrow prop
-      </Container>
+      </Container>,
     );
     expect(container).toMatchSnapshot();
   });

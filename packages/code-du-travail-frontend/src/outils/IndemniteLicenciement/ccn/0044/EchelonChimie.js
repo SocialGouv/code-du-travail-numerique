@@ -54,7 +54,7 @@ function EchelonChimie({ name }) {
       <Field name={name}>
         {({ input }) => (
           <OnChange name="echelon">
-            {coefficient => {
+            {(coefficient) => {
               if (coefficient) {
                 const { groupe, labels } = groupeLabelByCoeff.get(coefficient);
                 setLabels(labels);
@@ -78,7 +78,7 @@ function EchelonChimie({ name }) {
   );
 }
 EchelonChimie.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 export { EchelonChimie };
 

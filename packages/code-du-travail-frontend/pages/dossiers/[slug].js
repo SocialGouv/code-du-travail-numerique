@@ -15,7 +15,7 @@ import {
   Tile,
   Title,
   icons,
-  theme
+  theme,
 } from "@socialgouv/react-ui";
 
 import Answer from "../../src/common/Answer";
@@ -23,7 +23,7 @@ import { Layout } from "../../src/layout/Layout";
 import {
   AsideContent,
   MainAsideLayout,
-  MainContent
+  MainContent,
 } from "../../src/layout/AnswerLayout";
 import Metas from "../../src/common/Metas";
 import Mdx from "../../src/common/Mdx";
@@ -33,7 +33,7 @@ import { ListLink } from "../../src/search/SearchResults/Results";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 function DossierThematique({ dossier, ogImage, pageUrl }) {
@@ -48,7 +48,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   const templateRefs = refs.filter(({ type }) => type === "template");
   const componentMappings = {
     ul: FlatList,
-    a: LeftArrowLink
+    a: LeftArrowLink,
   };
   return (
     <Layout>
@@ -67,7 +67,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
             <Container>
               <Title id="essentiel">L’essentiel</Title>
               <FlatList>
-                {mainRefs.map(item => (
+                {mainRefs.map((item) => (
                   <StyledListItem key={item.slug}>
                     <ListLink item={item} />
                   </StyledListItem>
@@ -77,7 +77,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
               <Title id="fiches-pratiques">Pour aller plus loin</Title>
               <FlatList>
                 <ViewMore>
-                  {secondaryRefs.map(item => (
+                  {secondaryRefs.map((item) => (
                     <StyledListItem key={item.slug}>
                       <ListLink item={item} />
                     </StyledListItem>
@@ -110,7 +110,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
             Les modèles suivants peuvent vous intéresser
           </Title>
           <Grid>
-            {templateRefs.map(item => (
+            {templateRefs.map((item) => (
               <InternalLink
                 key={item.slug}
                 source={item.source}
@@ -127,7 +127,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
           </Grid>
           <Title>Les thèmes suivants peuvent vous intéresser</Title>
           <Grid>
-            {themeRefs.map(item => (
+            {themeRefs.map((item) => (
               <InternalLink
                 key={item.slug}
                 source={item.source}
@@ -156,7 +156,7 @@ const { spacings } = theme;
 
 const LeftArrowLink = styled(ArrowLink).attrs(() => ({
   arrowPosition: "left",
-  className: "no-after"
+  className: "no-after",
 }))`
   word-break: break-word;
 `;

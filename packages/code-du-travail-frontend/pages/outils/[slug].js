@@ -19,7 +19,7 @@ const toolsBySlug = {
   "simulateur-embauche": SimulateurEmbauche,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "preavis-demission": DureePreavisDemission,
-  "heures-recherche-emploi": HeuresRechercheEmploi
+  "heures-recherche-emploi": HeuresRechercheEmploi,
 };
 
 function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
@@ -50,12 +50,12 @@ export default Outils;
 
 Outils.getInitialProps = async ({ query }) => {
   const { slug } = query;
-  const { description, icon, title } = tools.find(tool => tool.slug === slug);
+  const { description, icon, title } = tools.find((tool) => tool.slug === slug);
 
   return {
     description,
     icon,
     slug,
-    title
+    title,
   };
 };

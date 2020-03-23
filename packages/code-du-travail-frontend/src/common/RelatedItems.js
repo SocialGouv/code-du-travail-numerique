@@ -7,7 +7,7 @@ import {
   FlatList,
   Heading,
   icons,
-  theme
+  theme,
 } from "@socialgouv/react-ui";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 import { matopush } from "../piwik";
@@ -38,7 +38,7 @@ export const RelatedItems = ({ items = [] }) => {
               source,
               subtitle,
               title,
-              url
+              url,
             }) => (
               <StyledTileItem key={slug || url}>
                 {source !== SOURCES.EXTERNALS ? (
@@ -106,7 +106,7 @@ export const RelatedItems = ({ items = [] }) => {
                         matopush([
                           "trackEvent",
                           "selectRelated",
-                          `${route}${rootSlug}${hash}`
+                          `${route}${rootSlug}${hash}`,
                         ])
                       }
                     >

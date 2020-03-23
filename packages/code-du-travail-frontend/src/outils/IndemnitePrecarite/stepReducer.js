@@ -10,29 +10,29 @@ export const initialState = {
     {
       component: StepIntro,
       name: "intro",
-      label: "Introduction"
+      label: "Introduction",
     },
     {
       component: StepInfoCCn,
       name: "info_cc",
-      label: "Convention collective"
+      label: "Convention collective",
     },
     {
       component: StepInfosGenerales,
       name: "info_generales",
-      label: "Informations générales"
+      label: "Informations générales",
     },
     {
       component: StepRemuneration,
       name: "remuneration",
-      label: "Rémunération"
+      label: "Rémunération",
     },
     {
       component: StepIndemnite,
       name: "indemnite",
-      label: "Indemnité"
-    }
-  ]
+      label: "Indemnité",
+    },
+  ],
 };
 
 export function stepReducer(state, { type, payload }) {

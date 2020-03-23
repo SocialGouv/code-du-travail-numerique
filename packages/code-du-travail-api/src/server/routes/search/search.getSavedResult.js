@@ -30,7 +30,7 @@ const fuzzOptions = {
   scorer: fuzz.ratio,
   full_process: false,
   unsorted: false,
-  limit: 2
+  limit: 2,
 };
 
 const testFuzzyAllowed = (query, match) => {

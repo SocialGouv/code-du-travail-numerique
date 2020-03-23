@@ -4,6 +4,6 @@ export const steps = [
   {
     component: Step,
     name: "branche_result",
-    label: "Indemnité conventionnelle"
-  }
+    label: "Indemnité conventionnelle",
+  },
 ];

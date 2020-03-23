@@ -1,6 +1,6 @@
 import {
   getIndemnite as getIndemniteConventionnelle,
-  getSalaireRef as getSalaireRefConventionnel
+  getSalaireRef as getSalaireRefConventionnel,
 } from "../indemnite";
 import { getIndemnite, getSalaireRef } from "../../../indemnite";
 import { OUVRIER, TAM, CADRE } from "../Categorie";
@@ -11,23 +11,23 @@ const initialValues = {
   anciennete: 1,
   indemnite: 500,
   categorie: OUVRIER,
-  age: "55"
+  age: "55",
 };
 const tests = [
   {
     title: "2k, 12mois d'ancienneté, 55ans, ouvrier",
     data: {
-      ...initialValues
+      ...initialValues,
     },
-    result: 0
+    result: 0,
   },
   {
     title: "2k, 24mois d'ancienneté, 55ans, ouvrier",
     data: {
       ...initialValues,
-      anciennete: 2
+      anciennete: 2,
     },
-    result: 400
+    result: 400,
   },
   {
     title: "2k, 24mois d'ancienneté, 61ans, ouvrier, retraite possible",
@@ -35,44 +35,44 @@ const tests = [
       ...initialValues,
       anciennete: 2,
       age: 61,
-      hasRetirementAge: true
+      hasRetirementAge: true,
     },
-    result: 320
+    result: 320,
   },
   {
     title: "2k, 36mois d'ancienneté, 55ans, ouvrier",
     data: {
       ...initialValues,
-      anciennete: 3
+      anciennete: 3,
     },
-    result: 1200
+    result: 1200,
   },
   {
     title: "2k, 24mois d'ancienneté, 55ans, TAM",
     data: {
       ...initialValues,
       anciennete: 2,
-      categorie: TAM
+      categorie: TAM,
     },
-    result: 400
+    result: 400,
   },
   {
     title: "2k, 36mois d'ancienneté, 55ans, TAM",
     data: {
       ...initialValues,
       anciennete: 3,
-      categorie: TAM
+      categorie: TAM,
     },
-    result: 1800
+    result: 1800,
   },
   {
     title: "2k, 24mois d'ancienneté, 55ans, cadre",
     data: {
       ...initialValues,
       anciennete: 2,
-      categorie: CADRE
+      categorie: CADRE,
     },
-    result: 500
+    result: 500,
   },
   {
     title: "2k, 36mois d'ancienneté, 55ans, cadre",
@@ -81,9 +81,9 @@ const tests = [
       anciennete: 3,
       tamDuration: 12,
       cadreDuration: 24,
-      categorie: "cadre"
+      categorie: "cadre",
     },
-    result: 2200
+    result: 2200,
   },
   {
     title: "2k, 36mois d'ancienneté, 61ans, cadre, retraite possible",
@@ -94,9 +94,9 @@ const tests = [
       hasRetirementAge: true,
       tamDuration: 12,
       cadreDuration: 24,
-      categorie: CADRE
+      categorie: CADRE,
     },
-    result: 1760
+    result: 1760,
   },
   {
     title: "2k, 6ans d'ancienneté, 61ans, cadre, retraite possible",
@@ -107,9 +107,9 @@ const tests = [
       hasRetirementAge: true,
       tamDuration: 12,
       cadreDuration: 60,
-      categorie: CADRE
+      categorie: CADRE,
     },
-    result: 3680
+    result: 3680,
   },
   {
     title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
@@ -120,9 +120,9 @@ const tests = [
       hasRetirementAge: true,
       tamDuration: 0,
       cadreDuration: 120,
-      categorie: CADRE
+      categorie: CADRE,
     },
-    result: 8000
+    result: 8000,
   },
   {
     title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
@@ -133,10 +133,10 @@ const tests = [
       hasRetirementAge: true,
       tamDuration: 5,
       cadreDuration: 120,
-      categorie: CADRE
+      categorie: CADRE,
     },
-    result: 5650
-  }
+    result: 5650,
+  },
 ];
 describe("getIndemnite", () => {
   tests.forEach(({ title, data, result }) => {
@@ -144,14 +144,14 @@ describe("getIndemnite", () => {
       const salaireRef = getSalaireRef({ ...data });
       const { indemnite } = getIndemnite({
         salaireRef,
-        ...data
+        ...data,
       });
       const salaireRefConventionnel = getSalaireRefConventionnel({ ...data });
 
       const res = getIndemniteConventionnelle({
         salaireRef: salaireRefConventionnel,
         indemnite,
-        ...data
+        ...data,
       });
       expect(res.indemniteConventionnelle).toBe(result);
       expect(res.infoCalculConventionnel).toMatchSnapshot();
@@ -161,16 +161,16 @@ describe("getIndemnite", () => {
     const salaireRef = getSalaireRef({ ...initialValues });
     const { indemnite } = getIndemnite({
       salaireRef,
-      ...initialValues
+      ...initialValues,
     });
     const salaireRefConventionnel = getSalaireRefConventionnel({
-      ...initialValues
+      ...initialValues,
     });
 
     const res = getIndemniteConventionnelle({
       salaireRef: salaireRefConventionnel,
       indemnite,
-      ...initialValues
+      ...initialValues,
     });
 
     expect(res.error).toMatchInlineSnapshot(

@@ -6,7 +6,7 @@ import {
   getPastQuestions,
   isNotYetProcessed,
   recapSituation,
-  getFormProps
+  getFormProps,
 } from "../situations.utils";
 
 import data from "@cdt/data...prime-precarite/precarite.data.json";
@@ -20,25 +20,25 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
   {
     idcc: "20",
     criteria: {
-      foo: "3| bar"
+      foo: "3| bar",
     },
     allowBonus: false,
     endMessage: "nope",
-    hasConventionalProvision: true
+    hasConventionalProvision: true,
   },
   {
     idcc: "20",
     criteria: {
-      foo: "4| baz"
+      foo: "4| baz",
     },
     allowBonus: true,
-    hasConventionalProvision: true
+    hasConventionalProvision: true,
   },
   {
     idcc: "30",
     criteria: {},
-    hasConventionalProvision: null
-  }
+    hasConventionalProvision: null,
+  },
 ]);
 
 describe("situations", () => {
@@ -47,7 +47,9 @@ describe("situations", () => {
       const idcc = "10";
       const situations = getSituationsFor(data, { idcc });
       expect(situations.length).toBe(4);
-      expect(situations.every(situation => idcc === situation.idcc)).toBe(true);
+      expect(situations.every((situation) => idcc === situation.idcc)).toBe(
+        true
+      );
     });
   });
 
@@ -61,7 +63,7 @@ describe("situations", () => {
     it("should render only situation that match foo", () => {
       expect(filterSituations(data, { foo: "1| foo" })).toEqual([
         { idcc: "10", criteria: { foo: "1| foo", bar: "baz" } },
-        { idcc: "10", criteria: { foo: "1| foo", bar: "bar" } }
+        { idcc: "10", criteria: { foo: "1| foo", bar: "bar" } },
       ]);
     });
   });
@@ -87,7 +89,7 @@ describe("situations", () => {
         ["1| foo", "foo"],
         ["2| baz", "baz"],
         ["3| bar", "bar"],
-        ["4| baz", "baz"]
+        ["4| baz", "baz"],
       ]);
     });
     it("should return options for a question key, given a situation", () => {
@@ -95,7 +97,7 @@ describe("situations", () => {
 
       expect(getOptions(situations, "foo")).toEqual([
         ["1| foo", "foo"],
-        ["2| baz", "baz"]
+        ["2| baz", "baz"],
       ]);
     });
   });
@@ -115,9 +117,9 @@ describe("situations", () => {
           "bar",
           [
             ["bar", "bar"],
-            ["baz", "baz"]
-          ]
-        ]
+            ["baz", "baz"],
+          ],
+        ],
       ]);
     });
   });
@@ -135,7 +137,7 @@ describe("situations", () => {
     it("should render formated criteria", () => {
       const criteria = {
         ancienneté: "23| moins de un an",
-        catégorie: "15| Agents de maîtrise"
+        catégorie: "15| Agents de maîtrise",
       };
       expect(recapSituation(criteria)).toMatchSnapshot();
     });
@@ -156,7 +158,7 @@ describe("situations", () => {
         getFormProps({
           key,
           criteria,
-          pastQuestions
+          pastQuestions,
         })
       ).toEqual(["foo"]);
     });

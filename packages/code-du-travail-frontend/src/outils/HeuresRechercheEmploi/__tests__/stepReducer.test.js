@@ -6,7 +6,7 @@ describe("initialSteps", () => {
       { name: "intro" },
       { name: "info_cc" },
       { name: "infos" },
-      { name: "results" }
+      { name: "results" },
     ]);
   });
   it("handles reset action", () => {

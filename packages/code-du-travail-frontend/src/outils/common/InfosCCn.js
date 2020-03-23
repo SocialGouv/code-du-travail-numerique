@@ -15,7 +15,7 @@ export const CONVENTION_NAME = "ccn";
 function StepInfoCCn({ form, isOptionnal = true }) {
   const [storedConvention, setConvention] = useLocalStorage("convention");
   const onSelectConvention = useCallback(
-    data => {
+    (data) => {
       setConvention(data);
       if (window) {
         window.scrollTo(0, 0);
@@ -43,7 +43,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                 <p>Vous avez sélectionné la convention collective&nbsp;</p>
                 <Toast
                   variant="primary"
-                  onRemove={event => {
+                  onRemove={(event) => {
                     event.preventDefault();
                     setConvention();
                   }}
@@ -77,11 +77,11 @@ function StepInfoCCn({ form, isOptionnal = true }) {
   );
 }
 
-export const StepInfoCCnMandatory = props => (
+export const StepInfoCCnMandatory = (props) => (
   <StepInfoCCn {...props} isOptionnal={false} />
 );
 
-export const StepInfoCCnOptionnal = props => (
+export const StepInfoCCnOptionnal = (props) => (
   <StepInfoCCn {...props} isOptionnal={true} />
 );
 

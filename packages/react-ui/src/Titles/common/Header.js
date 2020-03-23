@@ -21,12 +21,12 @@ Header.propTypes = {
   isFirst: PropTypes.bool,
   leftStripped: PropTypes.bool,
   pageTitle: PropTypes.bool,
-  shift: PropTypes.string
+  shift: PropTypes.string,
 };
 
 Header.defaultProps = {
   isFirst: false,
   leftStripped: false,
   pageTitle: false,
-  shift: ""
+  shift: "",
 };

@@ -7,14 +7,14 @@ describe("<Wrapper />", () => {
     "it renders a %s Wrapper",
     variant => {
       const { container } = render(
-        <Wrapper variant={variant}>this is a Button {variant} </Wrapper>
+        <Wrapper variant={variant}>this is a Button {variant} </Wrapper>,
       );
       expect(container).toMatchSnapshot();
-    }
+    },
   );
   it("should render a large wrapper", () => {
     const { container } = render(
-      <Wrapper size="large">I am a large wrapper</Wrapper>
+      <Wrapper size="large">I am a large wrapper</Wrapper>,
     );
     expect(container).toMatchSnapshot();
   });

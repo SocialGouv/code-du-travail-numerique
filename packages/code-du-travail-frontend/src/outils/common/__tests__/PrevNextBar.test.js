@@ -27,7 +27,7 @@ describe("<PrevNextBar />", () => {
     expect(onPrev).toHaveBeenCalled();
   });
   it("should trigger submit", () => {
-    const onSubmit = jest.fn(event => event.preventDefault());
+    const onSubmit = jest.fn((event) => event.preventDefault());
     const { getByText } = render(
       <form onSubmit={onSubmit}>
         <PrevNextBar />

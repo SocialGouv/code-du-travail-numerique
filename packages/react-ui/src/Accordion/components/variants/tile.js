@@ -5,7 +5,7 @@ import {
   Accordion as RootAccordion,
   AccordionItemButton,
   AccordionItem,
-  AccordionItemPanel
+  AccordionItemPanel,
 } from "react-accessible-accordion";
 
 import { box, breakpoints, fonts, spacings } from "../../../theme";
@@ -85,7 +85,7 @@ export const ItemButton = ({ children, icon: Icon }) => (
 
 ItemButton.propTypes = {
   children: PropTypes.node.isRequired,
-  icon: PropTypes.elementType
+  icon: PropTypes.elementType,
 };
 
 const StyledAccordionItemButton = styled(AccordionItemButton)`

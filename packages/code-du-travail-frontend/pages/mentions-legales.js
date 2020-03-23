@@ -7,7 +7,7 @@ import {
   Section,
   theme,
   Title,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 
 import { Layout } from "../src/layout/Layout";

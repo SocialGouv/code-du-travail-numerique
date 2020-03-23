@@ -34,8 +34,8 @@ export { FormulaDetails };
 FormulaDetails.propTypes = {
   infoCalcul: PropTypes.shape({
     labels: PropTypes.object.isRequired,
-    formula: PropTypes.string.isRequired
-  })
+    formula: PropTypes.string.isRequired,
+  }),
 };
 
 const { spacings, fonts } = theme;

@@ -23,7 +23,7 @@ function CurrencyField({
     >
       {({ input, meta: { touched, error, invalid } }) => (
         <UID>
-          {id => (
+          {(id) => (
             <>
               {label && (
                 <Question required={required} htmlFor={`currency-${id}`}>

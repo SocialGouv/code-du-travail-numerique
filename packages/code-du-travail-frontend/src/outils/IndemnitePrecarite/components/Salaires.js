@@ -23,7 +23,7 @@ function Salaires({ name, visible = true, onChange }) {
             {fields.map((name, index) => (
               <Row key={index}>
                 <UID>
-                  {uid => (
+                  {(uid) => (
                     <>
                       <MontantLabel htmlFor={uid}>Montant&nbsp;:</MontantLabel>
                       <CurrencyField name={`${name}.salaire`} id={uid}>
@@ -42,7 +42,7 @@ function Salaires({ name, visible = true, onChange }) {
               </AddButton>
             )}
             {onChange && (
-              <OnChange name={name}>{values => onChange(values)}</OnChange>
+              <OnChange name={name}>{(values) => onChange(values)}</OnChange>
             )}
           </>
         )}
