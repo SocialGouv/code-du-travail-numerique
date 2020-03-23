@@ -2,7 +2,8 @@
 Test Elastic 7.6.0:
   image: "curlimages/curl:7.67.0"
   services:
-    - "docker.elastic.co/elasticsearch/elasticsearch:7.5.2"
+    - name: "docker.elastic.co/elasticsearch/elasticsearch:7.6.1"
+      command: [ "bin/elasticsearch", "-Ediscovery.type=single-node" ]
   script:
     - >-
       retry=180;
