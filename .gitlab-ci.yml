@@ -1,18 +1,51 @@
-Test Elastic 7.6.0:
-  image: "curlimages/curl:7.67.0"
+# ---
+# include:
+#   - project: SocialGouv/gitlab-ci-yml
+#     file: /base_register_stage.yml
+#     ref: v9.1.1
+#   - project: SocialGouv/gitlab-ci-yml
+#     file: /base_docker_helm_image_stage.yml
+#     ref: v9.1.1
+#   - project: SocialGouv/gitlab-ci-yml
+#     file: /base_docker_kubectl_image_stage.yml
+#     ref: v9.1.1
+#   #
+#   - /.gitlab-ci/variables.yml
+#   - /.gitlab-ci/stages/quality.yml
+#   - /.gitlab-ci/stages/register.yml
+#   - /.gitlab-ci/stages/manual.yml
+#   - /.gitlab-ci/stages/scan.yml
+#   - /.gitlab-ci/stages/deploy.yml
+#   - /.gitlab-ci/stages/notify.yml
+
+#   - /optional/e2e/.runners/puppeteer/.gitlab-ci.yml
+
+# stages:
+#   - "Prepare"
+#   - "Code Quality"
+#   - "Manual Deploy"
+#   - "Registration"
+#   - "Post Registration"
+#   - "Deploy"
+#   - "Notify Finished Deployment"
+#   - E2E test
+
+Plop:
   services:
-    - name: "docker.elastic.co/elasticsearch/elasticsearch:7.6.0"
-      alias: elasticsearch-yo
-      command: ["bin/elasticsearch", "-Ediscovery.type=single-node"]
+    - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_REF_SLUG
+      alias: elasticsearch
   variables:
-    ELASTICSEARCH_URL: http://elasticsearch-yo:9200
+    ELASTICSEARCH_URL: http://elasticsearch:9200
   script:
+    # NOTE(douglasduteil): the elasticsearch health check must be last
+    # As we block the job waiting for elasticsearch to be up.
     - |-
+      echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_REF_SLUG";
       echo $ELASTICSEARCH_URL;
-      echo $CI_COMMIT_REF_SLUG;
-      retry=3600;
+      retry=180;
       while
-        ! curl "$ELASTICSEARCH_URL" &&
+        ! curl "$ELASTICSEARCH_URL/_cat/health?h=status" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
+    #
