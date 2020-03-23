@@ -4,5 +4,12 @@ Test Elastic 7.6.0:
   services:
     - "docker.elastic.co/elasticsearch/elasticsearch:7.6.1"
   script:
+    - >-
+      retry=180;
+      while
+        ! curl "http://localhost:9200/_cat/health?h=status" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
+      [ "$retry" -eq "-1" ] && exit 1
     - curl localhost:9200/_cat/health?h=status
     - curl localhost:9200/_cat/nodes?v&pretty
