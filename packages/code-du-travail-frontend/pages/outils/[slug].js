@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import tools from "@cdt/data...tools/internals.json";
-import { Badge, Container, Section, Wrapper } from "@socialgouv/react-ui";
+import { Container, Section, Wrapper } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import { matopush } from "../../src/piwik";
@@ -39,7 +39,6 @@ function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
         <Container>
           <Wrapper variant="main">
             <Tool icon={icon} title={title} />
-            <Badge />
           </Wrapper>
         </Container>
       </Section>
