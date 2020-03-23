@@ -40,7 +40,7 @@ const StyledListItem = styled.li`
     border-top: ${({ theme }) => box.border(theme.border)};
   }
   &:last-of-type {
-    & > * {
+    & > *:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
     }
