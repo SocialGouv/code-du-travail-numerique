@@ -31,10 +31,12 @@
 #   - E2E test
 
 Plop:
+  image: curlimages/curl:7.67.0
   services:
     - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_REF_SLUG
       alias: elasticsearch
   variables:
+    GIT_STRATEGY: none
     ELASTICSEARCH_URL: http://elasticsearch:9200
   script:
     # NOTE(douglasduteil): the elasticsearch health check must be last
