@@ -7,6 +7,8 @@ const slugify = require("@cdt/data/slugify");
 const urls = require("./ministere-travail-liste-fiches.json");
 const { splitArticle } = require("./articleSplitter");
 // const { addTags } = require("./enrichText");
+const { extractReferences } = require("./referenceExtractor");
+const { resolveReferences } = require("./referenceResolver");
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
@@ -126,6 +128,11 @@ function parseDom(dom, url) {
           nextEl = nextEl.nextElementSibling;
         }
         // section.html = addTags(section.html);
+
+        // first we extract the tokens referencing articles
+        const references = extractReferences(section.text);
+        // then we try to resolve the actual articles ids using legi-data
+        section.references = resolveReferences(references);
         sections.push(section);
       }
     });
