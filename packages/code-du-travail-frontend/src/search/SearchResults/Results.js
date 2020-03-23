@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import styled from "styled-components";
 import { matopush } from "../../piwik";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
-import {
-  Button,
-  Container,
-  Heading,
-  FlatList,
-  Tile,
-  Title,
-  theme,
-} from "@socialgouv/react-ui";
+import { Container, Heading, Tile, Title, theme } from "@socialgouv/react-ui";
 
 import { summarize, reportSelectionToMatomo } from "../utils";
+import { ViewMore } from "../../common/ViewMore";
 import { CallToActionTile } from "../../common/tiles/CallToAction";
 
 export const ListLink = ({
@@ -26,10 +19,10 @@ export const ListLink = ({
     source,
     slug,
     title,
-    url,
+    url
   },
   showTheme = true,
-  query,
+  query
 }) => {
   let subtitle = "";
   if (showTheme && source !== SOURCES.THEMES) {
@@ -43,11 +36,11 @@ export const ListLink = ({
   const tileCommonProps = {
     wide: true,
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
-    onKeyPress: (e) =>
+    onKeyPress: e =>
       e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
     title,
     subtitle,
-    children: summarize(description),
+    children: summarize(description)
   };
 
   if (source === SOURCES.EXTERNALS) {
@@ -84,7 +77,7 @@ export const ListLink = ({
     <Link
       href={{
         pathname: `/${getRouteBySource(source)}/[slug]`,
-        query: { ...(query && { q: query }), slug: rootSlug },
+        query: { ...(query && { q: query }), slug: rootSlug }
       }}
       as={`/${getRouteBySource(source)}/${rootSlug}${
         query ? `?q=${query}` : ""
@@ -105,18 +98,13 @@ ListLink.propTypes = {
     breadcrumbs: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string,
-        slug: PropTypes.string,
+        slug: PropTypes.string
       })
-    ),
-  }),
+    )
+  })
 };
 
 export const Results = ({ id, isSearch, items, query }) => {
-  const pageSize = 7;
-  const [page, setPage] = useState(1);
-  useEffect(() => {
-    setPage(1);
-  }, [query]);
   return (
     <Container narrow role="region" aria-label="Résultats de recherche">
       {isSearch ? (
@@ -124,46 +112,26 @@ export const Results = ({ id, isSearch, items, query }) => {
       ) : (
         <Title id={id}>{"Contenu correspondant"}</Title>
       )}
-      <FlatList>
-        {items.slice(0, page * pageSize).map((item) => (
+      <ViewMore
+        elementsDisplayed={7}
+        label="Plus de résultats"
+        onClick={() => {
+          matopush(["trackEvent", "nextResultPage", query]);
+        }}
+        query={query}
+      >
+        {items.map(item => (
           <StyledListItem key={item.slug}>
             <ListLink item={item} showTheme={Boolean(isSearch)} query={query} />
           </StyledListItem>
         ))}
-      </FlatList>
-      {items.length > page * pageSize && (
-        <ButtonWrapper>
-          <StyledButton
-            onClick={() => {
-              matopush(["trackEvent", "nextResultPage", query]);
-              setPage(page + 1);
-            }}
-          >
-            Plus de résultats
-          </StyledButton>
-        </ButtonWrapper>
-      )}
+      </ViewMore>
     </Container>
   );
 };
 
-const { breakpoints, spacings } = theme;
+const { spacings } = theme;
 
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
-`;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: ${spacings.large};
-  @media (max-width: ${breakpoints.mobile}) {
-    justify-content: stretch;
-  }
-`;
-
-const StyledButton = styled(Button)`
-  @media (max-width: ${breakpoints.mobile}) {
-    flex: 1 0 auto;
-  }
 `;
