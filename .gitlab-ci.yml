@@ -1,31 +1,10 @@
----
-include:
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_register_stage.yml
-    ref: v9.1.1
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_docker_helm_image_stage.yml
-    ref: v9.1.1
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_docker_kubectl_image_stage.yml
-    ref: v9.1.1
-  #
-  - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/quality.yml
-  - /.gitlab-ci/stages/register.yml
-  - /.gitlab-ci/stages/manual.yml
-  - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/deploy.yml
-  - /.gitlab-ci/stages/notify.yml
 
-  - /optional/e2e/.runners/puppeteer/.gitlab-ci.yml
-
-stages:
-  - "Prepare"
-  - "Code Quality"
-  - "Manual Deploy"
-  - "Registration"
-  - "Post Registration"
-  - "Deploy"
-  - "Notify Finished Deployment"
-  - E2E test
+Test Elastic 7.6.0:
+  image: "curlimages/curl:7.67.0"
+  services:
+    - "docker.elastic.co/elasticsearch/elasticsearch:7.6.1"
+  variables:
+    discovery.type: single-node
+  script:
+    - curl localhost:9200/_cat/health?h=status
+    - curl localhost:9200/_cat/nodes?v&pretty
