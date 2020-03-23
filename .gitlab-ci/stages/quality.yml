@@ -97,7 +97,7 @@ Test @cdtn/api:
       echo $ELASTICSEARCH_URL;
       retry=180;
       while
-        ! curl -s "$ELASTICSEARCH_URL/_cat/health?h=status" &&
+        ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
