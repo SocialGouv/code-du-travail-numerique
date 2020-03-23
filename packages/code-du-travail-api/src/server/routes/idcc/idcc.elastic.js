@@ -1,7 +1,7 @@
 function getIdccBody({ query }) {
   return {
     size: 50,
-    _source: ["id", "title", "shortTitle", "url", "idcc", "slug"],
+    _source: ["id", "title", "shortTitle", "url", "idcc", "slug", "effectif"],
     query: {
       bool: {
         filter: [
@@ -40,9 +40,16 @@ function getIdccBody({ query }) {
             ],
           },
         },
+        should: {
+          rank_feature: {
+            field: "effectif",
+            log: {
+              scaling_factor: 1,
+            },
+          },
+        },
       },
     },
   };
 }
-
 module.exports = getIdccBody;

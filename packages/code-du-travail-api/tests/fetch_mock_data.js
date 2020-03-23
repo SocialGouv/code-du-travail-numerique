@@ -39,6 +39,8 @@ const documentsSlugs = [
   "/modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur",
   "/convention-collective/1747-activites-industrielles-de-boulangerie-et-patisserie",
   "/convention-collective/843-boulangerie-patisserie-entreprises-artisanales",
+  "/convention-collective/2701-banque-personnel-des-banques-de-la-guyane",
+  "/convention-collective/2120-banque",
   "/external/mon-compte-formation",
   "/external/index-egapro",
 ];
