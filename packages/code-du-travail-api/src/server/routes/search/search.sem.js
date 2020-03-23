@@ -11,7 +11,7 @@ function getSemQuery({ query_vector, size, sources = [] }) {
       "description",
       "url",
       "action",
-      "breadcrumbs",
+      "breadcrumbs"
     ],
     query: {
       script_score: {
@@ -20,24 +20,23 @@ function getSemQuery({ query_vector, size, sources = [] }) {
             filter: [
               {
                 term: {
-                  excludeFromSearch: false,
-                },
+                  excludeFromSearch: false
+                }
               },
               {
                 bool: {
-                  should: sources.map(source => ({ term: { source } })),
-                },
-              },
-            ],
-          },
+                  should: sources.map(source => ({ term: { source } }))
+                }
+              }
+            ]
+          }
         },
         script: {
-          source:
-            "cosineSimilarity(params.query_vector, doc['title_vector']) + 1.0",
-          params: { query_vector: query_vector },
-        },
-      },
-    },
+          source: "cosineSimilarity(params.query_vector, 'title_vector') + 1.0",
+          params: { query_vector: query_vector }
+        }
+      }
+    }
   };
 }
 
