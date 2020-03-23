@@ -61,7 +61,7 @@ async function getDuplicateSlugs(allDocuments) {
 async function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
-    ({ id, num, title, shortTitle, url }) => {
+    ({ id, num, title, shortTitle, url, effectif }) => {
       return {
         source: SOURCES.CCN,
         id,
@@ -71,6 +71,7 @@ async function* cdtnDocumentsGen() {
         slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
         text: `IDCC ${num} ${title}`,
         url,
+        effectif,
         excludeFromSearch: false,
       };
     }

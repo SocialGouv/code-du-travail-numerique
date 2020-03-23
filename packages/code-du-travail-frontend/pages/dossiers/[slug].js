@@ -75,15 +75,13 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
               </FlatList>
               <br />
               <Title id="fiches-pratiques">Pour aller plus loin</Title>
-              <FlatList>
-                <ViewMore>
-                  {secondaryRefs.map((item) => (
-                    <StyledListItem key={item.slug}>
-                      <ListLink item={item} />
-                    </StyledListItem>
-                  ))}
-                </ViewMore>
-              </FlatList>
+              <ViewMore>
+                {secondaryRefs.map((item) => (
+                  <StyledListItem key={item.slug}>
+                    <ListLink item={item} />
+                  </StyledListItem>
+                ))}
+              </ViewMore>
             </Container>
           </MainContent>
           <AsideContent>
