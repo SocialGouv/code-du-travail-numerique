@@ -1,25 +1,3 @@
----
-include:
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_register_stage.yml
-    ref: v9.1.1
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_docker_helm_image_stage.yml
-    ref: v9.1.1
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_docker_kubectl_image_stage.yml
-    ref: v9.1.1
-  #
-  - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/quality.yml
-  - /.gitlab-ci/stages/register.yml
-  - /.gitlab-ci/stages/manual.yml
-  - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/deploy.yml
-  - /.gitlab-ci/stages/notify.yml
-
-  - /optional/e2e/.runners/puppeteer/.gitlab-ci.yml
-
 Plop:
   stage: "plop"
   services:
@@ -43,11 +21,3 @@ Plop:
 
 stages:
   - "plop"
-  - "Prepare"
-  - "Code Quality"
-  - "Manual Deploy"
-  - "Registration"
-  - "Post Registration"
-  - "Deploy"
-  - "Notify Finished Deployment"
-  - E2E test
