@@ -1,10 +1,10 @@
 Plop:
-  stage: "plop"
   services:
     - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_TAG
       alias: elasticsearch
   variables:
     ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
+    GIT_STRATEGY: none
   script:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.
@@ -18,6 +18,3 @@ Plop:
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
     #
-
-stages:
-  - "plop"
