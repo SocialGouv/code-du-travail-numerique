@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
-import { Button, Toast, theme } from "@socialgouv/react-ui";
+import { Toast, theme } from "@socialgouv/react-ui";
 
 import ConventionSearch from "../../conventions/Search";
 import { required } from "./validators";
@@ -14,7 +14,15 @@ export const CONVENTION_NAME = "ccn";
 
 function StepInfoCCn({ form, isOptionnal = true }) {
   const [storedConvention, setConvention] = useLocalStorage("convention");
-
+  const onSelectConvention = useCallback(
+    data => {
+      setConvention(data);
+      if (window) {
+        window.scrollTo(0, 0);
+      }
+    },
+    [setConvention]
+  );
   useEffect(() => {
     form.batch(() => {
       form.change("criteria", undefined);
@@ -32,16 +40,17 @@ function StepInfoCCn({ form, isOptionnal = true }) {
             return (
               <>
                 <Question>La convention collective</Question>
-                <p>{input.value.title}</p>
-                <p>
-                  <Button
-                    variant="link"
-                    type="button"
-                    onClick={() => setConvention()}
-                  >
-                    Changer de convention collective
-                  </Button>
-                </p>
+                <p>Vous avez sélectionné la convention collective&nbsp;</p>
+                <Toast
+                  variant="primary"
+                  onRemove={event => {
+                    event.preventDefault();
+                    setConvention();
+                  }}
+                >
+                  {input.value.shortTitle}
+                </Toast>
+                <p>Cliquez sur suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}
               </>
             );
@@ -58,7 +67,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                   en cliquant sur le bouton Suivant.
                 </P>
               )}
-              <StyledConventionSearch onSelectConvention={setConvention} />
+              <StyledConventionSearch onSelectConvention={onSelectConvention} />
               <ErrorField name={CONVENTION_NAME} />
             </>
           );
