@@ -15,21 +15,21 @@ function getRelatedThemesBody({ query, size = 5 }) {
             match: {
               title: {
                 query: `${query}`,
-                fuzziness: "auto"
-              }
-            }
+                fuzziness: "auto",
+              },
+            },
           },
           {
             match: {
               "breadcrumbs.label": {
                 query: `${query}`,
-                fuzziness: "auto"
-              }
-            }
-          }
-        ]
-      }
-    }
+                fuzziness: "auto",
+              },
+            },
+          },
+        ],
+      },
+    },
   };
 }
 

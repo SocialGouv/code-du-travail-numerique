@@ -35,17 +35,17 @@ router.get("/items/:source/:slug", async ctx => {
 
   const {
     _id,
-    _source: { title }
+    _source: { title },
   } = item;
 
   const relatedItems = await getRelatedItems({
     slug,
     title,
-    settings: [{ _id }]
+    settings: [{ _id }],
   });
   ctx.body = {
     ...item,
-    relatedItems
+    relatedItems,
   };
 });
 
@@ -64,7 +64,7 @@ router.get("/items/:id", async ctx => {
   const response = await elasticsearchClient.get({
     index: index,
     type: "_doc",
-    id
+    id,
   });
   ctx.body = response.body;
 });

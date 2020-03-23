@@ -9,31 +9,31 @@ function getSuggestQuery(query, size) {
             match: {
               title: {
                 query,
-                fuzziness: "auto"
-              }
-            }
-          }
+                fuzziness: "auto",
+              },
+            },
+          },
         ],
         should: [
           {
             match_phrase_prefix: {
               "title.prefix": {
-                query
-              }
-            }
+                query,
+              },
+            },
           },
           {
             rank_feature: {
               field: "ranking",
               log: {
-                scaling_factor: 1
+                scaling_factor: 1,
               },
-              boost: 10
-            }
-          }
-        ]
-      }
-    }
+              boost: 10,
+            },
+          },
+        ],
+      },
+    },
   };
 }
 

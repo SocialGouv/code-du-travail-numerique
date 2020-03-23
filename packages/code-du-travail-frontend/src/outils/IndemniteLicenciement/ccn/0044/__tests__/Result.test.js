@@ -16,7 +16,7 @@ const initialValues = {
   dateNotification: "2018-12-01",
   anciennete: 2.5,
   branche: "0044",
-  groupe: "I"
+  groupe: "I",
 };
 
 describe("<Result />", () => {

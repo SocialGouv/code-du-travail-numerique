@@ -16,7 +16,7 @@ describe("<ErroField />", () => {
               data-testid="test"
               name="test"
               component="input"
-              validate={value => (value ? undefined : "Champ requis")}
+              validate={(value) => (value ? undefined : "Champ requis")}
             />
             <ErrorField name="test" />
           </>

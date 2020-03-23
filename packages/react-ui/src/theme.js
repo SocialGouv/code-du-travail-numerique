@@ -38,7 +38,7 @@ export const colors = {
 
   // form colors
   error: "#eb5757",
-  validate: "#7bd0ac"
+  validate: "#7bd0ac",
 };
 
 colors.primaryText = colors.white;
@@ -49,7 +49,7 @@ export const blackAndWhiteColors = Object.entries(colors).reduce(
     blackAndWhiteColors[colorName] = maximiseContrast(colorValue);
     return blackAndWhiteColors;
   },
-  { noColors: true }
+  { noColors: true },
 );
 
 /* Rem with a 10px base */
@@ -62,7 +62,7 @@ export const spacings = {
   medium: "2rem",
   xmedium: "2.4rem",
   large: "3.2rem",
-  larger: "4rem"
+  larger: "4rem",
 };
 
 export const fonts = {
@@ -77,10 +77,10 @@ export const fonts = {
       xmedium: "2.2rem",
       mobileMedium: "2.6rem",
       medium: "2.8rem",
-      large: "3.2rem"
+      large: "3.2rem",
     },
-    medium: "2rem"
-  }
+    medium: "2rem",
+  },
 };
 
 export const breakpoints = {
@@ -89,7 +89,7 @@ export const breakpoints = {
   mobile: "600px",
   intDesktop: 1180,
   intTablet: 980,
-  intMobile: 600
+  intMobile: 600,
 };
 
 const shadow = "0 1rem 2rem";
@@ -105,10 +105,10 @@ export const box = {
     },
     large(color) {
       return `${shadow} ${rgba(color, 0.4)}`;
-    }
-  }
+    },
+  },
 };
 
 export const animations = {
-  transitionTiming: "250ms"
+  transitionTiming: "250ms",
 };

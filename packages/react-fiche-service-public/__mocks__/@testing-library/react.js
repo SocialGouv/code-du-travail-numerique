@@ -13,7 +13,7 @@ const AllTheProviders = ({ children }) => {
 };
 
 AllTheProviders.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 const customRender = (ui, options) =>

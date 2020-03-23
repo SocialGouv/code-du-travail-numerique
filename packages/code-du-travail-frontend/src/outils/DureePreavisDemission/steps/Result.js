@@ -11,7 +11,7 @@ import {
   filterSituations,
   getSituationsFor,
   recapSituation,
-  getRef
+  getRef,
 } from "../../common/situations.utils";
 
 function HdnToast({ ccn }) {
@@ -47,7 +47,7 @@ function StepResult({ form }) {
   const refLegal = {
     ref: " Article L.1237-1 du code du travail",
     refUrl:
-      "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
+      "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174",
   };
 
   // No ccn selected or UunhandledCC
@@ -94,7 +94,7 @@ function StepResult({ form }) {
       <br />
       {recapSituation({
         "Convention collective": `${ccn.title} (${idcc})`,
-        ...situation.criteria
+        ...situation.criteria,
       })}
       <SectionTitle>Source</SectionTitle>
       {getRef([refLegal, situation])}
@@ -104,8 +104,8 @@ function StepResult({ form }) {
 
 StepResult.propTypes = {
   form: PropTypes.shape({
-    getState: PropTypes.func.isRequired
-  })
+    getState: PropTypes.func.isRequired,
+  }),
 };
 
 export { StepResult };

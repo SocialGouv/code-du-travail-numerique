@@ -10,14 +10,16 @@ import { getText } from "../utils";
 class OuSAdresser extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
-    headingLevel: PropTypes.number.isRequired
+    headingLevel: PropTypes.number.isRequired,
   };
   render() {
     const { data, headingLevel } = this.props;
-    const label = getText(data.children.find(child => child.name === "Titre"));
+    const label = getText(
+      data.children.find((child) => child.name === "Titre")
+    );
     let content = null;
-    if (data.children.find(child => child.name === "RessourceWeb")) {
-      const url = data.children.find(child => child.name === "RessourceWeb")
+    if (data.children.find((child) => child.name === "RessourceWeb")) {
+      const url = data.children.find((child) => child.name === "RessourceWeb")
         .attributes.URL;
       content = (
         <a href={url} rel="noopener noreferrer" target="_blank">
@@ -27,7 +29,7 @@ class OuSAdresser extends React.PureComponent {
     } else {
       content = (
         <ElementBuilder
-          data={data.children.find(child => child.name === "Texte")}
+          data={data.children.find((child) => child.name === "Texte")}
           headingLevel={headingLevel + 1}
         />
       );

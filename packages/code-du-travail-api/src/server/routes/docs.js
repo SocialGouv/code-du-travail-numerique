@@ -8,7 +8,7 @@ const API_BASE_URL = require("./v1.prefix");
 // __webpack_modules__, to avoid this I eval the expression.
 // see https://github.com/webpack/webpack/issues/1554#issuecomment-336462319
 const courrierTypeModulePath = eval(
-  "require.resolve('@cdt/data...courrier-type')"
+  "require.resolve('@cdt/data...courrier-type')",
 );
 const DOCS_DIR = path.join(path.dirname(courrierTypeModulePath), "docx");
 

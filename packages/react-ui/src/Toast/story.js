@@ -6,7 +6,7 @@ import { Toast } from ".";
 
 export default {
   component: Toast,
-  title: "Components|Toast"
+  title: "Components|Toast",
 };
 
 export const base = () => (

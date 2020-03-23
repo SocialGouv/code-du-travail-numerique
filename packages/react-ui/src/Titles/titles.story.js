@@ -9,7 +9,7 @@ import { Subtitle } from "./Subtitle";
 import { Title } from "./Title";
 
 export default {
-  title: "Titles|Readme"
+  title: "Titles|Readme",
 };
 
 export const readme = () => (

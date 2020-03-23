@@ -4,7 +4,7 @@ import { render } from "@testing-library/react";
 import { matopush } from "../../piwik";
 
 jest.mock("../../piwik", () => ({
-  matopush: jest.fn()
+  matopush: jest.fn(),
 }));
 
 jest.mock("next/link", () => {
@@ -19,8 +19,8 @@ const item = {
   algo: "semantic",
   breadcrumbs: [
     { slug: "/themes/theme-root", label: "test content" },
-    { slug: "/themes/theme-test", label: "test theme content" }
-  ]
+    { slug: "/themes/theme-test", label: "test theme content" },
+  ],
 };
 
 describe("ListLink", () => {
@@ -37,7 +37,7 @@ describe("ListLink", () => {
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
       "selectResult",
-      '{"url":"/fiche-service-public/mer-il-est-fou","algo":"semantic"}'
+      '{"url":"/fiche-service-public/mer-il-est-fou","algo":"semantic"}',
     ]);
   });
 });

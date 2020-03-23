@@ -26,13 +26,13 @@ const fullFiches = [].concat(
   ...TYPES.map(type =>
     fiches[type]
       .filter(id => id.match(/F[0-9]+/))
-      .map(id => fiches.getFiche(type, id))
-  )
+      .map(id => fiches.getFiche(type, id)),
+  ),
 );
 
 const setTheme = fiche => ({
   ...fiche,
-  ...getThemeFiche(fiche)
+  ...getThemeFiche(fiche),
 });
 
 const getFichesSP = () =>
@@ -51,7 +51,7 @@ const getFichesSP = () =>
         raw,
         date,
         references_juridiques,
-        url
+        url,
       }) => ({
         id,
         source: SOURCES.SHEET_SP,
@@ -65,8 +65,8 @@ const getFichesSP = () =>
         date,
         references_juridiques,
         url,
-        excludeFromSearch: contribFicheId.includes(id)
-      })
+        excludeFromSearch: contribFicheId.includes(id),
+      }),
     );
 
 module.exports = { getFichesSP };

@@ -12,7 +12,7 @@ import {
   Row,
   MobileOnlyCell,
   DesktopOnly,
-  CellHeader
+  CellHeader,
 } from "../../common/stepStyles";
 
 const mobileMediaQuery = `(max-width: ${theme.breakpoints.mobile})`;
@@ -52,7 +52,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                 <Field name={`${name}.type`}>
                   {({ input }) => (
                     <Select {...input}>
-                      {typePeriod.map(item => (
+                      {typePeriod.map((item) => (
                         <option key={item}>{item}</option>
                       ))}
                     </Select>
@@ -68,7 +68,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                     value: true,
                     error: true,
                     touched: true,
-                    invalid: true
+                    invalid: true,
                   }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
@@ -93,7 +93,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                     value: true,
                     error: true,
                     touched: true,
-                    invalid: true
+                    invalid: true,
                   }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
@@ -123,7 +123,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
                 fields.push({
                   type: TEMPS_PARTIEL,
                   duration: null,
-                  salary: null
+                  salary: null,
                 })
               }
             >
@@ -131,7 +131,7 @@ function SalaireTempsPartiel({ name, visible = true, onChange }) {
             </AddButton>
           )}
           {onChange && (
-            <OnChange name={name}>{values => onChange(values)}</OnChange>
+            <OnChange name={name}>{(values) => onChange(values)}</OnChange>
           )}
         </>
       )}

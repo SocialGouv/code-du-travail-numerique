@@ -16,7 +16,7 @@ function Result({ form }) {
   const {
     indemniteConventionnelle,
     infoCalculConventionnel,
-    error
+    error,
   } = getIndemniteConventionnelle(data);
 
   const IndemniteWarning = () => (

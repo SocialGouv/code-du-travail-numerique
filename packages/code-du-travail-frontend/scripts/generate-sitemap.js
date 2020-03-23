@@ -12,7 +12,7 @@ const writeFile = promisify(fs.writeFile);
 const glossaryPages = glossary.map(({ slug }) => `glossaire/${slug}`);
 const staticPages = ["a-propos", "droit-du-travail", "mentions-legales"];
 const documentPages = require(DOCUMENT_PATH).map(
-  ({ source, slug }) => `${getRouteBySource(source)}/${slug}`
+  ({ source, slug }) => `${getRouteBySource(source)}/${slug}`,
 );
 
 const documents = staticPages.concat(glossaryPages, documentPages);

@@ -11,7 +11,7 @@ describe("<Salaire />", () => {
       <Form
         onSubmit={onSubmit}
         mutators={{
-          ...arrayMutators
+          ...arrayMutators,
         }}
       >
         {({ form }) => <Salaire form={form} />}
@@ -26,7 +26,7 @@ describe("<Salaire />", () => {
       <Form
         onSubmit={onSubmit}
         mutators={{
-          ...arrayMutators
+          ...arrayMutators,
         }}
         initialValues={initialValues}
       >
@@ -39,13 +39,13 @@ describe("<Salaire />", () => {
     const onSubmit = jest.fn();
     const initialValues = {
       hasBrancheNewSalaire: true,
-      hasBrancheNewRegularSalaire: true
+      hasBrancheNewRegularSalaire: true,
     };
     const { container } = render(
       <Form
         onSubmit={onSubmit}
         mutators={{
-          ...arrayMutators
+          ...arrayMutators,
         }}
         initialValues={initialValues}
       >
@@ -62,19 +62,19 @@ describe("<Salaire />", () => {
       brancheNewIrregularSalaire: [
         {
           label: "juillet 2019",
-          salary: null
+          salary: null,
         },
         {
           label: "juin 2019",
-          salary: null
-        }
-      ]
+          salary: null,
+        },
+      ],
     };
     const { container } = render(
       <Form
         onSubmit={onSubmit}
         mutators={{
-          ...arrayMutators
+          ...arrayMutators,
         }}
         initialValues={initialValues}
       >

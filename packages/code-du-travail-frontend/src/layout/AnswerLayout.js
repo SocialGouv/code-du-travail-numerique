@@ -16,14 +16,14 @@ export const MainAsideLayout = styled(Container)`
 `;
 
 export const MainContent = styled.div`
-  width: ${props => (props.hasResults ? "70%" : "80%")};
+  width: ${(props) => (props.hasResults ? "70%" : "80%")};
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
   }
 `;
 
 export const AsideContent = styled(Section)`
-  position: ${props => (props.sticky ? "sticky" : "static")};
+  position: ${(props) => (props.sticky ? "sticky" : "static")};
   top: 12rem;
   width: calc(30% - ${spacings.larger});
   margin-left: ${spacings.larger};
@@ -40,8 +40,8 @@ export const AsideContent = styled(Section)`
 `;
 
 AsideContent.propTypes = {
-  sticky: PropTypes.bool
+  sticky: PropTypes.bool,
 };
 AsideContent.defaultProps = {
-  sticky: false
+  sticky: false,
 };

@@ -1,7 +1,7 @@
 import { getIndemnite, getSalaireRef } from "../indemnite";
 import {
   getIndemnite as getIndemniteLegale,
-  getSalaireRef as getSalaireRefLegal
+  getSalaireRef as getSalaireRefLegal,
 } from "../../../indemnite";
 
 const echelon123 = [
@@ -11,9 +11,9 @@ const echelon123 = [
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
       anciennete: 1,
-      indemnite: 500
+      indemnite: 500,
     },
-    expected: 500
+    expected: 500,
   },
   {
     title: "2k, 12mois d'ancienneté, OPE + licenciement eco",
@@ -23,9 +23,9 @@ const echelon123 = [
       anciennete: 1,
       hasOpe: true,
       isEco: true,
-      indemnite: 500
+      indemnite: 500,
     },
-    expected: 2000
+    expected: 2000,
   },
   {
     title: "2k, 30mois d'ancienneté",
@@ -33,9 +33,9 @@ const echelon123 = [
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
       anciennete: 2 + 6 / 12,
-      indemnite: 1250
+      indemnite: 1250,
     },
-    expected: 1500
+    expected: 1500,
   },
   {
     title: "2k, 5ans d'ancienneté, 51ans",
@@ -44,9 +44,9 @@ const echelon123 = [
       hasTempsPartiel: false,
       anciennete: 5,
       indemnite: 2500,
-      age: 51
+      age: 51,
     },
-    expected: 5000
+    expected: 5000,
   },
   {
     title: "2k, 5ans d'ancienneté, 51ans, licenciement eco, OPE",
@@ -57,9 +57,9 @@ const echelon123 = [
       indemnite: 2500,
       age: 51,
       hasOpe: true,
-      isEco: true
+      isEco: true,
     },
-    expected: 7000
+    expected: 7000,
   },
   {
     title: "2k, 5ans d'ancienneté, 55ans",
@@ -68,9 +68,9 @@ const echelon123 = [
       hasTempsPartiel: false,
       anciennete: 5,
       indemnite: 2500,
-      age: 55
+      age: 55,
     },
-    expected: 7000
+    expected: 7000,
   },
   {
     title: "2k, 41ans d'ancienneté, 55ans",
@@ -79,10 +79,10 @@ const echelon123 = [
       hasTempsPartiel: false,
       anciennete: 41,
       indemnite: 25666.66,
-      age: 55
+      age: 55,
     },
-    expected: 28000
-  }
+    expected: 28000,
+  },
 ];
 
 const echelon4 = [
@@ -93,9 +93,9 @@ const echelon4 = [
       hasTempsPartiel: false,
       anciennete: 1,
       indemnite: 500,
-      groupe: "IV"
+      groupe: "IV",
     },
-    expected: 500
+    expected: 500,
   },
   {
     title: "2k, 12mois d'ancienneté, groupe IV, OPE + licenciement eco",
@@ -106,9 +106,9 @@ const echelon4 = [
       indemnite: 500,
       hasOpe: true,
       isEco: true,
-      groupe: "IV"
+      groupe: "IV",
     },
-    expected: 2000
+    expected: 2000,
   },
   {
     title: "2k, 2ans d'ancienneté, groupe IV",
@@ -117,9 +117,9 @@ const echelon4 = [
       hasTempsPartiel: false,
       anciennete: 2,
       indemnite: 1000,
-      groupe: "IV"
+      groupe: "IV",
     },
-    expected: 1200
+    expected: 1200,
   },
   {
     title: "2k, 10ans d'ancienneté, groupe IV",
@@ -128,9 +128,9 @@ const echelon4 = [
       hasTempsPartiel: false,
       anciennete: 10,
       indemnite: 5000,
-      groupe: "IV"
+      groupe: "IV",
     },
-    expected: 8000
+    expected: 8000,
   },
   {
     title: "2k, 20ans d'ancienneté, groupe IV",
@@ -139,9 +139,9 @@ const echelon4 = [
       hasTempsPartiel: false,
       anciennete: 20,
       indemnite: 11666.66,
-      groupe: "IV"
+      groupe: "IV",
     },
-    expected: 20000
+    expected: 20000,
   },
   {
     title: "2k, 10ans d'ancienneté, 51ans, groupe IV",
@@ -151,9 +151,9 @@ const echelon4 = [
       anciennete: 10,
       indemnite: 5000,
       age: 51,
-      groupe: "IV"
+      groupe: "IV",
     },
-    expected: 10000
+    expected: 10000,
   },
   {
     title: "2k, 10ans, 51ans, groupe IV, licenciement eco, OPE",
@@ -165,9 +165,9 @@ const echelon4 = [
       age: 51,
       groupe: "IV",
       hasOpe: true,
-      isEco: true
+      isEco: true,
     },
-    expected: 12000
+    expected: 12000,
   },
   {
     title: "2k, 20ans d'ancienneté, 51ans, groupe IV",
@@ -177,9 +177,9 @@ const echelon4 = [
       anciennete: 20,
       age: 51,
       indemnite: 11666.66,
-      groupe: "IV"
+      groupe: "IV",
     },
-    expected: 22000
+    expected: 22000,
   },
   {
     title: "2k, 20ans d'ancienneté, 51ans, groupe IV, licenciement eco, OPE",
@@ -191,9 +191,9 @@ const echelon4 = [
       indemnite: 11666.66,
       groupe: "IV",
       hasOpe: true,
-      isEco: true
+      isEco: true,
     },
-    expected: 24000
+    expected: 24000,
   },
   {
     title: "2k, 33ans d'ancienneté, 55ans, groupe IV, licenciement eco, OPE",
@@ -205,10 +205,10 @@ const echelon4 = [
       indemnite: 20333.33,
       groupe: "IV",
       hasOpe: true,
-      isEco: true
+      isEco: true,
     },
-    expected: 36000
-  }
+    expected: 36000,
+  },
 ];
 
 const echelon5 = [
@@ -219,9 +219,9 @@ const echelon5 = [
       hasTempsPartiel: false,
       anciennete: 1,
       indemnite: 500,
-      groupe: "V"
+      groupe: "V",
     },
-    expected: 500
+    expected: 500,
   },
   {
     title: "2k, 12mois d'ancienneté, groupe V, OPE + licenciement eco",
@@ -232,9 +232,9 @@ const echelon5 = [
       indemnite: 500,
       hasOpe: true,
       isEco: true,
-      groupe: "V"
+      groupe: "V",
     },
-    expected: 2000
+    expected: 2000,
   },
   {
     title: "2k, 2ans d'ancienneté, groupe V",
@@ -243,9 +243,9 @@ const echelon5 = [
       hasTempsPartiel: false,
       anciennete: 2,
       indemnite: 1000,
-      groupe: "V"
+      groupe: "V",
     },
-    expected: 1600
+    expected: 1600,
   },
   {
     title: "2k, 10ans d'ancienneté, groupe V",
@@ -254,9 +254,9 @@ const echelon5 = [
       hasTempsPartiel: false,
       anciennete: 10,
       indemnite: 5000,
-      groupe: "V"
+      groupe: "V",
     },
-    expected: 12000
+    expected: 12000,
   },
   {
     title: "2k, 20ans d'ancienneté, groupe V",
@@ -265,9 +265,9 @@ const echelon5 = [
       hasTempsPartiel: false,
       anciennete: 20,
       indemnite: 11666.66,
-      groupe: "V"
+      groupe: "V",
     },
-    expected: 32000
+    expected: 32000,
   },
   {
     title: "2k, 10ans d'ancienneté, 51ans, groupe V",
@@ -277,9 +277,9 @@ const echelon5 = [
       anciennete: 10,
       indemnite: 5000,
       age: 51,
-      groupe: "V"
+      groupe: "V",
     },
-    expected: 14000
+    expected: 14000,
   },
   {
     title: "2k, 10ans, 51ans, groupe V, licenciement eco, OPE",
@@ -291,9 +291,9 @@ const echelon5 = [
       age: 51,
       groupe: "V",
       hasOpe: true,
-      isEco: true
+      isEco: true,
     },
-    expected: 16000
+    expected: 16000,
   },
   {
     title: "2k, 20ans d'ancienneté, 51ans, groupe V",
@@ -303,9 +303,9 @@ const echelon5 = [
       anciennete: 20,
       age: 51,
       indemnite: 11666.66,
-      groupe: "V"
+      groupe: "V",
     },
-    expected: 34000
+    expected: 34000,
   },
   {
     title: "2k, 20ans d'ancienneté, 51ans, groupe V, licenciement eco, OPE",
@@ -317,9 +317,9 @@ const echelon5 = [
       indemnite: 11666.66,
       groupe: "V",
       hasOpe: true,
-      isEco: true
+      isEco: true,
     },
-    expected: 36000
+    expected: 36000,
   },
   {
     title: "2k, 23ans d'ancienneté, 55ans, groupe V, licenciement eco, OPE",
@@ -329,20 +329,20 @@ const echelon5 = [
       anciennete: 23,
       age: 55,
       indemnite: 13666.66,
-      groupe: "V"
+      groupe: "V",
     },
-    expected: 40000
-  }
+    expected: 40000,
+  },
 ];
 
 describe("getIndemnite", () => {
-  echelon123.concat(echelon4, echelon5).forEach(test => {
+  echelon123.concat(echelon4, echelon5).forEach((test) => {
     it(`${test.title} should return ${test.expected}`, () => {
       const salaireRefLegal = getSalaireRefLegal({ ...test.data });
       const salaireRef = getSalaireRef({ salaireRefLegal, ...test.data });
       const { indemnite } = getIndemniteLegale({
         salaireRef: salaireRefLegal,
-        ...test.data
+        ...test.data,
       });
       const res = getIndemnite({ salaireRef, indemnite, ...test.data });
       expect(res.indemniteConventionnelle).toEqual(test.expected);
@@ -353,17 +353,17 @@ describe("getIndemnite", () => {
     const salaireRefLegal = getSalaireRefLegal({ ...echelon123[0].data });
     const salaireRef = getSalaireRef({
       salaireRefLegal,
-      ...echelon123[0].data
+      ...echelon123[0].data,
     });
     const { indemnite } = getIndemniteLegale({
       salaireRef: salaireRefLegal,
-      ...echelon123[0].data
+      ...echelon123[0].data,
     });
     const res = getIndemnite({
       salaireRef,
       indemnite,
       ...echelon123[0].data,
-      anciennete: 15 / 12
+      anciennete: 15 / 12,
     });
 
     expect(res.indemniteConventionnelle).toEqual(500);

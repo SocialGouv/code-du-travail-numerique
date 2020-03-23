@@ -22,7 +22,7 @@ function ErrorField({ name }) {
   );
 }
 ErrorField.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 function ErrorComputedField({ name }) {
@@ -34,7 +34,7 @@ function ErrorComputedField({ name }) {
   );
 }
 ErrorComputedField.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 const Error = styled.div`
@@ -44,6 +44,6 @@ const Error = styled.div`
   font-size: ${theme.fonts.sizes.small};
 `;
 
-const InlineError = props => <Error {...props} as="span" />;
+const InlineError = (props) => <Error {...props} as="span" />;
 
 export { ErrorField, ErrorComputedField, Error, InlineError };

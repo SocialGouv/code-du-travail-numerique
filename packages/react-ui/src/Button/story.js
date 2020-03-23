@@ -9,7 +9,7 @@ import { Button } from ".";
 
 export default {
   component: Button,
-  title: "Components|Button"
+  title: "Components|Button",
 };
 
 const StyledSearchRight = styled(Search)`
@@ -29,7 +29,7 @@ const StyledMore = styled(More)`
 `;
 
 export const base = () =>
-  ["primary", "secondary", "flat"].map(variant => (
+  ["primary", "secondary", "flat"].map((variant) => (
     <Section key={variant}>
       <Button variant={variant} onClick={action("basic button clicked")}>
         {variant} button

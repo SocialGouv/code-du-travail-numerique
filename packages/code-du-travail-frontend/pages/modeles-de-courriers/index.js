@@ -12,7 +12,7 @@ import {
   Heading,
   Section,
   Select,
-  theme
+  theme,
 } from "@socialgouv/react-ui";
 import { summarize } from "../../src/search/utils";
 import { Layout } from "../../src/layout/Layout";
@@ -20,7 +20,7 @@ import Metas from "../../src/common/Metas";
 import { FocusRoot } from "../../src/a11y";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const title = "Modèles de documents";
@@ -34,13 +34,13 @@ function Modeles(props) {
     const other = {
       title: "Autres",
       label: "Autres",
-      slug: "autres"
+      slug: "autres",
     };
     const [theme = other] = templateDoc.breadcrumbs;
     if (!state[theme.slug]) {
       state[theme.slug] = {
         title: theme.label,
-        items: []
+        items: [],
       };
       themes.push(theme);
     }
@@ -51,7 +51,7 @@ function Modeles(props) {
   const [selectedTheme, setSelectedTheme] = useState("all");
   const [documents, setDocuments] = useState(modelesByTheme);
   const selectThemeHandler = useCallback(
-    event => {
+    (event) => {
       const themeSlug = event.target.value;
       setSelectedTheme(event.target.value);
       if (themeSlug === "all") {
@@ -80,7 +80,7 @@ function Modeles(props) {
               [
                 <option key="all" value="all">
                   Tous les thèmes
-                </option>
+                </option>,
               ].concat(
                 themes.map(({ label, slug }) => (
                   <option key={slug} value={slug}>
@@ -93,7 +93,7 @@ function Modeles(props) {
             {Object.values(documents).map(({ title, items }) => (
               <React.Fragment key={title}>
                 <Heading as={HeadingBlue}>{title}</Heading>
-                {items.map(docTemplate => (
+                {items.map((docTemplate) => (
                   <StyledListItem key={docTemplate.slug}>
                     <ModeleCourrier modele={docTemplate} />
                   </StyledListItem>
@@ -107,7 +107,7 @@ function Modeles(props) {
   );
 }
 
-Modeles.getInitialProps = async function() {
+Modeles.getInitialProps = async function () {
   const response = await fetch(`${API_URL}/modeles`);
   if (!response.ok) {
     return { statusCode: response.status };

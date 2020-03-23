@@ -1,7 +1,7 @@
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 import {
   getPastQuestions,
-  filterSituations
+  filterSituations,
 } from "../../common/situations.utils";
 
 // humanize questions
@@ -12,7 +12,7 @@ export const questions = {
   hasCdiRenewal:
     "À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI ?",
   hasEquivalentCdiRenewal:
-    "À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?"
+    "À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?",
 };
 
 export const labels = {
@@ -20,14 +20,14 @@ export const labels = {
   cddType: "type de cdd",
   hasCdiProposal: "proposition d'un cdi",
   hasCdiRenewal: "renouvellement en cdi",
-  hasEquivalentCdiRenewal: "renouvellement en cdi équivalent"
+  hasEquivalentCdiRenewal: "renouvellement en cdi équivalent",
 };
 
 export const criteriaOrder = [
   "cddType",
   "hasCdiProposal",
   "hasCdiRenewal",
-  "hasEquivalentCdiRenewal"
+  "hasEquivalentCdiRenewal",
 ];
 
 export function validateSituation(initialSituations, criteria, errors) {
@@ -46,7 +46,7 @@ export function validateSituation(initialSituations, criteria, errors) {
       if (!situation.allowBonus && situation.hasConventionalProvision) {
         return {
           ...errors,
-          criteria: { [lastQuestionKey]: situation.endMessage }
+          criteria: { [lastQuestionKey]: situation.endMessage },
         };
       } else {
         return { ...errors, criteria: { [lastQuestionKey]: undefined } };
@@ -58,16 +58,16 @@ export function validateSituation(initialSituations, criteria, errors) {
 
 export const hasConventionalProvision = (data, idcc) => {
   return data
-    .filter(situation => situation.idcc === idcc)
-    .some(situation => situation.hasConventionalProvision);
+    .filter((situation) => situation.idcc === idcc)
+    .some((situation) => situation.hasConventionalProvision);
 };
 
-export const isNotYetProcessed = idcc => {
+export const isNotYetProcessed = (idcc) => {
   const situations = data.filter(
-    situation => parseInt(situation.idcc) === parseInt(idcc)
+    (situation) => parseInt(situation.idcc) === parseInt(idcc)
   );
   return (
     situations.length === 0 ||
-    situations.some(situation => situation.hasConventionalProvision === null)
+    situations.some((situation) => situation.hasConventionalProvision === null)
   );
 };

@@ -9,7 +9,7 @@ export const Textarea = ({ name, ...props }) => (
 );
 
 Textarea.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 const StyledTextarea = styled.textarea`

@@ -9,7 +9,7 @@ import {
   getNextQuestionKey,
   filterSituations,
   getSituationsFor,
-  getFormProps
+  getFormProps,
 } from "../../common/situations.utils";
 
 const { questions, situations: allSituations } = data;
@@ -53,8 +53,8 @@ function StepInformations({ form }) {
               getFormProps({
                 key,
                 criteria,
-                pastQuestions
-              }).forEach(key => form.change(`criteria.${key}`, undefined));
+                pastQuestions,
+              }).forEach((key) => form.change(`criteria.${key}`, undefined));
             })
           }
         />

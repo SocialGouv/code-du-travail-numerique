@@ -14,8 +14,8 @@ const makeHit = data => ({
   _source: {
     source: "external",
     title: "",
-    ...data
-  }
+    ...data,
+  },
 });
 
 const indexQuery = { index };
@@ -39,7 +39,7 @@ const getEsReferences = async (refs = []) => {
 
   // get all known urls results
   const response = await elasticsearchClient.msearch({
-    body: [...queries]
+    body: [...queries],
   });
 
   const responses = flatten(response.body.responses.map(r => r.hits.hits));

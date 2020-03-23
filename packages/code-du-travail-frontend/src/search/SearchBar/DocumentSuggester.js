@@ -17,7 +17,7 @@ export class DocumentSuggester extends React.Component {
     onClear: PropTypes.func.isRequired,
     query: PropTypes.string,
     inputId: PropTypes.string,
-    suggestions: PropTypes.array
+    suggestions: PropTypes.array,
   };
 
   static defaultProps = {
@@ -25,10 +25,10 @@ export class DocumentSuggester extends React.Component {
     query: "",
     inputId: "main-search-input",
     excludeSources: "",
-    suggestions: []
+    suggestions: [],
   };
 
-  focusInput = autoSuggest => {
+  focusInput = (autoSuggest) => {
     if (autoSuggest !== null && this.props.hasFocus) {
       autoSuggest.input.focus();
     }
@@ -38,7 +38,7 @@ export class DocumentSuggester extends React.Component {
     this.props.onSelect(data.suggestion, event);
   };
 
-  onKeyPress = event => {
+  onKeyPress = (event) => {
     if (event.key === "Enter") {
       event.target.blur();
 
@@ -76,7 +76,7 @@ export class DocumentSuggester extends React.Component {
       onSearch,
       onClear,
       placeholder,
-      suggestions
+      suggestions,
     } = this.props;
     const inputProps = {
       id: inputId,
@@ -88,7 +88,7 @@ export class DocumentSuggester extends React.Component {
       className,
       value: query,
       onChange,
-      onKeyPress: this.onKeyPress
+      onKeyPress: this.onKeyPress,
     };
     return (
       <Autosuggest
@@ -100,7 +100,7 @@ export class DocumentSuggester extends React.Component {
         onSuggestionsFetchRequested={onSearch}
         onSuggestionsClearRequested={onClear}
         getSuggestionValue={getSuggestionValue}
-        renderSuggestion={suggestion => renderSuggestion(suggestion, query)}
+        renderSuggestion={(suggestion) => renderSuggestion(suggestion, query)}
         renderSuggestionsContainer={renderSuggestionsContainer}
         inputProps={inputProps}
       />
@@ -108,7 +108,7 @@ export class DocumentSuggester extends React.Component {
   }
 }
 
-const getSuggestionValue = suggestion => suggestion;
+const getSuggestionValue = (suggestion) => suggestion;
 
 const SuggestionContainer = styled.div`
   p {
@@ -141,7 +141,7 @@ const renderSuggestionsContainer = ({ containerProps, children }) => (
 // see https://github.com/moroshko/react-autosuggest#themeProp
 const suggesterTheme = {
   container: {
-    flex: "1 1 auto"
+    flex: "1 1 auto",
   },
   suggestionsList: {
     margin: 0,
@@ -154,16 +154,16 @@ const suggesterTheme = {
     position: "absolute",
     left: 0,
     right: 0,
-    boxShadow: "0 10px 10px -10px #b7bcdf"
+    boxShadow: "0 10px 10px -10px #b7bcdf",
   },
   suggestion: {
     listStyleType: "none",
     borderRadius: "3px",
     padding: 5,
     lineHeight: "2rem",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   suggestionHighlighted: {
-    background: colors.bgTertiary
-  }
+    background: colors.bgTertiary,
+  },
 };

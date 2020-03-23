@@ -41,8 +41,8 @@ const fixRefsTitles = refs =>
     refs.map(async ref => ({
       url: ref.url,
       title: await getTitle(ref),
-      position: ref.position
-    }))
+      position: ref.position,
+    })),
   );
 
 // import only valid data from datafiller
@@ -60,8 +60,8 @@ const fetchAll = async () => {
         title: item.title,
         theme: item.theme,
         refs: await fixRefsTitles(item.refs),
-        variants: getVariants(item)
-      }))
+        variants: getVariants(item),
+      })),
   );
 
   const sortedRows = await rows.map(sortRowRefsByPosition);

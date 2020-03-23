@@ -7,7 +7,7 @@ const ccn86 = {
   title:
     "Convention collective nationale de travail des cadres, techniciens et employés de la publicité française du 22 avril 1955. Étendue par arrêté du 29 juillet 1955 JORF 19 août 1955",
   shortTitle: "Entreprises de la publicité et assimilées",
-  num: 86
+  num: 86,
 };
 
 describe("<StepResult />", () => {
@@ -16,9 +16,9 @@ describe("<StepResult />", () => {
       criteria: {
         "période essai": "3| non",
         "catégorie socio-professionnelle": "16| Employés",
-        "type de rupture": "1| démission"
+        "type de rupture": "1| démission",
       },
-      ccn: ccn86
+      ccn: ccn86,
     });
     expect(container).toMatchSnapshot();
   });
@@ -27,9 +27,9 @@ describe("<StepResult />", () => {
     const { container } = renderForm(StepResult, {
       criteria: {
         "période essai": "1| oui",
-        "catégorie socio-professionnelle": "16| Employés"
+        "catégorie socio-professionnelle": "16| Employés",
       },
-      ccn: ccn86
+      ccn: ccn86,
     });
     expect(container).toMatchSnapshot();
   });
@@ -46,8 +46,8 @@ describe("<StepResult />", () => {
         title:
           "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
         shortTitle: "Cordonnerie multiservice",
-        num: 1561
-      }
+        num: 1561,
+      },
     });
     expect(container).toMatchSnapshot();
   });

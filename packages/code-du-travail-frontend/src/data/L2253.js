@@ -17,11 +17,11 @@ export const THEMES_L22531 = {
     3740,
     3750,
     3760,
-    3770
+    3770,
   ],
   "modalites-poursuite-contrats-travail": [12100],
   "mise-a-disposition-salarie-temporaire": [51400],
-  "remuneration-minimale-salarie": [44400]
+  "remuneration-minimale-salarie": [44400],
 };
 
 // https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000036262246&dateTexte=&categorieLien=id
@@ -29,5 +29,5 @@ export const THEMES_L22532 = {
   "prevention-exposition-facteurs-risques-professionnels": [162100],
   "insertion-professionnelle-maintien-emploi-handicapes": [86500],
   "effectif-delegues-syndicaux": [165200],
-  "prime-travaux-dangereux-insalubres": [41100]
+  "prime-travaux-dangereux-insalubres": [41100],
 };

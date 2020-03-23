@@ -5,17 +5,17 @@ const arr1 = [
       whatever: "whatever",
       slug: "a",
       source: "a",
-      algo: "ft"
-    }
+      algo: "ft",
+    },
   },
   {
     _source: {
       whatever: "whatever",
       slug: "hey",
       source: "a",
-      algo: "ft"
-    }
-  }
+      algo: "ft",
+    },
+  },
 ];
 const arr2 = [
   {
@@ -23,17 +23,17 @@ const arr2 = [
       whatever: "whatever",
       slug: "hey",
       source: "a",
-      algo: "sem"
-    }
+      algo: "sem",
+    },
   },
   {
     _source: {
       whatever: "whatever",
       slug: "c",
       source: "a",
-      algo: "sem"
-    }
-  }
+      algo: "sem",
+    },
+  },
 ];
 
 const tests = [
@@ -42,33 +42,33 @@ const tests = [
       [
         {
           title: 1,
-          score: 2
-        }
+          score: 2,
+        },
       ],
       [
         {
           title: 2,
-          score: 4
-        }
-      ]
+          score: 4,
+        },
+      ],
     ],
     expected: [
       { title: 1, score: 2 },
-      { title: 2, score: 4 }
-    ]
+      { title: 2, score: 4 },
+    ],
   },
   {
     input: [
       [
         {
           title: 1,
-          score: 2
-        }
+          score: 2,
+        },
       ],
-      []
+      [],
     ],
-    expected: [{ title: 1, score: 2 }]
-  }
+    expected: [{ title: 1, score: 2 }],
+  },
 ];
 
 const test_dupl = [
@@ -80,27 +80,27 @@ const test_dupl = [
           whatever: "whatever",
           slug: "a",
           source: "a",
-          algo: "ft"
-        }
+          algo: "ft",
+        },
       },
       {
         _source: {
           whatever: "whatever",
           slug: "hey",
           source: "a",
-          algo: "ft"
-        }
+          algo: "ft",
+        },
       },
       {
         _source: {
           whatever: "whatever",
           slug: "c",
           source: "a",
-          algo: "sem"
-        }
-      }
-    ]
-  }
+          algo: "sem",
+        },
+      },
+    ],
+  },
 ];
 const test_mergePipe_result = [
   {
@@ -108,25 +108,25 @@ const test_mergePipe_result = [
       whatever: "whatever",
       slug: "a",
       source: "a",
-      algo: "ft"
-    }
+      algo: "ft",
+    },
   },
   {
     _source: {
       whatever: "whatever",
       slug: "hey",
       source: "a",
-      algo: "both"
-    }
+      algo: "both",
+    },
   },
   {
     _source: {
       whatever: "whatever",
       slug: "c",
       source: "a",
-      algo: "sem"
-    }
-  }
+      algo: "sem",
+    },
+  },
 ];
 test("test merge two", () => {
   tests.forEach(t => {

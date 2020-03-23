@@ -4,7 +4,7 @@ import { matopush } from "../../piwik";
 import { RelatedItems } from "../RelatedItems";
 
 jest.mock("../../piwik", () => ({
-  matopush: jest.fn()
+  matopush: jest.fn(),
 }));
 
 jest.mock("next/link", () => {
@@ -15,39 +15,39 @@ const items = [
   {
     source: "fiches_service_public",
     slug: "fiche.sp.url",
-    title: "fiche sp"
+    title: "fiche sp",
   },
   {
     source: "external",
     url: "external.tools",
     title: "externalTool",
     action: "voir",
-    icon: "Custom"
+    icon: "Custom",
   },
   {
     source: "modeles_de_courriers",
     title: "modele de courrier",
-    slug: "modele.url"
+    slug: "modele.url",
   },
   {
     source: "outils",
     slug: "outils.url",
     title: "Simulateur",
     action: "simuler",
-    icon: "Depart"
+    icon: "Depart",
   },
   {
     source: "contributions",
     slug: "contrib.url",
-    title: "contrib"
+    title: "contrib",
   },
   {
     source: "outils",
     slug: "outil-2.slug",
     title: "fiche sp",
     icon: "Contract",
-    action: "tester"
-  }
+    action: "tester",
+  },
 ];
 
 describe("<RelatedItems />", () => {
@@ -65,7 +65,7 @@ describe("<RelatedItems />", () => {
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
       "selectRelated",
-      "fiche-service-public/fiche.sp.url"
+      "fiche-service-public/fiche.sp.url",
     ]);
   });
 });

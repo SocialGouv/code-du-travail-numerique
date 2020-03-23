@@ -18,7 +18,7 @@ function splitArticle(article) {
     "5 questions réponses sur ",
     "5 questions sur ",
     "5 questions-réponses sur ",
-    "5 questions/réponses sur "
+    "5 questions/réponses sur ",
   ];
   for (const pattern of patterns) {
     prefixTitle = prefixTitle.replace(pattern, "");
@@ -34,7 +34,7 @@ function splitArticle(article) {
         html,
         slug: `${slug}${anchor ? `#${anchor}` : ""}`,
         text,
-        title
+        title,
       };
     });
 }

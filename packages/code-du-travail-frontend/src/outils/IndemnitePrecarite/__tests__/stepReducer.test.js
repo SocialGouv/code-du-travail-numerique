@@ -7,7 +7,7 @@ describe("initialSteps", () => {
       { name: "info_cc" },
       { name: "info_generales" },
       { name: "remuneration" },
-      { name: "indemnite" }
+      { name: "indemnite" },
     ]);
   });
   it("handles reset action", () => {

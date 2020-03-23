@@ -16,14 +16,14 @@ export function getIndemnite({ salaireRef, anciennete }) {
   const trancheAnciennete = {
     a10: Math.max(0, round(anciennete - 10)),
     a5: Math.min(5, Math.max(0, round(anciennete - 5))),
-    a2: Math.min(5, round(anciennete))
+    a2: Math.min(5, round(anciennete)),
   };
 
   const labels = {
     "Salaire de référence (Sref)": round(salaireRef),
     "Ancienneté entre 2 et 5ans (A1)": trancheAnciennete.a2,
     "Ancienneté 6 ens 10ans (A2)": trancheAnciennete.a5,
-    "Ancienneté au delà de 10ans (A3)": trancheAnciennete.a10
+    "Ancienneté au delà de 10ans (A3)": trancheAnciennete.a10,
   };
 
   if (trancheAnciennete.a10) {
@@ -47,9 +47,9 @@ export function getIndemnite({ salaireRef, anciennete }) {
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
     infoCalculConventionnel: {
-      formula: formula.map(formula => `( ${formula} )`).join(" + "),
-      labels
+      formula: formula.map((formula) => `( ${formula} )`).join(" + "),
+      labels,
     },
-    error
+    error,
   };
 }

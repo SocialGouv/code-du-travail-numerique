@@ -29,7 +29,7 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
               <option disabled value="">
                 ...
               </option>
-              {options.map(option => {
+              {options.map((option) => {
                 let key, label;
                 if (Array.isArray(option)) {
                   [key, label] = option;
@@ -46,7 +46,7 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
             </StyledSelect>
             {error && dirty && <Error>{error}</Error>}
             {onChange && (
-              <OnChange name={name}>{values => onChange(values)}</OnChange>
+              <OnChange name={name}>{(values) => onChange(values)}</OnChange>
             )}
           </Wrapper>
         );
@@ -60,7 +60,7 @@ SelectQuestion.propTypes = {
   label: PropTypes.string.isRequired,
   subLabel: PropTypes.string,
   options: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
 };
 
 export { SelectQuestion };
@@ -71,7 +71,7 @@ const SubLabel = styled.label`
   display: block;
   margin-bottom: ${theme.spacings.tiny};
   font-size: ${fonts.sizes.default};
-  cursor: ${props => (props.as ? "default" : "pointer")};
+  cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.small};
   }

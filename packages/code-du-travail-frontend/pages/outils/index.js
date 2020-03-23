@@ -5,7 +5,7 @@ import {
   Grid,
   icons,
   PageTitle,
-  Section
+  Section,
 } from "@socialgouv/react-ui";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import tools from "@cdt/data...tools/internals.json";
@@ -18,7 +18,7 @@ import { CCTile, DocumentsTile } from "../index";
 import { FocusRoot } from "../../src/a11y";
 
 const monCompteFormation = externalTools.find(
-  tools => tools.title === "Mon compte formation"
+  (tools) => tools.title === "Mon compte formation"
 );
 
 const Outils = ({ pageUrl, ogImage }) => (

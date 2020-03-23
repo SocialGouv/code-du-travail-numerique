@@ -16,7 +16,7 @@ const Search = ({ onSelectConvention }) => {
   const router = useRouter();
   const [query, setQuery] = useState("");
 
-  const onInputChange = keyEvent => {
+  const onInputChange = (keyEvent) => {
     const value = keyEvent.target.value;
     setQuery(value);
   };
@@ -82,7 +82,7 @@ const Search = ({ onSelectConvention }) => {
                   buttonLabel={"Voir plus d’entreprises"}
                   title="ENTREPRISES"
                   query={query}
-                  items={entreprises.map(entreprise => (
+                  items={entreprises.map((entreprise) => (
                     <CompanyTile
                       {...entreprise}
                       key={entreprise.siret}

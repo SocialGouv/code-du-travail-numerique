@@ -9,14 +9,14 @@ import Title from "./Title";
 
 const { spacings } = theme;
 
-const isItemOfAccordion = element =>
+const isItemOfAccordion = (element) =>
   (element.name === "Chapitre" || element.name === "Cas") &&
-  element.children.find(child => child.name === "Titre");
+  element.children.find((child) => child.name === "Titre");
 
 class AccordionWrapper extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
-    headingLevel: PropTypes.number.isRequired
+    headingLevel: PropTypes.number.isRequired,
   };
   render() {
     const { data, headingLevel } = this.props;
@@ -25,25 +25,25 @@ class AccordionWrapper extends React.PureComponent {
     );
     const accordionItems = data.children
       .filter(isItemOfAccordion)
-      .map(accordionItem => {
+      .map((accordionItem) => {
         const title = (
           <Title level={headingLevel}>
             {getText(
-              accordionItem.children.find(child => child.name === "Titre")
+              accordionItem.children.find((child) => child.name === "Titre")
             )}
           </Title>
         );
         const body = (
           <ElementBuilder
             data={accordionItem.children.filter(
-              child => child.name !== "Titre"
+              (child) => child.name !== "Titre"
             )}
             headingLevel={headingLevel + 1}
           />
         );
         return {
           title,
-          body
+          body,
         };
       });
 

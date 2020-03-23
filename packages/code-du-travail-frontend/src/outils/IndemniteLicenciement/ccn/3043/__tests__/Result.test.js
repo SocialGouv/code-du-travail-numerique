@@ -9,7 +9,7 @@ const initialValues = {
   anciennete: 5,
   age: 55,
   groupe: "I",
-  branche: "3043"
+  branche: "3043",
 };
 
 describe("<Result />", () => {

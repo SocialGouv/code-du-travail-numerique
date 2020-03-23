@@ -10,7 +10,7 @@ import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const fetchFiche = ({ slug }) =>
@@ -40,9 +40,9 @@ class Fiche extends React.Component {
         raw,
         references_juridiques,
         title,
-        url
+        url,
       },
-      relatedItems
+      relatedItems,
     } = data;
     return (
       <Layout>

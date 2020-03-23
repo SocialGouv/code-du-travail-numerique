@@ -27,94 +27,94 @@ Coronavirus et données personnelles :
       {
         type: "main",
         url:
-          "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer"
+          "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer",
       },
       {
         type: "main",
         url:
-          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
+          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
       },
       {
         type: "main",
         url:
-          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur"
+          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur",
       },
       {
         type: "secondary",
         url:
-          "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique"
+          "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
       },
       {
         type: "secondary",
         url:
-          "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle"
+          "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle",
       },
       {
         type: "secondary",
-        url: "/fiche-service-public/teletravail-dans-le-secteur-prive"
-      },
-      {
-        type: "secondary",
-        url:
-          "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie"
+        url: "/fiche-service-public/teletravail-dans-le-secteur-prive",
       },
       {
         type: "secondary",
         url:
-          "/fiche-service-public/securite-et-sante-au-travail-obligations-de-lemployeur"
+          "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
       },
       {
         type: "secondary",
         url:
-          "/fiche-service-public/un-salarie-peut-il-refuser-de-travailler-dans-une-situation-dangereuse"
+          "/fiche-service-public/securite-et-sante-au-travail-obligations-de-lemployeur",
       },
       {
         type: "secondary",
         url:
-          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-apprentissage"
+          "/fiche-service-public/un-salarie-peut-il-refuser-de-travailler-dans-une-situation-dangereuse",
       },
       {
         type: "secondary",
         url:
-          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-formation-professionnelle-des-salaries-alternants-et-personnes-en-recherche-demploi"
+          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-apprentissage",
       },
       {
         type: "secondary",
         url:
-          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-mon-compte-formation"
+          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-formation-professionnelle-des-salaries-alternants-et-personnes-en-recherche-demploi",
+      },
+      {
+        type: "secondary",
+        url:
+          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-mon-compte-formation",
       },
       {
         type: "template",
         url:
-          "/modeles-de-courriers/attestation-sur-lhonneur-deplacement-derogatoire"
+          "/modeles-de-courriers/attestation-sur-lhonneur-deplacement-derogatoire",
       },
       {
         type: "template",
         url:
-          "/modeles-de-courriers/justificatif-de-lemployeur-de-deplacement-professionnel"
+          "/modeles-de-courriers/justificatif-de-lemployeur-de-deplacement-professionnel",
       },
       {
         type: "template",
         url:
-          "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant"
+          "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",
       },
       {
         type: "theme",
-        url: "/themes/615-teletravail"
+        url: "/themes/615-teletravail",
       },
       {
         type: "theme",
-        url: "/themes/522-les-aides-a-lemploi"
+        url: "/themes/522-les-aides-a-lemploi",
       },
       {
         type: "theme",
-        url: "/themes/511-dispositifs-dacces-a-la-formation"
+        url: "/themes/511-dispositifs-dacces-a-la-formation",
       },
       {
         type: "theme",
-        url: "/themes/631-maladie"
-      }
-    ]
-  }
+        url: "/themes/631-maladie",
+      },
+    ],
+  },
 ];
 module.exports = { thematicFiles };

@@ -29,7 +29,7 @@ function ServiceRenseignement() {
   const [departementData, setDepartementData] = useState();
   const router = useRouter();
   const onDepartmentInput = useCallback(
-    keyEvent => {
+    (keyEvent) => {
       const departmentNum = (keyEvent.target.value || "").toLowerCase();
       const departmentData = servicesDeRenseignement[departmentNum];
       setDepartementData(departmentData);
@@ -45,7 +45,7 @@ function ServiceRenseignement() {
       "trackEvent",
       "contact",
       "click_contact_sr_modale",
-      router.asPath
+      router.asPath,
     ]);
   }, [router.asPath]);
 
@@ -61,8 +61,8 @@ function ServiceRenseignement() {
 
       <Heading as="h4">Contact par email et prise de rendez-vous</Heading>
       <p>
-        <UID name={id => `id_${id}`}>
-          {id => (
+        <UID name={(id) => `id_${id}`}>
+          {(id) => (
             <>
               <label htmlFor={id}>
                 Saisissez votre numéro de département&nbsp;:

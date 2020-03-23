@@ -57,7 +57,7 @@ export default function useGlossary(children, html) {
     ).reduce((state, node) => {
       const internalRefMap = new Map();
       let refCounter = 0;
-      glossary.forEach(item => {
+      glossary.forEach((item) => {
         // we cannot use \b word boundary since \w does not match diacritics
         // So we do a kind of \b equivalent.
         // the main différence is that matched pattern can include a whitespace as first char
@@ -66,17 +66,17 @@ export default function useGlossary(children, html) {
         const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
         const patterns = [...new Set([item.title, ...item.variants])]
           .map(
-            term =>
+            (term) =>
               new RegExp(
                 `${wordBoundaryStart}(${term})${wordBoundaryEnd}`,
                 "gi"
               )
           )
-          .concat(item.abbrs.map(abbr => new RegExp(`\\b(${abbr})\\b`, "g")));
+          .concat(item.abbrs.map((abbr) => new RegExp(`\\b(${abbr})\\b`, "g")));
 
-        patterns.forEach(pattern => {
+        patterns.forEach((pattern) => {
           // we use an internal ref counter to track pattern replacement
-          node.innerHTML = node.innerHTML.replace(pattern, function(_, term) {
+          node.innerHTML = node.innerHTML.replace(pattern, function (_, term) {
             const internalRef = `__tt__${refCounter++}`;
             internalRefMap.set(internalRef, { slug: item.slug, term });
             return _.replace(
@@ -87,14 +87,14 @@ export default function useGlossary(children, html) {
         });
       });
       return state.concat(
-        Array.from(node.querySelectorAll("[data-tooltip-ref]")).map(node => {
+        Array.from(node.querySelectorAll("[data-tooltip-ref]")).map((node) => {
           const { slug, term } = internalRefMap.get(
             node.getAttribute("data-tooltip-ref")
           );
           return {
             node,
             term,
-            definition: glossaryBySlug[slug].definition
+            definition: glossaryBySlug[slug].definition,
           };
         })
       );

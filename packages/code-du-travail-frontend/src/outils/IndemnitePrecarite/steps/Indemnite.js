@@ -10,7 +10,7 @@ import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import {
   filterSituations,
   getSituationsFor,
-  getRef
+  getRef,
 } from "../../common/situations.utils";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 
@@ -67,7 +67,7 @@ function extractRefs(refs = []) {
   //some ref are duplicated so we need to dedup them
 
   const tempRefs = refs
-    .filter(item => item.refLabel && item.refUrl)
+    .filter((item) => item.refLabel && item.refUrl)
     .flatMap(({ refUrl, refLabel }) => {
       const urls = refUrl.split(/\n/);
       const labels = refLabel.split(/\n/);
@@ -80,7 +80,7 @@ function extractRefs(refs = []) {
   }
   return Object.entries(refMap).map(([refUrl, ref]) => ({
     refUrl,
-    ref
+    ref,
   }));
 }
 
@@ -92,7 +92,7 @@ function StepIndemnite({ form }) {
     salaires,
     salaire,
     ccn,
-    criteria = {}
+    criteria = {},
   } = state.values;
 
   const idcc = ccn ? ccn.num : 0;
@@ -131,7 +131,7 @@ function StepIndemnite({ form }) {
     salaire,
     salaires,
     rateValue,
-    rateLabel
+    rateLabel,
   });
 
   const entries = Object.entries({
@@ -140,7 +140,7 @@ function StepIndemnite({ form }) {
         ? ccn.title
         : "La convention collective n'a pas été traitée par nos services."
       : "La convention collective n'a pas été renseignée.",
-    ...inputs
+    ...inputs,
   });
 
   return (

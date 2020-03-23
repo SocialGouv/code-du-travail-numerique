@@ -11,7 +11,7 @@ function StepPrimes({ form }) {
       <YesNoQuestion
         name="hasPrimes"
         label="Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois&nbsp;?"
-        onChange={hasPrimes => {
+        onChange={(hasPrimes) => {
           hasPrimes
             ? form.change("primes", [{ prime: null }])
             : form.change("primes", []);
@@ -24,7 +24,7 @@ function StepPrimes({ form }) {
           <Primes
             name="primes"
             visible={input.value}
-            onChange={primes => {
+            onChange={(primes) => {
               if (primes.length === 0) {
                 form.change("hasPrimes", false);
               }
@@ -36,7 +36,7 @@ function StepPrimes({ form }) {
   );
 }
 StepPrimes.propTypes = {
-  form: PropTypes.object.isRequired
+  form: PropTypes.object.isRequired,
 };
 
 export { StepPrimes };

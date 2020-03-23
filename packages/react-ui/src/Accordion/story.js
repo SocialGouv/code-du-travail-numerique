@@ -6,7 +6,7 @@ import { Accordion } from ".";
 
 export default {
   component: Accordion,
-  title: "Components|Accordion"
+  title: "Components|Accordion",
 };
 
 export const base = () => (
@@ -22,8 +22,8 @@ export const base = () => (
                 or if it keeps its width
               </h5>
             ),
-            body: "this is the single body"
-          }
+            body: "this is the single body",
+          },
         ]}
       />
     </Section>
@@ -32,14 +32,14 @@ export const base = () => (
         items={[
           {
             title: <h3>This the first h3 heading of a multiple accordion</h3>,
-            body: "this is the first body"
+            body: "this is the first body",
           },
           {
             title: (
               <h3>This is the second h3 heading of a multiple accordion</h3>
             ),
-            body: "this is the second body"
-          }
+            body: "this is the second body",
+          },
         ]}
       />
     </Section>
@@ -50,12 +50,12 @@ export const base = () => (
           {
             id: "id",
             title: <Title>This is a pre expanded Title accordion</Title>,
-            body: "this is the body"
+            body: "this is the body",
           },
           {
             title: <Title>This bloc could be extended too if needed</Title>,
-            body: "this is the body"
-          }
+            body: "this is the body",
+          },
         ]}
       />
     </Section>
@@ -69,40 +69,40 @@ export const tile = () => (
       items={[
         {
           title: <h5>1 - A tile title</h5>,
-          body: "this is the single body"
+          body: "this is the single body",
         },
         {
           title: <h5>2 - A tile title</h5>,
-          body: "this is the single body"
+          body: "this is the single body",
         },
         {
           title: <h5>3 - A tile title with an icon</h5>,
           icon: Custom,
-          body: "this is the single body"
+          body: "this is the single body",
         },
         {
           title: <h5>4 - A tile title with an icon</h5>,
           icon: Custom,
-          body: "this is the single body"
+          body: "this is the single body",
         },
         {
           title: <h5>5 - A tile title</h5>,
-          body: "this is the single body"
+          body: "this is the single body",
         },
         {
           title: <h5>6 - A tile title with an icon</h5>,
           icon: Custom,
-          body: "this is the single body"
+          body: "this is the single body",
         },
         {
           title: <h5>7 - A tile title with an icon</h5>,
           icon: Custom,
-          body: "this is the single body"
+          body: "this is the single body",
         },
         {
           title: <h5>8 - A tile title</h5>,
-          body: "this is the single body"
-        }
+          body: "this is the single body",
+        },
       ]}
     />
   </Section>
@@ -134,12 +134,12 @@ export const Hierarchy = () => (
                 up with it
               </p>
             </div>
-          )
+          ),
         },
         {
           title: <h5>A hiearchy title with an icon</h5>,
           icon: Custom,
-          body: "this is the single body"
+          body: "this is the single body",
         },
         {
           title: <h5>A hiearchy title</h5>,
@@ -162,11 +162,11 @@ export const Hierarchy = () => (
                 up with it
               </p>
             </div>
-          )
+          ),
         },
         {
           title: <h5>A hiearchy title</h5>,
-          body: "this is the single body"
+          body: "this is the single body",
         },
         {
           icon: Custom,
@@ -195,8 +195,8 @@ export const Hierarchy = () => (
                 up with it
               </p>
             </div>
-          )
-        }
+          ),
+        },
       ]}
     />
   </Section>

@@ -5,7 +5,7 @@ import { Subtitle } from ".";
 
 export default {
   component: Subtitle,
-  title: "Titles|Components/Subtitle"
+  title: "Titles|Components/Subtitle",
 };
 
 export const base = () => (

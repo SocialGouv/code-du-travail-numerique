@@ -10,25 +10,25 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
   {
     idcc: 20,
     criteria: {
-      cddType: "3| bar"
+      cddType: "3| bar",
     },
     allowBonus: false,
     endMessage: "nope",
-    hasConventionalProvision: true
+    hasConventionalProvision: true,
   },
   {
     idcc: 20,
     criteria: {
-      cddType: "4| baz"
+      cddType: "4| baz",
     },
     allowBonus: true,
-    hasConventionalProvision: true
+    hasConventionalProvision: true,
   },
   {
     idcc: 30,
     criteria: {},
-    hasConventionalProvision: null
-  }
+    hasConventionalProvision: null,
+  },
 ]);
 
 describe("situations", () => {
@@ -36,7 +36,7 @@ describe("situations", () => {
     it("should return correct error message", () => {
       const situations = getSituationsFor(data, { idcc: 20 });
       expect(validateSituation(situations, { cddType: "3| bar" })).toEqual({
-        criteria: { cddType: "nope" }
+        criteria: { cddType: "nope" },
       });
     });
     it("should not touch error message if multiple situations match", () => {
@@ -44,7 +44,7 @@ describe("situations", () => {
       expect(
         validateSituation(situations, {}, { criteria: { cddType: "yoyo" } })
       ).toEqual({
-        criteria: { cddType: "yoyo" }
+        criteria: { cddType: "yoyo" },
       });
     });
     it("should override previous error message", () => {
@@ -56,7 +56,7 @@ describe("situations", () => {
           { criteria: { cddType: "yoyo" } }
         )
       ).toEqual({
-        criteria: { cddType: undefined }
+        criteria: { cddType: undefined },
       });
     });
   });

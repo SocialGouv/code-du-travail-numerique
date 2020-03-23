@@ -8,11 +8,11 @@ class ErrorBoundary extends React.Component {
   }
 
   static propTypes = {
-    message: PropTypes.string
+    message: PropTypes.string,
   };
 
   static defaultProps = {
-    message: "widget non disponible"
+    message: "widget non disponible",
   };
 
   static getDerivedStateFromError() {

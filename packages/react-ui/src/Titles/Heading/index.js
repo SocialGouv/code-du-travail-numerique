@@ -23,12 +23,12 @@ Heading.propTypes = {
   children: PropTypes.node,
   shift: PropTypes.string,
   stripped: PropTypes.bool,
-  variant: PropTypes.string
+  variant: PropTypes.string,
 };
 
 Heading.defaultProps = {
   isFirst: false,
-  variant: "secondary"
+  variant: "secondary",
 };
 
 const StyledHeading = styled.h3`

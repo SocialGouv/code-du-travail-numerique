@@ -9,7 +9,7 @@ import {
   getNextQuestionKey,
   filterSituations,
   getSituationsFor,
-  getFormProps
+  getFormProps,
 } from "../../common/situations.utils";
 
 const { questions, situations: allSituations } = data;
@@ -40,7 +40,7 @@ function StepInformations({ form }) {
   );
 
   // Specific sub-label on CC seniority
-  const subLabel = key =>
+  const subLabel = (key) =>
     key === "ancienneté"
       ? "Choissisez parmi les catégories d'ancienneté telles que définies par la convention collective"
       : undefined;
@@ -60,8 +60,8 @@ function StepInformations({ form }) {
               getFormProps({
                 key,
                 criteria,
-                pastQuestions
-              }).forEach(key => form.change(`criteria.${key}`, undefined));
+                pastQuestions,
+              }).forEach((key) => form.change(`criteria.${key}`, undefined));
             })
           }
         />

@@ -8,11 +8,11 @@ export const ScreenReaderOnly = ({ type, ...props }) => {
 };
 
 ScreenReaderOnly.propTypes = {
-  type: PropTypes.oneOf(["block", "inline"])
+  type: PropTypes.oneOf(["block", "inline"]),
 };
 
 ScreenReaderOnly.defaultProps = {
-  type: "block"
+  type: "block",
 };
 
 const InlineSR = styled.span`

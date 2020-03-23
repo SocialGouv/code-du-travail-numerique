@@ -10,7 +10,7 @@ import {
   PageTitle,
   Section,
   theme,
-  Tile
+  Tile,
 } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
 
@@ -19,7 +19,7 @@ import Metas from "../../src/common/Metas";
 import { FocusRoot } from "../../src/a11y";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const SubThemes = ({ children = [] }) => {

@@ -9,7 +9,7 @@ import {
   Heading,
   PageTitle,
   Section,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 
 import { Layout } from "../src/layout/Layout";
@@ -17,7 +17,7 @@ import Metas from "../src/common/Metas";
 import { FocusRoot } from "../src/a11y";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const Stats = ({ data, pageUrl, ogImage }) => {
@@ -75,7 +75,7 @@ const Stats = ({ data, pageUrl, ogImage }) => {
               {startDate.toLocaleString("fr-FR", {
                 year: "numeric",
                 month: "numeric",
-                day: "numeric"
+                day: "numeric",
               })}
             </p>
           </Wrapper>
@@ -85,7 +85,7 @@ const Stats = ({ data, pageUrl, ogImage }) => {
   );
 };
 
-Stats.getInitialProps = async function() {
+Stats.getInitialProps = async function () {
   const response = await fetch(`${API_URL}/stats`);
   if (!response.ok) {
     return { statusCode: response.status };

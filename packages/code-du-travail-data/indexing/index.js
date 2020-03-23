@@ -4,7 +4,7 @@ import {
   THEMES,
   AGREEMENTS,
   SUGGESTIONS,
-  MT_SHEETS
+  MT_SHEETS,
 } from "./esIndexName";
 
 import { logger } from "./logger";
@@ -15,7 +15,7 @@ import {
   version,
   createIndex,
   indexDocumentsBatched,
-  deleteOldIndex
+  deleteOldIndex,
 } from "./es_client.utils";
 import { populateSuggestions } from "./suggestion";
 
@@ -40,14 +40,14 @@ const DUMP_PATH =
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
 
 const esClientConfig = {
-  node: `${ELASTICSEARCH_URL}`
+  node: `${ELASTICSEARCH_URL}`,
 };
 
 switch (process.env.NODE_ENV) {
   case "production":
     esClientConfig.auth = {
       username: process.env.ELASTICSEARCH_USER || "elastic",
-      password: process.env.ELASTICSEARCH_PWD
+      password: process.env.ELASTICSEARCH_PWD,
     };
     break;
 }
@@ -62,49 +62,49 @@ async function main() {
   await createIndex({
     client,
     indexName: `${AGREEMENT_INDEX_NAME}-${ts}`,
-    mappings: conventionCollectiveMapping
+    mappings: conventionCollectiveMapping,
   });
   await indexDocumentsBatched({
     indexName: `${AGREEMENT_INDEX_NAME}-${ts}`,
     client,
-    documents: agreements
+    documents: agreements,
   });
 
   // Indexing documents/search data
   await createIndex({
     client,
     indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
-    mappings: documentMapping
+    mappings: documentMapping,
   });
   const documents = require(DUMP_PATH);
   await indexDocumentsBatched({
     indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
     client,
-    documents
+    documents,
   });
 
   // Indexing entire fiches MT data
   await createIndex({
     client,
     indexName: `${SHEET_MT_INDEX_NAME}-${ts}`,
-    mappings: documentMapping
+    mappings: documentMapping,
   });
   await indexDocumentsBatched({
     indexName: `${SHEET_MT_INDEX_NAME}-${ts}`,
     client,
-    documents: mtSheets
+    documents: mtSheets,
   });
 
   // Indexing Themes data
   await createIndex({
     client,
     indexName: `${THEME_INDEX_NAME}-${ts}`,
-    mappings: themesMapping
+    mappings: themesMapping,
   });
   await indexDocumentsBatched({
     client,
     indexName: `${THEME_INDEX_NAME}-${ts}`,
-    documents: themes
+    documents: themes,
   });
 
   // Indexing Suggestions
@@ -117,65 +117,65 @@ async function main() {
         {
           remove: {
             index: `${THEME_INDEX_NAME}-*`,
-            alias: `${THEME_INDEX_NAME}`
-          }
+            alias: `${THEME_INDEX_NAME}`,
+          },
         },
         {
           remove: {
             index: `${AGREEMENT_INDEX_NAME}-*`,
-            alias: `${AGREEMENT_INDEX_NAME}`
-          }
+            alias: `${AGREEMENT_INDEX_NAME}`,
+          },
         },
         {
           remove: {
             index: `${SHEET_MT_INDEX_NAME}-*`,
-            alias: `${SHEET_MT_INDEX_NAME}`
-          }
+            alias: `${SHEET_MT_INDEX_NAME}`,
+          },
         },
         {
           remove: {
             index: `${DOCUMENT_INDEX_NAME}-*`,
-            alias: `${DOCUMENT_INDEX_NAME}`
-          }
+            alias: `${DOCUMENT_INDEX_NAME}`,
+          },
         },
         {
           remove: {
             index: `${SUGGEST_INDEX_NAME}-*`,
-            alias: `${SUGGEST_INDEX_NAME}`
-          }
+            alias: `${SUGGEST_INDEX_NAME}`,
+          },
         },
         {
           add: {
             index: `${THEME_INDEX_NAME}-${ts}`,
-            alias: `${THEME_INDEX_NAME}`
-          }
+            alias: `${THEME_INDEX_NAME}`,
+          },
         },
         {
           add: {
             index: `${AGREEMENT_INDEX_NAME}-${ts}`,
-            alias: `${AGREEMENT_INDEX_NAME}`
-          }
+            alias: `${AGREEMENT_INDEX_NAME}`,
+          },
         },
         {
           add: {
             index: `${SHEET_MT_INDEX_NAME}-${ts}`,
-            alias: `${SHEET_MT_INDEX_NAME}`
-          }
+            alias: `${SHEET_MT_INDEX_NAME}`,
+          },
         },
         {
           add: {
             index: `${DOCUMENT_INDEX_NAME}-${ts}`,
-            alias: `${DOCUMENT_INDEX_NAME}`
-          }
+            alias: `${DOCUMENT_INDEX_NAME}`,
+          },
         },
         {
           add: {
             index: `${SUGGEST_INDEX_NAME}-${ts}`,
-            alias: `${SUGGEST_INDEX_NAME}`
-          }
-        }
-      ]
-    }
+            alias: `${SUGGEST_INDEX_NAME}`,
+          },
+        },
+      ],
+    },
   });
 
   const patterns = [
@@ -183,13 +183,13 @@ async function main() {
     THEME_INDEX_NAME,
     AGREEMENT_INDEX_NAME,
     SUGGEST_INDEX_NAME,
-    SHEET_MT_INDEX_NAME
+    SHEET_MT_INDEX_NAME,
   ];
 
   await deleteOldIndex({ client, patterns, timestamp: ts });
 }
 
-main().catch(response => {
+main().catch((response) => {
   if (response.body) {
     logger.error(response.meta.statusCode);
     logger.error(response.name);

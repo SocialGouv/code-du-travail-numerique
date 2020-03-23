@@ -11,29 +11,29 @@ export const initialState = {
     {
       component: StepIntro,
       name: "intro",
-      label: "Introduction"
+      label: "Introduction",
     },
     {
       component: StepInfoCCnOptionnal,
       name: "info_cc",
-      label: "Convention collective"
+      label: "Convention collective",
     },
     {
       component: StepInformations,
       name: "infos",
       label: "Informations",
-      skip: values =>
+      skip: (values) =>
         !values.ccn ||
         (values.ccn && isNotYetProcessed(data.situations, values.ccn.num)) ||
         data.situations.filter(({ idcc }) => idcc === values.ccn.num).length ===
-          1
+          1,
     },
     {
       component: StepResult,
       name: "results",
-      label: "Durée du préavis"
-    }
-  ]
+      label: "Durée du préavis",
+    },
+  ],
 };
 
 export function stepReducer(state, { type, payload }) {

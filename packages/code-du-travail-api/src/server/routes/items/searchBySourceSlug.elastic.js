@@ -5,13 +5,13 @@ function getSearchBody({ source, slug }) {
       bool: {
         filter: [
           {
-            term: { source }
+            term: { source },
           },
           {
-            term: { slug }
-          }
-        ]
-      }
+            term: { slug },
+          },
+        ],
+      },
     },
     _source: [
       "asideContent", // thematic file
@@ -38,8 +38,8 @@ function getSearchBody({ source, slug }) {
       "idcc",
       "date_publi", // convention-collective
       "answers", // contributions
-      "refs" // thematic file
-    ]
+      "refs", // thematic file
+    ],
   };
 }
 

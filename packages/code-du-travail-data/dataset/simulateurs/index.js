@@ -10,19 +10,19 @@ const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
 const dataTab = {
   "preavis-demission": 2,
   "preavis-licenciement": 3,
-  "heures-recherche-emploi": 4
+  "heures-recherche-emploi": 4,
 };
 
 async function main() {
   const questions = await getQuestions({
     spreadsheetKey: SPREADSHEET_KEY,
-    worksheet: 1
+    worksheet: 1,
   });
 
   for (const [key, tabId] of Object.entries(dataTab)) {
     const situations = await getSituations({
       spreadsheetKey: SPREADSHEET_KEY,
-      worksheet: tabId
+      worksheet: tabId,
     });
     const jsonData = JSON.stringify({ questions, situations }, 0, 2);
     await writeFile(path.join(__dirname, `${key}.data.json`), jsonData);

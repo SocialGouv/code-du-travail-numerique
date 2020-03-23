@@ -10,7 +10,7 @@ const SOURCES = {
   SHEET_SP: "fiches_service_public",
   THEMES: "themes",
   TOOLS: "outils",
-  THEMATIC_FILES: "dossiers"
+  THEMATIC_FILES: "dossiers",
 };
 
 // mapping elastic search source type -> route name
@@ -26,7 +26,7 @@ const routeBySource = {
   [SOURCES.SHEET_SP]: "fiche-service-public",
   [SOURCES.THEMES]: "themes",
   [SOURCES.TOOLS]: "outils",
-  [SOURCES.THEMATIC_FILES]: "dossiers"
+  [SOURCES.THEMATIC_FILES]: "dossiers",
 };
 
 // mapping elastic search source type -> source label
@@ -42,7 +42,7 @@ const labelBySource = {
   [SOURCES.SHEET_MT]: "Ministère du Travail",
   [SOURCES.THEMES]: "Themes",
   [SOURCES.TOOLS]: "Outils",
-  [SOURCES.THEMATIC_FILES]: "Dossiers"
+  [SOURCES.THEMATIC_FILES]: "Dossiers",
 };
 
 const sources = Object.values(SOURCES);
@@ -61,5 +61,5 @@ module.exports = {
   SOURCES,
   getLabelBySource,
   getRouteBySource,
-  getSourceByRoute
+  getSourceByRoute,
 };

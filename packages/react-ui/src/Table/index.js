@@ -12,7 +12,7 @@ export const Table = ({ children, ...props }) => (
 );
 
 Table.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 const StyledTable = styled.table`

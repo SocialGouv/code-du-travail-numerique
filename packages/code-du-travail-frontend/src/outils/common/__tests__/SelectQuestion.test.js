@@ -5,7 +5,7 @@ import { fireEvent } from "@testing-library/react";
 
 const values = {
   foo: "label foo",
-  baz: "label baz"
+  baz: "label baz",
 };
 const Component = () => (
   <SelectQuestion label="Une question ?" name="foo" options={values} />
@@ -33,7 +33,7 @@ describe("<SelectQuestion />", () => {
       />
     );
     const { getByLabelText } = renderForm(ComponentWithOnchange, {
-      foo: "foo"
+      foo: "foo",
     });
     const select = getByLabelText(/question/i);
     fireEvent.change(select, { target: { value: "baz" } });

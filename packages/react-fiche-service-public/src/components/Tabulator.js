@@ -10,7 +10,7 @@ import Title from "./Title";
 class Tabulator extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
-    headingLevel: PropTypes.number.isRequired
+    headingLevel: PropTypes.number.isRequired,
   };
   render() {
     const { data, headingLevel: previousHeadingLevel } = this.props;
@@ -19,19 +19,19 @@ class Tabulator extends React.PureComponent {
         ? previousHeadingLevel + 1
         : previousHeadingLevel;
 
-    const tabsData = data.children.map(tab => {
+    const tabsData = data.children.map((tab) => {
       return {
         tab: (
           <Title level={headingLevel}>
-            {getText(tab.children.find(child => child.name === "Titre"))}
+            {getText(tab.children.find((child) => child.name === "Titre"))}
           </Title>
         ),
         panel: (
           <ElementBuilder
-            data={tab.children.filter(el => el.name !== "Titre")}
+            data={tab.children.filter((el) => el.name !== "Titre")}
             headingLevel={headingLevel + 1}
           />
-        )
+        ),
       };
     });
     return <Tabs data={tabsData} />;

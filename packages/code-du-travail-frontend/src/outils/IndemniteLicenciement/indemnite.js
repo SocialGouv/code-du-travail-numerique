@@ -13,10 +13,10 @@ function getSalaireRef({
   salaire,
   salairePeriods,
   primes = [],
-  anciennete
+  anciennete,
 }) {
-  const primeValues = primes.map(a => a.prime);
-  const salaryValues = salaires.map(a => a.salary);
+  const primeValues = primes.map((a) => a.prime);
+  const salaryValues = salaires.map((a) => a.salary);
 
   let moyenneSalaires = 0;
   let moyenne3DerniersMoisSalaires = 0;
@@ -53,7 +53,7 @@ function getIndemnite({
   salaireRef,
   inaptitude = false,
   anciennete,
-  dateNotification
+  dateNotification,
 }) {
   const dNotification = parse(dateNotification);
   let formula = "-";
@@ -62,8 +62,8 @@ function getIndemnite({
     "Licenciement pour inaptitude": inaptitude ? "oui" : "non",
     "Ancienneté totale (A)": round(anciennete),
     ...(anciennete - 10 > 0 && {
-      "Ancienneté au delà de 10ans (A2)": round(anciennete - 10)
-    })
+      "Ancienneté au delà de 10ans (A2)": round(anciennete - 10),
+    }),
   };
   const avant27Sep2017 = isAfter(new Date("2017-09-27"), dNotification);
 
@@ -96,7 +96,7 @@ function getIndemnite({
 
   return {
     indemniteLegale: round(indemniteLegale),
-    infoCalculLegal: { formula, labels }
+    infoCalculLegal: { formula, labels },
   };
 }
 
@@ -111,7 +111,7 @@ function getIndemniteFromFinalForm(form) {
     primes = [],
     salaire,
     anciennete,
-    dateNotification
+    dateNotification,
   } = state.values;
 
   const salaireRef = getSalaireRef({
@@ -121,20 +121,20 @@ function getIndemniteFromFinalForm(form) {
     salairePeriods,
     salaires,
     anciennete,
-    primes
+    primes,
   });
 
   const { indemniteLegale, infoCalculLegal } = getIndemnite({
     salaireRef,
     inaptitude,
     anciennete,
-    dateNotification
+    dateNotification,
   });
 
   return {
     salaireRefLegal: salaireRef,
     indemniteLegale,
-    infoCalculLegal
+    infoCalculLegal,
   };
 }
 

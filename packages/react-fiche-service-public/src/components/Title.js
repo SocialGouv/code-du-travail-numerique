@@ -5,7 +5,7 @@ import { Title as UITitle, Heading } from "@socialgouv/react-ui";
 class Title extends React.PureComponent {
   static propTypes = {
     level: PropTypes.number,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
   render() {
     const { level, children } = this.props;

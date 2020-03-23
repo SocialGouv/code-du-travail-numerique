@@ -8,11 +8,11 @@ import { matopush } from "../../../piwik";
 jest.mock("../../../piwik", () => {
   let events = [];
   return {
-    matopush: jest.fn().mockImplementation(event => events.push(event)),
+    matopush: jest.fn().mockImplementation((event) => events.push(event)),
     events,
     flushEvents() {
       events = [];
-    }
+    },
   };
 });
 
@@ -28,13 +28,13 @@ const steps = [
   {
     name: "first_step",
     label: "First Step",
-    component: FirstStep
+    component: FirstStep,
   },
   {
     name: "second_step",
     label: "Second Step",
-    component: SecondStep
-  }
+    component: SecondStep,
+  },
 ];
 
 const initialState = { stepIndex: 0, steps };
@@ -43,7 +43,7 @@ const AdditionalStep = () => <Field name="firstName" component="input" />;
 const additionalStep = {
   label: "Name",
   name: "additional_step",
-  component: AdditionalStep
+  component: AdditionalStep,
 };
 const skipableStep = {
   name: "skippable",
@@ -51,7 +51,7 @@ const skipableStep = {
   skip: () => true,
   component: function Skipable() {
     return <p>skipable component</p>;
-  }
+  },
 };
 
 describe("<Wizard />", () => {
@@ -79,7 +79,7 @@ describe("<Wizard />", () => {
       "trackEvent",
       "outil",
       "view_step_test",
-      "second_step"
+      "second_step",
     ]);
     expect(container).toMatchSnapshot();
   });
@@ -114,7 +114,7 @@ describe("<Wizard />", () => {
       "trackEvent",
       "outil",
       "click_previous_test",
-      "first_step"
+      "first_step",
     ]);
   });
   it("should handle initialValues", () => {
@@ -146,7 +146,7 @@ describe("<Wizard />", () => {
     const [step1, step2] = steps;
     const state = {
       stepIndex: 0,
-      steps: [step1, skipableStep, step2]
+      steps: [step1, skipableStep, step2],
     };
 
     const { getByText } = render(
@@ -161,7 +161,7 @@ describe("<Wizard />", () => {
 
     const state = {
       stepIndex: 2,
-      steps: [step1, skipableStep, step2]
+      steps: [step1, skipableStep, step2],
     };
 
     const { getByText } = render(

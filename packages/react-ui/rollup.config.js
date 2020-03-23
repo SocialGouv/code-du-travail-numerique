@@ -8,25 +8,25 @@ export default {
   output: [
     {
       file: "lib/index.js",
-      format: "cjs"
+      format: "cjs",
     },
     {
       file: "lib/index.esm.js",
-      format: "esm"
-    }
+      format: "esm",
+    },
   ],
   external: ["prop-types", "react", "react-dom", "styled-components"],
   plugins: [
     babel(),
     resolve({
-      mainFields: ["module", "jsnext", "jsnext:main", "main"]
+      mainFields: ["module", "jsnext", "jsnext:main", "main"],
     }),
     commonjs(),
     replace({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-    })
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+    }),
   ],
   watch: {
-    include: "src/**"
-  }
+    include: "src/**",
+  },
 };

@@ -46,12 +46,12 @@ Title.propTypes = {
   shift: PropTypes.string,
   subtitle: PropTypes.node,
   topStripped: PropTypes.bool,
-  variant: PropTypes.string
+  variant: PropTypes.string,
 };
 
 Title.defaultProps = {
   isFirst: false,
-  variant: "secondary"
+  variant: "secondary",
 };
 
 const StyledTitle = styled.h2`

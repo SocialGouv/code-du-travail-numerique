@@ -2,7 +2,7 @@ import * as Sentry from "@sentry/browser";
 import getConfig from "next/config";
 
 const {
-  publicRuntimeConfig: { SENTRY_PUBLIC_DSN, PACKAGE_VERSION }
+  publicRuntimeConfig: { SENTRY_PUBLIC_DSN, PACKAGE_VERSION },
 } = getConfig();
 
 const isEnable = typeof window !== "undefined" && SENTRY_PUBLIC_DSN;
@@ -24,7 +24,7 @@ export function initializeSentry() {
     dsn: SENTRY_PUBLIC_DSN,
     debug: isPreProduction,
     environment,
-    release: packageVersion
+    release: packageVersion,
   });
 }
 
@@ -33,7 +33,7 @@ export function notifySentry(statusCode, message) {
     return;
   }
 
-  Sentry.withScope(scope => {
+  Sentry.withScope((scope) => {
     scope.setTag(`ssr`, false);
     Sentry.captureMessage(
       `Error ${statusCode}${message ? ` - ${message}` : ""}`,

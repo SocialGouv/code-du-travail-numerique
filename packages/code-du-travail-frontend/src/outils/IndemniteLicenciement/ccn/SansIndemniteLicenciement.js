@@ -7,11 +7,11 @@ import { getIndemniteFromFinalForm } from "../indemnite";
 
 function Step({ form }) {
   const {
-    values: { branche }
+    values: { branche },
   } = form.getState();
 
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
-  const selectedBranche = branches.find(br => br.value === branche);
+  const selectedBranche = branches.find((br) => br.value === branche);
 
   return (
     <Container>

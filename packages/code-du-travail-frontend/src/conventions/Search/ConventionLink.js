@@ -9,7 +9,7 @@ import { Button, theme } from "@socialgouv/react-ui";
 import { matopush } from "../../piwik";
 
 // following data/populate.js slug rules
-const getConventionSlug = convention =>
+const getConventionSlug = (convention) =>
   slugify(`${convention.num}-${convention.shortTitle}`.substring(0, 80));
 
 export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
@@ -24,7 +24,7 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
   const commonProps = {
     isFirst,
     onClick: clickHandler,
-    small
+    small,
   };
 
   return onClick ? (
@@ -35,7 +35,7 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
     <Link
       as={`/convention-collective/${getConventionSlug({
         num,
-        shortTitle
+        shortTitle,
       })}`}
       href="/convention-collective/[slug]"
       passHref

@@ -16,10 +16,10 @@ export const Grid = ({ columns, ...props }) => {
   );
 };
 Grid.propTypes = {
-  columns: PropTypes.number
+  columns: PropTypes.number,
 };
 Grid.defaultProps = {
-  columns: 4
+  columns: 4,
 };
 
 export const StyledOverflowWrapper = styled(OverflowWrapper)`

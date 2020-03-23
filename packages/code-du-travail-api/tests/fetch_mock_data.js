@@ -8,7 +8,7 @@ import getAgreementBody from "../src/server/routes/conventions/getAgreementBySlu
 import {
   DOCUMENTS,
   MT_SHEETS,
-  AGREEMENTS
+  AGREEMENTS,
 } from "@cdt/data/indexing/esIndexName";
 
 import themes from "@cdt/data...datafiller/themes.data.json";
@@ -20,7 +20,7 @@ const ELASTICSEARCH_URL =
 
 const client = new Client({
   node: `${ELASTICSEARCH_URL}`,
-  log: [{ type: "stdio", levels: ["error", "warning"] }]
+  log: [{ type: "stdio", levels: ["error", "warning"] }],
 });
 
 const documentsSlugs = [
@@ -40,20 +40,20 @@ const documentsSlugs = [
   "/convention-collective/1747-activites-industrielles-de-boulangerie-et-patisserie",
   "/convention-collective/843-boulangerie-patisserie-entreprises-artisanales",
   "/external/mon-compte-formation",
-  "/external/index-egapro"
+  "/external/index-egapro",
 ];
 
 const themesSlugs = ["8-depart-de-lentreprise", "81-demission"];
 
 const agreementSlugs = [
-  "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries"
+  "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",
 ];
 
 const ficheMTSlugs = [
   "5-questions-reponses-sur-la-sante-au-travail",
   "5-questions-reponses-sur-le-recours-devant-les-prudhommes",
   "5-questions-reponses-sur-le-compte-personnel-dactivite",
-  "5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae"
+  "5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae",
 ];
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -76,7 +76,7 @@ async function updateDocumentsData(slugs) {
     }
     await writeFile(
       join(__dirname, "./cdtn_document.data.json"),
-      JSON.stringify(data, 0, 2)
+      JSON.stringify(data, 0, 2),
     );
   } catch (error) {
     console.error(error.meta || error);
@@ -86,7 +86,7 @@ async function updateThemes(slugs) {
   const data = themes.filter(({ slug }) => slugs.includes(slug));
   await writeFile(
     join(__dirname, "./cdtn_theme.data.json"),
-    JSON.stringify(data, 0, 2)
+    JSON.stringify(data, 0, 2),
   );
 }
 
@@ -108,7 +108,7 @@ async function updateFichesMT(slugs) {
     });
     await writeFile(
       join(__dirname, "./fiches_ministere_travail.data.json"),
-      JSON.stringify(data, 0, 2)
+      JSON.stringify(data, 0, 2),
     );
   } catch (error) {
     console.error(error.meta || error);
@@ -133,7 +133,7 @@ async function updateAgreements(slugs) {
     });
     await writeFile(
       join(__dirname, "./cdtn_agreement.data.json"),
-      JSON.stringify(data, 0, 2)
+      JSON.stringify(data, 0, 2),
     );
   } catch (error) {
     console.error(error.meta || error);
@@ -142,7 +142,7 @@ async function updateAgreements(slugs) {
 
 if (module === require.main) {
   updateDocumentsData(documentsSlugs).catch(error =>
-    console.error("›››" + error)
+    console.error("›››" + error),
   );
   updateThemes(themesSlugs).catch(error => console.error("›››" + error));
   updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));

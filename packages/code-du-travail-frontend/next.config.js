@@ -5,10 +5,10 @@ const withTranspileModule = require("next-transpile-modules")([
   "@cdt/data",
   "@cdt/data...contributions",
   "parse5",
-  "is-plain-obj"
+  "is-plain-obj",
 ]);
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true"
+  enabled: process.env.ANALYZE === "true",
 });
 
 const withTM = function(config) {
@@ -24,7 +24,7 @@ const nextConfig = {
   webpack: config => {
     config.module.rules.push({
       test: /\.test.js$/,
-      loader: "ignore-loader"
+      loader: "ignore-loader",
     });
     return config;
   },
@@ -42,12 +42,12 @@ const nextConfig = {
     PACKAGE_VERSION: process.env.VERSION || require("./package.json").version,
     PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     PIWIK_URL: process.env.PIWIK_URL,
-    SENTRY_PUBLIC_DSN: process.env.SENTRY_PUBLIC_DSN
-  }
+    SENTRY_PUBLIC_DSN: process.env.SENTRY_PUBLIC_DSN,
+  },
 };
 
 module.exports = compose(
   withSourceMaps,
   withBundleAnalyzer,
-  withTM
+  withTM,
 )(nextConfig);

@@ -18,8 +18,8 @@ class ReferencesJuridiques extends React.PureComponent {
               items={[
                 {
                   title: <h3>Voir les références juridiques concernées</h3>,
-                  body: <ReferenceList references={references} />
-                }
+                  body: <ReferenceList references={references} />,
+                },
               ]}
             />
           </StyledWrapper>
@@ -40,13 +40,13 @@ ReferencesJuridiques.propTypes = {
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       type: PropTypes.oneOf(Object.values(TYPE_REFERENCE)).isRequired,
-      url: PropTypes.string
+      url: PropTypes.string,
     })
-  )
+  ),
 };
 
 ReferencesJuridiques.defaultProps = {
-  references: []
+  references: [],
 };
 
 export default ReferencesJuridiques;

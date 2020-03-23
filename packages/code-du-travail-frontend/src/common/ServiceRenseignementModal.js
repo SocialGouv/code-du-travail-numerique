@@ -6,7 +6,7 @@ import { ServiceRenseignement } from "./ServiceRenseignement";
 export const ServiceRenseignementModal = ({ children: renderProp }) => {
   const [isModalVisible, setModalVisibility] = useState(false);
 
-  const openModal = useCallback(e => {
+  const openModal = useCallback((e) => {
     e.preventDefault();
     setModalVisibility(true);
   }, []);
@@ -32,5 +32,5 @@ export const ServiceRenseignementModal = ({ children: renderProp }) => {
 export default ServiceRenseignementModal;
 
 ServiceRenseignementModal.propTypes = {
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };

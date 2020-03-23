@@ -13,7 +13,7 @@ import {
   theme,
   Title,
   Toast,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import slugify from "@cdt/data/slugify";
@@ -30,10 +30,12 @@ const RefLink = ({ title, url }) => (
 );
 
 const References = ({ references = [] }) => {
-  const agreementRefs = references.filter(ref => Boolean(ref.agreement));
-  const laborCodeRef = references.filter(ref => ref.category === "labor_code");
+  const agreementRefs = references.filter((ref) => Boolean(ref.agreement));
+  const laborCodeRef = references.filter(
+    (ref) => ref.category === "labor_code"
+  );
   const othersRefs = references.filter(
-    ref => !ref.agreement && ref.category !== "labor_code"
+    (ref) => !ref.agreement && ref.category !== "labor_code"
   );
   if (references.length === 0) {
     return null;
@@ -66,11 +68,11 @@ const References = ({ references = [] }) => {
         <>
           <Subtitle>Code du travail</Subtitle>
           <ul>
-            {laborCodeRef.map(ref => (
+            {laborCodeRef.map((ref) => (
               <li key={ref.title}>
                 <Link
                   href={{
-                    pathname: `/${getRouteBySource(SOURCES.CDT)}/[slug]`
+                    pathname: `/${getRouteBySource(SOURCES.CDT)}/[slug]`,
                   }}
                   as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
                 >
@@ -105,7 +107,7 @@ const Contribution = ({ answers, content }) => {
     convention &&
     answers.conventions &&
     answers.conventions.find(
-      answer => parseInt(answer.idcc, 10) === convention.num
+      (answer) => parseInt(answer.idcc, 10) === convention.num
     );
   // ensure we have valid data in ccInfo
   const isConventionDetected =

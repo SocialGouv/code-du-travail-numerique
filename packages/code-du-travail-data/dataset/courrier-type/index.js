@@ -7,8 +7,8 @@ const allThemes = require("../datafiller/themes.data.json");
 
 const themes = allThemes.filter(theme =>
   theme.refs.some(ref =>
-    ref.url.startsWith(`/${getRouteBySource(SOURCES.LETTERS)}`)
-  )
+    ref.url.startsWith(`/${getRouteBySource(SOURCES.LETTERS)}`),
+  ),
 );
 
 const DOC_DIR = "docx";
@@ -31,30 +31,30 @@ const options = {
     "p[style-name='Titre-centre'] => div.title-center:fresh",
     "p[style-name='expediteur'] => div.courrier-expediteur > p:fresh",
     "p[style-name='destinataire'] => div.courrier-destinataire > p:fresh",
-    "p[style-name='Titre'] => h3.courrier-titre:fresh"
-  ]
+    "p[style-name='Titre'] => h3.courrier-titre:fresh",
+  ],
 };
 
 const convertFile2Html = ({ filename, title, description, ...rest }) => {
   return mammoth
     .convertToHtml(
       {
-        path: `${__dirname}/${DOC_DIR}/${filename}`
+        path: `${__dirname}/${DOC_DIR}/${filename}`,
       },
-      options
+      options,
     )
     .then(result => {
       const slug = slugify(title);
       const theme = themes.find(theme =>
-        theme.refs.some(ref => ref.url.match(new RegExp(slug)))
+        theme.refs.some(ref => ref.url.match(new RegExp(slug))),
       );
       let breadcrumbs = [];
       if (theme) {
         breadcrumbs = (theme.breadcrumbs || []).concat([
           {
             label: theme.title,
-            slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`
-          }
+            slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`,
+          },
         ]);
       }
 
@@ -73,7 +73,7 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
           basic_styles +
           result.value
             .replace(/\t/g, " ")
-            .replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>")
+            .replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>"),
       };
     })
     .catch(err => {

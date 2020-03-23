@@ -8,14 +8,14 @@ describe("<StepStatus />", () => {
   });
   it("should render seriousMisconduct", () => {
     const { container } = renderForm(StepStatus, {
-      seriousMisconduct: false
+      seriousMisconduct: false,
     });
     expect(container).toMatchSnapshot();
   });
   it("should render coefficient", () => {
     const { container } = renderForm(StepStatus, {
       seriousMisconduct: false,
-      disabledWorker: true
+      disabledWorker: true,
     });
     expect(container).toMatchSnapshot();
   });

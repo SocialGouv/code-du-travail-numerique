@@ -50,10 +50,10 @@ describe("reducer", () => {
     const state = { stepIndex: 0, steps: [{ name: "salaires" }] };
     const newState = stepReducer(state, {
       type: "add_step",
-      payload: { insertAfter: "salaires", step: stepPrime }
+      payload: { insertAfter: "salaires", step: stepPrime },
     });
 
-    expect(newState.steps.findIndex(step => step.name === "primes")).toBe(1);
+    expect(newState.steps.findIndex((step) => step.name === "primes")).toBe(1);
     expect(newState.steps[1]).toEqual(stepPrime);
   });
 
@@ -61,11 +61,11 @@ describe("reducer", () => {
     const state = { stepIndex: 0, steps: [{}, {}] };
     const newState = stepReducer(state, {
       type: "add_step",
-      payload: { insertAfter: "salaires", step: stepPrime }
+      payload: { insertAfter: "salaires", step: stepPrime },
     });
 
     expect(
-      newState.steps.findIndex(step => step.name === stepPrime.name)
+      newState.steps.findIndex((step) => step.name === stepPrime.name)
     ).toEqual(0);
   });
 
@@ -73,11 +73,11 @@ describe("reducer", () => {
     const state = { stepIndex: 0, steps: [{}, stepPrime, {}] };
     const newState = stepReducer(state, {
       type: "remove_step",
-      payload: stepPrime.name
+      payload: stepPrime.name,
     });
 
     expect(
-      newState.steps.findIndex(step => step.name === stepPrime.name)
+      newState.steps.findIndex((step) => step.name === stepPrime.name)
     ).toEqual(-1);
   });
 
@@ -85,11 +85,11 @@ describe("reducer", () => {
     const state = { stepIndex: 0, steps: [{}] };
     const newState = stepReducer(state, {
       type: "remove_step",
-      payload: { insertAfter: "salaires", stepPrime }
+      payload: { insertAfter: "salaires", stepPrime },
     });
 
     expect(
-      newState.steps.findIndex(step => step.name === stepPrime.name)
+      newState.steps.findIndex((step) => step.name === stepPrime.name)
     ).toEqual(-1);
   });
 
@@ -97,18 +97,18 @@ describe("reducer", () => {
     const state = { stepIndex: 0, steps: [] };
     const newState = stepReducer(state, {
       type: "add_branche",
-      payload: [{ name: "branche_1" }, { name: "branche_2" }]
+      payload: [{ name: "branche_1" }, { name: "branche_2" }],
     });
 
     expect(
-      newState.steps.filter(step => /branche/.test(step.name)).length
+      newState.steps.filter((step) => /branche/.test(step.name)).length
     ).toEqual(2);
   });
 
   it("should not fail to remove_branche when steps are empty", () => {
     const state = { stepIndex: 0, steps: [] };
     const newState = stepReducer(state, {
-      type: "remove_branche"
+      type: "remove_branche",
     });
 
     expect(newState.steps.length).toEqual(0);
@@ -120,11 +120,11 @@ describe("reducer", () => {
       steps: [
         { name: "salaires" },
         { name: "branche_1" },
-        { name: "branche_2" }
-      ]
+        { name: "branche_2" },
+      ],
     };
     const newState = stepReducer(state, {
-      type: "remove_branche"
+      type: "remove_branche",
     });
 
     expect(newState.steps.length).toEqual(1);

@@ -11,7 +11,7 @@ import { getFichesSP } from "../dataset/fiches_service_public";
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
     return value instanceof Array
-      ? state.concat(value.map(value => `${key}:${value}`))
+      ? state.concat(value.map((value) => `${key}:${value}`))
       : state.concat(`${key}:${value}`);
   }, []);
 }
@@ -53,7 +53,7 @@ async function getDuplicateSlugs(allDocuments) {
   }
 
   return slugs
-    .map(slug => ({ slug, count: slugs.filter(s => slug === s).length }))
+    .map((slug) => ({ slug, count: slugs.filter((s) => slug === s).length }))
     .filter(({ count }) => count > 1)
     .reduce((state, { slug, count }) => ({ ...state, [slug]: count }), {});
 }
@@ -71,7 +71,7 @@ async function* cdtnDocumentsGen() {
         slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
         text: `IDCC ${num} ${title}`,
         url,
-        excludeFromSearch: false
+        excludeFromSearch: false,
       };
     }
   );
@@ -91,7 +91,7 @@ async function* cdtnDocumentsGen() {
       dateDebut,
       ...(nota.length > 0 && { notaHtml }),
       url: getArticleUrl(id),
-      excludeFromSearch: false
+      excludeFromSearch: false,
     })
   );
 
@@ -109,7 +109,7 @@ async function* cdtnDocumentsGen() {
       slug,
       text,
       title,
-      excludeFromSearch: false
+      excludeFromSearch: false,
     })
   );
 
@@ -119,7 +119,7 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.THEMES,
       title: title,
       slug,
-      excludeFromSearch: false
+      excludeFromSearch: false,
     })
   );
 
@@ -136,7 +136,7 @@ async function* cdtnDocumentsGen() {
       icon,
       questions,
       slug,
-      title
+      title,
     }) => ({
       action,
       breadcrumbs,
@@ -147,7 +147,7 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.TOOLS,
       text: questions.join("\n"),
       title,
-      excludeFromSearch: false
+      excludeFromSearch: false,
     })
   );
 
@@ -162,7 +162,7 @@ async function* cdtnDocumentsGen() {
       text: description,
       url,
       title,
-      excludeFromSearch: false
+      excludeFromSearch: false,
     })
   );
 
@@ -177,7 +177,7 @@ async function* cdtnDocumentsGen() {
         description: (answers.generic && answers.generic.text) || title,
         text: (answers.generic && answers.generic.text) || title,
         answers,
-        excludeFromSearch: false
+        excludeFromSearch: false,
       };
     }
   );
@@ -193,7 +193,7 @@ async function* cdtnDocumentsGen() {
         asideContent,
         text: `${title}\n${description}`,
         refs,
-        excludeFromSearch: false
+        excludeFromSearch: false,
       };
     }
   );

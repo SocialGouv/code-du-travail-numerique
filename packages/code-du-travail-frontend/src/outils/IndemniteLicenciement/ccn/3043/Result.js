@@ -2,7 +2,7 @@ import React from "react";
 
 import {
   getIndemnite as getIndemniteConventionnelle,
-  getSalaireRef as getSalaireRefConventionnel
+  getSalaireRef as getSalaireRefConventionnel,
 } from "./indemnite";
 
 import { getIndemniteFromFinalForm } from "../../indemnite";
@@ -20,13 +20,13 @@ function ResultProprete({ form }) {
     hasOpe,
     age,
     groupe,
-    branche
+    branche,
   } = state.values;
 
   const {
     salaireRefLegal,
     indemniteLegale,
-    infoCalculLegal
+    infoCalculLegal,
   } = getIndemniteFromFinalForm(form);
 
   const salaireRef = getSalaireRefConventionnel({
@@ -34,13 +34,13 @@ function ResultProprete({ form }) {
     groupe,
     salaires,
     salaire,
-    dateNotification
+    dateNotification,
   });
 
   const {
     indemniteConventionnelle,
     infoCalculConventionnel,
-    error
+    error,
   } = getIndemniteConventionnelle({
     salaireRef,
     indemnite: indemniteLegale,
@@ -48,7 +48,7 @@ function ResultProprete({ form }) {
     isEco,
     hasOpe,
     age,
-    groupe
+    groupe,
   });
 
   return (

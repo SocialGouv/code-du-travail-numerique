@@ -29,7 +29,7 @@ export function ElementBuilder({ data, headingLevel }) {
   if (!data) return null;
   // In case we get children
   if (Array.isArray(data)) {
-    return data.map(child => (
+    return data.map((child) => (
       <ElementBuilder
         key={seedId(child)}
         data={child}
@@ -73,7 +73,7 @@ export function ElementBuilder({ data, headingLevel }) {
     case "Tableau":
       return <Table data={data} headingLevel={headingLevel} />;
     case "Texte":
-      if (data.children.find(child => child.name === "Chapitre")) {
+      if (data.children.find((child) => child.name === "Chapitre")) {
         return <Accordion data={data} headingLevel={headingLevel} />;
       }
       return parseChildren(data.children, headingLevel);
@@ -113,11 +113,11 @@ export function ElementBuilder({ data, headingLevel }) {
 
 ElementBuilder.propTypes = {
   data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  headingLevel: PropTypes.number
+  headingLevel: PropTypes.number,
 };
 
 ElementBuilder.defaultProps = {
-  headingLevel: 0
+  headingLevel: 0,
 };
 
 const ANoter = styled(Wrapper)`

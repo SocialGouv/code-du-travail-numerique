@@ -8,7 +8,7 @@ import { getTextFromComponent } from "../utils/getTextFromComponent";
 import { OverflowWrapper } from "../OverflowWrapper";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
 
-export const Tabs = props => {
+export const Tabs = (props) => {
   const { data, defaultIndex, onSelect, selectedIndex } = props;
 
   const refinedProps = {
@@ -16,7 +16,7 @@ export const Tabs = props => {
     // conditional props
     ...(typeof selectedIndex === "number"
       ? { selectedIndex }
-      : { defaultIndex })
+      : { defaultIndex }),
   };
 
   return (
@@ -47,14 +47,14 @@ Tabs.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       tab: PropTypes.node.isRequired,
-      panel: PropTypes.node.isRequired
+      panel: PropTypes.node.isRequired,
     })
-  ).isRequired
+  ).isRequired,
 };
 
 Tabs.defaultProps = {
   defaultIndex: 0,
-  onSelect: () => {}
+  onSelect: () => {},
 };
 
 const StyledTabs = styled(RootTabs)`

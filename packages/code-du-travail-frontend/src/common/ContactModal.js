@@ -60,7 +60,7 @@ export const ContactModal = ({ children: renderProp }) => {
 export default ContactModal;
 
 ContactModal.propTypes = {
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };
 
 const StyledLink = styled.a`

@@ -19,11 +19,11 @@ export const Select = ({ children, disabled, className, ...props }) => (
 Select.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 Select.defaultProps = {
-  disabled: false
+  disabled: false,
 };
 
 const INPUT_HEIGHT = "5.4rem";

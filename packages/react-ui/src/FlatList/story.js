@@ -3,7 +3,7 @@ import { FlatList } from ".";
 
 export default {
   component: FlatList,
-  title: "Components|FlatList"
+  title: "Components|FlatList",
 };
 
 export const base = () => (

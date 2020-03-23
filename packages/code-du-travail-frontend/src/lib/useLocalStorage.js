@@ -19,7 +19,7 @@ export function useLocalStorage(key, defaultValue, useStorageListener = false) {
 
   const [value, setValue] = useState(initialValue);
   const onStorage = useCallback(
-    event => {
+    (event) => {
       if (event.storageArea === localStorage && event.key === key) {
         try {
           const data = JSON.parse(event.newValue);

@@ -4,14 +4,16 @@ import { Button } from "@socialgouv/react-ui";
 import { ServiceRenseignementModal } from "../ServiceRenseignementModal";
 
 jest.mock("../../piwik", () => ({
-  matopush: jest.fn()
+  matopush: jest.fn(),
 }));
 
 describe("<ServiceRenseignementModal />", () => {
   it("renders the given element", () => {
     const { getByText } = render(
       <ServiceRenseignementModal>
-        {openModal => <Button onClick={openModal}>texte dans le bouton</Button>}
+        {(openModal) => (
+          <Button onClick={openModal}>texte dans le bouton</Button>
+        )}
       </ServiceRenseignementModal>
     );
     const button = getByText(/texte dans le bouton/i);
@@ -21,7 +23,9 @@ describe("<ServiceRenseignementModal />", () => {
   it("renders a popup when click on button", () => {
     const { baseElement, getByText, getByLabelText } = render(
       <ServiceRenseignementModal>
-        {openModal => <Button onClick={openModal}>texte dans le bouton</Button>}
+        {(openModal) => (
+          <Button onClick={openModal}>texte dans le bouton</Button>
+        )}
       </ServiceRenseignementModal>
     );
     const button = getByText(/texte dans le bouton/i);
@@ -34,7 +38,9 @@ describe("<ServiceRenseignementModal />", () => {
   it("closes the modal", async () => {
     const { getByText, getByTitle, queryByLabelText } = render(
       <ServiceRenseignementModal>
-        {openModal => <Button onClick={openModal}>texte dans le bouton</Button>}
+        {(openModal) => (
+          <Button onClick={openModal}>texte dans le bouton</Button>
+        )}
       </ServiceRenseignementModal>
     );
     const button = getByText(/texte dans le bouton/i);

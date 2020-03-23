@@ -7,7 +7,7 @@ import { IconStripe } from ".";
 
 export default {
   component: IconStripe,
-  title: "Components|IconStripe"
+  title: "Components|IconStripe",
 };
 
 export const base = () => (

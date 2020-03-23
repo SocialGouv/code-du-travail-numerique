@@ -4,11 +4,11 @@ import getQueryType from "./getQueryType";
 import { searchConvention } from "./convention.service";
 import {
   searchEntrepriseByName,
-  searchEntrepriseBySiret
+  searchEntrepriseBySiret,
 } from "./entreprise.service";
 
 // build a result list based on query type
-export const getResults = async query => {
+export const getResults = async (query) => {
   const trimmedQuery = query.trim();
   const type = getQueryType(query);
 
@@ -18,11 +18,12 @@ export const getResults = async query => {
   if (type === "text") {
     [conventions, entreprises] = await Promise.all([
       searchConvention(trimmedQuery),
-      searchEntrepriseByName(trimmedQuery).then(entreprises =>
+      searchEntrepriseByName(trimmedQuery).then((entreprises) =>
         entreprises.filter(
-          entreprise => entreprise.conventions && entreprise.conventions.length
+          (entreprise) =>
+            entreprise.conventions && entreprise.conventions.length
         )
-      )
+      ),
     ]);
   } else if (type === "siret") {
     entreprises = await searchEntrepriseBySiret(query.replace(/[\s .-]/g, ""));
@@ -31,7 +32,7 @@ export const getResults = async query => {
 
     if (matches && matches.length) {
       const perfectMatch = matches.find(
-        match => parseIdcc(match.num) === parseIdcc(trimmedQuery)
+        (match) => parseIdcc(match.num) === parseIdcc(trimmedQuery)
       );
       conventions = perfectMatch ? [perfectMatch] : matches.slice(0, 5);
     }
@@ -40,6 +41,6 @@ export const getResults = async query => {
   }
   return {
     conventions,
-    entreprises
+    entreprises,
   };
 };

@@ -7,7 +7,7 @@ import {
   IconStripe,
   Input,
   theme,
-  Title
+  Title,
 } from "@socialgouv/react-ui";
 
 const { spacings } = theme;
@@ -15,7 +15,7 @@ const { spacings } = theme;
 export function TextSearch({ containerId }) {
   const [query, setQuery] = useState("");
   const formatQuery = useCallback(
-    e => {
+    (e) => {
       setQuery(`"${e.target.value}"`);
     },
     [setQuery]

@@ -3,5 +3,5 @@ module.exports = {
   THEMES: "themes",
   SUGGESTIONS: "suggestions",
   AGREEMENTS: "agreements",
-  MT_SHEETS: "mt-sheets"
+  MT_SHEETS: "mt-sheets",
 };

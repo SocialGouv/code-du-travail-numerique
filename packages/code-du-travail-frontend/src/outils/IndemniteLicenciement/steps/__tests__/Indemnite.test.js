@@ -8,7 +8,7 @@ const initialValues = {
   salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
   anciennete: 15 / 12,
   dateNotification: "2018-10-22",
-  inaptitude: true
+  inaptitude: true,
 };
 
 describe("<StepIndemnite />", () => {

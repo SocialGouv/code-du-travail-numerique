@@ -5,12 +5,12 @@ import Stats from "../pages/stats";
 const data = {
   feedback: {
     negative: 2,
-    positive: 3
+    positive: 3,
   },
   nbPageViews: 10,
   nbSearches: 4,
   nbVisits: 20,
-  nbDocuments: 16
+  nbDocuments: 16,
 };
 
 describe("<Stats />", () => {

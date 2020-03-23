@@ -5,7 +5,7 @@ import {
   Heading,
   Section,
   theme,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 import styled from "styled-components";
 import { matopush } from "../../piwik";
@@ -13,17 +13,17 @@ import { ServiceRenseignementModal } from "../ServiceRenseignementModal";
 
 function Feedback({
   query = "",
-  url = document ? document.location.href : ""
+  url = document ? document.location.href : "",
 }) {
   const [isSatisfied, setSatisfaction] = useState(null); // null, true, false,
 
-  const onSetSatisfaction = answer => {
+  const onSetSatisfaction = (answer) => {
     matopush([
       "trackEvent",
       "feedback",
       answer ? "positive" : "negative",
       url,
-      query
+      query,
     ]);
     setSatisfaction(answer);
   };
@@ -63,7 +63,7 @@ function Feedback({
               Merci pour votre réponse. Pour obtenir une réponse à votre
               question de droit du travail, nous vous invitons à joindre les{" "}
               <ServiceRenseignementModal>
-                {openModal => (
+                {(openModal) => (
                   <Button variant="link" onClick={openModal}>
                     services du ministère du Travail en région
                   </Button>

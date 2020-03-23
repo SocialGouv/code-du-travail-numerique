@@ -6,13 +6,13 @@ import { Salaire } from "./steps/Salaire";
 export const stepAnciennete = {
   component: Anciennete,
   name: "branche_anciennete",
-  label: "Ajustement ancienneté"
+  label: "Ajustement ancienneté",
 };
 
 export const stepSalaire = {
   component: Salaire,
   name: "branche_salaire",
-  label: "Ajustement salaire"
+  label: "Ajustement salaire",
 };
 
 export const steps = [
@@ -22,6 +22,6 @@ export const steps = [
   {
     component: Result,
     name: "branche_result",
-    label: "Indemnité conventionnelle"
-  }
+    label: "Indemnité conventionnelle",
+  },
 ];

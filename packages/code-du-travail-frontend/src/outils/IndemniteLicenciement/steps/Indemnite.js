@@ -33,6 +33,6 @@ function StepIndemnite({ form }) {
   );
 }
 StepIndemnite.propTypes = {
-  form: PropTypes.object.isRequired
+  form: PropTypes.object.isRequired,
 };
 export { StepIndemnite };

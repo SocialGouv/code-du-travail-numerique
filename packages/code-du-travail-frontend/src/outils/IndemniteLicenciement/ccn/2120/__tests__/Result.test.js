@@ -13,7 +13,7 @@ const initialValues = {
   motif: ECONOMIQUE,
   categorie: CADRE,
   branche: "2120",
-  age: "55"
+  age: "55",
 };
 
 describe("<Result />", () => {

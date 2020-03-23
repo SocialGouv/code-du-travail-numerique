@@ -10,7 +10,7 @@ const csvColumns = {
   answer2: 26,
   answer3: 27,
   ref: 28,
-  refUrl: 29
+  refUrl: 29,
 };
 
 const criteriaIndex = [
@@ -34,7 +34,7 @@ const criteriaIndex = [
   21, // coefficient
   22, // échelon
   23, // ancienneté
-  24 // age
+  24, // age
 ];
 
 export async function getQuestions({ spreadsheetKey, worksheet }) {
@@ -56,7 +56,7 @@ export async function getSituations({ spreadsheetKey, worksheet }) {
 async function getDataFromSpreadsheet({ spreadsheetKey, worksheet }) {
   const { cells } = await getCells({
     key: spreadsheetKey,
-    worksheet: worksheet
+    worksheet: worksheet,
   });
 
   return Object.values(cells);

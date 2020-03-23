@@ -8,14 +8,14 @@ import { colors, blackAndWhiteColors } from "../src/theme";
 import { GlobalStyles } from "../src/GlobalStyles";
 import { Wrapper } from "../src/layout/Wrapper";
 
-const CustomThemeWrapper = ({ theme, children }) => (<>
-  <ThemeProvider theme={theme}>
-    <GlobalStyles />
-    <Wrapper>
-      { children }
-    </Wrapper>
-  </ThemeProvider>
-</>);
+const CustomThemeWrapper = ({ theme, children }) => (
+  <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Wrapper>{children}</Wrapper>
+    </ThemeProvider>
+  </>
+);
 
 addDecorator(
   withContexts([
@@ -24,11 +24,11 @@ addDecorator(
       title: "Color toggle",
       components: [CustomThemeWrapper],
       params: [
-        { name: "Default Theme", props: { theme: colors }, default: true},
-        { name: "High Contrast Theme", props: { theme: blackAndWhiteColors }}
-      ]
-    }
-  ])
+        { name: "Default Theme", props: { theme: colors }, default: true },
+        { name: "High Contrast Theme", props: { theme: blackAndWhiteColors } },
+      ],
+    },
+  ]),
 );
 addDecorator(withA11y);
 

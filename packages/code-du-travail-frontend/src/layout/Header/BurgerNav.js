@@ -33,7 +33,7 @@ export const BurgerNav = ({ currentPage }) => {
         customCrossIcon={<CloseIcon />}
       >
         <AccessibilityModal>
-          {openModal => (
+          {(openModal) => (
             <BaseNavItem variant="navLink" onClick={openModal}>
               Accessibilité
             </BaseNavItem>

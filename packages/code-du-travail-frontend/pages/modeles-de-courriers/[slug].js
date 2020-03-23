@@ -10,7 +10,7 @@ import {
   Section,
   Wrapper,
   icons,
-  theme
+  theme,
 } from "@socialgouv/react-ui";
 
 import Html from "../../src/common/Html";
@@ -19,7 +19,7 @@ import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const fetchCourrier = ({ slug }) =>
@@ -46,13 +46,13 @@ class ModeleCourrier extends React.Component {
           filename,
           filesize,
           html,
-          title
+          title,
         },
         relatedItems,
-        status
+        status,
       } = { _source: {} },
       pageUrl,
-      ogImage
+      ogImage,
     } = this.props;
     if (status === 404) {
       return <Answer emptyMessage="Modèle de document introuvable" />;

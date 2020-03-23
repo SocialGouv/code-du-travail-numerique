@@ -1,4 +1,4 @@
-const printResult = e => {
+const printResult = (e) => {
   e.preventDefault();
   const detailsTags = document.getElementsByTagName("details");
   for (var i = 0; i < detailsTags.length; i++) {

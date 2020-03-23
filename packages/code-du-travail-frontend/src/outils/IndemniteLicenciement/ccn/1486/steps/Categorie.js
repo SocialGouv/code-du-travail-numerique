@@ -13,7 +13,7 @@ const CATEGORIES = {
   ETAM: "Employé, Technicien, Agent de Maîtrise",
   IC: "Ingénieur Cadre",
   CENI: "Chargé d'enquête non intermittent",
-  CEI: "Chargé d'enquête intermittent"
+  CEI: "Chargé d'enquête intermittent",
 };
 
 export const Categorie = ({ dispatch }) => (
@@ -44,13 +44,13 @@ export const Categorie = ({ dispatch }) => (
       )}
     </Field>
     <OnChange name={CATEGORIE_KEY}>
-      {currentCategorie => {
+      {(currentCategorie) => {
         if (currentCategorie === "CEI") {
           dispatch({ type: "remove_step", payload: stepSalaire.name });
         } else {
           dispatch({
             type: "add_step",
-            payload: { insertAfter: stepAnciennete.name, step: stepSalaire }
+            payload: { insertAfter: stepAnciennete.name, step: stepSalaire },
           });
         }
       }}

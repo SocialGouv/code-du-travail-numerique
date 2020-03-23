@@ -1,9 +1,9 @@
 import { Children, isValidElement } from "react";
 
-const hasChildren = element =>
+const hasChildren = (element) =>
   isValidElement(element) && Boolean(element.props.children);
 
-const childToString = child => {
+const childToString = (child) => {
   if (typeof child === "string") {
     return child;
   }
@@ -11,7 +11,7 @@ const childToString = child => {
 };
 
 // Beware, this one is recursive
-export const getTextFromComponent = children => {
+export const getTextFromComponent = (children) => {
   if (!(children instanceof Array) && !isValidElement(children)) {
     return childToString(children);
   }

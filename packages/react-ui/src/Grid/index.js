@@ -8,7 +8,7 @@ export { RootGrid, GridCell };
 export const Grid = ({ children, ...props }) => (
   <RootGrid {...props}>
     {Array.isArray(children) ? (
-      React.Children.map(children, element => (
+      React.Children.map(children, (element) => (
         <GridCell key={element.key}>{element}</GridCell>
       ))
     ) : (
@@ -19,9 +19,9 @@ export const Grid = ({ children, ...props }) => (
 
 Grid.propTypes = {
   children: PropTypes.node.isRequired,
-  columns: PropTypes.number
+  columns: PropTypes.number,
 };
 
 Grid.defaultProps = {
-  columns: 4
+  columns: 4,
 };

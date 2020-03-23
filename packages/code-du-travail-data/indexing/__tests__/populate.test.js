@@ -5,12 +5,12 @@ describe("getDuplicateSlug", () => {
     const documents = [
       [
         { slug: "slug-1", source: "cdt" },
-        { slug: "slug-2", source: "cdt" }
+        { slug: "slug-2", source: "cdt" },
       ],
       [
         { slug: "slug-1", source: "contribution" },
-        { slug: "slug-2", source: "contribution" }
-      ]
+        { slug: "slug-2", source: "contribution" },
+      ],
     ];
     const duplicateSlugs = await getDuplicateSlugs(documents);
     expect(Object.entries(duplicateSlugs).length).toBe(0);
@@ -20,16 +20,16 @@ describe("getDuplicateSlug", () => {
     const documents = [
       [
         { slug: "slug-1", source: "cdt" },
-        { slug: "slug-2", source: "cdt" }
+        { slug: "slug-2", source: "cdt" },
       ],
       [
         { slug: "slug-1", source: "faq" },
-        { slug: "slug-1", source: "faq" }
+        { slug: "slug-1", source: "faq" },
       ],
       [
         { slug: "slug-4", source: "fiche" },
-        { slug: "slug-3", source: "fiche" }
-      ]
+        { slug: "slug-3", source: "fiche" },
+      ],
     ];
     const duplicateSlugs = await getDuplicateSlugs(documents);
     expect(Object.entries(duplicateSlugs).length).toBe(1);
@@ -40,7 +40,7 @@ describe("flattenTags", () => {
   test("should return a array of range values", () => {
     const tags = {
       key: "val",
-      foo: ["bar", "baz"]
+      foo: ["bar", "baz"],
     };
     expect(flattenTags(tags)).toEqual(["key:val", "foo:bar", "foo:baz"]);
   });
@@ -51,7 +51,7 @@ describe("makeSlug", () => {
     const title = "my title";
     const tags = {
       key: "val",
-      foo: ["bar", "baz"]
+      foo: ["bar", "baz"],
     };
     expect(makeSlug(title, flattenTags(tags).join("-"))).toEqual(
       "my-title-sxc4it-rq8-sjg"

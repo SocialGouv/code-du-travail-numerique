@@ -8,7 +8,7 @@ import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   getOptions,
   filterSituations,
-  getSituationsFor
+  getSituationsFor,
 } from "../../common/situations.utils";
 
 const { questions, situations: allSituations } = data;

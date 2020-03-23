@@ -14,12 +14,12 @@ export const Badge = ({ icon: Icon, ...props }) => (
 
 Badge.propTypes = {
   variant: PropTypes.oneOf(["primary", "secondary"]),
-  icon: PropTypes.elementType
+  icon: PropTypes.elementType,
 };
 
 Badge.defaultProps = {
   variant: "primary",
-  icon: Config
+  icon: Config,
 };
 
 const DIMENSION = "5rem";

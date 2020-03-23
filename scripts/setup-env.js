@@ -35,10 +35,10 @@ const promisedAccess = promisify(access);
     const env = process.env.NODE_ENV === "production" ? "prod" : "dev";
     await promisedCopyFile(
       `docker-compose.override.${env}.yml`,
-      "docker-compose.override.yml"
+      "docker-compose.override.yml",
     );
     console.log(
-      `Copy "docker-compose.override.${env}.yml" to "docker-compose.override.yml"`
+      `Copy "docker-compose.override.${env}.yml" to "docker-compose.override.yml"`,
     );
   }
 })();

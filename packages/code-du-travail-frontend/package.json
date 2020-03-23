@@ -86,7 +86,7 @@
     "intl": "^1.2.5",
     "jest": "^25.1.0",
     "jest-styled-components": "^7.0.0",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.1",
     "prop-types": "^15.7.2",
     "stylelint": "^13.2.1",
     "stylelint-config-rational-order": "^0.1.2",

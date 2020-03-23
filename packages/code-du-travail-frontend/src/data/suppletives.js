@@ -44,7 +44,7 @@ const dispos = suppletives
     const articles = matches[2]
       .split(";")
       .filter(Boolean)
-      .map(x => x.trim());
+      .map((x) => x.trim());
     a[id] = articles;
     return a;
   }, {});

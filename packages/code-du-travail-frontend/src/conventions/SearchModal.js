@@ -7,7 +7,7 @@ import ConventionSearch from "./Search";
 export const ConventionModal = ({ children: renderProp }) => {
   const [isModalVisible, setModalVisibility] = useState(false);
 
-  const openModal = useCallback(e => {
+  const openModal = useCallback((e) => {
     e.preventDefault();
     setModalVisibility(true);
   }, []);
@@ -31,5 +31,5 @@ export const ConventionModal = ({ children: renderProp }) => {
 };
 
 ConventionModal.propTypes = {
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };

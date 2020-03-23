@@ -45,11 +45,11 @@ Toast.propTypes = {
     "from-top",
     "from-right",
     "from-bottom",
-    "from-left"
+    "from-left",
   ]),
   timeout: PropTypes.number,
   onRemove: PropTypes.func,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 Toast.defaultProps = {
@@ -57,13 +57,13 @@ Toast.defaultProps = {
   squared: false,
   variant: "secondary",
   animate: null,
-  onRemove: null
+  onRemove: null,
 };
 
 const StyledToast = styled.div`
   display: inline-flex;
   justify-content: space-between;
-  width: ${props => (props.wide ? "100%" : "auto")};
+  width: ${(props) => (props.wide ? "100%" : "auto")};
   min-height: 48px;
   color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};

@@ -12,8 +12,8 @@ describe("<ModelesDeCourrier />", () => {
         filename: "filename.pdf",
         filesize: "12345",
         html: "<p>youhou</p>",
-        title: "Courrier Epistolaire"
-      }
+        title: "Courrier Epistolaire",
+      },
     };
     const { container } = render(<ModelesDeCourriers data={data} />);
     expect(container).toMatchSnapshot();

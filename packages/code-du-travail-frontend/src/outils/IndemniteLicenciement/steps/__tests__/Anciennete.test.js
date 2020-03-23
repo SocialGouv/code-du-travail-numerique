@@ -8,7 +8,7 @@ function renderForm(data) {
   return render(
     <Form
       mutators={{
-        ...arrayMutators
+        ...arrayMutators,
       }}
       validate={StepAnciennete.validate}
       initialValues={{ ...data }}
@@ -32,7 +32,7 @@ describe("<Anciennete />", () => {
 
   it("should display error if dateEntre after dateSortie", async () => {
     const { getByLabelText, container } = renderForm({
-      dateEntree: "2018-04-02"
+      dateEntree: "2018-04-02",
     });
     const dateSortie = getByLabelText(/date de sortie/i);
     fireEvent.change(dateSortie, { target: { value: "2018-03-01" } });
@@ -45,7 +45,7 @@ describe("<Anciennete />", () => {
 
   it("should display error if dateEntree after dateNotif", () => {
     const { container, getByLabelText } = renderForm({
-      dateEntree: "2018-05-01"
+      dateEntree: "2018-05-01",
     });
     const dateNotif = getByLabelText(/licenciement/i);
     fireEvent.change(dateNotif, { target: { value: "2018-04-02" } });
@@ -58,7 +58,7 @@ describe("<Anciennete />", () => {
 
   it("should display error if dateNotif after dateSortie", () => {
     const { container, getByLabelText } = renderForm({
-      dateSortie: "2018-04-01"
+      dateSortie: "2018-04-01",
     });
     const dateNotif = getByLabelText(/licenciement/i);
     fireEvent.change(dateNotif, { target: { value: "2018-05-02" } });
@@ -72,7 +72,7 @@ describe("<Anciennete />", () => {
   it("should display error if anciennté < 8mois", () => {
     const { getByText, getByLabelText } = renderForm({
       dateEntree: "2018-04-02",
-      dateNotification: "2018-09-02"
+      dateNotification: "2018-09-02",
     });
     const dateSortie = getByLabelText(/date de sortie/i);
     fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
@@ -93,7 +93,7 @@ describe("computeAncienneté", () => {
       computeAnciennete({
         dateEntree: "2017-04-01",
         dateSortie: "2018-04-01",
-        absencePeriods: [{ type: "Congés sans solde", duration: "6" }]
+        absencePeriods: [{ type: "Congés sans solde", duration: "6" }],
       })
     ).toEqual(0.5);
   });
@@ -102,7 +102,7 @@ describe("computeAncienneté", () => {
       computeAnciennete({
         dateEntree: "2016-04-01",
         dateSortie: "2018-04-01",
-        absencePeriods: [{ type: "Congé parental d'éducation", duration: "6" }]
+        absencePeriods: [{ type: "Congé parental d'éducation", duration: "6" }],
       })
     ).toEqual(1.75);
   });

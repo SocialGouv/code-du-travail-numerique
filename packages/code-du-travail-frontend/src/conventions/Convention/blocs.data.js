@@ -15,5 +15,5 @@ export const blocs = {
   14: { label: "Risques professionnels : prévention", important: true },
   15: { label: "Emploi des travailleurs handicapés", important: true },
   16: { label: "Délégués syndicaux", important: true },
-  17: { label: "Primes travaux dangereux et insalubres", important: true }
+  17: { label: "Primes travaux dangereux et insalubres", important: true },
 };

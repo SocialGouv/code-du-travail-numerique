@@ -21,16 +21,16 @@ InputCheckbox.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  size: PropTypes.string
+  size: PropTypes.string,
 };
 
 InputCheckbox.defaultProps = {
-  size: "1.6rem"
+  size: "1.6rem",
 };
 
 const StyledLabel = styled.label`
   display: flex;
-  font-size: ${props => props.size};
+  font-size: ${(props) => props.size};
   cursor: pointer;
 `;
 
@@ -38,10 +38,10 @@ const StyledCheckbox = styled.input`
   position: relative;
   display: block;
   flex-shrink: 0;
-  width: calc(${props => props.size} * 1.25);
-  height: calc(${props => props.size} * 1.25);
-  margin: calc(${props => props.size} / 5) calc(2 * ${props => props.size} / 3)
-    0 0;
+  width: calc(${(props) => props.size} * 1.25);
+  height: calc(${(props) => props.size} * 1.25);
+  margin: calc(${(props) => props.size} / 5)
+    calc(2 * ${(props) => props.size} / 3) 0 0;
   background: ${({ theme }) => theme.white};
   border: ${({ theme }) => box.border(theme.border)};
   border-radius: ${spacings.tiny};
@@ -52,11 +52,11 @@ const StyledCheckbox = styled.input`
     top: 50%;
     left: 50%;
     display: none;
-    width: calc(${props => props.size} / 3);
-    height: calc(${props => props.size} / 1.7);
+    width: calc(${(props) => props.size} / 3);
+    height: calc(${(props) => props.size} / 1.7);
     border: ${({ theme }) => box.border(theme.white)};
-    border-width: 0 calc(${props => props.size} / 10)
-      calc(${props => props.size} / 10) 0;
+    border-width: 0 calc(${(props) => props.size} / 10)
+      calc(${(props) => props.size} / 10) 0;
     transform: translate(-50%, -60%) rotate(45deg);
     content: "";
   }

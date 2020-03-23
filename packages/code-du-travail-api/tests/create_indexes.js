@@ -2,7 +2,7 @@ import client from "../src/server/conf/elasticsearch";
 import {
   version,
   createIndex,
-  indexDocumentsBatched
+  indexDocumentsBatched,
 } from "@cdt/data/indexing/es_client.utils";
 
 import {
@@ -10,7 +10,7 @@ import {
   THEMES,
   AGREEMENTS,
   SUGGESTIONS,
-  MT_SHEETS
+  MT_SHEETS,
 } from "@cdt/data/indexing/esIndexName";
 
 import { documentMapping } from "@cdt/data/indexing/document.mapping";
@@ -36,56 +36,56 @@ async function main() {
   await createIndex({
     client,
     indexName: documentsIndexName,
-    mappings: documentMapping
+    mappings: documentMapping,
   });
   await indexDocumentsBatched({
     client,
     indexName: documentsIndexName,
-    documents: documents
+    documents: documents,
   });
 
   await createIndex({
     client,
     indexName: themesIndexName,
-    mappings: themesMapping
+    mappings: themesMapping,
   });
   await indexDocumentsBatched({
     client,
     indexName: themesIndexName,
-    documents: themes
+    documents: themes,
   });
 
   await createIndex({
     client,
     indexName: agreementsIndexName,
-    mappings: conventionCollectiveMapping
+    mappings: conventionCollectiveMapping,
   });
   await indexDocumentsBatched({
     client,
     indexName: agreementsIndexName,
-    documents: agreements
+    documents: agreements,
   });
 
   await createIndex({
     client,
     indexName: suggestionsIndexName,
-    mappings: suggestionMapping
+    mappings: suggestionMapping,
   });
   await indexDocumentsBatched({
     client,
     indexName: suggestionsIndexName,
-    documents: suggestions
+    documents: suggestions,
   });
 
   await createIndex({
     client,
     indexName: mtSheetsIndexName,
-    mappings: documentMapping
+    mappings: documentMapping,
   });
   await indexDocumentsBatched({
     client,
     indexName: mtSheetsIndexName,
-    documents: sheetsMT
+    documents: sheetsMT,
   });
 }
 

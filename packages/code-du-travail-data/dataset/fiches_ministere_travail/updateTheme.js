@@ -7,7 +7,7 @@ function updateTheme(fiches) {
     const strippedSlug = fiche.slug.split("#")[0];
     const ficheUrl = `/${getRouteBySource(SOURCES.SHEET_MT)}/${strippedSlug}`;
     const theme = themes.find(theme =>
-      theme.refs.map(r => r.url.split("#")[0]).includes(ficheUrl)
+      theme.refs.map(r => r.url.split("#")[0]).includes(ficheUrl),
     );
     fiche.breadcrumbs = [];
     if (theme) {
@@ -16,7 +16,7 @@ function updateTheme(fiches) {
       }
       fiche.breadcrumbs.push({
         label: theme.title,
-        slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`
+        slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`,
       });
     }
   });

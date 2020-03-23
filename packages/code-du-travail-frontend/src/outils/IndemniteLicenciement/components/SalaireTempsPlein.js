@@ -41,7 +41,7 @@ function SalaireTempsPlein({ name }) {
                       name={`${name}.salary`}
                       validate={isNumber}
                       formatOnBlur
-                      format={value => {
+                      format={(value) => {
                         // Hack auto fill
                         fields.value.forEach((field, fieldIndex) => {
                           if (
@@ -60,11 +60,11 @@ function SalaireTempsPlein({ name }) {
                         error: true,
                         touched: true,
                         invalid: true,
-                        blur: true
+                        blur: true,
                       }}
                       render={({
                         input,
-                        meta: { touched, error, invalid }
+                        meta: { touched, error, invalid },
                       }) => (
                         <>
                           <Input
@@ -92,7 +92,7 @@ function SalaireTempsPlein({ name }) {
 }
 
 SalaireTempsPlein.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 export { SalaireTempsPlein };

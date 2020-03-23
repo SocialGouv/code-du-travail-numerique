@@ -9,7 +9,7 @@ import {
   filterSituations,
   getSituationsFor,
   recapSituation,
-  getRef
+  getRef,
 } from "../../common/situations.utils";
 
 function Duration({ situation }) {
@@ -129,7 +129,7 @@ export function StepResult({ form }) {
       <SectionTitle>Détails</SectionTitle>
       {recapSituation({
         ...(ccn && { "Convention collective": ccn.shortTitle }),
-        ...situation.criteria
+        ...situation.criteria,
       })}
       <SectionTitle>Source</SectionTitle>
       {situation.ref && situation.refUrl && getRef([situation])}

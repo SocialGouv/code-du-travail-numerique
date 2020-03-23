@@ -8,11 +8,11 @@ import { act } from "react-dom/test-utils";
 jest.useFakeTimers();
 
 jest.mock("../search.service.js", () => ({
-  fetchSuggestResults: jest.fn()
+  fetchSuggestResults: jest.fn(),
 }));
 
 jest.mock("../../piwik", () => ({
-  matopush: jest.fn()
+  matopush: jest.fn(),
 }));
 
 const q = "foo";
@@ -28,7 +28,7 @@ describe("<SearchBar />", () => {
 
   it("should render suggestions", async () => {
     const { container, getAllByRole, getByLabelText } = render(<SearchBar />, {
-      query: { q }
+      query: { q },
     });
     const input = getByLabelText(/recherchez/i);
     fireEvent.change(input, { target: { value: "yolo" } });
@@ -63,12 +63,12 @@ describe("<SearchBar />", () => {
       "trackEvent",
       "selectedSuggestion",
       "yolo",
-      "foobar"
+      "foobar",
     ]);
     expect(matopush.mock.calls[1][0]).toEqual([
       "trackEvent",
       "candidateSuggestions",
-      suggestions.join("###")
+      suggestions.join("###"),
     ]);
   });
 });

@@ -5,12 +5,12 @@ function getDocumentByUrlBody({ url }) {
       bool: {
         filter: {
           term: {
-            url
-          }
-        }
-      }
+            url,
+          },
+        },
+      },
     },
-    _source: ["raw", "intro", "sections"]
+    _source: ["raw", "intro", "sections"],
   };
 }
 
