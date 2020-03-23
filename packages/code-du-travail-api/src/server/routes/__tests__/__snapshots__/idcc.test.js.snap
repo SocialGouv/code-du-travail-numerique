@@ -42,7 +42,6 @@ Object {
 }
 `;
 
-
 exports[`return idcc results for pati 1`] = `
 Object {
   "hits": Array [
@@ -91,7 +90,7 @@ Object {
     Object {
       "_id": "16",
       "_index": "cdtn_test_documents",
-      "_score": 14.131623,
+      "_score": 14.131624,
       "_source": Object {
         "effectif": 216431,
         "id": "KALICONT000005635780",
@@ -119,7 +118,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 14.131623,
+  "max_score": 14.131624,
   "total": Object {
     "relation": "eq",
     "value": 2,
