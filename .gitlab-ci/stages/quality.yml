@@ -92,11 +92,12 @@ Test @cdtn/api:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.
     - |-
-      retry=60;
+      retry=120;
       while
         ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
+      echo $retry
     #
     - yarn workspace @cdt/api test --coverage
 
