@@ -10,7 +10,7 @@
     "node-fetch": "^2.6.0",
     "p-limit": "^2.2.2",
     "remark": "^11.0.2",
-    "remark-html": "^10.0.0",
+    "remark-html": "^11.0.1",
     "unist-util-find": "^1.0.1",
     "unist-util-parents": "^1.0.3"
   },
