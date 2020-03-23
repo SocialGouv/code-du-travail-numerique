@@ -52,5 +52,4 @@ function getIdccBody({ query }) {
     },
   };
 }
-
 module.exports = getIdccBody;
