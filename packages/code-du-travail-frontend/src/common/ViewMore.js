@@ -33,15 +33,14 @@ ViewMore.propTypes = {
   elementsDisplayed: PropTypes.number,
   label: PropTypes.string,
   onClick: PropTypes.func,
-  router: PropTypes.object.isRequired,
-  query: PropTypes.string
+  query: PropTypes.string,
 };
 
 ViewMore.defaultProps = {
   elementsDisplayed: 4,
   label: "Voir plus",
   onClick: () => {},
-  query: ""
+  query: "",
 };
 
 export { ViewMore };
