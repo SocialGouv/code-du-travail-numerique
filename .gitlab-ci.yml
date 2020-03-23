@@ -1,13 +1,10 @@
-Plop:
+Test Elastic 7.6.0:
+  image: "curlimages/curl:7.67.0"
   services:
-    - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_TAG
+    - name: "docker.elastic.co/elasticsearch/elasticsearch:7.6.0"
       alias: elasticsearch
-  variables:
-    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
-    GIT_STRATEGY: none
+      command: ["bin/elasticsearch", "-Ediscovery.type=single-node"]
   script:
-    # NOTE(douglasduteil): the elasticsearch health check must be last
-    # As we block the job waiting for elasticsearch to be up.
     - |-
       echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_TAG";
       echo $ELASTICSEARCH_URL;
@@ -17,4 +14,3 @@ Plop:
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
-    #
