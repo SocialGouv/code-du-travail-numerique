@@ -8,7 +8,7 @@ import {
   MoreContent,
   theme,
   Tile,
-  Title
+  Title,
 } from "@socialgouv/react-ui";
 
 import { blocs as blocsLabels } from "./blocs.data";
@@ -54,7 +54,7 @@ function Articles({ blocs, containerId }) {
             ))}
           </Grid>
         </>
-      )
+      ),
     };
   });
 

@@ -6,11 +6,11 @@ function getRootThemesQuery() {
       bool: {
         must_not: {
           exists: {
-            field: "breadcrumbs"
-          }
-        }
-      }
-    }
+            field: "breadcrumbs",
+          },
+        },
+      },
+    },
   };
 }
 
@@ -22,15 +22,15 @@ function getThemeQuery({ slug }) {
       bool: {
         filter: {
           term: {
-            slug
-          }
-        }
-      }
-    }
+            slug,
+          },
+        },
+      },
+    },
   };
 }
 
 module.exports = {
   getRootThemesQuery,
-  getThemeQuery
+  getThemeQuery,
 };

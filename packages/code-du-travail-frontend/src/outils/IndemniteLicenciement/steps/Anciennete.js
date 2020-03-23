@@ -16,7 +16,7 @@ function validate({
   dateEntree,
   dateSortie,
   dateNotification,
-  absencePeriods = []
+  absencePeriods = [],
 }) {
   const errors = {};
   const dEntree = parse(dateEntree);
@@ -34,9 +34,9 @@ function validate({
 
   const totalAbsence =
     (absencePeriods || [])
-      .filter(period => Boolean(period.duration))
+      .filter((period) => Boolean(period.duration))
       .reduce((total, item) => {
-        const motif = motifs.find(motif => motif.label === item.type);
+        const motif = motifs.find((motif) => motif.label === item.type);
         return total + item.duration * motif.value;
       }, 0) / 12;
 
@@ -91,13 +91,13 @@ function StepAnciennete({ form }) {
       <YesNoQuestion
         name="hasAbsenceProlonge"
         label="Y a-t-il eu des absences de plus d’un mois durant le contrat de travail&nbsp;?"
-        onChange={hasAbsenceProlonge => {
+        onChange={(hasAbsenceProlonge) => {
           hasAbsenceProlonge
             ? form.change("absencePeriods", [
                 {
                   type: "Absence pour maladie non professionnelle",
-                  duration: null
-                }
+                  duration: null,
+                },
               ])
             : form.change("absencePeriods", []);
         }}
@@ -107,7 +107,7 @@ function StepAnciennete({ form }) {
           <AbsencePeriods
             visible={input.value}
             name="absencePeriods"
-            onChange={absencePeriods => {
+            onChange={(absencePeriods) => {
               if (absencePeriods.length === 0) {
                 form.change("hasAbsenceProlonge", false);
               }
@@ -129,12 +129,12 @@ StepAnciennete.validate = validate;
 StepAnciennete.decorator = createDecorator({
   field: /date|absencePeriods/,
   updates: {
-    anciennete: (_, values) => computeAnciennete(values)
-  }
+    anciennete: (_, values) => computeAnciennete(values),
+  },
 });
 
 StepAnciennete.propTypes = {
-  form: PropTypes.object.isRequired
+  form: PropTypes.object.isRequired,
 };
 
 function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
@@ -145,9 +145,9 @@ function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
   // pour pouvoir ensuite le retranché de l’anciennété qui est aussi en mois par année
   const totalAbsence =
     (absencePeriods || [])
-      .filter(period => Boolean(period.duration))
+      .filter((period) => Boolean(period.duration))
       .reduce((total, item) => {
-        const motif = motifs.find(motif => motif.label === item.type);
+        const motif = motifs.find((motif) => motif.label === item.type);
         return total + item.duration * motif.value;
       }, 0) / 12;
   return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;

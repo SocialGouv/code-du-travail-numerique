@@ -11,7 +11,7 @@ const { spacings } = theme;
 class List extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
-    headingLevel: PropTypes.number.isRequired
+    headingLevel: PropTypes.number.isRequired,
   };
   render() {
     const { data, headingLevel } = this.props;

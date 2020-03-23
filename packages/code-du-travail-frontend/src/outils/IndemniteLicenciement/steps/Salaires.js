@@ -13,7 +13,7 @@ import { YesNoQuestion } from "../../common/YesNoQuestion";
 import {
   SalaireTempsPartiel,
   TEMPS_PARTIEL,
-  TEMPS_PLEIN
+  TEMPS_PLEIN,
 } from "../components/SalaireTempsPartiel";
 import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
 import { motifs } from "../components/AbsencePeriods";
@@ -25,12 +25,12 @@ function StepSalaires({ form }) {
       <YesNoQuestion
         name="hasTempsPartiel"
         label="Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail&nbsp;?"
-        onChange={hasTempsPartiel => {
+        onChange={(hasTempsPartiel) => {
           if (hasTempsPartiel) {
             form.batch(() => {
               form.change("salairePeriods", [
                 { type: TEMPS_PLEIN, duration: null, salary: null },
-                { type: TEMPS_PARTIEL, duration: null, salary: null }
+                { type: TEMPS_PARTIEL, duration: null, salary: null },
               ]);
               form.change("salaire", null);
               form.change("salaires", []);
@@ -47,7 +47,7 @@ function StepSalaires({ form }) {
             <SalaireTempsPartiel
               name="salairePeriods"
               visible={input.value}
-              onChange={salairePeriods => {
+              onChange={(salairePeriods) => {
                 if (salairePeriods.length === 0) {
                   form.change("hasTempsPartiel", false);
                 }
@@ -59,7 +59,7 @@ function StepSalaires({ form }) {
                 <YesNoQuestion
                   name="hasSameSalaire"
                   label="Le salaire mensuel a-t-il été le même durant les 12 derniers mois&nbsp;?"
-                  onChange={hasSameSalaire => {
+                  onChange={(hasSameSalaire) => {
                     if (hasSameSalaire) {
                       form.change("salaires", []);
                     } else {
@@ -82,7 +82,7 @@ function StepSalaires({ form }) {
                             value: true,
                             error: true,
                             touched: true,
-                            invalid: true
+                            invalid: true,
                           }}
                         >
                           {({ input, meta: { touched, error, invalid } }) => (
@@ -130,9 +130,9 @@ function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
   const dSortie = parse(dateSortie);
 
   const totalAbsence = (absencePeriods || [])
-    .filter(period => Boolean(period.duration))
+    .filter((period) => Boolean(period.duration))
     .reduce((total, item) => {
-      const motif = motifs.find(motif => motif.label === item.type);
+      const motif = motifs.find((motif) => motif.label === item.type);
       return total + item.duration * motif.value;
     }, 0);
 
@@ -144,15 +144,15 @@ function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
   return Array.from({ length: nbMonthes }).map((_, index) => {
     return {
       label: format(subMonths(dSortie, index), "MMMM yyyy", {
-        locale: frLocale
+        locale: frLocale,
       }),
-      salary: null
+      salary: null,
     };
   });
 }
 
 StepSalaires.propTypes = {
-  form: PropTypes.object.isRequired
+  form: PropTypes.object.isRequired,
 };
 
 export { StepSalaires, getSalairesPeriods };

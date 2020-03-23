@@ -4,7 +4,7 @@ import { OverflowWrapper } from ".";
 
 export default {
   component: OverflowWrapper,
-  title: "Components|OverflowWrapper"
+  title: "Components|OverflowWrapper",
 };
 
 export const base = () => (

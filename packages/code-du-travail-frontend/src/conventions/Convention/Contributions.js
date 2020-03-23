@@ -41,18 +41,18 @@ function Contributions({ contributions }) {
       }
       return a.localeCompare(b);
     })
-    .map(theme => ({
+    .map((theme) => ({
       id: theme,
       title: theme,
       body: (
         <Accordion
-          items={contributionsByTheme[theme].map(item => ({
+          items={contributionsByTheme[theme].map((item) => ({
             id: item.slug,
             title: item.question,
-            body: AccordionContent(item)
+            body: AccordionContent(item),
           }))}
         />
-      )
+      ),
     }));
 
   return (
@@ -75,14 +75,14 @@ function AccordionContent({ answer, slug, references }) {
       <Html>{answer}</Html>
       {references && (
         <StyledReferencesJuridiques
-          references={references.map(reference => ({
+          references={references.map((reference) => ({
             id: seedId(reference),
             title: reference.title,
             type:
               reference.category === "labour_code"
                 ? TYPE_REFERENCE.codeDuTravail
                 : TYPE_REFERENCE.external,
-            url: reference.url
+            url: reference.url,
           }))}
         />
       )}

@@ -5,7 +5,7 @@ import { Section } from "./Section";
 import { Wrapper } from "./Wrapper";
 
 export default {
-  title: "Layout|Readme"
+  title: "Layout|Readme",
 };
 
 export const readme = () => (

@@ -7,7 +7,7 @@ const ccn16 = {
   title:
     "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
   shortTitle: "Transports routiers et activités auxiliaires du transport",
-  num: 16
+  num: 16,
 };
 
 describe("<StepResult />", () => {
@@ -16,13 +16,13 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "15| moins de 6 mois"
+        ancienneté: "15| moins de 6 mois",
       },
       criteria: {
         "catégorie socio-professionnelle": "16| Employés",
-        ancienneté: "3| moins de 1 mois"
+        ancienneté: "3| moins de 1 mois",
       },
-      ccn: ccn16
+      ccn: ccn16,
     });
     expect(container).toMatchSnapshot();
   });
@@ -31,13 +31,13 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "15| moins de 6 mois"
+        ancienneté: "15| moins de 6 mois",
       },
       criteria: {
         "catégorie socio-professionnelle": "16| Employés",
-        ancienneté: "30| 1 mois à moins de 2 ans"
+        ancienneté: "30| 1 mois à moins de 2 ans",
       },
-      ccn: ccn16
+      ccn: ccn16,
     });
     expect(container).toMatchSnapshot();
   });
@@ -46,13 +46,13 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "33| 6 mois à moins de 2 ans"
+        ancienneté: "33| 6 mois à moins de 2 ans",
       },
       criteria: {
         "catégorie socio-professionnelle": "16| Employés",
-        ancienneté: "30| 1 mois à moins de 2 ans"
+        ancienneté: "30| 1 mois à moins de 2 ans",
       },
-      ccn: ccn16
+      ccn: ccn16,
     });
     expect(container).toMatchSnapshot();
   });
@@ -61,8 +61,8 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "43| plus de 2 ans"
-      }
+        ancienneté: "43| plus de 2 ans",
+      },
     });
     expect(container).toMatchSnapshot();
   });
@@ -71,7 +71,7 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
       disabledWorker: false,
       cdt: {
-        ancienneté: "43| plus de 2 ans"
+        ancienneté: "43| plus de 2 ans",
       },
       ccn: {
         id: "KALICONT000005635662",
@@ -79,8 +79,8 @@ describe("<StepResult />", () => {
         title:
           "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
         shortTitle: "Cordonnerie multiservice",
-        num: 1561
-      }
+        num: 1561,
+      },
     });
     expect(container).toMatchSnapshot();
   });

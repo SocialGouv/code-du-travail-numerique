@@ -19,10 +19,10 @@ async function getGlossaire() {
       abbrs: [...new Set(abbrs.split("\n").filter(Boolean))],
       variants: [...new Set(variants.split("\n").filter(Boolean))],
       definition: compiler.processSync(definition).contents.replace(/\n/g, ""),
-      refs
+      refs,
     }))
     .sort(({ title: titleA }, { title: titleB }) =>
-      titleA.localeCompare(titleB)
+      titleA.localeCompare(titleB),
     );
 }
 

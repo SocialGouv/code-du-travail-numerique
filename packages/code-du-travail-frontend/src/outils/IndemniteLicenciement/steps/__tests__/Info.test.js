@@ -28,7 +28,7 @@ describe("<StepInfo />", () => {
 
   it("should display error if contrat cdd", () => {
     const { getByLabelText, getByTestId, getByText } = renderForm({
-      contrat: "cdi"
+      contrat: "cdi",
     });
     //trigger validation
     const cdd = getByLabelText(/cdd/i);

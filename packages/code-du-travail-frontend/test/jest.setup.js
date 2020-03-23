@@ -7,8 +7,8 @@ jest.mock("next/config", () => () => ({
     API_ENTREPRISE_URL: "api-entreprises.url",
     API_URL: "api.url",
     PACKAGE_VERSION: "vX.Y.Z",
-    SENTRY_PUBLIC_DSN: "https://xxxxxxx@sentry.test.com/n"
-  }
+    SENTRY_PUBLIC_DSN: "https://xxxxxxx@sentry.test.com/n",
+  },
 }));
 
 /**
@@ -23,7 +23,7 @@ const fr = new Intl.DateTimeFormat("fr-FR", {
   day: "2-digit",
   month: "numeric",
   year: "numeric",
-  timeZone: "UTC"
+  timeZone: "UTC",
 });
 
 jest.spyOn(Date.prototype, "toLocaleString").mockImplementation(function() {

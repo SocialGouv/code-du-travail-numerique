@@ -22,7 +22,7 @@ function TypeContrat({ name }) {
           id="cdd"
           validate={required}
         >
-          {props => (
+          {(props) => (
             <InputRadio
               id={`${name}-cdd`}
               label="Contrat à durée determiné (CDD) ou contrat d’intérim"
@@ -37,7 +37,7 @@ function TypeContrat({ name }) {
           id="cdi"
           validate={required}
         >
-          {props => (
+          {(props) => (
             <InputRadio
               id={`${name}-cdi`}
               label="Contrat à durée indeterminé (CDI)"
@@ -52,7 +52,7 @@ function TypeContrat({ name }) {
 }
 
 TypeContrat.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 export { TypeContrat };

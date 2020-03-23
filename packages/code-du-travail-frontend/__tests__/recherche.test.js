@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import Recherche from "../pages/recherche.js";
 
 jest.mock("../src/piwik", () => ({
-  matopush: jest.fn()
+  matopush: jest.fn(),
 }));
 
 describe("<Recherche />", () => {

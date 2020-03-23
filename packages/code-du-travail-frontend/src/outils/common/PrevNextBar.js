@@ -9,7 +9,7 @@ function PrevNextBar({
   hasError,
   nextVisible,
   printVisible,
-  previousVisible
+  previousVisible,
 }) {
   return (
     <>
@@ -38,13 +38,13 @@ PrevNextBar.propTypes = {
   onPrev: PropTypes.func,
   hasError: PropTypes.bool,
   nextVisible: PropTypes.bool,
-  previousVisible: PropTypes.bool
+  previousVisible: PropTypes.bool,
 };
 PrevNextBar.defaultProps = {
   onPrev: () => {},
   hasError: false,
   nextVisible: true,
-  previousVisible: true
+  previousVisible: true,
 };
 
 export { PrevNextBar };

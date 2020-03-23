@@ -24,7 +24,7 @@ Quand(
   "je cherche {string} dans le champ {string}",
   (searchText, searchInput) => {
     I.fillField(searchInput, searchText);
-  }
+  },
 );
 
 Quand("je clique sur {string}", text => {

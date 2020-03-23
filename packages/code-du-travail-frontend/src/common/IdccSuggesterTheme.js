@@ -25,7 +25,7 @@ export const Suggestion = styled.div`
 // see https://github.com/moroshko/react-autosuggest#themeProp
 export const suggesterTheme = {
   container: {
-    position: "relative"
+    position: "relative",
   },
   suggestionsContainerOpen: {
     maxHeight: "300px",
@@ -38,14 +38,14 @@ export const suggesterTheme = {
     borderRopLeftRadius: 0,
     borderTopRightRadius: 0,
     marginTop: "-3px",
-    boxShadow: "0 5px 20px 0 rgba(0, 0, 0, 0.3)"
+    boxShadow: "0 5px 20px 0 rgba(0, 0, 0, 0.3)",
   },
   suggestionsList: {
     margin: 0,
     padding: 0,
-    background: "white"
+    background: "white",
   },
   suggestionHighlighted: {
-    background: "#eee"
-  }
+    background: "#eee",
+  },
 };

@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.9.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.8.0...v4.9.0) (2020-03-20)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2502](https://github.com/SocialGouv/code-du-travail-numerique/issues/2502)) ([f37df0b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f37df0bf17015a43c99d95966b8a178b10ce24c6))
+
+
+### Features
+
+* **frontend:** add feather icon compatibility to IconStripe ([#2500](https://github.com/SocialGouv/code-du-travail-numerique/issues/2500)) ([e36e4ae](https://github.com/SocialGouv/code-du-travail-numerique/commit/e36e4ae94c541f48d9efa86633552728fa35937c))
+
+
+
+
+
+# [4.8.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.7.0...v4.8.0) (2020-03-18)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2468](https://github.com/SocialGouv/code-du-travail-numerique/issues/2468)) ([9aced61](https://github.com/SocialGouv/code-du-travail-numerique/commit/9aced616faefade1e7f37695ffb236f7ed25b32e))
+* **deps:** update all non-major dependencies ([#2486](https://github.com/SocialGouv/code-du-travail-numerique/issues/2486)) ([3e2282d](https://github.com/SocialGouv/code-du-travail-numerique/commit/3e2282dfe5f391446bd83a8b0fa8c24c29e948dd))
+
+
+### Features
+
+* **frontend:** add headband ([#2492](https://github.com/SocialGouv/code-du-travail-numerique/issues/2492)) ([48a52b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/48a52b03c751bfd7ffb93cb82588877e1dea2286))
+
+
+
+
+
 # [4.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.5.0...v4.7.0) (2020-03-14)
 
 

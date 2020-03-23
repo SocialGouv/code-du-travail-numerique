@@ -14,7 +14,7 @@ export const formatUrlMatomo = (source, slug, url) => {
 export const reportSelectionToMatomo = (source, slug, url, algo) => {
   const qualifiedCall = JSON.stringify({
     url: formatUrlMatomo(source, slug, url),
-    algo
+    algo,
   });
 
   matopush(["trackEvent", "selectResult", qualifiedCall]);

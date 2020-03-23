@@ -140,6 +140,10 @@
     "refs": [
       {
         "url": "/fiche-service-public/declaration-dactivite-des-formateurs-ou-organismes-de-formation"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-suspension-de-laccueil-dans-les-cfa-et-les-organismes-de-formation-et-continuite-dactivite-a-distance",
+        "title": "CORONAVIRUS : suspension de l’accueil dans les CFA et les organismes de formation et continuité d’activité à distance"
       }
     ],
     "slug": "517-acteurs-de-la-formation",
@@ -630,6 +634,22 @@
       {
         "url": "/fiche-service-public/dans-quel-secteur-peut-on-recourir-au-cdd-dusage-ou-a-linterim",
         "title": "Dans quel secteur peut-on recourir au CDD d'usage ou à l'intérim ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-dusage",
+        "title": "Le Contrat à durée déterminée d’usage"
+      },
+      {
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-dusage#Dans-quelles-conditions-peut-on-conclure-un-CDD-d-usage",
+        "title": "Le Contrat à durée déterminée d’usage : dans quelles conditions peut-on conclure un cdd d’usage ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-dusage#Quelles-sont-les-regles-applicables-aux-CDD-d-usage",
+        "title": "Le Contrat à durée déterminée d’usage : quelles sont les règles applicables aux cdd d’usage ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/le-contrat-a-duree-determinee-dusage#Quelles-sont-les-dispositions-visant-a-limiter-le-recours-excessif-aux-CDD-nbsp",
+        "title": "Le Contrat à durée déterminée d’usage : quelles sont les dispositions visant à limiter le recours excessif aux cdd d’usage ?"
       }
     ],
     "slug": "122-cdd",
@@ -884,6 +904,10 @@
       {
         "url": "/fiche-ministere-travail/compte-personnel-de-formation-cpf#Que-se-passe-t-il-en-cas-de-changement-de-situation",
         "title": "CPF : que se passe-t-il en cas de changement de situation ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-mon-compte-formation",
+        "title": "Coronavirus – COVID-19 | Questions-réponses Mon Compte Formation"
       }
     ],
     "slug": "512-compte-personnel-de-formation-cpf",
@@ -1769,6 +1793,10 @@
       {
         "url": "/fiche-ministere-travail/apprentissage-financement-de-lapprentissage",
         "title": "Apprentissage | Financement de l’apprentissage : apprentissage | financement de l’apprentissage"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-apprentissage",
+        "title": "Coronavirus – COVID-19 | Questions-réponses Apprentissage"
       }
     ],
     "slug": "124-contrat-dapprentissage",
@@ -4255,6 +4283,10 @@
       },
       {
         "url": "/fiche-service-public/quest-ce-que-le-socle-de-connaissances-et-de-competences-professionnelles"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-formation-professionnelle-des-salaries-alternants-et-personnes-en-recherche-demploi",
+        "title": "Coronavirus – COVID-19 | Questions-réponses Formation professionnelle des salariés, alternants et personnes en recherche d’emploi"
       }
     ],
     "slug": "51-formation-professionnelle",
@@ -6249,6 +6281,10 @@
       },
       {
         "url": "/fiche-service-public/arret-maladie-pendant-le-preavis-quelles-consequences"
+      },
+      {
+        "url": "/fiche-service-public/mutuelle-dentreprise-complementaire-sante-obligations-de-lemployeur",
+        "title": "Mutuelle d'entreprise (complémentaire santé) : obligations de l'employeur"
       }
     ],
     "slug": "631-maladie",
@@ -9416,6 +9452,18 @@
     "position": 6,
     "refs": [
       {
+        "url": "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",
+        "title": "Attestation sur l’honneur : arrêt de travail pour la garde d’enfant"
+      },
+      {
+        "url": "/modeles-de-courriers/attestation-sur-lhonneur-deplacement-derogatoire",
+        "title": "Attestation sur l’honneur : déplacement dérogatoire"
+      },
+      {
+        "url": "/modeles-de-courriers/justificatif-de-lemployeur-de-deplacement-professionnel",
+        "title": "Justificatif de l’employeur de déplacement professionnel"
+      },
+      {
         "url": "/fiche-service-public/complementaire-sante-dentreprise-mutuelle-sante",
         "title": "Complémentaire santé d'entreprise (mutuelle santé)"
       },
@@ -9426,6 +9474,10 @@
       {
         "url": "/fiche-service-public/mutuelle-sante-dentreprise-les-obligations-de-lemployeur",
         "title": "Mutuelle santé d'entreprise : les obligations de l'employeur"
+      },
+      {
+        "url": "/fiche-service-public/droit-du-travail-secteur-prive-quest-ce-que-la-force-majeure",
+        "title": "Droit du travail (secteur privé) : qu'est-ce que la force majeure ?"
       },
       {
         "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries",
@@ -9587,6 +9639,10 @@
       },
       {
         "url": "/fiche-service-public/le-particulier-employeur-doit-il-soccuper-du-suivi-medical-de-son-salarie"
+      },
+      {
+        "url": "/fiche-service-public/un-salarie-saisonnier-est-il-suivi-par-la-medecine-du-travail",
+        "title": "Un salarié saisonnier est-il suivi par la médecine du travail ?"
       }
     ],
     "slug": "634-suivi-medical-des-salaries",
@@ -9612,6 +9668,30 @@
     "refs": [
       {
         "url": "/fiche-service-public/teletravail-dans-le-secteur-prive"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#t1-Le-teletravail-est-la-regle-imperative-pour-tous-les-postes-qui-le-nbsp",
+        "title": "Coronavirus - COVID-19 et monde du Travail : 1. le télétravail est la règle impérative pour tous les postes qui le permettent"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#t2-Les-regles-de-distanciation-pour-les-emplois-non-eligibles-au-nbsp",
+        "title": "Coronavirus - COVID-19 et monde du Travail : 2. les règles de distanciation pour les emplois non éligibles au télétravail doivent impérativement être respectées"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#t3-Les-restaurants-d-entreprise-peuvent-rester-ouverts-mais-doivent-etre-nbsp",
+        "title": "Coronavirus - COVID-19 et monde du Travail : 3. les restaurants d’entreprise peuvent rester ouverts, mais doivent être aménagés pour laisser un mètre de distance entre les places à table"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#t4-Toutes-les-entreprises-qui-subissent-une-baisse-partielle-ou-totale-nbsp",
+        "title": "Coronavirus - COVID-19 et monde du Travail : 4. toutes les entreprises qui subissent une baisse partielle ou totale d’activité sont éligibles au chômage partiel"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#t5-Les-solutions-pour-les-parents-d-enfants-de-moins-de-16-ans",
+        "title": "Coronavirus - COVID-19 et monde du Travail : 5. les solutions pour les parents d’enfants de moins de 16 ans"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer",
+        "title": "Coronavirus - COVID-19 et monde du Travail : pour résumer"
       }
     ],
     "slug": "615-teletravail",

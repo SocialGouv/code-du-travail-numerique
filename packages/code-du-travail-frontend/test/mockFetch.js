@@ -1,6 +1,6 @@
 export function fetchResponse(data = {}) {
   return {
     ok: true,
-    json: () => Promise.resolve(data)
+    json: () => Promise.resolve(data),
   };
 }

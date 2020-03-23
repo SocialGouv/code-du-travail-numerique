@@ -10,7 +10,7 @@ import {
   Section,
   theme,
   Title,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
@@ -52,11 +52,11 @@ function getGlossaryLetters(glossary) {
   const alphabet = Array.from({ length: 26 }, (_, index) =>
     String.fromCharCode(A + index)
   );
-  return alphabet.map(letter => ({
+  return alphabet.map((letter) => ({
     letter,
     terms: glossary.filter(
       ({ slug }) => slug.slice(0, 1).toUpperCase() === letter
-    )
+    ),
   }));
 }
 

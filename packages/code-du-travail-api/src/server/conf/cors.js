@@ -9,7 +9,7 @@ const validOrigins = [
   "https://codedutravail-dev.num.social.gouv.fr",
 
   "https://code-du-travail.beta.gouv.fr",
-  "https://socialgouv.github.io"
+  "https://socialgouv.github.io",
 ];
 
 function originIsValid(origin) {
@@ -25,9 +25,9 @@ function verifyOrigin(ctx) {
 }
 
 const config = {
-  origin: verifyOrigin
+  origin: verifyOrigin,
 };
 
 module.exports = {
-  config
+  config,
 };

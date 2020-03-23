@@ -13,7 +13,7 @@ export const CADRE = "cadre";
 export const Categories = {
   [OUVRIER]: "Ouvriers et employés",
   [TAM]: "Techniciens et agents de maîtrise (TAM)",
-  [CADRE]: "Cadre"
+  [CADRE]: "Cadre",
 };
 
 function Categorie({ name }) {
@@ -41,7 +41,7 @@ function Categorie({ name }) {
 }
 
 Categorie.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 export { Categorie };

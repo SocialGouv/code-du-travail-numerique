@@ -9,7 +9,7 @@ import {
   NON_DISCIPLINAIRE,
   ECONOMIQUE,
   optionCategorie,
-  optionMotifs
+  optionMotifs,
 } from "./Step";
 
 function getSalaireRef({
@@ -18,9 +18,9 @@ function getSalaireRef({
   salaire,
   salairePeriods,
   salaires = [],
-  anciennete
+  anciennete,
 }) {
-  const salaryValues = salaires.map(a => a.salary);
+  const salaryValues = salaires.map((a) => a.salary);
 
   // calcul du salaire de reference
   if (hasTempsPartiel) {
@@ -42,7 +42,7 @@ function getIndemnite({
   dateSortie,
   anciennete,
   categorie = NON_CADRE,
-  motif
+  motif,
 }) {
   const dEntree = parse(dateEntree);
   const dSortie = parse(dateSortie);
@@ -53,17 +53,17 @@ function getIndemnite({
   const labels = {
     "Salaire de référence (Sref)": round(salaireRef),
     "Motif du licenciement": optionMotifs[motif],
-    Catégorie: optionCategorie[categorie]
+    Catégorie: optionCategorie[categorie],
   };
   if (anciennete < 1) {
     return {
       indemniteConventionnelle,
       infoCalculConventionnel: {
         formula: "-",
-        labels
+        labels,
       },
       error:
-        "La convention collective prévoit une indemnité conventionnelle de licenciement à partir d'un an d'ancienneté"
+        "La convention collective prévoit une indemnité conventionnelle de licenciement à partir d'un an d'ancienneté",
     };
   }
   if (motif === DISCIPLINAIRE) {
@@ -71,10 +71,10 @@ function getIndemnite({
       indemniteConventionnelle,
       infoCalculConventionnel: {
         formula: "-",
-        labels
+        labels,
       },
       error:
-        "La convention collective prévoit le droit à l’indemnité légale en cas de licenciement pour motif disciplinaire, sauf pour faute grave ou lourde"
+        "La convention collective prévoit le droit à l’indemnité légale en cas de licenciement pour motif disciplinaire, sauf pour faute grave ou lourde",
     };
   }
   const year2002 = new Date("2002-01-01");
@@ -113,7 +113,7 @@ function getIndemnite({
     const plafond = {
       [CADRE]: 24,
       [NON_CADRE]: 18,
-      [NE_SAIT_PAS]: 18
+      [NE_SAIT_PAS]: 18,
     };
 
     if (
@@ -126,7 +126,7 @@ function getIndemnite({
   } else {
     const plafond = {
       [ECONOMIQUE]: 18,
-      [NON_DISCIPLINAIRE]: 15
+      [NON_DISCIPLINAIRE]: 15,
     };
 
     if (indemniteConventionnelle > plafond[motif] * salaireRef) {
@@ -138,7 +138,7 @@ function getIndemnite({
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
     infoCalculConventionnel: { formula, labels },
-    error
+    error,
   };
 }
 export { getSalaireRef, getIndemnite };

@@ -3,7 +3,7 @@ import { Grid } from ".";
 import { Tile } from "../Tile";
 export default {
   component: Grid,
-  title: "Components|Grid"
+  title: "Components|Grid",
 };
 
 export const base = () => (

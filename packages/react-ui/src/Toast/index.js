@@ -39,36 +39,38 @@ export const Toast = ({ children, onRemove, timeout, variant, ...props }) => {
 Toast.propTypes = {
   variant: PropTypes.oneOf(["primary", "secondary"]),
   wide: PropTypes.bool,
+  squared: PropTypes.bool,
   shadow: PropTypes.bool,
   animate: PropTypes.oneOf([
     "from-top",
     "from-right",
     "from-bottom",
-    "from-left"
+    "from-left",
   ]),
   timeout: PropTypes.number,
   onRemove: PropTypes.func,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 Toast.defaultProps = {
   wide: false,
+  squared: false,
   variant: "secondary",
   animate: null,
-  onRemove: null
+  onRemove: null,
 };
 
 const StyledToast = styled.div`
   display: inline-flex;
   justify-content: space-between;
-  width: ${props => (props.wide ? "100%" : "auto")};
+  width: ${(props) => (props.wide ? "100%" : "auto")};
   min-height: 48px;
   color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};
   border-color: ${({ theme, variant }) => theme[variant]};
   border-style: solid;
   border-width: 2px;
-  border-radius: ${box.borderRadius};
+  border-radius: ${({ squared }) => (squared ? "0" : box.borderRadius)};
   box-shadow: ${({ shadow, theme, variant }) =>
     shadow ? box.shadow.default(theme[variant]) : "none"};
   animation: ${({ animate }) => {

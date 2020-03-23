@@ -13,7 +13,7 @@ import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
 import Html from "../../src/common/Html";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const fetchFiche = ({ slug }) =>
@@ -33,12 +33,12 @@ class Fiche extends React.Component {
     const {
       data: {
         _source: { title, description, dateDebut, html, url, notaHtml },
-        relatedItems
+        relatedItems,
       } = {
-        _source: {}
+        _source: {},
       },
       pageUrl,
-      ogImage
+      ogImage,
     } = this.props;
 
     const fixedHtml = replaceArticlesRefs(html);
@@ -56,7 +56,7 @@ class Fiche extends React.Component {
           date={
             dateDebut &&
             format(new Date(dateDebut), "dd/MM/yyyy", {
-              locale: frLocale
+              locale: frLocale,
             })
           }
           emptyMessage="Article introuvable"

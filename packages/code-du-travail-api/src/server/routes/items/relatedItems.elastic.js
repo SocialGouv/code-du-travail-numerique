@@ -11,7 +11,7 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
       "description",
       "url",
       "action",
-      "icon"
+      "icon",
     ],
     query: {
       bool: {
@@ -20,23 +20,23 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
             fields: ["title", "text"],
             min_term_freq: 1,
             max_query_terms: 12,
-            like: settings
-          }
+            like: settings,
+          },
         },
         filter: [
           {
             term: {
-              excludeFromSearch: false
-            }
+              excludeFromSearch: false,
+            },
           },
           {
             bool: {
-              should: sources.map(source => ({ term: { source } }))
-            }
-          }
-        ]
-      }
-    }
+              should: sources.map(source => ({ term: { source } })),
+            },
+          },
+        ],
+      },
+    },
   };
 }
 

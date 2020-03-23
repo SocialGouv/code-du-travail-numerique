@@ -13,7 +13,7 @@ import {
   Row,
   MobileOnlyCell,
   DesktopOnly,
-  CellHeader
+  CellHeader,
 } from "../../common/stepStyles";
 
 function AbsencePeriods({ name, visible = true, onChange }) {
@@ -70,7 +70,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
                     value: true,
                     error: true,
                     touched: true,
-                    invalid: true
+                    invalid: true,
                   }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
@@ -96,7 +96,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
               onClick={() =>
                 fields.push({
                   type: "Absence pour maladie non professionnelle",
-                  duration: null
+                  duration: null,
                 })
               }
             >
@@ -105,7 +105,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
           )}
           {onChange && (
             <OnChange name={name}>
-              {values => {
+              {(values) => {
                 onChange(values);
               }}
             </OnChange>
@@ -117,7 +117,7 @@ function AbsencePeriods({ name, visible = true, onChange }) {
 }
 
 AbsencePeriods.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 export { AbsencePeriods };
@@ -150,5 +150,5 @@ export const motifs = [
   { label: "Grève", value: 1.0 },
   { label: "Mise à pied", value: 1.0 },
   { label: "Maladie d'origine non professionnelle", value: 1.0 },
-  { label: "Congé de paternité", value: 1.0 }
+  { label: "Congé de paternité", value: 1.0 },
 ];

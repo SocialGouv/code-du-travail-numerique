@@ -21,9 +21,9 @@ export const Alert = styled.div`
 
 Alert.propTypes = {
   variant: PropTypes.oneOf(["primary", "secondary"]),
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 Alert.defaultProps = {
-  variant: "secondary"
+  variant: "secondary",
 };

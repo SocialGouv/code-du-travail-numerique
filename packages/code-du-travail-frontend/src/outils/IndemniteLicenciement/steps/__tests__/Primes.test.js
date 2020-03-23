@@ -11,7 +11,7 @@ function renderForm(data) {
       mutators={{ ...arrayMutators }}
       onSubmit={jest.fn()}
       initialValues={{
-        ...data
+        ...data,
       }}
       render={({ form }) => <StepPrimes form={form} />}
     />
@@ -22,7 +22,7 @@ describe("<StepPrimes />", () => {
   it("should render", () => {
     const { container } = renderForm({
       hasPrimes: true,
-      primes: [{ prime: 3000 }]
+      primes: [{ prime: 3000 }],
     });
     expect(container).toMatchSnapshot();
   });

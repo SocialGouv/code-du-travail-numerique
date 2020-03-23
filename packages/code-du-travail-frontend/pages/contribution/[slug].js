@@ -9,7 +9,7 @@ import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const fetchQuestion = ({ slug }) =>
@@ -42,13 +42,13 @@ class PageContribution extends React.Component {
     const {
       data: {
         _source: { breadcrumbs, title, answers, description },
-        relatedItems
+        relatedItems,
       } = {
-        _source: {}
+        _source: {},
       },
       content,
       pageUrl,
-      ogImage
+      ogImage,
     } = this.props;
 
     return (

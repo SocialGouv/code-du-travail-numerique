@@ -12,31 +12,31 @@ export class Suggester extends React.Component {
     renderSuggestionsContainer: PropTypes.func,
     theme: PropTypes.object,
     reformatEnteredValue: PropTypes.func,
-    renderMessage: PropTypes.func
+    renderMessage: PropTypes.func,
   };
 
   static defaultProps = {
     placeholder: "faire une recherche.",
     className: "full-width",
-    getSuggestionValue: value => value.toString(),
-    renderSuggestion: suggestion => <span>{suggestion.toString()}</span>,
+    getSuggestionValue: (value) => value.toString(),
+    renderSuggestion: (suggestion) => <span>{suggestion.toString()}</span>,
     renderSuggestionsContainer: undefined,
     theme: undefined,
     renderMessage: () => null,
-    reformatEnteredValue: v => v
+    reformatEnteredValue: (v) => v,
   };
 
   state = {
     query: "",
     suggestions: [],
-    loading: false
+    loading: false,
   };
 
-  onChange = event => {
+  onChange = (event) => {
     this.setState({
       [event.target.name]:
         event.target.value &&
-        this.props.reformatEnteredValue(event.target.value)
+        this.props.reformatEnteredValue(event.target.value),
     });
   };
 
@@ -46,17 +46,17 @@ export class Suggester extends React.Component {
 
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({ suggestions: null, loading: true });
-    this.props.onSearch(value).then(results =>
+    this.props.onSearch(value).then((results) =>
       this.setState({
         suggestions: results,
-        loading: false
+        loading: false,
       })
     );
   };
 
   onSuggestionsClearRequested = () => {
     this.setState({
-      suggestions: null
+      suggestions: null,
     });
   };
 
@@ -69,7 +69,7 @@ export class Suggester extends React.Component {
       value: query,
       type: "search",
       onChange: this.onChange,
-      className
+      className,
     };
 
     return (

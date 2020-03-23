@@ -13,8 +13,8 @@ describe("<SalaireTempsPartiel />", () => {
         initialValues={{
           periods: [
             { type: "Temps plein", duration: 12, salary: 2000 },
-            { type: "Temps partiel", duration: 6, salary: 1000 }
-          ]
+            { type: "Temps partiel", duration: 6, salary: 1000 },
+          ],
         }}
         onSubmit={onSubmit}
         render={() => <SalaireTempsPartiel name="periods" />}
@@ -29,8 +29,8 @@ describe("<SalaireTempsPartiel />", () => {
         initialValues={{
           periods: [
             { type: "Temps plein", duration: 12, salary: 2000 },
-            { type: "Temps partiel", duration: 6, salary: 1000 }
-          ]
+            { type: "Temps partiel", duration: 6, salary: 1000 },
+          ],
         }}
         mutators={{ ...arrayMutators }}
         onSubmit={onSubmit}

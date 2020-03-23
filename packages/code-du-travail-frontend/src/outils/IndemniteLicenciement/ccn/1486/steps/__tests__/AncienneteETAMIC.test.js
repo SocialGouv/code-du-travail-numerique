@@ -20,8 +20,8 @@ describe("<AncienneteETAMIC />", () => {
       brancheContrat: {
         duration: "3",
         indemnite: "0",
-        considered: false
-      }
+        considered: false,
+      },
     };
     const { container } = render(
       <Form onSubmit={onSubmit} initialValues={initialValues}>

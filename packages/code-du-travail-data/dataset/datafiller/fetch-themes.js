@@ -49,7 +49,7 @@ const getParents = (rows, row) => {
   }
   return parts.map(({ title, slug }) => ({
     label: title,
-    slug: `/${getRouteBySource(SOURCES.THEMES)}/${slug}`
+    slug: `/${getRouteBySource(SOURCES.THEMES)}/${slug}`,
   }));
 };
 
@@ -82,7 +82,7 @@ const fetchAll = async () => {
       slug: getSlug(row),
       source: SOURCES.THEMES,
       title: row.title,
-      variants: getVariants(row)
+      variants: getVariants(row),
     };
   });
 

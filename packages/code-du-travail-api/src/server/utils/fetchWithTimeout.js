@@ -6,8 +6,8 @@ function fetchWithTimeout(url, options = {}, timeout = 500) {
     new Promise((_, reject) =>
       setTimeout(() => {
         reject(new Error(`fetch timeout for ${url}`));
-      }, timeout)
-    )
+      }, timeout),
+    ),
   ]);
 }
 

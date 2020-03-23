@@ -14,10 +14,10 @@ export function getSalaireRef({
   salaires = [],
   primes = [],
   anciennete,
-  categorie
+  categorie,
 }) {
-  const primeValues = primes.map(a => a.prime);
-  const salaryValues = salaires.map(a => a.salary);
+  const primeValues = primes.map((a) => a.prime);
+  const salaryValues = salaires.map((a) => a.salary);
 
   // calcul du salaire de reference
   if (hasTempsPartiel) {
@@ -50,7 +50,7 @@ export function getIndemnite({
   anciennete,
   tamDuration,
   cadreDuration,
-  hasRetirementAge
+  hasRetirementAge,
 }) {
   let error;
   let indemniteConventionnelle = 0;
@@ -61,10 +61,10 @@ export function getIndemnite({
       !cadreDuration && { "Ancienneté totale, en année, (A)": anciennete }),
     Catégorie: categorie,
     ...(cadreDuration > 0 && {
-      "Durée comme cadre, en mois, (Dc)": cadreDuration
+      "Durée comme cadre, en mois, (Dc)": cadreDuration,
     }),
     ...(tamDuration > 0 && { "durée comme TAM, en mois, (Dt)": tamDuration }),
-    "En âge de partir à la retraite": hasRetirementAge ? "oui" : "non"
+    "En âge de partir à la retraite": hasRetirementAge ? "oui" : "non",
   };
 
   if (Math.floor(anciennete) < 2) {
@@ -73,12 +73,12 @@ export function getIndemnite({
   } else if (categorie === OUVRIER || categorie === TAM) {
     const bareme2_3 = {
       [OUVRIER]: { value: 1 / 10, label: "1/10" },
-      [TAM]: { value: 1 / 10, label: "1/10" }
+      [TAM]: { value: 1 / 10, label: "1/10" },
     };
 
     const bareme3plus = {
       [OUVRIER]: { value: 2 / 10, label: "2/10" },
-      [TAM]: { value: 3 / 10, label: "3/10" }
+      [TAM]: { value: 3 / 10, label: "3/10" },
     };
     const bareme = anciennete >= 3 ? bareme3plus : bareme2_3;
     indemniteConventionnelle =
@@ -123,6 +123,6 @@ export function getIndemnite({
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
     infoCalculConventionnel: { formula, labels },
-    error
+    error,
   };
 }

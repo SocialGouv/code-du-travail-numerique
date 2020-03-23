@@ -7,7 +7,7 @@ import {
   Container,
   PageTitle,
   Section,
-  theme
+  theme,
 } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
 
@@ -18,7 +18,7 @@ import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import { FocusRoot } from "../../src/a11y";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 // Theme page
@@ -33,7 +33,7 @@ class Theme extends React.Component {
     const theme = await searchThemeResponse.json();
 
     return {
-      theme
+      theme,
     };
   }
 

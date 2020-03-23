@@ -23,38 +23,38 @@ function YesNoQuestion({
       <RadioContainer {...otherProps}>
         <Field
           type="radio"
-          parse={value => value === "true"}
+          parse={(value) => value === "true"}
           name={name}
           label="Oui"
           value={true}
           validate={requiredBoolean}
         >
-          {props => (
+          {(props) => (
             <InputRadio id={`${name}-yes`} label="Oui" {...props.input} />
           )}
         </Field>
         <Field
           type="radio"
-          parse={value => value === "true"}
+          parse={(value) => value === "true"}
           name={name}
           value={false}
           validate={requiredBoolean}
         >
-          {props => (
+          {(props) => (
             <InputRadio id={`${name}-no`} label="Non" {...props.input} />
           )}
         </Field>
       </RadioContainer>
       <ErrorField name={name} />
       {onChange && (
-        <OnChange name={name}>{values => onChange(values)}</OnChange>
+        <OnChange name={name}>{(values) => onChange(values)}</OnChange>
       )}
     </>
   );
 }
 YesNoQuestion.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
 };
 
 export { YesNoQuestion };

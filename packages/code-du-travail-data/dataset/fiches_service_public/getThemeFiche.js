@@ -6,7 +6,7 @@ const slugify = require("../../slugify");
 function getThemeFiche(fiche) {
   const ficheUrl = `/fiche-service-public/${slugify(fiche.title)}`;
   const theme = themes.find(theme =>
-    theme.refs.map(r => r.url).includes(ficheUrl)
+    theme.refs.map(r => r.url).includes(ficheUrl),
   );
   const breadcrumbs = [];
   if (theme) {
@@ -15,7 +15,7 @@ function getThemeFiche(fiche) {
     }
     breadcrumbs.push({
       label: theme.title,
-      slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`
+      slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`,
     });
   }
 

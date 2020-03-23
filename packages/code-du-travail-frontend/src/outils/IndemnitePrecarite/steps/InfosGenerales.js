@@ -13,13 +13,13 @@ import {
   getPastQuestions,
   getNextQuestionKey,
   filterSituations,
-  getSituationsFor
+  getSituationsFor,
 } from "../../common/situations.utils";
 import {
   hasConventionalProvision,
   questions,
   criteriaOrder,
-  validateSituation
+  validateSituation,
 } from "./situation";
 
 const excludeContracts = [
@@ -29,7 +29,7 @@ const excludeContracts = [
   "CCD dans le cadre d’un congé de mobilité",
   "Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)",
   "Contrat de professionnalisation ou Contrat d’apprentissage",
-  "Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié"
+  "Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié",
 ];
 
 function StepInfosGenerales({ form }) {
@@ -52,8 +52,8 @@ function StepInfosGenerales({ form }) {
 
   function concatenateCddType(additionnalTypes) {
     return additionnalTypes
-      .filter(([a]) => !excludeContracts.find(label => a === label))
-      .concat(excludeContracts.map(a => [a, a]));
+      .filter(([a]) => !excludeContracts.find((label) => a === label))
+      .concat(excludeContracts.map((a) => [a, a]));
   }
 
   // update cddType list
@@ -93,7 +93,7 @@ function StepInfosGenerales({ form }) {
                             // list keys that no longer exist
                             const resetFormProps = Object.keys(values.criteria)
                               .filter(
-                                k => !pastQuestions.find(([key]) => k === key)
+                                (k) => !pastQuestions.find(([key]) => k === key)
                               )
                               .concat(
                                 // list keys that need to be reseted
@@ -105,7 +105,7 @@ function StepInfosGenerales({ form }) {
                                   )
                                   .map(([key]) => key)
                               );
-                            resetFormProps.forEach(key =>
+                            resetFormProps.forEach((key) =>
                               form.change(`criteria.${key}`, undefined)
                             );
                           });
@@ -157,19 +157,19 @@ function validate(values) {
 
   const errors = {
     ...StepCDD.validate(values),
-    ...StepCTT.validate(values)
+    ...StepCTT.validate(values),
   };
   // We need to performs these check before situation check
   // since situation Check can overwrite generals checks
   if (values.criteria && excludeContracts.includes(values.criteria.cddType)) {
     errors.criteria = {
       cddType:
-        "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité."
+        "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité.",
     };
   }
   return {
     ...errors,
-    ...validateSituation(initialSituations, values.criteria, errors)
+    ...validateSituation(initialSituations, values.criteria, errors),
   };
 }
 

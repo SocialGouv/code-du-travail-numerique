@@ -4,7 +4,7 @@ import { breakpoints, spacings } from "../theme";
 
 import { GridContext } from "./Grid";
 
-export const GridCell = props => {
+export const GridCell = (props) => {
   const columns = useContext(GridContext);
   return <ListItem {...props} columns={columns} />;
 };

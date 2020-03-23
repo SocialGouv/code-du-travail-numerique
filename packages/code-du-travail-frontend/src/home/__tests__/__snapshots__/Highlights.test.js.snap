@@ -349,6 +349,7 @@ exports[`<Highlights /> should render 1`] = `
     >
       <header
         class="c2"
+        id="en-ce-moment"
       >
         <h2
           class="c3"

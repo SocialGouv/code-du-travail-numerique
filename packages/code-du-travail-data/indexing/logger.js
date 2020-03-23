@@ -1,14 +1,14 @@
 const {
   createLogger,
   format,
-  transports: { Console }
+  transports: { Console },
 } = require("winston");
 
 export const logger = createLogger({
   level: "info",
   transports: [
     new Console({
-      format: format.prettyPrint()
-    })
-  ]
+      format: format.prettyPrint(),
+    }),
+  ],
 });

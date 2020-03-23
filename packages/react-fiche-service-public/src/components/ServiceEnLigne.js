@@ -7,7 +7,7 @@ import { getText } from "../utils";
 
 class ServiceEnLigne extends React.PureComponent {
   static propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
   };
   render() {
     const { data } = this.props;

@@ -52,7 +52,8 @@ router.get("/search", async ctx => {
     SOURCES.LETTERS,
     SOURCES.TOOLS,
     SOURCES.CONTRIBUTIONS,
-    SOURCES.EXTERNALS
+    SOURCES.EXTERNALS,
+    SOURCES.THEMATIC_FILES,
   ];
   const skipSavedResults =
     ctx.query.skipSavedResults === "" || ctx.query.skipSavedResults === "true";
@@ -64,13 +65,13 @@ router.get("/search", async ctx => {
   if (knownQueryResult) {
     knownQueryResult.forEach(item => (item._source.algo = "pre-qualified"));
     documents = knownQueryResult.filter(({ _source: { source } }) =>
-      sources.includes(source)
+      sources.includes(source),
     );
     articles = knownQueryResult.filter(
-      ({ _source: { source } }) => source === SOURCES.CDT
+      ({ _source: { source } }) => source === SOURCES.CDT,
     );
     themes = knownQueryResult.filter(
-      ({ _source: { source } }) => source === SOURCES.THEMES
+      ({ _source: { source } }) => source === SOURCES.THEMES,
     );
   }
 
@@ -81,11 +82,11 @@ router.get("/search", async ctx => {
   if (!knownQueryResult || shouldRequestThemes) {
     logger.info(
       `querying sem search on: ${NLP_URL}/api/search?q=${encodeURIComponent(
-        query
-      )}`
+        query,
+      )}`,
     );
     const query_vector = await fetchWithTimeout(
-      `${NLP_URL}/api/search?q=${encodeURIComponent(query.toLowerCase())}`
+      `${NLP_URL}/api/search?q=${encodeURIComponent(query.toLowerCase())}`,
     )
       .then(response => (response = response.json()))
       .catch(error => {
@@ -96,11 +97,11 @@ router.get("/search", async ctx => {
     if (!knownQueryResult) {
       searches[DOCUMENTS_ES] = [
         { index },
-        getSearchBody({ query, size, sources })
+        getSearchBody({ query, size, sources }),
       ];
       searches[DOCUMENTS_SEM] = [
         { index },
-        getSemBody({ query_vector, size, sources })
+        getSemBody({ query_vector, size, sources }),
       ];
     }
 
@@ -110,16 +111,16 @@ router.get("/search", async ctx => {
         { index: themeIndex }, // we search in themeIndex here to try to match title in breadcrumb
         getRelatedThemesBody({
           query,
-          size: themeNumber
-        })
+          size: themeNumber,
+        }),
       ];
       searches[THEMES_SEM] = [
         { index },
         getSemBody({
           query_vector,
           size: themeNumber,
-          sources: [SOURCES.THEMES]
-        })
+          sources: [SOURCES.THEMES],
+        }),
       ];
     }
   }
@@ -130,14 +131,14 @@ router.get("/search", async ctx => {
       { index },
       getRelatedArticlesBody({
         query,
-        size: cdtNumber
-      })
+        size: cdtNumber,
+      }),
     ];
   }
 
   const results = await msearch({
     client: elasticsearchClient,
-    searches
+    searches,
   });
 
   if (!knownQueryResult) {
@@ -152,7 +153,7 @@ router.get("/search", async ctx => {
 
     // we only consider semantic results above a given threshold
     const semanticHitsFiltered = semanticHits.filter(
-      item => item._score > SEMANTIC_THRESHOLD
+      item => item._score > SEMANTIC_THRESHOLD,
     );
     semanticHitsFiltered.forEach(item => (item._source.algo = "semantic"));
     documents = mergePipe(fulltextHits, semanticHitsFiltered, size);
@@ -165,7 +166,7 @@ router.get("/search", async ctx => {
     themes = removeDuplicate(
       themes
         .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
-        .slice(0, THEMES_RESULTS_NUMBER)
+        .slice(0, THEMES_RESULTS_NUMBER),
     );
   }
   if (shouldRequestCdt) {
@@ -182,8 +183,8 @@ router.get("/search", async ctx => {
     themes: themes.map(({ _score, _source }) => ({
       _score,
       ..._source,
-      source: SOURCES.THEMES
-    }))
+      source: SOURCES.THEMES,
+    })),
   };
 });
 

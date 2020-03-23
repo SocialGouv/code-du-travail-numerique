@@ -6,14 +6,14 @@ const unhandledCC = {
   title:
     "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
   shortTitle: "Cordonnerie multiservice",
-  num: 1561
+  num: 1561,
 };
 const ccWithoutConventionalProvition = {
   title:
     "Convention collective nationale des etablissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.",
   shortTitle:
     "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
-  num: 29
+  num: 29,
 };
 
 const ccWitConventionalProvition = {
@@ -21,7 +21,7 @@ const ccWitConventionalProvition = {
     "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
   shortTitle:
     "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
-  num: 1486
+  num: 1486,
 };
 
 describe("<StepIndemnite />", () => {
@@ -29,7 +29,7 @@ describe("<StepIndemnite />", () => {
     const data = {
       contractType: CONTRACT_TYPE.CTT,
       typeRemuneration: "total",
-      salaire: 3000
+      salaire: 3000,
     };
     const { container } = renderForm(StepIndemnite, data);
     expect(container).toMatchSnapshot();
@@ -39,9 +39,9 @@ describe("<StepIndemnite />", () => {
       typeRemuneration: "total",
       contractType: CONTRACT_TYPE.CDD,
       criteria: {
-        cddType: "Autres"
+        cddType: "Autres",
       },
-      salaire: 3000
+      salaire: 3000,
     };
     const { container } = renderForm(StepIndemnite, data);
     expect(container).toMatchSnapshot();
@@ -52,9 +52,9 @@ describe("<StepIndemnite />", () => {
       contractType: CONTRACT_TYPE.CDD,
       ccn: unhandledCC,
       criteria: {
-        cddType: "Autres"
+        cddType: "Autres",
       },
-      salaire: 3000
+      salaire: 3000,
     };
     const { container } = renderForm(StepIndemnite, data);
     expect(container).toMatchSnapshot();
@@ -65,9 +65,9 @@ describe("<StepIndemnite />", () => {
       contractType: CONTRACT_TYPE.CDD,
       ccn: ccWithoutConventionalProvition,
       criteria: {
-        cddType: "Autres"
+        cddType: "Autres",
       },
-      salaire: 3000
+      salaire: 3000,
     };
     const { container } = renderForm(StepIndemnite, data);
     expect(container).toMatchSnapshot();
@@ -80,9 +80,9 @@ describe("<StepIndemnite />", () => {
       criteria: {
         cddType:
           "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès",
-        hasCdiProposal: "non"
+        hasCdiProposal: "non",
       },
-      salaire: 3000
+      salaire: 3000,
     };
     const { container } = renderForm(StepIndemnite, data);
     expect(container).toMatchSnapshot();

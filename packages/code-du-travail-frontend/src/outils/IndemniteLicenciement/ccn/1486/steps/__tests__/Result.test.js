@@ -17,7 +17,7 @@ describe("<Result />", () => {
       hasBrancheContrat: false,
       hasBrancheNewSalaire: true,
       hasBrancheNewRegularSalaire: true,
-      brancheNewRegularSalaire: "2000"
+      brancheNewRegularSalaire: "2000",
     };
     const { container } = render(
       <Form onSubmit={onSubmit} initialValues={initialValues}>
@@ -39,7 +39,7 @@ describe("<Result />", () => {
       hasBrancheContrat: false,
       hasBrancheNewSalaire: true,
       hasBrancheNewRegularSalaire: true,
-      brancheNewRegularSalaire: "4000"
+      brancheNewRegularSalaire: "4000",
     };
     const { container } = render(
       <Form onSubmit={onSubmit} initialValues={initialValues}>

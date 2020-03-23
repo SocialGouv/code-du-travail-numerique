@@ -5,7 +5,7 @@ const RE_ARTICLE_NUM = /<a[^>]+>(((l' *)?article )?([LRD])[\s-.*]*([\d-]+))[\s.]
 //(?:article )?
 
 // fix single articles reference
-export const replaceArticlesRefs = html =>
+export const replaceArticlesRefs = (html) =>
   (html &&
     html.replace(RE_ARTICLE_NUM, (all, text, prefix1, prefix2, type, num) => {
       const slug = type.trim().toLowerCase() + num.trim().toLowerCase();

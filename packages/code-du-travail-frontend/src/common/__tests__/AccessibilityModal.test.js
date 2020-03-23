@@ -3,7 +3,7 @@ import { render, wait } from "@testing-library/react";
 import { Button } from "@socialgouv/react-ui";
 import {
   BLACK_AND_WHITE_STORAGE_KEY,
-  ThemeProvider
+  ThemeProvider,
 } from "../../layout/ThemeProvider";
 import { AccessibilityModal } from "../AccessibilityModal";
 
@@ -11,7 +11,9 @@ describe("<AccessibilityModal />", () => {
   it("renders the given element", () => {
     const { getByText } = render(
       <AccessibilityModal>
-        {openModal => <Button onClick={openModal}>texte dans le bouton</Button>}
+        {(openModal) => (
+          <Button onClick={openModal}>texte dans le bouton</Button>
+        )}
       </AccessibilityModal>
     );
     const button = getByText(/texte dans le bouton/i);
@@ -21,7 +23,9 @@ describe("<AccessibilityModal />", () => {
   it("renders a popup when click on button", () => {
     const { baseElement, getByText } = render(
       <AccessibilityModal>
-        {openModal => <Button onClick={openModal}>texte dans le bouton</Button>}
+        {(openModal) => (
+          <Button onClick={openModal}>texte dans le bouton</Button>
+        )}
       </AccessibilityModal>
     );
     const button = getByText(/texte dans le bouton/i);
@@ -36,7 +40,7 @@ describe("<AccessibilityModal />", () => {
     const { getByText } = render(
       <ThemeProvider>
         <AccessibilityModal>
-          {openModal => (
+          {(openModal) => (
             <Button onClick={openModal}>texte dans le bouton</Button>
           )}
         </AccessibilityModal>
@@ -54,7 +58,9 @@ describe("<AccessibilityModal />", () => {
   it("closes the modal", async () => {
     const { getByText, getByTitle, queryByLabelText } = render(
       <AccessibilityModal>
-        {openModal => <Button onClick={openModal}>texte dans le bouton</Button>}
+        {(openModal) => (
+          <Button onClick={openModal}>texte dans le bouton</Button>
+        )}
       </AccessibilityModal>
     );
     const button = getByText(/texte dans le bouton/i);

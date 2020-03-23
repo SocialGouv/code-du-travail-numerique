@@ -24,7 +24,7 @@ const initialValues = {
   tamDuration: "5",
   cadreDuration: "120",
   age: "64",
-  hasRetirementAge: true
+  hasRetirementAge: true,
 };
 describe("<Result />", () => {
   it("should render", () => {

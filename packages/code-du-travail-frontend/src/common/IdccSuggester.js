@@ -4,16 +4,16 @@ import { Suggester } from "./Suggester";
 import {
   renderSuggestionsContainer,
   Suggestion,
-  suggesterTheme
+  suggesterTheme,
 } from "./IdccSuggesterTheme";
 
 export class IdccSuggester extends React.Component {
   static propTypes = {
     onSearch: PropTypes.func.isRequired,
-    onSelect: PropTypes.func.isRequired
+    onSelect: PropTypes.func.isRequired,
   };
 
-  onSelect = value => {
+  onSelect = (value) => {
     this.props.onSelect(value._source);
   };
 
@@ -32,12 +32,12 @@ export class IdccSuggester extends React.Component {
   }
 }
 
-const getSuggestionValue = suggestion =>
+const getSuggestionValue = (suggestion) =>
   suggestion._source.idcc
     ? `${suggestion._source.idcc} - ${suggestion._source.title}`
     : suggestion._source.title;
 
-const renderSuggestion = suggestion => {
+const renderSuggestion = (suggestion) => {
   return (
     <Suggestion>
       {suggestion._source.idcc

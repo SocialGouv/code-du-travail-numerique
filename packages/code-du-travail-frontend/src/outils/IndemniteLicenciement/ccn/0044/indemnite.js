@@ -7,7 +7,7 @@ import { round } from "../../../common/math";
 const contains = (arr, value) => arr.indexOf(value) !== -1;
 
 export function getSalaireRef({
-  salaireRefLegal
+  salaireRefLegal,
   // groupe,
   // salaires,
   // salaire,
@@ -23,7 +23,7 @@ export function getIndemnite({
   age,
   hasOpe = false,
   isEco = false,
-  groupe = "I"
+  groupe = "I",
 }) {
   // ancienneté en année
   const anneeAncienete = Math.floor(anciennete);
@@ -36,7 +36,8 @@ export function getIndemnite({
     Groupe: groupe,
     ...(age && { Age: age }),
     ...(hasOpe && { "affiliation à une OPE": hasOpe ? "oui" : "non" }),
-    ...(hasOpe && isEco && { "licenciement économique": isEco ? "oui" : "non" })
+    ...(hasOpe &&
+      isEco && { "licenciement économique": isEco ? "oui" : "non" }),
   };
   // l'entreprise n'est pas affilié a une Organisation Patronale Employeur
 
@@ -189,6 +190,6 @@ export function getIndemnite({
 
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
-    infoCalculConventionnel: { formula, labels }
+    infoCalculConventionnel: { formula, labels },
   };
 }

@@ -43,12 +43,12 @@ export const AncienneteETAMIC = ({ form }) => {
       <YesNoQuestion
         name={HAS_CONTRAT_KEY}
         label="Avez-vous un/des contrat(s) antérieur(s) à déclarer ?"
-        onChange={HAS_CONTRAT_KEY => {
+        onChange={(HAS_CONTRAT_KEY) => {
           HAS_CONTRAT_KEY
             ? form.change(CONTRAT_KEY, {
                 duration: "",
                 indemnite: "0",
-                considered: false
+                considered: false,
               })
             : form.change(CONTRAT_KEY, undefined);
         }}
@@ -62,7 +62,7 @@ export const AncienneteETAMIC = ({ form }) => {
               value: true,
               error: true,
               touched: true,
-              invalid: true
+              invalid: true,
             }}
             render={({ input, meta: { touched, error, invalid } }) => (
               <>

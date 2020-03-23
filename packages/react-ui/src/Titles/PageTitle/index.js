@@ -39,11 +39,11 @@ PageTitle.propTypes = {
   shift: PropTypes.string,
   leftStripped: PropTypes.bool,
   subtitle: PropTypes.node,
-  variant: PropTypes.string
+  variant: PropTypes.string,
 };
 
 PageTitle.defaultProps = {
-  variant: "secondary"
+  variant: "secondary",
 };
 
 const StyledPageTitle = styled.h1`

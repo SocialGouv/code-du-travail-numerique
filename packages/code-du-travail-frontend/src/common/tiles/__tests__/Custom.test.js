@@ -6,7 +6,7 @@ import { icons } from "@socialgouv/react-ui/";
 const tileProps = {
   action: "Bonjour",
   icon: icons.Salary,
-  title: "Saluez moi"
+  title: "Saluez moi",
 };
 
 describe("<Article />", () => {

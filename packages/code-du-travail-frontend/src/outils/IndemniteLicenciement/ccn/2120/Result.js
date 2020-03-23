@@ -18,7 +18,7 @@ export function Result({ form }) {
     dateSortie,
     branche,
     motif,
-    categorie
+    categorie,
   } = state.values;
 
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
@@ -28,19 +28,19 @@ export function Result({ form }) {
     salaire,
     salairePeriods,
     salaires,
-    anciennete
+    anciennete,
   });
   const {
     error,
     indemniteConventionnelle,
-    infoCalculConventionnel
+    infoCalculConventionnel,
   } = getIndemnite({
     salaireRef,
     dateEntree,
     dateSortie,
     anciennete,
     categorie,
-    motif
+    motif,
   });
   return (
     <IndemniteCCn

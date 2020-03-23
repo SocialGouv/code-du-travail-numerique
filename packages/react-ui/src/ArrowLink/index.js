@@ -23,11 +23,11 @@ ArrowLink.displayName = "ArrowLink";
 
 ArrowLink.propTypes = {
   children: PropTypes.node.isRequired,
-  arrowPosition: PropTypes.oneOf(["left", "right"])
+  arrowPosition: PropTypes.oneOf(["left", "right"]),
 };
 
 ArrowLink.defaultProps = {
-  arrowPosition: "right"
+  arrowPosition: "right",
 };
 
 const StyledLink = styled.a`

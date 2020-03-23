@@ -38,7 +38,7 @@ const robotsProd = [
   "Disallow: /assets/",
   "Disallow: /images/",
   "",
-  `Sitemap: https://${PROD_HOSTNAME}/sitemap.xml`
+  `Sitemap: https://${PROD_HOSTNAME}/sitemap.xml`,
 ].join("\n");
 
 // Initialize NextJs instance and expose request handler
@@ -61,7 +61,7 @@ nextApp.prepare().then(() => {
             "'self'",
             "*.travail.gouv.fr",
             "*.data.gouv.fr",
-            "*.fabrique.social.gouv.fr"
+            "*.fabrique.social.gouv.fr",
           ],
           scriptSrc: [
             "'self'",
@@ -69,11 +69,11 @@ nextApp.prepare().then(() => {
             "https://mon-entreprise.fr",
             "https://www.googletagmanager.com",
             "*.fabrique.social.gouv.fr",
-            "https://cdnjs.cloudflare.com"
+            "https://cdnjs.cloudflare.com",
           ],
           frameSrc: [
             "https://mon-entreprise.fr",
-            "https://matomo.fabrique.social.gouv.fr"
+            "https://matomo.fabrique.social.gouv.fr",
           ],
           frameAncestors: ["'none'"],
           styleSrc: ["'self'", "'unsafe-inline'"],
@@ -83,14 +83,14 @@ nextApp.prepare().then(() => {
             "*.fabrique.social.gouv.fr",
             "https://travail-emploi.gouv.fr",
             "https://mon-entreprise.fr",
-            "https://ad.doubleclick.net"
+            "https://ad.doubleclick.net",
           ],
           ...(dev && { reportUri: "/report-violation" }),
-          ...(!dev && SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() })
+          ...(!dev && SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
         },
-        reportOnly: () => dev
-      }
-    })
+        reportOnly: () => dev,
+      },
+    }),
   );
   if (dev) {
     router.post("/report-violation", ctx => {

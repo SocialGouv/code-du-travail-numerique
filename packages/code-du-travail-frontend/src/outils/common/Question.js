@@ -19,7 +19,7 @@ const Label = styled.label`
   margin-bottom: ${spacings.small};
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
-  cursor: ${props => (props.as ? "default" : "pointer")};
+  cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }

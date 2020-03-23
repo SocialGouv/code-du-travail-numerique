@@ -8,11 +8,11 @@ global.fetch = jest.fn().mockResolvedValue({ json: () => ({ error: false }) });
 jest.mock("../../../piwik", () => {
   let events = [];
   return {
-    matopush: event => events.push(event),
+    matopush: (event) => events.push(event),
     events,
     flushEvents() {
       events = [];
-    }
+    },
   };
 });
 const { events, flushEvents } = require("../../../piwik");

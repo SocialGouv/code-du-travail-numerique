@@ -2,7 +2,7 @@ import React from "react";
 import { getIndemniteFromFinalForm } from "../../indemnite";
 import {
   getIndemnite as getIndemniteConventionnelle,
-  getSalaireRef as getSalaireRefConventionnel
+  getSalaireRef as getSalaireRefConventionnel,
 } from "./indemnite";
 
 import { IndemniteCCn } from "../../components/IndemniteConventionnelle";
@@ -23,7 +23,7 @@ export function Result({ form }) {
     categorie,
     tamDuration,
     cadreDuration,
-    hasRetirementAge = false
+    hasRetirementAge = false,
   } = state.values;
 
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
@@ -36,13 +36,13 @@ export function Result({ form }) {
     salaires,
     primes,
     anciennete,
-    categorie
+    categorie,
   });
 
   const {
     error,
     indemniteConventionnelle,
-    infoCalculConventionnel
+    infoCalculConventionnel,
   } = getIndemniteConventionnelle({
     age,
     categorie,
@@ -51,7 +51,7 @@ export function Result({ form }) {
     anciennete,
     tamDuration,
     cadreDuration,
-    hasRetirementAge
+    hasRetirementAge,
   });
   return (
     <IndemniteCCn

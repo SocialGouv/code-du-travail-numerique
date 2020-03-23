@@ -17,7 +17,7 @@ const Mdx = ({ markdown, components = {} }) => {
     .use(raw)
     .use(rehype2react, {
       createElement,
-      components
+      components,
     })
     .processSync(wrappedMarkdown).contents;
 };

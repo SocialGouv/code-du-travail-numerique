@@ -1,5 +1,5 @@
 // normalize article reference for slugs : l123-4-5
-const normalize = str =>
+const normalize = (str) =>
   str
     .replace(/[.\s]+/g, "")
     .replace(/^([LRD])-/, "$1")
@@ -7,7 +7,7 @@ const normalize = str =>
 
 // basic cdt article matcher for internal links
 // create relative markdown links
-const makeArticlesLinks = markdown => {
+const makeArticlesLinks = (markdown) => {
   const articleRegex = /([^[\w])([LRD][.-]?\s*\d+[^\s]+)\b/gi;
   let match;
   let str2 = markdown;

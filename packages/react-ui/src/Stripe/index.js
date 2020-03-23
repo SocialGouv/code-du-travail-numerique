@@ -22,12 +22,12 @@ Stripe.propTypes = {
   position: PropTypes.oneOf(["top", "left"]),
   variant: PropTypes.oneOf(["primary", "secondary"]),
   rounded: PropTypes.bool,
-  length: PropTypes.string
+  length: PropTypes.string,
 };
 
 Stripe.defaultProps = {
   position: "top",
   rounder: false,
   variant: "secondary",
-  length: "7rem"
+  length: "7rem",
 };

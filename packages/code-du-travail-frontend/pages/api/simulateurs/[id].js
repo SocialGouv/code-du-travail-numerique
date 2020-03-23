@@ -5,11 +5,11 @@ import heureRechercheEmploi from "@cdt/data...simulateurs/heures-recherche-emplo
 const data = {
   "preavis-demission": preavisDemission,
   "preavis-licenciement": preavisLicenciement,
-  "heure-recherche-emploi": heureRechercheEmploi
+  "heure-recherche-emploi": heureRechercheEmploi,
 };
 export default (req, res) => {
   const {
-    query: { id }
+    query: { id },
   } = req;
   switch (id) {
     case "preavis-demission":

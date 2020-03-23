@@ -15,7 +15,7 @@ const comparableIdcc = num => parseInt(num);
 const sortByKey = key => (a, b) => `${a[key]}`.localeCompare(`${b[key]}`);
 
 const themes = allThemes.filter(theme =>
-  theme.refs.some(ref => ref.url.startsWith("/contribution/"))
+  theme.refs.some(ref => ref.url.startsWith("/contribution/")),
 );
 
 /**
@@ -28,15 +28,15 @@ const fetchContributions = async () => {
   const agreements = await fetch(`${API_URL}/agreements`).then(r => r.json());
 
   const answers = await fetch(
-    `${API_URL}/public_answers?select=*&order=updated_at.desc`
+    `${API_URL}/public_answers?select=*&order=updated_at.desc`,
   ).then(r => r.json()); //.filter(a => a.is_published);
 
   const questions = await fetch(
-    `${API_URL}/questions?select=*&order=id`
+    `${API_URL}/questions?select=*&order=id`,
   ).then(r => r.json());
 
   const references = await fetch(`${API_URL}/answers_references`).then(r =>
-    r.json()
+    r.json(),
   );
 
   const getAnswer = answerId => answers.find(q => q.id === answerId);
@@ -57,7 +57,7 @@ const fetchContributions = async () => {
       agreement &&
       kaliData.find(
         convention =>
-          comparableIdcc(convention.num) === comparableIdcc(agreement.idcc)
+          comparableIdcc(convention.num) === comparableIdcc(agreement.idcc),
       );
     return conventionKali;
   };
@@ -70,7 +70,7 @@ const fetchContributions = async () => {
           return {
             category,
             title,
-            agreement: getConventionKali(answerId)
+            agreement: getConventionKali(answerId),
           };
         }
         return { title, url, category };
@@ -83,13 +83,13 @@ const fetchContributions = async () => {
       .map(ccAnswer => ({
         markdown: ccAnswer.value,
         idcc: getAgreementIdcc(ccAnswer.agreement_id),
-        references: getReferences(ccAnswer.id)
+        references: getReferences(ccAnswer.id),
       }))
       .sort((a, b) => parseInt(a.idcc, 10) - parseInt(b.idcc, 10));
 
   const getGenericAnswer = questionId => {
     const genericAnswer = answers.find(
-      a => a.question_id === questionId && a.agreement_id === null
+      a => a.question_id === questionId && a.agreement_id === null,
     );
     if (!genericAnswer) {
       return;
@@ -103,7 +103,7 @@ const fetchContributions = async () => {
       description:
         genericTextAnswer.slice(0, genericTextAnswer.indexOf(" ", 150)) + "…",
       references: getReferences(genericAnswer.id),
-      markdown: genericAnswer.value
+      markdown: genericAnswer.value,
     };
   };
 
@@ -111,15 +111,15 @@ const fetchContributions = async () => {
     .map(({ id, index, value: title }) => {
       const slug = slugify(title);
       const theme = themes.find(theme =>
-        theme.refs.some(ref => ref.url.match(new RegExp(slug)))
+        theme.refs.some(ref => ref.url.match(new RegExp(slug))),
       );
       let breadcrumbs = [];
       if (theme) {
         breadcrumbs = (theme.breadcrumbs || []).concat([
           {
             label: theme.title,
-            slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`
-          }
+            slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`,
+          },
         ]);
       }
       return {
@@ -130,8 +130,8 @@ const fetchContributions = async () => {
         breadcrumbs,
         answers: {
           generic: getGenericAnswer(id),
-          conventions: getConventionsAnswers(id)
-        }
+          conventions: getConventionsAnswers(id),
+        },
       };
     })
     .filter(q => q.answers.generic)

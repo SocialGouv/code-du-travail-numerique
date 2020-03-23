@@ -14,17 +14,17 @@ describe("<ModelesDeCourriers />", () => {
         breadcrumbs: [
           {
             label: "Embauche et contrat de travail",
-            slug: "/themes/1-embauche-et-contrat-de-travail"
+            slug: "/themes/1-embauche-et-contrat-de-travail",
           },
           {
             label: "Embauche",
-            slug: "/themes/11-embauche"
+            slug: "/themes/11-embauche",
           },
           {
             label: "Période d'essai",
-            slug: "/themes/113-periode-dessai"
-          }
-        ]
+            slug: "/themes/113-periode-dessai",
+          },
+        ],
       },
       {
         title: "Demande de rendez-vous en vue d’une rupture conventionnelle",
@@ -35,18 +35,18 @@ describe("<ModelesDeCourriers />", () => {
         breadcrumbs: [
           {
             label: "Départ de l'entreprise",
-            slug: "/themes/8-depart-de-lentreprise"
+            slug: "/themes/8-depart-de-lentreprise",
           },
           {
             label: "Rupture conventionnelle",
-            slug: "/themes/83-rupture-conventionnelle"
+            slug: "/themes/83-rupture-conventionnelle",
           },
           {
             label: "Rupture conventionnelle individuelle",
-            slug: "/themes/831-rupture-conventionnelle-individuelle"
-          }
-        ]
-      }
+            slug: "/themes/831-rupture-conventionnelle-individuelle",
+          },
+        ],
+      },
     ];
     const { container } = render(<ModelesDeCourriers data={data} />);
     expect(container).toMatchSnapshot();

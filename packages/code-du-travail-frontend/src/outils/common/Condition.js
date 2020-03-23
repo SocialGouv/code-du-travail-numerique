@@ -24,9 +24,9 @@ Condition.propTypes = {
     PropTypes.bool,
     PropTypes.string,
     PropTypes.number,
-    PropTypes.func
+    PropTypes.func,
   ]).isRequired,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export { Condition };

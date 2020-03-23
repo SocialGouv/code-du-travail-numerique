@@ -7,7 +7,7 @@ import {
   PageTitle,
   Subtitle as Suptitle,
   theme,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui/";
 
 const Article = ({
@@ -17,7 +17,7 @@ const Article = ({
   source,
   subtitle,
   suptitle,
-  title
+  title,
 }) => {
   return (
     <Container>
@@ -69,16 +69,16 @@ Article.propTypes = {
   dateLabel: PropTypes.string,
   source: PropTypes.shape({
     name: PropTypes.string,
-    url: PropTypes.string
+    url: PropTypes.string,
   }),
   style: PropTypes.object,
   /** when user clicks some tag */
-  onTagClick: PropTypes.func
+  onTagClick: PropTypes.func,
 };
 
 Article.defaultProps = {
   dateLabel: "Mis à jour le",
-  subtitle: null
+  subtitle: null,
 };
 
 export default Article;

@@ -8,42 +8,42 @@ import { StepPrimes } from "./steps/Primes";
 export const stepSalaires = {
   component: StepSalaires,
   name: "salaires",
-  label: "Salaires"
+  label: "Salaires",
 };
 
 export const stepPrime = {
   component: StepPrimes,
   label: "Primes",
-  name: "primes"
+  name: "primes",
 };
 
 const initialSteps = [
   {
     component: StepIntro,
     name: "introduction",
-    label: "Introduction"
+    label: "Introduction",
   },
   {
     component: StepInfo,
     name: "info_generales",
-    label: "Contrat de travail"
+    label: "Contrat de travail",
   },
   {
     component: StepAnciennete,
     name: "anciennete",
-    label: "Ancienneté"
+    label: "Ancienneté",
   },
   stepSalaires,
   {
     component: StepIndemnite,
     name: "indemnite_legale",
-    label: "Indemnité légale"
-  }
+    label: "Indemnité légale",
+  },
 ];
 
 export const initialState = {
   stepIndex: 0,
-  steps: initialSteps
+  steps: initialSteps,
 };
 
 export function stepReducer(state, { type, payload }) {
@@ -57,30 +57,30 @@ export function stepReducer(state, { type, payload }) {
     }
     case "add_step": {
       const previousStepIndex = steps.findIndex(
-        step => step.name === payload.insertAfter
+        (step) => step.name === payload.insertAfter
       );
-      const newSteps = steps.filter(step => step.name !== payload.step.name);
+      const newSteps = steps.filter((step) => step.name !== payload.step.name);
       newSteps.splice(previousStepIndex + 1, 0, payload.step);
       return { stepIndex, steps: newSteps };
     }
     case "remove_step": {
       return {
         stepIndex,
-        steps: steps.filter(step => step.name !== payload)
+        steps: steps.filter((step) => step.name !== payload),
       };
     }
     case "add_branche": {
       return {
         stepIndex: stepIndex,
         steps: steps
-          .filter(step => !/branche_/.test(step.name))
-          .concat(...payload)
+          .filter((step) => !/branche_/.test(step.name))
+          .concat(...payload),
       };
     }
     case "remove_branche": {
       return {
         stepIndex,
-        steps: steps.filter(step => !/branche_/.test(step.name))
+        steps: steps.filter((step) => !/branche_/.test(step.name)),
       };
     }
     default:

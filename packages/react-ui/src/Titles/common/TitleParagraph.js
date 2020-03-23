@@ -18,10 +18,10 @@ export const TitleParagraph = styled.p`
 
 TitleParagraph.propTypes = {
   leftStripped: PropTypes.bool,
-  shift: PropTypes.string
+  shift: PropTypes.string,
 };
 
 TitleParagraph.defaultProps = {
   leftStripped: false,
-  shift: ""
+  shift: "",
 };

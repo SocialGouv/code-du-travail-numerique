@@ -10,10 +10,10 @@ const { colors, blackAndWhiteColors } = theme;
 
 const ThemeContext = React.createContext({
   currentTheme: colors,
-  toggleTheme: () => {}
+  toggleTheme: () => {},
 });
 
-export const ThemeProvider = props => {
+export const ThemeProvider = (props) => {
   const [isBlackAndWhiteTheme, setBlackAndWhiteTheme] = useLocalStorage(
     BLACK_AND_WHITE_STORAGE_KEY,
     false
@@ -37,7 +37,7 @@ export const ThemeProvider = props => {
           setCurrentTheme(colors);
           setBlackAndWhiteTheme(false);
         }
-      }
+      },
     }),
     [currentTheme, setBlackAndWhiteTheme]
   );

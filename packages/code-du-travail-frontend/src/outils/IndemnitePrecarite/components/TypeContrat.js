@@ -9,7 +9,7 @@ import { ErrorField } from "../../common/ErrorField";
 
 export const CONTRACT_TYPE = {
   CDD: "CDD",
-  CTT: "CTT"
+  CTT: "CTT",
 };
 
 function TypeContrat({ name }) {
@@ -25,7 +25,7 @@ function TypeContrat({ name }) {
         id={CONTRACT_TYPE.CDD}
         validate={required}
       >
-        {props => (
+        {(props) => (
           <InputRadio
             id={`${name}-cdd`}
             label="Contrat à durée déterminée (CDD)"
@@ -40,7 +40,7 @@ function TypeContrat({ name }) {
         id={CONTRACT_TYPE.CTT}
         validate={required}
       >
-        {props => (
+        {(props) => (
           <InputRadio
             id={`${name}-ci`}
             label="Contrat de travail temporaire (Contrat d’intérim)"
@@ -54,7 +54,7 @@ function TypeContrat({ name }) {
 }
 
 TypeContrat.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 export { TypeContrat };

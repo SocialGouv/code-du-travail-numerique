@@ -4,7 +4,8 @@ import Link from "next/link";
 import { ArrowLink, FlatList, theme } from "@socialgouv/react-ui";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import TYPE_REFERENCE from "./typeReference";
-const sanitizeCdtSlug = slug => slug.replace(/[^LRD\d-]+/gi, "").toLowerCase();
+const sanitizeCdtSlug = (slug) =>
+  slug.replace(/[^LRD\d-]+/gi, "").toLowerCase();
 
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link
@@ -40,7 +41,7 @@ const OtherLink = ({ title, url }) =>
     <div>{title}</div>
   );
 
-const getLink = reference => {
+const getLink = (reference) => {
   switch (reference.type) {
     case TYPE_REFERENCE.codeDuTravail:
       return <CodeDuTravailLink title={reference.title} slug={reference.id} />;
@@ -54,7 +55,7 @@ const getLink = reference => {
 const ReferenceList = ({ references }) => {
   return (
     <FlatList>
-      {references.map(reference => (
+      {references.map((reference) => (
         <li key={`${reference.id}`}>{getLink(reference)}</li>
       ))}
     </FlatList>

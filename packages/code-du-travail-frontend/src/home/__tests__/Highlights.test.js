@@ -10,11 +10,11 @@ const highlights = [
     breadcrumbs: [
       {
         label: "Santé, sécurité et conditions de travail",
-        slug: "/themes/6-sante-securite-et-conditions-de-travail"
-      }
+        slug: "/themes/6-sante-securite-et-conditions-de-travail",
+      },
     ],
     slug:
-      "coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
+      "coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
   },
   {
     description: "9. Quelles sont les recommandations sanitaires pour...",
@@ -23,12 +23,12 @@ const highlights = [
     breadcrumbs: [
       {
         label: "Santé, sécurité et conditions de travail",
-        slug: "/themes/6-sante-securite-et-conditions-de-travail"
-      }
+        slug: "/themes/6-sante-securite-et-conditions-de-travail",
+      },
     ],
     slug:
-      "coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur"
-  }
+      "coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur",
+  },
 ];
 
 describe("<Highlights />", () => {

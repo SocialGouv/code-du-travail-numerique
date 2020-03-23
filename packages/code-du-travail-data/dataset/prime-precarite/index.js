@@ -15,14 +15,14 @@ const csvColumns = {
   rate: 12,
   bonusLabel: 14,
   refLabel: 16,
-  refUrl: 17
+  refUrl: 17,
 };
 
 const criteriaIndex = {
   6: "cddType",
   7: "hasCdiProposal",
   8: "hasCdiRenewal",
-  9: "hasEquivalentCdiRenewal"
+  9: "hasEquivalentCdiRenewal",
 };
 
 function rowWithIdcc(row) {
@@ -31,7 +31,7 @@ function rowWithIdcc(row) {
 async function getData() {
   const { cells } = await getCells({
     key: SPREADSHEET_KEY,
-    worksheet: SPREADSHEET_TAB
+    worksheet: SPREADSHEET_TAB,
   });
 
   return Object.values(cells)

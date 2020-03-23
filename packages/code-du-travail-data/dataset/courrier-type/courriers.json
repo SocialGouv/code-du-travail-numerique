@@ -138,12 +138,26 @@
     "date": "20/12/2019",
     "author": "Ministère du Travail",
     "filename": "rupture_commun_accord_du_cdd.docx"
-  }, 
+  },
   {
     "title": "Attestation sur l’honneur : arrêt de travail pour la garde d’enfant",
-    "description": "Dans le cadre des mesures visant à limiter la diffusion du coronavirus Covid-19, les crèches et les écoles sont fermés jusqu’à nouvel ordre. Afin de pouvoir bénéficier d’un arrêt de travail indemnisé, le salarié doit fournir à son employeur une attestation dans laquelle il s’engage à être le seul parent qui demande le bénéfice d’un arrêt de travail pour garder l’enfant à domicile.",
+    "description": "Dans le cadre des mesures visant à limiter la diffusion du coronavirus Covid-19, les crèches et les écoles sont fermées jusqu’à nouvel ordre. Afin de pouvoir bénéficier d’un arrêt de travail indemnisé, le salarié doit fournir à son employeur une attestation dans laquelle il s’engage à être le seul parent qui demande le bénéfice d’un arrêt de travail pour garder l’enfant à domicile.",
     "date": "13/03/2020",
     "author": "Ministère du Travail",
     "filename": "attestation_salarie_garde_d-enfant_a_domicile.docx"
+  },
+  {
+    "title": "Attestation sur l’honneur : déplacement dérogatoire",
+    "description": "Dans le cadre des mesures visant à limiter la diffusion du coronavirus Covid-19, le Président de la République a décidé de prendre des mesures pour réduire les contacts et déplacements au strict minimum sur l’ensemble du territoire à compter du mardi 17 mars à 12h00, pour quinze jours minimum.",
+    "date": "17/03/2020",
+    "author": "Ministère du Travail",
+    "filename": "attestation-deplacement-derogatoire.docx"
+  },
+   {
+    "title": "Justificatif de l’employeur de déplacement professionnel",
+    "description": "Un dispositif de confinement est mis en place sur l’ensemble du territoire à compter du mardi 17 mars à 12h00, pour quinze jours minimum. Les déplacements sont interdits sauf concernant les déplacements professionnels sous certaines conditions. L’employeur doit alors fournir au salarié un justificatif de déplacement professionnel.",
+    "date": "18/03/2020",
+    "author": "Ministère du Travail",
+    "filename": "justificatif_employeur_de_deplacement_professionnel.docx"
   }
 ]

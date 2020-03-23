@@ -20,7 +20,7 @@ const testQuestions = [
   ["finContratPeriodeDessai", true],
   ["propositionCDIFindeContrat", true],
   ["interruptionFauteGrave", true],
-  ["refusRenouvellementAuto", true]
+  ["refusRenouvellementAuto", true],
 ];
 
 describe("<StepCDD />", () => {

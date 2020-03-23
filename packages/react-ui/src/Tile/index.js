@@ -48,7 +48,7 @@ Tile.propTypes = {
   subtitle: PropTypes.string,
   striped: PropTypes.bool,
   title: PropTypes.string.isRequired,
-  wide: PropTypes.bool
+  wide: PropTypes.bool,
 };
 
 Tile.defaultProps = {
@@ -57,7 +57,7 @@ Tile.defaultProps = {
   icon: null,
   striped: false,
   subtitle: "",
-  wide: false
+  wide: false,
 };
 
 const StyledTile = styled.a`

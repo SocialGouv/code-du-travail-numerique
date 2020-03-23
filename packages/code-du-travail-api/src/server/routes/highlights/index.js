@@ -18,17 +18,17 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/highlights/:slug", async ctx => {
   const { slug } = ctx.params;
   const highlights = highlightsData.find(
-    collection => collection.title === slug
+    collection => collection.title === slug,
   );
   if (!highlights) {
     ctx.throw(
       404,
-      `There is no highlights collection that match the title: "${slug}".`
+      `There is no highlights collection that match the title: "${slug}".`,
     );
   }
 
   const refs = await getEsReferences(highlights.refs).then(references =>
-    references.map(reference => reference._source)
+    references.map(reference => reference._source),
   );
 
   ctx.body = [...refs];

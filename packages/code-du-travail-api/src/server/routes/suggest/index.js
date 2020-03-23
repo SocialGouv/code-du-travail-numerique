@@ -28,7 +28,7 @@ router.get("/suggest", async ctx => {
     const body = getSuggestQuery(q, size);
     const response = await elasticsearchClient.search({
       index,
-      body
+      body,
     });
     ctx.body = response.body.hits.hits.map(t => t._source.title);
   } else {

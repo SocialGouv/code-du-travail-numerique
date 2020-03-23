@@ -22,10 +22,10 @@ describe("<SansIndemniteLicenciement />", () => {
             salairePeriods: [],
             hasSameSalaire: true,
             salaires: [],
-            salaire: "2390"
-          }
+            salaire: "2390",
+          },
         };
-      }
+      },
     };
     const { container } = render(<SansIndemniteLicenciement form={form} />);
     expect(container).toMatchSnapshot();

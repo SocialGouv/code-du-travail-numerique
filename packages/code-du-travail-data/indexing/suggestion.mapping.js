@@ -1,7 +1,7 @@
 export const suggestionMapping = {
   properties: {
     ranking: {
-      type: "rank_feature"
+      type: "rank_feature",
     },
     title: {
       type: "text",
@@ -10,12 +10,12 @@ export const suggestionMapping = {
       fields: {
         prefix: {
           type: "text",
-          analyzer: "sugg_prefix"
-        }
+          analyzer: "sugg_prefix",
+        },
       },
       // normalization set to false in order to preserve
       // scores regardless of the size of the matching suggestions
-      norms: false
-    }
-  }
+      norms: false,
+    },
+  },
 };

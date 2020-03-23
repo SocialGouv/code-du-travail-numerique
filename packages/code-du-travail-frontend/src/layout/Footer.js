@@ -10,7 +10,7 @@ import {
   FlatList,
   Section,
   theme,
-  Title
+  Title,
 } from "@socialgouv/react-ui";
 
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
@@ -47,7 +47,7 @@ const Footer = () => {
               privé sur leurs questions en droit du travail.
             </StyledContainer>
             <ServiceRenseignementModal>
-              {openModal => (
+              {(openModal) => (
                 <Button onClick={openModal}>
                   Contacter nos services en région
                   <StyledDirectionRightIcon />
@@ -101,7 +101,7 @@ const Footer = () => {
                 <StyledList>
                   <StyledListItem>
                     <ContactModal>
-                      {openModal => (
+                      {(openModal) => (
                         <Button
                           variant="navLink"
                           onClick={() => {
@@ -109,7 +109,7 @@ const Footer = () => {
                               "trackEvent",
                               "contact",
                               "click_contact_cdtn_team",
-                              path
+                              path,
                             ]);
                             openModal();
                           }}

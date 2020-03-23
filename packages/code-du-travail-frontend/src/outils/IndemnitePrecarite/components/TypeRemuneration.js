@@ -22,7 +22,7 @@ function TypeRemuneration({ name, onChange }) {
         id="total"
         validate={required}
       >
-        {props => (
+        {(props) => (
           <InputRadio
             id={`${name}-amount`}
             label={
@@ -43,7 +43,7 @@ function TypeRemuneration({ name, onChange }) {
         id="mensuel"
         validate={required}
       >
-        {props => (
+        {(props) => (
           <InputRadio
             id={`${name}-pay`}
             label={
@@ -59,7 +59,7 @@ function TypeRemuneration({ name, onChange }) {
       </Field>
       <ErrorField name={name} />
       {onChange && (
-        <OnChange name={name}>{values => onChange(values)}</OnChange>
+        <OnChange name={name}>{(values) => onChange(values)}</OnChange>
       )}
     </>
   );

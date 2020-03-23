@@ -11,7 +11,7 @@ describe("<PageTitle />", () => {
     const { container } = render(
       <PageTitle leftStripped shif="10rem">
         Lorem Ipsum
-      </PageTitle>
+      </PageTitle>,
     );
     expect(container).toMatchSnapshot();
   });

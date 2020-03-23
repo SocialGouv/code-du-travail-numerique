@@ -13,11 +13,11 @@ function pDebounce(fn, wait, opts) {
   let timer;
   let resolveList = [];
 
-  return function() {
+  return function () {
     const ctx = this;
     const args = arguments;
 
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       const runImmediately = opts.leading && !timer;
 
       clearTimeout(timer);

@@ -4,11 +4,11 @@ import { render } from "@testing-library/react";
 import { fetchSuggestResults } from "../search.service";
 
 jest.mock("../search.service.js", () => ({
-  fetchSuggestResults: jest.fn()
+  fetchSuggestResults: jest.fn(),
 }));
 
 jest.mock("../../piwik", () => ({
-  matopush: jest.fn()
+  matopush: jest.fn(),
 }));
 
 const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];

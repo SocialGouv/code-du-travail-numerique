@@ -10,25 +10,25 @@ const ROW_HEADER = "header";
 class Table extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
-    headingLevel: PropTypes.number.isRequired
+    headingLevel: PropTypes.number.isRequired,
   };
   render() {
     const { data, headingLevel } = this.props;
 
-    const title = data.children.find(child => child.name === "Titre");
+    const title = data.children.find((child) => child.name === "Titre");
     const headingRows = data.children.filter(
-      child => child.name === "Rangée" && child.attributes.type === "header"
+      (child) => child.name === "Rangée" && child.attributes.type === "header"
     );
     const rows = data.children.filter(
-      child => child.name === "Rangée" && child.attributes.type === "normal"
+      (child) => child.name === "Rangée" && child.attributes.type === "normal"
     );
 
-    const columns = data.children.filter(child => child.name === "Colonne");
-    const isHeaderCell = columnIndex => {
+    const columns = data.children.filter((child) => child.name === "Colonne");
+    const isHeaderCell = (columnIndex) => {
       return columns[columnIndex].attributes.type === ROW_HEADER;
     };
 
-    const handleSpan = el => {
+    const handleSpan = (el) => {
       let colSpan = 1;
       let rowSpan = 1;
       if (el.attributes) {
@@ -37,7 +37,7 @@ class Table extends React.PureComponent {
       }
       return {
         colSpan,
-        rowSpan
+        rowSpan,
       };
     };
 

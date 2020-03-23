@@ -22,12 +22,12 @@ async function getRelatedItems({ title, settings, slug }) {
     SOURCES.SHEET_MT,
     SOURCES.LETTERS,
     SOURCES.CONTRIBUTIONS,
-    SOURCES.EXTERNALS
+    SOURCES.EXTERNALS,
   ];
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index }, relatedItemBody];
   const query_vector = await fetchWithTimeout(
-    `${NLP_URL}/api/search?q=${encodeURIComponent(title.toLowerCase())}`
+    `${NLP_URL}/api/search?q=${encodeURIComponent(title.toLowerCase())}`,
   )
     .then(response => (response = response.json()))
     .catch(error => {
@@ -38,7 +38,7 @@ async function getRelatedItems({ title, settings, slug }) {
     query_vector,
     // we +1 the size to remove the document source that should match perfectly for the given vector
     size: MAX_RESULTS + 1,
-    sources
+    sources,
   });
   // we use relatedItem query _source to have the same prop returned
   // for both request
@@ -47,8 +47,8 @@ async function getRelatedItems({ title, settings, slug }) {
 
   const {
     body: {
-      responses: [esResponse = [], semResponse = []]
-    }
+      responses: [esResponse = [], semResponse = []],
+    },
   } = await elasticsearchClient.msearch({ body: requestBodies });
 
   const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
@@ -62,5 +62,5 @@ async function getRelatedItems({ title, settings, slug }) {
 }
 
 module.exports = {
-  getRelatedItems
+  getRelatedItems,
 };

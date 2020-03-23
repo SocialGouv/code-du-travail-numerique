@@ -10,7 +10,7 @@ describe("<Alert />", () => {
 
   test.each(["primary", "secondary"])(
     "it should render a %s alert",
-    variant => {
+    (variant) => {
       const { container } = render(
         <Alert variant={variant}>this is a {variant} alert </Alert>
       );

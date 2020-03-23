@@ -7,7 +7,7 @@ const merge = (res1, res2, max_result) => {
   // interleave results
   const res = [];
   Array.from({
-    length: max_result
+    length: max_result,
   }).forEach((x, i) => {
     if (res1.length > i) res.push(res1[i]);
     if (res2.length > i) res.push(res2[i]);
@@ -30,7 +30,7 @@ const removeDuplicate = (arr, predicate = predicateFn) =>
 const mergeDuplicate = (arr, predicate = predicateFn) => {
   return arr.flatMap((a, index) => {
     const prevItem = arr.find(
-      (item, i) => predicate(item) === predicate(a) && i < index
+      (item, i) => predicate(item) === predicate(a) && i < index,
     );
     if (prevItem) {
       prevItem._source.algo = "both";

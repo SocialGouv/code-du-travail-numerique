@@ -7,5 +7,5 @@ function formatIdcc(num) {
 
 module.exports = {
   parseIdcc,
-  formatIdcc
+  formatIdcc,
 };

@@ -8,7 +8,7 @@ You can find them in the [features](./features) folder.
 You can run the Gherkin tests with through the different [Codecept](https://codecept.io) runners.  
 Each of them are individual packages that should be separately install and run (see each `README.md`).
 
-### [Puppetter Runner](./.runners/puppetteer/README.md)
+### [Puppeteer Runner](./.runners/puppeteer/README.md)
 
 ## Adding a new test
 

@@ -16,7 +16,7 @@ function getAncienneteConventionnelle({
   brancheCategorie,
   ancienneteLegale,
   hasBrancheContrat,
-  brancheContrat
+  brancheContrat,
 }) {
   let ancienneteConventionnelle = 0;
 
@@ -37,7 +37,7 @@ function getSalaireRefConventionnel({
   hasTempsPartiel = false,
   salairePeriods = [],
   hasSameSalaire = false,
-  salaires = []
+  salaires = [],
 }) {
   // beware this one below is a code duplication from indemniteLegale which does not take primes into account
   if (hasTempsPartiel) {
@@ -52,7 +52,7 @@ function getSalaireRefConventionnel({
   } else {
     const moyenneSalaires = hasSameSalaire
       ? parseFloat(salaire)
-      : sum(salaires.map(a => parseFloat(a.salary))) / salaires.length;
+      : sum(salaires.map((a) => parseFloat(a.salary))) / salaires.length;
 
     return moyenneSalaires;
   }
@@ -76,14 +76,14 @@ export function getIndemniteConventionnelle(data) {
     hasBrancheNewSalaire,
     hasBrancheNewRegularSalaire,
     brancheNewRegularSalaire,
-    brancheNewIrregularSalaire
+    brancheNewIrregularSalaire,
   } = data;
   // First of all, compute the new anciennete
   const ancienneteConventionnelle = getAncienneteConventionnelle({
     brancheCategorie,
     ancienneteLegale,
     hasBrancheContrat,
-    brancheContrat
+    brancheContrat,
   });
 
   let salaireRefConventionnel;
@@ -95,7 +95,7 @@ export function getIndemniteConventionnelle(data) {
       hasTempsPartiel: false,
       hasSameSalaire: hasBrancheNewRegularSalaire,
       salaire: brancheNewRegularSalaire,
-      salaires: brancheNewIrregularSalaire
+      salaires: brancheNewIrregularSalaire,
     });
   } else {
     salaireRefConventionnel = getSalaireRefConventionnel({
@@ -104,7 +104,7 @@ export function getIndemniteConventionnelle(data) {
       hasTempsPartiel,
       salairePeriods,
       hasSameSalaire,
-      salaires
+      salaires,
     });
   }
 
@@ -152,18 +152,18 @@ export function getIndemniteConventionnelle(data) {
   const labels = {
     "Salaire de référence (Sref)": round(salaireRefConventionnel),
     ...(isCeilingReached && {
-      "Plafond d'indemnité conventionnel en mois (Pmois)": maxMonthIndemnite
+      "Plafond d'indemnité conventionnel en mois (Pmois)": maxMonthIndemnite,
     }),
     ...(!isCeilingReached && {
-      "Coefficient d'indemnité conventionnel (C)": round(coefficient)
+      "Coefficient d'indemnité conventionnel (C)": round(coefficient),
     }),
     ...(!isCeilingReached && {
-      "Ancienneté conventionnelle (A)": round(ancienneteConventionnelle)
+      "Ancienneté conventionnelle (A)": round(ancienneteConventionnelle),
     }),
     ...(!isCeilingReached &&
       previousIndemnites && {
-        "Indemnité de licenciement perçue précédemment ( I )": previousIndemnites
-      })
+        "Indemnité de licenciement perçue précédemment ( I )": previousIndemnites,
+      }),
   };
 
   const formula = isCeilingReached
@@ -173,6 +173,6 @@ export function getIndemniteConventionnelle(data) {
   return {
     indemniteConventionnelle,
     infoCalculConventionnel: { formula, labels },
-    error
+    error,
   };
 }

@@ -21,7 +21,7 @@ function CategoriePeriod() {
           value: true,
           error: true,
           touched: true,
-          invalid: true
+          invalid: true,
         }}
       >
         {({ input, meta: { error, touched, invalid } }) => {
@@ -53,7 +53,7 @@ function CategoriePeriod() {
           value: true,
           error: true,
           touched: true,
-          invalid: true
+          invalid: true,
         }}
       >
         {({ input, meta: { error, touched, invalid } }) => {

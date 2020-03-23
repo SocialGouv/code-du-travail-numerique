@@ -4,9 +4,12 @@ import styled from "styled-components";
 
 import { breakpoints, spacings } from "../theme";
 
-export const IconStripe = ({ children, icon: Icon, ...props }) => (
+const SIZE = "4.2rem";
+const SMALL_SIZE = "3.4rem";
+
+export const IconStripe = ({ children, icon: Icon, small, ...props }) => (
   <FlexDiv {...props}>
-    <IconWrapper>
+    <IconWrapper small={small}>
       <Icon />
     </IconWrapper>
     <ChildrenWrapper>{children}</ChildrenWrapper>
@@ -22,12 +25,17 @@ const FlexDiv = styled.div`
 const IconWrapper = styled.div`
   display: ${({ theme }) => (theme.noColors ? "none" : "block")};
   flex-shrink: 0;
-  width: 4.2rem;
-  height: 4.2rem;
+  width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+  height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
   margin-right: ${spacings.xmedium};
   @media (max-width: ${breakpoints.mobile}) {
-    width: 3.4rem;
+    width: ${SMALL_SIZE};
+    height: ${SMALL_SIZE};
     margin-right: ${spacings.small};
+  }
+  svg {
+    width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+    height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
   }
 `;
 
@@ -38,5 +46,6 @@ const ChildrenWrapper = styled.div`
 IconStripe.propTypes = {
   centered: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  icon: PropTypes.elementType.isRequired
+  icon: PropTypes.elementType.isRequired,
+  small: PropTypes.bool,
 };

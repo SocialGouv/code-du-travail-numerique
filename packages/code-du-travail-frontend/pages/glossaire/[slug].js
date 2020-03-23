@@ -10,7 +10,7 @@ import {
   Section,
   Table,
   theme,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
@@ -21,7 +21,7 @@ import { FocusRoot } from "../../src/a11y";
 function Term({ pageUrl, ogImage }) {
   const router = useRouter();
   const { slug } = router.query;
-  const [term] = glossary.filter(term => slug === term.slug);
+  const [term] = glossary.filter((term) => slug === term.slug);
 
   return (
     <Layout>

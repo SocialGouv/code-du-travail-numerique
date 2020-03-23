@@ -10,7 +10,7 @@ import {
   RootGrid,
   Section,
   theme,
-  Tile
+  Tile,
 } from "@socialgouv/react-ui";
 
 export const Themes = ({ themes = [] }) => {

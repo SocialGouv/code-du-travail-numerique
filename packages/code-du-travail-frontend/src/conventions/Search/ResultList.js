@@ -7,14 +7,14 @@ import {
   FlatList,
   Heading,
   theme,
-  Wrapper
+  Wrapper,
 } from "@socialgouv/react-ui";
 
 export const ResultList = ({
   buttonLabel = "Plus de résultats",
   items,
   query,
-  title
+  title,
 }) => {
   const pageSize = 4;
   const [page, setPage] = useState(1);

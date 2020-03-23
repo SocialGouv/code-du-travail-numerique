@@ -1,4 +1,4 @@
-# Gherkin | Codeceptjs | Puppetteer
+# Gherkin | Codeceptjs | Puppeteer
 
 ## Install
 

@@ -13,8 +13,8 @@ describe("<SalaireTempsPlein />", () => {
         initialValues={{
           periods: [
             { label: "janvier", salary: 2000 },
-            { label: "février", salary: 1000 }
-          ]
+            { label: "février", salary: 1000 },
+          ],
         }}
         onSubmit={onSubmit}
         render={() => <SalaireTempsPlein name="periods" />}
@@ -31,8 +31,8 @@ describe("<SalaireTempsPlein />", () => {
         initialValues={{
           periods: [
             { label: "janvier", salary: null },
-            { label: "février", salary: null }
-          ]
+            { label: "février", salary: null },
+          ],
         }}
         onSubmit={onSubmit}
         render={() => <SalaireTempsPlein name="periods" />}

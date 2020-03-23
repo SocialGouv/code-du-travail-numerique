@@ -9,7 +9,7 @@ const item = {
   title: "item title",
   url: "item.url",
   type: "item-type",
-  idcc: "IDCC"
+  idcc: "IDCC",
 };
 const results = [{ _source: item }];
 

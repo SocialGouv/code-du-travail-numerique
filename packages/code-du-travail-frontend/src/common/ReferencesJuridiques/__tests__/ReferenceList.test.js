@@ -7,24 +7,24 @@ const references = [
   {
     title: "Article xxx du code du travail",
     type: TYPE_REFERENCE.codeDuTravail,
-    id: "L2323-4"
+    id: "L2323-4",
   },
   {
     title: "Article yyy du JO",
     type: TYPE_REFERENCE.journalOfficiel,
-    id: "yyy"
+    id: "yyy",
   },
   {
     title: "Article zzz de la CC",
     type: TYPE_REFERENCE.conventionCollective,
     id: "zzz",
-    slug: "ma-convention-collective"
+    slug: "ma-convention-collective",
   },
   {
     title: "Article zzz de la CC",
     type: TYPE_REFERENCE.codeDuTravail,
-    id: "R * 3321-2"
-  }
+    id: "R * 3321-2",
+  },
 ];
 
 describe("<ReferenceList />", () => {

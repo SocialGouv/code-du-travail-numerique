@@ -9,8 +9,8 @@ export const conventionCollectiveMapping = {
     nbArticles: {
       properties: {
         vigueurEtendu: { type: "integer" },
-        vigueurNonEtendu: { type: "integer" }
-      }
+        vigueurNonEtendu: { type: "integer" },
+      },
     },
     publishedAt: { type: "date" },
     articlesByTheme: {
@@ -20,10 +20,10 @@ export const conventionCollectiveMapping = {
           properties: {
             id: { type: "keyword" },
             cid: { type: "keyword" },
-            content: { type: "text" }
-          }
-        }
-      }
+            content: { type: "text" },
+          },
+        },
+      },
     },
     answer: {
       properties: {
@@ -35,10 +35,10 @@ export const conventionCollectiveMapping = {
           properties: {
             value: { type: "text" },
             category: { type: "keyword" },
-            url: { type: "keyword" }
-          }
-        }
-      }
-    }
-  }
+            url: { type: "keyword" },
+          },
+        },
+      },
+    },
+  },
 };

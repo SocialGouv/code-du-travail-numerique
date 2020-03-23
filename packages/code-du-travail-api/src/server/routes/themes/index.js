@@ -23,10 +23,10 @@ router.get("/themes", async ctx => {
   const body = getRootThemesQuery({});
   const response = await elasticsearchClient.search({
     index,
-    body
+    body,
   });
   ctx.body = {
-    children: response.body.hits.hits.map(t => t._source)
+    children: response.body.hits.hits.map(t => t._source),
   };
 });
 
@@ -44,7 +44,7 @@ router.get("/themes/:slug", async ctx => {
   const body = getThemeQuery({ slug });
   const response = await elasticsearchClient.search({
     index,
-    body
+    body,
   });
   if (response.body.hits.hits.length === 0) {
     ctx.throw(404, `there is no theme that match ${slug}`);
@@ -55,7 +55,7 @@ router.get("/themes/:slug", async ctx => {
 
   ctx.body = {
     ...theme._source,
-    refs: refs.map(({ _source }) => _source)
+    refs: refs.map(({ _source }) => _source),
   };
 });
 

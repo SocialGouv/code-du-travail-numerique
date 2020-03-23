@@ -5,7 +5,7 @@ import {
   InputCheckbox,
   Modal,
   Title,
-  theme
+  theme,
 } from "@socialgouv/react-ui";
 
 import { useTheme } from "../layout/ThemeProvider.js";
@@ -46,5 +46,5 @@ export const AccessibilityModal = ({ children: renderProp }) => {
 };
 
 AccessibilityModal.propTypes = {
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };

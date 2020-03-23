@@ -55,8 +55,8 @@ Info.propTypes = {
   convention: PropTypes.shape({
     url: PropTypes.string,
     idcc: PropTypes.string,
-    date_publi: PropTypes.string
-  }).isRequired
+    date_publi: PropTypes.string,
+  }).isRequired,
 };
 
 export { Info };

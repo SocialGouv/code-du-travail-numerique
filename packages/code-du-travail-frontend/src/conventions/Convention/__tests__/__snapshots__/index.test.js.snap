@@ -319,6 +319,11 @@ exports[`<Convention /> renders 1`] = `
   margin-right: 2.4rem;
 }
 
+.c47 svg {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
 .c48 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -779,6 +784,7 @@ exports[`<Convention /> renders 1`] = `
 @media (max-width:600px) {
   .c47 {
     width: 3.4rem;
+    height: 3.4rem;
     margin-right: 1rem;
   }
 }

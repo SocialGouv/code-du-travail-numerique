@@ -6,7 +6,7 @@ import { Toast } from ".";
 
 export default {
   component: Toast,
-  title: "Components|Toast"
+  title: "Components|Toast",
 };
 
 export const base = () => (
@@ -24,6 +24,9 @@ export const base = () => (
     </Section>
     <Section>
       <Toast shadow>Here is a toast with a shadow.</Toast>
+    </Section>
+    <Section>
+      <Toast squared>Here is a squared toast</Toast>
     </Section>
     <Section>
       <Toast onRemove={action("remove button clicked")}>

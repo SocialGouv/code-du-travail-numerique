@@ -19,7 +19,7 @@ function TextQuestion({
   const InputComponent = inputType === "date" ? InputDate : Input;
   return (
     <UID>
-      {id => (
+      {(id) => (
         <>
           <Question required htmlFor={id}>
             {label}
@@ -27,7 +27,7 @@ function TextQuestion({
           <QuestionWrapper>
             <Field
               name={name}
-              validate={value => {
+              validate={(value) => {
                 return validate ? validate(value) : required(value);
               }}
               subscription={{
@@ -36,11 +36,11 @@ function TextQuestion({
                 touched: true,
                 dirty: true,
                 invalid: true,
-                submitFailed: true
+                submitFailed: true,
               }}
               render={({
                 input,
-                meta: { error, invalid, dirty, touched, submitFailed }
+                meta: { error, invalid, dirty, touched, submitFailed },
               }) => (
                 <>
                   <InputComponent

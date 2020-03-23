@@ -46,7 +46,7 @@ const excludeDossierId = [
   "N102",
   "N20276",
   "N515",
-  "N379"
+  "N379",
 ];
 const excludeFicheId = [
   "F1234",
@@ -110,7 +110,7 @@ const excludeFicheId = [
   "F34629",
   "F34631",
   "F34633",
-  "F34900"
+  "F34900",
 ];
 const includeDossierId = [
   "N20286",
@@ -122,10 +122,10 @@ const includeDossierId = [
   "N31775",
   "N22781",
   "N31391",
-  "N31392"
+  "N31392",
 ];
 const includeThemeId = [
-  "N19806" // particulier / travail
+  "N19806", // particulier / travail
 ];
 const includeFicheId = [
   "F92",
@@ -175,7 +175,7 @@ const includeFicheId = [
   "F34059",
   "F34105",
   "F34705",
-  "F34902"
+  "F34902",
 ];
 
 module.exports = { filter };

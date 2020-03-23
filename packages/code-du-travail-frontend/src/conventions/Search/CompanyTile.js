@@ -8,7 +8,7 @@ export const CompanyTile = ({ conventions = [], label, onClick }) => (
   <>
     <Entreprise>{label}</Entreprise>
     {conventions.length ? (
-      conventions.map(convention => (
+      conventions.map((convention) => (
         <ConventionLink
           convention={convention}
           small

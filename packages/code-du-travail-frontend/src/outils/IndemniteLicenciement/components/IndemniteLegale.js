@@ -13,7 +13,7 @@ function IndemniteLegale({ indemnite, infoCalcul }) {
         <Highlight>
           {indemnite.toLocaleString("fr-FR", {
             maximumFractionDigits: 2,
-            minimumFractionDigits: 2
+            minimumFractionDigits: 2,
           })}
           &nbsp;€&nbsp;brut.
         </Highlight>{" "}
@@ -45,8 +45,8 @@ IndemniteLegale.propTypes = {
   indemnite: PropTypes.number.isRequired,
   infoCalcul: PropTypes.shape({
     formula: PropTypes.string.isRequired,
-    labels: PropTypes.object.isRequired
-  }).isRequired
+    labels: PropTypes.object.isRequired,
+  }).isRequired,
 };
 
 export { IndemniteLegale };

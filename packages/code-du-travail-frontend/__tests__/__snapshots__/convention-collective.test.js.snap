@@ -177,15 +177,6 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-left: 4rem;
 }
 
-.c2 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  margin: 20%;
-  font-size: 3.2rem;
-  text-align: center;
-}
-
 .c0 {
   max-width: 124rem;
   margin: 0 auto;
@@ -210,6 +201,15 @@ exports[`<ConventionCollective /> should render 1`] = `
 
 .c1 {
   width: 80%;
+}
+
+.c2 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  margin: 20%;
+  font-size: 3.2rem;
+  text-align: center;
 }
 
 @media (max-width:600px) {
@@ -312,25 +312,6 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
   .c0 {
     padding: 0 1rem;
   }
@@ -352,6 +333,25 @@ exports[`<ConventionCollective /> should render 1`] = `
 @media (max-width:980px) {
   .c1 {
     width: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c2 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    font-size: 2.8rem;
   }
 }
 

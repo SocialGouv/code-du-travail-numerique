@@ -40,7 +40,7 @@ Modal.propTypes = {
   onDismiss: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
   ContentWrapper: PropTypes.object,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 const StyledDialogOverlay = styled(DialogOverlay)`

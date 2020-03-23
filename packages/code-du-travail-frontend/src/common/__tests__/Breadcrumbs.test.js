@@ -11,7 +11,7 @@ describe("<Breadcrumbs />", () => {
   it("should render a breadcrumbs", () => {
     const data = [
       { label: "item 1", slug: "/themes/item-1" },
-      { label: "item 2", slug: "/themes/item-2" }
+      { label: "item 2", slug: "/themes/item-2" },
     ];
 
     const { container } = render(<Breadcrumbs items={data} />);

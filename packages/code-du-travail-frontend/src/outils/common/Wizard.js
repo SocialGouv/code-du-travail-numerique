@@ -16,12 +16,12 @@ function Wizard({
   title,
   icon,
   Rules = null,
-  stepReducer = step => step
+  stepReducer = (step) => step,
 }) {
   const [state, dispatch] = useReducer(stepReducer, initialState);
   const { stepIndex, steps } = state;
 
-  const setStepIndex = index =>
+  const setStepIndex = (index) =>
     dispatch({ type: "setStepIndex", payload: index });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function Wizard({
     }
   });
 
-  const prevStep = values => {
+  const prevStep = (values) => {
     let nextStepIndex = stepIndex;
     let skipFn = () => true;
     while (skipFn(values)) {
@@ -47,10 +47,10 @@ function Wizard({
       "trackEvent",
       "outil",
       `click_previous_${title}`,
-      initialState.steps[nextStepIndex].name
+      initialState.steps[nextStepIndex].name,
     ]);
   };
-  const nextStep = values => {
+  const nextStep = (values) => {
     let nextStepIndex = stepIndex;
     let skipFn = () => true;
     while (skipFn(values)) {
@@ -63,7 +63,7 @@ function Wizard({
       "trackEvent",
       "outil",
       `view_step_${title}`,
-      initialState.steps[nextStepIndex].name
+      initialState.steps[nextStepIndex].name,
     ]);
   };
 
@@ -71,7 +71,7 @@ function Wizard({
   const nextVisible = stepIndex < steps.length - 1;
   const printVisible = stepIndex === steps.length - 1;
 
-  const validate = values => {
+  const validate = (values) => {
     const Step = steps[stepIndex].component;
     return Step.validate ? Step.validate(values) : {};
   };
@@ -80,7 +80,7 @@ function Wizard({
     // This means the user clicked on a "restart a new simulation" button
     if (stepIndex === steps.length - 1) {
       dispatch({
-        type: "reset"
+        type: "reset",
       });
       setStepIndex(0);
       setTimeout(() => form.reset());
@@ -91,11 +91,11 @@ function Wizard({
   const stepItems = steps.map(({ name, label }) => ({
     name,
     label,
-    isValid: false
+    isValid: false,
   }));
 
   const decorators = steps
-    .map(step => step.component.decorator)
+    .map((step) => step.component.decorator)
     .filter(Boolean);
 
   const Step = steps[stepIndex].component;
@@ -107,7 +107,7 @@ function Wizard({
       validate={validate}
       decorators={decorators}
       mutators={{
-        ...arrayMutators
+        ...arrayMutators,
       }}
       onSubmit={handlePageSubmit}
     >
@@ -169,13 +169,13 @@ Wizard.propTypes = {
       PropTypes.shape({
         component: PropTypes.func.isRequired,
         name: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired
+        label: PropTypes.string.isRequired,
       })
-    )
+    ),
   }).isRequired,
   initialValues: PropTypes.object,
   Rules: PropTypes.func,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export { Wizard };

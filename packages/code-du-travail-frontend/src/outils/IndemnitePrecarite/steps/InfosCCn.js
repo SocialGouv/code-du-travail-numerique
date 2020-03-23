@@ -7,7 +7,7 @@ import { Toast, theme } from "@socialgouv/react-ui";
 export function StepInfoCCn(props) {
   const { form } = props;
   const {
-    values: { ccn }
+    values: { ccn },
   } = form.getState();
   return (
     <>

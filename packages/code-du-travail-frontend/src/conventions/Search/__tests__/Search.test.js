@@ -3,7 +3,7 @@ import {
   fireEvent,
   render,
   wait,
-  waitForElement
+  waitForElement,
 } from "@testing-library/react";
 import fetch from "isomorphic-unfetch";
 
@@ -13,22 +13,22 @@ jest.useFakeTimers();
 import Search from "../";
 
 jest.mock("../../../piwik", () => ({
-  matopush: jest.fn()
+  matopush: jest.fn(),
 }));
 
 function renderSearchForm({
   title = "Recherche de convention collective",
-  onSelectConvention = jest.fn()
+  onSelectConvention = jest.fn(),
 } = {}) {
   return render(
     <Search title={title} onSelectConvention={onSelectConvention} />
   );
 }
 
-const mockFetch = resultsByService => {
+const mockFetch = (resultsByService) => {
   fetch.mockReset();
-  fetch.mockImplementation(url => {
-    const mockFetchResponse = data =>
+  fetch.mockImplementation((url) => {
+    const mockFetchResponse = (data) =>
       Promise.resolve({ ok: true, json: () => Promise.resolve(data) });
 
     for (const [service, data] of Object.entries(resultsByService)) {
@@ -49,7 +49,7 @@ describe("<Search />", () => {
   it("should show spinner when loading", () => {
     mockFetch({ "api.url/idcc": {} });
     const { container, getByRole } = renderSearchForm({
-      onSelectConvention: null
+      onSelectConvention: null,
     });
     fireEvent.change(getByRole("search"), { target: { value: "8888" } });
     expect(container).toMatchSnapshot();
@@ -66,8 +66,8 @@ describe("<Search />", () => {
                 id: "KALICONT000000000001",
                 title: "titre convention 1",
                 shortTitle: "small titre",
-                slug: "slug-convention-1"
-              }
+                slug: "slug-convention-1",
+              },
             },
             {
               _source: {
@@ -75,15 +75,15 @@ describe("<Search />", () => {
                 id: "KALICONT000000000002",
                 title: "titre convention 2",
                 shortTitle: "smaller convention 2",
-                slug: "slug-convention-2"
-              }
-            }
-          ]
-        }
-      }
+                slug: "slug-convention-2",
+              },
+            },
+          ],
+        },
+      },
     });
     const { container, getByRole } = renderSearchForm({
-      onSelectConvention: null
+      onSelectConvention: null,
     });
     fireEvent.change(getByRole("search"), { target: { value: "1234" } });
     jest.runAllTimers();
@@ -104,8 +104,8 @@ describe("<Search />", () => {
                 id: "KALICONT000000000001",
                 title: "titre convention 1",
                 shortTitle: "small titre",
-                slug: "slug-convention-1"
-              }
+                slug: "slug-convention-1",
+              },
             },
             {
               _source: {
@@ -113,15 +113,15 @@ describe("<Search />", () => {
                 id: "KALICONT000000000002",
                 title: "titre convention 2",
                 shortTitle: "smaller convention 2",
-                slug: "slug-convention-2"
-              }
-            }
-          ]
-        }
-      }
+                slug: "slug-convention-2",
+              },
+            },
+          ],
+        },
+      },
     });
     const { container, getByRole } = renderSearchForm({
-      onSelectConvention: null
+      onSelectConvention: null,
     });
     fireEvent.change(getByRole("search"), { target: { value: "4567" } });
     jest.runAllTimers();
@@ -135,12 +135,12 @@ describe("<Search />", () => {
     mockFetch({
       "api.url/idcc": {
         hits: {
-          hits: []
-        }
-      }
+          hits: [],
+        },
+      },
     });
     const { container, getByRole, findByText } = renderSearchForm({
-      onSelectConvention: null
+      onSelectConvention: null,
     });
     fireEvent.change(getByRole("search"), { target: { value: "9999" } });
     jest.runAllTimers();
@@ -161,8 +161,8 @@ describe("<Search />", () => {
                 id: "KALICONT000000000001",
                 title: "titre convention 1",
                 shortTitle: "small titre",
-                slug: "slug-convention-1"
-              }
+                slug: "slug-convention-1",
+              },
             },
             {
               _source: {
@@ -170,16 +170,16 @@ describe("<Search />", () => {
                 id: "KALICONT000000000002",
                 title: "titre convention 2",
                 shortTitle: "smaller convention 2",
-                slug: "slug-convention-2"
-              }
-            }
-          ]
-        }
-      }
+                slug: "slug-convention-2",
+              },
+            },
+          ],
+        },
+      },
     });
     const onSelectConvention = jest.fn();
     const { getByRole, getByText } = renderSearchForm({
-      onSelectConvention
+      onSelectConvention,
     });
     fireEvent.change(getByRole("search"), { target: { value: "42" } });
     jest.runAllTimers();
@@ -193,7 +193,7 @@ describe("<Search />", () => {
       num: 4567,
       slug: "slug-convention-2",
       title: "titre convention 2",
-      shortTitle: "smaller convention 2"
+      shortTitle: "smaller convention 2",
     });
   });
 
@@ -208,11 +208,11 @@ describe("<Search />", () => {
                 id: "KALICONT000000000001",
                 title: "titre convention 1",
                 shortTitle: "titre convention 1",
-                slug: "slug-convention-1"
-              }
-            }
-          ]
-        }
+                slug: "slug-convention-1",
+              },
+            },
+          ],
+        },
       },
       "siret2idcc.url": [
         {
@@ -226,10 +226,10 @@ describe("<Search />", () => {
               nature: "IDCC",
               num: 843,
               title: "Convention 1",
-              shortTitle: "Short Convention 1"
-            }
-          ]
-        }
+              shortTitle: "Short Convention 1",
+            },
+          ],
+        },
       ],
       "api-entreprises.url": {
         etablissement: [
@@ -238,15 +238,15 @@ describe("<Search />", () => {
             siret: "44144914700020",
             nom_raison_sociale: "Entreprise 1",
             code_postal: 93100,
-            libelle_commune: "Commune test"
-          }
-        ]
-      }
+            libelle_commune: "Commune test",
+          },
+        ],
+      },
     });
 
     const onSelectConvention = jest.fn();
     const { container, getByRole } = renderSearchForm({
-      onSelectConvention
+      onSelectConvention,
     });
     fireEvent.change(getByRole("search"), { target: { value: "hello" } });
     jest.runOnlyPendingTimers(); // run debounce timer
@@ -266,20 +266,20 @@ describe("<Search />", () => {
                 id: "KALICONT000000000001",
                 title: "titre convention 1",
                 shortTitle: "small title 1",
-                slug: "slug-convention-1"
-              }
-            }
-          ]
-        }
+                slug: "slug-convention-1",
+              },
+            },
+          ],
+        },
       },
       "entreprise.data.gouv.fr": {
-        message: "no results found"
-      }
+        message: "no results found",
+      },
     });
 
     const onSelectConvention = jest.fn();
     const { container, getByRole } = renderSearchForm({
-      onSelectConvention
+      onSelectConvention,
     });
     fireEvent.change(getByRole("search"), { target: { value: "xxxx" } });
     jest.runOnlyPendingTimers(); // run debounce timer
@@ -296,8 +296,8 @@ describe("<Search />", () => {
           siret: "01234567891011",
           nom_raison_sociale: "Entreprise 1",
           code_postal: 93100,
-          libelle_commune: "Commune test"
-        }
+          libelle_commune: "Commune test",
+        },
       },
       "siret2idcc.url": [
         {
@@ -310,19 +310,19 @@ describe("<Search />", () => {
               id: "KALICONT000005635886",
               nature: "IDCC",
               num: "843",
-              title: "Convention 1"
-            }
-          ]
-        }
-      ]
+              title: "Convention 1",
+            },
+          ],
+        },
+      ],
     });
 
     const onSelectConvention = jest.fn();
     const { container, getByRole } = renderSearchForm({
-      onSelectConvention
+      onSelectConvention,
     });
     fireEvent.change(getByRole("search"), {
-      target: { value: "01234567891011" }
+      target: { value: "01234567891011" },
     });
     jest.runOnlyPendingTimers(); // run debounce timer
     await wait(); // with for promise to resolve
