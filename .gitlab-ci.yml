@@ -4,6 +4,8 @@ Test Elastic 7.6.0:
     - name: "docker.elastic.co/elasticsearch/elasticsearch:7.6.0"
       alias: elasticsearch
       command: ["bin/elasticsearch", "-Ediscovery.type=single-node"]
+  variables:
+    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
   script:
     - |-
       echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_TAG";
