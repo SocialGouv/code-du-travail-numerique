@@ -94,10 +94,10 @@ Test @cdtn/api:
     # As we block the job waiting for elasticsearch to be up.
     - |-
       echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA";
-      echo "http://$ELASTICSEARCH_URL:9200";
+      echo $ELASTICSEARCH_URL;
       retry=180;
       while
-        ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
+        ! curl -s "$ELASTICSEARCH_URL/_cat/health?h=status" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
