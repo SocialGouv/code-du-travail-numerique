@@ -9,28 +9,6 @@ function getIdccBody({ query }) {
             term: {
               source: "conventions_collectives"
             }
-          },
-          {
-            bool: {
-              should: [
-                {
-                  match_phrase_prefix: {
-                    "title.french": {
-                      query: `${query}`
-                    }
-                  }
-                },
-                {
-                  match: {
-                    "shortTitle.french": {
-                      query: `${query}`,
-                      fuzziness: "1",
-                      boost: 0.7
-                    }
-                  }
-                }
-              ]
-            }
           }
         ],
         must: {
