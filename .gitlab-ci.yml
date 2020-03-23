@@ -2,14 +2,15 @@ Test Elastic 7.6.0:
   image: "curlimages/curl:7.67.0"
   services:
     - name: "docker.elastic.co/elasticsearch/elasticsearch:7.6.0"
-      alias: elasticsearch
+      alias: elasticsearch-yo
       command: ["bin/elasticsearch", "-Ediscovery.type=single-node"]
   variables:
-    ELASTICSEARCH_URL: http://localhost:9200
+    ELASTICSEARCH_URL: http://elasticsearch-yo:9200
   script:
     - |-
       echo $ELASTICSEARCH_URL;
-      retry=180;
+      echo $CI_COMMIT_REF_SLUG;
+      retry=3600;
       while
         ! curl "$ELASTICSEARCH_URL" &&
         [[ $(( retry-- )) -gt 0 ]];
