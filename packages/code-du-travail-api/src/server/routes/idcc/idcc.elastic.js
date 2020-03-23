@@ -37,18 +37,25 @@ function getIdccBody({ query }) {
           bool: {
             should: [
               {
+                match: {
+                  "shortTitle.french": {
+                    query: `${query}`,
+                    fuzziness: "1",
+                    boost: ".9"
+                  }
+                }
+              },
+              {
                 match_phrase_prefix: {
-                  "title.french": {
+                  "idcc.text": {
                     query: `${query}`
                   }
                 }
               },
               {
-                match: {
-                  "shortTitle.french": {
-                    query: `${query}`,
-                    fuzziness: "1",
-                    boost: 0.7
+                match_phrase_prefix: {
+                  "title.french": {
+                    query: `${query}`
                   }
                 }
               }

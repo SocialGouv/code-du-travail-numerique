@@ -32,7 +32,21 @@
       }
     ],
     "slug": "5-questions-reponses-sur-la-sante-au-travail",
-    "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/5-questions-reponses-sur-la-sante-au-travail"
+    "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/5-questions-reponses-sur-la-sante-au-travail",
+    "breadcrumbs": [
+      {
+        "label": "Santé, sécurité et conditions de travail",
+        "slug": "/themes/6-sante-securite-et-conditions-de-travail"
+      },
+      {
+        "label": "Santé au travail",
+        "slug": "/themes/63-sante-au-travail"
+      },
+      {
+        "label": "Suivi médical des salariés",
+        "slug": "/themes/634-suivi-medical-des-salaries"
+      }
+    ]
   },
   {
     "date": "31/08/2018",
@@ -67,6 +81,20 @@
       }
     ],
     "slug": "5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae",
-    "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/la-validation-des-acquis-de-l-experience-vae-expliquee"
+    "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/la-validation-des-acquis-de-l-experience-vae-expliquee",
+    "breadcrumbs": [
+      {
+        "label": "Emploi et formation professionnelle",
+        "slug": "/themes/5-emploi-et-formation-professionnelle"
+      },
+      {
+        "label": "Formation professionnelle",
+        "slug": "/themes/51-formation-professionnelle"
+      },
+      {
+        "label": "Dispositifs d'accès à la formation",
+        "slug": "/themes/511-dispositifs-dacces-a-la-formation"
+      }
+    ]
   }
 ]

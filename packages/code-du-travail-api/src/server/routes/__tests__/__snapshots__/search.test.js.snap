@@ -76,6 +76,16 @@ Object {
     Object {
       "_score": 0,
       "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "slug": "/themes/81-demission",
+        },
+      ],
       "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, p",
       "slug": "la-demission#Comment-presenter-une-demission",
       "source": "fiches_ministere_travail",
@@ -163,6 +173,16 @@ Object {
     Object {
       "_score": 1.3897071,
       "algo": "both",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "slug": "/themes/81-demission",
+        },
+      ],
       "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, p",
       "slug": "la-demission#Comment-presenter-une-demission",
       "source": "fiches_ministere_travail",
@@ -181,6 +201,16 @@ Object {
     Object {
       "_score": 1.3131604,
       "algo": "both",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "slug": "/themes/81-demission",
+        },
+      ],
       "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
       "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",

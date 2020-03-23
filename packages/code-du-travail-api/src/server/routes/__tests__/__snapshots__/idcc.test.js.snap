@@ -1,12 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`return idcc for number 27 1`] = `
+Object {
+  "hits": Array [
+    Object {
+      "_id": "15",
+      "_index": "cdtn_test_documents",
+      "_score": 6.5976005,
+      "_source": Object {
+        "effectif": 219,
+        "id": "KALICONT000023973390",
+        "idcc": 2701,
+        "shortTitle": "Banque : personnel des banques de la Guyane",
+        "slug": "2701-banque-personnel-des-banques-de-la-guyane",
+        "title": "Convention collective du travail du personnel des banques de la Guyane du 18 décembre 2007",
+        "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000023973390",
+      },
+      "_type": "_doc",
+    },
+  ],
+  "max_score": 6.5976005,
+  "total": Object {
+    "relation": "eq",
+    "value": 1,
+  },
+}
+`;
+
 exports[`return idcc results for boulangerie 1`] = `
 Object {
   "hits": Array [
     Object {
       "_id": "14",
       "_index": "cdtn_test_documents",
-      "_score": 13.44666,
+      "_score": 13.575955,
       "_source": Object {
         "effectif": 134889,
         "id": "KALICONT000005635886",
@@ -21,7 +48,7 @@ Object {
     Object {
       "_id": "13",
       "_index": "cdtn_test_documents",
-      "_score": 12.343299,
+      "_score": 12.472594,
       "_source": Object {
         "effectif": 44699,
         "id": "KALICONT000005635691",
@@ -34,7 +61,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.44666,
+  "max_score": 13.575955,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -48,7 +75,7 @@ Object {
     Object {
       "_id": "14",
       "_index": "cdtn_test_documents",
-      "_score": 13.333527,
+      "_score": 13.430498,
       "_source": Object {
         "effectif": 134889,
         "id": "KALICONT000005635886",
@@ -63,7 +90,7 @@ Object {
     Object {
       "_id": "13",
       "_index": "cdtn_test_documents",
-      "_score": 12.2301655,
+      "_score": 12.327137,
       "_source": Object {
         "effectif": 44699,
         "id": "KALICONT000005635691",
@@ -76,7 +103,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.333527,
+  "max_score": 13.430498,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -90,7 +117,7 @@ Object {
     Object {
       "_id": "16",
       "_index": "cdtn_test_documents",
-      "_score": 14.131624,
+      "_score": 14.308578,
       "_source": Object {
         "effectif": 216431,
         "id": "KALICONT000005635780",
@@ -105,7 +132,7 @@ Object {
     Object {
       "_id": "15",
       "_index": "cdtn_test_documents",
-      "_score": 7.7080503,
+      "_score": 7.8896523,
       "_source": Object {
         "effectif": 219,
         "id": "KALICONT000023973390",
@@ -118,7 +145,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 14.131624,
+  "max_score": 14.308578,
   "total": Object {
     "relation": "eq",
     "value": 2,

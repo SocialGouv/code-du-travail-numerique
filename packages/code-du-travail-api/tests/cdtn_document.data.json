@@ -2698,6 +2698,16 @@
     "source": "fiches_ministere_travail",
     "anchor": "Comment-presenter-une-demission",
     "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, p",
+    "breadcrumbs": [
+      {
+        "label": "Départ de l'entreprise",
+        "slug": "/themes/8-depart-de-lentreprise"
+      },
+      {
+        "label": "Démission",
+        "slug": "/themes/81-demission"
+      }
+    ],
     "html": "<p>Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission&nbsp;: elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).</p><p>Toutefois, pour éviter les contestations sur l’intention même de démissionner ou sur la date de la fin du contrat de travail, le salarié a intérêt à remettre sa démission par écrit (si possible par lettre recommandée avec avis de réception). L’écrit permet également de définir le début du préavis.</p><blockquote class=\"spip\">\n<p><strong>Stipulations des conventions collectives</strong><br class=\"autobr\">\nCertaines conventions collectives prévoient d’ailleurs que la démission doit être écrite et adressée par lettre recommandée avec avis de réception&nbsp;; toutefois, selon la <a href=\"http://www.legifrance.gouv.fr/affichJuriJudi.do?idTexte=JURITEXT000007471860\" class=\"spip_out\" rel=\"external\">Cour de cassation</a>, l’absence de notification écrite de la démission ne remet pas en cause la validité de cette dernière, dès lors que le salarié manifeste sans ambigüité sa volonté de démissionner. <br class=\"autobr\">\nLa démission ne peut être exigée par avance, par exemple, lors de la signature du contrat de travail ou au cours de son exécution.</p>\n</blockquote>",
     "slug": "la-demission#Comment-presenter-une-demission",
     "text": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).Toutefois, pour éviter les contestations sur l’intention même de démissionner ou sur la date de la fin du contrat de travail, le salarié a intérêt à remettre sa démission par écrit (si possible par lettre recommandée avec avis de réception). L’écrit permet également de définir le début du préavis.Stipulations des conventions collectives\nCertaines conventions collectives prévoient d’ailleurs que la démission doit être écrite et adressée par lettre recommandée avec avis de réception ; toutefois, selon la Cour de cassation, l’absence de notification écrite de la démission ne remet pas en cause la validité de cette dernière, dès lors que le salarié manifeste sans ambigüité sa volonté de démissionner. \nLa démission ne peut être exigée par avance, par exemple, lors de la signature du contrat de travail ou au cours de son exécution.",
@@ -3222,6 +3232,16 @@
     "source": "fiches_ministere_travail",
     "anchor": "L-absence-prolongee-du-salarie-est-elle-une-demission",
     "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
+    "breadcrumbs": [
+      {
+        "label": "Départ de l'entreprise",
+        "slug": "/themes/8-depart-de-lentreprise"
+      },
+      {
+        "label": "Démission",
+        "slug": "/themes/81-demission"
+      }
+    ],
     "html": "<p>En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Dans ces hypothèses (souvent qualifiées d’abandon de poste), l’employeur doit demander à l’intéressé les raisons de son absence. Si le salarié ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement pour absence injustifiée Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.</p>",
     "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
     "text": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Dans ces hypothèses (souvent qualifiées d’abandon de poste), l’employeur doit demander à l’intéressé les raisons de son absence. Si le salarié ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement pour absence injustifiée Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.",
