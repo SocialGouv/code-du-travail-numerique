@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { withRouter } from "next/router";
 import styled from "styled-components";
 import { Button, FlatList, theme } from "@socialgouv/react-ui";
 
@@ -45,9 +44,7 @@ ViewMore.defaultProps = {
   query: ""
 };
 
-const RoutedViewMore = withRouter(ViewMore);
-
-export { RoutedViewMore as ViewMore };
+export { ViewMore };
 
 const { breakpoints, spacings } = theme;
 
