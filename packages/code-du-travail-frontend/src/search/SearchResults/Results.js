@@ -19,10 +19,10 @@ export const ListLink = ({
     source,
     slug,
     title,
-    url
+    url,
   },
   showTheme = true,
-  query
+  query,
 }) => {
   let subtitle = "";
   if (showTheme && source !== SOURCES.THEMES) {
@@ -36,11 +36,11 @@ export const ListLink = ({
   const tileCommonProps = {
     wide: true,
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
-    onKeyPress: e =>
+    onKeyPress: (e) =>
       e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
     title,
     subtitle,
-    children: summarize(description)
+    children: summarize(description),
   };
 
   if (source === SOURCES.EXTERNALS) {
@@ -77,7 +77,7 @@ export const ListLink = ({
     <Link
       href={{
         pathname: `/${getRouteBySource(source)}/[slug]`,
-        query: { ...(query && { q: query }), slug: rootSlug }
+        query: { ...(query && { q: query }), slug: rootSlug },
       }}
       as={`/${getRouteBySource(source)}/${rootSlug}${
         query ? `?q=${query}` : ""
@@ -98,10 +98,10 @@ ListLink.propTypes = {
     breadcrumbs: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string,
-        slug: PropTypes.string
+        slug: PropTypes.string,
       })
-    )
-  })
+    ),
+  }),
 };
 
 export const Results = ({ id, isSearch, items, query }) => {
@@ -120,7 +120,7 @@ export const Results = ({ id, isSearch, items, query }) => {
         }}
         query={query}
       >
-        {items.map(item => (
+        {items.map((item) => (
           <StyledListItem key={item.slug}>
             <ListLink item={item} showTheme={Boolean(isSearch)} query={query} />
           </StyledListItem>

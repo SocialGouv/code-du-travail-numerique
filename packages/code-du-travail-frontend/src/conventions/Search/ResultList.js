@@ -9,7 +9,7 @@ export const ResultList = ({
   buttonLabel = "Plus de résultats",
   items,
   query,
-  title
+  title,
 }) => {
   const seedId = useUIDSeed();
   return (
@@ -19,7 +19,7 @@ export const ResultList = ({
         {`résultat${items.length > 1 ? "s" : ""})`}
       </Heading>
       <ViewMore label={buttonLabel} query={query}>
-        {items.map(item => (
+        {items.map((item) => (
           <StyledListItem key={seedId(item)}>{item}</StyledListItem>
         ))}
       </ViewMore>
