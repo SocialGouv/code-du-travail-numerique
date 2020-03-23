@@ -4,10 +4,13 @@ import styled from "styled-components";
 
 import { breakpoints, spacings } from "../theme";
 
+const SIZE = "4.2rem";
+const SMALL_SIZE = "3.4rem";
+
 export const IconStripe = ({ children, icon: Icon, small, ...props }) => (
   <FlexDiv {...props}>
     <IconWrapper small={small}>
-      <Icon width="auto" height="auto" />
+      <Icon />
     </IconWrapper>
     <ChildrenWrapper>{children}</ChildrenWrapper>
   </FlexDiv>
@@ -22,13 +25,17 @@ const FlexDiv = styled.div`
 const IconWrapper = styled.div`
   display: ${({ theme }) => (theme.noColors ? "none" : "block")};
   flex-shrink: 0;
-  width: ${({ small }) => (small ? "3.4rem" : "4.2rem")};
-  height: ${({ small }) => (small ? "3.4rem" : "4.2rem")};
+  width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+  height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
   margin-right: ${spacings.xmedium};
   @media (max-width: ${breakpoints.mobile}) {
-    width: 3.4rem;
-    height: 3.4rem;
+    width: ${SMALL_SIZE};
+    height: ${SMALL_SIZE};
     margin-right: ${spacings.small};
+  }
+  svg {
+    width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+    height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
   }
 `;
 
