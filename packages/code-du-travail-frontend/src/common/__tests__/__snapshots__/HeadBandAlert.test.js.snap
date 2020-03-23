@@ -26,6 +26,11 @@ exports[`<HeadBandAlert /> should render 1`] = `
   margin-right: 2.4rem;
 }
 
+.c4 svg {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+
 .c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -92,13 +97,13 @@ exports[`<HeadBandAlert /> should render 1`] = `
           >
             <svg
               fill="none"
-              height="auto"
+              height="24"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               viewBox="0 0 24 24"
-              width="auto"
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <circle

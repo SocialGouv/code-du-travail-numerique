@@ -385,6 +385,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-right: 2.4rem;
 }
 
+.c44 svg {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
 .c45 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -2239,9 +2244,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       >
                         <svg
                           fill="none"
-                          height="auto"
                           viewBox="0 0 52 52"
-                          width="auto"
                         >
                           <path
                             clip-rule="evenodd"
@@ -3181,6 +3184,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-right: 2.4rem;
 }
 
+.c44 svg {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
 .c45 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -5035,9 +5043,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       >
                         <svg
                           fill="none"
-                          height="auto"
                           viewBox="0 0 52 52"
-                          width="auto"
                         >
                           <path
                             clip-rule="evenodd"
