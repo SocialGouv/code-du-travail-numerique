@@ -1,22 +1,4 @@
 function getIdccBody({ query }) {
-  const matchPhrasePrefix = {
-    match_phrase_prefix: {
-      "title.french": {
-        query: `${query}`
-      }
-    }
-  };
-
-  const matchShortTitle = {
-    match: {
-      "shortTitle.french": {
-        query: `${query}`,
-        fuzziness: "1",
-        boost: 0.7
-      }
-    }
-  };
-
   return {
     size: 50,
     _source: ["id", "title", "shortTitle", "url", "idcc", "slug", "effectif"],
@@ -27,6 +9,31 @@ function getIdccBody({ query }) {
             term: {
               source: "conventions_collectives"
             }
+<<<<<<< HEAD
+=======
+          },
+          {
+            bool: {
+              should: [
+                {
+                  match_phrase_prefix: {
+                    "title.french": {
+                      query: `${query}`
+                    }
+                  }
+                },
+                {
+                  match: {
+                    "shortTitle.french": {
+                      query: `${query}`,
+                      fuzziness: "1",
+                      boost: 0.7
+                    }
+                  }
+                }
+              ]
+            }
+>>>>>>> use should in filter
           }
         ],
         must: {
@@ -54,6 +61,18 @@ function getIdccBody({ query }) {
                     query: `${query}`
                   }
                 }
+<<<<<<< HEAD
+=======
+              },
+              {
+                match: {
+                  "shortTitle.french": {
+                    query: `${query}`,
+                    fuzziness: "1",
+                    boost: 0.7
+                  }
+                }
+>>>>>>> use should in filter
               }
             ]
           }
