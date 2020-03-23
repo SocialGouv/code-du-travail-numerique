@@ -93,8 +93,8 @@ Test @cdtn/api:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.
     - |-
-      echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA"
-      echo "http://ELASTICSEARCH_URL:9200"
+      echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA";
+      echo "http://$ELASTICSEARCH_URL:9200";
       retry=180;
       while
         ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
