@@ -61,7 +61,7 @@
     "react-mathjax-preview": "^0.1.16",
     "react-svg-spinner": "^1.0.4",
     "react-uid": "^2.2.0",
-    "rehype-raw": "^4.0.1",
+    "rehype-raw": "^4.0.2",
     "rehype-react": "^5.0.0",
     "remark-parse": "^7.0.2",
     "remark-rehype": "^5.0.0",
@@ -73,9 +73,9 @@
     "url-search-params": "^1.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@socialgouv/eslint-config-react": "^0.18.0",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@socialgouv/eslint-config-react": "^0.19.0",
     "@testing-library/react": "^10.0.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.1.0",
