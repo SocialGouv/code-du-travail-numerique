@@ -7,9 +7,9 @@ function getIdccBody({ query }) {
         filter: [
           {
             term: {
-              source: "conventions_collectives"
-            }
-          }
+              source: "conventions_collectives",
+            },
+          },
         ],
         must: {
           bool: {
@@ -19,37 +19,37 @@ function getIdccBody({ query }) {
                   "shortTitle.french": {
                     query: `${query}`,
                     fuzziness: "1",
-                    boost: ".9"
-                  }
-                }
+                    boost: ".9",
+                  },
+                },
               },
               {
                 match_phrase_prefix: {
                   "idcc.text": {
-                    query: `${query}`
-                  }
-                }
+                    query: `${query}`,
+                  },
+                },
               },
               {
                 match_phrase_prefix: {
                   "title.french": {
-                    query: `${query}`
-                  }
-                }
-              }
-            ]
-          }
+                    query: `${query}`,
+                  },
+                },
+              },
+            ],
+          },
         },
         should: {
           rank_feature: {
             field: "effectif",
             log: {
-              scaling_factor: 1
-            }
-          }
-        }
-      }
-    }
+              scaling_factor: 1,
+            },
+          },
+        },
+      },
+    },
   };
 }
 
