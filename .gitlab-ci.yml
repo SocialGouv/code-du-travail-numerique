@@ -5,14 +5,13 @@ Test Elastic 7.6.0:
       alias: elasticsearch
       command: ["bin/elasticsearch", "-Ediscovery.type=single-node"]
   variables:
-    ELASTICSEARCH_URL: http://elasticsearch:9200
+    ELASTICSEARCH_URL: http://localhost:9200
   script:
     - |-
-      echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_TAG";
       echo $ELASTICSEARCH_URL;
       retry=180;
       while
-        ! curl "$ELASTICSEARCH_URL/_cat/health?h=status" &&
+        ! curl "$ELASTICSEARCH_URL" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
