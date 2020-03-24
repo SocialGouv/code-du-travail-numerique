@@ -1,9 +1,3 @@
-ARG TAG_BASE_IMAGE=master
-ARG REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
-ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
-
-# hadolint ignore=DL3006
-FROM ${BASE_IMAGE} as cdtn-base-image
 #FROM tensorflow/tensorflow:2.0.0-py3
 FROM python:3.7-slim-buster
 
@@ -25,9 +19,5 @@ COPY --chown=worker:worker ./scripts ./scripts
 
 ENV PATH="/home/worker/.local/bin:${PATH}"
 ENV PYTHONPATH="."
-
-COPY --chown=worker:worker --from=cdtn-base-image /app/packages/code-du-travail-data/dist/dump.data.json ./data/dump.json
-
-RUN python scripts/dump.py
 
 ENTRYPOINT ["sh", "scripts/entrypoint.sh"]

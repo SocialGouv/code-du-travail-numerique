@@ -34,8 +34,7 @@ const SUGGEST_INDEX_NAME = `${ES_INDEX_PREFIX}_${SUGGESTIONS}`;
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
 
-const DUMP_PATH =
-  process.env.DUMP_PATH || "../../code-du-travail-nlp/data/dump.tf.json";
+const DUMP_PATH = process.env.DUMP_PATH || "../dist/dump.data.json";
 
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
 
