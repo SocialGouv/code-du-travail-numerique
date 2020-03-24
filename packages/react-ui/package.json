@@ -55,7 +55,7 @@
     "jest": "^25.1.0",
     "jest-styled-components": "^7.0.0",
     "npx": "^10.2.2",
-    "prettier": "^2.0.1",
+    "prettier": "^2.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
