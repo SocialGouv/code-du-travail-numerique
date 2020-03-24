@@ -1,5 +1,26 @@
 [
   {
+    "title": "Attestation sur l’honneur : déplacement dérogatoire",
+    "description": "Attestation individuelle de déplacement dérogatoire à remplir pour chaque déplacement non professionnel",
+    "url": "https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-derogatoire-et-justificatif-de-deplacement-professionnel",
+    "icon": "Document",
+    "action": "Consulter"
+  },
+  {
+    "title": "Justificatif de l’employeur de déplacement professionnel",
+    "description": "Justificatif permanent à renseigner par l’employeur pour les salariés qui doivent se déplacer pour leur activité professionnelle",
+    "url": "https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-derogatoire-et-justificatif-de-deplacement-professionnel",
+    "icon": "Document",
+    "action": "Consulter"
+  },
+  {
+    "title": "Coronavirus : obligations de l’employeur",
+    "description": "Quelles mesures l’employeur doit-il prendre pour protéger la santé de ses salariés face au virus ?",
+    "url": "https://travail-emploi.gouv.fr/IMG/pdf/covid19_obligations_employeur.pdf",
+    "icon": "Document",
+    "action": "Consulter"
+  },
+  {
     "title": "TéléAccords",
     "description": "Le service de dépôt des accords collectifs d’entreprise",
     "url": "https://www.teleaccords.travail-emploi.gouv.fr/PortailTeleprocedures",

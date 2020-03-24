@@ -5,10 +5,10 @@ const { SOURCES, getRouteBySource } = require("@cdt/sources");
 const slugify = require("../../slugify");
 const allThemes = require("../datafiller/themes.data.json");
 
-const themes = allThemes.filter(theme =>
-  theme.refs.some(ref =>
-    ref.url.startsWith(`/${getRouteBySource(SOURCES.LETTERS)}`),
-  ),
+const themes = allThemes.filter((theme) =>
+  theme.refs.some((ref) =>
+    ref.url.startsWith(`/${getRouteBySource(SOURCES.LETTERS)}`)
+  )
 );
 
 const DOC_DIR = "docx";
@@ -41,12 +41,12 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
       {
         path: `${__dirname}/${DOC_DIR}/${filename}`,
       },
-      options,
+      options
     )
-    .then(result => {
+    .then((result) => {
       const slug = slugify(title);
-      const theme = themes.find(theme =>
-        theme.refs.some(ref => ref.url.match(new RegExp(slug))),
+      const theme = themes.find((theme) =>
+        theme.refs.some((ref) => ref.url.match(new RegExp(slug)))
       );
       let breadcrumbs = [];
       if (theme) {
@@ -76,7 +76,7 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
             .replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>"),
       };
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(`Error while converting ${filename}`, err);
     });
 };

@@ -46,6 +46,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   const secondaryRefs = refs.filter(({ type }) => type === "secondary");
   const themeRefs = refs.filter(({ type }) => type === "theme");
   const templateRefs = refs.filter(({ type }) => type === "template");
+  const externalRefs = refs.filter(({ type }) => type === "external");
   const componentMappings = {
     ul: FlatList,
     a: LeftArrowLink,
@@ -95,6 +96,18 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
                     </InternalLink>
                   </li>
                 ))}
+                {externalRefs.map(({ title, url }) => (
+                  <li key={url}>
+                    <LeftArrowLink
+                      href={url}
+                      rel="noopener nofollow"
+                      target="_blank"
+                      className="no-after"
+                    >
+                      {title}
+                    </LeftArrowLink>
+                  </li>
+                ))}
               </FlatList>
               <Heading>Liens utiles</Heading>
               <Mdx markdown={asideContent} components={componentMappings} />
@@ -115,12 +128,25 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
                 slug={item.slug}
               >
                 <CallToActionTile
-                  action="Voir le modèle"
+                  action="Consulter"
                   custom
                   icon={icons.Document}
                   title={item.title}
                 />
               </InternalLink>
+            ))}
+            {externalRefs.map(({ action, icon, title, url }) => (
+              <CallToActionTile
+                key={url}
+                action={action}
+                custom
+                title={title}
+                icon={icons[icon]}
+                href={url}
+                rel="noopener nofollow"
+                target="_blank"
+                className="no-after"
+              ></CallToActionTile>
             ))}
           </Grid>
           <Title>Les thèmes suivants peuvent vous intéresser</Title>

@@ -19,7 +19,7 @@ const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
  * @returns {Object} An object containing the matching thematic file .
  */
 
-router.get("/dossiers/:slug", async ctx => {
+router.get("/dossiers/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const body = getItemBySlugBody({ source: SOURCES.THEMATIC_FILES, slug });
   const response = await elasticsearchClient.search({ index, body });
@@ -39,7 +39,7 @@ router.get("/dossiers/:slug", async ctx => {
   ctx.body = {
     ...thematicFile,
     refs: refs.map(({ _source }) => {
-      _source.type = refTypeByUrl[_source.slug];
+      _source.type = refTypeByUrl[_source.slug] || "external";
       return _source;
     }),
   };
