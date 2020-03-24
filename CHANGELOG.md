@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.9.0...v4.10.0) (2020-03-24)
+
+
+### Bug Fixes
+
+* **ccn:** reset scroll position on select cc and fix ui ([#2506](https://github.com/SocialGouv/code-du-travail-numerique/issues/2506)) ([d0b898c](https://github.com/SocialGouv/code-du-travail-numerique/commit/d0b898ce0a2a0ac966e07ed2055dd6a741630cbb))
+* **deps:** update all non-major dependencies ([#2521](https://github.com/SocialGouv/code-du-travail-numerique/issues/2521)) ([d038881](https://github.com/SocialGouv/code-du-travail-numerique/commit/d038881e38f1c926eac299ae65ef57aebaca22a3))
+* **deps:** update remark monorepo ([#2517](https://github.com/SocialGouv/code-du-travail-numerique/issues/2517)) ([ddd56a3](https://github.com/SocialGouv/code-du-travail-numerique/commit/ddd56a377e93876427b2edaadc49228d44065a4f))
+* **tools:** remove icon ([#2507](https://github.com/SocialGouv/code-du-travail-numerique/issues/2507)) ([09dfe9b](https://github.com/SocialGouv/code-du-travail-numerique/commit/09dfe9bae09e5246be459195e26292a3bfa19966))
+* **ui:** wrong svg attributes ([#2513](https://github.com/SocialGouv/code-du-travail-numerique/issues/2513)) ([4bacbb7](https://github.com/SocialGouv/code-du-travail-numerique/commit/4bacbb77dd0b4168d00e8bd61468089bc923ffe3))
+
+
+### Features
+
+* **chore:** update dossier corona ([#2523](https://github.com/SocialGouv/code-du-travail-numerique/issues/2523)) ([aec020e](https://github.com/SocialGouv/code-du-travail-numerique/commit/aec020ef4ce1a131d8df15780facea9b98e513b1))
+* **front:** apply ViewMore component everywhere it's used ([#2516](https://github.com/SocialGouv/code-du-travail-numerique/issues/2516)) ([fe07e1b](https://github.com/SocialGouv/code-du-travail-numerique/commit/fe07e1b2afd44b61fc8d9dee9af06bb4c75f79e3))
+
+
+
+
+
 # [4.9.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.8.0...v4.9.0) (2020-03-20)
 
 
