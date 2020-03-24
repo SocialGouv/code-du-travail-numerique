@@ -8,6 +8,9 @@ const thematicFiles = [
 Rester informer sur le Coronavirus :
  - https://www.gouvernement.fr/info-coronavirus
 
+Coronavirus - Obligations de l’employeur :
+ - https://travail-emploi.gouv.fr/IMG/pdf/covid19_obligations_employeur.pdf
+
 Le ministère de l'économie soutient les entreprises :
  - https://www.economie.gouv.fr/coronavirus-soutien-entreprises
 
@@ -76,6 +79,16 @@ Coronavirus et données personnelles :
       {
         type: "secondary",
         url:
+          "/fiche-ministere-travail/mesures-exceptionnelles-de-soutien-aux-intermittents-et-salaries-du-secteur-culturel-dans-le-cadre-de-la-crise-sanitaire",
+      },
+      {
+        type: "secondary",
+        url:
+          "/fiche-ministere-travail/covid-19-situation-des-travailleurs-frontaliers",
+      },
+      {
+        type: "secondary",
+        url:
           "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-formation-professionnelle-des-salaries-alternants-et-personnes-en-recherche-demploi",
       },
       {
@@ -84,14 +97,24 @@ Coronavirus et données personnelles :
           "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-mon-compte-formation",
       },
       {
-        type: "template",
+        type: "external",
+        title: "Justificatif de l’employeur de déplacement professionnel",
+        description:
+          "Justificatif permanent à renseigner par l’employeur pour les salariés qui doivent se déplacer pour leur activité professionnelle",
         url:
-          "/modeles-de-courriers/attestation-sur-lhonneur-deplacement-derogatoire",
+          "https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-derogatoire-et-justificatif-de-deplacement-professionnel",
+        icon: "Document",
+        action: "Consulter",
       },
       {
-        type: "template",
+        type: "external",
+        title: "Attestation sur l’honneur : déplacement dérogatoire",
+        description:
+          "Attestation individuelle de déplacement dérogatoire à remplir pour chaque déplacement non professionnel",
         url:
-          "/modeles-de-courriers/justificatif-de-lemployeur-de-deplacement-professionnel",
+          "https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-derogatoire-et-justificatif-de-deplacement-professionnel",
+        icon: "Document",
+        action: "Consulter",
       },
       {
         type: "template",

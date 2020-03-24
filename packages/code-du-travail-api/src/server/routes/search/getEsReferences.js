@@ -3,12 +3,12 @@ const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getDocumentByUrlQuery = require("./getDocumentByUrlQuery");
 
-const isInternalUrl = url => url.match(/^\//);
+const isInternalUrl = (url) => url.match(/^\//);
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
-const makeHit = data => ({
+const makeHit = (data) => ({
   _index: index,
   _type: "_doc",
   _source: {
@@ -20,15 +20,15 @@ const makeHit = data => ({
 
 const indexQuery = { index };
 
-const flatten = arr => arr.reduce((a, c) => [...a, ...c], []);
+const flatten = (arr) => arr.reduce((a, c) => [...a, ...c], []);
 
 // for a set of given urls, fetch related ES documents
 const getEsReferences = async (refs = []) => {
   const queries =
     (refs &&
       refs
-        .filter(ref => isInternalUrl(ref.url))
-        .map(ref => getDocumentByUrlQuery(ref.url))
+        .filter((ref) => isInternalUrl(ref.url))
+        .map((ref) => getDocumentByUrlQuery(ref.url))
         .filter(Boolean)
         .reduce((state, query) => state.concat(indexQuery, query), [])) ||
     [];
@@ -42,11 +42,11 @@ const getEsReferences = async (refs = []) => {
     body: [...queries],
   });
 
-  const responses = flatten(response.body.responses.map(r => r.hits.hits));
+  const responses = flatten(response.body.responses.map((r) => r.hits.hits));
 
   // mix with non ES-results (ex: external)
   const hits = refs
-    .map(ref => {
+    .map((ref) => {
       if (isInternalUrl(ref.url)) {
         return responses.shift();
       }

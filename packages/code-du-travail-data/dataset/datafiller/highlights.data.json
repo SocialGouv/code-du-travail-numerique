@@ -11,29 +11,23 @@
         "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries",
         "title": "Coronavirus : Questions/réponses pour les entreprises et les salariés",
         "valid": true,
-        "position": 0
-      },
-      {
-        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer",
-        "title": "Coronavirus - COVID-19 et monde du Travail : pour résumer",
-        "valid": true,
         "position": 1
       },
       {
-        "url": "/modeles-de-courriers/attestation-sur-lhonneur-deplacement-derogatoire",
-        "title": "Attestation sur l’honneur : déplacement dérogatoire",
+        "url": "/external/coronavirus-obligations-de-lemployeur",
+        "title": "Coronavirus : obligations de l’employeur",
         "valid": true,
         "position": 2
       },
       {
-        "url": "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
-        "title": "Activité partielle : démarches de l'employeur (chômage partiel ou technique)",
+        "url": "/external/attestation-sur-lhonneur-deplacement-derogatoire",
+        "title": "Attestation sur l’honneur : déplacement dérogatoire",
         "valid": true,
         "position": 3
       },
       {
-        "url": "/fiche-service-public/teletravail-dans-le-secteur-prive",
-        "title": "Télétravail dans le secteur privé",
+        "url": "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
+        "title": "Activité partielle : démarches de l'employeur (chômage partiel ou technique)",
         "valid": true,
         "position": 4
       },
